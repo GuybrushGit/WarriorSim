@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Simulator</title>
+  <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="spells.js"></script>
+  <script type="text/javascript" src="classes.js"></script>
+  <script type="text/javascript" src="sim.js"></script>
+  <style>
+  input[type="text"] {
+  	margin-bottom: 5px;
+  	width: 40px;
+  }
+  input[type="checkbox"] {
+  	vertical-align: top;
+  }
+  label {
+  	width: 100px;
+  	display: inline-block;
+  	vertical-align: middle;
+  }
+  </style>
+</head>
+
+<body>
+	<section>
+		<div>
+			<label>Target Armor</label>
+			<input type="text" name="armor" value="1000" />
+		</div>
+		<div>
+			<label>Fight Duration</label>
+			<input type="text" name="timesecs" value="180" /><span> seconds</span>
+		</div>
+		<div>
+			<label>Simulations</label>
+			<input type="text" name="simulations" value="1" />
+		</div>
+		<div>
+			<label>Base AP</label>
+			<input type="text" name="ap" value="160" />
+		</div>
+		<div>
+			<label>Base Strength</label>
+			<input type="text" name="str" value="125" />
+		</div>
+		<div>
+			<label>Base Agility</label>
+			<input type="text" name="agi" value="75" />
+		</div>
+		<div>
+			<label>Abilities</label><br>
+			<input type="checkbox" name="spells" value="Bloodthirst" checked> Bloodthirst<br>
+			<input type="checkbox" name="spells" value="Overpower" checked> Overpower<br>
+			<input type="checkbox" name="spells" value="Whirlwind"> Whirlwind<br>
+			<input type="checkbox" name="spells" value="Execute" checked> Execute (execute phase <input type="text" name="executeperc" value="20" />%)<br> 
+		</div>
+		<br />
+		<input type="submit" value="Run" />
+		<progress value="0" max="100"></progress>
+		<span id="dps"></span>
+	</section>
+</body>
+</html>
