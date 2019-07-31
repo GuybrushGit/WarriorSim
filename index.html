@@ -4,24 +4,17 @@
 <head>
   <meta name="viewport" content="width=device-width">
   <title>Simulator</title>
-  <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+
+  <link href="css/theme.default.min.css" rel="stylesheet">
+  <link href="css/theme.blue.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="libs/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="libs/jquery.tablesorter.widgets.min.js"></script>
   <script type="text/javascript" src="spells.js"></script>
   <script type="text/javascript" src="classes.js"></script>
   <script type="text/javascript" src="sim.js"></script>
-  <style>
-  input[type="text"] {
-  	margin-bottom: 5px;
-  	width: 40px;
-  }
-  input[type="checkbox"] {
-  	vertical-align: top;
-  }
-  label {
-  	width: 100px;
-  	display: inline-block;
-  	vertical-align: middle;
-  }
-  </style>
 </head>
 
 <body>
@@ -66,5 +59,48 @@
 		<progress value="0" max="100"></progress>
 		<span id="dps"></span>
 	</section>
+
+	<hr />
+	<section>
+		<h3>Head</h3>
+		<table data-type="head">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Location</th>
+					<th>Boss</th>
+					<th>Sta</th>
+					<th>Str</th>
+					<th>Agi</th>
+					<th>AP</th>
+					<th>Crit</th>
+					<th>Hit</th>
+					<th>Skill</th>
+					<th>Armor</th>
+					<th>DPS</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>Circlet of Restless Dreams</td><td></td><td></td><td>38</td><td></td><td>21</td><td></td><td></td><td></td><td>6</td><td>175</td><td></td></tr>
+				<tr><td>Conqueror's Crown</td><td></td><td></td><td>34</td><td>29</td><td>18</td><td></td><td></td><td></td><td></td><td>739</td><td></td></tr>
+				<tr><td>Crown of Destruction</td><td></td><td></td><td>23</td><td></td><td></td><td>44</td><td>2</td><td></td><td></td><td>392</td><td></td></tr>
+				<tr><td>Dreadnaught Helm</td><td></td><td></td><td>45</td><td>21</td><td></td><td></td><td></td><td></td><td></td><td>800</td><td></td></tr>
+				<tr><td>Expert Goldminer's Helmet</td><td></td><td></td><td>6</td><td></td><td>5</td><td></td><td></td><td></td><td>7</td><td>95</td><td></td></tr>
+				<tr><td>Fury Visor</td><td></td><td></td><td></td><td>18</td><td></td><td></td><td>1</td><td>1</td><td></td><td>445</td><td></td></tr>
+				<tr><td>Helm of Domination</td><td></td><td></td><td>28</td><td>21</td><td>11</td><td></td><td></td><td></td><td></td><td>661</td><td></td></tr>
+				<tr><td>Helm of Endless Rage</td><td></td><td></td><td>29</td><td>26</td><td>26</td><td></td><td></td><td></td><td></td><td>679</td><td></td></tr>
+				<tr><td>Helm of Heroism</td><td></td><td></td><td>32</td><td>18</td><td></td><td></td><td>1</td><td></td><td></td><td>556</td><td></td></tr>
+				<tr><td>Helm of Might</td><td></td><td></td><td>35</td><td>15</td><td></td><td></td><td></td><td></td><td></td><td>608</td><td></td></tr>
+				<tr><td>Helm of the Executioner</td><td></td><td></td><td>20</td><td>14</td><td></td><td></td><td></td><td>2</td><td></td><td>534</td><td></td></tr>
+				<tr><td>Helm of Valor</td><td></td><td></td><td>23</td><td>15</td><td>9</td><td></td><td></td><td></td><td></td><td>526</td><td></td></tr>
+				<tr><td>Helm of Wrath</td><td></td><td></td><td>40</td><td>17</td><td></td><td></td><td></td><td></td><td></td><td>696</td><td></td></tr>
+				<tr><td>Lionheart Helm</td><td></td><td></td><td></td><td>18</td><td></td><td></td><td>2</td><td>2</td><td></td><td>565</td><td></td></tr>
+				<tr><td>Mask of the Unforgiven</td><td></td><td></td><td>12</td><td></td><td></td><td></td><td>1</td><td>2</td><td></td><td>123</td><td></td></tr>
+				<tr><td>R10 Plate Helm</td><td></td><td></td><td>24</td><td>21</td><td></td><td></td><td>1</td><td>1</td><td></td><td>598</td><td></td></tr>
+				<tr><td>R13 Plate Helm</td><td></td><td></td><td>34</td><td>28</td><td></td><td></td><td>1</td><td></td><td></td><td>719</td><td></td></tr>
+			</tbody>
+		</table>
+	</section>
+	
 </body>
 </html>

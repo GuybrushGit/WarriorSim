@@ -1,3 +1,5 @@
+import { prependListener } from "cluster";
+
 // TODO
 // armor
 // hamstring
@@ -58,11 +60,27 @@ function simulation(i, player) {
     }
 }
 
+function getAura(tr) {
+    let data = tr.children();
+    let aura = {};
+    aura.str = parseInt(data.eq(4).text() || 0);
+    aura.agi = parseInt(data.eq(5).text() || 0);
+    aura.ap = parseInt(data.eq(6).text() || 0);
+    aura.crit = parseInt(data.eq(7).text() || 0);
+    aura.hit = parseInt(data.eq(8).text() || 0);
+    aura.skill = parseInt(data.eq(9).text() || 0);
+    aura.slot = tr.parents('table').data('type');
+    return aura;
+}
+
 $(document).ready(function() {
     $('input[type="submit"]').click(function() {
         total = 0;
         start = new Date().getTime();
         let player = new Player();
+        $('table tr.active').each(function() {
+            player.auras.push(getAura($(this)));
+        });
         $('input[type="text"]').each(function() { 
             let prop = $(this).attr('name');
             input[prop] = parseInt($(this).val());
@@ -80,13 +98,32 @@ $(document).ready(function() {
         player.target.armor = input.armor;
         player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
         player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
-        // player.auras.push({ skill: 5 });
-        // player.auras.push({ hit: 6 });
-        // player.auras.push({ ap: 800 });
-        // player.auras.push({ str: 20 });
-        // player.auras.push({ crit: 5 });
         player.update();
+        console.log(player);
 
         simulation(1, player);
+
+        $('tbody tr:not(.active)').each(function() {
+            let au = getAura($(this));
+            let pl = $.extend(true, {}, player);
+            let i = pl.auras.length;
+            while (i--) {
+                if (pl.auras[i].slot == au.slot)
+                    pl.auras.splice(i, 1);
+            }
+            pl.auras.push(au);
+            
+        });
+    });
+
+    $("table").tablesorter({
+        theme: 'blue',
+        widthFixed: true
+    });
+
+    $('table td').click(function() {
+        let tr = $(this).parent();
+        tr.addClass('active');
+        tr.siblings().removeClass('active');
     });
 });

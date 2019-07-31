@@ -1,0 +1,21 @@
+input[type="text"] {
+    margin-bottom: 5px;
+    width: 40px;
+}
+input[type="checkbox"] {
+    vertical-align: top;
+}
+label {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+h3 {
+    text-align: center;
+}
+td {
+    cursor: pointer;
+}
+tr.active td {
+    background-color: #d9d9d9;
+}
