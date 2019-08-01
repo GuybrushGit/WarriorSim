@@ -60,7 +60,6 @@ class Player {
             skill: this.level * 5,
         };
         this.auras = [];
-        this.update();
     }
     reset() {
         this.rage = 0;
@@ -68,15 +67,15 @@ class Player {
         this.dodgeTimer = 0;
         this.mh.timer = 0;
         this.oh.timer = 0;
-        if(this.bloodthirst) this.bloodthirst.timer = 0;
-        if(this.overpower) this.overpower.timer = 0;
-        if(this.whirlwind) this.whirlwind.timer = 0;
-        if(this.execute) this.execute.timer = 0;
+        if (this.bloodthirst) this.bloodthirst.timer = 0;
+        if (this.overpower) this.overpower.timer = 0;
+        if (this.whirlwind) this.whirlwind.timer = 0;
+        if (this.execute) this.execute.timer = 0;
     }
     update() {
         this.stats = $.extend({}, this.base);
-        for(let aura of this.auras)
-            for(let prop in aura)
+        for (let aura of this.auras)
+            for (let prop in aura)
                 this.stats[prop] += aura[prop];
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
@@ -88,12 +87,12 @@ class Player {
         this.dodge = this.getDodgeChance();
     }
     getGlanceReduction() {
-        let low = 1.3 - 0.05*(this.target.defense - this.stats.skill);
-        let high = 1.2 - 0.03*(this.target.defense - this.stats.skill);
+        let low = 1.3 - 0.05 * (this.target.defense - this.stats.skill);
+        let high = 1.2 - 0.03 * (this.target.defense - this.stats.skill);
         return (Math.min(low, 0.91) + Math.min(high, 0.99)) / 2;
     }
     getGlanceChance() {
-        return 10 + (this.target.defense - Math.min(this.level*5, this.stats.skill)) * 2;
+        return 10 + (this.target.defense - Math.min(this.level * 5, this.stats.skill)) * 2;
     }
     getMissChance() {
         let diff = this.target.defense - this.stats.skill;
@@ -134,14 +133,14 @@ class Player {
         this.oh.step();
         this.timer = this.timer < 10 ? 0 : this.timer - 10;
         this.dodgeTimer = this.dodgeTimer < 10 ? 0 : this.dodgeTimer - 10;
-        if(this.bloodthirst) this.bloodthirst.step();
-        if(this.overpower) this.overpower.step();
-        if(this.whirlwind) this.whirlwind.step();
-        if(this.execute) this.execute.step();
+        if (this.bloodthirst) this.bloodthirst.step();
+        if (this.overpower) this.overpower.step();
+        if (this.whirlwind) this.whirlwind.step();
+        if (this.execute) this.execute.step();
     }
     roll(isAttack, canDodge) {
         let tmp = 0;
-        let roll = rng(1,10000);
+        let roll = rng(1, 10000);
         tmp += Math.max(this.miss + (isAttack ? 19 : 0), 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         if (canDodge) {
@@ -160,7 +159,7 @@ class Player {
         weapon.use();
         let dmg = weapon.dmg();
         let result = this.roll(true, true);
- 
+
         if (result == RESULT.MISS) {
             if (log) console.log('Attack misses');
         }
@@ -186,7 +185,7 @@ class Player {
         spell.use();
         let dmg = spell.dmg();
         let result = this.roll(false, spell.canDodge);
-        let roll = rng(1,10000);
+        let roll = rng(1, 10000);
 
         if (result == RESULT.MISS) {
             if (log) console.log(spell.constructor.name + ' misses');
@@ -221,6 +220,62 @@ class Player {
     }
 }
 
-function rng(min,max) {
-    return Math.floor(Math.random()*(max-min+1)+min);
+class Simulation {
+    constructor(player, timesecs, iterations, executeperc, output, callback) {
+        this.player = player;
+        this.timesecs = timesecs;
+        this.iterations = iterations;
+        this.output = output;
+        this.total = 0;
+        this.executestep = timesecs * 10 * (100 - executeperc);
+        this.callback = callback || function() {};
+    }
+    start() {
+        this.run(1);
+    }
+    run(i) {
+        let player = this.player;
+        player.reset();
+        for (let step = 0; step < this.timesecs * 1000; step += 10) {
+            player.step();
+            if (player.mh.timer == 0) this.total += player.attack(player.mh);
+            if (player.oh.timer == 0) this.total += player.attack(player.oh);
+            if (player.timer == 0) {
+                if (player.execute && step >= this.executestep && player.execute.canUse()) {
+                    this.total += player.cast(player.execute);
+                    continue;
+                }
+                if (player.overpower && player.overpower.canUse()) {
+                    this.total += player.cast(player.overpower);
+                    continue;
+                }
+                if (player.bloodthirst && player.bloodthirst.canUse()) {
+                    this.total += player.cast(player.bloodthirst);
+                    continue;
+                }
+                if (player.whirlwind && player.whirlwind.canUse()) {
+                    this.total += player.cast(player.whirlwind);
+                    continue;
+                }
+            }
+        }
+
+        if (i % Math.floor(this.iterations / 20) == 0 || i == this.iterations) {
+            this.output.text((this.total / (this.timesecs * i)).toFixed(2));
+            if (i < this.iterations) {
+                let view = this;
+                setTimeout(function () { view.run(i + 1); }, 0);
+            }
+            else {
+                this.callback();
+            }
+        }
+        else {
+            this.run(i + 1);
+        }
+    }
+}
+
+function rng(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
