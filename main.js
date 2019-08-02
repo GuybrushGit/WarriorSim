@@ -4,8 +4,9 @@
 // weapons
 // trinkets
 // buffs
+// check how speed mods stack
 
-var log = false;
+var log = true;
 var start, end;
 
 function getAuraFromRow(tr) {
@@ -21,11 +22,17 @@ function getAuraFromRow(tr) {
     return aura;
 }
 
-function startSimulation(output, aura, callback) {
+function startSimulation(output, gear, callback) {
     let input = {};
     let player = new Player();
-    $('tbody tr.active').each(function () {
-        player.auras.push(getAuraFromRow($(this)));
+    $('table').each(function() {
+        let slot = $(this).data('type');
+        let row = $(this).find('tbody tr.active');
+        let aura = {};
+        if (row.length) aura = getAuraFromRow(row);
+        if (gear && gear.slot == slot) aura = gear;
+        for (let prop in aura)
+            player.gear[prop] += aura[prop];
     });
     $('input[type="text"]').each(function () {
         let prop = $(this).attr('name');
@@ -33,17 +40,14 @@ function startSimulation(output, aura, callback) {
     });
     $('#spells input[type="checkbox"]').each(function () {
         if ($(this).is(':checked'))
-            player[$(this).val().toLowerCase()] = eval("new " + $(this).val() + "(player)");
+            player.spells[$(this).val().toLowerCase()] = eval("new " + $(this).val() + "(player)");
+    });
+    $('#buffs input[type="checkbox"]').each(function () {
+        player[$(this).val().toLowerCase()] = $(this).is(':checked');
     });
 
-    if (aura) {
-        let i = player.auras.length;
-        while (i--) {
-            if (player.auras[i].slot == aura.slot)
-                player.auras.splice(i, 1);
-        }
-        player.auras.push(aura);
-    }
+    player.talents.crit = 20;
+
 
     player.base.ap = input.ap;
     player.base.str = input.str;
@@ -54,7 +58,6 @@ function startSimulation(output, aura, callback) {
     player.update();
 
     new Simulation(player, input.timesecs, input.simulations, input.executeperc, output, callback).start();
-    //console.log(player);
 }
 
 function runRow(rows, index) {
@@ -80,6 +83,15 @@ function complete() {
 }
 
 $(document).ready(function () {
+
+    // talents.push({ crit: 5 }); // Cruelty
+    // talents.push({ extrarage: 40 }); // Unbridled Wrath
+    // talents.push({ battleshoutduration: 50 }); // Booming Voice
+    // talents.push({ battleshoutpower: 25 }); // Imp Battle Shout
+    // talents.push({ executecost: 5 }); // Execute Cost
+    // talents.push({ offhanddamage: 25 }); // Dual Wield Specialization
+
+
     $('input[type="submit"]').click(function () {
 
         start = new Date().getTime();
@@ -87,7 +99,7 @@ $(document).ready(function () {
         $('tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        runRow($('tbody tr'), 0);
+        //runRow($('tbody tr'), 0);
 
     });
 

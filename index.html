@@ -14,7 +14,7 @@
   <script type="text/javascript" src="libs/jquery.tablesorter.widgets.min.js"></script>
   <script type="text/javascript" src="spells.js"></script>
   <script type="text/javascript" src="classes.js"></script>
-  <script type="text/javascript" src="sim.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -47,12 +47,19 @@
 			<label>Base Agility</label>
 			<input type="text" name="agi" value="75" />
 		</div>
+		<div>
+			<label>Flurry</label>
+			<input type="checkbox" name="flurry">
+		</div>
+		<div id="buffs">
+			<input type="checkbox" name="spells" value="Flurry" checked> Flurry<br>
+		</div>
 		<div id="spells">
 			<label>Abilities</label><br>
 			<input type="checkbox" name="spells" value="Bloodthirst" checked> Bloodthirst<br>
 			<input type="checkbox" name="spells" value="Overpower" checked> Overpower<br>
 			<input type="checkbox" name="spells" value="Whirlwind"> Whirlwind<br>
-			<input type="checkbox" name="spells" value="Execute"> Execute (execute phase <input type="text" name="executeperc" value="20" />% of the fight)<br> 
+			<input type="checkbox" name="spells" value="Execute"> Execute (execute phase <input type="text" name="executeperc" value="20" />% of the fight)<br>
 		</div>
 		<br />
 		<input type="submit" value="Run" />

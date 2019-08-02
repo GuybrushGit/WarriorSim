@@ -33,7 +33,13 @@ class Weapon {
         return dmg * this.modifier;
     }
     use() {
-        this.timer = this.speed * 1000;
+        for (let name in this.player.auras)
+            if (!this.player.auras[name].procattack()) {
+                delete this.player.auras[name];
+                this.player.update();
+                console.log('Remove aura: ' + name);
+            }
+        this.timer = this.speed * 1000 * this.player.stats.speedmod;
     }
     step() {
         this.timer = this.timer < 10 ? 0 : this.timer - 10;
@@ -51,15 +57,12 @@ class Player {
             armor: 0,
             defense: 63 * 5,
         };
-        this.base = {
-            ap: 0,
-            agi: 0,
-            str: 0,
-            hit: 0,
-            crit: 0,
-            skill: this.level * 5,
-        };
+        this.base = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: this.level * 5, speedmod: 1 };
+        this.stats = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: 0 };
+        this.gear = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: 0 };
         this.auras = [];
+        this.spells = {};
+        this.talents = {};
     }
     reset() {
         this.rage = 0;
@@ -67,16 +70,26 @@ class Player {
         this.dodgeTimer = 0;
         this.mh.timer = 0;
         this.oh.timer = 0;
-        if (this.bloodthirst) this.bloodthirst.timer = 0;
-        if (this.overpower) this.overpower.timer = 0;
-        if (this.whirlwind) this.whirlwind.timer = 0;
-        if (this.execute) this.execute.timer = 0;
+        this.auras = [];
+        if (this.spells.bloodthirst) this.spells.bloodthirst.timer = 0;
+        if (this.spells.overpower) this.spells.overpower.timer = 0;
+        if (this.spells.whirlwind) this.spells.whirlwind.timer = 0;
+        if (this.spells.execute) this.spells.execute.timer = 0;
+        this.update();
     }
     update() {
-        this.stats = $.extend({}, this.base);
-        for (let aura of this.auras)
-            for (let prop in aura)
-                this.stats[prop] += aura[prop];
+        
+        for (let prop in this.base)
+            this.stats[prop] = this.base[prop] + (this.gear[prop] || 0);
+        for (let prop in this.talents)
+            this.stats[prop] += this.talents[prop];
+        for (let aura of this.auras) {
+            for (let prop in aura.stats)
+                this.stats[prop] += aura.stats[prop];
+            for (let prop in aura.n_stats)
+                this.stats[prop] *= (1 - aura.n_stats[prop]/100);
+        }
+
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
         this.glanceReduction = this.getGlanceReduction();
@@ -111,10 +124,6 @@ class Player {
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);
         return r > 0.75 ? 0.75 : r;
     }
-    addAura(aura) {
-        this.auras.push(aura);
-        this.update();
-    }
     addRage(dmg, result, spell) {
         if (result == RESULT.MISS)
             return;
@@ -133,10 +142,10 @@ class Player {
         this.oh.step();
         this.timer = this.timer < 10 ? 0 : this.timer - 10;
         this.dodgeTimer = this.dodgeTimer < 10 ? 0 : this.dodgeTimer - 10;
-        if (this.bloodthirst) this.bloodthirst.step();
-        if (this.overpower) this.overpower.step();
-        if (this.whirlwind) this.whirlwind.step();
-        if (this.execute) this.execute.step();
+        if (this.spells.bloodthirst) this.spells.bloodthirst.step();
+        if (this.spells.overpower) this.spells.overpower.step();
+        if (this.spells.whirlwind) this.spells.whirlwind.step();
+        if (this.spells.execute) this.spells.execute.step();
     }
     roll(isAttack, canDodge) {
         let tmp = 0;
@@ -173,6 +182,7 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
+            this.procCrit();
             if (log) console.log('Attack crits for ' + dmg);
         }
         if (result == RESULT.HIT) {
@@ -197,6 +207,7 @@ class Player {
         if (result == RESULT.HIT) {
             if (roll < this.crit * 100) {
                 dmg *= 2;
+                this.procCrit();
                 if (log) console.log(spell.constructor.name + ' crits for ' + dmg);
             }
             else {
@@ -216,6 +227,13 @@ class Player {
         else {
             this.addRage(dmg, result, spell);
             return dmg;
+        }
+    }
+    procCrit() {
+        if (this.flurry) {
+            this.auras.flurry = new Flurry();
+            this.update();
+            console.log('Add aura: Flurry');
         }
     }
 }
@@ -241,20 +259,20 @@ class Simulation {
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             if (player.oh.timer == 0) this.total += player.attack(player.oh);
             if (player.timer == 0) {
-                if (player.execute && step >= this.executestep && player.execute.canUse()) {
-                    this.total += player.cast(player.execute);
+                if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
+                    this.total += player.cast(player.spells.execute);
                     continue;
                 }
-                if (player.overpower && player.overpower.canUse()) {
-                    this.total += player.cast(player.overpower);
+                if (player.spells.overpower && player.spells.overpower.canUse()) {
+                    this.total += player.cast(player.spells.overpower);
                     continue;
                 }
-                if (player.bloodthirst && player.bloodthirst.canUse()) {
-                    this.total += player.cast(player.bloodthirst);
+                if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                    this.total += player.cast(player.spells.bloodthirst);
                     continue;
                 }
-                if (player.whirlwind && player.whirlwind.canUse()) {
-                    this.total += player.cast(player.whirlwind);
+                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
+                    this.total += player.cast(player.spells.whirlwind);
                     continue;
                 }
             }
