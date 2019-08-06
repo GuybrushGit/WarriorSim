@@ -37,7 +37,7 @@ class Weapon {
             if (!this.player.auras[name].procattack()) {
                 delete this.player.auras[name];
                 this.player.update();
-                console.log('Remove aura: ' + name);
+                if (log) console.log('Remove aura: ' + name);
             }
         this.timer = this.speed * 1000 * this.player.stats.speedmod;
     }
@@ -83,11 +83,11 @@ class Player {
             this.stats[prop] = this.base[prop] + (this.gear[prop] || 0);
         for (let prop in this.talents)
             this.stats[prop] += this.talents[prop];
-        for (let aura of this.auras) {
-            for (let prop in aura.stats)
-                this.stats[prop] += aura.stats[prop];
-            for (let prop in aura.n_stats)
-                this.stats[prop] *= (1 - aura.n_stats[prop]/100);
+        for (let name in this.auras) {
+            for (let prop in this.auras[name].stats)
+                this.stats[prop] += this.auras[name].stats[prop];
+            for (let prop in this.auras[name].n_stats)
+                this.stats[prop] /= (1 + this.auras[name].n_stats[prop]/100);
         }
 
         this.stats.ap += this.stats.str * 2;
@@ -165,7 +165,6 @@ class Player {
         return RESULT.HIT;
     }
     attack(weapon) {
-        weapon.use();
         let dmg = weapon.dmg();
         let result = this.roll(true, true);
 
@@ -189,6 +188,7 @@ class Player {
             if (log) console.log('Attack hits for ' + dmg);
         }
 
+        weapon.use();
         return this.dealDamage(dmg, result);
     }
     cast(spell) {
@@ -233,7 +233,7 @@ class Player {
         if (this.flurry) {
             this.auras.flurry = new Flurry();
             this.update();
-            console.log('Add aura: Flurry');
+            if (log) console.log('Add aura: Flurry');
         }
     }
 }

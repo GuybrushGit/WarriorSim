@@ -6,7 +6,7 @@
 // buffs
 // check how speed mods stack
 
-var log = true;
+var log = false;
 var start, end;
 
 function getAuraFromRow(tr) {
@@ -46,7 +46,7 @@ function startSimulation(output, gear, callback) {
         player[$(this).val().toLowerCase()] = $(this).is(':checked');
     });
 
-    player.talents.crit = 20;
+    player.talents.crit = 5;
 
 
     player.base.ap = input.ap;
@@ -99,7 +99,7 @@ $(document).ready(function () {
         $('tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        //runRow($('tbody tr'), 0);
+        runRow($('tbody tr'), 0);
 
     });
 
