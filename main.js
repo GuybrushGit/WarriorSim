@@ -99,7 +99,7 @@ $(document).ready(function () {
         $('tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        runRow($('tbody tr'), 0);
+        //runRow($('tbody tr'), 0);
 
     });
 

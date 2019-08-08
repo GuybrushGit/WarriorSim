@@ -75,6 +75,7 @@ class Player {
         if (this.spells.overpower) this.spells.overpower.timer = 0;
         if (this.spells.whirlwind) this.spells.whirlwind.timer = 0;
         if (this.spells.execute) this.spells.execute.timer = 0;
+        if (this.spells.battleshout) this.spells.battleshout.timer = 0;
         this.update();
     }
     update() {
@@ -146,6 +147,14 @@ class Player {
         if (this.spells.overpower) this.spells.overpower.step();
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.execute) this.spells.execute.step();
+        if (this.spells.battleshout) this.spells.battleshout.step();
+        for(let name in this.auras)
+            if (!this.auras[name].step()) {
+                delete this.auras[name];
+                this.update();
+                if (log) console.log('Remove aura: ' + name);
+            }
+
     }
     roll(isAttack, canDodge) {
         let tmp = 0;
@@ -217,6 +226,9 @@ class Player {
 
         return this.dealDamage(dmg, result, spell);
     }
+    buff(spell) {
+        spell.use();
+    }
     dealDamage(dmg, result, spell) {
         // TODO: Modifiers
         if (result != RESULT.MISS && result != RESULT.DODGE) {
@@ -265,6 +277,10 @@ class Simulation {
                 }
                 if (player.spells.overpower && player.spells.overpower.canUse()) {
                     this.total += player.cast(player.spells.overpower);
+                    continue;
+                }
+                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
+                    player.buff(player.spells.battleshout);
                     continue;
                 }
                 if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {

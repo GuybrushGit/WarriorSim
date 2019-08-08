@@ -82,16 +82,28 @@ class Execute extends Spell {
     }
 }
 
+class BattleShout extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 10;
+        this.cooldown = 120;
+    }
+    use() {
+        super.use();
+        this.player.auras.battleshout = new Aura(120, { ap: 185 });
+        this.player.update();
+        if (log) console.log('use bshout');
+    }
+}
+
 class Aura {
-    constructor() {
-        this.duration = 0;
-        this.cooldown = 0;
-        this.timer = 0;
-        this.stats = {};
+    constructor(duration, stats) {
+        this.timer = duration * 1000;
+        this.stats = stats;
         this.n_stats = {};
     }
     step() {
-        this.timer = this.timer < 10 ? 0 : this.timer - 10;
+        return this.timer = this.timer < 10 ? 0 : this.timer - 10;
     }
     procattack() {
         return true;
@@ -100,9 +112,8 @@ class Aura {
 
 class Flurry extends Aura {
     constructor() {
-        super();
+        super(12, {});
         this.stacks = 3;
-        this.duration = 12;
         this.n_stats = { speedmod: 30 };
     }
     procattack() {
