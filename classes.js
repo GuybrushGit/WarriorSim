@@ -126,14 +126,12 @@ class Player {
         return r > 0.75 ? 0.75 : r;
     }
     addRage(dmg, result, spell) {
-        if (result == RESULT.MISS)
-            return;
         if (spell) {
-            if (result == RESULT.DODGE)
+            if (result == RESULT.MISS || result == RESULT.DODGE)
                 this.rage += spell.refund ? spell.cost * 0.8 : 0;
         }
         else {
-            let mod = result == RESULT.DODGE ? 0.75 : 1;
+            let mod = result == RESULT.MISS ? 0 : result == RESULT.DODGE ? 0.75 : 1;
             this.rage += (dmg / 230.6) * 7.5 * mod;
         }
         if (log) console.log('Rage: ' + this.rage);
