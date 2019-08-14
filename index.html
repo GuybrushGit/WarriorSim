@@ -8,6 +8,7 @@
   <link href="css/theme.default.min.css" rel="stylesheet">
   <link href="css/theme.blue.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="libs/jquery.tablesorter.min.js"></script>
@@ -19,6 +20,29 @@
 
 <body>
 	<section>
+		<article class="talents">
+			<label>Talents</label>
+			<table>
+				<tr>
+					<td><div class="talent" data-count="0" data-max-count="3"><img src="https://classicdb.ch/images/icons/medium/ability_rogue_ambush.jpg" alt="Improved Heroic Strike" /></div></td>
+					<td><div class="talent" data-count="0" data-max-count="5"><img src="https://classicdb.ch/images/icons/medium/ability_parry.jpg" alt="Deflection" /></div></td>
+					<td><div class="talent" data-count="0" data-max-count="3"><img src="https://classicdb.ch/images/icons/medium/ability_gouge.jpg" alt="Improved Rend" /></div></td>
+					<td></td>
+				</tr>
+
+				<tr><th colspan="4">Arms</th></tr>
+			</table>
+			<table>
+
+				<tr><th colspan="4">Fury</th></tr>
+			</table>
+			<table>
+
+				<tr><th colspan="4">Protection</th></tr>
+			</table>
+		</article>
+
+
 		<div>
 			<label>Debug</label>
 			<input type="checkbox" name="debug">
@@ -68,7 +92,7 @@
 	<hr />
 	<section>
 		<h3>Head</h3>
-		<table data-type="head">
+		<table class="gear" data-type="head">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -110,7 +134,7 @@
 
 	<section>
 		<h3>Neck</h3>
-		<table data-type="neck">
+		<table class="gear" data-type="neck">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -150,7 +174,7 @@
 
 	<!-- <section>
 		<h3></h3>
-		<table data-type="">
+		<table class="gear" data-type="">
 			<thead>
 				<tr>
 					<th>Name</th>

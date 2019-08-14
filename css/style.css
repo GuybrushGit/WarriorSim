@@ -1,3 +1,7 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
 input[type="text"] {
     margin-bottom: 5px;
     width: 40px;
@@ -30,4 +34,77 @@ td span.n {
 }
 input[name="executeperc"] {
     width: 25px;
+}
+article {
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+article label {
+    position: absolute;
+    left: 20px;
+    top: -9px;
+    font-weight: bold;
+    display: inline-block;
+    background: white;
+    width: auto;
+    padding: 0 10px;
+}
+.talent {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-right: 4px;
+    user-select: none;
+}
+.talent img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.talent:after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 4px;
+}
+.talent:before {
+    content: attr(data-count);
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    background: black;
+    color: green;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10;
+    font-size: 12px;
+    padding: 1px 3px;
+    color: rgb(23, 253, 23);
+}
+.talent.maxed:before {
+    color: rgb(231, 186, 0);
+}
+.talents {
+    display: inline-flex;
+}
+.talents table {
+    padding: 10px 10px 0;
+    border-left: 1px solid #cccccc;
+}
+.talents table:first-of-type {
+    border-left: 0;
+}
+.talents th {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0 5px;
 }

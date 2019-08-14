@@ -45,8 +45,13 @@ function startSimulation(output, gear, callback) {
     $('#buffs input[type="checkbox"]').each(function () {
         player[$(this).val().toLowerCase()] = $(this).is(':checked');
     });
+    $('.talent').each(function() {
+        let name = $(this).find('img').attr('alt');
+        let count = parseInt($(this).attr('data-count'));
+        if (count > 0) $.extend(player.talents, talents[name](count));
+    });
 
-    player.talents.crit = 5;
+    //player.talents.crit = 5;
 
 
     player.base.ap = input.ap;
@@ -103,15 +108,35 @@ $(document).ready(function () {
 
     });
 
-    $("table").tablesorter({
+    $("table.gear").tablesorter({
         theme: 'blue',
         widthFixed: true,
         sortList: [[11, 1]]
     });
 
-    $('tbody td').click(function () {
+    $('table.gear tbody td').click(function () {
         let tr = $(this).parent();
         tr.toggleClass('active');
         tr.siblings().removeClass('active');
     });
+
+    $('.talent').click(function(e) {
+        let count = parseInt($(this).attr('data-count'));
+        let maxcount = parseInt($(this).attr('data-max-count'));
+        $(this).attr('data-count', count < maxcount ? count + 1 : maxcount);
+        if (count >= maxcount - 1) $(this).addClass('maxed');
+    });
+
+    $('.talent').on('contextmenu',function(e) {
+        e.preventDefault();
+        let count = parseInt($(this).attr('data-count'));
+        $(this).attr('data-count', count < 1 ? 0 : count - 1);
+        $(this).removeClass('maxed');
+    });
 });
+
+var talents = {
+    "Improved Heroic Strike": function(count) { return { impheroicstrike: count }},
+    "Deflection": function(count) { return { parry: count }},
+    "Improved Rend": function(count) { return { rendmod: 5 + count*10 }},
+}
