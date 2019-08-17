@@ -1,6 +1,15 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
+    background: rgb(38, 38, 38);
+    color: rgb(222, 222, 222);
+    margin: 0;
+}
+section {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 input[type="text"] {
     margin-bottom: 5px;
@@ -37,19 +46,21 @@ input[name="executeperc"] {
 }
 article {
     display: inline-block;
+    vertical-align: top;
     border: 1px solid #cccccc;
     border-radius: 2px;
     margin: 20px auto;
     position: relative;
-    padding: 10px;
+    padding: 20px;
+    height: 383px;
 }
-article label {
+article > label {
     position: absolute;
-    left: 20px;
+    left: 12px;
     top: -9px;
     font-weight: bold;
     display: inline-block;
-    background: white;
+    background: rgb(38, 38, 38);
     width: auto;
     padding: 0 10px;
 }
@@ -59,6 +70,8 @@ article label {
     position: relative;
     margin-right: 4px;
     user-select: none;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 5px;
 }
 .talent img {
     width: 100%;
@@ -95,9 +108,10 @@ article label {
 }
 .talents {
     display: inline-flex;
+    position: relative;
 }
 .talents table {
-    padding: 10px 10px 0;
+    padding: 0 10px 0;
     border-left: 1px solid #cccccc;
 }
 .talents table:first-of-type {
@@ -106,5 +120,72 @@ article label {
 .talents th {
     text-align: center;
     font-size: 12px;
-    padding: 10px 0 5px;
+    padding: 20px 0 5px;
+}
+.tooltip {
+    width: 350px;
+    background: url(../img/tooltip.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    display: none;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    z-index: 20;
+    border: 1px solid grey;
+}
+.tooltip p {
+    margin: 0;
+    white-space: normal;
+}
+.tooltip .description {
+    margin: 0;
+    white-space: normal;
+    color:#FFCD45;
+    margin-top: 6px;
+    display: none;
+}
+.talent:hover .tooltip {
+    display: block;
+}
+.buff:hover .tooltip {
+    display: block;
+}
+.talent[data-count="0"] .description[data-index="0"] { display: block; }
+.talent[data-count="1"] .description[data-index="1"] { display: block; }
+.talent[data-count="2"] .description[data-index="2"] { display: block; }
+.talent[data-count="3"] .description[data-index="3"] { display: block; }
+.talent[data-count="4"] .description[data-index="4"] { display: block; }
+.talent.maxed .description:last-of-type { display: block; }
+.buff {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 3px;
+    user-select: none;
+    border: 1px solid rgb(82, 82, 82);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in;
+}
+
+.buff img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0.3;
+    transition: opacity 0.2s ease-in;
+}
+.buff.active {
+    border-color: #FFCD45;
+}
+.buff.active img {
+    opacity: 1;
+}
+.buff .tooltip .description {
+    display: block;
 }

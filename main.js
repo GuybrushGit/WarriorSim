@@ -87,6 +87,8 @@ function complete() {
     });
 }
 
+
+
 $(document).ready(function () {
 
     // talents.push({ crit: 5 }); // Cruelty
@@ -95,7 +97,9 @@ $(document).ready(function () {
     // talents.push({ battleshoutpower: 25 }); // Imp Battle Shout
     // talents.push({ executecost: 5 }); // Execute Cost
     // talents.push({ offhanddamage: 25 }); // Dual Wield Specialization
-
+    buildBuffs();
+    buildTalents();
+    talentEvents();
 
     $('input[type="submit"]').click(function () {
 
@@ -109,7 +113,7 @@ $(document).ready(function () {
     });
 
     $("table.gear").tablesorter({
-        theme: 'blue',
+        theme: 'dark',
         widthFixed: true,
         sortList: [[11, 1]]
     });
@@ -119,24 +123,10 @@ $(document).ready(function () {
         tr.toggleClass('active');
         tr.siblings().removeClass('active');
     });
-
-    $('.talent').click(function(e) {
-        let count = parseInt($(this).attr('data-count'));
-        let maxcount = parseInt($(this).attr('data-max-count'));
-        $(this).attr('data-count', count < maxcount ? count + 1 : maxcount);
-        if (count >= maxcount - 1) $(this).addClass('maxed');
-    });
-
-    $('.talent').on('contextmenu',function(e) {
-        e.preventDefault();
-        let count = parseInt($(this).attr('data-count'));
-        $(this).attr('data-count', count < 1 ? 0 : count - 1);
-        $(this).removeClass('maxed');
-    });
 });
 
-var talents = {
-    "Improved Heroic Strike": function(count) { return { impheroicstrike: count }},
-    "Deflection": function(count) { return { parry: count }},
-    "Improved Rend": function(count) { return { rendmod: 5 + count*10 }},
-}
+// var talents = {
+//     "Improved Heroic Strike": function(count) { return { impheroicstrike: count }},
+//     "Deflection": function(count) { return { parry: count }},
+//     "Improved Rend": function(count) { return { rendmod: 5 + count*10 }},
+// }

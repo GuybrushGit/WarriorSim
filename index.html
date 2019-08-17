@@ -6,59 +6,62 @@
   <title>Simulator</title>
 
   <link href="css/theme.default.min.css" rel="stylesheet">
-  <link href="css/theme.blue.min.css" rel="stylesheet">
+  <link href="css/theme.dark.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="libs/jquery.tablesorter.min.js"></script>
   <script type="text/javascript" src="libs/jquery.tablesorter.widgets.min.js"></script>
+  <script type="text/javascript" src="talents.js"></script>
+  
   <script type="text/javascript" src="spells.js"></script>
   <script type="text/javascript" src="classes.js"></script>
+  <script type="text/javascript" src="buffs.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
 	<section>
+		<article class="settings">
+			<label>Settings</label>
+			<div>
+				<label>Target Armor</label>
+				<input type="text" name="armor" value="1000" />
+			</div>
+			<div>
+				<label>Fight Duration</label>
+				<input type="text" name="timesecs" value="180" /><span> seconds</span>
+			</div>
+			<div>
+				<label>Simulations</label>
+				<input type="text" name="simulations" value="1" />
+			</div>
+			<div>
+				<label>Race</label>
+			</div>
+			<div>
+				<label>Rotation</label>
+				<input type="checkbox" value="Bloodthirst" checked> Bloodthirst<br>
+				<input type="checkbox" value="Overpower" checked> Overpower<br>
+				<input type="checkbox" value="Whirlwind"> Whirlwind<br>
+				<input type="checkbox" value="Execute"> Execute (execute phase <input type="text" name="executeperc" value="20" />% of the fight)<br>
+				<input type="checkbox" value="BattleShout" checked> Battle Shout<br>
+			</div>
+		</article>
+		<article class="buffs">
+			<label>Buffs</label>
+		</article>
 		<article class="talents">
 			<label>Talents</label>
-			<table>
-				<tr>
-					<td><div class="talent" data-count="0" data-max-count="3"><img src="https://classicdb.ch/images/icons/medium/ability_rogue_ambush.jpg" alt="Improved Heroic Strike" /></div></td>
-					<td><div class="talent" data-count="0" data-max-count="5"><img src="https://classicdb.ch/images/icons/medium/ability_parry.jpg" alt="Deflection" /></div></td>
-					<td><div class="talent" data-count="0" data-max-count="3"><img src="https://classicdb.ch/images/icons/medium/ability_gouge.jpg" alt="Improved Rend" /></div></td>
-					<td></td>
-				</tr>
-
-				<tr><th colspan="4">Arms</th></tr>
-			</table>
-			<table>
-
-				<tr><th colspan="4">Fury</th></tr>
-			</table>
-			<table>
-
-				<tr><th colspan="4">Protection</th></tr>
-			</table>
 		</article>
+		
 
 
-		<div>
-			<label>Debug</label>
-			<input type="checkbox" name="debug">
-		</div>
-		<div>
-			<label>Target Armor</label>
-			<input type="text" name="armor" value="1000" />
-		</div>
-		<div>
-			<label>Fight Duration</label>
-			<input type="text" name="timesecs" value="180" /><span> seconds</span>
-		</div>
-		<div>
-			<label>Simulations</label>
-			<input type="text" name="simulations" value="1" />
-		</div>
+		
+		
+		
+		
 		<div>
 			<label>Base AP</label>
 			<input type="text" name="ap" value="160" />
@@ -75,21 +78,12 @@
 			<label>Buffs</label><br />
 			<input type="checkbox" value="Flurry" checked> Flurry<br>
 		</div>
-		<div id="spells">
-			<label>Abilities</label><br>
-			<input type="checkbox" value="Bloodthirst" checked> Bloodthirst<br>
-			<input type="checkbox" value="Overpower" checked> Overpower<br>
-			<input type="checkbox" value="Whirlwind"> Whirlwind<br>
-			<input type="checkbox" value="Execute"> Execute (execute phase <input type="text" name="executeperc" value="20" />% of the fight)<br>
-			<input type="checkbox" value="BattleShout" checked> Battle Shout<br>
-		</div>
 		<br />
 		<input type="submit" value="Run" />
 		<progress value="0" max="100"></progress>
 		<span id="dps"></span>
 	</section>
 
-	<hr />
 	<section>
 		<h3>Head</h3>
 		<table class="gear" data-type="head">
