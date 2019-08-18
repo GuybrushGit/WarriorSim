@@ -227,6 +227,7 @@ class Player {
     }
     buff(spell) {
         spell.use();
+        return 0;
     }
     dealDamage(dmg, result, spell) {
         dmg *= this.stats.dmgmod;
@@ -250,13 +251,12 @@ class Player {
 }
 
 class Simulation {
-    constructor(player, timesecs, iterations, executeperc, output, callback) {
+    constructor(player, timesecs, iterations, output, callback) {
         this.player = player;
         this.timesecs = timesecs;
         this.iterations = iterations;
         this.output = output;
         this.total = 0;
-        this.executestep = timesecs * 10 * (100 - executeperc);
         this.callback = callback || function() {};
     }
     start() {
@@ -269,28 +269,7 @@ class Simulation {
             player.step();
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             if (player.oh.timer == 0) this.total += player.attack(player.oh);
-            if (player.timer == 0) {
-                if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
-                    this.total += player.cast(player.spells.execute);
-                    continue;
-                }
-                if (player.spells.overpower && player.spells.overpower.canUse()) {
-                    this.total += player.cast(player.spells.overpower);
-                    continue;
-                }
-                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
-                    player.buff(player.spells.battleshout);
-                    continue;
-                }
-                if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
-                    this.total += player.cast(player.spells.bloodthirst);
-                    continue;
-                }
-                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
-                    this.total += player.cast(player.spells.whirlwind);
-                    continue;
-                }
-            }
+            if (player.timer == 0) this.total += player.rotation() || 0;
         }
 
         if (i % Math.floor(this.iterations / 20) == 0 || i == this.iterations) {
@@ -307,6 +286,7 @@ class Simulation {
             this.run(i + 1);
         }
     }
+
 }
 
 function rng(min, max) {

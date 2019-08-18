@@ -1,11 +1,20 @@
 var buffs = [
    {
+      name: "Battle Shout",
+      iconname: "Ability_Warrior_BattleShout",
+      description: "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 185. Lasts 2 min.",
+      group: "",
+      ap: 185,
+      checked: true
+   },
+   {
       name: "Rallying Cry of the Dragonslayer",
       iconname: "inv_misc_head_dragon_01",
       description: "Increases critical chance of spells by 10%, melee and ranged by 5% and grants 140 attack power. 120 minute duration.",
       group: "",
       ap: 140,
       crit: 5,
+      checked: true
    },
    {
       name: "Spirit of Zandalar",
@@ -14,6 +23,7 @@ var buffs = [
       group: "",
       strmod: 15,
       agimod: 15,
+      checked: true
    },
    {
       name: "Sayge's Dark Fortune of Damage",
@@ -72,7 +82,8 @@ var buffs = [
       description: "Increases Agility by 25 and chance to get a critical hit by 2% for 1 hr.",
       group: "elixir",
       agi: 25,
-      crit: 2
+      crit: 2,
+      checked: true
    },
    {
       name: "Elixir of Greater Agility",
@@ -93,7 +104,8 @@ var buffs = [
       iconname: "inv_potion_61",
       description: "Increases your Strength by 25 for 1 hr.",
       group: "str",
-      str: 25
+      str: 25,
+      checked: true
    },
    {
       name: "Juju Might",
@@ -114,31 +126,25 @@ var buffs = [
       iconname: "inv_misc_food_64",
       description: "Restores 2148 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 20 Strength for 15 min.",
       group: "food",
+      str: 20
    },
    {
       name: "Grilled Squid",
       iconname: "inv_misc_fish_13",
-      description: "Restores 874.8 health over 27 sec. Must remain seated while eating. If you eat for 10 seconds will also increase your Agility by 162 for 10 min.",
+      description: "Restores 874.8 health over 27 sec. Must remain seated while eating. If you eat for 10 seconds will also increase your Agility by 10 for 10 min.",
       group: "food",
+      agi: 10
    },
    {
       name: "Blessed Sunfruit",
       iconname: "inv_misc_food_41",
       description: "Restores 1933.2 health over 27 sec. Must remain seated while eating. Also increases your Strength by 10 for 10 min.",
       group: "food",
+      str: 10
    },
-   {
-      name: "Elemental Sharpening Stone",
-      iconname: "inv_stone_02",
-      description: "Increase critical chance on a melee weapon by 2% for 30 minutes.",
-      group: "stone",
-   },
-   {
-      name: "Dense Stone",
-      iconname: "inv_stone_sharpeningstone_05",
-      description: "Increase weapon damage by 8 for 30 minutes.",
-      group: "stone",
-   },
+   
+   
+   
    // TODO
    // {
    //    name: "Juju Flurry",
@@ -148,6 +154,18 @@ var buffs = [
    //    haste: 3
    // },
    // Mighty Rage Potion
+   // {
+   //    name: "Elemental Sharpening Stone",
+   //    iconname: "inv_stone_02",
+   //    description: "Increase critical chance on a melee weapon by 2% for 30 minutes.",
+   //    group: "stone",
+   // },
+   // {
+   //    name: "Dense Stone",
+   //    iconname: "inv_stone_sharpeningstone_05",
+   //    description: "Increase weapon damage by 8 for 30 minutes.",
+   //    group: "stone",
+   // },
 ];
 
 
@@ -164,6 +182,7 @@ function buildBuffs() {
       div.attr('data-strmod', buff.strmod);
       div.attr('data-dmgmod', buff.dmgmod);
       div.attr('data-haste', buff.haste);
+      if (buff.checked) div.addClass('active');
       div.click(function() {
          let b = $(this);
          b.toggleClass('active');

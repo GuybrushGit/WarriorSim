@@ -23,7 +23,6 @@ function getAuraFromRow(tr) {
 }
 
 function startSimulation(output, gear, callback) {
-    let input = {};
     let player = new Player();
 
     // Gear
@@ -63,22 +62,66 @@ function startSimulation(output, gear, callback) {
     });
 
     // Settings
-    $('input[type="text"]').each(function () {
-        let prop = $(this).attr('name');
-        input[prop] = parseInt($(this).val());
+    let settings = {};
+    $('.settings input').each(function() {
+        settings[$(this).attr('name')] = parseInt($(this).val());
     });
-    $('#spells input[type="checkbox"]').each(function () {
-        if ($(this).is(':checked'))
-            player.spells[$(this).val().toLowerCase()] = eval("new " + $(this).val() + "(player)");
+    $('.race.active').each(function() {
+        let r = $(this);
+        player.base.ap = r.data('ap');
+        player.base.str = r.data('str');
+        player.base.agi = r.data('agi');
     });
-    $('#buffs input[type="checkbox"]').each(function () {
-        player[$(this).val().toLowerCase()] = $(this).is(':checked');
-    });
-    player.base.ap = input.ap;
-    player.base.str = input.str;
-    player.base.agi = input.agi;
-    player.target.armor = input.armor;
 
+    let rotation = "player.rotation = function() {";
+    $('.spell.active').each(function() {
+        let type = $(this).data('type');
+        let name = $(this).find('img').attr('alt');
+        let lname = name.toLowerCase();
+        player.spells[lname] = eval(`new ${name}(player)`);
+
+        if (type == "buff")
+            rotation += `if (player.spells.${lname}.canUse()) return player.buff(player.spells.${lname});`;
+        else
+            rotation += `if (player.spells.${lname}.canUse()) return player.cast(player.spells.${lname});`;
+
+
+
+
+
+
+
+          //   settings.executeperc
+          //   this.executestep = timesecs * 10 * (100 - executeperc);
+          // if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
+          //           this.total += player.cast(player.spells.execute);
+          //           continue;
+          //       }
+          //       if (player.spells.overpower && player.spells.overpower.canUse()) {
+          //           this.total += player.cast(player.spells.overpower);
+          //           continue;
+          //       }
+          //       if (player.spells.battleshout && player.spells.battleshout.canUse()) {
+          //           player.buff(player.spells.battleshout);
+          //           continue;
+          //       }
+          //       if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+          //           this.total += player.cast(player.spells.bloodthirst);
+          //           continue;
+          //       }
+          //       if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
+          //           this.total += player.cast(player.spells.whirlwind);
+          //           continue;
+          //       }
+          //   }
+
+
+
+    });
+    rotation += "}";
+    eval(rotation);
+    console.log(rotation, player.rotation);
+    
 
 
     player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
@@ -86,10 +129,8 @@ function startSimulation(output, gear, callback) {
 
 
     player.update();
-
     console.log(player);
-
-    new Simulation(player, input.timesecs, input.simulations, input.executeperc, output, callback).start();
+    new Simulation(player, settings.timesecs, settings.simulations, output, callback).start();
 }
 
 function runRow(rows, index) {
@@ -102,7 +143,8 @@ function runRow(rows, index) {
 }
 
 function complete() {
-    $('table').trigger('update');
+    $('progress').hide();
+    $('table.gear').trigger('update');
     end = new Date().getTime();
     console.log( (end - start) / 1000 );
     let dps = parseFloat($('#dps').text()).toFixed(2);
@@ -125,11 +167,12 @@ $(document).ready(function () {
     $('input[type="submit"]').click(function () {
 
         start = new Date().getTime();
-        $('progress').attr('max', $('tbody tr').length);
+        $('progress').show();
+        $('progress').attr('max', $('table.gear tbody tr').length);
         $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        //runRow($('tbody tr'), 0);
+        //runRow($('table.gear tbody tr'), 0);
 
     });
 
@@ -144,4 +187,11 @@ $(document).ready(function () {
         tr.toggleClass('active');
         tr.siblings().removeClass('active');
     });
+
+    $('.race').click(function() {
+        $(this).toggleClass('active');
+        $(this).siblings().removeClass('active');
+    });
+
+
 });

@@ -1,8 +1,8 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    background: rgb(38, 38, 38);
-    color: rgb(222, 222, 222);
+    background: #123;
+    color: #ddd;
     margin: 0;
 }
 section {
@@ -17,11 +17,6 @@ input[type="text"] {
 }
 input[type="checkbox"] {
     vertical-align: top;
-}
-label {
-    width: 100px;
-    display: inline-block;
-    vertical-align: middle;
 }
 h3 {
     text-align: center;
@@ -47,7 +42,7 @@ input[name="executeperc"] {
 article {
     display: inline-block;
     vertical-align: top;
-    border: 1px solid #cccccc;
+    border: 1px solid #ddd;
     border-radius: 2px;
     margin: 20px auto;
     position: relative;
@@ -62,15 +57,13 @@ article > label {
     top: -9px;
     font-weight: bold;
     display: inline-block;
-    background: rgb(38, 38, 38);
+    background: #123;
     width: auto;
     padding: 0 10px;
 }
-.settings {
-    width: 340px;
-}
-.buffs {
-    width: calc(100% - 350px);
+.settings, .buffs, .char {
+    width: 33%;
+    height: 340px;
 }
 .talent {
     width: 40px;
@@ -78,7 +71,7 @@ article > label {
     position: relative;
     margin-right: 4px;
     user-select: none;
-    border: 1px solid rgb(82, 82, 82);
+    border: 1px solid #444;
     border-radius: 5px;
 }
 .talent img {
@@ -130,7 +123,7 @@ article > label {
 }
 .talents table {
     padding: 0 10px 0;
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #ddd;
 }
 .talents table:first-of-type {
     border-left: 0;
@@ -206,4 +199,94 @@ article > label {
 }
 .buff .tooltip .description {
     display: block;
+}
+.settings ul, .char ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.settings li, .char li {
+    border-bottom: 1px solid #ddd;
+    padding: 7px 10px;
+    overflow: hidden;
+}
+.settings li:first-child, .char li:first-child {
+    padding-top: 0;
+}
+.settings li:last-child, .char li:last-child  {
+    border: 0;
+    padding-bottom: 0;
+}
+.settings input, .char input {
+    background: none;
+    border: none;
+    color: inherit;
+    outline: none;
+    text-align: right;
+    margin: 0;
+    float: right;
+}
+.race, .spell {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 2px 1px;
+    user-select: none;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in;
+    right: -10px;
+}
+.race img, .spell img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in;
+}
+.race.active img, .spell.active img {
+    filter: none;
+}
+.race:nth-child(4), .race:last-child,
+.spell:nth-child(4), .spell:last-child {
+    margin-right: 0;
+}
+.settings label + div {
+    float: right;
+}
+.spell {
+    border: 1px solid rgb(82, 82, 82);
+}
+.spell.active {
+    border-color: #FFCD45;
+}
+input[type="submit"] {
+    width: 90%;
+    border: 1px solid #ddd;
+    background: none;
+    height: 50px;
+    color: #ddd;
+    font-weight: bold;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    float: none;
+    text-align: center;
+}
+input[type="submit"]:hover {
+    background: #ddd;
+    color: #123;
+}
+progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    z-index: 20;
+    display: none;
 }
