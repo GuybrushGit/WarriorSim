@@ -18,7 +18,9 @@ var talents =[
             ],
             x:0,
             y:0,
-            iconname:'Ability_Rogue_Ambush'
+            iconname:'Ability_Rogue_Ambush',
+            c: 0,
+            aura: function(count) { return { impheroicstrike: count } }, // TODO
          },
          {  
             i:130,
@@ -40,7 +42,9 @@ var talents =[
             ],
             x:1,
             y:0,
-            iconname:'Ability_Parry'
+            c:2,
+            iconname:'Ability_Parry',
+            aura: function(count) { return { parry: count } }, // TODO
          },
          {  
             i:127,
@@ -58,7 +62,9 @@ var talents =[
             ],
             x:2,
             y:0,
-            iconname:'Ability_Gouge'
+            c:3,
+            iconname:'Ability_Gouge',
+            aura: function(count) { return { rendmod: 5 + count*10 } }, // TODO
          },
          {  
             i:126,
@@ -74,7 +80,9 @@ var talents =[
             ],
             x:0,
             y:1,
-            iconname:'Ability_Warrior_Charge'
+            c:0,
+            iconname:'Ability_Warrior_Charge',
+            aura: function(count) { return { chargebonus: count * 3 } }, // TODO
          },
          {  
             i:641,
@@ -96,7 +104,9 @@ var talents =[
             ],
             x:1,
             y:1,
-            iconname:'Spell_Nature_EnchantArmor'
+            c:5,
+            iconname:'Spell_Nature_EnchantArmor',
+            aura: function(count) { return { rageretained: count * 5 } }, // TODO
          },
          {  
             i:128,
@@ -114,7 +124,9 @@ var talents =[
             ],
             x:3,
             y:1,
-            iconname:'Ability_ThunderClap'
+            c:0,
+            iconname:'Ability_ThunderClap',
+            aura: function(count) { return { impthunderclap: Math.pow(2,count-1) } }, // TODO
          },
          {  
             i:131,
@@ -130,7 +142,9 @@ var talents =[
             ],
             x:0,
             y:2,
-            iconname:'INV_Sword_05'
+            c:2,
+            iconname:'INV_Sword_05',
+            aura: function(count) { return { overpowercrit: 25 * count } }, // TODO
          },
          {  
             i:137,
@@ -148,7 +162,9 @@ var talents =[
                4,
                5
             ],
-            iconname:'Spell_Holy_BlessingOfStamina'
+            c:1,
+            iconname:'Spell_Holy_BlessingOfStamina',
+            aura: function(count) { return { angermanagement: count } }, // TODO
          },
          {  
             i:121,
@@ -170,7 +186,9 @@ var talents =[
                2,
                3
             ],
-            iconname:'Ability_BackStab'
+            c:3,
+            iconname:'Ability_BackStab',
+            aura: function(count) { return { deepwounds: count * 20 } }, // TODO
          },
          {  
             i:136,
@@ -192,7 +210,9 @@ var talents =[
             ],
             x:1,
             y:3,
-            iconname:'INV_Axe_09'
+            c:0,
+            iconname:'INV_Axe_09',
+            aura: function(count) { return { dmgmod_twohand: count } }, // TODO
          },
          {  
             i:662,
@@ -212,7 +232,9 @@ var talents =[
                8,
                3
             ],
-            iconname:'Ability_SearingArrow'
+            c:2,
+            iconname:'Ability_SearingArrow',
+            aura: function(count) { return { abilitiescrit: count * 10 } }, // TODO
          },
          {  
             i:132,
@@ -234,7 +256,9 @@ var talents =[
             ],
             x:0,
             y:4,
-            iconname:'INV_Axe_06'
+            c:0,
+            iconname:'INV_Axe_06',
+            aura: function(count) { return { crit_axes: count } }, // TODO
          },
          {  
             i:133,
@@ -248,7 +272,9 @@ var talents =[
             ],
             x:1,
             y:4,
-            iconname:'Ability_Rogue_SliceDice'
+            c:0,
+            iconname:'Ability_Rogue_SliceDice',
+            aura: function(count) { return { sweepingstrikes: count } }, // TODO
          },
          {  
             i:125,
@@ -270,7 +296,9 @@ var talents =[
             ],
             x:2,
             y:4,
-            iconname:'INV_Mace_01'
+            c:0,
+            iconname:'INV_Mace_01',
+            aura: function(count) { return { macestun: count == 5 ? 6 : count } }, // TODO
          },
          {  
             i:123,
@@ -292,7 +320,9 @@ var talents =[
             ],
             x:3,
             y:4,
-            iconname:'INV_Sword_27'
+            c:0,
+            iconname:'INV_Sword_27',
+            aura: function(count) { return { proc_sword: count } }, // TODO
          },
          {  
             i:134,
@@ -314,7 +344,9 @@ var talents =[
             ],
             x:0,
             y:5,
-            iconname:'INV_Weapon_Halbard_01'
+            c:0,
+            iconname:'INV_Weapon_Halbard_01',
+            aura: function(count) { return { crit_polearm: count } }, // TODO
          },
          {  
             i:129,
@@ -332,7 +364,9 @@ var talents =[
             ],
             x:2,
             y:5,
-            iconname:'Ability_ShockWave'
+            c:0,
+            iconname:'Ability_ShockWave',
+            aura: function(count) { return { imphamstring: count * 5 } }, // TODO
          },
          {  
             i:135,
@@ -350,7 +384,9 @@ var talents =[
                12,
                1
             ],
-            iconname:'Ability_Warrior_SavageBlow'
+            c:0,
+            iconname:'Ability_Warrior_SavageBlow',
+            aura: function(count) { return { mortalstrike: count } }, // TODO
          }
       ]
    },
@@ -377,7 +413,9 @@ var talents =[
             ],
             x:1,
             y:0,
-            iconname:'Spell_Nature_Purge'
+            c:0,
+            iconname:'Spell_Nature_Purge',
+            aura: function(count) { return { boomingvoice: 10*count } }, // TODO
          },
          {  
             i:157,
@@ -399,7 +437,9 @@ var talents =[
             ],
             x:2,
             y:0,
-            iconname:'Ability_Rogue_Eviscerate'
+            c:5,
+            iconname:'Ability_Rogue_Eviscerate',
+            aura: function(count) { return { crit: count } }
          },
          {  
             i:161,
@@ -421,7 +461,9 @@ var talents =[
             ],
             x:1,
             y:1,
-            iconname:'Ability_Warrior_WarCry'
+            c:0,
+            iconname:'Ability_Warrior_WarCry',
+            aura: function(count) { return { impdemoshout: count * 8 } },
          },
          {  
             i:159,
@@ -443,7 +485,9 @@ var talents =[
             ],
             x:2,
             y:1,
-            iconname:'Spell_Nature_StoneClawTotem'
+            c:5,
+            iconname:'Spell_Nature_StoneClawTotem',
+            aura: function(count) { return { umbridledwrath: count * 8 } }, // TODO
          },
          {  
             i:166,
@@ -461,7 +505,9 @@ var talents =[
             ],
             x:0,
             y:2,
-            iconname:'Ability_Warrior_Cleave'
+            c:0,
+            iconname:'Ability_Warrior_Cleave',
+            aura: function(count) { return { cleavebonus: count * 40 } }, // TODO
          },
          {  
             i:160,
@@ -475,7 +521,9 @@ var talents =[
             ],
             x:1,
             y:2,
-            iconname:'Spell_Shadow_DeathScream'
+            c:0,
+            iconname:'Spell_Shadow_DeathScream',
+            aura: function(count) { return { piercinghowl: count } }, // TODO
          },
          {  
             i:661,
@@ -493,7 +541,9 @@ var talents =[
             ],
             x:2,
             y:2,
-            iconname:'Spell_Shadow_SummonImp'
+            c:0,
+            iconname:'Spell_Shadow_SummonImp',
+            aura: function(count) { return { bloodcraze: count } }, // TODO
          },
          {  
             i:154,
@@ -515,7 +565,9 @@ var talents =[
             ],
             x:3,
             y:2,
-            iconname:'Ability_Warrior_BattleShout'
+            c:5,
+            iconname:'Ability_Warrior_BattleShout',
+            aura: function(count) { return { impbattleshout: count * 5 } }, // TODO
          },
          {  
             i:1581,
@@ -537,7 +589,9 @@ var talents =[
             ],
             x:0,
             y:3,
-            iconname:'Ability_DualWield'
+            c:5,
+            iconname:'Ability_DualWield',
+            aura: function(count) { return { dmgmod_offhand: count * 5 } }, // TODO
          },
          {  
             i:1542,
@@ -553,7 +607,9 @@ var talents =[
             ],
             x:1,
             y:3,
-            iconname:'INV_Sword_48'
+            c:1,
+            iconname:'INV_Sword_48',
+            aura: function(count) { return { executecost: count == 2 ? 5 : count * 2 } }, // TODO
          },
          {  
             i:155,
@@ -575,7 +631,9 @@ var talents =[
             ],
             x:2,
             y:3,
-            iconname:'Spell_Shadow_UnholyFrenzy'
+            c:5,
+            iconname:'Spell_Shadow_UnholyFrenzy',
+            aura: function(count) { return { enrage: count * 5 } }, // TODO
          },
          {  
             i:168,
@@ -597,7 +655,9 @@ var talents =[
             ],
             x:0,
             y:4,
-            iconname:'Ability_Warrior_DecisiveStrike'
+            c:0,
+            iconname:'Ability_Warrior_DecisiveStrike',
+            aura: function(count) { return { impslam: count * 0.1 } }, // TODO
          },
          {  
             i:165,
@@ -611,7 +671,9 @@ var talents =[
             ],
             x:1,
             y:4,
-            iconname:'Spell_Shadow_DeathPact'
+            c:1,
+            iconname:'Spell_Shadow_DeathPact',
+            aura: function(count) { return { deathwish: count } }, // TODO
          },
          {  
             i:1543,
@@ -627,7 +689,9 @@ var talents =[
             ],
             x:3,
             y:4,
-            iconname:'Ability_Rogue_Sprint'
+            c:0,
+            iconname:'Ability_Rogue_Sprint',
+            aura: function(count) { return { impintercept: count * 5 } }, // TODO
          },
          {  
             i:1541,
@@ -643,7 +707,9 @@ var talents =[
             ],
             x:0,
             y:5,
-            iconname:'Spell_Nature_AncestralGuardian'
+            c:0,
+            iconname:'Spell_Nature_AncestralGuardian',
+            aura: function(count) { return { berserkerbonus: count * 5 } }, // TODO
          },
          {  
             i:156,
@@ -669,7 +735,9 @@ var talents =[
                10,
                5
             ],
-            iconname:'Ability_GhoulFrenzy'
+            c:5,
+            iconname:'Ability_GhoulFrenzy',
+            aura: function(count) { return { flurry: 5 + count * 5 } }, // TODO
          },
          {  
             i:167,
@@ -687,7 +755,9 @@ var talents =[
                12,
                1
             ],
-            iconname:'Spell_Nature_BloodLust'
+            c:1,
+            iconname:'Spell_Nature_BloodLust',
+            aura: function(count) { return { bloodthirst: count } }, // TODO
          }
       ]
    },
@@ -714,7 +784,9 @@ var talents =[
             ],
             x:1,
             y:0,
-            iconname:'INV_Shield_06'
+            c:0,
+            iconname:'INV_Shield_06',
+            aura: function(count) { return { block: count, blockragechance: count * 20  } }, // TODO
          },
          {  
             i:138,
@@ -736,7 +808,9 @@ var talents =[
             ],
             x:2,
             y:0,
-            iconname:'Spell_Nature_MirrorImage'
+            c:0,
+            iconname:'Spell_Nature_MirrorImage',
+            aura: function(count) { return { defense: count * 2 } }, // TODO
          },
          {  
             i:142,
@@ -752,7 +826,9 @@ var talents =[
             ],
             x:0,
             y:1,
-            iconname:'Ability_Racial_BloodRage'
+            c:0,
+            iconname:'Ability_Racial_BloodRage',
+            aura: function(count) { return { bloodragebonus: count == 2 ? 5 : count * 2 } }, // TODO
          },
          {  
             i:140,
@@ -774,7 +850,9 @@ var talents =[
             ],
             x:2,
             y:1,
-            iconname:'Spell_Holy_Devotion'
+            c:0,
+            iconname:'Spell_Holy_Devotion',
+            aura: function(count) { return { armormod: count * 2 } }, // TODO
          },
          {  
             i:141,
@@ -796,7 +874,9 @@ var talents =[
             ],
             x:3,
             y:1,
-            iconname:'Spell_Magic_MageArmor'
+            c:0,
+            iconname:'Spell_Magic_MageArmor',
+            aura: function(count) { return { stunresist: count * 3 } }, // TODO
          },
          {  
             i:153,
@@ -814,7 +894,9 @@ var talents =[
                2,
                2
             ],
-            iconname:'Spell_Holy_AshesToAshes'
+            c:0,
+            iconname:'Spell_Holy_AshesToAshes',
+            aura: function(count) { return { laststand: count } }, // TODO
          },
          {  
             i:145,
@@ -836,7 +918,9 @@ var talents =[
                0,
                5
             ],
-            iconname:'Ability_Defend'
+            c:0,
+            iconname:'Ability_Defend',
+            aura: function(count) { return { extrablock: count } }, // TODO
          },
          {  
             i:147,
@@ -854,7 +938,9 @@ var talents =[
             ],
             x:2,
             y:2,
-            iconname:'Ability_Warrior_Revenge'
+            c:0,
+            iconname:'Ability_Warrior_Revenge',
+            aura: function(count) { return { imprevenge: count * 15 } }, // TODO
          },
          {  
             i:144,
@@ -876,7 +962,9 @@ var talents =[
             ],
             x:3,
             y:2,
-            iconname:'Ability_Warrior_InnerRage'
+            c:0,
+            iconname:'Ability_Warrior_InnerRage',
+            aura: function(count) { return { threatmod: count * 3 } }, // TODO
          },
          {  
             i:146,
@@ -894,7 +982,9 @@ var talents =[
             ],
             x:0,
             y:3,
-            iconname:'Ability_Warrior_Sunder'
+            c:0,
+            iconname:'Ability_Warrior_Sunder',
+            aura: function(count) { return { impsunderarmor: count } }, // TODO
          },
          {  
             i:151,
@@ -912,7 +1002,9 @@ var talents =[
             ],
             x:1,
             y:3,
-            iconname:'Ability_Warrior_Disarm'
+            c:0,
+            iconname:'Ability_Warrior_Disarm',
+            aura: function(count) { return { impdisarm: count } }, // TODO
          },
          {  
             i:143,
@@ -928,7 +1020,9 @@ var talents =[
             ],
             x:2,
             y:3,
-            iconname:'Spell_Nature_Reincarnation'
+            c:0,
+            iconname:'Spell_Nature_Reincarnation',
+            aura: function(count) { return { imptaunt: count } }, // TODO
          },
          {  
             i:150,
@@ -944,7 +1038,9 @@ var talents =[
             ],
             x:0,
             y:4,
-            iconname:'Ability_Warrior_ShieldWall'
+            c:0,
+            iconname:'Ability_Warrior_ShieldWall',
+            aura: function(count) { return { impshieldwall: count == 2 ? 5 : count * 3 } }, // TODO
          },
          {  
             i:152,
@@ -958,7 +1054,9 @@ var talents =[
             ],
             x:1,
             y:4,
-            iconname:'Ability_ThunderBolt'
+            c:0,
+            iconname:'Ability_ThunderBolt',
+            aura: function(count) { return { concussionblow: count } }, // TODO
          },
          {  
             i:149,
@@ -974,7 +1072,9 @@ var talents =[
             ],
             x:2,
             y:4,
-            iconname:'Ability_Warrior_ShieldBash'
+            c:0,
+            iconname:'Ability_Warrior_ShieldBash',
+            aura: function(count) { return { impshieldbash: count * 50 } }, // TODO
          },
          {  
             i:702,
@@ -996,7 +1096,9 @@ var talents =[
             ],
             x:2,
             y:5,
-            iconname:'INV_Sword_20'
+            c:0,
+            iconname:'INV_Sword_20',
+            aura: function(count) { return { dmgmod_onehand: count * 2 } }, // TODO
          },
          {  
             i:148,
@@ -1014,7 +1116,9 @@ var talents =[
                13,
                1
             ],
-            iconname:'INV_Shield_05'
+            c:0,
+            iconname:'INV_Shield_05',
+            aura: function(count) { return { shieldslam: count } }, // TODO
          }
       ]
    }
@@ -1026,10 +1130,11 @@ function buildTalents() {
         let table = $('<table><tr><th colspan="4">' + tree.n + '</th></tr></table>');
         for(let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
         for(let talent of tree.t) {
-            let div = $('<div class="talent" data-count="0" data-max-count="' + talent.m + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
+            let div = $('<div class="talent" data-count="' + talent.c + '" data-max-count="' + talent.m + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
             div.html('<img src="img/' + talent.iconname + '.jpg" alt="' + talent.n + '" />');
             let tooltip = $('<div class="tooltip"><p>' + talent.n + '</p></div>');
             for (let j in talent.d) tooltip.append('<p data-index="' + j + '" class="description">' + talent.d[j] + '</p>');
+            if (talent.c >= talent.m) div.addClass('maxed');
             div.append(tooltip);
             table.find('tr').eq(talent.y).children().eq(talent.x).html(div);
         }

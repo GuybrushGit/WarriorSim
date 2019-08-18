@@ -25,15 +25,44 @@ function getAuraFromRow(tr) {
 function startSimulation(output, gear, callback) {
     let input = {};
     let player = new Player();
-    $('table').each(function() {
+
+    // Gear
+    $('table.gear').each(function() {
         let slot = $(this).data('type');
         let row = $(this).find('tbody tr.active');
         let aura = {};
         if (row.length) aura = getAuraFromRow(row);
         if (gear && gear.slot == slot) aura = gear;
         for (let prop in aura)
-            player.gear[prop] += aura[prop];
+            if (prop != "slot")
+                player.base[prop] += aura[prop];
     });
+
+    // Buffs
+    $('.buff.active').each(function() {
+        player.base.ap += $(this).data('ap') || 0;
+        player.base.agi += $(this).data('agi') || 0;
+        player.base.str += $(this).data('str') || 0;
+        player.base.crit += $(this).data('crit') || 0;
+        player.base.agimod *= (1 + $(this).data('agimod') / 100) || 1;
+        player.base.strmod *= (1 + $(this).data('strmod') / 100) || 1;
+        player.base.dmgmod *= (1 + $(this).data('dmgmod') / 100) || 1;
+        player.base.haste /= (1 + $(this).data('haste') / 100) || 1;
+    });
+
+    // Talents
+    $('.talent').each(function() {
+        let count = parseInt($(this).attr('data-count'));
+        let tree = $(this).parents('table').index();
+        let x = $(this).data('x');
+        let y = $(this).data('y');
+        if (count == 0) return;
+        for(let talent of talents[tree - 1].t)
+            if (talent.x == x && talent.y == y)
+                $.extend(player.talents, talent.aura(count));
+    });
+
+    // Settings
     $('input[type="text"]').each(function () {
         let prop = $(this).attr('name');
         input[prop] = parseInt($(this).val());
@@ -45,22 +74,20 @@ function startSimulation(output, gear, callback) {
     $('#buffs input[type="checkbox"]').each(function () {
         player[$(this).val().toLowerCase()] = $(this).is(':checked');
     });
-    $('.talent').each(function() {
-        let name = $(this).find('img').attr('alt');
-        let count = parseInt($(this).attr('data-count'));
-        if (count > 0) $.extend(player.talents, talents[name](count));
-    });
-
-    //player.talents.crit = 5;
-
-
     player.base.ap = input.ap;
     player.base.str = input.str;
     player.base.agi = input.agi;
     player.target.armor = input.armor;
+
+
+
     player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
     player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
+
+
     player.update();
+
+    console.log(player);
 
     new Simulation(player, input.timesecs, input.simulations, input.executeperc, output, callback).start();
 }
@@ -79,7 +106,7 @@ function complete() {
     end = new Date().getTime();
     console.log( (end - start) / 1000 );
     let dps = parseFloat($('#dps').text()).toFixed(2);
-    $('tbody td:last-of-type').each(function() {
+    $('table.gear tbody td:last-of-type').each(function() {
         let text = $(this).text();
         let diff = (text - dps).toFixed(2);
         let span = diff > 0 ? '<span class="p"> (+ ' + diff + ')</span>' : '<span class="n"> (' + diff + ')</span>';
@@ -91,12 +118,6 @@ function complete() {
 
 $(document).ready(function () {
 
-    // talents.push({ crit: 5 }); // Cruelty
-    // talents.push({ extrarage: 40 }); // Unbridled Wrath
-    // talents.push({ battleshoutduration: 50 }); // Booming Voice
-    // talents.push({ battleshoutpower: 25 }); // Imp Battle Shout
-    // talents.push({ executecost: 5 }); // Execute Cost
-    // talents.push({ offhanddamage: 25 }); // Dual Wield Specialization
     buildBuffs();
     buildTalents();
     talentEvents();
@@ -105,7 +126,7 @@ $(document).ready(function () {
 
         start = new Date().getTime();
         $('progress').attr('max', $('tbody tr').length);
-        $('tbody td:last-of-type').text('');
+        $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
         //runRow($('tbody tr'), 0);
@@ -124,9 +145,3 @@ $(document).ready(function () {
         tr.siblings().removeClass('active');
     });
 });
-
-// var talents = {
-//     "Improved Heroic Strike": function(count) { return { impheroicstrike: count }},
-//     "Deflection": function(count) { return { parry: count }},
-//     "Improved Rend": function(count) { return { rendmod: 5 + count*10 }},
-// }

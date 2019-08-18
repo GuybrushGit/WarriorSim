@@ -39,7 +39,7 @@ class Weapon {
                 this.player.update();
                 if (log) console.log('Remove aura: ' + name);
             }
-        this.timer = this.speed * 1000 * this.player.stats.speedmod;
+        this.timer = this.speed * 1000 * this.player.stats.haste;
     }
     step() {
         this.timer = this.timer < 10 ? 0 : this.timer - 10;
@@ -57,9 +57,8 @@ class Player {
             armor: 0,
             defense: 63 * 5,
         };
-        this.base = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: this.level * 5, speedmod: 1 };
-        this.stats = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: 0 };
-        this.gear = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: 0 };
+        this.base = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: this.level * 5, haste: 1, strmod: 1, agimod: 1, dmgmod: 1 };
+        this.stats = {};
         this.auras = [];
         this.spells = {};
         this.talents = {};
@@ -81,16 +80,18 @@ class Player {
     update() {
         
         for (let prop in this.base)
-            this.stats[prop] = this.base[prop] + (this.gear[prop] || 0);
-        for (let prop in this.talents)
-            this.stats[prop] += this.talents[prop];
+            this.stats[prop] = this.base[prop];
         for (let name in this.auras) {
             for (let prop in this.auras[name].stats)
                 this.stats[prop] += this.auras[name].stats[prop];
-            for (let prop in this.auras[name].n_stats)
-                this.stats[prop] /= (1 + this.auras[name].n_stats[prop]/100);
+            for (let prop in this.auras[name].div_stats)
+                this.stats[prop] /= (1 + this.auras[name].div_stats[prop]/100);
+            for (let prop in this.auras[name].mult_stats)
+                this.stats[prop] *= (1 + this.auras[name].mult_stats[prop]/100);
         }
 
+        this.stats.str = Math.floor(this.stats.str * this.stats.strmod);
+        this.stats.agi = Math.floor(this.stats.agi * this.stats.agimod);
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
         this.glanceReduction = this.getGlanceReduction();
@@ -115,7 +116,7 @@ class Player {
         return miss;
     }
     getCritChance() {
-        let crit = this.stats.crit + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6;
+        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6;
         return crit > 0 ? crit : 0;
     }
     getDodgeChance() {
@@ -228,7 +229,7 @@ class Player {
         spell.use();
     }
     dealDamage(dmg, result, spell) {
-        // TODO: Modifiers
+        dmg *= this.stats.dmgmod;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             dmg *= (1 - this.armorReduction);
             this.addRage(dmg, result, spell);
@@ -240,7 +241,7 @@ class Player {
         }
     }
     procCrit() {
-        if (this.flurry) {
+        if (this.talents.flurry) {
             this.auras.flurry = new Flurry();
             this.update();
             if (log) console.log('Add aura: Flurry');

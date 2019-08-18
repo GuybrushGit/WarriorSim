@@ -52,7 +52,9 @@ article {
     margin: 20px auto;
     position: relative;
     padding: 20px;
-    height: 383px;
+    min-height: 250px;
+    box-sizing: border-box;
+
 }
 article > label {
     position: absolute;
@@ -63,6 +65,12 @@ article > label {
     background: rgb(38, 38, 38);
     width: auto;
     padding: 0 10px;
+}
+.settings {
+    width: 340px;
+}
+.buffs {
+    width: calc(100% - 350px);
 }
 .talent {
     width: 40px;
@@ -77,6 +85,14 @@ article > label {
     width: 100%;
     height: 100%;
     border-radius: 4px;
+    filter: none;
+    transition: all 0.2s ease-in;
+}
+.talent[data-count="0"] img {
+    filter: grayscale(100%);
+}
+.talent[data-count="0"]:before {
+    display: none;
 }
 .talent:after {
     content: '';
@@ -109,6 +125,8 @@ article > label {
 .talents {
     display: inline-flex;
     position: relative;
+    width: 100%;
+    justify-content: center;
 }
 .talents table {
     padding: 0 10px 0;
@@ -177,14 +195,14 @@ article > label {
     width: 100%;
     height: 100%;
     margin: 0;
-    opacity: 0.3;
-    transition: opacity 0.2s ease-in;
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in;
 }
 .buff.active {
     border-color: #FFCD45;
 }
 .buff.active img {
-    opacity: 1;
+    filter: none;
 }
 .buff .tooltip .description {
     display: block;

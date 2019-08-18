@@ -97,10 +97,11 @@ class BattleShout extends Spell {
 }
 
 class Aura {
-    constructor(duration, stats) {
+    constructor(duration, stats, mult_stats, div_stats) {
         this.timer = duration * 1000;
-        this.stats = stats;
-        this.n_stats = {};
+        this.stats = stats || {};
+        this.div_stats = div_stats || {};
+        this.mult_stats = mult_stats || {};
     }
     step() {
         return this.timer = this.timer < 10 ? 0 : this.timer - 10;
@@ -112,9 +113,9 @@ class Aura {
 
 class Flurry extends Aura {
     constructor() {
-        super(12, {});
+        super(12);
         this.stacks = 3;
-        this.n_stats = { speedmod: 30 };
+        this.div_stats = { haste: 30 };
     }
     procattack() {
         this.stacks--;
