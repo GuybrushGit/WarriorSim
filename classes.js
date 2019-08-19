@@ -33,12 +33,11 @@ class Weapon {
         return dmg * this.modifier;
     }
     use() {
-        for (let name in this.player.auras)
-            if (!this.player.auras[name].procattack()) {
-                delete this.player.auras[name];
-                this.player.update();
-                if (log) console.log('Remove aura: ' + name);
-            }
+        if (this.player.auras.flurry && !this.player.auras.flurry.procattack()) {
+            delete this.player.auras.flurry;
+            this.player.updateAuras();
+            if (log) console.log('Remove aura: flurry');
+        }
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }
     step() {
@@ -62,6 +61,11 @@ class Player {
         this.auras = [];
         this.spells = {};
         this.talents = {};
+        this.glanceReduction = this.getGlanceReduction();
+        this.glanceChance = this.getGlanceChance();
+        this.armorReduction = this.getArmorReduction();
+        this.miss = this.getMissChance();
+        this.dodge = this.getDodgeChance();
     }
     reset() {
         this.rage = 0;
@@ -78,6 +82,14 @@ class Player {
         this.update();
     }
     update() {
+        this.updateAuras();
+        this.glanceReduction = this.getGlanceReduction();
+        this.glanceChance = this.getGlanceChance();
+        this.armorReduction = this.getArmorReduction();
+        this.miss = this.getMissChance();
+        this.dodge = this.getDodgeChance();
+    }
+    updateAuras() {
         for (let prop in this.base)
             this.stats[prop] = this.base[prop];
         for (let name in this.auras) {
@@ -92,12 +104,7 @@ class Player {
         this.stats.agi = ~~(this.stats.agi * this.stats.agimod);
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
-        this.glanceReduction = this.getGlanceReduction();
-        this.glanceChance = this.getGlanceChance();
-        this.armorReduction = this.getArmorReduction();
-        this.miss = this.getMissChance();
         this.crit = this.getCritChance();
-        this.dodge = this.getDodgeChance();
     }
     getGlanceReduction() {
         let low = 1.3 - 0.05 * (this.target.defense - this.stats.skill);
@@ -145,12 +152,11 @@ class Player {
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.execute) this.spells.execute.step();
         if (this.spells.battleshout) this.spells.battleshout.step();
-        for(let name in this.auras)
-            if (!this.auras[name].step()) {
-                delete this.auras[name];
-                this.update();
-                if (log) console.log('Remove aura: ' + name);
-            }
+        if (this.auras.battleshout && !this.auras.battleshout.step()) {
+            delete this.auras.battleshout;
+            this.updateAuras();
+            if (log) console.log('Remove aura: battleshout');
+        }
     }
     roll(isAttack, canDodge) {
         let tmp = 0;
