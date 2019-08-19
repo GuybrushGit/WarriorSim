@@ -78,7 +78,6 @@ class Player {
         this.update();
     }
     update() {
-        
         for (let prop in this.base)
             this.stats[prop] = this.base[prop];
         for (let name in this.auras) {
@@ -89,9 +88,8 @@ class Player {
             for (let prop in this.auras[name].mult_stats)
                 this.stats[prop] *= (1 + this.auras[name].mult_stats[prop]/100);
         }
-
-        this.stats.str = Math.floor(this.stats.str * this.stats.strmod);
-        this.stats.agi = Math.floor(this.stats.agi * this.stats.agimod);
+        this.stats.str = ~~(this.stats.str * this.stats.strmod);
+        this.stats.agi = ~~(this.stats.agi * this.stats.agimod);
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
         this.glanceReduction = this.getGlanceReduction();
@@ -153,7 +151,6 @@ class Player {
                 this.update();
                 if (log) console.log('Remove aura: ' + name);
             }
-
     }
     roll(isAttack, canDodge) {
         let tmp = 0;
@@ -244,19 +241,20 @@ class Player {
     procCrit() {
         if (this.talents.flurry) {
             this.auras.flurry = new Flurry(this.talents.flurry);
-            this.update();
+            this.stats.haste /= (1 + this.auras.flurry.div_stats.haste/100);
             if (log) console.log('Add aura: Flurry');
         }
     }
 }
 
 class Simulation {
-    constructor(player, timesecs, iterations, output, callback) {
+    constructor(player, timesecs, iterations, executeperc, output, callback) {
         this.player = player;
         this.timesecs = timesecs;
         this.iterations = iterations;
         this.output = output;
         this.total = 0;
+        this.executestep = timesecs * 10 * (100 - executeperc);
         this.callback = callback || function() {};
     }
     start() {
@@ -269,7 +267,28 @@ class Simulation {
             player.step();
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             if (player.oh.timer == 0) this.total += player.attack(player.oh);
-            if (player.timer == 0) this.total += player.rotation(step);
+            if (player.timer == 0) {
+                if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
+                    this.total += player.cast(player.spells.execute);
+                    continue;
+                }
+                if (player.spells.overpower && player.spells.overpower.canUse()) {
+                    this.total += player.cast(player.spells.overpower);
+                    continue;
+                }
+                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
+                    player.buff(player.spells.battleshout);
+                    continue;
+                }
+                if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                    this.total += player.cast(player.spells.bloodthirst);
+                    continue;
+                }
+                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
+                    this.total += player.cast(player.spells.whirlwind);
+                    continue;
+                }
+            }
         }
 
         if (i % Math.floor(this.iterations / 20) == 0 || i == this.iterations) {

@@ -91,7 +91,7 @@ class BattleShout extends Spell {
     use() {
         super.use();
         this.player.auras.battleshout = new Aura(120, { ap: 185 });
-        this.player.update();
+        this.player.stats.ap += 185;
         if (log) console.log('use bshout');
     }
 }

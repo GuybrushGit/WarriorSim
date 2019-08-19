@@ -64,30 +64,17 @@ function startSimulation(output, gear, callback) {
         player.base.str = r.data('str');
         player.base.agi = r.data('agi');
     });
-
-    let rotation = "player.rotation = function(step) {";
     $('.spell.active').each(function() {
-        let type = $(this).data('type');
         let name = $(this).find('img').attr('alt');
         let lname = name.toLowerCase();
-        let executestep = settings.timesecs * 10 * (100 - settings.executeperc);
         player.spells[lname] = eval(`new ${name}(player)`);
-        if (type == "buff")
-            rotation += `if (player.spells.${lname}.canUse()) return player.buff(player.spells.${lname});`;
-        else if (lname == "execute")
-            rotation += `if (step >= ${executestep} && player.spells.${lname}.canUse()) return player.cast(player.spells.${lname});`;
-        else
-            rotation += `if (player.spells.${lname}.canUse()) return player.cast(player.spells.${lname});`;
     });
-    rotation += " return 0; }";
-    eval(rotation);
     player.target.armor = settings.armor;
     player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
     player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
 
-
     player.update();
-    new Simulation(player, settings.timesecs, settings.simulations, output, callback).start();
+    new Simulation(player, settings.timesecs, settings.simulations, settings.executeperc, output, callback).start();
 }
 
 function runRow(rows, index) {
