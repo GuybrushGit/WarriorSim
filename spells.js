@@ -16,7 +16,7 @@ class Spell {
         this.timer = this.cooldown * 1000;
     }
     step() {
-        this.timer = this.timer < 100 ? 0 : this.timer - 100;
+        this.timer = this.timer < 200 ? 0 : this.timer - 200;
     }
     canUse() {
         return this.timer == 0 && this.cost <= this.player.rage;
@@ -104,7 +104,7 @@ class Aura {
         this.mult_stats = mult_stats || {};
     }
     step() {
-        return this.timer = this.timer < 100 ? 0 : this.timer - 100;
+        return this.timer = this.timer < 200 ? 0 : this.timer - 200;
     }
     procattack() {
         return true;
