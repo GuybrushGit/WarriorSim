@@ -238,12 +238,12 @@ class Player {
         }
         else {
             this.addRage(dmg, result, spell);
-            return dmg;
+            return 0;
         }
     }
     procCrit() {
         if (this.talents.flurry) {
-            this.auras.flurry = new Flurry();
+            this.auras.flurry = new Flurry(this.talents.flurry);
             this.update();
             if (log) console.log('Add aura: Flurry');
         }
@@ -269,7 +269,7 @@ class Simulation {
             player.step();
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             if (player.oh.timer == 0) this.total += player.attack(player.oh);
-            if (player.timer == 0) this.total += player.rotation() || 0;
+            if (player.timer == 0) this.total += player.rotation(step);
         }
 
         if (i % Math.floor(this.iterations / 20) == 0 || i == this.iterations) {

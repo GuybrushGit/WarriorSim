@@ -1,11 +1,3 @@
-// TODO
-// hamstring
-// talents
-// weapons
-// trinkets
-// buffs
-// check how speed mods stack
-
 var log = false;
 var start, end;
 
@@ -73,63 +65,28 @@ function startSimulation(output, gear, callback) {
         player.base.agi = r.data('agi');
     });
 
-    let rotation = "player.rotation = function() {";
+    let rotation = "player.rotation = function(step) {";
     $('.spell.active').each(function() {
         let type = $(this).data('type');
         let name = $(this).find('img').attr('alt');
         let lname = name.toLowerCase();
+        let executestep = settings.timesecs * 10 * (100 - settings.executeperc);
         player.spells[lname] = eval(`new ${name}(player)`);
-
         if (type == "buff")
             rotation += `if (player.spells.${lname}.canUse()) return player.buff(player.spells.${lname});`;
+        else if (lname == "execute")
+            rotation += `if (step >= ${executestep} && player.spells.${lname}.canUse()) return player.cast(player.spells.${lname});`;
         else
             rotation += `if (player.spells.${lname}.canUse()) return player.cast(player.spells.${lname});`;
-
-
-
-
-
-
-
-          //   settings.executeperc
-          //   this.executestep = timesecs * 10 * (100 - executeperc);
-          // if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
-          //           this.total += player.cast(player.spells.execute);
-          //           continue;
-          //       }
-          //       if (player.spells.overpower && player.spells.overpower.canUse()) {
-          //           this.total += player.cast(player.spells.overpower);
-          //           continue;
-          //       }
-          //       if (player.spells.battleshout && player.spells.battleshout.canUse()) {
-          //           player.buff(player.spells.battleshout);
-          //           continue;
-          //       }
-          //       if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
-          //           this.total += player.cast(player.spells.bloodthirst);
-          //           continue;
-          //       }
-          //       if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
-          //           this.total += player.cast(player.spells.whirlwind);
-          //           continue;
-          //       }
-          //   }
-
-
-
     });
-    rotation += "}";
+    rotation += " return 0; }";
     eval(rotation);
-    console.log(rotation, player.rotation);
-    
-
-
+    player.target.armor = settings.armor;
     player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
     player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
 
 
     player.update();
-    console.log(player);
     new Simulation(player, settings.timesecs, settings.simulations, output, callback).start();
 }
 
@@ -168,11 +125,12 @@ $(document).ready(function () {
 
         start = new Date().getTime();
         $('progress').show();
+        $('progress').attr('value', 0);
         $('progress').attr('max', $('table.gear tbody tr').length);
         $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        //runRow($('table.gear tbody tr'), 0);
+        runRow($('table.gear tbody tr'), 0);
 
     });
 
@@ -191,6 +149,10 @@ $(document).ready(function () {
     $('.race').click(function() {
         $(this).toggleClass('active');
         $(this).siblings().removeClass('active');
+    });
+
+    $('.spell').click(function() {
+        $(this).toggleClass('active');
     });
 
 

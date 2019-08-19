@@ -112,10 +112,10 @@ class Aura {
 }
 
 class Flurry extends Aura {
-    constructor() {
+    constructor(percentage) {
         super(12);
         this.stacks = 3;
-        this.div_stats = { haste: 30 };
+        this.div_stats = { haste: percentage };
     }
     procattack() {
         this.stacks--;
