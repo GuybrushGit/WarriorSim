@@ -3,9 +3,10 @@ var buffs = [
       name: "Battle Shout",
       iconname: "Ability_Warrior_BattleShout",
       description: "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 185. Lasts 2 min.",
-      group: "",
+      group: "battleshout",
       ap: 185,
-      checked: true
+      checked: true,
+      disableSpell: "battleshout"
    },
    {
       name: "Rallying Cry of the Dragonslayer",
@@ -182,6 +183,7 @@ function buildBuffs() {
       div.attr('data-strmod', buff.strmod);
       div.attr('data-dmgmod', buff.dmgmod);
       div.attr('data-haste', buff.haste);
+      if (buff.disableSpell) div.attr('data-disable-spell', buff.disableSpell);
       if (buff.checked) div.addClass('active');
       div.click(function() {
          let b = $(this);
@@ -189,6 +191,8 @@ function buildBuffs() {
          if (b.hasClass('active')) {
             if (b.data('group'))
                b.siblings().filter('[data-group="' + b.data('group') + '"]').removeClass('active');
+            if (b.data('disable-spell'))
+               $('.spell[data-id="' + b.data('disable-spell') + '"]').removeClass('active');
          }
       });
       article.append(div);

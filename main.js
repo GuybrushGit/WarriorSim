@@ -60,9 +60,9 @@ function startSimulation(output, gear, callback) {
     });
     $('.race.active').each(function() {
         let r = $(this);
-        player.base.ap = r.data('ap');
-        player.base.str = r.data('str');
-        player.base.agi = r.data('agi');
+        player.base.ap += r.data('ap');
+        player.base.str += r.data('str');
+        player.base.agi += r.data('agi');
     });
     $('.spell.active').each(function() {
         let name = $(this).find('img').attr('alt');
@@ -74,6 +74,7 @@ function startSimulation(output, gear, callback) {
     player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
 
     player.update();
+    // console.log(player);
     new Simulation(player, settings.timesecs, settings.simulations, settings.executeperc, output, callback).start();
 }
 
@@ -140,6 +141,9 @@ $(document).ready(function () {
 
     $('.spell').click(function() {
         $(this).toggleClass('active');
+        let disable = $(this).data('disable-buff');
+        if (disable)
+            $('.buff[data-group="' + disable + '"]').removeClass('active');
     });
 
 
