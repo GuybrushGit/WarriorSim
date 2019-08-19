@@ -41,7 +41,7 @@ class Weapon {
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }
     step() {
-        this.timer = this.timer < 10 ? 0 : this.timer - 10;
+        this.timer = this.timer < 100 ? 0 : this.timer - 100;
     }
 }
 
@@ -145,8 +145,8 @@ class Player {
     step() {
         this.mh.step();
         this.oh.step();
-        this.timer = this.timer < 10 ? 0 : this.timer - 10;
-        this.dodgeTimer = this.dodgeTimer < 10 ? 0 : this.dodgeTimer - 10;
+        this.timer = this.timer < 100 ? 0 : this.timer - 100;
+        this.dodgeTimer = this.dodgeTimer < 100 ? 0 : this.dodgeTimer - 100;
         if (this.spells.bloodthirst) this.spells.bloodthirst.step();
         if (this.spells.overpower) this.spells.overpower.step();
         if (this.spells.whirlwind) this.spells.whirlwind.step();
@@ -269,7 +269,7 @@ class Simulation {
     run(i) {
         let player = this.player;
         player.reset();
-        for (let step = 0; step < this.timesecs * 1000; step += 10) {
+        for (let step = 0; step < this.timesecs * 1000; step += 100) {
             player.step();
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             if (player.oh.timer == 0) this.total += player.attack(player.oh);
