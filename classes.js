@@ -12,7 +12,8 @@ var WEAPONTYPE = {
     AXE: 3,
     BIGMACE: 4,
     BIGSWORD: 5,
-    BIGAXE: 6
+    BIGAXE: 6,
+    FIST: 7
 }
 
 class Weapon {
@@ -56,7 +57,21 @@ class Player {
             armor: 0,
             defense: 63 * 5,
         };
-        this.base = { ap: 0, agi: 0, str: 0, hit: 0, crit: 0, skill: this.level * 5, haste: 1, strmod: 1, agimod: 1, dmgmod: 1 };
+        this.base = { 
+            ap: 0, 
+            agi: 0, 
+            str: 0, 
+            hit: 0, 
+            crit: 0, 
+            skill_sword: this.level * 5, 
+            skill_axe: this.level * 5, 
+            skill_dagger: this.level * 5, 
+            skill_mace: this.level * 5, 
+            haste: 1, 
+            strmod: 1, 
+            agimod: 1, 
+            dmgmod: 1 
+        };
         this.stats = {};
         this.auras = [];
         this.spells = {};
@@ -121,7 +136,7 @@ class Player {
         return miss;
     }
     getCritChance() {
-        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6;
+        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6 + 3;
         return crit > 0 ? crit : 0;
     }
     getDodgeChance() {
@@ -156,6 +171,11 @@ class Player {
             delete this.auras.battleshout;
             this.updateAuras();
             if (log) console.log('Remove aura: battleshout');
+        }
+        if (this.auras.battlestance && !this.auras.battlestance.step()) {
+            delete this.auras.battlestance;
+            this.updateAuras();
+            if (log) console.log('Remove aura: battlestance');
         }
     }
     roll(isAttack, canDodge) {

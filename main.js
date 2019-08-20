@@ -4,12 +4,17 @@ var start, end;
 function getAuraFromRow(tr) {
     let data = tr.children();
     let aura = {};
-    aura.str = parseInt(data.eq(4).text() || 0);
-    aura.agi = parseInt(data.eq(5).text() || 0);
-    aura.ap = parseInt(data.eq(6).text() || 0);
-    aura.crit = parseInt(data.eq(7).text() || 0);
-    aura.hit = parseInt(data.eq(8).text() || 0);
-    aura.skill = parseInt(data.eq(9).text() || 0);
+    aura.str = parseInt(data.eq(2).text() || 0);
+    aura.agi = parseInt(data.eq(3).text() || 0);
+    aura.ap = parseInt(data.eq(4).text() || 0);
+    aura.crit = parseInt(data.eq(5).text() || 0);
+    aura.hit = parseInt(data.eq(6).text() || 0);
+    aura.minhit = parseInt(data.eq(7).text() || 0);
+    aura.maxhit = parseInt(data.eq(8).text() || 0);
+    aura.speed = parseFloat(data.eq(9).text() || 0);
+    let skill = parseInt(data.eq(10).text() || 0);
+    if (skill > 0) aura['skill_' + data.eq(11).text().toLowerCase()] = skill;
+    aura.type = (data.eq(11).text().toUpperCase() || '');
     aura.slot = tr.parents('table').data('type');
     return aura;
 }
@@ -24,9 +29,12 @@ function startSimulation(output, gear, callback) {
         let aura = {};
         if (row.length) aura = getAuraFromRow(row);
         if (gear && gear.slot == slot) aura = gear;
-        for (let prop in aura)
-            if (prop != "slot")
-                player.base[prop] += aura[prop];
+        for (let prop in player.base)
+            player.base[prop] += aura[prop] || 0;
+        if (aura.slot == 'mainhand')
+            player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, WEAPONTYPE[aura.type], false);
+        if (aura.slot == 'offhand')
+            player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, WEAPONTYPE[aura.type], true);
     });
 
     // Buffs
@@ -70,6 +78,7 @@ function startSimulation(output, gear, callback) {
         player.spells[lname] = eval(`new ${name}(player)`);
     });
     player.target.armor = settings.armor;
+    
     player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
     player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
 
@@ -108,6 +117,7 @@ $(document).ready(function () {
     buildBuffs();
     buildTalents();
     talentEvents();
+    buildWeapons();
 
     $('input[type="submit"]').click(function () {
 
@@ -118,7 +128,7 @@ $(document).ready(function () {
         $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        runRow($('table.gear tbody tr'), 0);
+        //runRow($('table.gear tbody tr'), 0);
 
     });
 

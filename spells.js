@@ -59,6 +59,13 @@ class Overpower extends Spell {
     dmg() {
         return 35 + rng(this.player.mh.mindmg, this.player.mh.maxdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
+    use() {
+        this.player.timer = 3000;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.player.auras.battlestance = new Aura(1.5, { crit: -3 });
+        this.player.updateAuras();
+    }
     canUse() {
         return super.canUse() && this.player.dodgeTimer > 0;
     }
