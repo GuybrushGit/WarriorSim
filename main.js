@@ -81,7 +81,7 @@ function startSimulation(output, gear, callback) {
 
     player.update();
     // console.log(player);
-    new Simulation(player, settings.timesecs, settings.simulations, settings.executeperc, output, callback).start();
+    new Simulation(player, settings.timesecs, callback ? settings.simulations : 10000, settings.executeperc, output, callback).start();
 }
 
 function runRow(rows, index) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
         $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'));
-        //runRow($('table.gear tbody tr'), 0);
+        // runRow($('table.gear tbody tr'), 0);
 
     });
 
@@ -152,6 +152,5 @@ $(document).ready(function () {
         if (disable)
             $('.buff[data-group="' + disable + '"]').removeClass('active');
     });
-
 
 });
