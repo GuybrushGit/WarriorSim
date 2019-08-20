@@ -10,10 +10,10 @@ var WEAPONTYPE = {
     SWORD: 1,
     DAGGER: 2,
     AXE: 3,
-    BIGMACE: 4,
-    BIGSWORD: 5,
-    BIGAXE: 6,
-    FIST: 7
+    FIST: 4,
+    BIGMACE: 5,
+    BIGSWORD: 6,
+    BIGAXE: 7,
 }
 
 class Weapon {
@@ -23,9 +23,10 @@ class Weapon {
         this.mindmg = mindmg;
         this.maxdmg = maxdmg;
         this.type = type;
-        this.modifier = offhand ? 0.5 : 1;
+        this.modifier = offhand ? 0.5 : 1; // todo
         this.timer = 0;
         this.normSpeed = 2.4;
+        this.offhand = offhand;
         if (type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (type == WEAPONTYPE.BIGMACE || type == WEAPONTYPE.BIGSWORD || type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
     }
@@ -63,10 +64,11 @@ class Player {
             str: 0, 
             hit: 0, 
             crit: 0, 
-            skill_sword: this.level * 5, 
-            skill_axe: this.level * 5, 
-            skill_dagger: this.level * 5, 
-            skill_mace: this.level * 5, 
+            skill_0: this.level * 5, 
+            skill_1: this.level * 5, 
+            skill_2: this.level * 5, 
+            skill_3: this.level * 5, 
+            skill_4: this.level * 5, 
             haste: 1, 
             strmod: 1, 
             agimod: 1, 
@@ -76,11 +78,7 @@ class Player {
         this.auras = [];
         this.spells = {};
         this.talents = {};
-        this.glanceReduction = this.getGlanceReduction();
-        this.glanceChance = this.getGlanceChance();
         this.armorReduction = this.getArmorReduction();
-        this.miss = this.getMissChance();
-        this.dodge = this.getDodgeChance();
     }
     reset() {
         this.rage = 0;
@@ -98,11 +96,15 @@ class Player {
     }
     update() {
         this.updateAuras();
-        this.glanceReduction = this.getGlanceReduction();
-        this.glanceChance = this.getGlanceChance();
+        this.mh.glanceReduction = this.getGlanceReduction(this.mh);
+        this.oh.glanceReduction = this.getGlanceReduction(this.oh);
+        this.mh.glanceChance = this.getGlanceChance(this.mh);
+        this.oh.glanceChance = this.getGlanceChance(this.oh);
         this.armorReduction = this.getArmorReduction();
-        this.miss = this.getMissChance();
-        this.dodge = this.getDodgeChance();
+        this.mh.miss = this.getMissChance(this.mh);
+        this.oh.miss = this.getMissChance(this.oh);
+        this.mh.dodge = this.getDodgeChance(this.mh);
+        this.oh.dodge = this.getDodgeChance(this.oh);
     }
     updateAuras() {
         for (let prop in this.base)
@@ -121,16 +123,16 @@ class Player {
         this.stats.crit += this.stats.agi / 20;
         this.crit = this.getCritChance();
     }
-    getGlanceReduction() {
-        let low = 1.3 - 0.05 * (this.target.defense - this.stats.skill);
-        let high = 1.2 - 0.03 * (this.target.defense - this.stats.skill);
+    getGlanceReduction(weapon) {
+        let low = 1.3 - 0.05 * (this.target.defense - this.stats['skill_' + weapon.type]);
+        let high = 1.2 - 0.03 * (this.target.defense - this.stats['skill_' + weapon.type]);
         return (Math.min(low, 0.91) + Math.min(high, 0.99)) / 2;
     }
-    getGlanceChance() {
-        return 10 + (this.target.defense - Math.min(this.level * 5, this.stats.skill)) * 2;
+    getGlanceChance(weapon) {
+        return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;
     }
-    getMissChance() {
-        let diff = this.target.defense - this.stats.skill;
+    getMissChance(weapon) {
+        let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let miss = 5 + (diff > 10 ? diff * 0.2 : diff * 0.1);
         miss -= (diff > 10 ? this.stats.hit - 1 : this.stats.hit);
         return miss;
@@ -139,8 +141,8 @@ class Player {
         let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6 + 3;
         return crit > 0 ? crit : 0;
     }
-    getDodgeChance() {
-        return 5 + (this.target.defense - this.stats.skill) * 0.1;
+    getDodgeChance(weapon) {
+        return 5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1;
     }
     getArmorReduction() {
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);
@@ -178,17 +180,17 @@ class Player {
             if (log) console.log('Remove aura: battlestance');
         }
     }
-    roll(isAttack, canDodge) {
+    roll(canDodge, weapon) {
         let tmp = 0;
         let roll = rng(1, 10000);
-        tmp += Math.max(this.miss + (isAttack ? 19 : 0), 0) * 100;
+        tmp += Math.max( (weapon ? weapon.miss : this.mh.miss) + (weapon ? 19 : 0), 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         if (canDodge) {
-            tmp += this.dodge * 100;
+            tmp += (weapon ? weapon.dodge : this.mh.dodge) * 100;
             if (roll < tmp) return RESULT.DODGE;
         }
-        if (isAttack) {
-            tmp += this.glanceChance * 100;
+        if (weapon) {
+            tmp += weapon.glanceChance * 100;
             if (roll < tmp) return RESULT.GLANCE;
             tmp += this.crit * 100;
             if (roll < tmp) return RESULT.CRIT;
@@ -197,7 +199,7 @@ class Player {
     }
     attack(weapon) {
         let dmg = weapon.dmg();
-        let result = this.roll(true, true);
+        let result = this.roll(true, weapon);
 
         if (result == RESULT.MISS) {
             if (log) console.log('Attack misses');
@@ -207,7 +209,7 @@ class Player {
             if (log) console.log('Attack dodges');
         }
         if (result == RESULT.GLANCE) {
-            dmg *= this.glanceReduction;
+            dmg *= weapon.glanceReduction;
             if (log) console.log('Attack glances for ' + dmg);
         }
         if (result == RESULT.CRIT) {
@@ -225,7 +227,7 @@ class Player {
     cast(spell) {
         spell.use();
         let dmg = spell.dmg();
-        let result = this.roll(false, spell.canDodge);
+        let result = this.roll(spell.canDodge);
         let roll = rng(1, 10000);
 
         if (result == RESULT.MISS) {

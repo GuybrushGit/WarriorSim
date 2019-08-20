@@ -12,9 +12,9 @@ function getAuraFromRow(tr) {
     aura.minhit = parseInt(data.eq(7).text() || 0);
     aura.maxhit = parseInt(data.eq(8).text() || 0);
     aura.speed = parseFloat(data.eq(9).text() || 0);
+    aura.type = WEAPONTYPE[data.eq(11).text().toUpperCase()];
     let skill = parseInt(data.eq(10).text() || 0);
-    if (skill > 0) aura['skill_' + data.eq(11).text().toLowerCase()] = skill;
-    aura.type = (data.eq(11).text().toUpperCase() || '');
+    if (skill > 0) aura['skill_' + aura.type] = skill;
     aura.slot = tr.parents('table').data('type');
     return aura;
 }
@@ -32,9 +32,9 @@ function startSimulation(output, gear, callback) {
         for (let prop in player.base)
             player.base[prop] += aura[prop] || 0;
         if (aura.slot == 'mainhand')
-            player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, WEAPONTYPE[aura.type], false);
+            player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
         if (aura.slot == 'offhand')
-            player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, WEAPONTYPE[aura.type], true);
+            player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
     });
 
     // Buffs
@@ -78,9 +78,6 @@ function startSimulation(output, gear, callback) {
         player.spells[lname] = eval(`new ${name}(player)`);
     });
     player.target.armor = settings.armor;
-    
-    player.mh = new Weapon(player, 2.7, 66, 124, WEAPONTYPE.SWORD, false);
-    player.oh = new Weapon(player, 1.8, 57, 87, WEAPONTYPE.SWORD, true);
 
     player.update();
     // console.log(player);
