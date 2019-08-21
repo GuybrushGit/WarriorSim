@@ -29,7 +29,7 @@ var buffs = [
    {
       name: "Sayge's Dark Fortune of Damage",
       iconname: "inv_misc_orb_02",
-      description: "1-10% Damage",
+      description: "10% Damage",
       group: "darkfortune",
       dmgmod: 10,
    },

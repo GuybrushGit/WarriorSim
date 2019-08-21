@@ -50,7 +50,11 @@ function startSimulation(output, gear, callback) {
 
     // Buffs
     $('.buff.active').each(function() {
-        player.base.ap += $(this).data('ap') || 0;
+        let apbonus = 0;
+        if ($(this).data('group') == "battleshout")
+            apbonus = ~~($(this).data('ap') * player.talents.impbattleshout);
+
+        player.base.ap += ($(this).data('ap') || 0) + apbonus;
         player.base.agi += $(this).data('agi') || 0;
         player.base.str += $(this).data('str') || 0;
         player.base.crit += $(this).data('crit') || 0;
@@ -67,20 +71,25 @@ function startSimulation(output, gear, callback) {
     });
     $('.race.active').each(function() {
         let r = $(this);
-        player.base.ap += r.data('ap');
-        player.base.str += r.data('str');
-        player.base.agi += r.data('agi');
+        player.base.ap += (r.data('ap') || 0);
+        player.base.str += (r.data('str') || 0);
+        player.base.agi += (r.data('agi') || 0);
+        player.base.skill_0 += (r.data('skill_0') || 0);
+        player.base.skill_1 += (r.data('skill_1') || 0);
+        player.base.skill_2 += (r.data('skill_2') || 0);
+        player.base.skill_3 += (r.data('skill_2') || 0);
     });
     $('.spell.active').each(function() {
         let name = $(this).find('img').attr('alt');
         let lname = name.toLowerCase();
         player.spells[lname] = eval(`new ${name}(player)`);
+        if (lname == 'deepwounds') player.spells[lname] = true;
     });
     player.target.armor = settings.armor;
 
     player.update();
     // console.log(player);
-    new Simulation(player, settings.timesecs, callback ? settings.simulations : 10000, settings.executeperc, output, callback).start();
+    new Simulation(player, settings.timesecs, gear ? settings.simulations : 10000, settings.executeperc, output, callback).start();
 }
 
 function runRow(rows, index) {
@@ -123,7 +132,7 @@ $(document).ready(function () {
         $('progress').attr('max', $('table.gear tbody tr').length);
         $('table.gear tbody td:last-of-type').text('');
 
-        startSimulation($('#dps'));
+        startSimulation($('#dps'), null, complete);
         // runRow($('table.gear tbody tr'), 0);
 
     });

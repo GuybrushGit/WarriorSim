@@ -25,20 +25,21 @@
 RACE SPELLS
 WEAPON PROCS
 DEATHWISH
-DEEP WOUNDS
+DEEP WOUNDS DAMAGE CALCS WITH MODS AND ARMOR and spell hit chance AND REFRESHING
 JUJU FLURRY
 ENCHANTS
 RAGE POTS
 DENSE STONES
-SWORD SPECIALIZATION
 HAMSTRING
 HEROIC STRIKE
 MORTAL STRIKE
 ITEM FILTER
+SPELLS TOOLTIPS
+BLOODRAGE
 
-
-
-
+TEST OFFHAND ONEHAND TALENT mod
+TEST WEAPON SWIGING
+do extra attacks consume flurry?
 
 
 
@@ -79,7 +80,6 @@ ITEM FILTER
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/dwarf.png" alt="dwarf"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/gnome.png" alt="gnome"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/nelf.png" alt="nelf"></div>
-						<br />
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/undead.png" alt="undead"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75" data-skill_3="5"><img src="img/orc.png" alt="orc"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/tauren.png" alt="tauren"></div>
@@ -89,12 +89,13 @@ ITEM FILTER
 				<li>
 					<label>Rotation</label>
 					<div>
-						<div class="spell"><img src="img/INV_Sword_48.jpg" alt="Execute"></div>
-						<div class="spell active"><img src="img/ability_meleedamage.jpg" alt="Overpower"></div>
+						<div class="spell" data-id="berserkerrage"><img src="img/Spell_Nature_AncestralGuardian.jpg" alt="BerserkerRage"></div>
+						<div class="spell" data-id="execute"><img src="img/INV_Sword_48.jpg" alt="Execute"></div>
+						<div class="spell active" data-id="overpower"><img src="img/ability_meleedamage.jpg" alt="Overpower"></div>
 						<div class="spell" data-id="battleshout" data-disable-buff="battleshout"><img src="img/Ability_Warrior_BattleShout.jpg" alt="BattleShout"></div>
-						<div class="spell active"><img src="img/Spell_Nature_BloodLust.jpg" alt="Bloodthirst"></div>
-						<br />
-						<div class="spell"><img src="img/ability_whirlwind.jpg" alt="Whirlwind"></div>
+						<div class="spell hidden" data-id="bloodthirst"><img src="img/Spell_Nature_BloodLust.jpg" alt="Bloodthirst"></div>
+						<div class="spell" data-id="whirlwind"><img src="img/ability_whirlwind.jpg" alt="Whirlwind"></div>
+						<div class="spell hidden" data-id="deepwounds"><img src="img/Ability_BackStab.jpg" alt="DeepWounds"></div>
 					</div>
 				</li>
 			</ul>

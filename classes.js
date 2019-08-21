@@ -23,7 +23,7 @@ class Weapon {
         this.mindmg = mindmg;
         this.maxdmg = maxdmg;
         this.type = type;
-        this.modifier = offhand ? 0.5 : 1; // todo
+        this.modifier = offhand ? 0.5 + player.talents.offmod + player.talents.onemod : 1 + player.talents.onemod;
         this.timer = 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
@@ -36,11 +36,16 @@ class Weapon {
         let dmg = rng(this.mindmg, this.maxdmg) + (this.player.stats.ap / 14) * this.speed;
         return dmg * this.modifier;
     }
-    use() {
+    use(extra) {
         if (this.player.auras.flurry && !this.player.auras.flurry.procattack()) {
             delete this.player.auras.flurry;
             this.player.updateAuras();
             if (log) console.log('Remove aura: flurry');
+        }
+        if (extra) return;
+        if (this.player.talents.swordproc && this.type == WEAPONTYPE.SWORD) {
+            if (rng(1, 10000) < this.player.talents.swordproc * 100)
+                this.player.extraattacks++;
         }
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }
@@ -55,6 +60,7 @@ class Player {
         this.level = 60;
         this.timer = 0;
         this.dodgeTimer = 0;
+        this.extraattacks = 0;
         this.target = {
             level: 63,
             armor: 0,
@@ -74,7 +80,7 @@ class Player {
             haste: 1, 
             strmod: 1, 
             agimod: 1, 
-            dmgmod: 1 
+            dmgmod: 1
         };
         this.stats = {};
         this.auras = [];
@@ -160,15 +166,13 @@ class Player {
             this.rage += (dmg / 230.6) * 7.5 * mod;
 
             // TODO INCLUDE HEROIC STRIKE
-            if (this.talents.umbridledwrath) {
-                let roll = rng(1, 10000);
-                if (roll < this.talents.umbridledwrath * 100)
-                    this.rage += 1
+            if (this.talents.umbridledwrath && rng(1, 10000) < this.talents.umbridledwrath * 100) {
+                this.rage += 1
             }
         }
         if (log) console.log('Rage: ' + this.rage);
     }
-    step() {
+    step(simulation) {
         this.mh.step();
         this.oh.step();
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
@@ -178,15 +182,17 @@ class Player {
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.execute) this.spells.execute.step();
         if (this.spells.battleshout) this.spells.battleshout.step();
+        if (this.spells.berserkerrage) this.spells.berserkerrage.step();
         if (this.auras.battleshout && !this.auras.battleshout.step()) {
             delete this.auras.battleshout;
             this.updateAuras();
-            if (log) console.log('Remove aura: battleshout');
         }
         if (this.auras.battlestance && !this.auras.battlestance.step()) {
             delete this.auras.battlestance;
             this.updateAuras();
-            if (log) console.log('Remove aura: battlestance');
+        }
+        if (this.auras.deepwounds && !this.auras.deepwounds.step(simulation)) {
+            delete this.auras.deepwounds;
         }
     }
     roll(canDodge, weapon) {
@@ -206,7 +212,7 @@ class Player {
         }
         return RESULT.HIT;
     }
-    attack(weapon) {
+    attack(weapon, extra) {
         let dmg = weapon.dmg();
         let result = this.roll(true, weapon);
 
@@ -223,15 +229,15 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
-            this.procCrit();
+            this.proccrit();
             if (log) console.log('Attack crits for ' + dmg);
         }
         if (result == RESULT.HIT) {
             if (log) console.log('Attack hits for ' + dmg);
         }
 
-        weapon.use();
-        return this.dealDamage(dmg, result);
+        weapon.use(extra);
+        return this.dealdamage(dmg, result);
     }
     cast(spell) {
         spell.use();
@@ -252,7 +258,7 @@ class Player {
                 crit += this.talents.overpowercrit;
             if (roll < crit * 100) {
                 dmg *= 2 + this.talents.abilitiescrit;
-                this.procCrit();
+                this.proccrit();
                 if (log) console.log(spell.constructor.name + ' crits for ' + dmg);
             }
             else {
@@ -260,13 +266,14 @@ class Player {
             }
         }
 
-        return this.dealDamage(dmg, result, spell);
+        spell.procattack();
+        return this.dealdamage(dmg, result, spell);
     }
     buff(spell) {
         spell.use();
         return 0;
     }
-    dealDamage(dmg, result, spell) {
+    dealdamage(dmg, result, spell) {
         dmg *= this.stats.dmgmod;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             dmg *= (1 - this.armorReduction);
@@ -278,11 +285,14 @@ class Player {
             return 0;
         }
     }
-    procCrit() {
+    proccrit() {
         if (this.talents.flurry) {
             this.auras.flurry = new Flurry(this.talents.flurry);
             this.stats.haste /= (1 + this.auras.flurry.div_stats.haste/100);
             if (log) console.log('Add aura: Flurry');
+        }
+        if (this.spells.deepwounds && this.talents.deepwounds) {
+            this.auras.deepwounds = new DeepWounds(this.talents.deepwounds)
         }
     }
 }
@@ -304,10 +314,20 @@ class Simulation {
         let player = this.player;
         player.reset();
         for (let step = 0; step < this.timesecs * 1000; step += 200) {
-            player.step();
+            player.step(this);
+
+            if (player.extraattacks > 0) 
+                while (player.extraattacks--)
+                    this.total += player.attack(player.mh, true);
+
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
-            if (player.oh.timer == 0) this.total += player.attack(player.oh);
+            else if (player.oh.timer == 0) this.total += player.attack(player.oh);
+
             if (player.timer == 0) {
+                if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) {
+                    player.buff(player.spells.berserkerrage);
+                    continue;
+                }
                 if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
                     this.total += player.cast(player.spells.execute);
                     continue;

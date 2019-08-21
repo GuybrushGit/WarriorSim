@@ -21,6 +21,12 @@ class Spell {
     canUse() {
         return this.timer == 0 && this.cost <= this.player.rage;
     }
+    procattack() {
+        if (this.player.talents.swordproc && this.player.mh.type == WEAPONTYPE.SWORD) {
+            if (rng(1, 10000) < this.player.talents.swordproc * 100)
+                this.player.extraattacks++;
+        }
+    }
 }
 
 class Bloodthirst extends Spell {
@@ -75,7 +81,7 @@ class Overpower extends Spell {
 class Execute extends Spell {
     constructor(player) {
         super(player);
-        this.cost = 15;
+        this.cost = 15 - player.talents.executecost;
         this.usedrage = 0;
     }
     dmg() {
@@ -85,7 +91,7 @@ class Execute extends Spell {
     }
     use() {
         super.use();
-        this.usedrage = this.player.rage;
+        this.usedrage = ~~(this.player.rage);
         this.player.rage = 0;
     }
 }
@@ -94,13 +100,30 @@ class BattleShout extends Spell {
     constructor(player) {
         super(player);
         this.cost = 10;
+        this.ap = ~~(185 * (1 + player.talents.impbattleshout))
         this.cooldown = 120 * (1 + player.talents.boomingvoice);
     }
     use() {
         super.use();
-        this.player.auras.battleshout = new Aura(this.cooldown, { ap: 185 });
-        this.player.stats.ap += 185;
+        this.player.auras.battleshout = new Aura(this.cooldown, { ap: this.ap });
+        this.player.stats.ap += this.ap;
         if (log) console.log('use bshout');
+    }
+}
+
+class BerserkerRage extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 0;
+        this.bonusrage = 0 + player.talents.berserkerbonus;
+        this.cooldown = 30;
+    }
+    use() {
+        super.use();
+        this.player.rage += this.bonusrage;
+    }
+    canUse() {
+        return super.canUse() && !this.battlestance;
     }
 }
 
@@ -130,3 +153,18 @@ class Flurry extends Aura {
         return this.stacks > 0;
     }
 }
+
+class DeepWounds extends Aura {
+    constructor(percentage) {
+        super(12);
+        this.dotdmg = 100 * percentage;
+    }
+    step(simulation) {
+        let timer = super.step();
+        if (timer == 0 || timer % 4000 == 0 || timer % 8000 == 0)
+            simulation.total += this.dotdmg;
+        return timer;
+    }
+
+}
+

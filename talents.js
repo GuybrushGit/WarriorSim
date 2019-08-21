@@ -186,9 +186,10 @@ var talents =[
                2,
                3
             ],
-            c:3,
+            c:0,
+            enable: 'deepwounds',
             iconname:'Ability_BackStab',
-            aura: function(count) { return { deepwounds: count * 20 } }, // TODO
+            aura: function(count) { return { deepwounds: count * 0.2 } },
          },
          {  
             i:136,
@@ -322,7 +323,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'INV_Sword_27',
-            aura: function(count) { return { proc_sword: count } }, // TODO
+            aura: function(count) { return { swordproc: count } },
          },
          {  
             i:134,
@@ -567,7 +568,7 @@ var talents =[
             y:2,
             c:5,
             iconname:'Ability_Warrior_BattleShout',
-            aura: function(count) { return { impbattleshout: count * 5 } }, // TODO
+            aura: function(count) { return { impbattleshout: count * 0.05 } },
          },
          {  
             i:1581,
@@ -591,7 +592,7 @@ var talents =[
             y:3,
             c:5,
             iconname:'Ability_DualWield',
-            aura: function(count) { return { dmgmod_offhand: count * 5 } }, // TODO
+            aura: function(count) { return { offmod: count * 0.05 } },
          },
          {  
             i:1542,
@@ -609,7 +610,7 @@ var talents =[
             y:3,
             c:1,
             iconname:'INV_Sword_48',
-            aura: function(count) { return { executecost: count == 2 ? 5 : count * 2 } }, // TODO
+            aura: function(count) { return { executecost: count == 2 ? 5 : count * 2 } },
          },
          {  
             i:155,
@@ -633,7 +634,7 @@ var talents =[
             y:3,
             c:5,
             iconname:'Spell_Shadow_UnholyFrenzy',
-            aura: function(count) { return { enrage: count * 5 } }, // TODO
+            aura: function(count) { return { enrage: count * 5 } },
          },
          {  
             i:168,
@@ -657,7 +658,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'Ability_Warrior_DecisiveStrike',
-            aura: function(count) { return { impslam: count * 0.1 } }, // TODO
+            aura: function(count) { return { impslam: count * 0.1 } },
          },
          {  
             i:165,
@@ -673,7 +674,7 @@ var talents =[
             y:4,
             c:1,
             iconname:'Spell_Shadow_DeathPact',
-            aura: function(count) { return { deathwish: count } }, // TODO
+            aura: function(count) { return { deathwish: count } },
          },
          {  
             i:1543,
@@ -691,7 +692,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'Ability_Rogue_Sprint',
-            aura: function(count) { return { impintercept: count * 5 } }, // TODO
+            aura: function(count) { return { impintercept: count * 5 } },
          },
          {  
             i:1541,
@@ -709,7 +710,7 @@ var talents =[
             y:5,
             c:0,
             iconname:'Spell_Nature_AncestralGuardian',
-            aura: function(count) { return { berserkerbonus: count * 5 } }, // TODO
+            aura: function(count) { return { berserkerbonus: count * 5 } },
          },
          {  
             i:156,
@@ -737,7 +738,7 @@ var talents =[
             ],
             c:5,
             iconname:'Ability_GhoulFrenzy',
-            aura: function(count) { return { flurry: 5 + count * 5 } }, // TODO
+            aura: function(count) { return { flurry: 5 + count * 5 } },
          },
          {  
             i:167,
@@ -757,7 +758,8 @@ var talents =[
             ],
             c:1,
             iconname:'Spell_Nature_BloodLust',
-            aura: function(count) { return { bloodthirst: count } }, // TODO
+            enable: 'bloodthirst',
+            aura: function(count) { return { bloodthirst: count } },
          }
       ]
    },
@@ -786,7 +788,7 @@ var talents =[
             y:0,
             c:0,
             iconname:'INV_Shield_06',
-            aura: function(count) { return { block: count, blockragechance: count * 20  } }, // TODO
+            aura: function(count) { return { block: count, blockragechance: count * 20  } },
          },
          {  
             i:138,
@@ -810,7 +812,7 @@ var talents =[
             y:0,
             c:0,
             iconname:'Spell_Nature_MirrorImage',
-            aura: function(count) { return { defense: count * 2 } }, // TODO
+            aura: function(count) { return { defense: count * 2 } },
          },
          {  
             i:142,
@@ -828,7 +830,7 @@ var talents =[
             y:1,
             c:0,
             iconname:'Ability_Racial_BloodRage',
-            aura: function(count) { return { bloodragebonus: count == 2 ? 5 : count * 2 } }, // TODO
+            aura: function(count) { return { bloodragebonus: count == 2 ? 5 : count * 2 } },
          },
          {  
             i:140,
@@ -852,7 +854,7 @@ var talents =[
             y:1,
             c:0,
             iconname:'Spell_Holy_Devotion',
-            aura: function(count) { return { armormod: count * 2 } }, // TODO
+            aura: function(count) { return { armormod: count * 2 } },
          },
          {  
             i:141,
@@ -876,7 +878,7 @@ var talents =[
             y:1,
             c:0,
             iconname:'Spell_Magic_MageArmor',
-            aura: function(count) { return { stunresist: count * 3 } }, // TODO
+            aura: function(count) { return { stunresist: count * 3 } },
          },
          {  
             i:153,
@@ -896,7 +898,7 @@ var talents =[
             ],
             c:0,
             iconname:'Spell_Holy_AshesToAshes',
-            aura: function(count) { return { laststand: count } }, // TODO
+            aura: function(count) { return { laststand: count } },
          },
          {  
             i:145,
@@ -920,7 +922,7 @@ var talents =[
             ],
             c:0,
             iconname:'Ability_Defend',
-            aura: function(count) { return { extrablock: count } }, // TODO
+            aura: function(count) { return { extrablock: count } },
          },
          {  
             i:147,
@@ -940,7 +942,7 @@ var talents =[
             y:2,
             c:0,
             iconname:'Ability_Warrior_Revenge',
-            aura: function(count) { return { imprevenge: count * 15 } }, // TODO
+            aura: function(count) { return { imprevenge: count * 15 } },
          },
          {  
             i:144,
@@ -964,7 +966,7 @@ var talents =[
             y:2,
             c:0,
             iconname:'Ability_Warrior_InnerRage',
-            aura: function(count) { return { threatmod: count * 3 } }, // TODO
+            aura: function(count) { return { threatmod: count * 3 } },
          },
          {  
             i:146,
@@ -984,7 +986,7 @@ var talents =[
             y:3,
             c:0,
             iconname:'Ability_Warrior_Sunder',
-            aura: function(count) { return { impsunderarmor: count } }, // TODO
+            aura: function(count) { return { impsunderarmor: count } },
          },
          {  
             i:151,
@@ -1004,7 +1006,7 @@ var talents =[
             y:3,
             c:0,
             iconname:'Ability_Warrior_Disarm',
-            aura: function(count) { return { impdisarm: count } }, // TODO
+            aura: function(count) { return { impdisarm: count } },
          },
          {  
             i:143,
@@ -1022,7 +1024,7 @@ var talents =[
             y:3,
             c:0,
             iconname:'Spell_Nature_Reincarnation',
-            aura: function(count) { return { imptaunt: count } }, // TODO
+            aura: function(count) { return { imptaunt: count } },
          },
          {  
             i:150,
@@ -1040,7 +1042,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'Ability_Warrior_ShieldWall',
-            aura: function(count) { return { impshieldwall: count == 2 ? 5 : count * 3 } }, // TODO
+            aura: function(count) { return { impshieldwall: count == 2 ? 5 : count * 3 } },
          },
          {  
             i:152,
@@ -1056,7 +1058,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'Ability_ThunderBolt',
-            aura: function(count) { return { concussionblow: count } }, // TODO
+            aura: function(count) { return { concussionblow: count } },
          },
          {  
             i:149,
@@ -1074,7 +1076,7 @@ var talents =[
             y:4,
             c:0,
             iconname:'Ability_Warrior_ShieldBash',
-            aura: function(count) { return { impshieldbash: count * 50 } }, // TODO
+            aura: function(count) { return { impshieldbash: count * 50 } },
          },
          {  
             i:702,
@@ -1098,7 +1100,7 @@ var talents =[
             y:5,
             c:0,
             iconname:'INV_Sword_20',
-            aura: function(count) { return { dmgmod_onehand: count * 2 } }, // TODO
+            aura: function(count) { return { onemod: count * 0.02 } },
          },
          {  
             i:148,
@@ -1118,7 +1120,7 @@ var talents =[
             ],
             c:0,
             iconname:'INV_Shield_05',
-            aura: function(count) { return { shieldslam: count } }, // TODO
+            aura: function(count) { return { shieldslam: count } },
          }
       ]
    }
@@ -1135,6 +1137,8 @@ function buildTalents() {
             let tooltip = $('<div class="tooltip"><p>' + talent.n + '</p></div>');
             for (let j in talent.d) tooltip.append('<p data-index="' + j + '" class="description">' + talent.d[j] + '</p>');
             if (talent.c >= talent.m) div.addClass('maxed');
+            if (talent.enable) div.attr('data-enable', talent.enable);
+            if (talent.enable && talent.c > 0) $('.spell[data-id="' + talent.enable + '"]').removeClass('hidden').addClass('active');
             div.append(tooltip);
             table.find('tr').eq(talent.y).children().eq(talent.x).html(div);
         }
@@ -1144,16 +1148,22 @@ function buildTalents() {
 
 function talentEvents() {
 	$('.talent').click(function(e) {
-        let count = parseInt($(this).attr('data-count'));
-        let maxcount = parseInt($(this).attr('data-max-count'));
-        $(this).attr('data-count', count < maxcount ? count + 1 : maxcount);
-        if (count >= maxcount - 1) $(this).addClass('maxed');
-    });
+      let count = parseInt($(this).attr('data-count'));
+      let maxcount = parseInt($(this).attr('data-max-count'));
+      $(this).attr('data-count', count < maxcount ? count + 1 : maxcount);
+      if (count >= maxcount - 1) $(this).addClass('maxed');
+      let enable = $(this).data('enable');
+      if (enable) 
+         $('.spell[data-id="' + enable + '"]').addClass('active').removeClass('hidden');
+   });
 
-    $('.talent').on('contextmenu',function(e) {
-        e.preventDefault();
-        let count = parseInt($(this).attr('data-count'));
-        $(this).attr('data-count', count < 1 ? 0 : count - 1);
-        $(this).removeClass('maxed');
-    });
+   $('.talent').on('contextmenu',function(e) {
+      e.preventDefault();
+      let count = parseInt($(this).attr('data-count'));
+      $(this).attr('data-count', count < 1 ? 0 : count - 1);
+      $(this).removeClass('maxed');
+      let enable = $(this).data('enable');
+      if (count == 1 && enable) 
+         $('.spell[data-id="' + enable + '"]').removeClass('active').addClass('hidden');
+   });
 }

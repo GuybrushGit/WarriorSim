@@ -254,12 +254,17 @@ article > label {
 }
 .settings label + div {
     float: right;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 .spell {
     border: 1px solid rgb(82, 82, 82);
 }
 .spell.active {
     border-color: #FFCD45;
+}
+.spell.hidden {
+    display: none;
 }
 input[type="submit"] {
     width: 90%;
