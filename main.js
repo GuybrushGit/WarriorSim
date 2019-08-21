@@ -22,6 +22,17 @@ function getAuraFromRow(tr) {
 function startSimulation(output, gear, callback) {
     let player = new Player();
 
+    // Talents
+    $('.talent').each(function() {
+        let count = parseInt($(this).attr('data-count'));
+        let tree = $(this).parents('table').index();
+        let x = $(this).data('x');
+        let y = $(this).data('y');
+        for(let talent of talents[tree - 1].t)
+            if (talent.x == x && talent.y == y)
+                $.extend(player.talents, talent.aura(count));
+    });
+
     // Gear
     $('table.gear').each(function() {
         let slot = $(this).data('type');
@@ -47,18 +58,6 @@ function startSimulation(output, gear, callback) {
         player.base.strmod *= (1 + $(this).data('strmod') / 100) || 1;
         player.base.dmgmod *= (1 + $(this).data('dmgmod') / 100) || 1;
         player.base.haste /= (1 + $(this).data('haste') / 100) || 1;
-    });
-
-    // Talents
-    $('.talent').each(function() {
-        let count = parseInt($(this).attr('data-count'));
-        let tree = $(this).parents('table').index();
-        let x = $(this).data('x');
-        let y = $(this).data('y');
-        if (count == 0) return;
-        for(let talent of talents[tree - 1].t)
-            if (talent.x == x && talent.y == y)
-                $.extend(player.talents, talent.aura(count));
     });
 
     // Settings
@@ -130,9 +129,8 @@ $(document).ready(function () {
     });
 
     $("table.gear").tablesorter({
-        theme: 'dark',
         widthFixed: true,
-        sortList: [[11, 1]]
+        sortList: [[12, 1]]
     });
 
     $('table.gear tbody td').click(function () {
@@ -151,6 +149,29 @@ $(document).ready(function () {
         let disable = $(this).data('disable-buff');
         if (disable)
             $('.buff[data-group="' + disable + '"]').removeClass('active');
+    });
+
+    $('nav li').click(function() {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        let top = $('section').eq($(this).index()).offset().top;
+        $('nav').addClass('scrolling');
+        $("html, body").stop().animate({ scrollTop: top + 20 }, 300, 'swing', function() {
+            $('nav').removeClass('scrolling');
+        });
+    });
+
+    $(window).scroll(function() {
+        if ($('nav').hasClass('scrolling')) return;
+        let scroll = window.pageYOffset || document.documentElement.scrollTop;
+        let counter = 0;
+        $('section').each(function() {
+            if ($(this).offset().top < scroll + 50)
+                counter++;
+        });
+        let li = $('nav li').eq(counter - 1);
+        li.addClass('active');
+        li.siblings().removeClass('active');
     });
 
 });

@@ -61,6 +61,7 @@ class Overpower extends Spell {
     }
     use() {
         this.player.timer = 3000;
+        this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
         this.player.auras.battlestance = new Aura(1.5, { crit: -3 });
@@ -93,11 +94,11 @@ class BattleShout extends Spell {
     constructor(player) {
         super(player);
         this.cost = 10;
-        this.cooldown = 120;
+        this.cooldown = 120 * (1 + player.talents.boomingvoice);
     }
     use() {
         super.use();
-        this.player.auras.battleshout = new Aura(120, { ap: 185 });
+        this.player.auras.battleshout = new Aura(this.cooldown, { ap: 185 });
         this.player.stats.ap += 185;
         if (log) console.log('use bshout');
     }

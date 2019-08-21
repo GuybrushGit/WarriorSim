@@ -27,6 +27,8 @@ class Weapon {
         this.timer = 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
+        this.critbonus = 0;
+        if (type == WEAPONTYPE.AXE || type == WEAPONTYPE.BIGAXE) this.critbonus += player.talents.axecrit;
         if (type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (type == WEAPONTYPE.BIGMACE || type == WEAPONTYPE.BIGSWORD || type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
     }
@@ -156,6 +158,13 @@ class Player {
         else {
             let mod = result == RESULT.MISS ? 0 : result == RESULT.DODGE ? 0.75 : 1;
             this.rage += (dmg / 230.6) * 7.5 * mod;
+
+            // TODO INCLUDE HEROIC STRIKE
+            if (this.talents.umbridledwrath) {
+                let roll = rng(1, 10000);
+                if (roll < this.talents.umbridledwrath * 100)
+                    this.rage += 1
+            }
         }
         if (log) console.log('Rage: ' + this.rage);
     }
@@ -192,7 +201,7 @@ class Player {
         if (weapon) {
             tmp += weapon.glanceChance * 100;
             if (roll < tmp) return RESULT.GLANCE;
-            tmp += this.crit * 100;
+            tmp += (this.crit + weapon.critbonus) * 100;
             if (roll < tmp) return RESULT.CRIT;
         }
         return RESULT.HIT;
@@ -238,8 +247,11 @@ class Player {
             if (log) console.log(spell.constructor.name + ' dodges');
         }
         if (result == RESULT.HIT) {
-            if (roll < this.crit * 100) {
-                dmg *= 2;
+            let crit = this.crit + this.mh.critbonus;
+            if (spell instanceof Overpower) 
+                crit += this.talents.overpowercrit;
+            if (roll < crit * 100) {
+                dmg *= 2 + this.talents.abilitiescrit;
                 this.procCrit();
                 if (log) console.log(spell.constructor.name + ' crits for ' + dmg);
             }
@@ -259,7 +271,7 @@ class Player {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             dmg *= (1 - this.armorReduction);
             this.addRage(dmg, result, spell);
-            return dmg;
+            return ~~dmg;
         }
         else {
             this.addRage(dmg, result, spell);

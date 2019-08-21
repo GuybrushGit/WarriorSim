@@ -6,7 +6,6 @@
   <title>Simulator</title>
 
   <link href="css/theme.default.min.css" rel="stylesheet">
-  <link href="css/theme.dark.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
@@ -21,35 +20,68 @@
   <script type="text/javascript" src="main.js"></script>
 </head>
 
+<!-- TODO LIST 
+
+RACE SPELLS
+WEAPON PROCS
+DEATHWISH
+DEEP WOUNDS
+JUJU FLURRY
+ENCHANTS
+RAGE POTS
+DENSE STONES
+SWORD SPECIALIZATION
+HAMSTRING
+HEROIC STRIKE
+MORTAL STRIKE
+ITEM FILTER
+
+
+
+
+
+
+
+-->
+
 <body>
 	<progress value="0" max="100"></progress>
+
+	<nav>
+		<ul>
+			<li class="active">Settings</li>
+			<li>Main Hand</li>
+			<li>Off Hand</li>
+		</ul>
+	</nav>
 
 	<section>
 		<article class="settings">
 			<label>Settings</label>
 			<ul>
 				<li>
-					<label>Target Armor</label>
-					<input type="text" name="armor" value="1000" />
-				</li>
-				<li>
-					<label>Fight Duration (seconds)</label>
-					<input type="text" name="timesecs" value="180" />
-				</li>
-				<li>
 					<label>Simulations</label>
 					<input type="text" name="simulations" value="100" />
 				</li>
 				<li>
+					<label>Fight Duration</label>
+					<input type="text" name="timesecs" value="180" />
+				</li>
+				
+				<li>
+					<label>Target Armor</label>
+					<input type="text" name="armor" value="1000" />
+				</li>
+				<li>
 					<label>Race</label>
 					<div>
-						<div class="race active" data-ap="160" data-str="125" data-agi="75"><img src="img/human.png" alt="human"></div>
+						<div class="race active" data-ap="160" data-str="125" data-agi="75" data-skill_0="5" data-skill_1="5"><img src="img/human.png" alt="human"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/dwarf.png" alt="dwarf"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/gnome.png" alt="gnome"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/nelf.png" alt="nelf"></div>
 						<br />
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/undead.png" alt="undead"></div>
-						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/orc.png" alt="orc"></div>
+						<div class="race" data-ap="160" data-str="125" data-agi="75" data-skill_3="5"><img src="img/orc.png" alt="orc"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/tauren.png" alt="tauren"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/troll.png" alt="troll"></div>
 					</div>

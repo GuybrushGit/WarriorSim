@@ -26,7 +26,7 @@ td {
     white-space: nowrap;
 }
 tr.active td {
-    background-color: #d6e6d0;
+    background-color: rgba(30, 72, 48, 0.9);
 }
 td span {
     font-size: 12px;
@@ -289,4 +289,73 @@ progress {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
     z-index: 20;
     display: none;
+}
+nav {
+    position: fixed;
+    left: calc(50% - 620px);
+    top: 30px;
+}
+nav ul {
+    list-style: none;
+    width: 140px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+nav li {
+    display: block;
+    text-align: right;
+    padding: 11px 10px 5px;
+    font-style: italic;
+    transition: all 0.2s ease-in;
+    opacity: 0.5;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+nav li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: #ddd;
+    transition: all 0.2s ease-in;
+}
+nav li.active {
+    opacity: 1;
+}
+nav li.active:after {
+    width: 100%;
+}
+.tablesorter-default, .tablesorter-default td, 
+.tablesorter-default th, .tablesorter-default thead td {
+    background: transparent;
+    color: #ddd;
+}
+.tablesorter-default td {
+    border-color: rgba(204,204,204,0.3);
+}
+.tablesorter-default .header, .tablesorter-default .tablesorter-header {
+    outline: none;
+    background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+}
+.tablesorter-default {
+    font-size: 11px;
+    line-height: 15px;
+    font-family: inherit;
+}
+.tablesorter-default thead .headerSortUp, .tablesorter-default thead .tablesorter-headerAsc, .tablesorter-default thead .tablesorter-headerSortUp {
+    border-color: #ddd;
+    background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+}
+.tablesorter-default thead .headerSortDown, .tablesorter-default thead .tablesorter-headerDesc, .tablesorter-default thead .tablesorter-headerSortDown {
+    border-color: #ddd;
+    background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+}
+.tablesorter-default tbody>tr.even:hover>td, .tablesorter-default tbody>tr.hover>td, .tablesorter-default tbody>tr.odd:hover>td, .tablesorter-default tbody>tr:hover>td {
+    background-color: rgba(30, 72, 48, 0.9);
+    color: inherit;
 }
