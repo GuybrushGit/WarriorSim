@@ -287,7 +287,7 @@ class Player {
     proccrit() {
         if (this.talents.flurry) {
             this.auras.flurry = new Flurry(this.talents.flurry);
-            this.stats.haste /= (1 + this.auras.flurry.div_stats.haste/100);
+            this.updateAuras();
         }
         if (this.spells.deepwounds && this.talents.deepwounds) {
             if (!this.auras.deepwounds)
