@@ -63,7 +63,7 @@ article > label {
 }
 .settings, .buffs, .char {
     width: 33%;
-    height: 340px;
+    min-height: 340px;
 }
 .talent {
     width: 40px;

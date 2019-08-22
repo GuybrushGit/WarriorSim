@@ -21,12 +21,6 @@ class Spell {
     canUse() {
         return this.timer == 0 && this.cost <= this.player.rage;
     }
-    procattack() {
-        if (this.player.talents.swordproc && this.player.mh.type == WEAPONTYPE.SWORD) {
-            if (rng(1, 10000) < this.player.talents.swordproc * 100)
-                this.player.extraattacks++;
-        }
-    }
 }
 
 class Bloodthirst extends Spell {
@@ -107,7 +101,6 @@ class BattleShout extends Spell {
         super.use();
         this.player.auras.battleshout = new Aura(this.cooldown, { ap: this.ap });
         this.player.stats.ap += this.ap;
-        if (log) console.log('use bshout');
     }
 }
 
@@ -127,6 +120,50 @@ class BerserkerRage extends Spell {
     }
 }
 
+class Bloodrage extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 0;
+        this.rage = 10 + player.talents.bloodragebonus;
+        this.cooldown = 60;
+    }
+    use() {
+        super.use();
+        this.player.rage += this.rage;
+        this.player.auras.bloodrage = new BloodrageAura();
+    }
+    canUse() {
+        return super.canUse() && !this.battlestance;
+    }
+}
+
+class DeathWish extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 10;
+        this.cooldown = 180;
+    }
+    use() {
+        super.use();
+        this.player.auras.deathwish = new Aura(30, {}, { dmgmod: 20 });
+        this.player.updateAuras();
+    }
+}
+
+class HeroicStrike extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 15 - player.talents.impheroicstrike;
+    }
+    use() {
+        super.use();
+        this.player.nextswinghs = true;
+    }
+    canUse() {
+        return super.canUse() && !this.player.nextswinghs;
+    }
+}
+
 class Aura {
     constructor(duration, stats, mult_stats, div_stats) {
         this.timer = duration * 1000;
@@ -137,8 +174,8 @@ class Aura {
     step() {
         return this.timer = this.timer < 200 ? 0 : this.timer - 200;
     }
-    procattack() {
-        return true;
+    refresh() {
+
     }
 }
 
@@ -155,16 +192,34 @@ class Flurry extends Aura {
 }
 
 class DeepWounds extends Aura {
-    constructor(percentage) {
+    constructor() {
         super(12);
-        this.dotdmg = 100 * percentage;
     }
     step(simulation) {
         let timer = super.step();
-        if (timer == 0 || timer % 4000 == 0 || timer % 8000 == 0)
-            simulation.total += this.dotdmg;
+        if (timer == 0 || timer % 3000 == 0 || timer % 6000 == 0 || timer % 9000 == 0) {
+            let player = simulation.player;
+            let min = player.mh.mindmg + (player.stats.ap / 14) * player.mh.speed;
+            let max = player.mh.maxdmg + (player.stats.ap / 14) * player.mh.speed;
+            let dmg = (min + max) / 2;
+            dmg *= player.mh.modifier * player.stats.dmgmod * player.talents.deepwounds;
+            simulation.total += ~~(dmg / 4);
+        }
         return timer;
     }
-
+    refresh() {
+        this.timer = 9000 + (this.timer % 3000);
+    }
 }
 
+class BloodrageAura extends Aura {
+    constructor() {
+        super(10);
+    }
+    step(simulation) {
+        let timer = super.step();
+        if (timer % 1000 == 0)
+            simulation.player.rage++;
+        return timer;
+    }
+}

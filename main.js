@@ -1,4 +1,3 @@
-var log = false;
 var start, end;
 
 function getAuraFromRow(tr) {
@@ -82,8 +81,9 @@ function startSimulation(output, gear, callback) {
     $('.spell.active').each(function() {
         let name = $(this).find('img').attr('alt');
         let lname = name.toLowerCase();
-        player.spells[lname] = eval(`new ${name}(player)`);
         if (lname == 'deepwounds') player.spells[lname] = true;
+        else player.spells[lname] = eval(`new ${name}(player)`);
+        
     });
     player.target.armor = settings.armor;
 

@@ -23,7 +23,7 @@ class Weapon {
         this.mindmg = mindmg;
         this.maxdmg = maxdmg;
         this.type = type;
-        this.modifier = offhand ? 0.5 + player.talents.offmod + player.talents.onemod : 1 + player.talents.onemod;
+        this.modifier = offhand ? 0.5 * (1 + player.talents.offmod) * (1 + player.talents.onemod) : 1 + player.talents.onemod;
         this.timer = 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
@@ -32,21 +32,12 @@ class Weapon {
         if (type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (type == WEAPONTYPE.BIGMACE || type == WEAPONTYPE.BIGSWORD || type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
     }
-    dmg() {
+    dmg(heroicstrike) {
         let dmg = rng(this.mindmg, this.maxdmg) + (this.player.stats.ap / 14) * this.speed;
+        if (heroicstrike) dmg += 138;
         return dmg * this.modifier;
     }
-    use(extra) {
-        if (this.player.auras.flurry && !this.player.auras.flurry.procattack()) {
-            delete this.player.auras.flurry;
-            this.player.updateAuras();
-            if (log) console.log('Remove aura: flurry');
-        }
-        if (extra) return;
-        if (this.player.talents.swordproc && this.type == WEAPONTYPE.SWORD) {
-            if (rng(1, 10000) < this.player.talents.swordproc * 100)
-                this.player.extraattacks++;
-        }
+    use() {
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }
     step() {
@@ -61,6 +52,7 @@ class Player {
         this.timer = 0;
         this.dodgeTimer = 0;
         this.extraattacks = 0;
+        this.nextswinghs = false;
         this.target = {
             level: 63,
             armor: 0,
@@ -147,7 +139,7 @@ class Player {
     }
     getCritChance() {
         let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6 + 3;
-        return crit > 0 ? crit : 0;
+        return Math.max(crit, 0);
     }
     getDodgeChance(weapon) {
         return 5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1;
@@ -164,25 +156,27 @@ class Player {
         else {
             let mod = result == RESULT.MISS ? 0 : result == RESULT.DODGE ? 0.75 : 1;
             this.rage += (dmg / 230.6) * 7.5 * mod;
-
-            // TODO INCLUDE HEROIC STRIKE
-            if (this.talents.umbridledwrath && rng(1, 10000) < this.talents.umbridledwrath * 100) {
-                this.rage += 1
-            }
         }
-        if (log) console.log('Rage: ' + this.rage);
+        if (!spell || spell instanceof HeroicStrike) {
+            if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng(1, 10000) < this.talents.umbridledwrath * 100)
+                this.rage += 1;
+        }  
     }
     step(simulation) {
         this.mh.step();
         this.oh.step();
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
         this.dodgeTimer = this.dodgeTimer < 200 ? 0 : this.dodgeTimer - 200;
+
         if (this.spells.bloodthirst) this.spells.bloodthirst.step();
         if (this.spells.overpower) this.spells.overpower.step();
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.execute) this.spells.execute.step();
         if (this.spells.battleshout) this.spells.battleshout.step();
         if (this.spells.berserkerrage) this.spells.berserkerrage.step();
+        if (this.spells.bloodrage) this.spells.bloodrage.step();
+        if (this.spells.deathwish) this.spells.deathwish.step();
+
         if (this.auras.battleshout && !this.auras.battleshout.step()) {
             delete this.auras.battleshout;
             this.updateAuras();
@@ -194,79 +188,84 @@ class Player {
         if (this.auras.deepwounds && !this.auras.deepwounds.step(simulation)) {
             delete this.auras.deepwounds;
         }
+        if (this.auras.bloodrage && !this.auras.bloodrage.step(simulation)) {
+            delete this.auras.bloodrage;
+        }
+        if (this.auras.deathwish && !this.auras.deathwish.step()) {
+            delete this.auras.deathwish;
+            this.updateAuras();
+        }
     }
-    roll(canDodge, weapon) {
+    rollweapon(weapon) {
         let tmp = 0;
         let roll = rng(1, 10000);
-        tmp += Math.max( (weapon ? weapon.miss : this.mh.miss) + (weapon ? 19 : 0), 0) * 100;
+        tmp += Math.max(weapon.miss + 19, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
-        if (canDodge) {
-            tmp += (weapon ? weapon.dodge : this.mh.dodge) * 100;
+        tmp += weapon.dodge * 100;
+        if (roll < tmp) return RESULT.DODGE;
+        tmp += weapon.glanceChance * 100;
+        if (roll < tmp) return RESULT.GLANCE;
+        tmp += (this.crit + weapon.critbonus) * 100;
+        if (roll < tmp) return RESULT.CRIT;
+        return RESULT.HIT;
+    }
+    rollspell(spell) {
+        let tmp = 0;
+        let roll = rng(1, 10000);
+        tmp += Math.max(this.mh.miss, 0) * 100;
+        if (roll < tmp) return RESULT.MISS;
+        if (spell.canDodge) {
+            tmp += this.mh.dodge * 100;
             if (roll < tmp) return RESULT.DODGE;
         }
-        if (weapon) {
-            tmp += weapon.glanceChance * 100;
-            if (roll < tmp) return RESULT.GLANCE;
-            tmp += (this.crit + weapon.critbonus) * 100;
-            if (roll < tmp) return RESULT.CRIT;
-        }
+        roll = rng(1, 10000);
+        let crit = this.crit + this.mh.critbonus;
+        if (spell instanceof Overpower) 
+            crit += this.talents.overpowercrit;
+        if (roll < (crit * 100)) return RESULT.CRIT;
         return RESULT.HIT;
     }
     attack(weapon, extra) {
-        let dmg = weapon.dmg();
-        let result = this.roll(true, weapon);
-
-        if (result == RESULT.MISS) {
-            if (log) console.log('Attack misses');
+        let spell = null;
+        let heroicstrike = !weapon.offhand && this.nextswinghs;
+        let dmg = weapon.dmg(heroicstrike);
+        let result = this.rollweapon(weapon);
+        if (heroicstrike) {
+            this.nextswinghs = false;
+            spell = this.spells.heroicstrike;
+            result = this.rollspell(spell);
         }
+        this.procattack(spell, weapon, result);
+
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
-            if (log) console.log('Attack dodges');
         }
         if (result == RESULT.GLANCE) {
             dmg *= weapon.glanceReduction;
-            if (log) console.log('Attack glances for ' + dmg);
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
             this.proccrit();
-            if (log) console.log('Attack crits for ' + dmg);
-        }
-        if (result == RESULT.HIT) {
-            if (log) console.log('Attack hits for ' + dmg);
         }
 
-        weapon.use(extra);
-        return this.dealdamage(dmg, result);
+        if (!extra) weapon.use();
+        return this.dealdamage(dmg, result, spell);
     }
     cast(spell) {
         spell.use();
         let dmg = spell.dmg();
-        let result = this.roll(spell.canDodge);
+        let result = this.rollspell(spell);
         let roll = rng(1, 10000);
+        this.procattack(spell, this.mh, result);
 
-        if (result == RESULT.MISS) {
-            if (log) console.log(spell.constructor.name + ' misses');
-        }
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
-            if (log) console.log(spell.constructor.name + ' dodges');
         }
-        if (result == RESULT.HIT) {
-            let crit = this.crit + this.mh.critbonus;
-            if (spell instanceof Overpower) 
-                crit += this.talents.overpowercrit;
-            if (roll < crit * 100) {
-                dmg *= 2 + this.talents.abilitiescrit;
-                this.proccrit();
-                if (log) console.log(spell.constructor.name + ' crits for ' + dmg);
-            }
-            else {
-                if (log) console.log(spell.constructor.name + ' hits for ' + dmg);
-            }
+        if (result == RESULT.CRIT) {
+            dmg *= 2 + this.talents.abilitiescrit;
+            this.proccrit();
         }
 
-        spell.procattack();
         return this.dealdamage(dmg, result, spell);
     }
     buff(spell) {
@@ -289,10 +288,26 @@ class Player {
         if (this.talents.flurry) {
             this.auras.flurry = new Flurry(this.talents.flurry);
             this.stats.haste /= (1 + this.auras.flurry.div_stats.haste/100);
-            if (log) console.log('Add aura: Flurry');
         }
         if (this.spells.deepwounds && this.talents.deepwounds) {
-            this.auras.deepwounds = new DeepWounds(this.talents.deepwounds)
+            if (!this.auras.deepwounds)
+                this.auras.deepwounds = new DeepWounds();
+            else
+                this.auras.deepwounds.refresh();
+        }
+    }
+    procattack(spell, weapon, result) {
+        if (!spell || spell instanceof HeroicStrike) {
+            if (this.auras.flurry && !this.auras.flurry.procattack()) {
+                delete this.auras.flurry;
+                this.updateAuras();
+            }
+        }
+        if (result != RESULT.MISS && result != RESULT.DODGE) {
+            if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
+                if (rng(1, 10000) < this.talents.swordproc * 100)
+                    this.extraattacks++;
+            }
         }
     }
 }
@@ -346,6 +361,18 @@ class Simulation {
                 }
                 if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.total += player.cast(player.spells.whirlwind);
+                    continue;
+                }
+                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
+                    player.buff(player.spells.bloodrage);
+                    continue;
+                }
+                if (player.spells.deathwish && player.spells.deathwish.canUse()) {
+                    player.buff(player.spells.deathwish);
+                    continue;
+                }
+                if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
+                    player.buff(player.spells.heroicstrike);
                     continue;
                 }
             }

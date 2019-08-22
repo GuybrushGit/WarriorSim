@@ -673,6 +673,7 @@ var talents =[
             x:1,
             y:4,
             c:1,
+            enable: 'deathwish',
             iconname:'Spell_Shadow_DeathPact',
             aura: function(count) { return { deathwish: count } },
          },
@@ -1138,7 +1139,7 @@ function buildTalents() {
             for (let j in talent.d) tooltip.append('<p data-index="' + j + '" class="description">' + talent.d[j] + '</p>');
             if (talent.c >= talent.m) div.addClass('maxed');
             if (talent.enable) div.attr('data-enable', talent.enable);
-            if (talent.enable && talent.c > 0) $('.spell[data-id="' + talent.enable + '"]').removeClass('hidden').addClass('active');
+            if (talent.enable && talent.c == 0) $('.spell[data-id="' + talent.enable + '"]').addClass('hidden');
             div.append(tooltip);
             table.find('tr').eq(talent.y).children().eq(talent.x).html(div);
         }
