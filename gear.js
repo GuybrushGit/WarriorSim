@@ -2786,7 +2786,29 @@ weapon: [
    "Speed": 2.7,
    "Type": "Sword"
  }
-]
+],
+enchant: [
+ {
+   "Name": "Elemental Sharpening Stone",
+   "Crit": 2,
+   "Slot": "Main Hand Temporary"
+ },
+ {
+   "Name": "Dense Stone",
+   "WeaponDmg": 8,
+   "Slot": "Main Hand Temporary"
+ },
+ {
+   "Name": "Elemental Sharpening Stone",
+   "Crit": 2,
+   "Slot": "Off Hand Temporary"
+ },
+ {
+   "Name": "Dense Stone",
+   "WeaponDmg": 8,
+   "Slot": "Off Hand Temporary"
+ }
+],
 
 };
 
@@ -2874,6 +2896,37 @@ function buildWeapons() {
                      <td>${item.Speed || ''}</td>
                      <td>${item.Skill || ''}</td>
                      <td>${item.Type || ''}</td>
+                     <td></td>
+                  </tr>`;
+   }
+
+   section += '</tbody></table></section>';
+   $('body').append(section);
+
+}
+
+function buildEnchants() {
+
+   let enchants = gear.enchant;
+   let section = `<section><h3>Enchants</h3>
+      <table class="gear" data-type="enchant">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Slot</th>
+               <th>Crit</th>
+               <th>Weapon Damage</th>
+               <th>DPS</th>
+            </tr>
+         </thead>
+         <tbody>`;
+
+   for (let item of enchants) {
+      section += `<tr>
+                     <td>${item.Name}</td>
+                     <td>${item.Slot || ''}</td>
+                     <td>${item.Crit || ''}</td>
+                     <td>${item.WeaponDmg || ''}</td>
                      <td></td>
                   </tr>`;
    }

@@ -52,6 +52,8 @@ function startSimulation(output, gear, callback) {
         let apbonus = 0;
         if ($(this).data('group') == "battleshout")
             apbonus = ~~($(this).data('ap') * player.talents.impbattleshout);
+        if ($(this).data('spell'))
+            player.spells[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + '(player);');
 
         player.base.ap += ($(this).data('ap') || 0) + apbonus;
         player.base.agi += $(this).data('agi') || 0;
@@ -122,6 +124,7 @@ $(document).ready(function () {
     buildBuffs();
     buildTalents();
     talentEvents();
+    buildEnchants()
     buildWeapons();
 
     $('input[type="submit"]').click(function () {
@@ -144,8 +147,16 @@ $(document).ready(function () {
 
     $('table.gear tbody td').click(function () {
         let tr = $(this).parent();
+        let type = $(this).parents('table').data('type');
         tr.toggleClass('active');
-        tr.siblings().removeClass('active');
+        
+        if (type == "enchant") {
+
+        }
+        else {
+           tr.siblings().removeClass('active'); 
+        }
+        
     });
 
     $('.race').click(function() {

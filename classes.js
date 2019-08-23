@@ -176,6 +176,8 @@ class Player {
         if (this.spells.berserkerrage) this.spells.berserkerrage.step();
         if (this.spells.bloodrage) this.spells.bloodrage.step();
         if (this.spells.deathwish) this.spells.deathwish.step();
+        if (this.spells.jujuflurry) this.spells.jujuflurry.step();
+        if (this.spells.ragepotion) this.spells.ragepotion.step();
 
         if (this.auras.battleshout && !this.auras.battleshout.step()) {
             delete this.auras.battleshout;
@@ -193,6 +195,14 @@ class Player {
         }
         if (this.auras.deathwish && !this.auras.deathwish.step()) {
             delete this.auras.deathwish;
+            this.updateAuras();
+        }
+        if (this.auras.jujuflurry && !this.auras.jujuflurry.step()) {
+            delete this.auras.jujuflurry;
+            this.updateAuras();
+        }
+        if (this.auras.ragepotion && !this.auras.ragepotion.step()) {
+            delete this.auras.ragepotion;
             this.updateAuras();
         }
     }
@@ -253,7 +263,7 @@ class Player {
     }
     cast(spell) {
         spell.use();
-        let dmg = spell.dmg();
+        let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
         let roll = rng(1, 10000);
         this.procattack(spell, this.mh, result);
@@ -373,6 +383,14 @@ class Simulation {
                 }
                 if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
                     player.buff(player.spells.heroicstrike);
+                    continue;
+                }
+                if (player.spells.jujuflurry && player.spells.jujuflurry.canUse()) {
+                    player.buff(player.spells.jujuflurry);
+                    continue;
+                }
+                if (player.spells.ragepotion && player.spells.ragepotion.canUse()) {
+                    player.buff(player.spells.ragepotion);
                     continue;
                 }
             }

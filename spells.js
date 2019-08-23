@@ -164,6 +164,31 @@ class HeroicStrike extends Spell {
     }
 }
 
+class JujuFlurry extends Spell {
+    constructor(player) {
+        super(player);
+        this.cooldown = 60;
+    }
+    use() {
+        super.use();
+        this.player.auras.jujuflurry = new Aura(20, {}, {}, { haste: 3 });
+        this.player.updateAuras();
+    }
+}
+
+class RagePotion extends Spell {
+    constructor(player) {
+        super(player);
+        this.cooldown = 120;
+    }
+    use() {
+        super.use();
+        this.player.auras.ragepotion = new Aura(20, { str: 60 });
+        this.player.updateAuras();
+        this.player.rage = Math.max(this.player.rage + ~~rng(45,75), 100);
+    }
+}
+
 class Aura {
     constructor(duration, stats, mult_stats, div_stats) {
         this.timer = duration * 1000;

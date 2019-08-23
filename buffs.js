@@ -143,19 +143,21 @@ var buffs = [
       group: "food",
       str: 10
    },
-   
-   
+   {
+      name: "Juju Flurry",
+      iconname: "inv_misc_monsterscales_17",
+      description: "Increases the target's attack speed by 3% for 20 sec.",
+      spell: "JujuFlurry",
+   },
+   {
+      name: "Mighty Rage Potion",
+      iconname: "inv_potion_41",
+      description: "Increases Rage by 45 to 75 and increases Strength by 60 for 20 sec.",
+      spell: "RagePotion",
+   },
    
    // TODO
-   // {
-   //    name: "Juju Flurry",
-   //    iconname: "inv_misc_monsterscales_17",
-   //    description: "Increases the target's attack speed by 3% for 20 sec.",
-   //    group: "",
-   //    haste: 3
-   // },
-   // Mighty Rage Potion
-   // {
+
    //    name: "Elemental Sharpening Stone",
    //    iconname: "inv_stone_02",
    //    description: "Increase critical chance on a melee weapon by 2% for 30 minutes.",
@@ -183,6 +185,7 @@ function buildBuffs() {
       div.attr('data-strmod', buff.strmod);
       div.attr('data-dmgmod', buff.dmgmod);
       div.attr('data-haste', buff.haste);
+      if (buff.spell) div.attr('data-spell', buff.spell);
       if (buff.disableSpell) div.attr('data-disable-spell', buff.disableSpell);
       if (buff.checked) div.addClass('active');
       div.click(function() {
