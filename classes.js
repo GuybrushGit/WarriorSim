@@ -78,7 +78,6 @@ class Player {
         this.auras = [];
         this.spells = {};
         this.talents = {};
-        this.armorReduction = this.getArmorReduction();
     }
     reset() {
         this.rage = 0;

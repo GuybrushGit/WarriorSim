@@ -123,9 +123,10 @@ $(document).ready(function () {
 
     buildBuffs();
     buildTalents();
-    talentEvents();
-    buildEnchants()
     buildWeapons();
+    talentEvents();
+    gearEvents();
+
 
     $('input[type="submit"]').click(function () {
 
