@@ -22,7 +22,8 @@
 
 <!-- TODO LIST 
 
-RACE SPELLS
+BLOOD FURY
+BERSERKING
 WEAPON PROCS
 JUJU FLURRY
 ENCHANTS
@@ -34,6 +35,9 @@ ITEM FILTER
 SPELLS TOOLTIPS
 post aq ranks
 talent UI
+dynamic spell queue function
+prevent deselecting weapons
+ITEM SETS
 
 
 TEST WEAPON SWIGING
@@ -119,6 +123,32 @@ test hit rates over 9
 		</article>
 		<article class="talents">
 			<label>Talents</label>
+		</article>
+		<article class="filter">
+			<label>Gear Filter</label>
+			<ul class="sources">
+				<li data-id="quest" class="active">Quest</li>
+				<li data-id="crafting" class="active">Crafting</li>
+				<li data-id="dungeon" class="active">Dungeon</li>
+				<li data-id="onyxia" class="active">Onyxia</li>
+				<li data-id="mc" class="active">Molten Core</li>
+				<li data-id="bwl">Blackwing Lair</li>
+				<li data-id="zg">Zul'Gurub</li>
+				<li data-id="aq20">AQ20</li>
+				<li data-id="aq40">AQ40</li>
+				<li data-id="naxx">Naxxramas</li>
+				<li data-id="worldboss" class="active">World Boss</li>
+				<li data-id="pvp" class="active">PvP</li>
+				<li data-id="other" class="active">Other</li>
+			</ul>
+			<ul class="phases">
+				<li data-phase="1" data-sources="onyxia,mc" class="active">P1</li>
+				<li data-phase="2" data-sources="">P2</li>
+				<li data-phase="3" data-sources="bwl">P3</li>
+				<li data-phase="4" data-sources="zg">P4</li>
+				<li data-phase="5" data-sources="aq20,aq40">P5</li>
+				<li data-phase="6" data-sources="naxx">P6</li>
+			</ul>
 		</article>
 	</section>
 
