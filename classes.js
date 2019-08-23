@@ -41,7 +41,7 @@ class Weapon {
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }
     step() {
-        this.timer = this.timer < 200 ? 0 : this.timer - 200;
+        this.timer = this.timer < 10 ? 0 : this.timer - 10;
     }
 }
 
@@ -161,9 +161,10 @@ class Player {
                 this.rage += 1;
         }  
     }
-    step(simulation) {
+    step(simulation, batch) {
         this.mh.step();
         this.oh.step();
+        if (!batch) return;
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
         this.dodgeTimer = this.dodgeTimer < 200 ? 0 : this.dodgeTimer - 200;
 
@@ -337,17 +338,18 @@ class Simulation {
     run(i) {
         let player = this.player;
         player.reset();
-        for (let step = 0; step < this.timesecs * 1000; step += 200) {
-            player.step(this);
+        for (let step = 0; step < this.timesecs * 1000; step += 10) {
+            let batch = step % 200 == 0;
+            player.step(this, batch);
 
-            if (player.extraattacks > 0) 
+            if (batch && player.extraattacks > 0) 
                 while (player.extraattacks--)
                     this.total += player.attack(player.mh, true);
 
             if (player.mh.timer == 0) this.total += player.attack(player.mh);
             else if (player.oh.timer == 0) this.total += player.attack(player.oh);
 
-            if (player.timer == 0) {
+            if (batch && player.timer == 0) {
                 if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) {
                     player.buff(player.spells.berserkerrage);
                     continue;

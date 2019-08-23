@@ -3340,7 +3340,8 @@ var gear = {
          "Speed":1.8,
          "Type":"Sword",
          "Source":"Quest",
-         "Phase":1
+         "Phase":1,
+         "Selected":2
       },
       {  
          "Name":"Nightmare Blade",
@@ -3475,7 +3476,8 @@ var gear = {
          "Type":"Sword",
          "Source":"Quest",
          "PPM":1,
-         "Phase":1
+         "Phase":1,
+         "Selected":1
       },
       {  
          "Name":"Thunderfury, Blessed Blade of the Windseeker",
@@ -3545,13 +3547,40 @@ var gear = {
          "Source":"PVP",
          "Phase":3
       }
-   ]
+   ],
+   "enchant": [
+   {
+      "Name": "Elemental Sharpening Stone",
+      "Crit": 2,
+      "Slot": "Main Hand Temporary",
+      "Phase": 1
+   },
+   {
+      "Name": "Dense Stone",
+      "WeaponDmg": 8,
+      "Slot": "Main Hand Temporary",
+      "Phase": 1
+   },
+   {
+      "Name": "Elemental Sharpening Stone",
+      "Crit": 2,
+      "Slot": "Off Hand Temporary",
+      "Phase": 1
+   },
+   {
+      "Name": "Dense Stone",
+      "WeaponDmg": 8,
+      "Slot": "Off Hand Temporary",
+      "Phase": 1
+   }
+],
 };
 
 function gearEvents() {
 
    $('.sources li').click(function() {
       $(this).toggleClass('active');
+      filterGear();
    });
    $('.phases li').click(function() {
       $(this).toggleClass('active');
@@ -3561,10 +3590,54 @@ function gearEvents() {
          if (show) $('.sources [data-id="' + source + '"]').addClass('active');
          else $('.sources [data-id="' + source + '"]').removeClass('active');
       }
+      filterGear();
    });
 
+   $("table.gear").tablesorter({
+        widthFixed: true,
+        sortList: [[12, 1]]
+    });
 
+    $('table.gear tbody td').click(function () {
+        let tr = $(this).parent();
+        let type = $(this).parents('table').data('type');
+        tr.toggleClass('active');
+        
+        if (type == "enchant") {
 
+        }
+        else {
+           tr.siblings().removeClass('active'); 
+        }
+    });
+
+}
+
+function filterGear() {
+   $('table.gear').each(function() {
+      let type = $(this).data('type');
+      if (type == 'mainhand' || type == 'offhand') type = 'weapon';
+      $(this).find('tbody tr').each(function() {
+         let name = $(this).find('td:first-of-type').text();
+         let item = {};
+         for(let i of gear[type])
+            if (i.Name == name)
+               item = i;
+
+         let visible = true;
+         if (item.Phase && !$('.phases [data-id="' + item.Phase + '"]').hasClass('active'))
+            visible = false;
+         if (item.Source && !$('.sources [data-id="' + item.Source.toLowerCase() + '"]').hasClass('active'))
+            visible = false;
+
+         if (visible) $(this).removeClass('hidden');
+         else $(this).addClass('hidden').removeClass('active');
+      });
+
+      
+      
+
+   });
 }
 
 
@@ -3597,7 +3670,7 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Offhand) continue;
-      section += `<tr ${item.Name == "Thrash Blade" ? "class='active'" : ""}>
+      section += `<tr ${item.Selected == 1 ? "class='active'" : ""}>
                      <td>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
@@ -3643,7 +3716,7 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Mainhand) continue;
-      section += `<tr ${item.Name == "Mirah's song" ? "class='active'" : ""}>
+      section += `<tr ${item.Selected == 2 ? "class='active'" : ""}>
                      <td>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>

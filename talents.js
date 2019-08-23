@@ -739,7 +739,7 @@ var talents =[
             ],
             c:5,
             iconname:'Ability_GhoulFrenzy',
-            aura: function(count) { return { flurry: 5 + count * 5 } },
+            aura: function(count) { return { flurry: count == 0 ? 0 : 5 + count * 5 } },
          },
          {  
             i:167,

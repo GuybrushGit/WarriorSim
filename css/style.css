@@ -428,3 +428,6 @@ nav li.active:after {
     color: #123;
     font-weight: bold;
 }
+.hidden {
+    display: none;
+}

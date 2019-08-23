@@ -3,16 +3,16 @@ var start, end;
 function getAuraFromRow(tr) {
     let data = tr.children();
     let aura = {};
-    aura.str = parseInt(data.eq(2).text() || 0);
-    aura.agi = parseInt(data.eq(3).text() || 0);
-    aura.ap = parseInt(data.eq(4).text() || 0);
-    aura.crit = parseInt(data.eq(5).text() || 0);
-    aura.hit = parseInt(data.eq(6).text() || 0);
-    aura.minhit = parseInt(data.eq(7).text() || 0);
-    aura.maxhit = parseInt(data.eq(8).text() || 0);
-    aura.speed = parseFloat(data.eq(9).text() || 0);
-    aura.type = WEAPONTYPE[data.eq(11).text().toUpperCase()];
-    let skill = parseInt(data.eq(10).text() || 0);
+    aura.str = parseInt(data.eq(3).text() || 0);
+    aura.agi = parseInt(data.eq(4).text() || 0);
+    aura.ap = parseInt(data.eq(5).text() || 0);
+    aura.crit = parseInt(data.eq(6).text() || 0);
+    aura.hit = parseInt(data.eq(7).text() || 0);
+    aura.minhit = parseInt(data.eq(8).text() || 0);
+    aura.maxhit = parseInt(data.eq(9).text() || 0);
+    aura.speed = parseFloat(data.eq(10).text() || 0);
+    aura.type = WEAPONTYPE[data.eq(12).text().toUpperCase()];
+    let skill = parseInt(data.eq(11).text() || 0);
     if (skill > 0) aura['skill_' + aura.type] = skill;
     aura.slot = tr.parents('table').data('type');
     return aura;
@@ -85,7 +85,6 @@ function startSimulation(output, gear, callback) {
         let lname = name.toLowerCase();
         if (lname == 'deepwounds') player.spells[lname] = true;
         else player.spells[lname] = eval(`new ${name}(player)`);
-        
     });
     player.target.armor = settings.armor;
 
@@ -127,7 +126,7 @@ $(document).ready(function () {
     buildEnchants();
     talentEvents();
     gearEvents();
-
+    filterGear()
 
     $('input[type="submit"]').click(function () {
 
@@ -140,25 +139,6 @@ $(document).ready(function () {
         startSimulation($('#dps'), null, complete);
         // runRow($('table.gear tbody tr'), 0);
 
-    });
-
-    $("table.gear").tablesorter({
-        widthFixed: true,
-        sortList: [[12, 1]]
-    });
-
-    $('table.gear tbody td').click(function () {
-        let tr = $(this).parent();
-        let type = $(this).parents('table').data('type');
-        tr.toggleClass('active');
-        
-        if (type == "enchant") {
-
-        }
-        else {
-           tr.siblings().removeClass('active'); 
-        }
-        
     });
 
     $('.race').click(function() {
