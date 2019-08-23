@@ -124,6 +124,7 @@ $(document).ready(function () {
     buildBuffs();
     buildTalents();
     buildWeapons();
+    buildEnchants();
     talentEvents();
     gearEvents();
 
