@@ -31,6 +31,7 @@ class Weapon {
         if (type == WEAPONTYPE.AXE || type == WEAPONTYPE.BIGAXE) this.critbonus += player.talents.axecrit;
         if (type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (type == WEAPONTYPE.BIGMACE || type == WEAPONTYPE.BIGSWORD || type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
+        if (offhand) this.use();
     }
     dmg(heroicstrike) {
         let dmg = rng(this.mindmg, this.maxdmg) + (this.player.stats.ap / 14) * this.speed;
@@ -39,9 +40,10 @@ class Weapon {
     }
     use() {
         this.timer = this.speed * 1000 * this.player.stats.haste;
+
     }
-    step() {
-        this.timer = this.timer < 10 ? 0 : this.timer - 10;
+    step(next) {
+        this.timer = this.timer < 10 ? 0 : this.timer - next;
     }
 }
 
@@ -72,7 +74,8 @@ class Player {
             haste: 1, 
             strmod: 1, 
             agimod: 1, 
-            dmgmod: 1
+            dmgmod: 1,
+            dmg: 0
         };
         this.stats = {};
         this.auras = [];
@@ -84,7 +87,7 @@ class Player {
         this.timer = 0;
         this.dodgeTimer = 0;
         this.mh.timer = 0;
-        this.oh.timer = 0;
+        this.oh.use();
         this.auras = [];
         if (this.spells.bloodthirst) this.spells.bloodthirst.timer = 0;
         if (this.spells.overpower) this.spells.overpower.timer = 0;
@@ -161,9 +164,9 @@ class Player {
                 this.rage += 1;
         }  
     }
-    step(simulation, batch) {
-        this.mh.step();
-        this.oh.step();
+    step(simulation, batch, next) {
+        this.mh.step(next);
+        this.oh.step(next);
         if (!batch) return;
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
         this.dodgeTimer = this.dodgeTimer < 200 ? 0 : this.dodgeTimer - 200;
@@ -245,7 +248,10 @@ class Player {
             spell = this.spells.heroicstrike;
             result = this.rollspell(spell);
         }
-        this.procattack(spell, weapon, result);
+        if (!extra) {
+            weapon.use();
+            this.procattack(spell, weapon, result);
+        }
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -258,7 +264,6 @@ class Player {
             this.proccrit();
         }
 
-        if (!extra) weapon.use();
         return this.dealdamage(dmg, result, spell);
     }
     cast(spell) {
@@ -338,16 +343,34 @@ class Simulation {
     run(i) {
         let player = this.player;
         player.reset();
-        for (let step = 0; step < this.timesecs * 1000; step += 10) {
+        let step = 0;
+        let max = this.timesecs * 1000;
+        while( step < max ) {
+            let next = 10;
             let batch = step % 200 == 0;
-            player.step(this, batch);
+
+            if (player.mh.timer >= 200 && player.oh.timer >= 200)
+                next = (200 - (step % 200));
+
+            step += next;
+            player.step(this, batch, next);
 
             if (batch && player.extraattacks > 0) 
                 while (player.extraattacks--)
                     this.total += player.attack(player.mh, true);
 
-            if (player.mh.timer == 0) this.total += player.attack(player.mh);
-            else if (player.oh.timer == 0) this.total += player.attack(player.oh);
+            if (player.mh.timer == 0) {
+                this.total += player.attack(player.mh);
+                if (player.oh.timer < 200) {
+                    player.oh.timer = 200;
+                } 
+            }
+            else if (player.oh.timer == 0) {
+                this.total += player.attack(player.oh);
+                if (player.mh.timer < 200) {
+                    player.mh.timer = 200;
+                }
+            }
 
             if (batch && player.timer == 0) {
                 if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) {

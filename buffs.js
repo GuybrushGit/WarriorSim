@@ -155,20 +155,6 @@ var buffs = [
       description: "Increases Rage by 45 to 75 and increases Strength by 60 for 20 sec.",
       spell: "RagePotion",
    },
-   
-   // TODO
-
-   //    name: "Elemental Sharpening Stone",
-   //    iconname: "inv_stone_02",
-   //    description: "Increase critical chance on a melee weapon by 2% for 30 minutes.",
-   //    group: "stone",
-   // },
-   // {
-   //    name: "Dense Stone",
-   //    iconname: "inv_stone_sharpeningstone_05",
-   //    description: "Increase weapon damage by 8 for 30 minutes.",
-   //    group: "stone",
-   // },
 ];
 
 

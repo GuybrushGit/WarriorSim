@@ -1,22 +1,6 @@
 var start, end;
 
-function getAuraFromRow(tr) {
-    let data = tr.children();
-    let aura = {};
-    aura.str = parseInt(data.eq(3).text() || 0);
-    aura.agi = parseInt(data.eq(4).text() || 0);
-    aura.ap = parseInt(data.eq(5).text() || 0);
-    aura.crit = parseInt(data.eq(6).text() || 0);
-    aura.hit = parseInt(data.eq(7).text() || 0);
-    aura.minhit = parseInt(data.eq(8).text() || 0);
-    aura.maxhit = parseInt(data.eq(9).text() || 0);
-    aura.speed = parseFloat(data.eq(10).text() || 0);
-    aura.type = WEAPONTYPE[data.eq(12).text().toUpperCase()];
-    let skill = parseInt(data.eq(11).text() || 0);
-    if (skill > 0) aura['skill_' + aura.type] = skill;
-    aura.slot = tr.parents('table').data('type');
-    return aura;
-}
+
 
 function startSimulation(output, gear, callback) {
     let player = new Player();
@@ -35,9 +19,10 @@ function startSimulation(output, gear, callback) {
     // Gear
     $('table.gear').each(function() {
         let slot = $(this).data('type');
+        if (slot == 'enchant') return;
         let row = $(this).find('tbody tr.active');
         let aura = {};
-        if (row.length) aura = getAuraFromRow(row);
+        if (row.length) aura = getWeaponFromRow(row);
         if (gear && gear.slot == slot) aura = gear;
         for (let prop in player.base)
             player.base[prop] += aura[prop] || 0;
@@ -45,6 +30,16 @@ function startSimulation(output, gear, callback) {
             player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
         if (aura.slot == 'offhand')
             player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
+    });
+
+    $('table.gear[data-type="enchant"] tbody tr.active').each(function() {
+
+        let row = $(this);
+        let aura = getEnchantFromRow(row);
+        if (gear && gear.slot == aura.slot) aura = gear;
+        for (let prop in player.base)
+            player.base[prop] += aura[prop] || 0;
+
     });
 
     // Buffs
@@ -89,8 +84,8 @@ function startSimulation(output, gear, callback) {
     player.target.armor = settings.armor;
 
     player.update();
-    // console.log(player);
-    new Simulation(player, settings.timesecs, gear ? settings.simulations : 10000, settings.executeperc, output, callback).start();
+    console.log(player);
+    //new Simulation(player, settings.timesecs, gear ? settings.simulations : 10000, settings.executeperc, output, callback).start();
 }
 
 function runRow(rows, index) {
@@ -122,8 +117,9 @@ $(document).ready(function () {
 
     buildBuffs();
     buildTalents();
-    buildWeapons();
     buildEnchants();
+    buildWeapons();
+    
     talentEvents();
     gearEvents();
     filterGear()

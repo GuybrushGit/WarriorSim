@@ -3604,7 +3604,12 @@ function gearEvents() {
         tr.toggleClass('active');
         
         if (type == "enchant") {
-
+            let aura = getEnchantFromRow(tr);
+            tr.siblings().each(function() {
+               let sibling = getEnchantFromRow($(this));
+               if (sibling.slot == aura.slot)
+                  $(this).removeClass('active');
+            });
         }
         else {
            tr.siblings().removeClass('active'); 
@@ -3633,13 +3638,8 @@ function filterGear() {
          if (visible) $(this).removeClass('hidden');
          else $(this).addClass('hidden').removeClass('active');
       });
-
-      
-      
-
    });
 }
-
 
 
 function buildWeapons() {
@@ -3768,4 +3768,31 @@ function buildEnchants() {
    section += '</tbody></table></section>';
    $('body').append(section);
 
+}
+
+function getWeaponFromRow(tr) {
+    let data = tr.children();
+    let aura = {};
+    aura.str = parseInt(data.eq(3).text() || 0);
+    aura.agi = parseInt(data.eq(4).text() || 0);
+    aura.ap = parseInt(data.eq(5).text() || 0);
+    aura.crit = parseInt(data.eq(6).text() || 0);
+    aura.hit = parseInt(data.eq(7).text() || 0);
+    aura.minhit = parseInt(data.eq(8).text() || 0);
+    aura.maxhit = parseInt(data.eq(9).text() || 0);
+    aura.speed = parseFloat(data.eq(10).text() || 0);
+    aura.type = WEAPONTYPE[data.eq(12).text().toUpperCase()];
+    let skill = parseInt(data.eq(11).text() || 0);
+    if (skill > 0) aura['skill_' + aura.type] = skill;
+    aura.slot = tr.parents('table').data('type');
+    return aura;
+}
+
+function getEnchantFromRow(tr) {
+    let data = tr.children();
+    let aura = {};
+    aura.slot = data.eq(1).text();
+    aura.crit = parseInt(data.eq(2).text() || 0);
+    aura.dmg = parseInt(data.eq(3).text() || 0);
+    return aura;
 }
