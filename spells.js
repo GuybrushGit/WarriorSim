@@ -42,7 +42,7 @@ class Whirlwind extends Spell {
         this.refund = false;
     }
     dmg() {
-        return rng(this.player.mh.mindmg, this.player.mh.maxdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        return rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
         return super.canUse() && (!this.bloodthirst || this.player.bloodthirst.timer > 1500);
@@ -57,7 +57,7 @@ class Overpower extends Spell {
         this.canDodge = false;
     }
     dmg() {
-        return 35 + rng(this.player.mh.mindmg, this.player.mh.maxdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        return 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
         this.player.timer = 3000;
@@ -75,18 +75,20 @@ class Overpower extends Spell {
 class Execute extends Spell {
     constructor(player) {
         super(player);
-        this.cost = 15 - player.talents.executecost;
+        this.basecost = 15 - player.talents.executecost;
         this.usedrage = 0;
     }
     dmg() {
-        let dmg = 600 + (15 * this.usedrage);
-        this.usedrage = 0;
-        return dmg;
+        return 600 + (15 * this.usedrage);
     }
     use() {
-        super.use();
-        this.usedrage = ~~(this.player.rage);
+        this.player.timer = 1500;
+        this.usedrage = ~~(this.player.rage - this.basecost);
+        this.cost = this.basecost + this.usedrage;
         this.player.rage = 0;
+    }
+    canUse() {
+        return this.basecost <= this.player.rage;
     }
 }
 
@@ -189,6 +191,74 @@ class RagePotion extends Spell {
     }
 }
 
+class MortalStrike extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 30;
+        this.cooldown = 6;
+    }
+    dmg() {
+        return 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+    }
+}
+
+class Hamstring extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 10;
+    }
+    dmg() {
+        return 45;
+    }
+}
+
+class Recklessness extends Spell {
+    constructor(player) {
+        super(player);
+    }
+    use() {
+        super.use();
+        this.player.auras.recklessness = new Aura(15, { crit: 100 });
+        this.player.updateAuras();
+        this.player.recklessness = false;
+    }
+}
+
+class BloodFury extends Spell {
+    constructor(player) {
+        super(player);
+        this.cooldown = 120;
+    }
+    use() {
+        super.use();
+        this.player.auras.bloodfury = new Aura(15, {}, { apmod: 25 });
+        this.player.updateAuras();
+    }
+}
+
+class Berserking extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 5;
+        this.cooldown = 180;
+    }
+    use() {
+        super.use();
+        this.player.auras.berserking = new Aura(10, {}, {}, { haste: 30 });
+        this.player.updateAuras();
+    }
+}
+
+class Crusader extends Spell {
+    use() {
+        this.player.auras.crusader = new Aura(15, { str: 100 });
+        this.player.updateAuras();
+    }
+}
+
+
+
+
 class Aura {
     constructor(duration, stats, mult_stats, div_stats) {
         this.timer = duration * 1000;
@@ -224,8 +294,8 @@ class DeepWounds extends Aura {
         let timer = super.step();
         if (timer == 0 || timer % 3000 == 0 || timer % 6000 == 0 || timer % 9000 == 0) {
             let player = simulation.player;
-            let min = player.mh.mindmg + (player.stats.ap / 14) * player.mh.speed;
-            let max = player.mh.maxdmg + (player.stats.ap / 14) * player.mh.speed;
+            let min = player.mh.mindmg + player.mh.bonusdmg + (player.stats.ap / 14) * player.mh.speed;
+            let max = player.mh.maxdmg + player.mh.bonusdmg + (player.stats.ap / 14) * player.mh.speed;
             let dmg = (min + max) / 2;
             dmg *= player.mh.modifier * player.stats.dmgmod * player.talents.deepwounds;
             simulation.total += ~~(dmg / 4);

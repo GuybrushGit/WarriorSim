@@ -18,38 +18,35 @@
   <script type="text/javascript" src="classes.js"></script>
   <script type="text/javascript" src="buffs.js"></script>
   <script type="text/javascript" src="main.js"></script>
+
+  <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
+  <script src="https://wow.zamimg.com/widgets/power.js"></script>
 </head>
 
 <!-- TODO LIST 
 
-BLOOD FURY
-BERSERKING
 WEAPON PROCS
 ENCHANTS
-DENSE STONES
-HAMSTRING
-MORTAL STRIKE
 
-SPELLS TOOLTIPS
+ALL TOOLTIPS
 post aq ranks
 talent UI
 dynamic spell queue function
-no weapon error
 ITEM SETS
-enchants MH perma + temp ?
-dmg enchant on weapons
+overpower delays
+proc magical miss rate -> 17%
 
 
 deathwish - when to use?
 verify heroic strike refund rules
 verify execute refund rules
-test hit rates over 9
 
 
 
 -->
 
 <body>
+	<div class="alerts"></div>
 	<progress value="0" max="100"></progress>
 
 	<nav>
@@ -73,10 +70,13 @@ test hit rates over 9
 					<label>Fight Duration</label>
 					<input type="text" name="timesecs" value="180" />
 				</li>
-				
 				<li>
 					<label>Target Armor</label>
 					<input type="text" name="armor" value="1000" />
+				</li>
+				<li>
+					<label>Initial Rage</label>
+					<input type="text" name="startrage" value="0" />
 				</li>
 				<li>
 					<label>Race</label>
@@ -94,16 +94,66 @@ test hit rates over 9
 				<li>
 					<label>Rotation</label>
 					<div>
-						<div class="spell" data-id="berserkerrage"><img src="img/Spell_Nature_AncestralGuardian.jpg" alt="BerserkerRage"></div>
-						<div class="spell" data-id="execute"><img src="img/INV_Sword_48.jpg" alt="Execute"></div>
-						<div class="spell active" data-id="overpower"><img src="img/ability_meleedamage.jpg" alt="Overpower"></div>
-						<div class="spell" data-id="battleshout" data-disable-buff="battleshout"><img src="img/Ability_Warrior_BattleShout.jpg" alt="BattleShout"></div>
-						<div class="spell active" data-id="bloodthirst"><img src="img/Spell_Nature_BloodLust.jpg" alt="Bloodthirst"></div>
-						<div class="spell" data-id="whirlwind"><img src="img/ability_whirlwind.jpg" alt="Whirlwind"></div>
-						<div class="spell" data-id="deepwounds"><img src="img/Ability_BackStab.jpg" alt="DeepWounds"></div>
-						<div class="spell" data-id="bloodrage"><img src="img/Ability_Racial_BloodRage.jpg" alt="Bloodrage"></div>
-						<div class="spell" data-id="deathwish"><img src="img/Spell_Shadow_DeathPact.jpg" alt="DeathWish"></div>
-						<div class="spell" data-id="heroicstrike"><img src="img/Ability_Rogue_Ambush.jpg" alt="HeroicStrike"></div>
+						<div class="spell" data-id="berserkerrage">
+							<img src="img/Spell_Nature_AncestralGuardian.jpg" alt="BerserkerRage">
+							<a href="https://classic.wowhead.com/spell=18499" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="execute">
+							<img src="img/INV_Sword_48.jpg" alt="Execute">
+							<a href="https://classic.wowhead.com/spell=20662" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="overpower">
+							<img src="img/ability_meleedamage.jpg" alt="Overpower">
+							<a href="https://classic.wowhead.com/spell=11585" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="battleshout" data-disable-buff="battleshout">
+							<img src="img/Ability_Warrior_BattleShout.jpg" alt="BattleShout">
+							<a href="https://classic.wowhead.com/spell=11551" class="wh-tooltip"></a>
+						</div>
+						<div class="spell active" data-id="bloodthirst">
+							<img src="img/Spell_Nature_BloodLust.jpg" alt="Bloodthirst">
+							<a href="https://classic.wowhead.com/spell=23894" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="whirlwind">
+							<img src="img/ability_whirlwind.jpg" alt="Whirlwind">
+							<a href="https://classic.wowhead.com/spell=1680" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="deepwounds">
+							<img src="img/Ability_BackStab.jpg" alt="DeepWounds">
+							<a href="https://classic.wowhead.com/spell=23255" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="bloodrage">
+							<img src="img/Ability_Racial_BloodRage.jpg" alt="Bloodrage">
+							<a href="https://classic.wowhead.com/spell=2687" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="deathwish">
+							<img src="img/Spell_Shadow_DeathPact.jpg" alt="DeathWish">
+							<a href="https://classic.wowhead.com/spell=12328" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="heroicstrike">
+							<img src="img/Ability_Rogue_Ambush.jpg" alt="HeroicStrike">
+							<a href="https://classic.wowhead.com/spell=11567" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="mortalstrike">
+							<img src="img/Ability_Warrior_SavageBlow.jpg" alt="MortalStrike">
+							<a href="https://classic.wowhead.com/spell=27580" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="hamstring">
+							<img src="img/Ability_ShockWave.jpg" alt="Hamstring">
+							<a href="https://classic.wowhead.com/spell=7373" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="recklessness">
+							<img src="img/ability_criticalstrike.jpg" alt="Recklessness">
+							<a href="https://classic.wowhead.com/spell=1719" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="berserking">
+							<img src="img/racial_troll_berserk.jpg" alt="Berserking">
+							<a href="https://classic.wowhead.com/spell=26296" class="wh-tooltip"></a>
+						</div>
+						<div class="spell" data-id="bloodfury">
+							<img src="img/racial_orc_berserkerstrength.jpg" alt="BloodFury">
+							<a href="https://classic.wowhead.com/spell=20572" class="wh-tooltip"></a>
+						</div>
 					</div>
 				</li>
 			</ul>

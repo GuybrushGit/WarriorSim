@@ -27,14 +27,15 @@ class Weapon {
         this.timer = 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
-        this.critbonus = 0;
-        if (type == WEAPONTYPE.AXE || type == WEAPONTYPE.BIGAXE) this.critbonus += player.talents.axecrit;
+        this.crit = 0;
+        this.bonusdmg = 0;
+        if (type == WEAPONTYPE.AXE || type == WEAPONTYPE.BIGAXE) this.crit += player.talents.axecrit;
         if (type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (type == WEAPONTYPE.BIGMACE || type == WEAPONTYPE.BIGSWORD || type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
         if (offhand) this.use();
     }
     dmg(heroicstrike) {
-        let dmg = rng(this.mindmg, this.maxdmg) + (this.player.stats.ap / 14) * this.speed;
+        let dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed;
         if (heroicstrike) dmg += 138;
         return dmg * this.modifier;
     }
@@ -55,6 +56,7 @@ class Player {
         this.dodgeTimer = 0;
         this.extraattacks = 0;
         this.nextswinghs = false;
+        this.deepwounds = false;
         this.target = {
             level: 63,
             armor: 0,
@@ -75,25 +77,25 @@ class Player {
             strmod: 1, 
             agimod: 1, 
             dmgmod: 1,
-            dmg: 0
+            apmod: 1
         };
         this.stats = {};
         this.auras = [];
         this.spells = {};
         this.talents = {};
     }
-    reset() {
-        this.rage = 0;
+    reset(rage, reck) {
+        this.rage = rage;
         this.timer = 0;
         this.dodgeTimer = 0;
         this.mh.timer = 0;
         this.oh.use();
         this.auras = [];
-        if (this.spells.bloodthirst) this.spells.bloodthirst.timer = 0;
-        if (this.spells.overpower) this.spells.overpower.timer = 0;
-        if (this.spells.whirlwind) this.spells.whirlwind.timer = 0;
-        if (this.spells.execute) this.spells.execute.timer = 0;
-        if (this.spells.battleshout) this.spells.battleshout.timer = 0;
+        this.extraattacks = 0;
+        this.nextswinghs = false;
+        this.recklessness = reck;
+        for (let s in this.spells)
+            this.spells[s].timer = 0;
         this.update();
     }
     update() {
@@ -124,6 +126,9 @@ class Player {
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
         this.crit = this.getCritChance();
+
+        if (this.stats.apmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
     }
     getGlanceReduction(weapon) {
         let low = 1.3 - 0.05 * (this.target.defense - this.stats['skill_' + weapon.type]);
@@ -162,7 +167,9 @@ class Player {
         if (!spell || spell instanceof HeroicStrike) {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng(1, 10000) < this.talents.umbridledwrath * 100)
                 this.rage += 1;
-        }  
+        }
+
+        if (this.rage > 100) this.rage = 100;
     }
     step(simulation, batch, next) {
         this.mh.step(next);
@@ -174,13 +181,15 @@ class Player {
         if (this.spells.bloodthirst) this.spells.bloodthirst.step();
         if (this.spells.overpower) this.spells.overpower.step();
         if (this.spells.whirlwind) this.spells.whirlwind.step();
-        if (this.spells.execute) this.spells.execute.step();
         if (this.spells.battleshout) this.spells.battleshout.step();
         if (this.spells.berserkerrage) this.spells.berserkerrage.step();
         if (this.spells.bloodrage) this.spells.bloodrage.step();
         if (this.spells.deathwish) this.spells.deathwish.step();
         if (this.spells.jujuflurry) this.spells.jujuflurry.step();
         if (this.spells.ragepotion) this.spells.ragepotion.step();
+        if (this.spells.mortalstrike) this.spells.mortalstrike.step();
+        if (this.spells.bloodfury) this.spells.bloodfury.step();
+        if (this.spells.berserking) this.spells.berserking.step();
 
         if (this.auras.battleshout && !this.auras.battleshout.step()) {
             delete this.auras.battleshout;
@@ -208,6 +217,22 @@ class Player {
             delete this.auras.ragepotion;
             this.updateAuras();
         }
+        if (this.auras.recklessness && !this.auras.recklessness.step()) {
+            delete this.auras.recklessness;
+            this.updateAuras();
+        }
+        if (this.auras.bloodfury && !this.auras.bloodfury.step()) {
+            delete this.auras.bloodfury;
+            this.updateAuras();
+        }
+        if (this.auras.berserking && !this.auras.berserking.step()) {
+            delete this.auras.berserking;
+            this.updateAuras();
+        }
+        if (this.auras.crusader && !this.auras.crusader.step()) {
+            delete this.auras.crusader;
+            this.updateAuras();
+        }
     }
     rollweapon(weapon) {
         let tmp = 0;
@@ -218,7 +243,7 @@ class Player {
         if (roll < tmp) return RESULT.DODGE;
         tmp += weapon.glanceChance * 100;
         if (roll < tmp) return RESULT.GLANCE;
-        tmp += (this.crit + weapon.critbonus) * 100;
+        tmp += (this.crit + weapon.crit) * 100;
         if (roll < tmp) return RESULT.CRIT;
         return RESULT.HIT;
     }
@@ -232,7 +257,7 @@ class Player {
             if (roll < tmp) return RESULT.DODGE;
         }
         roll = rng(1, 10000);
-        let crit = this.crit + this.mh.critbonus;
+        let crit = this.crit + this.mh.crit;
         if (spell instanceof Overpower) 
             crit += this.talents.overpowercrit;
         if (roll < (crit * 100)) return RESULT.CRIT;
@@ -240,6 +265,7 @@ class Player {
     }
     attack(weapon, extra) {
         let spell = null;
+        let procdmg = 0;
         let heroicstrike = !weapon.offhand && this.nextswinghs;
         let dmg = weapon.dmg(heroicstrike);
         let result = this.rollweapon(weapon);
@@ -248,10 +274,8 @@ class Player {
             spell = this.spells.heroicstrike;
             result = this.rollspell(spell);
         }
-        if (!extra) {
-            weapon.use();
-            this.procattack(spell, weapon, result);
-        }
+        if (!extra)
+            procdmg = this.procattack(spell, weapon, result);
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -264,14 +288,15 @@ class Player {
             this.proccrit();
         }
 
-        return this.dealdamage(dmg, result, spell);
+        if (!extra) weapon.use();
+        return this.dealdamage(dmg, result, spell) + procdmg;
     }
     cast(spell) {
         spell.use();
+        let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
-        let roll = rng(1, 10000);
-        this.procattack(spell, this.mh, result);
+        procdmg = this.procattack(spell, this.mh, result);
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -281,7 +306,7 @@ class Player {
             this.proccrit();
         }
 
-        return this.dealdamage(dmg, result, spell);
+        return this.dealdamage(dmg, result, spell) + procdmg;
     }
     buff(spell) {
         spell.use();
@@ -304,14 +329,15 @@ class Player {
             this.auras.flurry = new Flurry(this.talents.flurry);
             this.updateAuras();
         }
-        if (this.spells.deepwounds && this.talents.deepwounds) {
+        if (this.deepwounds && this.talents.deepwounds) {
             if (!this.auras.deepwounds)
                 this.auras.deepwounds = new DeepWounds();
             else
                 this.auras.deepwounds.refresh();
         }
     }
-    procattack(spell, weapon, result) {
+    procattack(spell, weapon, result, simulation) {
+        let procdmg = 0;
         if (!spell || spell instanceof HeroicStrike) {
             if (this.auras.flurry && !this.auras.flurry.procattack()) {
                 delete this.auras.flurry;
@@ -319,22 +345,37 @@ class Player {
             }
         }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
+            if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
+                if (weapon.proc1.spell)
+                    weapon.proc1.spell.use();
+                if (weapon.proc1.dmg && rng(1, 10000) < 1700)
+                    procdmg += weapon.proc1.dmg;
+            }
+            if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance * 100) {
+                if (weapon.proc2.spell)
+                    weapon.proc2.spell.use();
+                if (weapon.proc2.dmg && rng(1, 10000) < 1700)
+                    procdmg += weapon.proc2.dmg; 
+            }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng(1, 10000) < this.talents.swordproc * 100)
                     this.extraattacks++;
             }
         }
+        return procdmg;
     }
 }
 
 class Simulation {
-    constructor(player, timesecs, iterations, executeperc, output, callback) {
+    constructor(player, settings, iterations, output, callback) {
         this.player = player;
-        this.timesecs = timesecs;
+        this.timesecs = settings.timesecs;
         this.iterations = iterations;
         this.output = output;
         this.total = 0;
-        this.executestep = timesecs * 10 * (100 - executeperc);
+        this.executestep = settings.timesecs * 10 * (100 - settings.executeperc);
+        this.startrage = settings.startrage;
+        this.recklessness = (settings.recklessness || false);
         this.callback = callback || function() {};
     }
     start() {
@@ -342,7 +383,7 @@ class Simulation {
     }
     run(i) {
         let player = this.player;
-        player.reset();
+        player.reset(this.startrage, this.recklessness);
         let step = 0;
         let max = this.timesecs * 1000;
         while( step < max ) {
@@ -393,6 +434,14 @@ class Simulation {
                     this.total += player.cast(player.spells.bloodthirst);
                     continue;
                 }
+                if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
+                    this.total += player.cast(player.spells.mortalstrike);
+                    continue;
+                }
+                if (player.spells.hamstring && player.spells.hamstring.canUse()) {
+                    this.total += player.cast(player.spells.hamstring);
+                    continue;
+                }
                 if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.total += player.cast(player.spells.whirlwind);
                     continue;
@@ -415,6 +464,18 @@ class Simulation {
                 }
                 if (player.spells.ragepotion && player.spells.ragepotion.canUse()) {
                     player.buff(player.spells.ragepotion);
+                    continue;
+                }
+                if (player.recklessness) {
+                    player.buff(player.spells.recklessness);
+                    continue;
+                }
+                if (player.spells.bloodfury && player.spells.bloodfury.canUse()) {
+                    player.buff(player.spells.bloodfury);
+                    continue;
+                }
+                if (player.spells.berserking && player.spells.berserking.canUse()) {
+                    player.buff(player.spells.berserking);
                     continue;
                 }
             }

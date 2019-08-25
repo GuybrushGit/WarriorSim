@@ -26,10 +26,28 @@ function startSimulation(output, gear, callback) {
         if (gear && gear.slot == slot) aura = gear;
         for (let prop in player.base)
             player.base[prop] += aura[prop] || 0;
-        if (aura.slot == 'mainhand')
+
+        if (aura.slot == 'mainhand') {
             player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
-        if (aura.slot == 'offhand')
+            if (aura.ppm) {
+                player.mh.proc1 = {};
+                player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
+                player.mh.proc1.dmg = aura.procdmg;
+                if (aura.procspell)
+                    player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+            }
+        }
+
+        if (aura.slot == 'offhand') {
             player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
+            if (aura.ppm) {
+                player.oh.proc1 = {};
+                player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
+                player.oh.proc1.dmg = aura.procdmg;
+                if (aura.procspell)
+                    player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+            }
+        }
     });
 
     $('table.gear[data-type="enchant"] tbody tr.active').each(function() {
@@ -37,8 +55,35 @@ function startSimulation(output, gear, callback) {
         let row = $(this);
         let aura = getEnchantFromRow(row);
         if (gear && gear.slot == aura.slot) aura = gear;
-        for (let prop in player.base)
-            player.base[prop] += aura[prop] || 0;
+        for (let prop in player.base) {
+            if (prop == 'haste')
+                player.base.haste /= (1 + aura.haste / 100) || 1;
+            else
+                player.base[prop] += aura[prop] || 0;
+        }
+
+        if (aura.slot.indexOf('Main Hand') >= 0) {
+            player.mh.crit += aura.crit;
+            player.mh.bonusdmg += aura.dmg;
+            if (aura.ppm) {
+                player.mh.proc2 = {};
+                player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
+                player.mh.proc2.dmg = aura.procdmg;
+                if (aura.procspell)
+                    player.mh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+            }
+        }
+        if (aura.slot.indexOf('Off Hand') >= 0) {
+            player.oh.crit += aura.crit;
+            player.oh.bonusdmg += aura.dmg;
+            if (aura.ppm) {
+                player.oh.proc2 = {};
+                player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
+                player.oh.proc2.dmg = aura.procdmg;
+                if (aura.procspell)
+                    player.oh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+            }
+        }
 
     });
 
@@ -67,6 +112,7 @@ function startSimulation(output, gear, callback) {
     });
     $('.race.active').each(function() {
         let r = $(this);
+        player.base.aprace = (r.data('ap') || 0);
         player.base.ap += (r.data('ap') || 0);
         player.base.str += (r.data('str') || 0);
         player.base.agi += (r.data('agi') || 0);
@@ -78,14 +124,30 @@ function startSimulation(output, gear, callback) {
     $('.spell.active').each(function() {
         let name = $(this).find('img').attr('alt');
         let lname = name.toLowerCase();
-        if (lname == 'deepwounds') player.spells[lname] = true;
+        if (lname == 'deepwounds') player.deepwounds = true;
         else player.spells[lname] = eval(`new ${name}(player)`);
+        if (lname == 'recklessness') settings.recklessness = true;
     });
     player.target.armor = settings.armor;
 
+    if (!player.mh || !player.oh)
+        return addAlert('No weapons selected.');
+
     player.update();
     console.log(player);
-    //new Simulation(player, settings.timesecs, gear ? settings.simulations : 10000, settings.executeperc, output, callback).start();
+    new Simulation(player, settings, gear ? settings.simulations : 10000, output, callback).start();
+}
+
+function addAlert(msg) {
+    $('.alerts').empty().append('<div class="alert"><p>' + msg + '</p></div>');
+    $('.alert').click(function() { closeAlert(); });
+    setTimeout(function() { $('.alert').addClass('in-up') });
+    setTimeout(function() { closeAlert(); }, 4000);
+}
+
+function closeAlert() {
+    $('.alert').removeClass('in-up');
+    setTimeout(function() { $('.alerts').empty(); }, 1000);
 }
 
 function runRow(rows, index) {
@@ -119,10 +181,13 @@ $(document).ready(function () {
     buildTalents();
     buildEnchants();
     buildWeapons();
-    
     talentEvents();
     gearEvents();
     filterGear()
+
+    $('body').on('click', '.wh-tooltip, .tablesorter-default a', function(e) {
+        e.preventDefault();
+    });
 
     $('input[type="submit"]').click(function () {
 

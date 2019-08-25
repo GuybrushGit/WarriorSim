@@ -3016,6 +3016,7 @@ var gear = {
          "Phase":2
       },
       {  
+         "ID": 11684,
          "Name":"Ironfoe",
          "Mainhand":true,
          "Min Hit":73,
@@ -3332,7 +3333,8 @@ var gear = {
          "Phase":3
       },
       {  
-         "Name":"Mirah's song",
+         "ID": 15806,
+         "Name":"Mirah's Song",
          "Str":9,
          "Agi":9,
          "Min Hit":57,
@@ -3469,6 +3471,7 @@ var gear = {
          "Phase":6
       },
       {  
+         "ID": 17705,
          "Name":"Thrash Blade",
          "Min Hit":66,
          "Max Hit":124,
@@ -3549,31 +3552,259 @@ var gear = {
       }
    ],
    "enchant": [
-   {
-      "Name": "Elemental Sharpening Stone",
-      "Crit": 2,
-      "Slot": "Main Hand Temporary",
-      "Phase": 1
-   },
-   {
-      "Name": "Dense Stone",
-      "WeaponDmg": 8,
-      "Slot": "Main Hand Temporary",
-      "Phase": 1
-   },
-   {
-      "Name": "Elemental Sharpening Stone",
-      "Crit": 2,
-      "Slot": "Off Hand Temporary",
-      "Phase": 1
-   },
-   {
-      "Name": "Dense Stone",
-      "WeaponDmg": 8,
-      "Slot": "Off Hand Temporary",
-      "Phase": 1
-   }
-],
+      {
+         "ID": 22840,
+         "Name": "Arcanum of Rapidity",
+         "Haste": 1,
+         "Slot": "Head",
+         "Phase": 2
+      },
+      {
+         "ID": 15402,
+         "Name": "Lesser Arcanum of Voracity (Agi)",
+         "Agi": 8,
+         "Slot": "Head",
+         "Phase": 1
+      },
+      {
+         "ID": 15397,
+         "Name": "Lesser Arcanum of Voracity (Str)",
+         "Str": 8,
+         "Slot": "Head",
+         "Phase": 1
+      },
+      {
+         "ID": 22840,
+         "Name": "Arcanum of Rapidity",
+         "Haste": 1,
+         "Slot": "Legs",
+         "Phase": 2
+      },
+      {
+         "ID": 15402,
+         "Name": "Lesser Arcanum of Voracity (Agi)",
+         "Agi": 8,
+         "Slot": "Legs",
+         "Phase": 1
+      },
+      {
+         "ID": 15397,
+         "Name": "Lesser Arcanum of Voracity (Str)",
+         "Str": 8,
+         "Slot": "Legs",
+         "Phase": 1
+      },
+      {
+         "ID": 25080,
+         "Name": "Superior Agility",
+         "Agi": 15,
+         "Slot": "Hands",
+         "Phase": 5
+      },
+      {
+         "ID": 20012,
+         "Name": "Greater Agility",
+         "Agi": 7,
+         "Slot": "Hands",
+         "Phase": 1
+      },
+      {
+         "ID": 20013,
+         "Name": "Greater Strength",
+         "Str": 7,
+         "Slot": "Hands",
+         "Phase": 1
+      },
+      {
+         "ID": 13948,
+         "Name": "Minor Haste",
+         "Haste": 1,
+         "Slot": "Hands",
+         "Phase": 1
+      },
+      {
+         "ID": 29483,
+         "Name": "Might of the Scourge",
+         "AP": 26,
+         "Crit": 1,
+         "Slot": "Shoulder",
+         "Phase": 6
+      },
+      {
+         "ID": 24422,
+         "Name": "Zandalar Signet of Might",
+         "AP": 30,
+         "Slot": "Shoulder",
+         "Phase": 4
+      },
+      {
+         "ID": 20025,
+         "Name": "Greater Stats",
+         "Agi": 4,
+         "Str": 4,
+         "Slot": "Chest",
+         "Phase": 1
+      },
+      {
+         "ID": 13941,
+         "Name": "Stats",
+         "Agi": 3,
+         "Str": 3,
+         "Slot": "Chest",
+         "Phase": 1
+      },
+      {
+         "ID": 25084,
+         "Name": "Subtlety",
+         "Slot": "Back",
+         "Phase": 5
+      },
+      {
+         "ID": 13882,
+         "Name": "Lesser Agility",
+         "Agi": 3,
+         "Slot": "Back",
+         "Phase": 1
+      },
+      {
+         "ID": 20010,
+         "Name": "Superior Strength",
+         "Str": 9,
+         "Slot": "Wrist",
+         "Phase": 1
+      },
+      {
+         "ID": 20023,
+         "Name": "Greater Agility",
+         "Agi": 7,
+         "Slot": "Boots",
+         "Phase": 1
+      },
+      {
+         "ID": 13890,
+         "Name": "Minor Speed",
+         "Slot": "Boots",
+         "Phase": 1
+      },
+      {
+         "ID": 23800,
+         "Name": "Agility",
+         "Agi": 15,
+         "Slot": "Main Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 23799,
+         "Name": "Strength",
+         "Str": 15,
+         "Slot": "Main Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 20034,
+         "Name": "Crusader",
+         "Slot": "Main Hand",
+         "Phase": 1,
+         "PPM": 1,
+         "ProcSpell": "Crusader"
+      },
+      {
+         "ID": 13898,
+         "Name": "Fiery",
+         "Slot": "Main Hand",
+         "Phase": 1,
+         "PPM": 6,
+         "ProcDmg": 44
+      },
+      {
+         "ID": 20032,
+         "Name": "Lifestealing",
+         "Slot": "Main Hand",
+         "Phase": 1,
+         "PPM": 6,
+         "ProcDmg": 33
+      },
+      {
+         "ID": 20031,
+         "Name": "Superior Striking",
+         "Dmg": 5,
+         "Slot": "Main Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 22756,
+         "Name": "Elemental Sharpening Stone",
+         "Crit": 2,
+         "Slot": "Main Hand Temporary",
+         "Phase": 1
+      },
+      {
+         "ID": 16138,
+         "Name": "Dense Stone",
+         "Dmg": 8,
+         "Slot": "Main Hand Temporary",
+         "Phase": 1
+      },
+      {
+         "ID": 23800,
+         "Name": "Agility",
+         "Agi": 15,
+         "Slot": "Off Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 23799,
+         "Name": "Strength",
+         "Str": 15,
+         "Slot": "Off Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 20034,
+         "Name": "Crusader",
+         "Slot": "Off Hand",
+         "Phase": 1,
+         "PPM": 1,
+         "ProcSpell": "Crusader"
+      },
+      {
+         "ID": 13898,
+         "Name": "Fiery",
+         "Slot": "Off Hand",
+         "Phase": 1,
+         "PPM": 6,
+         "ProcDmg": 44
+      },
+      {
+         "ID": 20032,
+         "Name": "Lifestealing",
+         "Slot": "Off Hand",
+         "Phase": 1,
+         "PPM": 6,
+         "ProcDmg": 33
+      },
+      {
+         "ID": 20031,
+         "Name": "Superior Striking",
+         "Dmg": 5,
+         "Slot": "Off Hand",
+         "Phase": 1
+      },
+      {
+         "ID": 22756,
+         "Name": "Elemental Sharpening Stone",
+         "Crit": 2,
+         "Slot": "Off Hand Temporary",
+         "Phase": 1
+      },
+      {
+         "ID": 16138,
+         "Name": "Dense Stone",
+         "Dmg": 8,
+         "Slot": "Off Hand Temporary",
+         "Phase": 1
+      },
+   ],
 };
 
 function gearEvents() {
@@ -3641,7 +3872,6 @@ function filterGear() {
    });
 }
 
-
 function buildWeapons() {
 
    // Main Hand
@@ -3670,8 +3900,8 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Offhand) continue;
-      section += `<tr ${item.Selected == 1 ? "class='active'" : ""}>
-                     <td>${item.Name}</td>
+      section += `<tr data-id="${item.ID}" ${item.Selected == 1 ? "class='active'" : ""}>
+                     <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
                      <td>${item.Str || ''}</td>
@@ -3716,8 +3946,8 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Mainhand) continue;
-      section += `<tr ${item.Selected == 2 ? "class='active'" : ""}>
-                     <td>${item.Name}</td>
+      section += `<tr data-id="${item.ID}" ${item.Selected == 2 ? "class='active'" : ""}>
+                     <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
                      <td>${item.Str || ''}</td>
@@ -3748,19 +3978,29 @@ function buildEnchants() {
             <tr>
                <th>Name</th>
                <th>Slot</th>
+               <th>Str</th>
+               <th>Agi</th>
+               <th>AP</th>
+               <th>Haste</th>
                <th>Crit</th>
-               <th>Weapon Damage</th>
+               <th>Damage</th>
+               <th>PPM</th>
                <th>DPS</th>
             </tr>
          </thead>
          <tbody>`;
 
    for (let item of enchants) {
-      section += `<tr>
-                     <td>${item.Name}</td>
+      section += `<tr data-id="${item.ID}" data-slot="${item.Slot}">
+                     <td><a href="https://classic.wowhead.com/spell=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Slot || ''}</td>
+                     <td>${item.Str || ''}</td>
+                     <td>${item.Agi || ''}</td>
+                     <td>${item.AP || ''}</td>
+                     <td>${item.Haste || ''}</td>
                      <td>${item.Crit || ''}</td>
-                     <td>${item.WeaponDmg || ''}</td>
+                     <td>${item.Dmg || ''}</td>
+                     <td>${item.PPM || ''}</td>
                      <td></td>
                   </tr>`;
    }
@@ -3771,28 +4011,39 @@ function buildEnchants() {
 }
 
 function getWeaponFromRow(tr) {
-    let data = tr.children();
-    let aura = {};
-    aura.str = parseInt(data.eq(3).text() || 0);
-    aura.agi = parseInt(data.eq(4).text() || 0);
-    aura.ap = parseInt(data.eq(5).text() || 0);
-    aura.crit = parseInt(data.eq(6).text() || 0);
-    aura.hit = parseInt(data.eq(7).text() || 0);
-    aura.minhit = parseInt(data.eq(8).text() || 0);
-    aura.maxhit = parseInt(data.eq(9).text() || 0);
-    aura.speed = parseFloat(data.eq(10).text() || 0);
-    aura.type = WEAPONTYPE[data.eq(12).text().toUpperCase()];
-    let skill = parseInt(data.eq(11).text() || 0);
-    if (skill > 0) aura['skill_' + aura.type] = skill;
-    aura.slot = tr.parents('table').data('type');
-    return aura;
+   let aura = {};
+   for(let item of gear.weapon)
+      if (item.ID == tr.data('id')) {
+         aura.str = parseInt(item.Str || 0);
+         aura.agi = parseInt(item.Agi || 0);
+         aura.ap = parseInt(item.AP || 0);
+         aura.crit = parseInt(item.Crit || 0);
+         aura.minhit = parseInt(item["Min Hit"] || 0);
+         aura.maxhit = parseInt(item["Max Hit"] || 0);
+         aura.speed = parseFloat(item.Speed || 0);
+         aura.type = WEAPONTYPE[item.Type.toUpperCase()];
+         let skill = parseInt(item.Skill || 0);
+         if (skill > 0) aura['skill_' + aura.type] = skill;
+         aura.slot = tr.parents('table').data('type');
+         break;
+      }
+   return aura;
 }
 
 function getEnchantFromRow(tr) {
-    let data = tr.children();
-    let aura = {};
-    aura.slot = data.eq(1).text();
-    aura.crit = parseInt(data.eq(2).text() || 0);
-    aura.dmg = parseInt(data.eq(3).text() || 0);
-    return aura;
+   let aura = {};
+   for(let item of gear.enchant)
+      if (item.ID == tr.data('id') && item.Slot == tr.data('slot')) {
+         aura.slot = item.Slot;
+         aura.str = parseInt(item.Str || 0);
+         aura.agi = parseInt(item.Agi || 0);
+         aura.haste = parseInt(item.Haste || 0);
+         aura.crit = parseInt(item.Crit || 0);
+         aura.dmg = parseInt(item.Dmg || 0);
+         aura.ppm = parseInt(item.PPM || 0);
+         aura.procdmg = parseInt(item.ProcDmg || 0);
+         aura.procspell = (item.ProcSpell || '');
+         break;
+      }
+   return aura;
 }
