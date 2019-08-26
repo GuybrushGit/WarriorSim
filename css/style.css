@@ -5,6 +5,7 @@ body {
     color: #ddd;
     margin: 0;
     overflow-x: hidden;
+    padding-bottom: 50px;
 }
 section {
     width: 100%;
@@ -134,38 +135,6 @@ article > label {
     font-size: 12px;
     padding: 20px 0 5px;
 }
-.tooltip {
-    width: 350px;
-    background: url(../img/tooltip.png) center center no-repeat;
-    background-size: 100% 100%;
-    position: absolute;
-    left: 100%;
-    top: 100%;
-    display: none;
-    color: white;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 8px 16px;
-    z-index: 20;
-    border: 1px solid grey;
-}
-.tooltip p {
-    margin: 0;
-    white-space: normal;
-}
-.tooltip .description {
-    margin: 0;
-    white-space: normal;
-    color:#FFCD45;
-    margin-top: 6px;
-    display: none;
-}
-.talent:hover .tooltip {
-    display: block;
-}
-.buff:hover .tooltip {
-    display: block;
-}
 .talent[data-count="0"] .description[data-index="0"] { display: block; }
 .talent[data-count="1"] .description[data-index="1"] { display: block; }
 .talent[data-count="2"] .description[data-index="2"] { display: block; }
@@ -197,9 +166,6 @@ article > label {
 }
 .buff.active img {
     filter: none;
-}
-.buff .tooltip .description {
-    display: block;
 }
 .settings ul, .char ul {
     list-style: none;

@@ -8,12 +8,8 @@ function startSimulation(output, gear, callback) {
     // Talents
     $('.talent').each(function() {
         let count = parseInt($(this).attr('data-count'));
-        let tree = $(this).parents('table').index();
-        let x = $(this).data('x');
-        let y = $(this).data('y');
-        for(let talent of talents[tree - 1].t)
-            if (talent.x == x && talent.y == y)
-                $.extend(player.talents, talent.aura(count));
+        let talent = getTalent($(this));
+        $.extend(player.talents, talent.aura(count));
     });
 
     // Gear
@@ -179,8 +175,8 @@ $(document).ready(function () {
 
     buildBuffs();
     buildTalents();
-    buildEnchants();
     buildWeapons();
+    buildEnchants();
     talentEvents();
     gearEvents();
     filterGear()
@@ -205,6 +201,10 @@ $(document).ready(function () {
     $('.race').click(function() {
         $(this).toggleClass('active');
         $(this).siblings().removeClass('active');
+        $('.spell[data-id="' + $(this).data('spell') + '"]').toggleClass('hidden');
+        $(this).siblings().each(function() {
+            $('.spell[data-id="' + $(this).data('spell') + '"]').addClass('hidden').removeClass('active');
+        });
     });
 
     $('.spell').click(function() {

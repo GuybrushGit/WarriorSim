@@ -387,6 +387,7 @@ var talents =[
             ],
             c:0,
             iconname:'Ability_Warrior_SavageBlow',
+            enable: 'mortalstrike',
             aura: function(count) { return { mortalstrike: count } },
          }
       ]
@@ -711,6 +712,7 @@ var talents =[
             y:5,
             c:0,
             iconname:'Spell_Nature_AncestralGuardian',
+            enable: 'berserkerrage',
             aura: function(count) { return { berserkerbonus: count * 5 } },
          },
          {  
@@ -1133,15 +1135,12 @@ function buildTalents() {
         let table = $('<table><tr><th colspan="4">' + tree.n + '</th></tr></table>');
         for(let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
         for(let talent of tree.t) {
-            let div = $('<div class="talent" data-count="' + talent.c + '" data-max-count="' + talent.m + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
+            let div = $('<div class="talent" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
             div.html('<img src="img/' + talent.iconname + '.jpg" alt="' + talent.n + '" />');
-            let tooltip = $('<div class="tooltip"><p>' + talent.n + '</p></div>');
-            for (let j in talent.d) tooltip.append('<p data-index="' + j + '" class="description">' + talent.d[j] + '</p>');
             if (talent.c >= talent.m) div.addClass('maxed');
-            if (talent.enable) div.attr('data-enable', talent.enable);
             if (talent.enable && talent.c == 0) $('.spell[data-id="' + talent.enable + '"]').addClass('hidden');
-            div.append(tooltip);
-            table.find('tr').eq(talent.y).children().eq(talent.x).html(div);
+            div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
+            table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
         }
         article.append(table);
     }
@@ -1149,22 +1148,34 @@ function buildTalents() {
 
 function talentEvents() {
 	$('.talent').click(function(e) {
+      let talent = getTalent($(this));
       let count = parseInt($(this).attr('data-count'));
-      let maxcount = parseInt($(this).attr('data-max-count'));
-      $(this).attr('data-count', count < maxcount ? count + 1 : maxcount);
-      if (count >= maxcount - 1) $(this).addClass('maxed');
-      let enable = $(this).data('enable');
-      if (enable) 
-         $('.spell[data-id="' + enable + '"]').addClass('active').removeClass('hidden');
+      count = count < talent.m ? count + 1 : talent.m;
+      $(this).attr('data-count', count);
+      if (count >= talent.m) $(this).addClass('maxed');
+      if (talent.enable) 
+         $('.spell[data-id="' + talent.enable + '"]').addClass('active').removeClass('hidden');
+      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[count == 0 ? 0 : count - 1]);
    });
 
    $('.talent').on('contextmenu',function(e) {
       e.preventDefault();
+      let talent = getTalent($(this));
       let count = parseInt($(this).attr('data-count'));
-      $(this).attr('data-count', count < 1 ? 0 : count - 1);
+      count = count < 1 ? 0 : count - 1;
+      $(this).attr('data-count', count);
       $(this).removeClass('maxed');
-      let enable = $(this).data('enable');
-      if (count == 1 && enable) 
-         $('.spell[data-id="' + enable + '"]').removeClass('active').addClass('hidden');
+      if (count == 0 && talent.enable) 
+         $('.spell[data-id="' + talent.enable + '"]').removeClass('active').addClass('hidden');
+      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[count == 0 ? 0 : count - 1]);
    });
+}
+
+function getTalent(div) {
+   let tree = div.parents('table').index();
+   let x = div.data('x');
+   let y = div.data('y');
+   for(let talent of talents[tree - 1].t)
+      if (talent.x == x && talent.y == y)
+            return talent;
 }

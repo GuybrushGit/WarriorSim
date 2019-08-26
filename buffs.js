@@ -1,158 +1,224 @@
 var buffs = [
    {
+      id: 27578,
+      spellid: true,
       name: "Battle Shout",
       iconname: "Ability_Warrior_BattleShout",
-      description: "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 185. Lasts 2 min.",
       group: "battleshout",
       ap: 185,
       checked: true,
       disableSpell: "battleshout"
    },
    {
+      id: 22888,
+      spellid: true,
       name: "Rallying Cry of the Dragonslayer",
       iconname: "inv_misc_head_dragon_01",
-      description: "Increases critical chance of spells by 10%, melee and ranged by 5% and grants 140 attack power. 120 minute duration.",
       group: "",
       ap: 140,
       crit: 5,
       checked: true
    },
    {
+      id: 24425,
+      spellid: true,
       name: "Spirit of Zandalar",
       iconname: "ability_creature_poison_05",
-      description: "Increases movement speed by 10% and all stats by 15% for 2 hours.",
       group: "",
       strmod: 15,
       agimod: 15,
       checked: true
    },
    {
+      id: 23768,
+      spellid: true,
       name: "Sayge's Dark Fortune of Damage",
       iconname: "inv_misc_orb_02",
-      description: "10% Damage",
       group: "darkfortune",
       dmgmod: 10,
    },
    {
+      id: 23735,
+      spellid: true,
       name: "Sayge's Dark Fortune of Strength",
       iconname: "inv_misc_orb_02",
-      description: "10% Strength",
       group: "darkfortune",
       strmod: 10,
    },
    {
+      id: 22817,
+      spellid: true,
       name: "Fengus' Ferocity",
       iconname: "spell_nature_undyingstrength",
-      description: "Attack power increased by 200.",
       group: "",
       ap: 200,
    },
    {
+      id: 15366,
+      spellid: true,
       name: "Songflower Serenade",
       iconname: "spell_holy_mindvision",
-      description: "Increases chance for a melee, ranged, or spell critical by 5% and all attributes by 15 for 1 hr.",
       group: "",
       crit: 5, 
       str: 15, 
       agi: 15,
    },
    {
+      id: 16609,
+      spellid: true,
       name: "Warchief's Blessing",
       iconname: "spell_arcane_teleportorgrimmar",
-      description: "Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.",
       group: "",
       haste: 15,
    },
    {
+      id: 17007,
+      spellid: true,
+      name: "Leader of the Pack",
+      iconname: "spell_nature_unyeildingstamina",
+      group: "",
+      crit: 3,
+   },
+   {
+      id: 9885,
+      spellid: true,
+      name: "Mark of the Wild",
+      iconname: "spell_nature_regeneration",
+      group: "",
+      str: 12,
+      agi: 12
+   },
+   {
+      id: 20906,
+      spellid: true,
+      name: "Trueshot Aura",
+      iconname: "ability_trueshot",
+      group: "",
+      ap: 100
+   },
+   {
+      id: 20217,
+      spellid: true,
+      name: "Blessing of Kings",
+      iconname: "spell_magic_magearmor",
+      group: "",
+      strmod: 10,
+      agimod: 10
+   },
+   {
+      id: 19838,
+      spellid: true,
+      name: "Blessing of Might",
+      iconname: "spell_holy_fistofjustice",
+      group: "",
+      ap: 155
+   },
+   {
+      id: 10627,
+      spellid: true,
+      name: "Grace of Air Totem",
+      iconname: "spell_nature_invisibilitytotem",
+      group: "",
+      agi: 67
+   },
+   {
+      id: 10442,
+      spellid: true,
+      name: "Strength of Earth Totem",
+      iconname: "spell_nature_earthbindtotem",
+      group: "",
+      str: 61
+   },
+   {
+      id: 8410,
       name: "R.O.I.D.S.",
       iconname: "inv_stone_15",
-      description: "Increases Strength by 25 when consumed. Effect lasts for 60 minutes.",
       group: "",
       str: 25,
    },
    {
+      id: 8412,
       name: "Ground Scorpok Assay",
       iconname: "inv_misc_dust_02",
-      description: "Increases Agility by 25 when consumed. Effect lasts for 60 minutes.",
       group: "",
       agi: 25,
    },
    {
+      id: 13452,
       name: "Elixir of the Mongoose",
       iconname: "inv_potion_32",
-      description: "Increases Agility by 25 and chance to get a critical hit by 2% for 1 hr.",
       group: "elixir",
       agi: 25,
       crit: 2,
       checked: true
    },
    {
+      id: 9187,
       name: "Elixir of Greater Agility",
       iconname: "inv_potion_94",
-      description: "Increases Agility by 25 for 1 hr.",
       group: "elixir",
       agi: 25
    },
    {
+      id: 12451,
       name: "Juju Power",
       iconname: "inv_misc_monsterscales_11",
-      description: "Increases the target's Strength by 30 for 30 min.",
       group: "str",
       str: 30
    },
    {
+      id: 9206,
       name: "Elixir of Giants",
       iconname: "inv_potion_61",
-      description: "Increases your Strength by 25 for 1 hr.",
       group: "str",
       str: 25,
       checked: true
    },
    {
+      id: 12460,
       name: "Juju Might",
       iconname: "inv_misc_monsterscales_07",
-      description: "Increases attack power by 40 for 10 min.",
       group: "ap",
       ap: 40
    },
    {
+      id: 12820,
       name: "Winterfall Firewater",
       iconname: "inv_potion_92",
-      description: "Increases your melee attack power by 35 and size for 20 min.",
       group: "ap",
       ap: 35
    },
    {
+      id: 20452,
       name: "Smoked Desert Dumplings",
       iconname: "inv_misc_food_64",
-      description: "Restores 2148 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 20 Strength for 15 min.",
       group: "food",
       str: 20
    },
    {
+      id: 13928,
       name: "Grilled Squid",
       iconname: "inv_misc_fish_13",
-      description: "Restores 874.8 health over 27 sec. Must remain seated while eating. If you eat for 10 seconds will also increase your Agility by 10 for 10 min.",
       group: "food",
       agi: 10
    },
    {
+      id: 13810,
       name: "Blessed Sunfruit",
       iconname: "inv_misc_food_41",
-      description: "Restores 1933.2 health over 27 sec. Must remain seated while eating. Also increases your Strength by 10 for 10 min.",
       group: "food",
       str: 10
    },
    {
+      id: 12450,
       name: "Juju Flurry",
       iconname: "inv_misc_monsterscales_17",
-      description: "Increases the target's attack speed by 3% for 20 sec.",
       spell: "JujuFlurry",
    },
    {
+      id: 13442,
       name: "Mighty Rage Potion",
       iconname: "inv_potion_41",
-      description: "Increases Rage by 45 to 75 and increases Strength by 60 for 20 sec.",
       spell: "RagePotion",
    },
 ];
@@ -161,7 +227,7 @@ var buffs = [
 function buildBuffs() {
    let article = $('article.buffs');
    for(let buff of buffs) {
-      let div = $('<div class="buff"><img src="img/' + buff.iconname + '.jpg" alt="' + buff.name + '"><div class="tooltip"><p>' + buff.name + '</p><p class="description">' + buff.description + '</p></div></div>');
+      let div = $('<div class="buff"><img src="img/' + buff.iconname + '.jpg" alt="' + buff.name + '"></div>');
       div.attr('data-group', buff.group);
       div.attr('data-ap', buff.ap);
       div.attr('data-crit', buff.crit);
@@ -184,6 +250,7 @@ function buildBuffs() {
                $('.spell[data-id="' + b.data('disable-spell') + '"]').removeClass('active');
          }
       });
+      div.append('<a href="https://classic.wowhead.com/' + (buff.spellid ? 'spell' : 'item') + '=' + buff.id + '" class="wh-tooltip"></a>');
       article.append(div);
    }
 

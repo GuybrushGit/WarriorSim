@@ -3553,42 +3553,42 @@ var gear = {
    ],
    "enchant": [
       {
-         "ID": 22840,
+         "ID": 18329,
          "Name": "Arcanum of Rapidity",
          "Haste": 1,
          "Slot": "Head",
          "Phase": 2
       },
       {
-         "ID": 15402,
+         "ID": 11647,
          "Name": "Lesser Arcanum of Voracity (Agi)",
          "Agi": 8,
          "Slot": "Head",
          "Phase": 1
       },
       {
-         "ID": 15397,
+         "ID": 11645,
          "Name": "Lesser Arcanum of Voracity (Str)",
          "Str": 8,
          "Slot": "Head",
          "Phase": 1
       },
       {
-         "ID": 22840,
+         "ID": 18329,
          "Name": "Arcanum of Rapidity",
          "Haste": 1,
          "Slot": "Legs",
          "Phase": 2
       },
       {
-         "ID": 15402,
+         "ID": 11647,
          "Name": "Lesser Arcanum of Voracity (Agi)",
          "Agi": 8,
          "Slot": "Legs",
          "Phase": 1
       },
       {
-         "ID": 15397,
+         "ID": 11645,
          "Name": "Lesser Arcanum of Voracity (Str)",
          "Str": 8,
          "Slot": "Legs",
@@ -3596,6 +3596,7 @@ var gear = {
       },
       {
          "ID": 25080,
+         "Spellid": true,
          "Name": "Superior Agility",
          "Agi": 15,
          "Slot": "Hands",
@@ -3603,6 +3604,7 @@ var gear = {
       },
       {
          "ID": 20012,
+         "Spellid": true,
          "Name": "Greater Agility",
          "Agi": 7,
          "Slot": "Hands",
@@ -3610,6 +3612,7 @@ var gear = {
       },
       {
          "ID": 20013,
+         "Spellid": true,
          "Name": "Greater Strength",
          "Str": 7,
          "Slot": "Hands",
@@ -3617,6 +3620,7 @@ var gear = {
       },
       {
          "ID": 13948,
+         "Spellid": true,
          "Name": "Minor Haste",
          "Haste": 1,
          "Slot": "Hands",
@@ -3624,6 +3628,7 @@ var gear = {
       },
       {
          "ID": 29483,
+         "Spellid": true,
          "Name": "Might of the Scourge",
          "AP": 26,
          "Crit": 1,
@@ -3632,6 +3637,7 @@ var gear = {
       },
       {
          "ID": 24422,
+         "Spellid": true,
          "Name": "Zandalar Signet of Might",
          "AP": 30,
          "Slot": "Shoulder",
@@ -3639,6 +3645,7 @@ var gear = {
       },
       {
          "ID": 20025,
+         "Spellid": true,
          "Name": "Greater Stats",
          "Agi": 4,
          "Str": 4,
@@ -3647,6 +3654,7 @@ var gear = {
       },
       {
          "ID": 13941,
+         "Spellid": true,
          "Name": "Stats",
          "Agi": 3,
          "Str": 3,
@@ -3655,12 +3663,14 @@ var gear = {
       },
       {
          "ID": 25084,
+         "Spellid": true,
          "Name": "Subtlety",
          "Slot": "Back",
          "Phase": 5
       },
       {
          "ID": 13882,
+         "Spellid": true,
          "Name": "Lesser Agility",
          "Agi": 3,
          "Slot": "Back",
@@ -3668,6 +3678,7 @@ var gear = {
       },
       {
          "ID": 20010,
+         "Spellid": true,
          "Name": "Superior Strength",
          "Str": 9,
          "Slot": "Wrist",
@@ -3675,6 +3686,7 @@ var gear = {
       },
       {
          "ID": 20023,
+         "Spellid": true,
          "Name": "Greater Agility",
          "Agi": 7,
          "Slot": "Boots",
@@ -3682,12 +3694,14 @@ var gear = {
       },
       {
          "ID": 13890,
+         "Spellid": true,
          "Name": "Minor Speed",
          "Slot": "Boots",
          "Phase": 1
       },
       {
          "ID": 23800,
+         "Spellid": true,
          "Name": "Agility",
          "Agi": 15,
          "Slot": "Main Hand",
@@ -3695,6 +3709,7 @@ var gear = {
       },
       {
          "ID": 23799,
+         "Spellid": true,
          "Name": "Strength",
          "Str": 15,
          "Slot": "Main Hand",
@@ -3702,6 +3717,7 @@ var gear = {
       },
       {
          "ID": 20034,
+         "Spellid": true,
          "Name": "Crusader",
          "Slot": "Main Hand",
          "Phase": 1,
@@ -3710,6 +3726,7 @@ var gear = {
       },
       {
          "ID": 13898,
+         "Spellid": true,
          "Name": "Fiery",
          "Slot": "Main Hand",
          "Phase": 1,
@@ -3718,6 +3735,7 @@ var gear = {
       },
       {
          "ID": 20032,
+         "Spellid": true,
          "Name": "Lifestealing",
          "Slot": "Main Hand",
          "Phase": 1,
@@ -3726,27 +3744,36 @@ var gear = {
       },
       {
          "ID": 20031,
+         "Spellid": true,
          "Name": "Superior Striking",
          "Dmg": 5,
          "Slot": "Main Hand",
          "Phase": 1
       },
       {
-         "ID": 22756,
+         "ID": 18262,
          "Name": "Elemental Sharpening Stone",
          "Crit": 2,
          "Slot": "Main Hand Temporary",
          "Phase": 1
       },
       {
-         "ID": 16138,
+         "ID": 12404,
          "Name": "Dense Stone",
          "Dmg": 8,
          "Slot": "Main Hand Temporary",
          "Phase": 1
+      },
+      {
+         "ID": 23122,
+         "Name": "Consecrated Sharpening Stone",
+         "AP": 108,
+         "Slot": "Main Hand Temporary",
+         "Phase": 6
       },
       {
          "ID": 23800,
+         "Spellid": true,
          "Name": "Agility",
          "Agi": 15,
          "Slot": "Off Hand",
@@ -3754,6 +3781,7 @@ var gear = {
       },
       {
          "ID": 23799,
+         "Spellid": true,
          "Name": "Strength",
          "Str": 15,
          "Slot": "Off Hand",
@@ -3761,6 +3789,7 @@ var gear = {
       },
       {
          "ID": 20034,
+         "Spellid": true,
          "Name": "Crusader",
          "Slot": "Off Hand",
          "Phase": 1,
@@ -3769,6 +3798,7 @@ var gear = {
       },
       {
          "ID": 13898,
+         "Spellid": true,
          "Name": "Fiery",
          "Slot": "Off Hand",
          "Phase": 1,
@@ -3777,6 +3807,7 @@ var gear = {
       },
       {
          "ID": 20032,
+         "Spellid": true,
          "Name": "Lifestealing",
          "Slot": "Off Hand",
          "Phase": 1,
@@ -3785,24 +3816,32 @@ var gear = {
       },
       {
          "ID": 20031,
+         "Spellid": true,
          "Name": "Superior Striking",
          "Dmg": 5,
          "Slot": "Off Hand",
          "Phase": 1
       },
       {
-         "ID": 22756,
+         "ID": 18262,
          "Name": "Elemental Sharpening Stone",
          "Crit": 2,
          "Slot": "Off Hand Temporary",
          "Phase": 1
       },
       {
-         "ID": 16138,
+         "ID": 12404,
          "Name": "Dense Stone",
          "Dmg": 8,
          "Slot": "Off Hand Temporary",
          "Phase": 1
+      },
+      {
+         "ID": 23122,
+         "Name": "Consecrated Sharpening Stone",
+         "AP": 108,
+         "Slot": "Off Hand Temporary",
+         "Phase": 6
       },
    ],
 };
@@ -3893,6 +3932,7 @@ function buildWeapons() {
                <th>Speed</th>
                <th>Skill</th>
                <th>Type</th>
+               <th>PPM</th>
                <th>DPS</th>
             </tr>
          </thead>
@@ -3914,6 +3954,7 @@ function buildWeapons() {
                      <td>${item.Speed || ''}</td>
                      <td>${item.Skill || ''}</td>
                      <td>${item.Type || ''}</td>
+                     <td>${item.PPM || ''}</td>
                      <td></td>
                   </tr>`;
    }
@@ -3939,6 +3980,7 @@ function buildWeapons() {
                <th>Speed</th>
                <th>Skill</th>
                <th>Type</th>
+               <th>PPM</th>
                <th>DPS</th>
             </tr>
          </thead>
@@ -3960,6 +4002,7 @@ function buildWeapons() {
                      <td>${item.Speed || ''}</td>
                      <td>${item.Skill || ''}</td>
                      <td>${item.Type || ''}</td>
+                     <td>${item.PPM || ''}</td>
                      <td></td>
                   </tr>`;
    }
@@ -3992,7 +4035,7 @@ function buildEnchants() {
 
    for (let item of enchants) {
       section += `<tr data-id="${item.ID}" data-slot="${item.Slot}">
-                     <td><a href="https://classic.wowhead.com/spell=${item.ID}"></a>${item.Name}</td>
+                     <td><a href="https://classic.wowhead.com/${item.Spellid ? 'spell' : 'item'}=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Slot || ''}</td>
                      <td>${item.Str || ''}</td>
                      <td>${item.Agi || ''}</td>
@@ -4040,6 +4083,7 @@ function getEnchantFromRow(tr) {
          aura.haste = parseInt(item.Haste || 0);
          aura.crit = parseInt(item.Crit || 0);
          aura.dmg = parseInt(item.Dmg || 0);
+         aura.ap = parseInt(item.AP || 0);
          aura.ppm = parseInt(item.PPM || 0);
          aura.procdmg = parseInt(item.ProcDmg || 0);
          aura.procspell = (item.ProcSpell || '');
