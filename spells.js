@@ -250,8 +250,11 @@ class Berserking extends Spell {
 }
 
 class Crusader extends Spell {
-    use() {
-        this.player.auras.crusader = new Aura(15, { str: 100 });
+    use(offhand) {
+        if (offhand)
+            this.player.auras.crusader2 = new Aura(15, { str: 100 });
+        else
+            this.player.auras.crusader1 = new Aura(15, { str: 100 });
         this.player.updateAuras();
     }
 }

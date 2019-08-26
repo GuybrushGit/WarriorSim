@@ -229,8 +229,12 @@ class Player {
             delete this.auras.berserking;
             this.updateAuras();
         }
-        if (this.auras.crusader && !this.auras.crusader.step()) {
-            delete this.auras.crusader;
+        if (this.auras.crusader1 && !this.auras.crusader1.step()) {
+            delete this.auras.crusader1;
+            this.updateAuras();
+        }
+        if (this.auras.crusader2 && !this.auras.crusader2.step()) {
+            delete this.auras.crusader2;
             this.updateAuras();
         }
     }
@@ -347,13 +351,13 @@ class Player {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
                 if (weapon.proc1.spell)
-                    weapon.proc1.spell.use();
+                    weapon.proc1.spell.use(weapon.offhand);
                 if (weapon.proc1.dmg && rng(1, 10000) < 1700)
                     procdmg += weapon.proc1.dmg;
             }
             if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance * 100) {
                 if (weapon.proc2.spell)
-                    weapon.proc2.spell.use();
+                    weapon.proc2.spell.use(weapon.offhand);
                 if (weapon.proc2.dmg && rng(1, 10000) < 1700)
                     procdmg += weapon.proc2.dmg; 
             }
@@ -377,6 +381,7 @@ class Simulation {
         this.startrage = settings.startrage;
         this.recklessness = (settings.recklessness || false);
         this.callback = callback || function() {};
+        this.maxcallstack = Math.min(Math.floor(iterations / 10), 1000);
     }
     start() {
         this.run(1);
@@ -481,7 +486,7 @@ class Simulation {
             }
         }
 
-        if (i % Math.floor(this.iterations / 20) == 0 || i == this.iterations) {
+        if (i % this.maxcallstack == 0 || i == this.iterations) {
             this.output.text((this.total / (this.timesecs * i)).toFixed(2));
             if (i < this.iterations) {
                 let view = this;

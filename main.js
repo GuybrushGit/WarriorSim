@@ -1,9 +1,68 @@
 var start, end;
 
+function addGearToPlayer(player, aura) {
+    for (let prop in player.base)
+        player.base[prop] += aura[prop] || 0;
 
+    if (aura.slot == 'mainhand') {
+        player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
+        if (aura.ppm) {
+            player.mh.proc1 = {};
+            player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
+            player.mh.proc1.dmg = aura.procdmg;
+            if (aura.procspell)
+                player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+        }
+    }
 
-function startSimulation(output, gear, callback) {
+    if (aura.slot == 'offhand') {
+        player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
+        if (aura.ppm) {
+            player.oh.proc1 = {};
+            player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
+            player.oh.proc1.dmg = aura.procdmg;
+            if (aura.procspell)
+                player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+        }
+    }
+}
+
+function addEnchantToPlayer(player, aura) {
+    for (let prop in player.base) {
+        if (prop == 'haste')
+            player.base.haste /= (1 + aura.haste / 100) || 1;
+        else
+            player.base[prop] += aura[prop] || 0;
+    }
+
+    if (aura.slot.indexOf('Main Hand') >= 0) {
+        player.mh.crit += aura.crit;
+        player.mh.bonusdmg += aura.dmg;
+        if (aura.ppm) {
+            player.mh.proc2 = {};
+            player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
+            player.mh.proc2.dmg = aura.procdmg;
+            if (aura.procspell)
+                player.mh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+        }
+    }
+    if (aura.slot.indexOf('Off Hand') >= 0) {
+        player.oh.crit += aura.crit;
+        player.oh.bonusdmg += aura.dmg;
+        if (aura.ppm) {
+            player.oh.proc2 = {};
+            player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
+            player.oh.proc2.dmg = aura.procdmg;
+            if (aura.procspell)
+                player.oh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+        }
+    }
+}
+
+function startSimulation(output, row, callback) {
     let player = new Player();
+    let testgear;
+    if (row) testgear = getAuraFromRow(row);
 
     // Talents
     $('.talent').each(function() {
@@ -16,72 +75,28 @@ function startSimulation(output, gear, callback) {
     $('table.gear').each(function() {
         let slot = $(this).data('type');
         if (slot == 'enchant') return;
-        let row = $(this).find('tbody tr.active');
+        let tr = $(this).find('tbody tr.active');
+
         let aura = {};
-        if (row.length) aura = getWeaponFromRow(row);
-        if (gear && gear.slot == slot) aura = gear;
-        for (let prop in player.base)
-            player.base[prop] += aura[prop] || 0;
+        if (testgear && testgear.slot == slot) aura = testgear;
+        else if (tr.length) aura = getAuraFromRow(tr);
 
-        if (aura.slot == 'mainhand') {
-            player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
-            if (aura.ppm) {
-                player.mh.proc1 = {};
-                player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
-                player.mh.proc1.dmg = aura.procdmg;
-                if (aura.procspell)
-                    player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
-            }
-        }
-
-        if (aura.slot == 'offhand') {
-            player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
-            if (aura.ppm) {
-                player.oh.proc1 = {};
-                player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
-                player.oh.proc1.dmg = aura.procdmg;
-                if (aura.procspell)
-                    player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
-            }
-        }
+        addGearToPlayer(player, aura);
     });
 
+    // Enchants
+    let testgearadded = false;
     $('table.gear[data-type="enchant"] tbody tr.active').each(function() {
-
-        let row = $(this);
-        let aura = getEnchantFromRow(row);
-        if (gear && gear.slot == aura.slot) aura = gear;
-        for (let prop in player.base) {
-            if (prop == 'haste')
-                player.base.haste /= (1 + aura.haste / 100) || 1;
-            else
-                player.base[prop] += aura[prop] || 0;
+        let tr = $(this);
+        let aura = getAuraFromRow(tr);
+        if (testgear && testgear.enchant && testgear.slot == aura.slot) {
+            aura = testgear;
+            testgearadded = true;
         }
-
-        if (aura.slot.indexOf('Main Hand') >= 0) {
-            player.mh.crit += aura.crit;
-            player.mh.bonusdmg += aura.dmg;
-            if (aura.ppm) {
-                player.mh.proc2 = {};
-                player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
-                player.mh.proc2.dmg = aura.procdmg;
-                if (aura.procspell)
-                    player.mh.proc2.spell = eval('new ' + aura.procspell + '(player)');
-            }
-        }
-        if (aura.slot.indexOf('Off Hand') >= 0) {
-            player.oh.crit += aura.crit;
-            player.oh.bonusdmg += aura.dmg;
-            if (aura.ppm) {
-                player.oh.proc2 = {};
-                player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
-                player.oh.proc2.dmg = aura.procdmg;
-                if (aura.procspell)
-                    player.oh.proc2.spell = eval('new ' + aura.procspell + '(player)');
-            }
-        }
-
+        addEnchantToPlayer(player, aura);
     });
+    if (testgear && !testgearadded)
+        addEnchantToPlayer(player, testgear);
 
     // Buffs
     $('.buff.active').each(function() {
@@ -130,8 +145,8 @@ function startSimulation(output, gear, callback) {
         return addAlert('No weapons selected.');
 
     player.update();
-    console.log(player);
-    new Simulation(player, settings, gear ? settings.simulations : 10000, output, callback).start();
+    // console.log(player);
+    new Simulation(player, settings, testgear ? settings.simulations : 10000, output, callback).start();
 }
 
 function addAlert(msg) {
@@ -149,7 +164,7 @@ function closeAlert() {
 function runRow(rows, index) {
     let row = rows.eq(index);
     if (!row.length) return setTimeout(complete, 10);
-    startSimulation(row.children().last(), getAuraFromRow(row), function () {
+    startSimulation(row.children().last(), row, function () {
         runRow(rows, index + 1);
         $('progress').attr('value', index + 1);
     });
@@ -175,6 +190,7 @@ $(document).ready(function () {
 
     buildBuffs();
     buildTalents();
+    buildGear();
     buildWeapons();
     buildEnchants();
     talentEvents();
@@ -190,11 +206,11 @@ $(document).ready(function () {
         start = new Date().getTime();
         $('progress').show();
         $('progress').attr('value', 0);
-        $('progress').attr('max', $('table.gear tbody tr').length);
+        $('progress').attr('max', $('table.gear tbody tr:not(.hidden)').length);
         $('table.gear tbody td:last-of-type').text('');
 
         startSimulation($('#dps'), null, complete);
-        // runRow($('table.gear tbody tr'), 0);
+        // runRow($('table.gear tbody tr:not(.hidden)'), 0);
 
     });
 
