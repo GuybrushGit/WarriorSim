@@ -62,20 +62,20 @@ class Player {
             armor: 0,
             defense: 63 * 5,
         };
-        this.base = { 
-            ap: 0, 
-            agi: 0, 
-            str: 0, 
-            hit: 0, 
-            crit: 0, 
-            skill_0: this.level * 5, 
-            skill_1: this.level * 5, 
-            skill_2: this.level * 5, 
-            skill_3: this.level * 5, 
-            skill_4: this.level * 5, 
-            haste: 1, 
-            strmod: 1, 
-            agimod: 1, 
+        this.base = {
+            ap: 0,
+            agi: 0,
+            str: 0,
+            hit: 0,
+            crit: 0,
+            skill_0: this.level * 5,
+            skill_1: this.level * 5,
+            skill_2: this.level * 5,
+            skill_3: this.level * 5,
+            skill_4: this.level * 5,
+            haste: 1,
+            strmod: 1,
+            agimod: 1,
             dmgmod: 1,
             apmod: 1
         };
@@ -117,9 +117,9 @@ class Player {
             for (let prop in this.auras[name].stats)
                 this.stats[prop] += this.auras[name].stats[prop];
             for (let prop in this.auras[name].div_stats)
-                this.stats[prop] /= (1 + this.auras[name].div_stats[prop]/100);
+                this.stats[prop] /= (1 + this.auras[name].div_stats[prop] / 100);
             for (let prop in this.auras[name].mult_stats)
-                this.stats[prop] *= (1 + this.auras[name].mult_stats[prop]/100);
+                this.stats[prop] *= (1 + this.auras[name].mult_stats[prop] / 100);
         }
         this.stats.str = ~~(this.stats.str * this.stats.strmod);
         this.stats.agi = ~~(this.stats.agi * this.stats.agimod);
@@ -262,7 +262,7 @@ class Player {
         }
         roll = rng(1, 10000);
         let crit = this.crit + this.mh.crit;
-        if (spell instanceof Overpower) 
+        if (spell instanceof Overpower)
             crit += this.talents.overpowercrit;
         if (roll < (crit * 100)) return RESULT.CRIT;
         return RESULT.HIT;
@@ -359,7 +359,7 @@ class Player {
                 if (weapon.proc2.spell)
                     weapon.proc2.spell.use(weapon.offhand);
                 if (weapon.proc2.dmg && rng(1, 10000) < 1700)
-                    procdmg += weapon.proc2.dmg; 
+                    procdmg += weapon.proc2.dmg;
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng(1, 10000) < this.talents.swordproc * 100)
@@ -371,17 +371,17 @@ class Player {
 }
 
 class Simulation {
-    constructor(player, settings, iterations, output, callback) {
+    constructor(player, settings, output, callback) {
         this.player = player;
         this.timesecs = settings.timesecs;
-        this.iterations = iterations;
+        this.iterations = settings.simulations;
         this.output = output;
         this.total = 0;
         this.executestep = settings.timesecs * 10 * (100 - settings.executeperc);
         this.startrage = settings.startrage;
         this.recklessness = (settings.recklessness || false);
-        this.callback = callback || function() {};
-        this.maxcallstack = Math.min(Math.floor(iterations / 10), 1000);
+        this.callback = callback || function () { };
+        this.maxcallstack = Math.min(Math.floor(this.iterations / 10), 1000);
     }
     start() {
         this.run(1);
@@ -391,7 +391,7 @@ class Simulation {
         player.reset(this.startrage, this.recklessness);
         let step = 0;
         let max = this.timesecs * 1000;
-        while( step < max ) {
+        while (step < max) {
             let next = 10;
             let batch = step % 200 == 0;
 
@@ -401,7 +401,7 @@ class Simulation {
             step += next;
             player.step(this, batch, next);
 
-            if (batch && player.extraattacks > 0) 
+            if (batch && player.extraattacks > 0)
                 while (player.extraattacks--)
                     this.total += player.attack(player.mh, true);
 
@@ -409,7 +409,7 @@ class Simulation {
                 this.total += player.attack(player.mh);
                 if (player.oh.timer < 200) {
                     player.oh.timer = 200;
-                } 
+                }
             }
             else if (player.oh.timer == 0) {
                 this.total += player.attack(player.oh);

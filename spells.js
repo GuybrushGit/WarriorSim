@@ -187,7 +187,7 @@ class RagePotion extends Spell {
         super.use();
         this.player.auras.ragepotion = new Aura(20, { str: 60 });
         this.player.updateAuras();
-        this.player.rage = Math.max(this.player.rage + ~~rng(45,75), 100);
+        this.player.rage = Math.max(this.player.rage + ~~rng(45, 75), 100);
     }
 }
 

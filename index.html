@@ -27,19 +27,20 @@
 
 FILL OUT GEAR DATA
 WEAPON PROCS
-ALL TOOLTIPS
+
 AQ BOOKS
 TALENT UI
 ITEM SETS
 dynamic spell queue function?
 overpower mechanics
-non-magical procs?
+are there non-magic procs?
 review all spell rotation - optimize timings etc
 Battle Squawk
 split buffs horde ally
 Windfury Totem + Improved Weapon Totems
 stats panel
 check which spells are non gcd
+optimize aura management - replace constant creation and deletion
 
 
 
@@ -69,17 +70,24 @@ extra attacks on next swing?
 		</ul>
 	</nav>
 
+	<div class="sidebar">
+		<input type="submit" id="runsim" value="Run Sim" />
+		<input type="submit" id="rungear" value="Test All Gear" />
+		<span id="dps"></span>
+		<span id="time"></span>
+	</div>
+
 	<section>
 		<article class="settings">
 			<label>Settings</label>
 			<ul>
 				<li>
 					<label>Simulations</label>
-					<input type="text" name="simulations" value="100" />
+					<input type="text" name="simulations" value="10000" />
 				</li>
 				<li>
 					<label>Fight Duration</label>
-					<input type="text" name="timesecs" value="180" />
+					<input type="text" name="timesecs" value="100" />
 				</li>
 				<li>
 					<label>Target Armor</label>
@@ -177,11 +185,42 @@ extra attacks on next swing?
 			<label>Character</label>
 			<ul>
 				<li>
-					<label>DPS</label>
-					<span id="dps"></span>
+					<label>Strength</label>
+					<span id="str"></span>
+				</li>
+				<li>
+					<label>Agility</label>
+					<span id="agi"></span>
+				</li>
+				<li>
+					<label>Attack Power</label>
+					<span id="ap"></span>
+				</li>
+				<li>
+					<label>Skill</label>
+					<span id="skill"></span>
+				</li>
+				<li>
+					<label>Miss</label>
+					<span id="miss"></span>
+				</li>
+				<li>
+					<label>Crit</label>
+					<span id="crit"></span>
+				</li>
+				<li>
+					<label>Crit Cap</label>
+					<span id="critcap"></span>
+				</li>
+				<li>
+					<label>Dmg %</label>
+					<span id="dmgmod"></span>
+				</li>
+				<li>
+					<label>Haste</label>
+					<span id="haste"></span>
 				</li>
 			</ul>
-			<input type="submit" value="Run" />
 		</article>
 		<article class="talents">
 			<label>Talents</label>

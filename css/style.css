@@ -65,7 +65,7 @@ article > label {
 }
 .settings, .buffs, .char {
     width: 33%;
-    min-height: 340px;
+    min-height: 392px;
 }
 .talent {
     width: 40px;
@@ -174,8 +174,9 @@ article > label {
 }
 .settings li, .char li {
     border-bottom: 1px solid rgba(221,221,221,0.4);
-    padding: 7px 10px;
+    padding: 5px 10px;
     overflow: hidden;
+    font-size: 12px;
 }
 .settings li:first-child, .char li:first-child {
     padding-top: 0;
@@ -234,19 +235,19 @@ article > label {
     display: none;
 }
 input[type="submit"] {
-    width: 90%;
     border: 1px solid #ddd;
     background: none;
-    height: 50px;
+    height: 40px;
     color: #ddd;
     font-weight: bold;
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
     cursor: pointer;
     transition: all 0.2s ease-in;
     float: none;
     text-align: center;
+    font-size: 12px;
+    width: 170px;
+    margin-bottom: 6px;
+    display: block;
 }
 input[type="submit"]:hover {
     background: #ddd;
@@ -447,9 +448,6 @@ nav li.active:after {
 .alert p {
     margin: 0;
 }
-
-
-
 @keyframes fadeInUp {
     from {
         opacity:0;
@@ -465,3 +463,43 @@ nav li.active:after {
     animation-fill-mode: both;
     animation-duration: 0.5s;
 }
+.char span {
+    float: right;
+}
+.char small {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.wowhead-tooltip .q2 {
+    white-space: normal;
+    display: block;
+    margin: 0;
+}
+.wowhead-tooltip .q2 a {
+    display: inline;
+}
+.sidebar {
+    position: fixed;
+    right: calc(50% - 670px);
+    top: 50px;
+}
+.sidebar #dps {
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+.sidebar #dps small {
+    font-size: 11px;
+}
+.sidebar #time {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 6px;
+    display: block;
+    text-align: center;
+}
+

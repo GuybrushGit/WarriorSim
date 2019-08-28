@@ -59,8 +59,8 @@ var buffs = [
       name: "Songflower Serenade",
       iconname: "spell_holy_mindvision",
       group: "",
-      crit: 5, 
-      str: 15, 
+      crit: 5,
+      str: 15,
       agi: 15,
    },
    {
@@ -226,7 +226,7 @@ var buffs = [
 
 function buildBuffs() {
    let article = $('article.buffs');
-   for(let buff of buffs) {
+   for (let buff of buffs) {
       let div = $('<div class="buff"><img src="img/' + buff.iconname + '.jpg" alt="' + buff.name + '"></div>');
       div.attr('data-group', buff.group);
       div.attr('data-ap', buff.ap);
@@ -240,7 +240,7 @@ function buildBuffs() {
       if (buff.spell) div.attr('data-spell', buff.spell);
       if (buff.disableSpell) div.attr('data-disable-spell', buff.disableSpell);
       if (buff.checked) div.addClass('active');
-      div.click(function() {
+      div.click(function () {
          let b = $(this);
          b.toggleClass('active');
          if (b.hasClass('active')) {
@@ -249,6 +249,7 @@ function buildBuffs() {
             if (b.data('disable-spell'))
                $('.spell[data-id="' + b.data('disable-spell') + '"]').removeClass('active');
          }
+         updatePanel();
       });
       div.append('<a href="https://classic.wowhead.com/' + (buff.spellid ? 'spell' : 'item') + '=' + buff.id + '" class="wh-tooltip"></a>');
       article.append(div);
