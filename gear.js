@@ -4682,11 +4682,23 @@ function buildPlayer(testgear) {
    $('.spell.active').each(function () {
       let name = $(this).find('img').attr('alt');
       let lname = name.toLowerCase();
-      if (lname == 'deepwounds') player.deepwounds = true;
+      if (lname == 'deepwounds') settings.deepwounds = true;
       else player.spells[lname] = eval(`new ${name}(player)`);
       if (lname == 'recklessness') settings.recklessness = true;
    });
    player.target.armor = settings.armor;
+
+
+   // Auras
+   if (settings.recklessness)
+      player.buras.recklessness = new Recklessness(player);
+   if (player.talents.flurry)
+      player.buras.flurry = new Flurry(player);
+   if (settings.deepwounds)
+      player.spells.deepwounds = new DeepWounds(player);
+
+
+
    player.update();
    return player;
 }

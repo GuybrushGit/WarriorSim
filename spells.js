@@ -126,7 +126,7 @@ class Bloodrage extends Spell {
     constructor(player) {
         super(player);
         this.cost = 0;
-        this.rage = 10 + player.talents.bloodragebonus;
+        this.rage = 20 + player.talents.bloodragebonus;
         this.cooldown = 60;
     }
     use() {
@@ -212,18 +212,6 @@ class Hamstring extends Spell {
     }
 }
 
-class Recklessness extends Spell {
-    constructor(player) {
-        super(player);
-    }
-    use() {
-        super.use();
-        this.player.auras.recklessness = new Aura(15, { crit: 100 });
-        this.player.updateAuras();
-        this.player.recklessness = false;
-    }
-}
-
 class BloodFury extends Spell {
     constructor(player) {
         super(player);
@@ -260,64 +248,78 @@ class Crusader extends Spell {
 }
 
 
-
-
 class Aura {
-    constructor(duration, stats, mult_stats, div_stats) {
-        this.timer = duration * 1000;
-        this.stats = stats || {};
-        this.div_stats = div_stats || {};
-        this.mult_stats = mult_stats || {};
+    constructor(player) {
+        this.timer = 0;
+        this.stats = {};
+        this.div_stats = {};
+        this.mult_stats = {};
+        this.player = player;
+        this.enabled = true;
+        this.duration = 0;
+        this.stacks = 0;
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.updateAuras();
     }
     step() {
-        return this.timer = this.timer < 200 ? 0 : this.timer - 200;
+        if (this.timer <= 200) {
+            this.timer = 0;
+            this.enabled = false;
+            this.player.updateAuras();
+        }
+        else {
+            this.timer -= 200;
+        }
     }
-    refresh() {
+}
 
+class Recklessness extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 15;
+        this.stats = { crit: 100 };
     }
 }
 
 class Flurry extends Aura {
-    constructor(percentage) {
-        super(12);
-        this.stacks = 3;
-        this.div_stats = { haste: percentage };
+    constructor(player, percentage) {
+        super(player);
+        this.duration = 12;
+        this.div_stats = { haste: player.talents.flurry };
     }
-    procattack() {
+    step() {
         this.stacks--;
-        return this.stacks > 0;
+        if (!this.stacks) {
+            this.timer = 0;
+            this.player.updateAuras();
+        }
+    }
+    use() {
+        this.stacks = 3;
+        this.timer = 1;
+        this.player.updateAuras();
     }
 }
 
 class DeepWounds extends Aura {
-    constructor() {
-        super(12);
+    constructor(player) {
+        super(player);
+        this.duration = 12;
     }
     step(simulation) {
-        let timer = super.step();
-        if (timer == 0 || timer % 3000 == 0 || timer % 6000 == 0 || timer % 9000 == 0) {
-            let player = simulation.player;
-            let min = player.mh.mindmg + player.mh.bonusdmg + (player.stats.ap / 14) * player.mh.speed;
-            let max = player.mh.maxdmg + player.mh.bonusdmg + (player.stats.ap / 14) * player.mh.speed;
+        this.timer = this.timer < 200 ? 0 : this.timer - 200;
+        if (this.timer == 0 || this.timer % 3000 == 0 || this.timer % 6000 == 0 || this.timer % 9000 == 0) {
+            let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+            let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
-            dmg *= player.mh.modifier * player.stats.dmgmod * player.talents.deepwounds;
+            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds;
             simulation.total += ~~(dmg / 4);
         }
-        return timer;
     }
-    refresh() {
-        this.timer = 9000 + (this.timer % 3000);
-    }
-}
-
-class BloodrageAura extends Aura {
-    constructor() {
-        super(10);
-    }
-    step(simulation) {
-        let timer = super.step();
-        if (timer % 1000 == 0)
-            simulation.player.rage++;
-        return timer;
+    use() {
+        if (!this.timer) this.timer = this.duration * 1000;
+        else this.timer = 9000 + (this.timer % 3000);
     }
 }

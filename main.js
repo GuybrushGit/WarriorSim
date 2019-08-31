@@ -1,4 +1,4 @@
-var start, end;
+var start, end, counter = 0;
 
 function startSimulation(output, row, callback) {
     let testgear;
@@ -12,8 +12,8 @@ function startSimulation(output, row, callback) {
     $('.settings input').each(function () {
         settings[$(this).attr('name')] = parseInt($(this).val());
     });
+    settings.recklessness = $('.spell[data-id="recklessness"]').hasClass('active');
 
-    // console.log(player);
     new Simulation(player, settings, output, callback).start();
 }
 
@@ -54,9 +54,6 @@ function complete() {
 
 function updatePanel() {
     let player = buildPlayer();
-
-    console.log(player);
-
     let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     $('.char #str').text(player.stats.str);
     $('.char #agi').text(player.stats.agi);
@@ -73,9 +70,7 @@ function updatePanel() {
     let ohdmg = player.stats.dmgmod * player.oh.modifier * 100;
     $('.char #dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + space + ohdmg.toFixed(2) + '% <small>OH</small>');
     $('.char #haste').html((player.stats.haste * 100).toFixed(2) + '%');
-
 }
-
 
 $(document).ready(function () {
 

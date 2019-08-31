@@ -56,7 +56,6 @@ class Player {
         this.dodgeTimer = 0;
         this.extraattacks = 0;
         this.nextswinghs = false;
-        this.deepwounds = false;
         this.target = {
             level: 63,
             armor: 0,
@@ -83,8 +82,9 @@ class Player {
         this.auras = [];
         this.spells = {};
         this.talents = {};
+        this.buras = {};
     }
-    reset(rage, reck) {
+    reset(rage) {
         this.rage = rage;
         this.timer = 0;
         this.dodgeTimer = 0;
@@ -93,9 +93,13 @@ class Player {
         this.auras = [];
         this.extraattacks = 0;
         this.nextswinghs = false;
-        this.recklessness = reck;
         for (let s in this.spells)
             this.spells[s].timer = 0;
+        for (let s in this.buras) {
+            this.buras[s].timer = 0;
+            this.buras[s].enabled = true;
+            this.buras[s].stacks = 0;
+        }
         this.update();
     }
     update() {
@@ -120,6 +124,16 @@ class Player {
                 this.stats[prop] /= (1 + this.auras[name].div_stats[prop] / 100);
             for (let prop in this.auras[name].mult_stats)
                 this.stats[prop] *= (1 + this.auras[name].mult_stats[prop] / 100);
+        }
+        for (let name in this.buras) {
+            if (this.buras[name].timer) {
+                for (let prop in this.buras[name].stats)
+                    this.stats[prop] += this.buras[name].stats[prop];
+                for (let prop in this.buras[name].div_stats)
+                    this.stats[prop] /= (1 + this.buras[name].div_stats[prop] / 100);
+                for (let prop in this.buras[name].mult_stats)
+                    this.stats[prop] *= (1 + this.buras[name].mult_stats[prop] / 100);
+            }
         }
         this.stats.str = ~~(this.stats.str * this.stats.strmod);
         this.stats.agi = ~~(this.stats.agi * this.stats.agimod);
@@ -199,12 +213,6 @@ class Player {
             delete this.auras.battlestance;
             this.updateAuras();
         }
-        if (this.auras.deepwounds && !this.auras.deepwounds.step(simulation)) {
-            delete this.auras.deepwounds;
-        }
-        if (this.auras.bloodrage && !this.auras.bloodrage.step(simulation)) {
-            delete this.auras.bloodrage;
-        }
         if (this.auras.deathwish && !this.auras.deathwish.step()) {
             delete this.auras.deathwish;
             this.updateAuras();
@@ -215,10 +223,6 @@ class Player {
         }
         if (this.auras.ragepotion && !this.auras.ragepotion.step()) {
             delete this.auras.ragepotion;
-            this.updateAuras();
-        }
-        if (this.auras.recklessness && !this.auras.recklessness.step()) {
-            delete this.auras.recklessness;
             this.updateAuras();
         }
         if (this.auras.bloodfury && !this.auras.bloodfury.step()) {
@@ -236,6 +240,13 @@ class Player {
         if (this.auras.crusader2 && !this.auras.crusader2.step()) {
             delete this.auras.crusader2;
             this.updateAuras();
+        }
+
+        if (this.buras.recklessness && this.buras.recklessness.enabled && this.buras.recklessness.timer) {
+            this.buras.recklessness.step();
+        }
+        if (this.spells.deepwounds && this.spells.deepwounds.timer) {
+            this.spells.deepwounds.step(simulation);
         }
     }
     rollweapon(weapon) {
@@ -329,24 +340,14 @@ class Player {
         }
     }
     proccrit() {
-        if (this.talents.flurry) {
-            this.auras.flurry = new Flurry(this.talents.flurry);
-            this.updateAuras();
-        }
-        if (this.deepwounds && this.talents.deepwounds) {
-            if (!this.auras.deepwounds)
-                this.auras.deepwounds = new DeepWounds();
-            else
-                this.auras.deepwounds.refresh();
-        }
+        if (this.buras.flurry) this.buras.flurry.use();
+        if (this.spells.deepwounds) this.spells.deepwounds.use();
     }
     procattack(spell, weapon, result, simulation) {
         let procdmg = 0;
         if (!spell || spell instanceof HeroicStrike) {
-            if (this.auras.flurry && !this.auras.flurry.procattack()) {
-                delete this.auras.flurry;
-                this.updateAuras();
-            }
+            if (this.buras.flurry && this.buras.flurry.stacks)
+                this.buras.flurry.step();
         }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
@@ -379,7 +380,6 @@ class Simulation {
         this.total = 0;
         this.executestep = settings.timesecs * 10 * (100 - settings.executeperc);
         this.startrage = settings.startrage;
-        this.recklessness = (settings.recklessness || false);
         this.callback = callback || function () { };
         this.maxcallstack = Math.min(Math.floor(this.iterations / 10), 1000);
     }
@@ -388,7 +388,7 @@ class Simulation {
     }
     run(i) {
         let player = this.player;
-        player.reset(this.startrage, this.recklessness);
+        player.reset(this.startrage);
         let step = 0;
         let max = this.timesecs * 1000;
         while (step < max) {
@@ -471,16 +471,18 @@ class Simulation {
                     player.buff(player.spells.ragepotion);
                     continue;
                 }
-                if (player.recklessness) {
-                    player.buff(player.spells.recklessness);
-                    continue;
-                }
+                
                 if (player.spells.bloodfury && player.spells.bloodfury.canUse()) {
                     player.buff(player.spells.bloodfury);
                     continue;
                 }
                 if (player.spells.berserking && player.spells.berserking.canUse()) {
                     player.buff(player.spells.berserking);
+                    continue;
+                }
+
+                if (player.buras.recklessness && player.buras.recklessness.enabled && !player.buras.recklessness.timer ) {
+                    player.buras.recklessness.use();
                     continue;
                 }
             }
