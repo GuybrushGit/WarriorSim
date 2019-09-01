@@ -79,10 +79,9 @@ class Player {
             apmod: 1
         };
         this.stats = {};
-        this.auras = [];
+        this.auras = {};
         this.spells = {};
         this.talents = {};
-        this.buras = {};
     }
     reset(rage) {
         this.rage = rage;
@@ -90,15 +89,14 @@ class Player {
         this.dodgeTimer = 0;
         this.mh.timer = 0;
         this.oh.use();
-        this.auras = [];
         this.extraattacks = 0;
         this.nextswinghs = false;
         for (let s in this.spells)
             this.spells[s].timer = 0;
-        for (let s in this.buras) {
-            this.buras[s].timer = 0;
-            this.buras[s].enabled = true;
-            this.buras[s].stacks = 0;
+        for (let s in this.auras) {
+            this.auras[s].timer = 0;
+            this.auras[s].firstuse = true;
+            this.auras[s].stacks = 0;
         }
         this.update();
     }
@@ -118,21 +116,13 @@ class Player {
         for (let prop in this.base)
             this.stats[prop] = this.base[prop];
         for (let name in this.auras) {
-            for (let prop in this.auras[name].stats)
-                this.stats[prop] += this.auras[name].stats[prop];
-            for (let prop in this.auras[name].div_stats)
-                this.stats[prop] /= (1 + this.auras[name].div_stats[prop] / 100);
-            for (let prop in this.auras[name].mult_stats)
-                this.stats[prop] *= (1 + this.auras[name].mult_stats[prop] / 100);
-        }
-        for (let name in this.buras) {
-            if (this.buras[name].timer) {
-                for (let prop in this.buras[name].stats)
-                    this.stats[prop] += this.buras[name].stats[prop];
-                for (let prop in this.buras[name].div_stats)
-                    this.stats[prop] /= (1 + this.buras[name].div_stats[prop] / 100);
-                for (let prop in this.buras[name].mult_stats)
-                    this.stats[prop] *= (1 + this.buras[name].mult_stats[prop] / 100);
+            if (this.auras[name].timer) {
+                for (let prop in this.auras[name].stats)
+                    this.stats[prop] += this.auras[name].stats[prop];
+                for (let prop in this.auras[name].div_stats)
+                    this.stats[prop] /= (1 + this.auras[name].div_stats[prop] / 100);
+                for (let prop in this.auras[name].mult_stats)
+                    this.stats[prop] *= (1 + this.auras[name].mult_stats[prop] / 100);
             }
         }
         this.stats.str = ~~(this.stats.str * this.stats.strmod);
@@ -192,61 +182,50 @@ class Player {
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
         this.dodgeTimer = this.dodgeTimer < 200 ? 0 : this.dodgeTimer - 200;
 
+        // Spells
+        if (this.spells.mortalstrike) this.spells.mortalstrike.step();
         if (this.spells.bloodthirst) this.spells.bloodthirst.step();
-        if (this.spells.overpower) this.spells.overpower.step();
-        if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.battleshout) this.spells.battleshout.step();
-        if (this.spells.berserkerrage) this.spells.berserkerrage.step();
         if (this.spells.bloodrage) this.spells.bloodrage.step();
-        if (this.spells.deathwish) this.spells.deathwish.step();
+        if (this.spells.whirlwind) this.spells.whirlwind.step();
+        if (this.spells.overpower) this.spells.overpower.step();
+        if (this.spells.berserkerrage) this.spells.berserkerrage.step();
         if (this.spells.jujuflurry) this.spells.jujuflurry.step();
         if (this.spells.ragepotion) this.spells.ragepotion.step();
-        if (this.spells.mortalstrike) this.spells.mortalstrike.step();
-        if (this.spells.bloodfury) this.spells.bloodfury.step();
-        if (this.spells.berserking) this.spells.berserking.step();
 
-        if (this.auras.battleshout && !this.auras.battleshout.step()) {
-            delete this.auras.battleshout;
-            this.updateAuras();
+        // Auras
+        if (this.auras.deepwounds && this.auras.deepwounds.timer) {
+            this.auras.deepwounds.step(simulation);
         }
-        if (this.auras.battlestance && !this.auras.battlestance.step()) {
-            delete this.auras.battlestance;
-            this.updateAuras();
+        if (this.auras.battleshout && this.auras.battleshout.timer) {
+            this.auras.battleshout.step();
         }
-        if (this.auras.deathwish && !this.auras.deathwish.step()) {
-            delete this.auras.deathwish;
-            this.updateAuras();
+        if (this.auras.battlestance && this.auras.battlestance.timer) {
+            this.auras.battlestance.step();
         }
-        if (this.auras.jujuflurry && !this.auras.jujuflurry.step()) {
-            delete this.auras.jujuflurry;
-            this.updateAuras();
+        if (this.auras.recklessness && this.auras.recklessness.firstuse && this.auras.recklessness.timer) {
+            this.auras.recklessness.step();
         }
-        if (this.auras.ragepotion && !this.auras.ragepotion.step()) {
-            delete this.auras.ragepotion;
-            this.updateAuras();
+        if (this.auras.crusader1 && this.auras.crusader1.timer) {
+            this.auras.crusader1.step();
         }
-        if (this.auras.bloodfury && !this.auras.bloodfury.step()) {
-            delete this.auras.bloodfury;
-            this.updateAuras();
+        if (this.auras.crusader2 && this.auras.crusader2.timer) {
+            this.auras.crusader2.step();
         }
-        if (this.auras.berserking && !this.auras.berserking.step()) {
-            delete this.auras.berserking;
-            this.updateAuras();
+        if (this.auras.deathwish && this.auras.deathwish.firstuse && this.auras.deathwish.timer) {
+            this.auras.deathwish.step();
         }
-        if (this.auras.crusader1 && !this.auras.crusader1.step()) {
-            delete this.auras.crusader1;
-            this.updateAuras();
+        if (this.auras.jujuflurry && this.auras.jujuflurry.timer) {
+            this.auras.jujuflurry.step();
         }
-        if (this.auras.crusader2 && !this.auras.crusader2.step()) {
-            delete this.auras.crusader2;
-            this.updateAuras();
+        if (this.auras.ragepotion && this.auras.ragepotion.timer) {
+            this.auras.ragepotion.step();
         }
-
-        if (this.buras.recklessness && this.buras.recklessness.enabled && this.buras.recklessness.timer) {
-            this.buras.recklessness.step();
+        if (this.auras.bloodfury && this.auras.bloodfury.timer) {
+            this.auras.bloodfury.step();
         }
-        if (this.spells.deepwounds && this.spells.deepwounds.timer) {
-            this.spells.deepwounds.step(simulation);
+        if (this.auras.berserking && this.auras.berserking.timer) {
+            this.auras.berserking.step();
         }
     }
     rollweapon(weapon) {
@@ -340,25 +319,25 @@ class Player {
         }
     }
     proccrit() {
-        if (this.buras.flurry) this.buras.flurry.use();
-        if (this.spells.deepwounds) this.spells.deepwounds.use();
+        if (this.auras.flurry) this.auras.flurry.use();
+        if (this.auras.deepwounds) this.auras.deepwounds.use();
     }
     procattack(spell, weapon, result, simulation) {
         let procdmg = 0;
         if (!spell || spell instanceof HeroicStrike) {
-            if (this.buras.flurry && this.buras.flurry.stacks)
-                this.buras.flurry.step();
+            if (this.auras.flurry && this.auras.flurry.stacks)
+                this.auras.flurry.step();
         }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
                 if (weapon.proc1.spell)
-                    weapon.proc1.spell.use(weapon.offhand);
+                    weapon.proc1.spell.use();
                 if (weapon.proc1.dmg && rng(1, 10000) < 1700)
                     procdmg += weapon.proc1.dmg;
             }
             if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance * 100) {
                 if (weapon.proc2.spell)
-                    weapon.proc2.spell.use(weapon.offhand);
+                    weapon.proc2.spell.use();
                 if (weapon.proc2.dmg && rng(1, 10000) < 1700)
                     procdmg += weapon.proc2.dmg;
             }
@@ -419,20 +398,26 @@ class Simulation {
             }
 
             if (batch && player.timer == 0) {
+
+                // Spells
                 if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) {
-                    player.buff(player.spells.berserkerrage);
+                    player.spells.berserkerrage.use();
+                    continue;
+                }
+                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
+                    player.spells.bloodrage.use();
                     continue;
                 }
                 if (player.spells.execute && step >= this.executestep && player.spells.execute.canUse()) {
                     this.total += player.cast(player.spells.execute);
                     continue;
                 }
-                if (player.spells.overpower && player.spells.overpower.canUse()) {
-                    this.total += player.cast(player.spells.overpower);
+                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
+                    player.spells.battleshout.use();
                     continue;
                 }
-                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
-                    player.buff(player.spells.battleshout);
+                if (player.spells.overpower && player.spells.overpower.canUse()) {
+                    this.total += player.cast(player.spells.overpower);
                     continue;
                 }
                 if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
@@ -443,46 +428,42 @@ class Simulation {
                     this.total += player.cast(player.spells.mortalstrike);
                     continue;
                 }
-                if (player.spells.hamstring && player.spells.hamstring.canUse()) {
-                    this.total += player.cast(player.spells.hamstring);
-                    continue;
-                }
                 if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.total += player.cast(player.spells.whirlwind);
                     continue;
                 }
-                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
-                    player.buff(player.spells.bloodrage);
-                    continue;
-                }
-                if (player.spells.deathwish && player.spells.deathwish.canUse()) {
-                    player.buff(player.spells.deathwish);
-                    continue;
-                }
-                if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
-                    player.buff(player.spells.heroicstrike);
-                    continue;
-                }
                 if (player.spells.jujuflurry && player.spells.jujuflurry.canUse()) {
-                    player.buff(player.spells.jujuflurry);
+                    player.spells.jujuflurry.use();
                     continue;
                 }
                 if (player.spells.ragepotion && player.spells.ragepotion.canUse()) {
-                    player.buff(player.spells.ragepotion);
+                    player.spells.ragepotion.use();
+                    continue;
+                }
+                if (player.spells.hamstring && player.spells.hamstring.canUse()) {
+                    this.total += player.cast(player.spells.hamstring);
+                    continue;
+                }
+                if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
+                    player.spells.heroicstrike.use();
                     continue;
                 }
                 
-                if (player.spells.bloodfury && player.spells.bloodfury.canUse()) {
-                    player.buff(player.spells.bloodfury);
+                // Auras
+                if (player.auras.recklessness && player.auras.recklessness.canUse()) {
+                    player.auras.recklessness.use();
                     continue;
                 }
-                if (player.spells.berserking && player.spells.berserking.canUse()) {
-                    player.buff(player.spells.berserking);
+                if (player.auras.deathwish && player.auras.deathwish.canUse()) {
+                    player.auras.deathwish.use();
                     continue;
                 }
-
-                if (player.buras.recklessness && player.buras.recklessness.enabled && !player.buras.recklessness.timer ) {
-                    player.buras.recklessness.use();
+                if (player.auras.bloodfury && player.auras.bloodfury.canUse()) {
+                    player.auras.bloodfury.use();
+                    continue;
+                }
+                if (player.auras.berserking && player.auras.berserking.canUse()) {
+                    player.auras.berserking.use();
                     continue;
                 }
             }

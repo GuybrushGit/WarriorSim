@@ -4587,8 +4587,10 @@ function addEnchantToPlayer(player, aura) {
          player.mh.proc2 = {};
          player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
          player.mh.proc2.dmg = aura.procdmg;
-         if (aura.procspell)
-            player.mh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.procspell) {
+            player.auras.crusader1 = new Crusader(player);
+            player.mh.proc2.spell = player.auras.crusader1;
+         }
       }
    }
    if (aura.slot.indexOf('Off Hand') >= 0) {
@@ -4599,8 +4601,10 @@ function addEnchantToPlayer(player, aura) {
          player.oh.proc2 = {};
          player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
          player.oh.proc2.dmg = aura.procdmg;
-         if (aura.procspell)
-            player.oh.proc2.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.procspell) {
+            player.auras.crusader2 = new Crusader(player);
+            player.oh.proc2.spell = player.auras.crusader2;
+         }
       }
    }
 }
@@ -4650,8 +4654,10 @@ function buildPlayer(testgear) {
       let apbonus = 0;
       if ($(this).data('group') == "battleshout")
          apbonus = ~~($(this).data('ap') * player.talents.impbattleshout);
-      if ($(this).data('spell'))
+      if ($(this).data('spell')) {
          player.spells[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + '(player);');
+         player.auras[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + 'Aura(player);');
+      }
 
       player.base.ap += ($(this).data('ap') || 0) + apbonus;
       player.base.agi += $(this).data('agi') || 0;
@@ -4682,22 +4688,13 @@ function buildPlayer(testgear) {
    $('.spell.active').each(function () {
       let name = $(this).find('img').attr('alt');
       let lname = name.toLowerCase();
-      if (lname == 'deepwounds') settings.deepwounds = true;
+      let type = $(this).data('type');
+      if (type == 'buff') player.auras[lname] = eval(`new ${name}(player)`);
       else player.spells[lname] = eval(`new ${name}(player)`);
-      if (lname == 'recklessness') settings.recklessness = true;
    });
    player.target.armor = settings.armor;
-
-
-   // Auras
-   if (settings.recklessness)
-      player.buras.recklessness = new Recklessness(player);
-   if (player.talents.flurry)
-      player.buras.flurry = new Flurry(player);
-   if (settings.deepwounds)
-      player.spells.deepwounds = new DeepWounds(player);
-
-
+   if (player.talents.flurry) player.auras.flurry = new Flurry(player);
+   if (player.spells.overpower) player.auras.battlestance = new BattleStance(player);
 
    player.update();
    return player;
