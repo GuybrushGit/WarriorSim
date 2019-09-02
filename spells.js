@@ -40,12 +40,13 @@ class Whirlwind extends Spell {
         this.cost = 25;
         this.cooldown = 10;
         this.refund = false;
+        this.threshold = (player.spells.bloodthirst || player.spells.mortalstrike ? 40 : 0);
     }
     dmg() {
         return rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
-        return this.timer == 0 && this.cost <= this.player.rage && !this.battlestance && (!this.bloodthirst || this.player.bloodthirst.timer > 1500);
+        return this.timer == 0 && this.cost <= this.player.rage && this.player.rage >= this.threshold && !this.battlestance;
     }
 }
 
@@ -60,7 +61,7 @@ class Overpower extends Spell {
         return 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
-        this.player.timer = 3000;
+        this.player.timer = 2000;
         this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
@@ -132,7 +133,7 @@ class Bloodrage extends Spell {
         this.cooldown = 60;
     }
     use() {
-        this.player.timer = 1500;
+        this.player.timer = 200;
         this.timer = this.cooldown * 1000;
         this.player.rage += this.rage;
     }
@@ -145,13 +146,15 @@ class HeroicStrike extends Spell {
     constructor(player) {
         super(player);
         this.cost = 15 - player.talents.impheroicstrike;
+        this.threshold = (player.spells.bloodthirst || player.spells.mortalstrike ? 40 : 0);
     }
     use() {
+        this.player.timer = 200;
         this.player.rage -= this.cost;
         this.player.nextswinghs = true;
     }
     canUse() {
-        return this.cost <= this.player.rage && !this.player.nextswinghs;
+        return this.player.rage >= this.threshold && this.cost <= this.player.rage && !this.player.nextswinghs;
     }
 }
 
@@ -161,7 +164,7 @@ class JujuFlurry extends Spell {
         this.cooldown = 60;
     }
     use() {
-        this.player.timer = 1500;
+        this.player.timer = 200;
         this.timer = this.cooldown * 1000;
         this.player.auras.jujuflurry.use();
     }
@@ -173,7 +176,7 @@ class RagePotion extends Spell {
         this.cooldown = 120;
     }
     use() {
-        this.player.timer = 1500;
+        this.player.timer = 200;
         this.timer = this.cooldown * 1000;
         this.player.auras.ragepotion.use();
         this.player.updateAuras();
@@ -196,9 +199,13 @@ class Hamstring extends Spell {
     constructor(player) {
         super(player);
         this.cost = 10;
+        this.threshold = (player.spells.bloodthirst || player.spells.mortalstrike ? 40 : 0);
     }
     dmg() {
         return 45;
+    }
+    canUse() {
+        return this.timer == 0 && this.player.rage >= this.threshold && this.cost <= this.player.rage;
     }
 }
 
@@ -389,3 +396,4 @@ class Berserking extends Aura {
         return this.firstuse && !this.timer && this.player.rage >= 5;
     }
 }
+

@@ -15,9 +15,9 @@
   <script type="text/javascript" src="talents.js"></script>
   <script type="text/javascript" src="gear.js"></script>
   <script type="text/javascript" src="spells.js"></script>
-  <script type="text/javascript" src="classes.js"></script>
+  <script type="text/javascript" src="simulation.js"></script>
   <script type="text/javascript" src="buffs.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="ui.js"></script>
 
   <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
   <script src="https://wow.zamimg.com/widgets/power.js"></script>
@@ -32,16 +32,12 @@ AQ BOOKS
 TALENT UI
 ITEM SETS
 dynamic spell queue function?
-overpower mechanics
 are there non-magic procs?
 review all spell rotation - optimize timings etc
 Battle Squawk
 Windfury Totem + Improved Weapon Totems
-check which spells are non gcd
-ret aura
 random cooldown extra
 store saved settings
-anger management
 
 
 during classic:
@@ -52,8 +48,40 @@ verify if swing proccing flurry gets the buff
 race base stats
 extra attacks on next swing?
 check for a base crit
+deep wounds mh or oh?
+
+-->
 
 
+
+
+
+
+<!-- ROTATION
+
+Bloodrage: Used on cooldown
+RagePotion: Used on cooldown
+JujuFlurry: Used on cooldown
+DeathWish: Used last 30 secs
+BloodFury: Used last 17 secs
+Berserking: Used last 10 secs
+Recklessness: Used last 15 secs
+Execute: Used last 20% of fight duration
+-- spells below not used during execute phase --
+Overpower: Used on cooldown
+BerserkerRage: Used on cooldown
+BattleShout: Used on cooldown
+Bloodthirst: Used on cooldown
+MortalStrike: Used on cooldown
+Whirlwind: Used on cooldown, if BT or MS enabled only use above 45 rage, test 45?
+HeroicStrike: Used on cooldown, if BT or MS or WW enabled only use above 40 rage, test 40?
+Hamstring: Used on cooldown, if BT or MS or WW enabled only use above 40 rage, test 40?
+
+
+Priorities:
+Bloodrage -> RagePotion -> JujuFlurry -> DeathWish -> BloodFury -> Berserking
+-> Recklessness -> Execute -> Overpower -> BerserkerRage -> BattleShout
+-> Bloodthirst -> MortalStrike -> Whirlwind -> HeroicStrike -> Hamstring
 
 -->
 

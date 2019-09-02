@@ -4104,7 +4104,7 @@ var gear = {
          "Slot": "Main Hand",
          "Phase": 1,
          "PPM": 6,
-         "ProcDmg": 44
+         "MagicDmg": 44
       },
       {
          "ID": 20032,
@@ -4113,7 +4113,7 @@ var gear = {
          "Slot": "Main Hand",
          "Phase": 1,
          "PPM": 6,
-         "ProcDmg": 33
+         "MagicDmg": 33
       },
       {
          "ID": 20031,
@@ -4176,7 +4176,7 @@ var gear = {
          "Slot": "Off Hand",
          "Phase": 1,
          "PPM": 6,
-         "ProcDmg": 44
+         "MagicDmg": 44
       },
       {
          "ID": 20032,
@@ -4185,7 +4185,7 @@ var gear = {
          "Slot": "Off Hand",
          "Phase": 1,
          "PPM": 6,
-         "ProcDmg": 33
+         "MagicDmg": 33
       },
       {
          "ID": 20031,
@@ -4503,7 +4503,7 @@ function getEnchantFromRow(tr) {
          aura.dmg = parseInt(item.Dmg || 0);
          aura.ap = parseInt(item.AP || 0);
          aura.ppm = parseInt(item.PPM || 0);
-         aura.procdmg = parseInt(item.ProcDmg || 0);
+         aura.magicdmg = parseInt(item.MagicDmg || 0);
          aura.procspell = (item.ProcSpell || '');
          aura.enchant = true;
          break;
@@ -4551,7 +4551,7 @@ function addGearToPlayer(player, aura) {
       if (aura.ppm) {
          player.mh.proc1 = {};
          player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
-         player.mh.proc1.dmg = aura.procdmg;
+         player.mh.proc1.magicdmg = aura.magicdmg;
          if (aura.procspell)
             player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
       }
@@ -4562,7 +4562,7 @@ function addGearToPlayer(player, aura) {
       if (aura.ppm) {
          player.oh.proc1 = {};
          player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
-         player.oh.proc1.dmg = aura.procdmg;
+         player.oh.proc1.magicdmg = aura.magicdmg;
          if (aura.procspell)
             player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
       }
@@ -4586,7 +4586,7 @@ function addEnchantToPlayer(player, aura) {
       if (aura.ppm) {
          player.mh.proc2 = {};
          player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
-         player.mh.proc2.dmg = aura.procdmg;
+         player.mh.proc2.magicdmg = aura.magicdmg;
          if (aura.procspell) {
             player.auras.crusader1 = new Crusader(player);
             player.mh.proc2.spell = player.auras.crusader1;
@@ -4600,7 +4600,7 @@ function addEnchantToPlayer(player, aura) {
       if (aura.ppm) {
          player.oh.proc2 = {};
          player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
-         player.oh.proc2.dmg = aura.procdmg;
+         player.oh.proc2.magicdmg = aura.magicdmg;
          if (aura.procspell) {
             player.auras.crusader2 = new Crusader(player);
             player.oh.proc2.spell = player.auras.crusader2;
