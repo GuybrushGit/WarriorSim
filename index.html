@@ -38,6 +38,9 @@ Battle Squawk
 Windfury Totem + Improved Weapon Totems
 random cooldown extra
 store saved settings
+sort tables after test
+overpower threshold
+bleeds ignore armor
 
 
 during classic:
@@ -49,6 +52,8 @@ race base stats
 extra attacks on next swing?
 check for a base crit
 deep wounds mh or oh?
+anger management regen ?
+test extra attacks + flurry
 
 -->
 
@@ -60,8 +65,8 @@ deep wounds mh or oh?
 <!-- ROTATION
 
 Bloodrage: Used on cooldown
-RagePotion: Used on cooldown
-JujuFlurry: Used on cooldown
+RagePotion: Used last 20 secs and under 25 rage
+JujuFlurry: Used last 20 secs
 DeathWish: Used last 30 secs
 BloodFury: Used last 17 secs
 Berserking: Used last 10 secs
@@ -129,7 +134,7 @@ Bloodrage -> RagePotion -> JujuFlurry -> DeathWish -> BloodFury -> Berserking
 				<li>
 					<label>Race</label>
 					<div>
-						<div class="race active" data-ap="160" data-str="125" data-agi="75" data-skill_0="5" data-skill_1="5"><img src="img/human.png" alt="human"></div>
+						<div class="race" data-ap="160" data-str="125" data-agi="75" data-skill_0="5" data-skill_1="5"><img src="img/human.png" alt="human"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/dwarf.png" alt="dwarf"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/gnome.png" alt="gnome"></div>
 						<div class="race" data-ap="160" data-str="125" data-agi="75"><img src="img/nelf.png" alt="nelf"></div>
@@ -158,7 +163,7 @@ Bloodrage -> RagePotion -> JujuFlurry -> DeathWish -> BloodFury -> Berserking
 							<img src="img/Ability_Warrior_BattleShout.jpg" alt="BattleShout">
 							<a href="https://classic.wowhead.com/spell=11551" class="wh-tooltip"></a>
 						</div>
-						<div class="spell active" data-id="bloodthirst">
+						<div class="spell" data-id="bloodthirst">
 							<img src="img/Spell_Nature_BloodLust.jpg" alt="Bloodthirst">
 							<a href="https://classic.wowhead.com/spell=23894" class="wh-tooltip"></a>
 						</div>
@@ -205,7 +210,7 @@ Bloodrage -> RagePotion -> JujuFlurry -> DeathWish -> BloodFury -> Berserking
 					</div>
 				</li>
 			</ul>
-			<input type="hidden" name="executeperc" value="20" />
+			<input type="hidden" name="executeperc" value="18" />
 		</article>
 		<article class="buffs">
 			<label>Buffs</label>
@@ -257,22 +262,22 @@ Bloodrage -> RagePotion -> JujuFlurry -> DeathWish -> BloodFury -> Berserking
 		<article class="filter">
 			<label>Gear Filter</label>
 			<ul class="sources">
-				<li data-id="quest" class="active">Quest</li>
-				<li data-id="crafting" class="active">Crafting</li>
-				<li data-id="dungeon" class="active">Dungeon</li>
-				<li data-id="onyxia" class="active">Onyxia</li>
-				<li data-id="mc" class="active">Molten Core</li>
+				<li data-id="quest">Quest</li>
+				<li data-id="crafting">Crafting</li>
+				<li data-id="dungeon">Dungeon</li>
+				<li data-id="onyxia">Onyxia</li>
+				<li data-id="mc">Molten Core</li>
 				<li data-id="bwl">Blackwing Lair</li>
 				<li data-id="zg">Zul'Gurub</li>
 				<li data-id="aq20">AQ20</li>
 				<li data-id="aq40">AQ40</li>
 				<li data-id="naxx">Naxxramas</li>
-				<li data-id="worldboss" class="active">World Boss</li>
-				<li data-id="pvp" class="active">PvP</li>
-				<li data-id="other" class="active">Other</li>
+				<li data-id="worldboss">World Boss</li>
+				<li data-id="pvp">PvP</li>
+				<li data-id="other">Other</li>
 			</ul>
 			<ul class="phases">
-				<li data-id="1" data-sources="onyxia,mc" class="active">P1</li>
+				<li data-id="1" data-sources="onyxia,mc">P1</li>
 				<li data-id="2" data-sources="">P2</li>
 				<li data-id="3" data-sources="bwl">P3</li>
 				<li data-id="4" data-sources="zg">P4</li>

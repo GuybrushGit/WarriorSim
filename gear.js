@@ -3698,8 +3698,7 @@ var gear = {
          "Speed": 1.8,
          "Type": "Sword",
          "Source": "Quest",
-         "Phase": 1,
-         "Selected": 2
+         "Phase": 1
       },
       {
          "Name": "Nightmare Blade",
@@ -3846,8 +3845,7 @@ var gear = {
          "Type": "Sword",
          "Source": "Quest",
          "PPM": 1,
-         "Phase": 1,
-         "Selected": 1
+         "Phase": 1
       },
       {
          "Name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -4224,6 +4222,7 @@ function gearEvents() {
    $('.sources li').click(function () {
       $(this).toggleClass('active');
       filterGear();
+      updateSession();
    });
    $('.phases li').click(function () {
       $(this).toggleClass('active');
@@ -4234,6 +4233,7 @@ function gearEvents() {
          else $('.sources [data-id="' + source + '"]').removeClass('active');
       }
       filterGear();
+      updateSession();
    });
 
    $("table.gear").tablesorter({
@@ -4258,6 +4258,7 @@ function gearEvents() {
          tr.siblings().removeClass('active');
       }
       updatePanel();
+      updateSession();
    });
 
 }
@@ -4314,7 +4315,7 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Offhand) continue;
-      section += `<tr data-id="${item.ID}" data-name="${item.Name}" ${item.Selected == 1 ? "class='active'" : ""}>
+      section += `<tr data-id="${item.ID}" data-name="${item.Name}">
                      <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
@@ -4362,7 +4363,7 @@ function buildWeapons() {
 
    for (let item of weapons) {
       if (item.Mainhand) continue;
-      section += `<tr data-id="${item.ID}" data-name="${item.Name}" ${item.Selected == 2 ? "class='active'" : ""}>
+      section += `<tr data-id="${item.ID}" data-name="${item.Name}">
                      <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
@@ -4655,8 +4656,7 @@ function buildPlayer(testgear) {
       if ($(this).data('group') == "battleshout")
          apbonus = ~~($(this).data('ap') * player.talents.impbattleshout);
       if ($(this).data('spell')) {
-         player.spells[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + '(player);');
-         player.auras[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + 'Aura(player);');
+         player.auras[$(this).data('spell').toLowerCase()] = eval('new ' + $(this).data('spell') + '(player);');
       }
 
       player.base.ap += ($(this).data('ap') || 0) + apbonus;

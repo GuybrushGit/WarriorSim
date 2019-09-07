@@ -158,32 +158,6 @@ class HeroicStrike extends Spell {
     }
 }
 
-class JujuFlurry extends Spell {
-    constructor(player) {
-        super(player);
-        this.cooldown = 60;
-    }
-    use() {
-        this.player.timer = 200;
-        this.timer = this.cooldown * 1000;
-        this.player.auras.jujuflurry.use();
-    }
-}
-
-class RagePotion extends Spell {
-    constructor(player) {
-        super(player);
-        this.cooldown = 120;
-    }
-    use() {
-        this.player.timer = 200;
-        this.timer = this.cooldown * 1000;
-        this.player.auras.ragepotion.use();
-        this.player.updateAuras();
-        this.player.rage = Math.max(this.player.rage + ~~rng(45, 75), 100);
-    }
-}
-
 class MortalStrike extends Spell {
     constructor(player) {
         super(player);
@@ -348,19 +322,36 @@ class BattleStance extends Aura {
     }
 }
 
-class JujuFlurryAura extends Aura {
+class JujuFlurry extends Aura {
     constructor(player) {
         super(player);
         this.div_stats = { haste: 3 };
         this.duration = 20;
     }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.timer = 200;
+        this.player.updateAuras();
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
 }
 
-class RagePotionAura extends Aura {
+class RagePotion extends Aura {
     constructor(player) {
         super(player);
         this.stats = { str: 60 };
         this.duration = 20;
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.rage = Math.max(this.player.rage + ~~rng(45, 75), 100);
+        this.player.timer = 200;
+        this.player.updateAuras();
+    }
+    canUse() {
+        return this.firstuse && !this.timer && this.player.rage < 25;
     }
 }
 

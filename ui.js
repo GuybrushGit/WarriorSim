@@ -75,10 +75,11 @@ function updatePanel() {
 $(document).ready(function () {
 
     buildBuffs();
-    buildTalents();
     buildGear();
     buildWeapons();
     buildEnchants();
+    loadSession();
+    buildTalents();
     talentEvents();
     gearEvents();
     filterGear();
@@ -117,6 +118,7 @@ $(document).ready(function () {
             $('.spell[data-id="' + $(this).data('spell') + '"]').addClass('hidden').removeClass('active');
         });
         updatePanel();
+        updateSession();
     });
 
     $('.spell').click(function () {
@@ -125,6 +127,7 @@ $(document).ready(function () {
         if (disable)
             $('.buff[data-group="' + disable + '"]').removeClass('active');
         updatePanel();
+        updateSession();
     });
 
     $('nav li').click(function () {
@@ -150,4 +153,84 @@ $(document).ready(function () {
         li.siblings().removeClass('active');
     });
 
+    $('input[type="text"]').keyup(function() {
+        localStorage[$(this).attr('name')] = $(this).val();
+    });
+
 });
+
+function updateSession() {
+    let spells = [];
+    let buffs = [];
+    let sources = [];
+    let phases = [];
+    let _talents = [];
+    let items = [];
+    let enchants = [];
+    localStorage.race = $('.race.active').index();
+    $('.spell.active').each(function() {
+        spells.push($(this).index());
+    });
+    $('.buff.active').each(function() {
+        buffs.push($(this).index());
+    });
+    $('.sources .active').each(function() {
+        sources.push($(this).index());
+    });
+    $('.phases .active').each(function() {
+        phases.push($(this).index());
+    });
+    $('table.gear:not([data-type="enchant"]) tr.active').each(function() {
+        items.push({ id: $(this).data('id'), slot: $(this).parents('table').data('type') });
+    });
+    $('table.gear[data-type="enchant"] tr.active').each(function() {
+        enchants.push({ id: $(this).data('id'), slot: $(this).data('slot') });
+    });
+    for(let tree of talents) {
+        let arr = [];
+        for(let talent of tree.t)
+            arr.push(talent.c);
+        _talents.push({ n: tree.n, t: arr });
+    }
+    localStorage.spells = JSON.stringify(spells);
+    localStorage.buffs = JSON.stringify(buffs);
+    localStorage.sources = JSON.stringify(sources);
+    localStorage.spells = JSON.stringify(spells);
+    localStorage.phases = JSON.stringify(phases);
+    localStorage.talents = JSON.stringify(_talents);
+    localStorage.items = JSON.stringify(items);
+    localStorage.enchants = JSON.stringify(enchants);
+}
+
+function loadSession() {
+    let spells = !localStorage.spells ? [] : JSON.parse(localStorage.spells);
+    let buffs = !localStorage.buffs ? [] : JSON.parse(localStorage.buffs);
+    let sources = !localStorage.sources ? [0,1,2,3,4,10,11,12] : JSON.parse(localStorage.sources);
+    let phases = !localStorage.phases ? [0] : JSON.parse(localStorage.phases);
+    let _talents = !localStorage.talents ? [] : JSON.parse(localStorage.talents);
+    let items = !localStorage.items ? [] : JSON.parse(localStorage.items);
+    let enchants = !localStorage.enchants ? [] : JSON.parse(localStorage.enchants);
+    let race = !localStorage.race ? 0 : localStorage.race;
+    let racediv = $('.race').eq(race);
+    
+    for(let prop in localStorage) {
+        $('input[name="' + prop + '"]').val(localStorage[prop]);
+    }
+    
+    racediv.addClass('active');
+    $('.spell[data-id="' + racediv.data('spell') + '"]').removeClass('hidden');
+
+    for(let i of spells) $('.spell').eq(i).addClass('active');
+    for(let i of buffs) $('.buff').eq(i - 1).addClass('active');
+    for(let i of sources) $('.sources li').eq(i).addClass('active');
+    for(let i of phases) $('.phases li').eq(i).addClass('active');
+
+    for(let tree in _talents)
+        for(let talent in _talents[tree].t){
+            talents[tree].t[talent].c = _talents[tree].t[talent];
+        }
+
+    for(let i of items) $('table[data-type="' + i.slot + '"] tr[data-id="' + i.id + '"]').addClass('active');
+    for(let i of enchants) $('tr[data-id="' + i.id + '"][data-slot="' + i.slot + '"]').addClass('active');
+            
+}

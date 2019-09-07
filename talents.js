@@ -42,7 +42,7 @@ var talents = [
             ],
             x: 1,
             y: 0,
-            c: 2,
+            c: 0,
             iconname: 'Ability_Parry',
             aura: function (count) { return { parry: count } },
          },
@@ -62,7 +62,7 @@ var talents = [
             ],
             x: 2,
             y: 0,
-            c: 3,
+            c: 0,
             iconname: 'Ability_Gouge',
             aura: function (count) { return { rendmod: 5 + count * 10 } },
          },
@@ -104,7 +104,7 @@ var talents = [
             ],
             x: 1,
             y: 1,
-            c: 5,
+            c: 0,
             iconname: 'Spell_Nature_EnchantArmor',
             aura: function (count) { return { rageretained: count * 5 } },
          },
@@ -142,7 +142,7 @@ var talents = [
             ],
             x: 0,
             y: 2,
-            c: 2,
+            c: 0,
             iconname: 'INV_Sword_05',
             aura: function (count) { return { overpowercrit: 25 * count } },
          },
@@ -162,7 +162,7 @@ var talents = [
                4,
                5
             ],
-            c: 1,
+            c: 0,
             iconname: 'Spell_Holy_BlessingOfStamina',
             aura: function (count) { return { angermanagement: count } },
          },
@@ -186,7 +186,7 @@ var talents = [
                2,
                3
             ],
-            c: 3,
+            c: 0,
             enable: 'deepwounds',
             iconname: 'Ability_BackStab',
             aura: function (count) { return { deepwounds: count * 0.2 } },
@@ -233,7 +233,7 @@ var talents = [
                8,
                3
             ],
-            c: 2,
+            c: 0,
             iconname: 'Ability_SearingArrow',
             aura: function (count) { return { abilitiescrit: count * 0.1 } },
          },
@@ -439,7 +439,7 @@ var talents = [
             ],
             x: 2,
             y: 0,
-            c: 5,
+            c: 0,
             iconname: 'Ability_Rogue_Eviscerate',
             aura: function (count) { return { crit: count } }
          },
@@ -487,7 +487,7 @@ var talents = [
             ],
             x: 2,
             y: 1,
-            c: 5,
+            c: 0,
             iconname: 'Spell_Nature_StoneClawTotem',
             aura: function (count) { return { umbridledwrath: count * 8 } },
          },
@@ -567,7 +567,7 @@ var talents = [
             ],
             x: 3,
             y: 2,
-            c: 5,
+            c: 0,
             iconname: 'Ability_Warrior_BattleShout',
             aura: function (count) { return { impbattleshout: count * 0.05 } },
          },
@@ -591,7 +591,7 @@ var talents = [
             ],
             x: 0,
             y: 3,
-            c: 5,
+            c: 0,
             iconname: 'Ability_DualWield',
             aura: function (count) { return { offmod: count * 0.05 } },
          },
@@ -609,7 +609,7 @@ var talents = [
             ],
             x: 1,
             y: 3,
-            c: 1,
+            c: 0,
             iconname: 'INV_Sword_48',
             aura: function (count) { return { executecost: count == 2 ? 5 : count * 2 } },
          },
@@ -633,7 +633,7 @@ var talents = [
             ],
             x: 2,
             y: 3,
-            c: 5,
+            c: 0,
             iconname: 'Spell_Shadow_UnholyFrenzy',
             aura: function (count) { return { enrage: count * 5 } },
          },
@@ -673,7 +673,7 @@ var talents = [
             ],
             x: 1,
             y: 4,
-            c: 1,
+            c: 0,
             enable: 'deathwish',
             iconname: 'Spell_Shadow_DeathPact',
             aura: function (count) { return { deathwish: count } },
@@ -739,7 +739,7 @@ var talents = [
                10,
                5
             ],
-            c: 5,
+            c: 0,
             iconname: 'Ability_GhoulFrenzy',
             aura: function (count) { return { flurry: count == 0 ? 0 : 5 + count * 5 } },
          },
@@ -759,7 +759,7 @@ var talents = [
                12,
                1
             ],
-            c: 1,
+            c: 0,
             iconname: 'Spell_Nature_BloodLust',
             enable: 'bloodthirst',
             aura: function (count) { return { bloodthirst: count } },
@@ -1149,27 +1149,27 @@ function buildTalents() {
 function talentEvents() {
    $('.talent').click(function (e) {
       let talent = getTalent($(this));
-      let count = parseInt($(this).attr('data-count'));
-      count = count < talent.m ? count + 1 : talent.m;
-      $(this).attr('data-count', count);
-      if (count >= talent.m) $(this).addClass('maxed');
+      talent.c = talent.c < talent.m ? talent.c + 1 : talent.m;
+      $(this).attr('data-count', talent.c);
+      if (talent.c >= talent.m) $(this).addClass('maxed');
       if (talent.enable)
          $('.spell[data-id="' + talent.enable + '"]').addClass('active').removeClass('hidden');
-      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[count == 0 ? 0 : count - 1]);
+      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
       updatePanel();
+      updateSession();
    });
 
    $('.talent').on('contextmenu', function (e) {
       e.preventDefault();
       let talent = getTalent($(this));
-      let count = parseInt($(this).attr('data-count'));
-      count = count < 1 ? 0 : count - 1;
-      $(this).attr('data-count', count);
+      talent.c = talent.c < 1 ? 0 : talent.c - 1;
+      $(this).attr('data-count', talent.c);
       $(this).removeClass('maxed');
-      if (count == 0 && talent.enable)
+      if (talent.c == 0 && talent.enable)
          $('.spell[data-id="' + talent.enable + '"]').removeClass('active').addClass('hidden');
-      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[count == 0 ? 0 : count - 1]);
+      $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
       updatePanel();
+      updateSession();
    });
 }
 

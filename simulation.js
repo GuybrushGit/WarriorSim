@@ -190,8 +190,6 @@ class Player {
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.overpower) this.spells.overpower.step();
         if (this.spells.berserkerrage) this.spells.berserkerrage.step();
-        if (this.spells.jujuflurry) this.spells.jujuflurry.step();
-        if (this.spells.ragepotion) this.spells.ragepotion.step();
 
         // Auras
         if (this.auras.deepwounds && this.auras.deepwounds.timer) {
@@ -209,10 +207,10 @@ class Player {
         if (this.auras.crusader2 && this.auras.crusader2.timer) {
             this.auras.crusader2.step();
         }
-        if (this.auras.jujuflurry && this.auras.jujuflurry.timer) {
+        if (this.auras.jujuflurry && this.auras.jujuflurry.firstuse && this.auras.jujuflurry.timer) {
             this.auras.jujuflurry.step();
         }
-        if (this.auras.ragepotion && this.auras.ragepotion.timer) {
+        if (this.auras.ragepotion && this.auras.ragepotion.firstuse && this.auras.ragepotion.timer) {
             this.auras.ragepotion.step();
         }
         if (this.auras.deathwish && this.auras.deathwish.firstuse && this.auras.deathwish.timer) {
@@ -324,7 +322,7 @@ class Player {
     }
     procattack(spell, weapon, result) {
         let procdmg = 0;
-        if (!spell || spell instanceof HeroicStrike) {
+        if (!spell) { // || spell instanceof HeroicStrike
             if (this.auras.flurry && this.auras.flurry.stacks)
                 this.auras.flurry.step();
         }
@@ -362,6 +360,8 @@ class Simulation {
         this.bloodfurystep = (settings.timesecs - 17) * 1000;
         this.berserkingstep = (settings.timesecs - 10) * 1000;
         this.reckstep = (settings.timesecs - 15) * 1000;
+        this.ragestep = (settings.timesecs - 20) * 1000;
+        this.jujustep = (settings.timesecs - 20) * 1000;
         this.startrage = settings.startrage;
         this.callback = callback || function () { };
         this.maxcallstack = Math.min(Math.floor(this.iterations / 10), 1000);
@@ -410,12 +410,12 @@ class Simulation {
                     player.spells.bloodrage.use();
                     continue;
                 }
-                if (player.spells.jujuflurry && player.spells.jujuflurry.canUse()) {
-                    player.spells.jujuflurry.use();
+                if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step >= this.jujustep) {
+                    player.auras.jujuflurry.use();
                     continue;
                 }
-                if (player.spells.ragepotion && player.spells.ragepotion.canUse()) {
-                    player.spells.ragepotion.use();
+                if (player.auras.ragepotion && player.auras.ragepotion.canUse() && step >= this.ragestep) {
+                    player.auras.ragepotion.use();
                     continue;
                 }
                 if (player.auras.deathwish && player.auras.deathwish.canUse() && step >= this.deathwishstep) {

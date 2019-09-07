@@ -6,7 +6,6 @@ var buffs = [
       iconname: "Ability_Warrior_BattleShout",
       group: "battleshout",
       ap: 185,
-      checked: true,
       disableSpell: "battleshout"
    },
    {
@@ -17,7 +16,6 @@ var buffs = [
       group: "",
       ap: 140,
       crit: 5,
-      checked: true
    },
    {
       id: 24425,
@@ -27,7 +25,6 @@ var buffs = [
       group: "",
       strmod: 15,
       agimod: 15,
-      checked: true
    },
    {
       id: 23768,
@@ -133,14 +130,14 @@ var buffs = [
       id: 8410,
       name: "R.O.I.D.S.",
       iconname: "inv_stone_15",
-      group: "",
+      group: "blasted",
       str: 25,
    },
    {
       id: 8412,
       name: "Ground Scorpok Assay",
       iconname: "inv_misc_dust_02",
-      group: "",
+      group: "blasted",
       agi: 25,
    },
    {
@@ -150,7 +147,6 @@ var buffs = [
       group: "elixir",
       agi: 25,
       crit: 2,
-      checked: true
    },
    {
       id: 9187,
@@ -172,7 +168,6 @@ var buffs = [
       iconname: "inv_potion_61",
       group: "str",
       str: 25,
-      checked: true
    },
    {
       id: 12460,
@@ -239,7 +234,6 @@ function buildBuffs() {
       div.attr('data-haste', buff.haste);
       if (buff.spell) div.attr('data-spell', buff.spell);
       if (buff.disableSpell) div.attr('data-disable-spell', buff.disableSpell);
-      if (buff.checked) div.addClass('active');
       div.click(function () {
          let b = $(this);
          b.toggleClass('active');
@@ -250,6 +244,7 @@ function buildBuffs() {
                $('.spell[data-id="' + b.data('disable-spell') + '"]').removeClass('active');
          }
          updatePanel();
+         updateSession();
       });
       div.append('<a href="https://classic.wowhead.com/' + (buff.spellid ? 'spell' : 'item') + '=' + buff.id + '" class="wh-tooltip"></a>');
       article.append(div);
