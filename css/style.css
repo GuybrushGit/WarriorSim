@@ -15,13 +15,14 @@ section {
 }
 input[type="text"] {
     margin-bottom: 5px;
-    width: 40px;
+    width: 60px;
 }
 input[type="checkbox"] {
     vertical-align: top;
 }
 h3 {
     text-align: center;
+    text-transform: capitalize;
 }
 td {
     cursor: pointer;

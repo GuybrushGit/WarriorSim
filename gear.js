@@ -208,7 +208,7 @@ var gear = {
          "ID": 22150
       },
       {
-         "Name": "Blazefury Medallion",
+         "Name": "[TODO] Blazefury Medallion",
          "Sta": 13,
          "Agi": 14,
          "Source": "Kazzak",
@@ -710,8 +710,8 @@ var gear = {
          "Sta": 8,
          "AP": 50,
          "AC": 344,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 15050
       },
       {
@@ -720,8 +720,8 @@ var gear = {
          "Sta": 13,
          "Agi": 9,
          "AC": 381,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19690
       },
       {
@@ -731,8 +731,8 @@ var gear = {
          "Str": 37,
          "Sta": 13,
          "AC": 824,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 4,
          "ID": 21814
       },
       {
@@ -742,8 +742,8 @@ var gear = {
          "Sta": 20,
          "Dodge": 1,
          "AC": 190,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 1,
          "ID": 12757
       },
       {
@@ -753,8 +753,8 @@ var gear = {
          "Sta": 26,
          "Agi": 13,
          "AC": 684,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21997
       },
       {
@@ -763,8 +763,8 @@ var gear = {
          "Sta": 28,
          "Defense": 7,
          "AC": 749,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16865
       },
       {
@@ -773,8 +773,8 @@ var gear = {
          "Sta": 30,
          "Agi": 10,
          "AC": 706,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 1,
          "ID": 12895
       },
       {
@@ -783,8 +783,8 @@ var gear = {
          "Sta": 24,
          "Agi": 10,
          "AC": 657,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16730
       },
       {
@@ -793,8 +793,8 @@ var gear = {
          "Sta": 40,
          "Defense": 11,
          "AC": 857,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 16966
       },
       {
@@ -803,8 +803,8 @@ var gear = {
          "Agi": 8,
          "AP": 60,
          "AC": 172,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 14637
       },
       {
@@ -814,8 +814,8 @@ var gear = {
          "Agi": 24,
          "Defense": 6,
          "AC": 985,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21331
       },
       {
@@ -824,8 +824,8 @@ var gear = {
          "Str": 8,
          "Sta": 8,
          "AC": 338,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 11926
       },
       {
@@ -834,8 +834,8 @@ var gear = {
          "Str": 40,
          "Sta": 22,
          "AC": 411,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 23226
       },
       {
@@ -843,8 +843,8 @@ var gear = {
          "Str": 40,
          "Sta": 22,
          "AC": 814,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 19405
       },
       {
@@ -852,8 +852,8 @@ var gear = {
          "Crit": 1,
          "AP": 76,
          "AC": 311,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 22191
       },
       {
@@ -863,8 +863,8 @@ var gear = {
          "Sta": 13,
          "Agi": 20,
          "AC": 365,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 2,
          "ID": 18530
       },
       {
@@ -874,8 +874,8 @@ var gear = {
          "Str": 45,
          "Sta": 25,
          "AC": 953,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 23000
       },
       {
@@ -885,8 +885,8 @@ var gear = {
          "Sta": 33,
          "Agi": 14,
          "AC": 875,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 16477
       },
       {
@@ -895,8 +895,8 @@ var gear = {
          "Str": 21,
          "Sta": 23,
          "AC": 706,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 16513
       },
       {
@@ -905,8 +905,8 @@ var gear = {
          "Sta": 19,
          "AP": 58,
          "AC": 416,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19904
       },
       {
@@ -916,8 +916,8 @@ var gear = {
          "Sta": 13,
          "Agi": 14,
          "AC": 369,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 11726
       },
       {
@@ -927,8 +927,8 @@ var gear = {
          "Agi": 15,
          "Defense": 4,
          "AC": 828,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19822
       },
       {
@@ -937,8 +937,8 @@ var gear = {
          "Str": 10,
          "Sta": 10,
          "AC": 174,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13944
       },
       {
@@ -947,8 +947,8 @@ var gear = {
          "Sta": 20,
          "Agi": 41,
          "AC": 229,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21680
       }
    ],
@@ -959,8 +959,8 @@ var gear = {
          "Sta": 11,
          "Agi": 12,
          "AC": 309,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "5",
          "ID": 20687
       },
       {
@@ -968,8 +968,8 @@ var gear = {
          "Crit": 1,
          "Hit": 1,
          "AC": 287,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 12936
       },
       {
@@ -978,8 +978,8 @@ var gear = {
          "Sta": 11,
          "Agi": 8,
          "AC": 323,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 3,
          "ID": 19578
       },
       {
@@ -987,8 +987,8 @@ var gear = {
          "Str": 13,
          "Sta": 27,
          "AC": 375,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 2,
          "ID": 16959
       },
       {
@@ -997,8 +997,8 @@ var gear = {
          "Sta": 9,
          "Agi": 12,
          "AC": 356,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21457
       },
       {
@@ -1008,8 +1008,8 @@ var gear = {
          "Agi": 5,
          "Defense": 3,
          "AC": 296,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21996
       },
       {
@@ -1017,8 +1017,8 @@ var gear = {
          "Str": 11,
          "Sta": 23,
          "AC": 328,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16861
       },
       {
@@ -1027,8 +1027,8 @@ var gear = {
          "Sta": 14,
          "Agi": 3,
          "AC": 261,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16735
       },
       {
@@ -1037,8 +1037,8 @@ var gear = {
          "Sta": 8,
          "Agi": 10,
          "AC": 309,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21184
       },
       {
@@ -1046,8 +1046,8 @@ var gear = {
          "Str": 17,
          "Sta": 7,
          "AC": 287,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 2,
          "ID": 18533
       },
       {
@@ -1055,8 +1055,8 @@ var gear = {
          "Str": 23,
          "Agi": 18,
          "AC": 384,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21618
       },
       {
@@ -1066,8 +1066,8 @@ var gear = {
          "Sta": 14,
          "Agi": 16,
          "AC": 103,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21602
       },
       {
@@ -1076,8 +1076,8 @@ var gear = {
          "Sta": 8,
          "Agi": 15,
          "AC": 87,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21491
       },
       {
@@ -1086,8 +1086,8 @@ var gear = {
          "Sta": 13,
          "Agi": 13,
          "AC": 304,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19824
       },
       {
@@ -1096,8 +1096,8 @@ var gear = {
          "Str": 6,
          "Sta": 7,
          "AC": 270,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13400
       },
       {
@@ -1105,8 +1105,8 @@ var gear = {
          "Str": 24,
          "Sta": 8,
          "AC": 86,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 19146
       },
       {
@@ -1115,8 +1115,8 @@ var gear = {
          "Sta": 11,
          "Agi": 19,
          "AC": 198,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 18812
       },
       {
@@ -1125,8 +1125,8 @@ var gear = {
          "Str": 24,
          "Sta": 10,
          "AC": 407,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 22936
       }
    ],
@@ -1139,8 +1139,8 @@ var gear = {
          "AC": 130,
          "Skill": 5,
          "Type": "Dagger",
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 18823
       },
       {
@@ -1149,17 +1149,17 @@ var gear = {
          "Sta": 9,
          "AP": 28,
          "AC": 103,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 15063
       },
       {
-         "Name": "Edgemaster's Handguards",
+         "Name": "[TODO] Edgemaster's Handguards",
          "AC": 201,
          "Skill": 7,
          "Type": "Varied",
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": 1,
          "ID": 14551
       },
       {
@@ -1168,8 +1168,8 @@ var gear = {
          "Sta": 13,
          "AP": 54,
          "AC": 488,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 19143
       },
       {
@@ -1179,8 +1179,8 @@ var gear = {
          "Str": 35,
          "Sta": 15,
          "AC": 615,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21581
       },
       {
@@ -1189,8 +1189,8 @@ var gear = {
          "Str": 18,
          "Sta": 12,
          "AC": 393,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21998
       },
       {
@@ -1200,8 +1200,8 @@ var gear = {
          "Sta": 17,
          "Defense": 5,
          "AC": 468,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16863
       },
       {
@@ -1211,8 +1211,8 @@ var gear = {
          "Agi": 18,
          "Defense": 9,
          "AC": 535,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21674
       },
       {
@@ -1222,8 +1222,8 @@ var gear = {
          "Parry": 1,
          "Defense": 5,
          "AC": 482,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21479
       },
       {
@@ -1232,8 +1232,8 @@ var gear = {
          "Sta": 10,
          "Agi": 3,
          "AC": 386,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16737
       },
       {
@@ -1243,8 +1243,8 @@ var gear = {
          "Parry": 1,
          "Defense": 7,
          "AC": 535,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 16964
       },
       {
@@ -1254,8 +1254,8 @@ var gear = {
          "Sta": 6,
          "Agi": 20,
          "AC": 140,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21672
       },
       {
@@ -1264,8 +1264,8 @@ var gear = {
          "Str": 20,
          "Sta": 23,
          "AC": 532,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 16548
       },
       {
@@ -1273,8 +1273,8 @@ var gear = {
          "Str": 17,
          "Sta": 17,
          "AC": 429,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 23286
       },
       {
@@ -1283,8 +1283,8 @@ var gear = {
          "Str": 9,
          "Sta": 15,
          "AC": 398,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13162
       },
       {
@@ -1293,8 +1293,8 @@ var gear = {
          "Hit": 1,
          "Str": 19,
          "AC": 441,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 22714
       },
       {
@@ -1303,8 +1303,8 @@ var gear = {
          "Sta": 12,
          "Parry": 1,
          "AC": 441,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 12639
       },
       {
@@ -1313,8 +1313,8 @@ var gear = {
          "Sta": 6,
          "Agi": 9,
          "AC": 221,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 1,
          "ID": 13963
       }
    ],
@@ -1325,8 +1325,8 @@ var gear = {
          "Str": 17,
          "Sta": 10,
          "AC": 369,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 3,
          "ID": 20204
       },
       {
@@ -1336,8 +1336,8 @@ var gear = {
          "Agi": 9,
          "Defense": 7,
          "AC": 380,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21994
       },
       {
@@ -1347,8 +1347,8 @@ var gear = {
          "Dodge": 1,
          "Defense": 5,
          "AC": 412,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16864
       },
       {
@@ -1358,8 +1358,8 @@ var gear = {
          "Sta": 20,
          "AP": 64,
          "AC": 142,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21586
       },
       {
@@ -1369,8 +1369,8 @@ var gear = {
          "Sta": 11,
          "Agi": 15,
          "AC": 108,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 20216
       },
       {
@@ -1379,8 +1379,8 @@ var gear = {
          "Sta": 11,
          "Agi": 7,
          "AC": 408,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 20213
       },
       {
@@ -1389,8 +1389,8 @@ var gear = {
          "Sta": 18,
          "Defense": 5,
          "AC": 494,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21503
       },
       {
@@ -1399,8 +1399,8 @@ var gear = {
          "Sta": 8,
          "Agi": 7,
          "AC": 341,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16736
       },
       {
@@ -1409,8 +1409,8 @@ var gear = {
          "Str": 15,
          "Sta": 16,
          "AC": 369,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13142
       },
       {
@@ -1421,8 +1421,8 @@ var gear = {
          "Sta": 21,
          "Agi": 20,
          "AC": 536,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 23219
       },
       {
@@ -1432,8 +1432,8 @@ var gear = {
          "AC": 98,
          "Skill": 5,
          "Type": "Dagger",
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 2,
          "ID": 18505
       },
       {
@@ -1442,8 +1442,8 @@ var gear = {
          "Str": 15,
          "Sta": 9,
          "AC": 353,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 1,
          "ID": 13959
       },
       {
@@ -1453,8 +1453,8 @@ var gear = {
          "Str": 31,
          "Sta": 11,
          "AC": 494,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 19137
       },
       {
@@ -1464,8 +1464,8 @@ var gear = {
          "Sta": 19,
          "Agi": 20,
          "AC": 258,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21463
       },
       {
@@ -1476,8 +1476,8 @@ var gear = {
          "Parry": 1,
          "Defense": 8,
          "AC": 512,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21598
       },
       {
@@ -1486,8 +1486,8 @@ var gear = {
          "Str": 25,
          "Sta": 10,
          "AC": 391,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19823
       },
       {
@@ -1496,8 +1496,8 @@ var gear = {
          "Sta": 22,
          "AP": 44,
          "AC": 295,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 19380
       },
       {
@@ -1506,8 +1506,8 @@ var gear = {
          "Sta": 17,
          "Agi": 19,
          "AC": 476,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21692
       },
       {
@@ -1516,8 +1516,8 @@ var gear = {
          "Sta": 20,
          "Defense": 7,
          "AC": 482,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 16960
       }
    ],
@@ -1529,8 +1529,8 @@ var gear = {
          "Sta": 15,
          "Agi": 15,
          "AC": 566,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": 5,
          "ID": 20671
       },
       {
@@ -1538,8 +1538,8 @@ var gear = {
          "Sta": 8,
          "AP": 54,
          "AC": 320,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 15052
       },
       {
@@ -1549,8 +1549,8 @@ var gear = {
          "Agi": 5,
          "Dodge": 2,
          "AC": 154,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 12963
       },
       {
@@ -1559,8 +1559,8 @@ var gear = {
          "Sta": 21,
          "Defense": 10,
          "AC": 674,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19855
       },
       {
@@ -1568,19 +1568,19 @@ var gear = {
          "Sta": 18,
          "AP": 52,
          "AC": 150,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 14638
       },
       {
-         "Name": "Cloudkeeper Legplates",
+         "Name": "[TODO] Cloudkeeper Legplates",
          "Str": 20,
          "Sta": 20,
          "Agi": 20,
          "AP": 0,
          "AC": 617,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": 1,
          "ID": 14554
       },
       {
@@ -1591,8 +1591,8 @@ var gear = {
          "Agi": 21,
          "Defense": 6,
          "AC": 796,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21332
       },
       {
@@ -1601,8 +1601,8 @@ var gear = {
          "Sta": 20,
          "AP": 48,
          "AC": 296,
-         "Source": "",
-         "Phase": "",
+         "Source": "Lethon",
+         "Phase": 4,
          "ID": 20627
       },
       {
@@ -1611,8 +1611,8 @@ var gear = {
          "Sta": 12,
          "AP": 46,
          "AC": 148,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 15062
       },
       {
@@ -1622,8 +1622,8 @@ var gear = {
          "Sta": 20,
          "Agi": 9,
          "AC": 566,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 2,
          "ID": 18380
       },
       {
@@ -1631,8 +1631,8 @@ var gear = {
          "Str": 29,
          "Sta": 12,
          "AC": 548,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13498
       },
       {
@@ -1642,8 +1642,8 @@ var gear = {
          "Sta": 23,
          "Agi": 31,
          "AC": 211,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 23071
       },
       {
@@ -1652,8 +1652,8 @@ var gear = {
          "Sta": 22,
          "Agi": 22,
          "AC": 740,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 19402
       },
       {
@@ -1662,8 +1662,8 @@ var gear = {
          "Str": 42,
          "Sta": 18,
          "AC": 815,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": 6,
          "ID": 23068
       },
       {
@@ -1673,8 +1673,8 @@ var gear = {
          "Agi": 11,
          "Defense": 5,
          "AC": 601,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 22000
       },
       {
@@ -1684,8 +1684,8 @@ var gear = {
          "Parry": 1,
          "Defense": 7,
          "AC": 655,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16867
       },
       {
@@ -1694,8 +1694,8 @@ var gear = {
          "Str": 20,
          "Sta": 13,
          "AC": 644,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21495
       },
       {
@@ -1704,8 +1704,8 @@ var gear = {
          "Sta": 15,
          "Agi": 11,
          "AC": 557,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16732
       },
       {
@@ -1715,8 +1715,8 @@ var gear = {
          "Dodge": 2,
          "Defense": 11,
          "AC": 749,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16962
       },
       {
@@ -1726,8 +1726,8 @@ var gear = {
          "Str": 20,
          "Sta": 28,
          "AC": 743,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 16479
       },
       {
@@ -1736,8 +1736,8 @@ var gear = {
          "Str": 12,
          "Sta": 17,
          "AC": 618,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 22873
       },
       {
@@ -1746,8 +1746,8 @@ var gear = {
          "Sta": 23,
          "AP": 62,
          "AC": 427,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21651
       },
       {
@@ -1757,8 +1757,8 @@ var gear = {
          "Str": 28,
          "Sta": 27,
          "AC": 646,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 3,
          "ID": 22672
       },
       {
@@ -1767,8 +1767,8 @@ var gear = {
          "Hit": 2,
          "Str": 30,
          "AC": 598,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 22385
       }
    ],
@@ -1779,8 +1779,8 @@ var gear = {
          "Sta": 12,
          "Agi": 12,
          "AC": 452,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 3,
          "ID": 20208
       },
       {
@@ -1788,8 +1788,8 @@ var gear = {
          "Str": 14,
          "Sta": 8,
          "Agi": 13,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": 1,
          "ID": 12555
       },
       {
@@ -1797,8 +1797,8 @@ var gear = {
          "Sta": 10,
          "AP": 28,
          "AC": 270,
-         "Source": "",
-         "Phase": "",
+         "Source": "Crafting",
+         "Phase": 1,
          "ID": 16984
       },
       {
@@ -1807,8 +1807,8 @@ var gear = {
          "Sta": 10,
          "Agi": 21,
          "AC": 129,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": 4,
          "ID": 19906
       },
       {
@@ -1818,8 +1818,8 @@ var gear = {
          "Sta": 10,
          "Agi": 9,
          "AC": 247,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 14616
       },
       {
@@ -1828,8 +1828,8 @@ var gear = {
          "Str": 20,
          "Sta": 20,
          "AC": 470,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": 5,
          "ID": 21995
       },
       {
@@ -1839,8 +1839,8 @@ var gear = {
          "Sta": 22,
          "Agi": 14,
          "AC": 581,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21688
       },
       {
@@ -1849,8 +1849,8 @@ var gear = {
          "Sta": 22,
          "AP": 44,
          "AC": 286,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 19381
       },
       {
@@ -1859,8 +1859,8 @@ var gear = {
          "Sta": 11,
          "Agi": 22,
          "AC": 138,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21493
       },
       {
@@ -1870,8 +1870,8 @@ var gear = {
          "Agi": 8,
          "Defense": 5,
          "AC": 647,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21706
       },
       {
@@ -1880,8 +1880,8 @@ var gear = {
          "Sta": 20,
          "Agi": 4,
          "AC": 424,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 16734
       },
       {
@@ -1891,8 +1891,8 @@ var gear = {
          "Sta": 19,
          "Agi": 20,
          "AC": 596,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 19387
       },
       {
@@ -1902,8 +1902,8 @@ var gear = {
          "Agi": 17,
          "Defense": 4,
          "AC": 604,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": 5,
          "ID": 21333
       },
       {
@@ -1911,8 +1911,8 @@ var gear = {
          "Sta": 14,
          "AP": 40,
          "AC": 116,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13210
       },
       {
@@ -1922,8 +1922,8 @@ var gear = {
          "Sta": 24,
          "Agi": 12,
          "AC": 592,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 16545
       },
       {
@@ -1932,8 +1932,8 @@ var gear = {
          "Sta": 23,
          "Agi": 9,
          "AC": 472,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 2,
          "ID": 23287
       },
       {
@@ -1942,8 +1942,8 @@ var gear = {
          "Sta": 26,
          "Defense": 5,
          "AC": 515,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": 1,
          "ID": 16862
       },
       {
@@ -1952,8 +1952,8 @@ var gear = {
          "Sta": 30,
          "Defense": 7,
          "AC": 589,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": 3,
          "ID": 16965
       },
       {
@@ -1962,8 +1962,8 @@ var gear = {
          "Sta": 14,
          "Agi": 9,
          "AC": 417,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": 1,
          "ID": 13070
       },
       {
@@ -1973,8 +1973,8 @@ var gear = {
          "Sta": 12,
          "Agi": 12,
          "AC": 519,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": 5,
          "ID": 21490
       },
       {
@@ -1983,8 +1983,8 @@ var gear = {
          "Sta": 7,
          "Agi": 21,
          "AC": 115,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 12553
       },
       {
@@ -1992,8 +1992,8 @@ var gear = {
          "Hit": 1,
          "Agi": 20,
          "AC": 247,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": 1,
          "ID": 13967
       }
    ],
@@ -2135,8 +2135,8 @@ var gear = {
          "Str": 12,
          "Sta": 8,
          "Agi": 11,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": 3,
          "ID": 19514
       },
       {
@@ -2608,7 +2608,7 @@ var gear = {
          "MagicDmg": 113
       },
       {
-         "Name": "Annihilator",
+         "Name": "[TODO] Annihilator",
          "Mainhand": true,
          "Min Hit": 49,
          "Max Hit": 92,
@@ -2962,7 +2962,7 @@ var gear = {
          "ID": 19859
       },
       {
-         "Name": "Felstriker",
+         "Name": "[TODO] Felstriker",
          "Min Hit": 54,
          "Max Hit": 101,
          "Speed": 1.7,
@@ -3201,7 +3201,7 @@ var gear = {
          "ID": 23242
       },
       {
-         "Name": "Eskhandar's Left Claw",
+         "Name": "[TODO] Eskhandar's Left Claw",
          "Offhand": true,
          "Agi": 4,
          "Min Hit": 50,
@@ -3214,7 +3214,7 @@ var gear = {
          "ID": 18202
       },
       {
-         "Name": "Eskhandar's Right Claw",
+         "Name": "[TODO] Eskhandar's Right Claw",
          "Mainhand": true,
          "Agi": 4,
          "Min Hit": 50,
@@ -3346,7 +3346,7 @@ var gear = {
          "MagicDmg": 220
       },
       {
-         "Name": "Empyrean Demolisher",
+         "Name": "[TODO] Empyrean Demolisher",
          "Mainhand": true,
          "Min Hit": 94,
          "Max Hit": 175,
@@ -3793,7 +3793,7 @@ var gear = {
          "ID": 22378
       },
       {
-         "Name": "Skullforge Reaver",
+         "Name": "[TODO] Skullforge Reaver",
          "Min Hit": 72,
          "Max Hit": 135,
          "Speed": 2.5,
@@ -3804,7 +3804,7 @@ var gear = {
          "ID": 13361
       },
       {
-         "Name": "Sword of Zeal",
+         "Name": "[TODO] Sword of Zeal",
          "Mainhand": true,
          "Min Hit": 81,
          "Max Hit": 151,
@@ -4281,7 +4281,6 @@ function gearEvents() {
       updatePanel();
       updateSession();
    });
-
 }
 
 function filterGear() {
@@ -4294,6 +4293,9 @@ function filterGear() {
          for (let i of gear[type])
             if (i.Name == name)
                item = i;
+
+         if (item.Source == 'Lethon' || item.Source == 'Emeriss' || item.Source == 'Kazzak' || item.Source == 'Azuregos' || item.Source == 'Ysondre' || item.Source == 'Taerar')
+            item.Source = 'worldboss';
 
          let visible = true;
          if (item.Phase && !$('.phases [data-id="' + item.Phase + '"]').hasClass('active'))
@@ -4405,7 +4407,6 @@ function buildWeapons() {
 
    section += '</tbody></table></section>';
    $('body').append(section);
-
 }
 
 function buildEnchants() {
@@ -4446,50 +4447,55 @@ function buildEnchants() {
 
    section += '</tbody></table></section>';
    $('body').append(section);
-
 }
 
 function buildGear() {
 
-   let heads = gear.head;
-   let section = `<section><h3>Head</h3>
-      <table class="gear" data-type="head">
-         <thead>
-            <tr>
-               <th>Name</th>
-               <th>Source</th>
-               <th>Sta</th>
-               <th>Str</th>
-               <th>Agi</th>
-               <th>AP</th>
-               <th>Hit</th>
-               <th>Crit</th>
-               <th>Skill</th>
-               <th>Type</th>
-               <th>DPS</th>
-            </tr>
-         </thead>
-         <tbody>`;
+   for (let prop in gear) {
 
-   for (let item of heads) {
-      section += `<tr data-id="${item.ID}">
-                     <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
-                     <td>${item.Source || ''}</td>
-                     <td>${item.Sta || ''}</td>
-                     <td>${item.Str || ''}</td>
-                     <td>${item.Agi || ''}</td>
-                     <td>${item.AP || ''}</td>
-                     <td>${item.Hit || ''}</td>
-                     <td>${item.Crit || ''}</td>
-                     <td>${item.Skill || ''}</td>
-                     <td>${item.Type || ''}</td>
-                     <td></td>
-                  </tr>`;
+      continue;
+
+      if (prop == 'finger' || prop == 'trinket' || prop == 'ranged' || prop == 'weapon' || prop == 'enchant')
+         continue;
+
+      let section = `<section><h3>${prop}</h3>
+         <table class="gear" data-type="${prop}">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Source</th>
+                  <th>Sta</th>
+                  <th>Str</th>
+                  <th>Agi</th>
+                  <th>AP</th>
+                  <th>Hit</th>
+                  <th>Crit</th>
+                  <th>Skill</th>
+                  <th>Type</th>
+                  <th>DPS</th>
+               </tr>
+            </thead>
+            <tbody>`;
+
+      for (let item of gear[prop]) {
+         section += `<tr data-id="${item.ID}">
+                        <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
+                        <td>${item.Source || ''}</td>
+                        <td>${item.Sta || ''}</td>
+                        <td>${item.Str || ''}</td>
+                        <td>${item.Agi || ''}</td>
+                        <td>${item.AP || ''}</td>
+                        <td>${item.Hit || ''}</td>
+                        <td>${item.Crit || ''}</td>
+                        <td>${item.Skill || ''}</td>
+                        <td>${item.Type || ''}</td>
+                        <td></td>
+                     </tr>`;
+      }
+
+      section += '</tbody></table></section>';
+      $('body').append(section);
    }
-
-   section += '</tbody></table></section>';
-   $('body').append(section);
-
 }
 
 function getWeaponFromRow(tr) {
@@ -4674,7 +4680,7 @@ function buildPlayer(testgear) {
       }
       addEnchantToPlayer(player, aura);
    });
-   if (testgear && !testgearadded)
+   if (testgear && testgear.enchant && !testgearadded)
       addEnchantToPlayer(player, testgear);
 
    // Buffs

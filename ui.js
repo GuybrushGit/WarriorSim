@@ -44,7 +44,7 @@ function complete() {
     end = new Date().getTime();
     $('#time').html((end - start) / 1000 + ' s');
     let dps = parseFloat($('#dps').text()).toFixed(2);
-    $('table.gear tbody td:last-of-type').each(function () {
+    $('table.gear tbody tr:not(.hidden) td:last-of-type').each(function () {
         let text = $(this).text();
         let diff = (text - dps).toFixed(2);
         let span = diff > 0 ? '<span class="p"> (+ ' + diff + ')</span>' : '<span class="n"> (' + diff + ')</span>';
@@ -55,6 +55,7 @@ function complete() {
 function updatePanel() {
     let player = buildPlayer();
     let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    if (!player.mh || !player.oh) return;
     $('.char #str').text(player.stats.str);
     $('.char #agi').text(player.stats.agi);
     $('.char #ap').text(player.stats.ap);
@@ -105,8 +106,10 @@ $(document).ready(function () {
         $('progress').attr('max', $('table.gear tbody tr:not(.hidden)').length);
         $('table.gear tbody td:last-of-type').text('');
 
-        startSimulation($('#dps'));
-        runRow($('table.gear tbody tr:not(.hidden)'), 0);
+        startSimulation($('#dps'), null, function() {
+            runRow($('table.gear tbody tr:not(.hidden)'), 0);
+        });
+        
 
     });
 
