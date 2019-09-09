@@ -56,6 +56,7 @@ class Overpower extends Spell {
         this.cost = 5;
         this.cooldown = 5;
         this.canDodge = false;
+        this.threshold = this.player.talents.rageretained > 10 ? this.player.talents.rageretained : 10;
     }
     dmg() {
         return 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;

@@ -2604,7 +2604,8 @@ var gear = {
          "Source": "ZG",
          "PPM": 1,
          "Phase": 4,
-         "ID": 19852
+         "ID": 19852,
+         "MagicDmg": 113
       },
       {
          "Name": "Annihilator",
@@ -2614,7 +2615,7 @@ var gear = {
          "Speed": 1.7,
          "Type": "Axe",
          "Source": "Crafting",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 1,
          "ID": 12798
       },
@@ -2628,7 +2629,8 @@ var gear = {
          "Source": "Other",
          "PPM": 1,
          "Phase": 1,
-         "ID": 811
+         "ID": 811,
+         "MagicDmg": 108
       },
       {
          "Name": "Blessed Qiraji War Axe",
@@ -2688,7 +2690,8 @@ var gear = {
          "Source": "Onyxia",
          "PPM": 1,
          "Phase": 1,
-         "ID": 17068
+         "ID": 17068,
+         "MagicDmg": 138
       },
       {
          "Name": "Doom's Edge",
@@ -2712,7 +2715,8 @@ var gear = {
          "Source": "Other",
          "PPM": 1,
          "Phase": 1,
-         "ID": 871
+         "ID": 871,
+         "ProcExtra": 1
       },
       {
          "Name": "Frostbite",
@@ -2830,9 +2834,10 @@ var gear = {
          "Speed": 1.3,
          "Type": "Dagger",
          "Source": "Other",
-         "PPM": 1,
+         "PPM": 1.3,
          "Phase": 1,
-         "ID": 14555
+         "ID": 14555,
+         "MagicDmg": 99
       },
       {
          "Name": "Black Amnesty",
@@ -2841,7 +2846,6 @@ var gear = {
          "Speed": 1.6,
          "Type": "Dagger",
          "Source": "Crafting",
-         "PPM": 1,
          "Phase": 1,
          "ID": 19166
       },
@@ -2892,7 +2896,8 @@ var gear = {
          "Source": "Quest",
          "PPM": 1,
          "Phase": 1,
-         "ID": 13984
+         "ID": 13984,
+         "MagicDmg": 99
       },
       {
          "Name": "Death's Sting",
@@ -2941,7 +2946,8 @@ var gear = {
          "Source": "Ysondre",
          "PPM": 1,
          "Phase": 4,
-         "ID": 20578
+         "ID": 20578,
+         "MagicDmg": 97
       },
       {
          "Name": "Fang of the Faceless",
@@ -2962,7 +2968,7 @@ var gear = {
          "Speed": 1.7,
          "Type": "Dagger",
          "Source": "Dungeon",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 1,
          "ID": 12590
       },
@@ -2987,7 +2993,8 @@ var gear = {
          "Source": "PVP",
          "PPM": 1,
          "Phase": 3,
-         "ID": 19099
+         "ID": 19099,
+         "MagicDmg": 49
       },
       {
          "Name": "Gutgore Ripper",
@@ -2998,7 +3005,8 @@ var gear = {
          "Source": "MC",
          "PPM": 1,
          "Phase": 1,
-         "ID": 17071
+         "ID": 17071,
+         "MagicDmg": 82
       },
       {
          "Name": "Harbinger of Doom",
@@ -3072,9 +3080,10 @@ var gear = {
          "Speed": 1.8,
          "Type": "Dagger",
          "Source": "MC",
-         "PPM": 1,
+         "PPM": 1.3,
          "Phase": 1,
-         "ID": 18816
+         "ID": 18816,
+         "MagicDmg": 53
       },
       {
          "Name": "Qiraji Sacrificial Dagger",
@@ -3134,7 +3143,8 @@ var gear = {
          "Source": "PVP",
          "PPM": 1,
          "Phase": 3,
-         "ID": 19324
+         "ID": 19324,
+         "PhysDmg": 250
       },
       {
          "Name": "The Thunderwood Poker",
@@ -3158,7 +3168,8 @@ var gear = {
          "Source": "ZG",
          "PPM": 1,
          "Phase": 4,
-         "ID": 19910
+         "ID": 19910,
+         "MagicDmg": 77
       },
       {
          "Name": "Claw of the Black Drake",
@@ -3198,7 +3209,7 @@ var gear = {
          "Speed": 1.5,
          "Type": "Fist",
          "Source": "Azuregos",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 2,
          "ID": 18202
       },
@@ -3211,7 +3222,7 @@ var gear = {
          "Speed": 1.5,
          "Type": "Fist",
          "Source": "MC",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 1,
          "ID": 18203
       },
@@ -3331,7 +3342,8 @@ var gear = {
          "Source": "Crafting",
          "PPM": 1,
          "Phase": 1,
-         "ID": 19170
+         "ID": 19170,
+         "MagicDmg": 220
       },
       {
          "Name": "Empyrean Demolisher",
@@ -3341,7 +3353,7 @@ var gear = {
          "Speed": 2.8,
          "Type": "Mace",
          "Source": "Kazzak",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 2,
          "ID": 17112
       },
@@ -3355,7 +3367,8 @@ var gear = {
          "Type": "Mace",
          "Source": "Dungeon",
          "PPM": 1,
-         "Phase": 1
+         "Phase": 1,
+         "ProcExtra": 2
       },
       {
          "Name": "Hammer of Bestial Fury",
@@ -3405,7 +3418,9 @@ var gear = {
          "Type": "Mace",
          "Source": "Naxx",
          "Phase": 6,
-         "ID": 23221
+         "ID": 23221,
+         "PPM": 1,
+         "MagicDmg": 125
       },
       {
          "Name": "Persuader",
@@ -3443,7 +3458,8 @@ var gear = {
          "Source": "ZG",
          "PPM": 1,
          "Phase": 4,
-         "ID": 19908
+         "ID": 19908,
+         "MagicDmg": 78
       },
       {
          "Name": "Spineshatter",
@@ -3783,7 +3799,7 @@ var gear = {
          "Speed": 2.5,
          "Type": "Sword",
          "Source": "Dungeon",
-         "PPM": 1,
+         "PPM": -1, // 2
          "Phase": 1,
          "ID": 13361
       },
@@ -3795,7 +3811,7 @@ var gear = {
          "Speed": 2.8,
          "Type": "Sword",
          "Source": "Other",
-         "PPM": 1,
+         "PPM": -1,
          "Phase": 1,
          "ID": 6622
       },
@@ -3809,7 +3825,8 @@ var gear = {
          "Source": "ZG",
          "PPM": 1,
          "Phase": 4,
-         "ID": 19901
+         "ID": 19901,
+         "MagicDmg": 84
       },
       {
          "Name": "Teebu's Blazing Longsword",
@@ -3821,7 +3838,8 @@ var gear = {
          "Source": "Other",
          "PPM": 1,
          "Phase": 1,
-         "ID": 1728
+         "ID": 1728,
+         "MagicDmg": 165
       },
       {
          "Name": "The Hungering Cold",
@@ -3844,8 +3862,9 @@ var gear = {
          "Speed": 2.7,
          "Type": "Sword",
          "Source": "Quest",
-         "PPM": 1,
-         "Phase": 1
+         "PPM": 0.5,
+         "Phase": 1,
+         "ProcExtra": 1
       },
       {
          "Name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -3856,9 +3875,10 @@ var gear = {
          "Speed": 1.9,
          "Type": "Sword",
          "Source": "MC",
-         "PPM": 1,
+         "PPM": 8,
          "Phase": 3,
-         "ID": 19019
+         "ID": 19019,
+         "MagicDmg": 300
       },
       {
          "Name": "Warblade of the Hakkari (MH)",
@@ -3905,9 +3925,10 @@ var gear = {
          "Speed": 2.6,
          "Type": "Sword",
          "Source": "Onyxia",
-         "PPM": 1,
+         "PPM": 1.3,
          "Phase": 1,
-         "ID": 17075
+         "ID": 17075,
+         "PhysDmg": 240
       },
       {
          "Name": "Protector's Sword",
@@ -4241,7 +4262,7 @@ function gearEvents() {
       sortList: [[12, 1]]
    });
 
-   $('table.gear tbody td').click(function () {
+   $('table.gear tbody td:not(.ppm)').click(function () {
       let tr = $(this).parent();
       let type = $(this).parents('table').data('type');
       tr.toggleClass('active');
@@ -4329,7 +4350,7 @@ function buildWeapons() {
                      <td>${item.Speed || ''}</td>
                      <td>${item.Skill || ''}</td>
                      <td>${item.Type || ''}</td>
-                     <td>${item.PPM || ''}</td>
+                     <td class="ppm"><p contenteditable="true">${item.PPM || ''}</p></td>
                      <td></td>
                   </tr>`;
    }
@@ -4377,7 +4398,7 @@ function buildWeapons() {
                      <td>${item.Speed || ''}</td>
                      <td>${item.Skill || ''}</td>
                      <td>${item.Type || ''}</td>
-                     <td>${item.PPM || ''}</td>
+                     <td class="ppm"><p contenteditable="true">${item.PPM || ''}</p></td>
                      <td></td>
                   </tr>`;
    }
@@ -4487,6 +4508,10 @@ function getWeaponFromRow(tr) {
          let skill = parseInt(item.Skill || 0);
          if (skill > 0) aura['skill_' + aura.type] = skill;
          aura.slot = tr.parents('table').data('type');
+         aura.physdmg = parseInt(item.PhysDmg || 0);
+         aura.magicdmg = parseInt(item.MagicDmg || 0);
+         aura.procextra = parseInt(item.ProcExtra || 0);
+         aura.ppm = parseFloat(tr.find('td').eq(13).text() || 0);
          break;
       }
    return aura;
@@ -4503,7 +4528,7 @@ function getEnchantFromRow(tr) {
          aura.crit = parseInt(item.Crit || 0);
          aura.dmg = parseInt(item.Dmg || 0);
          aura.ap = parseInt(item.AP || 0);
-         aura.ppm = parseInt(item.PPM || 0);
+         aura.ppm = parseFloat(item.PPM || 0);
          aura.magicdmg = parseInt(item.MagicDmg || 0);
          aura.procspell = (item.ProcSpell || '');
          aura.enchant = true;
@@ -4552,9 +4577,10 @@ function addGearToPlayer(player, aura) {
       if (aura.ppm) {
          player.mh.proc1 = {};
          player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
-         player.mh.proc1.magicdmg = aura.magicdmg;
-         if (aura.procspell)
-            player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.physdmg) player.mh.proc1.physdmg = aura.physdmg;
+         if (aura.magicdmg) player.mh.proc1.magicdmg = aura.magicdmg;
+         if (aura.procextra) player.mh.proc1.extra = aura.procextra;
+         if (aura.procspell) player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
       }
    }
 
@@ -4563,9 +4589,10 @@ function addGearToPlayer(player, aura) {
       if (aura.ppm) {
          player.oh.proc1 = {};
          player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
-         player.oh.proc1.magicdmg = aura.magicdmg;
-         if (aura.procspell)
-            player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.physdmg) player.oh.proc1.physdmg = aura.physdmg;
+         if (aura.magicdmg) player.oh.proc1.magicdmg = aura.magicdmg;
+         if (aura.procextra) player.oh.proc1.extra = aura.procextra;
+         if (aura.procspell) player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
       }
    }
 }

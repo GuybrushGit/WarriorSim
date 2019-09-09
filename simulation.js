@@ -328,16 +328,14 @@ class Player {
         }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
-                if (weapon.proc1.spell)
-                    weapon.proc1.spell.use();
-                if (weapon.proc1.magicdmg && rng(1, 10000) < 1700)
-                    procdmg += weapon.proc1.magicdmg;
+                if (weapon.proc1.spell) weapon.proc1.spell.use();
+                if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1.magicdmg);
+                if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
+                if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
             }
             if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance * 100) {
-                if (weapon.proc2.spell)
-                    weapon.proc2.spell.use();
-                if (weapon.proc2.magicdmg && rng(1, 10000) < 1700)
-                    procdmg += weapon.proc2.magicdmg;
+                if (weapon.proc2.spell) weapon.proc2.spell.use();
+                if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng(1, 10000) < this.talents.swordproc * 100)
@@ -345,6 +343,23 @@ class Player {
             }
         }
         return procdmg;
+    }
+    magicproc(dmg) {
+        // todo spell crit
+        if (rng(1, 10000) < 1700) return 0;
+        return dmg;
+    }
+    physproc(dmg) {
+        let tmp = 0;
+        let roll = rng(1, 10000);
+        tmp += Math.max(this.mh.miss, 0) * 100;
+        if (roll < tmp) dmg = 0;
+        tmp += this.mh.dodge * 100;
+        if (roll < tmp) { this.dodgeTimer = 5000; dmg = 0; }
+        roll = rng(1, 10000);
+        let crit = this.crit + this.mh.crit;
+        if (roll < (crit * 100)) dmg *= 2;
+        return dmg * this.stats.dmgmod * this.mh.modifier;
     }
 }
 

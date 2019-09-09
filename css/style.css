@@ -38,6 +38,9 @@ td span {
 td span.n {
     color: red;
 }
+td p {
+    margin: 0;
+}
 input[name="executeperc"] {
     width: 25px;
 }
@@ -316,7 +319,7 @@ nav li.active:after {
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 960px;
+    width: 830px;
     position: absolute;
     height: 23px;
     top: 0;
