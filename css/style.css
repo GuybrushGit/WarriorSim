@@ -316,6 +316,14 @@ nav li.active:after {
     border-color: rgba(204,204,204,0.3);
     position: relative;
 }
+.tablesorter-default td:first-child {
+    width: 20px;
+}
+.tablesorter-default input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
 .tablesorter-default td a {
     color: inherit;
     text-decoration: none;

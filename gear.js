@@ -4250,10 +4250,16 @@ function gearEvents() {
 
    $("table.gear").tablesorter({
       widthFixed: true,
-      sortList: [[12, 1]]
+      sortList: [[12, 1]],
+      headers: { 0: { sorter: false} }
    });
 
-   $('table.gear tbody td:not(.ppm)').click(function () {
+   $('table.gear th input[type="checkbox"]').click(function() {
+      let table = $(this).parents('table');
+      table.find('tbody input[type="checkbox"]').prop('checked', $(this).is(':checked'));
+   });
+
+   $('table.gear tbody td:not(.ppm):not(:first-child)').click(function () {
       let tr = $(this).parent();
       let type = $(this).parents('table').data('type');
       tr.toggleClass('active');
@@ -4451,6 +4457,7 @@ function buildGear() {
          <table class="gear" data-type="${prop}">
             <thead>
                <tr>
+                  <th><input type="checkbox" /></th>
                   <th>Name</th>
                   <th>Source</th>
                   <th>Sta</th>
@@ -4468,6 +4475,7 @@ function buildGear() {
 
       for (let item of gear[prop]) {
          section += `<tr data-id="${item.ID}">
+                        <td><input type="checkbox" /></td>
                         <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                         <td>${item.Source || ''}</td>
                         <td>${item.Sta || ''}</td>
@@ -4577,7 +4585,7 @@ function addGearToPlayer(player, aura) {
       player.mh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, false);
       if (aura.ppm) {
          player.mh.proc1 = {};
-         player.mh.proc1.chance = player.mh.speed * aura.ppm / 0.6;
+         player.mh.proc1.chance = ~~(player.mh.speed * aura.ppm / 0.006);
          if (aura.physdmg) player.mh.proc1.physdmg = aura.physdmg;
          if (aura.magicdmg) player.mh.proc1.magicdmg = aura.magicdmg;
          if (aura.procextra) player.mh.proc1.extra = aura.procextra;
@@ -4592,7 +4600,7 @@ function addGearToPlayer(player, aura) {
       player.oh = new Weapon(player, aura.speed, aura.minhit, aura.maxhit, aura.type, true);
       if (aura.ppm) {
          player.oh.proc1 = {};
-         player.oh.proc1.chance = player.oh.speed * aura.ppm / 0.6;
+         player.oh.proc1.chance = ~~(player.oh.speed * aura.ppm / 0.006);
          if (aura.physdmg) player.oh.proc1.physdmg = aura.physdmg;
          if (aura.magicdmg) player.oh.proc1.magicdmg = aura.magicdmg;
          if (aura.procextra) player.oh.proc1.extra = aura.procextra;
@@ -4620,7 +4628,7 @@ function addEnchantToPlayer(player, aura) {
       player.base.ap += aura.ap;
       if (aura.ppm) {
          player.mh.proc2 = {};
-         player.mh.proc2.chance = player.mh.speed * aura.ppm / 0.6;
+         player.mh.proc2.chance = ~~(player.mh.speed * aura.ppm / 0.006);
          player.mh.proc2.magicdmg = aura.magicdmg;
          if (aura.procspell) {
             player.auras.crusader1 = new Crusader(player);
@@ -4634,7 +4642,7 @@ function addEnchantToPlayer(player, aura) {
       player.base.ap += aura.ap;
       if (aura.ppm) {
          player.oh.proc2 = {};
-         player.oh.proc2.chance = player.oh.speed * aura.ppm / 0.6;
+         player.oh.proc2.chance = ~~(player.oh.speed * aura.ppm / 0.006);
          player.oh.proc2.magicdmg = aura.magicdmg;
          if (aura.procspell) {
             player.auras.crusader2 = new Crusader(player);

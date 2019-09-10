@@ -333,13 +333,13 @@ class Player {
                 this.auras.flurry.step();
         }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
-            if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance * 100) {
+            if (weapon.proc1 && rng(1, 10000) < weapon.proc1.chance) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1.magicdmg);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
             }
-            if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance * 100) {
+            if (weapon.proc2 && rng(1, 10000) < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
             }

@@ -289,6 +289,16 @@ class Felstriker extends Aura {
         this.timer = this.duration * 1000;
         this.player.update();
     }
+    step() {
+        if (this.timer <= 200) {
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.update();
+        }
+        else {
+            this.timer -= 200;
+        }
+    }
 }
 
 class BattleShoutAura extends Aura {

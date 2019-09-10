@@ -98,6 +98,21 @@ $(document).ready(function () {
         });
     });
 
+    $('input#runselected').click(function () {
+
+        start = new Date().getTime();
+        $('progress').show();
+        $('progress').attr('value', 0);
+
+        let trs = [];
+        $('progress').attr('max', $('table.gear tbody tr:not(.hidden)').length);
+        $('table.gear tbody td:last-of-type').text('');
+
+        startSimulation($('#dps'), null, function() {
+            runRow($('table.gear tbody tr:not(.hidden)'), 0);
+        });
+    });
+
     $('input#rungear').click(function () {
 
         start = new Date().getTime();
@@ -109,8 +124,6 @@ $(document).ready(function () {
         startSimulation($('#dps'), null, function() {
             runRow($('table.gear tbody tr:not(.hidden)'), 0);
         });
-        
-
     });
 
     $('.race').click(function () {
