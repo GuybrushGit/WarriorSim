@@ -279,6 +279,18 @@ class Crusader extends Aura {
     }
 }
 
+class Felstriker extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 3;
+        this.stats = { crit: 100, hit: 100 };
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.update();
+    }
+}
+
 class BattleShoutAura extends Aura {
     constructor(player) {
         super(player);

@@ -201,12 +201,6 @@ class Player {
         if (this.auras.battlestance && this.auras.battlestance.timer) {
             this.auras.battlestance.step();
         }
-        if (this.auras.crusader1 && this.auras.crusader1.timer) {
-            this.auras.crusader1.step();
-        }
-        if (this.auras.crusader2 && this.auras.crusader2.timer) {
-            this.auras.crusader2.step();
-        }
         if (this.auras.jujuflurry && this.auras.jujuflurry.firstuse && this.auras.jujuflurry.timer) {
             this.auras.jujuflurry.step();
         }
@@ -224,6 +218,18 @@ class Player {
         }
         if (this.auras.berserking && this.auras.berserking.firstuse && this.auras.berserking.timer) {
             this.auras.berserking.step();
+        }
+        if (this.mh.proc1 && this.mh.proc1.spell && this.mh.proc1.spell.timer) {
+            this.mh.proc1.spell.step();
+        }
+        if (this.mh.proc2 && this.mh.proc2.spell && this.mh.proc2.spell.timer) {
+            this.mh.proc2.spell.step();
+        }
+        if (this.oh.proc1 && this.oh.proc1.spell && this.oh.proc1.spell.timer) {
+            this.oh.proc1.spell.step();
+        }
+        if (this.oh.proc2 && this.oh.proc2.spell && this.oh.proc2.spell.timer) {
+            this.oh.proc2.spell.step();
         }
     }
     rollweapon(weapon) {
@@ -425,31 +431,31 @@ class Simulation {
                     player.spells.bloodrage.use();
                     continue;
                 }
-                if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step >= this.jujustep) {
+                if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step > this.jujustep) {
                     player.auras.jujuflurry.use();
                     continue;
                 }
-                if (player.auras.ragepotion && player.auras.ragepotion.canUse() && step >= this.ragestep) {
+                if (player.auras.ragepotion && player.auras.ragepotion.canUse() && step > this.ragestep) {
                     player.auras.ragepotion.use();
                     continue;
                 }
-                if (player.auras.deathwish && player.auras.deathwish.canUse() && step >= this.deathwishstep) {
+                if (player.auras.deathwish && player.auras.deathwish.canUse() && step > this.deathwishstep) {
                     player.auras.deathwish.use();
                     continue;
                 }
-                if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step >= this.bloodfurystep) {
+                if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step > this.bloodfurystep) {
                     player.auras.bloodfury.use();
                     continue;
                 }
-                if (player.auras.berserking && player.auras.berserking.canUse() && step >= this.berserkingstep) {
+                if (player.auras.berserking && player.auras.berserking.canUse() && step > this.berserkingstep) {
                     player.auras.berserking.use();
                     continue;
                 }
-                if (player.auras.recklessness && player.auras.recklessness.canUse() && step >= this.reckstep) {
+                if (player.auras.recklessness && player.auras.recklessness.canUse() && step > this.reckstep) {
                     player.auras.recklessness.use();
                     continue;
                 }
-                if (player.spells.execute && step >= this.executestep) {
+                if (player.spells.execute && step > this.executestep) {
                     // Execute phase
                     if (player.spells.execute.canUse())
                         this.total += player.cast(player.spells.execute);

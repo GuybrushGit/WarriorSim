@@ -78,7 +78,7 @@ $(document).ready(function () {
     buildBuffs();
     buildGear();
     buildWeapons();
-    buildEnchants();
+    //buildEnchants();
     loadSession();
     buildTalents();
     talentEvents();

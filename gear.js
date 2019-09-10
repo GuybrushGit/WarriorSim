@@ -1146,6 +1146,7 @@ var gear = {
       {
          "Name": "Devilsaur Gauntlets",
          "Crit": 1,
+         "Hit": 2,
          "Sta": 9,
          "AP": 28,
          "AC": 103,
@@ -1154,7 +1155,7 @@ var gear = {
          "ID": 15063
       },
       {
-         "Name": "[TODO] Edgemaster's Handguards",
+         "Name": "Edgemaster's Handguards",
          "AC": 201,
          "Skill": 7,
          "Type": "Varied",
@@ -2962,15 +2963,16 @@ var gear = {
          "ID": 19859
       },
       {
-         "Name": "[TODO] Felstriker",
+         "Name": "Felstriker",
          "Min Hit": 54,
          "Max Hit": 101,
          "Speed": 1.7,
          "Type": "Dagger",
          "Source": "Dungeon",
-         "PPM": -1,
+         "PPM": 1.4,
          "Phase": 1,
-         "ID": 12590
+         "ID": 12590,
+         "ProcSpell": "Felstriker"
       },
       {
          "Name": "Finkle's Skinner",
@@ -3793,17 +3795,6 @@ var gear = {
          "ID": 22378
       },
       {
-         "Name": "[TODO] Skullforge Reaver",
-         "Min Hit": 72,
-         "Max Hit": 135,
-         "Speed": 2.5,
-         "Type": "Sword",
-         "Source": "Dungeon",
-         "PPM": -1, // 2
-         "Phase": 1,
-         "ID": 13361
-      },
-      {
          "Name": "[TODO] Sword of Zeal",
          "Mainhand": true,
          "Min Hit": 81,
@@ -4453,8 +4444,6 @@ function buildGear() {
 
    for (let prop in gear) {
 
-      continue;
-
       if (prop == 'finger' || prop == 'trinket' || prop == 'ranged' || prop == 'weapon' || prop == 'enchant')
          continue;
 
@@ -4518,6 +4507,7 @@ function getWeaponFromRow(tr) {
          aura.magicdmg = parseInt(item.MagicDmg || 0);
          aura.procextra = parseInt(item.ProcExtra || 0);
          aura.ppm = parseFloat(tr.find('td').eq(13).text() || 0);
+         aura.procspell = (item.ProcSpell || '');
          break;
       }
    return aura;
@@ -4558,6 +4548,11 @@ function getGearFromRow(tr) {
          if (skill > 0) {
             aura.type = WEAPONTYPE[item.Type.toUpperCase()];
             aura['skill_' + aura.type] = skill;
+            if (item.Type == 'Varied') {
+               aura['skill_1'] = skill;
+               aura['skill_2'] = skill;
+               aura['skill_3'] = skill;
+            }
          }
          break;
       }
@@ -4586,7 +4581,10 @@ function addGearToPlayer(player, aura) {
          if (aura.physdmg) player.mh.proc1.physdmg = aura.physdmg;
          if (aura.magicdmg) player.mh.proc1.magicdmg = aura.magicdmg;
          if (aura.procextra) player.mh.proc1.extra = aura.procextra;
-         if (aura.procspell) player.mh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.procspell) {
+            player.auras[aura.procspell.toLowerCase()] = eval('new ' + aura.procspell + '(player)');
+            player.mh.proc1.spell = player.auras[aura.procspell.toLowerCase()];
+         }
       }
    }
 
@@ -4598,7 +4596,10 @@ function addGearToPlayer(player, aura) {
          if (aura.physdmg) player.oh.proc1.physdmg = aura.physdmg;
          if (aura.magicdmg) player.oh.proc1.magicdmg = aura.magicdmg;
          if (aura.procextra) player.oh.proc1.extra = aura.procextra;
-         if (aura.procspell) player.oh.proc1.spell = eval('new ' + aura.procspell + '(player)');
+         if (aura.procspell) {
+            player.auras[aura.procspell.toLowerCase()] = eval('new ' + aura.procspell + '(player)');
+            player.oh.proc1.spell = player.auras[aura.procspell.toLowerCase()];
+         }
       }
    }
 }
