@@ -46,6 +46,7 @@ function complete() {
     let dps = parseFloat($('#dps').text()).toFixed(2);
     $('table.gear tbody tr:not(.hidden) td:last-of-type').each(function () {
         let text = $(this).text();
+        if (!text) return;
         let diff = (text - dps).toFixed(2);
         let span = diff > 0 ? '<span class="p"> (+ ' + diff + ')</span>' : '<span class="n"> (' + diff + ')</span>';
         $(this).html(text + span);
@@ -78,7 +79,7 @@ $(document).ready(function () {
     buildBuffs();
     buildGear();
     buildWeapons();
-    //buildEnchants();
+    buildEnchants();
     loadSession();
     buildTalents();
     talentEvents();
@@ -88,6 +89,13 @@ $(document).ready(function () {
 
     $('body').on('click', '.wh-tooltip, .tablesorter-default a', function (e) {
         e.preventDefault();
+    });
+
+    $('table.gear input[type="checkbox"]').change(function() {
+        if ($(this).is(':checked'))
+            $(this).parents('tr').addClass('selected');
+        else
+            $(this).parents('tr').removeClass('selected');
     });
 
     $('input#runsim').click(function () {
@@ -105,11 +113,11 @@ $(document).ready(function () {
         $('progress').attr('value', 0);
 
         let trs = [];
-        $('progress').attr('max', $('table.gear tbody tr:not(.hidden)').length);
-        $('table.gear tbody td:last-of-type').text('');
+        $('progress').attr('max', $('table.gear tbody tr.selected:not(.hidden)').length);
+        $('table.gear tbody tr.selected td:last-of-type').text('');
 
         startSimulation($('#dps'), null, function() {
-            runRow($('table.gear tbody tr:not(.hidden)'), 0);
+            runRow($('table.gear tbody tr.selected:not(.hidden)'), 0);
         });
     });
 

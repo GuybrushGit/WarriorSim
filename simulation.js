@@ -267,9 +267,10 @@ class Player {
         let heroicstrike = !weapon.offhand && this.nextswinghs;
         let dmg = weapon.dmg(heroicstrike);
         let result = this.rollweapon(weapon);
-        if (heroicstrike) {
+        if (heroicstrike &&  this.spells.heroicstrike.cost <= this.rage) {
             this.nextswinghs = false;
             spell = this.spells.heroicstrike;
+            this.rage -= spell.cost;
             result = this.rollspell(spell);
         }
         if (!extra)

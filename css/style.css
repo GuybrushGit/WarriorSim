@@ -328,7 +328,7 @@ nav li.active:after {
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 800px;
+    width: 750px;
     position: absolute;
     height: 23px;
     top: 0;

@@ -151,7 +151,6 @@ class HeroicStrike extends Spell {
     }
     use() {
         this.player.timer = 200;
-        this.player.rage -= this.cost;
         this.player.nextswinghs = true;
     }
     canUse() {

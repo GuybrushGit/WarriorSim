@@ -2714,7 +2714,7 @@ var gear = {
          "Speed": 1.5,
          "Type": "Axe",
          "Source": "Other",
-         "PPM": 1,
+         "PPM": 2,
          "Phase": 1,
          "ID": 871,
          "ProcExtra": 1
@@ -2969,7 +2969,7 @@ var gear = {
          "Speed": 1.7,
          "Type": "Dagger",
          "Source": "Dungeon",
-         "PPM": 1.4,
+         "PPM": 1,
          "Phase": 1,
          "ID": 12590,
          "ProcSpell": "Felstriker"
@@ -3368,7 +3368,7 @@ var gear = {
          "Speed": 2.4,
          "Type": "Mace",
          "Source": "Dungeon",
-         "PPM": 1,
+         "PPM": 0.75,
          "Phase": 1,
          "ProcExtra": 2
       },
@@ -3853,7 +3853,7 @@ var gear = {
          "Speed": 2.7,
          "Type": "Sword",
          "Source": "Quest",
-         "PPM": 0.5,
+         "PPM": 1,
          "Phase": 1,
          "ProcExtra": 1
       },
@@ -3932,6 +3932,18 @@ var gear = {
          "Source": "PVP",
          "Phase": 3,
          "ID": 19554
+      },
+      {
+         "Name": "Bonechill Hammer",
+         "Min Hit": 68,
+         "Max Hit": 127,
+         "Speed": 2.4,
+         "Type": "Mace",
+         "Source": "Dungeon",
+         "Phase": 1,
+         "ID": 14487,
+         "PPM": 1,
+         "MagicDmg": 99
       }
    ],
    "enchant": [
@@ -4257,6 +4269,8 @@ function gearEvents() {
    $('table.gear th input[type="checkbox"]').click(function() {
       let table = $(this).parents('table');
       table.find('tbody input[type="checkbox"]').prop('checked', $(this).is(':checked'));
+      if ($(this).is(':checked')) table.find('tbody tr').addClass('selected');
+      else table.find('tbody tr').removeClass('selected');
    });
 
    $('table.gear tbody td:not(.ppm):not(:first-child)').click(function () {
@@ -4285,7 +4299,7 @@ function filterGear() {
       let type = $(this).data('type');
       if (type == 'mainhand' || type == 'offhand') type = 'weapon';
       $(this).find('tbody tr').each(function () {
-         let name = $(this).find('td:first-of-type').text();
+         let name = $(this).find('td').eq(1).text();
          let item = {};
          for (let i of gear[type])
             if (i.Name == name)
@@ -4314,6 +4328,7 @@ function buildWeapons() {
       <table class="gear" data-type="mainhand">
          <thead>
             <tr>
+               <th><input type="checkbox" /></th>
                <th>Name</th>
                <th>Source</th>
                <th>Sta</th>
@@ -4336,6 +4351,7 @@ function buildWeapons() {
    for (let item of weapons) {
       if (item.Offhand) continue;
       section += `<tr data-id="${item.ID}" data-name="${item.Name}">
+                     <td><input type="checkbox" /></td>
                      <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
@@ -4362,6 +4378,7 @@ function buildWeapons() {
       <table class="gear" data-type="offhand">
          <thead>
             <tr>
+               <th><input type="checkbox" /></th>
                <th>Name</th>
                <th>Source</th>
                <th>Sta</th>
@@ -4384,6 +4401,7 @@ function buildWeapons() {
    for (let item of weapons) {
       if (item.Mainhand) continue;
       section += `<tr data-id="${item.ID}" data-name="${item.Name}">
+                     <td><input type="checkbox" /></td>
                      <td><a href="https://classic.wowhead.com/item=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Source}</td>
                      <td>${item.Sta || ''}</td>
@@ -4413,6 +4431,7 @@ function buildEnchants() {
       <table class="gear" data-type="enchant">
          <thead>
             <tr>
+               <th><input type="checkbox" /></th>
                <th>Name</th>
                <th>Slot</th>
                <th>Str</th>
@@ -4429,6 +4448,7 @@ function buildEnchants() {
 
    for (let item of enchants) {
       section += `<tr data-id="${item.ID}" data-slot="${item.Slot}">
+                     <td><input type="checkbox" /></td>
                      <td><a href="https://classic.wowhead.com/${item.Spellid ? 'spell' : 'item'}=${item.ID}"></a>${item.Name}</td>
                      <td>${item.Slot || ''}</td>
                      <td>${item.Str || ''}</td>
@@ -4514,7 +4534,7 @@ function getWeaponFromRow(tr) {
          aura.physdmg = parseInt(item.PhysDmg || 0);
          aura.magicdmg = parseInt(item.MagicDmg || 0);
          aura.procextra = parseInt(item.ProcExtra || 0);
-         aura.ppm = parseFloat(tr.find('td').eq(13).text() || 0);
+         aura.ppm = parseFloat(tr.find('td').eq(14).text() || 0);
          aura.procspell = (item.ProcSpell || '');
          break;
       }
