@@ -222,7 +222,7 @@ var buffs = [
 function buildBuffs() {
    let article = $('article.buffs');
    for (let buff of buffs) {
-      let div = $('<div class="buff"><img src="img/' + buff.iconname + '.jpg" alt="' + buff.name + '"></div>');
+      let div = $('<div class="buff"><img src="img/' + buff.iconname.toLowerCase() + '.jpg" alt="' + buff.name + '"></div>');
       div.attr('data-group', buff.group);
       div.attr('data-ap', buff.ap);
       div.attr('data-crit', buff.crit);

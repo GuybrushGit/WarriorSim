@@ -1136,7 +1136,7 @@ function buildTalents() {
       for (let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
       for (let talent of tree.t) {
          let div = $('<div class="talent" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
-         div.html('<img src="img/' + talent.iconname + '.jpg" alt="' + talent.n + '" />');
+         div.html('<img src="img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
          if (talent.c >= talent.m) div.addClass('maxed');
          if (talent.enable && talent.c == 0) $('.spell[data-id="' + talent.enable + '"]').addClass('hidden');
          div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');

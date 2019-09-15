@@ -1,6 +1,15 @@
 var gear = {
    "head": [
       {
+         "Name": "Eye of Rend",
+         "Sta": 7,
+         "Str": 13,
+         "Crit": 2,
+         "Source": "Dungeon",
+         "Phase": 1,
+         "ID": 12587
+      },
+      {
          "Name": "Circlet of Restless Dreams",
          "Sta": 38,
          "Agi": 21,
