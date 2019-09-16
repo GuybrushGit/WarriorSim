@@ -2617,18 +2617,18 @@ var gear = {
          "ID": 19852,
          "MagicDmg": 113
       },
-      {
-         "Name": "[TODO] Annihilator",
-         "Mainhand": true,
-         "Min Hit": 49,
-         "Max Hit": 92,
-         "Speed": 1.7,
-         "Type": "Axe",
-         "Source": "Crafting",
-         "PPM": -1,
-         "Phase": 1,
-         "ID": 12798
-      },
+      // {
+      //    "Name": "[TODO] Annihilator",
+      //    "Mainhand": true,
+      //    "Min Hit": 49,
+      //    "Max Hit": 92,
+      //    "Speed": 1.7,
+      //    "Type": "Axe",
+      //    "Source": "Crafting",
+      //    "PPM": -1,
+      //    "Phase": 1,
+      //    "ID": 12798
+      // },
       {
          "Name": "Axe of the Deep Woods",
          "Mainhand": true,
@@ -3224,19 +3224,19 @@ var gear = {
          "Phase": 2,
          "ID": 18202
       },
-      {
-         "Name": "[TODO] Eskhandar's Right Claw",
-         "Mainhand": true,
-         "Agi": 4,
-         "Min Hit": 50,
-         "Max Hit": 94,
-         "Speed": 1.5,
-         "Type": "Fist",
-         "Source": "MC",
-         "PPM": -1,
-         "Phase": 1,
-         "ID": 18203
-      },
+      // {
+      //    "Name": "[TODO] Eskhandar's Right Claw",
+      //    "Mainhand": true,
+      //    "Agi": 4,
+      //    "Min Hit": 50,
+      //    "Max Hit": 94,
+      //    "Speed": 1.5,
+      //    "Type": "Fist",
+      //    "Source": "MC",
+      //    "PPM": -1,
+      //    "Phase": 1,
+      //    "ID": 18203
+      // },
       {
          "Name": "R14 Claw (OH)",
          "Offhand": true,
@@ -3613,10 +3613,11 @@ var gear = {
          "ID": 19110
       },
       {
-         "Name": "Dal'Rend's Sacred Charge",
+         "Name": "Dal'Rend's Sacred Charge (with set)",
          "Mainhand": true,
          "Crit": 1,
          "Str": 4,
+         "AP": 50,
          "Min Hit": 81,
          "Max Hit": 151,
          "Speed": 2.8,
@@ -3803,18 +3804,18 @@ var gear = {
          "Phase": 5,
          "ID": 22378
       },
-      {
-         "Name": "[TODO] Sword of Zeal",
-         "Mainhand": true,
-         "Min Hit": 81,
-         "Max Hit": 151,
-         "Speed": 2.8,
-         "Type": "Sword",
-         "Source": "Other",
-         "PPM": -1,
-         "Phase": 1,
-         "ID": 6622
-      },
+      // {
+      //    "Name": "[TODO] Sword of Zeal",
+      //    "Mainhand": true,
+      //    "Min Hit": 81,
+      //    "Max Hit": 151,
+      //    "Speed": 2.8,
+      //    "Type": "Sword",
+      //    "Source": "Other",
+      //    "PPM": -1,
+      //    "Phase": 1,
+      //    "ID": 6622
+      // },
       {
          "Name": "Zulian Slicer",
          "AP": 12,
@@ -4764,6 +4765,7 @@ function buildPlayer(testgear) {
       else player.spells[lname] = eval(`new ${name}(player)`);
    });
    player.target.armor = settings.armor;
+   player.target.mitigation = 1 - 15*((settings.resistance + 24) / 6000);
    if (player.talents.flurry) player.auras.flurry = new Flurry(player);
    if (player.spells.overpower) player.auras.battlestance = new BattleStance(player);
 

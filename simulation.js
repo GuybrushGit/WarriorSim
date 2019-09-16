@@ -354,7 +354,7 @@ class Player {
     magicproc(dmg) {
         // todo spell crit
         if (rng(1, 10000) < 1700) return 0;
-        return dmg;
+        return dmg * this.target.mitigation;
     }
     physproc(dmg) {
         let tmp = 0;
