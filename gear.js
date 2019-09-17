@@ -70,7 +70,7 @@ var gear = {
          "Str": 18,
          "AC": 445,
          "Source": "Quest",
-         "Phase": 1,
+         "Phase": 4,
          "ID": 20521
       },
       {
@@ -473,7 +473,7 @@ var gear = {
          "Agi": 10,
          "AC": 410,
          "Source": "Quest",
-         "Phase": 1,
+         "Phase": 4,
          "ID": 20517
       },
       {
@@ -2007,13 +2007,13 @@ var gear = {
          "ID": 13967
       }
    ],
-   "finger": [
+   "finger1": [
       {
          "Name": "Archimtiros' Ring of Reckoning",
          "Sta": 28,
          "Agi": 14,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19376
       },
       {
@@ -2021,8 +2021,8 @@ var gear = {
          "Hit": 2,
          "Sta": 10,
          "Agi": 16,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": "1",
          "ID": 17063
       },
       {
@@ -2030,8 +2030,8 @@ var gear = {
          "Crit": 1,
          "Hit": 1,
          "Str": 6,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "5",
          "ID": 21182
       },
       {
@@ -2039,24 +2039,24 @@ var gear = {
          "Hit": 1,
          "Sta": 8,
          "Agi": 14,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 19925
       },
       {
          "Name": "Band of Reanimation",
          "Sta": 22,
-         "Agi": 23,
-         "Source": "",
-         "Phase": "",
+         "Agi": 34,
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 22961
       },
       {
          "Name": "Band of the Ogre King",
          "Str": 14,
          "Sta": 13,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "2",
          "ID": 18522
       },
       {
@@ -2064,8 +2064,8 @@ var gear = {
          "Crit": 1,
          "Hit": 1,
          "AP": 52,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 23038
       },
       {
@@ -2073,8 +2073,8 @@ var gear = {
          "Hit": 1,
          "Sta": 6,
          "AP": 20,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 17713
       },
       {
@@ -2082,8 +2082,8 @@ var gear = {
          "Str": 12,
          "Sta": 9,
          "Agi": 22,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19432
       },
       {
@@ -2092,8 +2092,8 @@ var gear = {
          "Hit": 1,
          "Sta": 11,
          "AP": 16,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": "3",
          "ID": 19325
       },
       {
@@ -2101,8 +2101,8 @@ var gear = {
          "Crit": 1,
          "Str": 6,
          "Sta": 7,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 12548
       },
       {
@@ -2110,34 +2110,25 @@ var gear = {
          "Hit": 1,
          "Sta": 14,
          "AP": 48,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19384
       },
       {
-         "Name": "Might of Cenarius",
+         "Name": "[TODO] Might of Cenarius",
          "Hit": 1,
          "Sta": 8,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "5",
          "ID": 21189
-      },
-      {
-         "Name": "Naglering",
-         "Sta": 10,
-         "Defense": 5,
-         "AC": 50,
-         "Source": "",
-         "Phase": "",
-         "ID": 11669
       },
       {
          "Name": "Painweaver Band",
          "Crit": 1,
          "Sta": 7,
          "AP": 16,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 13098
       },
       {
@@ -2155,8 +2146,8 @@ var gear = {
          "Str": 5,
          "Sta": 8,
          "AP": 30,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": "1",
          "ID": 18821
       },
       {
@@ -2165,8 +2156,8 @@ var gear = {
          "Agi": 12,
          "Defense": 9,
          "AC": 100,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 21601
       },
       {
@@ -2174,16 +2165,16 @@ var gear = {
          "Hit": 1,
          "Sta": 9,
          "AP": 30,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": "5",
          "ID": 21477
       },
       {
          "Name": "Ring of the Godslayer",
          "Sta": 17,
          "Agi": 27,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 21596
       },
       {
@@ -2191,8 +2182,8 @@ var gear = {
          "Crit": 1,
          "Sta": 12,
          "AP": 40,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 21677
       },
       {
@@ -2200,16 +2191,16 @@ var gear = {
          "Crit": 1,
          "Sta": 8,
          "AP": 20,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 19898
       },
       {
          "Name": "Seal of the Gurubashi Berserker",
          "Sta": 13,
          "AP": 40,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 22722
       },
       {
@@ -2217,8 +2208,8 @@ var gear = {
          "Hit": 1,
          "Sta": 24,
          "AC": 140,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 23018
       },
       {
@@ -2226,8 +2217,8 @@ var gear = {
          "Crit": 1,
          "Str": 11,
          "Sta": 14,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "5",
          "ID": 21393
       },
       {
@@ -2235,132 +2226,484 @@ var gear = {
          "Hit": 1,
          "Sta": 13,
          "Agi": 24,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "5",
          "ID": 21205
       },
       {
          "Name": "Tarnished Elven Ring",
          "Hit": 1,
          "Agi": 15,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "2",
          "ID": 18500
       }
    ],
-   "trinket": [
+   "finger2": [
       {
-         "Name": "Badge of the Swarmguard",
-         "Source": "",
-         "Phase": "",
-         "ID": 21670
+         "Name": "Archimtiros' Ring of Reckoning",
+         "Sta": 28,
+         "Agi": 14,
+         "Source": "BWL",
+         "Phase": "3",
+         "ID": 19376
+      },
+      {
+         "Name": "Band of Accuria",
+         "Hit": 2,
+         "Sta": 10,
+         "Agi": 16,
+         "Source": "MC",
+         "Phase": "1",
+         "ID": 17063
+      },
+      {
+         "Name": "Band of Earthen Might",
+         "Crit": 1,
+         "Hit": 1,
+         "Str": 6,
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21182
+      },
+      {
+         "Name": "Band of Jin",
+         "Hit": 1,
+         "Sta": 8,
+         "Agi": 14,
+         "Source": "ZG",
+         "Phase": "4",
+         "ID": 19925
+      },
+      {
+         "Name": "Band of Reanimation",
+         "Sta": 22,
+         "Agi": 34,
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 22961
+      },
+      {
+         "Name": "Band of the Ogre King",
+         "Str": 14,
+         "Sta": 13,
+         "Source": "Dungeon",
+         "Phase": "2",
+         "ID": 18522
+      },
+      {
+         "Name": "Band of Unnatural Forces",
+         "Crit": 1,
+         "Hit": 1,
+         "AP": 52,
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 23038
+      },
+      {
+         "Name": "Blackstone Ring",
+         "Hit": 1,
+         "Sta": 6,
+         "AP": 20,
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 17713
+      },
+      {
+         "Name": "Circle of Applied Force",
+         "Str": 12,
+         "Sta": 9,
+         "Agi": 22,
+         "Source": "BWL",
+         "Phase": "3",
+         "ID": 19432
+      },
+      {
+         "Name": "Don Julio's Band",
+         "Crit": 1,
+         "Hit": 1,
+         "Sta": 11,
+         "AP": 16,
+         "Source": "PVP",
+         "Phase": "3",
+         "ID": 19325
+      },
+      {
+         "Name": "Magni's Will",
+         "Crit": 1,
+         "Str": 6,
+         "Sta": 7,
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 12548
+      },
+      {
+         "Name": "Master Dragonslayer's Ring",
+         "Hit": 1,
+         "Sta": 14,
+         "AP": 48,
+         "Source": "BWL",
+         "Phase": "3",
+         "ID": 19384
+      },
+      {
+         "Name": "[TODO] Might of Cenarius",
+         "Hit": 1,
+         "Sta": 8,
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21189
+      },
+      {
+         "Name": "Painweaver Band",
+         "Crit": 1,
+         "Sta": 7,
+         "AP": 16,
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 13098
+      },
+      {
+         "Name": "Protector's Band",
+         "Str": 12,
+         "Sta": 8,
+         "Agi": 11,
+         "Source": "PVP",
+         "Phase": 3,
+         "ID": 19514
+      },
+      {
+         "Name": "Quick Strike Ring",
+         "Crit": 1,
+         "Str": 5,
+         "Sta": 8,
+         "AP": 30,
+         "Source": "MC",
+         "Phase": "1",
+         "ID": 18821
+      },
+      {
+         "Name": "Ring of Emperor Vek'lor",
+         "Sta": 18,
+         "Agi": 12,
+         "Defense": 9,
+         "AC": 100,
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 21601
+      },
+      {
+         "Name": "Ring of Fury",
+         "Hit": 1,
+         "Sta": 9,
+         "AP": 30,
+         "Source": "AQ20",
+         "Phase": "5",
+         "ID": 21477
+      },
+      {
+         "Name": "Ring of the Godslayer",
+         "Sta": 17,
+         "Agi": 27,
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 21596
+      },
+      {
+         "Name": "Ring of the Qiraji Fury",
+         "Crit": 1,
+         "Sta": 12,
+         "AP": 40,
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 21677
+      },
+      {
+         "Name": "Seal of Jin",
+         "Crit": 1,
+         "Sta": 8,
+         "AP": 20,
+         "Source": "ZG",
+         "Phase": "4",
+         "ID": 19898
+      },
+      {
+         "Name": "Seal of the Gurubashi Berserker",
+         "Sta": 13,
+         "AP": 40,
+         "Source": "ZG",
+         "Phase": "4",
+         "ID": 22722
+      },
+      {
+         "Name": "Signet of the Fallen Defender",
+         "Hit": 1,
+         "Sta": 24,
+         "AC": 140,
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 23018
+      },
+      {
+         "Name": "Signet of Unyielding Strength",
+         "Crit": 1,
+         "Str": 11,
+         "Sta": 14,
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21393
+      },
+      {
+         "Name": "Signet Ring of the Bronze Dragonflight",
+         "Hit": 1,
+         "Sta": 13,
+         "Agi": 24,
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21205
+      },
+      {
+         "Name": "Tarnished Elven Ring",
+         "Hit": 1,
+         "Agi": 15,
+         "Source": "Dungeon",
+         "Phase": "2",
+         "ID": 18500
+      }
+   ],
+   "trinket1": [
+      {
+         "Name": "[TODO] Badge of the Swarmguard",
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 21670,
+         "Spell": "Swarmguard"
       },
       {
          "Name": "Blackhand's Breadth",
          "Crit": 2,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "1",
          "ID": 13965
       },
       {
          "Name": "Counterattack Lodestone",
          "AP": 22,
          "Parry": 1,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "2",
          "ID": 18537
       },
       {
-         "Name": "Darkmoon Card: Maelstrom",
-         "Source": "",
-         "Phase": "",
-         "ID": 19289
+         "Name": "[TODO] Darkmoon Card: Maelstrom",
+         "Source": "Quest",
+         "Phase": "3",
+         "ID": 19289,
+         "ProcSpell": "Maelstorm"
       },
       {
-         "Name": "Diamond Flask",
+         "Name": "[TODO] Diamond Flask",
          "Str": 75,
-         "Source": "",
-         "Phase": "",
-         "ID": 20130
+         "Source": "Quest",
+         "Phase": "4",
+         "ID": 20130,
+         "Spell": "Flask"
       },
       {
          "Name": "Drake Fang Talisman",
          "Hit": 2,
          "AP": 56,
          "Dodge": 1,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19406
       },
       {
-         "Name": "Earthstrike",
-         "Source": "",
-         "Phase": "",
-         "ID": 21180
+         "Name": "[TODO] Earthstrike",
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21180,
+         "Spell": "Earthstrike"
       },
       {
-         "Name": "Hand of Justice",
+         "Name": "[TODO] Hand of Justice",
          "AP": 20,
-         "Source": "",
-         "Phase": "",
-         "ID": 11815
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 11815,
+         "ProcExtra": 1,
+         "ProcChance": 2
       },
       {
-         "Name": "Heart of Wyrmthalak",
-         "Source": "",
-         "Phase": "",
-         "ID": 22321
+         "Name": "[TODO] Heart of Wyrmthalak",
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 22321,
+         "ProcSpell": "Wyrmthalak"
       },
       {
-         "Name": "Jom Gabbar",
-         "Source": "",
-         "Phase": "",
-         "ID": 23570
+         "Name": "[TODO] Jom Gabbar",
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 23570,
+         "Spell": "Gabbar"
       },
       {
-         "Name": "Kiss of the Spider",
+         "Name": "[TODO] Kiss of the Spider",
          "Crit": 1,
          "Hit": 1,
-         "Source": "",
-         "Phase": "",
-         "ID": 22954
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 22954,
+         "Spell": "Spider"
       },
       {
          "Name": "Rune of the Guard Captain",
          "Hit": 1,
          "AP": 20,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "1",
          "ID": 19120
       },
       {
          "Name": "Seal of the Dawn",
          "AP": 81,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "1",
          "ID": 13209
       },
       {
-         "Name": "Slayer's Crest",
+         "Name": "[TODO] Slayer's Crest",
          "AP": 64,
-         "Source": "",
-         "Phase": "",
-         "ID": 23041
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 23041,
+         "Spell": "Crest"
+      }
+   ],
+   "trinket2": [
+      {
+         "Name": "[TODO] Badge of the Swarmguard",
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 21670,
+         "Spell": "Swarmguard"
+      },
+      {
+         "Name": "Blackhand's Breadth",
+         "Crit": 2,
+         "Source": "Quest",
+         "Phase": "1",
+         "ID": 13965
+      },
+      {
+         "Name": "Counterattack Lodestone",
+         "AP": 22,
+         "Parry": 1,
+         "Source": "Dungeon",
+         "Phase": "2",
+         "ID": 18537
+      },
+      {
+         "Name": "[TODO] Darkmoon Card: Maelstrom",
+         "Source": "Quest",
+         "Phase": "3",
+         "ID": 19289,
+         "ProcSpell": "Maelstorm"
+      },
+      {
+         "Name": "[TODO] Diamond Flask",
+         "Str": 75,
+         "Source": "Quest",
+         "Phase": "4",
+         "ID": 20130,
+         "Spell": "Flask"
+      },
+      {
+         "Name": "Drake Fang Talisman",
+         "Hit": 2,
+         "AP": 56,
+         "Dodge": 1,
+         "Source": "BWL",
+         "Phase": "3",
+         "ID": 19406
+      },
+      {
+         "Name": "[TODO] Earthstrike",
+         "Source": "Quest",
+         "Phase": "5",
+         "ID": 21180,
+         "Spell": "Earthstrike"
+      },
+      {
+         "Name": "[TODO] Hand of Justice",
+         "AP": 20,
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 11815,
+         "ProcExtra": 1,
+         "ProcChance": 2
+      },
+      {
+         "Name": "[TODO] Heart of Wyrmthalak",
+         "Source": "Dungeon",
+         "Phase": "1",
+         "ID": 22321,
+         "ProcSpell": "Wyrmthalak"
+      },
+      {
+         "Name": "[TODO] Jom Gabbar",
+         "Source": "AQ40",
+         "Phase": "5",
+         "ID": 23570,
+         "Spell": "Gabbar"
+      },
+      {
+         "Name": "[TODO] Kiss of the Spider",
+         "Crit": 1,
+         "Hit": 1,
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 22954,
+         "Spell": "Spider"
+      },
+      {
+         "Name": "Rune of the Guard Captain",
+         "Hit": 1,
+         "AP": 20,
+         "Source": "Quest",
+         "Phase": "1",
+         "ID": 19120
+      },
+      {
+         "Name": "Seal of the Dawn",
+         "AP": 81,
+         "Source": "Quest",
+         "Phase": "1",
+         "ID": 13209
+      },
+      {
+         "Name": "[TODO] Slayer's Crest",
+         "AP": 64,
+         "Source": "Naxx",
+         "Phase": "6",
+         "ID": 23041,
+         "Spell": "Crest"
       }
    ],
    "ranged": [
       {
          "Name": "Ancient Bone Bow",
          "Agi": 11,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 18680
       },
       {
          "Name": "Bow of Taut Sinew",
          "AP": 22,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": "5",
          "ID": 21478
       },
       {
@@ -2368,47 +2711,47 @@ var gear = {
          "Str": 2,
          "Sta": 9,
          "Agi": 3,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "1",
          "ID": 16996
       },
       {
          "Name": "Heartstriker",
          "Sta": 9,
          "AP": 24,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19350
       },
       {
          "Name": "Hoodoo Hunting Bow",
          "Sta": 4,
          "Agi": 10,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 19993
       },
       {
          "Name": "Huhuran's Stinger",
          "Agi": 18,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 21616
       },
       {
          "Name": "Malgen's Long Bow",
          "Sta": 4,
          "AP": 20,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "1",
          "ID": 22318
       },
       {
          "Name": "Mandokir's Sting",
          "Sta": 8,
          "Agi": 11,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 20038
       },
       {
@@ -2416,62 +2759,63 @@ var gear = {
          "Crit": 1,
          "Sta": 6,
          "AP": 16,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 22811
       },
       {
          "Name": "Outrunner's Bow",
          "Sta": 10,
          "Agi": 4,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": "3",
          "ID": 19562
       },
       {
          "Name": "Riphook",
          "AP": 22,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 12653
       },
       {
          "Name": "Satyr's Bow",
          "Hit": 1,
          "Agi": 3,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "2",
          "ID": 18323
       },
       {
          "Name": "Striker's Mark",
          "Hit": 1,
          "AP": 22,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": "1",
          "ID": 17069
       },
       {
          "Name": "Blackcrow",
          "Hit": 1,
-         "Source": "",
-         "Phase": "",
+         "Agi": 3,
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 12651
       },
       {
          "Name": "Bloodseeker",
          "Str": 8,
          "Agi": 7,
-         "Source": "",
-         "Phase": "",
+         "Source": "PVP",
+         "Phase": "3",
          "ID": 19107
       },
       {
          "Name": "Carapace Spine Crossbow",
          "Sta": 9,
          "Agi": 4,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 18738
       },
       {
@@ -2480,127 +2824,127 @@ var gear = {
          "Str": 5,
          "Sta": 5,
          "Agi": 7,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 21459
       },
       {
          "Name": "Fahrad's Reloading Repeater",
          "Hit": 1,
          "Agi": 4,
-         "Source": "",
-         "Phase": "",
+         "Source": "Quest",
+         "Phase": "5",
          "ID": 22347
       },
       {
          "Name": "Heartseeking Crossbow",
          "Sta": 4,
          "Agi": 9,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "1",
          "ID": 13040
       },
       {
          "Name": "Nerubian Slavemaker",
          "Crit": 1,
          "AP": 24,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 22812
       },
       {
          "Name": "Polished Ironwood Crossbow",
          "Sta": 5,
          "AP": 24,
-         "Source": "",
-         "Phase": "",
+         "Source": "Emeriss",
+         "Phase": "4",
          "ID": 20599
       },
       {
          "Name": "Skull Splitting Crossbow",
          "Str": 3,
          "AP": 14,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "1",
          "ID": 13039
       },
       {
          "Name": "Blastershot Launcher",
          "Crit": 1,
          "Sta": 6,
-         "Source": "",
-         "Phase": "",
+         "Source": "MC",
+         "Phase": "1",
          "ID": 17072
       },
       {
          "Name": "Burstshot Harquebus",
          "Sta": 8,
          "AP": 10,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "1",
          "ID": 13248
       },
       {
          "Name": "Crystal Slugthrower",
          "Sta": 4,
          "AP": 20,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "5",
          "ID": 20722
       },
       {
          "Name": "Dragonbreath Hand Cannon",
          "Sta": 7,
          "Agi": 14,
-         "Source": "",
-         "Phase": "",
+         "Source": "BWL",
+         "Phase": "3",
          "ID": 19368
       },
       {
          "Name": "Gurubashi Dwarf Destroyer",
          "AP": 30,
-         "Source": "",
-         "Phase": "",
+         "Source": "ZG",
+         "Phase": "4",
          "ID": 19853
       },
       {
          "Name": "Guttbuster",
          "Str": 3,
          "Agi": 8,
-         "Source": "",
-         "Phase": "",
+         "Source": "Other",
+         "Phase": "1",
          "ID": 13139
       },
       {
          "Name": "Larvae of the Great Worm",
          "Crit": 1,
          "AP": 18,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ40",
+         "Phase": "5",
          "ID": 23557
       },
       {
          "Name": "Silithid Husked Launcher",
          "Sta": 10,
          "Agi": 4,
-         "Source": "",
-         "Phase": "",
+         "Source": "AQ20",
+         "Phase": "5",
          "ID": 21800
       },
       {
          "Name": "Toxin Injector",
          "Sta": 10,
          "AP": 28,
-         "Source": "",
-         "Phase": "",
+         "Source": "Naxx",
+         "Phase": "6",
          "ID": 22810
       },
       {
          "Name": "Willey's Portable Howitzer",
          "Sta": 9,
          "AP": 8,
-         "Source": "",
-         "Phase": "",
+         "Source": "Dungeon",
+         "Phase": "1",
          "ID": 13380
       }
    ],
@@ -2617,18 +2961,18 @@ var gear = {
          "ID": 19852,
          "MagicDmg": 113
       },
-      // {
-      //    "Name": "[TODO] Annihilator",
-      //    "Mainhand": true,
-      //    "Min Hit": 49,
-      //    "Max Hit": 92,
-      //    "Speed": 1.7,
-      //    "Type": "Axe",
-      //    "Source": "Crafting",
-      //    "PPM": -1,
-      //    "Phase": 1,
-      //    "ID": 12798
-      // },
+      {
+         "Name": "[TODO] Annihilator",
+         "Mainhand": true,
+         "Min Hit": 49,
+         "Max Hit": 92,
+         "Speed": 1.7,
+         "Type": "Axe",
+         "Source": "Crafting",
+         "PPM": -1,
+         "Phase": 1,
+         "ID": 12798
+      },
       {
          "Name": "Axe of the Deep Woods",
          "Mainhand": true,
@@ -3224,19 +3568,19 @@ var gear = {
          "Phase": 2,
          "ID": 18202
       },
-      // {
-      //    "Name": "[TODO] Eskhandar's Right Claw",
-      //    "Mainhand": true,
-      //    "Agi": 4,
-      //    "Min Hit": 50,
-      //    "Max Hit": 94,
-      //    "Speed": 1.5,
-      //    "Type": "Fist",
-      //    "Source": "MC",
-      //    "PPM": -1,
-      //    "Phase": 1,
-      //    "ID": 18203
-      // },
+      {
+         "Name": "[TODO] Eskhandar's Right Claw",
+         "Mainhand": true,
+         "Agi": 4,
+         "Min Hit": 50,
+         "Max Hit": 94,
+         "Speed": 1.5,
+         "Type": "Fist",
+         "Source": "MC",
+         "PPM": -1,
+         "Phase": 1,
+         "ID": 18203
+      },
       {
          "Name": "R14 Claw (OH)",
          "Offhand": true,
@@ -3804,18 +4148,18 @@ var gear = {
          "Phase": 5,
          "ID": 22378
       },
-      // {
-      //    "Name": "[TODO] Sword of Zeal",
-      //    "Mainhand": true,
-      //    "Min Hit": 81,
-      //    "Max Hit": 151,
-      //    "Speed": 2.8,
-      //    "Type": "Sword",
-      //    "Source": "Other",
-      //    "PPM": -1,
-      //    "Phase": 1,
-      //    "ID": 6622
-      // },
+      {
+         "Name": "[TODO] Sword of Zeal",
+         "Mainhand": true,
+         "Min Hit": 81,
+         "Max Hit": 151,
+         "Speed": 2.8,
+         "Type": "Sword",
+         "Source": "Other",
+         "PPM": -1,
+         "Phase": 1,
+         "ID": 6622
+      },
       {
          "Name": "Zulian Slicer",
          "AP": 12,
@@ -4480,10 +4824,10 @@ function buildGear() {
 
    for (let prop in gear) {
 
-      if (prop == 'finger' || prop == 'trinket' || prop == 'ranged' || prop == 'weapon' || prop == 'enchant')
+      if (prop == 'weapon' || prop == 'enchant')
          continue;
 
-      let section = `<section><h3>${prop}</h3>
+      let section = `<section><h3>${prop.replace('1', ' 1').replace('2', ' 2')}</h3>
          <table class="gear" data-type="${prop}">
             <thead>
                <tr>
@@ -4582,6 +4926,10 @@ function getGearFromRow(tr) {
          aura.crit = parseInt(item.Crit || 0);
          aura.hit = parseInt(item.Hit || 0);
          aura.slot = slot;
+         aura.spell = (item.Spell || '');
+         aura.procspell = (item.ProcSpell || '');
+         aura.procextra = (item.ProcExtra || '');
+         aura.procchance = (item.ProcChance || '');
          let skill = parseInt(item.Skill || 0);
          if (skill > 0) {
             aura.type = WEAPONTYPE[item.Type.toUpperCase()];
@@ -4638,6 +4986,15 @@ function addGearToPlayer(player, aura) {
             player.auras[aura.procspell.toLowerCase()] = eval('new ' + aura.procspell + '(player)');
             player.oh.proc1.spell = player.auras[aura.procspell.toLowerCase()];
          }
+      }
+   }
+
+   if (aura.slot == 'trinket') {
+      if (aura.procchance) {
+         player.attackproc = {};
+         player.attackproc.chance = aura.procchance;
+         player.attackproc.extra = aura.procextra;
+         player.attackproc.spell = aura.procspell;
       }
    }
 }
