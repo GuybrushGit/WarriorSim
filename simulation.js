@@ -350,6 +350,9 @@ class Player {
                 if (rng(1, 10000) < this.talents.swordproc * 100)
                     this.extraattacks++;
             }
+            if (this.attackproc && rng(1, 10000) < this.attackproc.chance) {
+                if (this.attackproc.extra) this.extraattacks += this.attackproc.extra;
+            }
         }
         return procdmg;
     }
