@@ -4989,10 +4989,10 @@ function addGearToPlayer(player, aura) {
       }
    }
 
-   if (aura.slot == 'trinket') {
+   if (aura.slot && aura.slot.indexOf('trinket') > -1) {
       if (aura.procchance) {
          player.attackproc = {};
-         player.attackproc.chance = aura.procchance;
+         player.attackproc.chance = aura.procchance * 100;
          player.attackproc.extra = aura.procextra;
          player.attackproc.spell = aura.procspell;
       }
