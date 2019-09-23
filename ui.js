@@ -61,7 +61,7 @@ function updatePanel() {
     $('.char #agi').text(player.stats.agi);
     $('.char #ap').text(player.stats.ap);
     $('.char #skill').html(player.stats['skill_' + player.mh.type] + ' <small>MH</small>' + space + player.stats['skill_' + player.oh.type] + ' <small>OH</small>');
-    $('.char #miss').html(Math.max(player.mh.miss, 0).toFixed(2) + '% <small>MH</small>' + space + (player.mh.miss + 19).toFixed(2) + '% <small>DW</small>');
+    $('.char #miss').html(Math.max(player.mh.miss, 0).toFixed(2) + '% <small>1H</small>' + space + Math.max(player.mh.dwmiss, 0).toFixed(2) + '% <small>DW</small>');
     let mhcrit = player.crit + player.mh.crit;
     let ohcrit = player.crit + player.oh.crit;
     $('.char #crit').html(mhcrit.toFixed(2) + '% <small>MH</small>' + space + ohcrit.toFixed(2) + '% <small>OH</small>');

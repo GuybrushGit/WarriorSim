@@ -109,6 +109,8 @@ class Player {
         this.armorReduction = this.getArmorReduction();
         this.mh.miss = this.getMissChance(this.mh);
         this.oh.miss = this.getMissChance(this.oh);
+        this.mh.dwmiss = (this.mh.miss > 0 ? this.mh.miss * 0.8 : this.mh.miss) + 20;
+        this.oh.dwmiss = (this.oh.miss > 0 ? this.oh.miss * 0.8 : this.oh.miss) + 20;
         this.mh.dodge = this.getDodgeChance(this.mh);
         this.oh.dodge = this.getDodgeChance(this.oh);
     }
@@ -235,7 +237,7 @@ class Player {
     rollweapon(weapon) {
         let tmp = 0;
         let roll = rng(1, 10000);
-        tmp += Math.max(weapon.miss + 19, 0) * 100;
+        tmp += Math.max(weapon.dwmiss, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         tmp += weapon.dodge * 100;
         if (roll < tmp) return RESULT.DODGE;
