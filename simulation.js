@@ -237,7 +237,10 @@ class Player {
     rollweapon(weapon) {
         let tmp = 0;
         let roll = rng(1, 10000);
-        tmp += Math.max(weapon.dwmiss, 0) * 100;
+        if (this.nextswinghs) 
+            tmp += Math.max(this.mh.miss, 0) * 100;
+        else 
+            tmp += Math.max(weapon.dwmiss, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         tmp += weapon.dodge * 100;
         if (roll < tmp) return RESULT.DODGE;
@@ -269,11 +272,16 @@ class Player {
         let heroicstrike = !weapon.offhand && this.nextswinghs;
         let dmg = weapon.dmg(heroicstrike);
         let result = this.rollweapon(weapon);
-        if (heroicstrike &&  this.spells.heroicstrike.cost <= this.rage) {
-            this.nextswinghs = false;
-            spell = this.spells.heroicstrike;
-            this.rage -= spell.cost;
-            result = this.rollspell(spell);
+        if (heroicstrike) {
+            if (this.spells.heroicstrike.cost <= this.rage) {
+                this.nextswinghs = false;
+                spell = this.spells.heroicstrike;
+                this.rage -= spell.cost;
+                result = this.rollspell(spell);
+            }
+            else {
+                this.nextswinghs = false;
+            }
         }
         if (!extra)
             procdmg = this.procattack(spell, weapon, result);
