@@ -92,9 +92,9 @@ var buffs = [
       name: "Mark of the Wild",
       iconname: "spell_nature_regeneration",
       group: "",
-      str: 12,
-      agi: 12,
-      int: 12,
+      str: 16,
+      agi: 16,
+      int: 16,
    },
    {
       id: 20906,
