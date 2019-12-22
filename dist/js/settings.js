@@ -151,7 +151,7 @@ SIM.SETTINGS = {
         for(let spell of spells) {
 
             let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
-            <img src="dist/img/${spell.iconname}.jpg " alt="${spell.name}">
+            <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div><ul class="options"></ul></div>`);
 
@@ -194,7 +194,7 @@ SIM.SETTINGS = {
             let group = buff.group ? `data-group="${buff.group}"`: '';
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"`: '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
-                            <img src="dist/img/${buff.iconname}.jpg " alt="${buff.name}">
+                            <img src="dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
                             <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             view.buffs.append(html);
