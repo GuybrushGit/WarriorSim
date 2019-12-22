@@ -1,0 +1,36 @@
+$item-uncommon: #1eff00;
+$item-rare: #0070dd;
+$item-epic: #a335ee;
+$item-legendary: #ff8000;
+$icon-border: #FFCD45;
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0;
+    background: #123;
+    color: #ddd;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    position: relative;
+}
+
+.wrapper {
+    padding: 20px 40px;
+}
+
+.wh-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}

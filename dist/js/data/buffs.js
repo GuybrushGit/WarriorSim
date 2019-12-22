@@ -16,6 +16,7 @@ var buffs = [
       group: "",
       ap: 140,
       crit: 5,
+      spellcrit: 10,
    },
    {
       id: 24425,
@@ -51,6 +52,14 @@ var buffs = [
       ap: 200,
    },
    {
+      id: 22820,
+      spellid: true,
+      name: "Slip'kik's Savvy",
+      iconname: "spell_holy_lesserheal02",
+      group: "",
+      spellcrit: 3,
+   },
+   {
       id: 15366,
       spellid: true,
       name: "Songflower Serenade",
@@ -59,6 +68,7 @@ var buffs = [
       crit: 5,
       str: 15,
       agi: 15,
+      spellcrit: 5,
    },
    {
       id: 16609,
@@ -83,7 +93,8 @@ var buffs = [
       iconname: "spell_nature_regeneration",
       group: "",
       str: 12,
-      agi: 12
+      agi: 12,
+      int: 12,
    },
    {
       id: 20906,
@@ -100,7 +111,7 @@ var buffs = [
       iconname: "spell_magic_magearmor",
       group: "",
       strmod: 10,
-      agimod: 10
+      agimod: 10,
    },
    {
       id: 19838,
@@ -204,50 +215,4 @@ var buffs = [
       group: "food",
       str: 10
    },
-   {
-      id: 12450,
-      name: "Juju Flurry",
-      iconname: "inv_misc_monsterscales_17",
-      spell: "JujuFlurry",
-   },
-   {
-      id: 13442,
-      name: "Mighty Rage Potion",
-      iconname: "inv_potion_41",
-      spell: "RagePotion",
-   },
 ];
-
-
-function buildBuffs() {
-   let article = $('article.buffs');
-   for (let buff of buffs) {
-      let div = $('<div class="buff"><img src="img/' + buff.iconname.toLowerCase() + '.jpg" alt="' + buff.name + '"></div>');
-      div.attr('data-group', buff.group);
-      div.attr('data-ap', buff.ap);
-      div.attr('data-crit', buff.crit);
-      div.attr('data-agi', buff.agi);
-      div.attr('data-str', buff.str);
-      div.attr('data-agimod', buff.agimod);
-      div.attr('data-strmod', buff.strmod);
-      div.attr('data-dmgmod', buff.dmgmod);
-      div.attr('data-haste', buff.haste);
-      if (buff.spell) div.attr('data-spell', buff.spell);
-      if (buff.disableSpell) div.attr('data-disable-spell', buff.disableSpell);
-      div.click(function () {
-         let b = $(this);
-         b.toggleClass('active');
-         if (b.hasClass('active')) {
-            if (b.data('group'))
-               b.siblings().filter('[data-group="' + b.data('group') + '"]').removeClass('active');
-            if (b.data('disable-spell'))
-               $('.spell[data-id="' + b.data('disable-spell') + '"]').removeClass('active');
-         }
-         updatePanel();
-         updateSession();
-      });
-      div.append('<a href="https://classic.wowhead.com/' + (buff.spellid ? 'spell' : 'item') + '=' + buff.id + '" class="wh-tooltip"></a>');
-      article.append(div);
-   }
-
-}
