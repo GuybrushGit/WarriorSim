@@ -151,7 +151,7 @@ SIM.SETTINGS = {
         for(let spell of spells) {
 
             let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
-            <img src="img/${spell.iconname}.jpg " alt="${spell.name}">
+            <img src="dist/img/${spell.iconname}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div><ul class="options"></ul></div>`);
 
@@ -194,7 +194,7 @@ SIM.SETTINGS = {
             let group = buff.group ? `data-group="${buff.group}"`: '';
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"`: '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
-                            <img src="img/${buff.iconname}.jpg " alt="${buff.name}">
+                            <img src="dist/img/${buff.iconname}.jpg " alt="${buff.name}">
                             <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             view.buffs.append(html);
@@ -208,7 +208,7 @@ SIM.SETTINGS = {
             for (let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
             for (let talent of tree.t) {
                let div = $('<div class="icon" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
-               div.html('<img src="img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
+               div.html('<img src="dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
                if (talent.c >= talent.m) div.addClass('maxed');
                if (talent.enable && talent.c == 0) view.rotation.find('[data-id="' + talent.enable + '"]').addClass('hidden');
                if (talent.enable && talent.c > 0) view.rotation.find('[data-id="' + talent.enable + '"]').removeClass('hidden');

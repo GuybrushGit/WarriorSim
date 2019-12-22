@@ -3,15 +3,317 @@
 
 <head>
   <meta name="viewport" content="width=device-width">
-  <meta http-equiv="refresh" content="0; url=https://guybrushgit.github.io/WarriorSim/dist/">
   <title>Warrior Sim</title>
-  
 
+  <link href="dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
+  <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
+
+  <script type="text/javascript" src="dist/js/classes/player.js"></script>
+  <script type="text/javascript" src="dist/js/classes/simulation.js"></script>
+  <script type="text/javascript" src="dist/js/classes/spell.js"></script>
+  <script type="text/javascript" src="dist/js/classes/weapon.js"></script>
+
+  <script type="text/javascript" src="dist/js/data/gear.js"></script>
+  <script type="text/javascript" src="dist/js/data/races.js"></script>
+  <script type="text/javascript" src="dist/js/data/buffs.js"></script>
+  <script type="text/javascript" src="dist/js/data/spells.js"></script>
+  <script type="text/javascript" src="dist/js/data/talents.js"></script>
+  <script type="text/javascript" src="dist/js/data/session.js"></script>
+
+  <script type="text/javascript" src="dist/js/settings.js"></script>
+  <script type="text/javascript" src="dist/js/ui.js"></script>
+
+  <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
+  <script src="https://wow.zamimg.com/widgets/power.js"></script>
 </head>
 
-<body>
+<!-- TODOS
+
+  
+  ** HIGH PRIO **
+  ADD DEFAULT SESSION
+  close settings
+  oil of immolation
+  review ppms with discord
+  weapon todos
+  phase filters auto disable js
+  bogling
+  shadow oil
+  deep wounds mh or oh?
+  are extras consuming flurry?
+  compare execute data with real data
+  sunder armor
+
+
+  ** LOW PRIO **
+  CLEAVE + ADJACENT TARGETS
+  DEATH WISH + CRUSADER INTERACTION
+  LOOK FOR MISSING ITEM SETS
+  LOOK FOR MISSING ITEMS
+  CLASS GIFS
+  TALENT UI RULES
+  Berserking config haste
+  AQ books
+  Battle Squawk
+  Windfury Totem + Improved Weapon Totems
+  confirm dual wield formulas
  
+
+
+-->
+
+<body>
+  <div class="alerts"></div>
+
+  <section class="sidebar">
+    <div class="character">
+      <p><span id="race">Human</span> Warrior</p>
+      <p>Level 60</p>
+      <figure>
+        <img src="dist/img/udrogue.gif" alt="" />
+      </figure>
+
+      <ul>
+        <li>
+          <label>Strength</label>
+          <span id="str"></span>
+        </li>
+        <li>
+          <label>Agility</label>
+          <span id="agi"></span>
+        </li>
+        <li>
+          <label>Attack Power</label>
+          <span id="ap"></span>
+        </li>
+        <li>
+          <label>Skill</label>
+          <span id="skill"></span>
+        </li>
+        <li>
+          <label>Miss</label>
+          <span id="miss"></span>
+        </li>
+        <li>
+          <label>Crit</label>
+          <span id="crit"></span>
+        </li>
+        <li>
+          <label>Crit Cap</label>
+          <span id="critcap"></span>
+        </li>
+        <li>
+          <label>Dmg %</label>
+          <span id="dmgmod"></span>
+        </li>
+        <li>
+          <label>Haste</label>
+          <span id="haste"></span>
+        </li>
+      </ul>
+      <ul style="display: none;">
+        <li>
+          <label>Health</label>
+          <span id="health">3005</span>
+        </li>
+        <li>
+          <label>Stamina</label>
+          <span id="sta">80</span>
+        </li>
+        <li>
+          <label>Armor</label>
+          <span id="armor">5000</span>
+        </li>
+        <li>
+          <label>Defense</label>
+          <span id="defense">300</span>
+        </li>
+        <li>
+          <label>Dodge</label>
+          <span id="dodge">4.00%</span>
+        </li>
+        <li>
+          <label>Parry</label>
+          <span id="parry">4.00%</span>
+        </li>
+        <li>
+          <label>Block</label>
+          <span id="block">4.00%</span>
+        </li>
+        <li>
+          <label>Block Value</label>
+          <span id="blockvalue">30</span>
+        </li>
+      </ul>
+
+
+    </div>
+    <div class="bottom">
+      <div id="dps"></div>
+      <div id="stats"></div>
+      <div id="time"></div>
+      <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-settings">SETTINGS</a>
+    </div>
+  </section>
+
+  <section class="settings">
+    <div class="wrapper">
+
+      <article class="fight">
+        <label>Settings</label>
+        <ul>
+          <li>
+            <label>Level</label>
+            <input type="text" name="level" value="60" data-numberonly="true" readonly>
+          </li>
+          <li>
+            <label>Race</label>
+            <select dir="rtl" name="race">
+              <option value="Human">Human</option>
+              <option value="Dwarf">Dwarf</option>
+              <option value="Gnome">Gnome</option>
+              <option value="Night Elf">Night Elf</option>
+              <option value="Undead">Undead</option>
+              <option value="Orc">Orc</option>
+              <option value="Tauren">Tauren</option>
+              <option value="Troll">Troll</option>
+            </select>
+          </li>
+          <li>
+            <label>Simulations</label>
+            <input type="text" name="simulations" value="20000" data-numberonly="true">
+          </li>
+          <li>
+            <label>Fight Duration</label>
+            <input type="text" name="timesecs" value="100" data-numberonly="true">
+          </li>
+          <li>
+            <label>Initial Rage</label>
+            <input type="text" name="startrage" value="0" data-numberonly="true">
+          </li>
+          <li>
+            <label>Target Level</label>
+            <input type="text" name="targetlevel" value="63" data-numberonly="true" readonly>
+          </li>
+          <li>
+            <label>Target Magic Resistance</label>
+            <input type="text" name="targetresistance" value="0" data-numberonly="true">
+          </li>
+          <li style="display: none;">
+            <label>Adjacent Targets</label>
+            <input type="text" name="adjacent" value="0" data-numberonly="true">
+          </li>
+          <li style="display: none;">
+            <label>Adjacent Targets Level</label>
+            <input type="text" name="adjacentlevel" value="60" data-numberonly="true">
+          </li>
+          <li>
+            <label>Target Armor</label>
+            <input type="text" name="targetarmor" value="0" data-numberonly="true">
+          </li>
+        </ul>
+      </article>
+
+      <article class="buffs">
+        <label>Buffs</label>
+      </article>
+
+      <article class="rotation">
+        <label>Rotation</label>
+      </article>
+
+      <article class="talents">
+        <label>Talents</label>
+      </article>
+
+      <article class="filter">
+        <label>Gear Filter</label>
+        <ul class="sources">
+          <li data-id="quest">Quest</li>
+          <li data-id="crafting">Crafting</li>
+          <li data-id="dungeon">Dungeon</li>
+          <li data-id="onyxia">Onyxia</li>
+          <li data-id="mc">Molten Core</li>
+          <li data-id="bwl">Blackwing Lair</li>
+          <li data-id="zg">Zul'Gurub</li>
+          <li data-id="aq20">AQ20</li>
+          <li data-id="aq40">AQ40</li>
+          <li data-id="naxx">Naxxramas</li>
+          <li data-id="worldboss">World Boss</li>
+          <li data-id="pvp">PvP</li>
+          <li data-id="other">Other</li>
+        </ul>
+        <ul class="phases">
+          <li data-id="1" data-sources="onyxia,mc">P1</li>
+          <li data-id="2" data-sources="">P2</li>
+          <li data-id="3" data-sources="bwl">P3</li>
+          <li data-id="4" data-sources="zg">P4</li>
+          <li data-id="5" data-sources="aq20,aq40">P5</li>
+          <li data-id="6" data-sources="naxx">P6</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="main">
+    <nav>
+      <ul>
+        <li data-type="mainhand" class="active">Main Hand
+          <select id="mainhandfilter">
+            <option value="">All</option>
+            <option>Axe</option>
+            <option>Dagger</option>
+            <option>Fist</option>
+            <option>Mace</option>
+            <option>Sword</option>
+          </select>
+        </li>
+        <li data-type="offhand">Off Hand
+          <select id="offhandfilter">
+            <option value="">All</option>
+            <option>Axe</option>
+            <option>Dagger</option>
+            <option>Fist</option>
+            <option>Mace</option>
+            <option>Sword</option>
+          </select>
+        </li>
+        <li data-type="head">Head</li>
+        <li data-type="neck">Neck</li>
+        <li data-type="shoulder">Shoulder</li>
+        <li data-type="back">Back</li>
+        <li data-type="chest">Chest</li>
+        <li data-type="wrist">Wrist</li>
+        <li data-type="hands">Hands</li>
+        <li data-type="waist">Waist</li>
+        <li data-type="legs">Legs</li>
+        <li data-type="feet">Feet</li>
+        <li data-type="finger">Finger</li>
+        <li data-type="trinket">Trinket</li>
+        <li data-type="ranged">Ranged</li>
+      </ul>
+    </nav>
+
+    <div class="table-container"></div>
+    <a href="#" class="btn js-table">TABLE DPS</a>
+  </section>
+
+
+  <script>
+    $(document).ready(function () {
+      SIM.UI.init();
+      SIM.SETTINGS.init();
+    });
+  </script>
+
+
 </body>
 
 </html>

@@ -20,10 +20,10 @@ class Player {
             this.testItemType = testType;
         }
         this.target = {
-            level: parseInt(localStorage.targetlevel),
-            armor: parseInt(localStorage.targetarmor),
-            defense: parseInt(localStorage.targetlevel) * 5,
-            mitigation: 1 - 15 * ((parseInt(localStorage.targetresistance) + 24) / 6000),
+            level: parseInt($('input[name="targetlevel"]').val()),
+            armor: parseInt($('input[name="targetarmor"]').val()),
+            defense: parseInt($('input[name="targetlevel"]').val()) * 5,
+            mitigation: 1 - 15 * ((parseInt($('input[name="targetresistance"]').val()) + 24) / 6000),
         };
         this.base = {
             ap: 0,
@@ -64,7 +64,7 @@ class Player {
     }
     addRace() {
         for (let race of races) {
-            if (race.name == localStorage.race) {
+            if (race.name == $('select[name="race"]').val()) {
                 this.base.aprace = race.ap;
                 this.base.ap += race.ap;
                 this.base.str += race.str;

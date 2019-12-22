@@ -9,9 +9,9 @@ var RESULT = {
 class Simulation {
     constructor(player, callback_finished, callback_update) {
         this.player = player;
-        this.duration = parseInt(localStorage.timesecs);
-        this.startrage = parseInt(localStorage.startrage);
-        this.iterations = parseInt(localStorage.simulations);
+        this.duration = parseInt(('input[name="timesecs"]').val());
+        this.startrage = parseInt(('input[name="startrage"]').val());
+        this.iterations = parseInt($('input[name="simulations"]').val());
         this.idmg = 0;
         this.totaldmg = 0;
         this.mindmg = 99999;

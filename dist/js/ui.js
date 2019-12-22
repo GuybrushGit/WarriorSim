@@ -331,13 +331,13 @@ SIM.UI = {
         view.main.find('#mainhandfilter').val(localStorage.mainhandfilter);
         view.main.find('#offhandfilter').val(localStorage.offhandfilter);
 
-        let _buffs = !localStorage.buffs ? [] : JSON.parse(localStorage.buffs);
-        let _rotation = !localStorage.rotation ? [] : JSON.parse(localStorage.rotation);
-        let _sources = !localStorage.sources ? [0, 1, 2, 3, 4, 10, 11, 12] : JSON.parse(localStorage.sources);
-        let _phases = !localStorage.phases ? [0, 1] : JSON.parse(localStorage.phases);
-        let _talents = !localStorage.talents ? [] : JSON.parse(localStorage.talents);
-        let _gear = !localStorage.gear ? {} : JSON.parse(localStorage.gear);
-        let _enchant = !localStorage.enchant ? {} : JSON.parse(localStorage.enchant);
+        let _buffs = !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs);
+        let _rotation = !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation);
+        let _sources = !localStorage.sources ? JSON.parse(session.sources) : JSON.parse(localStorage.sources);
+        let _phases = !localStorage.phases ? JSON.parse(session.phases) : JSON.parse(localStorage.phases);
+        let _talents = !localStorage.talents ? JSON.parse(session.talents) : JSON.parse(localStorage.talents);
+        let _gear = !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear);
+        let _enchant = !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant);
 
         for (let tree in _talents)
             for (let talent in _talents[tree].t)
