@@ -5,7 +5,7 @@ var buffs = [
       name: "Battle Shout",
       iconname: "Ability_Warrior_BattleShout",
       group: "battleshout",
-      ap: 185,
+      ap: 193,
       disableSpell: "battleshout"
    },
    {
@@ -119,7 +119,7 @@ var buffs = [
       name: "Blessing of Might",
       iconname: "spell_holy_fistofjustice",
       group: "",
-      ap: 155
+      ap: 186
    },
    {
       id: 10627,
