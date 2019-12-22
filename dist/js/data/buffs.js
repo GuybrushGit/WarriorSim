@@ -215,4 +215,11 @@ var buffs = [
       group: "food",
       str: 10
    },
+   {
+      id: 5206,
+      name: "Bogling Root",
+      iconname: "inv_misc_herb_07",
+      group: "",
+      bonusdmg: 1
+   },
 ];

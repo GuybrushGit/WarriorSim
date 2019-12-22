@@ -3730,16 +3730,17 @@ var gear = {
          "id": 22378
       },
       {
-         "name": "[TODO] Sword of Zeal",
+         "name": "Sword of Zeal",
          "Mainhand": true,
          "mindmg": 81,
          "maxdmg": 151,
          "speed": 2.8,
          "type": "Sword",
          "source": "Other",
-         "ppm": -1,
+         "ppm": 1.8,
          "phase": 1,
-         "id": 6622
+         "id": 6622,
+         "procspell": "Zeal"
       },
       {
          "name": "Zulian Slicer",
@@ -5081,7 +5082,7 @@ var enchant = {
          "id": 20031,
          "spellid": true,
          "name": "Superior Striking",
-         "dmg": 5,
+         "bonusdmg": 5,
          "phase": 1
       },
       {
@@ -5094,7 +5095,7 @@ var enchant = {
       {
          "id": 12404,
          "name": "Dense Stone",
-         "dmg": 8,
+         "bonusdmg": 8,
          "phase": 1,
          "temp": true,
       },
@@ -5149,7 +5150,7 @@ var enchant = {
          "id": 20031,
          "spellid": true,
          "name": "Superior Striking",
-         "dmg": 5,
+         "bonusdmg": 5,
          "phase": 1
       },
       {
@@ -5162,7 +5163,7 @@ var enchant = {
       {
          "id": 12404,
          "name": "Dense Stone",
-         "dmg": 8,
+         "bonusdmg": 8,
          "phase": 1,
          "temp": true,
       },

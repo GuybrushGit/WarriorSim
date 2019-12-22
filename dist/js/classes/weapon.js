@@ -21,6 +21,7 @@ class Weapon {
         this.normSpeed = 2.4;
         this.offhand = offhand;
         this.crit = 0;
+        this.basebonusdmg = 0;
         this.bonusdmg = 0;
         this.type = WEAPONTYPE[item.type.toUpperCase()] || 0;
         if (this.type == WEAPONTYPE.AXE || this.type == WEAPONTYPE.BIGAXE) this.crit += player.talents.axecrit;
@@ -38,9 +39,7 @@ class Weapon {
                this.proc1.spell = player.auras[item.procspell.toLowerCase()];
             }
         }
-
-        if (enchant && enchant.dmg) 
-            this.bonusdmg += enchant.dmg;
+        
         if (enchant && enchant.ppm) {
             this.proc2 = {};
             this.proc2.chance = ~~(this.speed * enchant.ppm / 0.006);
@@ -55,9 +54,14 @@ class Weapon {
             }
         }
 
-        if (tempenchant && tempenchant.dmg) 
-            this.bonusdmg += tempenchant.dmg;
-
+        for(let buff of buffs)
+            if (buff.bonusdmg && buff.active)
+                this.basebonusdmg += buff.bonusdmg;
+        if (enchant && enchant.bonusdmg) 
+            this.basebonusdmg += enchant.bonusdmg;
+        if (tempenchant && tempenchant.bonusdmg) 
+            this.basebonusdmg += tempenchant.bonusdmg;
+        this.bonusdmg = this.basebonusdmg;
     }
     dmg(heroicstrike) {
         let dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed;

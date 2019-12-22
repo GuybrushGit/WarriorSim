@@ -339,6 +339,13 @@ class Player {
         if (this.auras.eskhandar && this.auras.eskhandar.timer)
             this.stats.haste /= (1 + this.auras.eskhandar.div_stats.haste / 100);
     }
+    updateBonusDmg() {
+        let bonus = 0;
+        if (this.auras.zeal && this.auras.zeal.timer)
+            bonus += this.auras.zeal.stats.bonusdmg;
+        this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
+        this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
+    }
     getGlanceReduction(weapon) {
         let low = 1.3 - 0.05 * (this.target.defense - this.stats['skill_' + weapon.type]);
         let high = 1.2 - 0.03 * (this.target.defense - this.stats['skill_' + weapon.type]);

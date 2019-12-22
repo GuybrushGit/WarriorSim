@@ -488,3 +488,26 @@ class Eskhandar extends Aura {
     }
 }
 
+class Zeal extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 15;
+        this.stats = { bonusdmg: 10 };
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.updateBonusDmg();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateBonusDmg();
+        }
+        else {
+            this.timer -= 400;
+        }
+    }
+}
+
+
