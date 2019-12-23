@@ -41,12 +41,15 @@ class Whirlwind extends Spell {
         this.cooldown = 10;
         this.refund = false;
         this.threshold = parseInt(spells[5].minrage);
+        this.maincd = parseInt(spells[5].maincd) * 1000;
     }
     dmg() {
         return rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
-        return this.timer == 0 && this.cost <= this.player.rage && this.player.rage >= this.threshold && !this.battlestance;
+        return this.timer == 0 && this.cost <= this.player.rage &&  (this.player.rage >= this.threshold || 
+            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -123,7 +126,7 @@ class BerserkerRage extends Spell {
         this.player.rage += this.bonusrage;
     }
     canUse() {
-        return this.timer == 0 && !this.battlestance;
+        return this.timer == 0;
     }
 }
 
@@ -141,7 +144,7 @@ class Bloodrage extends Spell {
         this.player.rage += this.rage;
     }
     canUse() {
-        return this.timer == 0 && !this.battlestance && this.player.rage < this.threshold;
+        return this.timer == 0 && this.player.rage < this.threshold;
     }
 }
 
@@ -150,13 +153,16 @@ class HeroicStrike extends Spell {
         super(player);
         this.cost = 15 - player.talents.impheroicstrike;
         this.threshold = parseInt(spells[2].minrage);
+        this.maincd = parseInt(spells[2].maincd) * 1000;
     }
     use() {
         this.player.timer = 400;
         this.player.nextswinghs = true;
     }
     canUse() {
-        return this.player.rage >= this.threshold && this.cost <= this.player.rage && !this.player.nextswinghs;
+        return !this.player.nextswinghs && this.cost <= this.player.rage && (this.player.rage >= this.threshold || 
+            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -182,6 +188,24 @@ class Hamstring extends Spell {
     }
     canUse() {
         return this.timer == 0 && this.player.rage >= this.threshold && this.cost <= this.player.rage;
+    }
+}
+
+class SunderArmor extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 15 - player.talents.impsunderarmor;
+        this.globals = parseInt(spells[16].globals);
+        this.stacks = 0;
+        this.nocrit = true;
+    }
+    use() {
+        this.player.timer = 1500;
+        this.player.rage -= this.cost;
+        this.stacks++;
+    }
+    canUse() {
+        return this.stacks < this.globals && this.cost <= this.player.rage;
     }
 }
 

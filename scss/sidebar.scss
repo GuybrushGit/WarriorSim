@@ -10,6 +10,42 @@
     left: 0;
     top: 0;
 
+    .bg {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 80% auto;
+        position: absolute;
+        left: 0;
+        top: 380px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        &[data-race="Human"] {
+            background-image: url(/dist/img/human.png);
+        }
+        &[data-race="Gnome"] {
+            background-image: url(/dist/img/gnome.png);
+        }
+        &[data-race="Dwarf"] {
+            background-image: url(/dist/img/dwarf.png);
+        }
+        &[data-race="Night Elf"] {
+            background-image: url(/dist/img/nightelf.png);
+        }
+        &[data-race="Orc"] {
+            background-image: url(/dist/img/orc.png);
+        }
+        &[data-race="Undead"] {
+            background-image: url(/dist/img/undead.png);
+        }
+        &[data-race="Tauren"] {
+            background-image: url(/dist/img/tauren.png);
+        }
+        &[data-race="Troll"] {
+            background-image: url(/dist/img/troll.png);
+        }
+    }
+
     .character {
         padding: 20px 0;
         

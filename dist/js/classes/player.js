@@ -282,8 +282,10 @@ class Player {
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        for (let s in this.spells)
+        for (let s in this.spells) {
             this.spells[s].timer = 0;
+            this.spells[s].stacks = 0;
+        }
         for (let s in this.auras) {
             this.auras[s].timer = 0;
             this.auras[s].firstuse = true;
@@ -530,7 +532,7 @@ class Player {
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
         }
-        if (result == RESULT.CRIT) {
+        if (result == RESULT.CRIT && !spell.nocrit) {
             dmg *= 2 + this.talents.abilitiescrit;
             this.proccrit();
         }

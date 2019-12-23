@@ -2849,7 +2849,7 @@ var gear = {
          "speed": 1.3,
          "type": "Dagger",
          "source": "Other",
-         "ppm": 1.3,
+         "ppm": 1,
          "phase": 1,
          "id": 14555,
          "magicdmg": 99
@@ -3084,7 +3084,7 @@ var gear = {
          "speed": 1.8,
          "type": "Dagger",
          "source": "MC",
-         "ppm": 1.3,
+         "ppm": 1,
          "phase": 1,
          "id": 18816,
          "magicdmg": 53

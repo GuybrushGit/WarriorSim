@@ -20,6 +20,7 @@ SIM.SETTINGS = {
         view.talents = view.body.find('article.talents');
         view.filter = view.body.find('article.filter');
         view.close = view.body.find('section.settings .btn-close');
+        view.bg = view.body.find('section.sidebar .bg');
     },
 
     events: function () {
@@ -145,6 +146,8 @@ SIM.SETTINGS = {
                     spell.active = false;
             }
 
+            view.bg.attr('data-race', val);
+
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
@@ -176,6 +179,10 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>Use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
             if (spell.maxrage !== undefined) 
                 div.find('.options').append(`<li>Use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
+            if (spell.globals !== undefined) 
+                div.find('.options').append(`<li>Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
+            if (spell.maincd !== undefined) 
+                div.find('.options').append(`<li>BT cooldown more than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /></li>`);
             if (spell.id == 23255) 
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.hidden)
@@ -191,6 +198,10 @@ SIM.SETTINGS = {
                 div.find('.options li:first-of-type').append(' and');
                 let html = div.find('.options li:last-of-type').html();
                 div.find('.options li:last-of-type').html(html.replace('Use ',''));
+            }
+
+            if (spell.maincd !== undefined) {
+                div.find('.options li:first-of-type').append(' or');
             }
                         
             view.rotation.append(div);

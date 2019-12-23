@@ -86,6 +86,10 @@ class Simulation {
                     player.auras.cloudkeeper.use();
                     continue;
                 }
+                if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {
+                    this.idmg += player.cast(player.spells.sunderarmor);
+                    continue;
+                }
                 if (player.auras.deathwish && player.auras.deathwish.canUse() && step > this.deathwishstep) {
                     player.auras.deathwish.use();
                     continue;
@@ -123,12 +127,12 @@ class Simulation {
                     this.idmg += player.cast(player.spells.mortalstrike);
                     continue;
                 }
-                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
-                    this.idmg += player.cast(player.spells.whirlwind);
-                    continue;
-                }
                 if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
                     player.spells.heroicstrike.use();
+                    continue;
+                }
+                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
+                    this.idmg += player.cast(player.spells.whirlwind);
                     continue;
                 }
             }

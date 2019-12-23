@@ -21,6 +21,7 @@ var spells = [
     classname: 'HeroicStrike',
     iconname: 'ability_rogue_ambush',
     minrage: 30,
+    maincd: 3,
 },
 {
     id: 11609,
@@ -43,6 +44,7 @@ var spells = [
     classname: 'Whirlwind',
     iconname: 'ability_whirlwind',
     minrage: 50,
+    maincd: 3,
 },
 {
     id: 12328,
@@ -126,6 +128,13 @@ var spells = [
     iconname: 'ability_backstab',
     hidden: true,
     aura: true,
+},
+{
+    id: 11597,
+    name: 'Sunder Armor',
+    classname: 'SunderArmor',
+    iconname: 'ability_warrior_sunder',
+    globals: 1,
 },
 
 ];

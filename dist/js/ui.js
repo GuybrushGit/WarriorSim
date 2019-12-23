@@ -327,6 +327,7 @@ SIM.UI = {
             view.fight.find('select[name="' + prop + '"]').val(localStorage[prop]);
         }
 
+        view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
         view.main.find('#mainhandfilter').val(localStorage.mainhandfilter);
         view.main.find('#offhandfilter').val(localStorage.offhandfilter);
 
