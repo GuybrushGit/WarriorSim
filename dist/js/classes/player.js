@@ -21,6 +21,7 @@ class Player {
         }
         this.target = {
             level: parseInt($('input[name="targetlevel"]').val()),
+            basearmor: parseInt($('input[name="targetarmor"]').val()),
             armor: parseInt($('input[name="targetarmor"]').val()),
             defense: parseInt($('input[name="targetlevel"]').val()) * 5,
             mitigation: 1 - 15 * ((parseInt($('input[name="targetresistance"]').val()) + 24) / 6000),
@@ -345,6 +346,12 @@ class Player {
             bonus += this.auras.zeal.stats.bonusdmg;
         this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
         this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
+    }
+    updateArmorReduction() {
+        this.target.armor = this.target.basearmor;
+        if (this.auras.annihilator && this.auras.annihilator.timer)
+            this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
+        this.armorReduction = this.getArmorReduction();
     }
     getGlanceReduction(weapon) {
         let low = 1.3 - 0.05 * (this.target.defense - this.stats['skill_' + weapon.type]);

@@ -2622,16 +2622,17 @@ var gear = {
          "magicdmg": 113
       },
       {
-         "name": "[TODO] Annihilator",
+         "name": "Annihilator",
          "Mainhand": true,
          "mindmg": 49,
          "maxdmg": 92,
          "speed": 1.7,
          "type": "Axe",
          "source": "Crafting",
-         "ppm": -1,
+         "ppm": 1,
          "phase": 1,
-         "id": 12798
+         "id": 12798,
+         "procspell": "Annihilator"
       },
       {
          "name": "Axe of the Deep Woods",
@@ -2641,7 +2642,7 @@ var gear = {
          "speed": 2.7,
          "type": "Axe",
          "source": "Other",
-         "ppm": 1,
+         "ppm": 0.8,
          "phase": 1,
          "id": 811,
          "magicdmg": 108
@@ -2702,7 +2703,7 @@ var gear = {
          "speed": 2.9,
          "type": "Axe",
          "source": "Onyxia",
-         "ppm": 1,
+         "ppm": 0.8,
          "phase": 1,
          "id": 17068,
          "magicdmg": 138
@@ -2727,7 +2728,7 @@ var gear = {
          "speed": 1.5,
          "type": "Axe",
          "source": "Other",
-         "ppm": 2,
+         "ppm": 1.8,
          "phase": 1,
          "id": 871,
          "procextra": 1
@@ -3316,7 +3317,7 @@ var gear = {
          "speed": 2.4,
          "type": "Mace",
          "source": "Dungeon",
-         "ppm": 1,
+         "ppm": 0.8,
          "phase": 1,
          "procextra": 2
       },

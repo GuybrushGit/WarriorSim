@@ -19,10 +19,17 @@ SIM.SETTINGS = {
         view.rotation = view.body.find('article.rotation');
         view.talents = view.body.find('article.talents');
         view.filter = view.body.find('article.filter');
+        view.close = view.body.find('section.settings .btn-close');
     },
 
     events: function () {
         var view = this;
+
+        view.close.click(function(e) {
+            e.preventDefault();
+            $('.js-settings').removeClass('active');
+            $('section.settings').removeClass('active');
+        });
 
         view.buffs.on('click', '.icon', function(){
             let obj = $(this).toggleClass('active');
@@ -70,6 +77,10 @@ SIM.SETTINGS = {
 
         view.filter.on('click', '.sources li', function(e){
             $(this).toggleClass('active');
+            if ($(this).hasClass('active')) {
+                let id = $(this).data('id');
+                view.filter.find(`.phases [data-sources*="${id}"]`).addClass('active');
+            }
             SIM.UI.updateSession();
             SIM.UI.filterGear();
         });

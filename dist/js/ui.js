@@ -256,7 +256,6 @@ SIM.UI = {
         view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + space + ohdmg.toFixed(2) + '% <small>OH</small>');
         view.sidebar.find('#haste').html((player.stats.haste * 100).toFixed(2) + '%');
         view.sidebar.find('#race').text(localStorage.race);
-
     },
 
     updateSession: function () {

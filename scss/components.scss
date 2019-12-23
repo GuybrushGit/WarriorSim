@@ -173,7 +173,7 @@
 .spinner > span {
     width: 18px;
     height: 18px;
-    background-color: #CCC;
+    background-color: #ccc;
 
     border-radius: 100%;
     display: inline-block;
@@ -212,5 +212,31 @@
     40% {
         -webkit-transform: scale(1);
         transform: scale(1);
+    }
+}
+
+.btn-close {
+    position: absolute;
+    right: 19px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+    &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 20px;
+        width: 2px;
+        background-color: #ccc;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
     }
 }

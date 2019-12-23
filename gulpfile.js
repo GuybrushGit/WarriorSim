@@ -19,7 +19,7 @@ gulp.task('watch', function(){
 gulp.task('browser', function() {
     browser.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./"
         }
     });
 });

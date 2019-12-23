@@ -510,4 +510,28 @@ class Zeal extends Aura {
     }
 }
 
+class Annihilator extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 45;
+        this.armor = 200;
+        this.stacks = 0;
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
+        this.player.updateArmorReduction();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateArmorReduction();
+        }
+        else {
+            this.timer -= 400;
+        }
+    }
+}
+
 
