@@ -56,9 +56,18 @@ SIM.UI = {
 
         view.main.on('click', '.js-table', function(e) {
             e.preventDefault();
-            let first = view.tcontainer.find('tbody tr').first();
-            view.tcontainer.find('tbody tr').addClass('waiting');
-            view.tcontainer.find('tbody tr td:last-of-type').html('');
+            let first = view.tcontainer.find('table.gear tbody tr').first();
+            view.tcontainer.find('table.gear tbody tr').addClass('waiting');
+            view.tcontainer.find('table.gear tbody tr td:last-of-type').html('');
+            view.startLoading();
+            view.simulateDPS(first);
+        });
+
+        view.main.on('click', '.js-enchant', function(e) {
+            e.preventDefault();
+            let first = view.tcontainer.find('table.enchant tbody tr').first();
+            view.tcontainer.find('table.enchant tbody tr').addClass('waiting');
+            view.tcontainer.find('table.enchant tbody tr td:last-of-type').html('');
             view.startLoading();
             view.simulateDPS(first);
         });
@@ -233,14 +242,14 @@ SIM.UI = {
     },
 
     startLoading: function() {
-        let btns = $('.js-dps, .js-table');
+        let btns = $('.js-dps, .js-table, .js-enchant');
         btns.addClass('loading');
         btns.append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
         $('section.main nav').addClass('loading');
     },
 
     endLoading: function() {
-        let btns = $('.js-dps, .js-table');
+        let btns = $('.js-dps, .js-table, .js-enchant');
         btns.removeClass('loading');
         btns.find('.spinner').remove();
         $('section.main nav').removeClass('loading');
@@ -541,6 +550,7 @@ SIM.UI = {
 
     loadEnchants: function (type) {
         var view = this;
+        view.main.find('.js-enchant').hide();
 
         if (!enchant[type] || enchant[type].length == 0) return;
 
@@ -587,6 +597,8 @@ SIM.UI = {
             widthFixed: true,
             sortList: [[8, 1],[0, 0]],
         });
+
+        view.main.find('.js-enchant').show();
     }
 
 
