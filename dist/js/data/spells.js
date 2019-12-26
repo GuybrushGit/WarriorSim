@@ -52,6 +52,7 @@ var spells = [
     classname: 'DeathWish',
     iconname: 'spell_shadow_deathpact',
     time: 30,
+    crusaders: 1,
     hidden: true,
     aura: true,
 },

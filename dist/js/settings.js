@@ -183,6 +183,8 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
             if (spell.maincd !== undefined) 
                 div.find('.options').append(`<li>BT cooldown more than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /></li>`);
+            if (spell.crusaders !== undefined) 
+                div.find('.options').append(`<li>when <input type="text" name="crusaders" value="${spell.crusaders}" data-numberonly="true" /> crusaders are up</li>`);
             if (spell.id == 23255) 
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.hidden)
@@ -201,6 +203,10 @@ SIM.SETTINGS = {
             }
 
             if (spell.maincd !== undefined) {
+                div.find('.options li:first-of-type').append(' or');
+            }
+
+            if (spell.crusaders !== undefined) {
                 div.find('.options li:first-of-type').append(' or');
             }
                         

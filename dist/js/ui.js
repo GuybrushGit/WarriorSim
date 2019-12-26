@@ -36,12 +36,22 @@ SIM.UI = {
             e.preventDefault();
             $(this).toggleClass('active');
             $('section.settings').toggleClass('active');
+            view.sidebar.find('.js-stats').removeClass('active');
+            $('section.stats').removeClass('active');
         });
 
         view.sidebar.find('.js-dps').click(function (e) {
             e.preventDefault();
             view.startLoading();
             view.simulateDPS();
+        });
+
+        view.sidebar.find('.js-stats').click(function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $('section.stats').toggleClass('active');
+            view.sidebar.find('.js-settings').removeClass('active');
+            $('section.settings').removeClass('active');
         });
 
         view.main.on('click', '.js-table', function(e) {
@@ -125,6 +135,8 @@ SIM.UI = {
                 stats.html((sim.mindmg / sim.duration).toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + (sim.maxdmg / sim.duration).toFixed(2) + ' max');
                 if (row) view.simulateRow(row);
                 else view.endLoading();
+
+                SIM.STATS.initCharts(sim);
             },
             (iteration) => {
                 // Update

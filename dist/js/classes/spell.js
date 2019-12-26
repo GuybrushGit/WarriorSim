@@ -6,6 +6,7 @@ class Spell {
         this.player = player;
         this.refund = true;
         this.canDodge = true;
+        this.totaldmg = 0;
     }
     dmg() {
         return 0;
@@ -222,6 +223,7 @@ class Aura {
         this.firstuse = true;
         this.duration = 0;
         this.stacks = 0;
+        this.uptime = 0;
     }
     use() {
         this.timer = this.duration * 1000;
@@ -229,11 +231,13 @@ class Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateAuras();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -244,6 +248,7 @@ class Recklessness extends Aura {
         super(player);
         this.duration = 15;
         this.stats = { crit: 100 };
+        this.name = 'Recklessness';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -260,12 +265,16 @@ class Flurry extends Aura {
         super(player);
         this.duration = 12;
         this.div_stats = { haste: player.talents.flurry };
+        this.name = 'Flurry';
     }
     step() {
         this.stacks--;
         if (!this.stacks) {
             this.timer = 0;
             this.player.updateHaste();
+        }
+        else {
+            this.uptime += 400;
         }
     }
     use() {
@@ -279,8 +288,10 @@ class DeepWounds extends Aura {
     constructor(player) {
         super(player);
         this.duration = 12;
+        this.name = 'Deep Wounds';
     }
     step(simulation) {
+        this.uptime += this.timer < 200 ? this.timer : 200;
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
         if (this.timer == 0 || this.timer % 3000 == 0 || this.timer % 6000 == 0 || this.timer % 3000 == 0) {
             let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
@@ -309,6 +320,7 @@ class Cloudkeeper extends Aura {
         super(player);
         this.duration = 30;
         this.stats = { ap: 100 };
+        this.name = 'Cloudkeeper';
     }
     canUse() {
         return this.firstuse && !this.timer;
@@ -320,6 +332,7 @@ class Felstriker extends Aura {
         super(player);
         this.duration = 3;
         this.stats = { crit: 100, hit: 100 };
+        this.name = 'Felstriker';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -327,11 +340,13 @@ class Felstriker extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.update();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -342,6 +357,7 @@ class BattleShoutAura extends Aura {
         super(player);
         this.stats = { ap: ~~(185 * (1 + player.talents.impbattleshout)) };
         this.duration = 120 * (1 + player.talents.boomingvoice);
+        this.name = 'Battleshout';
     }
 }
 
@@ -350,6 +366,9 @@ class DeathWish extends Aura {
         super(player);
         this.duration = 30;
         this.mult_stats = { dmgmod: 20 };
+        this.name = 'Death Wish';
+        this.crusaders = parseInt(spells[6].crusaders);
+        this.deathwishstep = parseInt(spells[6].time) * 1000;
     }
     use() {
         this.timer = this.duration * 1000;
@@ -357,8 +376,10 @@ class DeathWish extends Aura {
         this.player.timer = 1500;
         this.player.updateAuras();
     }
-    canUse() {
-        return this.firstuse && !this.timer && this.player.rage >= 10;
+    canUse(step) {
+        return this.firstuse && !this.timer && this.player.rage >= 10 && (step > this.deathwishstep || 
+            (this.crusaders == 1 && (this.player.auras.crusader1.timer || this.player.auras.crusader2.timer)) ||
+            (this.crusaders == 2 && this.player.auras.crusader1.timer && this.player.auras.crusader2.timer));
     }
 }
 
@@ -386,6 +407,7 @@ class JujuFlurry extends Aura {
         super(player);
         this.div_stats = { haste: 3 };
         this.duration = 20;
+        this.name = 'Juju Flurry';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -394,11 +416,13 @@ class JujuFlurry extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -413,6 +437,7 @@ class MightyRagePotion extends Aura {
         this.stats = { str: 60 };
         this.duration = 20;
         this.threshold = parseInt(spells[13].maxrage);
+        this.name = 'Mighty Rage Potion';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -430,6 +455,7 @@ class BloodFury extends Aura {
         super(player);
         this.duration = 15;
         this.mult_stats = { apmod: 25 };
+        this.name = 'Blood Fury';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -446,6 +472,7 @@ class Berserking extends Aura {
         super(player);
         this.duration = 10;
         this.div_stats = { haste: 30 };
+        this.name = 'Berserking';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -455,11 +482,13 @@ class Berserking extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -473,6 +502,7 @@ class Empyrean extends Aura {
         super(player);
         this.duration = 10;
         this.div_stats = { haste: 20 };
+        this.name = 'Empyrean Haste';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -480,11 +510,13 @@ class Empyrean extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -495,6 +527,7 @@ class Eskhandar extends Aura {
         super(player);
         this.duration = 5;
         this.div_stats = { haste: 30 };
+        this.name = 'Eskhandar Haste';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -502,11 +535,13 @@ class Eskhandar extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -517,6 +552,7 @@ class Zeal extends Aura {
         super(player);
         this.duration = 15;
         this.stats = { bonusdmg: 10 };
+        this.name = 'Zeal';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -524,11 +560,13 @@ class Zeal extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateBonusDmg();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }
@@ -540,6 +578,7 @@ class Annihilator extends Aura {
         this.duration = 45;
         this.armor = 200;
         this.stacks = 0;
+        this.name = 'Annihilator';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -548,11 +587,13 @@ class Annihilator extends Aura {
     }
     step() {
         if (this.timer <= 400) {
+            this.uptime += this.timer;
             this.timer = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
         }
         else {
+            this.uptime += 400;
             this.timer -= 400;
         }
     }

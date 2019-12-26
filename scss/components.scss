@@ -17,6 +17,11 @@
     border-radius: 4px;
     position: relative;
 
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &:hover,
     &.active {
         background: #ddd;

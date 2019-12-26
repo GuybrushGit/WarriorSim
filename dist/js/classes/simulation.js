@@ -25,7 +25,6 @@ class Simulation {
         // steps
         this.maxsteps = this.duration * 1000;
         this.executestep = parseInt(spells[4].starttime) * 1000;
-        this.deathwishstep = parseInt(spells[6].time) * 1000;
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
@@ -90,7 +89,7 @@ class Simulation {
                     this.idmg += player.cast(player.spells.sunderarmor);
                     continue;
                 }
-                if (player.auras.deathwish && player.auras.deathwish.canUse() && step > this.deathwishstep) {
+                if (player.auras.deathwish && player.auras.deathwish.canUse(step)) {
                     player.auras.deathwish.use();
                     continue;
                 }

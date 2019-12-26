@@ -12,6 +12,7 @@
   <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.min.js"></script>
   <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/Chart.min.js"></script>
 
   <script type="text/javascript" src="dist/js/classes/player.js"></script>
   <script type="text/javascript" src="dist/js/classes/simulation.js"></script>
@@ -26,6 +27,7 @@
   <script type="text/javascript" src="dist/js/data/session.js"></script>
 
   <script type="text/javascript" src="dist/js/settings.js"></script>
+  <script type="text/javascript" src="dist/js/stats.js"></script>
   <script type="text/javascript" src="dist/js/ui.js"></script>
 
   <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
@@ -38,9 +40,13 @@
   ** HIGH PRIO **
   deep wounds mh or oh?
   are extras consuming flurry?
+  extras proc viskag?
   compare execute data with real data
   redo session data
   DEATH WISH + CRUSADER INTERACTION
+  enchant dps
+  item sets
+  more stats
 
   ** LOW PRIO **
   CLEAVE + ADJACENT TARGETS
@@ -146,6 +152,7 @@
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-stats disabled">STATS</a>
       <a href="#" class="btn js-settings">SETTINGS</a>
     </div>
   </section>
@@ -251,6 +258,16 @@
     </div>
   </section>
 
+  <section class="stats">
+    <a href="#" class="btn-close"></a>
+    <div class="wrapper">
+
+      <div class="container-dmg"><canvas></canvas><div class="legend"></div></div>
+      <div class="container-aura"><canvas></canvas></div>
+
+    </div>
+  </section>
+
   <section class="main">
     <nav>
       <ul>
@@ -299,6 +316,7 @@
     $(document).ready(function () {
       SIM.UI.init();
       SIM.SETTINGS.init();
+      SIM.STATS.init();
     });
   </script>
 

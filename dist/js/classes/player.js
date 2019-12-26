@@ -520,7 +520,11 @@ class Player {
         }
 
         if (!extra) weapon.use();
-        return this.dealdamage(dmg, result, spell) + procdmg;
+        let done = this.dealdamage(dmg, result, spell);
+        if (spell) spell.totaldmg += done;
+        else weapon.totaldmg += done;
+        weapon.totalprocdmg += procdmg;
+        return done + procdmg;
     }
     cast(spell) {
         spell.use();
@@ -537,7 +541,10 @@ class Player {
             this.proccrit();
         }
 
-        return this.dealdamage(dmg, result, spell) + procdmg;
+        let done = this.dealdamage(dmg, result, spell);
+        spell.totaldmg += done;
+        this.mh.totalprocdmg += procdmg;
+        return done + procdmg;
     }
     buff(spell) {
         spell.use();
