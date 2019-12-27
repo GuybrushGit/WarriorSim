@@ -109,7 +109,7 @@ class Player {
                         this.addWeapon(item, type);
 
                     // Blazefury Medallion
-                    if (item.id == 17111) { 
+                    if (item.id == 17111) {
                         this.attackproc = {};
                         this.attackproc.chance = item.procchance * 100;
                         this.attackproc.magicdmg = item.magicdmg;
@@ -159,13 +159,13 @@ class Player {
             }
         }
 
-        for(let item of fingers) {
+        for (let item of fingers) {
             for (let prop in this.base)
                 this.base[prop] += item[prop] || 0;
         }
 
         let index = 0;
-        for(let item of trinkets) {
+        for (let item of trinkets) {
             index++;
             for (let prop in this.base)
                 this.base[prop] += item[prop] || 0;
@@ -483,7 +483,7 @@ class Player {
         if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attack(weapon, extra) {
+    attack(weapon) {
         let spell = null;
         let procdmg = 0;
         let heroicstrike = !weapon.offhand && this.nextswinghs;
@@ -502,11 +502,11 @@ class Player {
             }
             else {
                 heroicstrike = false;
+                result = this.rollweapon(weapon); // ??
             }
         }
         let dmg = weapon.dmg(heroicstrike);
-        if (!extra)
-            procdmg = this.procattack(spell, weapon, result);
+        procdmg = this.procattack(spell, weapon, result);
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -519,7 +519,7 @@ class Player {
             this.proccrit();
         }
 
-        if (!extra) weapon.use();
+        weapon.use();
         let done = this.dealdamage(dmg, result, spell);
         if (spell) {
             spell.totaldmg += done;
@@ -591,12 +591,12 @@ class Player {
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
-                if (this.trinketproc1.extra) 
+                if (this.trinketproc1.extra)
                     this.extraattacks += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1.magicdmg);
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
-                if (this.trinketproc2.extra) 
+                if (this.trinketproc2.extra)
                     this.extraattacks += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2.magicdmg);
             }

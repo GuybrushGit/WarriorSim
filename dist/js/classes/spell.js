@@ -158,7 +158,7 @@ class HeroicStrike extends Spell {
         this.maincd = parseInt(spells[2].maincd) * 1000;
     }
     use() {
-        this.player.timer = 400;
+        this.player.timer = 800;
         this.player.nextswinghs = true;
     }
     canUse() {

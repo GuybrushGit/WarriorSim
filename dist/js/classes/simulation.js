@@ -56,10 +56,6 @@ class Simulation {
             player.oh.step(next);
             if (batch) player.step(this);
 
-            if (batch && player.extraattacks > 0)
-                while (player.extraattacks--)
-                    this.idmg += player.attack(player.mh, true);
-
             if (player.mh.timer == 0) {
                 this.idmg += player.attack(player.mh);
             }
@@ -71,69 +67,55 @@ class Simulation {
 
                 if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
                     player.spells.bloodrage.use();
-                    continue;
                 }
-                if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step > this.jujustep) {
+                else if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step > this.jujustep) {
                     player.auras.jujuflurry.use();
-                    continue;
                 }
-                if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse() && step > this.ragestep) {
+                else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse() && step > this.ragestep) {
                     player.auras.mightyragepotion.use();
-                    continue;
                 }
-                if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) {
+                else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) {
                     player.auras.cloudkeeper.use();
-                    continue;
                 }
-                if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {
+                else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {
                     this.idmg += player.cast(player.spells.sunderarmor);
-                    continue;
                 }
-                if (player.auras.deathwish && player.auras.deathwish.canUse(step)) {
+                else if (player.auras.deathwish && player.auras.deathwish.canUse(step)) {
                     player.auras.deathwish.use();
-                    continue;
                 }
-                if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step > this.bloodfurystep) {
+                else if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step > this.bloodfurystep) {
                     player.auras.bloodfury.use();
-                    continue;
                 }
-                if (player.auras.berserking && player.auras.berserking.canUse() && step > this.berserkingstep) {
+                else if (player.auras.berserking && player.auras.berserking.canUse() && step > this.berserkingstep) {
                     player.auras.berserking.use();
-                    continue;
                 }
-                if (player.auras.recklessness && player.auras.recklessness.canUse() && step > this.reckstep) {
+                else if (player.auras.recklessness && player.auras.recklessness.canUse() && step > this.reckstep) {
                     player.auras.recklessness.use();
-                    continue;
                 }
-                if (player.spells.execute && step > this.executestep) {
+                else if (player.spells.execute && step > this.executestep) {
                     if (player.spells.execute.canUse())
                         this.idmg += player.cast(player.spells.execute);
-                    continue;
                 }
-                if (player.spells.overpower && player.spells.overpower.canUse()) {
+                else if (player.spells.overpower && player.spells.overpower.canUse()) {
                     this.idmg += player.cast(player.spells.overpower);
-                    continue;
                 }
-                if (player.spells.battleshout && player.spells.battleshout.canUse()) {
-                    player.spells.battleshout.use();
-                    continue;
-                }
-                if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
                     this.idmg += player.cast(player.spells.bloodthirst);
-                    continue;
                 }
-                if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
+                else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
                     this.idmg += player.cast(player.spells.mortalstrike);
-                    continue;
                 }
-                if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
+                else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
                     player.spells.heroicstrike.use();
-                    continue;
                 }
-                if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
+                else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.idmg += player.cast(player.spells.whirlwind);
-                    continue;
                 }
+            }
+
+            if (player.extraattacks > 0) {
+                player.mh.timer = 0;
+                player.extraattacks--;
             }
         }
 
