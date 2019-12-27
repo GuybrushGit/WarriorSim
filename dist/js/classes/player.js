@@ -403,7 +403,6 @@ class Player {
         // Spells
         if (this.spells.mortalstrike) this.spells.mortalstrike.step();
         if (this.spells.bloodthirst) this.spells.bloodthirst.step();
-        if (this.spells.battleshout) this.spells.battleshout.step();
         if (this.spells.bloodrage) this.spells.bloodrage.step();
         if (this.spells.whirlwind) this.spells.whirlwind.step();
         if (this.spells.overpower) this.spells.overpower.step();
@@ -414,9 +413,6 @@ class Player {
             if (this.auras.deepwounds.timer)
                 this.auras.deepwounds.step(simulation);
         }
-        // if (this.auras.battleshout && this.auras.battleshout.timer) {
-        //     this.auras.battleshout.step();
-        // }
         if (this.auras.battlestance && this.auras.battlestance.timer) {
             this.auras.battlestance.step();
         }
@@ -502,7 +498,7 @@ class Player {
             }
             else {
                 heroicstrike = false;
-                result = this.rollweapon(weapon); // ??
+                result = this.rollweapon(weapon);
             }
         }
         let dmg = weapon.dmg(heroicstrike);
@@ -515,7 +511,7 @@ class Player {
             dmg *= weapon.glanceReduction;
         }
         if (result == RESULT.CRIT) {
-            dmg *= 2;
+            dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
             this.proccrit();
         }
 
@@ -538,7 +534,6 @@ class Player {
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result);
-        spell.data[result]++;
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -549,13 +544,10 @@ class Player {
         }
 
         let done = this.dealdamage(dmg, result, spell);
+        spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
         return done + procdmg;
-    }
-    buff(spell) {
-        spell.use();
-        return 0;
     }
     dealdamage(dmg, result, spell) {
         dmg *= this.stats.dmgmod;

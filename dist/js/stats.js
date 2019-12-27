@@ -17,7 +17,7 @@ SIM.STATS = {
         view.aura = view.stats.find('.container-aura canvas');
         view.colors = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#ffa600'];
         view.close = view.stats.find('.btn-close');
-        view.table = view.stats.find('.container-table table');
+        view.table = view.stats.find('.container-table');
     },
 
     events: function () {
@@ -74,7 +74,7 @@ SIM.STATS = {
         for (let name in sim.player.spells) {
             let spell = sim.player.spells[name];
             if (!spell.totaldmg) continue;
-            view.dmgdata.labels.push(spell.constructor.name);
+            view.dmgdata.labels.push(spell.name);
             data.push((spell.totaldmg / sim.iterations / sim.duration).toFixed(2));
             colors.push(view.colors[counter % view.colors.length]);
             counter++;
@@ -130,9 +130,6 @@ SIM.STATS = {
                 },
                 tooltips: {
                     enabled: false,
-                    callbacks: {
-                        label: (item) => ` ${item.xLabel}%`,
-                    },
                 },
                 hover: {
                     mode: null
@@ -204,51 +201,46 @@ SIM.STATS = {
                 legend: {
                     display: false
                 },
+                tooltips: {
+                    callbacks: {
+                        label: (item, obj) => ` ${obj.labels[item.index]}: ${obj.datasets[0].data[item.index]} DPS`,
+                    }
+                },
             }
         });
-
-        // view.dmglegend.html(view.dmgchart.generateLegend());
-        // let lis = view.dmglegend.find('li');
-        // for(let i = 0; i < lis.length; i++) {
-        //     let value = view.dmgdata.datasets[0].data[i];
-        //     lis.eq(i).append(`<em>${value}</em>`);
-        // }
     },
 
     buildTable: function (sim) {
         var view = this;
         view.table.empty();
-        view.table.append('<thead><tr><th>Spell</th><th>Hit %</th><th>Crit %</th><th>Miss %</th><th>Dodge %</th><th>Glance %</th><th>Uses</th><th>DPS</th></tr></thead><tbody>');
+        let html = '<table><thead><tr><th>Action</th><th>Hit %</th><th>Crit %</th><th>Miss %</th><th>Dodge %</th><th>Glance %</th><th>Uses</th><th>DPS</th></tr></thead><tbody>';
 
 
         let i = sim.iterations;
         let data = sim.player.mh.data;
         let total = data.reduce((a, b) => a + b, 0);
         let dps = (sim.player.mh.totaldmg / sim.iterations / sim.duration).toFixed(2);
-        view.table.append(`<tr><td>Main Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`);
+        html += `<tr><td>Main Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
 
         data = sim.player.oh.data;
         total = data.reduce((a, b) => a + b, 0);
         dps = (sim.player.oh.totaldmg / sim.iterations / sim.duration).toFixed(2);
-        view.table.append(`<tr><td>Off Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`);
+        html += `<tr><td>Off Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
 
         for (let name in sim.player.spells) {
-            let n = sim.player.spells[name].constructor.name
+            let n = sim.player.spells[name].name;
             let data = sim.player.spells[name].data;
             let total = data.reduce((a, b) => a + b, 0);
             if (!total) continue;
             let dps = (sim.player.spells[name].totaldmg / sim.iterations / sim.duration).toFixed(2);
-            view.table.append(`<tr><td>${n}</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`);
+            html += `<tr><td>${n}</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
         }
 
-        view.table.append('</tbody>');
+        html += '</tbody></table>';
 
-        view.table.tablesorter({
+        view.table.append(html);
+        view.table.find('table').tablesorter({
             widthFixed: true,
         });
-
     }
-
-
-
 };

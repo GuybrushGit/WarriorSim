@@ -185,6 +185,8 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>BT cooldown more than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /></li>`);
             if (spell.crusaders !== undefined) 
                 div.find('.options').append(`<li>when <input type="text" name="crusaders" value="${spell.crusaders}" data-numberonly="true" /> crusaders are up</li>`);
+            if (spell.haste !== undefined) 
+                div.find('.options').append(`<li>Attack speed at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
             if (spell.id == 23255) 
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.hidden)

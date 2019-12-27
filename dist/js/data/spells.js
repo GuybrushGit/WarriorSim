@@ -85,6 +85,7 @@ var spells = [
     classname: 'Berserking',
     iconname: 'racial_troll_berserk',
     time: 50,
+    haste: 30,
     hidden: true,
     aura: true,
 },

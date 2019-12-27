@@ -146,6 +146,8 @@ SIM.UI = {
                 else view.endLoading();
 
                 SIM.STATS.initCharts(sim);
+                sim = null;
+                player = null;
             },
             (iteration) => {
                 // Update
@@ -177,6 +179,8 @@ SIM.UI = {
                 dps.text(calc.toFixed(2)).append(span);
                 view.tcontainer.find('table').trigger('update');
                 tr.removeClass('waiting');
+                sim = null;
+                player = null;
 
                 if (isench) {
                     for(let i of enchant[type])

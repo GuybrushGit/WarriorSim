@@ -7,7 +7,8 @@ class Spell {
         this.refund = true;
         this.canDodge = true;
         this.totaldmg = 0;
-        this.data = [0,0,0,0,0];
+        this.data = [0, 0, 0, 0, 0];
+        this.name = this.constructor.name;
     }
     dmg() {
         return 0;
@@ -49,8 +50,8 @@ class Whirlwind extends Spell {
         return rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
-        return this.timer == 0 && this.cost <= this.player.rage &&  (this.player.rage >= this.threshold || 
-            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+        return this.timer == 0 && this.cost <= this.player.rage && (this.player.rage >= this.threshold ||
+            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
             (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
@@ -99,27 +100,13 @@ class Execute extends Spell {
     }
 }
 
-class BattleShout extends Spell {
-    constructor(player) {
-        super(player);
-        this.cost = 10;
-        this.cooldown = 120 * (1 + player.talents.boomingvoice);
-        this.player.auras.battleshout = new BattleShoutAura(player);
-    }
-    use() {
-        this.player.timer = 1500;
-        this.player.rage -= this.cost;
-        this.timer = this.cooldown * 1000;
-        this.player.auras.battleshout.use();
-    }
-}
-
 class BerserkerRage extends Spell {
     constructor(player) {
         super(player);
         this.cost = 0;
         this.bonusrage = 0 + player.talents.berserkerbonus;
         this.cooldown = 30;
+        this.name = 'Berserker Rage';
     }
     use() {
         this.player.timer = 1500;
@@ -156,14 +143,15 @@ class HeroicStrike extends Spell {
         this.cost = 15 - player.talents.impheroicstrike;
         this.threshold = parseInt(spells[2].minrage);
         this.maincd = parseInt(spells[2].maincd) * 1000;
+        this.name = 'Heroic Strike';
     }
     use() {
         this.player.timer = 800;
         this.player.nextswinghs = true;
     }
     canUse() {
-        return !this.player.nextswinghs && this.cost <= this.player.rage && (this.player.rage >= this.threshold || 
-            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+        return !this.player.nextswinghs && this.cost <= this.player.rage && (this.player.rage >= this.threshold ||
+            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
             (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
@@ -173,6 +161,7 @@ class MortalStrike extends Spell {
         super(player);
         this.cost = 30;
         this.cooldown = 6;
+        this.name = 'Mortal Strike';
     }
     dmg() {
         return 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
@@ -200,6 +189,7 @@ class SunderArmor extends Spell {
         this.globals = parseInt(spells[16].globals);
         this.stacks = 0;
         this.nocrit = true;
+        this.name = 'Sunder Armor';
     }
     use() {
         this.player.timer = 1500;
@@ -225,6 +215,7 @@ class Aura {
         this.duration = 0;
         this.stacks = 0;
         this.uptime = 0;
+        this.name = this.constructor.name;
     }
     use() {
         this.timer = this.duration * 1000;
@@ -249,7 +240,6 @@ class Recklessness extends Aura {
         super(player);
         this.duration = 15;
         this.stats = { crit: 100 };
-        this.name = 'Recklessness';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -266,7 +256,6 @@ class Flurry extends Aura {
         super(player);
         this.duration = 12;
         this.div_stats = { haste: player.talents.flurry };
-        this.name = 'Flurry';
     }
     step() {
         this.stacks--;
@@ -318,7 +307,6 @@ class Cloudkeeper extends Aura {
         super(player);
         this.duration = 30;
         this.stats = { ap: 100 };
-        this.name = 'Cloudkeeper';
     }
     canUse() {
         return this.firstuse && !this.timer;
@@ -330,7 +318,6 @@ class Felstriker extends Aura {
         super(player);
         this.duration = 3;
         this.stats = { crit: 100, hit: 100 };
-        this.name = 'Felstriker';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -350,15 +337,6 @@ class Felstriker extends Aura {
     }
 }
 
-class BattleShoutAura extends Aura {
-    constructor(player) {
-        super(player);
-        this.stats = { ap: ~~(185 * (1 + player.talents.impbattleshout)) };
-        this.duration = 120 * (1 + player.talents.boomingvoice);
-        this.name = 'Battleshout';
-    }
-}
-
 class DeathWish extends Aura {
     constructor(player) {
         super(player);
@@ -375,7 +353,7 @@ class DeathWish extends Aura {
         this.player.updateAuras();
     }
     canUse(step) {
-        return this.firstuse && !this.timer && this.player.rage >= 10 && (step > this.deathwishstep || 
+        return this.firstuse && !this.timer && this.player.rage >= 10 && (step > this.deathwishstep ||
             (this.crusaders == 1 && (this.player.auras.crusader1.timer || this.player.auras.crusader2.timer)) ||
             (this.crusaders == 2 && this.player.auras.crusader1.timer && this.player.auras.crusader2.timer));
     }
@@ -386,6 +364,7 @@ class BattleStance extends Aura {
         super(player);
         this.duration = 2;
         this.stats = { crit: -3 };
+        this.name = 'Battle Stance';
     }
     step() {
         if (this.timer <= 400) {
@@ -469,8 +448,7 @@ class Berserking extends Aura {
     constructor(player) {
         super(player);
         this.duration = 10;
-        this.div_stats = { haste: 30 };
-        this.name = 'Berserking';
+        this.div_stats = { haste: parseInt(spells[10].haste) };
     }
     use() {
         this.timer = this.duration * 1000;
@@ -550,7 +528,6 @@ class Zeal extends Aura {
         super(player);
         this.duration = 15;
         this.stats = { bonusdmg: 10 };
-        this.name = 'Zeal';
     }
     use() {
         this.timer = this.duration * 1000;
@@ -576,7 +553,6 @@ class Annihilator extends Aura {
         this.duration = 45;
         this.armor = 200;
         this.stacks = 0;
-        this.name = 'Annihilator';
     }
     use() {
         this.timer = this.duration * 1000;
