@@ -26,6 +26,7 @@ class Weapon {
         this.type = WEAPONTYPE[item.type.toUpperCase()] || 0;
         this.totaldmg = 0;
         this.totalprocdmg = 0;
+        this.data = [0,0,0,0,0];
         if (this.type == WEAPONTYPE.AXE || this.type == WEAPONTYPE.BIGAXE) this.crit += player.talents.axecrit;
         if (this.type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (this.type == WEAPONTYPE.BIGMACE || this.type == WEAPONTYPE.BIGSWORD || this.type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;

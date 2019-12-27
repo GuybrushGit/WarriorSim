@@ -7,6 +7,7 @@ class Spell {
         this.refund = true;
         this.canDodge = true;
         this.totaldmg = 0;
+        this.data = [0,0,0,0,0];
     }
     dmg() {
         return 0;
@@ -272,9 +273,6 @@ class Flurry extends Aura {
         if (!this.stacks) {
             this.timer = 0;
             this.player.updateHaste();
-        }
-        else {
-            this.uptime += 400;
         }
     }
     use() {

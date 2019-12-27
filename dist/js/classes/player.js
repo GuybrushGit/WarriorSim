@@ -414,9 +414,9 @@ class Player {
             if (this.auras.deepwounds.timer)
                 this.auras.deepwounds.step(simulation);
         }
-        if (this.auras.battleshout && this.auras.battleshout.timer) {
-            this.auras.battleshout.step();
-        }
+        // if (this.auras.battleshout && this.auras.battleshout.timer) {
+        //     this.auras.battleshout.step();
+        // }
         if (this.auras.battlestance && this.auras.battlestance.timer) {
             this.auras.battlestance.step();
         }
@@ -480,7 +480,7 @@ class Player {
         let crit = this.crit + this.mh.crit;
         if (spell instanceof Overpower)
             crit += this.talents.overpowercrit;
-        if (roll < (crit * 100)) return RESULT.CRIT;
+        if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
     attack(weapon, extra) {
@@ -521,8 +521,14 @@ class Player {
 
         if (!extra) weapon.use();
         let done = this.dealdamage(dmg, result, spell);
-        if (spell) spell.totaldmg += done;
-        else weapon.totaldmg += done;
+        if (spell) {
+            spell.totaldmg += done;
+            spell.data[result]++;
+        }
+        else {
+            weapon.totaldmg += done;
+            weapon.data[result]++;
+        }
         weapon.totalprocdmg += procdmg;
         return done + procdmg;
     }
@@ -532,11 +538,12 @@ class Player {
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result);
+        spell.data[result]++;
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
         }
-        if (result == RESULT.CRIT && !spell.nocrit) {
+        if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
             this.proccrit();
         }
