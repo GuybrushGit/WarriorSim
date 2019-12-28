@@ -479,29 +479,27 @@ class Player {
         if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attack(weapon) {
+    attackmainhand(weapon) {
         let spell = null;
         let procdmg = 0;
-        let heroicstrike = !weapon.offhand && this.nextswinghs;
         let result;
+
         if (this.nextswinghs) {
-            result = this.rollspell(this.spells.heroicstrike);
-        }
-        else {
-            result = this.rollweapon(weapon);
-        }
-        if (heroicstrike) {
             this.nextswinghs = false;
             if (this.spells.heroicstrike.cost <= this.rage) {
+                result = this.rollspell(this.spells.heroicstrike);
                 spell = this.spells.heroicstrike;
                 this.rage -= spell.cost;
             }
             else {
-                heroicstrike = false;
                 result = this.rollweapon(weapon);
             }
         }
-        let dmg = weapon.dmg(heroicstrike);
+        else {
+            result = this.rollweapon(weapon);
+        }
+
+        let dmg = weapon.dmg(spell);
         procdmg = this.procattack(spell, weapon, result);
 
         if (result == RESULT.DODGE) {
@@ -525,6 +523,35 @@ class Player {
             weapon.totaldmg += done;
             weapon.data[result]++;
         }
+        weapon.totalprocdmg += procdmg;
+        return done + procdmg;
+    }
+    attackoffhand(weapon) {
+        let procdmg = 0;
+        let result;
+        if (this.nextswinghs) 
+            result = this.rollspell(this.spells.heroicstrike);
+        else 
+            result = this.rollweapon(weapon);
+
+        let dmg = weapon.dmg();
+        procdmg = this.procattack(null, weapon, result);
+
+        if (result == RESULT.DODGE) {
+            this.dodgeTimer = 5000;
+        }
+        if (result == RESULT.GLANCE) {
+            dmg *= weapon.glanceReduction;
+        }
+        if (result == RESULT.CRIT) {
+            dmg *= 2;
+            this.proccrit();
+        }
+
+        weapon.use();
+        let done = this.dealdamage(dmg, result);
+        weapon.data[result]++;
+        weapon.totaldmg += done;
         weapon.totalprocdmg += procdmg;
         return done + procdmg;
     }

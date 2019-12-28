@@ -57,10 +57,10 @@ class Simulation {
             if (batch) player.step(this);
 
             if (player.mh.timer == 0) {
-                this.idmg += player.attack(player.mh);
+                this.idmg += player.attackmainhand(player.mh);
             }
             if (player.oh.timer == 0) {
-                this.idmg += player.attack(player.oh);
+                this.idmg += player.attackoffhand(player.oh);
             }
             
             if (batch && player.timer == 0) {

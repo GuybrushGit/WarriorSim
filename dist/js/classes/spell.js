@@ -354,8 +354,8 @@ class DeathWish extends Aura {
     }
     canUse(step) {
         return this.firstuse && !this.timer && this.player.rage >= 10 && (step > this.deathwishstep ||
-            (this.crusaders == 1 && (this.player.auras.crusader1.timer || this.player.auras.crusader2.timer)) ||
-            (this.crusaders == 2 && this.player.auras.crusader1.timer && this.player.auras.crusader2.timer));
+            (this.crusaders == 1 && ((this.player.auras.crusader1 && this.player.auras.crusader1.timer) || (this.player.auras.crusader2 && this.player.auras.crusader2.timer))) ||
+            (this.crusaders == 2 && this.player.auras.crusader1 && this.player.auras.crusader1.timer && this.player.auras.crusader2 && this.player.auras.crusader2.timer));
     }
 }
 
