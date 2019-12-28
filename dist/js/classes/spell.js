@@ -256,18 +256,24 @@ class Flurry extends Aura {
         super(player);
         this.duration = 12;
         this.div_stats = { haste: player.talents.flurry };
+        this.startstep = 0;
     }
     step() {
         this.stacks--;
+        this.uptime += this.player.simulation.step - this.startstep;
+        this.startstep = this.player.simulation.step;
         if (!this.stacks) {
             this.timer = 0;
             this.player.updateHaste();
         }
     }
     use() {
-        this.stacks = 3;
         this.timer = 1;
-        this.player.updateHaste();
+        if (!this.stacks) {
+            this.startstep = this.player.simulation.step;
+            this.player.updateHaste();
+        }
+        this.stacks = 3;
     }
 }
 
@@ -276,21 +282,22 @@ class DeepWounds extends Aura {
         super(player);
         this.duration = 12;
         this.name = 'Deep Wounds';
+        this.totaldmg = 0;
     }
     step(simulation) {
         this.uptime += this.timer < 200 ? this.timer : 200;
         this.timer = this.timer < 200 ? 0 : this.timer - 200;
-        if (this.timer == 0 || this.timer % 3000 == 0 || this.timer % 6000 == 0 || this.timer % 3000 == 0) {
+        if (this.timer == 0 || this.timer % 3000 == 0 || this.timer % 6000 == 0 || this.timer % 9000 == 0) {
             let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
             dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds;
             simulation.idmg += ~~(dmg / 4);
+            this.totaldmg += ~~(dmg / 4);
         }
     }
     use() {
-        if (!this.timer) this.timer = this.duration * 1000;
-        else this.timer = 9000 + (this.timer % 3000);
+        this.timer = this.duration * 1000;
     }
 }
 

@@ -21,8 +21,9 @@ class Simulation {
         this.endtime = 0;
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
+        this.player.simulation = this;
 
-        // steps
+        // this.steps
         this.maxsteps = this.duration * 1000;
         this.executestep = parseInt(spells[4].starttime) * 1000;
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
@@ -37,21 +38,21 @@ class Simulation {
         this.starttime = new Date().getTime();
     }
     run(iteration) {
-        let step = 0;
+        this.step = 0;
         this.idmg = 0;
         let player = this.player;
         player.reset(this.startrage);
-        while (step < this.maxsteps) {
+        while (this.step < this.maxsteps) {
             let next = 10;
-            let batch = step % 400 == 0;
+            let batch = this.step % 400 == 0;
 
             if (player.mh.timer >= 400 && player.oh.timer >= 400)
-                next = (400 - (step % 400));
+                next = (400 - (this.step % 400));
 
-            if (batch && step % 3000 <= 200 && player.talents.angermanagement)
+            if (batch && this.step % 3000 <= 200 && player.talents.angermanagement)
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
 
-            step += next;
+            this.step += next;
             player.mh.step(next);
             player.oh.step(next);
             if (batch) player.step(this);
@@ -68,31 +69,31 @@ class Simulation {
                 if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
                     player.spells.bloodrage.use();
                 }
-                else if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && step > this.jujustep) {
+                else if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && this.step > this.jujustep) {
                     player.auras.jujuflurry.use();
                 }
-                else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse() && step > this.ragestep) {
+                else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse() && this.step > this.ragestep) {
                     player.auras.mightyragepotion.use();
                 }
-                else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) {
+                else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && this.step > this.cloudstep) {
                     player.auras.cloudkeeper.use();
                 }
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {
                     this.idmg += player.cast(player.spells.sunderarmor);
                 }
-                else if (player.auras.deathwish && player.auras.deathwish.canUse(step)) {
+                else if (player.auras.deathwish && player.auras.deathwish.canUse(this.step)) {
                     player.auras.deathwish.use();
                 }
-                else if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step > this.bloodfurystep) {
+                else if (player.auras.bloodfury && player.auras.bloodfury.canUse() && this.step > this.bloodfurystep) {
                     player.auras.bloodfury.use();
                 }
-                else if (player.auras.berserking && player.auras.berserking.canUse() && step > this.berserkingstep) {
+                else if (player.auras.berserking && player.auras.berserking.canUse() && this.step > this.berserkingstep) {
                     player.auras.berserking.use();
                 }
-                else if (player.auras.recklessness && player.auras.recklessness.canUse() && step > this.reckstep) {
+                else if (player.auras.recklessness && player.auras.recklessness.canUse() && this.step > this.reckstep) {
                     player.auras.recklessness.use();
                 }
-                else if (player.spells.execute && step > this.executestep) {
+                else if (player.spells.execute && this.step > this.executestep) {
                     if (player.spells.execute.canUse())
                         this.idmg += player.cast(player.spells.execute);
                 }

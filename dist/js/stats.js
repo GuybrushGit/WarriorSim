@@ -104,6 +104,13 @@ SIM.STATS = {
             counter++;
         }
 
+        // DW
+        if (sim.player.auras.deepwounds && sim.player.auras.deepwounds.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.deepwounds.name);
+            data.push((sim.player.auras.deepwounds.totaldmg / sim.iterations / sim.duration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+
         view.dmgdata.datasets.push({
             data: data,
             fill: false,
@@ -138,6 +145,7 @@ SIM.STATS = {
                     display: true,
                     text: 'Aura Uptime',
                     fontColor: '#ccc',
+                    position: 'bottom'
                 },
                 scales: {
                     yAxes: [{
@@ -167,7 +175,11 @@ SIM.STATS = {
                             var meta = chartInstance.controller.getDatasetMeta(i);
                             meta.data.forEach(function (bar, index) {
                                 var data = dataset.data[index];
-                                ctx.fillStyle = "#ccc";
+                                ctx.fillStyle = "#ddd";
+                                ctx.shadowOffsetX = 2;
+                                ctx.shadowOffsetY = 2;
+                                ctx.shadowColor = "rgba(0,0,0,0.5)";
+                                ctx.shadowBlur = 4;
                                 ctx.fillText(data + '%', bar._model.x - 50, bar._model.y + 5);
                             });
                         });
@@ -193,6 +205,7 @@ SIM.STATS = {
                     display: true,
                     text: 'DPS',
                     fontColor: '#ccc',
+                    position: 'bottom'
                 },
                 animation: {
                     animateScale: true,
