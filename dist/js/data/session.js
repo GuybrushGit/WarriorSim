@@ -1,6 +1,6 @@
 var session = {
-   buffs: '["27578","22888","15366","9885","20906","20217","19838","8410","13452","12451","12460","13810"]',
-   rotation: '[{"id":"23894","active":true},{"id":"27580","active":false},{"id":"11567","active":true,"minrage":"30"},{"id":"11609","active":false,"minrage":"40"},{"id":"20662","active":true,"starttime":"50"},{"id":"1680","active":true,"minrage":"50"},{"id":"12328","active":true,"time":"30"},{"id":"1719","active":false,"time":"45"},{"id":"11551","active":false},{"id":"11585","active":false,"maxrage":"25"},{"id":"26296","active":false,"time":"50"},{"id":"20572","active":false,"time":"35"},{"id":"2687","active":true},{"id":"17528","active":true,"time":"40","maxrage":"25"},{"id":"16322","active":false,"time":"40"},{"id":"23255","active":false}]',
+   buffs: '["27578","22888","22817","9885","20906","20217","19838","8410","13452","12451","12460","13810"]',
+   rotation: '[]',
    sources: '["quest","crafting","dungeon","onyxia","mc","worldboss","pvp","other"]',
    phases: '["1","2"]',
    talents: '[{"n":"Arms","t":[3,0,3,0,5,0,0,1,3,0,2,0,0,0,0,0,0,0]},{"n":"Fury","t":[0,5,0,5,0,0,0,5,5,2,5,0,1,0,0,5,1]},{"n":"Protection","t":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]',
