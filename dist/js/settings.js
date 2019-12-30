@@ -198,12 +198,6 @@ SIM.SETTINGS = {
             if (spell.active)
                 div.addClass('active');
 
-            if (spell.id == 17528) {
-                div.find('.options li:first-of-type').append(' and');
-                let html = div.find('.options li:last-of-type').html();
-                div.find('.options li:last-of-type').html(html.replace('Use ',''));
-            }
-
             if (spell.maincd !== undefined) {
                 div.find('.options li:first-of-type').append(' or');
             }

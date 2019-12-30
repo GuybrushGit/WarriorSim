@@ -213,7 +213,7 @@ var talents = [
             y: 3,
             c: 0,
             iconname: 'INV_Axe_09',
-            aura: function (count) { return { dmgmod_twohand: count } },
+            aura: function (count) { return { twomod: count * 0.01 } },
          },
          {
             i: 662,

@@ -29,7 +29,6 @@ class Simulation {
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
-        this.ragestep = parseInt(spells[13].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
         this.cloudstep = Math.max(this.duration - 30,0) * 1000;
     }
@@ -46,7 +45,7 @@ class Simulation {
             let next = 10;
             let batch = this.step % 400 == 0;
 
-            if (player.mh.timer >= 400 && player.oh.timer >= 400)
+            if (player.mh.timer >= 400 && (!player.oh || player.oh.timer >= 400))
                 next = (400 - (this.step % 400));
 
             if (batch && this.step % 3000 <= 200 && player.talents.angermanagement)
@@ -54,14 +53,14 @@ class Simulation {
 
             this.step += next;
             player.mh.step(next);
-            player.oh.step(next);
+            if (player.oh) player.oh.step(next);
             if (batch) player.step(this);
 
             if (player.mh.timer == 0) {
-                this.idmg += player.attackmainhand(player.mh);
+                this.idmg += player.attackmh(player.mh);
             }
-            if (player.oh.timer == 0) {
-                this.idmg += player.attackoffhand(player.oh);
+            if (player.oh && player.oh.timer == 0) {
+                this.idmg += player.attackoh(player.oh);
             }
             
             if (batch && player.timer == 0) {
@@ -72,7 +71,7 @@ class Simulation {
                 else if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && this.step > this.jujustep) {
                     player.auras.jujuflurry.use();
                 }
-                else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse() && this.step > this.ragestep) {
+                else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse(this.step)) {
                     player.auras.mightyragepotion.use();
                 }
                 else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && this.step > this.cloudstep) {

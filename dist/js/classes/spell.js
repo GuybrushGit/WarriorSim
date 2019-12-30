@@ -420,7 +420,8 @@ class MightyRagePotion extends Aura {
         super(player);
         this.stats = { str: 60 };
         this.duration = 20;
-        this.threshold = parseInt(spells[13].maxrage);
+        this.crusaders = parseInt(spells[13].crusaders);
+        this.ragestep = parseInt(spells[13].time) * 1000;
         this.name = 'Mighty Rage Potion';
     }
     use() {
@@ -429,8 +430,10 @@ class MightyRagePotion extends Aura {
         this.player.timer = 400;
         this.player.updateAuras();
     }
-    canUse() {
-        return this.firstuse && !this.timer && this.player.rage <= this.threshold;
+    canUse(step) {
+        return this.firstuse && !this.timer && (step > this.ragestep ||
+            (this.crusaders == 1 && ((this.player.auras.crusader1 && this.player.auras.crusader1.timer) || (this.player.auras.crusader2 && this.player.auras.crusader2.timer))) ||
+            (this.crusaders == 2 && this.player.auras.crusader1 && this.player.auras.crusader1.timer && this.player.auras.crusader2 && this.player.auras.crusader2.timer));
     }
 }
 

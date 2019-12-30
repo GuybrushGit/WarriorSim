@@ -77,7 +77,7 @@ SIM.UI = {
             $(this).siblings().removeClass('active');
             var type = $(this).data('type');
 
-            if (type == "mainhand" || type == "offhand") 
+            if (type == "mainhand" || type == "offhand" || type == "twohand") 
                 view.loadWeapons(type);
             else 
                 view.loadGear(type);
@@ -90,8 +90,7 @@ SIM.UI = {
             var tr = $(this).parent();
 
             if (tr.hasClass('active')) {
-                if (type != "mainhand" && type != "offhand") 
-                    view.rowDisableItem(tr);
+                view.rowDisableItem(tr);
             }
             else {
                 var counter = table.find('tr.active').length;
@@ -136,6 +135,11 @@ SIM.UI = {
         dps.text('');
         time.text('');
         var player = new Player();
+        if (row) {
+            let type = row.parents('table').data('type');
+            if (type == "finger" || type == "trinket")
+                player = new Player(null, type);
+        }
         var sim = new Simulation(player, 
             () => {
                 // Finished
@@ -223,6 +227,24 @@ SIM.UI = {
             if (gear[type][i].id == tr.data('id'))
                 gear[type][i].selected = true;
         }
+
+        if (type == "twohand") {
+            for(let i = 0; i < gear.mainhand.length; i++)
+                gear.mainhand[i].selected = false;
+            for(let i = 0; i < gear.offhand.length; i++)
+                gear.offhand[i].selected = false;
+            for(let i = 0; i < enchant.mainhand.length; i++)
+                enchant.mainhand[i].selected = false;
+            for(let i = 0; i < enchant.offhand.length; i++)
+                enchant.offhand[i].selected = false;
+        }
+
+        if (type == "mainhand" || type == "offhand") {
+            for(let i = 0; i < gear.twohand.length; i++)
+                gear.twohand[i].selected = false;
+            for(let i = 0; i < enchant.twohand.length; i++)
+                enchant.twohand[i].selected = false;
+        }
     },
 
     rowDisableEnchant: function(tr) {
@@ -264,21 +286,21 @@ SIM.UI = {
         var player = new Player();
 
         let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-        if (!player.mh || !player.oh) return;
+        if (!player.mh) return;
         view.sidebar.find('#str').text(player.stats.str);
         view.sidebar.find('#agi').text(player.stats.agi);
         view.sidebar.find('#ap').text(player.stats.ap);
-        view.sidebar.find('#skill').html(player.stats['skill_' + player.mh.type] + ' <small>MH</small>' + space + player.stats['skill_' + player.oh.type] + ' <small>OH</small>');
-        view.sidebar.find('#miss').html(Math.max(player.mh.miss, 0).toFixed(2) + '% <small>1H</small>' + space + Math.max(player.mh.dwmiss, 0).toFixed(2) + '% <small>DW</small>');
+        view.sidebar.find('#skill').html(player.stats['skill_' + player.mh.type] + ' <small>MH</small>' + (player.oh ? space + player.stats['skill_' + player.oh.type] + ' <small>OH</small>' : ''));
+        view.sidebar.find('#miss').html(Math.max(player.mh.miss, 0).toFixed(2) + '% <small>1H</small>' + (player.oh ? space + Math.max(player.mh.dwmiss, 0).toFixed(2) + '% <small>DW</small>' : ''));
         let mhcrit = player.crit + player.mh.crit;
-        let ohcrit = player.crit + player.oh.crit;
-        view.sidebar.find('#crit').html(mhcrit.toFixed(2) + '% <small>MH</small>' + space + ohcrit.toFixed(2) + '% <small>OH</small>');
+        let ohcrit = player.crit + (player.oh ? player.oh.crit : 0);
+        view.sidebar.find('#crit').html(mhcrit.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohcrit.toFixed(2) + '% <small>OH</small>' : ''));
         let mhcap = 100 - player.mh.miss - 19 - player.mh.dodge - player.mh.glanceChance;
-        let ohcap = 100 - player.oh.miss - 19 - player.oh.dodge - player.oh.glanceChance;
-        view.sidebar.find('#critcap').html(mhcap.toFixed(2) + '% <small>MH</small>'+ space + ohcap.toFixed(2) + '% <small>OH</small>');
+        let ohcap = player.oh ? 100 - player.oh.miss - 19 - player.oh.dodge - player.oh.glanceChance : 0;
+        view.sidebar.find('#critcap').html(mhcap.toFixed(2) + '% <small>MH</small>'+ (player.oh ? space + ohcap.toFixed(2) + '% <small>OH</small>' : ''));
         let mhdmg = player.stats.dmgmod * player.mh.modifier * 100;
-        let ohdmg = player.stats.dmgmod * player.oh.modifier * 100;
-        view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + space + ohdmg.toFixed(2) + '% <small>OH</small>');
+        let ohdmg = player.stats.dmgmod * (player.oh ? player.oh.modifier * 100 : 0);
+        view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohdmg.toFixed(2) + '% <small>OH</small>' : ''));
         view.sidebar.find('#haste').html((player.stats.haste * 100).toFixed(2) + '%');
         view.sidebar.find('#race').text(localStorage.race);
     },
@@ -298,6 +320,7 @@ SIM.UI = {
         localStorage.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
         localStorage.mainhandfilter = view.main.find('#mainhandfilter').val();
         localStorage.offhandfilter = view.main.find('#offhandfilter').val();
+        localStorage.twohandfilter = view.main.find('#twohandfilter').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
@@ -355,6 +378,7 @@ SIM.UI = {
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
         view.main.find('#mainhandfilter').val(localStorage.mainhandfilter);
         view.main.find('#offhandfilter').val(localStorage.offhandfilter);
+        view.main.find('#twohandfilter').val(localStorage.twohandfilter);
 
         let _buffs = !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs);
         let _rotation = !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation);
@@ -417,6 +441,7 @@ SIM.UI = {
 
         if (type == "mainhand") filter = view.main.find('#mainhandfilter').val();
         if (type == "offhand") filter = view.main.find('#offhandfilter').val();
+        if (type == "twohand") filter = view.main.find('#twohandfilter').val();
 
         let table = `<table class="gear" data-type="${type}" data-max="1">
                         <thead>

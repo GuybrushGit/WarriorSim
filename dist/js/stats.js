@@ -93,15 +93,17 @@ SIM.STATS = {
         }
 
         // OH
-        view.dmgdata.labels.push('Off Hand');
-        data.push((sim.player.oh.totaldmg / sim.iterations / sim.duration).toFixed(2));
-        colors.push(view.colors[counter % view.colors.length]);
-        counter++;
-        if (sim.player.oh.totalprocdmg) {
-            view.dmgdata.labels.push('Off Hand Proc');
-            data.push((sim.player.oh.totalprocdmg / sim.iterations / sim.duration).toFixed(2));
+        if (sim.player.oh) {
+            view.dmgdata.labels.push('Off Hand');
+            data.push((sim.player.oh.totaldmg / sim.iterations / sim.duration).toFixed(2));
             colors.push(view.colors[counter % view.colors.length]);
             counter++;
+            if (sim.player.oh.totalprocdmg) {
+                view.dmgdata.labels.push('Off Hand Proc');
+                data.push((sim.player.oh.totalprocdmg / sim.iterations / sim.duration).toFixed(2));
+                colors.push(view.colors[counter % view.colors.length]);
+                counter++;
+            }
         }
 
         // DW
@@ -180,7 +182,7 @@ SIM.STATS = {
                                 ctx.shadowOffsetY = 2;
                                 ctx.shadowColor = "rgba(0,0,0,0.5)";
                                 ctx.shadowBlur = 4;
-                                ctx.fillText(data + '%', bar._model.x - 50, bar._model.y + 5);
+                                ctx.fillText(data + '%', parseInt(data) < 11 ? bar._model.x + 10 : bar._model.x - 50, bar._model.y + 5);
                             });
                         });
                     }
@@ -235,11 +237,13 @@ SIM.STATS = {
         let dps = (sim.player.mh.totaldmg / sim.iterations / sim.duration).toFixed(2);
         html += `<tr><td>Main Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
 
-        data = sim.player.oh.data;
-        total = data.reduce((a, b) => a + b, 0);
-        dps = (sim.player.oh.totaldmg / sim.iterations / sim.duration).toFixed(2);
-        html += `<tr><td>Off Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
-
+        if (sim.player.oh) {
+            data = sim.player.oh.data;
+            total = data.reduce((a, b) => a + b, 0);
+            dps = (sim.player.oh.totaldmg / sim.iterations / sim.duration).toFixed(2);
+            html += `<tr><td>Off Hand</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dps}</td></tr>`;
+        }
+        
         for (let name in sim.player.spells) {
             let n = sim.player.spells[name].name;
             let data = sim.player.spells[name].data;

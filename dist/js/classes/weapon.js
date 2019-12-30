@@ -4,22 +4,21 @@ var WEAPONTYPE = {
     DAGGER: 2,
     AXE: 3,
     FIST: 4,
-    BIGMACE: 5,
-    BIGSWORD: 6,
-    BIGAXE: 7,
 }
 
 class Weapon {
-    constructor(player, item, enchant, tempenchant, offhand) {
+    constructor(player, item, enchant, tempenchant, offhand, twohand) {
         this.player = player;
         this.speed = item.speed;
         this.mindmg = item.mindmg;
         this.maxdmg = item.maxdmg;
         this.type = item.type;
         this.modifier = offhand ? 0.5 * (1 + player.talents.offmod) * (1 + player.talents.onemod) : 1 + player.talents.onemod;
+        if (twohand) this.modifier = 1 + player.talents.twomod;
         this.timer = offhand ? this.speed * 1000 : 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
+        this.twohand = twohand;
         this.crit = 0;
         this.basebonusdmg = 0;
         this.bonusdmg = 0;
@@ -27,9 +26,9 @@ class Weapon {
         this.totaldmg = 0;
         this.totalprocdmg = 0;
         this.data = [0,0,0,0,0];
-        if (this.type == WEAPONTYPE.AXE || this.type == WEAPONTYPE.BIGAXE) this.crit += player.talents.axecrit;
+        if (this.type == WEAPONTYPE.AXE) this.crit += player.talents.axecrit;
         if (this.type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
-        if (this.type == WEAPONTYPE.BIGMACE || this.type == WEAPONTYPE.BIGSWORD || this.type == WEAPONTYPE.BIGAXE) this.normSpeed = 3.3;
+        if (this.twohand) this.normSpeed = 3.3;
 
         if (item.ppm) {
             this.proc1 = {};

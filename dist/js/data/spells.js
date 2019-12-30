@@ -111,7 +111,7 @@ var spells = [
     classname: 'MightyRagePotion',
     iconname: 'inv_potion_41',
     time: 39,
-    maxrage: 50,
+    crusaders: 1,
     aura: true,
 },
 {

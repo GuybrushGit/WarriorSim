@@ -51,13 +51,15 @@ class Player {
         this.addRace();
         this.addTalents();
         this.addGear();
-        this.addTrinkets();
+        if (!this.mh) {
+            // TODO ALERT
+            return;
+        }
         this.addSets();
         this.addEnchants();
         this.addTempEnchants();
         this.addBuffs();
         this.addSpells();
-        if (!this.mh || !this.oh) return;
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
@@ -87,7 +89,6 @@ class Player {
     }
     addGear() {
         for (let type in gear) {
-            if (type == "finger" || type == "trinket") continue;
             for (let item of gear[type]) {
                 if ((this.testItemType == type && this.testItem == item.id) ||
                     (this.testItemType != type && item.selected)) {
@@ -105,7 +106,7 @@ class Player {
                         }
                     }
 
-                    if (type == "mainhand" || type == "offhand")
+                    if (type == "mainhand" || type == "offhand" || type == "twohand")
                         this.addWeapon(item, type);
 
                     // Blazefury Medallion
@@ -114,68 +115,17 @@ class Player {
                         this.attackproc.chance = item.procchance * 100;
                         this.attackproc.magicdmg = item.magicdmg;
                     }
+                    
+                    if (item.procchance && type == "trinket") {
+                        let proc = {};
+                        proc.chance = item.procchance * 100;
+                        proc.extra = item.procextra;
+                        proc.magicdmg = item.magicdmg;
+                        this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
+                    }
 
                     this.items.push(item.id);
                 }
-            }
-        }
-    }
-    addTrinkets() {
-        let fingers = [];
-        let trinkets = [];
-
-        for (let item of gear.finger)
-            if (item.selected) fingers.push(item);
-        for (let item of gear.trinket)
-            if (item.selected) trinkets.push(item);
-
-        if (this.testItemType == "finger") {
-            for (let item of gear.finger) {
-                if (item.id == this.testItem) {
-                    if (fingers.includes(item))
-                        break;
-                    else if (fingers.length < 2)
-                        fingers.push(item);
-                    else if (parseFloat(fingers[0].dps) > parseFloat(fingers[1].dps))
-                        fingers[1] = item;
-                    else
-                        fingers[0] = item;
-                }
-            }
-        }
-
-        if (this.testItemType == "trinket") {
-            for (let item of gear.trinket) {
-                if (item.id == this.testItem) {
-                    if (trinkets.includes(item))
-                        break;
-                    else if (trinkets.length < 2)
-                        trinkets.push(item);
-                    else if (parseFloat(trinkets[0].dps) > parseFloat(trinkets[1].dps))
-                        trinkets[1] = item;
-                    else
-                        trinkets[0] = item;
-                }
-            }
-        }
-
-        for (let item of fingers) {
-            for (let prop in this.base)
-                this.base[prop] += item[prop] || 0;
-        }
-
-        let index = 0;
-        for (let item of trinkets) {
-            index++;
-            for (let prop in this.base)
-                this.base[prop] += item[prop] || 0;
-
-            if (item.procchance) {
-                let proc = {};
-                proc.chance = item.procchance * 100;
-                proc.extra = item.procextra;
-                proc.magicdmg = item.magicdmg;
-                this["trinketproc" + index] = proc;
             }
         }
     }
@@ -194,10 +144,13 @@ class Player {
         }
 
         if (type == "mainhand")
-            this.mh = new Weapon(this, item, ench, tempench, false);
+            this.mh = new Weapon(this, item, ench, tempench, false, false);
 
         if (type == "offhand")
-            this.oh = new Weapon(this, item, ench, tempench, true);
+            this.oh = new Weapon(this, item, ench, tempench, true, false);
+
+        if (type == "twohand")
+            this.mh = new Weapon(this, item, ench, tempench, false, true);
 
     }
     addEnchants() {
@@ -278,7 +231,7 @@ class Player {
         this.timer = 0;
         this.dodgeTimer = 0;
         this.mh.timer = 0;
-        this.oh.use();
+        if (this.oh) this.oh.use();
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
@@ -295,17 +248,19 @@ class Player {
     }
     update() {
         this.updateAuras();
-        this.mh.glanceReduction = this.getGlanceReduction(this.mh);
-        this.oh.glanceReduction = this.getGlanceReduction(this.oh);
         this.mh.glanceChance = this.getGlanceChance(this.mh);
-        this.oh.glanceChance = this.getGlanceChance(this.oh);
         this.armorReduction = this.getArmorReduction();
         this.mh.miss = this.getMissChance(this.mh);
-        this.oh.miss = this.getMissChance(this.oh);
-        this.mh.dwmiss = (this.mh.miss > 0 ? this.mh.miss * 0.8 : this.mh.miss) + 20;
-        this.oh.dwmiss = (this.oh.miss > 0 ? this.oh.miss * 0.8 : this.oh.miss) + 20;
+        this.mh.dwmiss = this.mh.miss;
         this.mh.dodge = this.getDodgeChance(this.mh);
-        this.oh.dodge = this.getDodgeChance(this.oh);
+
+        if (this.oh) {
+            this.mh.dwmiss = (this.mh.miss > 0 ? this.mh.miss * 0.8 : this.mh.miss) + 20;
+            this.oh.glanceChance = this.getGlanceChance(this.oh);
+            this.oh.miss = this.getMissChance(this.oh);
+            this.oh.dwmiss = (this.oh.miss > 0 ? this.oh.miss * 0.8 : this.oh.miss) + 20;
+            this.oh.dodge = this.getDodgeChance(this.oh);
+        }
     }
     updateAuras() {
         for (let prop in this.base)
@@ -356,9 +311,10 @@ class Player {
         this.armorReduction = this.getArmorReduction();
     }
     getGlanceReduction(weapon) {
-        let low = 1.3 - 0.05 * (this.target.defense - this.stats['skill_' + weapon.type]);
-        let high = 1.2 - 0.03 * (this.target.defense - this.stats['skill_' + weapon.type]);
-        return (Math.min(low, 0.91) + Math.min(high, 0.99)) / 2;
+        let diff = this.target.defense - this.stats['skill_' + weapon.type];
+        let low = 1.3 - 0.05 * diff;
+        let high = 1.2 - 0.03 * diff;
+        return rng(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;
     }
     getGlanceChance(weapon) {
         return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;
@@ -443,10 +399,10 @@ class Player {
         if (this.mh.proc2 && this.mh.proc2.spell && this.mh.proc2.spell.timer) {
             this.mh.proc2.spell.step();
         }
-        if (this.oh.proc1 && this.oh.proc1.spell && this.oh.proc1.spell.timer) {
+        if (this.oh && this.oh.proc1 && this.oh.proc1.spell && this.oh.proc1.spell.timer) {
             this.oh.proc1.spell.step();
         }
-        if (this.oh.proc2 && this.oh.proc2.spell && this.oh.proc2.spell.timer) {
+        if (this.oh && this.oh.proc2 && this.oh.proc2.spell && this.oh.proc2.spell.timer) {
             this.oh.proc2.spell.step();
         }
     }
@@ -479,7 +435,7 @@ class Player {
         if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmainhand(weapon) {
+    attackmh(weapon) {
         let spell = null;
         let procdmg = 0;
         let result;
@@ -506,7 +462,7 @@ class Player {
             this.dodgeTimer = 5000;
         }
         if (result == RESULT.GLANCE) {
-            dmg *= weapon.glanceReduction;
+            dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
@@ -526,7 +482,7 @@ class Player {
         weapon.totalprocdmg += procdmg;
         return done + procdmg;
     }
-    attackoffhand(weapon) {
+    attackoh(weapon) {
         let procdmg = 0;
         let result;
         if (this.nextswinghs) 
@@ -541,7 +497,7 @@ class Player {
             this.dodgeTimer = 5000;
         }
         if (result == RESULT.GLANCE) {
-            dmg *= weapon.glanceReduction;
+            dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
