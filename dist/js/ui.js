@@ -27,6 +27,7 @@ SIM.UI = {
         view.main = view.body.find('section.main');
         view.sidebar = view.body.find('section.sidebar');
         view.tcontainer = view.main.find('.table-container');
+        view.alerts = view.body.find('.alerts');
     },
 
     events: function () {
@@ -139,6 +140,11 @@ SIM.UI = {
             let type = row.parents('table').data('type');
             if (type == "finger" || type == "trinket")
                 player = new Player(null, type);
+        }
+        if (!player.mh) {
+            view.addAlert('No weapon selected');
+            view.endLoading();
+            return;
         }
         var sim = new Simulation(player, 
             () => {
@@ -628,7 +634,22 @@ SIM.UI = {
         });
 
         view.main.find('.js-enchant').show();
+    },
+
+    addAlert: function (msg) {
+        var view = this;
+        view.alerts.empty().append('<div class="alert"><p>' + msg + '</p></div>');
+        view.alerts.find('.alert').click(function () { view.closeAlert(); });
+        setTimeout(function () { view.alerts.find('.alert').addClass('in-up') });
+        setTimeout(function () { view.closeAlert(); }, 4000);
+    },
+    
+    closeAlert: function () {
+        var view = this;
+        view.alerts.find('.alert').removeClass('in-up');
+        setTimeout(function () { view.alerts.empty(); }, 1000);
     }
+    
 
 
 };

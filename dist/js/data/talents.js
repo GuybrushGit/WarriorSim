@@ -659,7 +659,7 @@ var talents = [
             y: 4,
             c: 0,
             iconname: 'Ability_Warrior_DecisiveStrike',
-            aura: function (count) { return { impslam: count * 0.1 } },
+            aura: function (count) { return { impslam: count } },
          },
          {
             i: 165,

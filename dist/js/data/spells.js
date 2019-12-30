@@ -137,5 +137,12 @@ var spells = [
     iconname: 'ability_warrior_sunder',
     globals: 1,
 },
+{
+    id: 11605,
+    name: 'Slam',
+    classname: 'Slam',
+    iconname: 'ability_warrior_decisivestrike',
+    hidden: true,
+},
 
 ];

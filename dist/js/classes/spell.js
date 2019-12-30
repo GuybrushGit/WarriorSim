@@ -201,6 +201,19 @@ class SunderArmor extends Spell {
     }
 }
 
+class Slam extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 15;
+        this.casttime = 1500 - player.talents.impslam * 100;
+    }
+    dmg() {
+        return 87 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.speed;
+    }
+    canUse() {
+        return true;
+    }
+}
 
 
 
