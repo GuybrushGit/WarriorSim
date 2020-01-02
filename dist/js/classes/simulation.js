@@ -68,8 +68,8 @@ class Simulation {
                 this.idmg += player.attackoh(player.oh);
             }
 
-            if (player.spells.slam && player.spells.slam.canUse()) {
-                player.spells.slam.use();
+            if (player.spells.slam && (!player.spells.execute || this.step <= this.executestep) && player.spells.slam.canUse()) {
+                player.spells.slam.queue();
             }
             
             if (batch && player.timer == 0) {
