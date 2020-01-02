@@ -347,7 +347,7 @@ var talents = [
             y: 5,
             c: 0,
             iconname: 'INV_Weapon_Halbard_01',
-            aura: function (count) { return { crit_polearm: count } },
+            aura: function (count) { return { polearmcrit: count } },
          },
          {
             i: 129,

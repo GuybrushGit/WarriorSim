@@ -190,7 +190,9 @@ SIM.SETTINGS = {
             if (spell.id == 23255)
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.id == 11605)
-                div.find('.options').append(`<li>Use macro with MH swing</li>`);
+                div.find('.options').append(`<li>Slam macro with MH swing</li>`);
+            if (spell.id == 2687)
+                div.find('.options').append('<li>Used on cooldown below 80 rage</li>');
             if (spell.hidden)
                 div.addClass('hidden');
             if (localStorage.race == "Orc" && spell.id == 20572)

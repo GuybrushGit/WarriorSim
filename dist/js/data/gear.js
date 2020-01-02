@@ -4899,31 +4899,765 @@ var gear = {
    ],
    "twohand": [
       {
+         "name": "Arcanite Reaper",
+         "sta": 13,
+         "ap": 62,
+         "mindmg": 153,
+         "maxdmg": 256,
+         "speed": 3.8,
+         "id": 12784,
+         "source": "Crafting",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "[TODO] Brain Hacker",
+         "mindmg": 95,
+         "maxdmg": 143,
+         "speed": 2.1,
+         "id": 1263,
+         "source": "Other",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "Dark Edge of Insanity",
+         "str": 35,
+         "sta": 25,
+         "agi": 19,
+         "mindmg": 242,
+         "maxdmg": 364,
+         "speed": 3.5,
+         "id": 21134,
+         "source": "AQ40",
+         "phase": 5,
+         "type": "Axe"
+      },
+      {
+         "name": "Draconic Avenger",
+         "str": 21,
+         "sta": 18,
+         "mindmg": 174,
+         "maxdmg": 262,
+         "speed": 3.2,
+         "id": 19354,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Axe"
+      },
+      {
+         "name": "[TODO] Drake Talon Cleaver",
+         "str": 22,
+         "sta": 17,
+         "mindmg": 199,
+         "maxdmg": 300,
+         "speed": 3.4,
+         "id": 19353,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Axe"
+      },
+      {
+         "name": "Dreadforge Retaliator",
+         "ap": 30,
+         "crit": 1,
+         "mindmg": 149,
+         "maxdmg": 225,
+         "speed": 3.7,
+         "id": 11931,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "Gravestone War Axe",
+         "mindmg": 144,
+         "maxdmg": 217,
+         "speed": 3.4,
+         "id": 13983,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "Gri'lek's Carver",
+         "mindmg": 182,
+         "maxdmg": 274,
+         "speed": 3.9,
+         "id": 19962,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Axe"
+      },
+      {
+         "name": "R14 Battle Axe",
+         "crit": 1,
+         "str": 26,
+         "sta": 41,
+         "mindmg": 235,
+         "maxdmg": 353,
+         "speed": 3.8,
+         "id": 18831,
+         "source": "PVP",
+         "phase": 2,
+         "type": "Axe"
+      },
+      {
+         "name": "Malicious Axe",
+         "sta": 30,
+         "ap": 26,
+         "mindmg": 131,
+         "maxdmg": 197,
+         "speed": 3.1,
+         "id": 18759,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "[TODO] Neretzek, The Blood Drinker",
+         "str": 21,
+         "sta": 16,
+         "mindmg": 202,
+         "maxdmg": 303,
+         "speed": 3.7,
+         "id": 21856,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Axe"
+      },
+      {
+         "name": "Nightfall",
+         "mindmg": 187,
+         "maxdmg": 282,
+         "speed": 3.5,
+         "id": 19169,
+         "source": "Crafting",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "Severance",
+         "crit": 2,
+         "str": 43,
+         "sta": 18,
+         "mindmg": 235,
+         "maxdmg": 354,
+         "speed": 3.6,
+         "id": 22815,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Axe"
+      },
+      {
+         "name": "Spinal Reaper",
+         "ap": 34,
+         "mindmg": 203,
+         "maxdmg": 305,
+         "speed": 3.4,
+         "id": 17104,
+         "source": "MC",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "[TODO] The Nicker",
+         "mindmg": 159,
+         "maxdmg": 239,
+         "speed": 4,
+         "id": 13285,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Axe"
+      },
+      {
+         "name": "Treant's Bane",
+         "crit": 2,
+         "str": 25,
+         "sta": 15,
+         "mindmg": 128,
+         "maxdmg": 193,
+         "speed": 2.7,
+         "id": 18538,
+         "source": "Dungeon",
+         "phase": 2,
+         "type": "Axe"
+      },
+      {
+         "name": "Zulian Stone Axe",
+         "crit": 1,
+         "ap": 44,
+         "mindmg": 131,
+         "maxdmg": 197,
+         "speed": 2.8,
+         "id": 19900,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Axe"
+      },
+      {
+         "name": "Bonecrusher",
+         "crit": 1,
+         "str": 30,
+         "mindmg": 129,
+         "maxdmg": 194,
+         "speed": 3,
+         "id": 18420,
+         "source": "Quest",
+         "phase": 2,
+         "type": "Mace"
+      },
+      {
+         "name": "Crystal Spiked Maul",
+         "crit": 2,
+         "str": 16,
+         "mindmg": 168,
+         "maxdmg": 252,
+         "speed": 3.9,
+         "id": 20696,
+         "source": "Other",
+         "phase": 5,
+         "type": "Mace"
+      },
+      {
+         "name": "Doomulus Prime",
+         "hit": 1,
+         "str": 22,
+         "sta": 22,
+         "mindmg": 158,
+         "maxdmg": 265,
+         "speed": 3.8,
+         "id": 22348,
+         "source": "Quest",
+         "phase": 5,
+         "type": "Mace"
+      },
+      {
+         "name": "Draconic Maul",
+         "crit": 2,
+         "str": 27,
+         "sta": 19,
+         "mindmg": 187,
+         "maxdmg": 282,
+         "speed": 3.5,
+         "id": 19358,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Mace"
+      },
+      {
+         "name": "Earthshaker",
+         "ap": 22,
+         "mindmg": 175,
+         "maxdmg": 263,
+         "speed": 3.5,
+         "id": 17073,
+         "source": "MC",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "Fist of Omokk",
+         "str": 29,
+         "sta": 12,
+         "mindmg": 135,
+         "maxdmg": 204,
+         "speed": 3.3,
+         "id": 13167,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "Hammer of the Titans",
+         "str": 15,
+         "mindmg": 163,
+         "maxdmg": 246,
+         "speed": 3.8,
+         "id": 12796,
+         "source": "Crafting",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "R14 Pulverizer",
+         "crit": 1,
+         "str": 26,
+         "sta": 41,
+         "mindmg": 235,
+         "maxdmg": 353,
+         "speed": 3.8,
+         "id": 18868,
+         "source": "PVP",
+         "phase": 2,
+         "type": "Mace"
+      },
+      {
+         "name": "[TODO] Jeklik's Crusher",
+         "mindmg": 159,
+         "maxdmg": 248,
+         "speed": 3.6,
+         "id": 19918,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Mace"
+      },
+      {
+         "name": "Might of Menethil",
+         "crit": 2,
+         "str": 20,
+         "sta": 46,
+         "mindmg": 289,
+         "maxdmg": 435,
+         "speed": 3.8,
+         "id": 22798,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Mace"
+      },
+      {
+         "name": "Seeping Willow",
+         "mindmg": 155,
+         "maxdmg": 233,
+         "speed": 3.6,
+         "id": 12969,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "[TODO] Sulfuras, Hand of Ragnaros",
+         "str": 12,
+         "sta": 12,
+         "mindmg": 223,
+         "maxdmg": 372,
+         "speed": 3.7,
+         "id": 17182,
+         "source": "MC",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "[TODO] Sulfuron Hammer",
+         "mindmg": 175,
+         "maxdmg": 295,
+         "speed": 3.7,
+         "id": 17193,
+         "source": "MC",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
          "name": "The Unstoppable Force",
+         "crit": 2,
          "str": 19,
          "sta": 15,
-         "crit": 2,
          "mindmg": 175,
          "maxdmg": 292,
          "speed": 3.8,
-         "type": "Mace",
+         "id": 19323,
          "source": "PVP",
          "phase": 2,
-         "id": 19323
+         "type": "Mace"
+      },
+      {
+         "name": "[TODO] Manual Crowd Pummeler",
+         "str": 16,
+         "agi": 5,
+         "mindmg": 46,
+         "maxdmg": 70,
+         "speed": 2,
+         "id": 9449,
+         "source": "Other",
+         "phase": 1,
+         "type": "Mace"
+      },
+      {
+         "name": "Barb of the Sand Reaver",
+         "sta": 31,
+         "agi": 41,
+         "mindmg": 225,
+         "maxdmg": 338,
+         "speed": 3.7,
+         "id": 21635,
+         "source": "AQ40",
+         "phase": 5,
+         "type": "Polearm"
+      },
+      {
+         "name": "Blackfury",
+         "crit": 1,
+         "str": 35,
+         "sta": 15,
+         "mindmg": 105,
+         "maxdmg": 158,
+         "speed": 2.1,
+         "id": 19167,
+         "source": "Crafting",
+         "phase": 1,
+         "type": "Polearm"
+      },
+      {
+         "name": "[TODO] Blackhand Doomsaw",
+         "mindmg": 151,
+         "maxdmg": 227,
+         "speed": 3.5,
+         "id": 12583,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Polearm"
+      },
+      {
+         "name": "[TODO] Halberd of Smiting",
+         "mindmg": 175,
+         "maxdmg": 263,
+         "speed": 3.5,
+         "id": 19874,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Polearm"
+      },
+      {
+         "name": "Huntsman's Harpoon",
+         "agi": 35,
+         "mindmg": 150,
+         "maxdmg": 226,
+         "speed": 3.6,
+         "id": 22314,
+         "source": "Dungeon",
+         "phase": 2,
+         "type": "Polearm"
+      },
+      {
+         "name": "R14 Polearm",
+         "crit": 1,
+         "str": 26,
+         "sta": 41,
+         "mindmg": 235,
+         "maxdmg": 353,
+         "speed": 3.8,
+         "id": 18871,
+         "source": "PVP",
+         "phase": 2,
+         "type": "Polearm"
+      },
+      {
+         "name": "Ice Barbed Spear",
+         "str": 13,
+         "sta": 20,
+         "agi": 21,
+         "mindmg": 155,
+         "maxdmg": 233,
+         "speed": 3.6,
+         "id": 19106,
+         "source": "Quest",
+         "phase": 2,
+         "type": "Polearm"
+      },
+      {
+         "name": "Monstrous Glaive",
+         "sta": 23,
+         "mindmg": 123,
+         "maxdmg": 185,
+         "speed": 2.9,
+         "id": 18502,
+         "source": "Dungeon",
+         "phase": 2,
+         "type": "Polearm"
+      },
+      {
+         "name": "[TODO] Thunderstrike",
+         "mindmg": 147,
+         "maxdmg": 221,
+         "speed": 3.1,
+         "id": 17223,
+         "source": "MC",
+         "phase": 1,
+         "type": "Polearm"
+      },
+      {
+         "name": "Peacemaker",
+         "crit": 1,
+         "ap": 56,
+         "mindmg": 137,
+         "maxdmg": 206,
+         "speed": 3.4,
+         "id": 18725,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Polearm"
+      },
+      {
+         "name": "Pitchfork of Madness",
+         "mindmg": 163,
+         "maxdmg": 246,
+         "speed": 3.5,
+         "id": 19963,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Polearm"
+      },
+      {
+         "name": "Stonecutting Glaive",
+         "str": 29,
+         "agi": 12,
+         "mindmg": 152,
+         "maxdmg": 228,
+         "speed": 3.7,
+         "id": 20660,
+         "source": "Other",
+         "phase": 5,
+         "type": "Polearm"
+      },
+      {
+         "name": "The Eye of Nerub",
+         "sta": 22,
+         "agi": 45,
+         "mindmg": 251,
+         "maxdmg": 378,
+         "speed": 3.7,
+         "id": 23039,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Polearm"
+      },
+      {
+         "name": "Tigule's Harpoon",
+         "hit": 2,
+         "sta": 20,
+         "mindmg": 154,
+         "maxdmg": 232,
+         "speed": 3.3,
+         "id": 19946,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Polearm"
+      },
+      {
+         "name": "Ashkandi, Greatsword of the Brotherhood",
+         "sta": 33,
+         "ap": 86,
+         "mindmg": 229,
+         "maxdmg": 344,
+         "speed": 3.5,
+         "id": 19364,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Sword"
+      },
+      {
+         "name": "Barbarous Blade",
+         "crit": 1,
+         "ap": 60,
+         "mindmg": 138,
+         "maxdmg": 207,
+         "speed": 3.2,
+         "id": 18520,
+         "source": "Dungeon",
+         "phase": 2,
+         "type": "Sword"
+      },
+      {
+         "name": "Blackblade of Shahram",
+         "mindmg": 166,
+         "maxdmg": 250,
+         "speed": 3.5,
+         "id": 12592,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "Blade of Hanna",
+         "str": 11,
+         "sta": 11,
+         "agi": 11,
+         "mindmg": 101,
+         "maxdmg": 152,
+         "speed": 2.1,
+         "id": 2801,
+         "source": "Other",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "[TODO] Bonereaver's Edge",
+         "crit": 1,
+         "sta": 16,
+         "mindmg": 206,
+         "maxdmg": 310,
+         "speed": 3.4,
+         "id": 17076,
+         "source": "MC",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "Claymore of Unholy Might",
+         "sta": 20,
+         "ap": 98,
+         "mindmg": 235,
+         "maxdmg": 354,
+         "speed": 3.6,
+         "id": 22813,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Sword"
+      },
+      {
+         "name": "[TODO] Corrupted Ashbringer",
+         "hit": 1,
+         "crit": 2,
+         "mindmg": 259,
+         "maxdmg": 389,
+         "speed": 3.6,
+         "id": 22691,
+         "source": "Naxxramas",
+         "phase": 6,
+         "type": "Sword"
+      },
+      {
+         "name": "Darkstone Claymore",
+         "sta": 17,
+         "ap": 54,
+         "mindmg": 152,
+         "maxdmg": 229,
+         "speed": 3.6,
+         "id": 20669,
+         "source": "Other",
+         "phase": 5,
+         "type": "Sword"
+      },
+      {
+         "name": "Destiny",
+         "mindmg": 112,
+         "maxdmg": 168,
+         "speed": 2.6,
+         "id": 647,
+         "source": "Other",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "R14 Greatsword",
+         "crit": 1,
+         "str": 26,
+         "sta": 41,
+         "mindmg": 235,
+         "maxdmg": 353,
+         "speed": 3.8,
+         "id": 18877,
+         "source": "PVP",
+         "phase": 2,
+         "type": "Sword"
+      },
+      {
+         "name": "[TODO] Kalimdor's Revenge",
+         "str": 24,
+         "sta": 18,
+         "mindmg": 209,
+         "maxdmg": 315,
+         "speed": 3.2,
+         "id": 21679,
+         "source": "AQ40",
+         "phase": 5,
+         "type": "Sword"
+      },
+      {
+         "name": "Manslayer of the Qiraji",
+         "str": 35,
+         "sta": 20,
+         "agi": 15,
+         "mindmg": 180,
+         "maxdmg": 270,
+         "speed": 3.6,
+         "id": 21492,
+         "source": "AQ20",
+         "phase": 5,
+         "type": "Sword"
       },
       {
          "name": "Obsidian Edged Blade",
          "str": 42,
-         "crit": 2,
-         "skill": 8,
          "mindmg": 176,
          "maxdmg": 264,
          "speed": 3.4,
-         "type": "Sword",
+         "id": 18822,
          "source": "MC",
          "phase": 1,
-         "id": 18822
+         "skill": 8,
+         "type": "Sword"
       },
+      {
+         "name": "Relentless Scythe",
+         "str": 20,
+         "sta": 8,
+         "agi": 8,
+         "mindmg": 140,
+         "maxdmg": 210,
+         "speed": 3.3,
+         "id": 13163,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "Runeblade of Baron Rivendare",
+         "mindmg": 171,
+         "maxdmg": 257,
+         "speed": 3.6,
+         "id": 13505,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "[TODO] The Untamed Blade",
+         "sta": 16,
+         "agi": 22,
+         "mindmg": 192,
+         "maxdmg": 289,
+         "speed": 3.4,
+         "id": 19334,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Sword"
+      },
+      {
+         "name": "Typhoon",
+         "str": 14,
+         "sta": 10,
+         "agi": 20,
+         "mindmg": 150,
+         "maxdmg": 225,
+         "speed": 2.9,
+         "id": 18542,
+         "source": "Azuregos",
+         "phase": 2,
+         "type": "Sword"
+      },
+      {
+         "name": "Warblade of Caer Darrow",
+         "mindmg": 143,
+         "maxdmg": 236,
+         "speed": 3.3,
+         "id": 13982,
+         "source": "Quest",
+         "phase": 1,
+         "type": "Sword"
+      },
+      {
+         "name": "Zin'rokh, Destroyer of Worlds",
+         "sta": 28,
+         "ap": 72,
+         "mindmg": 196,
+         "maxdmg": 295,
+         "speed": 3.8,
+         "id": 19854,
+         "source": "ZG",
+         "phase": 4,
+         "type": "Sword"
+      }
    ]
 };
 
@@ -5324,54 +6058,54 @@ var sets = [
    },
    {
       id: 537,
-      items: [22868,22858,22872,22873,23244,23243],
+      items: [22868, 22858, 22872, 22873, 23244, 23243],
       bonus: [
          { count: 2, stats: { ap: 40 } }
       ]
    },
    {
       id: 537,
-      items: [22868,22858,22872,22873,23244,23243],
+      items: [22868, 22858, 22872, 22873, 23244, 23243],
       bonus: [
          { count: 2, stats: { ap: 40 } }
       ]
    },
    {
       id: 218,
-      items: [16959,16966,16964,16963,16962,16961,16965,16960],
+      items: [16959, 16966, 16964, 16963, 16962, 16961, 16965, 16960],
       bonus: [
          { count: 3, stats: { ap: 30 } }
       ]
    },
    {
       id: 511,
-      items: [21994,21995,21996,21997,21998,21999,22000,22001],
+      items: [21994, 21995, 21996, 21997, 21998, 21999, 22000, 22001],
       bonus: [
          { count: 6, stats: { ap: 40 } }
       ]
    },
    {
       id: 487,
-      items: [20204,20208,20212],
+      items: [20204, 20208, 20212],
       bonus: [
          { count: 3, stats: { crit: 1 } }
       ]
    },
    {
       id: 466,
-      items: [19898,19925],
+      items: [19898, 19925],
       bonus: [
          { count: 2, stats: { ap: 30 } }
       ]
    },
    {
       id: 461,
-      items: [19865,19866],
+      items: [19865, 19866],
       bonus: [
          { count: 2, stats: { skill_1: 6 } }
       ]
    }
 
-   
+
 
 ];

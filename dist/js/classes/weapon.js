@@ -4,6 +4,7 @@ var WEAPONTYPE = {
     DAGGER: 2,
     AXE: 3,
     FIST: 4,
+    POLEARM: 5,
 }
 
 class Weapon {
@@ -27,6 +28,7 @@ class Weapon {
         this.totalprocdmg = 0;
         this.data = [0,0,0,0,0];
         if (this.type == WEAPONTYPE.AXE) this.crit += player.talents.axecrit;
+        if (this.type == WEAPONTYPE.POLEARM) this.crit += player.talents.polearmcrit;
         if (this.type == WEAPONTYPE.DAGGER) this.normSpeed = 1.7;
         if (this.twohand) this.normSpeed = 3.3;
 

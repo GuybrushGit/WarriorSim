@@ -39,6 +39,7 @@ class Player {
             skill_2: this.level * 5,
             skill_3: this.level * 5,
             skill_4: this.level * 5,
+            skill_5: this.level * 5,
             haste: 1,
             strmod: 1,
             agimod: 1,

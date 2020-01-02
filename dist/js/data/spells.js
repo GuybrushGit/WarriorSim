@@ -103,7 +103,6 @@ var spells = [
     name: 'Bloodrage',
     classname: 'Bloodrage',
     iconname: 'ability_racial_bloodrage',
-    time: -1,
 },
 {
     id: 17528,
