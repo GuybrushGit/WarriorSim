@@ -86,6 +86,9 @@ class Simulation {
                 else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && this.step > this.cloudstep) {
                     player.auras.cloudkeeper.use();
                 }
+                else if (player.auras.pummeler && player.auras.pummeler.canUse() && this.step > this.cloudstep) {
+                    player.auras.pummeler.use();
+                }
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {
                     this.idmg += player.cast(player.spells.sunderarmor);
                 }

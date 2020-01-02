@@ -64,6 +64,7 @@ class Player {
         this.addSpells();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
+        if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
         this.update();
     }
@@ -299,6 +300,8 @@ class Player {
             this.stats.haste /= (1 + this.auras.empyrean.div_stats.haste / 100);
         if (this.auras.eskhandar && this.auras.eskhandar.timer)
             this.stats.haste /= (1 + this.auras.eskhandar.div_stats.haste / 100);
+        if (this.auras.pummeler && this.auras.pummeler.timer)
+            this.stats.haste /= (1 + this.auras.pummeler.div_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
@@ -311,6 +314,8 @@ class Player {
         this.target.armor = this.target.basearmor;
         if (this.auras.annihilator && this.auras.annihilator.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
+        if (this.auras.bonereaver && this.auras.bonereaver.timer)
+            this.target.armor = Math.max(this.target.armor - (this.auras.bonereaver.stacks * this.auras.bonereaver.armor), 0);
         this.armorReduction = this.getArmorReduction();
     }
     getGlanceReduction(weapon) {
@@ -395,6 +400,9 @@ class Player {
         }
         if (this.auras.cloudkeeper && this.auras.cloudkeeper.firstuse && this.auras.cloudkeeper.timer) {
             this.auras.cloudkeeper.step();
+        }
+        if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) {
+            this.auras.pummeler.step();
         }
         if (this.mh.proc1 && this.mh.proc1.spell && this.mh.proc1.spell.timer) {
             this.mh.proc1.spell.step();

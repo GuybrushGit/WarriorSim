@@ -604,4 +604,73 @@ class Annihilator extends Aura {
     }
 }
 
+class Bonereaver extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.armor = 700;
+        this.stacks = 0;
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
+        this.player.updateArmorReduction();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateArmorReduction();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
+}
 
+class Destiny extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.stats = { str: 200 };
+    }
+}
+
+class Untamed extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 8;
+        this.stats = { str: 300 };
+        this.name = 'The Untamed Blade';
+    }
+}
+
+class Pummeler extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 30;
+        this.div_stats = { haste: 50 };
+        this.name = 'Manual Crowd Pummeler';
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.updateHaste();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateHaste();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+}

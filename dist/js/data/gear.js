@@ -4911,7 +4911,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "[TODO] Brain Hacker",
+         "name": "Brain Hacker",
          "mindmg": 95,
          "maxdmg": 143,
          "speed": 2.1,
@@ -4948,7 +4948,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "[TODO] Drake Talon Cleaver",
+         "name": "Drake Talon Cleaver",
          "str": 22,
          "sta": 17,
          "mindmg": 199,
@@ -5019,7 +5019,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "[TODO] Neretzek, The Blood Drinker",
+         "name": "Neretzek, The Blood Drinker",
          "str": 21,
          "sta": 16,
          "mindmg": 202,
@@ -5067,7 +5067,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "[TODO] The Nicker",
+         "name": "The Nicker",
          "mindmg": 159,
          "maxdmg": 239,
          "speed": 4,
@@ -5201,7 +5201,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "[TODO] Jeklik's Crusher",
+         "name": "Jeklik's Crusher",
          "mindmg": 159,
          "maxdmg": 248,
          "speed": 3.6,
@@ -5236,7 +5236,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "[TODO] Sulfuras, Hand of Ragnaros",
+         "name": "Sulfuras, Hand of Ragnaros",
          "str": 12,
          "sta": 12,
          "mindmg": 223,
@@ -5250,7 +5250,7 @@ var gear = {
          "magicdmg": 333,
       },
       {
-         "name": "[TODO] Sulfuron Hammer",
+         "name": "Sulfuron Hammer",
          "mindmg": 175,
          "maxdmg": 295,
          "speed": 3.7,
@@ -5275,7 +5275,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "[TODO] Manual Crowd Pummeler",
+         "name": "Manual Crowd Pummeler (Used last 30 secs)",
          "str": 16,
          "agi": 5,
          "mindmg": 46,
@@ -5284,9 +5284,7 @@ var gear = {
          "id": 9449,
          "source": "Other",
          "phase": 1,
-         "type": "Mace",
-         "ppm": 1,
-         "procspell": "Pummeler"
+         "type": "Mace"
       },
       {
          "name": "Barb of the Sand Reaver",
@@ -5314,7 +5312,7 @@ var gear = {
          "type": "Polearm"
       },
       {
-         "name": "[TODO] Blackhand Doomsaw",
+         "name": "Blackhand Doomsaw",
          "mindmg": 151,
          "maxdmg": 227,
          "speed": 3.5,
@@ -5326,7 +5324,7 @@ var gear = {
          "ppm": 1,
       },
       {
-         "name": "[TODO] Halberd of Smiting",
+         "name": "Halberd of Smiting",
          "mindmg": 175,
          "maxdmg": 263,
          "speed": 3.5,
@@ -5386,7 +5384,7 @@ var gear = {
          "type": "Polearm"
       },
       {
-         "name": "[TODO] Thunderstrike",
+         "name": "Thunderstrike",
          "mindmg": 147,
          "maxdmg": 221,
          "speed": 3.1,
@@ -5503,7 +5501,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "[TODO] Bonereaver's Edge",
+         "name": "Bonereaver's Edge",
          "crit": 1,
          "sta": 16,
          "mindmg": 206,
@@ -5529,7 +5527,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "[TODO] Corrupted Ashbringer",
+         "name": "Corrupted Ashbringer",
          "hit": 1,
          "crit": 2,
          "mindmg": 259,
@@ -5555,7 +5553,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "[TODO] Destiny",
+         "name": "Destiny",
          "mindmg": 112,
          "maxdmg": 168,
          "speed": 2.6,
@@ -5580,7 +5578,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "[TODO] Kalimdor's Revenge",
+         "name": "Kalimdor's Revenge",
          "str": 24,
          "sta": 18,
          "mindmg": 209,
@@ -5642,7 +5640,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "[TODO] The Untamed Blade",
+         "name": "The Untamed Blade",
          "sta": 16,
          "agi": 22,
          "mindmg": 192,
