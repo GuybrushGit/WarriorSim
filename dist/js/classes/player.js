@@ -7,6 +7,7 @@ class Player {
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
+        this.nextswingslam = false;
         if (enchtype == 1) {
             this.testEnch = testItem;
             this.testEnchType = testType;
@@ -235,6 +236,7 @@ class Player {
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
+        this.nextswingslam = false;
         for (let s in this.spells) {
             this.spells[s].timer = 0;
             this.spells[s].stacks = 0;

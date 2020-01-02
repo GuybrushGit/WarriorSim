@@ -1595,6 +1595,17 @@ var gear = {
          "id": 14554
       },
       {
+         "name": "Cloudkeeper Legplates (Not used)",
+         "str": 20,
+         "sta": 20,
+         "agi": 20,
+         "ap": 0,
+         "ac": 617,
+         "source": "Other",
+         "phase": 1,
+         "id": 145541
+      },
+      {
          "name": "Conqueror's Legguards",
          "hit": 1,
          "str": 33,
@@ -4899,6 +4910,19 @@ var gear = {
          "source": "PVP",
          "phase": 2,
          "id": 19323
+      },
+      {
+         "name": "Obsidian Edged Blade",
+         "str": 42,
+         "crit": 2,
+         "skill": 8,
+         "mindmg": 176,
+         "maxdmg": 264,
+         "speed": 3.4,
+         "type": "Sword",
+         "source": "MC",
+         "phase": 1,
+         "id": 18822
       },
    ]
 };

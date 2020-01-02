@@ -210,8 +210,14 @@ class Slam extends Spell {
     dmg() {
         return 87 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.speed;
     }
+    use() {
+        this.player.timer = 1500;
+        this.player.nextswingslam = true;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+    }
     canUse() {
-        return true;
+        return this.player.timer == 0 && this.player.mh.timer < (this.casttime + 10) && this.player.mh.timer > (this.casttime - 10) && this.cost <= this.player.rage;
     }
 }
 

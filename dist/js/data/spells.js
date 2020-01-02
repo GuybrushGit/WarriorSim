@@ -142,7 +142,6 @@ var spells = [
     name: 'Slam',
     classname: 'Slam',
     iconname: 'ability_warrior_decisivestrike',
-    hidden: true,
 },
 
 ];
