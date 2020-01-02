@@ -392,7 +392,7 @@ var gear = {
          "ac": 634,
          "source": "BWL",
          "phase": 3,
-         "id": 19394
+         "id": 19394,
       },
       {
          "name": "Dreadnaught Pauldrons",
@@ -4918,7 +4918,9 @@ var gear = {
          "id": 1263,
          "source": "Other",
          "phase": 1,
-         "type": "Axe"
+         "type": "Axe",
+         "physdmg": 250,
+         "ppm": 1,
       },
       {
          "name": "Dark Edge of Insanity",
@@ -4955,7 +4957,9 @@ var gear = {
          "id": 19353,
          "source": "BWL",
          "phase": 3,
-         "type": "Axe"
+         "type": "Axe",
+         "physdmg": 240,
+         "ppm": 1,
       },
       {
          "name": "Dreadforge Retaliator",
@@ -5022,9 +5026,11 @@ var gear = {
          "maxdmg": 303,
          "speed": 3.7,
          "id": 21856,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
-         "type": "Axe"
+         "type": "Axe",
+         "ppm": 1,
+         "magicdmg": 152,
       },
       {
          "name": "Nightfall",
@@ -5045,7 +5051,7 @@ var gear = {
          "maxdmg": 354,
          "speed": 3.6,
          "id": 22815,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
          "type": "Axe"
       },
@@ -5068,7 +5074,9 @@ var gear = {
          "id": 13285,
          "source": "Dungeon",
          "phase": 1,
-         "type": "Axe"
+         "type": "Axe",
+         "physdmg": 100,
+         "ppm": 1,
       },
       {
          "name": "Treant's Bane",
@@ -5200,7 +5208,9 @@ var gear = {
          "id": 19918,
          "source": "ZG",
          "phase": 4,
-         "type": "Mace"
+         "type": "Mace",
+         "physdmg": 210,
+         "ppm": 1,
       },
       {
          "name": "Might of Menethil",
@@ -5211,7 +5221,7 @@ var gear = {
          "maxdmg": 435,
          "speed": 3.8,
          "id": 22798,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
          "type": "Mace"
       },
@@ -5235,7 +5245,9 @@ var gear = {
          "id": 17182,
          "source": "MC",
          "phase": 1,
-         "type": "Mace"
+         "type": "Mace",
+         "ppm": 0.7,
+         "magicdmg": 333,
       },
       {
          "name": "[TODO] Sulfuron Hammer",
@@ -5245,7 +5257,9 @@ var gear = {
          "id": 17193,
          "source": "MC",
          "phase": 1,
-         "type": "Mace"
+         "type": "Mace",
+         "ppm": 1,
+         "magicdmg": 101,
       },
       {
          "name": "The Unstoppable Force",
@@ -5270,7 +5284,9 @@ var gear = {
          "id": 9449,
          "source": "Other",
          "phase": 1,
-         "type": "Mace"
+         "type": "Mace",
+         "ppm": 1,
+         "procspell": "Pummeler"
       },
       {
          "name": "Barb of the Sand Reaver",
@@ -5305,7 +5321,9 @@ var gear = {
          "id": 12583,
          "source": "Dungeon",
          "phase": 1,
-         "type": "Polearm"
+         "type": "Polearm",
+         "physdmg": 432,
+         "ppm": 1,
       },
       {
          "name": "[TODO] Halberd of Smiting",
@@ -5315,7 +5333,9 @@ var gear = {
          "id": 19874,
          "source": "ZG",
          "phase": 4,
-         "type": "Polearm"
+         "type": "Polearm",
+         "physdmg": 564,
+         "ppm": 1,
       },
       {
          "name": "Huntsman's Harpoon",
@@ -5373,7 +5393,9 @@ var gear = {
          "id": 17223,
          "source": "MC",
          "phase": 1,
-         "type": "Polearm"
+         "type": "Polearm",
+         "ppm": 1,
+         "magicdmg": 200,
       },
       {
          "name": "Peacemaker",
@@ -5417,7 +5439,7 @@ var gear = {
          "maxdmg": 378,
          "speed": 3.7,
          "id": 23039,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
          "type": "Polearm"
       },
@@ -5490,7 +5512,9 @@ var gear = {
          "id": 17076,
          "source": "MC",
          "phase": 1,
-         "type": "Sword"
+         "type": "Sword",
+         "ppm": 2,
+         "procspell": "Bonereaver"
       },
       {
          "name": "Claymore of Unholy Might",
@@ -5500,7 +5524,7 @@ var gear = {
          "maxdmg": 354,
          "speed": 3.6,
          "id": 22813,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
          "type": "Sword"
       },
@@ -5512,9 +5536,11 @@ var gear = {
          "maxdmg": 389,
          "speed": 3.6,
          "id": 22691,
-         "source": "Naxxramas",
+         "source": "Naxx",
          "phase": 6,
-         "type": "Sword"
+         "type": "Sword",
+         "magicdmg": 200,
+         "ppm": 1,
       },
       {
          "name": "Darkstone Claymore",
@@ -5529,14 +5555,16 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "Destiny",
+         "name": "[TODO] Destiny",
          "mindmg": 112,
          "maxdmg": 168,
          "speed": 2.6,
          "id": 647,
          "source": "Other",
          "phase": 1,
-         "type": "Sword"
+         "type": "Sword",
+         "ppm": 1,
+         "procspell": "Destiny"
       },
       {
          "name": "R14 Greatsword",
@@ -5561,7 +5589,9 @@ var gear = {
          "id": 21679,
          "source": "AQ40",
          "phase": 5,
-         "type": "Sword"
+         "type": "Sword",
+         "magicdmg": 258,
+         "ppm": 1,
       },
       {
          "name": "Manslayer of the Qiraji",
@@ -5621,7 +5651,9 @@ var gear = {
          "id": 19334,
          "source": "BWL",
          "phase": 3,
-         "type": "Sword"
+         "type": "Sword",
+         "ppm": 1,
+         "procspell": "Untamed"
       },
       {
          "name": "Typhoon",
