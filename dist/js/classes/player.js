@@ -420,7 +420,7 @@ class Player {
     rollweapon(weapon) {
         let tmp = 0;
         let roll = rng10k();
-        tmp += Math.max(weapon.dwmiss, 0) * 100;
+        tmp += Math.max(this.nextswinghs ? weapon.miss : weapon.dwmiss, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         tmp += weapon.dodge * 100;
         if (roll < tmp) return RESULT.DODGE;
@@ -496,10 +496,7 @@ class Player {
     attackoh(weapon) {
         let procdmg = 0;
         let result;
-        if (this.nextswinghs) 
-            result = this.rollspell(this.spells.heroicstrike);
-        else 
-            result = this.rollweapon(weapon);
+        result = this.rollweapon(weapon);
 
         let dmg = weapon.dmg();
         procdmg = this.procattack(null, weapon, result);

@@ -133,6 +133,7 @@ SIM.UI = {
         let dps = view.sidebar.find('#dps');
         let stats = view.sidebar.find('#stats');
         let time = view.sidebar.find('#time');
+        let btn = view.sidebar.find('.js-dps');
         dps.text('');
         time.text('');
         var player = new Player();
@@ -152,6 +153,7 @@ SIM.UI = {
                 dps.text((sim.totaldmg / (sim.duration * sim.iterations)).toFixed(2));
                 time.text((sim.endtime - sim.starttime) / 1000);
                 stats.html((sim.mindmg / sim.duration).toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + (sim.maxdmg / sim.duration).toFixed(2) + ' max');
+                btn.css('background', '');
                 if (row) view.simulateRow(row);
                 else view.endLoading();
 
@@ -161,7 +163,9 @@ SIM.UI = {
             },
             (iteration) => {
                 // Update
+                let perc = parseInt(iteration / sim.iterations * 100);
                 dps.text((sim.totaldmg / (sim.duration * iteration)).toFixed(2));
+                btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
             }
         );
         sim.start();

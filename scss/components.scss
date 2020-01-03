@@ -5,7 +5,7 @@
     color: #ddd;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s ease-in, color 0.2s ease-in;
+    transition: all 0.2s ease-in, color 0.2s ease-in;
     float: none;
     text-align: center;
     font-size: 12px;
@@ -24,7 +24,7 @@
 
     &:hover,
     &.active {
-        background: #ddd;
+        background: #ddd !important;
         color: #123;
     }
 
@@ -32,7 +32,7 @@
         font-size: 0;
         pointer-events: none;
         &:hover {
-            background: none;
+            background: none !important;
             color: #ddd;
         }
     }
