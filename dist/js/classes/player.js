@@ -53,10 +53,7 @@ class Player {
         this.addRace();
         this.addTalents();
         this.addGear();
-        if (!this.mh) {
-            // TODO ALERT
-            return;
-        }
+        if (!this.mh) return;
         this.addSets();
         this.addEnchants();
         this.addTempEnchants();
@@ -177,6 +174,7 @@ class Player {
         for (let type in enchant) {
             for (let item of enchant[type]) {
                 if (!item.temp) continue;
+                if (type == "mainhand" && this.mh.windfury) continue;
                 if ((this.testTempEnchType == type && this.testTempEnch == item.id) ||
                     (this.testTempEnchType != type && item.selected)) {
 
@@ -572,6 +570,9 @@ class Player {
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
+            }
+            if (weapon.windfury && rng10k() < weapon.windfury.chance) {
+                weapon.windfury.spell.use();
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.extra)

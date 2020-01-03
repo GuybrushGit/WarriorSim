@@ -674,3 +674,29 @@ class Pummeler extends Aura {
         return this.firstuse && !this.timer;
     }
 }
+
+class Windfury extends Aura {
+    constructor(player) {
+        super(player);
+        this.stats = { ap: 315 };
+    }
+    use() {
+        this.timer = 1500;
+        this.stacks = 2;
+        this.player.updateAuras();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.stacks = 0;
+            this.firstuse = false;
+            this.player.updateAuras();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
+}
+

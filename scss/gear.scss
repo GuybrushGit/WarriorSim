@@ -100,5 +100,20 @@ section.main {
             min-width: 40%;
         }
     }
+
+    progress {
+        width: 80%;
+        max-width: calc(100% - 320px);
+        height: 20px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        opacity: 0.5;
+        &[value="0"], &[value="100"] {
+            display: none;
+        }
+    }
 }
 

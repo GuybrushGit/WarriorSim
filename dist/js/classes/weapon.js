@@ -60,12 +60,21 @@ class Weapon {
             }
         }
 
+        for (let buff of buffs) {
+            if (buff.id == 10614 && buff.active && !this.offhand) {
+                this.windfury = {};
+                this.windfury.chance = 2000;
+                this.windfury.extra = 1;
+                this.windfury.spell = new Windfury(this.player);
+            }
+        }
+
         for(let buff of buffs)
             if (buff.bonusdmg && buff.active)
                 this.basebonusdmg += buff.bonusdmg;
         if (enchant && enchant.bonusdmg) 
             this.basebonusdmg += enchant.bonusdmg;
-        if (tempenchant && tempenchant.bonusdmg) 
+        if (!this.windfury && tempenchant && tempenchant.bonusdmg) 
             this.basebonusdmg += tempenchant.bonusdmg;
         this.bonusdmg = this.basebonusdmg;
     }

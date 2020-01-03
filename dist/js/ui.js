@@ -28,6 +28,7 @@ SIM.UI = {
         view.sidebar = view.body.find('section.sidebar');
         view.tcontainer = view.main.find('.table-container');
         view.alerts = view.body.find('.alerts');
+        view.progress = view.main.find('progress');
     },
 
     events: function () {
@@ -179,6 +180,8 @@ SIM.UI = {
         var isench = tr.parents('table').hasClass('enchant');
         var istemp = tr.data('temp') == true;
         var base = parseFloat(view.sidebar.find('#dps').text());
+        var rows = tr.siblings().length + 1;
+        var rowsdone = tr.siblings(':not(.waiting)').length;
 
         var player = new Player(item, type, istemp ? 2 : isench ? 1 : 0);
         var sim = new Simulation(player, 
@@ -193,6 +196,8 @@ SIM.UI = {
                 dps.text(calc.toFixed(2)).append(span);
                 view.tcontainer.find('table').trigger('update');
                 tr.removeClass('waiting');
+                let perc = parseInt(((rowsdone + 1) * sim.iterations) / (sim.iterations * rows) * 100);
+                view.progress.attr('value',perc);
                 sim = null;
                 player = null;
 
@@ -213,6 +218,8 @@ SIM.UI = {
             },
             (iteration) => {
                 // Update
+                let perc = parseInt((rowsdone * sim.iterations + iteration) / (sim.iterations * rows) * 100);
+                view.progress.attr('value',perc);
                 dps.text((sim.totaldmg / (sim.duration * iteration)).toFixed(2));
             }
         );
