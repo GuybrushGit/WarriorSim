@@ -329,6 +329,22 @@ class Crusader extends Aura {
         this.duration = 15;
         this.stats = { str: 100 };
     }
+    use() {
+        this.timer = this.duration * 1000;
+        this.player.updateStrength();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateStrength();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
 }
 
 class Cloudkeeper extends Aura {

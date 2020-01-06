@@ -291,6 +291,24 @@ class Player {
         if (this.stats.apmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
     }
+    updateStrength() {
+        this.stats.str = this.base.str;
+        this.stats.ap = this.base.ap;
+            
+        for (let name in this.auras) {
+            if (this.auras[name].timer) {
+                if (this.auras[name].stats.str)
+                    this.stats.str += this.auras[name].stats.str;
+                if (this.auras[name].stats.ap)
+                    this.stats.ap += this.auras[name].stats.ap;
+            }
+        }
+        this.stats.str = ~~(this.stats.str * this.stats.strmod);
+        this.stats.ap += this.stats.str * 2;
+
+        if (this.stats.apmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+    }
     updateAP() {
         this.stats.ap = this.base.ap;
         for (let name in this.auras) {
