@@ -1790,7 +1790,7 @@ var gear = {
          "str": 30,
          "ac": 598,
          "source": "Crafting",
-         "phase": 1,
+         "phase": 5,
          "id": 22385
       }
    ],
