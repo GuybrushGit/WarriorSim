@@ -62,10 +62,8 @@ class Weapon {
 
         for (let buff of buffs) {
             if (buff.id == 10614 && buff.active && !this.offhand) {
-                this.windfury = {};
-                this.windfury.chance = 2000;
-                this.windfury.extra = 1;
-                this.windfury.spell = new Windfury(this.player);
+                this.player.auras.windfury = new Windfury(this.player);
+                this.windfury = this.player.auras.windfury;
             }
         }
 
@@ -80,7 +78,7 @@ class Weapon {
     }
     dmg(heroicstrike) {
         let dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed;
-        if (heroicstrike) dmg += 138;
+        if (heroicstrike) dmg += heroicstrike.bonus;
         return dmg * this.modifier;
     }
     use() {

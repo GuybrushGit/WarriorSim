@@ -338,6 +338,7 @@ SIM.UI = {
         localStorage.mainhandfilter = view.main.find('#mainhandfilter').val();
         localStorage.offhandfilter = view.main.find('#offhandfilter').val();
         localStorage.twohandfilter = view.main.find('#twohandfilter').val();
+        localStorage.aqbooks = view.fight.find('select[name="aqbooks"]').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });

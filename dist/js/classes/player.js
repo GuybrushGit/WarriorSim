@@ -8,6 +8,8 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingslam = false;
+        this.nextswingwf = false;
+        this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
         if (enchtype == 1) {
             this.testEnch = testItem;
             this.testEnchType = testType;
@@ -204,8 +206,10 @@ class Player {
         for (let buff of buffs) {
             if (buff.active) {
                 let apbonus = 0;
-                if (buff.group == "battleshout")
-                    apbonus = ~~(buff.ap * this.talents.impbattleshout);
+                if (buff.group == "battleshout") {
+                    apbonus = ~~((this.aqbooks ? 232 : buff.ap) * this.talents.impbattleshout);
+                    if (this.aqbooks) apbonus += 39;
+                }
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;
@@ -237,6 +241,7 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingslam = false;
+        this.nextswingwf = false;
         for (let s in this.spells) {
             this.spells[s].timer = 0;
             this.spells[s].stacks = 0;
@@ -282,6 +287,17 @@ class Player {
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi / 20;
         this.crit = this.getCritChance();
+
+        if (this.stats.apmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+    }
+    updateAP() {
+        this.stats.ap = this.base.ap;
+        for (let name in this.auras) {
+            if (this.auras[name].timer && this.auras[name].stats.ap)
+                this.stats.ap += this.auras[name].stats.ap;
+        }
+        this.stats.ap += this.stats.str * 2;
 
         if (this.stats.apmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
@@ -414,6 +430,9 @@ class Player {
         if (this.oh && this.oh.proc2 && this.oh.proc2.spell && this.oh.proc2.spell.timer) {
             this.oh.proc2.spell.step();
         }
+        if (this.mh.windfury && this.mh.windfury.timer) {
+            this.mh.windfury.step();
+        }
     }
     rollweapon(weapon) {
         let tmp = 0;
@@ -444,11 +463,12 @@ class Player {
         if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmh(weapon) {
+    attackmh(weapon, wf) {
         let spell = null;
         let procdmg = 0;
         let result;
 
+        this.nextswingwf = false;
         if (this.nextswinghs) {
             this.nextswinghs = false;
             if (this.spells.heroicstrike.cost <= this.rage) {
@@ -465,7 +485,7 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        procdmg = this.procattack(spell, weapon, result);
+        procdmg = this.procattack(spell, weapon, result, wf);
 
         if (result == RESULT.DODGE) {
             this.dodgeTimer = 5000;
@@ -554,12 +574,8 @@ class Player {
         if (this.auras.flurry) this.auras.flurry.use();
         if (this.auras.deepwounds) this.auras.deepwounds.use();
     }
-    procattack(spell, weapon, result) {
+    procattack(spell, weapon, result, wf) {
         let procdmg = 0;
-        if (!spell) {
-            if (this.auras.flurry && this.auras.flurry.stacks)
-                this.auras.flurry.step();
-        }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
@@ -571,8 +587,8 @@ class Player {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
             }
-            if (weapon.windfury && rng10k() < weapon.windfury.chance) {
-                weapon.windfury.spell.use();
+            if (weapon.windfury && !wf && rng10k() < 2000) {
+                weapon.windfury.use();
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.extra)
@@ -591,6 +607,12 @@ class Player {
                 if (rng10k() < this.talents.swordproc * 100)
                     this.extraattacks++;
             }
+        }
+        if (!spell) {
+            if (this.auras.flurry && this.auras.flurry.stacks)
+                this.auras.flurry.step();
+            if (this.mh.windfury && this.mh.windfury.stacks)
+                this.mh.windfury.proc();
         }
         return procdmg;
     }

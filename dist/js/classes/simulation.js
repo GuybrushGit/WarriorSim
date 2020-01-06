@@ -62,7 +62,7 @@ class Simulation {
                     this.idmg += player.cast(player.spells.slam);
                     if (player.oh) player.oh.use();
                 }
-                this.idmg += player.attackmh(player.mh);
+                this.idmg += player.attackmh(player.mh, player.nextswingwf);
             }
             if (player.oh && player.oh.timer == 0) {
                 this.idmg += player.attackoh(player.oh);

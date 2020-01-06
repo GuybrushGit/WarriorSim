@@ -121,13 +121,13 @@ var buffs = [
       group: "",
       ap: 186
    },
-   // {
-   //    id: 10614,
-   //    spellid: true,
-   //    name: "Windfury Totem",
-   //    iconname: "spell_nature_windfury",
-   //    group: "",
-   // },
+   {
+      id: 10614,
+      spellid: true,
+      name: "Windfury Totem",
+      iconname: "spell_nature_windfury",
+      group: "",
+   },
    {
       id: 10627,
       spellid: true,

@@ -152,6 +152,10 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
+        view.fight.on('change', 'select[name="aqbooks"]', function (e) {
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
 
         view.fight.on('keyup', 'input[type="text"]', function (e) {
             SIM.UI.updateSession();

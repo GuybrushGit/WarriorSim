@@ -144,6 +144,7 @@ class HeroicStrike extends Spell {
         this.threshold = parseInt(spells[2].minrage);
         this.maincd = parseInt(spells[2].maincd) * 1000;
         this.name = 'Heroic Strike';
+        this.bonus = player.aqbooks ? 157 : 138;
     }
     use() {
         this.player.timer = 800;
@@ -683,18 +684,28 @@ class Windfury extends Aura {
     use() {
         this.timer = 1500;
         this.stacks = 2;
-        this.player.updateAuras();
+        this.player.updateAP();
+        this.player.extraattacks++;
+        this.player.nextswingwf = true;
+    }
+    proc() {
+        if (this.stacks < 2) {
+            this.timer = 0;
+            this.stacks = 0;
+            this.player.updateAP();
+        }
+        else {
+            this.stacks--;
+        }
     }
     step() {
         if (this.timer <= 400) {
-            this.uptime += this.timer;
             this.timer = 0;
             this.stacks = 0;
             this.firstuse = false;
-            this.player.updateAuras();
+            this.player.updateAP();
         }
         else {
-            this.uptime += 400;
             this.timer -= 400;
         }
     }
