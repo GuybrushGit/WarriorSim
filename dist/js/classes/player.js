@@ -130,6 +130,28 @@ class Player {
                 }
             }
         }
+
+        if (this.mh && this.mh.twohand) {
+            for (let type in gear) {
+                for (let item of gear[type]) {
+                    if (type != "hands" && type != "head") continue;
+                    if ((this.testItemType == type && this.testItem == item.id) ||
+                        (this.testItemType != type && item.selected)) {
+                        if (item.skill && item.skill > 0) {
+                            if (item.type == 'Varied') {
+                                this.base['skill_1'] -= item.skill;
+                                this.base['skill_2'] -= item.skill;
+                                this.base['skill_3'] -= item.skill;
+                            }
+                            else {
+                                let sk = WEAPONTYPE[item.type.toUpperCase()];
+                                this.base['skill_' + sk] -= item.skill;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     addWeapon(item, type) {
 
