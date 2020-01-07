@@ -390,6 +390,8 @@ SIM.UI = {
     loadSession: function () {
         var view = this;
 
+        if (!localStorage.length) view.firstSession();
+
         for (let prop in localStorage) {
             view.fight.find('input[name="' + prop + '"]').val(localStorage[prop]);
             view.fight.find('select[name="' + prop + '"]').val(localStorage[prop]);
@@ -665,6 +667,10 @@ SIM.UI = {
         var view = this;
         view.alerts.find('.alert').removeClass('in-up');
         setTimeout(function () { view.alerts.empty(); }, 1000);
+    },
+
+    firstSession: function () {
+        console.log('Welcome!');
     }
     
 

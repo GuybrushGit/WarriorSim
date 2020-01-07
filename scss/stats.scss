@@ -37,9 +37,9 @@
         border-radius: 2px;
         margin: 20px auto;
         position: relative;
-        padding: 20px;
+        padding: 30px;
         box-sizing: border-box;
-        width: calc(50% - 2px);
+        width: calc(50% - 16px);
         min-height: 290px;
 
         label {
@@ -56,6 +56,13 @@
 
         &:nth-child(1) {
             width: 100%;
+        }
+        &:nth-child(2) {
+            margin-right: 27px;
+            margin-top: 10px;
+        }
+        &:nth-child(3) {
+            margin-top: 10px;
         }
     }
 
