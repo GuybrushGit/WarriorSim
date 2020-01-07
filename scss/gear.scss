@@ -5,7 +5,7 @@ section.main {
     box-sizing: border-box;
     position: relative;
     left: 20%;
-    padding: 0 40px 50px;
+    padding: 80px 40px 50px;
 
     @media (min-width: 0px) and (max-width: 1600px) {
         left: 320px;
@@ -17,6 +17,14 @@ section.main {
         text-align: center;
         margin: 10px 0 50px;
         font-weight: bold;
+        background: #303950;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        margin: 0;
+        padding: 10px 0 10px;
+        border-bottom: 2px solid #333333;
         &.loading {
             li {
                 pointer-events: none;
@@ -30,6 +38,7 @@ section.main {
         font-size: 0;
         display: inline-block;
         vertical-align: top;
+        white-space: nowrap;
     }
     li {
         position: relative;
@@ -40,28 +49,27 @@ section.main {
         cursor: pointer;
         transition: all 0.2s ease-in;
         opacity: 0.5;
-        &:hover {
-            color: white;
-        }
-        &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: white;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-        }
+        text-shadow: 1px 1px darkblue;
+        // &:after {
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 2px;
+        //     background: white;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     opacity: 0;
+        // }
         &:hover, &.active {
             opacity: 1;
+            color: white;
             &:after {
                 opacity: 1;
             }
         }
         &.active select {
-            display: block;
+            //display: block;
         }
     }
 
@@ -111,6 +119,7 @@ section.main {
         appearance: none;
         -webkit-appearance: none;
         opacity: 0.5;
+        display: none;
         &[value="0"], &[value="100"] {
             display: none;
         }

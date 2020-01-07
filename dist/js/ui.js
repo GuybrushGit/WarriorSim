@@ -56,7 +56,7 @@ SIM.UI = {
             $('section.settings').removeClass('active');
         });
 
-        view.main.on('click', '.js-table', function(e) {
+        view.sidebar.on('click', '.js-table', function(e) {
             e.preventDefault();
             let first = view.tcontainer.find('table.gear tbody tr').first();
             view.tcontainer.find('table.gear tbody tr').addClass('waiting');
@@ -182,6 +182,7 @@ SIM.UI = {
         var base = parseFloat(view.sidebar.find('#dps').text());
         var rows = tr.siblings().length + 1;
         var rowsdone = tr.siblings(':not(.waiting)').length;
+        let btn = view.sidebar.find('.js-table');
 
         var player = new Player(item, type, istemp ? 2 : isench ? 1 : 0);
         var sim = new Simulation(player, 
@@ -197,7 +198,8 @@ SIM.UI = {
                 view.tcontainer.find('table').trigger('update');
                 tr.removeClass('waiting');
                 let perc = parseInt(((rowsdone + 1) * sim.iterations) / (sim.iterations * rows) * 100);
-                view.progress.attr('value',perc);
+                if (perc == 100) btn.css('background', '');
+                else btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
                 sim = null;
                 player = null;
 
@@ -219,7 +221,7 @@ SIM.UI = {
             (iteration) => {
                 // Update
                 let perc = parseInt((rowsdone * sim.iterations + iteration) / (sim.iterations * rows) * 100);
-                view.progress.attr('value',perc);
+                btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
                 dps.text((sim.totaldmg / (sim.duration * iteration)).toFixed(2));
             }
         );

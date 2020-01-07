@@ -144,7 +144,7 @@ SIM.STATS = {
                     mode: null
                 },
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Aura Uptime',
                     fontColor: '#ccc',
                     position: 'bottom'
@@ -194,7 +194,7 @@ SIM.STATS = {
         // Damage
         if (view.dmgchart) view.dmgchart.destroy();
         view.dmgchart = new Chart(view.dmg, {
-            type: 'doughnut',
+            type: 'pie',
             data: view.dmgdata,
             options: {
                 elements: {
@@ -204,7 +204,7 @@ SIM.STATS = {
                 },
                 responsive: true,
                 title: {
-                    display: true,
+                    display: false,
                     text: 'DPS',
                     fontColor: '#ccc',
                     position: 'bottom'
@@ -214,7 +214,11 @@ SIM.STATS = {
                     animateRotate: true
                 },
                 legend: {
-                    display: false
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        fontColor: '#ccc',
+                    }
                 },
                 tooltips: {
                     callbacks: {

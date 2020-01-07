@@ -36,14 +36,11 @@
 
 <!-- TODO
 
-  stats page
-  gear dps button?
+  weapon filter
   how to use
-  filter sidebar?
   CLEAVE + ADJACENT TARGETS
   research refund rules
   research dual wield formulas 
-  redo session data
 
   [TODO] items
 
@@ -138,6 +135,7 @@
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-table">SHEET DPS</a>
       <a href="#" class="btn js-stats disabled">STATS</a>
       <a href="#" class="btn js-settings">SETTINGS</a>
     </div>
@@ -255,9 +253,20 @@
     <a href="#" class="btn-close"></a>
     <div class="wrapper">
 
-      <div class="container-table"></div>
-      <div class="container-dmg"><canvas></canvas></div>
-      <div class="container-aura"><canvas></canvas></div>
+      <article>
+        <label>Fight Details</label>
+        <div class="container-table"></div>
+      </article>
+
+      <article>
+        <label>DPS</label>
+        <div class="container-dmg"><canvas></canvas></div>
+      </article>
+
+      <article>
+        <label>Aura Uptime</label>
+        <div class="container-aura"><canvas></canvas></div>
+      </article>
 
     </div>
   </section>
@@ -312,7 +321,7 @@
     </nav>
 
     <div class="table-container"></div>
-    <a href="#" class="btn js-table">GEAR DPS</a>
+    <!-- <a href="#" class="btn js-table">GEAR DPS</a> -->
     <a href="#" class="btn js-enchant">ENCHANTS DPS</a>
     <progress value="0" max="100"></progress>
   </section>

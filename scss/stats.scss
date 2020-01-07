@@ -28,24 +28,35 @@
     .wrapper {
         opacity: 0;
         transition: none;
-        padding-top: 100px;
     }
 
-    .container-dmg {
-        width: 48%;
+    article {
         display: inline-block;
         vertical-align: top;
-    }
-    
-    .container-aura {
-        width: 48%;
-        display: inline-block;
-        vertical-align: top;
-    }
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        margin: 20px auto;
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
+        width: calc(50% - 2px);
+        min-height: 290px;
 
-    .container-table {
-        max-width: 80%;
-        margin: 0 auto 80px;
+        label {
+            position: absolute;
+            left: 12px;
+            top: -9px;
+            font-weight: 700;
+            display: inline-block;
+            background: #272727;
+            width: auto;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        &:nth-child(1) {
+            width: 100%;
+        }
     }
 
     .legend {

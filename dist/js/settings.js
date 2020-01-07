@@ -216,7 +216,7 @@ SIM.SETTINGS = {
 
             if (spell.id == 11567) {
                 div.find('.options').empty();
-                div.find('.options').append(`<li>Use when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT cooldown more than <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
+                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT cooldown more than <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
                 div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage on swing</li>`);
             }
 
