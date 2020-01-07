@@ -111,10 +111,10 @@ class Simulation {
                 else if (player.spells.overpower && player.spells.overpower.canUse()) {
                     this.idmg += player.cast(player.spells.overpower);
                 }
-                else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse() && (!player.spells.slam || player.mh.timer > 2000)) {
                     this.idmg += player.cast(player.spells.bloodthirst);
                 }
-                else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
+                else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse() && (!player.spells.slam || player.mh.timer > 2000)) {
                     this.idmg += player.cast(player.spells.mortalstrike);
                 }
                 else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
