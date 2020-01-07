@@ -57,8 +57,8 @@ class Simulation {
             if (batch) player.step(this);
 
             if (player.mh.timer == 0) {
-                if (this.player.nextswingslam) {
-                    this.player.nextswingslam = false;
+                if (player.nextswingslam) {
+                    player.nextswingslam = false;
                     this.idmg += player.cast(player.spells.slam);
                     if (player.oh) player.oh.use();
                 }
@@ -111,10 +111,10 @@ class Simulation {
                 else if (player.spells.overpower && player.spells.overpower.canUse()) {
                     this.idmg += player.cast(player.spells.overpower);
                 }
-                else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse() && (!player.spells.slam || player.mh.timer > 2000)) {
+                else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
                     this.idmg += player.cast(player.spells.bloodthirst);
                 }
-                else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse() && (!player.spells.slam || player.mh.timer > 2000)) {
+                else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
                     this.idmg += player.cast(player.spells.mortalstrike);
                 }
                 else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
@@ -123,6 +123,10 @@ class Simulation {
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.idmg += player.cast(player.spells.whirlwind);
                 }
+            }
+
+            if (batch && player.spells.heroicstrike && player.mh.timer <= 400 && player.rage < player.spells.heroicstrike.unqueue) {
+                this.player.nextswinghs = false;
             }
 
             if (player.extraattacks > 0) {

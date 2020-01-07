@@ -145,6 +145,10 @@
                 text-align: center;
             }
 
+            &[data-id="11567"] {
+                width: 100%;
+            }
+
             &.active {
                 border-color: #6e6d6d;
                 img {

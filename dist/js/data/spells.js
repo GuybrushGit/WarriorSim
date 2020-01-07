@@ -4,7 +4,7 @@ var spells = [
     name: 'Bloodthirst',
     classname: 'Bloodthirst',
     iconname: 'spell_nature_bloodlust',
-    time: -1,
+    minrage: 30,
     hidden: true,
 },
 {
@@ -12,7 +12,7 @@ var spells = [
     name: 'Mortal Strike',
     classname: 'MortalStrike',
     iconname: 'ability_warrior_savageblow',
-    time: -1,
+    minrage: 30,
     hidden: true,
 },
 {
@@ -22,6 +22,7 @@ var spells = [
     iconname: 'ability_rogue_ambush',
     minrage: 40,
     maincd: 4,
+    unqueue: 0,
 },
 {
     id: 11609,

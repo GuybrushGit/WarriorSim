@@ -31,9 +31,13 @@ class Bloodthirst extends Spell {
         super(player);
         this.cost = 30;
         this.cooldown = 6;
+        this.threshold = parseInt(spells[0].minrage);
     }
     dmg() {
         return this.player.stats.ap * 0.45;
+    }
+    canUse() {
+        return this.timer == 0 && this.cost <= this.player.rage && this.player.rage >= this.threshold;
     }
 }
 
@@ -143,6 +147,7 @@ class HeroicStrike extends Spell {
         this.cost = 15 - player.talents.impheroicstrike;
         this.threshold = parseInt(spells[2].minrage);
         this.maincd = parseInt(spells[2].maincd) * 1000;
+        this.unqueue = parseInt(spells[2].unqueue);
         this.name = 'Heroic Strike';
         this.bonus = player.aqbooks ? 157 : 138;
     }
@@ -163,9 +168,13 @@ class MortalStrike extends Spell {
         this.cost = 30;
         this.cooldown = 6;
         this.name = 'Mortal Strike';
+        this.threshold = parseInt(spells[1].minrage);
     }
     dmg() {
         return 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+    }
+    canUse() {
+        return this.timer == 0 && this.cost <= this.player.rage && this.player.rage >= this.threshold;
     }
 }
 
