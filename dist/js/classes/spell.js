@@ -736,3 +736,108 @@ class Windfury extends Aura {
     }
 }
 
+class Swarmguard extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 30;
+        this.armor = 200;
+        this.stacks = 0;
+    }
+    use() {
+        this.timer = this.duration * 1000;
+        this.stacks = this.stacks > 5 ? 6 : this.stacks + 1;
+        this.player.updateArmorReduction();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateArmorReduction();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
+}
+
+class Flask extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 60;
+        this.stats = { str: 75 };
+        this.name = 'Diamond Flask';
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+}
+
+class Slayer extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 20;
+        this.stats = { ap: 260 };
+        this.name = 'Slayer\'s Crest';
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+}
+
+class Spider extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 15;
+        this.div_stats = { haste: 20 };
+        this.name = 'Kiss of the Spider';
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+}
+
+class Earthstrike extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 20;
+        this.stats = { ap: 280 };
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+}
+
+class Gabbar extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 20;
+        this.stats = { ap: 65 };
+        this.name = 'Jom Gabbar';
+    }
+    canUse() {
+        return this.firstuse && !this.timer;
+    }
+    use() {
+        this.stats.ap = 65;
+        this.timer = this.duration * 1000;
+        this.player.updateAP();
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateAP();
+        }
+        else {
+            if (this.uptime && this.timer % 2000 == 0) {
+                this.stats.ap += 65;
+                this.player.updateAP();
+            }
+            this.uptime += 400;
+            this.timer -= 400;
+        }
+    }
+}

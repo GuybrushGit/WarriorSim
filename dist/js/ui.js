@@ -442,7 +442,7 @@ SIM.UI = {
 
     filterGear: function () {
         var view = this;
-        var type = view.main.find('nav li.active').data('type');
+        var type = view.main.find('nav > ul > li.active').data('type');
         if (type == "mainhand" || type == "offhand") 
             view.loadWeapons(type);
         else 

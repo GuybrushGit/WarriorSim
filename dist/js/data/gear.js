@@ -2253,11 +2253,12 @@ var gear = {
    ],
    "trinket": [
       {
-         "name": "[TODO] Badge of the Swarmguard",
+         "name": "Badge of the Swarmguard (Assumed 50% proc chance)",
          "source": "AQ40",
          "phase": "5",
          "id": 21670,
-         "spell": "Swarmguard"
+         "procspell": "Swarmguard",
+         "procchance": 50
       },
       {
          "name": "Blackhand's Breadth",
@@ -2275,19 +2276,18 @@ var gear = {
          "id": 18537
       },
       {
-         "name": "[TODO] Darkmoon Card: Maelstrom",
+         "name": "Darkmoon Card: Maelstrom (Assumed 2% proc chance)",
          "source": "Quest",
          "phase": "3",
          "id": 19289,
-         "procspell": "Maelstorm"
+         "procchance": 2,
+         "magicdmg": 250,
       },
       {
-         "name": "[TODO] Diamond Flask",
-         "str": 75,
+         "name": "Diamond Flask (Used last 60 seconds)",
          "source": "Quest",
          "phase": "4",
          "id": 20130,
-         "spell": "Flask"
       },
       {
          "name": "Drake Fang Talisman",
@@ -2299,11 +2299,10 @@ var gear = {
          "id": 19406
       },
       {
-         "name": "[TODO] Earthstrike",
+         "name": "Earthstrike (Used last 20 secs)",
          "source": "Quest",
          "phase": "5",
          "id": 21180,
-         "spell": "Earthstrike"
       },
       {
          "name": "Hand of Justice",
@@ -2323,20 +2322,18 @@ var gear = {
          "magicdmg": 165,
       },
       {
-         "name": "[TODO] Jom Gabbar",
+         "name": "Jom Gabbar (Used last 20 secs)",
          "source": "AQ40",
          "phase": "5",
          "id": 23570,
-         "spell": "Gabbar"
       },
       {
-         "name": "[TODO] Kiss of the Spider",
+         "name": "Kiss of the Spider (Used last 15 secs)",
          "crit": 1,
          "hit": 1,
          "source": "Naxx",
          "phase": "6",
          "id": 22954,
-         "spell": "Spider"
       },
       {
          "name": "Rune of the Guard Captain",
@@ -2354,12 +2351,11 @@ var gear = {
          "id": 13209
       },
       {
-         "name": "[TODO] Slayer's Crest",
+         "name": "Slayer's Crest (Used last 20 secs)",
          "ap": 64,
          "source": "Naxx",
          "phase": "6",
          "id": 23041,
-         "spell": "Crest"
       }
    ],
    "ranged": [

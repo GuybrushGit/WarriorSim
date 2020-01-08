@@ -30,7 +30,10 @@ class Simulation {
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
-        this.cloudstep = Math.max(this.duration - 30,0) * 1000;
+        this.fifteenstep = Math.max(this.duration - 15,0) * 1000;
+        this.twentystep = Math.max(this.duration - 20,0) * 1000;
+        this.thirtystep = Math.max(this.duration - 30,0) * 1000;
+        this.sixtystep = Math.max(this.duration - 60,0) * 1000;
     }
     start() {
         this.run(1);
@@ -85,10 +88,25 @@ class Simulation {
                 else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse(this.step)) {
                     player.auras.mightyragepotion.use();
                 }
-                else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && this.step > this.cloudstep) {
+                else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && this.step > this.thirtystep) {
                     player.auras.cloudkeeper.use();
                 }
-                else if (player.auras.pummeler && player.auras.pummeler.canUse() && this.step > this.cloudstep) {
+                else if (player.auras.flask && player.auras.flask.canUse() && this.step > this.sixtystep) {
+                    player.auras.flask.use();
+                }
+                else if (player.auras.slayer && player.auras.slayer.canUse() && this.step > this.twentystep) {
+                    player.auras.slayer.use();
+                }
+                else if (player.auras.spider && player.auras.spider.canUse() && this.step > this.fifteenstep) {
+                    player.auras.spider.use();
+                }
+                else if (player.auras.gabbar && player.auras.gabbar.canUse() && this.step > this.twentystep) {
+                    player.auras.gabbar.use();
+                }
+                else if (player.auras.earthstrike && player.auras.earthstrike.canUse() && this.step > this.twentystep) {
+                    player.auras.earthstrike.use();
+                }
+                else if (player.auras.pummeler && player.auras.pummeler.canUse() && this.step > this.thirtystep) {
                     player.auras.pummeler.use();
                 }
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) {

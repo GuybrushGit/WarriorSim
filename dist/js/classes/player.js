@@ -65,6 +65,11 @@ class Player {
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
+        if (this.items.includes(20130)) this.auras.flask = new Flask(this);
+        if (this.items.includes(23041)) this.auras.slayer = new Slayer(this);
+        if (this.items.includes(22954)) this.auras.spider = new Spider(this);
+        if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
+        if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
         this.update();
     }
     addRace() {
@@ -123,6 +128,10 @@ class Player {
                         proc.chance = item.procchance * 100;
                         proc.extra = item.procextra;
                         proc.magicdmg = item.magicdmg;
+                        if (item.procspell) {
+                            this.auras[item.procspell.toLowerCase()] = eval('new ' + item.procspell + '(this)');
+                            proc.spell = this.auras[item.procspell.toLowerCase()];
+                        }
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
                     }
 
@@ -356,6 +365,8 @@ class Player {
             this.stats.haste /= (1 + this.auras.eskhandar.div_stats.haste / 100);
         if (this.auras.pummeler && this.auras.pummeler.timer)
             this.stats.haste /= (1 + this.auras.pummeler.div_stats.haste / 100);
+        if (this.auras.spider && this.auras.spider.timer)
+            this.stats.haste /= (1 + this.auras.spider.div_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
@@ -370,6 +381,8 @@ class Player {
             this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
         if (this.auras.bonereaver && this.auras.bonereaver.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.bonereaver.stacks * this.auras.bonereaver.armor), 0);
+        if (this.auras.swarmguard && this.auras.swarmguard.timer)
+            this.target.armor = Math.max(this.target.armor - (this.auras.swarmguard.stacks * this.auras.swarmguard.armor), 0);
         this.armorReduction = this.getArmorReduction();
     }
     getGlanceReduction(weapon) {
@@ -455,6 +468,21 @@ class Player {
         if (this.auras.cloudkeeper && this.auras.cloudkeeper.firstuse && this.auras.cloudkeeper.timer) {
             this.auras.cloudkeeper.step();
         }
+        if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) {
+            this.auras.flask.step();
+        }
+        if (this.auras.slayer && this.auras.slayer.firstuse && this.auras.slayer.timer) {
+            this.auras.slayer.step();
+        }
+        if (this.auras.spider && this.auras.spider.firstuse && this.auras.spider.timer) {
+            this.auras.spider.step();
+        }
+        if (this.auras.gabbar && this.auras.gabbar.firstuse && this.auras.gabbar.timer) {
+            this.auras.gabbar.step();
+        }
+        if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) {
+            this.auras.earthstrike.step();
+        }
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) {
             this.auras.pummeler.step();
         }
@@ -472,6 +500,12 @@ class Player {
         }
         if (this.mh.windfury && this.mh.windfury.timer) {
             this.mh.windfury.step();
+        }
+        if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) {
+            this.trinketproc1.spell.step();
+        }
+        if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) {
+            this.trinketproc2.spell.step();
         }
     }
     rollweapon(weapon) {
@@ -634,11 +668,13 @@ class Player {
                 if (this.trinketproc1.extra)
                     this.extraattacks += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1.magicdmg);
+                if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.extra)
                     this.extraattacks += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2.magicdmg);
+                if (this.trinketproc2.spell) this.trinketproc2.spell.use();
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc.magicdmg);
