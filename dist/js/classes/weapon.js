@@ -74,6 +74,8 @@ class Weapon {
             this.basebonusdmg += enchant.bonusdmg;
         if (!this.windfury && tempenchant && tempenchant.bonusdmg) 
             this.basebonusdmg += tempenchant.bonusdmg;
+        if (this.player.items.includes(21189))
+            this.basebonusdmg += 4;
         this.bonusdmg = this.basebonusdmg;
     }
     dmg(heroicstrike) {

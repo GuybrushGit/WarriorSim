@@ -2127,7 +2127,7 @@ var gear = {
          "id": 19384
       },
       {
-         "name": "[TODO] Might of Cenarius",
+         "name": "Might of Cenarius",
          "hit": 1,
          "sta": 8,
          "source": "Quest",
