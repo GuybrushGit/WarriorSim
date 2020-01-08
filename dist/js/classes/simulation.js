@@ -125,6 +125,9 @@ class Simulation {
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.idmg += player.cast(player.spells.whirlwind);
                 }
+                else if (player.spells.hamstring && player.spells.hamstring.canUse()) {
+                    this.idmg += player.cast(player.spells.hamstring);
+                }
             }
 
             if (batch && player.spells.heroicstrike && player.mh.timer <= 400 && player.rage < player.spells.heroicstrike.unqueue) {

@@ -121,7 +121,6 @@ var spells = [
     iconname: 'inv_misc_monsterscales_17',
     time: 39,
     aura: true,
-    hidden: true,
 },
 {
     id: 23255,
@@ -144,6 +143,13 @@ var spells = [
     classname: 'Slam',
     iconname: 'ability_warrior_decisivestrike',
     hidden: true,
+},
+{
+    id: 7373,
+    name: 'Hamstring',
+    classname: 'Hamstring',
+    iconname: 'ability_shockwave',
+    minrage: 50,
 },
 
 ];

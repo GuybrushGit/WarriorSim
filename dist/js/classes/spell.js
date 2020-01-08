@@ -182,7 +182,7 @@ class Hamstring extends Spell {
     constructor(player) {
         super(player);
         this.cost = 10;
-        this.threshold = (player.spells.bloodthirst || player.spells.mortalstrike ? 40 : 0);
+        this.threshold = parseInt(spells[18].minrage);
     }
     dmg() {
         return 45;

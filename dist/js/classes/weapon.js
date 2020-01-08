@@ -78,6 +78,8 @@ class Weapon {
     }
     dmg(heroicstrike) {
         let dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed;
+        if (this.player.auras.jujuflurry && !this.player.auras.jujuflurry.timer)
+            dmg = rng(~~((this.mindmg + this.bonusdmg) * (1/1.03)), ~~((this.maxdmg + this.bonusdmg) * (1/1.03))) + (this.player.stats.ap / 14) * this.speed;
         if (heroicstrike) dmg += heroicstrike.bonus;
         return dmg * this.modifier;
     }
