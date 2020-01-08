@@ -141,4 +141,16 @@
         font-weight: bold;
         min-height: 17px;
     }
+
+    .author {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 18px;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        opacity: 0.5;
+        font-style: italic;
+    }
 }

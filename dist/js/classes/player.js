@@ -293,10 +293,10 @@ class Player {
         this.mh.dodge = this.getDodgeChance(this.mh);
 
         if (this.oh) {
-            this.mh.dwmiss = (this.mh.miss > 0 ? this.mh.miss * 0.8 : this.mh.miss) + 20;
+            this.mh.dwmiss = this.getDWMissChance(this.mh);
             this.oh.glanceChance = this.getGlanceChance(this.oh);
             this.oh.miss = this.getMissChance(this.oh);
-            this.oh.dwmiss = (this.oh.miss > 0 ? this.oh.miss * 0.8 : this.oh.miss) + 20;
+            this.oh.dwmiss = this.getDWMissChance(this.oh);
             this.oh.dodge = this.getDodgeChance(this.oh);
         }
     }
@@ -397,6 +397,14 @@ class Player {
     getMissChance(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let miss = 5 + (diff > 10 ? diff * 0.2 : diff * 0.1);
+        miss -= (diff > 10 ? this.stats.hit - 1 : this.stats.hit);
+        return miss;
+    }
+    getDWMissChance(weapon) {
+        let diff = this.target.defense - this.stats['skill_' + weapon.type];
+        let miss = 5 + (diff > 10 ? diff * 0.2 : diff * 0.1);
+        miss = miss * 0.8 + 20; //v1
+        //miss += 19; // v2
         miss -= (diff > 10 ? this.stats.hit - 1 : this.stats.hit);
         return miss;
     }

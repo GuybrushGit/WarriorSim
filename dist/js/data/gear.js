@@ -3851,7 +3851,7 @@ var gear = {
          "ppm": 0.5,
          "phase": 1,
          "id": 17075,
-         "physdmg": 240
+         "physdmg": 240,
       },
       {
          "name": "Protector's Sword",
