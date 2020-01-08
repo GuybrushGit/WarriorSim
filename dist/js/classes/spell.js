@@ -152,7 +152,7 @@ class HeroicStrike extends Spell {
         this.bonus = player.aqbooks ? 157 : 138;
     }
     use() {
-        this.player.timer = 800;
+        this.player.timer = 400;
         this.player.nextswinghs = true;
     }
     canUse() {

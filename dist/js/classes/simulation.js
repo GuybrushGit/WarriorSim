@@ -45,7 +45,9 @@ class Simulation {
             let next = 10;
             let batch = this.step % 400 == 0;
 
-            if (!player.spells.slam && player.mh.timer >= 400 && (!player.oh || player.oh.timer >= 400))
+            // if (!player.spells.slam && player.mh.timer >= 400 && (!player.oh || player.oh.timer >= 400))
+            //     next = (400 - (this.step % 400));
+            if (player.mh.timer >= 400 && (!player.oh || player.oh.timer >= 400))
                 next = (400 - (this.step % 400));
 
             if (batch && this.step % 3000 <= 200 && player.talents.angermanagement)
@@ -57,20 +59,20 @@ class Simulation {
             if (batch) player.step(this);
 
             if (player.mh.timer == 0) {
-                if (player.nextswingslam) {
-                    player.nextswingslam = false;
-                    this.idmg += player.cast(player.spells.slam);
-                    if (player.oh) player.oh.use();
-                }
+                // if (player.nextswingslam) {
+                //     player.nextswingslam = false;
+                //     this.idmg += player.cast(player.spells.slam);
+                //     if (player.oh) player.oh.use();
+                // }
                 this.idmg += player.attackmh(player.mh, player.nextswingwf);
             }
             if (player.oh && player.oh.timer == 0) {
                 this.idmg += player.attackoh(player.oh);
             }
 
-            if (player.spells.slam && (!player.spells.execute || this.step <= this.executestep) && player.spells.slam.canUse()) {
-                player.spells.slam.queue();
-            }
+            // if (player.spells.slam && (!player.spells.execute || this.step <= this.executestep) && player.spells.slam.canUse()) {
+            //     player.spells.slam.queue();
+            // }
             
             if (batch && player.timer == 0) {
 

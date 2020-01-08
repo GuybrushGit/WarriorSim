@@ -5,7 +5,6 @@ section.main {
     box-sizing: border-box;
     position: relative;
     left: 20%;
-    padding: 80px 40px 50px;
 
     @media (min-width: 0px) and (max-width: 1600px) {
         left: 320px;
@@ -18,10 +17,7 @@ section.main {
         margin: 10px 0 50px;
         font-weight: bold;
         background: #303950;
-        position: absolute;
-        left: 0;
         width: 100%;
-        top: 0;
         margin: 0;
         padding: 10px 0 10px;
         border-bottom: 2px solid #333333;
@@ -32,6 +28,7 @@ section.main {
         }
     }
     ul {
+        position: relative;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -41,26 +38,14 @@ section.main {
         white-space: nowrap;
     }
     li {
-        position: relative;
+        padding: 0;
         display: inline-block;
         vertical-align: top;
-        padding: 10px 14px;
         font-size: 14px;
         cursor: pointer;
         transition: all 0.2s ease-in;
         opacity: 0.5;
         text-shadow: 1px 1px darkblue;
-        // &:after {
-        //     content: '';
-        //     display: block;
-        //     width: 100%;
-        //     height: 2px;
-        //     background: white;
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     opacity: 0;
-        // }
         &:hover, &.active {
             opacity: 1;
             color: white;
@@ -68,19 +53,53 @@ section.main {
                 opacity: 1;
             }
         }
-        &.active select {
-            //display: block;
+        &.active .filter {
+            opacity: 1;
+            visibility: visible;
+        }
+        p {
+            margin: 0;
+            padding: 10px 14px;
+        }
+        .filter {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-in;
+            position: absolute;
+            left: 0;
+            top: 32px;
+            &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: #545454;
+                position: absolute;
+                display: block;
+                top: 4px;
+                left: 0;
+            }
+        }
+        &.active[data-type="mainhand"],
+        &.active[data-type="offhand"],
+        &.active[data-type="twohand"] {
+            margin-bottom: 30px;
         }
     }
 
-    > .btn {
-        float: right;
-        margin-top: 30px;
-        margin-left: 20px;
+    .table-container {
+        padding: 20px 40px;
     }
 
     .table-container:empty + .btn {
         display: none;
+    }
+
+    .button-container {
+        padding: 0px 40px 40px;
+        text-align: right;
+        .btn {
+            display: inline-block;
+        }
     }
 
     select {

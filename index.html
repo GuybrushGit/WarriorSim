@@ -36,10 +36,8 @@
 
 <!-- TODO
 
-  author
-  weapon filter
-  how to use
-  CLEAVE + ADJACENT TARGETS
+  juju flurry
+  hamstring
   research refund rules
   research dual wield formulas 
 
@@ -275,55 +273,64 @@
   <section class="main">
     <nav>
       <ul>
-        <li data-type="mainhand" class="active">Main Hand
-          <select id="mainhandfilter">
-            <option value="">All</option>
-            <option>Axe</option>
-            <option>Dagger</option>
-            <option>Fist</option>
-            <option>Mace</option>
-            <option>Sword</option>
-          </select>
+        <li data-type="mainhand" class="active">
+          <p>Main Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Dagger</p></li>
+            <li><p>Fist</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+            <li><p>Axe, Dagger & Sword</p></li>
+          </ul>
         </li>
-        <li data-type="offhand">Off Hand
-          <select id="offhandfilter">
-            <option value="">All</option>
-            <option>Axe</option>
-            <option>Dagger</option>
-            <option>Fist</option>
-            <option>Mace</option>
-            <option>Sword</option>
-          </select>
+        <li data-type="offhand">
+          <p>Off Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Dagger</p></li>
+            <li><p>Fist</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+            <li><p>Axe, Dagger & Sword</p></li>
+          </ul>
         </li>
-        <li data-type="twohand">Two Hand
-          <select id="twohandfilter">
-            <option value="">All</option>
-            <option>Axe</option>
-            <option>Dagger</option>
-            <option>Fist</option>
-            <option>Mace</option>
-            <option>Sword</option>
-          </select>
+        <li data-type="twohand">
+          <p>Two Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+          </ul>
         </li>
-        <li data-type="head">Head</li>
-        <li data-type="neck">Neck</li>
-        <li data-type="shoulder">Shoulder</li>
-        <li data-type="back">Back</li>
-        <li data-type="chest">Chest</li>
-        <li data-type="wrist">Wrist</li>
-        <li data-type="hands">Hands</li>
-        <li data-type="waist">Waist</li>
-        <li data-type="legs">Legs</li>
-        <li data-type="feet">Feet</li>
-        <li data-type="finger">Finger</li>
-        <li data-type="trinket">Trinket</li>
-        <li data-type="ranged">Ranged</li>
+        <li data-type="head"><p>Head</p></li>
+        <li data-type="neck"><p>Neck</p></li>
+        <li data-type="shoulder"><p>Shoulder</p></li>
+        <li data-type="back"><p>Back</p></li>
+        <li data-type="chest"><p>Chest</p></li>
+        <li data-type="wrist"><p>Wrist</p></li>
+        <li data-type="hands"><p>Hands</p></li>
+        <li data-type="waist"><p>Waist</p></li>
+        <li data-type="legs"><p>Legs</p></li>
+        <li data-type="feet"><p>Feet</p></li>
+        <li data-type="finger"><p>Finger</p></li>
+        <li data-type="trinket"><p>Trinket</p></li>
+        <li data-type="ranged"><p>Ranged</p></li>
       </ul>
     </nav>
 
     <div class="table-container"></div>
-    <!-- <a href="#" class="btn js-table">GEAR DPS</a> -->
-    <a href="#" class="btn js-enchant">ENCHANTS DPS</a>
+    <div class="button-container">
+      <!-- <a href="#" class="btn js-table">GEAR DPS</a> -->
+      <a href="#" class="btn js-enchant">ENCHANTS DPS</a>
+    </div>
+    
     <progress value="0" max="100"></progress>
   </section>
 

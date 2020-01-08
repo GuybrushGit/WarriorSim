@@ -74,10 +74,14 @@ SIM.UI = {
             view.simulateDPS(first);
         });
 
-        view.main.find('nav li').click(function () {
-            $(this).addClass('active');
-            $(this).siblings().removeClass('active');
-            var type = $(this).data('type');
+        view.main.find('nav li p').click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let li = $(this).parent();
+            li.addClass('active');
+            li.siblings().removeClass('active');
+            var type = li.data('type');
+            if (!type) type = li.parents('[data-type]').data('type');
 
             if (type == "mainhand" || type == "offhand" || type == "twohand") 
                 view.loadWeapons(type);
@@ -120,12 +124,6 @@ SIM.UI = {
 
             view.updateSession();
             view.updateSidebar();
-        });
-
-        view.main.on('change', 'nav select', function(e) {
-            var type = $(this).parent().data('type');
-            view.loadWeapons(type);
-            view.updateSession();
         });
     },
 
@@ -337,9 +335,6 @@ SIM.UI = {
         localStorage.targetresistance = view.fight.find('input[name="targetresistance"]').val();
         localStorage.adjacent = view.fight.find('input[name="adjacent"]').val();
         localStorage.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
-        localStorage.mainhandfilter = view.main.find('#mainhandfilter').val();
-        localStorage.offhandfilter = view.main.find('#offhandfilter').val();
-        localStorage.twohandfilter = view.main.find('#twohandfilter').val();
         localStorage.aqbooks = view.fight.find('select[name="aqbooks"]').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {};
@@ -398,9 +393,6 @@ SIM.UI = {
         }
 
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
-        view.main.find('#mainhandfilter').val(localStorage.mainhandfilter);
-        view.main.find('#offhandfilter').val(localStorage.offhandfilter);
-        view.main.find('#twohandfilter').val(localStorage.twohandfilter);
 
         let _buffs = !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs);
         let _rotation = !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation);
@@ -459,11 +451,7 @@ SIM.UI = {
 
     loadWeapons: function (type) {
         var view = this;
-        var filter;
-
-        if (type == "mainhand") filter = view.main.find('#mainhandfilter').val();
-        if (type == "offhand") filter = view.main.find('#offhandfilter').val();
-        if (type == "twohand") filter = view.main.find('#twohandfilter').val();
+        var filter = view.main.find('nav li.active .filter .active').text();
 
         let table = `<table class="gear" data-type="${type}" data-max="1">
                         <thead>
@@ -489,8 +477,16 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            if (filter && item.type != filter)
-                continue;
+            if (filter && filter != "All") {
+                if (filter == "Mace & Sword") {
+                    if (item.type != "Mace" && item.type != "Sword") continue;
+                }
+                else if (filter == "Axe, Dagger & Sword") {
+                    if (item.type != "Axe"  && item.type != "Dagger" && item.type != "Sword") continue; 
+                }
+                else if (item.type != filter)
+                    continue;
+            }
 
             let source = item.source.toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar')
