@@ -15,6 +15,7 @@ SIM.STATS = {
         view.dmg = view.stats.find('.container-dmg canvas');
         view.dmglegend = view.stats.find('.container-dmg .legend');
         view.aura = view.stats.find('.container-aura canvas');
+        view.spread = view.stats.find('.container-spread canvas');
         view.colors = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#ffa600'];
         view.close = view.stats.find('.btn-close');
         view.table = view.stats.find('.container-table');
@@ -35,7 +36,9 @@ SIM.STATS = {
         $('.js-stats').removeClass('disabled');
         view.buildTable(sim);
         view.buildData(sim);
-        view.buildCharts();
+        view.buildAuras();
+        view.buildDamage();
+        view.buildSpread();
     },
 
     buildData: function (sim) {
@@ -119,12 +122,33 @@ SIM.STATS = {
             backgroundColor: colors,
         });
 
+        console.log(view.dmgdata);
+
+        data = [];
+        view.spreaddata = {
+            labels: [],
+            datasets: []
+        };
+
+        for(let i in sim.spread) {
+            view.spreaddata.labels.push(i);
+            data.push(sim.spread[i]);
+        }
+
+        view.spreaddata.datasets.push({
+            data: data,
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgb(255, 99, 132)',
+            fill: 'origin'
+        });
+
+        console.log(view.spreaddata);
+
     },
 
-    buildCharts: function () {
+    buildAuras: function () {
         var view = this;
 
-        // Auras
         if (view.aurachart) view.aurachart.destroy();
         view.aurachart = new Chart(view.aura, {
             type: 'horizontalBar',
@@ -132,6 +156,7 @@ SIM.STATS = {
             showTooltips: false,
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 legend: {
                     display: false,
                     align: 'center',
@@ -190,8 +215,11 @@ SIM.STATS = {
             },
 
         });
+    },
 
-        // Damage
+    buildDamage: function () {
+        var view = this;
+
         if (view.dmgchart) view.dmgchart.destroy();
         view.dmgchart = new Chart(view.dmg, {
             type: 'pie',
@@ -203,6 +231,7 @@ SIM.STATS = {
                     }
                 },
                 responsive: true,
+                maintainAspectRatio: false,
                 title: {
                     display: false,
                     text: 'DPS',
@@ -263,5 +292,50 @@ SIM.STATS = {
         view.table.find('table').tablesorter({
             widthFixed: true,
         });
-    }
+    },
+
+    buildSpread: function () {
+        var view = this;
+
+        if (view.spreadchart) view.spreadchart.destroy();
+        view.spreadchart = new Chart(view.spread, {
+            type: 'line',
+            data: view.spreaddata,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                spanGaps: false,
+                legend: {
+                    display: false,
+                },
+                elements: {
+                    line: {
+                        tension: 0.4
+                    },
+                    point:{
+                        radius: 0
+                    }
+                },
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero:true,
+                            autoSkip: true,
+                            maxRotation: 0
+                        }
+                    }],
+                },
+                tooltips: {
+                    callbacks: {
+                        label: (item, obj) => ` ${obj.labels[item.index]} DPS: ${obj.datasets[0].data[item.index]}`,
+                    }
+                },
+            }
+        });
+    },
 };

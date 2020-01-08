@@ -157,8 +157,10 @@ SIM.UI = {
                 else view.endLoading();
 
                 SIM.STATS.initCharts(sim);
+                console.log(sim.spread);
                 sim = null;
                 player = null;
+                
             },
             (iteration) => {
                 // Update

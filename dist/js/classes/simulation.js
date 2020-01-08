@@ -22,6 +22,7 @@ class Simulation {
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
         this.player.simulation = this;
+        this.spread = [];
 
         // this.steps
         this.maxsteps = this.duration * 1000;
@@ -161,6 +162,10 @@ class Simulation {
         this.totaldmg += this.idmg;
         if (this.idmg < this.mindmg) this.mindmg = this.idmg;
         if (this.idmg > this.maxdmg) this.maxdmg = this.idmg;
+
+        let dps = Math.round(this.idmg / this.duration);
+        if (!this.spread[dps]) this.spread[dps] = 1;
+        else this.spread[dps]++;
 
         if (iteration == this.iterations) {
             this.endtime = new Date().getTime();
