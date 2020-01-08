@@ -30,10 +30,10 @@ class Simulation {
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
-        this.fifteenstep = Math.max(this.duration - 15,0) * 1000;
-        this.twentystep = Math.max(this.duration - 20,0) * 1000;
-        this.thirtystep = Math.max(this.duration - 30,0) * 1000;
-        this.sixtystep = Math.max(this.duration - 60,0) * 1000;
+        this.fifteenstep = Math.max(this.duration - 16,0) * 1000;
+        this.twentystep = Math.max(this.duration - 21,0) * 1000;
+        this.thirtystep = Math.max(this.duration - 31,0) * 1000;
+        this.sixtystep = Math.max(this.duration - 61,0) * 1000;
     }
     start() {
         this.run(1);
