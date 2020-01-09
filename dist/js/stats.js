@@ -13,7 +13,7 @@ SIM.STATS = {
         view.body = $('body');
         view.stats = view.body.find('section.stats');
         view.dmg = view.stats.find('.container-dmg canvas');
-        view.dmglegend = view.stats.find('.container-dmg .legend');
+        view.dmglegend = view.stats.find('.container-dmg').siblings('.legend');
         view.aura = view.stats.find('.container-aura canvas');
         view.spread = view.stats.find('.container-spread canvas');
         view.colors = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a', '#ff7c43', '#ffa600'];
@@ -121,8 +121,6 @@ SIM.STATS = {
             fill: false,
             backgroundColor: colors,
         });
-
-        console.log(view.dmgdata);
 
         data = [];
         view.spreaddata = {
@@ -241,7 +239,7 @@ SIM.STATS = {
                     animateRotate: true
                 },
                 legend: {
-                    display: true,
+                    display: false,
                     position: 'bottom',
                     labels: {
                         fontColor: '#ccc',
@@ -254,6 +252,8 @@ SIM.STATS = {
                 },
             }
         });
+
+        view.dmglegend.html(view.dmgchart.generateLegend());
     },
 
     buildTable: function (sim) {

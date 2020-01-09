@@ -244,6 +244,8 @@ SIM.UI = {
         for(let i = 0; i < gear[type].length; i++) {
             if (gear[type][i].id == tr.data('id'))
                 gear[type][i].selected = true;
+            else if (type != "finger" && type != "trinket")
+                gear[type][i].selected = false;
         }
 
         if (type == "twohand") {
@@ -525,12 +527,6 @@ SIM.UI = {
             widthFixed: true,
             sortList: [[14, 1],[0, 0]],
         });
-
-        // disable hidden items
-        for (let item of gear[type]) {
-            if (item.selected && !view.tcontainer.find('tr[data-id="' + item.id + '"]').length)
-                item.selected = false;
-        }
 
         view.loadEnchants(type);
     },

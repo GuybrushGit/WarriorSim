@@ -83,12 +83,14 @@
     .legend {
         text-align: center;
         margin-top: 20px;
+        width: 25%;
+        display: inline-block;
+        vertical-align: top;
         ul {
             display: inline-block;
             margin: 0 auto;
             padding: 0;
             text-align: left;
-            padding-right: 60px;
         }
         li {
             list-style: none;
@@ -111,5 +113,12 @@
                 font-style: normal;
             }
         }
+    }
+
+    .container-dmg {
+        width: 65%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
     }
 }
