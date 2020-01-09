@@ -299,7 +299,7 @@ SIM.STATS = {
 
         if (view.spreadchart) view.spreadchart.destroy();
         view.spreadchart = new Chart(view.spread, {
-            type: 'line',
+            type: 'bar',
             data: view.spreaddata,
             options: {
                 responsive: true,
