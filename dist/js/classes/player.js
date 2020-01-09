@@ -409,7 +409,7 @@ class Player {
         return miss;
     }
     getCritChance() {
-        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6 + 3;
+        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6;
         return Math.max(crit, 0);
     }
     getDodgeChance(weapon) {

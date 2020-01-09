@@ -1,5 +1,12 @@
 var buffs = [
    {
+      id: 2458,
+      spellid: true,
+      name: "Berserker Stance",
+      iconname: "Ability_Racial_Avatar",
+      crit: 3
+   },
+   {
       id: 27578,
       spellid: true,
       name: "Battle Shout",
