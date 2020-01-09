@@ -3935,7 +3935,7 @@ var gear = {
          "speed": 2.9,
          "type": "Axe",
          "source": "Onyxia",
-         "ppm": 1,
+         "ppm": 0.8,
          "phase": 1,
          "id": 17068,
          "magicdmg": 138
@@ -3960,7 +3960,7 @@ var gear = {
          "speed": 1.5,
          "type": "Axe",
          "source": "Other",
-         "ppm": 2,
+         "ppm": 1.8,
          "phase": 1,
          "id": 871,
          "procextra": 1
@@ -4070,7 +4070,7 @@ var gear = {
          "speed": 1.3,
          "type": "Dagger",
          "source": "Other",
-         "ppm": 1.3,
+         "ppm": 1,
          "phase": 1,
          "id": 14555,
          "magicdmg": 99
@@ -4306,7 +4306,7 @@ var gear = {
          "speed": 1.8,
          "type": "Dagger",
          "source": "MC",
-         "ppm": 1.3,
+         "ppm": 1,
          "phase": 1,
          "id": 18816,
          "magicdmg": 53
@@ -4863,7 +4863,7 @@ var gear = {
          "speed": 2.6,
          "type": "Sword",
          "source": "Onyxia",
-         "ppm": 1.3,
+         "ppm": 0.8,
          "phase": 1,
          "id": 17075,
          "physdmg": 240
