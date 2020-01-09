@@ -7,7 +7,6 @@ class Player {
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        this.nextswingslam = false;
         this.nextswingwf = false;
         this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
         if (enchtype == 1) {
@@ -271,7 +270,6 @@ class Player {
         this.extraattacks = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        this.nextswingslam = false;
         this.nextswingwf = false;
         for (let s in this.spells) {
             this.spells[s].timer = 0;
@@ -426,7 +424,7 @@ class Player {
         }
         else {
             if (result == RESULT.DODGE)
-                this.rage += (weapon.avgdmg() / 230.6) * 7.5 * 0.8;
+                this.rage += (weapon.avgdmg() / 230.6) * 7.5 * 0.75;
             else if (result != RESULT.MISS)
                 this.rage += (dmg / 230.6) * 7.5;
         }

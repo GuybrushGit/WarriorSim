@@ -86,9 +86,9 @@ class Weapon {
         return dmg * this.modifier;
     }
     avgdmg() {
-        let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.speed;
+        let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.normSpeed;
         if (this.player.auras.jujuflurry && !this.player.auras.jujuflurry.timer)
-            dmg = (((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg) * (1/1.03))/2) + (this.player.stats.ap / 14) * this.speed;
+            dmg = (((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg) * (1/1.03))/2) + (this.player.stats.ap / 14) * this.normSpeed;
         dmg *= this.modifier * this.player.stats.dmgmod * (1 - this.player.armorReduction);
         return dmg;
     }
