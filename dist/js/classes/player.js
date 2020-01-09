@@ -419,14 +419,16 @@ class Player {
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);
         return r > 0.75 ? 0.75 : r;
     }
-    addRage(dmg, result, spell) {
+    addRage(dmg, result, weapon, spell) {
         if (spell) {
             if (result == RESULT.MISS || result == RESULT.DODGE)
-                this.rage += spell.refund ? spell.cost * 0.8 : 0;
+                this.rage += spell.usedrage ? spell.usedrage : spell.refund ? spell.cost * 0.8 : 0;
         }
         else {
-            let mod = result == RESULT.MISS ? 0 : result == RESULT.DODGE ? 0.75 : 1;
-            this.rage += (dmg / 230.6) * 7.5 * mod;
+            if (result == RESULT.DODGE)
+                this.rage += (weapon.avgdmg() / 230.6) * 7.5 * 0.8;
+            else if (result != RESULT.MISS)
+                this.rage += (dmg / 230.6) * 7.5;
         }
         if (!spell || spell instanceof HeroicStrike) {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100)
@@ -581,7 +583,7 @@ class Player {
         }
 
         weapon.use();
-        let done = this.dealdamage(dmg, result, spell);
+        let done = this.dealdamage(dmg, result, weapon, spell);
         if (spell) {
             spell.totaldmg += done;
             spell.data[result]++;
@@ -613,7 +615,7 @@ class Player {
         }
 
         weapon.use();
-        let done = this.dealdamage(dmg, result);
+        let done = this.dealdamage(dmg, result, weapon);
         weapon.data[result]++;
         weapon.totaldmg += done;
         weapon.totalprocdmg += procdmg;
@@ -634,21 +636,21 @@ class Player {
             this.proccrit();
         }
 
-        let done = this.dealdamage(dmg, result, spell);
+        let done = this.dealdamage(dmg, result, this.mh, spell);
         spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
         return done + procdmg;
     }
-    dealdamage(dmg, result, spell) {
-        dmg *= this.stats.dmgmod;
+    dealdamage(dmg, result, weapon, spell) {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
+            dmg *= this.stats.dmgmod;
             dmg *= (1 - this.armorReduction);
-            this.addRage(dmg, result, spell);
+            this.addRage(dmg, result, weapon, spell);
             return ~~dmg;
         }
         else {
-            this.addRage(dmg, result, spell);
+            this.addRage(dmg, result, weapon, spell);
             return 0;
         }
     }

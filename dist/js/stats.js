@@ -142,8 +142,6 @@ SIM.STATS = {
             fill: 'origin'
         });
 
-        console.log(view.spreaddata);
-
     },
 
     buildAuras: function () {

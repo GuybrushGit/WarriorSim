@@ -85,6 +85,13 @@ class Weapon {
         if (heroicstrike) dmg += heroicstrike.bonus;
         return dmg * this.modifier;
     }
+    avgdmg() {
+        let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.speed;
+        if (this.player.auras.jujuflurry && !this.player.auras.jujuflurry.timer)
+            dmg = (((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg) * (1/1.03))/2) + (this.player.stats.ap / 14) * this.speed;
+        dmg *= this.modifier * this.player.stats.dmgmod * (1 - this.player.armorReduction);
+        return dmg;
+    }
     use() {
         this.timer = this.speed * 1000 * this.player.stats.haste;
     }

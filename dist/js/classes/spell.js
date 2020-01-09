@@ -87,7 +87,7 @@ class Overpower extends Spell {
 class Execute extends Spell {
     constructor(player) {
         super(player);
-        this.basecost = 15 - player.talents.executecost;
+        this.cost = 15 - player.talents.executecost;
         this.usedrage = 0;
     }
     dmg() {
@@ -95,12 +95,11 @@ class Execute extends Spell {
     }
     use() {
         this.player.timer = 1500;
-        this.usedrage = ~~(this.player.rage - this.basecost);
-        this.cost = this.basecost + this.usedrage;
+        this.usedrage = ~~(this.player.rage - this.cost);
         this.player.rage = 0;
     }
     canUse() {
-        return this.basecost <= this.player.rage;
+        return this.cost <= this.player.rage;
     }
 }
 
