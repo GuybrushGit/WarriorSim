@@ -908,7 +908,7 @@ var gear = {
          "ac": 706,
          "source": "PVP",
          "phase": 2,
-         "id": 16513
+         "id": 22872
       },
       {
          "name": "Runed Bloodstained Hauberk",
