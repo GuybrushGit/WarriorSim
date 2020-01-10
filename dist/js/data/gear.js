@@ -70,7 +70,7 @@ var gear = {
          "str": 18,
          "ac": 445,
          "source": "Quest",
-         "phase": 4,
+         "phase": 3,
          "id": 20521
       },
       {
@@ -475,7 +475,7 @@ var gear = {
          "agi": 10,
          "ac": 410,
          "source": "Quest",
-         "phase": 4,
+         "phase": 3,
          "id": 20517
       },
       {
@@ -2286,7 +2286,7 @@ var gear = {
       {
          "name": "Diamond Flask (Used last 60 seconds)",
          "source": "Quest",
-         "phase": "4",
+         "phase": "3",
          "id": 20130,
       },
       {
@@ -2868,7 +2868,7 @@ var gear = {
          "speed": 1.6,
          "type": "Dagger",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "id": 19166
       },
       {
@@ -3493,7 +3493,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "id": 19168
       },
       {
@@ -4486,7 +4486,7 @@ var gear = {
          "type": "Mace",
          "source": "Crafting",
          "ppm": 1,
-         "phase": 1,
+         "phase": 3,
          "id": 19170,
          "magicdmg": 220
       },
@@ -5304,7 +5304,7 @@ var gear = {
          "speed": 2.1,
          "id": 19167,
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "type": "Polearm"
       },
       {
