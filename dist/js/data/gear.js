@@ -5684,6 +5684,123 @@ var gear = {
          "phase": 4,
          "type": "Sword"
       }
+   ],
+   "custom" : [
+      {
+         "id": 1,
+         "name": "+ 10 Attack Power",
+         "ap": 10,
+      },
+      {
+         "id": 2,
+         "name": "+ 20 Attack Power",
+         "ap": 20
+      },
+      {
+         "id": 3,
+         "name": "+ 50 Attack Power",
+         "ap": 50
+      },
+      {
+         "id": 4,
+         "name": "+ 1% Hit",
+         "hit": 1
+      },
+      {
+         "id": 5,
+         "name": "+ 2% Hit",
+         "hit": 2
+      },
+      {
+         "id": 6,
+         "name": "+ 3% Hit",
+         "hit": 3
+      },
+      {
+         "id": 7,
+         "name": "+ 1% Crit",
+         "crit": 1
+      },
+      {
+         "id": 8,
+         "name": "+ 2% Crit",
+         "crit": 2
+      },
+      {
+         "id": 9,
+         "name": "+ 3% Crit",
+         "crit": 3
+      },
+      {
+         "id": 10,
+         "name": "+ 5 Strength",
+         "str": 5
+      },
+      {
+         "id": 11,
+         "name": "+ 10 Strength",
+         "str": 10
+      },
+      {
+         "id": 12,
+         "name": "+ 20 Strength",
+         "str": 20
+      },
+      {
+         "id": 13,
+         "name": "+ 5 Agility",
+         "agi": 5
+      },
+      {
+         "id": 14,
+         "name": "+ 10 Agility",
+         "agi": 10
+      },
+      {
+         "id": 15,
+         "name": "+ 20 Agility",
+         "agi": 20
+      },
+      {
+         "id": 16,
+         "name": "+ 4 Skill",
+         "skill_0": 4,
+         "skill_1": 4,
+         "skill_2": 4,
+         "skill_3": 4,
+         "skill_4": 4,
+         "skill_5": 4,
+      },
+      {
+         "id": 17,
+         "name": "+ 5 Skill",
+         "skill_0": 5,
+         "skill_1": 5,
+         "skill_2": 5,
+         "skill_3": 5,
+         "skill_4": 5,
+         "skill_5": 5,
+      },
+      {
+         "id": 18,
+         "name": "+ 7 Skill",
+         "skill_0": 7,
+         "skill_1": 7,
+         "skill_2": 7,
+         "skill_3": 7,
+         "skill_4": 7,
+         "skill_5": 7,
+      },
+      {
+         "id": 19,
+         "name": "+ 12 Skill",
+         "skill_0": 12,
+         "skill_1": 12,
+         "skill_2": 12,
+         "skill_3": 12,
+         "skill_4": 12,
+         "skill_5": 12,
+      },
    ]
 };
 

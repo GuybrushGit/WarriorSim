@@ -56,7 +56,7 @@ SIM.UI = {
             $('section.settings').removeClass('active');
         });
 
-        view.sidebar.on('click', '.js-table', function(e) {
+        view.body.on('click', '.js-table', function(e) {
             e.preventDefault();
             let first = view.tcontainer.find('table.gear tbody tr').first();
             view.tcontainer.find('table.gear tbody tr').addClass('waiting');
@@ -85,7 +85,9 @@ SIM.UI = {
 
             if (type == "mainhand" || type == "offhand" || type == "twohand") 
                 view.loadWeapons(type);
-            else 
+            else if (type == "custom") 
+                view.loadCustom();
+            else
                 view.loadGear(type);
         });
 
@@ -138,7 +140,7 @@ SIM.UI = {
         var player = new Player();
         if (row) {
             let type = row.parents('table').data('type');
-            if (type == "finger" || type == "trinket")
+            if (type == "finger" || type == "trinket" || type == "custom")
                 player = new Player(null, type);
         }
         if (!player.mh) {
@@ -448,6 +450,8 @@ SIM.UI = {
         var type = view.main.find('nav > ul > li.active').data('type');
         if (type == "mainhand" || type == "offhand") 
             view.loadWeapons(type);
+        else if (type == "custom") 
+            view.loadCustom();
         else 
             view.loadGear(type);
     },
@@ -593,6 +597,48 @@ SIM.UI = {
         });
 
         view.loadEnchants(type);
+    },
+
+    loadCustom: function () {
+        var view = this;
+
+        var max = 1;
+        let table = `<table class="gear" data-type="custom" data-max="${max}">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Str</th>
+                                <th>Agi</th>
+                                <th>AP</th>
+                                <th>Hit</th>
+                                <th>Crit</th>
+                                <th>Skill</th>
+                                <th>DPS</th>
+                            </tr>
+                        </thead>
+                    <tbody>`;
+
+        for (let item of gear.custom) {
+            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''}">
+                        <td>${item.name}</td>
+                        <td>${item.str || ''}</td>
+                        <td>${item.agi || ''}</td>
+                        <td>${item.ap || ''}</td>
+                        <td>${item.hit || ''}</td>
+                        <td>${item.crit || ''}</td>
+                        <td>${item.skill_1 || ''}</td>
+                        <td>${item.dps || ''}</td>
+                    </tr>`;
+        }
+
+        table += '</tbody></table></section>';
+
+        view.tcontainer.empty();
+        view.tcontainer.append(table);
+        view.tcontainer.find('table.gear').tablesorter({
+            widthFixed: true,
+            sortList: [[10, 1]],
+        });
     },
 
     loadEnchants: function (type) {
