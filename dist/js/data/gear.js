@@ -465,7 +465,7 @@ var gear = {
          "ac": 626,
          "source": "PVP",
          "phase": 2,
-         "id": 16544
+         "id": 16480
       },
       {
          "name": "Razorsteel Shoulders",
@@ -1277,7 +1277,7 @@ var gear = {
          "ac": 532,
          "source": "PVP",
          "phase": 2,
-         "id": 16548
+         "id": 16484
       },
       {
          "name": "R7 Gauntlets",
@@ -1955,7 +1955,7 @@ var gear = {
          "ac": 592,
          "source": "PVP",
          "phase": 2,
-         "id": 16545
+         "id": 16483
       },
       {
          "name": "R7 Plate Boots",
@@ -6206,13 +6206,6 @@ var sets = [
       items: [16477, 16478, 16480, 16483, 16484, 16479],
       bonus: [
          { count: 6, stats: { ap: 40 } }
-      ]
-   },
-   {
-      id: 537,
-      items: [22868, 22858, 22872, 22873, 23244, 23243],
-      bonus: [
-         { count: 2, stats: { ap: 40 } }
       ]
    },
    {
