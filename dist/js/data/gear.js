@@ -1327,6 +1327,15 @@ var gear = {
          "source": "Quest",
          "phase": 1,
          "id": 13963
+      },
+      {
+         "name": "Chromatic Gauntlets",
+         "crit": 1,
+         "ap": 44,
+         "ac": 279,
+         "source": "Crafting",
+         "phase": 3,
+         "id": 19157
       }
    ],
    "waist": [

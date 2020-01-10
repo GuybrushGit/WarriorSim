@@ -4,7 +4,8 @@ var buffs = [
       spellid: true,
       name: "Berserker Stance",
       iconname: "Ability_Racial_Avatar",
-      crit: 3
+      crit: 3,
+      group: "zerkstance",
    },
    {
       id: 27578,

@@ -240,6 +240,8 @@ class Player {
                     apbonus = ~~((this.aqbooks ? 232 : buff.ap) * this.talents.impbattleshout);
                     if (this.aqbooks) apbonus += 39;
                 }
+                if (buff.group == "zerkstance")
+                    this.zerkstance = true;
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;

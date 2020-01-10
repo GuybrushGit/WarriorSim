@@ -79,6 +79,7 @@ var spells = [
     classname: 'Overpower',
     iconname: 'ability_meleedamage',
     maxrage: 25,
+    maincd: 2,
 },
 {
     id: 26296,

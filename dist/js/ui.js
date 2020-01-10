@@ -246,7 +246,7 @@ SIM.UI = {
         for(let i = 0; i < gear[type].length; i++) {
             if (gear[type][i].id == tr.data('id'))
                 gear[type][i].selected = true;
-            else if (type != "finger" && type != "trinket")
+            else if (type != "finger" && type != "trinket" && type != "custom")
                 gear[type][i].selected = false;
         }
 
@@ -602,8 +602,7 @@ SIM.UI = {
     loadCustom: function () {
         var view = this;
 
-        var max = 1;
-        let table = `<table class="gear" data-type="custom" data-max="${max}">
+        let table = `<table class="gear" data-type="custom" data-max="10">
                         <thead>
                             <tr>
                                 <th>Name</th>

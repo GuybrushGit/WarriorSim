@@ -67,20 +67,24 @@ class Overpower extends Spell {
         this.cooldown = 5;
         this.canDodge = false;
         this.threshold = parseInt(spells[9].maxrage);
+        this.maincd = parseInt(spells[9].maincd);
     }
     dmg() {
         return 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
-        this.player.timer = 2000;
+        this.player.timer = this.player.zerkstance ? 2000 : 1500;
         this.player.dodgeTimer = 0;
         this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
-        this.player.auras.battlestance.use();
+        if (this.player.zerkstance)
+            this.player.auras.battlestance.use();
     }
     canUse() {
-        return this.timer == 0 && this.cost <= this.player.rage && this.player.dodgeTimer > 0 && this.player.rage <= this.threshold;
+        return this.timer == 0 && this.cost <= this.player.rage && this.player.dodgeTimer > 0 && this.player.rage <= this.threshold &&
+            ((this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
+            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 

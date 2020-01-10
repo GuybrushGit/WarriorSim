@@ -186,7 +186,7 @@ SIM.SETTINGS = {
             if (spell.globals !== undefined)
                 div.find('.options').append(`<li>Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
             if (spell.maincd !== undefined)
-                div.find('.options').append(`<li>BT cooldown more than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /></li>`);
+                div.find('.options').append(`<li>BT/MS cooldown >= <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> secs</li>`);
             if (spell.crusaders !== undefined)
                 div.find('.options').append(`<li>when <input type="text" name="crusaders" value="${spell.crusaders}" data-numberonly="true" /> crusaders are up</li>`);
             if (spell.haste !== undefined)
@@ -216,8 +216,14 @@ SIM.SETTINGS = {
 
             if (spell.id == 11567) {
                 div.find('.options').empty();
-                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT cooldown more than <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
+                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT/MS cooldown >= <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
                 div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage on swing</li>`);
+            }
+
+            if (spell.id == 11585) {
+                div.find('.options').empty();
+                div.find('.options').append(`<li>Use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage and</li>`);
+                div.find('.options').append(`<li>BT/MS cooldown >= <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> secs</li>`);
             }
 
             view.rotation.append(div);
