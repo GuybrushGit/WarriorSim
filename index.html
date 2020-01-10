@@ -352,6 +352,24 @@
     });
   </script>
 
+  <style>
+    
+    @media only screen and (max-width: 1600px) {
+      section.main ul {
+        white-space: normal;
+      }
+      section.main li.active .filter {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+      }
+      section.main li.active[data-type=mainhand], section.main li.active[data-type=offhand], section.main li.active[data-type=twohand] {
+        margin-bottom: 0;
+      }
+    }
+  
+  </style>
+
 
 </body>
 
