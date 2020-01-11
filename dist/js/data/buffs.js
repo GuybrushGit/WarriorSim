@@ -237,4 +237,11 @@ var buffs = [
       group: "",
       bonusdmg: 1
    },
+   {
+      id: 22237,
+      name: "Dark Desire",
+      iconname: "inv_valentineschocolate04",
+      group: "",
+      hit: 2
+   },
 ];

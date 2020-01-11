@@ -247,6 +247,7 @@ class Player {
                 this.base.agi += buff.agi || 0;
                 this.base.str += buff.str || 0;
                 this.base.crit += buff.crit || 0;
+                this.base.hit += buff.hit || 0;
                 this.base.spellcrit += buff.spellcrit || 0;
                 this.base.agimod *= (1 + buff.agimod / 100) || 1;
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;

@@ -3319,7 +3319,7 @@ var gear = {
          "speed": 2.8,
          "type": "Mace",
          "source": "Kazzak",
-         "ppm": 1,
+         "ppm": 1.1,
          "phase": 2,
          "id": 17112,
          "procspell": "Empyrean",
