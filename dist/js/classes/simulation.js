@@ -15,8 +15,9 @@ class Simulation {
         this.iterations = parseInt($('input[name="simulations"]').val());
         this.idmg = 0;
         this.totaldmg = 0;
-        this.mindmg = 99999;
-        this.maxdmg = 0;
+        this.totalduration = 0;
+        this.mindps = 99999;
+        this.maxdps = 0;
         this.maxcallstack = Math.min(Math.floor(this.iterations / 10), 1000);
         this.starttime = 0;
         this.endtime = 0;
@@ -26,17 +27,10 @@ class Simulation {
         this.spread = [];
 
         // this.steps
-        this.maxsteps = rng(this.timesecsmin * 1000, this.timesecsmax * 1000);
-        this.duration = this.maxsteps / 1000;
-        this.executestep = Math.max(this.maxsteps - parseInt(spells[4].lasttime) * 1000, 0);
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
-        this.fifteenstep = Math.max(this.maxsteps - 16000,0);
-        this.twentystep = Math.max(this.maxsteps - 21000,0);
-        this.thirtystep = Math.max(this.maxsteps - 31000,0);
-        this.sixtystep = Math.max(this.maxsteps - 61000,0);
     }
     start() {
         this.run(1);
@@ -47,6 +41,13 @@ class Simulation {
         this.idmg = 0;
         let player = this.player;
         player.reset(this.startrage);
+        this.maxsteps = rng(this.timesecsmin * 1000, this.timesecsmax * 1000);
+        this.duration = this.maxsteps / 1000;
+        this.executestep = Math.max(this.maxsteps - parseInt(spells[4].lasttime) * 1000, 0);
+        this.fifteenstep = Math.max(this.maxsteps - 16000,0);
+        this.twentystep = Math.max(this.maxsteps - 21000,0);
+        this.thirtystep = Math.max(this.maxsteps - 31000,0);
+        this.sixtystep = Math.max(this.maxsteps - 61000,0);
         while (this.step < this.maxsteps) {
             let next = 10;
             let batch = this.step % 400 == 0;
@@ -151,10 +152,11 @@ class Simulation {
         }
 
         this.totaldmg += this.idmg;
-        if (this.idmg < this.mindmg) this.mindmg = this.idmg;
-        if (this.idmg > this.maxdmg) this.maxdmg = this.idmg;
-
-        let dps = Math.round(this.idmg / this.duration);
+        this.totalduration += this.duration;
+        let dps = this.idmg / this.duration;
+        if (dps < this.mindps) this.mindps = dps;
+        if (dps > this.maxdps) this.maxdps = dps;
+        dps = Math.round(dps);
         if (!this.spread[dps]) this.spread[dps] = 1;
         else this.spread[dps]++;
 

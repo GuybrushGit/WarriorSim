@@ -151,9 +151,9 @@ SIM.UI = {
         var sim = new Simulation(player, 
             () => {
                 // Finished
-                dps.text((sim.totaldmg / (sim.duration * sim.iterations)).toFixed(2));
+                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
                 time.text((sim.endtime - sim.starttime) / 1000);
-                stats.html((sim.mindmg / sim.duration).toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + (sim.maxdmg / sim.duration).toFixed(2) + ' max');
+                stats.html(sim.mindps.toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + sim.maxdps.toFixed(2) + ' max');
                 btn.css('background', '');
                 if (row) view.simulateRow(row);
                 else view.endLoading();
@@ -166,7 +166,7 @@ SIM.UI = {
             (iteration) => {
                 // Update
                 let perc = parseInt(iteration / sim.iterations * 100);
-                dps.text((sim.totaldmg / (sim.duration * iteration)).toFixed(2));
+                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
                 btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
             }
         );
@@ -190,7 +190,7 @@ SIM.UI = {
             () => {
                 // Finished
                 let span = $('<span></span>');
-                let calc = sim.totaldmg / (sim.duration * sim.iterations);
+                let calc = sim.totaldmg / sim.totalduration;
                 let diff = calc - base;
                 span.text(diff.toFixed(2));
                 if (diff >= 0) span.addClass('p');
@@ -223,7 +223,7 @@ SIM.UI = {
                 // Update
                 let perc = parseInt((rowsdone * sim.iterations + iteration) / (sim.iterations * rows) * 100);
                 btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
-                dps.text((sim.totaldmg / (sim.duration * iteration)).toFixed(2));
+                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
             }
         );
         sim.start();
