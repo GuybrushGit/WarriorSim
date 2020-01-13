@@ -37,7 +37,7 @@ class Simulation {
         this.starttime = new Date().getTime();
     }
     run(iteration) {
-        this.step = 0;
+        this.step = 1;
         this.idmg = 0;
         let player = this.player;
         player.reset(this.startrage);
@@ -49,16 +49,19 @@ class Simulation {
         this.thirtystep = Math.max(this.maxsteps - 31000,0);
         this.sixtystep = Math.max(this.maxsteps - 61000,0);
         while (this.step < this.maxsteps) {
-            let next = 10;
+            let next;
+            let nextbatch = 400 - (this.step % 400);
+  
+            if (player.mh.timer >= nextbatch && (!player.oh || player.oh.timer >= nextbatch))
+                next = nextbatch;
+            else
+                next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
+
+            this.step += next;
             let batch = this.step % 400 == 0;
-
-            if (player.mh.timer >= 400 && (!player.oh || player.oh.timer >= 400))
-                next = (400 - (this.step % 400));
-
             if (batch && this.step % 3000 <= 200 && player.talents.angermanagement)
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
 
-            this.step += next;
             player.mh.step(next);
             if (player.oh) player.oh.step(next);
             if (batch) player.step(this);

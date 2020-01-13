@@ -10,13 +10,14 @@ var WEAPONTYPE = {
 class Weapon {
     constructor(player, item, enchant, tempenchant, offhand, twohand) {
         this.player = player;
-        this.speed = item.speed;
         this.mindmg = item.mindmg;
         this.maxdmg = item.maxdmg;
         this.type = item.type;
         this.modifier = offhand ? 0.5 * (1 + player.talents.offmod) * (1 + player.talents.onemod) : 1 + player.talents.onemod;
         if (twohand) this.modifier = 1 + player.talents.twomod;
-        this.timer = offhand ? this.speed * 1000 : 0;
+        this.speed = item.speed;
+        this.realSpeed = this.speed * 1000;
+        this.timer = offhand ? this.realSpeed : 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
         this.twohand = twohand;
@@ -93,9 +94,10 @@ class Weapon {
         return dmg;
     }
     use() {
-        this.timer = this.speed * 1000 * this.player.stats.haste;
+        //this.timer = this.realSpeed;
+        this.timer = Math.round(this.speed * 1000 * this.player.stats.haste);
     }
     step(next) {
-        this.timer = this.timer < 10 ? 0 : this.timer - next;
+        this.timer -= next;
     }
 }

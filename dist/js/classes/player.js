@@ -70,6 +70,7 @@ class Player {
         if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
         if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
         this.update();
+        if (this.oh) this.oh.use();
     }
     addRace() {
         for (let race of races) {
