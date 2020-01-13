@@ -407,12 +407,24 @@ class DeathWish extends Aura {
         this.timer = this.duration * 1000;
         this.player.rage -= 10;
         this.player.timer = 1500;
-        this.player.updateAuras();
+        this.player.updateDmgMod();
     }
     canUse(step) {
         return this.firstuse && !this.timer && this.player.rage >= 10 && (step > this.deathwishstep ||
             (this.crusaders == 1 && ((this.player.auras.crusader1 && this.player.auras.crusader1.timer) || (this.player.auras.crusader2 && this.player.auras.crusader2.timer))) ||
             (this.crusaders == 2 && this.player.auras.crusader1 && this.player.auras.crusader1.timer && this.player.auras.crusader2 && this.player.auras.crusader2.timer));
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateDmgMod();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
     }
 }
 
@@ -478,12 +490,24 @@ class MightyRagePotion extends Aura {
         this.timer = this.duration * 1000;
         this.player.rage = Math.min(this.player.rage + ~~rng(45, 75), 100);
         this.player.timer = 400;
-        this.player.updateAuras();
+        this.player.updateStrength();
     }
     canUse(step) {
         return this.firstuse && !this.timer && (step > this.ragestep ||
             (this.crusaders == 1 && ((this.player.auras.crusader1 && this.player.auras.crusader1.timer) || (this.player.auras.crusader2 && this.player.auras.crusader2.timer))) ||
             (this.crusaders == 2 && this.player.auras.crusader1 && this.player.auras.crusader1.timer && this.player.auras.crusader2 && this.player.auras.crusader2.timer));
+    }
+    step() {
+        if (this.timer <= 400) {
+            this.uptime += this.timer;
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateStrength();
+        }
+        else {
+            this.uptime += 400;
+            this.timer -= 400;
+        }
     }
 }
 

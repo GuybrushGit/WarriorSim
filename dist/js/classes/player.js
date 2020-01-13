@@ -387,6 +387,13 @@ class Player {
             this.target.armor = Math.max(this.target.armor - (this.auras.swarmguard.stacks * this.auras.swarmguard.armor), 0);
         this.armorReduction = this.getArmorReduction();
     }
+    updateDmgMod() {
+        this.stats.dmgmod = this.base.dmgmod;
+        for (let name in this.auras) {
+            if (this.auras[name].timer && this.auras[name].mult_stats.dmgmod)
+                this.stats.dmgmod *= (1 + this.auras[name].mult_stats.dmgmod / 100);
+        }
+    }
     getGlanceReduction(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let low = 1.3 - 0.05 * diff;

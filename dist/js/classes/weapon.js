@@ -16,8 +16,7 @@ class Weapon {
         this.modifier = offhand ? 0.5 * (1 + player.talents.offmod) * (1 + player.talents.onemod) : 1 + player.talents.onemod;
         if (twohand) this.modifier = 1 + player.talents.twomod;
         this.speed = item.speed;
-        this.realSpeed = this.speed * 1000;
-        this.timer = offhand ? this.realSpeed : 0;
+        this.timer = 0;
         this.normSpeed = 2.4;
         this.offhand = offhand;
         this.twohand = twohand;
@@ -94,7 +93,6 @@ class Weapon {
         return dmg;
     }
     use() {
-        //this.timer = this.realSpeed;
         this.timer = Math.round(this.speed * 1000 * this.player.stats.haste);
     }
     step(next) {
