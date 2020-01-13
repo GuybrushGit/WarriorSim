@@ -9,7 +9,8 @@ var RESULT = {
 class Simulation {
     constructor(player, callback_finished, callback_update) {
         this.player = player;
-        this.duration = parseInt($('input[name="timesecs"]').val());
+        this.timesecsmin = parseInt($('input[name="timesecsmin"]').val());
+        this.timesecsmax = parseInt($('input[name="timesecsmax"]').val());
         this.startrage = parseInt($('input[name="startrage"]').val());
         this.iterations = parseInt($('input[name="simulations"]').val());
         this.idmg = 0;
@@ -25,16 +26,17 @@ class Simulation {
         this.spread = [];
 
         // this.steps
-        this.maxsteps = this.duration * 1000;
-        this.executestep = parseInt(spells[4].starttime) * 1000;
+        this.maxsteps = rng(this.timesecsmin * 1000, this.timesecsmax * 1000);
+        this.duration = this.maxsteps / 1000;
+        this.executestep = Math.max(this.maxsteps - parseInt(spells[4].lasttime) * 1000, 0);
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
-        this.fifteenstep = Math.max(this.duration - 16,0) * 1000;
-        this.twentystep = Math.max(this.duration - 21,0) * 1000;
-        this.thirtystep = Math.max(this.duration - 31,0) * 1000;
-        this.sixtystep = Math.max(this.duration - 61,0) * 1000;
+        this.fifteenstep = Math.max(this.maxsteps - 16000,0);
+        this.twentystep = Math.max(this.maxsteps - 21000,0);
+        this.thirtystep = Math.max(this.maxsteps - 31000,0);
+        this.sixtystep = Math.max(this.maxsteps - 61000,0);
     }
     start() {
         this.run(1);

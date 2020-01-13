@@ -37,7 +37,7 @@ var spells = [
     name: 'Execute',
     classname: 'Execute',
     iconname: 'inv_sword_48',
-    starttime: 52,
+    lasttime: 8,
 },
 {
     id: 1680,
