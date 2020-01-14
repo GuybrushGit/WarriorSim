@@ -93,7 +93,7 @@ class Weapon {
         return dmg;
     }
     use() {
-        this.timer = Math.round(this.speed * 1000 * this.player.stats.haste);
+        this.timer = Math.round(this.speed * 1000 / this.player.stats.haste);
     }
     step(next) {
         this.timer -= next;

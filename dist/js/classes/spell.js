@@ -242,7 +242,6 @@ class Aura {
     constructor(player) {
         this.timer = 0;
         this.stats = {};
-        this.div_stats = {};
         this.mult_stats = {};
         this.player = player;
         this.firstuse = true;
@@ -289,7 +288,7 @@ class Flurry extends Aura {
     constructor(player, percentage) {
         super(player);
         this.duration = 12;
-        this.div_stats = { haste: player.talents.flurry };
+        this.mult_stats = { haste: player.talents.flurry };
         this.startstep = 0;
     }
     step() {
@@ -451,7 +450,7 @@ class BattleStance extends Aura {
 class JujuFlurry extends Aura {
     constructor(player) {
         super(player);
-        this.div_stats = { haste: 3 };
+        this.mult_stats = { haste: 3 };
         this.duration = 20;
         this.name = 'Juju Flurry';
     }
@@ -532,7 +531,7 @@ class Berserking extends Aura {
     constructor(player) {
         super(player);
         this.duration = 10;
-        this.div_stats = { haste: parseInt(spells[10].haste) };
+        this.mult_stats = { haste: parseInt(spells[10].haste) };
     }
     use() {
         this.timer = this.duration * 1000;
@@ -561,7 +560,7 @@ class Empyrean extends Aura {
     constructor(player) {
         super(player);
         this.duration = 10;
-        this.div_stats = { haste: 20 };
+        this.mult_stats = { haste: 20 };
         this.name = 'Empyrean Haste';
     }
     use() {
@@ -586,7 +585,7 @@ class Eskhandar extends Aura {
     constructor(player) {
         super(player);
         this.duration = 5;
-        this.div_stats = { haste: 30 };
+        this.mult_stats = { haste: 30 };
         this.name = 'Eskhandar Haste';
     }
     use() {
@@ -704,7 +703,7 @@ class Pummeler extends Aura {
     constructor(player) {
         super(player);
         this.duration = 30;
-        this.div_stats = { haste: 50 };
+        this.mult_stats = { haste: 50 };
         this.name = 'Manual Crowd Pummeler';
     }
     use() {
@@ -817,7 +816,7 @@ class Spider extends Aura {
     constructor(player) {
         super(player);
         this.duration = 15;
-        this.div_stats = { haste: 20 };
+        this.mult_stats = { haste: 20 };
         this.name = 'Kiss of the Spider';
     }
     canUse() {

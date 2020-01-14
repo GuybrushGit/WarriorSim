@@ -195,7 +195,7 @@ class Player {
 
                     for (let prop in this.base) {
                         if (prop == 'haste')
-                            this.base.haste /= (1 + item.haste / 100) || 1;
+                            this.base.haste *= (1 + item.haste / 100) || 1;
                         else
                             this.base[prop] += item[prop] || 0;
                     }
@@ -253,7 +253,7 @@ class Player {
                 this.base.agimod *= (1 + buff.agimod / 100) || 1;
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
-                this.base.haste /= (1 + buff.haste / 100) || 1;
+                this.base.haste *= (1 + buff.haste / 100) || 1;
             }
         }
     }
@@ -309,8 +309,6 @@ class Player {
             if (this.auras[name].timer) {
                 for (let prop in this.auras[name].stats)
                     this.stats[prop] += this.auras[name].stats[prop];
-                for (let prop in this.auras[name].div_stats)
-                    this.stats[prop] /= (1 + this.auras[name].div_stats[prop] / 100);
                 for (let prop in this.auras[name].mult_stats)
                     this.stats[prop] *= (1 + this.auras[name].mult_stats[prop] / 100);
             }
@@ -323,6 +321,8 @@ class Player {
 
         if (this.stats.apmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+        if (this.stats.haste > 2) 
+            this.stats.haste = 2;
     }
     updateStrength() {
         this.stats.str = this.base.str;
@@ -356,19 +356,20 @@ class Player {
     updateHaste() {
         this.stats.haste = this.base.haste;
         if (this.auras.flurry && this.auras.flurry.timer)
-            this.stats.haste /= (1 + this.auras.flurry.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.flurry.mult_stats.haste / 100);
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
-            this.stats.haste /= (1 + this.auras.jujuflurry.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
         if (this.auras.berserking && this.auras.berserking.timer)
-            this.stats.haste /= (1 + this.auras.berserking.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.berserking.mult_stats.haste / 100);
         if (this.auras.empyrean && this.auras.empyrean.timer)
-            this.stats.haste /= (1 + this.auras.empyrean.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.empyrean.mult_stats.haste / 100);
         if (this.auras.eskhandar && this.auras.eskhandar.timer)
-            this.stats.haste /= (1 + this.auras.eskhandar.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.eskhandar.mult_stats.haste / 100);
         if (this.auras.pummeler && this.auras.pummeler.timer)
-            this.stats.haste /= (1 + this.auras.pummeler.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.pummeler.mult_stats.haste / 100);
         if (this.auras.spider && this.auras.spider.timer)
-            this.stats.haste /= (1 + this.auras.spider.div_stats.haste / 100);
+            this.stats.haste *= (1 + this.auras.spider.mult_stats.haste / 100);
+        if (this.stats.haste > 2) this.stats.haste = 2;
     }
     updateBonusDmg() {
         let bonus = 0;
