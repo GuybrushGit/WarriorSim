@@ -37,10 +37,7 @@
 
 <!-- TODO
   
-  add bwl to session
-  performance buffs
-  prioritize BT over execute
-  todo page
+  intro page
   
 -->
 
@@ -95,42 +92,6 @@
           <span id="haste"></span>
         </li>
       </ul>
-      <ul style="display: none;">
-        <li>
-          <label>Health</label>
-          <span id="health">3005</span>
-        </li>
-        <li>
-          <label>Stamina</label>
-          <span id="sta">80</span>
-        </li>
-        <li>
-          <label>Armor</label>
-          <span id="armor">5000</span>
-        </li>
-        <li>
-          <label>Defense</label>
-          <span id="defense">300</span>
-        </li>
-        <li>
-          <label>Dodge</label>
-          <span id="dodge">4.00%</span>
-        </li>
-        <li>
-          <label>Parry</label>
-          <span id="parry">4.00%</span>
-        </li>
-        <li>
-          <label>Block</label>
-          <span id="block">4.00%</span>
-        </li>
-        <li>
-          <label>Block Value</label>
-          <span id="blockvalue">30</span>
-        </li>
-      </ul>
-
-
     </div>
     <div class="bottom">
       <div id="dps"></div>
@@ -170,7 +131,7 @@
           </li>
           <li>
             <label>Simulations</label>
-            <input type="text" name="simulations" value="40000" data-numberonly="true">
+            <input type="text" name="simulations" value="50000" data-numberonly="true">
           </li>
           <li>
             <label>Fight Duration (min)</label>
@@ -358,25 +319,6 @@
       SIM.STATS.init();
     });
   </script>
-
-  <style>
-    
-    @media only screen and (max-width: 1600px) {
-      section.main ul {
-        white-space: normal;
-      }
-      section.main li.active .filter {
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-      }
-      section.main li.active[data-type=mainhand], section.main li.active[data-type=offhand], section.main li.active[data-type=twohand] {
-        margin-bottom: 0;
-      }
-    }
-  
-  </style>
-
 
 </body>
 

@@ -31,6 +31,7 @@ class Simulation {
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.jujustep = parseInt(spells[14].time) * 1000;
+        this.priorityap = parseInt(spells[4].priorityap);
     }
     start() {
         this.run(1);
@@ -121,7 +122,13 @@ class Simulation {
                     player.auras.recklessness.use();
                 }
                 else if (player.spells.execute && this.step > this.executestep) {
-                    if (player.spells.execute.canUse())
+                    if (player.spells.bloodthirst && player.stats.ap >= this.priorityap && player.spells.bloodthirst.canUse()) {
+                        this.idmg += player.cast(player.spells.bloodthirst);
+                    }
+                    else if (player.spells.mortalstrike && player.stats.ap >= this.priorityap && player.spells.mortalstrike.canUse()) {
+                        this.idmg += player.cast(player.spells.mortalstrike);
+                    }
+                    else if (player.spells.execute.canUse())
                         this.idmg += player.cast(player.spells.execute);
                 }
                 else if (player.spells.overpower && player.spells.overpower.canUse()) {

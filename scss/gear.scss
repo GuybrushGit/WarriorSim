@@ -35,7 +35,7 @@ section.main {
         font-size: 0;
         display: inline-block;
         vertical-align: top;
-        white-space: nowrap;
+        
     }
     li {
         padding: 0;
@@ -78,11 +78,19 @@ section.main {
                 top: 4px;
                 left: 0;
             }
+            @media only screen and (max-width: 1600px) {
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+            }
         }
         &.active[data-type="mainhand"],
         &.active[data-type="offhand"],
         &.active[data-type="twohand"] {
             margin-bottom: 30px;
+            @media only screen and (max-width: 1600px) {
+                margin-bottom: 0;
+            }
         }
     }
 

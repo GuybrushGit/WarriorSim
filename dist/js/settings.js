@@ -191,6 +191,8 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>when <input type="text" name="crusaders" value="${spell.crusaders}" data-numberonly="true" /> crusaders are up</li>`);
             if (spell.haste !== undefined)
                 div.find('.options').append(`<li>Attack speed at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
+            if (spell.priorityap !== undefined)
+                div.find('.options').append(`<li>Prioritize BT/MS when >= <input style="width:25px" type="text" name="priorityap" value="${spell.priorityap}" data-numberonly="true" /> AP</li>`);
             if (spell.id == 23255)
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.id == 11605)
