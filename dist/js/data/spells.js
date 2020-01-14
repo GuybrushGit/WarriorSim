@@ -123,6 +123,7 @@ var spells = [
     iconname: 'inv_misc_monsterscales_17',
     time: 39,
     aura: true,
+    hidden: true,
 },
 {
     id: 23255,

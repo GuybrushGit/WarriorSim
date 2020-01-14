@@ -30,7 +30,6 @@ class Simulation {
         this.bloodfurystep = parseInt(spells[11].time) * 1000;
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
-        this.jujustep = parseInt(spells[14].time) * 1000;
         this.priorityap = parseInt(spells[4].priorityap);
     }
     start() {
@@ -78,9 +77,6 @@ class Simulation {
 
                 if (player.spells.bloodrage && player.spells.bloodrage.canUse()) {
                     player.spells.bloodrage.use();
-                }
-                else if (player.auras.jujuflurry && player.auras.jujuflurry.canUse() && this.step > this.jujustep) {
-                    player.auras.jujuflurry.use();
                 }
                 else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse(this.step)) {
                     player.auras.mightyragepotion.use();

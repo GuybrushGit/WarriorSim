@@ -357,8 +357,6 @@ class Player {
         this.stats.haste = this.base.haste;
         if (this.auras.flurry && this.auras.flurry.timer)
             this.stats.haste *= (1 + this.auras.flurry.mult_stats.haste / 100);
-        if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
-            this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
         if (this.auras.berserking && this.auras.berserking.timer)
             this.stats.haste *= (1 + this.auras.berserking.mult_stats.haste / 100);
         if (this.auras.empyrean && this.auras.empyrean.timer)
@@ -466,9 +464,6 @@ class Player {
         }
         if (this.auras.battlestance && this.auras.battlestance.timer) {
             this.auras.battlestance.step();
-        }
-        if (this.auras.jujuflurry && this.auras.jujuflurry.firstuse && this.auras.jujuflurry.timer) {
-            this.auras.jujuflurry.step();
         }
         if (this.auras.mightyragepotion && this.auras.mightyragepotion.firstuse && this.auras.mightyragepotion.timer) {
             this.auras.mightyragepotion.step();
