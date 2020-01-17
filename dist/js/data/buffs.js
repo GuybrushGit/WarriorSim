@@ -244,4 +244,12 @@ var buffs = [
       group: "",
       hit: 2
    },
+   {
+      id: 23513,
+      spellid: true,
+      name: "Essence of the Red",
+      iconname: "spell_fire_lavaspawn",
+      group: "vaelbuff",
+   },
+   
 ];
