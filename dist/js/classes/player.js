@@ -243,6 +243,8 @@ class Player {
                 }
                 if (buff.group == "zerkstance")
                     this.zerkstance = true;
+                if (buff.group == "vaelbuff")
+                    this.vaelbuff = true;
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;

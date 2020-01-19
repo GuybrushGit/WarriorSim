@@ -61,6 +61,8 @@ class Simulation {
             let batch = this.step % 400 == 0;
             if (batch && this.step % 3000 <= 200 && player.talents.angermanagement)
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
+            if (batch && player.vaelbuff && this.step % 1000 <= 200)
+                player.rage = player.rage >= 80 ? 100 : player.rage + 20;
 
             player.mh.step(next);
             if (player.oh) player.oh.step(next);
