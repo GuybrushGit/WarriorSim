@@ -251,5 +251,21 @@ var buffs = [
       iconname: "spell_fire_lavaspawn",
       group: "vaelbuff",
    },
+   {
+      id: 26393,
+      spellid: true,
+      name: "Elune's Blessing",
+      iconname: "inv_misc_gem_pearl_02",
+      strmod: 10,
+      agimod: 10,
+   },
+   {
+      id: 26462,
+      spellid: true,
+      name: "Festival Fortune!",
+      iconname: "spell_nature_strength",
+      strmod: 10,
+      agimod: 10,
+   },
    
 ];
