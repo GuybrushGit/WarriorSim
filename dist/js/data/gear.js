@@ -1467,6 +1467,16 @@ var gear = {
          "id": 13959
       },
       {
+         "name": "Frostwolf Plate Belt",
+         "str": 18,
+         "agi": 7,
+         "sta": 8,
+         "ac": 353,
+         "source": "PVP",
+         "phase": 2,
+         "id": 19087
+      },
+      {
          "name": "Onslaught Girdle",
          "crit": 1,
          "hit": 1,
