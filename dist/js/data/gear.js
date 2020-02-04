@@ -175,7 +175,7 @@ var gear = {
          "ac": 598,
          "source": "PVP",
          "phase": 2,
-         "id": 23244
+         "id": 23314
       },
       {
          "name": "R13 Plate Helm",
@@ -454,7 +454,7 @@ var gear = {
          "ac": 552,
          "source": "PVP",
          "phase": 2,
-         "id": 23243
+         "id": 23315
       },
       {
          "name": "R13 Plate Shoulders",
@@ -908,7 +908,7 @@ var gear = {
          "ac": 706,
          "source": "PVP",
          "phase": 2,
-         "id": 22872
+         "id": 23300
       },
       {
          "name": "Runed Bloodstained Hauberk",
@@ -1779,7 +1779,7 @@ var gear = {
          "ac": 618,
          "source": "PVP",
          "phase": 2,
-         "id": 22873
+         "id": 23301
       },
       {
          "name": "Scaled Sand Reaver Leggings",
@@ -3512,7 +3512,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 3,
+         "phase": 4,
          "id": 19168
       },
       {
@@ -4101,7 +4101,7 @@ var gear = {
          "speed": 1.6,
          "type": "Dagger",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "id": 19166
       },
       {
@@ -6219,8 +6219,8 @@ var sets = [
       ]
    },
    {
-      id: 537,
-      items: [22868, 22858, 22872, 22873, 23244, 23243],
+      id: 545,
+      items: [23315,23314,23287,23286,23301,23300],
       bonus: [
          { count: 2, stats: { ap: 40 } }
       ]
