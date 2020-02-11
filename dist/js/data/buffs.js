@@ -245,6 +245,13 @@ var buffs = [
       hit: 2
    },
    {
+      id: 27666,
+      spellid: true,
+      name: "Darnassus Gift of Friendship",
+      iconname: "inv_holiday_christmas_present_02",
+      agi: 30,
+   },
+   {
       id: 23513,
       spellid: true,
       name: "Essence of the Red",
@@ -256,14 +263,6 @@ var buffs = [
       spellid: true,
       name: "Elune's Blessing",
       iconname: "inv_misc_gem_pearl_02",
-      strmod: 10,
-      agimod: 10,
-   },
-   {
-      id: 26462,
-      spellid: true,
-      name: "Festival Fortune!",
-      iconname: "spell_nature_strength",
       strmod: 10,
       agimod: 10,
    },
