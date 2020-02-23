@@ -701,7 +701,7 @@ class Player {
                     this.extraattacks++;
             }
         }
-        if (!spell) {
+        if (!spell || spell instanceof HeroicStrike) {
             if (this.auras.flurry && this.auras.flurry.stacks)
                 this.auras.flurry.step();
             if (this.mh.windfury && this.mh.windfury.stacks)

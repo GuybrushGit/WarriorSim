@@ -3316,7 +3316,7 @@ var gear = {
          "speed": 2.3,
          "type": "Mace",
          "source": "Crafting",
-         "ppm": 1,
+         "ppm": 0.5,
          "phase": 1,
          "id": 19170,
          "magicdmg": 220
@@ -3895,6 +3895,18 @@ var gear = {
          "id": 14487,
          "ppm": 1,
          "magicdmg": 99
+      },
+      {
+         "name": "Hammer of the Vesper",
+         "mindmg": 70,
+         "maxdmg": 131,
+         "speed": 2.5,
+         "type": "Mace",
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 18683,
+         "str": 7,
+         "sta": 12,
       }
    ],
    "offhand": [
@@ -4910,6 +4922,18 @@ var gear = {
          "id": 14487,
          "ppm": 1,
          "magicdmg": 99
+      },
+      {
+         "name": "Hammer of the Vesper",
+         "mindmg": 70,
+         "maxdmg": 131,
+         "speed": 2.5,
+         "type": "Mace",
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 18683,
+         "str": 7,
+         "sta": 12,
       }
    ],
    "twohand": [
