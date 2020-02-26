@@ -3829,7 +3829,7 @@ var gear = {
          "speed": 1.9,
          "type": "Sword",
          "source": "MC",
-         "ppm": 8,
+         "ppm": 6,
          "phase": 3,
          "id": 19019,
          "magicdmg": 300
