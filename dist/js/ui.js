@@ -37,6 +37,8 @@ SIM.UI = {
         view.sidebar.find('.js-settings').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
+            window.scrollTo(0, 0);
+            $('section.settings').height(view.body.outerHeight());
             $('section.settings').toggleClass('active');
             view.sidebar.find('.js-stats').removeClass('active');
             $('section.stats').removeClass('active');

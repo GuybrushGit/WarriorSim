@@ -1,11 +1,11 @@
 .settings {
     width: 0;
-    height: 100vh;
+    height: 100%;
     background: #272727;
     transition: all 0.3s ease-in-out;
     box-sizing: border-box;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     left: 20%;
     top: 0;
     z-index: 10;
@@ -21,13 +21,10 @@
         }
     }
 
-    @media (min-width: 0px) and (max-width: 1600px) {
-        left: 320px;
-    }
-
     .wrapper {
         opacity: 0;
         transition: none;
+        height: 100%;
     }
 
     article {
@@ -327,6 +324,26 @@
                     font-weight: bold;
                 }
             }
+        }
+    }
+
+    @media (min-width: 0px) and (max-width: 1600px) {
+        left: 320px;
+        .rotation {
+            width: 100%;
+        }
+        .fight, .buffs {
+            width: calc(50% - 2px);
+            height: 320px;
+        }
+    }
+
+    @media (min-width: 0px) and (max-width: 1350px) {
+        .talents {
+            width: 100%;
+        }
+        .filter {
+            width: 100%;
         }
     }
 

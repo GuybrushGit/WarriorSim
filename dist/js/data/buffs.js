@@ -244,13 +244,13 @@ var buffs = [
       group: "",
       hit: 2
    },
-   {
-      id: 27666,
-      spellid: true,
-      name: "Darnassus Gift of Friendship",
-      iconname: "inv_holiday_christmas_present_02",
-      agi: 30,
-   },
+   // {
+   //    id: 27666,
+   //    spellid: true,
+   //    name: "Darnassus Gift of Friendship",
+   //    iconname: "inv_holiday_christmas_present_02",
+   //    agi: 30,
+   // },
    {
       id: 23513,
       spellid: true,
@@ -258,13 +258,13 @@ var buffs = [
       iconname: "spell_fire_lavaspawn",
       group: "vaelbuff",
    },
-   {
-      id: 26393,
-      spellid: true,
-      name: "Elune's Blessing",
-      iconname: "inv_misc_gem_pearl_02",
-      strmod: 10,
-      agimod: 10,
-   },
+   // {
+   //    id: 26393,
+   //    spellid: true,
+   //    name: "Elune's Blessing",
+   //    iconname: "inv_misc_gem_pearl_02",
+   //    strmod: 10,
+   //    agimod: 10,
+   // },
    
 ];
