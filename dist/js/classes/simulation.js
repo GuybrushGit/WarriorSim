@@ -155,8 +155,11 @@ class Simulation {
 
             if (player.extraattacks > 0) {
                 player.mh.timer = 0;
-                // player.mh.timer = 400 - (this.step % 400);
                 player.extraattacks--;
+            }
+            if (player.batchedextras > 0) {
+                player.mh.timer = 400 - (this.step % 400);
+                player.batchedextras--;
             }
         }
 

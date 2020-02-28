@@ -5,6 +5,7 @@ class Player {
         this.timer = 0;
         this.dodgeTimer = 0;
         this.extraattacks = 0;
+        this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingwf = false;
@@ -274,6 +275,7 @@ class Player {
         this.mh.timer = 0;
         if (this.oh) this.oh.use();
         this.extraattacks = 0;
+        this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingwf = false;
@@ -683,13 +685,13 @@ class Player {
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.extra)
-                    this.extraattacks += this.trinketproc1.extra;
+                    this.batchedextras += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1.magicdmg);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.extra)
-                    this.extraattacks += this.trinketproc2.extra;
+                    this.batchedextras += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2.magicdmg);
                 if (this.trinketproc2.spell) this.trinketproc2.spell.use();
             }
