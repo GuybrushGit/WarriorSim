@@ -518,6 +518,15 @@ var gear = {
    ],
    "back": [
       {
+         "name": "Cloak of Firemaw",
+         "ap": 50,
+         "sta": 12,
+         "ac": 57,
+         "source": "BWL",
+         "phase": 3,
+         "id": 19398
+      },
+      {
          "name": "Cape of the Black Baron",
          "agi": 15,
          "ap": 20,
