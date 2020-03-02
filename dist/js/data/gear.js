@@ -2875,7 +2875,7 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 199211
       },
       {
          "name": "Alcor's Sunrazor",
@@ -3521,7 +3521,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 4,
+         "phase": 3,
          "id": 19168
       },
       {
@@ -4101,7 +4101,7 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 199211
       },
       {
          "name": "Alcor's Sunrazor",
@@ -4641,7 +4641,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "id": 19168
       },
       {
