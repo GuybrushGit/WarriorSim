@@ -867,3 +867,12 @@ class Gabbar extends Aura {
         }
     }
 }
+
+class PrimalBlessing extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 12;
+        this.stats = { ap: 300 };
+        this.name = 'Primal Blessing';
+    }
+}

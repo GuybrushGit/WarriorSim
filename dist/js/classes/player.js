@@ -5,6 +5,7 @@ class Player {
         this.timer = 0;
         this.dodgeTimer = 0;
         this.extraattacks = 0;
+        this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingwf = false;
@@ -230,6 +231,12 @@ class Player {
                 if (counter >= bonus.count) {
                     for (let prop in bonus.stats)
                         this.base[prop] += bonus.stats[prop] || 0;
+                    if (bonus.stats.procspell) {
+                        this.attackproc = {};
+                        this.attackproc.chance = bonus.stats.procchance * 100;
+                        this.auras[bonus.stats.procspell.toLowerCase()] = eval('new ' + bonus.stats.procspell + '(this)');
+                        this.attackproc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
+                    }
                 }
             }
         }
@@ -275,6 +282,7 @@ class Player {
         this.mh.timer = 0;
         if (this.oh) this.oh.use();
         this.extraattacks = 0;
+        this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.nextswingwf = false;
@@ -525,6 +533,9 @@ class Player {
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) {
             this.trinketproc2.spell.step();
         }
+        if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) {
+            this.attackproc.spell.step();
+        }
     }
     rollweapon(weapon) {
         let tmp = 0;
@@ -684,18 +695,19 @@ class Player {
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.extra)
-                    this.extraattacks += this.trinketproc1.extra;
+                    this.batchedextras += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1.magicdmg);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.extra)
-                    this.extraattacks += this.trinketproc2.extra;
+                    this.batchedextras += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2.magicdmg);
                 if (this.trinketproc2.spell) this.trinketproc2.spell.use();
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc.magicdmg);
+                if (this.attackproc.spell) this.attackproc.spell.use();
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng10k() < this.talents.swordproc * 100)

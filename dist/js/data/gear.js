@@ -2875,7 +2875,7 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 199211
       },
       {
          "name": "Alcor's Sunrazor",
@@ -3265,7 +3265,7 @@ var gear = {
          "id": 21673
       },
       {
-         "name": "Thekal's Grasp",
+         "name": "Thekal's Grasp (1% chance on set)",
          "Mainhand": true,
          "crit": 1,
          "sta": 13,
@@ -3521,7 +3521,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 4,
+         "phase": 3,
          "id": 19168
       },
       {
@@ -4101,7 +4101,7 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 199211
       },
       {
          "name": "Alcor's Sunrazor",
@@ -4425,7 +4425,7 @@ var gear = {
          "id": 22377
       },
       {
-         "name": "Arlokk's Grasp",
+         "name": "Arlokk's Grasp (1% chance on set)",
          "offhand": true,
          "mindmg": 41,
          "maxdmg": 84,
@@ -4641,7 +4641,7 @@ var gear = {
          "speed": 1.8,
          "type": "Sword",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 3,
          "id": 19168
       },
       {
@@ -6291,6 +6291,13 @@ var sets = [
       items: [19865, 19866],
       bonus: [
          { count: 2, stats: { skill_1: 6 } }
+      ]
+   },
+   {
+      id: 463,
+      items: [19896, 19910],
+      bonus: [
+         { count: 2, stats: { procspell: "PrimalBlessing", procchance: 1 } }
       ]
    }
 

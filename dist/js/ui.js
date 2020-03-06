@@ -507,9 +507,12 @@ SIM.UI = {
                 continue;
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
+
+            let tooltip = item.id;
+            if (tooltip == 199211) tooltip = 19921;
                 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''}">
-                        <td><a href="https://classic.wowhead.com/item=${item.id}"></a>${item.name}</td>
+                        <td><a href="https://classic.wowhead.com/item=${tooltip}"></a>${item.name}</td>
                         <td>${item.source}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
