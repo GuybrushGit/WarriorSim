@@ -596,6 +596,7 @@ SIM.UI = {
 
             let tooltip = item.id;
             if (tooltip == 145541) tooltip = 14554;
+            if (tooltip == 198981) tooltip = 19898;
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''}">
                         <td><a href="https://classic.wowhead.com/item=${tooltip}"></a>${item.name}</td>

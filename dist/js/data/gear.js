@@ -2236,6 +2236,17 @@ var gear = {
          "id": 19898
       },
       {
+         "name": "Seal of Jin + Band of Jin",
+         "crit": 1,
+         "hit": 1,
+         "sta": 16,
+         "agi": 14,
+         "ap": 50,
+         "source": "ZG",
+         "phase": "4",
+         "id": 198981
+      },
+      {
          "name": "Seal of the Gurubashi Berserker",
          "sta": 13,
          "ap": 40,
