@@ -2017,6 +2017,16 @@ var gear = {
          "id": 13070
       },
       {
+         "name": "Savage Gladiator Greaves",
+         "str": 10,
+         "sta": 15,
+         "agi": 13,
+         "ac": 233,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 11731
+      },
+      {
          "name": "Slime Kickers",
          "hit": 1,
          "str": 18,
