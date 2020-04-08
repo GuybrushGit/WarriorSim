@@ -2045,6 +2045,16 @@ var gear = {
          "source": "Dungeon",
          "phase": 1,
          "id": 13967
+      },
+      {
+         "name": "Savage Gladiator Greaves",
+         "str": 10,
+         "agi": 15,
+         "sta": 13,
+         "ac": 233,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 11731
       }
    ],
    "finger": [
@@ -5746,6 +5756,18 @@ var gear = {
          "source": "ZG",
          "phase": 4,
          "type": "Sword"
+      },
+      {
+         "name": "Herald of Woe",
+         "sta": 22,
+         "str": 31,
+         "mindmg": 199,
+         "maxdmg": 300,
+         "speed": 3.4,
+         "id": 19357,
+         "source": "BWL",
+         "phase": 3,
+         "type": "Mace"
       }
    ],
    "custom" : [
