@@ -185,7 +185,7 @@ SIM.UI = {
         var base = parseFloat(view.sidebar.find('#dps').text());
         var rows = tr.siblings().length + 1;
         var rowsdone = tr.siblings(':not(.waiting)').length;
-        let btn = view.sidebar.find('.js-table');
+        var btn = view.sidebar.find('.js-table');
 
         var player = new Player(item, type, istemp ? 2 : isench ? 1 : 0);
         var sim = new Simulation(player, 
@@ -198,7 +198,13 @@ SIM.UI = {
                 if (diff >= 0) span.addClass('p');
                 else span.addClass('n');
                 dps.text(calc.toFixed(2)).append(span);
-                view.tcontainer.find('table').trigger('update');
+
+                view.tcontainer.find('table').each(function() {
+                    $(this).trigger('update');
+                    let sortList = [[$(this).find('th').length - 1, 1]];
+                    $(this).trigger("sorton", [sortList]);
+                });
+                
                 tr.removeClass('waiting');
                 let perc = parseInt(((rowsdone + 1) * sim.iterations) / (sim.iterations * rows) * 100);
                 if (perc == 100) btn.css('background', '');
@@ -537,6 +543,18 @@ SIM.UI = {
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
             sortList: [[14, 1],[0, 0]],
+            textSorter : {
+                14 : function(a, b, direction, column, table) {
+                    var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
+                    var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
+                    if (isNaN(a)) a = 0; 
+                    if (isNaN(b)) b = 0; 
+                    return (a < b) ? -1 : (a > b) ? 1 : 0;
+                },
+            },
+            headers: {
+                14: { sorter: "text" }
+            }
         });
 
         view.loadEnchants(type);
@@ -602,6 +620,18 @@ SIM.UI = {
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
             sortList: [[10, 1],[0, 0]],
+            textSorter : {
+                10 : function(a, b, direction, column, table) {
+                    var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
+                    var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
+                    if (isNaN(a)) a = 0; 
+                    if (isNaN(b)) b = 0; 
+                    return (a < b) ? -1 : (a > b) ? 1 : 0;
+                },
+            },
+            headers: {
+                10: { sorter: "text" }
+            }
         });
 
         view.loadEnchants(type);
