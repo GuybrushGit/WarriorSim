@@ -338,7 +338,7 @@ var gear = {
          "agi": 13,
          "ac": 530,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "id": 20683
       },
       {
@@ -720,7 +720,7 @@ var gear = {
          "agi": 15,
          "ac": 50,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "id": 20691
       }
    ],
@@ -980,7 +980,7 @@ var gear = {
          "agi": 12,
          "ac": 309,
          "source": "Other",
-         "phase": "5",
+         "phase": "4",
          "id": 20687
       },
       {
@@ -1569,7 +1569,7 @@ var gear = {
          "agi": 15,
          "ac": 566,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "id": 20671
       },
       {
@@ -2605,7 +2605,7 @@ var gear = {
          "sta": 4,
          "ap": 20,
          "source": "Other",
-         "phase": "5",
+         "phase": "4",
          "id": 20722
       },
       {
@@ -2870,7 +2870,7 @@ var gear = {
          "speed": 2.5,
          "type": "Axe",
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "id": 20675
       },
       {
@@ -5193,7 +5193,7 @@ var gear = {
          "speed": 3.9,
          "id": 20696,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "type": "Mace"
       },
       {
@@ -5495,7 +5495,7 @@ var gear = {
          "speed": 3.7,
          "id": 20660,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "type": "Polearm"
       },
       {
@@ -5618,7 +5618,7 @@ var gear = {
          "speed": 3.6,
          "id": 20669,
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "type": "Sword"
       },
       {
