@@ -514,11 +514,12 @@ SIM.UI = {
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
 
-            let tooltip = item.id;
+            let tooltip = item.id, rand = '';
             if (tooltip == 199211) tooltip = 19921;
+            if (item.rand) rand = '?rand=' + item.rand;
                 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''}">
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}"></a>${item.name}</td>
+                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
                         <td>${item.source}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
@@ -599,12 +600,13 @@ SIM.UI = {
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
 
-            let tooltip = item.id;
+            let tooltip = item.id, rand = '';
             if (tooltip == 145541) tooltip = 14554;
             if (tooltip == 198981) tooltip = 19898;
+            if (item.rand) rand = '?rand=' + item.rand;
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''}">
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}"></a>${item.name}</td>
+                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
                         <td>${item.source || ''}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>

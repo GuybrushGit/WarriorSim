@@ -339,7 +339,8 @@ var gear = {
          "ac": 530,
          "source": "Other",
          "phase": 4,
-         "id": 20683
+         "id": 20683,
+         "rand": 2158,
       },
       {
          "name": "Arathi Plate Spaulders",
@@ -976,12 +977,13 @@ var gear = {
       {
          "name": "Abyssal Plate Vambraces",
          "str": 11,
-         "sta": 11,
-         "agi": 12,
+         "sta": 12,
+         "agi": 11,
          "ac": 309,
          "source": "Other",
          "phase": "4",
-         "id": 20687
+         "id": 20687,
+         "rand": 2163,
       },
       {
          "name": "Battleborn Armbraces",
@@ -1570,7 +1572,8 @@ var gear = {
          "ac": 566,
          "source": "Other",
          "phase": 4,
-         "id": 20671
+         "id": 20671,
+         "rand": 2157,
       },
       {
          "name": "Black Dragonscale Leggings",
@@ -2883,7 +2886,8 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 19921,
+         "rand": 193,
       },
       {
          "name": "Zulian Hacker of the Tiger",
@@ -2896,7 +2900,8 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 199211
+         "id": 199211,
+         "rand": 690
       },
       {
          "name": "Alcor's Sunrazor",
@@ -4109,7 +4114,8 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 19921
+         "id": 19921,
+         "rand": 193,
       },
       {
          "name": "Zulian Hacker of the Tiger",
@@ -4122,7 +4128,8 @@ var gear = {
          "type": "Axe",
          "source": "ZG",
          "phase": 4,
-         "id": 199211
+         "id": 199211,
+         "rand": 690,
       },
       {
          "name": "Alcor's Sunrazor",
