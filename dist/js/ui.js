@@ -589,6 +589,11 @@ SIM.UI = {
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar')
                 source = 'worldboss';
 
+            if (max == 2 && 
+                ((phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active')) ||
+                (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))))
+                item.selected = false;
+
             if (phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active'))
                 continue;
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
@@ -635,6 +640,8 @@ SIM.UI = {
         });
 
         view.loadEnchants(type);
+        view.updateSession();
+        view.updateSidebar();
     },
 
     loadCustom: function () {
