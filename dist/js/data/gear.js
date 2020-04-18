@@ -5916,6 +5916,19 @@ var enchant = {
          "str": 8,
          "phase": 1
       },
+      {
+         "id": 19785,
+         "name": "Falcon's Call",
+         "hit": 1,
+         "sta": 10,
+         "phase": 4
+      },
+      {
+         "id": 19784,
+         "name": "Death's Embrace",
+         "ap": 28,
+         "phase": 4
+      },
    ],
    "shoulder": [
       {
