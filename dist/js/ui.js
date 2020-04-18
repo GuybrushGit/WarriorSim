@@ -702,6 +702,7 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Haste</th>
                                 <th>Crit</th>
+                                <th>Hit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -721,6 +722,7 @@ SIM.UI = {
                         <td>${item.ap || ''}</td>
                         <td>${item.haste || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td>${item.hit || ''}</td>
                         <td>${item.dmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
