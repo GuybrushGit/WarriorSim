@@ -638,6 +638,7 @@ class Annihilator extends Aura {
         this.stacks = 0;
     }
     use() {
+        if (rng10k() < this.player.target.binaryresist) return;
         this.timer = this.duration * 1000;
         this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
         this.player.updateArmorReduction();
