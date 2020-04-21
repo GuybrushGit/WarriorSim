@@ -46,6 +46,7 @@ SIM.UI = {
 
         view.sidebar.find('.js-dps').click(function (e) {
             e.preventDefault();
+            view.disableEditMode();
             view.startLoading();
             view.simulateDPS();
         });
@@ -60,6 +61,7 @@ SIM.UI = {
 
         view.body.on('click', '.js-table', function(e) {
             e.preventDefault();
+            view.disableEditMode();
             let first = view.tcontainer.find('table.gear tbody tr').first();
             view.tcontainer.find('table.gear tbody tr').addClass('waiting');
             view.tcontainer.find('table.gear tbody tr td:last-of-type').html('');
@@ -69,11 +71,21 @@ SIM.UI = {
 
         view.main.on('click', '.js-enchant', function(e) {
             e.preventDefault();
+            view.disableEditMode();
             let first = view.tcontainer.find('table.enchant tbody tr').first();
             view.tcontainer.find('table.enchant tbody tr').addClass('waiting');
             view.tcontainer.find('table.enchant tbody tr td:last-of-type').html('');
             view.startLoading();
             view.simulateDPS(first);
+        });
+
+        view.main.on('click', '.js-editmode', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            window.scrollTo(0, 0);
+            let active = $(this).hasClass('active');
+            if (active) view.enableEditMode();
+            else view.disableEditMode();
         });
 
         view.main.find('nav li p').click(function (e) {
@@ -99,6 +111,14 @@ SIM.UI = {
             var max = table.data('max');
             var tr = $(this).parent();
 
+            if (table.hasClass('editmode')) {
+                if (tr.hasClass('hidden'))
+                    view.rowShowItem(tr);
+                else
+                    view.rowHideItem(tr);
+                return;
+            }
+
             if (tr.hasClass('active')) {
                 view.rowDisableItem(tr);
             }
@@ -115,7 +135,15 @@ SIM.UI = {
         view.tcontainer.on('click', 'table.enchant td:not(.ppm)', function(e) {
             var table = $(this).parents('table');
             var tr = $(this).parent();
-            var temp = tr.data('temp')
+            var temp = tr.data('temp');
+
+            if (table.hasClass('editmode')) {
+                if (tr.hasClass('hidden'))
+                    view.rowShowEnchant(tr);
+                else
+                    view.rowHideEnchant(tr);
+                return;
+            }
 
             if (tr.hasClass('active')) {
                 view.rowDisableEnchant(tr);
@@ -129,6 +157,29 @@ SIM.UI = {
             view.updateSession();
             view.updateSidebar();
         });
+    },
+
+    enableEditMode: function() {
+        var view = this;
+        let type = view.tcontainer.find('table.gear').attr('data-type');
+        if (type == "mainhand" || type == "offhand" || type == "twohand") 
+            view.loadWeapons(type, true);
+        else if (type == "custom") 
+            view.loadCustom(true);
+        else
+            view.loadGear(type, true);
+    },
+
+    disableEditMode: function() {
+        var view = this;
+        view.main.find('.js-editmode').removeClass('active');
+        let type = view.tcontainer.find('table.gear').attr('data-type');
+        if (type == "mainhand" || type == "offhand" || type == "twohand") 
+            view.loadWeapons(type, false);
+        else if (type == "custom") 
+            view.loadCustom(false);
+        else
+            view.loadGear(type, false);
     },
 
     simulateDPS: function(row) {
@@ -277,6 +328,31 @@ SIM.UI = {
         }
     },
 
+    rowHideItem: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        tr.addClass('hidden');
+        tr.find('.hide').html(eyesvghidden);
+        for(let i = 0; i < gear[type].length; i++) {
+            if (gear[type][i].id == tr.data('id')) {
+                gear[type][i].hidden = true;
+                gear[type][i].selected = false;
+            }
+        }
+    },
+
+    rowShowItem: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('hidden');
+        tr.find('.hide').html(eyesvg);
+        for(let i = 0; i < gear[type].length; i++) {
+            if (gear[type][i].id == tr.data('id'))
+                gear[type][i].hidden = false;
+        }
+    },
+
     rowDisableEnchant: function(tr) {
         var table = tr.parents('table');
         var type = table.data('type');
@@ -294,6 +370,31 @@ SIM.UI = {
         for(let i = 0; i < enchant[type].length; i++) {
             if (enchant[type][i].id == tr.data('id'))
                 enchant[type][i].selected = true;
+        }
+    },
+
+    rowHideEnchant: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        tr.addClass('hidden');
+        tr.find('.hide').html(eyesvghidden);
+        for(let i = 0; i < enchant[type].length; i++) {
+            if (enchant[type][i].id == tr.data('id')) {
+                enchant[type][i].hidden = true;
+                enchant[type][i].selected = false;
+            }
+        }
+    },
+
+    rowShowEnchant: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('hidden');
+        tr.find('.hide').html(eyesvg);
+        for(let i = 0; i < enchant[type].length; i++) {
+            if (enchant[type][i].id == tr.data('id'))
+                enchant[type][i].hidden = false;
         }
     },
 
@@ -377,14 +478,14 @@ SIM.UI = {
         for (let type in gear) {
             _gear[type] = [];
             for (let item of gear[type]) {
-                _gear[type].push({id:item.id,selected:item.selected,dps:item.dps});
+                _gear[type].push({id:item.id,selected:item.selected,dps:item.dps,hidden:item.hidden});
             }
         }
 
         for (let type in enchant) {
             _enchant[type] = [];
             for (let item of enchant[type]) {
-                _enchant[type].push({id:item.id,selected:item.selected,dps:item.dps});
+                _enchant[type].push({id:item.id,selected:item.selected,dps:item.dps,hidden:item.hidden});
             }
         }
 
@@ -443,6 +544,7 @@ SIM.UI = {
                     if (i.id == j.id) {
                         j.dps = i.dps;
                         j.selected = i.selected;
+                        j.hidden = i.hidden;
                     }
 
         for (let type in _enchant)
@@ -451,6 +553,7 @@ SIM.UI = {
                     if (i.id == j.id) {
                         j.dps = i.dps;
                         j.selected = i.selected;
+                        j.hidden = i.hidden;
                     }
 
     },
@@ -466,13 +569,14 @@ SIM.UI = {
             view.loadGear(type);
     },
 
-    loadWeapons: function (type) {
+    loadWeapons: function (type, editmode) {
         var view = this;
         var filter = view.main.find('nav li.active .filter .active').text();
 
-        let table = `<table class="gear" data-type="${type}" data-max="1">
+        let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
                         <thead>
                             <tr>
+                                ${editmode ? '<th></th>' : ''}
                                 <th>Name</th>
                                 <th>Source</th>
                                 <th>Sta</th>
@@ -514,11 +618,14 @@ SIM.UI = {
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
 
+            if (item.hidden && !editmode) continue;
+
             let tooltip = item.id, rand = '';
             if (tooltip == 199211) tooltip = 19921;
             if (item.rand) rand = '?rand=' + item.rand;
                 
-            table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''}">
+            table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
                         <td>${item.source}</td>
                         <td>${item.sta || ''}</td>
@@ -558,17 +665,18 @@ SIM.UI = {
             }
         });
 
-        view.loadEnchants(type);
+        view.loadEnchants(type, editmode);
     },
 
-    loadGear: function (type) {
+    loadGear: function (type, editmode) {
         var view = this;
 
         var max = 1;
         if (type == 'trinket' || type == 'finger') max = 2;
-        let table = `<table class="gear" data-type="${type}" data-max="${max}">
+        let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="${max}">
                         <thead>
                             <tr>
+                                ${editmode ? '<th></th>' : ''}
                                 <th>Name</th>
                                 <th>Source</th>
                                 <th>Sta</th>
@@ -600,12 +708,15 @@ SIM.UI = {
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
 
+            if (item.hidden && !editmode) continue;
+
             let tooltip = item.id, rand = '';
             if (tooltip == 145541) tooltip = 14554;
             if (tooltip == 198981) tooltip = 19898;
             if (item.rand) rand = '?rand=' + item.rand;
 
-            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''}">
+            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
                         <td>${item.source || ''}</td>
                         <td>${item.sta || ''}</td>
@@ -641,17 +752,18 @@ SIM.UI = {
             }
         });
 
-        view.loadEnchants(type);
+        view.loadEnchants(type, editmode);
         view.updateSession();
         view.updateSidebar();
     },
 
-    loadCustom: function () {
+    loadCustom: function (editmode) {
         var view = this;
 
-        let table = `<table class="gear" data-type="custom" data-max="10">
+        let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="custom" data-max="10">
                         <thead>
                             <tr>
+                                ${editmode ? '<th></th>' : ''}
                                 <th>Name</th>
                                 <th>Str</th>
                                 <th>Agi</th>
@@ -665,7 +777,9 @@ SIM.UI = {
                     <tbody>`;
 
         for (let item of gear.custom) {
-            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''}">
+            if (item.hidden && !editmode) continue;
+            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td>${item.name}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
@@ -687,15 +801,16 @@ SIM.UI = {
         });
     },
 
-    loadEnchants: function (type) {
+    loadEnchants: function (type, editmode) {
         var view = this;
         view.main.find('.js-enchant').hide();
 
         if (!enchant[type] || enchant[type].length == 0) return;
 
-        let table = `<table class="enchant" data-type="${type}" data-max="1">
+        let table = `<table class="enchant ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
                         <thead>
                             <tr>
+                                ${editmode ? '<th></th>' : ''}
                                 <th>Enchant</th>
                                 <th>Str</th>
                                 <th>Agi</th>
@@ -715,7 +830,10 @@ SIM.UI = {
             if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
                 continue;
 
-            table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''}">
+            if (item.hidden && !editmode) continue;
+
+            table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="https://classic.wowhead.com/${item.spellid ? 'spell' : 'item'}=${item.id}"></a>${item.name}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
@@ -763,3 +881,6 @@ SIM.UI = {
 
 
 };
+
+var eyesvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>';
+var eyesvghidden = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.885 14.988l3.104-3.098.011.11c0 1.654-1.346 3-3 3l-.115-.012zm8.048-8.032l-3.274 3.268c.212.554.341 1.149.341 1.776 0 2.757-2.243 5-5 5-.631 0-1.229-.13-1.785-.344l-2.377 2.372c1.276.588 2.671.972 4.177.972 7.733 0 11.985-8.449 11.985-8.449s-1.415-2.478-4.067-4.595zm1.431-3.536l-18.619 18.58-1.382-1.422 3.455-3.447c-3.022-2.45-4.818-5.58-4.818-5.58s4.446-7.551 12.015-7.551c1.825 0 3.456.426 4.886 1.075l3.081-3.075 1.382 1.42zm-13.751 10.922l1.519-1.515c-.077-.264-.132-.538-.132-.827 0-1.654 1.346-3 3-3 .291 0 .567.055.833.134l1.518-1.515c-.704-.382-1.496-.619-2.351-.619-2.757 0-5 2.243-5 5 0 .852.235 1.641.613 2.342z"/></svg>';

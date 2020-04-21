@@ -107,6 +107,9 @@ section.main {
         text-align: right;
         .btn {
             display: inline-block;
+            &:first-child {
+                float: left;
+            }
         }
     }
 
@@ -130,7 +133,8 @@ section.main {
 
     table.enchant {
         margin-top: 40px;
-        tbody td:first-of-type {
+        tbody td:first-of-type:not(.hide),
+        tbody td.hide + td {
             width: 40%;
             min-width: 40%;
         }
@@ -149,6 +153,16 @@ section.main {
         display: none;
         &[value="0"], &[value="100"] {
             display: none;
+        }
+    }
+
+    .hide {
+        width: 20px;
+        svg {
+            width: 15px;
+            height: 15px;
+            fill: #ddd;
+            vertical-align: middle;
         }
     }
 }

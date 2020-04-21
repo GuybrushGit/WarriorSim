@@ -83,6 +83,7 @@
     td {
         border-color: hsla(0, 0%, 44%, 0.3);
         position: relative;
+        vertical-align: middle;
         a {
             color: inherit;
             text-decoration: none;
@@ -101,6 +102,9 @@
             td {
                 border-bottom: 0;
             }
+        }
+        &.hidden {
+            opacity: 0.4;
         }
     }
 
