@@ -817,7 +817,6 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Haste</th>
                                 <th>Crit</th>
-                                <th>Hit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -840,7 +839,6 @@ SIM.UI = {
                         <td>${item.ap || ''}</td>
                         <td>${item.haste || ''}</td>
                         <td>${item.crit || ''}</td>
-                        <td>${item.hit || ''}</td>
                         <td>${item.dmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
@@ -854,7 +852,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[9, 1],[1, 0]] : [[8, 1],[0, 0]],
+            sortList: editmode ? [[9, 1]] : [[8, 1]],
         });
 
         view.main.find('.js-enchant').show();
