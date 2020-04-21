@@ -162,6 +162,11 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
+        view.fight.on('change', 'select[name="weaponrng"]', function (e) {
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+
     },
 
     buildSpells: function () {

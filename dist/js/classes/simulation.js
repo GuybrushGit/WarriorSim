@@ -196,3 +196,7 @@ function rng(min, max) {
 function rng10k() {
     return ~~(Math.random() * 10000);
 }
+
+function avg(min, max) {
+    return (min + max) / 2;
+}

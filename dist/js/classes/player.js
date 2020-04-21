@@ -10,6 +10,7 @@ class Player {
         this.nextswingcl = false;
         this.nextswingwf = false;
         this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
+        this.weaponrng = $('select[name="weaponrng"]').val() == "Yes";
         if (enchtype == 1) {
             this.testEnch = testItem;
             this.testEnchType = testType;
@@ -409,7 +410,8 @@ class Player {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let low = 1.3 - 0.05 * diff;
         let high = 1.2 - 0.03 * diff;
-        return rng(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;
+        if (this.weaponrng) return rng(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;
+        else return avg(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;  
     }
     getGlanceChance(weapon) {
         return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;

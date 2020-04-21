@@ -51,7 +51,10 @@ class Whirlwind extends Spell {
         this.maincd = parseInt(spells[5].maincd) * 1000;
     }
     dmg() {
-        return rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        let dmg;
+        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
         return this.timer == 0 && this.cost <= this.player.rage && (this.player.rage >= this.threshold ||
@@ -70,7 +73,10 @@ class Overpower extends Spell {
         this.maincd = parseInt(spells[9].maincd);
     }
     dmg() {
-        return 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        let dmg;
+        if (this.player.weaponrng) dmg = 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = 35 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
         this.player.timer = this.player.zerkstance ? 2000 : 1500;
@@ -174,7 +180,10 @@ class MortalStrike extends Spell {
         this.threshold = parseInt(spells[1].minrage);
     }
     dmg() {
-        return 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        let dmg;
+        if (this.player.weaponrng) dmg = 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = 160 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
         return this.timer == 0 && this.cost <= this.player.rage && this.player.rage >= this.threshold;
@@ -221,7 +230,10 @@ class Slam extends Spell {
         this.casttime = 1500 - player.talents.impslam * 100;
     }
     dmg() {
-        return 87 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) + (this.player.stats.ap / 14) * this.player.mh.speed;
+        let dmg;
+        if (this.player.weaponrng) dmg = 87 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = 87 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg)
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.speed;
     }
     use() {
         return;
