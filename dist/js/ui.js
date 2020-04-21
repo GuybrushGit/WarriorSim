@@ -650,7 +650,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: [[14, 1],[0, 0]],
+            sortList: editmode ?  [[15, 1],[1, 0]] : [[14, 1],[0, 0]],
             textSorter : {
                 14 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -737,7 +737,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: [[10, 1],[0, 0]],
+            sortList: editmode ? [[11, 1],[1, 0]] : [[10, 1],[0, 0]],
             textSorter : {
                 10 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -797,7 +797,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: [[10, 1]],
+            sortList: editmode ? [[11, 1]] : [[10, 1]],
         });
     },
 
@@ -854,7 +854,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: true,
-            sortList: [[8, 1],[0, 0]],
+            sortList: editmode ? [[9, 1],[1, 0]] : [[8, 1],[0, 0]],
         });
 
         view.main.find('.js-enchant').show();
