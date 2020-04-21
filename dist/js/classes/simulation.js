@@ -138,9 +138,6 @@ class Simulation {
                 else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
                     this.idmg += player.cast(player.spells.mortalstrike);
                 }
-                else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
-                    player.spells.heroicstrike.use();
-                }
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) {
                     this.idmg += player.cast(player.spells.whirlwind);
                 }
@@ -148,6 +145,10 @@ class Simulation {
                     this.idmg += player.cast(player.spells.hamstring);
                 }
             }
+
+            if (batch && player.spells.heroicstrike && player.spells.heroicstrike.canUse()) {
+	        player.spells.heroicstrike.use();
+	    }
 
             if (batch && player.spells.heroicstrike && player.mh.timer <= 400 && player.rage < player.spells.heroicstrike.unqueue) {
                 this.player.nextswinghs = false;
@@ -162,6 +163,7 @@ class Simulation {
                 player.batchedextras--;
             }
         }
+
 
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;
