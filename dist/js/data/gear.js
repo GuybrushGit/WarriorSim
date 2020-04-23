@@ -331,6 +331,16 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Flamescarred Shoulders",
+         "str": 12,
+         "sta": 11,
+         "agi": 12,
+         "ac": 131,
+         "source": "Dungeon",
+         "phase": 2,
+         "id": 18374,
+      },
+      {
          "name": "Abyssal Plate Epaulets",
          "hit": 1,
          "str": 13,
@@ -2305,12 +2315,12 @@ var gear = {
    ],
    "trinket": [
       {
-         "name": "Badge of the Swarmguard (Assumed 50% proc chance)",
+         "name": "Badge of the Swarmguard (Assumed 50% proc chance) [TODO]",
          "source": "AQ40",
          "phase": "5",
          "id": 21670,
-         "procspell": "Swarmguard",
-         "procchance": 50
+         // "procspell": "Swarmguard",
+         // "procchance": 50
       },
       {
          "name": "Blackhand's Breadth",
