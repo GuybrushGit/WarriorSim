@@ -525,6 +525,16 @@ var gear = {
          "source": "Quest",
          "phase": 1,
          "id": 12082
+      },
+      {
+         "name": "Mantle of Wicked Revenge",
+         "str": 16,
+         "agi": 30,
+         "sta": 14,
+         "ac": 170,
+         "source": "AQ40",
+         "phase": 5,
+         "id": 21665
       }
    ],
    "back": [
