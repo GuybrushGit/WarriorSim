@@ -10,6 +10,7 @@ var WEAPONTYPE = {
 class Weapon {
     constructor(player, item, enchant, tempenchant, offhand, twohand) {
         this.player = player;
+        this.name = item.name;
         this.mindmg = item.mindmg;
         this.maxdmg = item.maxdmg;
         this.type = item.type;

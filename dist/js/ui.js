@@ -557,6 +557,7 @@ SIM.UI = {
                         j.hidden = i.hidden;
                     }
 
+        if (!localStorage.version || parseInt(localStorage.version) < version) view.newVersion();
     },
 
     filterGear: function () {
@@ -875,6 +876,24 @@ SIM.UI = {
 
     firstSession: function () {
         console.log('Welcome!');
+    },
+
+    newVersion: function() {
+        
+        localStorage.version = version;
+
+        for (let type in gear) {
+            for (let item of gear[type]) {
+                item.dps = undefined;
+            }
+        }
+        for (let type in enchant) {
+            for (let item of enchant[type]) {
+                item.dps = undefined;
+            }
+        }
+
+
     }
     
 

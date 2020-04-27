@@ -187,7 +187,7 @@ var talents = [
                3
             ],
             c: 0,
-            enable: 23255,
+            // enable: 23255,
             iconname: 'Ability_BackStab',
             aura: function (count) { return { deepwounds: count * 0.2 } },
          },

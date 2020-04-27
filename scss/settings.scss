@@ -1,6 +1,7 @@
 .settings {
     width: 0;
     height: 100%;
+    min-height: 1010px;
     background: #272727;
     transition: all 0.3s ease-in-out;
     box-sizing: border-box;
@@ -24,7 +25,6 @@
     .wrapper {
         opacity: 0;
         transition: none;
-        height: 100%;
     }
 
     article {
@@ -86,7 +86,7 @@
 
     .fight {
         width: 330px;
-        height: 346px;
+        height: 450px;
 
         li {
             border-bottom: 1px solid rgba(221,221,221,0.4);
@@ -110,18 +110,18 @@
     .buffs {
         font-size: 0;
         width: 330px;
-        height: 346px;
+        height: 450px;
     }
 
     .rotation {
         width: calc(100% - 670px);
-        height: 346px;
+        height: 450px;
         font-size: 0;
 
         .spell {
             padding-left: 30px;
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
             width: calc(50% - 30px);
             position: relative;
             cursor: pointer;
@@ -142,8 +142,21 @@
                 text-align: center;
             }
 
+            label {
+                font-weight: bold;
+                position: absolute;
+                left: 0;
+                top: -14px;
+                font-size: 11px;
+            }
+
             &[data-id="11567"] {
                 width: 100%;
+            }
+
+            &[data-id="115671"] {
+                width: 100%;
+                margin-top: 26px;
             }
 
             &.active {

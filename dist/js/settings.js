@@ -173,9 +173,10 @@ SIM.SETTINGS = {
         var view = this;
         for (let spell of spells) {
 
+            let tooltip = spell.id == 115671 ? 11567 : spell.id;
             let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
+            <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
             </div><ul class="options"></ul></div>`);
 
             if (spell.time == -1)
@@ -204,6 +205,8 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>Slam macro with MH swing</li>`);
             if (spell.id == 2687)
                 div.find('.options').append('<li>Used on cooldown below 80 rage</li>');
+            if (spell.reaction !== undefined)
+                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             if (spell.hidden)
                 div.addClass('hidden');
             if (localStorage.race == "Orc" && spell.id == 20572)
@@ -224,19 +227,30 @@ SIM.SETTINGS = {
             if (spell.id == 11567) {
                 div.find('.options').empty();
                 div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT/MS cooldown >= <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
-                div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage on swing</li>`);
+                div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage, <input type="text" name="unqueuetimer" value="${spell.unqueuetimer}" data-numberonly="true" /> ms before MH swing</li>`);
+                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
+            }
+
+            if (spell.id == 115671) {
+                div.find('.options').empty();
+                div.find('.options').before('<label>Execute phase HS:</label>');
+                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage</li>`);
+                div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage, <input type="text" name="unqueuetimer" value="${spell.unqueuetimer}" data-numberonly="true" /> ms before MH swing</li>`);
+                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             }
 
             if (spell.id == 11585) {
                 div.find('.options').empty();
                 div.find('.options').append(`<li>Use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage and</li>`);
                 div.find('.options').append(`<li>BT/MS cooldown >= <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> secs</li>`);
+                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             }
 
             view.rotation.append(div);
         }
 
         view.rotation.children().eq(3).appendTo(view.rotation);
+        view.rotation.children().eq(19).appendTo(view.rotation);
     },
 
     buildBuffs: function () {
