@@ -7,7 +7,7 @@ var RESULT = {
 }
 
 var step = 0;
-var log = true;
+var log = false;
 var version = 2;
 
 class Simulation {
@@ -52,11 +52,13 @@ class Simulation {
         this.twentystep = Math.max(this.maxsteps - 21000, 0);
         this.thirtystep = Math.max(this.maxsteps - 31000, 0);
         this.sixtystep = Math.max(this.maxsteps - 61000, 0);
-        let delayedspell, delayedheroic;
+        let delayedspell;
         let spellcheck = false;
         let next = 0;
+        if (iteration == 1) log = true;
+        else log = false;
 
-        //if (log) console.log(' TIME |   RAGE | EVENT')
+        if (log) console.log(' TIME |   RAGE | EVENT')
 
         while (step < this.maxsteps) {
 
@@ -64,12 +66,12 @@ class Simulation {
             if (next != 0 && step % 3000 == 0 && player.talents.angermanagement) {
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
                 spellcheck = true;
-                //if (log) player.log(`Anger Management tick`);
+                if (log) player.log(`Anger Management tick`);
             }
             if (player.vaelbuff && next != 0 && step % 1000 == 0) {
                 player.rage = player.rage >= 80 ? 100 : player.rage + 20;
                 spellcheck = true;
-                //if (log) player.log(`Vael Buff tick`);
+                if (log) player.log(`Vael Buff tick`);
             }
 
             // Attacks
@@ -82,25 +84,20 @@ class Simulation {
                 spellcheck = true;
             }
 
-            // Heroic Strike
-            if (spellcheck && !player.heroicdelay) {
-                if (!player.spells.execute || step < this.executestep) {
-                    if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; }
-                }
-                else {
-                    if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrikeexecute; }
-                }
-
-                //if (log && player.heroicdelay) player.log(`Preparing ${delayedheroic.name}`);
-
-                if (player.spelldelay) spellcheck = false;
-            }
-
             // Spells
             if (spellcheck && !player.spelldelay) {
 
+                // Heroic Strike
+                if (!player.spells.execute || step < this.executestep) {
+                    if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.heroicstrike; }
+                }
+                else {
+                    if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse())  { player.spelldelay = 1; delayedspell = player.spells.heroicstrikeexecute; }
+                }
+
                 // No GCD
-                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
+                if (player.spelldelay) { }
+                else if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
                 else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mightyragepotion; }
 
                 // GCD spells
@@ -143,17 +140,6 @@ class Simulation {
                 spellcheck = false;
             }
 
-            if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay) {
-                if (delayedheroic.canUse()) {
-                    player.cast(delayedheroic);
-                    player.heroicdelay = 0;
-                    spellcheck = true;
-                }
-                else {
-                    player.heroicdelay = 0;
-                }
-            }
-
             if (player.spelldelay && delayedspell && player.spelldelay > delayedspell.maxdelay) {
                 if (delayedspell.canUse()) {
                     this.idmg += player.cast(delayedspell);
@@ -168,7 +154,7 @@ class Simulation {
             if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs && 
                 player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                 this.player.nextswinghs = false;
-                //if (log) player.log(`Heroic Strike unqueued`);
+                if (log) player.log(`Heroic Strike unqueued`);
             }
 
             // Extra attacks
@@ -182,10 +168,9 @@ class Simulation {
             }
             
             // Process next step
-            if (!player.mh.timer || (!player.spelldelay && spellcheck) || (!player.heroicdelay && spellcheck)) { next = 0; continue; }
+            if (!player.mh.timer || (!player.spelldelay && spellcheck)) { next = 0; continue; }
             next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
             if (player.spelldelay && (delayedspell.maxdelay - player.spelldelay) < next) next = delayedspell.maxdelay - player.spelldelay + 1;
-            if (player.heroicdelay && (delayedheroic.maxdelay - player.heroicdelay) < next) next = delayedheroic.maxdelay - player.heroicdelay + 1;
             if (player.timer && player.timer < next) next = player.timer;
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
@@ -210,7 +195,6 @@ class Simulation {
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
-            if (player.heroicdelay) player.heroicdelay += next;
 
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && !player.spells.bloodthirst.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && !player.spells.mortalstrike.step(next) && !player.spelldelay) spellcheck = true;
