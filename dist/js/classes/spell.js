@@ -737,7 +737,6 @@ class Windfury extends Aura {
         this.stacks = 2;
         this.player.updateAP();
         this.player.extraattacks++;
-        this.player.nextswingwf = true;
         if (log) this.player.log(`${this.name} applied`);
     }
     proc() {

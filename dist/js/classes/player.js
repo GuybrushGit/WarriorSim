@@ -577,14 +577,13 @@ class Player {
         if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmh(weapon, wf) {
+    attackmh(weapon) {
         this.stepauras();
 
         let spell = null;
         let procdmg = 0;
         let result;
 
-        this.nextswingwf = false;
         if (this.nextswinghs) {
             this.nextswinghs = false;
             if (this.spells.heroicstrike && this.spells.heroicstrike.cost <= this.rage) {
@@ -606,7 +605,7 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        procdmg = this.procattack(spell, weapon, result, wf);
+        procdmg = this.procattack(spell, weapon, result);
 
         if (result == RESULT.DODGE) {
             this.dodgetimer = 5000;
@@ -705,7 +704,7 @@ class Player {
         if (this.auras.flurry) this.auras.flurry.use();
         if (this.auras.deepwounds) this.auras.deepwounds.use();
     }
-    procattack(spell, weapon, result, wf) {
+    procattack(spell, weapon, result) {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
@@ -719,7 +718,7 @@ class Player {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
             }
-            if (weapon.windfury && !wf && rng10k() < 2000) {
+            if (weapon.windfury && !this.auras.windfury.timer && rng10k() < 2000) {
                 weapon.windfury.use();
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
