@@ -9,7 +9,6 @@ class Player {
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        this.nextswingwf = false;
         this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
         this.weaponrng = $('select[name="weaponrng"]').val() == "Yes";
         if (enchtype == 1) {
@@ -284,6 +283,7 @@ class Player {
         this.itemtimer = 0;
         this.dodgetimer = 0;
         this.spelldelay = 0;
+        this.heroicdelay = 0;
         this.mh.timer = 0;
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
@@ -291,7 +291,6 @@ class Player {
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        this.nextswingwf = false;
         for (let s in this.spells) {
             this.spells[s].timer = 0;
             this.spells[s].stacks = 0;

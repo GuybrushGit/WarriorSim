@@ -35,6 +35,9 @@ class Simulation {
         this.berserkingstep = parseInt(spells[10].time) * 1000;
         this.reckstep = parseInt(spells[7].time) * 1000;
         this.priorityap = parseInt(spells[4].priorityap);
+
+        if (this.iterations == 1) log = true;
+        else log = false;
     }
     start() {
         this.run(1);
@@ -52,11 +55,9 @@ class Simulation {
         this.twentystep = Math.max(this.maxsteps - 21000, 0);
         this.thirtystep = Math.max(this.maxsteps - 31000, 0);
         this.sixtystep = Math.max(this.maxsteps - 61000, 0);
-        let delayedspell;
+        let delayedspell, delayedheroic;
         let spellcheck = false;
         let next = 0;
-        if (iteration == 1) log = true;
-        else log = false;
 
         if (log) console.log(' TIME |   RAGE | EVENT')
 
@@ -76,7 +77,7 @@ class Simulation {
 
             // Attacks
             if (player.mh.timer <= 0) {
-                this.idmg += player.attackmh(player.mh, player.nextswingwf);
+                this.idmg += player.attackmh(player.mh);
                 spellcheck = true;
             }
             if (player.oh && player.oh.timer <= 0) {
@@ -87,17 +88,8 @@ class Simulation {
             // Spells
             if (spellcheck && !player.spelldelay) {
 
-                // Heroic Strike
-                if (!player.spells.execute || step < this.executestep) {
-                    if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.heroicstrike; }
-                }
-                else {
-                    if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse())  { player.spelldelay = 1; delayedspell = player.spells.heroicstrikeexecute; }
-                }
-
                 // No GCD
-                if (player.spelldelay) { }
-                else if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
+                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
                 else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mightyragepotion; }
 
                 // GCD spells
@@ -137,10 +129,30 @@ class Simulation {
 
                 //if (log && player.spelldelay) player.log(`Preparing ${delayedspell.name}`);
 
+                if (player.heroicdelay) spellcheck = false;
+            }
+
+            // Heroic Strike
+            if (spellcheck && !player.heroicdelay) {
+                if (!player.spells.execute || step < this.executestep) {
+                    if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; }
+                }
+                else {
+                    if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrikeexecute; }
+                }
+
+                //if (log && player.heroicdelay) player.log(`Preparing ${delayedheroic.name}`);
+
                 spellcheck = false;
             }
 
+            // Cast spells
             if (player.spelldelay && delayedspell && player.spelldelay > delayedspell.maxdelay) {
+
+                // Prevent casting HS and other spells at the exact same time
+                if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
+                    player.heroicdelay = delayedheroic.maxdelay - 49;
+
                 if (delayedspell.canUse()) {
                     this.idmg += player.cast(delayedspell);
                     player.spelldelay = 0;
@@ -148,6 +160,18 @@ class Simulation {
                 }
                 else {
                     player.spelldelay = 0;
+                }
+            }
+
+            // Cast HS
+            if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay) {
+                if (delayedheroic.canUse()) {
+                    player.cast(delayedheroic);
+                    player.heroicdelay = 0;
+                    spellcheck = true;
+                }
+                else {
+                    player.heroicdelay = 0;
                 }
             }
 
@@ -168,9 +192,10 @@ class Simulation {
             }
             
             // Process next step
-            if (!player.mh.timer || (!player.spelldelay && spellcheck)) { next = 0; continue; }
+            if (!player.mh.timer || (!player.spelldelay && spellcheck) || (!player.heroicdelay && spellcheck)) { next = 0; continue; }
             next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
             if (player.spelldelay && (delayedspell.maxdelay - player.spelldelay) < next) next = delayedspell.maxdelay - player.spelldelay + 1;
+            if (player.heroicdelay && (delayedheroic.maxdelay - player.heroicdelay) < next) next = delayedheroic.maxdelay - player.heroicdelay + 1;
             if (player.timer && player.timer < next) next = player.timer;
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
@@ -195,6 +220,7 @@ class Simulation {
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
+            if (player.heroicdelay) player.heroicdelay += next;
 
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && !player.spells.bloodthirst.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && !player.spells.mortalstrike.step(next) && !player.spelldelay) spellcheck = true;
