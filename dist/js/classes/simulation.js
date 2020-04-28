@@ -59,7 +59,7 @@ class Simulation {
         let spellcheck = false;
         let next = 0;
 
-        if (log) console.log(' TIME |   RAGE | EVENT')
+        //if (log) console.log(' TIME |   RAGE | EVENT')
 
         while (step < this.maxsteps) {
 
@@ -67,12 +67,12 @@ class Simulation {
             if (next != 0 && step % 3000 == 0 && player.talents.angermanagement) {
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
                 spellcheck = true;
-                if (log) player.log(`Anger Management tick`);
+                //if (log) player.log(`Anger Management tick`);
             }
             if (player.vaelbuff && next != 0 && step % 1000 == 0) {
                 player.rage = player.rage >= 80 ? 100 : player.rage + 20;
                 spellcheck = true;
-                if (log) player.log(`Vael Buff tick`);
+                //if (log) player.log(`Vael Buff tick`);
             }
 
             // Attacks
@@ -108,7 +108,7 @@ class Simulation {
                 else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
 
                 // Execute phase
-                else if (player.spells.execute && step > this.executestep) {
+                else if (player.spells.execute && step >= this.executestep) {
                     if (player.spells.bloodthirst && player.stats.ap >= this.priorityap && player.spells.bloodthirst.canUse()) {
                         player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
                     }
@@ -179,7 +179,7 @@ class Simulation {
             if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs && 
                 player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                 this.player.nextswinghs = false;
-                if (log) player.log(`Heroic Strike unqueued`);
+                //if (log) player.log(`Heroic Strike unqueued`);
             }
 
             // Extra attacks
@@ -207,6 +207,7 @@ class Simulation {
             if (player.spells.whirlwind && player.spells.whirlwind.timer && player.spells.whirlwind.timer < next) next = player.spells.whirlwind.timer;
             if (player.spells.bloodrage && player.spells.bloodrage.timer && player.spells.bloodrage.timer < next) next = player.spells.bloodrage.timer;
             if (player.spells.overpower && player.spells.overpower.timer && player.spells.overpower.timer < next) next = player.spells.overpower.timer;
+            if (player.spells.execute && player.spells.execute.timer && player.spells.execute.timer < next) next = player.spells.execute.timer;
 
             if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
                 let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
@@ -228,6 +229,7 @@ class Simulation {
             if (player.spells.whirlwind && player.spells.whirlwind.timer && !player.spells.whirlwind.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.bloodrage && player.spells.bloodrage.timer && !player.spells.bloodrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
 
         }
 
