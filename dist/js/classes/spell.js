@@ -230,6 +230,21 @@ class SunderArmor extends Spell {
     }
 }
 
+class Hamstring extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 10;
+        this.threshold = parseInt(spells[18].minrage);
+        this.maxdelay = parseInt(spells[18].reaction);
+    }
+    dmg() {
+        return 45;
+    }
+    canUse() {
+        return !this.player.timer && this.player.rage >= this.threshold && this.cost <= this.player.rage;
+    }
+}
+
 class Aura {
     constructor(player) {
         this.timer = 0;

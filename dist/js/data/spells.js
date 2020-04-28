@@ -5,7 +5,7 @@ var spells = [
     classname: 'Bloodthirst',
     iconname: 'spell_nature_bloodlust',
     minrage: 30,
-    reaction: 500,
+    reaction: 100,
     hidden: true,
 },
 {
@@ -14,7 +14,7 @@ var spells = [
     classname: 'MortalStrike',
     iconname: 'ability_warrior_savageblow',
     minrage: 30,
-    reaction: 500,
+    reaction: 100,
     hidden: true,
 },
 {
@@ -43,7 +43,7 @@ var spells = [
     iconname: 'inv_sword_48',
     lasttime: 8,
     priorityap: 2000,
-    reaction: 200,
+    reaction: 100,
 },
 {
     id: 1680,
@@ -52,7 +52,7 @@ var spells = [
     iconname: 'ability_whirlwind',
     minrage: 50,
     maincd: 2,
-    reaction: 500,
+    reaction: 300,
 },
 {
     id: 12328,
@@ -61,7 +61,7 @@ var spells = [
     iconname: 'spell_shadow_deathpact',
     time: 29,
     crusaders: 0,
-    reaction: 500,
+    reaction: 300,
     hidden: true,
     aura: true,
 },
@@ -71,7 +71,7 @@ var spells = [
     classname: 'Recklessness',
     iconname: 'ability_criticalstrike',
     time: 44,
-    reaction: 500,
+    reaction: 300,
     aura: true,
 },
 {
@@ -89,7 +89,7 @@ var spells = [
     iconname: 'ability_meleedamage',
     maxrage: 25,
     maincd: 2,
-    reaction: 500,
+    reaction: 300,
 },
 {
     id: 26296,
@@ -98,7 +98,7 @@ var spells = [
     iconname: 'racial_troll_berserk',
     time: 50,
     haste: 30,
-    reaction: 500,
+    reaction: 300,
     hidden: true,
     aura: true,
 },
@@ -108,7 +108,7 @@ var spells = [
     classname: 'BloodFury',
     iconname: 'racial_orc_berserkerstrength',
     time: 35,
-    reaction: 500,
+    reaction: 300,
     hidden: true,
     aura: true,
 },
@@ -117,7 +117,7 @@ var spells = [
     name: 'Bloodrage',
     classname: 'Bloodrage',
     iconname: 'ability_racial_bloodrage',
-    reaction: 500,
+    reaction: 100,
 },
 {
     id: 17528,
@@ -126,7 +126,7 @@ var spells = [
     iconname: 'inv_potion_41',
     time: 39,
     crusaders: 0,
-    reaction: 500,
+    reaction: 100,
     aura: true,
 },
 {
@@ -152,7 +152,7 @@ var spells = [
     classname: 'SunderArmor',
     iconname: 'ability_warrior_sunder',
     globals: 1,
-    reaction: 500,
+    reaction: 300,
 },
 {
     id: 11605,
@@ -167,8 +167,7 @@ var spells = [
     classname: 'Hamstring',
     iconname: 'ability_shockwave',
     minrage: 50,
-    reaction: 500,
-    hidden: true,
+    reaction: 100,
 },
 {
     id: 115671,
@@ -178,7 +177,7 @@ var spells = [
     minrage: 40,
     unqueue: 0,
     unqueuetimer: 200,
-    reaction: 200,
+    reaction: 100,
 },
 
 ];
