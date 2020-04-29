@@ -144,15 +144,16 @@ class Bloodrage extends Spell {
     constructor(player) {
         super(player);
         this.cost = 0;
-        this.rage = 20 + player.talents.bloodragebonus;
-        this.threshold = 100 - this.rage;
+        this.rage = 10 + player.talents.bloodragebonus;
+        this.threshold = 80;
         this.cooldown = 60;
         this.useonly = true;
         this.maxdelay = parseInt(spells[12].reaction);
     }
     use() {
         this.timer = this.cooldown * 1000;
-        this.player.rage += this.rage;
+        this.player.rage = Math.min(this.player.rage + this.rage, 100);
+        this.player.auras.bloodrage.use();
     }
     canUse() {
         return this.timer == 0 && this.player.rage < this.threshold;
@@ -938,5 +939,31 @@ class PrimalBlessing extends Aura {
         this.duration = 12;
         this.stats = { ap: 300 };
         this.name = 'Primal Blessing';
+    }
+}
+
+class BloodrageAura extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.name = 'Bloodrage';
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        //if (log) this.player.log(`${this.name} applied`);
+    }
+    step() {
+        if ((step - this.starttimer) % 1000 == 0) {
+            this.player.rage = Math.min(this.player.rage + 1, 100);
+            //if (log) this.player.log(`${this.name} tick`);
+        }
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            // if (log) this.player.log(`${this.name} removed`);
+        }
+        return this.timer;
     }
 }

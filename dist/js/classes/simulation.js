@@ -59,7 +59,7 @@ class Simulation {
         let spellcheck = false;
         let next = 0;
 
-        //if (log) console.log(' TIME |   RAGE | EVENT')
+        // if (log) console.log(' TIME |   RAGE | EVENT')
 
         while (step < this.maxsteps) {
 
@@ -67,12 +67,12 @@ class Simulation {
             if (next != 0 && step % 3000 == 0 && player.talents.angermanagement) {
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
                 spellcheck = true;
-                //if (log) player.log(`Anger Management tick`);
+                // if (log) player.log(`Anger Management tick`);
             }
             if (player.vaelbuff && next != 0 && step % 1000 == 0) {
                 player.rage = player.rage >= 80 ? 100 : player.rage + 20;
                 spellcheck = true;
-                //if (log) player.log(`Vael Buff tick`);
+                // if (log) player.log(`Vael Buff tick`);
             }
 
             // Attacks
@@ -201,6 +201,8 @@ class Simulation {
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
             if (player.vaelbuff && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
+            if (player.auras.bloodrage && player.auras.bloodrage.timer && (1000 - ((step - player.auras.bloodrage.starttimer) % 1000)) < next)
+                next = 1000 - ((step - player.auras.bloodrage.starttimer) % 1000);
 
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && player.spells.bloodthirst.timer < next) next = player.spells.bloodthirst.timer;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && player.spells.mortalstrike.timer < next) next = player.spells.mortalstrike.timer;
@@ -231,6 +233,7 @@ class Simulation {
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
 
+            if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step(next) && !player.spelldelay) spellcheck = true;
         }
 
         // Fight done

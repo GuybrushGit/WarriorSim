@@ -65,6 +65,7 @@ class Player {
         this.addSpells();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
+        if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
         if (this.items.includes(20130)) this.auras.flask = new Flask(this);
