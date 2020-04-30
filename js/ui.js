@@ -445,6 +445,7 @@ SIM.UI = {
         localStorage.simulations = view.fight.find('input[name="simulations"]').val();
         localStorage.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
         localStorage.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
+        localStorage.executeperc = view.fight.find('input[name="executeperc"]').val();
         localStorage.startrage = view.fight.find('input[name="startrage"]').val();
         localStorage.targetlevel = view.fight.find('input[name="targetlevel"]').val();
         localStorage.targetarmor = view.fight.find('input[name="targetarmor"]').val();

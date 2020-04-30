@@ -15,6 +15,7 @@ class Simulation {
         this.player = player;
         this.timesecsmin = parseInt($('input[name="timesecsmin"]').val());
         this.timesecsmax = parseInt($('input[name="timesecsmax"]').val());
+        this.executeperc = parseInt($('input[name="executeperc"]').val());
         this.startrage = parseInt($('input[name="startrage"]').val());
         this.iterations = parseInt($('input[name="simulations"]').val());
         this.idmg = 0;
@@ -49,7 +50,7 @@ class Simulation {
         player.reset(this.startrage);
         this.maxsteps = rng(this.timesecsmin * 1000, this.timesecsmax * 1000);
         this.duration = this.maxsteps / 1000;
-        this.executestep = Math.max(this.maxsteps - parseInt(spells[4].lasttime) * 1000, 0);
+        this.executestep = this.maxsteps - parseInt(this.maxsteps * (this.executeperc / 100));
         this.fifteenstep = Math.max(this.maxsteps - 16000, 0);
         this.twentystep = Math.max(this.maxsteps - 21000, 0);
         this.thirtystep = Math.max(this.maxsteps - 31000, 0);

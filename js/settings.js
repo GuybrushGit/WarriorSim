@@ -183,8 +183,6 @@ SIM.SETTINGS = {
                 div.find('.options').append('<li>Used on cooldown</li>');
             if (spell.time > -1)
                 div.find('.options').append(`<li>Use at <input type="text" name="time" value="${spell.time}" data-numberonly="true" /> seconds</li>`);
-            if (spell.lasttime > -1)
-                div.find('.options').append(`<li>Use on last <input type="text" name="lasttime" value="${spell.lasttime}" data-numberonly="true" /> seconds</li>`);
             if (spell.minrage !== undefined)
                 div.find('.options').append(`<li>Use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
             if (spell.maxrage !== undefined)
