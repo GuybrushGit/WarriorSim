@@ -28,7 +28,7 @@ class Player {
             basearmor: parseInt($('input[name="targetarmor"]').val()),
             armor: parseInt($('input[name="targetarmor"]').val()),
             defense: parseInt($('input[name="targetlevel"]').val()) * 5,
-            mitigation: 1 - 15 * ((parseInt($('input[name="targetresistance"]').val()) + 24) / 6000),
+            mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
             binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60))))
         };
         this.base = {
@@ -713,13 +713,13 @@ class Player {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
                 //if (log) this.log(`${weapon.name} proc`);
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
-                if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1.magicdmg);
+                if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
             }
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
-                if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2.magicdmg);
+                if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2);
             }
             if (weapon.windfury && !this.auras.windfury.timer && rng10k() < 2000) {
                 weapon.windfury.use();
@@ -728,18 +728,18 @@ class Player {
                 //if (log) this.log(`Trinket 1 proc`);
                 if (this.trinketproc1.extra)
                     this.batchedextras += this.trinketproc1.extra;
-                if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1.magicdmg);
+                if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
                 //if (log) this.log(`Trinket 2 proc`);
                 if (this.trinketproc2.extra)
                     this.batchedextras += this.trinketproc2.extra;
-                if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2.magicdmg);
+                if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
                 if (this.trinketproc2.spell) this.trinketproc2.spell.use();
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
-                if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc.magicdmg);
+                if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
                 //if (log) this.log(`Misc proc`);
             }
@@ -761,11 +761,14 @@ class Player {
         }
         return procdmg;
     }
-    magicproc(dmg) {
+    magicproc(proc) {
         let mod = 1;
-        if (rng10k() < 1700) return 0;
-        if (rng10k() < (this.stats.spellcrit * 100)) mod = 1.5;
-        return ~~(dmg * this.target.mitigation * mod);
+        let miss = 1700;
+        if (proc.binaryspell) miss = this.target.binaryresist;
+        else mod *= this.target.mitigation;
+        if (rng10k() < miss) return 0;
+        if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1.5;
+        return ~~(proc.magicdmg * mod);
     }
     physproc(dmg) {
         let tmp = 0;

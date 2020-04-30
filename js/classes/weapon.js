@@ -38,6 +38,7 @@ class Weapon {
             this.proc1.chance = ~~(item.speed * item.ppm / 0.006);
             if (item.physdmg) this.proc1.physdmg = item.physdmg;
             if (item.magicdmg) this.proc1.magicdmg = item.magicdmg;
+            if (item.binaryspell) this.proc1.binaryspell = item.binaryspell;
             if (item.procextra) this.proc1.extra = item.procextra;
             if (item.procspell) {
                player.auras[item.procspell.toLowerCase()] = eval('new ' + item.procspell + '(player)');

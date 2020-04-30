@@ -2696,7 +2696,7 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19852,
-         "magicdmg": 113
+         "magicdmg": 56
       },
       {
          "name": "Annihilator",
@@ -3089,7 +3089,8 @@ var gear = {
          "ppm": 1,
          "phase": 1,
          "id": 17071,
-         "magicdmg": 82
+         "magicdmg": 82,
+         "binaryspell": true
       },
       {
          "name": "Harbinger of Doom",
@@ -3885,7 +3886,8 @@ var gear = {
          "ppm": 6,
          "phase": 3,
          "id": 19019,
-         "magicdmg": 300
+         "magicdmg": 300,
+         "binaryspell": true
       },
       {
          "name": "Warblade of the Hakkari (MH)",
@@ -3973,7 +3975,7 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19852,
-         "magicdmg": 113
+         "magicdmg": 56
       },
       {
          "name": "Blessed Qiraji War Axe",
@@ -4318,7 +4320,8 @@ var gear = {
          "ppm": 1,
          "phase": 1,
          "id": 17071,
-         "magicdmg": 82
+         "magicdmg": 82,
+         "binaryspell": true
       },
       {
          "name": "Harbinger of Doom",
@@ -4915,7 +4918,8 @@ var gear = {
          "ppm": 8,
          "phase": 3,
          "id": 19019,
-         "magicdmg": 300
+         "magicdmg": 300,
+         "binaryspell": true
       },
       {
          "name": "Warblade of the Hakkari (OH)",
