@@ -58,7 +58,7 @@ class Simulation {
         let spellcheck = false;
         let next = 0;
 
-        if (log) console.log(' TIME |   RAGE | EVENT')
+        //if (log) console.log(' TIME |   RAGE | EVENT')
 
         while (step < this.maxsteps) {
 
@@ -105,6 +105,7 @@ class Simulation {
                 else if (player.auras.gabbar && player.auras.gabbar.canUse() && step > this.twentystep) { player.spelldelay = 1; delayedspell = player.auras.gabbar; }
                 else if (player.auras.earthstrike && player.auras.earthstrike.canUse() && step > this.twentystep) { player.spelldelay = 1; delayedspell = player.auras.earthstrike; }
                 else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
+                else if (player.auras.swarmguard && player.auras.swarmguard.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.swarmguard; }
 
                 // Execute phase
                 else if (player.spells.execute && step >= this.executestep) {

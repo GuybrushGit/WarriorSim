@@ -2325,12 +2325,10 @@ var gear = {
    ],
    "trinket": [
       {
-         "name": "Badge of the Swarmguard (Assumed 50% proc chance) [Not implemented yet]",
+         "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
          "source": "AQ40",
          "phase": "5",
-         "id": 21670,
-         // "procspell": "Swarmguard",
-         // "procchance": 50
+         "id": 21670
       },
       {
          "name": "Blackhand's Breadth",

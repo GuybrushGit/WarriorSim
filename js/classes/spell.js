@@ -323,7 +323,7 @@ class Flurry extends Aura {
         this.duration = 12;
         this.mult_stats = { haste: player.talents.flurry };
     }
-    step() {
+    proc() {
         this.stacks--;
         if (!this.stacks) {
             this.uptime += step - this.starttimer;
@@ -799,19 +799,29 @@ class Swarmguard extends Aura {
         this.duration = 30;
         this.armor = 200;
         this.stacks = 0;
+        this.chance = 5000;
     }
     use() {
-        if (this.timer) this.uptime += (step - this.starttimer);
+        this.player.timer = 1500;
+        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.stacks = this.stacks > 5 ? 6 : this.stacks + 1;
-        this.player.updateArmorReduction();
+        this.stacks = 0;
         //if (log) this.player.log(`${this.name} applied`);
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+    }
+    proc() {
+        this.stacks = Math.min(this.stacks + 1, 6);
+        this.player.updateArmorReduction();
+        //if (log) this.player.log(`${this.name} proc`);
     }
     step() {
         if (step > this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
+            this.stacks = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
             //if (log) this.player.log(`${this.name} removed`);
@@ -851,7 +861,7 @@ class Slayer extends Aura {
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.updateAuras();
+        this.player.updateAP();
         //if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
@@ -871,7 +881,7 @@ class Spider extends Aura {
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.updateAuras();
+        this.player.updateHaste();
         //if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
@@ -890,7 +900,7 @@ class Earthstrike extends Aura {
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.updateAuras();
+        this.player.updateAP();
         //if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {

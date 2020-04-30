@@ -73,6 +73,7 @@ class Player {
         if (this.items.includes(22954)) this.auras.spider = new Spider(this);
         if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
         if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
+        if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
         this.update();
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
@@ -514,6 +515,7 @@ class Player {
         if (this.auras.spider && this.auras.spider.firstuse && this.auras.spider.timer) this.auras.spider.step();
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.step();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
+        if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -541,6 +543,7 @@ class Player {
         if (this.auras.gabbar && this.auras.gabbar.firstuse && this.auras.gabbar.timer) this.auras.gabbar.end();
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.end();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
+        if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
@@ -746,10 +749,13 @@ class Player {
                     //if (log) this.log(`Sword talent proc`);
                 }
             }
+            if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {
+                this.auras.swarmguard.proc();
+            }
         }
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
             if (this.auras.flurry && this.auras.flurry.stacks)
-                this.auras.flurry.step();
+                this.auras.flurry.proc();
             if (this.mh.windfury && this.mh.windfury.stacks)
                 this.mh.windfury.proc();
         }
@@ -774,6 +780,6 @@ class Player {
         return dmg * this.stats.dmgmod * this.mh.modifier;
     }
     log(msg) {
-        console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${this.stats.ap} | ${msg}`);
+        console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${this.target.armor} | ${msg}`);
     }
 }
