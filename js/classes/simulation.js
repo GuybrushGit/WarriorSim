@@ -27,7 +27,6 @@ class Simulation {
         this.endtime = 0;
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
-        this.player.simulation = this;
         this.spread = [];
 
         // steps
@@ -59,7 +58,7 @@ class Simulation {
         let spellcheck = false;
         let next = 0;
 
-        // if (log) console.log(' TIME |   RAGE | EVENT')
+        if (log) console.log(' TIME |   RAGE | EVENT')
 
         while (step < this.maxsteps) {
 
@@ -67,12 +66,12 @@ class Simulation {
             if (next != 0 && step % 3000 == 0 && player.talents.angermanagement) {
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
                 spellcheck = true;
-                // if (log) player.log(`Anger Management tick`);
+                //if (log) player.log(`Anger Management tick`);
             }
             if (player.vaelbuff && next != 0 && step % 1000 == 0) {
                 player.rage = player.rage >= 80 ? 100 : player.rage + 20;
                 spellcheck = true;
-                // if (log) player.log(`Vael Buff tick`);
+                //if (log) player.log(`Vael Buff tick`);
             }
 
             // Attacks
@@ -94,9 +93,9 @@ class Simulation {
 
                 // GCD spells
                 else if (player.timer) { }
-                else if (player.auras.flask && player.auras.flask.canUse()) { player.spelldelay = 1; delayedspell = player.auras.flask; }
+                else if (player.auras.flask && player.auras.flask.canUse() && step > this.sixtystep) { player.spelldelay = 1; delayedspell = player.auras.flask; }
                 else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.cloudkeeper; }
-                else if (player.auras.recklessness&& player.auras.recklessness.canUse() && step > this.reckstep) { player.spelldelay = 1; delayedspell = player.auras.recklessness; }
+                else if (player.auras.recklessness && player.auras.recklessness.canUse() && step > this.reckstep) { player.spelldelay = 1; delayedspell = player.auras.recklessness; }
                 else if (player.auras.deathwish && player.auras.deathwish.canUse()) { player.spelldelay = 1; delayedspell = player.auras.deathwish; }
                 else if (player.auras.bloodfury && player.auras.bloodfury.canUse() && step > this.bloodfurystep) { player.spelldelay = 1; delayedspell = player.auras.bloodfury; }
                 else if (player.auras.berserking && player.auras.berserking.canUse()&& step > this.berserkingstep) { player.spelldelay = 1; delayedspell = player.auras.berserking; }
@@ -203,6 +202,8 @@ class Simulation {
             if (player.vaelbuff && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
             if (player.auras.bloodrage && player.auras.bloodrage.timer && (1000 - ((step - player.auras.bloodrage.starttimer) % 1000)) < next)
                 next = 1000 - ((step - player.auras.bloodrage.starttimer) % 1000);
+            if (player.auras.gabbar && player.auras.gabbar.timer && (2000 - ((step - player.auras.gabbar.starttimer) % 2000)) < next)
+                next = 2000 - ((step - player.auras.gabbar.starttimer) % 2000);
 
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && player.spells.bloodthirst.timer < next) next = player.spells.bloodthirst.timer;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && player.spells.mortalstrike.timer < next) next = player.spells.mortalstrike.timer;
@@ -233,7 +234,8 @@ class Simulation {
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
 
-            if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.gabbar && player.auras.gabbar.timer) player.auras.gabbar.step();
         }
 
         // Fight done

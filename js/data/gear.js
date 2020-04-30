@@ -2356,7 +2356,7 @@ var gear = {
          "magicdmg": 250,
       },
       {
-         "name": "Diamond Flask (Used at start)",
+         "name": "Diamond Flask (Used last 60 secs)",
          "source": "Quest",
          "phase": "3",
          "id": 20130,
@@ -2394,7 +2394,7 @@ var gear = {
          "magicdmg": 165,
       },
       {
-         "name": "Jom Gabbar (Used last 20 secs) [Not implemented yet]",
+         "name": "Jom Gabbar (Used last 20 secs)",
          "source": "AQ40",
          "phase": "5",
          "id": 23570,

@@ -918,18 +918,18 @@ class Gabbar extends Aura {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
     }
     step() {
-        if (step > this.timer) {
+        if ((step - this.starttimer) % 2000 == 0) {
+            this.stats.ap += 65;
+            this.player.updateAP();
+            //if (log) this.player.log(`${this.name} tick`);
+        }
+        if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.firstuse = false;
             this.player.updateAP();
             //if (log) this.player.log(`${this.name} removed`);
         }
-
-        // if (this.uptime && this.timer % 2000 == 0) {
-        //     this.stats.ap += 65;
-        //     this.player.updateAP();
-        // }
     }
 }
 
@@ -962,7 +962,7 @@ class BloodrageAura extends Aura {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            // if (log) this.player.log(`${this.name} removed`);
+            //if (log) this.player.log(`${this.name} removed`);
         }
         return this.timer;
     }
