@@ -579,11 +579,15 @@ class Player {
             tmp += this.mh.dodge * 100;
             if (roll < tmp) return RESULT.DODGE;
         }
-        roll = rng10k();
+        if (!spell.weaponspell) {
+            roll = rng10k();
+            tmp = 0;
+        }
         let crit = this.crit + this.mh.crit;
         if (spell instanceof Overpower)
             crit += this.talents.overpowercrit;
-        if (roll < (crit * 100) && !spell.nocrit) return RESULT.CRIT;
+        tmp += crit * 100;
+        if (roll < tmp && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
     attackmh(weapon) {

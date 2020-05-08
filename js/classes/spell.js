@@ -11,6 +11,7 @@ class Spell {
         this.name = this.constructor.name;
         this.useonly = false;
         this.maxdelay = 300;
+        this.weaponspell = true;
     }
     dmg() {
         return 0;
@@ -42,6 +43,7 @@ class Bloodthirst extends Spell {
         this.cooldown = 6;
         this.threshold = parseInt(spells[0].minrage);
         this.maxdelay = parseInt(spells[0].reaction);
+        this.weaponspell = false;
     }
     dmg() {
         return this.player.stats.ap * 0.45;
@@ -113,6 +115,7 @@ class Execute extends Spell {
         this.usedrage = 0;
         this.maxdelay = parseInt(spells[4].reaction);
         this.refund = false;
+        this.weaponspell = false;
     }
     dmg() {
         return 600 + (15 * this.usedrage);
