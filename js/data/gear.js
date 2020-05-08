@@ -3365,8 +3365,8 @@ var gear = {
       {
          "name": "Ebon Hand",
          "sta": 9,
-         "mindmg": 83,
-         "maxdmg": 154,
+         "mindmg": 90,
+         "maxdmg": 168,
          "speed": 2.5,
          "type": "Mace",
          "source": "Crafting",
@@ -4569,8 +4569,8 @@ var gear = {
       {
          "name": "Ebon Hand",
          "sta": 9,
-         "mindmg": 83,
-         "maxdmg": 154,
+         "mindmg": 90,
+         "maxdmg": 168,
          "speed": 2.5,
          "type": "Mace",
          "source": "Crafting",
