@@ -2693,6 +2693,18 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Argent Avenger (vs Undead)",
+         "mindmg": 71,
+         "maxdmg": 108,
+         "speed": 2.2,
+         "type": "Sword",
+         "source": "Quest",
+         "ppm": 1,
+         "phase": 1,
+         "id": 13246,
+         "procspell": "Avenger"
+      },
+      {
          "name": "Ancient Hakkari Manslayer",
          "mindmg": 69,
          "maxdmg": 130,
@@ -3971,6 +3983,18 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Argent Avenger (vs Undead)",
+         "mindmg": 71,
+         "maxdmg": 108,
+         "speed": 2.2,
+         "type": "Sword",
+         "source": "Quest",
+         "ppm": 1,
+         "phase": 1,
+         "id": 13246,
+         "procspell": "Avenger"
+      },
       {
          "name": "Ancient Hakkari Manslayer",
          "mindmg": 69,

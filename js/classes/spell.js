@@ -10,7 +10,7 @@ class Spell {
         this.data = [0, 0, 0, 0, 0];
         this.name = this.constructor.name;
         this.useonly = false;
-        this.maxdelay = 300;
+        this.maxdelay = 100;
         this.weaponspell = true;
     }
     dmg() {
@@ -275,7 +275,7 @@ class Aura {
         this.stacks = 0;
         this.uptime = 0;
         this.name = this.constructor.name;
-        this.maxdelay = 300;
+        this.maxdelay = 100;
         this.useonly = true;
     }
     use() {
@@ -1015,5 +1015,14 @@ class Zandalarian extends Aura {
             this.player.updateBonusDmg();
             //if (log) this.player.log(`${this.name} removed`);
         }
+    }
+}
+
+class Avenger extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.stats = { ap: 200 };
+        this.name = 'Argent Avenger';
     }
 }
