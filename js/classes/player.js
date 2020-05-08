@@ -796,6 +796,6 @@ class Player {
         return dmg * this.stats.dmgmod * this.mh.modifier;
     }
     log(msg) {
-        console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${this.target.armor} | ${msg}`);
+        console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);
     }
 }

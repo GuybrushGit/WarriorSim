@@ -542,12 +542,13 @@ SIM.UI = {
 
         for (let type in _gear)
             for (let i of _gear[type])
-                for (let j of gear[type])
-                    if (i.id == j.id) {
-                        j.dps = i.dps;
-                        j.selected = i.selected;
-                        j.hidden = i.hidden;
-                    }
+                if (gear[type])
+                    for (let j of gear[type])
+                        if (i.id == j.id) {
+                            j.dps = i.dps;
+                            j.selected = i.selected;
+                            j.hidden = i.hidden;
+                        }
 
         for (let type in _enchant)
             for (let i of _enchant[type])

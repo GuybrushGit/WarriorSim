@@ -2080,7 +2080,7 @@ var gear = {
          "id": 11731
       }
    ],
-   "finger": [
+   "finger1": [
       {
          "name": "Archimtiros' Ring of Reckoning",
          "sta": 28,
@@ -2323,7 +2323,250 @@ var gear = {
          "id": 18500
       }
    ],
-   "trinket": [
+   "finger2": [
+      {
+         "name": "Archimtiros' Ring of Reckoning",
+         "sta": 28,
+         "agi": 14,
+         "source": "BWL",
+         "phase": "3",
+         "id": 19376
+      },
+      {
+         "name": "Band of Accuria",
+         "hit": 2,
+         "sta": 10,
+         "agi": 16,
+         "source": "MC",
+         "phase": "1",
+         "id": 17063
+      },
+      {
+         "name": "Band of Earthen Might",
+         "crit": 1,
+         "hit": 1,
+         "str": 6,
+         "source": "Quest",
+         "phase": "5",
+         "id": 21182
+      },
+      {
+         "name": "Band of Jin",
+         "hit": 1,
+         "sta": 8,
+         "agi": 14,
+         "source": "ZG",
+         "phase": "4",
+         "id": 19925
+      },
+      {
+         "name": "Band of Reanimation",
+         "sta": 22,
+         "agi": 34,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 22961
+      },
+      {
+         "name": "Band of the Ogre King",
+         "str": 14,
+         "sta": 13,
+         "source": "Dungeon",
+         "phase": "2",
+         "id": 18522
+      },
+      {
+         "name": "Band of Unnatural Forces",
+         "crit": 1,
+         "hit": 1,
+         "ap": 52,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 23038
+      },
+      {
+         "name": "Blackstone Ring",
+         "hit": 1,
+         "sta": 6,
+         "ap": 20,
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 17713
+      },
+      {
+         "name": "Circle of Applied Force",
+         "str": 12,
+         "sta": 9,
+         "agi": 22,
+         "source": "BWL",
+         "phase": "3",
+         "id": 19432
+      },
+      {
+         "name": "Don Julio's Band",
+         "crit": 1,
+         "hit": 1,
+         "sta": 11,
+         "ap": 16,
+         "source": "PVP",
+         "phase": "2",
+         "id": 19325
+      },
+      {
+         "name": "Magni's Will",
+         "crit": 1,
+         "str": 6,
+         "sta": 7,
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 12548
+      },
+      {
+         "name": "Master Dragonslayer's Ring",
+         "hit": 1,
+         "sta": 14,
+         "ap": 48,
+         "source": "BWL",
+         "phase": "3",
+         "id": 19384
+      },
+      {
+         "name": "Might of Cenarius",
+         "hit": 1,
+         "sta": 8,
+         "source": "Quest",
+         "phase": "5",
+         "id": 21189
+      },
+      {
+         "name": "Painweaver Band",
+         "crit": 1,
+         "sta": 7,
+         "ap": 16,
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 13098
+      },
+      {
+         "name": "Protector's Band",
+         "str": 12,
+         "sta": 8,
+         "agi": 11,
+         "source": "PVP",
+         "phase": 3,
+         "id": 19514
+      },
+      {
+         "name": "Quick Strike Ring",
+         "crit": 1,
+         "str": 5,
+         "sta": 8,
+         "ap": 30,
+         "source": "MC",
+         "phase": "1",
+         "id": 18821
+      },
+      {
+         "name": "Ring of Emperor Vek'lor",
+         "sta": 18,
+         "agi": 12,
+         "defense": 9,
+         "ac": 100,
+         "source": "AQ40",
+         "phase": "5",
+         "id": 21601
+      },
+      {
+         "name": "Ring of Fury",
+         "hit": 1,
+         "sta": 9,
+         "ap": 30,
+         "source": "AQ20",
+         "phase": "5",
+         "id": 21477
+      },
+      {
+         "name": "Ring of the Godslayer",
+         "sta": 17,
+         "agi": 27,
+         "source": "AQ40",
+         "phase": "5",
+         "id": 21596
+      },
+      {
+         "name": "Ring of the Qiraji Fury",
+         "crit": 1,
+         "sta": 12,
+         "ap": 40,
+         "source": "AQ40",
+         "phase": "5",
+         "id": 21677
+      },
+      {
+         "name": "Seal of Jin",
+         "crit": 1,
+         "sta": 8,
+         "ap": 20,
+         "source": "ZG",
+         "phase": "4",
+         "id": 19898
+      },
+      {
+         "name": "Seal of Jin + Band of Jin",
+         "crit": 1,
+         "hit": 1,
+         "sta": 16,
+         "agi": 14,
+         "ap": 50,
+         "source": "ZG",
+         "phase": "4",
+         "id": 198981
+      },
+      {
+         "name": "Seal of the Gurubashi Berserker",
+         "sta": 13,
+         "ap": 40,
+         "source": "ZG",
+         "phase": "4",
+         "id": 22722
+      },
+      {
+         "name": "Signet of the Fallen Defender",
+         "hit": 1,
+         "sta": 24,
+         "ac": 140,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 23018
+      },
+      {
+         "name": "Signet of Unyielding Strength",
+         "crit": 1,
+         "str": 11,
+         "sta": 14,
+         "source": "Quest",
+         "phase": "5",
+         "id": 21393
+      },
+      {
+         "name": "Signet Ring of the Bronze Dragonflight",
+         "hit": 1,
+         "sta": 13,
+         "agi": 24,
+         "source": "Quest",
+         "phase": "5",
+         "id": 21205
+      },
+      {
+         "name": "Tarnished Elven Ring",
+         "hit": 1,
+         "agi": 15,
+         "source": "Dungeon",
+         "phase": "2",
+         "id": 18500
+      }
+   ],
+   "trinket1": [
       {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
          "source": "ZG",
@@ -2420,7 +2663,118 @@ var gear = {
          "id": 19120
       },
       {
-         "name": "Seal of the Dawn",
+         "name": "Seal of the Dawn (vs Undead)",
+         "ap": 81,
+         "source": "Quest",
+         "phase": "1",
+         "id": 13209
+      },
+      {
+         "name": "Slayer's Crest (Used last 20 secs)",
+         "ap": 64,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 23041,
+      }
+   ],
+   "trinket2": [
+      {
+         "name": "Zandalarian Hero Medallion (Used last 20 secs)",
+         "source": "ZG",
+         "phase": "4",
+         "id": 19949
+      },
+      {
+         "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
+         "source": "AQ40",
+         "phase": "5",
+         "id": 21670
+      },
+      {
+         "name": "Blackhand's Breadth",
+         "crit": 2,
+         "source": "Quest",
+         "phase": "1",
+         "id": 13965
+      },
+      {
+         "name": "Counterattack Lodestone",
+         "ap": 22,
+         "parry": 1,
+         "source": "Dungeon",
+         "phase": "2",
+         "id": 18537
+      },
+      {
+         "name": "Darkmoon Card: Maelstrom (Assumed 2% proc chance)",
+         "source": "Quest",
+         "phase": "3",
+         "id": 19289,
+         "procchance": 2,
+         "magicdmg": 250,
+      },
+      {
+         "name": "Diamond Flask (Used last 60 secs)",
+         "source": "Quest",
+         "phase": "3",
+         "id": 20130,
+      },
+      {
+         "name": "Drake Fang Talisman",
+         "hit": 2,
+         "ap": 56,
+         "dodge": 1,
+         "source": "BWL",
+         "phase": "3",
+         "id": 19406
+      },
+      {
+         "name": "Earthstrike (Used last 20 secs)",
+         "source": "Quest",
+         "phase": "5",
+         "id": 21180,
+      },
+      {
+         "name": "Hand of Justice",
+         "ap": 20,
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 11815,
+         "procextra": 1,
+         "procchance": 2
+      },
+      {
+         "name": "Heart of Wyrmthalak (Assumed 2% proc chance)",
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 22321,
+         "procchance": 2,
+         "magicdmg": 165,
+      },
+      {
+         "name": "Jom Gabbar (Used last 20 secs)",
+         "source": "AQ40",
+         "phase": "5",
+         "id": 23570,
+      },
+      {
+         "name": "Kiss of the Spider (Used last 15 secs)",
+         "crit": 1,
+         "hit": 1,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 22954,
+      },
+      {
+         "name": "Rune of the Guard Captain",
+         "hit": 1,
+         "ap": 20,
+         "source": "Quest",
+         "phase": "1",
+         "id": 19120
+      },
+      {
+         "name": "Seal of the Dawn (vs Undead)",
          "ap": 81,
          "source": "Quest",
          "phase": "1",
