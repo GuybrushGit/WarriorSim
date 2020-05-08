@@ -2325,6 +2325,12 @@ var gear = {
    ],
    "trinket": [
       {
+         "name": "Zandalarian Hero Medallion (Used last 20 secs)",
+         "source": "ZG",
+         "phase": "4",
+         "id": 19949
+      },
+      {
          "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
          "source": "AQ40",
          "phase": "5",

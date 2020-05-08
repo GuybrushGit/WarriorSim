@@ -107,6 +107,7 @@ class Simulation {
                 else if (player.auras.earthstrike && player.auras.earthstrike.canUse() && step > this.twentystep) { player.spelldelay = 1; delayedspell = player.auras.earthstrike; }
                 else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
                 else if (player.auras.swarmguard && player.auras.swarmguard.canUse() && step > this.thirtystep) { player.spelldelay = 1; delayedspell = player.auras.swarmguard; }
+                else if (player.auras.zandalarian && player.auras.zandalarian.canUse() && step > this.twentystep) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
 
                 // Execute phase
                 else if (player.spells.execute && step >= this.executestep) {

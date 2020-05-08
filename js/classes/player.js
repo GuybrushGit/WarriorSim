@@ -74,6 +74,7 @@ class Player {
         if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
         if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
         if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
+        if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
         this.update();
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
@@ -391,8 +392,11 @@ class Player {
         let bonus = 0;
         if (this.auras.zeal && this.auras.zeal.timer)
             bonus += this.auras.zeal.stats.bonusdmg;
+        if (this.auras.zandalarian && this.auras.zandalarian.timer)
+            bonus += this.auras.zandalarian.stats.bonusdmg;
         this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
-        this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
+        if (this.oh)
+            this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
     }
     updateArmorReduction() {
         this.target.armor = this.target.basearmor;
@@ -516,6 +520,7 @@ class Player {
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.step();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
+        if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -544,6 +549,7 @@ class Player {
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.end();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
+        if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
@@ -751,6 +757,9 @@ class Player {
             }
             if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {
                 this.auras.swarmguard.proc();
+            }
+            if (this.auras.zandalarian && this.auras.zandalarian.timer) {
+                this.auras.zandalarian.proc();
             }
         }
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {

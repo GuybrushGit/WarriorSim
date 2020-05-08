@@ -977,3 +977,40 @@ class BloodrageAura extends Aura {
         return this.timer;
     }
 }
+
+class Zandalarian extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 20;
+        this.stats = { bonusdmg: 40 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.stats.bonusdmg = 40;
+        this.player.updateBonusDmg();
+        //if (log) this.player.log(`${this.name} applied`);
+    }
+    proc() {
+        this.stats.bonusdmg -= 2;
+        this.player.updateBonusDmg();
+        if (this.stats.bonusdmg <= 0) {
+            this.timer = step;
+            this.step();
+        }
+        //this.player.log(`${this.name} proc ${this.stats.bonusdmg} `);
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateBonusDmg();
+            //if (log) this.player.log(`${this.name} removed`);
+        }
+    }
+}
