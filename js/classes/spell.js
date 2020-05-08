@@ -988,7 +988,8 @@ class Zandalarian extends Aura {
         this.stats = { bonusdmg: 40 };
     }
     use() {
-        if (this.timer) this.uptime += (step - this.starttimer);
+        this.player.timer = 1500;
+        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.stats.bonusdmg = 40;
