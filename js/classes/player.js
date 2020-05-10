@@ -130,7 +130,7 @@ class Player {
                         this.attackproc.magicdmg = item.magicdmg;
                     }
                     
-                    if (item.procchance && type == "trinket") {
+                    if (item.procchance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
                         proc.chance = item.procchance * 100;
                         proc.extra = item.procextra;

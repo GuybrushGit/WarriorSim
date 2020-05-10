@@ -676,7 +676,6 @@ SIM.UI = {
         var view = this;
 
         var max = 1;
-        if (type == 'trinket' || type == 'finger') max = 2;
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="${max}">
                         <thead>
                             <tr>
