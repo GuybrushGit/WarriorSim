@@ -6686,7 +6686,7 @@ var sets = [
       id: 218,
       items: [16959, 16966, 16964, 16963, 16962, 16961, 16965, 16960],
       bonus: [
-         { count: 3, stats: { ap: 30 } }
+         { count: 3, stats: { enhancedbs: true  } }
       ]
    },
    {

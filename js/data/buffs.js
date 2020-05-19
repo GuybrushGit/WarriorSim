@@ -14,7 +14,14 @@ var buffs = [
       iconname: "Ability_Warrior_BattleShout",
       group: "battleshout",
       ap: 193,
-      disableSpell: "battleshout"
+   },
+   {
+      id: 23563,
+      spellid: true,
+      name: "Enhanced Battle Shout",
+      iconname: "Ability_Warrior_BattleShout",
+      group: "battleshout",
+      ap: 223,
    },
    {
       id: 22888,
@@ -42,14 +49,6 @@ var buffs = [
       iconname: "inv_misc_orb_02",
       group: "darkfortune",
       dmgmod: 10,
-   },
-   {
-      id: 23735,
-      spellid: true,
-      name: "Sayge's Dark Fortune of Strength",
-      iconname: "inv_misc_orb_02",
-      group: "darkfortune",
-      strmod: 10,
    },
    {
       id: 22817,
@@ -244,13 +243,6 @@ var buffs = [
       group: "",
       hit: 2
    },
-   // {
-   //    id: 27666,
-   //    spellid: true,
-   //    name: "Darnassus Gift of Friendship",
-   //    iconname: "inv_holiday_christmas_present_02",
-   //    agi: 30,
-   // },
    {
       id: 23513,
       spellid: true,
@@ -258,13 +250,5 @@ var buffs = [
       iconname: "spell_fire_lavaspawn",
       group: "vaelbuff",
    },
-   // {
-   //    id: 26393,
-   //    spellid: true,
-   //    name: "Elune's Blessing",
-   //    iconname: "inv_misc_gem_pearl_02",
-   //    strmod: 10,
-   //    agimod: 10,
-   // },
    
 ];

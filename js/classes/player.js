@@ -242,6 +242,9 @@ class Player {
                         this.auras[bonus.stats.procspell.toLowerCase()] = eval('new ' + bonus.stats.procspell + '(this)');
                         this.attackproc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
                     }
+                    if (bonus.stats.enhancedbs) {
+                        this.enhancedbs = true;
+                    }
                 }
             }
         }
@@ -251,8 +254,10 @@ class Player {
             if (buff.active) {
                 let apbonus = 0;
                 if (buff.group == "battleshout") {
-                    apbonus = ~~((this.aqbooks ? 232 : buff.ap) * this.talents.impbattleshout);
-                    if (this.aqbooks) apbonus += 39;
+                    let shoutap = this.aqbooks ? buff.ap + 39 : buff.ap;
+                    if (buff.id == 27578 && this.enhancedbs) shoutap += 30;
+                    shoutap = ~~(shoutap * (1 + this.talents.impbattleshout));
+                    apbonus = shoutap - buff.ap;
                 }
                 if (buff.group == "zerkstance")
                     this.zerkstance = true;

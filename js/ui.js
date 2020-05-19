@@ -251,6 +251,7 @@ SIM.UI = {
                 dps.text(calc.toFixed(2)).append(span);
 
                 view.tcontainer.find('table').each(function() {
+                    if (type == "custom") return;
                     $(this).trigger('update');
                     let sortList = [[$(this).find('th').length - 1, 1]];
                     $(this).trigger("sorton", [sortList]);
