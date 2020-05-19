@@ -436,6 +436,18 @@ SIM.UI = {
         view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohdmg.toFixed(2) + '% <small>OH</small>' : ''));
         view.sidebar.find('#haste').html((player.stats.haste * 100).toFixed(2) + '%');
         view.sidebar.find('#race').text(localStorage.race);
+        view.sidebar.find('#sets').empty();
+
+        for (let set of sets) {
+            let counter = 0;
+            for (let item of set.items)
+                if (player.items.includes(item))
+                    counter++;
+            if (counter == 0)
+                continue;
+            if (counter >= set.bonus[0].count)
+                view.sidebar.find('#sets').append(`<a href="https://classic.wowhead.com/item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
+        }
     },
 
     updateSession: function () {

@@ -102,9 +102,9 @@ class Overpower extends Spell {
             this.player.auras.battlestance.use();
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer && (this.player.rage <= this.threshold &&
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer && this.player.rage <= this.threshold &&
             ((this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
-            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)));
+            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
