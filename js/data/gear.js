@@ -3046,7 +3046,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19852,
-         "magicdmg": 56
+         "magicdmg": 56,
+         "coeff": 1
       },
       {
          "name": "Annihilator",
@@ -3840,7 +3841,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19908,
-         "magicdmg": 78
+         "magicdmg": 78,
+         "coeff": 1
       },
       {
          "name": "Spineshatter",
@@ -4184,7 +4186,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19901,
-         "magicdmg": 84
+         "magicdmg": 84,
+         "coeff": 1,
       },
       {
          "name": "Teebu's Blazing Longsword",
@@ -4337,7 +4340,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19852,
-         "magicdmg": 56
+         "magicdmg": 56,
+         "coeff": 1,
       },
       {
          "name": "Blessed Qiraji War Axe",
@@ -4990,7 +4994,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19908,
-         "magicdmg": 78
+         "magicdmg": 78,
+         "coeff": 1
       },
       {
          "name": "Stormstrike Hammer",
@@ -5241,7 +5246,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19901,
-         "magicdmg": 84
+         "magicdmg": 84,
+         "coeff": 1
       },
       {
          "name": "The Hungering Cold",

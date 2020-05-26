@@ -467,6 +467,7 @@ SIM.UI = {
         localStorage.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
         localStorage.aqbooks = view.fight.find('select[name="aqbooks"]').val();
         localStorage.weaponrng = view.fight.find('select[name="weaponrng"]').val();
+        localStorage.spelldamage = view.fight.find('input[name="spelldamage"]').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });

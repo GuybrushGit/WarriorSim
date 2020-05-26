@@ -250,5 +250,13 @@ var buffs = [
       iconname: "spell_fire_lavaspawn",
       group: "vaelbuff",
    },
+   {
+      id: 12217,
+      name: "Dragonbreath Chili",
+      iconname: "inv_drink_17",
+      group: "dragonbreath",
+   },
+   
+   
    
 ];

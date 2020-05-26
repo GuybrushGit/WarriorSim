@@ -11,6 +11,7 @@ class Player {
         this.nextswingcl = false;
         this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
         this.weaponrng = $('select[name="weaponrng"]').val() == "Yes";
+        this.spelldamage = parseInt($('input[name="spelldamage"]').val());
         if (enchtype == 1) {
             this.testEnch = testItem;
             this.testEnchType = testType;
@@ -263,6 +264,8 @@ class Player {
                     this.zerkstance = true;
                 if (buff.group == "vaelbuff")
                     this.vaelbuff = true;
+                if (buff.group == "dragonbreath")
+                    this.dragonbreath = true;
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;
@@ -770,6 +773,9 @@ class Player {
             if (this.auras.zandalarian && this.auras.zandalarian.timer) {
                 this.auras.zandalarian.proc();
             }
+            if (this.dragonbreath && rng10k() < 400) {
+                procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
+            }
         }
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
             if (this.auras.flurry && this.auras.flurry.stacks)
@@ -782,11 +788,13 @@ class Player {
     magicproc(proc) {
         let mod = 1;
         let miss = 1700;
+        let dmg = proc.magicdmg;
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
         if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1.5;
-        return ~~(proc.magicdmg * mod);
+        if (proc.coeff) dmg += this.spelldamage * proc.coeff;
+        return ~~(dmg * mod);
     }
     physproc(dmg) {
         let tmp = 0;
