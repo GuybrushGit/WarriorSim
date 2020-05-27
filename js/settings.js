@@ -179,10 +179,8 @@ SIM.SETTINGS = {
             <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
             </div><ul class="options"></ul></div>`);
 
-            if (spell.time == -1)
-                div.find('.options').append('<li>Used on cooldown</li>');
-            if (spell.time > -1)
-                div.find('.options').append(`<li>Use at <input type="text" name="time" value="${spell.time}" data-numberonly="true" /> seconds</li>`);
+            if (spell.timetoend !== undefined)
+                div.find('.options').append(`<li>Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds</li>`);
             if (spell.minrage !== undefined)
                 div.find('.options').append(`<li>Use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
             if (spell.maxrage !== undefined)
