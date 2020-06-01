@@ -8,7 +8,7 @@ var RESULT = {
 
 var step = 0;
 var log = false;
-var version = 2;
+var version = 3;
 
 class Simulation {
     constructor(player, callback_finished, callback_update) {

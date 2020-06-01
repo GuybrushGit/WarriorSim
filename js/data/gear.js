@@ -2899,7 +2899,7 @@ var gear = {
          "str": 5,
          "sta": 5,
          "agi": 7,
-         "source": "AQ40",
+         "source": "AQ20",
          "phase": "5",
          "id": 21459
       },

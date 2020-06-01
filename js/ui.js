@@ -894,20 +894,12 @@ SIM.UI = {
     },
 
     newVersion: function() {
-        
+        var view = this;
+
         localStorage.version = version;
 
-        for (let type in gear) {
-            for (let item of gear[type]) {
-                item.dps = undefined;
-            }
-        }
-        for (let type in enchant) {
-            for (let item of enchant[type]) {
-                item.dps = undefined;
-            }
-        }
-
+        if (!view.filter.find(`.phases [data-id="4"]`).hasClass('active'))
+            setTimeout(() => { view.filter.find(`.phases [data-id="4"]`).click() }, 100);
 
     }
     
