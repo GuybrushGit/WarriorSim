@@ -806,17 +806,16 @@ class Swarmguard extends Aura {
         this.armor = 200;
         this.stacks = 0;
         this.chance = 5000;
+        this.timetoend = 30000;
     }
     use() {
-        this.player.timer = 1500;
-        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.stacks = 0;
         //if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && step >= this.usestep;
     }
     proc() {
         this.stacks = Math.min(this.stacks + 1, 6);

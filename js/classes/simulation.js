@@ -59,7 +59,6 @@ class Simulation {
         if (player.auras.gabbar) { this.gabbarstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
         if (player.auras.earthstrike) { this.earthstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
         if (player.auras.pummeler) { this.pummelstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
-        if (player.auras.swarmguard) { this.swarmstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
         if (player.auras.zandalarian) { this.zandalarstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
 
         if (player.auras.deathwish) { player.auras.deathwish.usestep = Math.max(this.maxsteps - player.auras.deathwish.timetoend, 0); }
@@ -67,6 +66,7 @@ class Simulation {
         if (player.auras.mightyragepotion) { player.auras.mightyragepotion.usestep = Math.max(this.maxsteps - player.auras.mightyragepotion.timetoend, 0); }
         if (player.auras.berserking) { player.auras.berserking.usestep = Math.max(this.maxsteps - player.auras.berserking.timetoend, 0); }
         if (player.auras.bloodfury) { player.auras.bloodfury.usestep = Math.max(this.maxsteps - player.auras.bloodfury.timetoend, 0); }
+        if (player.auras.swarmguard) { player.auras.swarmguard.usestep = Math.max(this.maxsteps - player.auras.swarmguard.timetoend, 0); }
 
 
         //if (log) console.log(' TIME |   RAGE | EVENT')
@@ -99,9 +99,10 @@ class Simulation {
             if (spellcheck && !player.spelldelay) {
 
                 // No GCD
-                if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
+                if (player.auras.swarmguard && player.auras.swarmguard.canUse()) { player.spelldelay = 1; delayedspell = player.auras.swarmguard; }
                 else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mightyragepotion; }
-
+                else if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
+                
                 // GCD spells
                 else if (player.timer) { }
                 else if (player.auras.flask && player.auras.flask.canUse() && step > this.flaskstep) { player.spelldelay = 1; delayedspell = player.auras.flask; }
@@ -116,7 +117,6 @@ class Simulation {
                 else if (player.auras.gabbar && player.auras.gabbar.canUse() && step > this.gabbarstep) { player.spelldelay = 1; delayedspell = player.auras.gabbar; }
                 else if (player.auras.earthstrike && player.auras.earthstrike.canUse() && step > this.earthstep) { player.spelldelay = 1; delayedspell = player.auras.earthstrike; }
                 else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.pummelstep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
-                else if (player.auras.swarmguard && player.auras.swarmguard.canUse() && step > this.swarmstep) { player.spelldelay = 1; delayedspell = player.auras.swarmguard; }
                 else if (player.auras.zandalarian && player.auras.zandalarian.canUse() && step > this.zandalarstep) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
 
                 // Execute phase
