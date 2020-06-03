@@ -327,6 +327,14 @@ var gear = {
          "source": "Quest",
          "phase": 1,
          "id": 17044
+      },
+      {
+         "name": "Emberfury Talisman",
+         "crit": 1,
+         "sta": 8,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 12929
       }
    ],
    "shoulder": [
