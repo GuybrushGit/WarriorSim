@@ -329,6 +329,41 @@ var gear = {
          "id": 17044
       },
       {
+         "name": "Strength of Mugamba (friendly)",
+         "str": 7,
+         "sta": 10,
+         "source": "ZG",
+         "phase": 4,
+         "id": 19574
+      },
+      {
+         "name": "Strength of Mugamba (honored)",
+         "str": 7,
+         "sta": 10,
+         "agi": 6,
+         "source": "ZG",
+         "phase": 4,
+         "id": 19575
+      },
+      {
+         "name": "Strength of Mugamba (revered)",
+         "str": 8,
+         "sta": 13,
+         "agi": 8,
+         "source": "ZG",
+         "phase": 4,
+         "id": 19576
+      },
+      {
+         "name": "Rage of Mugamba",
+         "str": 8,
+         "sta": 13,
+         "agi": 8,
+         "source": "ZG",
+         "phase": 4,
+         "id": 19577
+      },
+      {
          "name": "Emberfury Talisman",
          "crit": 1,
          "sta": 8,
