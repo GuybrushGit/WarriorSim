@@ -329,7 +329,7 @@ var gear = {
          "id": 17044
       },
       {
-         "name": "Strength of Mugamba (friendly)",
+         "name": "Strength of Mugamba (Friendly)",
          "str": 7,
          "sta": 10,
          "source": "ZG",
@@ -337,7 +337,7 @@ var gear = {
          "id": 19574
       },
       {
-         "name": "Strength of Mugamba (honored)",
+         "name": "Strength of Mugamba (Honored)",
          "str": 7,
          "sta": 10,
          "agi": 6,
@@ -346,7 +346,7 @@ var gear = {
          "id": 19575
       },
       {
-         "name": "Strength of Mugamba (revered)",
+         "name": "Strength of Mugamba (Revered)",
          "str": 8,
          "sta": 13,
          "agi": 8,

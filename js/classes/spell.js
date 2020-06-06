@@ -254,6 +254,7 @@ class Hamstring extends Spell {
         this.cost = 10;
         this.threshold = parseInt(spells[18].minrage);
         this.maxdelay = parseInt(spells[18].reaction);
+        if (player.items.includes(19577)) this.cost -= 2;
     }
     dmg() {
         return 45;
