@@ -535,6 +535,15 @@ var gear = {
          "source": "AQ40",
          "phase": 5,
          "id": 21665
+      },
+      {
+         "name": "Darksoul Shoulders",
+         "hit": 1,
+         "sta": 24,
+         "ac": 507,
+         "source": "Crafting",
+         "phase": 4,
+         "id": 19695
       }
    ],
    "back": [
@@ -1000,6 +1009,15 @@ var gear = {
          "source": "AQ40",
          "phase": 5,
          "id": 21680
+      },
+      {
+         "name": "Darksoul Breastplate",
+         "hit": 1,
+         "sta": 32,
+         "ac": 736,
+         "source": "Crafting",
+         "phase": 4,
+         "id": 19693
       }
    ],
    "wrist": [
@@ -1852,6 +1870,15 @@ var gear = {
          "source": "Crafting",
          "phase": 5,
          "id": 22385
+      },
+      {
+         "name": "Darksoul Leggings",
+         "hit": 2,
+         "sta": 22,
+         "ac": 722,
+         "source": "Crafting",
+         "phase": 4,
+         "id": 19694
       }
    ],
    "feet": [
