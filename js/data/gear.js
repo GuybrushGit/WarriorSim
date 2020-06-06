@@ -752,6 +752,15 @@ var gear = {
          "source": "Other",
          "phase": 4,
          "id": 20691
+      },
+      {
+         "name": "Might of the Tribe",
+         "sta": 18,
+         "ap": 28,
+         "ac": 48,
+         "source": "ZG",
+         "phase": 4,
+         "id": 22712
       }
    ],
    "chest": [
