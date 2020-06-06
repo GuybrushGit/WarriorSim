@@ -15,7 +15,9 @@
     "gulp-minify": "^3.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp sass && gulp js",
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC"
