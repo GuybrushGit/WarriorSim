@@ -564,6 +564,8 @@ class Player {
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.end();
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.end();
 
+        if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
+
     }
     rollweapon(weapon) {
         let tmp = 0;

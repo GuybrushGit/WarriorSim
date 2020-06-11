@@ -298,6 +298,7 @@ class Aura {
     end() {
         this.uptime += (step - this.starttimer);
         this.timer = 0;
+        this.stacks = 0;
     }
 }
 
