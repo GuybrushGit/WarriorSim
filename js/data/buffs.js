@@ -256,6 +256,14 @@ var buffs = [
       iconname: "inv_drink_17",
       group: "dragonbreath",
    },
+   {
+      id: 29338,
+      spellid: true,
+      name: "Fire Festival Fury",
+      iconname: "inv_misc_summerfest_brazierorange",
+      crit: 3,
+      spellcrit: 3,
+   },
    
    
    
