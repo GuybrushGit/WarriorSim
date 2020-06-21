@@ -244,6 +244,13 @@ var buffs = [
       hit: 2
    },
    {
+      id: 23327,
+      name: "Fire-toasted Bun",
+      iconname: "inv_misc_food_11",
+      group: "",
+      hit: 2
+   },
+   {
       id: 23513,
       spellid: true,
       name: "Essence of the Red",
@@ -264,7 +271,6 @@ var buffs = [
       crit: 3,
       spellcrit: 3,
    },
-   
    
    
 ];
