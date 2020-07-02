@@ -8,6 +8,14 @@ var buffs = [
       group: "zerkstance",
    },
    {
+      id: 71,
+      spellid: true,
+      name: "Defensive Stance",
+      iconname: "ability_warrior_defensivestance",
+      dmgmod: -10,
+      group: "zerkstance",
+   },
+   {
       id: 27578,
       spellid: true,
       name: "Battle Shout",
