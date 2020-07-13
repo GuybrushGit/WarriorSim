@@ -426,6 +426,16 @@ var gear = {
          "id": 19878
       },
       {
+         "name": "Chitinous Shoulderguards",
+         "str": 11,
+         "sta": 7,
+         "agi": 25,
+         "ac": 151,
+         "source": "AQ20",
+         "phase": 5,
+         "id": 21474
+      },
+      {
          "name": "Conqueror's Spaulders",
          "hit": 1,
          "str": 20,
