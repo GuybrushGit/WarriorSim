@@ -348,13 +348,11 @@ class Player {
 
         if (this.stats.apmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
-        if (this.stats.haste > 2) 
-            this.stats.haste = 2;
     }
     updateStrength() {
         this.stats.str = this.base.str;
         this.stats.ap = this.base.ap;
-            
+        
         for (let name in this.auras) {
             if (this.auras[name].timer) {
                 if (this.auras[name].stats.str)
@@ -394,7 +392,6 @@ class Player {
             this.stats.haste *= (1 + this.auras.pummeler.mult_stats.haste / 100);
         if (this.auras.spider && this.auras.spider.timer)
             this.stats.haste *= (1 + this.auras.spider.mult_stats.haste / 100);
-        if (this.stats.haste > 2) this.stats.haste = 2;
     }
     updateBonusDmg() {
         let bonus = 0;
