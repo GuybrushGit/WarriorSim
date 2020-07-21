@@ -3152,6 +3152,18 @@ var gear = {
          "procspell": "Annihilator"
       },
       {
+         "name": "Rivenspike",
+         "mindmg": 77,
+         "maxdmg": 144,
+         "speed": 2.9,
+         "type": "Axe",
+         "source": "Dungeon",
+         "ppm": 1,
+         "phase": 1,
+         "id": 13286,
+         "procspell": "Rivenspike"
+      },
+      {
          "name": "Axe of the Deep Woods",
          "Mainhand": true,
          "mindmg": 78,
@@ -5450,6 +5462,18 @@ var gear = {
          "id": 18683,
          "str": 7,
          "sta": 12,
+      },
+      {
+         "name": "Rivenspike",
+         "mindmg": 77,
+         "maxdmg": 144,
+         "speed": 2.9,
+         "type": "Axe",
+         "source": "Dungeon",
+         "ppm": 1,
+         "phase": 1,
+         "id": 13286,
+         "procspell": "Rivenspike"
       }
    ],
    "twohand": [
