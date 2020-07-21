@@ -319,8 +319,8 @@ class Player {
     }
     update() {
         this.updateAuras();
+        this.updateArmorReduction();
         this.mh.glanceChance = this.getGlanceChance(this.mh);
-        this.armorReduction = this.getArmorReduction();
         this.mh.miss = this.getMissChance(this.mh);
         this.mh.dwmiss = this.mh.miss;
         this.mh.dodge = this.getDodgeChance(this.mh);
