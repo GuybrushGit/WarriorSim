@@ -794,6 +794,7 @@ class Player {
         let mod = 1;
         let miss = 1700;
         let dmg = proc.magicdmg;
+        if (proc.gcd && this.timer && this.timer < 1500) return 0;
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
