@@ -897,6 +897,8 @@ SIM.UI = {
 
         if (!view.filter.find(`.phases [data-id="4"]`).hasClass('active'))
             setTimeout(() => { view.filter.find(`.phases [data-id="4"]`).click() }, 100);
+        if (!view.filter.find(`.phases [data-id="5"]`).hasClass('active'))
+            setTimeout(() => { view.filter.find(`.phases [data-id="5"]`).click() }, 100);
 
     }
     

@@ -8,7 +8,7 @@ var RESULT = {
 
 var step = 0;
 var log = false;
-var version = 3;
+var version = 4;
 
 const TYPE = {
     UPDATE: 0,
