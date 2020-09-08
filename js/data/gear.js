@@ -5804,7 +5804,7 @@ var gear = {
          "phase": 4,
          "type": "Mace",
          "physdmg": 210,
-         "ppm": 1,
+         "ppm": 4,
       },
       {
          "name": "Might of Menethil",
