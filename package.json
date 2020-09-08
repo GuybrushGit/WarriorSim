@@ -3,21 +3,18 @@
   "version": "1.0.0",
   "description": "WarriorSim",
   "main": "main.js",
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-sass": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2"
   },
-  "devDependencies": {
-    "gulp-minify": "^3.1.0"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp sass && gulp js",
-    "gulp": "gulp"
+    "dist": "gulp sass && gulp js",
+    "dev": "gulp"
   },
   "author": "",
   "license": "ISC"

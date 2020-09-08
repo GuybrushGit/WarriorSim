@@ -3181,7 +3181,8 @@ var gear = {
          "ppm": 0.8,
          "phase": 1,
          "id": 811,
-         "magicdmg": 108
+         "magicdmg": 108,
+         "procgcd": true,
       },
       {
          "name": "Blessed Qiraji War Axe",
@@ -3242,7 +3243,8 @@ var gear = {
          "ppm": 0.8,
          "phase": 1,
          "id": 17068,
-         "magicdmg": 138
+         "magicdmg": 138,
+         "procgcd": true,
       },
       {
          "name": "Doom's Edge",
@@ -3549,7 +3551,8 @@ var gear = {
          "phase": 1,
          "id": 17071,
          "magicdmg": 82,
-         "binaryspell": true
+         "binaryspell": true,
+         "procgcd": true
       },
       {
          "name": "Harbinger of Doom",
@@ -3832,7 +3835,8 @@ var gear = {
          "ppm": 0.4,
          "phase": 3,
          "id": 19170,
-         "magicdmg": 220
+         "magicdmg": 220,
+         "procgcd": true,
       },
       {
          "name": "Empyrean Demolisher",
@@ -4498,7 +4502,8 @@ var gear = {
          "ppm": 0.8,
          "phase": 1,
          "id": 17068,
-         "magicdmg": 138
+         "magicdmg": 138,
+         "procgcd": true,
       },
       {
          "name": "Doom's Edge",
@@ -4795,7 +4800,8 @@ var gear = {
          "phase": 1,
          "id": 17071,
          "magicdmg": 82,
-         "binaryspell": true
+         "binaryspell": true,
+         "procgcd": true
       },
       {
          "name": "Harbinger of Doom",
@@ -4958,7 +4964,8 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19910,
-         "magicdmg": 77
+         "magicdmg": 77,
+         "procgcd": true
       },
       {
          "name": "Claw of the Frost Wyrm",
@@ -5051,7 +5058,8 @@ var gear = {
          "ppm": 0.4,
          "phase": 3,
          "id": 19170,
-         "magicdmg": 220
+         "magicdmg": 220,
+         "procgcd": true,
       },
       {
          "name": "R14 Hammer",
@@ -5796,7 +5804,7 @@ var gear = {
          "phase": 4,
          "type": "Mace",
          "physdmg": 210,
-         "ppm": 1,
+         "ppm": 4,
       },
       {
          "name": "Might of Menethil",
@@ -5834,6 +5842,7 @@ var gear = {
          "type": "Mace",
          "ppm": 0.7,
          "magicdmg": 333,
+         "procgcd": true
       },
       {
          "name": "Sulfuron Hammer",
@@ -5846,6 +5855,7 @@ var gear = {
          "type": "Mace",
          "ppm": 1,
          "magicdmg": 101,
+         "procgcd": true
       },
       {
          "name": "The Unstoppable Force",

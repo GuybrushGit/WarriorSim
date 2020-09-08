@@ -646,6 +646,7 @@ class Zeal extends Aura {
         this.stats = { bonusdmg: 10 };
     }
     use() {
+        if (this.player.timer && this.player.timer < 1500) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;

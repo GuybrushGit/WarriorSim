@@ -10,14 +10,55 @@ var step = 0;
 var log = false;
 var version = 3;
 
+const TYPE = {
+    UPDATE: 0,
+    FINISHED: 1
+}
+
+class SimulationWorker {
+    constructor(callback_finished, callback_update, callback_error) {
+        this.worker = new Worker('./dist/js/sim-worker.min.js');
+        this.worker.onerror = callback_error;
+        this.worker.onmessage = (event) => {
+            const [type, ...args] = event.data;
+            switch (type) {
+                case TYPE.UPDATE:
+                    callback_update(...args);
+                    break;
+                case TYPE.FINISHED:
+                    callback_finished(...args);
+                    break;
+                default:
+                    callback_error(`Unexpected type: ${type}`);
+            }
+        };
+    }
+
+    start(params) {
+        params.globals = getGlobalsDelta();
+        this.worker.postMessage(params);
+    }
+}
+
 class Simulation {
-    constructor(player, callback_finished, callback_update) {
+    static getConfig() {
+        return {
+            timesecsmin: parseInt($('input[name="timesecsmin"]').val()),
+            timesecsmax: parseInt($('input[name="timesecsmax"]').val()),
+            executeperc: parseInt($('input[name="executeperc"]').val()),
+            startrage: parseInt($('input[name="startrage"]').val()),
+            iterations: parseInt($('input[name="simulations"]').val()),
+            priorityap: parseInt(spells[4].priorityap),
+        };
+    }
+    constructor(player, callback_finished, callback_update, config) {
+        if (!config) config = Simulation.getConfig();
         this.player = player;
-        this.timesecsmin = parseInt($('input[name="timesecsmin"]').val());
-        this.timesecsmax = parseInt($('input[name="timesecsmax"]').val());
-        this.executeperc = parseInt($('input[name="executeperc"]').val());
-        this.startrage = parseInt($('input[name="startrage"]').val());
-        this.iterations = parseInt($('input[name="simulations"]').val());
+        this.timesecsmin = config.timesecsmin;
+        this.timesecsmax = config.timesecsmax;
+        this.executeperc = config.executeperc;
+        this.startrage = config.startrage;
+        this.iterations = config.iterations;
         this.idmg = 0;
         this.totaldmg = 0;
         this.totalduration = 0;
@@ -34,11 +75,35 @@ class Simulation {
         if (this.iterations == 1) log = true;
         else log = false;
     }
-    start() {
-        this.run(1);
+    startSync() {
         this.starttime = new Date().getTime();
+        let iteration;
+        for (iteration = 1; iteration < this.iterations; ++iteration) {
+            this.run();
+            if (iteration % this.maxcallstack == 0) {
+                this.update(iteration);
+            }
+        }
+        this.endtime = new Date().getTime();
+        this.finished();
     }
-    run(iteration) {
+    startAsync() {
+        this.starttime = new Date().getTime();
+        this.runAsync(1);
+    }
+    runAsync(iteration) {
+        this.run();
+        if (iteration == this.iterations) {
+            this.endtime = new Date().getTime();
+            this.finished();
+        } else if (iteration % this.maxcallstack == 0) {
+            this.update(iteration);
+            setTimeout(() => this.runAsync(iteration + 1), 0);
+        } else {
+            this.runAsync(iteration + 1);
+        }
+    }
+    run() {
         step = 0;
         this.idmg = 0;
         let player = this.player;
@@ -262,20 +327,27 @@ class Simulation {
         dps = Math.round(dps);
         if (!this.spread[dps]) this.spread[dps] = 1;
         else this.spread[dps]++;
-
-        if (iteration == this.iterations) {
-            this.endtime = new Date().getTime();
-            if (this.cb_finished)
-                this.cb_finished();
+    }
+    update(iteration) {
+        if (this.cb_update) {
+            this.cb_update(iteration, {
+                iterations: this.iterations,
+                totaldmg: this.totaldmg,
+                totalduration: this.totalduration,
+            });
         }
-        else if (iteration % this.maxcallstack == 0) {
-            let view = this;
-            if (this.cb_update)
-                this.cb_update(iteration);
-            setTimeout(function () { view.run(iteration + 1); }, 0);
-        }
-        else {
-            this.run(iteration + 1);
+    }
+    finished() {
+        if (this.cb_finished) {
+            this.cb_finished({
+                iterations: this.iterations,
+                totaldmg: this.totaldmg,
+                totalduration: this.totalduration,
+                mindps: this.mindps,
+                maxdps: this.maxdps,
+                starttime: this.starttime,
+                endtime: this.endtime,
+            });
         }
     }
 }
