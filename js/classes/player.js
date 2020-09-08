@@ -292,6 +292,13 @@ class Player {
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+
+                if (buff.group == "blessingmight" && this.aqbooks)
+                    this.base.ap += 36;
+                if (buff.group == "graceair" && this.aqbooks)
+                    this.base.agi += 10;
+                if (buff.group == "strengthearth" && this.aqbooks)
+                    this.base.str += 16;
             }
         }
     }
