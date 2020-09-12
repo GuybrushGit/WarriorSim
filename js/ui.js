@@ -1,3 +1,5 @@
+const MAX_WORKERS = navigator.hardwareConcurrency || 8;
+
 var SIM = SIM || {}
 
 SIM.UI = {
@@ -239,21 +241,46 @@ SIM.UI = {
         var view = this;
         var btn = view.sidebar.find('.js-table');
 
-        const status = rows.map(() => 0);
-        const updateFn = (index, rowPerc) => {
-            status[index] = rowPerc;
-            const perc = Math.floor(status.reduce((a, b) => a + b, 0) / status.length);
-            if (perc == 100) {
-                btn.css('background', '');
-                view.endLoading();
-                view.updateSession();
-            } else {
-                btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
-            }
-        };
+        const simulations = rows.map((row) => {
+            const simulation = { perc: 0 };
+            simulation.run = () => {
+                // Remove from pending simulations
+                pending.delete(simulation);
 
-        for (const [index, row] of rows.entries()) {
-            this.simulateRow($(row), (rowPerc) => updateFn(index, rowPerc));
+                // Start simulation
+                this.simulateRow($(row), (perc) => {
+                    // Update row percentage
+                    simulation.perc = perc;
+
+                    // Update total percentage
+                    const total = Math.floor(
+                        Array.from(simulations.values())
+                            .map((sim) => sim.perc)
+                            .reduce((a, b) => a + b, 0) / rows.length
+                    );
+                    if (total == 100) {
+                        btn.css('background', '');
+                        view.endLoading();
+                        view.updateSession();
+                    } else {
+                        btn.css('background', 'linear-gradient(to right, transparent ' + total + '%, #444 ' + total + '%)');
+                    }
+
+                    // If simulation complete, run another pending simulation (if any)
+                    if (simulation.perc == 100) {
+                        const next = pending.values().next().value;
+                        if (next) {
+                            next.run();
+                        }
+                    }
+                });
+            };
+            return simulation;
+        });
+        const pending = new Set(simulations);
+
+        for (const simulation of simulations.slice(0, MAX_WORKERS)) {
+            simulation.run();
         }
     },
 
