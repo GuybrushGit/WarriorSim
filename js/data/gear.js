@@ -186,6 +186,47 @@ var gear = {
          "source": "PVP",
          "phase": 2,
          "id": 16478
+      },
+      {
+         "name": "Foror's Eyepatch",
+         "crit": 2,
+         "sta": 19,
+         "ap": 44,
+         "ac": 160,
+         "source": "ZG",
+         "phase": 3,
+         "id": 19945
+      },
+      {
+         "name": "Blooddrenched Mask",
+         "hit": 2,
+         "agi": 22,
+         "sta": 17,
+         "ac": 153,
+         "source": "ZG",
+         "phase": 4,
+         "id": 22718
+      },
+      {
+         "name": "Southwind Helm",
+         "hit": 1,
+         "str": 21,
+         "sta": 14,
+         "agi": 24,
+         "ac": 164,
+         "source": "AQ20",
+         "phase": 5,
+         "id": 21455
+      },
+      {
+         "name": "Ragefury Eyepatch",
+         "crit": 2,
+         "str": 6,
+         "sta": 9,
+         "ac": 132,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 11735
       }
    ],
    "neck": [
