@@ -960,6 +960,15 @@ var gear = {
          "id": 16730
       },
       {
+         "name": "Breastplate of Undead Slaying (vs Undead)",
+         "sta": 20,
+         "ac": 657,
+         "ap": 81,
+         "source": "Other",
+         "phase": 6,
+         "id": 23087
+      },
+      {
          "name": "Breastplate of Wrath",
          "str": 17,
          "sta": 40,
@@ -1204,6 +1213,15 @@ var gear = {
          "id": 16861
       },
       {
+         "name": "Bracers of Undead Slaying (vs Undead)",
+         "sta": 10,
+         "ac": 287,
+         "ap": 45,
+         "source": "Other",
+         "phase": 6,
+         "id": 23090
+      },
+      {
          "name": "Bracers of Valor",
          "str": 7,
          "sta": 14,
@@ -1407,6 +1425,15 @@ var gear = {
          "source": "AQ20",
          "phase": 5,
          "id": 21479
+      },
+      {
+         "name": "Gauntlets of Undead Slaying (vs Undead)",
+         "sta": 15,
+         "ac": 410,
+         "ap": 60,
+         "source": "Quest",
+         "phase": 6,
+         "id": 23078
       },
       {
          "name": "Gauntlets of Valor",
@@ -6851,6 +6878,14 @@ var sets = [
       ]
    },
    {
+      id: 533,
+      name: 'Battlegear of Undead Slaying (vs Undead)',
+      items: [23078, 23087, 23090],
+      bonus: [
+         { count: 3, stats: { dmgmod: .02 } }
+      ]
+   },
+   {
       id: 189,
       name: 'Battlegear of Valor',
       items: [16736, 16734, 16735, 16730, 16737, 16731, 16732, 16733],
@@ -6948,7 +6983,4 @@ var sets = [
          { count: 3, stats: { sta: 0 } }
       ]
    },
-
-
-
 ];
