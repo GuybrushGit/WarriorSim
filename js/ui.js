@@ -200,7 +200,7 @@ SIM.UI = {
         if (rows) {
             let type = rows.parents('table').data('type');
             if (type == "finger" || type == "trinket" || type == "custom")
-                params.player = [null, typ, undefined, Player.getConfig()];
+                params.player = [null, type, undefined, Player.getConfig()];
         }
         player = new Player(...params.player);
         if (!player.mh) {
