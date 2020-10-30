@@ -83,7 +83,7 @@ class Overpower extends Spell {
         this.cooldown = 5;
         this.canDodge = false;
         this.threshold = parseInt(spells[9].maxrage);
-        this.maincd = parseInt(spells[9].maincd);
+        this.maincd = parseInt(spells[9].maincd) * 1000;
         this.maxdelay = parseInt(spells[9].reaction);
     }
     dmg() {
