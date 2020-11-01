@@ -226,7 +226,7 @@ class Player {
         for (let type in enchant) {
             for (let item of enchant[type]) {
                 if (!item.temp) continue;
-                if (type == "mainhand" && this.mh.windfury) continue;
+                if ((type == "mainhand" || type == "twohand") && this.mh.windfury) continue;
                 if ((this.testTempEnchType == type && this.testTempEnch == item.id) ||
                     (this.testTempEnchType != type && item.selected)) {
 

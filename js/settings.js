@@ -124,25 +124,25 @@ SIM.SETTINGS = {
             var val = $(this).val();
             var bloodfury = view.rotation.find('[data-id="20572"]');
             var berserking = view.rotation.find('[data-id="26296"]');
-            var disableSpell;
+            var disableSpells = [];
 
             if (val == "Orc") {
                 bloodfury.removeClass('hidden');
             }
             else {
                 bloodfury.addClass('hidden').removeClass('active');
-                disableSpell = 20572;
+                disableSpells.push(20572);
             }
             if (val == "Troll") {
                 berserking.removeClass('hidden');
             }
             else {
                 berserking.addClass('hidden').removeClass('active');
-                disableSpell = 26296;
+                disableSpells.push(26296);
             }
 
             for (let spell of spells) {
-                if (spell.id == disableSpell)
+                if (disableSpells.includes(spell.id))
                     spell.active = false;
             }
 
