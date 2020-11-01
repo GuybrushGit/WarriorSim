@@ -4000,7 +4000,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 1,
+         "ppm": 2,
          "magicdmg": 125
       },
       {
@@ -5170,7 +5170,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 1,
+         "ppm": 2,
          "magicdmg": 125
       },
       {
