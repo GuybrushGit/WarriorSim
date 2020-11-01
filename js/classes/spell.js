@@ -354,22 +354,35 @@ class DeepWounds extends Aura {
         super(player);
         this.duration = 12;
         this.name = 'Deep Wounds';
+        this.idmg = 0;
         this.totaldmg = 0;
+        this.lasttick = 0;
     }
-    step(simulation) {
-        this.uptime += this.timer < 200 ? this.timer : 200;
-        this.timer = this.timer < 200 ? 0 : this.timer - 200;
-        if (this.timer == 0 || this.timer % 3000 == 0 || this.timer % 6000 == 0 || this.timer % 9000 == 0) {
+    step() {
+        while (step >= this.nexttick) {
             let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
             dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds;
-            simulation.idmg += ~~(dmg / 4);
+            //console.log("%d %s: %d", step, this.name, ~~(dmg / 4));
+            this.idmg += ~~(dmg / 4);
             this.totaldmg += ~~(dmg / 4);
+
+            this.nexttick += 3000;
+        }
+
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
         }
     }
     use() {
-        this.timer = this.duration * 1000;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.nexttick = step + 3000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        //if (log) this.player.log(`${this.name} applied`);
     }
 }
 
