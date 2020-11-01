@@ -18,7 +18,10 @@ const TYPE = {
 class SimulationWorker {
     constructor(callback_finished, callback_update, callback_error) {
         this.worker = new Worker('./dist/js/sim-worker.min.js');
-        this.worker.onerror = callback_error;
+        this.worker.onerror = (...args) => {
+            callback_error(...args);
+            this.worker.terminate();
+        };
         this.worker.onmessage = (event) => {
             const [type, ...args] = event.data;
             switch (type) {
@@ -27,9 +30,11 @@ class SimulationWorker {
                     break;
                 case TYPE.FINISHED:
                     callback_finished(...args);
+                    this.worker.terminate();
                     break;
                 default:
                     callback_error(`Unexpected type: ${type}`);
+                    this.worker.terminate();
             }
         };
     }
@@ -78,7 +83,7 @@ class Simulation {
     startSync() {
         this.starttime = new Date().getTime();
         let iteration;
-        for (iteration = 1; iteration < this.iterations; ++iteration) {
+        for (iteration = 1; iteration <= this.iterations; ++iteration) {
             this.run();
             if (iteration % this.maxcallstack == 0) {
                 this.update(iteration);
