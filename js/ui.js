@@ -53,6 +53,13 @@ SIM.UI = {
             view.simulateDPS();
         });
 
+        view.sidebar.find('.js-weights').click(function (e) {
+            e.preventDefault();
+            view.disableEditMode();
+            view.startLoading();
+            view.simulateDPS("stats");
+        });
+
         view.sidebar.find('.js-stats').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
@@ -187,10 +194,16 @@ SIM.UI = {
     simulateDPS: function(rows) {
         let view = this;
         let dps = view.sidebar.find('#dps');
+        let error = view.sidebar.find('#dpserr');
         let stats = view.sidebar.find('#stats');
         let time = view.sidebar.find('#time');
         let btn = view.sidebar.find('.js-dps');
+        let weights = (rows === "stats");
+        if (weights) {
+            rows = undefined;
+        }
         dps.text('');
+        error.text('');
         time.text('');
         const params = {
             player: [undefined, undefined, undefined, Player.getConfig()],
@@ -208,14 +221,23 @@ SIM.UI = {
             view.endLoading();
             return;
         }
-        var sim = new SimulationWorker(
+        var sim = new SimulationWorkerParallel(
+            MAX_WORKERS,
             (report) => {
                 // Finished
-                dps.text((report.totaldmg / report.totalduration).toFixed(2));
+                // Technically, it is incorrect to calculate mean DPS like this, since fight duration varies...
+                const mean = report.totaldmg / report.totalduration;
+                dps.text(mean.toFixed(2));
+
+                const s1 = report.sumdps, s2 = report.sumdps2, n = report.iterations;
+                const varmean = (s2 - s1 * s1 / n) / (n - 1) / n;
+                error.text((1.96 * Math.sqrt(varmean)).toFixed(2));
+
                 time.text((report.endtime - report.starttime) / 1000);
                 stats.html(report.mindps.toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + report.maxdps.toFixed(2) + ' max');
                 btn.css('background', '');
                 if (rows) view.simulateRows(Array.from(rows));
+                else if (weights) view.simulateWeights(player, mean, varmean);
                 else view.endLoading();
 
                 SIM.STATS.initCharts(report);
@@ -235,6 +257,87 @@ SIM.UI = {
             },
         );
         sim.start(params);
+    },
+
+    simulateWeights: function(player, mean, varmean) {
+        const view = this;
+        const btn = view.sidebar.find('.js-weights');
+        const totalTasks = (player.auras.bloodfury ? 4 : 3);
+        view.sidebar.find('#weights-div').css('display', 'block');
+        view.sidebar.find('#weights-div > div').addClass('loading').append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
+        let tasksDone = 0;
+        function updateFn(progress) {
+            const perc = parseInt(100 * (tasksDone + progress) / totalTasks);
+            btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
+        }
+        const simulateWeight = (stat, amount) => this.simulateStat(stat, amount, updateFn).then(result => {
+            tasksDone += 1;
+            return {weight: (result.mean - mean) / amount, error: 1.96 * Math.sqrt(varmean + result.varmean) / amount};
+        });
+        function updateStat(name, {weight, error}) {
+            const line = view.sidebar.find('#weight-' + name);
+            line.removeClass('loading').find('.spinner').remove();
+            line.find('.stat-dps').text(weight.toFixed(2));
+            line.find('.stat-error').text(error.toFixed(2));
+        }
+        async function simulateAll() {
+            const ap = await simulateWeight(0, 50);
+            updateStat("ap", ap);
+            console.log(player.auras.bloodfury);
+            if (player.auras.bloodfury) {
+                updateStat("str", await simulateWeight(3, 25));
+            } else {
+                const strAp = 2 * player.stats.strmod;
+                updateStat("str", {weight: ap.weight * strAp, error: ap.error * strAp});
+            }
+
+            const crit = await simulateWeight(1, 2);
+            updateStat("crit", crit);
+
+            const agiCrit = player.stats.agimod / 20;
+            updateStat("agi", {weight: crit.weight * agiCrit, error: crit.error * agiCrit});
+
+            updateStat("hit", await simulateWeight(2, 2));
+        }
+
+        simulateAll().then(
+            () => {
+                btn.css('background', '');
+                view.endLoading();
+            },
+            error => {
+                btn.css('background', '');
+                view.sidebar.find('#dps').text('ERROR');
+                view.sidebar.find('#dpserr').text('');
+                view.endLoading();
+                console.error(error);
+            },
+        );
+    },
+
+    simulateStat: function(stat, amount, updateFn) {
+        return new Promise((resolve, reject) => {
+            const params = {
+                player: [amount, stat, 3, Player.getConfig()],
+                sim: Simulation.getConfig(),
+            };
+            var sim = new SimulationWorkerParallel(
+                MAX_WORKERS,
+                (report) => {
+                    const mean = report.totaldmg / report.totalduration;
+
+                    const s1 = report.sumdps, s2 = report.sumdps2, n = report.iterations;
+                    const varmean = (s2 - s1 * s1 / n) / (n - 1) / n;
+
+                    resolve({mean, varmean});
+                },
+                (iteration, report) => {
+                    if (updateFn) updateFn(iteration / report.iterations, report.totaldmg / report.totalduration);
+                },
+                (error) => reject(error),
+            );
+            sim.start(params);
+        });
     },
 
     simulateRows: function(rows) {
@@ -454,14 +557,14 @@ SIM.UI = {
     },
 
     startLoading: function() {
-        let btns = $('.js-dps, .js-table, .js-enchant');
+        let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.addClass('loading');
         btns.append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
         $('section.main nav').addClass('loading');
     },
 
     endLoading: function() {
-        let btns = $('.js-dps, .js-table, .js-enchant');
+        let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.removeClass('loading');
         btns.find('.spinner').remove();
         $('section.main nav').removeClass('loading');

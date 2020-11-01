@@ -107,16 +107,91 @@
         transform: translateX(-50%);
     }
 
+    #weights-div {
+        position: relative;
+        left: 50%;
+        margin-bottom: 10px;
+        display: none;
+
+        & > div {
+            position: relative;
+            height: 27px;
+        }
+
+        .spinner {
+            left: 0;
+            width: 52px;
+            top: calc(50% - 8px);
+            > span {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        .loading {
+            .stat-dps, .stat-error {
+                display: none;
+            }
+        }
+
+        .stat-name {
+            position: absolute;
+            right: 100%;
+            bottom: 2px;
+            margin-right: 4px;
+            white-space: nowrap;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .stat-dps {
+            font-size: 20px;
+            font-weight: bold;
+            color: $item-uncommon;
+            &:after {
+                content: " DPS";
+                font-size: 12px;
+            }
+            &:empty:after {
+                display: none;
+            }
+        }
+        .stat-error {
+            font-size: 12px;
+            font-weight: bold;
+            color: $item-uncommon;
+            &:before {
+                content: " \00b1";
+            }
+            &:empty:before {
+                display: none;
+            }
+        }
+    }
+
+    #dps-box {
+        text-align: center;
+    }
     #dps {
         font-size: 26px;
         font-weight: bold;
-        text-align: center;
         color: $item-uncommon;
         &:after {
             content: " DPS";
             font-size: 14px;
         }
         &:empty:after {
+            display: none;
+        }
+    }
+    #dpserr {
+        font-size: 14px;
+        font-weight: bold;
+        color: $item-uncommon;
+        &:before {
+            content: " \00b1";
+        }
+        &:empty:before {
             display: none;
         }
     }

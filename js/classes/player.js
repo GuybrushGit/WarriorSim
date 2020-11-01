@@ -30,18 +30,6 @@ class Player {
         this.aqbooks = config.aqbooks;
         this.weaponrng = config.weaponrng;
         this.spelldamage = config.spelldamage;
-        if (enchtype == 1) {
-            this.testEnch = testItem;
-            this.testEnchType = testType;
-        }
-        else if (enchtype == 2) {
-            this.testTempEnch = testItem;
-            this.testTempEnchType = testType;
-        }
-        else {
-            this.testItem = testItem;
-            this.testItemType = testType;
-        }
         this.target = config.target;
         this.base = {
             ap: 0,
@@ -62,6 +50,32 @@ class Player {
             dmgmod: 1,
             apmod: 1
         };
+        if (enchtype == 1) {
+            this.testEnch = testItem;
+            this.testEnchType = testType;
+        }
+        else if (enchtype == 2) {
+            this.testTempEnch = testItem;
+            this.testTempEnchType = testType;
+        }
+        else if (enchtype == 3) {
+            if (testType == 0) {
+                this.base.ap += testItem;
+            }
+            else if (testType == 1) {
+                this.base.crit += testItem;
+            }
+            else if (testType == 2) {
+                this.base.hit += testItem;
+            }
+            else if (testType == 3) {
+                this.base.str += testItem;
+            }
+        }
+        else {
+            this.testItem = testItem;
+            this.testItemType = testType;
+        }
         this.stats = {};
         this.auras = {};
         this.spells = {};
@@ -76,6 +90,7 @@ class Player {
         this.addBuffs();
         this.addSpells();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
+        if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
@@ -333,6 +348,9 @@ class Player {
             this.auras[s].firstuse = true;
             this.auras[s].stacks = 0;
         }
+        if (this.auras.deepwounds) {
+            this.auras.deepwounds.idmg = 0;
+        }
         this.update();
     }
     update() {
@@ -446,10 +464,10 @@ class Player {
     }
     getGlanceReduction(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
-        let low = 1.3 - 0.05 * diff;
-        let high = 1.2 - 0.03 * diff;
-        if (this.weaponrng) return rng(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;
-        else return avg(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;  
+        let low = Math.min(1.3 - 0.05 * diff, 0.91);
+        let high = Math.min(1.2 - 0.03 * diff, 0.99);
+        if (this.weaponrng) return Math.random() * (high - low) + low;
+        else return avg(low, high);
     }
     getGlanceChance(weapon) {
         return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;
@@ -556,6 +574,7 @@ class Player {
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.step();
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.step();
 
+        if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.step();
     }
     endauras() {
 
@@ -586,6 +605,7 @@ class Player {
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.end();
 
         if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
+        if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.end();
 
     }
     rollweapon(weapon) {
