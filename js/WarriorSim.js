@@ -1607,15 +1607,15 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  1024: function($0, $1, $2, $3) {postMessage( [0, $0, { iterations: $1, totaldmg : $2, totalduration : $3 }] );},  
- 1114: function($0, $1, $2, $3, $4, $5, $6) {var report = { iterations: $0, totaldmg: $1, totalduration: $2, mindps: $3, maxdps: $4, sumdps: $5, sumdps2: $6, starttime: SIM_START, endtime: SIM_END }; if ( typeof SIM_PLAYER !== "undefined" ) report.player = SIM_PLAYER; if ( typeof SIM_SPREAD !== "undefined" ) report.spread = SIM_SPREAD; postMessage( [ 1, report ] );},  
- 1451: function($0, $1, $2) {var name = UTF8ToString( $0 ); var data = $2 >> 2; SIM_PLAYER.spells[name.replace(/[^\w]/g, "").toLowerCase()] = { name, totaldmg: $1, data: [ ...HEAP32.subarray( data, data + 5 ) ] };},  
- 1647: function($0, $1, $2) {var name = UTF8ToString( $0 ); var data = { name, uptime: $1 }; if ( $2 ) data.totaldmg = $2; SIM_PLAYER.auras[name.replace(/[^\w]/g, "").toLowerCase()] = data;},  
- 1819: function($0, $1, $2, $3) {var data = $3 >> 2; SIM_PLAYER[$0 ? "oh" : "mh"] = { totaldmg: $1, totalprocdmg: $2, data: [ ...HEAP32.subarray( data, data + 5 ) ] };},  
- 1965: function($0, $1) {var start = ( $0 >> 2 ), end = ( $0 >> 2 ) + $1; SIM_SPREAD = {}; for ( var i = start; i < end; ++i ) { if ( HEAP32[i] ) { SIM_SPREAD[i - start] = HEAP32[i]; } }},  
- 2136: function() {SIM_START = new Date().getTime()},  
- 2170: function() {SIM_END = new Date().getTime()},  
- 2201: function() {SIM_PLAYER = { auras: {}, spells: {} }}
+  2232: function($0, $1, $2, $3) {postMessage( [0, $0, { iterations: $1, totaldmg : $2, totalduration : $3 }] );},  
+ 2322: function($0, $1, $2, $3, $4, $5, $6) {var report = { iterations: $0, totaldmg: $1, totalduration: $2, mindps: $3, maxdps: $4, sumdps: $5, sumdps2: $6, starttime: SIM_START, endtime: SIM_END }; if ( typeof SIM_PLAYER !== "undefined" ) report.player = SIM_PLAYER; if ( typeof SIM_SPREAD !== "undefined" ) report.spread = SIM_SPREAD; postMessage( [ 1, report ] );},  
+ 2659: function($0, $1, $2) {var name = UTF8ToString( $0 ); var data = $2 >> 2; SIM_PLAYER.spells[name.replace(/[^\w]/g, "").toLowerCase()] = { name, totaldmg: $1, data: [ ...HEAP32.subarray( data, data + 5 ) ] };},  
+ 2855: function($0, $1, $2) {var name = UTF8ToString( $0 ); var data = { name, uptime: $1 }; if ( $2 ) data.totaldmg = $2; SIM_PLAYER.auras[name.replace(/[^\w]/g, "").toLowerCase()] = data;},  
+ 3027: function($0, $1, $2, $3) {var data = $3 >> 2; SIM_PLAYER[$0 ? "oh" : "mh"] = { totaldmg: $1, totalprocdmg: $2, data: [ ...HEAP32.subarray( data, data + 5 ) ] };},  
+ 3173: function($0, $1) {var start = ( $0 >> 2 ), end = ( $0 >> 2 ) + $1; SIM_SPREAD = {}; for ( var i = start; i < end; ++i ) { if ( HEAP32[i] ) { SIM_SPREAD[i - start] = HEAP32[i]; } }},  
+ 3344: function() {SIM_START = new Date().getTime()},  
+ 3378: function() {SIM_END = new Date().getTime()},  
+ 3409: function() {SIM_PLAYER = { auras: {}, spells: {} }}
 };
 
 // Avoid creating a new array
