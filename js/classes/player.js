@@ -1,5 +1,22 @@
 class Player {
-    constructor(testItem, testType, enchtype) {
+    static getConfig(base) {
+        return {
+            race: $('select[name="race"]').val(),
+            aqbooks: $('select[name="aqbooks"]').val() == "Yes",
+            weaponrng: $('select[name="weaponrng"]').val() == "Yes",
+            spelldamage: parseInt($('input[name="spelldamage"]').val()),
+            target: {
+                level: parseInt($('input[name="targetlevel"]').val()),
+                basearmor: parseInt($('input[name="targetarmor"]').val()),
+                armor: parseInt($('input[name="targetarmor"]').val()),
+                defense: parseInt($('input[name="targetlevel"]').val()) * 5,
+                mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
+                binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60)))),
+            },
+        };
+    }
+    constructor(testItem, testType, enchtype, config) {
+        if (!config) config = Player.getConfig();
         this.rage = 0;
         this.level = 60;
         this.timer = 0;
@@ -9,29 +26,11 @@ class Player {
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
-        this.aqbooks = $('select[name="aqbooks"]').val() == "Yes";
-        this.weaponrng = $('select[name="weaponrng"]').val() == "Yes";
-        this.spelldamage = parseInt($('input[name="spelldamage"]').val());
-        if (enchtype == 1) {
-            this.testEnch = testItem;
-            this.testEnchType = testType;
-        }
-        else if (enchtype == 2) {
-            this.testTempEnch = testItem;
-            this.testTempEnchType = testType;
-        }
-        else {
-            this.testItem = testItem;
-            this.testItemType = testType;
-        }
-        this.target = {
-            level: parseInt($('input[name="targetlevel"]').val()),
-            basearmor: parseInt($('input[name="targetarmor"]').val()),
-            armor: parseInt($('input[name="targetarmor"]').val()),
-            defense: parseInt($('input[name="targetlevel"]').val()) * 5,
-            mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
-            binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60))))
-        };
+        this.race = config.race;
+        this.aqbooks = config.aqbooks;
+        this.weaponrng = config.weaponrng;
+        this.spelldamage = config.spelldamage;
+        this.target = config.target;
         this.base = {
             ap: 0,
             agi: 0,
@@ -51,6 +50,32 @@ class Player {
             dmgmod: 1,
             apmod: 1
         };
+        if (enchtype == 1) {
+            this.testEnch = testItem;
+            this.testEnchType = testType;
+        }
+        else if (enchtype == 2) {
+            this.testTempEnch = testItem;
+            this.testTempEnchType = testType;
+        }
+        else if (enchtype == 3) {
+            if (testType == 0) {
+                this.base.ap += testItem;
+            }
+            else if (testType == 1) {
+                this.base.crit += testItem;
+            }
+            else if (testType == 2) {
+                this.base.hit += testItem;
+            }
+            else if (testType == 3) {
+                this.base.str += testItem;
+            }
+        }
+        else {
+            this.testItem = testItem;
+            this.testItemType = testType;
+        }
         this.stats = {};
         this.auras = {};
         this.spells = {};
@@ -65,6 +90,7 @@ class Player {
         this.addBuffs();
         this.addSpells();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
+        if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
@@ -82,7 +108,7 @@ class Player {
     }
     addRace() {
         for (let race of races) {
-            if (race.name == $('select[name="race"]').val()) {
+            if (race.name == this.race) {
                 this.base.aprace = race.ap;
                 this.base.ap += race.ap;
                 this.base.str += race.str;
@@ -98,7 +124,7 @@ class Player {
         this.talents = {};
         for (let tree in talents) {
             for (let talent of talents[tree].t) {
-                $.extend(this.talents, talent.aura(talent.c));
+                this.talents = Object.assign(this.talents, talent.aura(talent.c));
             }
         }
     }
@@ -215,7 +241,7 @@ class Player {
         for (let type in enchant) {
             for (let item of enchant[type]) {
                 if (!item.temp) continue;
-                if (type == "mainhand" && this.mh.windfury) continue;
+                if ((type == "mainhand" || type == "twohand") && this.mh.windfury) continue;
                 if ((this.testTempEnchType == type && this.testTempEnch == item.id) ||
                     (this.testTempEnchType != type && item.selected)) {
 
@@ -281,6 +307,13 @@ class Player {
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+
+                if (buff.group == "blessingmight" && this.aqbooks)
+                    this.base.ap += 36;
+                if (buff.group == "graceair" && this.aqbooks)
+                    this.base.agi += 10;
+                if (buff.group == "strengthearth" && this.aqbooks)
+                    this.base.str += 16;
             }
         }
     }
@@ -314,6 +347,9 @@ class Player {
             this.auras[s].timer = 0;
             this.auras[s].firstuse = true;
             this.auras[s].stacks = 0;
+        }
+        if (this.auras.deepwounds) {
+            this.auras.deepwounds.idmg = 0;
         }
         this.update();
     }
@@ -428,10 +464,10 @@ class Player {
     }
     getGlanceReduction(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
-        let low = 1.3 - 0.05 * diff;
-        let high = 1.2 - 0.03 * diff;
-        if (this.weaponrng) return rng(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;
-        else return avg(Math.min(low, 0.91)*1000,Math.min(high, 0.99)*1000) / 1000;  
+        let low = Math.min(1.3 - 0.05 * diff, 0.91);
+        let high = Math.min(1.2 - 0.03 * diff, 0.99);
+        if (this.weaponrng) return Math.random() * (high - low) + low;
+        else return avg(low, high);
     }
     getGlanceChance(weapon) {
         return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;
@@ -538,6 +574,7 @@ class Player {
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.step();
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.step();
 
+        if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.step();
     }
     endauras() {
 
@@ -568,6 +605,7 @@ class Player {
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.end();
 
         if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
+        if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.end();
 
     }
     rollweapon(weapon) {
@@ -813,6 +851,14 @@ class Player {
         let crit = this.crit + this.mh.crit;
         if (roll < (crit * 100)) dmg *= 2;
         return dmg * this.stats.dmgmod * this.mh.modifier;
+    }
+    serializeStats() {
+        return {
+            auras: this.auras,
+            spells: this.spells,
+            mh: this.mh,
+            oh: this.oh,
+        };
     }
     log(msg) {
         console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);

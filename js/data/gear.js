@@ -186,6 +186,47 @@ var gear = {
          "source": "PVP",
          "phase": 2,
          "id": 16478
+      },
+      {
+         "name": "Foror's Eyepatch",
+         "crit": 2,
+         "sta": 19,
+         "ap": 44,
+         "ac": 160,
+         "source": "ZG",
+         "phase": 3,
+         "id": 19945
+      },
+      {
+         "name": "Blooddrenched Mask",
+         "hit": 2,
+         "agi": 22,
+         "sta": 17,
+         "ac": 153,
+         "source": "ZG",
+         "phase": 4,
+         "id": 22718
+      },
+      {
+         "name": "Southwind Helm",
+         "hit": 1,
+         "str": 21,
+         "sta": 14,
+         "agi": 24,
+         "ac": 164,
+         "source": "AQ20",
+         "phase": 5,
+         "id": 21455
+      },
+      {
+         "name": "Ragefury Eyepatch",
+         "crit": 2,
+         "str": 6,
+         "sta": 9,
+         "ac": 132,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 11735
       }
    ],
    "neck": [
@@ -370,6 +411,16 @@ var gear = {
          "source": "Dungeon",
          "phase": 1,
          "id": 12929
+      },
+      {
+         "name": "Pendant of the Qiraji Guardian",
+         "sta": 17,
+         "str": 12,
+         "agi": 11,
+         "defense": 6,
+         "phase": 5,
+         "source": "AQ40",
+         "id": 21700
       }
    ],
    "shoulder": [
@@ -814,6 +865,15 @@ var gear = {
          "source": "ZG",
          "phase": 4,
          "id": 22712
+      },
+      {
+         "name": "Shifting Cloak",
+         "sta": 8,
+         "agi": 17,
+         "dodge": 1,
+         "ac": 48,
+         "source": "Crafting",
+         "id": 18511
       }
    ],
    "chest": [
@@ -898,6 +958,15 @@ var gear = {
          "source": "Dungeon",
          "phase": 1,
          "id": 16730
+      },
+      {
+         "name": "Breastplate of Undead Slaying (vs Undead)",
+         "sta": 20,
+         "ac": 657,
+         "ap": 81,
+         "source": "Other",
+         "phase": 6,
+         "id": 23087
       },
       {
          "name": "Breastplate of Wrath",
@@ -1144,6 +1213,15 @@ var gear = {
          "id": 16861
       },
       {
+         "name": "Bracers of Undead Slaying (vs Undead)",
+         "sta": 10,
+         "ac": 287,
+         "ap": 45,
+         "source": "Other",
+         "phase": 6,
+         "id": 23090
+      },
+      {
          "name": "Bracers of Valor",
          "str": 7,
          "sta": 14,
@@ -1347,6 +1425,15 @@ var gear = {
          "source": "AQ20",
          "phase": 5,
          "id": 21479
+      },
+      {
+         "name": "Gauntlets of Undead Slaying (vs Undead)",
+         "sta": 15,
+         "ac": 410,
+         "ap": 60,
+         "source": "Quest",
+         "phase": 6,
+         "id": 23078
       },
       {
          "name": "Gauntlets of Valor",
@@ -3913,7 +4000,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 1,
+         "ppm": 2,
          "magicdmg": 125
       },
       {
@@ -4600,7 +4687,7 @@ var gear = {
          "speed": 2.5,
          "type": "Axe",
          "source": "Other",
-         "phase": 5,
+         "phase": 4,
          "id": 20675
       },
       {
@@ -5083,7 +5170,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 1,
+         "ppm": 2,
          "magicdmg": 125
       },
       {
@@ -5620,8 +5707,8 @@ var gear = {
          "maxdmg": 303,
          "speed": 3.7,
          "id": 21856,
-         "source": "Naxx",
-         "phase": 6,
+         "source": "AQ40",
+         "phase": 5,
          "type": "Axe",
          "ppm": 1,
          "magicdmg": 152,
@@ -5804,7 +5891,7 @@ var gear = {
          "phase": 4,
          "type": "Mace",
          "physdmg": 210,
-         "ppm": 1,
+         "ppm": 4,
       },
       {
          "name": "Might of Menethil",
@@ -6791,6 +6878,14 @@ var sets = [
       ]
    },
    {
+      id: 533,
+      name: 'Battlegear of Undead Slaying (vs Undead)',
+      items: [23078, 23087, 23090],
+      bonus: [
+         { count: 3, stats: { dmgmod: .02 } }
+      ]
+   },
+   {
       id: 189,
       name: 'Battlegear of Valor',
       items: [16736, 16734, 16735, 16730, 16737, 16731, 16732, 16733],
@@ -6888,7 +6983,4 @@ var sets = [
          { count: 3, stats: { sta: 0 } }
       ]
    },
-
-
-
 ];

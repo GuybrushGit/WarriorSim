@@ -125,7 +125,7 @@ var buffs = [
       spellid: true,
       name: "Blessing of Might",
       iconname: "spell_holy_fistofjustice",
-      group: "",
+      group: "blessingmight",
       ap: 186
    },
    {
@@ -140,7 +140,7 @@ var buffs = [
       spellid: true,
       name: "Grace of Air Totem",
       iconname: "spell_nature_invisibilitytotem",
-      group: "",
+      group: "graceair",
       agi: 67
    },
    {
@@ -148,7 +148,7 @@ var buffs = [
       spellid: true,
       name: "Strength of Earth Totem",
       iconname: "spell_nature_earthbindtotem",
-      group: "",
+      group: "strengthearth",
       str: 61
    },
    {

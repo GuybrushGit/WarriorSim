@@ -1,3 +1,5 @@
+const MAX_WORKERS = navigator.hardwareConcurrency || 8;
+
 var SIM = SIM || {}
 
 SIM.UI = {
@@ -51,6 +53,13 @@ SIM.UI = {
             view.simulateDPS();
         });
 
+        view.sidebar.find('.js-weights').click(function (e) {
+            e.preventDefault();
+            view.disableEditMode();
+            view.startLoading();
+            view.simulateDPS("stats");
+        });
+
         view.sidebar.find('.js-stats').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
@@ -62,21 +71,21 @@ SIM.UI = {
         view.body.on('click', '.js-table', function(e) {
             e.preventDefault();
             view.disableEditMode();
-            let first = view.tcontainer.find('table.gear tbody tr').first();
-            view.tcontainer.find('table.gear tbody tr').addClass('waiting');
+            const rows = view.tcontainer.find('table.gear tbody tr');
+            rows.addClass('waiting');
             view.tcontainer.find('table.gear tbody tr td:last-of-type').html('');
             view.startLoading();
-            view.simulateDPS(first);
+            view.simulateDPS(rows);
         });
 
         view.main.on('click', '.js-enchant', function(e) {
             e.preventDefault();
             view.disableEditMode();
-            let first = view.tcontainer.find('table.enchant tbody tr').first();
-            view.tcontainer.find('table.enchant tbody tr').addClass('waiting');
+            const rows = view.tcontainer.find('table.enchant tbody tr'); 
+            rows.addClass('waiting');
             view.tcontainer.find('table.enchant tbody tr td:last-of-type').html('');
             view.startLoading();
-            view.simulateDPS(first);
+            view.simulateDPS(rows);
         });
 
         view.main.on('click', '.js-editmode', function(e) {
@@ -182,51 +191,203 @@ SIM.UI = {
             view.loadGear(type, false);
     },
 
-    simulateDPS: function(row) {
+    simulateDPS: function(rows) {
         let view = this;
         let dps = view.sidebar.find('#dps');
+        let error = view.sidebar.find('#dpserr');
         let stats = view.sidebar.find('#stats');
         let time = view.sidebar.find('#time');
         let btn = view.sidebar.find('.js-dps');
-        dps.text('');
-        time.text('');
-        var player = new Player();
-        if (row) {
-            let type = row.parents('table').data('type');
-            if (type == "finger" || type == "trinket" || type == "custom")
-                player = new Player(null, type);
+        let weights = (rows === "stats");
+        if (weights) {
+            rows = undefined;
         }
+        dps.text('');
+        error.text('');
+        time.text('');
+        const params = {
+            player: [undefined, undefined, undefined, Player.getConfig()],
+            sim: Simulation.getConfig(),
+            fullReport: true,
+        };
+        if (rows) {
+            let type = rows.parents('table').data('type');
+            if (type == "finger" || type == "trinket" || type == "custom")
+                params.player = [null, type, undefined, Player.getConfig()];
+        }
+        player = new Player(...params.player);
         if (!player.mh) {
             view.addAlert('No weapon selected');
             view.endLoading();
             return;
         }
-        var sim = new Simulation(player, 
-            () => {
+        var sim = new SimulationWorkerParallel(
+            MAX_WORKERS,
+            (report) => {
                 // Finished
-                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
-                time.text((sim.endtime - sim.starttime) / 1000);
-                stats.html(sim.mindps.toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + sim.maxdps.toFixed(2) + ' max');
+                // Technically, it is incorrect to calculate mean DPS like this, since fight duration varies...
+                const mean = report.totaldmg / report.totalduration;
+                dps.text(mean.toFixed(2));
+
+                const s1 = report.sumdps, s2 = report.sumdps2, n = report.iterations;
+                const varmean = (s2 - s1 * s1 / n) / (n - 1) / n;
+                error.text((1.96 * Math.sqrt(varmean)).toFixed(2));
+
+                time.text((report.endtime - report.starttime) / 1000);
+                stats.html(report.mindps.toFixed(2) + ' min&nbsp;&nbsp;&nbsp;&nbsp;' + report.maxdps.toFixed(2) + ' max');
                 btn.css('background', '');
-                if (row) view.simulateRow(row);
+                if (rows) view.simulateRows(Array.from(rows));
+                else if (weights) view.simulateWeights(player, mean, varmean);
                 else view.endLoading();
 
-                SIM.STATS.initCharts(sim);
+                SIM.STATS.initCharts(report);
                 sim = null;
                 player = null;
                 
             },
-            (iteration) => {
+            (iteration, report) => {
                 // Update
-                let perc = parseInt(iteration / sim.iterations * 100);
-                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
+                let perc = parseInt(iteration / report.iterations * 100);
+                dps.text((report.totaldmg / report.totalduration).toFixed(2));
                 btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
-            }
+            },
+            (error) => {
+                dps.text('ERROR');
+                console.error(error);
+            },
         );
-        sim.start();
+        sim.start(params);
     },
 
-    simulateRow: function(tr) {
+    simulateWeights: function(player, mean, varmean) {
+        const view = this;
+        const btn = view.sidebar.find('.js-weights');
+        const totalTasks = (player.auras.bloodfury ? 4 : 3);
+        view.sidebar.find('#weights-div').css('display', 'block');
+        view.sidebar.find('#weights-div > div').addClass('loading').append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
+        let tasksDone = 0;
+        function updateFn(progress) {
+            const perc = parseInt(100 * (tasksDone + progress) / totalTasks);
+            btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
+        }
+        const simulateWeight = (stat, amount) => this.simulateStat(stat, amount, updateFn).then(result => {
+            tasksDone += 1;
+            return {weight: (result.mean - mean) / amount, error: 1.96 * Math.sqrt(varmean + result.varmean) / amount};
+        });
+        function updateStat(name, {weight, error}) {
+            const line = view.sidebar.find('#weight-' + name);
+            line.removeClass('loading').find('.spinner').remove();
+            line.find('.stat-dps').text(weight.toFixed(2));
+            line.find('.stat-error').text(error.toFixed(2));
+        }
+        async function simulateAll() {
+            const ap = await simulateWeight(0, 50);
+            updateStat("ap", ap);
+            console.log(player.auras.bloodfury);
+            if (player.auras.bloodfury) {
+                updateStat("str", await simulateWeight(3, 25));
+            } else {
+                const strAp = 2 * player.stats.strmod;
+                updateStat("str", {weight: ap.weight * strAp, error: ap.error * strAp});
+            }
+
+            const crit = await simulateWeight(1, 2);
+            updateStat("crit", crit);
+
+            const agiCrit = player.stats.agimod / 20;
+            updateStat("agi", {weight: crit.weight * agiCrit, error: crit.error * agiCrit});
+
+            updateStat("hit", await simulateWeight(2, 2));
+        }
+
+        simulateAll().then(
+            () => {
+                btn.css('background', '');
+                view.endLoading();
+            },
+            error => {
+                btn.css('background', '');
+                view.sidebar.find('#dps').text('ERROR');
+                view.sidebar.find('#dpserr').text('');
+                view.endLoading();
+                console.error(error);
+            },
+        );
+    },
+
+    simulateStat: function(stat, amount, updateFn) {
+        return new Promise((resolve, reject) => {
+            const params = {
+                player: [amount, stat, 3, Player.getConfig()],
+                sim: Simulation.getConfig(),
+            };
+            var sim = new SimulationWorkerParallel(
+                MAX_WORKERS,
+                (report) => {
+                    const mean = report.totaldmg / report.totalduration;
+
+                    const s1 = report.sumdps, s2 = report.sumdps2, n = report.iterations;
+                    const varmean = (s2 - s1 * s1 / n) / (n - 1) / n;
+
+                    resolve({mean, varmean});
+                },
+                (iteration, report) => {
+                    if (updateFn) updateFn(iteration / report.iterations, report.totaldmg / report.totalduration);
+                },
+                (error) => reject(error),
+            );
+            sim.start(params);
+        });
+    },
+
+    simulateRows: function(rows) {
+        var view = this;
+        var btn = view.sidebar.find('.js-table');
+
+        const simulations = rows.map((row) => {
+            const simulation = { perc: 0 };
+            simulation.run = () => {
+                // Remove from pending simulations
+                pending.delete(simulation);
+
+                // Start simulation
+                this.simulateRow($(row), (perc) => {
+                    // Update row percentage
+                    simulation.perc = perc;
+
+                    // Update total percentage
+                    const total = Math.floor(
+                        Array.from(simulations.values())
+                            .map((sim) => sim.perc)
+                            .reduce((a, b) => a + b, 0) / rows.length
+                    );
+                    if (total == 100) {
+                        btn.css('background', '');
+                        view.endLoading();
+                        view.updateSession();
+                    } else {
+                        btn.css('background', 'linear-gradient(to right, transparent ' + total + '%, #444 ' + total + '%)');
+                    }
+
+                    // If simulation complete, run another pending simulation (if any)
+                    if (simulation.perc == 100) {
+                        const next = pending.values().next().value;
+                        if (next) {
+                            next.run();
+                        }
+                    }
+                });
+            };
+            return simulation;
+        });
+        const pending = new Set(simulations);
+
+        for (const simulation of simulations.slice(0, MAX_WORKERS)) {
+            simulation.run();
+        }
+    },
+
+    simulateRow: function(tr, updateFn) {
         var view = this;
         var dps = tr.find('td:last-of-type');
         var type = tr.parents('table').data('type');
@@ -234,16 +395,16 @@ SIM.UI = {
         var isench = tr.parents('table').hasClass('enchant');
         var istemp = tr.data('temp') == true;
         var base = parseFloat(view.sidebar.find('#dps').text());
-        var rows = tr.siblings().length + 1;
-        var rowsdone = tr.siblings(':not(.waiting)').length;
-        var btn = view.sidebar.find('.js-table');
 
-        var player = new Player(item, type, istemp ? 2 : isench ? 1 : 0);
-        var sim = new Simulation(player, 
-            () => {
+        const params = {
+            player: [item, type, istemp ? 2 : isench ? 1 : 0, Player.getConfig()],
+            sim: Simulation.getConfig(),
+        };
+        var sim = new SimulationWorker(
+            (report) => {
                 // Finished
                 let span = $('<span></span>');
-                let calc = sim.totaldmg / sim.totalduration;
+                let calc = report.totaldmg / report.totalduration;
                 let diff = calc - base;
                 span.text(diff.toFixed(2));
                 if (diff >= 0) span.addClass('p');
@@ -258,11 +419,8 @@ SIM.UI = {
                 });
                 
                 tr.removeClass('waiting');
-                let perc = parseInt(((rowsdone + 1) * sim.iterations) / (sim.iterations * rows) * 100);
-                if (perc == 100) btn.css('background', '');
-                else btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
+                updateFn(100);
                 sim = null;
-                player = null;
 
                 if (isench) {
                     for(let i of enchant[type])
@@ -274,19 +432,18 @@ SIM.UI = {
                         if (i.id == item)
                             i.dps = calc.toFixed(2);
                 }
-
-                let next = view.tcontainer.find('tbody tr.waiting').first();
-                if (next.length) view.simulateRow(next);
-                else { view.endLoading(); view.updateSession(); }
             },
-            (iteration) => {
+            (iteration, report) => {
                 // Update
-                let perc = parseInt((rowsdone * sim.iterations + iteration) / (sim.iterations * rows) * 100);
-                btn.css('background', 'linear-gradient(to right, transparent ' + perc + '%, #444 ' + perc + '%)');
-                dps.text((sim.totaldmg / sim.totalduration).toFixed(2));
-            }
+                updateFn(Math.floor((iteration / report.iterations) * 100));
+                dps.text((report.totaldmg / report.totalduration).toFixed(2));
+            },
+            (error) => {
+                dps.text('ERROR');
+                console.error(error);
+            },
         );
-        sim.start();
+        sim.start(params);
     },
 
     rowDisableItem: function(tr) {
@@ -400,14 +557,14 @@ SIM.UI = {
     },
 
     startLoading: function() {
-        let btns = $('.js-dps, .js-table, .js-enchant');
+        let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.addClass('loading');
         btns.append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
         $('section.main nav').addClass('loading');
     },
 
     endLoading: function() {
-        let btns = $('.js-dps, .js-table, .js-enchant');
+        let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.removeClass('loading');
         btns.find('.spinner').remove();
         $('section.main nav').removeClass('loading');
@@ -526,52 +683,22 @@ SIM.UI = {
 
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
 
-        let _buffs = !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs);
-        let _rotation = !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation);
+        updateGlobals({
+            talents: !localStorage.talents ? JSON.parse(session.talents) : JSON.parse(localStorage.talents),
+            buffs: !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs),
+            rotation: !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation),
+            gear: !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear),
+            enchant: !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant),
+        });
+
         let _sources = !localStorage.sources ? JSON.parse(session.sources) : JSON.parse(localStorage.sources);
         let _phases = !localStorage.phases ? JSON.parse(session.phases) : JSON.parse(localStorage.phases);
-        let _talents = !localStorage.talents ? JSON.parse(session.talents) : JSON.parse(localStorage.talents);
-        let _gear = !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear);
-        let _enchant = !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant);
-
-        for (let tree in _talents)
-            for (let talent in _talents[tree].t)
-                talents[tree].t[talent].c = _talents[tree].t[talent];
-
-        for (let i of _buffs)
-            for (let j of buffs)
-                if (i == j.id) j.active = true;
-
-        for (let i of _rotation)
-            for (let j of spells)
-                if (i.id == j.id)
-                    for (let prop in i)
-                        j[prop] = i[prop];
 
         for (let i of _sources)
             view.filter.find(`.sources [data-id="${i}"]`).addClass('active');
 
         for (let i of _phases)
             view.filter.find(`.phases [data-id="${i}"]`).addClass('active');
-
-        for (let type in _gear)
-            for (let i of _gear[type])
-                if (gear[type])
-                    for (let j of gear[type])
-                        if (i.id == j.id) {
-                            j.dps = i.dps;
-                            j.selected = i.selected;
-                            j.hidden = i.hidden;
-                        }
-
-        for (let type in _enchant)
-            for (let i of _enchant[type])
-                for (let j of enchant[type])
-                    if (i.id == j.id) {
-                        j.dps = i.dps;
-                        j.selected = i.selected;
-                        j.hidden = i.hidden;
-                    }
 
         if (!localStorage.version || parseInt(localStorage.version) < version) view.newVersion();
     },
@@ -900,6 +1027,8 @@ SIM.UI = {
 
         if (!view.filter.find(`.phases [data-id="4"]`).hasClass('active'))
             setTimeout(() => { view.filter.find(`.phases [data-id="4"]`).click() }, 100);
+        if (!view.filter.find(`.phases [data-id="5"]`).hasClass('active'))
+            setTimeout(() => { view.filter.find(`.phases [data-id="5"]`).click() }, 100);
 
     }
     

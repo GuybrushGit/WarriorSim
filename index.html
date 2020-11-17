@@ -25,6 +25,7 @@
   <script type="text/javascript" src="dist/js/data/spells.min.js"></script>
   <script type="text/javascript" src="dist/js/data/talents.min.js"></script>
   <script type="text/javascript" src="dist/js/data/session.min.js"></script>
+  <script type="text/javascript" src="dist/js/globals.min.js"></script>
   <script type="text/javascript" src="dist/js/settings.min.js"></script>
   <script type="text/javascript" src="dist/js/stats.min.js"></script>
   <script type="text/javascript" src="dist/js/ui.min.js"></script>
@@ -40,6 +41,7 @@
   <script type="text/javascript" src="js/data/spells.js"></script>
   <script type="text/javascript" src="js/data/talents.js"></script>
   <script type="text/javascript" src="js/data/session.js"></script>
+  <script type="text/javascript" src="js/globals.js"></script>
   <script type="text/javascript" src="js/settings.js"></script>
   <script type="text/javascript" src="js/stats.js"></script>
   <script type="text/javascript" src="js/ui.js"></script> -->
@@ -110,10 +112,18 @@ profiles
       </ul>
     </div>
     <div class="bottom">
-      <div id="dps"></div>
+      <div id="weights-div">
+        <div id="weight-str"><span class="stat-name">Strength:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-agi"><span class="stat-name">Agility:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-ap"><span class="stat-name">Attack Power:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+      </div>
+      <div id="dps-box"><span id="dps"></span><span id="dpserr"></span></div>
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-weights">STAT WEIGHTS</a>
       <a href="#" class="btn js-table">SHEET DPS</a>
       <a href="#" class="btn js-stats disabled">STATS</a>
       <a href="#" class="btn js-settings">SETTINGS</a>

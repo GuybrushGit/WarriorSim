@@ -8,21 +8,172 @@ var RESULT = {
 
 var step = 0;
 var log = false;
-var version = 3;
+var version = 4;
+
+const TYPE = {
+    UPDATE: 0,
+    FINISHED: 1,
+    ERROR: 2,
+}
+
+class SimulationWorker {
+    constructor(callback_finished, callback_update, callback_error) {
+        this.worker = new Worker('./dist/js/sim-worker.min.js');
+        this.worker.onerror = (...args) => {
+            callback_error(...args);
+            this.worker.terminate();
+        };
+        this.worker.onmessage = (event) => {
+            const [type, ...args] = event.data;
+            switch (type) {
+                case TYPE.UPDATE:
+                    callback_update(...args);
+                    break;
+                case TYPE.FINISHED:
+                    callback_finished(...args);
+                    this.worker.terminate();
+                    break;
+                case TYPE.ERROR:
+                    callback_error(...args);
+                    this.worker.terminate();
+                    break;
+                default:
+                    callback_error(`Unexpected type: ${type}`);
+                    this.worker.terminate();
+            }
+        };
+    }
+
+    start(params) {
+        params.globals = getGlobalsDelta();
+        this.worker.postMessage(params);
+    }
+}
+
+class SimulationWorkerParallel {
+    constructor(threads, callback_finished, callback_update, callback_error) {
+        this.threads = threads;
+        this.callback_finished = callback_finished;
+        this.callback_update = callback_update;
+        this.states = [...Array(this.threads)];
+        this.workers = this.states.map((_, i) => new SimulationWorker(
+            data => { this.states[i] = { status: 1, data }; this.update(); },
+            (iteration, data) => { this.states[i] = { status: 0, iteration, data }; this.update(); },
+            error => { if (!this.error) { this.error = error; callback_error(error); } },
+        ));
+    }
+
+    update() {
+        if (this.error) return;
+        const completed = this.states.reduce((count, state) => count + (state && state.status || 0), 0);
+        if (completed >= this.states.length) {
+            const result = this.states[0].data;
+            this.states.slice(1).forEach(({data}) => {
+                result.iterations += data.iterations;
+                result.totaldmg += data.totaldmg;
+                result.totalduration += data.totalduration;
+                result.mindps = Math.min(result.mindps, data.mindps);
+                result.maxdps = Math.min(result.maxdps, data.maxdps);
+                result.sumdps += data.sumdps;
+                result.sumdps2 += data.sumdps2;
+                result.starttime = Math.min(result.starttime, data.starttime);
+                result.endtime = Math.min(result.endtime, data.endtime);
+                if (result.spread && data.spread) {
+                    for (let i in data.spread) {
+                        result.spread[i] = (result.spread[i] || 0) + data.spread[i];
+                    }
+                }
+                if (result.player && data.player) {
+                    for (let id in data.player.auras) {
+                        const src = data.player.auras[id], dst = result.player.auras[id];
+                        if (!dst) {
+                            result.player.auras[id] = src;
+                        } else {
+                            dst.uptime += src.uptime;
+                            if (src.totaldmg) {
+                                dst.totaldmg = (dst.totaldmg || 0) + src.totaldmg;
+                            }
+                        }
+                    }
+                    for (let id in data.player.spells) {
+                        const src = data.player.spells[id], dst = result.player.spells[id];
+                        if (!dst) {
+                            result.player.spells[id] = src;
+                        } else {
+                            dst.totaldmg += src.totaldmg;
+                            for (let i = 0; i < src.data.length; ++i) {
+                                dst.data[i] += src.data[i];
+                            }
+                        }
+                    }
+                    function mergeWeapon(dst, src) {
+                        if (dst) {
+                            dst.totaldmg += src.totaldmg;
+                            dst.totalprocdmg += src.totalprocdmg;
+                            for (let i = 0; i < src.data.length; ++i) {
+                                dst.data[i] += src.data[i];
+                            }
+                            return dst;
+                        } else {
+                            return src;
+                        }
+                    }
+                    result.player.mh = mergeWeapon(result.player.mh, data.player.mh);
+                    if (data.player.oh) result.player.oh = mergeWeapon(result.player.oh, data.player.oh);
+                }
+            });
+            this.callback_finished(result);
+        } else {
+            let iteration = 0;
+            const data = { iterations: this.iterations, totaldmg: 0, totalduration: 0 };
+            this.states.forEach(state => {
+                if (!state) return;
+                iteration += (state.status ? state.data.iterations : state.iteration);
+                data.totaldmg += state.data.totaldmg;
+                data.totalduration += state.data.totalduration;
+            });
+            this.callback_update(iteration, data);
+        }
+    }
+
+    start(params) {
+        params.globals = getGlobalsDelta();
+        this.iterations = params.sim.iterations;
+        let remain = params.sim.iterations;
+        this.workers.forEach((worker, i) => {
+            const current = Math.round(remain / (this.workers.length - i));
+            remain -= current;
+            worker.start({...params, sim: {...params.sim, iterations: current}});
+        });
+    }
+}
 
 class Simulation {
-    constructor(player, callback_finished, callback_update) {
+    static getConfig() {
+        return {
+            timesecsmin: parseInt($('input[name="timesecsmin"]').val()),
+            timesecsmax: parseInt($('input[name="timesecsmax"]').val()),
+            executeperc: parseInt($('input[name="executeperc"]').val()),
+            startrage: parseInt($('input[name="startrage"]').val()),
+            iterations: parseInt($('input[name="simulations"]').val()),
+            priorityap: parseInt(spells[4].priorityap),
+        };
+    }
+    constructor(player, callback_finished, callback_update, config) {
+        if (!config) config = Simulation.getConfig();
         this.player = player;
-        this.timesecsmin = parseInt($('input[name="timesecsmin"]').val());
-        this.timesecsmax = parseInt($('input[name="timesecsmax"]').val());
-        this.executeperc = parseInt($('input[name="executeperc"]').val());
-        this.startrage = parseInt($('input[name="startrage"]').val());
-        this.iterations = parseInt($('input[name="simulations"]').val());
+        this.timesecsmin = config.timesecsmin;
+        this.timesecsmax = config.timesecsmax;
+        this.executeperc = config.executeperc;
+        this.startrage = config.startrage;
+        this.iterations = config.iterations;
         this.idmg = 0;
         this.totaldmg = 0;
         this.totalduration = 0;
         this.mindps = 99999;
         this.maxdps = 0;
+        this.sumdps = 0;
+        this.sumdps2 = 0;
         this.maxcallstack = Math.min(Math.floor(this.iterations / 10), 1000);
         this.starttime = 0;
         this.endtime = 0;
@@ -34,11 +185,35 @@ class Simulation {
         if (this.iterations == 1) log = true;
         else log = false;
     }
-    start() {
-        this.run(1);
+    startSync() {
         this.starttime = new Date().getTime();
+        let iteration;
+        for (iteration = 1; iteration <= this.iterations; ++iteration) {
+            this.run();
+            if (iteration % this.maxcallstack == 0) {
+                this.update(iteration);
+            }
+        }
+        this.endtime = new Date().getTime();
+        this.finished();
     }
-    run(iteration) {
+    startAsync() {
+        this.starttime = new Date().getTime();
+        this.runAsync(1);
+    }
+    runAsync(iteration) {
+        this.run();
+        if (iteration == this.iterations) {
+            this.endtime = new Date().getTime();
+            this.finished();
+        } else if (iteration % this.maxcallstack == 0) {
+            this.update(iteration);
+            setTimeout(() => this.runAsync(iteration + 1), 0);
+        } else {
+            this.runAsync(iteration + 1);
+        }
+    }
+    run() {
         step = 0;
         this.idmg = 0;
         let player = this.player;
@@ -254,28 +429,42 @@ class Simulation {
         // Fight done
         player.endauras();
 
+        if (player.auras.deepwounds) {
+            this.idmg += player.auras.deepwounds.idmg;
+        }
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;
         let dps = this.idmg / this.duration;
         if (dps < this.mindps) this.mindps = dps;
         if (dps > this.maxdps) this.maxdps = dps;
+        this.sumdps += dps;
+        this.sumdps2 += dps * dps;
         dps = Math.round(dps);
         if (!this.spread[dps]) this.spread[dps] = 1;
         else this.spread[dps]++;
-
-        if (iteration == this.iterations) {
-            this.endtime = new Date().getTime();
-            if (this.cb_finished)
-                this.cb_finished();
+    }
+    update(iteration) {
+        if (this.cb_update) {
+            this.cb_update(iteration, {
+                iterations: this.iterations,
+                totaldmg: this.totaldmg,
+                totalduration: this.totalduration,
+            });
         }
-        else if (iteration % this.maxcallstack == 0) {
-            let view = this;
-            if (this.cb_update)
-                this.cb_update(iteration);
-            setTimeout(function () { view.run(iteration + 1); }, 0);
-        }
-        else {
-            this.run(iteration + 1);
+    }
+    finished() {
+        if (this.cb_finished) {
+            this.cb_finished({
+                iterations: this.iterations,
+                totaldmg: this.totaldmg,
+                totalduration: this.totalduration,
+                mindps: this.mindps,
+                maxdps: this.maxdps,
+                sumdps: this.sumdps,
+                sumdps2: this.sumdps2,
+                starttime: this.starttime,
+                endtime: this.endtime,
+            });
         }
     }
 }
