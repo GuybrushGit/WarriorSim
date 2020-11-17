@@ -6862,8 +6862,7 @@ var enchant = {
          "id": 6043,
          "name": "Iron Counterweight",
          "haste": 3,
-         "phase": 1,
-         "temp": true,
+         "phase": 1
       },
    ],
 };
