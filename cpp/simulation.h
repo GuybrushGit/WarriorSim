@@ -10,6 +10,7 @@ struct Simulation
     int startrage;
     int iterations;
     int priorityap;
+    int batching;
 
     uint64_t totaldmg = 0;
     uint64_t totalduration = 0;

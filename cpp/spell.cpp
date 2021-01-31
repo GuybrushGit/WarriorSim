@@ -110,7 +110,7 @@ void Execute::use()
 {
     Spell::use();
     usedrage = int( player.rage );
-    timer = 400 - ( player.simulation.step % 400 );
+    timer = player.simulation.batching - ( player.simulation.step % player.simulation.batching );
 }
 
 int Execute::step( int a )
@@ -512,7 +512,7 @@ void Windfury::use()
     }
     timer = player.simulation.step + 1500;
     starttimer = player.simulation.step;
-    mintime = player.simulation.step % 400;
+    mintime = player.simulation.step % player.simulation.batching;
     stacks = 2;
     player.updateAP();
     player.extraattacks += 1;

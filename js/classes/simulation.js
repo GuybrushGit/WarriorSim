@@ -6,6 +6,7 @@ var RESULT = {
     GLANCE: 4
 }
 
+var batching = 0;
 var step = 0;
 var log = false;
 var version = 4;
@@ -157,6 +158,7 @@ class Simulation {
             startrage: parseInt($('input[name="startrage"]').val()),
             iterations: parseInt($('input[name="simulations"]').val()),
             priorityap: parseInt(spells[4].priorityap),
+            batching: parseInt($('select[name="batching"]').val()),
         };
     }
     constructor(player, callback_finished, callback_update, config) {
@@ -167,6 +169,7 @@ class Simulation {
         this.executeperc = config.executeperc;
         this.startrage = config.startrage;
         this.iterations = config.iterations;
+        batching = config.batching;
         this.idmg = 0;
         this.totaldmg = 0;
         this.totalduration = 0;
@@ -375,7 +378,7 @@ class Simulation {
                 player.extraattacks--;
             }
             if (player.batchedextras > 0) {
-                player.mh.timer = 400 - (step % 400);
+                player.mh.timer = batching - (step % batching);
                 player.batchedextras--;
             }
             

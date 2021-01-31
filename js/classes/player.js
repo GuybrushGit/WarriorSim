@@ -773,7 +773,7 @@ class Player {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
                 //if (log) this.log(`${weapon.name} proc`);
-                if (weapon.proc1.spell) weapon.proc1.spell.use();
+                if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
@@ -832,7 +832,7 @@ class Player {
         let mod = 1;
         let miss = 1700;
         let dmg = proc.magicdmg;
-        if (proc.gcd && this.timer && this.timer < 1500) return 0;
+        //if (proc.gcd && this.timer && this.timer < 1500) return 0;
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;

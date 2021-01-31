@@ -985,7 +985,7 @@ int Player::magicproc( Proc& proc )
     double mod = 1.0;
     int miss = 1700;
     int dmg = proc.magicdmg;
-    if ( proc.gcd && timer && timer < 1500 ) return 0;
+    //if ( proc.gcd && timer && timer < 1500 ) return 0;
     if ( proc.binaryspell ) miss = target.binaryresist;
     else mod *= target.mitigation;
     if ( rng10k() < miss ) return 0;
