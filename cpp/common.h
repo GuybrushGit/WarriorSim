@@ -35,7 +35,7 @@ enum Race : int
     RACE_TAUREN,
     RACE_TROLL,
     RACE_UNDEAD,
-    RACE_GOBLIN
+    RACE_GOBLIN,
 
     NUM_RACES
 };
