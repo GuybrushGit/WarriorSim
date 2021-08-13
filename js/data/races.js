@@ -99,7 +99,7 @@ var races = [
       skill_2: 0,
       skill_3: 0,
    },{
-      name: 'Golbin',
+      name: 'Goblin',
       str: 123,
       agi: 77,
       sta: 112,
