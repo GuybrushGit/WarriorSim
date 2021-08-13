@@ -30,10 +30,12 @@ enum Race : int
     RACE_DWARF,
     RACE_GNOME,
     RACE_NIGHTELF,
+    RACE_HIGHELF,
     RACE_ORC,
     RACE_TAUREN,
     RACE_TROLL,
     RACE_UNDEAD,
+    RACE_GOBLIN
 
     NUM_RACES
 };
@@ -155,10 +157,13 @@ static RaceInfo races[] =
     { 122,  76, 113,  29, 160, { 0, 0, 0, 0, 0, 0 } }, // dwarf
     { 115,  83, 109,  35, 160, { 0, 0, 0, 0, 0, 0 } }, // gnome
     { 117,  85, 109,  30, 160, { 0, 0, 0, 0, 0, 0 } }, // nightelf
+    { 123,  77, 112,  27, 160, { 0, 0, 0, 0, 0, 0 } }, // highelf
     { 123,  77, 112,  27, 160, { 0, 0, 0, 5, 0, 0 } }, // orc
     { 125,  75, 112,  25, 160, { 0, 0, 0, 0, 0, 0 } }, // tauren
     { 121,  82, 111,  26, 160, { 0, 0, 0, 0, 0, 0 } }, // troll
     { 119,  78, 111,  28, 160, { 0, 0, 0, 0, 0, 0 } }, // undead
+    { 123,  77, 112,  27, 160, { 5, 0, 5, 0, 0, 0 } }, // goblin
+
 };
 
 template<class T>

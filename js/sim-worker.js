@@ -22,7 +22,7 @@ onmessage = (event) => {
         const itemSlots = ['head', 'neck', 'shoulder', 'back', 'chest', 'wrist', 'hands',
           'waist', 'legs', 'feet', 'finger1', 'finger2', 'trinket1', 'trinket2', 'ranged',
           'mainhand', 'offhand', 'twohand', 'custom'];
-        const races = ['Human', 'Dwarf', 'Gnome', 'Night Elf', 'Orc', 'Tauren', 'Troll', 'Undead'];
+        const races = ['Human', 'Dwarf', 'Gnome', 'Night Elf', 'High Elf', 'Orc', 'Tauren', 'Troll', 'Undead', 'Goblin'];
 
         const rng = [...Array(8)].map(() => Math.floor(Math.random() * 65536));
         module._initRandom(...rng);
