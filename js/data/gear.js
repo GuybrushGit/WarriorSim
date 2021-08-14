@@ -3780,6 +3780,7 @@ var gear = {
          "name": "Quel'dorei/Revantusk Revered Deflector",
          "Mainhand": true,
          "sta": 10,
+         "ac": 40,
          "mindmg": 61,
          "maxdmg": 110,
          "speed": 2.0,
@@ -3839,7 +3840,7 @@ var gear = {
          "type": "Dagger",
          "source": "AQ20",
          "phase": 7,
-         "id": 13246,
+         "id": 81003,
       },
       {
          "name": "Sandswept Obsidian Dagger",
