@@ -1053,6 +1053,17 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Onyxia Scale Breastplate",
+         "str": 15,
+         "agi": 15,
+         "sta": 15,
+         "crit": 1,
+         "ac": 605,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 15141
+      },
+      {
          "name": "Cryptbone Hauberk",
          "str": 16,
          "agi": 10,
