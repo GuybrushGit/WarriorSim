@@ -1,6 +1,76 @@
 var gear = {
    "head": [
       {
+         "name": "Crown of the Dark Reaver",
+         "str": 16,
+         "sta": 25,
+         "crit": 1,
+         "hit": 1,
+         "ac": 561,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51769
+      },
+      {
+         "name": "Visage of the Forgotten",
+         "sta": 22,
+         "str": 18,
+         "agi": 25,
+         "hit": 1,
+         "ac": 163,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51788
+      },
+      {
+         "name": "Timeskipper's Helm of Alacrity",
+         "sta": 20,
+         "str": 12,
+         "ac": 549,
+         "source": "Quest",
+         "phase": 7,
+         "id": 61003
+      },
+      {
+         "name": "Chieftain's Ceremonial Headdress",
+         "sta": 7,
+         "agi": 7,
+         "ac": 155,
+         "skill": 7,
+         "type": "Mace",
+         "source": "Other",
+         "phase": 7,
+         "id": 81223
+      },
+      {
+         "name": "Horned Helm of Ancient Kings",
+         "str": 21,
+         "sta": 16,
+         "ac": 750,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70056
+      },
+      {
+         "name": "Crown of Sacrifice (vs Undead)",
+         "ap": 45,
+         "ac": 754,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70057
+      },
+      {
+         "name": "Helmet of the Scarlet Avenger",
+         "sta": 14,
+         "str": 13,
+         "crit": 1,
+         "ac": 519,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 81124,
+         "_TODO": "Spell 9233"
+      },
+      {
          "name": "Eye of Rend",
          "sta": 7,
          "str": 13,
@@ -241,6 +311,15 @@ var gear = {
    ],
    "neck": [
       {
+         "name": "Shard of Eternity",
+         "str": 8,
+         "sta": 8,
+         "agi": 8,
+         "source": "Quest",
+         "phase": 7,
+         "id": 61012
+      },
+      {
          "name": "Amulet of the Darkmoon",
          "str": 10,
          "sta": 10,
@@ -275,7 +354,7 @@ var gear = {
          "phase": 2,
          "id": 17111,
          "procchance": 100,
-         "magicdmg": 3,
+         "magicdmg": 3
       },
       {
          "name": "Choker of the Shifting Sands",
@@ -435,6 +514,43 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Shoulderguards of the Dark Reaver",
+         "str": 15,
+         "sta": 18,
+         "crit": 1,
+         "ac": 561,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51770
+      },
+      {
+         "name": "Shoulderpads of True Flight",
+         "agi": 18,
+         "sta": 18,
+         "hit": 1,
+         "ac": 413,
+         "source": "MC",
+         "phase": 7,
+         "id": 81264
+      },
+      {
+         "name": "Epaulets of Courage",
+         "str": 18,
+         "ac": 610,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70064
+      },
+      {
+         "name": "Shoulderplates of Misfortune",
+         "str": 16,
+         "agi": 5,
+         "ac": 617,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70050
+      },
+      {
          "name": "Flamescarred Shoulders",
          "str": 12,
          "sta": 11,
@@ -442,7 +558,7 @@ var gear = {
          "ac": 131,
          "source": "Dungeon",
          "phase": 2,
-         "id": 18374,
+         "id": 18374
       },
       {
          "name": "Abyssal Plate Epaulets",
@@ -454,7 +570,7 @@ var gear = {
          "source": "Other",
          "phase": 4,
          "id": 20683,
-         "rand": 2158,
+         "rand": 2158
       },
       {
          "name": "Arathi Plate Spaulders",
@@ -661,6 +777,55 @@ var gear = {
       }
    ],
    "back": [
+      {
+         "name": "Quel'dorei/Revantusk Honored Cloak",
+         "str": 9,
+         "agi": 9,
+         "sta": 9,
+         "ac": 45,
+         "source": "Other",
+         "phase": 7,
+         "id": 80506
+      },
+      {
+         "name": "Wing of the Time-Lord",
+         "str": 12,
+         "agi": 12,
+         "sta": 8,
+         "ac": 50,
+         "source": "Quest",
+         "phase": 7,
+         "id": 61010
+      },
+      {
+         "name": "Bloodfallen Cloak",
+         "sta": 10,
+         "ap": 16,
+         "ac": 43,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 81122
+      },
+      {
+         "name": "Shadow-Weaver's Cape",
+         "ap": 50,
+         "agi": 10,
+         "sta": 12,
+         "ac": 53,
+         "source": "Nerubian",
+         "phase": 7,
+         "id": 51773
+      },
+      {
+         "name": "Shawl of Haunted Memories",
+         "ap": 40,
+         "str": 10,
+         "sta": 12,
+         "ac": 53,
+         "source": "Nerubian",
+         "phase": 7,
+         "id": 51773
+      },
       {
          "name": "Cloak of Firemaw",
          "ap": 50,
@@ -887,6 +1052,74 @@ var gear = {
       }
    ],
    "chest": [
+      {
+         "name": "Cryptbone Hauberk",
+         "str": 16,
+         "agi": 10,
+         "sta": 22,
+         "hit": 1,
+         "ac": 592,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51786
+      },
+      {
+         "name": "Chestplate of the Dark Reaver",
+         "str": 18,
+         "sta": 30,
+         "ac": 749,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51771
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Chestplate",
+         "str": 18,
+         "agi": 10,
+         "sta": 13,
+         "crit": 1,
+         "ac": 687,
+         "source": "Other",
+         "phase": 7,
+         "id": 80507
+      },
+      {
+         "name": "Breastplate of Fortitutde",
+         "str": 22,
+         "sta": 11,
+         "ac": 835,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70058,
+      },
+      {
+         "name": "Breastplate of the Dark Reaver",
+         "str": 26,
+         "ac": 650,
+         "source": "Unobtainable",
+         "phase": 7,
+         "id": 81052,
+         "_TODO": "Spell 16611"
+      },
+      {
+         "name": "Carapace of the Spider Queen",
+         "agi": 10,
+         "str": 7,
+         "sta": 15,
+         "ac": 172,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 80758
+      },
+      {
+         "name": "Chieftain's Ceremonial Harness",
+         "sta": 17,
+         "str": 16,
+         "ac": 155,
+         "source": "Other",
+         "phase": 7,
+         "id": 81218
+      },
       {
          "name": "Black Dragonscale Breastplate",
          "sta": 8,
@@ -1163,6 +1396,26 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Shadowskin Bracers",
+         "ap": 26,
+         "sta": 16,
+         "hit": 1,
+         "ac": 140,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51783
+      },
+      {
+         "name": "Rothide Armguards",
+         "sta": 12,
+         "ap": 16,
+         "hit": 1,
+         "ac": 76,
+         "source": "Unobtainable",
+         "phase": "7",
+         "id": 51744
+      },      
+      {
          "name": "Abyssal Plate Vambraces",
          "str": 11,
          "sta": 12,
@@ -1171,7 +1424,7 @@ var gear = {
          "source": "Other",
          "phase": "4",
          "id": 20687,
-         "rand": 2163,
+         "rand": 2163
       },
       {
          "name": "Battleborn Armbraces",
@@ -1350,6 +1603,64 @@ var gear = {
       }
    ],
    "hands": [
+      {
+         "name": "Grasp of the Dark Reaver",
+         "str": 14,
+         "sta": 20,
+         "crit": 1,
+         "ac": 468,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51772
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Handguards",
+         "str": 15,
+         "agi": 10,
+         "sta": 10,
+         "ac": 430,
+         "source": "Other",
+         "phase": 7,
+         "id": 80510
+      },
+      {
+         "name": "Gauntlets of Temporal Guidance",
+         "sta": 11,
+         "agi": 18,
+         "hit": 1,
+         "ac": 238,
+         "source": "Quest",
+         "phase": 7,
+         "id": 61013
+      },
+      {
+         "name": "Gauntlets of Wrangling",
+         "str": 12,
+         "agi": 7,
+         "ac": 489,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70051
+      },
+      {
+         "name": "Gauntlets of Force (vs Undead)",
+         "ap": 30,
+         "ac": 483,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70062
+      },
+      {
+         "name": "Gauntlets of the Myrimidon",
+         "str": 10,
+         "agi": 6,
+         "sta": 12,
+         "ap": 20,
+         "ac": 225,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 81019
+      },
       {
          "name": "Aged Core Leather Gloves",
          "crit": 1,
@@ -1556,6 +1867,76 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Girdle of the Dark Reaver",
+         "str": 16,
+         "sta": 20,
+         "hit": 1,
+         "ac": 421,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51773
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Girdle",
+         "str": 14,
+         "agi": 10,
+         "sta": 13,
+         "crit": 1,
+         "ac": 380,
+         "source": "Other",
+         "phase": 7,
+         "id": 80509
+      },
+      {
+         "name": "Ashskin Belt",
+         "crit": 1,
+         "sta": 15,
+         "str": 10,
+         "agi": 10,
+         "ac": 111,
+         "skill": 5,
+         "type": "Fist",
+         "source": "MC",
+         "phase": 7,
+         "id": 81265
+      },
+      {
+         "name": "Girdle of Hope (vs Undead)",
+         "ap": 39,
+         "ac": 416,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70063
+      },
+      {
+         "name": "Skorgrim's Lost Belt",
+         "sta": 10,
+         "ac": 550,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70052
+      },
+      {
+         "name": "Stonescale Girdle",
+         "agi": -6,
+         "sta": 14,
+         "crit": 1,
+         "ap": 18,
+         "ac": 280,
+         "source": "Unobtainable",
+         "phase": 7,
+         "id": 51749
+      },
+      {
+         "name": "Chieftain's Ceremonial Belt",
+         "agi": 10,
+         "sta": 18,
+         "ac": 88,
+         "source": "Other",
+         "phase": 7,
+         "id": 81221
+      },
       {
          "name": "Arathi Plate Girdle",
          "crit": 1,
@@ -1769,6 +2150,44 @@ var gear = {
       }
    ],
    "legs": [
+      {
+         "name": "Legguards of the Dark Reaver",
+         "str": 16,
+         "sta": 24,
+         "crit": 1,
+         "ac": 655,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51775
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Legplates",
+         "str": 16,
+         "agi": 13,
+         "sta": 19,
+         "crit": 1,
+         "ac": 593,
+         "source": "Other",
+         "phase": 7,
+         "id": 80511
+      },
+      {
+         "name": "Rotworm Legplates",
+         "agi": 11,
+         "sta": 13,
+         "ac": 648,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70053
+      },
+      {
+         "name": "Greaves of Servitude (vs Demons)",
+         "ap": 78,
+         "ac": 642,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70060
+      },
       {
          "name": "Abyssal Plate Legplates",
          "crit": 1,
@@ -2042,6 +2461,44 @@ var gear = {
    ],
    "feet": [
       {
+         "name": "Sabatons of the Dark Reaver",
+         "str": 12,
+         "sta": 20,
+         "crit": 1,
+         "ac": 515,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51774
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Boots",
+         "str": 17,
+         "agi": 17,
+         "sta": 10,
+         "ac": 468,
+         "source": "Other",
+         "phase": 7,
+         "id": 80508
+      },
+      {
+         "name": "Boots of Flowing Sands",
+         "agi": 14,
+         "sta": 16,
+         "hit": 1,
+         "ac": 187,
+         "source": "Quest",
+         "phase": 7,
+         "id": 61005
+      },
+      {
+         "name": "Sabatons of Protection (vs Demons)",
+         "ap": 45,
+         "ac": 578,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 70059
+      },
+      {
          "name": "Arathi Plate Greaves",
          "str": 14,
          "sta": 12,
@@ -2277,6 +2734,15 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Spireblade Band",
+         "str": 10,
+         "agi": 5,
+         "hit": 1,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 80760
+      },
+      {
          "name": "Archimtiros' Ring of Reckoning",
          "sta": 28,
          "agi": 14,
@@ -2508,6 +2974,15 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Spireblade Band",
+         "str": 10,
+         "agi": 5,
+         "hit": 1,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 80760
+      },
       {
          "name": "Archimtiros' Ring of Reckoning",
          "sta": 28,
@@ -2970,6 +3445,29 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Ghoulslayer Shotgun (vs Undead)",
+         "ap": 39,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "id": 51780
+      },
+      {
+         "name": "Flintlocke's Hand Cannon",
+         "hit": 1,
+         "sta": 5,
+         "source": "Quest",
+         "phase": "7",
+         "id": 61011
+      },
+      {
+         "name": "Burstshot Harquebus",
+         "ap": 10,
+         "sta": 8,
+         "source": "Other",
+         "phase": "7",
+         "id": 80795
+      },
+      {
          "name": "Ancient Bone Bow",
          "agi": 11,
          "source": "Dungeon",
@@ -3226,6 +3724,135 @@ var gear = {
       }
    ],
    "mainhand": [
+      {
+         "name": "Quel'dorei/Revantusk Revered Kris",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 44,
+         "maxdmg": 84,
+         "speed": 1.5,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 80528,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Sword",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 80536,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Handaxe",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Axe",
+         "source": "Other",
+         "phase": 7,
+         "id": 80533,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Mace",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Mace",
+         "source": "Other",
+         "phase": 7,
+         "id": 80530,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Deflector",
+         "Mainhand": true,
+         "sta": 10,
+         "mindmg": 61,
+         "maxdmg": 110,
+         "speed": 2.0,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 80535,
+      },
+      {
+         "name": "Lavashard Axe",
+         "crit": 1,
+         "sta": 6,
+         "mindmg": 79,
+         "maxdmg": 147,
+         "speed": 2.4,
+         "type": "Axe",
+         "source": "MC",
+         "phase": 7,
+         "id": 81260,
+      },
+      {
+         "name": "Claw of the Infinite",
+         "skill": 2,
+         "agi": 11,
+         "sta": 5,
+         "mindmg": 63,
+         "maxdmg": 125,
+         "speed": 2.2,
+         "type": "Dagger",
+         "source": "Quest",
+         "phase": 7,
+         "id": 61001,
+      },
+      {
+         "name": "Mechanist's Bonechopper Replica",
+         "str": 5,
+         "agi": 5,
+         "sta": 5,
+         "mindmg": 76,
+         "maxdmg": 139,
+         "speed": 2.6,
+         "type": "Sword",
+         "source": "Quest",
+         "phase": 7,
+         "id": 81288,
+         "ppm": 1,
+         "physdmg": 20
+      },
+      {
+         "name": "Ancient Hakkari Flayer",
+         "Mainhand": true,
+         "ap": 24,
+         "hit": 1,
+         "mindmg": 66,
+         "maxdmg": 123,
+         "speed": 1.9,
+         "type": "Dagger",
+         "source": "AQ20",
+         "phase": 7,
+         "id": 13246,
+      },
+      {
+         "name": "Sandswept Obsidian Dagger",
+         "ap": 24,
+         "hit": 1,
+         "mindmg": 66,
+         "maxdmg": 123,
+         "speed": 1.9,
+         "type": "Dagger",
+         "source": "AQ20",
+         "phase": 7,
+         "id": 13246,
+      },
       {
          "name": "Argent Avenger (vs Undead)",
          "mindmg": 71,
@@ -4537,6 +5164,97 @@ var gear = {
    ],
    "offhand": [
       {
+         "name": "Quel'dorei/Revantusk Revered Kris",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 44,
+         "maxdmg": 84,
+         "speed": 1.5,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 80528,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Sword",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 80536,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Handaxe",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Axe",
+         "source": "Other",
+         "phase": 7,
+         "id": 80533,
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Mace",
+         "sta": 5,
+         "str": 8,
+         "agi": 8,
+         "mindmg": 71,
+         "maxdmg": 134,
+         "speed": 2.4,
+         "type": "Mace",
+         "source": "Other",
+         "phase": 7,
+         "id": 80530,
+      },
+      {
+         "name": "Lavashard Axe",
+         "crit": 1,
+         "sta": 6,
+         "mindmg": 79,
+         "maxdmg": 147,
+         "speed": 2.4,
+         "type": "Axe",
+         "source": "MC",
+         "phase": 7,
+         "id": 81260,
+      },
+      {
+         "name": "Mechanist's Bonechopper Replica",
+         "str": 5,
+         "agi": 5,
+         "sta": 5,
+         "mindmg": 76,
+         "maxdmg": 139,
+         "speed": 2.6,
+         "type": "Sword",
+         "source": "Quest",
+         "phase": 7,
+         "id": 81288,
+         "ppm": 1,
+         "physdmg": 20
+      },
+      {
+         "name": "Sandswept Obsidian Dagger",
+         "ap": 24,
+         "hit": 1,
+         "mindmg": 66,
+         "maxdmg": 123,
+         "speed": 1.9,
+         "type": "Dagger",
+         "source": "AQ20",
+         "phase": 7,
+         "id": 13246,
+      },
+      {
          "name": "Argent Avenger (vs Undead)",
          "mindmg": 71,
          "maxdmg": 108,
@@ -5598,6 +6316,70 @@ var gear = {
       }
    ],
    "twohand": [
+      {
+         "name": "Quel'dorei/Revantusk Revered Battle Axe",
+         "sta": 20,
+         "crit": 2,
+         "mindmg": 182,
+         "maxdmg": 269,
+         "speed": 3.6,
+         "id": 51779,
+         "source": "Dark Reaver",
+         "phase": 7,
+         "type": "Axe"
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Battle Axe",
+         "sta": 8,
+         "ap": 50,
+         "crit": 1,
+         "mindmg": 136,
+         "maxdmg": 243,
+         "speed": 3.4,
+         "id": 80547,
+         "source": "Other",
+         "phase": 7,
+         "type": "Axe"
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Battle Glaive",
+         "sta": 8,
+         "ap": 50,
+         "crit": 1,
+         "mindmg": 136,
+         "maxdmg": 243,
+         "speed": 3.4,
+         "id": 80534,
+         "source": "Other",
+         "phase": 7,
+         "type": "Polearm"
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Warhammer",
+         "sta": 8,
+         "ap": 50,
+         "crit": 1,
+         "mindmg": 136,
+         "maxdmg": 243,
+         "speed": 3.4,
+         "id": 80531,
+         "source": "Other",
+         "phase": 7,
+         "type": "Mace"
+      },
+      {
+         "name": "Quel'dorei/Revantusk Revered Twinblade",
+         "sta": 8,
+         "ap": 50,
+         "crit": 1,
+         "mindmg": 136,
+         "maxdmg": 243,
+         "speed": 3.4,
+         "id": 80537,
+         "source": "Other",
+         "phase": 7,
+         "type": "Sword"
+      },
       {
          "name": "Arcanite Reaper",
          "sta": 13,
