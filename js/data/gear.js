@@ -68,7 +68,8 @@ var gear = {
          "source": "Dungeon",
          "phase": 7,
          "id": 81124,
-         "_TODO": "Spell 9233"
+         "procchance": 5,
+         "magicdmg": 20
       },
       {
          "name": "Eye of Rend",

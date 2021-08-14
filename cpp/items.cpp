@@ -10,7 +10,7 @@ static Aura& addproc( Player& player )
 
 Item item_head[] =
 {
-  { 81124, { 14, 13, 0, 0, 1, 0, 519, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { -1, 0, 0, 0.0 }, { 0, 0, 0, 0, 0, 0, 0, 0,  nullptr } }, // Helmet of the Scarlet Avenger
+  { 81124, { 14, 13, 0, 0, 1, 0, 519, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { -1, 0, 0, 0.0 }, { 5, 0, 0, 20, 0, 0, 0, 0,  nullptr } }, // Helmet of the Scarlet Avenger
   { 70057, { 0, 0, 0, 45, 0, 0, 754, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { -1, 0, 0, 0.0 }, { 0, 0, 0, 0, 0, 0, 0, 0,  nullptr } }, // Crown of Sacrifice (vs Undead)
   { 70056, { 16, 21, 0, 0, 0, 0, 750, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { -1, 0, 0, 0.0 }, { 0, 0, 0, 0, 0, 0, 0, 0,  nullptr } }, // Horned Helm of Ancient Kings
   { 81223, { 7, 0, 7, 0, 0, 0, 155, 0, 0, 0, { 7, 0, 0, 0, 0, 0 } }, { -1, 0, 0, 0.0 }, { 0, 0, 0, 0, 0, 0, 0, 0,  nullptr } }, // Chieftain's Ceremonial Headdress
