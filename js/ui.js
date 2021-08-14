@@ -772,7 +772,13 @@ SIM.UI = {
                 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
+                        <td>`
+            if (tooltip <= 50000)
+              table += `<a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>`
+            else
+              table += `<a href="https://database.turtle-wow.org/?item=${tooltip}${rand}"></a>`
+            
+            table +=`${item.name}</td>
                         <td>${item.source}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
@@ -862,7 +868,13 @@ SIM.UI = {
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
+                        <td>`
+            if (tooltip <= 50000)
+              table += `<a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>`
+            else
+              table += `<a href="https://database.turtle-wow.org/?item=${tooltip}${rand}"></a>`
+            
+            table += `${item.name}</td>
                         <td>${item.source || ''}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
