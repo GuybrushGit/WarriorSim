@@ -814,7 +814,7 @@ var gear = {
          "ac": 53,
          "source": "Nerubian",
          "phase": 7,
-         "id": 51773
+         "id": 51733
       },
       {
          "name": "Shawl of Haunted Memories",
@@ -824,7 +824,7 @@ var gear = {
          "ac": 53,
          "source": "Nerubian",
          "phase": 7,
-         "id": 51773
+         "id": 51734
       },
       {
          "name": "Cloak of Firemaw",
