@@ -756,7 +756,7 @@ SIM.UI = {
             }
 
             let source = item.source.toLowerCase(), phase = item.phase;
-            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
+            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver')
                 source = 'worldboss';
 
             if (phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active'))
@@ -846,7 +846,7 @@ SIM.UI = {
         for (let item of gear[type]) {
 
             let source = item.source.toLowerCase(), phase = item.phase;
-            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
+            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver')
                 source = 'worldboss';
 
             if (max == 2 && 
