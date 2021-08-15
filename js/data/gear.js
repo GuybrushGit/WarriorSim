@@ -1,6 +1,15 @@
 var gear = {
    "head": [
       {
+         "name": "Hawkspear's Ceremonial Headdress",
+         "skill": 5,
+         "type": "Polearm",
+         "ac": 76,
+         "source": "Quest",
+         "phase": 7,
+         "id": 70014
+      },
+      {
          "name": "Crown of the Dark Reaver",
          "str": 16,
          "sta": 25,
