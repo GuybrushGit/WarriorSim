@@ -2168,6 +2168,15 @@ var gear = {
          "source": "BWL",
          "phase": 3,
          "id": 16960
+      },
+      {
+         "name": "Light Obsidian Belt",
+         "ap": 32,
+         "crit": 1,
+         "ac": 224,
+         "source": "Crafting",
+         "phase": 5,
+         "id": 22195
       }
    ],
    "legs": [
