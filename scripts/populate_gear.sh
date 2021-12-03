@@ -1,5 +1,8 @@
 jsonDataFile="./js/data/gear.js"
+cppDataTempl="./cpp/items.cpp.template"
 cppDataFile="./cpp/items.cpp"
+
+cp -v ${cppDataTempl} ${cppDataFile}
 
 function populate_gear () {
   gearJson=$(node -e "eval(fs.readFileSync('${jsonDataFile}')+''); console.log('%j', gear)")
@@ -10,12 +13,12 @@ function populate_gear () {
     readarray -t ids < <(jq ".${itemType} | .[].id" <<< $gearJson); # build list of all IDs
     
     for id in ${ids[@]}; do
-      if ! grep -q ${id} ${cppDataFile}; then # for all items not yet processed
+      # if ! grep -q ${id} ${cppDataFile}; then # for all items not yet processed
         generateCppSyntax;
         echo $cppLine;
         # add item to top of c++ array
-        sed -i -z -- "s@item_${itemType}\[] =\n{\n  @item_${itemType}[] =\n{\n  ${cppLine}\n  @" ${cppDataFile}; # using @ as delimiter to avoid conflict with c++ // comment syntax
-      fi;
+        sed -i -z -- "s@item_${itemType}\[] =\n{\n@item_${itemType}[] =\n{\n  ${cppLine}\n@" ${cppDataFile}; # using @ as delimiter to avoid conflict with c++ // comment syntax
+      # fi;
     done;
   done;
 }
@@ -23,7 +26,7 @@ function populate_gear () {
 function generateCppSyntax () {
   # Initialize item stats to 0
   declare -A itemStats
-  for stat in id sta str agi ap crit hit ac defense dodge parry skill type procchance ppm procextra magicdmg physdmg binaryspell procgcd coeff; do
+  for stat in id sta str agi ap crit hit ac defense dodge parry skill type procchance ppm procextra procspell magicdmg physdmg binaryspell procgcd coeff Mainhand; do
     itemStats[$stat]=0
   done
     
@@ -80,8 +83,23 @@ function generateCppSyntax () {
   cppLine+="${itemStats["procgcd"]}, "
   cppLine+="${itemStats["coeff"]}, "
   
-  # assume no custom proc c++ code to be invoked
-  cppLine+=" nullptr } }, "
+  if [[ ! ${itemStats["procspell"]} == 0 ]]; then
+    if [[ ! ${itemType} == "twohand" ]]; then # 1handers only
+      if [[ ! ${itemStats["Mainhand"]} == 0 ]]; then
+        cppLine+="addproc<${itemStats["procspell"]}>"   # mainhanders only
+      elif [[ ${itemType} == "mainhand" ]]; then
+        cppLine+="addproc<${itemStats["procspell"]}MH>" # 1hander in mainhand
+      else
+        cppLine+="addproc<${itemStats["procspell"]}OH>" # 1hander in offhand
+      fi
+    else
+      cppLine+="addproc<${itemStats["procspell"]}>"
+    fi
+  else
+    cppLine+="nullptr"
+  fi
+  
+  cppLine+="} }, "
 
   # add the item's name as a c++ comment at the end of the line
   cppLine+="// ${itemStats["name"]}"

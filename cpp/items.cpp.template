@@ -1,0 +1,308 @@
+#include "items.h"
+
+#include "player.h"
+
+template<class T>
+static Aura& addproc( Player& player )
+{
+    return player.auras.emplace<T>( player );
+}
+
+Item item_head[] =
+{
+};
+
+Item item_neck[] =
+{
+};
+
+Item item_shoulder[] =
+{
+};
+
+Item item_back[] =
+{
+};
+
+Item item_chest[] =
+{
+};
+
+Item item_wrist[] =
+{
+};
+
+Item item_hands[] =
+{
+};
+
+Item item_waist[] =
+{
+};
+
+Item item_legs[] =
+{
+};
+
+Item item_feet[] =
+{
+};
+
+Item item_finger1[] =
+{
+};
+
+Item item_finger2[] =
+{
+};
+
+Item item_trinket1[] =
+{
+};
+
+Item item_trinket2[] =
+{
+};
+
+Item item_ranged[] =
+{
+};
+
+Item item_mainhand[] =
+{
+};
+
+Item item_offhand[] =
+{
+};
+
+Item item_twohand[] =
+{
+};
+
+Item item_custom[] =
+{
+};
+
+Enchant enchant_head[] =
+{
+  {  18329, 0, {   0,   0,   0, 0, 1, 0 }, { 0.0,  0, nullptr              } }, // Arcanum of Rapidity
+  {  11647, 0, {   0,   8,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Lesser Arcanum of Voracity (Agi)
+  {  11645, 0, {   8,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Lesser Arcanum of Voracity (Str)
+};
+
+Enchant enchant_shoulder[] =
+{
+  {  29483, 0, {   0,   0,  26, 1, 0, 0 }, { 0.0,  0, nullptr              } }, // Might of the Scourge
+  {  24422, 0, {   0,   0,  30, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Zandalar Signet of Might
+};
+
+Enchant enchant_back[] =
+{
+  {  25084, 0, {   0,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Subtlety
+  {  13882, 0, {   0,   3,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Lesser Agility
+};
+
+Enchant enchant_chest[] =
+{
+  {  20025, 0, {   4,   4,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Greater Stats
+  {  13941, 0, {   3,   3,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Stats
+};
+
+Enchant enchant_wrist[] =
+{
+  {  13939, 0, {   7,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Greater Strength
+  {  20010, 0, {   9,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Superior Strength
+};
+
+Enchant enchant_hands[] =
+{
+  {  25080, 0, {   0,  15,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Superior Agility
+  {  20012, 0, {   0,   7,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Greater Agility
+  {  20013, 0, {   7,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Greater Strength
+  {  13948, 0, {   0,   0,   0, 0, 1, 0 }, { 0.0,  0, nullptr              } }, // Minor Haste
+};
+
+Enchant enchant_legs[] =
+{
+  {  18329, 0, {   0,   0,   0, 0, 1, 0 }, { 0.0,  0, nullptr              } }, // Arcanum of Rapidity
+  {  11647, 0, {   0,   8,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Lesser Arcanum of Voracity (Agi)
+  {  11645, 0, {   8,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Lesser Arcanum of Voracity (Str)
+};
+
+Enchant enchant_feet[] =
+{
+  {  20023, 0, {   0,   7,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Greater Agility
+  {  13890, 0, {   0,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Minor Speed
+};
+
+Enchant enchant_mainhand[] =
+{
+  {  23800, 0, {   0,  15,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Agility
+  {  23799, 0, {  15,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Strength
+  {  20034, 0, {   0,   0,   0, 0, 0, 0 }, { 1.0,  0, addproc<CrusaderMH>  } }, // Crusader
+  {  13898, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 44, nullptr              } }, // Fiery
+  {  20032, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 33, nullptr              } }, // Lifestealing
+  {  20031, 0, {   0,   0,   0, 0, 0, 5 }, { 0.0,  0, nullptr              } }, // Superior Striking
+  {  18262, 1, {   0,   0,   0, 2, 0, 0 }, { 0.0,  0, nullptr              } }, // Elemental Sharpening Stone
+  {  12404, 1, {   0,   0,   0, 0, 0, 8 }, { 0.0,  0, nullptr              } }, // Dense Stone
+  {  23122, 1, {   0,   0, 108, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Consecrated Sharpening Stone
+};
+
+Enchant enchant_offhand[] =
+{
+  {  23800, 0, {   0,  15,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Agility
+  {  23799, 0, {  15,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Strength
+  {  20034, 0, {   0,   0,   0, 0, 0, 0 }, { 1.0,  0, addproc<CrusaderOH>  } }, // Crusader
+  {  13898, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 44, nullptr              } }, // Fiery
+  {  20032, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 33, nullptr              } }, // Lifestealing
+  {  20031, 0, {   0,   0,   0, 0, 0, 5 }, { 0.0,  0, nullptr              } }, // Superior Striking
+  {  18262, 1, {   0,   0,   0, 2, 0, 0 }, { 0.0,  0, nullptr              } }, // Elemental Sharpening Stone
+  {  12404, 1, {   0,   0,   0, 0, 0, 8 }, { 0.0,  0, nullptr              } }, // Dense Stone
+  {  23122, 1, {   0,   0, 108, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Consecrated Sharpening Stone
+};
+
+Enchant enchant_twohand[] =
+{
+  {  27837, 0, {   0,  25,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // 2H Agility
+  {  23799, 0, {  15,   0,   0, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Strength
+  {  20034, 0, {   0,   0,   0, 0, 0, 0 }, { 1.0,  0, addproc<CrusaderMH>  } }, // Crusader
+  {  13898, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 44, nullptr              } }, // Fiery
+  {  20032, 0, {   0,   0,   0, 0, 0, 0 }, { 6.0, 33, nullptr              } }, // Lifestealing
+  {  18262, 1, {   0,   0,   0, 2, 0, 0 }, { 0.0,  0, nullptr              } }, // Elemental Sharpening Stone
+  {  12404, 1, {   0,   0,   0, 0, 0, 8 }, { 0.0,  0, nullptr              } }, // Dense Stone
+  {  23122, 1, {   0,   0, 108, 0, 0, 0 }, { 0.0,  0, nullptr              } }, // Consecrated Sharpening Stone
+  {  20030, 0, {   0,   0,   0, 0, 0, 9 }, { 0.0,  0, nullptr              } }, // Superior Impact
+  {   6043, 1, {   0,   0,   0, 0, 3, 0 }, { 0.0,  0, nullptr              } }, // Iron Counterweight
+};
+
+ItemSet item_sets[] =
+{
+    { // Devilsaur Armor
+        { 15062, 15063 },
+        {
+            { 2, { 0, 2, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Battlegear of Undead Slaying (vs Undead)
+        { 23078, 23087, 23090 },
+        {
+            { 3, { 0, 0, 0, 0, 2, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Battlegear of Valor
+        { 16736, 16734, 16735, 16730, 16737, 16731, 16732, 16733 },
+        {
+            { 4, { 40, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Black Dragon Mail
+        { 15050, 16984, 15052, 15051 },
+        {
+            { 2, { 0, 1, 0, 0, 0, 0 }, { 0, nullptr } },
+            { 3, { 0, 0, 2, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Dal'Rend's Arms
+        { 12940, 12939 },
+        {
+            { 2, { 50, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Field Marshal's Battlegear
+        { 16477, 16478, 16480, 16483, 16484, 16479 },
+        {
+            { 6, { 40, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Lieutenant Commander's Battlearmor
+        { 23315, 23314, 23287, 23286, 23301, 23300 },
+        {
+            { 2, { 40, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Battlegear of Wrath
+        { 16959, 16966, 16964, 16963, 16962, 16961, 16965, 16960 },
+        {
+            { 2, { 0, 0, 0, 0, 0, 1 }, { 0, nullptr } },
+        }
+    },
+    { // Battlegear of Heroism
+        { 21994, 21995, 21996, 21997, 21998, 21999, 22000, 22001 },
+        {
+            { 6, { 40, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // The Defiler's Resolution
+        { 20204, 20208, 20212 },
+        {
+            { 3, { 0, 0, 1, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Major Mojo Infusion
+        { 19898, 19925 },
+        {
+            { 2, { 30, 0, 0, 0, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // The Twin Blades of Hakkari
+        { 19865, 19866 },
+        {
+            { 2, { 0, 0, 0, 6, 0, 0 }, { 0, nullptr } },
+        }
+    },
+    { // Primal Blessing
+        { 19896, 19910 },
+        {
+            { 2, { 0, 0, 0, 0, 0, 0 }, { 1, addproc<PrimalBlessing> } },
+        }
+    },
+};
+
+static_vector<Item> Items[NUM_ITEM_SLOTS] =
+{
+    item_head,
+    item_neck,
+    item_shoulder,
+    item_back,
+    item_chest,
+    item_wrist,
+    item_hands,
+    item_waist,
+    item_legs,
+    item_feet,
+    item_finger1,
+    item_finger2,
+    item_trinket1,
+    item_trinket2,
+    item_ranged,
+    item_mainhand,
+    item_offhand,
+    item_twohand,
+    item_custom,
+};
+
+static_vector<Enchant> Enchants[NUM_ITEM_SLOTS] =
+{
+    enchant_head,
+    0,
+    enchant_shoulder,
+    enchant_back,
+    enchant_chest,
+    enchant_wrist,
+    enchant_hands,
+    0,
+    enchant_legs,
+    enchant_feet,
+    0,
+    0,
+    0,
+    0,
+    0,
+    enchant_mainhand,
+    enchant_offhand,
+    enchant_twohand,
+    0,
+};
+
+static_vector<ItemSet> Sets = item_sets;
