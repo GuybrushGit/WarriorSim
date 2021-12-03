@@ -6462,7 +6462,7 @@ var gear = {
          "source": "Crafting",
          "phase": 1,
          "type": "Sword",
-         "ppm": 3,
+         "ppm": 1.2,
          "procspell": "Champion"
       },
       {
