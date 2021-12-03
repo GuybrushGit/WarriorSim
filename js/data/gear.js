@@ -6390,6 +6390,18 @@ var gear = {
    ],
    "twohand": [
       {
+         "name": "Sul'thraze the Lasher",
+         "mindmg": 108,
+         "maxdmg": 163,
+         "speed": 2.6,
+         "id": 9372,
+         "source": "Dungeon",
+         "phase": 1,
+         "type": "Sword",
+         "ppm": 1.5,
+         "magicdmg": 275
+      },
+      {
          "name": "Quel'dorei/Revantusk Revered Battle Axe",
          "sta": 20,
          "crit": 2,

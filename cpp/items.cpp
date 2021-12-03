@@ -753,6 +753,7 @@ Item item_twohand[] =
   { 80534, { 8, 0, 0, 50, 1, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { 5, 136, 243, 3.4 }, { 0, 0, 0, 0, 0, 0, 0, 0, nullptr} }, // Quel'dorei/Revantusk Revered Battle Glaive
   { 80547, { 8, 0, 0, 50, 1, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { 3, 136, 243, 3.4 }, { 0, 0, 0, 0, 0, 0, 0, 0, nullptr} }, // Quel'dorei/Revantusk Revered Battle Axe
   { 51779, { 20, 0, 0, 0, 2, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { 3, 182, 269, 3.6 }, { 0, 0, 0, 0, 0, 0, 0, 0, nullptr} }, // Quel'dorei/Revantusk Revered Battle Axe
+  { 9372, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 0, 0 } }, { 1, 108, 163, 2.6 }, { 0, 1.5, 0, 275, 0, 0, 0, 0, nullptr} }, // Sul'thraze the Lasher
 };
 
 Item item_custom[] =
