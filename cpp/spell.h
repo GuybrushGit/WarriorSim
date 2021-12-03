@@ -766,6 +766,21 @@ struct Untamed : public StrengthAura
     }
 };
 
+struct Champion : public StrengthAura
+{
+    const char* name() const override
+    {
+        return "Arcanite Champion";
+    }
+
+    Champion( Player& player_ )
+        : StrengthAura( player_ )
+    {
+        duration = 30;
+        stats.str = 120;
+    }
+};
+
 struct Pummeler : public HasteAura
 {
     const char* name() const override

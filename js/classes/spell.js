@@ -773,6 +773,15 @@ class Untamed extends Aura {
     }
 }
 
+class Champion extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 30;
+        this.stats = { str: 120 };
+        this.name = 'Arcanite Champion';
+    }
+}
+
 class Pummeler extends Aura {
     constructor(player) {
         super(player);

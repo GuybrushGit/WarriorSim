@@ -49,6 +49,7 @@ struct Player
         Bonereaver,
         Destiny,
         Untamed,
+        Champion,
         Pummeler,
         Windfury,
         Swarmguard,

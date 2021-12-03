@@ -524,6 +524,16 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Blood Tiger Shoulders",
+         "sta": 13,
+         "str": 13,
+         "agi": 12,
+         "ac": 136,
+         "source": "Crafting",
+         "phase": 4,
+         "id": 19689
+      },
+      {
          "name": "Shoulderguards of the Dark Reaver",
          "str": 15,
          "sta": 18,
@@ -1063,6 +1073,16 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Blood Tiger Breastplate",
+         "sta": 17,
+         "str": 17,
+         "agi": 16,
+         "ac": 181,
+         "source": "Crafting",
+         "phase": 4,
+         "id": 19688
+      },
+      {
          "name": "Onyxia Scale Breastplate",
          "str": 15,
          "agi": 15,
@@ -1174,10 +1194,10 @@ var gear = {
       {
          "name": "Breastplate of Bloodthirst",
          "crit": 2,
-         "str": 13,
-         "sta": 20,
+         "str": 15,
+         "sta": 25,
          "dodge": 1,
-         "ac": 190,
+         "ac": 197,
          "source": "Quest",
          "phase": 1,
          "id": 12757
@@ -1207,8 +1227,8 @@ var gear = {
          "name": "Breastplate of the Chromatic Flight",
          "str": 20,
          "sta": 30,
-         "agi": 10,
-         "ac": 706,
+         "agi": 15,
+         "ac": 736,
          "source": "Quest",
          "phase": 1,
          "id": 12895
@@ -2181,6 +2201,17 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Legguards of the Chromatic Defier",
+         "sta": 15,
+         "str": 9,
+         "agi": 30,
+         "crit": 1,
+         "ac": 364,
+         "source": "Quest",
+         "phase": 1,
+         "id": 12903
+      },
+      {
          "name": "Legguards of the Dark Reaver",
          "str": 16,
          "sta": 24,
@@ -2336,8 +2367,9 @@ var gear = {
       },
       {
          "name": "Handcrafted Mastersmith Leggings",
-         "str": 29,
-         "sta": 12,
+         "str": 12,
+         "sta": 29,
+         "defense": 8,
          "ac": 548,
          "source": "Dungeon",
          "phase": 1,
@@ -2490,6 +2522,16 @@ var gear = {
       }
    ],
    "feet": [
+      {
+         "name": "Death Knight Sabatons",
+         "str": 11,
+         "sta": 11,
+         "agi": 9,
+         "ac": 424,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 18692
+      },
       {
          "name": "Sabatons of the Dark Reaver",
          "str": 12,
@@ -3988,7 +4030,7 @@ var gear = {
       {
          "name": "Dark Iron Destroyer",
          "Mainhand": true,
-         "str": 10,
+         "str": 12,
          "mindmg": 71,
          "maxdmg": 134,
          "speed": 2.4,
@@ -6412,6 +6454,18 @@ var gear = {
          "type": "Sword"
       },
       {
+         "name": "Arcanite Champion",
+         "mindmg": 151,
+         "maxdmg": 227,
+         "speed": 3.5,
+         "id": 12790,
+         "source": "Crafting",
+         "phase": 1,
+         "type": "Sword",
+         "ppm": 3,
+         "procspell": "Champion"
+      },
+      {
          "name": "Arcanite Reaper",
          "sta": 13,
          "ap": 62,
@@ -6818,9 +6872,9 @@ var gear = {
          "crit": 1,
          "str": 35,
          "sta": 15,
-         "mindmg": 105,
-         "maxdmg": 158,
-         "speed": 2.1,
+         "mindmg": 155,
+         "maxdmg": 238,
+         "speed": 3.3,
          "id": 19167,
          "source": "Crafting",
          "phase": 3,
@@ -7004,9 +7058,11 @@ var gear = {
       },
       {
          "name": "Blade of Hanna",
-         "str": 11,
-         "sta": 11,
-         "agi": 11,
+         "str": 14,
+         "sta": 14,
+         "agi": 14,
+         "crit": 1,
+         "hit": 1,
          "mindmg": 101,
          "maxdmg": 152,
          "speed": 2.1,
@@ -7813,6 +7869,14 @@ var sets = [
       items: [16864,16861,16865,16863,16866,16867,16868,16862],
       bonus: [
          { count: 3, stats: { sta: 0 } }
+      ]
+   },
+   {
+      id: 442,
+      name: 'Blood Tiger Harness',
+      items: [19688,19689],
+      bonus: [
+         { count: 2, stats: { crit: 1 } }
       ]
    },
 ];
