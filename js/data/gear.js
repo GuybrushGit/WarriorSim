@@ -6397,7 +6397,7 @@ var gear = {
          "maxdmg": 269,
          "speed": 3.6,
          "id": 51779,
-         "source": "Dark Reaver",
+         "source": "Other",
          "phase": 7,
          "type": "Axe"
       },
