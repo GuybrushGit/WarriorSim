@@ -884,6 +884,14 @@ var gear = {
          "ac": 48,
          "source": "Crafting",
          "id": 18511
+      },
+      {
+         "name": "Shroud of Domination",
+         "sta": 17,
+         "sta": 7,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 22337
       }
    ],
    "chest": [
