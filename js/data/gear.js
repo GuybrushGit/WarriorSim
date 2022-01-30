@@ -887,7 +887,7 @@ var gear = {
       },
       {
          "name": "Shroud of Domination",
-         "sta": 17,
+         "str": 17,
          "sta": 7,
          "source": "Dungeon",
          "phase": 1,
