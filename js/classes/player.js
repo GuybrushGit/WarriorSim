@@ -35,6 +35,7 @@ class Player {
             ap: 0,
             agi: 0,
             str: 0,
+            arp: 0,
             hit: 0,
             crit: 0,
             spellcrit: 0,
@@ -133,8 +134,12 @@ class Player {
             for (let item of gear[type]) {
                 if ((this.testItemType == type && this.testItem == item.id) ||
                     (this.testItemType != type && item.selected)) {
-                    for (let prop in this.base)
-                        this.base[prop] += item[prop] || 0;
+                    for (let prop in this.base) {
+                        if (prop == 'haste') {
+                            this.base.haste *= (1 + item.haste / 100) || 1;
+                        } else
+                            this.base[prop] += item[prop] || 0;
+                    }
                     if (item.skill && item.skill > 0) {
                         if (item.type == 'Varied') {
                             this.base['skill_1'] += item.skill;
@@ -444,7 +449,7 @@ class Player {
             this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
     }
     updateArmorReduction() {
-        this.target.armor = this.target.basearmor;
+        this.target.armor = Math.max(this.target.basearmor - this.base.arp, 0)
         if (this.auras.annihilator && this.auras.annihilator.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
         if (this.auras.rivenspike && this.auras.rivenspike.timer)

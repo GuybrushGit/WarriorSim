@@ -729,8 +729,10 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
+                                <th>ArP</th>
                                 <th>Crit</th>
                                 <th>Hit</th>
+                                <th>Haste</th>
                                 <th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
@@ -756,7 +758,7 @@ SIM.UI = {
             }
 
             let source = item.source.toLowerCase(), phase = item.phase;
-            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver')
+            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver' || item.source == 'Concavius' || item.source == 'Ostarius')
                 source = 'worldboss';
 
             if (phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active'))
@@ -784,10 +786,12 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
+                        <td>${item.arp || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.minhit || ''}</td>
-                        <td>${item.maxhit || ''}</td>
+                        <td>${item.haste || ''}</td>
+                        <td>${item.mindmg || ''}</td>
+                        <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
@@ -834,8 +838,10 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
+                                <th>ArP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
+                                <th>Haste</th>
                                 <th>Skill</th>
                                 <th>Type</th>
                                 <th>DPS</th>
@@ -846,7 +852,7 @@ SIM.UI = {
         for (let item of gear[type]) {
 
             let source = item.source.toLowerCase(), phase = item.phase;
-            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver')
+            if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons' || item.source == 'Nerubian' || item.source == 'Dark Reaver' || item.source == 'Concavius' || item.source == 'Ostarius')
                 source = 'worldboss';
 
             if (max == 2 && 
@@ -880,8 +886,10 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
+                        <td>${item.arp || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td>${item.haste || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
