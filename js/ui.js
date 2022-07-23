@@ -806,9 +806,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ?  [[15, 1],[1, 0]] : [[14, 1],[0, 0]],
+            sortList: editmode ?  [[17, 1],[1, 0]] : [[16, 1],[0, 0]],
             textSorter : {
-                14 : function(a, b, direction, column, table) {
+                16 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
                     if (isNaN(a)) a = 0; 
@@ -817,7 +817,7 @@ SIM.UI = {
                 },
             },
             headers: {
-                14: { sorter: "text" }
+                16: { sorter: "text" }
             }
         });
 
@@ -902,9 +902,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[11, 1],[1, 0]] : [[10, 1],[0, 0]],
+            sortList: editmode ? [[13, 1],[1, 0]] : [[12, 1],[0, 0]],
             textSorter : {
-                10 : function(a, b, direction, column, table) {
+                12 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
                     if (isNaN(a)) a = 0; 
@@ -913,7 +913,7 @@ SIM.UI = {
                 },
             },
             headers: {
-                10: { sorter: "text" }
+                12: { sorter: "text" }
             }
         });
 
