@@ -1,6 +1,17 @@
 var gear = {
    "head": [
       {
+         "name": "Crown of Corruption",
+         "sta": 5,
+         "agi": 18,
+         "ap": 10,
+         "haste": 1,
+         "ac": 102,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60258,
+      },
+      {
          "name": "Sightless Leather Hood",
          "sta": 19,
          "agi": 17,
@@ -1609,10 +1620,21 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Trickster's Wraps",
+         "sta": 4,
+         "agi": 8,
+         "ac": 52,
+         "skill": 1,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83213
+      },
+      {
          "name": "Consumer Shackles",
          "sta": 10,
          "str": 15,
-         "291": 166,
+         "ac": 291,
          "source": "Other",
          "phase": 7,
          "id": 83459
@@ -3156,6 +3178,16 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Ring of Demonic Fury",
+         "sta": 5,
+         "str": 4,
+         "ap": 10,
+         "haste": 1,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83217
+      },
+      {
          "name": "Band of Ancient Lethality",
          "sta": 6,
          "agi": 15,
@@ -3406,6 +3438,16 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Ring of Demonic Fury",
+         "sta": 5,
+         "str": 4,
+         "ap": 10,
+         "haste": 1,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83217
+      },
       {
          "name": "Band of Ancient Lethality",
          "sta": 6,
