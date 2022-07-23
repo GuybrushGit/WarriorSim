@@ -2132,6 +2132,28 @@ var gear = {
    ],
    "waist": [
       {
+         "name": "Primalist's Linked Waistguard",
+         "sta": 13,
+         "str": 16,
+         "agi": 15,
+         "haste": 1,
+         "ac": 275,
+         "source": "BWL",
+         "phase": 3,
+         "id": 19393,
+      },
+      {
+         "name": "Girdle of the Fallen Crusader",
+         "sta": 17,
+         "str": 20,
+         "agi": 16,
+         "haste": 1,
+         "ac": 488,
+         "source": "BWL",
+         "phase": 3,
+         "id": 19392,
+      },
+      {
          "name": "Unstable Belt",
          "ac": 122,
          "source": "Dungeon",
