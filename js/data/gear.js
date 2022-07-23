@@ -1,13 +1,87 @@
 var gear = {
    "head": [
       {
+         "name": "Sightless Leather Hood",
+         "sta": 19,
+         "agi": 17,
+         "crit": 1,
+         "hit": 1,
+         "ac": 143,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60436,
+      },
+      {
+         "name": "Felguard's Visage",
+         "sta": 20,
+         "str": 16,
+         "crit": 1,
+         "ap": 18,
+         "ac": 301,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60428,
+      },
+      {
+         "name": "Thornweave Mask",
+         "sta": 15,
+         "str": 15,
+         "crit": 1,
+         "hit": 1,
+         "ac": 151,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61060,
+      },
+      {
+         "name": "Monolith Headguard",
+         "sta": 22,
+         "str": 22,
+         "agi": 20,
+         "ac": 558,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61047,
+      },
+      {
+         "name": "Westwind's Bicorne",
+         "sta": 8,
+         "agi": 18,
+         "crit": 1,
+         "ac": 72,
+         "source": "Other",
+         "phase": 7,
+         "id": 60385,
+      },
+      {
+         "name": "Blademaster's Blindfold",
+         "sta": 15,
+         "agi": 9,
+         "crit": 1,
+         "type": "Polearm",
+         "skill": 5,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60414,
+      },
+      {
+         "name": "Demon Hunter's Blindfold",
+         "sta": 6,
+         "agi": 10,
+         "crit": 1,
+         "hit": 1,
+         "source": "Other",
+         "phase": 7,
+         "id": 83265,
+      },
+      {
          "name": "Hawkspear's Ceremonial Headdress",
          "skill": 5,
          "type": "Polearm",
          "ac": 76,
          "source": "Quest",
          "phase": 7,
-         "id": 70014
+         "id": 70014,
       },
       {
          "name": "Crown of the Dark Reaver",
@@ -18,7 +92,7 @@ var gear = {
          "ac": 561,
          "source": "Dark Reaver",
          "phase": 7,
-         "id": 51769
+         "id": 51769,
       },
       {
          "name": "Visage of the Forgotten",
@@ -29,7 +103,7 @@ var gear = {
          "ac": 163,
          "source": "Dark Reaver",
          "phase": 7,
-         "id": 51788
+         "id": 51788,
       },
       {
          "name": "Timeskipper's Helm of Alacrity",
@@ -38,7 +112,7 @@ var gear = {
          "ac": 549,
          "source": "Quest",
          "phase": 7,
-         "id": 61003
+         "id": 61003,
       },
       {
          "name": "Chieftain's Ceremonial Headdress",
@@ -49,7 +123,7 @@ var gear = {
          "type": "Mace",
          "source": "Other",
          "phase": 7,
-         "id": 81223
+         "id": 81223,
       },
       {
          "name": "Horned Helm of Ancient Kings",
@@ -58,7 +132,7 @@ var gear = {
          "ac": 750,
          "source": "Dungeon",
          "phase": 7,
-         "id": 70056
+         "id": 70056,
       },
       {
          "name": "Crown of Sacrifice (vs Undead)",
@@ -66,7 +140,7 @@ var gear = {
          "ac": 754,
          "source": "Dungeon",
          "phase": 7,
-         "id": 70057
+         "id": 70057,
       },
       {
          "name": "Helmet of the Scarlet Avenger",
@@ -78,7 +152,7 @@ var gear = {
          "phase": 7,
          "id": 81124,
          "procchance": 5,
-         "magicdmg": 20
+         "magicdmg": 20,
       },
       {
          "name": "Eye of Rend",
@@ -321,6 +395,24 @@ var gear = {
    ],
    "neck": [
       {
+         "name": "Voidclaw Choker",
+         "str": 14,
+         "crit": 1,
+         "source": "Concavius",
+         "phase": 7,
+         "id": 83234
+      },
+      {
+         "name": "Desert Wind Talisman",
+         "crit": 1,
+         "haste": 2,
+         "sta": 15,
+         "agi": 13,
+         "source": "Ostarius",
+         "phase": 7,
+         "id": 83484
+      },
+      {
          "name": "Shard of Eternity",
          "str": 8,
          "sta": 8,
@@ -523,6 +615,16 @@ var gear = {
       }
    ],
    "shoulder": [
+      {
+         "name": "Shoulderguards of the Defiler",
+         "sta": 12,
+         "ap": 20,
+         "hit": 2,
+         "ac": 290,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61017
+      },
       {
          "name": "Blood Tiger Shoulders",
          "sta": 13,
@@ -798,6 +900,37 @@ var gear = {
    ],
    "back": [
       {
+         "name": "Windshear Cape",
+         "str": 10,
+         "sta": 14,
+         "agi": 15,
+         "haste": 1,
+         "ac": 50,
+         "source": "Other",
+         "phase": 4,
+         "id": 20691
+      },
+      {
+         "name": "Sandstalker's Shroud",
+         "sta": 12,
+         "agi": 22,
+         "hit": 1,
+         "ac": 57,
+         "source": "Ostarius",
+         "phase": 7,
+         "id": 83486,
+      },
+      {
+         "name": "Wing of the Time-Lord",
+         "sta": 8,
+         "str": 12,
+         "agi": 12,
+         "ac": 50,
+         "source": "Other",
+         "phase": 7,
+         "id": 61010,
+      },
+      {
          "name": "Quel'dorei/Revantusk Honored Cloak",
          "str": 9,
          "agi": 9,
@@ -805,17 +938,7 @@ var gear = {
          "ac": 45,
          "source": "Other",
          "phase": 7,
-         "id": 80506
-      },
-      {
-         "name": "Wing of the Time-Lord",
-         "str": 12,
-         "agi": 12,
-         "sta": 8,
-         "ac": 50,
-         "source": "Quest",
-         "phase": 7,
-         "id": 61010
+         "id": 80506,
       },
       {
          "name": "Bloodfallen Cloak",
@@ -1043,16 +1166,6 @@ var gear = {
          "id": 19907
       },
       {
-         "name": "Windshear Cape",
-         "str": 8,
-         "sta": 14,
-         "agi": 15,
-         "ac": 50,
-         "source": "Other",
-         "phase": 4,
-         "id": 20691
-      },
-      {
          "name": "Might of the Tribe",
          "sta": 18,
          "ap": 28,
@@ -1072,6 +1185,57 @@ var gear = {
       }
    ],
    "chest": [
+      {
+         "name": "Damien's Sorrow",
+         "sta": 22,
+         "crit": 1,
+         "ap": 44,
+         "ac": 241,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60421,
+      },
+      {
+         "name": "Cadaverlink Vest",
+         "agi": 19,
+         "haste": 2,
+         "ac": 376,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83462,
+      },
+      {
+         "name": "Splintercage Breastplate",
+         "str": 28,
+         "sta": 10,
+         "crit": 1,
+         "ac": 784,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83441,
+      },
+      {
+         "name": "Time-blackened Chestpiece",
+         "sta": 22,
+         "agi": 12,
+         "ap": 20,
+         "crit": 1,
+         "hit": 1,
+         "ac": 205,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 50427
+      },
+      {
+         "name": "Gigno's Overalls",
+         "str": 8,
+         "agi": 8,
+         "crit": 1,
+         "ac": 172,
+         "source": "Quest",
+         "phase": 7,
+         "id": 60153
+      },
       {
          "name": "Blood Tiger Breastplate",
          "sta": 17,
@@ -1437,6 +1601,25 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Consumer Shackles",
+         "sta": 10,
+         "str": 15,
+         "291": 166,
+         "source": "Other",
+         "phase": 7,
+         "id": 83459
+      },
+      {
+         "name": "Mariner's Cuffs",
+         "sta": 5,
+         "agi": 7,
+         "hit": 1,
+         "ac": 166,
+         "source": "Other",
+         "phase": 7,
+         "id": 60388
+      },
+      {
          "name": "Shadowskin Bracers",
          "ap": 26,
          "sta": 16,
@@ -1645,6 +1828,59 @@ var gear = {
    ],
    "hands": [
       {
+         "name": "Fists of the Makers",
+         "str": 18,
+         "sta": 24,
+         "crit": 1,
+         "ac": 529,
+         "skill": 5,
+         "type": "Mace",
+         "source": "Ostarius",
+         "phase": 7,
+         "id": 83485
+      },
+      {
+         "name": "Golden Gauntlets of Stormwind",
+         "str": 16,
+         "agi": 7,
+         "hit": 1,
+         "ac": 421,
+         "source": "Other",
+         "phase": 7,
+         "id": 60625,
+      },
+      {
+         "name": "Rotworm Grips",
+         "str": 22,
+         "sta": 9,
+         "agi": 7,
+         "ac": 113,
+         "source": "Other",
+         "phase": 7,
+         "id": 83463,
+      },
+      {
+         "name": "Gauntlets of Temporal Guidance",
+         "sta": 11,
+         "agi": 18,
+         "hit": 1,
+         "ac": 238,
+         "source": "Other",
+         "phase": 7,
+         "id": 61013,
+      },
+      {
+         "name": "Gauntlets of the Myrimidon",
+         "str": 10,
+         "sta": 12,
+         "agi": 6,
+         "ap": 20,
+         "ac": 225,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 81019
+      },
+      {
          "name": "Grasp of the Dark Reaver",
          "str": 14,
          "sta": 20,
@@ -1665,16 +1901,6 @@ var gear = {
          "id": 80510
       },
       {
-         "name": "Gauntlets of Temporal Guidance",
-         "sta": 11,
-         "agi": 18,
-         "hit": 1,
-         "ac": 238,
-         "source": "Quest",
-         "phase": 7,
-         "id": 61013
-      },
-      {
          "name": "Gauntlets of Wrangling",
          "str": 12,
          "agi": 7,
@@ -1690,17 +1916,6 @@ var gear = {
          "source": "Dungeon",
          "phase": 7,
          "id": 70062
-      },
-      {
-         "name": "Gauntlets of the Myrimidon",
-         "str": 10,
-         "agi": 6,
-         "sta": 12,
-         "ap": 20,
-         "ac": 225,
-         "source": "Dungeon",
-         "phase": 7,
-         "id": 81019
       },
       {
          "name": "Aged Core Leather Gloves",
@@ -1908,6 +2123,42 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Unstable Belt",
+         "ac": 122,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60502,
+         "rand": 2157,
+      },
+      {
+         "name": "Clutch of Hivaxxis",
+         "sta": 13,
+         "ap": 44,
+         "ac": 157,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83447,
+      },
+      {
+         "name": "Moontouched Girdle",
+         "sta": 14,
+         "agi": 12,
+         "crit": 1,
+         "source": "Other",
+         "phase": 7,
+         "id": 81376,
+      },
+      {
+         "name": "The Dire Clasp",
+         "str": 8,
+         "agi": 5,
+         "crit": 1,
+         "ac": 178,
+         "source": "Other",
+         "phase": 7,
+         "id": 83273
+      },
       {
          "name": "Girdle of the Dark Reaver",
          "str": 16,
@@ -2201,6 +2452,35 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Leggings of Alacrity",
+         "agi": 26,
+         "sta": 16,
+         "ac": 334,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60503,
+      },
+      {
+         "name": "Baneforged Leggings",
+         "str": 23,
+         "agi": 10,
+         "crit": 1,
+         "ac": 582,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83466,
+      },
+      {
+         "name": "Deathrune Leggings",
+         "str": 10,
+         "agi": 10,
+         "crit": 2,
+         "ac": 159,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83454,
+      },
+      {
          "name": "Legguards of the Chromatic Defier",
          "sta": 15,
          "str": 9,
@@ -2209,7 +2489,7 @@ var gear = {
          "ac": 364,
          "source": "Quest",
          "phase": 1,
-         "id": 12903
+         "id": 12903,
       },
       {
          "name": "Legguards of the Dark Reaver",
@@ -2219,7 +2499,7 @@ var gear = {
          "ac": 655,
          "source": "Dark Reaver",
          "phase": 7,
-         "id": 51775
+         "id": 51775,
       },
       {
          "name": "Quel'dorei/Revantusk Revered Legplates",
@@ -2230,7 +2510,7 @@ var gear = {
          "ac": 593,
          "source": "Other",
          "phase": 7,
-         "id": 80511
+         "id": 80511,
       },
       {
          "name": "Rotworm Legplates",
@@ -2239,7 +2519,7 @@ var gear = {
          "ac": 648,
          "source": "Dungeon",
          "phase": 7,
-         "id": 70053
+         "id": 70053,
       },
       {
          "name": "Greaves of Servitude (vs Demons)",
@@ -2247,7 +2527,7 @@ var gear = {
          "ac": 642,
          "source": "Dungeon",
          "phase": 7,
-         "id": 70060
+         "id": 70060,
       },
       {
          "name": "Abyssal Plate Legplates",
@@ -2268,7 +2548,7 @@ var gear = {
          "ac": 320,
          "source": "Crafting",
          "phase": 1,
-         "id": 15052
+         "id": 15052,
       },
       {
          "name": "Blademaster Leggings",
@@ -2279,7 +2559,7 @@ var gear = {
          "ac": 154,
          "source": "Dungeon",
          "phase": 1,
-         "id": 12963
+         "id": 12963,
       },
       {
          "name": "Bloodsoaked Legplates",
@@ -2522,6 +2802,46 @@ var gear = {
       }
    ],
    "feet": [
+      {
+         "name": "Wormhide Boots",
+         "agi": 32,
+         "str": 18,
+         "sta": 13,
+         "ac": 163,
+         "source": "AQ40",
+         "phase": 7,
+         "id": 21613
+      },
+      {
+         "name": "Greaves of the Ceaseless Expanse",
+         "sta": 18,
+         "agi": 8,
+         "hit": 1,
+         "ac": 289,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61024
+      },
+      {
+         "name": "Boots of the Riftwalker",
+         "sta": 20,
+         "str": 12,
+         "agi": 9,
+         "ac": 472,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61036
+      },
+      {
+         "name": "Miasma Walkers",
+         "sta": 8,
+         "str": 8,
+         "agi": 20,
+         "ac": 131,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83442
+      },
       {
          "name": "Death Knight Sabatons",
          "str": 11,
@@ -2806,6 +3126,16 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Band of Ancient Lethality",
+         "sta": 6,
+         "agi": 15,
+         "hit": 1,
+         "haste": 1,
+         "source": "Concavius",
+         "phase": 7,
+         "id": 83237
+      },
+      {
          "name": "Spireblade Band",
          "str": 10,
          "agi": 5,
@@ -3046,6 +3376,16 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Band of Ancient Lethality",
+         "sta": 6,
+         "agi": 15,
+         "hit": 1,
+         "haste": 1,
+         "source": "Concavius",
+         "phase": 7,
+         "id": 83237
+      },
       {
          "name": "Spireblade Band",
          "str": 10,
@@ -3288,6 +3628,13 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Whip of Encouragement",
+         "haste": 3,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 60501
+      },
+      {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
          "source": "ZG",
          "phase": "4",
@@ -3406,6 +3753,13 @@ var gear = {
    ],
    "trinket2": [
       {
+         "name": "Whip of Encouragement",
+         "haste": 3,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 60501
+      },
+      {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
          "source": "ZG",
          "phase": "4",
@@ -3516,6 +3870,29 @@ var gear = {
       }
    ],
    "ranged": [
+      {
+         "name": "Vigilance",
+         "sta": 9,
+         "agi": 5,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60506
+      },
+      {
+         "name": "Goldplated Royal Crossbow",
+         "ap": 12,
+         "agi": 5,
+         "source": "Quest",
+         "phase": 7,
+         "id": 60624
+      },
+      {
+         "name": "Caer Darrow Reserve Rifle",
+         "crit": 1,
+         "source": "Other",
+         "phase": 7,
+         "id": 83257
+      },
       {
          "name": "Ghoulslayer Shotgun (vs Undead)",
          "ap": 39,
@@ -3724,14 +4101,6 @@ var gear = {
          "id": 17072
       },
       {
-         "name": "Burstshot Harquebus",
-         "sta": 8,
-         "ap": 10,
-         "source": "Other",
-         "phase": "1",
-         "id": 13248
-      },
-      {
          "name": "Crystal Slugthrower",
          "sta": 4,
          "ap": 20,
@@ -3796,6 +4165,133 @@ var gear = {
       }
    ],
    "mainhand": [
+      {
+         "name": "The Ripper *Unknown PPM",
+         "mindmg": 47,
+         "maxdmg": 85,
+         "speed": 1.4,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60422,
+         "ppm": 1,
+         "magicdmg": 25,
+         "coeff": 1
+      },
+      {
+         "name": "Willbreaker",
+         "agi": 3,
+         "str": 4,
+         "mindmg": 67,
+         "maxdmg": 122,
+         "speed": 2.2,
+         "Mainhand": true,
+         "type": "Fist",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60410,
+      },
+      {
+         "name": "Skull of Grarr",
+         "mindmg": 59,
+         "maxdmg": 114,
+         "speed": 2.1,
+         "Mainhand": true,
+         "type": "Mace",
+         "ac": 80,
+         "str": 10,
+         "sta": 8,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60416
+      },
+      {
+         "name": "Venom's Touch",
+         "agi": 8,
+         "mindmg": 45,
+         "maxdmg": 80,
+         "speed": 1.6,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83446,
+      },
+      {
+         "name": "Rotmaw's Tooth",
+         "sta": 11,
+         "ap": 20,
+         "mindmg": 46,
+         "maxdmg": 92,
+         "speed": 1.6,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61063,
+      },
+      {
+         "name": "Shadowreaper",
+         "sta": 13,
+         "agi": 7,
+         "mindmg": 68,
+         "maxdmg": 131,
+         "speed": 2.3,
+         "type": "Axe",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61046,
+      },
+      {
+         "name": "Stormfist",
+         "mindmg": 37,
+         "maxdmg": 76,
+         "speed": 1.3,
+         "type": "Fist",
+         "source": "Dungeon",
+         "ppm": 1,
+         "phase": 7,
+         "id": 61042,
+         "magicdmg": 59,
+         "coeff": 1
+      },
+      {
+         "name": "Marrowclaw Knuckles",
+         "mindmg": 76,
+         "maxdmg": 145,
+         "speed": 2.6,
+         "Mainhand": true,
+         "type": "Fist",
+         "str": 6,
+         "agi": 13,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83445
+      },
+      {
+         "name": "Claw of the Infinite",
+         "sta": 5,
+         "agi": 11,
+         "skill": 2,
+         "mindmg": 63,
+         "maxdmg": 125,
+         "speed": 2.2,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 61001
+      },
+      {
+         "name": "Terrorblade Glaive (vs Demons)",
+         "Mainhand": true,
+         "ap": 30,
+         "crit": 1,
+         "mindmg": 74,
+         "maxdmg": 121,
+         "speed": 2.2,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 83269,
+      },
       {
          "name": "Quel'dorei/Revantusk Revered Kris",
          "sta": 5,
@@ -3874,20 +4370,7 @@ var gear = {
          "id": 81260,
       },
       {
-         "name": "Claw of the Infinite",
-         "skill": 2,
-         "agi": 11,
-         "sta": 5,
-         "mindmg": 63,
-         "maxdmg": 125,
-         "speed": 2.2,
-         "type": "Dagger",
-         "source": "Quest",
-         "phase": 7,
-         "id": 61001,
-      },
-      {
-         "name": "Mechanist's Bonechopper Replica",
+         "name": "Mechanist's Bonechopper Replica *Speculative PPM",
          "str": 5,
          "agi": 5,
          "sta": 5,
@@ -3927,7 +4410,7 @@ var gear = {
          "id": 13246,
       },
       {
-         "name": "Argent Avenger (vs Undead)",
+         "name": "Argent Avenger (vs Undead) *Classic PPM",
          "mindmg": 71,
          "maxdmg": 108,
          "speed": 2.2,
@@ -3939,7 +4422,7 @@ var gear = {
          "procspell": "Avenger"
       },
       {
-         "name": "Ancient Hakkari Manslayer",
+         "name": "Ancient Hakkari Manslayer *Classic PPM",
          "mindmg": 69,
          "maxdmg": 130,
          "speed": 2,
@@ -3952,7 +4435,7 @@ var gear = {
          "coeff": 1
       },
       {
-         "name": "Annihilator",
+         "name": "Annihilator *Classic PPM",
          "Mainhand": true,
          "mindmg": 49,
          "maxdmg": 92,
@@ -3965,7 +4448,7 @@ var gear = {
          "procspell": "Annihilator"
       },
       {
-         "name": "Rivenspike",
+         "name": "Rivenspike *Classic PPM",
          "mindmg": 77,
          "maxdmg": 144,
          "speed": 2.9,
@@ -3977,7 +4460,7 @@ var gear = {
          "procspell": "Rivenspike"
       },
       {
-         "name": "Axe of the Deep Woods",
+         "name": "Axe of the Deep Woods *Classic PPM",
          "Mainhand": true,
          "mindmg": 78,
          "maxdmg": 146,
@@ -4040,7 +4523,7 @@ var gear = {
          "id": 17016
       },
       {
-         "name": "Deathbringer",
+         "name": "Deathbringer *Classic PPM",
          "mindmg": 114,
          "maxdmg": 213,
          "speed": 2.9,
@@ -4066,7 +4549,7 @@ var gear = {
          "id": 19362
       },
       {
-         "name": "Flurry Axe",
+         "name": "Flurry Axe *Classic PPM",
          "mindmg": 37,
          "maxdmg": 69,
          "speed": 1.5,
@@ -4189,7 +4672,7 @@ var gear = {
          "rand": 690
       },
       {
-         "name": "Alcor's Sunrazor",
+         "name": "Alcor's Sunrazor *Classic PPM",
          "mindmg": 41,
          "maxdmg": 77,
          "speed": 1.3,
@@ -4249,7 +4732,7 @@ var gear = {
          "id": 18805
       },
       {
-         "name": "Darrowspike",
+         "name": "Darrowspike *Classic PPM",
          "mindmg": 43,
          "maxdmg": 81,
          "speed": 1.5,
@@ -4286,7 +4769,7 @@ var gear = {
          "id": 19346
       },
       {
-         "name": "Emerald Dragonfang",
+         "name": "Emerald Dragonfang *Classic PPM",
          "agi": 12,
          "mindmg": 66,
          "maxdmg": 123,
@@ -4311,7 +4794,7 @@ var gear = {
          "id": 19859
       },
       {
-         "name": "Felstriker",
+         "name": "Felstriker *Classic PPM",
          "mindmg": 54,
          "maxdmg": 101,
          "speed": 1.7,
@@ -4334,7 +4817,7 @@ var gear = {
          "id": 12709
       },
       {
-         "name": "Glacial Blade",
+         "name": "Glacial Blade *Classic PPM",
          "agi": 10,
          "mindmg": 53,
          "maxdmg": 100,
@@ -4347,7 +4830,7 @@ var gear = {
          "magicdmg": 49
       },
       {
-         "name": "Gutgore Ripper",
+         "name": "Gutgore Ripper *Classic PPM",
          "mindmg": 63,
          "maxdmg": 119,
          "speed": 1.8,
@@ -4426,7 +4909,7 @@ var gear = {
          "id": 22804
       },
       {
-         "name": "Perdition's Blade",
+         "name": "Perdition's Blade *Classic PPM",
          "mindmg": 73,
          "maxdmg": 137,
          "speed": 1.8,
@@ -4487,7 +4970,7 @@ var gear = {
          "id": 21522
       },
       {
-         "name": "The Lobotomizer",
+         "name": "The Lobotomizer *Classic PPM",
          "mindmg": 59,
          "maxdmg": 111,
          "speed": 1.8,
@@ -4525,7 +5008,7 @@ var gear = {
          "id": 19365
       },
       {
-         "name": "Eskhandar's Right Claw",
+         "name": "Eskhandar's Right Claw *Classic PPM",
          "Mainhand": true,
          "agi": 4,
          "mindmg": 50,
@@ -4631,7 +5114,7 @@ var gear = {
          "id": 21268
       },
       {
-         "name": "Ebon Hand",
+         "name": "Ebon Hand *Classic PPM",
          "sta": 9,
          "mindmg": 90,
          "maxdmg": 168,
@@ -4645,7 +5128,7 @@ var gear = {
          "procgcd": true,
       },
       {
-         "name": "Empyrean Demolisher",
+         "name": "Empyrean Demolisher *Classic PPM",
          "Mainhand": true,
          "mindmg": 94,
          "maxdmg": 175,
@@ -4659,7 +5142,7 @@ var gear = {
       },
       {
          "id": 11684,
-         "name": "Ironfoe",
+         "name": "Ironfoe *Classic PPM",
          "Mainhand": true,
          "mindmg": 73,
          "maxdmg": 136,
@@ -4719,7 +5202,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 2,
+         "ppm": 4,
          "magicdmg": 125
       },
       {
@@ -4749,7 +5232,7 @@ var gear = {
          "id": 21715
       },
       {
-         "name": "Sceptre of Smiting",
+         "name": "Sceptre of Smiting *Classic PPM",
          "skill": 2,
          "mindmg": 77,
          "maxdmg": 145,
@@ -5081,7 +5564,7 @@ var gear = {
          "id": 22378
       },
       {
-         "name": "Sword of Zeal",
+         "name": "Sword of Zeal *Classic PPM",
          "Mainhand": true,
          "mindmg": 81,
          "maxdmg": 151,
@@ -5094,7 +5577,7 @@ var gear = {
          "procspell": "Zeal"
       },
       {
-         "name": "Zulian Slicer",
+         "name": "Zulian Slicer *Classic PPM",
          "ap": 12,
          "mindmg": 78,
          "maxdmg": 146,
@@ -5108,7 +5591,7 @@ var gear = {
          "coeff": 1,
       },
       {
-         "name": "Teebu's Blazing Longsword",
+         "name": "Teebu's Blazing Longsword *Classic PPM",
          "Mainhand": true,
          "mindmg": 96,
          "maxdmg": 178,
@@ -5135,7 +5618,7 @@ var gear = {
       },
       {
          "id": 17705,
-         "name": "Thrash Blade",
+         "name": "Thrash Blade *Classic PPM",
          "mindmg": 66,
          "maxdmg": 124,
          "speed": 2.7,
@@ -5146,7 +5629,7 @@ var gear = {
          "procextra": 1
       },
       {
-         "name": "Thunderfury, Blessed Blade of the Windseeker",
+         "name": "Thunderfury, Blessed Blade of the Windseeker *Classic PPM",
          "sta": 8,
          "agi": 5,
          "mindmg": 60,
@@ -5187,7 +5670,7 @@ var gear = {
          "id": 22806
       },
       {
-         "name": "Vis'kag the Bloodletter",
+         "name": "Vis'kag the Bloodletter *Classic PPM",
          "mindmg": 100,
          "maxdmg": 187,
          "speed": 2.6,
@@ -5211,7 +5694,7 @@ var gear = {
          "id": 19554
       },
       {
-         "name": "Bonechill Hammer",
+         "name": "Bonechill Hammer *Classic PPM",
          "mindmg": 68,
          "maxdmg": 127,
          "speed": 2.4,
@@ -5236,6 +5719,69 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "The Ripper *Unknown PPM",
+         "mindmg": 47,
+         "maxdmg": 85,
+         "speed": 1.4,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60422,
+         "ppm": 1,
+         "magicdmg": 25,
+         "coeff": 1
+      },
+      {
+         "name": "Rotmaw's Tooth",
+         "sta": 11,
+         "ap": 20,
+         "mindmg": 46,
+         "maxdmg": 92,
+         "speed": 1.6,
+         "type": "Dagger",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61063,
+      },
+      {
+         "name": "Shadowreaper",
+         "sta": 13,
+         "agi": 7,
+         "mindmg": 68,
+         "maxdmg": 131,
+         "speed": 2.3,
+         "type": "Axe",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 61046,
+      },
+      {
+         "name": "Stormfist",
+         "mindmg": 37,
+         "maxdmg": 76,
+         "speed": 1.3,
+         "type": "Fist",
+         "source": "Dungeon",
+         "ppm": 1,
+         "phase": 7,
+         "id": 61042,
+         "magicdmg": 59,
+         "coeff": 1
+      },
+      {
+         "name": "Claw of the Infinite",
+         "sta": 5,
+         "agi": 11,
+         "skill": 2,
+         "mindmg": 63,
+         "maxdmg": 125,
+         "speed": 2.2,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 61001
+      },
       {
          "name": "Quel'dorei/Revantusk Revered Kris",
          "sta": 5,
@@ -5301,7 +5847,7 @@ var gear = {
          "id": 81260,
       },
       {
-         "name": "Mechanist's Bonechopper Replica",
+         "name": "Mechanist's Bonechopper Replica *Speculative PPM",
          "str": 5,
          "agi": 5,
          "sta": 5,
@@ -5328,7 +5874,7 @@ var gear = {
          "id": 13246,
       },
       {
-         "name": "Argent Avenger (vs Undead)",
+         "name": "Argent Avenger (vs Undead) *Classic PPM",
          "mindmg": 71,
          "maxdmg": 108,
          "speed": 2.2,
@@ -5340,7 +5886,7 @@ var gear = {
          "procspell": "Avenger"
       },
       {
-         "name": "Ancient Hakkari Manslayer",
+         "name": "Ancient Hakkari Manslayer *Classic PPM",
          "mindmg": 69,
          "maxdmg": 130,
          "speed": 2,
@@ -5390,7 +5936,7 @@ var gear = {
          "id": 19363
       },
       {
-         "name": "Deathbringer",
+         "name": "Deathbringer *Classic PPM",
          "mindmg": 114,
          "maxdmg": 213,
          "speed": 2.9,
@@ -5416,7 +5962,7 @@ var gear = {
          "id": 19362
       },
       {
-         "name": "Flurry Axe",
+         "name": "Flurry Axe *Classic PPM",
          "mindmg": 37,
          "maxdmg": 69,
          "speed": 1.5,
@@ -5528,7 +6074,7 @@ var gear = {
          "rand": 690,
       },
       {
-         "name": "Alcor's Sunrazor",
+         "name": "Alcor's Sunrazor *Classic PPM",
          "mindmg": 41,
          "maxdmg": 77,
          "speed": 1.3,
@@ -5588,7 +6134,7 @@ var gear = {
          "id": 18805
       },
       {
-         "name": "Darrowspike",
+         "name": "Darrowspike *Classic PPM",
          "mindmg": 43,
          "maxdmg": 81,
          "speed": 1.5,
@@ -5637,7 +6183,7 @@ var gear = {
          "id": 19346
       },
       {
-         "name": "Emerald Dragonfang",
+         "name": "Emerald Dragonfang *Classic PPM",
          "agi": 12,
          "mindmg": 66,
          "maxdmg": 123,
@@ -5662,7 +6208,7 @@ var gear = {
          "id": 19859
       },
       {
-         "name": "Felstriker",
+         "name": "Felstriker *Classic PPM",
          "mindmg": 54,
          "maxdmg": 101,
          "speed": 1.7,
@@ -5674,7 +6220,7 @@ var gear = {
          "procspell": "Felstriker"
       },
       {
-         "name": "Glacial Blade",
+         "name": "Glacial Blade *Classic PPM",
          "agi": 10,
          "mindmg": 53,
          "maxdmg": 100,
@@ -5687,7 +6233,7 @@ var gear = {
          "magicdmg": 49
       },
       {
-         "name": "Gutgore Ripper",
+         "name": "Gutgore Ripper *Classic PPM",
          "mindmg": 63,
          "maxdmg": 119,
          "speed": 1.8,
@@ -5766,7 +6312,7 @@ var gear = {
          "id": 22804
       },
       {
-         "name": "Perdition's Blade",
+         "name": "Perdition's Blade *Classic PPM",
          "mindmg": 73,
          "maxdmg": 137,
          "speed": 1.8,
@@ -5827,7 +6373,7 @@ var gear = {
          "id": 21522
       },
       {
-         "name": "The Lobotomizer",
+         "name": "The Lobotomizer *Classic PPM",
          "mindmg": 59,
          "maxdmg": 111,
          "speed": 1.8,
@@ -5851,7 +6397,7 @@ var gear = {
          "id": 22377
       },
       {
-         "name": "Arlokk's Grasp (1% chance on set)",
+         "name": "Arlokk's Grasp (1% chance on set) *Classic PPM",
          "offhand": true,
          "mindmg": 41,
          "maxdmg": 84,
@@ -5945,7 +6491,7 @@ var gear = {
          "id": 21268
       },
       {
-         "name": "Ebon Hand",
+         "name": "Ebon Hand *Classic PPM",
          "sta": 9,
          "mindmg": 90,
          "maxdmg": 168,
@@ -5980,7 +6526,7 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 23221,
-         "ppm": 2,
+         "ppm": 4,
          "magicdmg": 125
       },
       {
@@ -5997,7 +6543,7 @@ var gear = {
          "id": 21715
       },
       {
-         "name": "Sceptre of Smiting",
+         "name": "Sceptre of Smiting *Classic PPM",
          "skill": 2,
          "mindmg": 77,
          "maxdmg": 145,
@@ -6249,7 +6795,7 @@ var gear = {
          "id": 22378
       },
       {
-         "name": "Zulian Slicer",
+         "name": "Zulian Slicer *Classic PPM",
          "ap": 12,
          "mindmg": 78,
          "maxdmg": 146,
@@ -6276,8 +6822,8 @@ var gear = {
          "id": 23577
       },
       {
+         "name": "Thrash Blade *Classic PPM",
          "id": 17705,
-         "name": "Thrash Blade",
          "mindmg": 66,
          "maxdmg": 124,
          "speed": 2.7,
@@ -6288,7 +6834,7 @@ var gear = {
          "procextra": 1
       },
       {
-         "name": "Thunderfury, Blessed Blade of the Windseeker",
+         "name": "Thunderfury, Blessed Blade of the Windseeker *Classic PPM",
          "sta": 8,
          "agi": 5,
          "mindmg": 60,
@@ -6328,7 +6874,7 @@ var gear = {
          "id": 22806
       },
       {
-         "name": "Vis'kag the Bloodletter",
+         "name": "Vis'kag the Bloodletter *Classic PPM",
          "mindmg": 100,
          "maxdmg": 187,
          "speed": 2.6,
@@ -6352,7 +6898,7 @@ var gear = {
          "id": 19554
       },
       {
-         "name": "Bonechill Hammer",
+         "name": "Bonechill Hammer *Classic PPM",
          "mindmg": 68,
          "maxdmg": 127,
          "speed": 2.4,
@@ -6376,7 +6922,7 @@ var gear = {
          "sta": 12,
       },
       {
-         "name": "Rivenspike",
+         "name": "Rivenspike *Classic PPM",
          "mindmg": 77,
          "maxdmg": 144,
          "speed": 2.9,
@@ -6389,6 +6935,107 @@ var gear = {
       }
    ],
    "twohand": [
+      {
+         "name": "Cryptkeeper's Pike",
+         "str": 25,
+         "hit": 1,
+         "mindmg": 160,
+         "maxdmg": 245,
+         "speed": 3.7,
+         "id": 83461,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Polearm",
+      },
+      {
+         "name": "Boneshatter Maul",
+         "str": 32,
+         "crit": 1,
+         "mindmg": 156,
+         "maxdmg": 250,
+         "speed": 3.7,
+         "id": 83440,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Mace",
+      },
+      {
+         "name": "The Murkfisher",
+         "str": 10,
+         "agi": 10,
+         "sta": 15,
+         "mindmg": 139,
+         "maxdmg": 209,
+         "speed": 3.1,
+         "id": 61030,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Staff",
+      },
+      {
+         "name": "Spear of the Endless Hunt",
+         "ap": 38,
+         "crit": 1,
+         "hit": 1,
+         "mindmg": 153,
+         "maxdmg": 240,
+         "speed": 3.7,
+         "id": 50429,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Polearm",
+      },
+      {
+         "name": "Chronobreaker *Unknown PPM",
+         "mindmg": 142,
+         "maxdmg": 214,
+         "speed": 2.9,
+         "id": 61049,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Sword",
+         "ppm": 1,
+         "procextra": 1,
+      },
+      {
+         "name": "Gavel of Aqir Superiority",
+         "sta": 14,
+         "str": 12,
+         "hit": 1,
+         "ac": 250,
+         "mindmg": 110,
+         "maxdmg": 170,
+         "speed": 2.5,
+         "id": 61044,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Mace",
+      },
+      {
+         "name": "Time-Lost Claymore",
+         "sta": 12,
+         "ap": 66,
+         "mindmg": 150,
+         "maxdmg": 219,
+         "speed": 3.3,
+         "id": 61016,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Sword",
+      },
+      {
+         "name": "The Cruel Blade (Ravager Proc) *Unknown PPM",
+         "sta": 18,
+         "crit": 1,
+         "mindmg": 107,
+         "maxdmg": 182,
+         "speed": 2.6,
+         "id": 60413,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Polearm",
+         "ppm": 0,
+      },
       {
          "name": "Sul'thraze the Lasher",
          "mindmg": 108,
@@ -6490,7 +7137,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "Brain Hacker",
+         "name": "Brain Hacker *Classic PPM",
          "mindmg": 95,
          "maxdmg": 143,
          "speed": 2.1,
@@ -6527,7 +7174,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "Drake Talon Cleaver",
+         "name": "Drake Talon Cleaver *Classic PPM",
          "str": 22,
          "sta": 17,
          "mindmg": 199,
@@ -6598,7 +7245,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "Neretzek, The Blood Drinker",
+         "name": "Neretzek, The Blood Drinker *Classic PPM",
          "str": 21,
          "sta": 16,
          "mindmg": 202,
@@ -6646,7 +7293,7 @@ var gear = {
          "type": "Axe"
       },
       {
-         "name": "The Nicker",
+         "name": "The Nicker *Classic PPM",
          "mindmg": 159,
          "maxdmg": 239,
          "speed": 4,
@@ -6780,7 +7427,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "Jeklik's Crusher",
+         "name": "Jeklik's Crusher *Classic PPM",
          "mindmg": 159,
          "maxdmg": 248,
          "speed": 3.6,
@@ -6815,7 +7462,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "Sulfuras, Hand of Ragnaros",
+         "name": "Sulfuras, Hand of Ragnaros *Classic PPM",
          "str": 12,
          "sta": 12,
          "mindmg": 223,
@@ -6830,7 +7477,7 @@ var gear = {
          "procgcd": true
       },
       {
-         "name": "Sulfuron Hammer",
+         "name": "Sulfuron Hammer *Classic PPM",
          "mindmg": 175,
          "maxdmg": 295,
          "speed": 3.7,
@@ -6893,7 +7540,7 @@ var gear = {
          "type": "Polearm"
       },
       {
-         "name": "Blackhand Doomsaw",
+         "name": "Blackhand Doomsaw *Classic PPM",
          "mindmg": 151,
          "maxdmg": 227,
          "speed": 3.5,
@@ -6914,7 +7561,7 @@ var gear = {
          "phase": 4,
          "type": "Polearm",
          "physdmg": 564,
-         "ppm": 1,
+         "ppm": 1.2,
       },
       {
          "name": "Huntsman's Harpoon",
@@ -6973,7 +7620,7 @@ var gear = {
          "source": "MC",
          "phase": 1,
          "type": "Polearm",
-         "ppm": 1,
+         "ppm": 1.5,
          "magicdmg": 200,
       },
       {
@@ -7094,7 +7741,7 @@ var gear = {
          "source": "MC",
          "phase": 1,
          "type": "Sword",
-         "ppm": 2,
+         "ppm": 4,
          "procspell": "Bonereaver"
       },
       {
@@ -7121,7 +7768,7 @@ var gear = {
          "phase": 6,
          "type": "Sword",
          "magicdmg": 200,
-         "ppm": 1,
+         "ppm": 2,
       },
       {
          "name": "Darkstone Claymore",
@@ -7136,7 +7783,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "Destiny",
+         "name": "Destiny *Classic PPM",
          "mindmg": 112,
          "maxdmg": 168,
          "speed": 2.6,
@@ -7161,7 +7808,7 @@ var gear = {
          "type": "Sword"
       },
       {
-         "name": "Kalimdor's Revenge",
+         "name": "Kalimdor's Revenge *Classic PPM",
          "str": 24,
          "sta": 18,
          "mindmg": 209,
@@ -7233,7 +7880,7 @@ var gear = {
          "source": "BWL",
          "phase": 3,
          "type": "Sword",
-         "ppm": 1,
+         "ppm": 2,
          "procspell": "Untamed"
       },
       {
