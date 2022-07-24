@@ -5207,7 +5207,7 @@ var gear = {
          "speed": 2.8,
          "type": "Mace",
          "source": "Kazzak",
-         "ppm": 1,
+         "ppm": 0.8,
          "phase": 2,
          "id": 17112,
          "procspell": "Empyrean",
@@ -5701,7 +5701,7 @@ var gear = {
          "procextra": 1
       },
       {
-         "name": "Thunderfury, Blessed Blade of the Windseeker *Classic PPM",
+         "name": "Thunderfury, Blessed Blade of the Windseeker",
          "sta": 8,
          "agi": 5,
          "mindmg": 60,
@@ -5709,7 +5709,7 @@ var gear = {
          "speed": 1.9,
          "type": "Sword",
          "source": "MC",
-         "ppm": 6,
+         "ppm": 7.2,
          "phase": 3,
          "id": 19019,
          "magicdmg": 300,
