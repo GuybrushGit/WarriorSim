@@ -5200,7 +5200,7 @@ var gear = {
          "procgcd": true,
       },
       {
-         "name": "Empyrean Demolisher *Classic PPM",
+         "name": "Empyrean Demolisher",
          "Mainhand": true,
          "mindmg": 94,
          "maxdmg": 175,
@@ -5214,14 +5214,14 @@ var gear = {
       },
       {
          "id": 11684,
-         "name": "Ironfoe *Classic PPM",
+         "name": "Ironfoe",
          "Mainhand": true,
          "mindmg": 73,
          "maxdmg": 136,
          "speed": 2.4,
          "type": "Mace",
          "source": "Dungeon",
-         "ppm": 0.8,
+         "ppm": 1,
          "phase": 1,
          "procextra": 2
       },
@@ -5742,13 +5742,13 @@ var gear = {
          "id": 22806
       },
       {
-         "name": "Vis'kag the Bloodletter *Classic PPM",
+         "name": "Vis'kag the Bloodletter",
          "mindmg": 100,
          "maxdmg": 187,
          "speed": 2.6,
          "type": "Sword",
          "source": "Onyxia",
-         "ppm": 0.6,
+         "ppm": 1,
          "phase": 1,
          "id": 17075,
          "physdmg": 240,
@@ -5958,7 +5958,7 @@ var gear = {
          "procspell": "Avenger"
       },
       {
-         "name": "Ancient Hakkari Manslayer *Classic PPM",
+         "name": "Ancient Hakkari Manslayer",
          "mindmg": 69,
          "maxdmg": 130,
          "speed": 2,
@@ -5967,7 +5967,7 @@ var gear = {
          "ppm": 1,
          "phase": 4,
          "id": 19852,
-         "magicdmg": 56,
+         "magicdmg": 51,
          "coeff": 1,
       },
       {
@@ -7840,7 +7840,7 @@ var gear = {
          "phase": 6,
          "type": "Sword",
          "magicdmg": 200,
-         "ppm": 2,
+         "ppm": 1,
       },
       {
          "name": "Darkstone Claymore",
