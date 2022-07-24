@@ -78,10 +78,12 @@ SIM.SETTINGS = {
 
         view.filter.on('click', '.sources li', function (e) {
             $(this).toggleClass('active');
+            /*  // commenting this allows users to select raids as a source, while also deslecting blizzlike gear, to easily see just what is custom to the server
             if ($(this).hasClass('active')) {
                 let id = $(this).data('id');
                 view.filter.find(`.phases [data-sources*="${id}"]`).addClass('active');
             }
+            */
             SIM.UI.updateSession();
             SIM.UI.filterGear();
         });
