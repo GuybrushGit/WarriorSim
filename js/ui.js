@@ -780,8 +780,8 @@ SIM.UI = {
                         <td>${item.ap || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.minhit || ''}</td>
-                        <td>${item.maxhit || ''}</td>
+                        <td>${item.mindmg || ''}</td>
+                        <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
