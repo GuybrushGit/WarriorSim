@@ -643,7 +643,7 @@ var gear = {
          "agi": 12,
          "ac": 136,
          "source": "Crafting",
-         "phase": 4,
+         "phase": 7,
          "id": 19689
       },
       {
@@ -911,17 +911,6 @@ var gear = {
    ],
    "back": [
       {
-         "name": "Windshear Cape",
-         "str": 10,
-         "sta": 14,
-         "agi": 15,
-         "haste": 1,
-         "ac": 50,
-         "source": "Other",
-         "phase": 4,
-         "id": 20691
-      },
-      {
          "name": "Sandstalker's Shroud",
          "sta": 12,
          "agi": 22,
@@ -1177,6 +1166,17 @@ var gear = {
          "id": 19907
       },
       {
+         "name": "Windshear Cape",
+         "str": 10,
+         "sta": 14,
+         "agi": 15,
+         "haste": 1,
+         "ac": 50,
+         "source": "Other",
+         "phase": 7,
+         "id": 20691
+      },
+      {
          "name": "Might of the Tribe",
          "sta": 18,
          "ap": 28,
@@ -1262,7 +1262,7 @@ var gear = {
          "agi": 16,
          "ac": 181,
          "source": "Crafting",
-         "phase": 4,
+         "phase": 7,
          "id": 19688
       },
       {
@@ -1382,7 +1382,7 @@ var gear = {
          "dodge": 1,
          "ac": 197,
          "source": "Quest",
-         "phase": 1,
+         "phase": 7,
          "id": 12757
       },
       {
@@ -1413,7 +1413,7 @@ var gear = {
          "agi": 15,
          "ac": 736,
          "source": "Quest",
-         "phase": 1,
+         "phase": 7,
          "id": 12895
       },
       {
@@ -1666,7 +1666,7 @@ var gear = {
          "hit": 1,
          "ac": 76,
          "source": "Unobtainable",
-         "phase": "7",
+         "phase": 7,
          "id": 51744
       },      
       {
@@ -2161,7 +2161,7 @@ var gear = {
          "haste": 1,
          "ac": 275,
          "source": "BWL",
-         "phase": 3,
+         "phase": 7,
          "id": 19393,
       },
       {
@@ -2172,7 +2172,7 @@ var gear = {
          "haste": 1,
          "ac": 488,
          "source": "BWL",
-         "phase": 3,
+         "phase": 7,
          "id": 19392,
       },
       {
@@ -2540,7 +2540,7 @@ var gear = {
          "crit": 1,
          "ac": 364,
          "source": "Quest",
-         "phase": 1,
+         "phase": 7,
          "id": 12903,
       },
       {
@@ -2704,7 +2704,7 @@ var gear = {
          "defense": 8,
          "ac": 548,
          "source": "Dungeon",
-         "phase": 1,
+         "phase": 7,
          "id": 13498
       },
       {
@@ -2901,7 +2901,7 @@ var gear = {
          "agi": 9,
          "ac": 424,
          "source": "Dungeon",
-         "phase": 1,
+         "phase": 7,
          "id": 18692
       },
       {
@@ -3977,15 +3977,15 @@ var gear = {
          "hit": 1,
          "sta": 5,
          "source": "Quest",
-         "phase": "7",
+         "phase": 7,
          "id": 61011
       },
       {
          "name": "Burstshot Harquebus",
-         "ap": 10,
          "sta": 8,
+         "ap": 10,
          "source": "Other",
-         "phase": "7",
+         "phase": 7,
          "id": 80795
       },
       {
@@ -4479,7 +4479,7 @@ var gear = {
          "type": "Dagger",
          "source": "AQ20",
          "phase": 7,
-         "id": 13246,
+         "id": 81004,
       },
       {
          "name": "Argent Avenger (vs Undead) *Classic PPM",
@@ -4591,7 +4591,7 @@ var gear = {
          "speed": 2.4,
          "type": "Axe",
          "source": "Crafting",
-         "phase": 1,
+         "phase": 7,
          "id": 17016
       },
       {
@@ -7191,7 +7191,7 @@ var gear = {
          "speed": 3.5,
          "id": 12790,
          "source": "Crafting",
-         "phase": 1,
+         "phase": 7,
          "type": "Sword",
          "ppm": 1.2,
          "procspell": "Champion"
@@ -7608,7 +7608,7 @@ var gear = {
          "speed": 3.3,
          "id": 19167,
          "source": "Crafting",
-         "phase": 3,
+         "phase": 7,
          "type": "Polearm"
       },
       {
@@ -7799,7 +7799,7 @@ var gear = {
          "speed": 2.1,
          "id": 2801,
          "source": "Other",
-         "phase": 1,
+         "phase": 7,
          "type": "Sword"
       },
       {

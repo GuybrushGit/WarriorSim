@@ -775,7 +775,7 @@ SIM.UI = {
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td>`
-            if (tooltip <= 50000)
+            if (item.phase <= 6)
               table += `<a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>`
             else
               table += `<a href="https://database.turtle-wow.org/?item=${tooltip}${rand}"></a>`
@@ -875,7 +875,7 @@ SIM.UI = {
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td>`
-            if (tooltip <= 50000)
+            if (item.phase <= 6)
               table += `<a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>`
             else
               table += `<a href="https://database.turtle-wow.org/?item=${tooltip}${rand}"></a>`
