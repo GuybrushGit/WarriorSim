@@ -11,8 +11,10 @@ struct Item
         int str;
         int agi;
         int ap;
+        int arp;
         int crit;
         int hit;
+        int haste;
         int ac;
         int defense;
         int dodge;

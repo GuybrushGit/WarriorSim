@@ -109,8 +109,14 @@ void Player::addGear()
                 base.str += item.stats.str;
                 base.agi += item.stats.agi;
                 base.ap += item.stats.ap;
+                base.arp += item.stats.arp;
                 base.crit += item.stats.crit;
                 base.hit += item.stats.hit;
+                if ( item.stats.haste )
+                {
+                    base.haste *= 1.0 + ( double )item.stats.haste / 100.0;
+                }
+                
                 for ( int i = 0; i < NUM_WEAPON_TYPES; ++i )
                 {
                     base.skill[i] += item.stats.skill[i];

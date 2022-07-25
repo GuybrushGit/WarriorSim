@@ -115,6 +115,7 @@ struct Stats
 {
     int aprace = 0;
     int ap = 0;
+    int arp = 0;
     int agi = 0;
     int str = 0;
     int hit = 0;

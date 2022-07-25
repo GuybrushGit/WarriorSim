@@ -26,7 +26,7 @@ function populate_gear () {
 function generateCppSyntax () {
   # Initialize item stats to 0
   declare -A itemStats
-  for stat in id sta str agi ap crit hit ac defense dodge parry skill type procchance ppm procextra procspell magicdmg physdmg binaryspell procgcd coeff Mainhand; do
+  for stat in id sta str agi ap arp crit hit haste ac defense dodge parry skill type procchance ppm procextra procspell magicdmg physdmg binaryspell procgcd coeff Mainhand; do
     itemStats[$stat]=0
   done
     
@@ -45,8 +45,10 @@ function generateCppSyntax () {
   cppLine+="${itemStats["str"]}, "
   cppLine+="${itemStats["agi"]}, "
   cppLine+="${itemStats["ap"]}, "
+  cppLine+="${itemStats["arp"]}, "
   cppLine+="${itemStats["crit"]}, "
   cppLine+="${itemStats["hit"]}, "
+  cppLine+="${itemStats["haste"]}, "
   cppLine+="${itemStats["ac"]}, "
   cppLine+="${itemStats["defense"]}, "
   cppLine+="${itemStats["dodge"]}, "
@@ -68,7 +70,7 @@ function generateCppSyntax () {
     cppLine+="${itemStats["mindmg"]}, "
     cppLine+="${itemStats["maxdmg"]}, "
     cppLine+="${itemStats["speed"]}"
-  else # aromor
+  else # armor
     cppLine+="-1, 0, 0, 0.0"
   fi
   

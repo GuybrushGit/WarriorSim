@@ -8050,6 +8050,21 @@ var gear = {
          "crit": 3
       },
       {
+         "id": 20,
+         "name": "+ 1% Haste",
+         "haste": 1
+      },
+      {
+         "id": 21,
+         "name": "+ 2% Haste",
+         "haste": 2
+      },
+      {
+         "id": 22,
+         "name": "+ 3% Haste",
+         "haste": 3
+      },
+      {
          "id": 10,
          "name": "+ 5 Strength",
          "str": 5
