@@ -271,6 +271,14 @@ var buffs = [
       crit: 3,
       spellcrit: 3,
    },
+   {
+      id: 29232,
+      spellid: true,
+      name: "Fungal Bloom",
+      iconname: "spell_nature_unyeildingstamina",
+      crit: 50,
+      spellcrit: 60,
+   },
    
    
 ];
