@@ -3917,8 +3917,7 @@ var gear = {
    "trinket1": [
       {
          "name": "Corossive Core",
-         "hit": 1,
-         "arp": 200,
+         "arp": 100,
          "source": "Dungeon",
          "phase": "7",
          "id": 100000103
@@ -4058,8 +4057,7 @@ var gear = {
    "trinket2": [
       {
          "name": "Corossive Core",
-         "hit": 1,
-         "arp": 200,
+         "arp": 100,
          "source": "Dungeon",
          "phase": "7",
          "id": 100000103
