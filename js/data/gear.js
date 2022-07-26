@@ -627,6 +627,17 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Blackhammer Pauldrons",
+         "sta": 10,
+         "str": 15,
+         "agi": 7,
+         "arp": 30,
+         "ac": 441,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 100000123
+      },
+      {
          "name": "Shoulderguards of the Defiler",
          "sta": 12,
          "ap": 20,
@@ -3178,6 +3189,14 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Band of Calamity",
+         "str": 3,
+         "arp": 200,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 100000104
+      },
+      {
          "name": "Ring of Demonic Fury",
          "sta": 5,
          "str": 4,
@@ -3438,6 +3457,14 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Band of Calamity",
+         "str": 3,
+         "arp": 200,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 100000104
+      },
       {
          "name": "Ring of Demonic Fury",
          "sta": 5,
@@ -3700,6 +3727,22 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Corossive Core",
+         "hit": 1,
+         "arp": 200,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 100000103
+      },
+      {
+         "name": "Heartreaver Cog",
+         "haste": 1,
+         "ac": 120,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 100000102
+      },
+      {
          "name": "Whip of Encouragement",
          "haste": 3,
          "source": "Dungeon",
@@ -3824,6 +3867,22 @@ var gear = {
       },
    ],
    "trinket2": [
+      {
+         "name": "Corossive Core",
+         "hit": 1,
+         "arp": 200,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 100000103
+      },
+      {
+         "name": "Heartreaver Cog",
+         "haste": 1,
+         "ac": 120,
+         "source": "Dungeon",
+         "phase": "7",
+         "id": 100000102
+      },
       {
          "name": "Whip of Encouragement",
          "haste": 3,
