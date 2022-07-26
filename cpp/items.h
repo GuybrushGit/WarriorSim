@@ -80,6 +80,7 @@ struct ItemSet
         struct
         {
             int ap;
+            int arp;
             int hit;
             int crit;
             int skill_1;
@@ -91,7 +92,7 @@ struct ItemSet
             int chance;
             Aura&( *spell )( Player& player );
         } proc;
-    } bonuses[2];
+    } bonuses[3];
 };
 
 extern static_vector<Item> Items[NUM_ITEM_SLOTS];

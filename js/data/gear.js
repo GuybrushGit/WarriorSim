@@ -1,6 +1,28 @@
 var gear = {
    "head": [
       {
+         "name": "Bloody Gladiator's Headband",
+         "agi": 14,
+         "str": 16,
+         "sta": 22,
+         "ac": 219,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83436,
+      },
+      {
+         "name": "Bloody Gladiator's Helm",
+         "str": 15,
+         "sta": 24,
+         "hit": 1,
+         "crit": 1,
+         "ap": 30,
+         "ac": 658,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60365,
+      },
+      {
          "name": "Crown of Corruption",
          "sta": 5,
          "agi": 18,
@@ -627,6 +649,28 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Bloody Gladiator's Shoulders",
+         "str": 14,
+         "agi": 14,
+         "sta": 20,
+         "hit": 1,
+         "ac": 208,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83435,
+      },
+      {
+         "name": "Bloody Gladiator's Spaulders",
+         "str": 10,
+         "sta": 18,
+         "hit": 1,
+         "ap": 24,
+         "ac": 612,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60364,
+      },
+      {
          "name": "Blackhammer Pauldrons",
          "sta": 10,
          "str": 15,
@@ -1216,6 +1260,28 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Bloody Gladiator's Tunic",
+         "str": 10,
+         "agi": 10,
+         "sta": 22,
+         "crit": 2,
+         "ac": 246,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83434,
+      },
+      {
+         "name": "Bloody Gladiator's Breastplate",
+         "str": 14,
+         "sta": 24,
+         "crit": 1,
+         "ap": 28,
+         "ac": 799,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60363,
+      },
+      {
          "name": "Damien's Sorrow",
          "sta": 22,
          "crit": 1,
@@ -1631,6 +1697,26 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Bloody Gladiator's Bands",
+         "str": 9,
+         "agi": 9,
+         "sta": 13,
+         "ac": 112,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83433,
+      },
+      {
+         "name": "Bloody Gladiator's Bracers",
+         "str": 9,
+         "ap": 14,
+         "sta": 14,
+         "ac": 349,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60362,
+      },
+      {
          "name": "Trickster's Wraps",
          "sta": 4,
          "agi": 8,
@@ -1868,6 +1954,28 @@ var gear = {
       }
    ],
    "hands": [
+      {
+         "name": "Bloody Gladiator's Gauntlets",
+         "str": 9,
+         "sta": 14,
+         "crit": 1,
+         "ap": 18,
+         "ac": 392,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60359,
+      },
+      {
+         "name": "Bloody Gladiator's Gloves",
+         "str": 10,
+         "ap": 10,
+         "sta": 14,
+         "hit": 1,
+         "ac": 155,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83430,
+      },
       {
          "name": "Fists of the Makers",
          "str": 18,
@@ -2164,6 +2272,27 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Bloody Gladiator's Girdle",
+         "str": 10,
+         "sta": 16,
+         "ap": 16,
+         "hit": 1,
+         "ac": 425,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60358,
+      },
+      {
+         "name": "Bloody Gladiator's Belt",
+         "str": 12,
+         "agi": 14,
+         "sta": 15,
+         "ac": 143,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83429,
+      },
       {
          "name": "Primalist's Linked Waistguard",
          "sta": 13,
@@ -2514,6 +2643,28 @@ var gear = {
       }
    ],
    "legs": [
+      {
+         "name": "Bloody Gladiator's Legguards",
+         "str": 12,
+         "sta": 20,
+         "crit": 1,
+         "agi": 24,
+         "ac": 668,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60360,
+      },
+      {
+         "name": "Bloody Gladiator's Pants",
+         "agi": 14,
+         "str": 12,
+         "sta": 20,
+         "hit": 1,
+         "ac": 215,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83431,
+      },
       {
          "name": "Leggings of Alacrity",
          "agi": 26,
@@ -2866,6 +3017,26 @@ var gear = {
    ],
    "feet": [
       {
+         "name": "Bloody Gladiator's Greaves",
+         "str": 8,
+         "sta": 18,
+         "ap": 18,
+         "ac": 526,
+         "source": "PVP",
+         "phase": 7,
+         "id": 60361,
+      },
+      {
+         "name": "Bloody Gladiator's Boots",
+         "agi": 12,
+         "str": 10,
+         "sta": 16,
+         "ac": 179,
+         "source": "PVP",
+         "phase": 7,
+         "id": 83432,
+      },
+      {
          "name": "Wormhide Boots",
          "agi": 32,
          "str": 18,
@@ -3189,6 +3360,15 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Gore Ring of the Gladiator",
+         "sta": 12,
+         "str": 9,
+         "ap": 20,
+         "source": "PVP",
+         "phase": 7,
+         "id": 100000105
+      },
+      {
          "name": "Band of Calamity",
          "str": 3,
          "arp": 200,
@@ -3457,6 +3637,15 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Gore Ring of the Gladiator",
+         "sta": 12,
+         "str": 9,
+         "ap": 20,
+         "source": "PVP",
+         "phase": 7,
+         "id": 100000105
+      },
       {
          "name": "Band of Calamity",
          "str": 3,
@@ -8562,6 +8751,26 @@ var enchant = {
 };
 
 var sets = [
+   {
+      id: 100000999,
+      name: 'Bloody Gladiator\'s Vestements',
+      items: [83429, 83430, 83431, 83432, 83433, 83434, 83435, 83436],
+      bonus: [
+         { count: 4, stats: { arp: 100 } },
+         { count: 6, stats: { ap: 40 } },
+         { count: 8, stats: { crit: 2 } },
+      ]
+   },
+   {
+      id: 100000998,
+      name: 'Bloody Gladiator\'s Battlegear',
+      items: [60358, 60359, 60360, 60361, 60362, 60363, 60364, 60365],
+      bonus: [
+         { count: 4, stats: { arp: 100 } },
+         { count: 6, stats: { ap: 40 } },
+         { count: 8, stats: { crit: 2 } },
+      ]
+   },
    {
       id: 143,
       name: 'Devilsaur Armor',
