@@ -10,5 +10,5 @@ cd WarriorSim
 nvm install 11.15.0
 nvm use 11.15.0
 npm install
-npm run gulp
+npm run dev
 ```
