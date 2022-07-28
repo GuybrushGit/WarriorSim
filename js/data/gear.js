@@ -1955,6 +1955,18 @@ var gear = {
    ],
    "hands": [
       {
+         "name": "Skulker's Gloves",
+         "str": 12,
+         "agi": 12,
+         "sta": 10,
+         "hit": 1,
+         "haste": 1,
+         "ac": 113,
+         "source": "Other",
+         "phase": 7,
+         "id": 100000106,
+      },
+      {
          "name": "Bloody Gladiator's Gauntlets",
          "str": 9,
          "sta": 14,
@@ -3371,7 +3383,7 @@ var gear = {
       {
          "name": "Band of Calamity",
          "str": 3,
-         "arp": 200,
+         "arp": 150,
          "source": "Dungeon",
          "phase": 7,
          "id": 100000104
@@ -3649,7 +3661,7 @@ var gear = {
       {
          "name": "Band of Calamity",
          "str": 3,
-         "arp": 200,
+         "arp": 150,
          "source": "Dungeon",
          "phase": 7,
          "id": 100000104
@@ -3917,7 +3929,8 @@ var gear = {
    "trinket1": [
       {
          "name": "Corossive Core",
-         "arp": 100,
+         "arp": 75,
+         "hit": 1,
          "source": "Dungeon",
          "phase": "7",
          "id": 100000103
@@ -4057,7 +4070,8 @@ var gear = {
    "trinket2": [
       {
          "name": "Corossive Core",
-         "arp": 100,
+         "arp": 75,
+         "hit": 1,
          "source": "Dungeon",
          "phase": "7",
          "id": 100000103
