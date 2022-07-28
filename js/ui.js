@@ -591,6 +591,7 @@ SIM.UI = {
         let mhdmg = player.stats.dmgmod * player.mh.modifier * 100;
         let ohdmg = player.stats.dmgmod * (player.oh ? player.oh.modifier * 100 : 0);
         view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohdmg.toFixed(2) + '% <small>OH</small>' : ''));
+        view.sidebar.find('#arp').html(player.stats.arp + '/' + player.target.basearmor + ' <small>ArP</small>' + space + '+' + (player.arpContribution * 100).toFixed(2) + '% <small>DPS</small>');
         view.sidebar.find('#haste').html((player.stats.haste * 100).toFixed(2) + '%');
         view.sidebar.find('#race').text(localStorage.race);
         view.sidebar.find('#sets').empty();
@@ -933,8 +934,10 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
+                                <th>ArP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
+                                <th>Haste</th>
                                 <th>Skill</th>
                                 <th>DPS</th>
                             </tr>
@@ -949,8 +952,10 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
+                        <td>${item.arp || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td>${item.haste || ''}</td>
                         <td>${item.skill_1 || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -962,7 +967,10 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[11, 1]] : [[10, 1]],
+            sortList: editmode ? [[10, 1]] : [[9, 1]],
+            headers: {
+                9: { sorter: "text" }
+            }
         });
     },
 

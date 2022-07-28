@@ -8325,6 +8325,31 @@ var gear = {
          "haste": 3
       },
       {
+         "id": 23,
+         "name": "+ 50 ArP",
+         "arp": 50
+      },
+      {
+         "id": 24,
+         "name": "+ 100 ArP",
+         "arp": 100
+      },
+      {
+         "id": 25,
+         "name": "+ 200 ArP",
+         "arp": 200
+      },
+      {
+         "id": 26,
+         "name": "+ 400 ArP",
+         "arp": 400
+      },
+      {
+         "id": 27,
+         "name": "+ 800 ArP",
+         "arp": 800
+      },
+      {
          "id": 10,
          "name": "+ 5 Strength",
          "str": 5

@@ -449,7 +449,8 @@ class Player {
             this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
     }
     updateArmorReduction() {
-        this.target.armor = Math.max(this.target.basearmor - this.base.arp, 0)
+        this.stats.arp = this.base.arp;
+        this.target.armor = Math.max(this.target.basearmor - this.stats.arp, 0)
         if (this.auras.annihilator && this.auras.annihilator.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
         if (this.auras.rivenspike && this.auras.rivenspike.timer)
@@ -459,6 +460,7 @@ class Player {
         if (this.auras.swarmguard && this.auras.swarmguard.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.swarmguard.stacks * this.auras.swarmguard.armor), 0);
         this.armorReduction = this.getArmorReduction();
+        this.arpContribution = this.getArpContribution();
     }
     updateDmgMod() {
         this.stats.dmgmod = this.base.dmgmod;
@@ -501,6 +503,11 @@ class Player {
     getArmorReduction() {
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);
         return r > 0.75 ? 0.75 : r;
+    }
+    getArpContribution() {
+        let basereduct = this.target.basearmor / (this.target.basearmor + 400 + 85 * this.level);
+        let witharpreduct = this.target.armor / (this.target.armor + 400 + 85 * this.level);
+        return ((1 - (witharpreduct > 0.75 ? 0.75 : witharpreduct)) / (1 - (basereduct > 0.75 ? 0.75 : basereduct))) - 1;
     }
     addRage(dmg, result, weapon, spell) {
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
