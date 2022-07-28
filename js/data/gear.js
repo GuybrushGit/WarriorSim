@@ -3959,6 +3959,7 @@ var gear = {
       {
          "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
          "source": "AQ40",
+         "arpv": "0–1200",
          "phase": "5",
          "id": 21670
       },
@@ -8074,7 +8075,8 @@ var gear = {
          "phase": 1,
          "type": "Sword",
          "ppm": 4,
-         "procspell": "Bonereaver"
+         "procspell": "Bonereaver",
+         "arpv": "0–2100",
       },
       {
          "name": "Claymore of Unholy Might",

@@ -787,7 +787,7 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.arp || ''}</td>
+                        <td>${item.arp || item.arpv || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.haste || ''}</td>
@@ -887,7 +887,7 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.arp || ''}</td>
+                        <td>${item.arp || item.arpv || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.haste || ''}</td>
