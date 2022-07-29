@@ -679,7 +679,7 @@ var gear = {
          "ac": 441,
          "source": "Dungeon",
          "phase": 7,
-         "id": 100000123
+         "id": 60567,
       },
       {
          "name": "Shoulderguards of the Defiler",
@@ -1964,7 +1964,7 @@ var gear = {
          "ac": 113,
          "source": "Other",
          "phase": 7,
-         "id": 100000106,
+         "id": 60729,
       },
       {
          "name": "Bloody Gladiator's Gauntlets",
@@ -2284,6 +2284,16 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Shadowruned Girdle",
+         "str": 18,
+         "ap": 20,
+         "haste": 1,
+         "ac": 91,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60550,
+      },
       {
          "name": "Bloody Gladiator's Girdle",
          "str": 10,
@@ -3378,7 +3388,7 @@ var gear = {
          "ap": 20,
          "source": "PVP",
          "phase": 7,
-         "id": 100000105
+         "id": 60366
       },
       {
          "name": "Band of Calamity",
@@ -3386,7 +3396,7 @@ var gear = {
          "arp": 150,
          "source": "Dungeon",
          "phase": 7,
-         "id": 100000104
+         "id": 60547
       },
       {
          "name": "Ring of Demonic Fury",
@@ -3656,7 +3666,7 @@ var gear = {
          "ap": 20,
          "source": "PVP",
          "phase": 7,
-         "id": 100000105
+         "id": 60366
       },
       {
          "name": "Band of Calamity",
@@ -3664,7 +3674,7 @@ var gear = {
          "arp": 150,
          "source": "Dungeon",
          "phase": 7,
-         "id": 100000104
+         "id": 60547
       },
       {
          "name": "Ring of Demonic Fury",
@@ -3933,15 +3943,16 @@ var gear = {
          "hit": 1,
          "source": "Dungeon",
          "phase": "7",
-         "id": 100000103
+         "id": 80674
       },
       {
-         "name": "Heartreaver Cog",
+         "name": "Hatereaver Cog",
          "haste": 1,
+         "sta": 12,
          "ac": 120,
          "source": "Dungeon",
          "phase": "7",
-         "id": 100000102
+         "id": 60559,
       },
       {
          "name": "Whip of Encouragement",
@@ -4075,22 +4086,23 @@ var gear = {
          "hit": 1,
          "source": "Dungeon",
          "phase": "7",
-         "id": 100000103
+         "id": 80674,
       },
       {
-         "name": "Heartreaver Cog",
+         "name": "Hatereaver Cog",
          "haste": 1,
+         "sta": 12,
          "ac": 120,
          "source": "Dungeon",
          "phase": "7",
-         "id": 100000102
+         "id": 60559,
       },
       {
          "name": "Whip of Encouragement",
          "haste": 3,
          "source": "Dungeon",
          "phase": "7",
-         "id": 60501
+         "id": 60501,
       },
       {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
