@@ -3393,7 +3393,7 @@ var gear = {
       {
          "name": "Band of Calamity",
          "str": 3,
-         "arp": 150,
+         "arp": 200,
          "source": "Dungeon",
          "phase": 7,
          "id": 60547
@@ -3671,7 +3671,7 @@ var gear = {
       {
          "name": "Band of Calamity",
          "str": 3,
-         "arp": 150,
+         "arp": 200,
          "source": "Dungeon",
          "phase": 7,
          "id": 60547
