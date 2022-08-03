@@ -642,6 +642,36 @@ struct Eskhandar : public HasteAura
     }
 };
 
+struct Tempest : public HasteAura
+{
+    Tempest( Player& player_ )
+        : HasteAura( player_ )
+    {
+        duration = 20;
+        mult_stats.haste = 15;
+    }
+};
+
+struct TempestMH : public Tempest
+{
+    const char* name() const override
+    {
+        return "Tempest (MH)";
+    }
+
+    TempestMH( Player& player_ ) : Tempest( player_ ) {}
+};
+
+struct TempestOH : public Tempest
+{
+    const char* name() const override
+    {
+        return "Tempest (OH)";
+    }
+
+    TempestOH( Player& player_ ) : Tempest( player_ ) {}
+};
+
 struct Zeal : public BonusDmgAura
 {
     const char* name() const override

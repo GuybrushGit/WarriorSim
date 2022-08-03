@@ -4511,6 +4511,18 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Tempest's Rage",
+         "mindmg": 59,
+         "maxdmg": 110,
+         "speed": 1.7,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 83564,
+         "ppm": 0.6,
+         "procspell": "Tempest",
+      },
+      {
          "name": "The Ripper *Unknown PPM",
          "mindmg": 47,
          "maxdmg": 85,
@@ -6064,6 +6076,18 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Tempest's Rage",
+         "mindmg": 59,
+         "maxdmg": 110,
+         "speed": 1.7,
+         "type": "Sword",
+         "source": "Other",
+         "phase": 7,
+         "id": 83564,
+         "ppm": 0.6,
+         "procspell": "Tempest",
+      },
       {
          "name": "The Ripper *Unknown PPM",
          "mindmg": 47,

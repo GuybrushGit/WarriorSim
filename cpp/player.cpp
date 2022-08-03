@@ -488,6 +488,14 @@ void Player::updateHaste()
     {
         stats.haste *= 1.0 + 0.01 * ( double )aura->mult_stats.haste;
     }
+    if ( auto aura = auras.ptr<TempestMH>(); aura && aura->timer )
+    {
+        stats.haste *= 1.0 + 0.01 * ( double )aura->mult_stats.haste;
+    }
+    if ( auto aura = auras.ptr<TempestOH>(); aura && aura->timer )
+    {
+        stats.haste *= 1.0 + 0.01 * ( double )aura->mult_stats.haste;
+    }
     if ( auto aura = auras.ptr<Pummeler>(); aura && aura->timer )
     {
         stats.haste *= 1.0 + 0.01 * ( double )aura->mult_stats.haste;

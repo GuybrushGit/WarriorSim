@@ -433,6 +433,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.empyrean.mult_stats.haste / 100);
         if (this.auras.eskhandar && this.auras.eskhandar.timer)
             this.stats.haste *= (1 + this.auras.eskhandar.mult_stats.haste / 100);
+        if (this.auras.tempest && this.auras.tempest.timer)
+            this.stats.haste *= (1 + this.auras.tempest.mult_stats.haste / 100);
         if (this.auras.pummeler && this.auras.pummeler.timer)
             this.stats.haste *= (1 + this.auras.pummeler.mult_stats.haste / 100);
         if (this.auras.spider && this.auras.spider.timer)

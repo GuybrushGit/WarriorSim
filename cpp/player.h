@@ -42,6 +42,8 @@ struct Player
         Berserking,
         Empyrean,
         Eskhandar,
+        TempestMH,
+        TempestOH,
         Zeal,
         Annihilator,
         RivenspikeMH,
