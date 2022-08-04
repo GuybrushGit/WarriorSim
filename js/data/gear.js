@@ -4215,6 +4215,13 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Shieldbreaker Arbalest",
+         "arp": 75,
+         "source": "Other",
+         "phase": 7,
+         "id": 60782,
+      },
+      {
          "name": "Vigilance",
          "sta": 9,
          "agi": 5,
