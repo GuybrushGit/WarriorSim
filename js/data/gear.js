@@ -3382,6 +3382,14 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Ring of Tyvadrius",
+         "agi": 18,
+         "sta": 5,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60499
+      },
+      {
          "name": "Gore Ring of the Gladiator",
          "sta": 12,
          "str": 9,
@@ -3658,6 +3666,14 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Ring of Tyvadrius",
+         "agi": 18,
+         "sta": 5,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60499
+      },
       {
          "name": "Gore Ring of the Gladiator",
          "sta": 12,
@@ -7310,6 +7326,19 @@ var gear = {
       }
    ],
    "twohand": [
+      {
+         "name": "Halberd of the Bronze Defender",
+         "str": 24,
+         "agi": 8,
+         "sta": 6,
+         "mindmg": 162,
+         "maxdmg": 258,
+         "speed": 3.6,
+         "id": 60498,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Polearm",
+      },
       {
          "name": "Cryptkeeper's Pike",
          "str": 25,
