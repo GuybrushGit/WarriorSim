@@ -1260,6 +1260,16 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Cuirass of the Kirin-Eye",
+         "str": 24,
+         "sta": 12,
+         "ap": 10,
+         "ac": 612,
+         "source": "Quest",
+         "phase": 7,
+         "id": 60117,
+      },
+      {
          "name": "Bloody Gladiator's Tunic",
          "str": 10,
          "agi": 10,
