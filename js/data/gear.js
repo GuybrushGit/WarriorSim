@@ -1775,7 +1775,7 @@ var gear = {
          "source": "Unobtainable",
          "phase": 7,
          "id": 51744
-      },      
+      },
       {
          "name": "Abyssal Plate Vambraces",
          "str": 11,
@@ -1964,6 +1964,17 @@ var gear = {
       }
    ],
    "hands": [
+      {
+         "name": "Hateforge Grips",
+         "str": 9,
+         "sta": 7,
+         "crit": 1,
+         "haste": 1,
+         "ac": 173,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 60577,
+      },
       {
          "name": "Skulker's Gloves",
          "str": 12,
@@ -2637,12 +2648,13 @@ var gear = {
       {
          "name": "Therazane's Link",
          "crit": 1,
+         "haste": 1,
          "sta": 22,
          "ap": 44,
          "ac": 295,
          "source": "BWL",
-         "phase": 3,
-         "id": 19380
+         "phase": 7,
+         "id": 19380,
       },
       {
          "name": "Triad Girdle",
