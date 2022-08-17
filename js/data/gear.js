@@ -4794,7 +4794,7 @@ var gear = {
          "maxdmg": 123,
          "speed": 1.9,
          "type": "Dagger",
-         "source": "AQ20",
+         "source": "ZG",
          "phase": 7,
          "id": 81003,
       },
