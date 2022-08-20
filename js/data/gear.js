@@ -4249,6 +4249,13 @@ var gear = {
          "source": "Naxx",
          "phase": "6",
          "id": 23041,
+      },
+      {
+         "name": "Mark of the Champion (vs Undead)",
+         "ap": 150,
+         "source": "Naxx",
+         "phase": "6",
+         "id": 23206
       }
    ],
    "ranged": [
