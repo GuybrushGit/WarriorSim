@@ -1,6 +1,18 @@
 var gear = {
    "head": [
       {
+         "name": "Depthstalker Helm",
+         "agi": 14,
+         "str": 14,
+         "sta": 14,
+         "crit": 1,
+         "hit": 1,
+         "ac": 163,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65026,
+      },
+      {
          "name": "Bloody Gladiator's Headband",
          "agi": 14,
          "str": 16,
@@ -1259,6 +1271,17 @@ var gear = {
       }
    ],
    "chest": [
+      {
+         "name": "Earthguard Tunic",
+         "agi": 10,
+         "str": 6,
+         "sta": 25,
+         "hit": 1,
+         "ac": 275,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65024,
+      },
       {
          "name": "Cuirass of the Kirin-Eye",
          "str": 24,
@@ -2688,6 +2711,18 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Flamewrath Leggings",
+         "str": 25,
+         "agi": 18,
+         "sta": 18,
+         "crit": 1,
+         "hit": 1,
+         "ac": 175,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65025,
+      },
+      {
          "name": "Bloody Gladiator's Legguards",
          "str": 12,
          "sta": 20,
@@ -3060,6 +3095,16 @@ var gear = {
       }
    ],
    "feet": [
+      {
+         "name": "Windwalker Boots",
+         "agi": 22,
+         "sta": 10,
+         "haste": 2,
+         "ac": 138,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65027,
+      },
       {
          "name": "Bloody Gladiator's Greaves",
          "str": 8,
@@ -8889,6 +8934,15 @@ var enchant = {
 };
 
 var sets = [
+   {
+      id: 100000998,
+      name: 'Convergence of the Elements',
+      items: [65024, 65025, 65026, 65027],
+      bonus: [
+         { count: 3, stats: { hit: 1, crit: 1} },
+         { count: 4, stats: { haste: 2, ap: 40 } },
+      ]
+   },
    {
       id: 100000999,
       name: 'Bloody Gladiator\'s Vestements',
