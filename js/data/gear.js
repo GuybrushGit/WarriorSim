@@ -8940,7 +8940,7 @@ var sets = [
       items: [65024, 65025, 65026, 65027],
       bonus: [
          { count: 3, stats: { hit: 1, crit: 1} },
-         { count: 4, stats: { haste: 2, ap: 40 } },
+         { count: 4, stats: { haste: .02, ap: 40 } },
       ]
    },
    {
