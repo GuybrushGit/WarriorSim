@@ -1028,7 +1028,8 @@ var gear = {
       },
       {
          "name": "Shawl of Haunted Memories",
-         "arp": 50,
+         "arp": 40,
+         "ap": 40,
          "str": 10,
          "sta": 12,
          "ac": 53,
