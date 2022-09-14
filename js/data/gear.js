@@ -1989,6 +1989,16 @@ var gear = {
    ],
    "hands": [
       {
+         "name": "Skullcrushing Gauntlets",
+         "str": 13,
+         "arp": 25,
+         "crit": 1,
+         "ac": 421,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60791,
+      },
+      {
          "name": "Hateforge Grips",
          "str": 9,
          "sta": 7,
@@ -3096,6 +3106,16 @@ var gear = {
       }
    ],
    "feet": [
+      {
+         "name": "Sternrock Trudgers",
+         "agi": 16,
+         "sta": 8,
+         "ap": 22,
+         "ac": 113,
+         "source": "Quest",
+         "phase": 7,
+         "id": 60666,
+      },
       {
          "name": "Windwalker Boots",
          "agi": 22,
@@ -4607,6 +4627,18 @@ var gear = {
       }
    ],
    "mainhand": [
+      {
+         "name": "Dream's Herald",
+         "mindmg": 61,
+         "maxdmg": 114,
+         "speed": 1.9,
+         "type": "Sword",
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65008,
+         "ppm": 7,
+         "magicdmg": 150,
+      },
       {
          "name": "Tempest's Rage",
          "mindmg": 59,
@@ -6173,6 +6205,18 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Dream's Herald",
+         "mindmg": 61,
+         "maxdmg": 114,
+         "speed": 1.9,
+         "type": "Sword",
+         "source": "Crafting",
+         "phase": 7,
+         "id": 65008,
+         "ppm": 7,
+         "magicdmg": 150,
+      },
       {
          "name": "Tempest's Rage",
          "mindmg": 59,
