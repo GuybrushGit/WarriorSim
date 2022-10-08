@@ -4061,7 +4061,14 @@ var gear = {
          "haste": 3,
          "source": "Dungeon",
          "phase": "7",
-         "id": 60501
+         "id": 60501,
+      },
+      {
+         "name": "Finke's Accelerator",
+         "haste": 2,
+         "source": "Other",
+         "phase": "7",
+         "id": 60789,
       },
       {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
@@ -4205,6 +4212,13 @@ var gear = {
          "source": "Dungeon",
          "phase": "7",
          "id": 60501,
+      },
+      {
+         "name": "Finke's Accelerator",
+         "haste": 2,
+         "source": "Other",
+         "phase": "7",
+         "id": 60789,
       },
       {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
