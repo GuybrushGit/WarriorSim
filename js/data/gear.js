@@ -1,6 +1,17 @@
 var gear = {
    "head": [
       {
+         "name": "Blindfold of the Scarlet Marksman",
+         "agi": 30,
+         "sta": 16,
+         "hit": 3,
+         "ap": 40,
+         "ac": 425,
+         "source": "SCitadel",
+         "phase": 7,
+         "id": 84005,
+      },
+      {
          "name": "Depthstalker Helm",
          "agi": 14,
          "str": 14,
@@ -1989,6 +2000,19 @@ var gear = {
    ],
    "hands": [
       {
+         "name": "Fists of the Red Dawn",
+         "str": 22,
+         "agi": 12,
+         "sta": 20,
+         "crit": 1,
+         "ac": 158,
+         "source": "SCitadel",
+         "phase": 7,
+         "id": 84035,
+         "procchance": 5,
+         "magicdmg": 60,
+      },
+      {
          "name": "Skullcrushing Gauntlets",
          "str": 13,
          "arp": 25,
@@ -2339,6 +2363,17 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Girdle of the Insane Zealot",
+         "crit": 2,
+         "str": 15,
+         "sta": 20,
+         "agi": 15,
+         "ac": 554,
+         "source": "SCitadel",
+         "phase": 7,
+         "id": 84034
+      },
       {
          "name": "Shadowruned Girdle",
          "str": 18,
@@ -4040,6 +4075,14 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Banner of the Scarlet Crusade",
+         "haste": 4,
+         "ap": 30,
+         "source": "SCitadel",
+         "phase": "7",
+         "id": 84006,
+      },
+      {
          "name": "Corossive Core",
          "arp": 75,
          "hit": 1,
@@ -4189,6 +4232,14 @@ var gear = {
       },
    ],
    "trinket2": [
+      {
+         "name": "Banner of the Scarlet Crusade",
+         "haste": 4,
+         "ap": 30,
+         "source": "SCitadel",
+         "phase": "7",
+         "id": 84006,
+      },
       {
          "name": "Corossive Core",
          "arp": 75,
@@ -4641,6 +4692,19 @@ var gear = {
       }
    ],
    "mainhand": [
+      {
+         "name": "Gauntlet of a Thousand Cuts",
+         "mindmg": 75,
+         "maxdmg": 140,
+         "speed": 1.5,
+         "type": "Fist",
+         "source": "SCitadel",
+         "phase": 7,
+         "id": 84030,
+         "ppm": 1,
+         "magicdmg": 75,
+         "Mainhand": true,
+      },
       {
          "name": "Dream's Herald",
          "mindmg": 61,
