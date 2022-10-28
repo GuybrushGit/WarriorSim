@@ -4693,6 +4693,17 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Wrench of Creation",
+         "mindmg": 68,
+         "maxdmg": 101,
+         "speed": 2.3,
+         "skill": 3,
+         "type": "Mace",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60543,
+      },
+      {
          "name": "Gauntlet of a Thousand Cuts",
          "mindmg": 75,
          "maxdmg": 140,
@@ -6283,6 +6294,17 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Wrench of Creation",
+         "mindmg": 68,
+         "maxdmg": 101,
+         "speed": 2.3,
+         "skill": 3,
+         "type": "Mace",
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 60543,
+      },
       {
          "name": "Dream's Herald",
          "mindmg": 61,
