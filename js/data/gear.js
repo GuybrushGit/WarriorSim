@@ -2360,6 +2360,15 @@ var gear = {
          "source": "Crafting",
          "phase": 3,
          "id": 19157
+      },
+      {
+         "name": "Gloves of Holy Might (vs Undead)",
+         "ap": 50,
+         "crit": 1,
+         "ac": 86,
+         "source": "Dungeon",
+         "phase": "1",
+         "id": 867
       }
    ],
    "waist": [
@@ -3138,7 +3147,7 @@ var gear = {
          "source": "Crafting",
          "phase": 4,
          "id": 19694
-      }
+      },
    ],
    "feet": [
       {
