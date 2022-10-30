@@ -4092,7 +4092,7 @@ var gear = {
          "id": 84006,
       },
       {
-         "name": "Corossive Core",
+         "name": "Corrosive Core",
          "arp": 75,
          "hit": 1,
          "source": "Dungeon",
@@ -4250,7 +4250,7 @@ var gear = {
          "id": 84006,
       },
       {
-         "name": "Corossive Core",
+         "name": "Corrosive Core",
          "arp": 75,
          "hit": 1,
          "source": "Dungeon",
