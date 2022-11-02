@@ -161,7 +161,7 @@ class Player {
                         this.attackproc.chance = item.procchance * 100;
                         this.attackproc.magicdmg = item.magicdmg;
                     }
-                    
+
                     if (item.procchance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
                         proc.chance = item.procchance * 100;
@@ -179,27 +179,27 @@ class Player {
             }
         }
 
-        if (this.mh && this.mh.twohand) {
-            for (let type in gear) {
-                for (let item of gear[type]) {
-                    if (type != "hands" && type != "head") continue;
-                    if ((this.testItemType == type && this.testItem == item.id) ||
-                        (this.testItemType != type && item.selected)) {
-                        if (item.skill && item.skill > 0) {
-                            if (item.type == 'Varied') {
-                                this.base['skill_1'] -= item.skill;
-                                this.base['skill_2'] -= item.skill;
-                                this.base['skill_3'] -= item.skill;
-                            }
-                            else {
-                                let sk = WEAPONTYPE[item.type.toUpperCase()];
-                                this.base['skill_' + sk] -= item.skill;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        // if (this.mh && this.mh.twohand) {
+        //     for (let type in gear) {
+        //         for (let item of gear[type]) {
+        //             if (type != "hands" && type != "head") continue;
+        //             if ((this.testItemType == type && this.testItem == item.id) ||
+        //                 (this.testItemType != type && item.selected)) {
+        //                 if (item.skill && item.skill > 0) {
+        //                     if (item.type == 'Varied') {
+        //                         this.base['skill_1'] -= item.skill;
+        //                         this.base['skill_2'] -= item.skill;
+        //                         this.base['skill_3'] -= item.skill;
+        //                     }
+        //                     else {
+        //                         let sk = WEAPONTYPE[item.type.toUpperCase()];
+        //                         this.base['skill_' + sk] -= item.skill;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
     addWeapon(item, type) {
 
@@ -397,7 +397,7 @@ class Player {
     updateStrength() {
         this.stats.str = this.base.str;
         this.stats.ap = this.base.ap;
-        
+
         for (let name in this.auras) {
             if (this.auras[name].timer) {
                 if (this.auras[name].stats.str)
@@ -742,9 +742,9 @@ class Player {
     cast(spell) {
         this.stepauras();
         spell.use();
-        if (spell.useonly) { 
+        if (spell.useonly) {
             //if (log) this.log(`${spell.name} used`);
-            return 0; 
+            return 0;
         }
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;

@@ -116,7 +116,7 @@ void Player::addGear()
                 {
                     base.haste *= 1.0 + ( double )item.stats.haste / 100.0;
                 }
-                
+
                 for ( int i = 0; i < NUM_WEAPON_TYPES; ++i )
                 {
                     base.skill[i] += item.stats.skill[i];
@@ -144,27 +144,27 @@ void Player::addGear()
         }
     }
 
-    // remove weapon skill if using 2H
-    if ( mh && mh->twohand )
-    {
-        for ( int type = 0; type < NUM_ITEM_SLOTS; ++type )
-        {
-            if ( type != ITEM_HEAD && type != ITEM_HANDS )
-            {
-                continue;
-            }
-            for ( auto& item : Items[type] )
-            {
-                if ( testItemType == type ? testItem == item.id : item.selected )
-                {
-                    for ( int i = 0; i < NUM_WEAPON_TYPES; ++i )
-                    {
-                        base.skill[i] -= item.stats.skill[i];
-                    }
-                }
-            }
-        }
-    }
+    // // remove weapon skill if using 2H
+    // if ( mh && mh->twohand )
+    // {
+    //     for ( int type = 0; type < NUM_ITEM_SLOTS; ++type )
+    //     {
+    //         if ( type != ITEM_HEAD && type != ITEM_HANDS )
+    //         {
+    //             continue;
+    //         }
+    //         for ( auto& item : Items[type] )
+    //         {
+    //             if ( testItemType == type ? testItem == item.id : item.selected )
+    //             {
+    //                 for ( int i = 0; i < NUM_WEAPON_TYPES; ++i )
+    //                 {
+    //                     base.skill[i] -= item.stats.skill[i];
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 void Player::addWeapon( Item& item, int type )
