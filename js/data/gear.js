@@ -1996,6 +1996,16 @@ var gear = {
          "source": "Naxx",
          "phase": 6,
          "id": 22936
+      },
+      {
+         "name": "Slashclaw Bracers",
+         "hit": 1,
+         "agi": 7,
+         "sta": 7,
+         "ac": 155,
+         "source": "Dungeon",
+         "phase": 1,
+         "id": 83433,
       }
    ],
    "hands": [
