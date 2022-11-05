@@ -2005,7 +2005,7 @@ var gear = {
          "ac": 155,
          "source": "Dungeon",
          "phase": 1,
-         "id": 83433,
+         "id": 13211,
       }
    ],
    "hands": [
