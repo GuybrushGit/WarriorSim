@@ -4410,6 +4410,14 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Flightblade Throwing Axe",
+         "str": 7,
+         "agi": 7,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 13173,
+      },
+      {
          "name": "Shieldbreaker Arbalest",
          "arp": 75,
          "source": "Other",
@@ -7691,7 +7699,7 @@ var gear = {
          "magicdmg": 275
       },
       {
-         "name": "Quel'dorei/Revantusk Revered Battle Axe",
+         "name": "Greataxe of the Decrepit Crypt",
          "sta": 20,
          "crit": 2,
          "mindmg": 182,
