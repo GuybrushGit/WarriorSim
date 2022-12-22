@@ -136,12 +136,12 @@ var buffs = [
       group: "",
    },
    {
-      id: 10627,
+      id: 21293,
       spellid: true,
       name: "Grace of Air Totem",
       iconname: "spell_nature_invisibilitytotem",
       group: "graceair",
-      agi: 67
+      agi: 93
    },
    {
       id: 10442,
@@ -230,6 +230,13 @@ var buffs = [
       str: 10
    },
    {
+      id: 60978,
+      name: "Danonzo's Tel'Abim Medley",
+      iconname: "inv_misc_food_33",
+      group: "food",
+      haste: 2
+   },
+   {
       id: 5206,
       name: "Bogling Root",
       iconname: "inv_misc_herb_07",
@@ -279,6 +286,6 @@ var buffs = [
       crit: 50,
       spellcrit: 60,
    },
-   
-   
+
+
 ];

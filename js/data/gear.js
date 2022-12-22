@@ -8827,6 +8827,14 @@ var enchant = {
          "str": 9,
          "phase": 1
       },
+      {
+         "id": 60969,
+         "spellid": true,
+         "name": "Greater Agility",
+         "agi": 7,
+         "phase": 7
+      },
+
    ],
    "hands": [
       {
