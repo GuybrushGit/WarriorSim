@@ -4094,6 +4094,13 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Taskmaster Whip",
+         "haste": 2,
+         "source": "Quest",
+         "phase": "7",
+         "id": 60715,
+      },
+      {
          "name": "Banner of the Scarlet Crusade",
          "haste": 4,
          "ap": 30,
@@ -4251,6 +4258,13 @@ var gear = {
       },
    ],
    "trinket2": [
+      {
+         "name": "Taskmaster Whip",
+         "haste": 2,
+         "source": "Quest",
+         "phase": "7",
+         "id": 60715,
+      },
       {
          "name": "Banner of the Scarlet Crusade",
          "haste": 4,
