@@ -8658,6 +8658,11 @@ var gear = {
          "haste": 3
       },
       {
+         "id": 225,
+         "name": "+ 5% Haste",
+         "haste": 5
+      },
+      {
          "id": 23,
          "name": "+ 50 ArP",
          "arp": 50
