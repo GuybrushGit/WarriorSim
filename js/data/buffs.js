@@ -152,6 +152,13 @@ var buffs = [
       str: 61
    },
    {
+      id: 16939,
+      spellid: true,
+      name: "Darkspear",
+      iconname: "inv_spear_08",
+      crit: 4,
+   },
+   {
       id: 8410,
       name: "R.O.I.D.S.",
       iconname: "inv_stone_15",
@@ -216,6 +223,13 @@ var buffs = [
       str: 20
    },
    {
+      id: 60978,
+      name: "Danonzo's Tel'Abim Medley",
+      iconname: "inv_misc_food_33",
+      group: "food",
+      haste: 2
+   },
+   {
       id: 13928,
       name: "Grilled Squid",
       iconname: "inv_misc_fish_13",
@@ -228,13 +242,6 @@ var buffs = [
       iconname: "inv_misc_food_41",
       group: "food",
       str: 10
-   },
-   {
-      id: 60978,
-      name: "Danonzo's Tel'Abim Medley",
-      iconname: "inv_misc_food_33",
-      group: "food",
-      haste: 2
    },
    {
       id: 5206,
@@ -286,6 +293,4 @@ var buffs = [
       crit: 50,
       spellcrit: 60,
    },
-
-
 ];
