@@ -4428,6 +4428,13 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Windbreaker",
+         "agi": 12,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 83452,
+      },
+      {
          "name": "Flightblade Throwing Axe",
          "str": 7,
          "agi": 7,
