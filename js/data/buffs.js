@@ -159,6 +159,13 @@ var buffs = [
       crit: 4,
    },
    {
+      id: 16601,
+      spellid: true,
+      name: "Fist of Shahram",
+      iconname: "ability_whirlwind",
+      haste: 10,
+   },
+   {
       id: 8410,
       name: "R.O.I.D.S.",
       iconname: "inv_stone_15",
