@@ -3690,6 +3690,7 @@ var gear = {
          "name": "Might of Cenarius",
          "hit": 1,
          "sta": 8,
+         "bonusdmg": 4,
          "source": "Quest",
          "phase": "5",
          "id": 21189
@@ -3975,6 +3976,7 @@ var gear = {
          "name": "Might of Cenarius",
          "hit": 1,
          "sta": 8,
+         "bonusdmg": 4,
          "source": "Quest",
          "phase": "5",
          "id": 21189
