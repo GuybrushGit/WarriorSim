@@ -180,6 +180,14 @@ var buffs = [
       agi: 25,
    },
    {
+      id: 27669,
+      spellid: true,
+      name: "Orgrimmar Gift of Friendship",
+      iconname: "inv_misc_gift_01",
+      group: "blasted",
+      agi: 30
+   },
+   {
       id: 13452,
       name: "Elixir of the Mongoose",
       iconname: "inv_potion_32",
