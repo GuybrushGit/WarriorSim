@@ -222,9 +222,9 @@ var gear = {
       {
          "name": "Circlet of Restless Dreams",
          "sta": 38,
-         "agi": 21,
+         "agi": 24,
          "ac": 175,
-         "skill": 6,
+         "skill": 7,
          "type": "Dagger",
          "source": "Emeriss",
          "phase": 4,
@@ -2979,9 +2979,9 @@ var gear = {
       {
          "name": "Dark Heart Pants",
          "crit": 2,
-         "sta": 20,
-         "ap": 48,
-         "ac": 296,
+         "sta": 22,
+         "ap": 52,
+         "ac": 327,
          "source": "Lethon",
          "phase": 4,
          "id": 20627
@@ -4659,8 +4659,8 @@ var gear = {
       },
       {
          "name": "Polished Ironwood Crossbow",
-         "sta": 5,
-         "ap": 24,
+         "sta": 6,
+         "ap": 26,
          "source": "Emeriss",
          "phase": "4",
          "id": 20599
@@ -6119,11 +6119,11 @@ var gear = {
       },
       {
          "name": "Nightmare Blade",
-         "sta": 9,
-         "ap": 32,
-         "ac": 70,
-         "mindmg": 99,
-         "maxdmg": 185,
+         "sta": 10,
+         "ap": 34,
+         "ac": 75,
+         "mindmg": 112,
+         "maxdmg": 198,
          "speed": 2.7,
          "type": "Sword",
          "source": "Taerar",
@@ -6849,9 +6849,9 @@ var gear = {
       },
       {
          "name": "Emerald Dragonfang *Classic PPM",
-         "agi": 12,
-         "mindmg": 66,
-         "maxdmg": 123,
+         "agi": 13,
+         "mindmg": 72,
+         "maxdmg": 135,
          "speed": 1.8,
          "type": "Dagger",
          "source": "Ysondre",
@@ -9148,7 +9148,7 @@ var enchant = {
 
 var sets = [
    {
-      id: 100000998,
+      id: 100000997,
       name: 'Convergence of the Elements',
       items: [65024, 65025, 65026, 65027],
       bonus: [
