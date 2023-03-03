@@ -28,11 +28,11 @@ Weapon::Weapon( Player& player_, Item& item, Enchant* enchant, Enchant* tempench
 
     if ( type == WEAPON_AXE )
     {
-        crit += player.talents.axecrit;
+        crit += player.talents.poleaxecrit;
     }
     else if ( type == WEAPON_POLEARM )
     {
-        crit += player.talents.polearmcrit;
+        crit += player.talents.poleaxecrit;
     }
     else if ( type == WEAPON_DAGGER )
     {

@@ -13,11 +13,10 @@ struct Talents
     double deepwounds = 0;
     double twomod = 0;
     double abilitiescrit = 0;
-    int axecrit = 0;
+    int poleaxecrit = 0;
     int sweepingstrikes = 0;
     int macestun = 0;
     int swordproc = 0;
-    int polearmcrit = 0;
     int imphamstring = 0;
     int mortalstrike = 0;
 
@@ -73,11 +72,10 @@ struct Talents
         case 121: deepwounds = double( count ) * 0.2; break;
         case 136: twomod = double( count ) * 0.01; break;
         case 662: abilitiescrit = double( count ) * 0.1; break;
-        case 132: axecrit = count; break;
+        case 132: poleaxecrit = count; break;
         case 133: sweepingstrikes = count; break;
         case 125: macestun = count == 5 ? 6 : count; break;
         case 123: swordproc = count; break;
-        case 134: polearmcrit = count; break;
         case 129: imphamstring = count * 5; break;
         case 135: mortalstrike = count; break;
 

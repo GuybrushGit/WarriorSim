@@ -239,7 +239,7 @@ var talents = [
          },
          {
             i: 132,
-            n: 'Axe Specialization',
+            n: 'Poleaxe Specialization',
             m: 5,
             s: [
                12700,
@@ -249,17 +249,17 @@ var talents = [
                12785
             ],
             d: [
-               'Increases your chance to get a critical strike with Axes by 1%.',
-               'Increases your chance to get a critical strike with Axes by 2%.',
-               'Increases your chance to get a critical strike with Axes by 3%.',
-               'Increases your chance to get a critical strike with Axes by 4%.',
-               'Increases your chance to get a critical strike with Axes by 5%.'
+               'Increases your chance to get a critical strike with Axes and Polearms by 1%.',
+               'Increases your chance to get a critical strike with Axes and Polearms by 2%.',
+               'Increases your chance to get a critical strike with Axes and Polearms by 3%.',
+               'Increases your chance to get a critical strike with Axes and Polearms by 4%.',
+               'Increases your chance to get a critical strike with Axes and Polearms by 5%.'
             ],
             x: 0,
             y: 4,
             c: 0,
-            iconname: 'INV_Axe_06',
-            aura: function (count) { return { axecrit: count } },
+            iconname: 'INV_Weapon_Halbard_01',
+            aura: function (count) { return { poleaxecrit: count } },
          },
          {
             i: 133,
@@ -327,26 +327,22 @@ var talents = [
          },
          {
             i: 134,
-            n: 'Polearm Specialization',
-            m: 5,
+            n: 'Improved Disciplines',
+            m: 3,
             s: [
-               12165,
-               12830,
-               12831,
-               12832,
-               12833
+               45576,
+               45577,
+               45578
             ],
             d: [
-               'Increases your chance to get a critical strike with Polearms by 1%.',
-               'Increases your chance to get a critical strike with Polearms by 2%.',
-               'Increases your chance to get a critical strike with Polearms by 3%.',
-               'Increases your chance to get a critical strike with Polearms by 4%.',
-               'Increases your chance to get a critical strike with Polearms by 5%.'
+               'Reduces the cooldown of your Retaliation, Recklessness and Shield Wall abilities by 2 min.',
+               'Reduces the cooldown of your Retaliation, Recklessness and Shield Wall abilities by 4 min.',
+               'Reduces the cooldown of your Retaliation, Recklessness and Shield Wall abilities by 6 min.'
             ],
             x: 0,
             y: 5,
             c: 0,
-            iconname: 'INV_Weapon_Halbard_01',
+            iconname: 'Ability_Warrior_Improveddisciplines',
             aura: function (count) { return { polearmcrit: count } },
          },
          {
