@@ -1743,6 +1743,17 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Sanctum Bark Wraps",
+         "agi": 17,
+         "str": 6,
+         "sta": 10,
+         "haste": 2,
+         "ac": 88,
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 61212,
+      },
+      {
          "name": "Bloody Gladiator's Bands",
          "str": 9,
          "agi": 9,
@@ -4100,6 +4111,14 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "The Heart of Dreams",
+         "haste": 2,
+         "crit": 2,
+         "source": "EmerSanc",
+         "phase": "7",
+         "id": 61194,
+      },
+      {
          "name": "Taskmaster Whip",
          "haste": 2,
          "source": "Quest",
@@ -4264,6 +4283,14 @@ var gear = {
       },
    ],
    "trinket2": [
+      {
+         "name": "The Heart of Dreams",
+         "haste": 2,
+         "crit": 2,
+         "source": "EmerSanc",
+         "phase": "7",
+         "id": 61194,
+      },
       {
          "name": "Taskmaster Whip",
          "haste": 2,
