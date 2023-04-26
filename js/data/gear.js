@@ -989,6 +989,15 @@ var gear = {
    ],
    "back": [
       {
+         "name": "Pelt of the Great Howler",
+         "str": 22,
+         "hit": 1,
+         "ac": 51,
+         "source": "Unknown",
+         "phase": 7,
+         "id": 61249,
+      },
+      {
          "name": "Sandstalker's Shroud",
          "sta": 12,
          "agi": 22,
@@ -3175,6 +3184,16 @@ var gear = {
       },
    ],
    "feet": [
+      {
+         "name": "Sabatons of the Endless March",
+         "str": 20,
+         "sta": 20,
+         "arp": 50,
+         "ac": 515,
+         "source": "Unknown",
+         "phase": 7,
+         "id": 61246,
+      },
       {
          "name": "Sternrock Trudgers",
          "agi": 16,
