@@ -2799,6 +2799,17 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Ancient Jade Leggings",
+         "str": 21,
+         "skill": 8,
+         "type": "Mace",
+         "crit": 1,
+         "ac": 408,
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 61239,
+      },
+      {
          "name": "Flamewrath Leggings",
          "str": 25,
          "agi": 18,
