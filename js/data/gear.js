@@ -1,6 +1,18 @@
 var gear = {
    "head": [
       {
+         "name": "Darkflame Helm",
+         "str": 20,
+         "sta": 17,
+         "hit": 1,
+         "crit": 2,
+         "arp": 50,
+         "ac": 608,
+         "source": "LowerKara",
+         "phase": 7,
+         "id": 4237234678,
+      },
+      {
          "name": "Blindfold of the Scarlet Marksman",
          "agi": 30,
          "sta": 16,
@@ -449,6 +461,15 @@ var gear = {
       }
    ],
    "neck": [
+      {
+         "name": "Medallion of the Dawn",
+         "crit": 1,
+         "ap": 24,
+         "sta": 12,
+         "source": "Other",
+         "phase": 6,
+         "id": 22659
+      },
       {
          "name": "Voidclaw Choker",
          "str": 14,
