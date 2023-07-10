@@ -2,10 +2,10 @@ var gear = {
    "head": [
       {
          "name": "Darkflame Helm",
-         "str": 20,
-         "sta": 17,
+         "str": 18,
+         "sta": 24,
          "hit": 1,
-         "crit": 2,
+         "crit": 1,
          "arp": 50,
          "ac": 608,
          "source": "LowerKara",
@@ -308,9 +308,10 @@ var gear = {
       },
       {
          "name": "Helm of Endless Rage",
-         "str": 26,
-         "sta": 29,
-         "agi": 26,
+         "str": 25,
+         "sta": 26,
+         "agi": 25,
+         "hit": 1,
          "ac": 679,
          "source": "BWL",
          "phase": 3,
@@ -369,10 +370,11 @@ var gear = {
       },
       {
          "name": "Lionheart Helm",
+         "sta": 18,
          "crit": 2,
-         "hit": 2,
-         "str": 18,
-         "ac": 565,
+         "hit": 1,
+         "ap": 24,
+         "ac": 665,
          "source": "Crafting",
          "phase": 1,
          "id": 12640
@@ -1531,10 +1533,10 @@ var gear = {
          "crit": 2,
          "str": 15,
          "sta": 25,
-         "dodge": 1,
+         "haste": 1,
          "ac": 197,
          "source": "Quest",
-         "phase": 7,
+         "phase": 1,
          "id": 12757
       },
       {
@@ -1631,9 +1633,9 @@ var gear = {
       {
          "name": "Ghoul Skin Tunic",
          "crit": 2,
-         "str": 40,
+         "str": 34,
          "sta": 22,
-         "ac": 411,
+         "ac": 369,
          "source": "Naxx",
          "phase": 6,
          "id": 23226
@@ -2820,6 +2822,17 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Kargron's Leggings",
+         "str": 9,
+         "agi": 11,
+         "hit": 1,
+         "parry": 2,
+         "ac": 169,
+         "source": "Unknown",
+         "phase": 7,
+         "id": 81365
+      },
+      {
          "name": "Leggings of the Inferno",
          "crit": 1,
          "str": 18,
@@ -3092,9 +3105,10 @@ var gear = {
       },
       {
          "name": "Legguards of the Fallen Crusader",
-         "str": 28,
-         "sta": 22,
-         "agi": 22,
+         "str": 35,
+         "sta": 18,
+         "agi": 20,
+         "hit": 1,
          "ac": 740,
          "source": "BWL",
          "phase": 3,
@@ -3226,6 +3240,16 @@ var gear = {
       },
    ],
    "feet": [
+      {
+         "name": "Boots of Displacement",
+         "agi": 30,
+         "sta": 21,
+         "haste": 2,
+         "ac": 166,
+         "source": "Naxx",
+         "phase": 6,
+         "id": 23073,
+      },
       {
          "name": "Sabatons of the Endless March",
          "str": 20,
@@ -3600,6 +3624,13 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Band of the Old Horde",
+         "str": 20,
+         "source": "Other",
+         "phase": 7,
+         "id": 81367
+      },
+      {
          "name": "Ring of Tyvadrius",
          "agi": 18,
          "sta": 5,
@@ -3885,6 +3916,13 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Band of the Old Horde",
+         "str": 20,
+         "source": "Other",
+         "phase": 7,
+         "id": 81367
+      },
       {
          "name": "Ring of Tyvadrius",
          "agi": 18,
@@ -4835,6 +4873,17 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Coldheart Icicle",
+         "mindmg": 49,
+         "maxdmg": 92,
+         "speed": 1.7,
+         "arp": 75,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 60806,
+      },
+      {
          "name": "Wrench of Creation",
          "mindmg": 68,
          "maxdmg": 101,
@@ -5567,8 +5616,8 @@ var gear = {
          "hit": 1,
          "sta": 8,
          "agi": 8,
-         "mindmg": 83,
-         "maxdmg": 126,
+         "mindmg": 66,
+         "maxdmg": 124,
          "speed": 1.6,
          "type": "Dagger",
          "source": "Naxx",
@@ -5832,14 +5881,14 @@ var gear = {
          "id": 21268
       },
       {
-         "name": "Ebon Hand *Classic PPM",
+         "name": "Ebon Hand",
          "sta": 9,
          "mindmg": 90,
          "maxdmg": 168,
          "speed": 2.5,
          "type": "Mace",
          "source": "Crafting",
-         "ppm": 0.4,
+         "ppm": 0.8,
          "phase": 3,
          "id": 19170,
          "magicdmg": 220,
@@ -5913,8 +5962,8 @@ var gear = {
       },
       {
          "name": "Misplaced Servo Arm",
-         "mindmg": 128,
-         "maxdmg": 238,
+         "mindmg": 112,
+         "maxdmg": 221,
          "speed": 2.8,
          "type": "Mace",
          "source": "Naxx",
@@ -5994,9 +6043,9 @@ var gear = {
          "hit": 1,
          "sta": 9,
          "ap": 16,
-         "mindmg": 119,
-         "maxdmg": 221,
-         "speed": 2.6,
+         "mindmg": 128,
+         "maxdmg": 238,
+         "speed": 2.8,
          "type": "Mace",
          "source": "Naxx",
          "phase": 6,
@@ -6030,7 +6079,7 @@ var gear = {
       },
       {
          "name": "Blackguard",
-         "sta": 9,
+         "sta": 13,
          "parry": 1,
          "mindmg": 65,
          "maxdmg": 121,
@@ -6437,6 +6486,17 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Coldheart Icicle",
+         "mindmg": 49,
+         "maxdmg": 92,
+         "speed": 1.7,
+         "arp": 75,
+         "type": "Dagger",
+         "source": "Other",
+         "phase": 7,
+         "id": 60806,
+      },
       {
          "name": "Wrench of Creation",
          "mindmg": 68,
@@ -7005,8 +7065,8 @@ var gear = {
          "hit": 1,
          "sta": 8,
          "agi": 8,
-         "mindmg": 83,
-         "maxdmg": 126,
+         "mindmg": 66,
+         "maxdmg": 124,
          "speed": 1.6,
          "type": "Dagger",
          "source": "Naxx",
@@ -7244,14 +7304,14 @@ var gear = {
          "id": 21268
       },
       {
-         "name": "Ebon Hand *Classic PPM",
+         "name": "Ebon Hand",
          "sta": 9,
          "mindmg": 90,
          "maxdmg": 168,
          "speed": 2.5,
          "type": "Mace",
          "source": "Crafting",
-         "ppm": 0.4,
+         "ppm": 0.8,
          "phase": 3,
          "id": 19170,
          "magicdmg": 220,
@@ -7272,8 +7332,8 @@ var gear = {
       },
       {
          "name": "Misplaced Servo Arm",
-         "mindmg": 128,
-         "maxdmg": 238,
+         "mindmg": 112,
+         "maxdmg": 221,
          "speed": 2.8,
          "type": "Mace",
          "source": "Naxx",
@@ -7688,6 +7748,32 @@ var gear = {
       }
    ],
    "twohand": [
+      {
+         "name": "Blade of the Blademaster",
+         "str": 17,
+         "sta": 12,
+         "crit": 2,
+         "dodge": 1,
+         "mindmg": 151,
+         "maxdmg": 234,
+         "speed": 2.9,
+         "id": 81369,
+         "source": "Other",
+         "phase": 7,
+         "type": "Polearm",
+      },
+      {
+         "name": "Bone Fracture",
+         "arp": 150,
+         "str": 13,
+         "mindmg": 103,
+         "maxdmg": 209,
+         "speed": 2.9,
+         "id": 60808,
+         "source": "Dungeon",
+         "phase": 7,
+         "type": "Sword",
+      },
       {
          "name": "Halberd of the Bronze Defender",
          "str": 24,
@@ -8228,7 +8314,7 @@ var gear = {
          "type": "Mace"
       },
       {
-         "name": "Sulfuras, Hand of Ragnaros *Classic PPM",
+         "name": "Sulfuras, Hand of Ragnaros",
          "str": 12,
          "sta": 12,
          "mindmg": 223,
@@ -8238,7 +8324,7 @@ var gear = {
          "source": "MC",
          "phase": 1,
          "type": "Mace",
-         "ppm": 0.7,
+         "ppm": 1.4,
          "magicdmg": 333,
          "procgcd": true
       },
