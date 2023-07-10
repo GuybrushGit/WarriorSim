@@ -2820,6 +2820,18 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Leggings of the Inferno",
+         "crit": 1,
+         "str": 18,
+         "sta": 18,
+         "agi": 18,
+         "haste": 1,
+         "ac": 169,
+         "source": "Unknown",
+         "phase": 7,
+         "id": 823467786234
+      },
+      {
          "name": "Ancient Jade Leggings",
          "str": 21,
          "skill": 8,
