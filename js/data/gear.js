@@ -3221,9 +3221,10 @@ var gear = {
       },
       {
          "name": "Titanic Leggings",
-         "crit": 1,
+         "str": 20,
+         "sta": 15,
          "hit": 2,
-         "str": 30,
+         "dodge": 1,
          "ac": 598,
          "source": "Crafting",
          "phase": 5,
