@@ -4874,6 +4874,20 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "(New aq40 cthun fist)",
+         "mindmg": 126,
+         "maxdmg": 233,
+         "speed": 2.7,
+         "skill": 5,
+         "sta": 13,
+         "ap": 26,
+         "type": "Fist",
+         "source": "AQ40",
+         "phase": 7,
+         "id": 4278927894323479,
+         "Mainhand": true,
+      },
+      {
          "name": "Coldheart Icicle",
          "mindmg": 49,
          "maxdmg": 92,
