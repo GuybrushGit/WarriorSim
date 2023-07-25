@@ -4874,7 +4874,7 @@ var gear = {
    ],
    "mainhand": [
       {
-         "name": "(New aq40 cthun fist)",
+         "name": "Remnants of an Old God",
          "mindmg": 126,
          "maxdmg": 233,
          "speed": 2.7,
