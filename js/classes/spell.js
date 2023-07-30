@@ -914,7 +914,7 @@ class Flask extends Aura {
     constructor(player) {
         super(player);
         this.duration = 60;
-        this.stats = { str: 75 };
+        this.stats = { str: 50 };
         this.name = 'Diamond Flask';
     }
     use() {
