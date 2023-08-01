@@ -136,7 +136,7 @@ var buffs = [
       group: "",
    },
    {
-      id: 21293,
+      id: 25359,
       spellid: true,
       name: "Grace of Air Totem",
       iconname: "spell_nature_invisibilitytotem",

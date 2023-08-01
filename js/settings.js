@@ -54,7 +54,7 @@ SIM.SETTINGS = {
             if (talent.c >= talent.m) $(this).addClass('maxed');
             if (talent.enable)
                 $('.rotation [data-id="' + talent.enable + '"]').removeClass('hidden');
-            $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
+            $(this).find('a').attr('href', 'https://database.turtle-wow.org/?spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
@@ -71,7 +71,7 @@ SIM.SETTINGS = {
                     if (spell.id == talent.enable)
                         spell.active = false;
             }
-            $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
+            $(this).find('a').attr('href', 'https://database.turtle-wow.org/?spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
@@ -183,7 +183,7 @@ SIM.SETTINGS = {
             let tooltip = spell.id == 115671 ? 11567 : spell.id;
             let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
+            <a href="https://database.turtle-wow.org/?spell=${tooltip}" class="wh-tooltip"></a>
             </div><ul class="options"></ul></div>`);
 
             if (spell.timetoend !== undefined)
@@ -265,7 +265,7 @@ SIM.SETTINGS = {
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"` : '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
                             <img src="dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
-                            <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
+                            <a href="https://database.turtle-wow.org/?${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             view.buffs.append(html);
         }
@@ -282,7 +282,7 @@ SIM.SETTINGS = {
                 if (talent.c >= talent.m) div.addClass('maxed');
                 if (talent.enable && talent.c == 0) view.rotation.find('[data-id="' + talent.enable + '"]').addClass('hidden');
                 if (talent.enable && talent.c > 0) view.rotation.find('[data-id="' + talent.enable + '"]').removeClass('hidden');
-                div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
+                div.append('<a href="https://database.turtle-wow.org/?spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
             }
             view.talents.append(table);
