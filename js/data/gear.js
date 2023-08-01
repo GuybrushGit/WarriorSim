@@ -3721,7 +3721,6 @@ var gear = {
       },
       {
          "name": "Band of Reanimation",
-         "sta": 22,
          "agi": 34,
          "source": "Naxx",
          "phase": "6",
@@ -4014,7 +4013,6 @@ var gear = {
       },
       {
          "name": "Band of Reanimation",
-         "sta": 22,
          "agi": 34,
          "source": "Naxx",
          "phase": "6",
