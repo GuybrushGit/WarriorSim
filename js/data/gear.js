@@ -6217,7 +6217,7 @@ var gear = {
          "id": 23054
       },
       {
-         "name": "Iblis, Blade of the Fallen Seraph",
+         "name": "Iblis, Blade of the Fallen Seraph (Pre-Buff Values)",
          "crit": 1,
          "hit": 1,
          "ap": 26,
@@ -6437,7 +6437,7 @@ var gear = {
          "id": 19865
       },
       {
-         "name": "Widow's Remorse",
+         "name": "Widow's Remorse (Pre-Buff Values)",
          "hit": 1,
          "sta": 17,
          "ac": 100,
@@ -7399,9 +7399,9 @@ var gear = {
          "hit": 1,
          "sta": 9,
          "ap": 16,
-         "mindmg": 119,
-         "maxdmg": 221,
-         "speed": 2.6,
+         "mindmg": 128,
+         "maxdmg": 238,
+         "speed": 2.8,
          "type": "Mace",
          "source": "Naxx",
          "phase": 6,
@@ -7520,7 +7520,7 @@ var gear = {
          "id": 23054
       },
       {
-         "name": "Iblis, Blade of the Fallen Seraph",
+         "name": "Iblis, Blade of the Fallen Seraph (Pre-Buff Values)",
          "crit": 1,
          "hit": 1,
          "ap": 26,
@@ -7687,7 +7687,7 @@ var gear = {
          "id": 19866
       },
       {
-         "name": "Widow's Remorse",
+         "name": "Widow's Remorse (Pre-Buff Values)",
          "hit": 1,
          "sta": 17,
          "ac": 100,
@@ -8137,9 +8137,9 @@ var gear = {
          "name": "Severance",
          "crit": 2,
          "str": 43,
-         "sta": 18,
-         "mindmg": 235,
-         "maxdmg": 354,
+         "sta": 20,
+         "mindmg": 242,
+         "maxdmg": 366,
          "speed": 3.6,
          "id": 22815,
          "source": "Naxx",
@@ -8614,8 +8614,8 @@ var gear = {
          "name": "Claymore of Unholy Might",
          "sta": 20,
          "ap": 98,
-         "mindmg": 235,
-         "maxdmg": 354,
+         "mindmg": 242,
+         "maxdmg": 366,
          "speed": 3.6,
          "id": 22813,
          "source": "Naxx",
