@@ -2076,7 +2076,7 @@ var gear = {
          "id": 60791,
       },
       {
-         "name": "Hateforge Grips",
+         "name": "Hateforge Grips (Used last 15 secs)",
          "str": 9,
          "sta": 7,
          "crit": 1,
@@ -2085,6 +2085,17 @@ var gear = {
          "source": "Crafting",
          "phase": 7,
          "id": 60577,
+      },
+      {
+         "name": "Hateforge Grips (Not used)",
+         "str": 9,
+         "sta": 7,
+         "crit": 1,
+         "haste": 1,
+         "ac": 173,
+         "source": "Crafting",
+         "phase": 7,
+         "id": 160577,
       },
       {
          "name": "Skulker's Gloves",

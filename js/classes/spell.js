@@ -910,6 +910,26 @@ class Swarmguard extends Aura {
     }
 }
 
+class Hategrips extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 15;
+        this.mult_stats = { haste: 5 };
+        this.name = 'Hatefury Haste';
+    }
+    use() {
+        this.player.timer = 1500;
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateHaste();
+        //if (log) this.player.log(`${this.name} applied`);
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+    }
+}
+
 class Flask extends Aura {
     constructor(player) {
         super(player);
