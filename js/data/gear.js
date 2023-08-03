@@ -4688,7 +4688,7 @@ var gear = {
          "name": "Soulstring",
          "crit": 1,
          "sta": 6,
-         "ap": 16,
+         "ap": 18,
          "source": "Naxx",
          "phase": "6",
          "id": 22811
@@ -5678,11 +5678,12 @@ var gear = {
       {
          "name": "Maexxna's Fang",
          "hit": 1,
-         "sta": 8,
-         "ap": 36,
-         "mindmg": 94,
-         "maxdmg": 141,
-         "speed": 1.8,
+         "str": 10,
+         "agi": 10,
+         "ap": 20,
+         "mindmg": 95,
+         "maxdmg": 127,
+         "speed": 1.7,
          "type": "Dagger",
          "source": "Naxx",
          "phase": 6,
@@ -7127,11 +7128,12 @@ var gear = {
       {
          "name": "Maexxna's Fang",
          "hit": 1,
-         "sta": 8,
-         "ap": 36,
-         "mindmg": 94,
-         "maxdmg": 141,
-         "speed": 1.8,
+         "str": 10,
+         "agi": 10,
+         "ap": 20,
+         "mindmg": 95,
+         "maxdmg": 127,
+         "speed": 1.7,
          "type": "Dagger",
          "source": "Naxx",
          "phase": 6,
@@ -9072,6 +9074,13 @@ var enchant = {
          "phase": 1
       },
       {
+         "id": 100008349289234,
+         "spellid": true,
+         "name": "Major Strength",
+         "str": 9,
+         "phase": 7
+      },
+      {
          "id": 20013,
          "spellid": true,
          "name": "Greater Strength",
@@ -9084,6 +9093,20 @@ var enchant = {
          "name": "Minor Haste",
          "haste": 1,
          "phase": 1
+      },
+   ],
+   "waist": [
+      {
+         "id": 1000001,
+         "name": "Iron",
+         "arp": 25,
+         "phase": 7,
+      },
+      {
+         "id": 1000002,
+         "name": "Mithril",
+         "agi": 6,
+         "phase": 7,
       },
    ],
    "legs": [

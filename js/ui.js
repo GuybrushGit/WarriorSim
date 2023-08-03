@@ -984,6 +984,7 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
+                                <th>ArP</th>
                                 <th>Haste</th>
                                 <th>Crit</th>
                                 <th>Damage</th>
@@ -1006,6 +1007,7 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
+                        <td>${item.arp || ''}</td>
                         <td>${item.haste || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.dmg || ''}</td>
