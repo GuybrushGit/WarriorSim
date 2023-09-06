@@ -8902,6 +8902,11 @@ var gear = {
          "arp": 800
       },
       {
+         "id": 28,
+         "name": "+ 1600 ArP",
+         "arp": 1600
+      },
+      {
          "id": 10,
          "name": "+ 5 Strength",
          "str": 5
