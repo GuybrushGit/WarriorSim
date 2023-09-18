@@ -9016,6 +9016,13 @@ var enchant = {
          "ap": 30,
          "phase": 4
       },
+      {
+         "id": 10000538349,
+         "spellid": true,
+         "name": "Sigil of Penetration",
+         "arp": 75,
+         "phase": 7
+      },
    ],
    "back": [
       {
