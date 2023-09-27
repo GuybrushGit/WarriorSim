@@ -1,3 +1,6 @@
+.hidden {
+    display: none;
+}
 .settings {
     width: 0;
     height: 100%;
@@ -48,6 +51,22 @@
             width: auto;
             padding: 0 10px;
             font-size: 14px;
+            &.active {
+                background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+                background-position: center right;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                white-space: normal;
+                padding: 0px 20px 4px 4px;
+            }
+            &.inactive {
+                background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+                background-position: center right;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                white-space: normal;
+                padding: 0px 20px 4px 4px;
+            }
         }
     
         ul {
@@ -86,7 +105,6 @@
 
     .fight {
         width: 330px;
-        height: 500px;
 
         li {
             border-bottom: 1px solid rgba(221,221,221,0.4);
@@ -104,18 +122,21 @@
             span {
                 float: right;
             }
+
+            a {
+                color: rgb(221, 221, 221);
+                cursor: pointer;
+            }
         }
     }
 
     .buffs {
         font-size: 0;
         width: 330px;
-        height: 500px;
     }
 
     .rotation {
         width: calc(100% - 670px);
-        height: 500px;
         font-size: 0;
 
         .spell {
@@ -127,7 +148,9 @@
             cursor: pointer;
             margin-bottom: 4px;
             min-height: 38px;
-
+            &.hidden {
+                display: none;
+            }
             &:before {
                 content: '';
                 width: 16px;
@@ -169,9 +192,6 @@
                 }
             }
 
-            &.hidden {
-                display: none;
-            }
         }
 
         .icon {
@@ -206,7 +226,6 @@
 
     .talents {
         width: calc(100% - 251px);
-        height: 450px;
         display: inline-flex;
         position: relative;
         justify-content: center;
@@ -274,11 +293,10 @@
         display: inline-block;
         padding: 20px 30px;
         width: 245px;
-        height: 450px;
         margin-top: 10px;
 
         .sources {
-            li {
+            > li {
                 display: block;
                 list-style: none;
                 transition: all 0.2s ease-in;
@@ -314,6 +332,12 @@
                     }
                 }
             }
+            .resistances-list {
+                input {
+                    float: left;
+                    margin: .2em;
+                }
+            }
         }
 
         .phases {
@@ -324,7 +348,7 @@
             li {
                 display: block;
                 border: 1px solid #ddd;
-                width: 30px;
+                width: 50px;
                 height: 30px;
                 line-height: 30px;
                 text-align: center;
@@ -339,6 +363,9 @@
             }
         }
     }
+    .hidden {
+        display: none;
+    }
 
     @media (min-width: 0px) and (max-width: 1600px) {
         left: 320px;
@@ -347,7 +374,6 @@
         }
         .fight, .buffs {
             width: calc(50% - 2px);
-            height: 320px;
         }
     }
 

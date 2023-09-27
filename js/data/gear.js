@@ -1,6 +1,87 @@
 var gear = {
    "head": [
       {
+         "name": "Dark Iron Helm",
+         "source": "Crafted",
+         "ac": 758,
+         "sta": 20,
+         "subsource": "fire",
+         "resist": {
+             "fire": 35
+         },
+         "phase": 1,
+         "id": 19148
+      },
+      {
+         "name": "Gyth's Skull",
+         "source": "UBRS",
+         "ac": 509,
+         "sta": 20,
+         "defense": 9,
+         "subsource": "fire",
+         "resist": {
+             "fire": 15,
+             "frost": 15,
+             "nature": 15,
+             "arcane": 15,
+             "shadow": 15
+         },
+         "phase": 1,
+         "id": 12952
+      },
+      {
+         "name": "Polar Helmet",
+         "source": "Naxx",
+         "subsource": "frost",
+         "ac": 196,
+         "sta": 24,
+         "agi": 18,
+         "resist": {
+             "frost": 44
+         },
+         "phase": 6,
+         "id": 23020
+      },
+      {
+         "name": "Icy Scale Coif",
+         "source": "Naxx",
+         "subsource": "frost",
+         "ac": 425,
+         "sta": 24,
+         "agi": 18,
+         "resist": {
+             "frost": 44
+         },
+         "phase": 6,
+         "id": 23033
+      },
+      {
+         "name": "Icebane Helmet",
+         "source": "Naxx",
+         "subsource": "frost",
+         "ac": 757,
+         "sta": 24,
+         "str": 12,
+         "defense": 8,
+         "resist": {
+             "frost": 44
+         },
+         "phase": 6,
+         "id": 23019
+      },
+      {
+         "name": "Bramblewood Helm",
+         "source": "Crafting",
+         "subsource": "nature",
+         "ac": 156,
+         "sta": 20,
+         "resist": {
+             "nature": 30
+         },
+         "phase": 5,
+         "id": 22759
+      },
+      {
          "name": "Eye of Rend",
          "sta": 7,
          "str": 13,
@@ -142,6 +223,10 @@ var gear = {
          "sta": 40,
          "defense": 11,
          "ac": 696,
+         "resist": {
+             "frost": 10,
+             "shadow": 10
+         },
          "source": "Onyxia",
          "phase": 1,
          "id": 16963
@@ -241,6 +326,39 @@ var gear = {
    ],
    "neck": [
       {
+         "name": "Drakefire Amulet",
+         "source": "Quest",
+         "sta": 10,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 16309
+      },
+      {
+         "name": "Tempestria's Frozen Necklace",
+         "source": "Other",
+         "subsource": "frost",
+         "sta": 8,
+         "resist": {
+             "frost": 15
+         },
+         "phase": "1",
+         "id": 18678
+      },
+      {
+         "name": "Touch of Frost",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 20,
+         "resist": {
+             "frost": 24
+         },
+         "phase": "6",
+         "id": 22935
+      },
+      {
          "name": "Amulet of the Darkmoon",
          "str": 10,
          "sta": 10,
@@ -275,7 +393,7 @@ var gear = {
          "phase": 2,
          "id": 17111,
          "procchance": 100,
-         "magicdmg": 3,
+         "magicdmg": 3
       },
       {
          "name": "Choker of the Shifting Sands",
@@ -325,6 +443,9 @@ var gear = {
          "hit": 1,
          "sta": 9,
          "agi": 12,
+         "resist": {
+             "fire": 10
+         },
          "source": "Onyxia",
          "phase": 1,
          "id": 18404
@@ -435,6 +556,90 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Fireguard Shoulders",
+         "source": "MC",
+         "ac": 159,
+         "sta": 22,
+         "subsource": "fire",
+         "resist": {
+             "fire": 22
+         },
+         "phase": 1,
+         "id": 19139
+      },
+      {
+         "name": "Volcanic Shoulders",
+         "source": "Crafting",
+         "ac": 167,
+         "subsource": "fire",
+         "resist": {
+             "fire": 18
+         },
+         "phase": 1,
+         "id": 15055
+      },
+      {
+         "name": "Icebane Pauldrons",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 18,
+         "str": 9,
+         "ac": 698,
+         "defense": 7,
+         "resist": {
+             "frost": 33
+         },
+         "phase": "6",
+         "id": 22940
+      },
+      {
+         "name": "Icy Scale Spaulders",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 25,
+         "ac": 393,
+         "resist": {
+             "frost": 33
+         },
+         "phase": "6",
+         "id": 22967
+      },
+      {
+         "name": "Polar Shoulder Pads",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 25,
+         "ac": 181,
+         "resist": {
+             "frost": 33
+         },
+         "phase": "6",
+         "id": 22941
+      },
+      {
+         "name": "Acid-etched Pauldrons",
+         "source": "Dungeon",
+         "subsource": "nature",
+         "ac": 434,
+         "resist": {
+             "nature": 20,
+         },
+         "phase": "1",
+         "id": 13533
+      },
+      {
+         "name": "Sylvan Shoulders",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 18,
+         "ac": 74,
+         "resist": {
+             "nature": 20
+         },
+         "phase": "5",
+         "id": 22758
+      },
+      {
          "name": "Flamescarred Shoulders",
          "str": 12,
          "sta": 11,
@@ -442,7 +647,7 @@ var gear = {
          "ac": 131,
          "source": "Dungeon",
          "phase": 2,
-         "id": 18374,
+         "id": 18374
       },
       {
          "name": "Abyssal Plate Epaulets",
@@ -454,7 +659,7 @@ var gear = {
          "source": "Other",
          "phase": 4,
          "id": 20683,
-         "rand": 2158,
+         "rand": 2158
       },
       {
          "name": "Arathi Plate Spaulders",
@@ -662,6 +867,53 @@ var gear = {
    ],
    "back": [
       {
+         "name": "Wildfire Cape",
+         "source": "Pyroguard Emberseer",
+         "ac": 43,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 12905
+      },
+      {
+         "name": "Icy Cloak",
+         "source": "Onyxia",
+         "subsource": "frost",
+         "sta": 10,
+         "ac": 55,
+         "resist": {
+             "frost": 6,
+             "arcane": 6
+         },
+         "phase": 1,
+         "id": 17078
+      },
+      {
+         "name": "Icy Cloak",
+         "source": "Crafting",
+         "subsource": "frost",
+         "ac": 29,
+         "resist": {
+             "frost": 11
+         },
+         "phase": 1,
+         "id": 4327
+      },
+      {
+         "name": "Glacial Cloak",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 18,
+         "ac": 61,
+         "resist": {
+             "frost": 24
+         },
+         "phase": 6,
+         "id": 22658
+      },
+      {
          "name": "Cloak of Firemaw",
          "ap": 50,
          "sta": 12,
@@ -746,6 +998,10 @@ var gear = {
          "sta": 12,
          "agi": 22,
          "ac": 57,
+         "resist": {
+             "fire": 6,
+             "nature": 6
+         },
          "source": "MC",
          "phase": 1,
          "id": 17102
@@ -896,6 +1152,109 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Volcanic Breastplate",
+         "source": "Crafting",
+         "ac": 268,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 15053
+      },
+      {
+         "name": "Ice Scale Breastplate",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 24,
+         "ac": 506,
+         "ap": 40,
+         "resist": {
+             "frost": 40
+         },
+         "phase": "6",
+         "id": 22664
+      },
+      {
+         "name": "Icebane Breastplate",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 24,
+         "str": 12,
+         "ac": 899,
+         "defense": 8,
+         "resist": {
+             "frost": 42
+         },
+         "phase": "6",
+         "id": 22669
+      },
+      {
+         "name": "Thorium Armor",
+         "source": "Crafting",
+         "subsource": "frost",
+         "ac": 480,
+         "resist": {
+             "shadow": 8,
+             "arcane": 8,
+             "nature": 8,
+             "fire": 8,
+             "frost": 8
+         },
+         "phase": "1",
+         "id": 12405
+      },
+      {
+         "name": "Brightcloth Robe",
+         "source": "Crafting",
+         "subsource": "frost",
+         "ac": 70,
+         "resist": {
+             "shadow": 15,
+             "frost": 16
+         },
+         "phase": "1",
+         "id": 14100
+      },
+      {
+         "name": "Polar Tunic",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 26,
+         "agi": 18,
+         "ac": 234,
+         "resist": {
+             "frost": 40
+         },
+         "phase": "6",
+         "id": 22661
+      },
+      {
+         "name": "Ironvine Breastplate",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 15,
+         "ac": 726,
+         "defense": 7,
+         "resist": {
+             "nature": 30
+         },
+         "phase": "5",
+         "id": 22762
+      },
+      {
+         "name": "Sandstalker Breastplate",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 13,
+         "ac": 485,
+         "resist": {
+             "nature": 25
+         },
+         "phase": "5",
+         "id": 20478
+      },
+      {
          "name": "Black Dragonscale Breastplate",
          "sta": 8,
          "ap": 50,
@@ -964,6 +1323,10 @@ var gear = {
          "agi": 10,
          "ac": 706,
          "source": "Quest",
+         "subsource": "fire",
+         "resist": {
+             "fire": 15
+         },
          "phase": 1,
          "id": 12895
       },
@@ -1171,6 +1534,96 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Dark Iron Bracer",
+         "source": "Crafted",
+         "ac": 394,
+         "sta": 7,
+         "subsource": "fire",
+         "resist": {
+             "fire": 18
+         },
+         "phase": 1,
+         "id": 17014
+      },
+      {
+         "name": "Emberplate Armguards of the Tiger",
+         "source": "Lord Incendius",
+         "ac": 261,
+         "subsource": "fire",
+         "str": 10,
+         "agi": 10,
+         "resist": {
+             "fire": 10
+         },
+         "phase": 1,
+         "id": 11767,
+         "rand": 690
+      },
+      {
+         "name": "Polar Bracer",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 20,
+         "agi": 12,
+         "ac": 102,
+         "resist": {
+             "frost": 20
+         },
+         "phase": "6",
+         "id": 22663
+      },
+      {
+         "name": "Icy Scale Bracers",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 17,
+         "ap": 32,
+         "ac": 221,
+         "resist": {
+             "frost": 20
+         },
+         "phase": "6",
+         "id": 22665
+      },
+      {
+         "name": "Icebane Bracers",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 13,
+         "str": 6,
+         "ac": 393,
+         "defense": 5,
+         "resist": {
+             "frost": 24
+         },
+         "phase": "6",
+         "id": 22671
+      },
+      {
+         "name": "Sandstalker Bracer",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 7,
+         "ac": 220,
+         "resist": {
+             "nature": 15
+         },
+         "phase": "5",
+         "id": 20476
+      },
+      {
+         "name": "Noxxion's Shackles",
+         "source": "Dungeon",
+         "subsource": "nature",
+         "sta": 5,
+         "ac": 235,
+         "resist": {
+             "nature": 15
+         },
+         "phase": "5",
+         "id": 17746
+      },
+      {
          "name": "Abyssal Plate Vambraces",
          "str": 11,
          "sta": 12,
@@ -1358,6 +1811,98 @@ var gear = {
       }
    ],
    "hands": [
+      {
+         "name": "Dark Iron Gauntlets",
+         "source": "Crafted",
+         "ac": 495,
+         "sta": 16,
+         "agi": 12,
+         "subsource": "fire",
+         "resist": {
+             "fire": 28
+         },
+         "phase": 1,
+         "id": 19164
+      },
+      {
+         "name": "Molten Fists",
+         "source": "UBRS",
+         "ac": 215,
+         "agi": 10,
+         "sta": 11,
+         "int": 11,
+         "subsource": "fire",
+         "resist": {
+             "fire": 10
+         },
+         "phase": 1,
+         "id": 11814
+      },
+      {
+         "name": "Polar Gloves",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 18,
+         "agi": 18,
+         "ac": 146,
+         "resist": {
+             "frost": 30
+         },
+         "phase": 6,
+         "id": 22662
+      },
+      {
+         "name": "Icy Scale Gauntlets",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 22,
+         "ap": 22,
+         "ac": 316,
+         "resist": {
+             "frost": 30
+         },
+         "phase": 6,
+         "id": 22666
+      },
+      {
+         "name": "Icebane Gauntlets",
+         "source": "Crafting",
+         "subsource": "frost",
+         "sta": 18,
+         "str": 9,
+         "ac": 562,
+         "defense":5,
+         "resist": {
+             "frost": 32
+         },
+         "phase": 6,
+         "id": 22670
+      },
+      {
+         "name": "Sandstalker Gauntlets",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 9,
+         "ac": 308,
+         "resist": {
+             "nature": 20
+         },
+         "phase": 5,
+         "id": 20477
+      },
+      {
+         "name": "Ironvine Gloves",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 10,
+         "ac": 454,
+         "defense": 10,
+         "resist": {
+             "nature": 20
+         },
+         "phase": "5",
+         "id": 22763
+      },
       {
          "name": "Aged Core Leather Gloves",
          "crit": 1,
@@ -1565,6 +2110,72 @@ var gear = {
    ],
    "waist": [
       {
+         "name": "Molten Belt",
+         "source": "Crafted",
+         "ac": 118,
+         "sta": 16,
+         "agi": 28,
+         "subsource": "fire",
+         "resist": {
+             "fire": 12
+         },
+         "phase": 1,
+         "id": 19163
+      },
+      {
+         "name": "Flamescarred Girdle",
+         "source": "Maleki the Pallid",
+         "ac": 89,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 13526
+      },
+      {
+         "name": "Frostbite Girdle",
+         "source": "Dungeon",
+         "subsource": "frost",
+         "sta": 15,
+         "str": 5,
+         "agi": 15,
+         "ac": 98,
+         "resist": {
+             "frost": 10
+         },
+         "phase": "1",
+         "id": 14502
+      },
+      {
+         "name": "Unmelting Ice Girdle",
+         "source": "Azuregos",
+         "subsource": "frost",
+         "sta": 14,
+         "str": 14,
+         "agi": 14,
+         "ac": 452,
+         "defense": 8,
+         "resist": {
+             "frost": 16
+         },
+         "phase": "2",
+         "id": 18547
+      },
+      {
+         "name": "Ironvine Belt",
+         "source": "Crafting",
+         "subsource": "nature",
+         "sta": 12,
+         "ac": 408,
+         "defense": 3,
+         "resist": {
+             "nature": 15
+         },
+         "phase": "5",
+         "id": 22764
+      },
+      {
          "name": "Arathi Plate Girdle",
          "crit": 1,
          "str": 17,
@@ -1592,6 +2203,9 @@ var gear = {
          "dodge": 1,
          "defense": 5,
          "ac": 412,
+         "resist": {
+             "fire": 7
+         },
          "source": "MC",
          "phase": 1,
          "id": 16864
@@ -1778,6 +2392,96 @@ var gear = {
    ],
    "legs": [
       {
+         "name": "Emberweave Leggings",
+         "source": "Flamegor",
+         "ac": 417,
+         "sta": 22,
+         "agi": 17,
+         "int": 12,
+         "subsource": "fire",
+         "resist": {
+             "fire": 35
+         },
+         "phase": 1,
+         "id": 19433
+      },
+      {
+         "name": "Dark Iron Leggings",
+         "source": "Crafted",
+         "ac": 778,
+         "sta": 14,
+         "subsource": "fire",
+         "resist": {
+             "fire": 30
+         },
+         "phase": 1,
+         "id": 17013
+      },
+      {
+         "name": "Volcanic Leggings",
+         "source": "Crafting",
+         "ac": 204,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 15054
+      },
+      {
+         "name": "Polar Leggings",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 28,
+         "agi": 15,
+         "ac": 205,
+         "resist": {
+             "frost": 40
+         },
+         "phase": "6",
+         "id": 22701
+      },
+      {
+         "name": "Icy Scale Leggings",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 28,
+         "agi": 15,
+         "ac": 443,
+         "resist": {
+             "frost": 40
+         },
+         "phase": "6",
+         "id": 22702
+      },
+      {
+         "name": "Icebane Leggings",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 25,
+         "str": 10,
+         "ac": 787,
+         "defense": 6,
+         "resist": {
+             "frost": 40
+         },
+         "phase": "6",
+         "id": 22702
+      },
+      {
+         "name": "Cenarion Reservist's Legplates",
+         "source": "Quest",
+         "subsource": "nature",
+         "sta": 13,
+         "ac": 575,
+         "defense": 9,
+         "resist": {
+             "nature": 25
+         },
+         "phase": "5",
+         "id": 20699
+      },
+      {
          "name": "Abyssal Plate Legplates",
          "crit": 1,
          "str": 15,
@@ -1787,7 +2491,7 @@ var gear = {
          "source": "Other",
          "phase": 4,
          "id": 20671,
-         "rand": 2157,
+         "rand": 2157
       },
       {
          "name": "Black Dragonscale Leggings",
@@ -2050,6 +2754,56 @@ var gear = {
    ],
    "feet": [
       {
+         "name": "Corehound Boots",
+         "source": "Crafted",
+         "ac": 126,
+         "sta": 10,
+         "agi": 13,
+         "subsource": "fire",
+         "resist": {
+             "fire": 24
+         },
+         "phase": 1,
+         "id": 16982
+      },
+      {
+         "name": "Dark Iron Boots of the Tiger",
+         "source": "Crafted",
+         "ac": 664,
+         "agi": 11,
+         "str": 11,
+         "subsource": "fire",
+         "resist": {
+             "fire": 28
+         },
+         "phase": 1,
+         "id": 20039
+      },
+      {
+         "name": "Lavawalker Greaves",
+         "source": "Maleki the Pallid",
+         "ac": 404,
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 13527
+      },
+      {
+         "name": "Flame Walkers",
+         "source": "Goraluk Anvilcrack",
+         "ac": 251,
+         "sta": 10,
+         "dodge": 1,
+         "subsource": "fire",
+         "resist": {
+             "fire": 18
+         },
+         "phase": 1,
+         "id": 18047
+      },
+      {
          "name": "Arathi Plate Greaves",
          "str": 14,
          "sta": 12,
@@ -2285,6 +3039,50 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Prismatic Band of Fire Resistance",
+         "source": "World Drop",
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 12017
+      },
+      {
+         "name": "Band of Icy Depths",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 19,
+         "resist": {
+             "frost": 20
+         },
+         "phase": 5,
+         "id": 21526
+      },
+      {
+         "name": "Hailstone Band",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 18,
+         "dodge": 1,
+         "resist": {
+             "frost": 20
+         },
+         "phase": 6,
+         "id": 23028
+      },
+      {
+         "name": "Ramaladni's Icy Grasp",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 15,
+         "resist": {
+             "frost": 25
+         },
+         "phase": 6,
+         "id": 22707
+      },
+      {
          "name": "Archimtiros' Ring of Reckoning",
          "sta": 28,
          "agi": 14,
@@ -2516,6 +3314,50 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Prismatic Band of Fire Resistance",
+         "source": "World Drop",
+         "subsource": "fire",
+         "resist": {
+             "fire": 20
+         },
+         "phase": 1,
+         "id": 12017
+      },
+      {
+         "name": "Band of Icy Depths",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 19,
+         "resist": {
+             "frost": 20
+         },
+         "phase": 5,
+         "id": 21526
+      },
+      {
+         "name": "Hailstone Band",
+         "source": "Naxx",
+         "subsource": "frost",
+         "sta": 18,
+         "dodge": 1,
+         "resist": {
+             "frost": 20
+         },
+         "phase": 6,
+         "id": 23028
+      },
+      {
+         "name": "Ramaladni's Icy Grasp",
+         "source": "Quest",
+         "subsource": "frost",
+         "sta": 15,
+         "resist": {
+             "frost": 25
+         },
+         "phase": 6,
+         "id": 22707
+      },
       {
          "name": "Archimtiros' Ring of Reckoning",
          "sta": 28,
@@ -2749,6 +3591,61 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Blazing Emblem",
+         "source": "World Drop",
+         "subsource": "fire",
+         "resist": {
+             "fire": 15
+         },
+         "phase": "1",
+         "id": 2802
+      },
+      {
+         "name": "Loatheb's Reflection",
+         "source": "Naxx",
+         "subsource": "frost",
+         "resist": {
+             "shadow": 13,
+             "arcane": 13,
+             "nature": 13,
+             "fire": 13,
+             "frost": 13
+         },
+         "phase": "6",
+         "id": 23042
+      },
+      {
+         "name": "Gyrofreeze Ice Reflector",
+         "source": "Crafting",
+         "subsource": "frost",
+         "resist": {
+             "frost": 15
+         },
+         "phase": "1",
+         "id": 18634
+      },
+      {
+         "name": "Exalted AV Insignia Rank 6",
+         "source": "PVP",
+         "subsource": "frost",
+         "dodge": 2,
+         "resist": {
+             "frost": 10
+         },
+         "phase": "3",
+         "id": 17904
+      },
+      {
+         "name": "Heart of Noxxion",
+         "source": "Dungeon",
+         "subsource": "nature",
+         "resist": {
+             "nature": 10
+         },
+         "phase": "1",
+         "id": 17744
+      },
+      {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
          "source": "ZG",
          "phase": "4",
@@ -2781,13 +3678,13 @@ var gear = {
          "phase": "3",
          "id": 19289,
          "procchance": 2,
-         "magicdmg": 250,
+         "magicdmg": 250
       },
       {
          "name": "Diamond Flask (Used last 60 secs)",
          "source": "Quest",
          "phase": "3",
-         "id": 20130,
+         "id": 20130
       },
       {
          "name": "Drake Fang Talisman",
@@ -2802,7 +3699,7 @@ var gear = {
          "name": "Earthstrike (Used last 20 secs)",
          "source": "Quest",
          "phase": "5",
-         "id": 21180,
+         "id": 21180
       },
       {
          "name": "Hand of Justice",
@@ -2819,13 +3716,13 @@ var gear = {
          "phase": "1",
          "id": 22321,
          "procchance": 2,
-         "magicdmg": 165,
+         "magicdmg": 165
       },
       {
          "name": "Jom Gabbar (Used last 20 secs)",
          "source": "AQ40",
          "phase": "5",
-         "id": 23570,
+         "id": 23570
       },
       {
          "name": "Kiss of the Spider (Used last 15 secs)",
@@ -2833,7 +3730,7 @@ var gear = {
          "hit": 1,
          "source": "Naxx",
          "phase": "6",
-         "id": 22954,
+         "id": 22954
       },
       {
          "name": "Rune of the Guard Captain",
@@ -2855,7 +3752,7 @@ var gear = {
          "ap": 64,
          "source": "Naxx",
          "phase": "6",
-         "id": 23041,
+         "id": 23041
       },
       {
          "name": "Mark of the Champion (vs Undead)",
@@ -2863,9 +3760,64 @@ var gear = {
          "source": "Naxx",
          "phase": "6",
          "id": 23206
-      },
+      }
    ],
    "trinket2": [
+      {
+         "name": "Blazing Emblem",
+         "source": "World Drop",
+         "subsource": "fire",
+         "resist": {
+             "fire": 15
+         },
+         "phase": "1",
+         "id": 2802
+      },
+      {
+         "name": "Loatheb's Reflection",
+         "source": "Naxx",
+         "subsource": "frost",
+         "resist": {
+             "shadow": 13,
+             "arcane": 13,
+             "nature": 13,
+             "fire": 13,
+             "frost": 13
+         },
+         "phase": "6",
+         "id": 23042
+      },
+      {
+         "name": "Gyrofreeze Ice Reflector",
+         "source": "Crafting",
+         "subsource": "frost",
+         "resist": {
+             "frost": 15
+         },
+         "phase": "1",
+         "id": 18634
+      },
+      {
+         "name": "Exalted AV Insignia Rank 6",
+         "source": "PVP",
+         "subsource": "frost",
+         "dodge": 2,
+         "resist": {
+             "frost": 10
+         },
+         "phase": "3",
+         "id": 17904
+      },
+      {
+         "name": "Heart of Noxxion",
+         "source": "Dungeon",
+         "subsource": "nature",
+         "resist": {
+             "nature": 10
+         },
+         "phase": "1",
+         "id": 17744
+      },
       {
          "name": "Zandalarian Hero Medallion (Used last 20 secs)",
          "source": "ZG",
@@ -2899,13 +3851,13 @@ var gear = {
          "phase": "3",
          "id": 19289,
          "procchance": 2,
-         "magicdmg": 250,
+         "magicdmg": 250
       },
       {
          "name": "Diamond Flask (Used last 60 secs)",
          "source": "Quest",
          "phase": "3",
-         "id": 20130,
+         "id": 20130
       },
       {
          "name": "Drake Fang Talisman",
@@ -2920,7 +3872,7 @@ var gear = {
          "name": "Earthstrike (Used last 20 secs)",
          "source": "Quest",
          "phase": "5",
-         "id": 21180,
+         "id": 21180
       },
       {
          "name": "Hand of Justice",
@@ -2937,13 +3889,13 @@ var gear = {
          "phase": "1",
          "id": 22321,
          "procchance": 2,
-         "magicdmg": 165,
+         "magicdmg": 165
       },
       {
          "name": "Jom Gabbar (Used last 20 secs)",
          "source": "AQ40",
          "phase": "5",
-         "id": 23570,
+         "id": 23570
       },
       {
          "name": "Kiss of the Spider (Used last 15 secs)",
@@ -2951,7 +3903,7 @@ var gear = {
          "hit": 1,
          "source": "Naxx",
          "phase": "6",
-         "id": 22954,
+         "id": 22954
       },
       {
          "name": "Rune of the Guard Captain",
@@ -2973,10 +3925,33 @@ var gear = {
          "ap": 64,
          "source": "Naxx",
          "phase": "6",
-         "id": 23041,
+         "id": 23041
       }
    ],
    "ranged": [
+      {
+         "name": "Polished Ironwood Crossbow",
+         "sta": 6,
+         "ap": 26,
+         "resist": {
+             "nature": 7
+         },
+         "subsource": "nature",
+         "source": "Emeriss",
+         "phase": "4",
+         "id": 20599
+      },
+      {
+         "name": "Bow of Taut Sinew",
+         "ap": 22,
+         "resist": {
+             "nature": 8
+         },
+         "subsource": "nature",
+         "source": "AQ20",
+         "phase": "5",
+         "id": 21478
+      },
       {
          "name": "Ancient Bone Bow",
          "agi": 11,
@@ -3296,7 +4271,7 @@ var gear = {
          "phase": 1,
          "id": 811,
          "magicdmg": 108,
-         "procgcd": true,
+         "procgcd": true
       },
       {
          "name": "Blessed Qiraji War Axe",
@@ -3358,7 +4333,7 @@ var gear = {
          "phase": 1,
          "id": 17068,
          "magicdmg": 138,
-         "procgcd": true,
+         "procgcd": true
       },
       {
          "name": "Doom's Edge",
@@ -3480,7 +4455,7 @@ var gear = {
          "source": "ZG",
          "phase": 4,
          "id": 19921,
-         "rand": 193,
+         "rand": 193
       },
       {
          "name": "Zulian Hacker of the Tiger",
@@ -3844,7 +4819,7 @@ var gear = {
          "ppm": 1,
          "phase": 1,
          "id": 18203,
-         "procspell": "Eskhandar",
+         "procspell": "Eskhandar"
       },
       {
          "name": "R14 Claw (MH)",
@@ -3950,7 +4925,7 @@ var gear = {
          "phase": 3,
          "id": 19170,
          "magicdmg": 220,
-         "procgcd": true,
+         "procgcd": true
       },
       {
          "name": "Empyrean Demolisher",
@@ -3963,7 +4938,7 @@ var gear = {
          "ppm": 1,
          "phase": 2,
          "id": 17112,
-         "procspell": "Empyrean",
+         "procspell": "Empyrean"
       },
       {
          "id": 11684,
@@ -4413,7 +5388,7 @@ var gear = {
          "phase": 4,
          "id": 19901,
          "magicdmg": 84,
-         "coeff": 1,
+         "coeff": 1
       },
       {
          "name": "Teebu's Blazing Longsword",
@@ -4462,6 +5437,10 @@ var gear = {
          "speed": 1.9,
          "type": "Sword",
          "source": "MC",
+         "resist": {
+             "fire": 8,
+             "nature": 9
+         },
          "ppm": 6,
          "phase": 3,
          "id": 19019,
@@ -4504,7 +5483,7 @@ var gear = {
          "ppm": 0.6,
          "phase": 1,
          "id": 17075,
-         "physdmg": 240,
+         "physdmg": 240
       },
       {
          "name": "Protector's Sword",
@@ -4540,7 +5519,7 @@ var gear = {
          "phase": 1,
          "id": 18683,
          "str": 7,
-         "sta": 12,
+         "sta": 12
       }
    ],
    "offhand": [
@@ -4567,7 +5546,7 @@ var gear = {
          "phase": 4,
          "id": 19852,
          "magicdmg": 56,
-         "coeff": 1,
+         "coeff": 1
       },
       {
          "name": "Blessed Qiraji War Axe",
@@ -4752,6 +5731,9 @@ var gear = {
          "type": "Dagger",
          "source": "Other",
          "ppm": 1,
+         "resist": {
+             "fire": 10
+         },
          "phase": 1,
          "id": 14555,
          "magicdmg": 99
@@ -6533,6 +7515,16 @@ var gear = {
 var enchant = {
    "head": [
       {
+         "name": "Ice Guard",
+         "source": "Quest",
+         "subsource": "frost",
+         "resist": {
+             "frost": 10
+         },
+         "phase": "6",
+         "id": 22636
+      },
+      {
          "id": 18329,
          "name": "Arcanum of Rapidity",
          "haste": 1,
@@ -6549,9 +7541,29 @@ var enchant = {
          "name": "Lesser Arcanum of Voracity (Str)",
          "str": 8,
          "phase": 1
-      },
+      }
    ],
    "shoulder": [
+      {
+         "name": "Frost Mantle of the Dawn",
+         "source": "Quest",
+         "subsource": "frost",
+         "resist": {
+             "frost": 5
+         },
+         "phase": "1",
+         "id": 18170
+      },
+      {
+         "name": "Nature Mantle of the Dawn",
+         "source": "Quest",
+         "subsource": "nature",
+         "resist": {
+             "nature": 5
+         },
+         "phase": "1",
+         "id": 18172
+      },
       {
          "id": 29483,
          "spellid": true,
@@ -6566,9 +7578,43 @@ var enchant = {
          "name": "Zandalar Signet of Might",
          "ap": 30,
          "phase": 4
-      },
+      }
    ],
    "back": [
+      {
+         "name": "Greater Fire Resistance",
+         "source": "Quest",
+         "subsource": "fire",
+         "resist": {
+             "fire": 15
+         },
+         "phase": 4,
+         "id": 25081
+      },
+      {
+         "name": "Greater Nature Resistance",
+         "source": "Quest",
+         "subsource": "nature",
+         "resist": {
+             "nature": 15
+         },
+         "phase": 4,
+         "id": 25082
+      },
+      {
+         "name": "Greater Resistance",
+         "source": "Quest",
+         "subsource": "frost",
+         "resist": {
+             "shadow": 5,
+             "arcane": 5,
+             "nature": 5,
+             "fire": 5,
+             "frost": 5
+         },
+         "phase": 1,
+         "id": 20014
+      },
       {
          "id": 25084,
          "spellid": true,
@@ -6581,7 +7627,7 @@ var enchant = {
          "name": "Lesser Agility",
          "agi": 3,
          "phase": 1
-      },
+      }
    ],
    "chest": [
       {
@@ -6599,7 +7645,7 @@ var enchant = {
          "agi": 3,
          "str": 3,
          "phase": 1
-      },
+      }
    ],
    "wrist": [
       {
@@ -6615,7 +7661,7 @@ var enchant = {
          "name": "Superior Strength",
          "str": 9,
          "phase": 1
-      },
+      }
    ],
    "hands": [
       {
@@ -6645,7 +7691,7 @@ var enchant = {
          "name": "Minor Haste",
          "haste": 1,
          "phase": 1
-      },
+      }
    ],
    "legs": [
       {
@@ -6665,7 +7711,7 @@ var enchant = {
          "name": "Lesser Arcanum of Voracity (Str)",
          "str": 8,
          "phase": 1
-      },
+      }
    ],
    "feet": [
       {
@@ -6680,7 +7726,7 @@ var enchant = {
          "spellid": true,
          "name": "Minor Speed",
          "phase": 1
-      },
+      }
    ],
    "mainhand": [
       {
@@ -6733,22 +7779,22 @@ var enchant = {
          "name": "Elemental Sharpening Stone",
          "crit": 2,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 12404,
          "name": "Dense Stone",
          "bonusdmg": 8,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 23122,
          "name": "Consecrated Sharpening Stone",
          "ap": 108,
          "phase": 6,
-         "temp": true,
-      },
+         "temp": true
+      }
    ],
    "offhand": [
       {
@@ -6801,21 +7847,21 @@ var enchant = {
          "name": "Elemental Sharpening Stone",
          "crit": 2,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 12404,
          "name": "Dense Stone",
          "bonusdmg": 8,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 23122,
          "name": "Consecrated Sharpening Stone",
          "ap": 108,
          "phase": 6,
-         "temp": true,
+         "temp": true
       }
    ],
    "twohand": [
@@ -6862,21 +7908,21 @@ var enchant = {
          "name": "Elemental Sharpening Stone",
          "crit": 2,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 12404,
          "name": "Dense Stone",
          "bonusdmg": 8,
          "phase": 1,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 23122,
          "name": "Consecrated Sharpening Stone",
          "ap": 108,
          "phase": 6,
-         "temp": true,
+         "temp": true
       },
       {
          "id": 20030,
@@ -6890,8 +7936,8 @@ var enchant = {
          "name": "Iron Counterweight",
          "haste": 3,
          "phase": 1
-      },
-   ],
+      }
+   ]
 };
 
 var sets = [
