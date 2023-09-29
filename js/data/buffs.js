@@ -314,4 +314,12 @@ var buffs = [
       crit: 50,
       spellcrit: 60,
    },
+   {
+      id: 11371,
+      name: "Gift of Arthas",
+      spellid: true,
+      "iconname": "inv_potion_28",
+      group: "",
+      bonusdmg: 8
+   },
 ];

@@ -1,3 +1,6 @@
+.hidden {
+    display: none;
+}
 .settings {
     width: 0;
     height: 100%;
@@ -37,7 +40,7 @@
         padding: 20px;
         box-sizing: border-box;
         width: 33%;
-    
+
         > label {
             position: absolute;
             left: 12px;
@@ -48,8 +51,24 @@
             width: auto;
             padding: 0 10px;
             font-size: 14px;
+            &.active {
+                background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+                background-position: center right;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                white-space: normal;
+                padding: 0px 20px 4px 4px;
+            }
+            &.inactive {
+                background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+                background-position: center right;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                white-space: normal;
+                padding: 0px 20px 4px 4px;
+            }
         }
-    
+
         ul {
             list-style: none;
             margin: 0;
@@ -86,7 +105,6 @@
 
     .fight {
         width: 330px;
-        height: 500px;
 
         li {
             border-bottom: 1px solid rgba(221,221,221,0.4);
@@ -100,7 +118,7 @@
             &:last-child {
                 border: 0;
             }
-    
+
             span {
                 float: right;
             }
@@ -115,12 +133,10 @@
     .buffs {
         font-size: 0;
         width: 330px;
-        height: 500px;
     }
 
     .rotation {
         width: calc(100% - 670px);
-        height: 500px;
         font-size: 0;
 
         .spell {
@@ -132,7 +148,9 @@
             cursor: pointer;
             margin-bottom: 4px;
             min-height: 38px;
-
+            &.hidden {
+                display: none;
+            }
             &:before {
                 content: '';
                 width: 16px;
@@ -174,9 +192,6 @@
                 }
             }
 
-            &.hidden {
-                display: none;
-            }
         }
 
         .icon {
@@ -206,12 +221,11 @@
                 font-size: 11px;
             }
         }
-       
+
     }
 
     .talents {
         width: calc(100% - 251px);
-        height: 450px;
         display: inline-flex;
         position: relative;
         justify-content: center;
@@ -283,7 +297,7 @@
         margin-top: 10px;
 
         .sources {
-            li {
+            > li {
                 display: block;
                 list-style: none;
                 transition: all 0.2s ease-in;
@@ -319,6 +333,12 @@
                     }
                 }
             }
+            .resistances-list {
+                input {
+                    float: left;
+                    margin: .2em;
+                }
+            }
         }
 
         .phases {
@@ -344,6 +364,9 @@
             }
         }
     }
+    .hidden {
+        display: none;
+    }
 
     @media (min-width: 0px) and (max-width: 1600px) {
         left: 320px;
@@ -352,7 +375,6 @@
         }
         .fight, .buffs {
             width: calc(50% - 2px);
-            height: 320px;
         }
     }
 
@@ -365,5 +387,5 @@
         }
     }
 
-    
+
 }

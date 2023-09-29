@@ -49,7 +49,14 @@ class Player {
             strmod: 1,
             agimod: 1,
             dmgmod: 1,
-            apmod: 1
+            apmod: 1,
+            resist: {
+                shadow: 0,
+                arcane: 0,
+                nature: 0,
+                fire: 0,
+                frost: 0,
+            },
         };
         if (enchtype == 1) {
             this.testEnch = testItem;
@@ -138,8 +145,17 @@ class Player {
                     for (let prop in this.base) {
                         if (prop == 'haste') {
                             this.base.haste *= (1 + item.haste / 100) || 1;
-                        } else
-                            this.base[prop] += item[prop] || 0;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
                     }
                     if (item.skill && item.skill > 0) {
                         if (item.type == 'Varied') {
@@ -234,10 +250,19 @@ class Player {
                     (this.testEnchType != type && item.selected)) {
 
                     for (let prop in this.base) {
-                        if (prop == 'haste')
+                        if (prop == 'haste') {
                             this.base.haste *= (1 + item.haste / 100) || 1;
-                        else
-                            this.base[prop] += item[prop] || 0;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -252,10 +277,19 @@ class Player {
                     (this.testTempEnchType != type && item.selected)) {
 
                     for (let prop in this.base) {
-                        if (prop == 'haste')
+                        if (prop == 'haste') {
                             this.base.haste *= (1 + item.haste / 100) || 1;
-                        else
-                            this.base[prop] += item[prop] || 0;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
                     }
                 }
             }

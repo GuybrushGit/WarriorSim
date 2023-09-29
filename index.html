@@ -109,6 +109,26 @@ profiles
           <label>Haste</label>
           <span id="haste"></span>
         </li>
+        <li class="shadow-resist hidden">
+          <label>Shadow Resist</label>
+          <span id="shadow-resist"></span>
+        </li>
+        <li class="arcane-resist hidden">
+          <label>Arcane Resist</label>
+          <span id="arcane-resist"></span>
+        </li>
+        <li class="nature-resist hidden">
+          <label>Nature Resist</label>
+          <span id="nature-resist"></span>
+        </li>
+        <li class="frost-resist hidden">
+          <label>Frost Resist</label>
+          <span id="frost-resist"></span>
+        </li>
+        <li class="fire-resist hidden">
+          <label>Fire Resist</label>
+          <span id="fire-resist"></span>
+        </li>
         <li>
           <label>Sets</label>
           <span id="sets"></span>
@@ -142,7 +162,7 @@ profiles
     <div class="wrapper">
 
       <article class="fight">
-        <label>Settings</label>
+        <label class="active">Settings</label>
         <ul>
           <li>
             <label>Level</label>
@@ -232,19 +252,20 @@ profiles
       </article>
 
       <article class="buffs">
-        <label>Buffs</label>
+        <label class="active">Buffs</label>
       </article>
 
       <article class="rotation">
-        <label>Rotation</label>
+        <label class="active">Rotation</label>
+        <div></div>
       </article>
 
       <article class="talents">
-        <label>Talents</label>
+        <label class="active">Talents</label>
       </article>
 
       <article class="filter">
-        <label>Gear Filter</label>
+        <label class="active">Gear Filter</label>
         <ul class="sources">
           <li data-id="quest">Quest</li>
           <li data-id="crafting">Crafting</li>
@@ -262,6 +283,40 @@ profiles
           <li data-id="unknown">Unknown/Unreleased</li>
           <li data-id="worldboss">World Boss</li>
           <li data-id="pvp">PvP</li>
+          <li class="js-toggle" data-id="resistances-list">Resistances
+            <ul class="resistances-list hidden">
+              <li>
+                <label>
+                    Shadow Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="shadow-resist" name="shadow-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Arcane Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="arcane-resist" name="arcane-resist">
+                </label>
+              </li>
+              </li>
+                <label>
+                    Nature Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="nature-resist" name="nature-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Fire Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="fire-resist" name="fire-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Frost Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="frost-resist" name="frost-resist">
+                </label>
+              </li>
+            </ul>
+          </li>
           <li data-id="other">Other</li>
         </ul>
         <ul class="phases">

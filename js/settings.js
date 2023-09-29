@@ -31,8 +31,7 @@ SIM.SETTINGS = {
             $('.js-settings').removeClass('active');
             $('section.settings').removeClass('active');
         });
-
-        view.buffs.on('click', '.icon', function () {
+        view.buffs.on('click', '.icon', function (e) {
             let obj = $(this).toggleClass('active');
             if (obj.hasClass('active')) {
                 if (obj.data('group'))
@@ -43,6 +42,8 @@ SIM.SETTINGS = {
             for (let buff of buffs) {
                 buff.active = view.buffs.find('[data-id="' + buff.id + '"]').hasClass('active');
             }
+            e.stopPropagation();
+            e.preventDefault();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
@@ -76,7 +77,7 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
-        view.filter.on('click', '.sources li', function (e) {
+        view.filter.on('click', '.sources > li', function (e) {
             $(this).toggleClass('active');
             /*  // commenting this allows users to select raids as a source, while also deslecting blizzlike gear, to easily see just what is custom to the server
             if ($(this).hasClass('active')) {
@@ -86,6 +87,15 @@ SIM.SETTINGS = {
             */
             SIM.UI.updateSession();
             SIM.UI.filterGear();
+            e.preventDefault();
+        });
+
+        view.filter.on('click', '.js-toggle, li ul', function(e) {
+            e.stopPropagation();
+            if (this.classList.contains("js-toggle")) {
+                var toggleEle = this.getAttribute('data-id');
+                $("."+toggleEle).toggleClass('hidden');
+            }
         });
 
         view.filter.on('click', '.phases li', function (e) {
@@ -122,6 +132,35 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
         });
 
+        view.buffs.on('click', 'label', function(e) {
+            var view = this;
+            $(view.parentElement).find('div').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
+        view.fight.on('click', 'label', function (e) {
+            var view = this;
+            $(view.parentElement).find('ul').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
+        view.rotation.on('click', 'label', function (e) {
+            var view = this;
+            $(view.parentElement).find('div:first').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
+        view.talents.on('click', 'label', function (e) {
+            var view = this;
+            $(view.parentElement).find('table').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+        view.filter.on('click', 'label', function (e) {
+            var view = this;
+            $(view.parentElement).find('ul').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
         view.fight.on('change', 'select[name="race"]', function (e) {
             var val = $(this).val();
             var bloodfury = view.rotation.find('[data-id="20572"]');
@@ -150,30 +189,45 @@ SIM.SETTINGS = {
 
             view.bg.attr('data-race', val);
 
+            e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
 
         view.fight.on('change', 'select[name="aqbooks"]', function (e) {
+            e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
 
         view.fight.on('keyup', 'input[type="text"]', function (e) {
+            e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
 
         view.fight.on('change', 'select[name="weaponrng"]', function (e) {
+            e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
 
         view.fight.on('change', 'select[name="batching"]', function (e) {
+            e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
 
+    },
+
+    toggleArticle: function(label) {
+        if (label.classList.contains("active")) {
+            label.classList.add("inactive")
+            label.classList.remove("active")
+        } else {
+            label.classList.add("active")
+            label.classList.remove("inactive")
+        }
     },
 
     buildSpells: function () {
@@ -249,7 +303,7 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             }
 
-            view.rotation.append(div);
+            view.rotation.find('div:first').append(div);
         }
 
         view.rotation.children().eq(3).appendTo(view.rotation);
