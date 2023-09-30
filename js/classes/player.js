@@ -6,10 +6,10 @@ class Player {
             weaponrng: $('select[name="weaponrng"]').val() == "Yes",
             spelldamage: parseInt($('input[name="spelldamage"]').val()),
             target: {
-                level: parseInt($('input[name="targetlevel"]').val()),
+                level: parseInt($('select[name="targetlevel"]').val()),
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
                 armor: parseInt($('input[name="targetarmor"]').val()),
-                defense: parseInt($('input[name="targetlevel"]').val()) * 5,
+                defense: 5 * parseInt($('select[name="targetlevel"]').val()),
                 mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
                 binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60)))),
             },
@@ -533,7 +533,7 @@ class Player {
         return miss;
     }
     getCritChance() {
-        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1 + (this.level - this.target.level) * 0.6;
+        let crit = this.stats.crit + (this.talents.crit || 0) + (this.level - this.target.level) * 1;
         return Math.max(crit, 0);
     }
     getDodgeChance(weapon) {
