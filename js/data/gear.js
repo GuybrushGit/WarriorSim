@@ -5125,6 +5125,13 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Chimaera's Eye",
+         "source": "Quest",
+         "arp": 100,
+         "phase": 7,
+         "id": 1170009
+      },
+      {
          "name": "Blazing Emblem",
          "source": "World Drop",
          "subsource": "fire",
@@ -5352,6 +5359,13 @@ var gear = {
       }
    ],
    "trinket2": [
+      {
+         "name": "Chimaera's Eye",
+         "source": "Quest",
+         "arp": 100,
+         "phase": 7,
+         "id": 1170009
+      },
       {
          "name": "Blazing Emblem",
          "source": "World Drop",
@@ -7554,6 +7568,17 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Stagwood Grasp",
+         "mindmg": 55,
+         "maxdmg": 102,
+         "speed": 1.7,
+         "haste": 1,
+         "type": "Fist",
+         "source": "Quest",
+         "phase": 7,
+         "id": 1170010,
+      },
       {
          "name": "Coldheart Icicle",
          "mindmg": 49,
