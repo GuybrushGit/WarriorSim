@@ -777,11 +777,14 @@ SIM.UI = {
         for (let item of gear[type]) {
 
             if (filter && filter != "All") {
-                if (filter == "Mace & Sword") {
+                if (filter == "Human Weps") {
                     if (item.type != "Mace" && item.type != "Sword") continue;
                 }
-                else if (filter == "Axe, Dagger & Sword") {
-                    if (item.type != "Axe"  && item.type != "Dagger" && item.type != "Sword") continue;
+                else if (filter == "Goblin Weps") {
+                    if (item.type != "Mace" && item.type != "Dagger") continue;
+                }
+                else if (filter == "Edgies Weps") {
+                    if (item.type != "Axe"  && item.type != "Dagger" && item.type != "Sword" && item.type != "Fist") continue;
                 }
                 else if (item.type != filter)
                     continue;
