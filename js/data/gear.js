@@ -4453,6 +4453,14 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Mark of the Worgen",
+         "ap": 20,
+         "arp": 75,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 1170011
+      },
+      {
          "name": "Prismatic Band of Fire Resistance",
          "source": "World Drop",
          "subsource": "fire",
@@ -4788,6 +4796,14 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Mark of the Worgen",
+         "ap": 20,
+         "arp": 75,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 1170011
+      },
       {
          "name": "Prismatic Band of Fire Resistance",
          "source": "World Drop",
