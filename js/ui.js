@@ -625,7 +625,7 @@ SIM.UI = {
         localStorage.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
         localStorage.executeperc = view.fight.find('input[name="executeperc"]').val();
         localStorage.startrage = view.fight.find('input[name="startrage"]').val();
-        localStorage.targetlevel = view.fight.find('input[name="targetlevel"]').val();
+        localStorage.targetlevel = view.fight.find('select[name="targetlevel"]').val();
         localStorage.targetarmor = view.fight.find('input[name="targetarmor"]').val();
         localStorage.targetresistance = view.fight.find('input[name="targetresistance"]').val();
         localStorage.adjacent = view.fight.find('input[name="adjacent"]').val();

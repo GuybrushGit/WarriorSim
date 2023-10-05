@@ -204,8 +204,13 @@ profiles
             <input type="text" name="startrage" value="0" data-numberonly="true">
           </li>
           <li>
-            <label>Target Level</label>
-            <input type="text" name="targetlevel" value="63" data-numberonly="true" readonly>
+            <label>Target level</label>
+            <select name="targetlevel" dir="rtl">
+              <option value="60">60</option>
+              <option value="61">61</option>
+              <option value="62">62</option>
+              <option value="63" selected>63 (boss)</option>
+            </select>
           </li>
           <li>
             <label>Target Resistance</label>
