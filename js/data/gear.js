@@ -2137,6 +2137,26 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Dreamhide Bracers",
+         "sta": 5,
+         "str": 18,
+         "agi": 4,
+         "source": "Crafted",
+         "ac": 87,
+         "phase": 7,
+         "id": 1170001
+      },
+      {
+         "name": "Dreamsteel Bracers",
+         "sta": 12,
+         "str": 18,
+         "haste": 1,
+         "source": "Crafted",
+         "ac": 318,
+         "phase": 7,
+         "id": 1170002
+      },
+      {
          "name": "Dark Iron Bracer",
          "source": "Crafted",
          "ac": 394,
@@ -2983,6 +3003,17 @@ var gear = {
    ],
    "waist": [
       {
+         "name": "Dreamhide Belt",
+         "sta": 14,
+         "str": 19,
+         "agi": 15,
+         "haste": 1,
+         "source": "Crafted",
+         "ac": 108,
+         "phase": 7,
+         "id": 1170005
+      },
+      {
          "name": "Molten Belt",
          "source": "Crafted",
          "ac": 118,
@@ -3384,11 +3415,11 @@ var gear = {
       },
       {
          "name": "Royal Qiraji Belt",
-         "str": 13,
+         "str": 14,
          "sta": 22,
-         "agi": 13,
+         "agi": 14,
          "parry": 1,
-         "defense": 8,
+         "defense": 9,
          "ac": 512,
          "source": "AQ40",
          "phase": 5,
@@ -3446,6 +3477,27 @@ var gear = {
       }
    ],
    "legs": [
+      {
+         "name": "Dreamhide Leggings",
+         "sta": 9,
+         "haste": 3,
+         "agi": 26,
+         "source": "Crafted",
+         "ac": 228,
+         "phase": 7,
+         "id": 1170003
+      },
+      {
+         "name": "Dreamsteel Leggings",
+         "agi": 14,
+         "str": 36,
+         "haste": 1,
+         "arp": 50,
+         "source": "Crafted",
+         "ac": 648,
+         "phase": 7,
+         "id": 1170004
+      },
       {
          "name": "Emberweave Leggings",
          "source": "Flamegor",
@@ -3957,6 +4009,17 @@ var gear = {
    ],
    "feet": [
       {
+         "name": "Dreamsteel Boots",
+         "sta": 4,
+         "str": 31,
+         "agi": 7,
+         "arp": 20,
+         "source": "Crafted",
+         "ac": 108,
+         "phase": 7,
+         "id": 1170008
+      },
+      {
          "name": "Corehound Boots",
          "source": "Crafted",
          "ac": 126,
@@ -4390,6 +4453,14 @@ var gear = {
    ],
    "finger1": [
       {
+         "name": "Mark of the Worgen",
+         "ap": 20,
+         "arp": 75,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 1170011
+      },
+      {
          "name": "Prismatic Band of Fire Resistance",
          "source": "World Drop",
          "subsource": "fire",
@@ -4725,6 +4796,14 @@ var gear = {
       }
    ],
    "finger2": [
+      {
+         "name": "Mark of the Worgen",
+         "ap": 20,
+         "arp": 75,
+         "source": "Dungeon",
+         "phase": 7,
+         "id": 1170011
+      },
       {
          "name": "Prismatic Band of Fire Resistance",
          "source": "World Drop",
@@ -5062,6 +5141,13 @@ var gear = {
    ],
    "trinket1": [
       {
+         "name": "Chimaera's Eye",
+         "source": "Quest",
+         "arp": 100,
+         "phase": 7,
+         "id": 1170009
+      },
+      {
          "name": "Blazing Emblem",
          "source": "World Drop",
          "subsource": "fire",
@@ -5289,6 +5375,13 @@ var gear = {
       }
    ],
    "trinket2": [
+      {
+         "name": "Chimaera's Eye",
+         "source": "Quest",
+         "arp": 100,
+         "phase": 7,
+         "id": 1170009
+      },
       {
          "name": "Blazing Emblem",
          "source": "World Drop",
@@ -7041,9 +7134,9 @@ var gear = {
          "name": "The Castigator",
          "crit": 1,
          "hit": 1,
-         "sta": 9,
-         "ap": 16,
-         "mindmg": 128,
+         "sta": 11,
+         "ap": 22,
+         "mindmg": 129,
          "maxdmg": 238,
          "speed": 2.8,
          "type": "Mace",
@@ -7204,12 +7297,13 @@ var gear = {
          "id": 23054
       },
       {
-         "name": "Iblis, Blade of the Fallen Seraph (Pre-Buff Values)",
+         "name": "Iblis, Blade of the Fallen Seraph",
          "crit": 1,
          "hit": 1,
          "ap": 26,
-         "mindmg": 70,
-         "maxdmg": 131,
+         "sta": 7,
+         "mindmg": 76,
+         "maxdmg": 133,
          "speed": 1.6,
          "type": "Sword",
          "source": "Naxx",
@@ -7428,12 +7522,12 @@ var gear = {
          "id": 19865
       },
       {
-         "name": "Widow's Remorse (Pre-Buff Values)",
+         "name": "Widow's Remorse",
          "hit": 1,
          "sta": 17,
          "ac": 100,
-         "mindmg": 70,
-         "maxdmg": 131,
+         "mindmg": 76,
+         "maxdmg": 133,
          "speed": 1.6,
          "type": "Sword",
          "source": "Naxx",
@@ -7490,6 +7584,17 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Stagwood Grasp",
+         "mindmg": 55,
+         "maxdmg": 102,
+         "speed": 1.7,
+         "haste": 1,
+         "type": "Fist",
+         "source": "Quest",
+         "phase": 7,
+         "id": 1170010,
+      },
       {
          "name": "Coldheart Icicle",
          "mindmg": 49,
@@ -8392,9 +8497,9 @@ var gear = {
          "name": "The Castigator",
          "crit": 1,
          "hit": 1,
-         "sta": 9,
-         "ap": 16,
-         "mindmg": 128,
+         "sta": 11,
+         "ap": 22,
+         "mindmg": 129,
          "maxdmg": 238,
          "speed": 2.8,
          "type": "Mace",
@@ -8515,12 +8620,12 @@ var gear = {
          "id": 23054
       },
       {
-         "name": "Iblis, Blade of the Fallen Seraph (Pre-Buff Values)",
+         "name": "Iblis, Blade of the Fallen Seraph",
          "crit": 1,
          "hit": 1,
          "ap": 26,
-         "mindmg": 70,
-         "maxdmg": 131,
+         "mindmg": 76,
+         "maxdmg": 133,
          "speed": 1.6,
          "type": "Sword",
          "source": "Naxx",
@@ -8682,12 +8787,12 @@ var gear = {
          "id": 19866
       },
       {
-         "name": "Widow's Remorse (Pre-Buff Values)",
+         "name": "Widow's Remorse",
          "hit": 1,
          "sta": 17,
          "ac": 100,
-         "mindmg": 70,
-         "maxdmg": 131,
+         "mindmg": 76,
+         "maxdmg": 133,
          "speed": 1.6,
          "type": "Sword",
          "source": "Naxx",
@@ -10034,6 +10139,13 @@ var enchant = {
          "name": "Sigil of Penetration",
          "arp": 75,
          "phase": 7
+      },
+      {
+         "id": 1170012,
+         "spellid": true,
+         "name": "Sigil of Quickness",
+         "haste": 2,
+         "phase": 7
       }
    ],
    "back": [
@@ -10425,6 +10537,15 @@ var enchant = {
 };
 
 var sets = [
+   {
+      id: 1170000001,
+      name: 'Dreamsteel Armor',
+      items: [1170002, 1170004, 1170006, 1170008],
+      bonus: [
+         { count: 2, stats: { ap: 26} },
+         { count: 4, stats: { arp: 100 } },
+      ]
+   },
    {
       id: 100000997,
       name: 'Convergence of the Elements',
