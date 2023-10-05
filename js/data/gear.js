@@ -1215,6 +1215,15 @@ var gear = {
    ],
    "back": [
       {
+         "name": "Windtalker Cape",
+         "str": 16,
+         "agi": 8,
+         "ac": 47,
+         "source": "Quest",
+         "phase": 7,
+         "id": 1170013
+      }
+      {
          "name": "Wildfire Cape",
          "source": "Pyroguard Emberseer",
          "ac": 43,
