@@ -1085,7 +1085,6 @@ SIM.UI = {
         if ($(table).find('tbody tr').length == 0) return;
 
         view.tcontainer.append(table);
-        console.log(view.tcontainer.find('table.enchant'));
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: true,
             sortList: editmode ? [[14, 1]] : [[13, 1]],
