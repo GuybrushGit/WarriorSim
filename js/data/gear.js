@@ -10078,6 +10078,12 @@ var gear = {
 var enchant = {
    "head": [
       {
+         "id": 1170013,
+         "name": "Invocation of Shattering",
+         "arp": 75,
+         "phase": 7
+      },
+      {
          "name": "Ice Guard",
          "source": "Quest",
          "subsource": "frost",
@@ -10299,6 +10305,12 @@ var enchant = {
       },
    ],
    "legs": [
+      {
+         "id": 1170013,
+         "name": "Invocation of Shattering",
+         "arp": 75,
+         "phase": 7
+      },
       {
          "id": 18329,
          "name": "Arcanum of Rapidity",
