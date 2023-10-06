@@ -5960,6 +5960,23 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Crystal Sword of the Blossom",
+         "sta": 11,
+         "resist": {
+             "nature": 7
+         },
+         "hit": 1,
+         "ap": 20,
+         "skill": 3,
+         "mindmg": 75,
+         "maxdmg": 139,
+         "speed": 1.8,
+         "type": "Sword",
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1170014
+      },
+      {
          "name": "Remnants of an Old God",
          "mindmg": 126,
          "maxdmg": 233,
@@ -7593,6 +7610,23 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Crystal Sword of the Blossom",
+         "sta": 11,
+         "resist": {
+             "nature": 7
+         },
+         "hit": 1,
+         "ap": 20,
+         "skill": 3,
+         "mindmg": 75,
+         "maxdmg": 139,
+         "speed": 1.8,
+         "type": "Sword",
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1170014
+      },
       {
          "name": "Stagwood Grasp",
          "mindmg": 55,
