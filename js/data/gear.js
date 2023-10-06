@@ -1222,7 +1222,7 @@ var gear = {
          "source": "Quest",
          "phase": 7,
          "id": 1170013
-      }
+      },
       {
          "name": "Wildfire Cape",
          "source": "Pyroguard Emberseer",
