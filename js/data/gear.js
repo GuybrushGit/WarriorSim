@@ -10161,6 +10161,11 @@ var enchant = {
          "name": "Sigil of Quickness",
          "haste": 2,
          "phase": 7
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "back": [
@@ -10210,6 +10215,11 @@ var enchant = {
          "name": "Lesser Agility",
          "agi": 3,
          "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "chest": [
@@ -10227,6 +10237,11 @@ var enchant = {
          "name": "Stats",
          "agi": 3,
          "str": 3,
+         "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
          "phase": 1
       }
    ],
@@ -10251,6 +10266,11 @@ var enchant = {
          "name": "Greater Agility",
          "agi": 7,
          "phase": 7
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "hands": [
@@ -10288,6 +10308,11 @@ var enchant = {
          "name": "Minor Haste",
          "haste": 1,
          "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "waist": [
@@ -10303,6 +10328,11 @@ var enchant = {
          "agi": 6,
          "phase": 7,
       },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
+      }
    ],
    "legs": [
       {
@@ -10328,6 +10358,11 @@ var enchant = {
          "name": "Lesser Arcanum of Voracity (Str)",
          "str": 8,
          "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "feet": [
@@ -10342,6 +10377,11 @@ var enchant = {
          "id": 13890,
          "spellid": true,
          "name": "Minor Speed",
+         "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
          "phase": 1
       }
    ],
@@ -10411,6 +10451,11 @@ var enchant = {
          "ap": 100,
          "phase": 6,
          "temp": true
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "offhand": [
@@ -10479,6 +10524,11 @@ var enchant = {
          "ap": 108,
          "phase": 6,
          "temp": true
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
+         "phase": 1
       }
    ],
    "twohand": [
@@ -10552,6 +10602,11 @@ var enchant = {
          "id": 6043,
          "name": "Iron Counterweight",
          "haste": 3,
+         "phase": 1
+      },
+      {
+         "id": 0,
+         "name": "No Enchant",
          "phase": 1
       }
    ]
