@@ -832,9 +832,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ?  [[15, 1],[1, 0]] : [[14, 1],[0, 0]],
+            sortList: editmode ?  [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
             textSorter : {
-                14 : function(a, b, direction, column, table) {
+                19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
                     if (isNaN(a)) a = 0;
@@ -843,7 +843,7 @@ SIM.UI = {
                 },
             },
             headers: {
-                14: { sorter: "text" }
+                19: { sorter: "text" }
             }
         });
 
@@ -950,9 +950,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[11, 1],[1, 0]] : [[10, 1],[0, 0]],
+            sortList: editmode ? [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
             textSorter : {
-                10 : function(a, b, direction, column, table) {
+                19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
                     if (isNaN(a)) a = 0;
@@ -961,7 +961,7 @@ SIM.UI = {
                 },
             },
             headers: {
-                10: { sorter: "text" }
+                19: { sorter: "text" }
             }
         });
 
@@ -1087,9 +1087,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[10, 1]] : [[9, 1]],
+            sortList: editmode ? [[14, 1]] : [[13, 1]],
             headers: {
-                9: { sorter: "text" }
+                13: { sorter: "text" }
             }
         });
 
