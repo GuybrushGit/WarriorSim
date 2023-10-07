@@ -6894,7 +6894,7 @@ var gear = {
          "id": 19365
       },
       {
-         "name": "Eskhandar's Right Claw *Classic PPM",
+         "name": "Eskhandar's Right Claw",
          "Mainhand": true,
          "agi": 4,
          "mindmg": 50,
