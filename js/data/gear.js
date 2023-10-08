@@ -83,7 +83,7 @@ var gear = {
       },
       {
          "name": "Darkflame Helm",
-         "str": 18,
+         "str": 25,
          "sta": 24,
          "hit": 1,
          "crit": 1,
@@ -3618,11 +3618,11 @@ var gear = {
          "ac": 169,
          "source": "Unknown",
          "phase": 7,
-         "id": 823467786234
+         "id": 1170017
       },
       {
          "name": "Ancient Jade Leggings",
-         "str": 21,
+         "agi": 26,
          "skill": 8,
          "type": "Mace",
          "crit": 1,
@@ -4094,9 +4094,9 @@ var gear = {
          "sta": 20,
          "arp": 50,
          "ac": 515,
-         "source": "Unknown",
+         "source": "LowerKara",
          "phase": 7,
-         "id": 61246,
+         "id": 61246
       },
       {
          "name": "Sternrock Trudgers",
@@ -5620,6 +5620,15 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Nature's Call",
+         "sta": 5,
+         "hit": 1,
+         "arp": 50,
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1170015
+      },
+      {
          "name": "Polished Ironwood Crossbow",
          "sta": 6,
          "ap": 26,
@@ -5959,6 +5968,20 @@ var gear = {
       }
    ],
    "mainhand": [
+      {
+         "name": "Axe of Dormant Slumber",
+         "mindmg": 90,
+         "maxdmg": 166,
+         "speed": 2.2,
+         "hit": 1,
+         "sta": 11,
+         "str": 8,
+         "ac": 100,
+         "type": "Axe",
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1170016
+      },
       {
          "name": "Crystal Sword of the Blossom",
          "sta": 11,
@@ -7610,6 +7633,20 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Axe of Dormant Slumber",
+         "mindmg": 90,
+         "maxdmg": 166,
+         "speed": 2.2,
+         "hit": 1,
+         "sta": 11,
+         "str": 8,
+         "ac": 100,
+         "type": "Axe",
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1170016
+      },
       {
          "name": "Crystal Sword of the Blossom",
          "sta": 11,
