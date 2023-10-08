@@ -814,6 +814,17 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Towerforge Pauldrons",
+         "source": "LowerKara",
+         "ac": 317,
+         "sta": 20,
+         "str": 17,
+         "haste": 1,
+         "crit": 1,
+         "phase": 7,
+         "id": 1913911111
+      },
+      {
          "name": "Fireguard Shoulders",
          "source": "MC",
          "ac": 159,
@@ -6013,6 +6024,19 @@ var gear = {
          "id": 1170014
       },
       {
+         "name": "Claw of Senthos",
+         "mindmg": 86,
+         "maxdmg": 145,
+         "speed": 2.4,
+         "crit": 1,
+         "sta": 5,
+         "ap": 20,
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 1238927894323479,
+         "Mainhand": true
+      },
+      {
          "name": "Remnants of an Old God",
          "mindmg": 126,
          "maxdmg": 233,
@@ -10804,6 +10828,17 @@ var sets = [
       items: [23315,23314,23287,23286,23301,23300],
       bonus: [
          { count: 2, stats: { ap: 40 } }
+      ]
+   },
+   {
+      id: 54511111,
+      name: 'Towerforge Battlegear',
+      items: [1913911111,1913911112,1913911113,19139111114],
+      bonus: [
+         {
+           count: 2, stats: { skill: 6, type: "Mace" },
+           count: 4, stats: { procspell: "TowerForgeSetBonus", procchance: 2 }
+         }
       ]
    },
    {
