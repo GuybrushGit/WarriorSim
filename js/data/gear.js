@@ -5969,6 +5969,19 @@ var gear = {
    ],
    "mainhand": [
       {
+         "name": "Anasterian's Legacy",
+         "sta": 16,
+         "agi": 16,
+         "skill": 4,
+         "mindmg": 57,
+         "maxdmg": 104,
+         "speed": 1.5,
+         "type": "Sword",
+         "source": "LowerKara",
+         "phase": 7,
+         "id": 1170018
+      },
+      {
          "name": "Axe of Dormant Slumber",
          "mindmg": 90,
          "maxdmg": 166,
@@ -7633,6 +7646,19 @@ var gear = {
       }
    ],
    "offhand": [
+      {
+         "name": "Anasterian's Legacy",
+         "sta": 16,
+         "agi": 16,
+         "skill": 4,
+         "mindmg": 57,
+         "maxdmg": 104,
+         "speed": 1.5,
+         "type": "Sword",
+         "source": "LowerKara",
+         "phase": 7,
+         "id": 1170018
+      },
       {
          "name": "Axe of Dormant Slumber",
          "mindmg": 90,
