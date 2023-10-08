@@ -815,7 +815,7 @@ var gear = {
    "shoulder": [
       {
          "name": "Towerforge Pauldrons",
-         "source": "LowerKara",
+         "source": "Crafting",
          "ac": 317,
          "sta": 20,
          "str": 17,
