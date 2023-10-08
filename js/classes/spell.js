@@ -1053,6 +1053,15 @@ class PrimalBlessing extends Aura {
     }
 }
 
+class TowerForgeSetBonus extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.stats = { str: 50 };
+        this.name = 'Tower Forge Strength Set Bonus';
+    }
+}
+
 class BloodrageAura extends Aura {
     constructor(player) {
         super(player);
