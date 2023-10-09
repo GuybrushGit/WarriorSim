@@ -1594,6 +1594,7 @@ var gear = {
          "name": "Breastplate of Earthen Might",
          "crit": 2,
          "ap": 40,
+         "arp": 100,
          "sta": 18,
          "ac": 458,
          "source": "EmerSanc",
