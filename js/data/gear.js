@@ -1591,6 +1591,16 @@ var gear = {
    ],
    "chest": [
       {
+         "name": "Breastplate of Earthen Might",
+         "crit": 2,
+         "ap": 40,
+         "sta": 18,
+         "ac": 458,
+         "source": "EmerSanc",
+         "phase": 7,
+         "id": 218141111
+      },
+      {
          "name": "Volcanic Breastplate",
          "source": "Crafting",
          "ac": 268,
@@ -3022,6 +3032,16 @@ var gear = {
       }
    ],
    "waist": [
+      {
+         "name": "Earthbreaker Belt",
+         "sta": 15,
+         "crit": 1,
+         "arp": 50,
+         "source": "EmerSanc",
+         "ac": 237,
+         "phase": 7,
+         "id": 1170006
+      },
       {
          "name": "Dreamhide Belt",
          "sta": 14,
