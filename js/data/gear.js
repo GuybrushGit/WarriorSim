@@ -1286,7 +1286,7 @@ var gear = {
          "str": 22,
          "hit": 1,
          "ac": 51,
-         "source": "Unknown",
+         "source": "LowerKara",
          "phase": 7,
          "id": 61249,
       },
@@ -3654,12 +3654,14 @@ var gear = {
       {
          "name": "Leggings of the Inferno",
          "crit": 1,
-         "str": 18,
-         "sta": 18,
-         "agi": 18,
-         "haste": 1,
+         "resist": {
+             "fire": 10
+         },
+         "str": 16,
+         "sta": 22,
+         "agi": 22,
          "ac": 169,
-         "source": "Unknown",
+         "source": "LowerKara",
          "phase": 7,
          "id": 1170017
       },
