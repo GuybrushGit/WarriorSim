@@ -1597,7 +1597,7 @@ var gear = {
          "arp": 100,
          "sta": 18,
          "ac": 458,
-         "source": "EmerSanc",
+         "source": "LowerKara",
          "phase": 7,
          "id": 218141111
       },
@@ -3038,6 +3038,7 @@ var gear = {
          "sta": 15,
          "crit": 1,
          "arp": 50,
+         "ap": 100,
          "source": "EmerSanc",
          "ac": 237,
          "phase": 7,
