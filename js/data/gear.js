@@ -3038,7 +3038,7 @@ var gear = {
          "sta": 15,
          "crit": 1,
          "arp": 50,
-         "ap": 100,
+         "ap": 40,
          "source": "EmerSanc",
          "ac": 237,
          "phase": 7,
