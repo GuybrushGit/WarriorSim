@@ -2168,6 +2168,16 @@ var gear = {
    ],
    "wrist": [
       {
+         "name": "Granitized Bracers",
+         "sta": 12,
+         "ap": 22,
+         "arp": 30,
+         "source": "LowerKara",
+         "ac": 174,
+         "phase": 7,
+         "id": 1171001
+      },
+      {
          "name": "Dreamhide Bracers",
          "sta": 5,
          "str": 18,
