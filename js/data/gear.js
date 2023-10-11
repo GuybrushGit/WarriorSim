@@ -814,6 +814,17 @@ var gear = {
    ],
    "shoulder": [
       {
+         "name": "Dreamsteel Bracers",
+         "str": 33,
+         "agi": 12,
+	 "ap": 12,
+         "haste": 1,
+         "source": "Crafting",
+         "ac": 638,
+         "phase": 7,
+         "id": 21170002 // Wrong ID
+      },
+      {
          "name": "Towerforge Pauldrons",
          "source": "Crafting",
          "ac": 317,
@@ -10933,3 +10944,4 @@ var sets = [
       ]
    },
 ];
+module.exports = { sets, gear, enchant };
