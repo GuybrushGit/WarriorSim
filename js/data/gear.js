@@ -5665,6 +5665,14 @@ var gear = {
    ],
    "ranged": [
       {
+         "name": "Time Frozen Bow",
+         "hit": 1,
+         "haste": 1,
+         "source": "Caverns of Time",
+         "phase": 7,
+         "id": 2170016 // incorrect id
+      },
+      {
          "name": "Nature's Call",
          "sta": 5,
          "hit": 1,
