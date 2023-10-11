@@ -2,7 +2,7 @@ var gear = {
    "head": [
       {
          "name": "Dark Iron Helm",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 758,
          "sta": 20,
          "subsource": "fire",
@@ -1535,7 +1535,7 @@ var gear = {
    "wrist": [
       {
          "name": "Dark Iron Bracer",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 394,
          "sta": 7,
          "subsource": "fire",
@@ -1813,7 +1813,7 @@ var gear = {
    "hands": [
       {
          "name": "Dark Iron Gauntlets",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 495,
          "sta": 16,
          "agi": 12,
@@ -2111,7 +2111,7 @@ var gear = {
    "waist": [
       {
          "name": "Molten Belt",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 118,
          "sta": 16,
          "agi": 28,
@@ -2407,7 +2407,7 @@ var gear = {
       },
       {
          "name": "Dark Iron Leggings",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 778,
          "sta": 14,
          "subsource": "fire",
@@ -2755,7 +2755,7 @@ var gear = {
    "feet": [
       {
          "name": "Corehound Boots",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 126,
          "sta": 10,
          "agi": 13,
@@ -2768,7 +2768,7 @@ var gear = {
       },
       {
          "name": "Dark Iron Boots of the Tiger",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 664,
          "agi": 11,
          "str": 11,
