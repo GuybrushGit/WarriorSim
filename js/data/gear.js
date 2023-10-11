@@ -2,7 +2,7 @@ var gear = {
    "head": [
       {
          "name": "Dark Iron Helm",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 758,
          "sta": 20,
          "subsource": "fire",
@@ -2182,7 +2182,7 @@ var gear = {
          "sta": 5,
          "str": 18,
          "agi": 4,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 87,
          "phase": 7,
          "id": 1170001
@@ -2192,14 +2192,14 @@ var gear = {
          "sta": 12,
          "str": 18,
          "haste": 1,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 318,
          "phase": 7,
          "id": 1170002
       },
       {
          "name": "Dark Iron Bracer",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 394,
          "sta": 7,
          "subsource": "fire",
@@ -2568,7 +2568,7 @@ var gear = {
    "hands": [
       {
          "name": "Dark Iron Gauntlets",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 495,
          "sta": 16,
          "agi": 12,
@@ -3048,7 +3048,7 @@ var gear = {
          "sta": 15,
          "crit": 1,
          "arp": 50,
-         "ap": 40,
+         "ap": 44,
          "source": "EmerSanc",
          "ac": 237,
          "phase": 7,
@@ -3060,14 +3060,14 @@ var gear = {
          "str": 19,
          "agi": 15,
          "haste": 1,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 108,
          "phase": 7,
          "id": 1170005
       },
       {
          "name": "Molten Belt",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 118,
          "sta": 16,
          "agi": 28,
@@ -3534,7 +3534,7 @@ var gear = {
          "sta": 9,
          "haste": 3,
          "agi": 26,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 228,
          "phase": 7,
          "id": 1170003
@@ -3545,7 +3545,7 @@ var gear = {
          "str": 36,
          "haste": 1,
          "arp": 50,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 648,
          "phase": 7,
          "id": 1170004
@@ -3566,7 +3566,7 @@ var gear = {
       },
       {
          "name": "Dark Iron Leggings",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 778,
          "sta": 14,
          "subsource": "fire",
@@ -4068,14 +4068,14 @@ var gear = {
          "str": 31,
          "agi": 7,
          "arp": 20,
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 108,
          "phase": 7,
          "id": 1170008
       },
       {
          "name": "Corehound Boots",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 126,
          "sta": 10,
          "agi": 13,
@@ -4088,7 +4088,7 @@ var gear = {
       },
       {
          "name": "Dark Iron Boots of the Tiger",
-         "source": "Crafted",
+         "source": "Crafting",
          "ac": 664,
          "agi": 11,
          "str": 11,
