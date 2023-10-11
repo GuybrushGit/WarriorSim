@@ -10944,4 +10944,3 @@ var sets = [
       ]
    },
 ];
-module.exports = { sets, gear, enchant };
