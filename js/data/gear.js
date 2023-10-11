@@ -3931,8 +3931,8 @@ var gear = {
    "ranged": [
       {
          "name": "Polished Ironwood Crossbow",
-         "sta": 6,
-         "ap": 26,
+         "sta": 5,
+         "ap": 24,
          "resist": {
              "nature": 7
          },
@@ -3958,13 +3958,6 @@ var gear = {
          "source": "Dungeon",
          "phase": "1",
          "id": 18680
-      },
-      {
-         "name": "Bow of Taut Sinew",
-         "ap": 22,
-         "source": "AQ20",
-         "phase": "5",
-         "id": 21478
       },
       {
          "name": "Gorewood Bow",
@@ -4111,14 +4104,6 @@ var gear = {
          "source": "Naxx",
          "phase": "6",
          "id": 22812
-      },
-      {
-         "name": "Polished Ironwood Crossbow",
-         "sta": 5,
-         "ap": 24,
-         "source": "Emeriss",
-         "phase": "4",
-         "id": 20599
       },
       {
          "name": "Skull Splitting Crossbow",
