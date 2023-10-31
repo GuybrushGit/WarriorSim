@@ -124,7 +124,7 @@ class Execute extends Spell {
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.usedrage = ~~this.player.rage;
-        this.timer = batching - (step % batching);
+        this.timer = 400 - (step % 400);
     }
     step(a) {
         if (this.timer <= a) {
@@ -811,7 +811,7 @@ class Windfury extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + 1500;
         this.starttimer = step;
-        this.mintime = step % batching;
+        this.mintime = step % 400;
         this.stacks = 2;
         this.player.updateAP();
         this.player.extraattacks++;

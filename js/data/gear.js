@@ -312,16 +312,6 @@ var gear = {
          "source": "Dungeon",
          "phase": 1,
          "id": 11735
-      },
-      {
-         "name": "Gurubashi Helm",
-         "str": 22,
-         "agi": 21,
-         "sta": 13,
-         "ac": 549,
-         "source": "ZG",
-         "phase": 4,
-         "id": 20263
       }
    ],
    "neck": [
@@ -1521,15 +1511,6 @@ var gear = {
          "source": "Crafting",
          "phase": 4,
          "id": 19693
-      },
-      {
-         "name": "Thick Obsidian Breastplate",
-         "str": 38,
-         "sta": 16,
-         "ac": 814,
-         "source": "Crafting",
-         "phase": 5,
-         "id": 22196
       }
    ],
    "wrist": [

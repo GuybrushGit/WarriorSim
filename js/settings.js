@@ -210,12 +210,6 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
-        view.fight.on('change', 'select[name="batching"]', function (e) {
-            e.stopPropagation();
-            SIM.UI.updateSession();
-            SIM.UI.updateSidebar();
-        });
-
     },
 
     toggleArticle: function(label) {
