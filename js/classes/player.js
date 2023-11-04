@@ -18,7 +18,7 @@ class Player {
     constructor(testItem, testType, enchtype, config) {
         if (!config) config = Player.getConfig();
         this.rage = 0;
-        this.level = 60;
+        this.level = 25;
         this.timer = 0;
         this.itemtimer = 0;
         this.dodgetimer = 0;

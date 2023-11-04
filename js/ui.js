@@ -598,6 +598,7 @@ SIM.UI = {
         view.sidebar.find('#fire-resist').html(player.stats.resist.fire);
         view.sidebar.find('#frost-resist').html(player.stats.resist.frost);
         view.sidebar.find('#race').text(localStorage.race);
+        view.sidebar.find('#level').text(localStorage.level);
         view.sidebar.find('#sets').empty();
 
         for (let set of sets) {
@@ -782,7 +783,7 @@ SIM.UI = {
                     continue;
             }
 
-            let source = item.source.toLowerCase(), phase = item.phase;
+            let source = (item.source || "").toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
 
@@ -891,7 +892,7 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            let source = item.source.toLowerCase(), phase = item.phase;
+            let source = (item.source || "").toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
 

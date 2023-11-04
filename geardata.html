@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Warrior DPS Sim</title>
+
+  <link href="dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./geardata.js"></script>
+</head>
+<body>
+
+  <textarea style="width: 100%; height: 100vh;">
+
+    </textarea>
+
+    <script>
+      $(document).ready(function () {
+        var gear25 = {
+          head: [],
+          neck: [],
+          shoulder: [],
+          back: [],
+          chest: [],
+          wrist: [],
+          hands: [],
+          waist: [],
+          legs: [],
+          feet: [],
+          finger1: [],
+          finger2: [],
+          trinket1: [],
+          trinket2: [],
+          ranged: [],
+          mainhand: [],
+          offhand: [],
+          twohand: [],
+          custom: []
+        };
+
+        var enchant25 = {
+          head: [],
+          neck: [],
+          shoulder: [],
+          back: [],
+          chest: [],
+          wrist: [],
+          hands: [],
+          waist: [],
+          legs: [],
+          feet: [],
+          finger1: [],
+          finger2: [],
+          trinket1: [],
+          trinket2: [],
+          ranged: [],
+          mainhand: [],
+          offhand: [],
+          twohand: []
+        };
+        
+        data.forEach(d => {
+
+          //if (d.slot != "Main Hand") return; 
+
+
+          if (d.class != "Weapon" && d.class != "Armor") return;
+          if (d.requiredLevel > 25 || d.requiredLevel == 0) return;
+          if (d.quality == "Common" || d.quality == "Poor" || d.quality == "Uncommon") return;
+          if (d.slot == "Held In Off-hand" || d.slot == "Non-equippable" || d.slot == "Relic" || d.slot == "Shirt" || d.slot == "Tabard" || d.slot == "Thrown") return;
+
+          let slot = d.slot.toLowerCase();
+          slot = slot.replace(" ","");
+          slot = slot.replace("-","");
+          let obj = {
+            name: d.name,
+            source: (!d.source || d.source.category != "Boss Drop" ? "Other" : "Dungeon"),
+            sourceZone: (d.source && d.source.zone) || 0,
+            type: d.subclass,
+            slot: d.slot,
+            id: d.itemId,
+            reqLevel: d.requiredLevel,
+            phase: d.contentPhase,
+            //obj: d,
+          };
+          d.tooltip.forEach(tt => {
+            if (/[+-]\d+ Stamina/.test(tt.label)) obj.sta = parseInt(tt.label);
+            if (/[+-]\d+ Strength/.test(tt.label)) obj.str = parseInt(tt.label);
+            if (/[+-]\d+ Agility/.test(tt.label)) obj.agi = parseInt(tt.label);
+            if (/[+-]\d+ Attack Power/.test(tt.label)) obj.ap = parseInt(tt.label);
+
+            let dmg = tt.label.match(/(\d+) - (\d+) Damage/);
+            if (dmg) {
+              obj.mindmg = parseInt(dmg[1]);
+              obj.maxdmg = parseInt(dmg[2]);
+            }
+
+            let speed = tt.label.match(/Speed ([\d.]+)/);
+            if (speed) obj.speed = parseFloat(speed[1]);
+          });
+
+          if (slot == "finger") {
+            gear25["finger1"].push(obj);
+            gear25["finger2"].push(obj);
+          }
+          else if (slot == "trinket") {
+            gear25["trinket1"].push(obj);
+            gear25["trinket2"].push(obj);
+          }
+          else if (slot == "onehand") {
+            gear25["mainhand"].push(obj);
+            gear25["offhand"].push(obj);
+          }
+          else {
+            gear25[slot].push(obj);
+          }
+        });
+
+        console.log(gear25);
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear25, null, 2) + "; var enchant = " + JSON.stringify(enchant25, null, 2) + "; var sets = [];";
+      });
+    </script>
+
+</body>
+
+</html>
