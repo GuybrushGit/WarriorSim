@@ -50,8 +50,12 @@
     .tabs {
         display: flex;
         justify-content: center;
-        gap: 10px;
-        padding-top: 20px;
+        .btn {
+            width: 50%;
+            border-radius: 0;
+            border-left: 0;
+            border-right: 0;
+        }
     }
 
     .character {
@@ -63,6 +67,10 @@
             font-weight: bold;
             margin: 4px 0;
             text-shadow: 1px 1px darkblue;
+        }
+
+        .hidden {
+            display: none;
         }
     }
 
@@ -109,7 +117,7 @@
 
     .bottom {
         position: absolute;
-        bottom: 60px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -226,20 +234,16 @@
     }
 
     .author {
-        position: absolute;
-        left: 0;
-        bottom: 48px;
         width: 100%;
         text-align: center;
         font-size: 10px;
         opacity: 0.5;
         font-style: italic;
+        padding-bottom: 16px;
     }
 
     .manual {
-        position: absolute;
-        left: 0;
-        bottom: 20px;
+        padding: 4px;
         width: 100%;
         text-align: center;
         text-transform: uppercase;

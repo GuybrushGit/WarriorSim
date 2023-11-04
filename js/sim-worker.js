@@ -12,7 +12,7 @@ importScripts(
 
 onmessage = (event) => {
     const params = event.data;
-    if (params.globals.sod) importScripts('./data/gear_sod.min.js');
+    if (params.globals.sod) importScripts('./data/gear_sod.min.js','./data/runes.min.js');
     else importScripts('./data/gear.min.js');
     updateGlobals(params.globals);
     // console.log('starting sim-worker', params);

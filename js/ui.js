@@ -166,6 +166,32 @@ SIM.UI = {
             view.updateSession();
             view.updateSidebar();
         });
+
+        view.tcontainer.on('click', 'table.runes td:not(.ppm)', function(e) {
+            var table = $(this).parents('table');
+            var tr = $(this).parent();
+            var temp = tr.data('temp');
+
+            if (table.hasClass('editmode')) {
+                if (tr.hasClass('hidden'))
+                    view.rowShowRunes(tr);
+                else
+                    view.rowHideRunes(tr);
+                return;
+            }
+
+            if (tr.hasClass('active')) {
+                view.rowDisableRunes(tr);
+            }
+            else {
+                let disable = table.find('tr.active').first();
+                if (disable.length) view.rowDisableRunes(disable);
+                view.rowEnableRunes(tr);
+            }
+
+            view.updateSession();
+            view.updateSidebar();
+        });
     },
 
     enableEditMode: function() {
@@ -556,6 +582,51 @@ SIM.UI = {
         }
     },
 
+    rowDisableRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id'))
+                runes[type][i].selected = false;
+        }
+    },
+
+    rowEnableRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.addClass('active');
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id'))
+                runes[type][i].selected = true;
+        }
+    },
+
+    rowHideRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        tr.addClass('hidden');
+        tr.find('.hide').html(eyesvghidden);
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id')) {
+                runes[type][i].hidden = true;
+                runes[type][i].selected = false;
+            }
+        }
+    },
+
+    rowShowRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('hidden');
+        tr.find('.hide').html(eyesvg);
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id'))
+                runes[type][i].hidden = false;
+        }
+    },
+
     startLoading: function() {
         let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.addClass('loading');
@@ -635,7 +706,7 @@ SIM.UI = {
         obj.spelldamage = view.fight.find('input[name="spelldamage"]').val();
         obj.batching = view.fight.find('select[name="batching"]').val();
 
-        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _resistance = {};
+        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
         view.filter.find('.sources .active').each(function () { _sources.push($(this).attr('data-id')); });
         view.filter.find('.phases .active').each(function () { _phases.push($(this).attr('data-id')); });
@@ -671,6 +742,15 @@ SIM.UI = {
             }
         }
 
+        if (typeof runes !== "undefined") {
+            for (let type in runes) {
+                _runes[type] = [];
+                for (let item of runes[type]) {
+                    _runes[type].push({id:item.id,selected:item.selected,hidden:item.hidden});
+                }
+            }
+        }
+
         var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
         for (let resist in resistances) {
             var element = resistances[resist];
@@ -684,6 +764,7 @@ SIM.UI = {
         obj.talents = _talents;
         obj.gear = _gear;
         obj.enchant = _enchant;
+        obj.runes = _runes;
         obj.resistance = _resistance;
         localStorage[mode] = JSON.stringify(obj);
     },
@@ -708,6 +789,7 @@ SIM.UI = {
             rotation: !storage.rotation ? JSON.parse(session.rotation) : storage.rotation,
             gear: !storage.gear ? JSON.parse(session.gear) : storage.gear,
             enchant: !storage.enchant ? JSON.parse(session.enchant) : storage.enchant,
+            runes: !storage.runes ? JSON.parse(session.runes || "{}") : storage.runes,
             resistances: !storage.resistances ? null : storage.resistances,
         });
 
@@ -759,11 +841,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Crit</th>
                                 <th>Hit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire R</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost R</th>
                                 <th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
@@ -971,6 +1053,7 @@ SIM.UI = {
             }
         });
 
+        view.loadRunes(type, editmode);
         view.loadEnchants(type, editmode);
         view.updateSession();
         view.updateSidebar();
@@ -1100,6 +1183,49 @@ SIM.UI = {
         });
 
         view.main.find('.js-enchant').show();
+    },
+
+    loadRunes: function (type, editmode) {
+        var view = this;
+
+        if (!runes[type] || runes[type].length == 0) return;
+
+        let table = `<table class="runes ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
+                        <thead>
+                            <tr>
+                                ${editmode ? '<th></th>' : ''}
+                                <th>Rune</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                    <tbody>`;
+
+        for (let item of runes[type]) {
+
+            if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
+                continue;
+
+            if (item.hidden && !editmode) continue;
+
+            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
+                        <td>${item.name}</td>
+                        <td>${item.description}</td>
+                    </tr>`;
+        }
+
+        table += '</tbody></table></section>';
+
+        if ($(table).find('tbody tr').length == 0) return;
+
+        view.tcontainer.append(table);
+        view.tcontainer.find('table.runes').tablesorter({
+            widthFixed: true,
+            sortList: editmode ? [[1, 0]] : [[0, 0]],
+            headers: {
+                0: { sorter: "text" }
+            }
+        });
     },
 
     addAlert: function (msg) {

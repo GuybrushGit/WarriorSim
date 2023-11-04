@@ -1,6 +1,3 @@
-.hidden {
-    display: none;
-}
 .settings {
     width: 0;
     height: auto;
@@ -137,7 +134,7 @@
         width: 330px;
     }
 
-    .rotation {
+    .rotation, .runes {
         width: calc(100% - 670px);
         font-size: 0;
 
@@ -224,6 +221,34 @@
             }
         }
        
+    }
+
+    .runes {
+        width: 100%;
+
+        .container {
+            display: flex; 
+            gap: 40px;
+            & > div {
+                width: 33%;
+                &:before {
+                    font-size: 12px;
+                    font-family: Open Sans,sans-serif;
+                }
+                &.chest:before {
+                    content: "Chest:";
+                }
+                &.legs:before {
+                    content: "Legs:";
+                }
+                &.gloves:before {
+                    content: "Gloves:";
+                }
+            }
+        }
+        .spell {
+            width: 100%;
+        }
     }
 
     .talents {

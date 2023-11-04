@@ -1,6 +1,4 @@
-.hidden {
-    display: none;
-}
+
 section.main {
     width: 80%;
     max-width: calc(100% - 320px);
@@ -138,8 +136,8 @@ section.main {
         margin-top: 40px;
         tbody td:first-of-type:not(.hide),
         tbody td.hide + td {
-            width: 40%;
-            min-width: 40%;
+            width: 20%;
+            min-width: 20%;
         }
     }
 

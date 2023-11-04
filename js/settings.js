@@ -302,6 +302,17 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             }
 
+            // runes
+            if (spell.id > 900000) {
+                if (mode != "sod") continue;
+                div.find('.options').empty();
+                div.find('.options').append(`<li><strong>${spell.name}</strong></li>`);
+                div.find('.options').append(`<li>${spell.description}</li>`);
+                // TODO
+                //view.runes.find('.' + spell.slot).append(div);
+                continue;
+            }
+
             view.rotation.find('div:first').append(div);
         }
 

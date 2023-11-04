@@ -21,6 +21,18 @@ function getGlobalsDelta() {
             }
         });
     }
+    const _runes = {};
+    if (typeof runes !== "undefined") {
+        for (const type in runes) {
+            _runes[type] = runes[type].map((item) => {
+                return {
+                    id: item.id,
+                    selected: item.selected,
+                    hidden: item.hidden,
+                }
+            });
+        }
+    }
     return {
         talents: talents.map((tree) => {
             return {
@@ -33,6 +45,7 @@ function getGlobalsDelta() {
         rotation: spells,
         gear: _gear,
         enchant: _enchant,
+        runes: _runes,
         sod: window.location.href.indexOf("sod") > -1
     }
 }
@@ -67,6 +80,14 @@ function updateGlobals(params) {
             for (let j of enchant[type])
                 if (i.id == j.id) {
                     j.dps = i.dps;
+                    j.selected = i.selected;
+                    j.hidden = i.hidden;
+                }
+
+    for (let type in params.runes)
+        for (let i of params.runes[type])
+            for (let j of runes[type])
+                if (i.id == j.id) {
                     j.selected = i.selected;
                     j.hidden = i.hidden;
                 }
