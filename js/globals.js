@@ -33,6 +33,7 @@ function getGlobalsDelta() {
         rotation: spells,
         gear: _gear,
         enchant: _enchant,
+        sod: window.location.href.indexOf("sod") > -1
     }
 }
 

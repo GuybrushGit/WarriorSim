@@ -66,7 +66,7 @@
         
         data.forEach(d => {
 
-          //if (d.slot != "Main Hand") return; 
+          //if (d.name != "Cruel Barb") return; 
 
 
           if (d.class != "Weapon" && d.class != "Armor") return;
@@ -86,13 +86,13 @@
             id: d.itemId,
             reqLevel: d.requiredLevel,
             phase: d.contentPhase,
-            //obj: d,
+            obj: d,
           };
           d.tooltip.forEach(tt => {
             if (/[+-]\d+ Stamina/.test(tt.label)) obj.sta = parseInt(tt.label);
             if (/[+-]\d+ Strength/.test(tt.label)) obj.str = parseInt(tt.label);
             if (/[+-]\d+ Agility/.test(tt.label)) obj.agi = parseInt(tt.label);
-            if (/[+-]\d+ Attack Power/.test(tt.label)) obj.ap = parseInt(tt.label);
+            if (/Equip: [+-]\d+ Attack Power/.test(tt.label)) obj.ap = parseInt(tt.label.replace("Equip: ",""));
 
             let dmg = tt.label.match(/(\d+) - (\d+) Damage/);
             if (dmg) {

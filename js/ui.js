@@ -40,7 +40,7 @@ SIM.UI = {
             e.preventDefault();
             $(this).toggleClass('active');
             window.scrollTo(0, 0);
-            $('section.settings').height(view.body.outerHeight());
+            $('section.settings').css('min-height', view.body.outerHeight() + 'px');
             $('section.settings').toggleClass('active');
             view.sidebar.find('.js-stats').removeClass('active');
             $('section.stats').removeClass('active');
@@ -573,6 +573,7 @@ SIM.UI = {
     updateSidebar: function () {
         var view = this;
         var player = new Player();
+        let storage = JSON.parse(localStorage[mode]);
 
         let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
         if (!player.mh) return;
@@ -597,8 +598,8 @@ SIM.UI = {
         view.sidebar.find('#nature-resist').html(player.stats.resist.nature);
         view.sidebar.find('#fire-resist').html(player.stats.resist.fire);
         view.sidebar.find('#frost-resist').html(player.stats.resist.frost);
-        view.sidebar.find('#race').text(localStorage.race);
-        view.sidebar.find('#level').text(localStorage.level);
+        view.sidebar.find('#race').text(storage.race);
+        view.sidebar.find('#level').text(storage.level);
         view.sidebar.find('#sets').empty();
 
         for (let set of sets) {
@@ -616,22 +617,23 @@ SIM.UI = {
     updateSession: function () {
         var view = this;
 
-        localStorage.level = view.fight.find('input[name="level"]').val();
-        localStorage.race = view.fight.find('select[name="race"]').val();
-        localStorage.simulations = view.fight.find('input[name="simulations"]').val();
-        localStorage.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
-        localStorage.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
-        localStorage.executeperc = view.fight.find('input[name="executeperc"]').val();
-        localStorage.startrage = view.fight.find('input[name="startrage"]').val();
-        localStorage.targetlevel = view.fight.find('input[name="targetlevel"]').val();
-        localStorage.targetarmor = view.fight.find('input[name="targetarmor"]').val();
-        localStorage.targetresistance = view.fight.find('input[name="targetresistance"]').val();
-        localStorage.adjacent = view.fight.find('input[name="adjacent"]').val();
-        localStorage.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
-        localStorage.aqbooks = view.fight.find('select[name="aqbooks"]').val();
-        localStorage.weaponrng = view.fight.find('select[name="weaponrng"]').val();
-        localStorage.spelldamage = view.fight.find('input[name="spelldamage"]').val();
-        localStorage.batching = view.fight.find('select[name="batching"]').val();
+        let obj = {};
+        obj.level = view.fight.find('input[name="level"]').val();
+        obj.race = view.fight.find('select[name="race"]').val();
+        obj.simulations = view.fight.find('input[name="simulations"]').val();
+        obj.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
+        obj.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
+        obj.executeperc = view.fight.find('input[name="executeperc"]').val();
+        obj.startrage = view.fight.find('input[name="startrage"]').val();
+        obj.targetlevel = view.fight.find('input[name="targetlevel"]').val();
+        obj.targetarmor = view.fight.find('input[name="targetarmor"]').val();
+        obj.targetresistance = view.fight.find('input[name="targetresistance"]').val();
+        obj.adjacent = view.fight.find('input[name="adjacent"]').val();
+        obj.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
+        obj.aqbooks = view.fight.find('select[name="aqbooks"]').val();
+        obj.weaponrng = view.fight.find('select[name="weaponrng"]').val();
+        obj.spelldamage = view.fight.find('input[name="spelldamage"]').val();
+        obj.batching = view.fight.find('select[name="batching"]').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
@@ -675,39 +677,42 @@ SIM.UI = {
             _resistance[element] = $(".resistances[data-id='"+element+"-resist']").prop("checked");
         }
 
-        localStorage.buffs = JSON.stringify(_buffs);
-        localStorage.rotation = JSON.stringify(_rotation);
-        localStorage.sources = JSON.stringify(_sources);
-        localStorage.phases = JSON.stringify(_phases);
-        localStorage.talents = JSON.stringify(_talents);
-        localStorage.gear = JSON.stringify(_gear);
-        localStorage.enchant = JSON.stringify(_enchant);
-        localStorage.resistances = JSON.stringify(_resistance);
+        obj.buffs = _buffs;
+        obj.rotation = _rotation;
+        obj.sources = _sources;
+        obj.phases = _phases;
+        obj.talents = _talents;
+        obj.gear = _gear;
+        obj.enchant = _enchant;
+        obj.resistance = _resistance;
+        localStorage[mode] = JSON.stringify(obj);
     },
 
     loadSession: function () {
         var view = this;
 
-        if (!localStorage.length) view.firstSession();
+        if (localStorage.level) localStorage.clear(); // clear old style of storage
+        if (!localStorage[mode]) localStorage[mode] = "{}";
 
-        for (let prop in localStorage) {
-            view.fight.find('input[name="' + prop + '"]').val(localStorage[prop]);
-            view.fight.find('select[name="' + prop + '"]').val(localStorage[prop]);
+        let storage = JSON.parse(localStorage[mode]);
+        for (let prop in storage) {
+            view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
+            view.fight.find('select[name="' + prop + '"]').val(storage[prop]);
         }
 
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
 
         updateGlobals({
-            talents: !localStorage.talents ? JSON.parse(session.talents) : JSON.parse(localStorage.talents),
-            buffs: !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs),
-            rotation: !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation),
-            gear: !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear),
-            enchant: !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant),
-            resistances: !localStorage.resistances ? null : JSON.parse(localStorage.resistances),
+            talents: !storage.talents ? JSON.parse(session.talents) : storage.talents,
+            buffs: !storage.buffs ? JSON.parse(session.buffs) : storage.buffs,
+            rotation: !storage.rotation ? JSON.parse(session.rotation) : storage.rotation,
+            gear: !storage.gear ? JSON.parse(session.gear) : storage.gear,
+            enchant: !storage.enchant ? JSON.parse(session.enchant) : storage.enchant,
+            resistances: !storage.resistances ? null : storage.resistances,
         });
 
-        let _sources = !localStorage.sources ? JSON.parse(session.sources) : JSON.parse(localStorage.sources);
-        let _phases = !localStorage.phases ? JSON.parse(session.phases) : JSON.parse(localStorage.phases);
+        let _sources = !storage.sources ? JSON.parse(session.sources) : storage.sources;
+        let _phases = !storage.phases ? JSON.parse(session.phases) : storage.phases;
 
         for (let i of _sources)
             view.filter.find(`.sources [data-id="${i}"]`).addClass('active');
@@ -715,7 +720,7 @@ SIM.UI = {
         for (let i of _phases)
             view.filter.find(`.phases [data-id="${i}"]`).addClass('active');
 
-        if (!localStorage.version || parseInt(localStorage.version) < version) view.newVersion();
+        //if (!storage.version || parseInt(storage.version) < version) view.newVersion();
 
         var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
         for (let resist in resistances) {
@@ -1118,7 +1123,7 @@ SIM.UI = {
     newVersion: function() {
         var view = this;
 
-        localStorage.version = version;
+        localStorage[mode].version = version;
 
         if (!view.filter.find(`.phases [data-id="4"]`).hasClass('active'))
             setTimeout(() => { view.filter.find(`.phases [data-id="4"]`).click() }, 100);

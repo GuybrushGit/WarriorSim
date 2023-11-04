@@ -47,6 +47,13 @@
         }
     }
 
+    .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
     .character {
         padding: 20px 0;
         

@@ -1,6 +1,7 @@
 class Player {
     static getConfig(base) {
         return {
+            level: $('input[name="level"]').val(),
             race: $('select[name="race"]').val(),
             aqbooks: $('select[name="aqbooks"]').val() == "Yes",
             weaponrng: $('select[name="weaponrng"]').val() == "Yes",
@@ -18,7 +19,7 @@ class Player {
     constructor(testItem, testType, enchtype, config) {
         if (!config) config = Player.getConfig();
         this.rage = 0;
-        this.level = 25;
+        this.level = config.level;
         this.timer = 0;
         this.itemtimer = 0;
         this.dodgetimer = 0;

@@ -1,7 +1,5 @@
 importScripts(
     './data/buffs.min.js',
-    './data/gear.min.js',
-    './data/gear25.min.js',
     './data/races.min.js',
     './data/spells.min.js',
     './data/talents.min.js',
@@ -14,6 +12,8 @@ importScripts(
 
 onmessage = (event) => {
     const params = event.data;
+    if (params.globals.sod) importScripts('./data/gear25.min.js');
+    else importScripts('./data/gear.min.js');
     updateGlobals(params.globals);
     // console.log('starting sim-worker', params);
     const player = new Player(...params.player);

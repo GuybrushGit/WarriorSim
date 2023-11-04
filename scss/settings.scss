@@ -3,7 +3,7 @@
 }
 .settings {
     width: 0;
-    height: 100%;
+    height: auto;
     min-height: 1060px;
     background: #272727;
     transition: all 0.3s ease-in-out;
@@ -28,6 +28,8 @@
     .wrapper {
         opacity: 0;
         transition: none;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     article {
@@ -35,7 +37,7 @@
         vertical-align: top;
         border: 1px solid #ddd;
         border-radius: 2px;
-        margin: 20px auto;
+        margin: 20px auto 10px;
         position: relative;
         padding: 20px;
         box-sizing: border-box;
