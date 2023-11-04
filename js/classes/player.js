@@ -115,16 +115,28 @@ class Player {
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
     }
     addRace() {
-        for (let race of races) {
-            if (race.name == this.race) {
-                this.base.aprace = race.ap;
-                this.base.ap += race.ap;
-                this.base.str += race.str;
-                this.base.agi += race.agi;
-                this.base.skill_0 += race.skill_0;
-                this.base.skill_1 += race.skill_1;
-                this.base.skill_2 += race.skill_2;
-                this.base.skill_3 += race.skill_3;
+        for(let l of levelstats) {
+            let raceid;
+            if (this.race == "Human") raceid = "1";
+            if (this.race == "Orc") raceid = "2";
+            if (this.race == "Dwarf") raceid = "3";
+            if (this.race == "Night Elf") raceid = "4";
+            if (this.race == "Undead") raceid = "5";
+            if (this.race == "Tauren") raceid = "6";
+            if (this.race == "Gnome") raceid = "7";
+            if (this.race == "Troll") raceid = "8";
+
+            // race,class,level,str,agi,sta,inte,spi
+            let stats = l.split(",");
+            if (stats[0] == raceid && stats[2] == this.level) {
+                this.base.aprace = 160;
+                this.base.ap += 160;
+                this.base.str += parseInt(stats[3]);
+                this.base.agi += parseInt(stats[4]);
+                this.base.skill_0 += raceid == "1" ? 5 : 0;
+                this.base.skill_1 += raceid == "1" ? 5 : 0;
+                this.base.skill_2 += 0;
+                this.base.skill_3 += raceid == "2" ? 5 : 0;
             }
         }
     }

@@ -1,6 +1,6 @@
 importScripts(
     './data/buffs.min.js',
-    './data/races.min.js',
+    './data/levelstats.min.js',
     './data/spells.min.js',
     './data/talents.min.js',
     './classes/player.min.js',
