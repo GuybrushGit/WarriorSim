@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width">
   <title>Warrior DPS Sim</title>
 
-  <link href="dist/css/theme.default.min.css" rel="stylesheet">
-  <link href="dist/css/style.css" rel="stylesheet">
+  <link href="/dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="/dist/css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
-  <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="./geardata.js"></script>
+  <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="geardata.js"></script>
 </head>
 <body>
 
@@ -86,7 +86,7 @@
             id: d.itemId,
             reqLevel: d.requiredLevel,
             phase: d.contentPhase,
-            obj: d,
+            //obj: d
           };
           d.tooltip.forEach(tt => {
             if (/[+-]\d+ Stamina/.test(tt.label)) obj.sta = parseInt(tt.label);
