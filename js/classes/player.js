@@ -19,6 +19,7 @@ class Player {
     constructor(testItem, testType, enchtype, config) {
         if (!config) config = Player.getConfig();
         this.rage = 0;
+        this.ragemod = 1;
         this.level = config.level;
         this.timer = 0;
         this.itemtimer = 0;
@@ -309,16 +310,19 @@ class Player {
         }
     }
     addRunes() {
+        if (typeof runes === "undefined") return;
         for (let type in runes) {
             for (let item of runes[type]) {
                 if (item.selected) {
+                    this.bleedrage = item.bleedrage;
+
+                    // Endless Rage
+                    if (item.ragemod) {
+                        this.ragemod = item.ragemod;
+                    }
                     // Frenzied Assault
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
-                    }
-                    // Blood Frenzy
-                    if (item.bleedrage) {
-                        this.bleedrage = item.bleedrage;
                     }
                     // Flagellation
                     if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
@@ -574,7 +578,6 @@ class Player {
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
-                //if (log) this.log('Unbridled Wrath proc');
             }
         }
         if (spell) {
@@ -586,7 +589,7 @@ class Player {
             if (result == RESULT.DODGE)
                 this.rage += (weapon.avgdmg() / 230.6) * 7.5 * 0.75;
             else if (result != RESULT.MISS)
-                this.rage += (dmg / 230.6) * 7.5;
+                this.rage += (dmg / 230.6) * 7.5 * this.ragemod;
         }
         if (this.rage > 100) this.rage = 100;
     }

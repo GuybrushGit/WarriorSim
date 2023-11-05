@@ -60,8 +60,9 @@ var runes = {
      {
          id: 900009,
          name: 'Endless Rage',
-         description: "NOT IMPLEMENTED - PASSIVE - You generate 25% more Rage from all damage you deal.",
+         description: "You generate 25% more Rage from all damage you deal.",
          iconname: 'Endless-Rage',
+         ragemod: 1.25,
      },
      {
          id: 900010,
