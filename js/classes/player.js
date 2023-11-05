@@ -314,7 +314,7 @@ class Player {
         for (let type in runes) {
             for (let item of runes[type]) {
                 if (item.selected) {
-                    this.bleedrage = item.bleedrage;
+                    if (item.bleedrage) this.bleedrage = item.bleedrage;
 
                     // Endless Rage
                     if (item.ragemod) {

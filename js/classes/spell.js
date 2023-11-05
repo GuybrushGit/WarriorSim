@@ -408,7 +408,6 @@ class DeepWounds extends Aura {
             let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
             dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds;
-            //console.log("%d %s: %d", step, this.name, ~~(dmg / 4));
             this.idmg += ~~(dmg / 4);
             this.totaldmg += ~~(dmg / 4);
 
@@ -416,6 +415,8 @@ class DeepWounds extends Aura {
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
             }
+
+            if (log) this.player.log(`${this.name} tick for ${~~(dmg / 4)}`);
 
             this.nexttick += 3000;
         }

@@ -238,7 +238,7 @@ var spells = [
     classname: 'VictoryRush',
     iconname: 'Victory-Rush',
     minrage: 0,
-    reaction: 100,
+    reaction: 0,
     hidden: true,
 },
 // {
