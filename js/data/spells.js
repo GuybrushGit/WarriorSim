@@ -156,6 +156,13 @@ var spells = [
     minrage: 50,
     reaction: 100,
 },
+{
+    id: 18499,
+    name: 'Berserker Rage',
+    classname: 'BerserkerRage',
+    iconname: 'spell_nature_ancestralguardian',
+    reaction: 100,
+},
 // {
 //     id: 900001,
 //     name: 'Flagellation',
@@ -176,16 +183,15 @@ var spells = [
 //     reaction: 100,
 //     slot: "chest",
 // },
-// {
-//     id: 900003,
-//     name: 'Raging Blow',
-//     description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.",
-//     classname: 'RagingBlow',
-//     iconname: 'Raging-Blow',
-//     minrage: 0,
-//     reaction: 100,
-//     slot: "chest",
-// },
+{
+    id: 900003,
+    name: 'Raging Blow',
+    classname: 'RagingBlow',
+    iconname: 'Raging-Blow',
+    minrage: 0,
+    reaction: 100,
+    hidden: true,
+},
 // {
 //     id: 900004,
 //     name: 'Warbringer',
@@ -229,7 +235,6 @@ var spells = [
 {
     id: 900008,
     name: 'Victory Rush',
-    description: "Instantly attack the target causing 151 damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
     classname: 'VictoryRush',
     iconname: 'Victory-Rush',
     minrage: 0,

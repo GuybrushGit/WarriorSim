@@ -712,7 +712,6 @@ var talents = [
             y: 5,
             c: 0,
             iconname: 'Spell_Nature_AncestralGuardian',
-            // enable: 'berserkerrage',
             aura: function (count) { return { berserkerbonus: count * 5 } },
          },
          {

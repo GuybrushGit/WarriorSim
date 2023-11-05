@@ -17,8 +17,9 @@ var runes = {
      {
          id: 900003,
          name: 'Raging Blow',
-         description: "NOT IMPLEMENTED - SPELL - A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.",
+         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [Assumed 6 second cd and 10 rage cost]",
          iconname: 'Raging-Blow',
+         enable: 900003
      },
      {
          id: 900004,
@@ -65,7 +66,7 @@ var runes = {
      {
          id: 900010,
          name: 'Devastate',
-         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
+         description: "NOT IMPLEMENTED - While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
          iconname: 'Devastate',
      },
      {

@@ -261,7 +261,7 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
             if (spell.id == 11605)
                 div.find('.options').append(`<li>Slam macro with MH swing</li>`);
-            if (spell.id == 2687)
+            if (spell.id == 2687 || spell.id == 18499)
                 div.find('.options').append('<li>Used on cooldown below 80 rage</li>');
             if (spell.reaction !== undefined)
                 div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);

@@ -265,6 +265,46 @@ class VictoryRush extends Spell {
     }
 }
 
+class RagingBlow extends Spell {
+    constructor(player) {
+        super(player, 'Raging Blow');
+        this.cost = 10;
+        this.cooldown = 6;
+    }
+    dmg() {
+        let dmg;
+        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.threshold && 
+            ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer));
+    }
+}
+
+class BerserkerRage extends Spell {
+    constructor(player) {
+        super(player);
+        this.cost = 0;
+        this.rage = player.talents.berserkerbonus;
+        this.threshold = 80;
+        this.cooldown = 30;
+        this.useonly = true;
+    }
+    use() {
+        this.player.timer = 1500;
+        this.timer = this.cooldown * 1000;
+        this.player.rage = Math.min(this.player.rage + this.rage, 100);
+        this.player.auras.berserkerrage.use();
+        this.player.auras.flagellation && this.player.auras.flagellation.use();
+    }
+    canUse() {
+        return this.timer == 0 && this.player.rage < this.threshold;
+    }
+}
+
+
 class Aura {
     constructor(player, name) {
         this.timer = 0;
@@ -1083,6 +1123,25 @@ class Flagellation extends Aura {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateDmgMod();
+        }
+    }
+}
+
+class BerserkerRageAura extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 10;
+        this.name = 'Berserker Rage';
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
         }
     }
 }

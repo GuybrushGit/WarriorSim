@@ -102,6 +102,7 @@ class Player {
         if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
+        if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
         if (this.items.includes(20130)) this.auras.flask = new Flask(this);
@@ -641,6 +642,7 @@ class Player {
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
         if (this.auras.flagellation && this.auras.flagellation.firstuse && this.auras.flagellation.timer) this.auras.flagellation.step();
+        if (this.auras.berserkerrage && this.auras.berserkerrage.firstuse && this.auras.berserkerrage.timer) this.auras.berserkerrage.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -672,6 +674,7 @@ class Player {
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
         if (this.auras.flagellation && this.auras.flagellation.firstuse && this.auras.flagellation.timer) this.auras.flagellation.end();
+        if (this.auras.berserkerrage && this.auras.berserkerrage.firstuse && this.auras.berserkerrage.timer) this.auras.berserkerrage.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
