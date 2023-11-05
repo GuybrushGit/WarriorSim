@@ -225,6 +225,7 @@ SIM.UI = {
         let stats = view.sidebar.find('#stats');
         let time = view.sidebar.find('#time');
         let btn = view.sidebar.find('.js-dps');
+        view.sidebar.find('#weights-div').css('display', '');
         let weights = (rows === "stats");
         if (weights) {
             rows = undefined;

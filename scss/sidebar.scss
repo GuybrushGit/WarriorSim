@@ -1,22 +1,26 @@
 .sidebar {
     min-width: 320px;
-    min-height: 600px;
     width: 20%;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     background: #171717;
-    border-right: 2px solid #727272;
     box-sizing: border-box;
     position: fixed;
     left: 0;
     top: 0;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .bg {
-        background-position: top center;
+        background-position: center center;
         background-repeat: no-repeat;
         background-size: 80% auto;
         position: absolute;
         left: 0;
-        top: 380px;
+        top: 0;
         width: 100%;
         height: 100%;
         opacity: 0.1;
@@ -116,17 +120,17 @@
     }
 
     .bottom {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
     }
 
     #weights-div {
         position: relative;
-        left: 50%;
         margin-bottom: 10px;
         display: none;
+        left: 40px;
 
         & > div {
             position: relative;
