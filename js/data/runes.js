@@ -9,8 +9,9 @@ var runes = {
      {
          id: 900002,
          name: 'Blood Frenzy',
-         description: "NOT IMPLEMENTED - AURA - Each time you deal Bleed damage, you gain 3 rage.",
+         description: "NOT IMPLEMENTED - PASSIVE - Each time you deal Bleed damage, you gain 3 rage.",
          iconname: 'Blood-Frenzy',
+         bleedrage: 3,
      },
      {
          id: 900003,
@@ -35,27 +36,28 @@ var runes = {
      {
          id: 900006,
          name: 'Consumed by Rage',
-         description: "NOT IMPLEMENTED - ???? - Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
+         description: "NOT IMPLEMENTED - AURA + SPELL - Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
          iconname: 'Consumed-by-Rage',
      },
      {
          id: 900007,
          name: 'Frenzied Assault',
-         description: "NOT IMPLEMENTED - AURA - While wielding 2-handed weapons, your attack speed is increased by 20%.",
+         description: "While wielding 2-handed weapons, your attack speed is increased by 20%.",
          iconname: 'Frenzied-Assault',
+         haste2h: 20,
      },
    ],
    "legs": [
       {
          id: 900008,
          name: 'Victory Rush',
-         description: "NOT IMPLEMENTED - SPELL - Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
+         description: "Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
          iconname: 'Victory-Rush',
      },
      {
          id: 900009,
          name: 'Endless Rage',
-         description: "NOT IMPLEMENTED - AURA - You generate 25% more Rage from all damage you deal.",
+         description: "NOT IMPLEMENTED - PASSIVE - You generate 25% more Rage from all damage you deal.",
          iconname: 'Endless-Rage',
      },
      {
@@ -67,7 +69,7 @@ var runes = {
      {
          id: 900011,
          name: 'Single-Minded Fury',
-         description: "NOT IMPLEMENTED - AURA - While dual-wielding, your Physical damage and movement speed are increased by 10%.",
+         description: "NOT IMPLEMENTED - PASSIVE - While dual-wielding, your Physical damage and movement speed are increased by 10%.",
          iconname: 'Single-Minded-Fury',
          enable: 900011
      },

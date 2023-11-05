@@ -95,6 +95,7 @@ class Player {
         this.addSets();
         this.addEnchants();
         this.addTempEnchants();
+        this.addRunes();
         this.addBuffs();
         this.addSpells();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
@@ -301,6 +302,19 @@ class Player {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    addRunes() {
+        for (let type in runes) {
+            for (let item of runes[type]) {
+                if (item.selected) {
+
+                    // Frenzied Assault
+                    if (item.haste2h && this.mh.twohand) {
+                        this.base.haste *= (1 + item.haste2h / 100) || 1;
                     }
                 }
             }
