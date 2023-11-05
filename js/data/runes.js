@@ -3,13 +3,14 @@ var runes = {
       {
          id: 900001,
          name: 'Flagellation',
-         description: "NOT IMPLEMENTED - AURA - Gain a 25% bonus to physical damage done for 12 sec after activating Bloodrage or Berserker Rage.",
+         description: "Gain a 25% bonus to physical damage done for 12 sec after activating Bloodrage or Berserker Rage.",
          iconname: 'Flagellation',
+         flagellation: true,
      },
      {
          id: 900002,
          name: 'Blood Frenzy',
-         description: "NOT IMPLEMENTED - PASSIVE - Each time you deal Bleed damage, you gain 3 rage.",
+         description: "Each time you deal Bleed damage, you gain 3 rage.",
          iconname: 'Blood-Frenzy',
          bleedrage: 3,
      },
@@ -53,6 +54,7 @@ var runes = {
          name: 'Victory Rush',
          description: "Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
          iconname: 'Victory-Rush',
+         enable: 900008,
      },
      {
          id: 900009,

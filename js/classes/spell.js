@@ -156,6 +156,7 @@ class Bloodrage extends Spell {
         this.timer = this.cooldown * 1000;
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.bloodrage.use();
+        this.player.auras.flagellation && this.player.auras.flagellation.use();
     }
     canUse() {
         return this.timer == 0 && this.player.rage < this.threshold;
@@ -370,6 +371,11 @@ class DeepWounds extends Aura {
             //console.log("%d %s: %d", step, this.name, ~~(dmg / 4));
             this.idmg += ~~(dmg / 4);
             this.totaldmg += ~~(dmg / 4);
+
+            if (this.player.bleedrage) {
+                this.player.rage += this.player.bleedrage;
+                if (this.player.rage > 100) this.player.rage = 100;
+            }
 
             this.nexttick += 3000;
         }
@@ -1057,5 +1063,26 @@ class Avenger extends Aura {
         this.duration = 10;
         this.stats = { ap: 200 };
         this.name = 'Argent Avenger';
+    }
+}
+
+class Flagellation extends Aura {
+    constructor(player) {
+        super(player);
+        this.duration = 12;
+        this.mult_stats = { dmgmod: 25 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateDmgMod();
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateDmgMod();
+        }
     }
 }

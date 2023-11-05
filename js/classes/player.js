@@ -95,9 +95,9 @@ class Player {
         this.addSets();
         this.addEnchants();
         this.addTempEnchants();
-        this.addRunes();
         this.addBuffs();
         this.addSpells();
+        this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
@@ -311,10 +311,17 @@ class Player {
         for (let type in runes) {
             for (let item of runes[type]) {
                 if (item.selected) {
-
                     // Frenzied Assault
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
+                    }
+                    // Blood Frenzy
+                    if (item.bleedrage) {
+                        this.bleedrage = item.bleedrage;
+                    }
+                    // Flagellation
+                    if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
+                        this.auras[item.name.toLowerCase()] = eval(`new ${item.name}(this)`);
                     }
                 }
             }
@@ -633,6 +640,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
+        if (this.auras.flagellation && this.auras.flagellation.firstuse && this.auras.flagellation.timer) this.auras.flagellation.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -663,6 +671,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
+        if (this.auras.flagellation && this.auras.flagellation.firstuse && this.auras.flagellation.timer) this.auras.flagellation.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();

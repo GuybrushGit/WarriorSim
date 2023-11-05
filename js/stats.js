@@ -56,7 +56,7 @@ SIM.STATS = {
             let aura = sim.player.auras[name];
             if (!aura.uptime) continue;
             view.auradata.labels.push(aura.name);
-            data.push((aura.uptime / sim.totalduration / 10).toFixed(2));
+            data.push(Math.min((aura.uptime / sim.totalduration / 10).toFixed(2), 100));
             colors.push(view.colors[counter % view.colors.length]);
             counter++;
         }

@@ -9,6 +9,7 @@ SIM.SETTINGS = {
         view.buildSpells();
         view.buildBuffs();
         view.buildTalents();
+        view.buildRunes();
     },
 
     variables: function () {
@@ -308,19 +309,6 @@ SIM.SETTINGS = {
                 div.find('.options').prepend(`<li>Open with ${spell.name}</li>`);
             }
 
-            // runes
-            if (spell.id > 900000) {
-                if (mode != "sod") continue;
-
-                let rune;
-                for(let type in runes)
-                    for(let i in runes[type])
-                        if (runes[type][i].id == spell.id) rune = runes[type][i];
-
-                if (rune.selected) div.removeClass('hidden');
-                
-            }
-
             view.rotation.find('div:first').append(div);
         }
 
@@ -358,6 +346,17 @@ SIM.SETTINGS = {
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
             }
             view.talents.append(table);
+        }
+    },
+
+    buildRunes: function () {
+        var view = this;
+        for (let type in runes) {
+            for (let i in runes[type]) {
+                let rune = runes[type][i];
+                if (rune.enable && rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').removeClass('hidden');
+                if (rune.enable && !rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').addClass('hidden');
+            }
         }
     },
 
