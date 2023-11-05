@@ -228,7 +228,7 @@ class Simulation {
         let spellcheck = false;
         let next = 0;
 
-        // step through item auras
+        // determine when to use item auras
         let itemdelay = 0;
         if (player.auras.flask) { this.flaskstep = Math.max(this.maxsteps - 60000, 0); itemdelay += 60000; }
         if (player.auras.cloudkeeper) { this.cloudstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
@@ -239,7 +239,7 @@ class Simulation {
         if (player.auras.pummeler) { this.pummelstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
         if (player.auras.zandalarian) { this.zandalarstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
 
-        // step through auras cast by player
+        // determine when to use player auras
         if (player.auras.deathwish) { player.auras.deathwish.usestep = Math.max(this.maxsteps - player.auras.deathwish.timetoend, 0); }
         if (player.auras.recklessness) { player.auras.recklessness.usestep = Math.max(this.maxsteps - player.auras.recklessness.timetoend, 0); }
         if (player.auras.mightyragepotion) { player.auras.mightyragepotion.usestep = Math.max(this.maxsteps - player.auras.mightyragepotion.timetoend, 0); }
@@ -306,9 +306,14 @@ class Simulation {
                     }
                 }
 
-                // Normal phase
+                // Normal phase - no cost
                 else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
                 else if (player.spells.victoryrush && player.spells.victoryrush.canUse()) { player.spelldelay = 1; delayedspell = player.spells.victoryrush; }
+
+                // prevent using spells while waiting for consumed by rage proc
+                else if (player.auras.consumedrage && !player.auras.consumedrage.timer) { } 
+
+                // Normal phase - rage cost
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                 else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodthirst; }
                 else if (player.spells.ragingblow && player.spells.ragingblow.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
@@ -323,7 +328,8 @@ class Simulation {
             // Heroic Strike
             if (spellcheck && !player.heroicdelay) {
                 if (!player.spells.execute || step < this.executestep) {
-                    if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; }
+                    if (player.auras.consumedrage && !player.auras.consumedrage.timer) { } // prevent using HS while waiting for consumed by rage proc
+                    else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; }
                 }
                 else {
                     if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrikeexecute; }
@@ -419,6 +425,7 @@ class Simulation {
             if (player.heroicdelay) player.heroicdelay += next;
 
             // Spells used by player
+            if (player.spells.berserkerrage && player.spells.berserkerrage.timer && !player.spells.berserkerrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && !player.spells.bloodthirst.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.ragingblow && player.spells.ragingblow.timer && !player.spells.ragingblow.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && !player.spells.mortalstrike.step(next) && !player.spelldelay) spellcheck = true;

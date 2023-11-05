@@ -17,7 +17,7 @@ var runes = {
      {
          id: 900003,
          name: 'Raging Blow',
-         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [Assumed 6 second cd and 10 rage cost]",
+         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [ASSUMED 6 SECOND CD AND 10 RAGE COST]",
          iconname: 'Raging-Blow',
          enable: 900003
      },
@@ -38,8 +38,9 @@ var runes = {
      {
          id: 900006,
          name: 'Consumed by Rage',
-         description: "NOT IMPLEMENTED - AURA + SPELL - Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
+         description: "Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage. [ASSUMED NO COOLDOWN]",
          iconname: 'Consumed-by-Rage',
+         enable: 900006,
      },
      {
          id: 900007,

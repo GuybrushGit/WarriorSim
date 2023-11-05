@@ -309,6 +309,11 @@ SIM.SETTINGS = {
                 div.find('.options').prepend(`<li>Open with ${spell.name}</li>`);
             }
 
+            if (spell.id == 900006) {
+                div.find('.options').empty();
+                div.find('.options').prepend(`<li>Don't use rage until CbR procs.</li>`);
+            }
+
             view.rotation.find('div:first').append(div);
         }
 
