@@ -73,9 +73,9 @@ var runes = {
      {
          id: 900011,
          name: 'Single-Minded Fury',
-         description: "NOT IMPLEMENTED - PASSIVE - While dual-wielding, your Physical damage and movement speed are increased by 10%.",
+         description: "While dual-wielding, your Physical damage and movement speed are increased by 10%.",
          iconname: 'Single-Minded-Fury',
-         enable: 900011
+         dmgdw: 10
      },
      {
          id: 900012,

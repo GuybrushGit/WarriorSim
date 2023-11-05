@@ -328,6 +328,10 @@ class Player {
                     if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
                         this.auras[item.name.toLowerCase()] = eval(`new ${item.name}(this)`);
                     }
+                    // Single-Minded Fury
+                    if (item.dmgdw && this.oh) {
+                        this.base.dmgmod *= (1 + item.dmgdw / 100) || 1;
+                    }
                 }
             }
         }
