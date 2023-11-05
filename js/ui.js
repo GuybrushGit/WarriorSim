@@ -189,6 +189,7 @@ SIM.UI = {
                 view.rowEnableRunes(tr);
             }
 
+            SIM.SETTINGS.buildSpells();
             view.updateSession();
             view.updateSidebar();
         });
@@ -844,8 +845,8 @@ SIM.UI = {
                                 <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
                                 <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
                                 <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire R</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost R</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
                                 <th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
@@ -965,11 +966,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
                                 <th>Skill</th>
                                 <th>Type</th>
                                 <th>DPS</th>
@@ -1073,11 +1074,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
                                 <th>Skill</th>
                                 <th>DPS</th>
                             </tr>
@@ -1130,11 +1131,11 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Haste</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
                                 <th>Crit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>

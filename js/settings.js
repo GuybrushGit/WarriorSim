@@ -230,6 +230,7 @@ SIM.SETTINGS = {
 
     buildSpells: function () {
         var view = this;
+        view.rotation.find('div:first').empty();
         for (let spell of spells) {
 
             let storage = JSON.parse(localStorage[mode]);
@@ -302,15 +303,22 @@ SIM.SETTINGS = {
                 div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
             }
 
+            if (spell.id == 900008) {
+                div.find('.options').empty();
+                div.find('.options').prepend(`<li>Open with ${spell.name}</li>`);
+            }
+
             // runes
             if (spell.id > 900000) {
                 if (mode != "sod") continue;
-                div.find('.options').empty();
-                div.find('.options').append(`<li><strong>${spell.name}</strong></li>`);
-                div.find('.options').append(`<li>${spell.description}</li>`);
-                // TODO
-                //view.runes.find('.' + spell.slot).append(div);
-                continue;
+
+                let rune;
+                for(let type in runes)
+                    for(let i in runes[type])
+                        if (runes[type][i].id == spell.id) rune = runes[type][i];
+
+                if (rune.selected) div.removeClass('hidden');
+                
             }
 
             view.rotation.find('div:first').append(div);

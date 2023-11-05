@@ -81,7 +81,7 @@
             name: d.name,
             source: (!d.source || d.source.category != "Boss Drop" ? "Other" : "Dungeon"),
             sourceZone: (d.source && d.source.zone) || 0,
-            type: d.subclass,
+            type: d.subclass == "Fist Weapon" ? "Fist" : d.subclass,
             slot: d.slot,
             id: d.itemId,
             reqLevel: d.requiredLevel,
