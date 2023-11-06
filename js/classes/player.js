@@ -48,7 +48,14 @@ class Player {
             strmod: 1,
             agimod: 1,
             dmgmod: 1,
-            apmod: 1
+            apmod: 1,
+            resist: {
+                shadow: 0,
+                arcane: 0,
+                nature: 0,
+                fire: 0,
+                frost: 0,
+            },
         };
         if (enchtype == 1) {
             this.testEnch = testItem;
@@ -133,8 +140,21 @@ class Player {
             for (let item of gear[type]) {
                 if ((this.testItemType == type && this.testItem == item.id) ||
                     (this.testItemType != type && item.selected)) {
-                    for (let prop in this.base)
-                        this.base[prop] += item[prop] || 0;
+                    for (let prop in this.base) {
+                        if (prop == 'haste') {
+                            this.base.haste *= (1 + item.haste / 100) || 1;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
+                    }
                     if (item.skill && item.skill > 0) {
                         if (item.type == 'Varied') {
                             this.base['skill_1'] += item.skill;
@@ -156,7 +176,7 @@ class Player {
                         this.attackproc.chance = item.procchance * 100;
                         this.attackproc.magicdmg = item.magicdmg;
                     }
-                    
+
                     if (item.procchance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
                         proc.chance = item.procchance * 100;
@@ -228,10 +248,19 @@ class Player {
                     (this.testEnchType != type && item.selected)) {
 
                     for (let prop in this.base) {
-                        if (prop == 'haste')
+                        if (prop == 'haste') {
                             this.base.haste *= (1 + item.haste / 100) || 1;
-                        else
-                            this.base[prop] += item[prop] || 0;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -246,10 +275,19 @@ class Player {
                     (this.testTempEnchType != type && item.selected)) {
 
                     for (let prop in this.base) {
-                        if (prop == 'haste')
+                        if (prop == 'haste') {
                             this.base.haste *= (1 + item.haste / 100) || 1;
-                        else
-                            this.base[prop] += item[prop] || 0;
+                        } else {
+                            if (typeof item[prop] === 'object') {
+                                for (let subprop in item[prop]) {
+                                    this.base[prop][subprop] += item[prop][subprop] || 0;
+                                }
+                            } else {
+                                if (item[prop]) {
+                                    this.base[prop] += item[prop] || 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -392,7 +430,7 @@ class Player {
     updateStrength() {
         this.stats.str = this.base.str;
         this.stats.ap = this.base.ap;
-        
+
         for (let name in this.auras) {
             if (this.auras[name].timer) {
                 if (this.auras[name].stats.str)
@@ -728,9 +766,9 @@ class Player {
     cast(spell) {
         this.stepauras();
         spell.use();
-        if (spell.useonly) { 
+        if (spell.useonly) {
             //if (log) this.log(`${spell.name} used`);
-            return 0; 
+            return 0;
         }
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
