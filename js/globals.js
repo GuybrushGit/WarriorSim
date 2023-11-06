@@ -69,4 +69,12 @@ function updateGlobals(params) {
                     j.selected = i.selected;
                     j.hidden = i.hidden;
                 }
+
+    for (let type in params.resistances) {
+        if (params.resistances[type]) {
+            $('.resistances-list.hidden').removeClass('hidden');
+            $(".js-toggle[data-id='resistances-list']").addClass('active');
+            $(".resistances[data-id='"+type+"-resist']").click()
+        }
+    }
 }

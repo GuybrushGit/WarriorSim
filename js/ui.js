@@ -81,7 +81,7 @@ SIM.UI = {
         view.main.on('click', '.js-enchant', function(e) {
             e.preventDefault();
             view.disableEditMode();
-            const rows = view.tcontainer.find('table.enchant tbody tr'); 
+            const rows = view.tcontainer.find('table.enchant tbody tr');
             rows.addClass('waiting');
             view.tcontainer.find('table.enchant tbody tr td:last-of-type').html('');
             view.startLoading();
@@ -106,9 +106,9 @@ SIM.UI = {
             var type = li.data('type');
             if (!type) type = li.parents('[data-type]').data('type');
 
-            if (type == "mainhand" || type == "offhand" || type == "twohand") 
+            if (type == "mainhand" || type == "offhand" || type == "twohand")
                 view.loadWeapons(type);
-            else if (type == "custom") 
+            else if (type == "custom")
                 view.loadCustom();
             else
                 view.loadGear(type);
@@ -171,9 +171,9 @@ SIM.UI = {
     enableEditMode: function() {
         var view = this;
         let type = view.tcontainer.find('table.gear').attr('data-type');
-        if (type == "mainhand" || type == "offhand" || type == "twohand") 
+        if (type == "mainhand" || type == "offhand" || type == "twohand")
             view.loadWeapons(type, true);
-        else if (type == "custom") 
+        else if (type == "custom")
             view.loadCustom(true);
         else
             view.loadGear(type, true);
@@ -183,9 +183,9 @@ SIM.UI = {
         var view = this;
         view.main.find('.js-editmode').removeClass('active');
         let type = view.tcontainer.find('table.gear').attr('data-type');
-        if (type == "mainhand" || type == "offhand" || type == "twohand") 
+        if (type == "mainhand" || type == "offhand" || type == "twohand")
             view.loadWeapons(type, false);
-        else if (type == "custom") 
+        else if (type == "custom")
             view.loadCustom(false);
         else
             view.loadGear(type, false);
@@ -243,7 +243,7 @@ SIM.UI = {
                 SIM.STATS.initCharts(report);
                 sim = null;
                 player = null;
-                
+
             },
             (iteration, report) => {
                 // Update
@@ -417,7 +417,7 @@ SIM.UI = {
                     let sortList = [[$(this).find('th').length - 1, 1]];
                     $(this).trigger("sorton", [sortList]);
                 });
-                
+
                 tr.removeClass('waiting');
                 updateFn(100);
                 sim = null;
@@ -592,6 +592,11 @@ SIM.UI = {
         let ohdmg = player.stats.dmgmod * (player.oh ? player.oh.modifier * 100 : 0);
         view.sidebar.find('#dmgmod').html(mhdmg.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohdmg.toFixed(2) + '% <small>OH</small>' : ''));
         view.sidebar.find('#haste').html((player.stats.haste * 100).toFixed(2) + '%');
+        view.sidebar.find('#shadow-resist').html(player.stats.resist.shadow);
+        view.sidebar.find('#arcane-resist').html(player.stats.resist.arcane);
+        view.sidebar.find('#nature-resist').html(player.stats.resist.nature);
+        view.sidebar.find('#fire-resist').html(player.stats.resist.fire);
+        view.sidebar.find('#frost-resist').html(player.stats.resist.frost);
         view.sidebar.find('#race').text(localStorage.race);
         view.sidebar.find('#sets').empty();
 
@@ -627,7 +632,7 @@ SIM.UI = {
         localStorage.spelldamage = view.fight.find('input[name="spelldamage"]').val();
         localStorage.batching = view.fight.find('select[name="batching"]').val();
 
-        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {};
+        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
         view.filter.find('.sources .active').each(function () { _sources.push($(this).attr('data-id')); });
         view.filter.find('.phases .active').each(function () { _phases.push($(this).attr('data-id')); });
@@ -663,6 +668,12 @@ SIM.UI = {
             }
         }
 
+        var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
+        for (let resist in resistances) {
+            var element = resistances[resist];
+            _resistance[element] = $(".resistances[data-id='"+element+"-resist']").prop("checked");
+        }
+
         localStorage.buffs = JSON.stringify(_buffs);
         localStorage.rotation = JSON.stringify(_rotation);
         localStorage.sources = JSON.stringify(_sources);
@@ -670,6 +681,7 @@ SIM.UI = {
         localStorage.talents = JSON.stringify(_talents);
         localStorage.gear = JSON.stringify(_gear);
         localStorage.enchant = JSON.stringify(_enchant);
+        localStorage.resistances = JSON.stringify(_resistance);
     },
 
     loadSession: function () {
@@ -690,6 +702,7 @@ SIM.UI = {
             rotation: !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation),
             gear: !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear),
             enchant: !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant),
+            resistances: !localStorage.resistances ? null : JSON.parse(localStorage.resistances),
         });
 
         let _sources = !localStorage.sources ? JSON.parse(session.sources) : JSON.parse(localStorage.sources);
@@ -702,16 +715,24 @@ SIM.UI = {
             view.filter.find(`.phases [data-id="${i}"]`).addClass('active');
 
         if (!localStorage.version || parseInt(localStorage.version) < version) view.newVersion();
+
+        var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
+        for (let resist in resistances) {
+            var element = resistances[resist];
+            if ( $(".resistances[data-id='"+element+"-resist']").prop("checked") ) {
+                view.sidebar.find("."+element+"-resist.hidden").removeClass('hidden');
+            }
+        }
     },
 
     filterGear: function () {
         var view = this;
         var type = view.main.find('nav > ul > li.active').data('type');
-        if (type == "mainhand" || type == "offhand") 
+        if (type == "mainhand" || type == "offhand")
             view.loadWeapons(type);
-        else if (type == "custom") 
+        else if (type == "custom")
             view.loadCustom();
-        else 
+        else
             view.loadGear(type);
     },
 
@@ -719,6 +740,7 @@ SIM.UI = {
         var view = this;
         var filter = view.main.find('nav li.active .filter .active').text();
 
+        var resistCheckList = SIM.UI.resistCheckList();
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
                         <thead>
                             <tr>
@@ -731,6 +753,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Crit</th>
                                 <th>Hit</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
                                 <th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
@@ -749,7 +776,7 @@ SIM.UI = {
                     if (item.type != "Mace" && item.type != "Sword") continue;
                 }
                 else if (filter == "Axe, Dagger & Sword") {
-                    if (item.type != "Axe"  && item.type != "Dagger" && item.type != "Sword") continue; 
+                    if (item.type != "Axe"  && item.type != "Dagger" && item.type != "Sword") continue;
                 }
                 else if (item.type != filter)
                     continue;
@@ -758,6 +785,9 @@ SIM.UI = {
             let source = item.source.toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
+
+            if (item.subsource == 'shadow' || item.subsource == 'arcane' || item.subsource == 'nature' || item.subsource == 'fire' || item.subsource == 'frost')
+                source = 'resistances-list';
 
             if (phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active'))
                 continue;
@@ -769,17 +799,23 @@ SIM.UI = {
             let tooltip = item.id, rand = '';
             if (tooltip == 199211) tooltip = 19921;
             if (item.rand) rand = '?rand=' + item.rand;
-                
+
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
-                        <td>${item.source}</td>
+                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
+
+            table +=`<td>${item.source}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
+                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         <td>${item.mindmg || ''}</td>
                         <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
@@ -796,26 +832,37 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ?  [[15, 1],[1, 0]] : [[14, 1],[0, 0]],
+            sortList: editmode ?  [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
             textSorter : {
-                14 : function(a, b, direction, column, table) {
+                19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
-                    if (isNaN(a)) a = 0; 
-                    if (isNaN(b)) b = 0; 
+                    if (isNaN(a)) a = 0;
+                    if (isNaN(b)) b = 0;
                     return (a < b) ? -1 : (a > b) ? 1 : 0;
                 },
             },
             headers: {
-                14: { sorter: "text" }
+                19: { sorter: "text" }
             }
         });
 
         view.loadEnchants(type, editmode);
     },
+    resistCheckList: function() {
+        return {
+            shadow: $(".resistances[data-id='shadow-resist']").prop("checked"),
+            arcane: $(".resistances[data-id='arcane-resist']").prop("checked"),
+            nature: $(".resistances[data-id='nature-resist']").prop("checked"),
+            fire: $(".resistances[data-id='fire-resist']").prop("checked"),
+            frost: $(".resistances[data-id='frost-resist']").prop("checked"),
+        };
+    },
 
     loadGear: function (type, editmode) {
         var view = this;
+
+        var resistCheckList = SIM.UI.resistCheckList();
 
         var max = 1;
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="${max}">
@@ -830,6 +877,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
                                 <th>Skill</th>
                                 <th>Type</th>
                                 <th>DPS</th>
@@ -843,15 +895,23 @@ SIM.UI = {
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
 
-            if (max == 2 && 
+            if (item.subsource == 'shadow' || item.subsource == 'arcane' || item.subsource == 'nature' || item.subsource == 'fire' || item.subsource == 'frost')
+                source = 'resistances-list';
+
+            if (max == 2 &&
                 ((phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active')) ||
                 (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))))
                 item.selected = false;
 
             if (phase && !view.filter.find('.phases [data-id="' + phase + '"]').hasClass('active'))
                 continue;
-            if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
+            if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active')) {
                 continue;
+            }
+
+            if (source === 'resistances-list' && !$(".resistances[data-id='"+item.subsource+"-resist']").prop("checked")) {
+                continue;
+            }
 
             if (item.hidden && !editmode) continue;
 
@@ -862,14 +922,22 @@ SIM.UI = {
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>
-                        <td>${item.source || ''}</td>
+                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
+
+
+            var resistCheckList = SIM.UI.resistCheckList();
+            table += `<td>${item.source || ''}</td>
                         <td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
@@ -882,18 +950,18 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[11, 1],[1, 0]] : [[10, 1],[0, 0]],
+            sortList: editmode ? [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
             textSorter : {
-                10 : function(a, b, direction, column, table) {
+                19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
-                    if (isNaN(a)) a = 0; 
-                    if (isNaN(b)) b = 0; 
+                    if (isNaN(a)) a = 0;
+                    if (isNaN(b)) b = 0;
                     return (a < b) ? -1 : (a > b) ? 1 : 0;
                 },
             },
             headers: {
-                10: { sorter: "text" }
+                19: { sorter: "text" }
             }
         });
 
@@ -905,6 +973,7 @@ SIM.UI = {
     loadCustom: function (editmode) {
         var view = this;
 
+        var resistCheckList = SIM.UI.resistCheckList();
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="custom" data-max="10">
                         <thead>
                             <tr>
@@ -915,6 +984,11 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
                                 <th>Skill</th>
                                 <th>DPS</th>
                             </tr>
@@ -931,6 +1005,11 @@ SIM.UI = {
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         <td>${item.skill_1 || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -952,6 +1031,7 @@ SIM.UI = {
 
         if (!enchant[type] || enchant[type].length == 0) return;
 
+        var resistCheckList = SIM.UI.resistCheckList();
         let table = `<table class="enchant ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
                         <thead>
                             <tr>
@@ -961,6 +1041,11 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Haste</th>
+                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
+                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
+                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
+                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
+                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
                                 <th>Crit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
@@ -983,6 +1068,11 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.haste || ''}</td>
+                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.dmg || ''}</td>
                         <td>${item.ppm || ''}</td>
@@ -997,7 +1087,10 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[9, 1]] : [[8, 1]],
+            sortList: editmode ? [[14, 1]] : [[13, 1]],
+            headers: {
+                13: { sorter: "text" }
+            }
         });
 
         view.main.find('.js-enchant').show();
@@ -1010,7 +1103,7 @@ SIM.UI = {
         setTimeout(function () { view.alerts.find('.alert').addClass('in-up') });
         setTimeout(function () { view.closeAlert(); }, 4000);
     },
-    
+
     closeAlert: function () {
         var view = this;
         view.alerts.find('.alert').removeClass('in-up');
@@ -1032,7 +1125,7 @@ SIM.UI = {
             setTimeout(() => { view.filter.find(`.phases [data-id="5"]`).click() }, 100);
 
     }
-    
+
 
 
 };
