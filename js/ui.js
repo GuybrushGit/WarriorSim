@@ -697,6 +697,12 @@ SIM.UI = {
             if (counter >= set.bonus[0].count)
                 view.sidebar.find('#sets').append(`<a href="https://classic.wowhead.com/item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
         }
+
+        let count = 0;
+        for (let tree of talents)
+            for (let talent of tree.t)
+                count += talent.c;
+        view.talents.find("#points").text(Math.max(player.level - 9 - count, 0));
     },
 
     updateSession: function () {

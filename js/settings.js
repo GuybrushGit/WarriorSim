@@ -51,6 +51,18 @@ SIM.SETTINGS = {
 
         view.talents.on('click', '.icon', function (e) {
             let talent = view.getTalent($(this));
+            let total = view.getTalentTotal($(this));
+            if (total < talent.y * 5) return;
+
+            let storage = JSON.parse(localStorage[mode]);
+            let level = parseInt(storage.level);
+            let count = 0;
+            for (let tree of talents)
+                for (let talent of tree.t)
+                    count += talent.c;
+            let available = Math.max(level - 9 - count, 0);
+            if (available <= 0) return;
+
             talent.c = talent.c < talent.m ? talent.c + 1 : talent.m;
             $(this).attr('data-count', talent.c);
             if (talent.c >= talent.m) $(this).addClass('maxed');
@@ -76,6 +88,16 @@ SIM.SETTINGS = {
             $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
+        });
+
+        view.talents.on('click', '.js-talents-reset', function (e) {
+            e.preventDefault();
+            for (let tree of talents)
+                for (let talent of tree.t)
+                    talent.c = 0;
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+            view.buildTalents();
         });
 
         view.filter.on('click', '.sources > li', function (e) {
@@ -366,6 +388,7 @@ SIM.SETTINGS = {
 
     buildTalents: function () {
         var view = this;
+        view.talents.find('table').remove();
         for (let tree of talents) {
             let table = $('<table><tr><th colspan="4">' + tree.n + '</th></tr></table>');
             for (let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
@@ -395,14 +418,20 @@ SIM.SETTINGS = {
     },
 
     getTalent: function (div) {
-        let tree = div.parents('table').index();
+        let tree = div.parents('table').index() - 1;
         let x = div.data('x');
         let y = div.data('y');
         for (let talent of talents[tree - 1].t)
             if (talent.x == x && talent.y == y)
                 return talent;
+    },
+
+    getTalentTotal: function (div) {
+        let tree = div.parents('table').index() - 1;
+        let count = 0;
+        for (let talent of talents[tree - 1].t)
+            count += parseInt(talent.c);
+        return count;
     }
-
-
 
 };

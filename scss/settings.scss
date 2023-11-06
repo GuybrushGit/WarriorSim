@@ -274,6 +274,7 @@
         position: relative;
         justify-content: center;
         margin-top: 10px;
+        flex-wrap: wrap;
 
         table {
             padding: 0 10px 0;
@@ -329,6 +330,23 @@
                 &:before {
                     color: $icon-border;
                 }
+            }
+        }
+
+        .top {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            span {
+                color: #1eff00;
+                font-weight: bold;
+            }
+            a {
+                color: white;
+                font-size: 12px;
             }
         }
     }
