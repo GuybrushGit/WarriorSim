@@ -582,7 +582,7 @@ class Player {
     }
     addRage(dmg, result, weapon, spell) {
         let oldRage = this.rage;
-        if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
+        if (!spell) { // HS does not trigger UW
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
             }

@@ -17,7 +17,7 @@ var runes = {
      {
          id: 900003,
          name: 'Raging Blow',
-         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [8 SECOND CD AND NO RAGE COST]",
+         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.<BR/>[ASSUMED NO SWING RESET, 8 SECOND CD AND NO RAGE COST]",
          iconname: 'Raging-Blow',
          enable: 900003
      },
@@ -38,7 +38,7 @@ var runes = {
      {
          id: 900006,
          name: 'Consumed by Rage',
-         description: "Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage. [ASSUMED NO COOLDOWN]",
+         description: "Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
          iconname: 'Consumed-by-Rage',
          enable: 900006,
      },
@@ -54,7 +54,7 @@ var runes = {
       {
          id: 900008,
          name: 'Victory Rush',
-         description: "Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor. [ASSUMED Attack power * 45 / 100]",
+         description: "Instantly attack the target causing X damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.<BR/>[ASSUMED X = Attack power * 45 / 100]",
          iconname: 'Victory-Rush',
          enable: 900008,
      },
@@ -68,7 +68,7 @@ var runes = {
      {
          id: 900010,
          name: 'Devastate',
-         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target. [NOT IMPLEMENTED]",
+         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.<BR/>[NOT IMPLEMENTED]",
          iconname: 'Devastate',
      },
      {
@@ -81,7 +81,7 @@ var runes = {
      {
          id: 900012,
          name: 'Quick Strike',
-         description: "NOT IMPLEMENTED - A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike. [ASSUMED X = 70, NO CD, 20 RAGE COST, DOESNT RESET SWING]",
+         description: "A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS, ASSUMED X = 66, NO CD, 20 RAGE COST, NO SWING RESET, NO INTERACTION WITH HS QUEUE]",
          iconname: 'inv_axe_03',
          twohandonly: true,
          enable: 900012,

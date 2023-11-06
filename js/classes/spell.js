@@ -313,13 +313,13 @@ class BerserkerRage extends Spell {
 class QuickStrike extends Spell {
     constructor(player) {
         super(player, 'Quick Strike');
-        this.cost = 20;
+        this.cost = 20 - player.talents.impheroicstrike;
         this.cooldown = 0;
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = 70;
-        else dmg = 70;
+        if (this.player.weaponrng) dmg = 66;
+        else dmg = 66;
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
