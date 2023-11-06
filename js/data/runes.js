@@ -17,7 +17,7 @@ var runes = {
      {
          id: 900003,
          name: 'Raging Blow',
-         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [ASSUMED 6 SECOND CD AND 10 RAGE COST]",
+         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active. [8 SECOND CD AND NO RAGE COST]",
          iconname: 'Raging-Blow',
          enable: 900003
      },
@@ -54,7 +54,7 @@ var runes = {
       {
          id: 900008,
          name: 'Victory Rush',
-         description: "Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
+         description: "Instantly attack the target causing (Attack power * 45 / 100) damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor. [ASSUMED Attack power * 45 / 100]",
          iconname: 'Victory-Rush',
          enable: 900008,
      },
@@ -68,7 +68,7 @@ var runes = {
      {
          id: 900010,
          name: 'Devastate',
-         description: "NOT IMPLEMENTED - While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
+         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target. [NOT IMPLEMENTED]",
          iconname: 'Devastate',
      },
      {
@@ -81,8 +81,10 @@ var runes = {
      {
          id: 900012,
          name: 'Quick Strike',
-         description: "NOT IMPLEMENTED - SPELL - A reckless instant melee attack with your two-handed weapon dealing 50 to 83 physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.",
+         description: "NOT IMPLEMENTED - A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike. [ASSUMED X = 70, NO CD, 20 RAGE COST, DOESNT RESET SWING]",
          iconname: 'inv_axe_03',
+         twohandonly: true,
+         enable: 900012,
      },
    ],
 };

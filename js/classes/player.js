@@ -314,8 +314,10 @@ class Player {
         for (let type in runes) {
             for (let item of runes[type]) {
                 if (item.selected) {
-                    if (item.bleedrage) this.bleedrage = item.bleedrage;
-
+                    // Blood Frenzy
+                    if (item.bleedrage) {
+                        this.bleedrage = item.bleedrage;
+                    }
                     // Endless Rage
                     if (item.ragemod) {
                         this.ragemod = item.ragemod;
@@ -579,6 +581,7 @@ class Player {
         return r > 0.75 ? 0.75 : r;
     }
     addRage(dmg, result, weapon, spell) {
+        let oldRage = this.rage;
         if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
@@ -597,7 +600,7 @@ class Player {
         }
         if (this.rage > 100) this.rage = 100;
 
-        if (this.auras.consumedrage && !this.auras.consumedrage.timer && this.rage > 80)
+        if (this.auras.consumedrage && oldRage <= 80 && this.rage > 80)
             this.auras.consumedrage.use();
     }
     steptimer(a) {
@@ -952,6 +955,8 @@ class Player {
         };
     }
     log(msg) {
-        console.log(`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);
+        let color = '\x1b[36m';
+        if (msg.indexOf('attack') > 1 || msg.indexOf('Global') > -1) color = '\x1b[90m';
+        console.log(color+'%s\x1b[0m',`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);
     }
 }

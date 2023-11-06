@@ -154,9 +154,12 @@ class Bloodrage extends Spell {
     }
     use() {
         this.timer = this.cooldown * 1000;
+        let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.bloodrage.use();
         this.player.auras.flagellation && this.player.auras.flagellation.use();
+        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+            this.player.auras.consumedrage.use();
     }
     canUse() {
         return this.timer == 0 && this.player.rage < this.threshold;
@@ -268,8 +271,8 @@ class VictoryRush extends Spell {
 class RagingBlow extends Spell {
     constructor(player) {
         super(player, 'Raging Blow');
-        this.cost = 10;
-        this.cooldown = 6;
+        this.cost = 0;
+        this.cooldown = 8;
     }
     dmg() {
         let dmg;
@@ -295,12 +298,32 @@ class BerserkerRage extends Spell {
     use() {
         this.player.timer = 1500;
         this.timer = this.cooldown * 1000;
+        let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.berserkerrage.use();
         this.player.auras.flagellation && this.player.auras.flagellation.use();
+        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+            this.player.auras.consumedrage.use();
     }
     canUse() {
         return this.timer == 0 && this.player.rage < this.threshold;
+    }
+}
+
+class QuickStrike extends Spell {
+    constructor(player) {
+        super(player, 'Quick Strike');
+        this.cost = 20;
+        this.cooldown = 0;
+    }
+    dmg() {
+        let dmg;
+        if (this.player.weaponrng) dmg = 70;
+        else dmg = 70;
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.threshold;
     }
 }
 
@@ -412,8 +435,11 @@ class DeepWounds extends Aura {
             this.totaldmg += ~~(dmg / 4);
 
             if (this.player.bleedrage) {
+                let oldRage = this.player.rage;
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
+                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                    this.player.auras.consumedrage.use();
             }
 
             if (log) this.player.log(`${this.name} tick for ${~~(dmg / 4)}`);
@@ -559,10 +585,13 @@ class MightyRagePotion extends Aura {
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
+        let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + ~~rng(45, 75), 100);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateStrength();
+        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+            this.player.auras.consumedrage.use();
         if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
@@ -1049,6 +1078,8 @@ class BloodrageAura extends Aura {
     step() {
         if ((step - this.starttimer) % 1000 == 0) {
             this.player.rage = Math.min(this.player.rage + 1, 100);
+            if (this.player.auras.consumedrage && this.player.rage > 80 && this.player.rage <= 81)
+                this.player.auras.consumedrage.use();
             if (log) this.player.log(`${this.name} tick`);
         }
         if (step >= this.timer) {
@@ -1170,8 +1201,8 @@ class ConsumedRage extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.updateDmgMod();
         this.stacks = 12;
+        this.player.updateDmgMod();
         if (log) this.player.log(`${this.name} applied`);
     }
     step() {
