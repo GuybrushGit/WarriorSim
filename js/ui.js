@@ -793,6 +793,7 @@ SIM.UI = {
         for (let prop in storage) {
             view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
             view.fight.find('select[name="' + prop + '"]').val(storage[prop]);
+            view.fight.find('.slider[name="slider-' + prop + '"]').val(storage[prop]);
         }
 
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
