@@ -160,6 +160,12 @@ SIM.SETTINGS = {
             SIM.SETTINGS.toggleArticle(view);
         });
 
+        view.fight.on('input', '.slider', function (e) {
+            var val = $(this).val();
+            $(this).next().val(val);
+            $(this).next().trigger("keyup");
+        });
+
         view.fight.on('change', 'select[name="race"]', function (e) {
             var val = $(this).val();
             var bloodfury = view.rotation.find('[data-id="20572"]');
@@ -203,6 +209,7 @@ SIM.SETTINGS = {
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
+            view.buildBuffs();
         });
 
         view.fight.on('change', 'select[name="weaponrng"]', function (e) {
@@ -231,10 +238,9 @@ SIM.SETTINGS = {
 
     buildSpells: function () {
         var view = this;
+        let storage = JSON.parse(localStorage[mode]);
         view.rotation.find('div:first').empty();
         for (let spell of spells) {
-
-            let storage = JSON.parse(localStorage[mode]);
             let tooltip = spell.id == 115671 ? 11567 : spell.id;
             let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
             <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
@@ -323,7 +329,13 @@ SIM.SETTINGS = {
 
     buildBuffs: function () {
         var view = this;
+        view.buffs.empty();
+        let storage = JSON.parse(localStorage[mode]);
+        let level = parseInt(storage.level);
         for (let buff of buffs) {
+            let min = parseInt(buff.minlevel || 0);
+            let max = parseInt(buff.maxlevel || 60);
+            if (level < min || level > max) continue;
             let wh = buff.spellid ? 'spell' : 'item';
             let active = buff.active ? 'active' : '';
             let group = buff.group ? `data-group="${buff.group}"` : '';
@@ -334,6 +346,8 @@ SIM.SETTINGS = {
                         </div>`;
             view.buffs.append(html);
         }
+        SIM.UI.updateSession();
+        SIM.UI.updateSidebar();
     },
 
     buildTalents: function () {

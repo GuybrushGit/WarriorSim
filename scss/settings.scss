@@ -110,6 +110,8 @@
             padding: 5px 10px;
             overflow: hidden;
             font-size: 12px;
+            display: flex;
+            justify-content: space-between;
 
             &:first-child {
                 padding-top: 0;
@@ -126,6 +128,15 @@
                 color: rgb(221, 221, 221);
                 cursor: pointer;
             }
+        }
+
+        input[name="level"], input[name="targetlevel"] {
+            width: 24px;
+        }
+
+        .slider {
+            width: 140px;
+            margin-left: auto;
         }
     }
 
