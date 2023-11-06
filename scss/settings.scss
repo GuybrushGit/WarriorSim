@@ -143,6 +143,12 @@
     .buffs {
         font-size: 0;
         width: 330px;
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 3px;
+        }
     }
 
     .rotation, .runes {

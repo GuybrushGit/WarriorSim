@@ -330,12 +330,17 @@ SIM.SETTINGS = {
     buildBuffs: function () {
         var view = this;
         view.buffs.empty();
+        view.buffs.append('<label class="active">Buffs</label>');
         let storage = JSON.parse(localStorage[mode]);
         let level = parseInt(storage.level);
+        let worldbuffs = '', consumes = '', other = '';
         for (let buff of buffs) {
             let min = parseInt(buff.minlevel || 0);
             let max = parseInt(buff.maxlevel || 60);
-            if (level < min || level > max) continue;
+            if (level < min || level > max) {
+                buff.active = false;
+                continue;
+            }
             let wh = buff.spellid ? 'spell' : 'item';
             let active = buff.active ? 'active' : '';
             let group = buff.group ? `data-group="${buff.group}"` : '';
@@ -344,8 +349,17 @@ SIM.SETTINGS = {
                             <img src="/dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
                             <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
-            view.buffs.append(html);
+            if (buff.worldbuff) worldbuffs += html;
+            else if (buff.consume) consumes += html;
+            else if (buff.other) other += html;
+            else view.buffs.append(html);
         }
+        view.buffs.append('<div class="label">Consumables</div>');
+        view.buffs.append(consumes);
+        view.buffs.append('<div class="label">World Buffs</div>');
+        view.buffs.append(worldbuffs);
+        view.buffs.append('<div class="label">Other</div>');
+        view.buffs.append(other);
         SIM.UI.updateSession();
         SIM.UI.updateSidebar();
     },
