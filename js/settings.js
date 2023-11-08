@@ -71,6 +71,7 @@ SIM.SETTINGS = {
             $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
+            view.buildSpells();
         });
 
         view.talents.on('contextmenu', '.icon', function (e) {
@@ -98,6 +99,7 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildTalents();
+            view.buildSpells();
         });
 
         view.filter.on('click', '.sources > li', function (e) {
@@ -232,7 +234,7 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildBuffs();
-            view.buildSpells2();
+            view.buildSpells();
         });
 
         view.fight.on('change', 'select[name="weaponrng"]', function (e) {
@@ -324,6 +326,7 @@ SIM.SETTINGS = {
 
         for (let spell of spells) {
 
+            // level restriction
             let min = parseInt(spell.minlevel || 0);
             let max = parseInt(spell.maxlevel || 60);
             if (level < min || level > max) {
@@ -331,10 +334,19 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            let tooltip = spell.id == 115671 ? 11567 : spell.id;
+            // talent restriction
+            let talent;
+            for (let tree of talents)
+                for (let t of tree.t)
+                    if (t.n == spell.name) talent = t;
+            if (talent && talent.enable && talent.c == 0) {
+                spell.active = false;
+                continue;
+            }
+
             let div = $(`<div data-id="${spell.id}" class="spell2 ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
+            <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
             container.append(div);
@@ -352,12 +364,14 @@ SIM.SETTINGS = {
         details.append(`<label>${spell.name}</label>`);
         let ul = $("<ul></ul>");
 
-        if (typeof spell.globals === 'undefined')
+        if (typeof spell.globals === 'undefined' && typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
         if (typeof spell.minrage !== 'undefined') 
-            ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">Only ${spell.name == "Heroic Strike" ? 'queue' : 'use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
+            ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">${spell.name == "Heroic Strike" ? 'Queue' : 'Use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maxrage !== 'undefined') 
-            ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Only use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
+            ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Don't use when above <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
+        if (typeof spell.maincd !== 'undefined') 
+            ul.append(`<li data-id="maincdactive" class="${spell.maincdactive ? 'active' : ''}">Don't use if BT / MS cooldown shorter than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> seconds</li>`);
         if (typeof spell.duration !== 'undefined') 
             ul.append(`<li data-id="durationactive" class="${spell.durationactive ? 'active' : ''}">Only use every <input type="text" name="duration" value="${spell.duration}" data-numberonly="true" /> seconds</li>`);
         if (typeof spell.unqueue !== 'undefined') 
@@ -365,12 +379,15 @@ SIM.SETTINGS = {
         if (typeof spell.exmacro !== 'undefined') 
             ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Execute phase: Always queue when casting Execute</li>`);
         if (typeof spell.exminrage !== 'undefined') 
-            ul.append(`<li data-id="exminrageactive" class="${spell.exminrageactive ? 'active' : ''}" data-group="ex">Execute phase: Only queue when above <input type="text" name="exminrage" value="${spell.exminrage}" data-numberonly="true" /> rage</li>`);
+            ul.append(`<li data-id="exminrageactive" class="${spell.exminrageactive ? 'active' : ''}" data-group="ex">Execute phase: Queue when above <input type="text" name="exminrage" value="${spell.exminrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.exunqueue !== 'undefined') 
             ul.append(`<li data-id="exunqueueactive" class="${spell.exunqueueactive ? 'active' : ''}">Execute phase: Unqueue if below <input type="text" name="exunqueue" value="${spell.exunqueue}" data-numberonly="true" /> rage before MH swing</li>`);
         if (typeof spell.globals !== 'undefined') 
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
-        
+        if (spell.timetoend !== undefined)
+            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Only use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
+
+
 
 
         details.append(ul);
@@ -538,8 +555,6 @@ SIM.SETTINGS = {
                 let div = $('<div class="icon" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
                 div.html('<img src="/dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
                 if (talent.c >= talent.m) div.addClass('maxed');
-                if (talent.enable && talent.c == 0) view.rotation.find('[data-id="' + talent.enable + '"]').addClass('hidden');
-                if (talent.enable && talent.c > 0) view.rotation.find('[data-id="' + talent.enable + '"]').removeClass('hidden');
                 div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
             }

@@ -19,6 +19,7 @@ class Spell {
         if (!spell) return;
         if (spell.minrageactive) this.minrage = parseInt(spell.minrage);
         if (spell.maxrageactive) this.maxrage = parseInt(spell.maxrage);
+        if (spell.maincdactive) this.maincd = parseInt(spell.maincd) * 1000;
         if (spell.reaction) this.maxdelay = parseInt(spell.reaction);
         if (spell.cooldown) this.cooldown = parseInt(spell.cooldown) || 0;
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
@@ -35,14 +36,6 @@ class Spell {
             if (spell.exunqueueactive) this.unqueue = parseInt(spell.exunqueue);
             else this.unqueue = 0;
         }
-        
-
-
-
-
-        if (spell && spell.maincd) this.maincd = parseInt(spell.maincd) * 1000;
-        
-
     }
     dmg() {
         return 0;
@@ -96,9 +89,10 @@ class Whirlwind extends Spell {
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && (this.player.rage >= this.minrage ||
-            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
-            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
+        ((this.minrage && this.player.rage >= this.minrage) ||
+         (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
+         (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -125,9 +119,11 @@ class Overpower extends Spell {
             this.player.auras.battlestance.use();
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer && (!this.maxrage || this.player.rage <= this.maxrage);
-            // ((this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
-            // (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer &&
+        ((!this.maxrage && !this.maincd) ||
+         (this.maxrage && this.player.rage <= this.maxrage) ||
+         (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
+         (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -323,7 +319,6 @@ class BerserkerRage extends Spell {
         super(player, id);
         this.cost = 0;
         this.rage = player.talents.berserkerbonus;
-        this.minrage = 80;
         this.cooldown = 30;
         this.useonly = true;
     }
@@ -376,11 +371,12 @@ class Aura {
         this.maxdelay = 100;
         this.useonly = true;
 
-        let spell = spells.filter(s => s.name == this.id)[0];
-        if (spell && spell.reaction) this.maxdelay = parseInt(spell.reaction);
-        if (spell && spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
-        if (spell && spell.crusaders) this.crusaders = parseInt(spell.crusaders);
-        if (spell && spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
+        let spell = spells.filter(s => s.id == this.id)[0];
+        if (!spell) return;
+        if (spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
+        if (spell.crusaders) this.crusaders = parseInt(spell.crusaders);
+        if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
+
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -602,6 +598,7 @@ class BattleStance extends Aura {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
+            this.player.timer = 1500;
             this.firstuse = false;
             this.player.updateAuras();
             this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);

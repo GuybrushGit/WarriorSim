@@ -278,9 +278,26 @@ var spells = [
     classname: 'Overpower',
     iconname: 'ability_meleedamage',
     maxrage: 25,
+    maxrageactive: false,
+    maincd: 2,
+    maincdactive: false,
     value1: 5,
     minlevel: 12,
     maxlevel: 27,
+    active: false,
+},
+{
+    id: 7887,
+    name: 'Overpower',
+    classname: 'Overpower',
+    iconname: 'ability_meleedamage',
+    maxrage: 25,
+    maxrageactive: false,
+    maincd: 2,
+    maincdactive: false,
+    value1: 15,
+    minlevel: 28,
+    maxlevel: 43,
     active: false,
 },
 {
@@ -289,8 +306,11 @@ var spells = [
     classname: 'Overpower',
     iconname: 'ability_meleedamage',
     maxrage: 25,
+    maxrageactive: false,
+    maincd: 2,
+    maincdactive: false,
     value1: 25,
-    minlevel: 28,
+    minlevel: 44,
     maxlevel: 59,
     active: false,
 },
@@ -300,10 +320,68 @@ var spells = [
     classname: 'Overpower',
     iconname: 'ability_meleedamage',
     maxrage: 25,
+    maxrageactive: false,
+    maincd: 2,
+    maincdactive: false,
     value1: 35,
     minlevel: 60,
     active: false,
 },
 
+// Berserker Rage
+{
+    id: 18499,
+    name: 'Berserker Rage',
+    classname: 'BerserkerRage',
+    iconname: 'spell_nature_ancestralguardian',
+    active: false,
+},
+
+// Whirlwind
+{
+    id: 1680,
+    name: 'Whirlwind',
+    classname: 'Whirlwind',
+    iconname: 'ability_whirlwind',
+    minrage: 50,
+    minrageactive: false,
+    maincd: 2,
+    maincdactive: false,
+    active: false,
+},
+
+// Bloodthirst
+{
+    id: 23894,
+    name: 'Bloodthirst',
+    classname: 'Bloodthirst',
+    iconname: 'spell_nature_bloodlust',
+    minrage: 30,
+    minrageactive: false,
+    active: false,
+},
+
+// Mortal Strike
+{
+    id: 27580,
+    name: 'Mortal Strike',
+    classname: 'MortalStrike',
+    iconname: 'ability_warrior_savageblow',
+    minrage: 30,
+    minrageactive: false,
+    active: false,
+},
+
+// Recklessness
+{
+    id: 1719,
+    name: 'Recklessness',
+    classname: 'Recklessness',
+    iconname: 'ability_criticalstrike',
+    timetoend: 16,
+    minlevel: 50,
+    aura: true,
+    active: true,
+},
 
 ];
