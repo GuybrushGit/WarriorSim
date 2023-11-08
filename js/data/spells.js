@@ -126,14 +126,6 @@ var spells = [
     hidden: true,
 },
 {
-    id: 23255,
-    name: 'Deep Wounds',
-    classname: 'DeepWounds',
-    iconname: 'ability_backstab',
-    hidden: true,
-    aura: true,
-},
-{
     id: 11597,
     name: 'Sunder Armor',
     classname: 'SunderArmor',

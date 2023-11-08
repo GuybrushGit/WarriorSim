@@ -232,6 +232,7 @@ SIM.SETTINGS = {
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildBuffs();
+            view.buildSpells2();
         });
 
         view.fight.on('change', 'select[name="weaponrng"]', function (e) {
@@ -246,6 +247,135 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
+        view.rotation.on('click', '.spell2', function (e) {
+            e.stopPropagation();
+            
+        });
+
+        view.rotation.on('click', '.spell2 a', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            let el = $(this).closest('.spell2');
+            let id = el.data('id');
+            el.toggleClass('open');
+            for (let spell of spells) {
+                if (spell.id == id) {
+                    if (el.hasClass("open")) {
+                        el.siblings('.open').each(function() {
+                            $(this).removeClass('open');
+                            view.hideSpellDetails($(this));
+                        });
+                        view.buildSpellDetails(spell, el);
+                    }
+                    else view.hideSpellDetails(el);
+                }
+            }
+        });
+
+        view.rotation.on('click', '.details li', function (e) {
+            if (e.target.nodeName !== "LI") return;
+            $(this).toggleClass('active');
+            let active = $(this).hasClass('active');
+            let id = $(this).parents('.details').data('id');
+
+            if ($(this).data('id') == 'active') {
+                view.rotation.find(`.spell2[data-id="${id}"]`).toggleClass('active', active);
+            }
+
+            if (active && $(this).data('group')) {
+                $(this).siblings(`.active[data-group="${$(this).data('group')}"]`).click();
+            }
+
+            for (let spell of spells)
+                if (spell.id == id)
+                    spell[$(this).data('id')] = active;
+
+            SIM.UI.updateSession();
+        });
+
+        view.rotation.on('keyup', '.details input', function (e) {
+            let id = $(this).parents('.details').data('id');
+
+            for (let spell of spells)
+                if (spell.id == id)
+                    spell[$(this).attr('name')] = $(this).val();
+
+            SIM.UI.updateSession();
+        });
+
+    },
+
+
+
+    buildSpells2: function () {
+        const view = this;
+        let storage = JSON.parse(localStorage[mode]);
+        let level = parseInt(storage.level);
+        let container = view.rotation.find('div:first');
+        container.empty();
+        if (view.rotation.find('.open')) view.hideSpellDetails(view.rotation.find('.open'))
+
+        for (let spell of spells) {
+
+            let min = parseInt(spell.minlevel || 0);
+            let max = parseInt(spell.maxlevel || 60);
+            if (level < min || level > max) {
+                spell.active = false;
+                continue;
+            }
+
+            let tooltip = spell.id == 115671 ? 11567 : spell.id;
+            let div = $(`<div data-id="${spell.id}" class="spell2 ${spell.active ? 'active' : ''}"><div class="icon">
+            <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
+            <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
+            </div></div>`);
+
+            container.append(div);
+
+        }
+
+
+    },
+
+    buildSpellDetails(spell, el) {
+        const view = this;
+        let details = view.rotation.find('.details');
+        details.data('id',spell.id);
+        details.empty();
+        details.append(`<label>${spell.name}</label>`);
+        let ul = $("<ul></ul>");
+
+        ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
+        if (typeof spell.minrage !== 'undefined') 
+            ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">Only ${spell.name == "Heroic Strike" ? 'queue' : 'use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
+        if (typeof spell.maxrage !== 'undefined') 
+            ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Only use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
+        if (typeof spell.duration !== 'undefined') 
+            ul.append(`<li data-id="durationactive" class="${spell.durationactive ? 'active' : ''}">Only use every <input type="text" name="duration" value="${spell.duration}" data-numberonly="true" /> seconds</li>`);
+        if (typeof spell.unqueue !== 'undefined') 
+            ul.append(`<li data-id="unqueueactive" class="${spell.unqueueactive ? 'active' : ''}">Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage before MH swing</li>`);
+        if (typeof spell.exmacro !== 'undefined') 
+            ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Execute phase: Always queue when casting Execute</li>`);
+        if (typeof spell.exminrage !== 'undefined') 
+            ul.append(`<li data-id="exminrageactive" class="${spell.exminrageactive ? 'active' : ''}" data-group="ex">Execute phase: Only queue when above <input type="text" name="exminrage" value="${spell.exminrage}" data-numberonly="true" /> rage</li>`);
+        if (typeof spell.exunqueue !== 'undefined') 
+            ul.append(`<li data-id="exunqueueactive" class="${spell.exunqueueactive ? 'active' : ''}">Execute phase: Unqueue if below <input type="text" name="exunqueue" value="${spell.exunqueue}" data-numberonly="true" /> rage before MH swing</li>`);
+        
+
+
+        details.append(ul);
+
+
+        el.css('margin-bottom', details.height() + 40 + 'px');
+        details.addClass('visible');
+    },
+
+    hideSpellDetails(el) {
+        const view = this;
+        let details = view.rotation.find('.details');
+        details.removeClass('visible');
+        el.css('margin-bottom', '0px');
+        
     },
 
     toggleArticle: function(label) {
@@ -259,6 +389,8 @@ SIM.SETTINGS = {
     },
 
     buildSpells: function () {
+        this.buildSpells2();
+        return;
         var view = this;
         let storage = JSON.parse(localStorage[mode]);
         view.rotation.find('div:first').empty();

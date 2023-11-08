@@ -157,7 +157,7 @@ class Simulation {
             executeperc: parseInt($('input[name="executeperc"]').val()),
             startrage: parseInt($('input[name="startrage"]').val()),
             iterations: parseInt($('input[name="simulations"]').val()),
-            priorityap: parseInt(spells[4].priorityap),
+            //priorityap: parseInt(spells[4].priorityap),
             batching: parseInt($('select[name="batching"]').val()),
         };
     }
@@ -183,7 +183,7 @@ class Simulation {
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
         this.spread = [];
-        this.priorityap = parseInt(spells[4].priorityap);
+        //this.priorityap = parseInt(spells[4].priorityap);
 
         if (this.iterations == 1) log = true;
         else log = false;
@@ -352,8 +352,12 @@ class Simulation {
                 if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
                     player.heroicdelay = delayedheroic.maxdelay - 49;
 
+                // Handled by Execute spell
+                if (player.heroicdelay && delayedheroic && delayedheroic instanceof HeroicStrikeExecute && delayedheroic.exmacro)
+                    player.heroicdelay = 0;
+
                 if (delayedspell.canUse()) {
-                    this.idmg += player.cast(delayedspell);
+                    this.idmg += player.cast(delayedspell, delayedheroic);
                     player.spelldelay = 0;
                     spellcheck = true;
                 }
@@ -375,9 +379,19 @@ class Simulation {
             }
 
             // Unqueue HS
-            if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs &&
-                player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
-                this.player.nextswinghs = false;
+            if (!player.spells.execute || step < this.executestep) {
+                if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs &&
+                    player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
+                    this.player.nextswinghs = false;
+                    if (log) this.player.log(`Heroic Strike unqueued`);
+                }
+            }
+            else {
+                if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.unqueue && player.nextswinghs &&
+                    player.rage < player.spells.heroicstrikeexecute.unqueue && player.mh.timer <= player.spells.heroicstrikeexecute.unqueuetimer) {
+                    this.player.nextswinghs = false;
+                    if (log) this.player.log(`Heroic Strike (Execute phase) unqueued`);
+                }
             }
 
             // Extra attacks
@@ -416,9 +430,17 @@ class Simulation {
             if (player.spells.overpower && player.spells.overpower.timer && player.spells.overpower.timer < next) next = player.spells.overpower.timer;
             if (player.spells.execute && player.spells.execute.timer && player.spells.execute.timer < next) next = player.spells.execute.timer;
 
-            if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
-                let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
-                if (timeleft > 0 && timeleft < next) next = timeleft;
+            if (!player.spells.execute || step < this.executestep) {
+                if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
+                    let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
+                    if (timeleft > 0 && timeleft < next) next = timeleft;
+                }
+            }
+            else {
+                if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.unqueue) {
+                    let timeleft = Math.max(player.mh.timer - player.spells.heroicstrikeexecute.unqueuetimer);
+                    if (timeleft > 0 && timeleft < next) next = timeleft;
+                }
             }
 
             step += next;
@@ -442,6 +464,7 @@ class Simulation {
             if (player.spells.bloodrage && player.spells.bloodrage.timer && !player.spells.bloodrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.spells.hamstring && player.spells.hamstring.timer && !player.spells.hamstring.step(next) && !player.spelldelay) spellcheck = true;
 
             // Auras with periodic ticks
             if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step() && !player.spelldelay) spellcheck = true;

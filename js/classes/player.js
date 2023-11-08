@@ -104,6 +104,7 @@ class Player {
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
+        if (this.spells.heroicstrike) this.spells.heroicstrikeexecute = new HeroicStrikeExecute(this, this.spells.heroicstrike.id);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
         if (this.items.includes(20130)) this.auras.flask = new Flask(this);
@@ -403,8 +404,8 @@ class Player {
     addSpells() {
         for (let spell of spells) {
             if (spell.active) {
-                if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this)`);
-                else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this)`);
+                if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
+                else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
             }
         }
     }
@@ -754,6 +755,7 @@ class Player {
             }
             else {
                 result = this.rollweapon(weapon);
+                if (log) this.log(`Heroic Strike auto canceled`);
             }
         }
         else {
@@ -817,9 +819,9 @@ class Player {
         if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`);
         return done + procdmg;
     }
-    cast(spell) {
+    cast(spell, delayedheroic) {
         this.stepauras();
-        spell.use();
+        spell.use(delayedheroic);
         if (spell.useonly) {
             if (log) this.log(`${spell.name} used`);
             return 0;

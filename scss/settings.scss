@@ -142,7 +142,7 @@
 
     .buffs {
         font-size: 0;
-        width: 330px;
+        width: 426px;
         .label {
             font-size: 12px;
             font-weight: bold;
@@ -151,9 +151,15 @@
         }
     }
 
-    .rotation, .runes {
-        width: calc(100% - 670px);
+    .rotation {
+        width: calc(100% - 766px);
         font-size: 0;
+
+        & > div {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
 
         .spell {
             padding-left: 30px;
@@ -210,12 +216,79 @@
 
         }
 
+        .spell2 {
+            transition: all 0.2s ease-in;
+            &:hover, &.open {
+                .icon {
+                    border-color: #ffcd45;
+                }
+            }
+            &.active {
+                img {
+                    filter: none;
+                }
+            }
+        }
+
+        .details {
+            width: 100%;
+            margin-top: 10;
+            border-top: 1px solid white;
+            padding-top: 10px;
+            position: absolute;
+            top: 94px;
+            left: 0;
+            margin: 0 20px;
+            width: calc(100% - 40px);
+            opacity: 0;
+            transition: all 0.1s ease-in;
+            transition-delay: 0s;
+            &.visible {
+                opacity: 1;
+                transition-delay: .2s;
+            }
+            label {
+                font-size: 12px;
+                position: absolute;
+                top: -20px;
+                font-weight: bold;
+            }
+            li {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+                &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    border: 1px solid #ddd;
+                    font-size: 12px;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+                &.active:before {
+                    content: '✔';
+                }
+                input[type="text"] {
+                    width: 20px;
+                    border-bottom: 1px solid #ddd;
+                    text-align: center;
+                    font-size: 11px;
+                    margin: 0 6px;
+                }
+            }
+        }
+
         .icon {
             display: inline-block;
             vertical-align: middle;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin: 4px 0;
+            border: 1px solid #525252;
         }
 
         .options {

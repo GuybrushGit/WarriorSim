@@ -738,15 +738,17 @@ SIM.UI = {
             _talents.push({ n: tree.n, t: arr });
         }
 
-        view.rotation.find('.spell').each(function () {
-            var sp = {};
-            sp.id = $(this).attr('data-id');
-            sp.active = $(this).hasClass('active');
-            $(this).find('input').each(function () {
-                sp[$(this).attr('name')] = $(this).val();
-            });
-            _rotation.push(sp);
-        });
+        // view.rotation.find('.spell').each(function () {
+        //     var sp = {};
+        //     sp.id = $(this).attr('data-id');
+        //     sp.active = $(this).hasClass('active');
+        //     $(this).find('input').each(function () {
+        //         sp[$(this).attr('name')] = $(this).val();
+        //     });
+        //     _rotation.push(sp);
+        // });
+
+        _rotation = spells;
 
         for (let type in gear) {
             _gear[type] = [];
@@ -793,29 +795,33 @@ SIM.UI = {
         var view = this;
 
         if (localStorage.level) localStorage.clear(); // clear old style of storage
-        if (!localStorage[mode]) localStorage[mode] = "{}";
+        if (!localStorage[mode]) localStorage[mode] = JSON.stringify(session);
 
         let storage = JSON.parse(localStorage[mode]);
+        if (!storage.level) storage.level = session.level;
+        if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
         for (let prop in storage) {
             view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
             view.fight.find('select[name="' + prop + '"]').val(storage[prop]);
             view.fight.find('.slider[name="slider-' + prop + '"]').val(storage[prop]);
         }
 
+        
+
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
 
         updateGlobals({
-            talents: !storage.talents ? JSON.parse(session.talents) : storage.talents,
-            buffs: !storage.buffs ? JSON.parse(session.buffs) : storage.buffs,
-            rotation: !storage.rotation ? JSON.parse(session.rotation) : storage.rotation,
-            gear: !storage.gear ? JSON.parse(session.gear) : storage.gear,
-            enchant: !storage.enchant ? JSON.parse(session.enchant) : storage.enchant,
-            runes: !storage.runes ? JSON.parse(session.runes || "{}") : storage.runes,
+            talents: !storage.talents ? session.talents : storage.talents,
+            buffs: !storage.buffs ? session.buffs : storage.buffs,
+            rotation: !storage.rotation ? session.rotation : storage.rotation,
+            gear: !storage.gear ? session.gear : storage.gear,
+            enchant: !storage.enchant ? session.enchant : storage.enchant,
+            runes: !storage.runes ? session.runes || {} : storage.runes,
             resistances: !storage.resistances ? null : storage.resistances,
         });
 
-        let _sources = !storage.sources ? JSON.parse(session.sources) : storage.sources;
-        let _phases = !storage.phases ? JSON.parse(session.phases) : storage.phases;
+        let _sources = !storage.sources ? session.sources : storage.sources;
+        let _phases = !storage.phases ? session.phases : storage.phases;
 
         for (let i of _sources)
             view.filter.find(`.sources [data-id="${i}"]`).addClass('active');
