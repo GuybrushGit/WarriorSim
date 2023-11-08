@@ -355,6 +355,28 @@ class QuickStrike extends Spell {
     }
 }
 
+class RagePotion extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Rage Potion');
+        this.cost = 0;
+        this.rage = 100;
+        this.minrage = 80;
+        this.cooldown = 120;
+        this.useonly = true;
+    }
+    use() {
+        this.timer = this.cooldown * 1000;
+        let oldRage = this.player.rage;
+        this.player.rage = Math.min(this.player.rage + ~~rng(this.value1, this.value2), 100);
+        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+            this.player.auras.consumedrage.use();
+    }
+    canUse() {
+        return this.timer == 0 && this.player.rage < this.minrage;
+    }
+}
+
+/**************************************************** AURAS ****************************************************/
 
 class Aura {
     constructor(player, id, name) {
@@ -377,6 +399,8 @@ class Aura {
         if (spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
         if (spell.crusaders) this.crusaders = parseInt(spell.crusaders);
         if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
+        if (spell.value1) this.value1 = spell.value1;
+        if (spell.value2) this.value2 = spell.value2;
 
     }
     use() {
@@ -617,7 +641,7 @@ class MightyRagePotion extends Aura {
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
         let oldRage = this.player.rage;
-        this.player.rage = Math.min(this.player.rage + ~~rng(45, 75), 100);
+        this.player.rage = Math.min(this.player.rage + ~~rng(this.value1, this.value2), 100);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateStrength();

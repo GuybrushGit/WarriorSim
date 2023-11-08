@@ -387,6 +387,8 @@ SIM.SETTINGS = {
         if (spell.timetoend !== undefined)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
 
+        // if (spell.crusaders !== undefined)
+        //     ul.append(`<li data-id="active" class="${spell.crusaders ? 'active' : ''}">Use when <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
 
 
 

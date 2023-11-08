@@ -400,4 +400,53 @@ var spells = [
     active: true,
 },
 
+// Death Wish
+{
+    id: 12328,
+    name: 'Death Wish',
+    classname: 'DeathWish',
+    iconname: 'spell_shadow_deathpact',
+    timetoend: 31,
+    crusaders: 2,
+    aura: true,
+    active: false,
+},
+
+// Rage Potion
+{
+    id: 6612,
+    name: 'Rage Potion',
+    classname: 'RagePotion',
+    iconname: 'inv_potion_24',
+    minlevel: 4,
+    maxlevel: 24,
+    value1: 20,
+    value2: 40,
+    active: true,
+},
+{
+    id: 6613,
+    name: 'Great Rage Potion',
+    classname: 'RagePotion',
+    iconname: 'inv_potion_21',
+    minlevel: 25,
+    maxlevel: 45,
+    value1: 30,
+    value2: 60,
+    active: true,
+},
+{
+    id: 17528,
+    name: 'Mighty Rage Potion',
+    classname: 'MightyRagePotion',
+    iconname: 'inv_potion_41',
+    timetoend: 21,
+    crusaders: 0,
+    aura: true,
+    minlevel: 46,
+    value1: 45,
+    value2: 75,
+    active: true,
+},
+
 ];
