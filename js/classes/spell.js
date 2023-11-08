@@ -23,6 +23,7 @@ class Spell {
         if (spell.cooldown) this.cooldown = parseInt(spell.cooldown) || 0;
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
         if (spell.value1) this.value1 = spell.value1;
+        if (spell.value2) this.value2 = spell.value2;
 
         // HS
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
@@ -138,7 +139,7 @@ class Execute extends Spell {
         this.weaponspell = false;
     }
     dmg() {
-        return 600 + (15 * this.usedrage);
+        return this.value1 + (this.value2 * this.usedrage);
     }
     use(delayedheroic) {
         // HS + Execute macro
@@ -199,8 +200,6 @@ class HeroicStrike extends Spell {
         this.bonus = player.aqbooks ? 157 : this.value1;
         this.useonly = true;
         this.unqueuetimer = 200;
-
-        
     }
     use() {
         this.player.nextswinghs = true;
