@@ -24,6 +24,7 @@ class Spell {
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
+        if (typeof spell.globals !== 'undefined') this.globals = parseInt(spell.globals);
 
         // HS
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
@@ -40,7 +41,7 @@ class Spell {
 
 
         if (spell && spell.maincd) this.maincd = parseInt(spell.maincd) * 1000;
-        if (spell && spell.globals) this.globals = parseInt(spell.globals);
+        
 
     }
     dmg() {

@@ -12,7 +12,7 @@ var spells = [
     minlevel: 8,
     maxlevel: 31,
     value1: 5,
-    active: true
+    active: false
 },
 {
     id: 7372,
@@ -26,7 +26,7 @@ var spells = [
     minlevel: 32,
     maxlevel: 53,
     value1: 18,
-    active: true
+    active: false
 },
 {
     id: 7373,
@@ -39,7 +39,7 @@ var spells = [
     durationactive: false,
     minlevel: 54,
     value1: 45,
-    active: true
+    active: false
 },
 
 // Heroic Strike
@@ -259,6 +259,16 @@ var spells = [
     classname: 'Bloodrage',
     iconname: 'ability_racial_bloodrage',
     active: true,
+},
+
+// Sunder Armor
+{
+    id: 11597,
+    name: 'Sunder Armor',
+    classname: 'SunderArmor',
+    iconname: 'ability_warrior_sunder',
+    globals: 1,
+    active: false,
 },
 
 

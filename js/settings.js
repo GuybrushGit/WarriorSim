@@ -258,15 +258,22 @@ SIM.SETTINGS = {
             let el = $(this).closest('.spell2');
             let id = el.data('id');
             el.toggleClass('open');
+            el.removeClass('fade');
+            let isopen = el.hasClass("open");
+            if (isopen) {
+                el.siblings().addClass('fade');
+                el.siblings('.open').each(function() {
+                    $(this).removeClass('open');
+                    view.hideSpellDetails($(this));
+                });
+            }
+            else {
+                el.siblings().removeClass('fade');
+            }
+
             for (let spell of spells) {
                 if (spell.id == id) {
-                    if (el.hasClass("open")) {
-                        el.siblings('.open').each(function() {
-                            $(this).removeClass('open');
-                            view.hideSpellDetails($(this));
-                        });
-                        view.buildSpellDetails(spell, el);
-                    }
+                    if (isopen) view.buildSpellDetails(spell, el);
                     else view.hideSpellDetails(el);
                 }
             }
@@ -345,7 +352,8 @@ SIM.SETTINGS = {
         details.append(`<label>${spell.name}</label>`);
         let ul = $("<ul></ul>");
 
-        ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
+        if (typeof spell.globals === 'undefined')
+            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
         if (typeof spell.minrage !== 'undefined') 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">Only ${spell.name == "Heroic Strike" ? 'queue' : 'use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maxrage !== 'undefined') 
@@ -360,6 +368,8 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="exminrageactive" class="${spell.exminrageactive ? 'active' : ''}" data-group="ex">Execute phase: Only queue when above <input type="text" name="exminrage" value="${spell.exminrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.exunqueue !== 'undefined') 
             ul.append(`<li data-id="exunqueueactive" class="${spell.exunqueueactive ? 'active' : ''}">Execute phase: Unqueue if below <input type="text" name="exunqueue" value="${spell.exunqueue}" data-numberonly="true" /> rage before MH swing</li>`);
+        if (typeof spell.globals !== 'undefined') 
+            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
         
 
 

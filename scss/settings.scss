@@ -223,6 +223,9 @@
                     border-color: #ffcd45;
                 }
             }
+            &.fade {
+                opacity: 0.3;
+            }
             &.active {
                 img {
                     filter: none;
