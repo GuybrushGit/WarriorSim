@@ -271,5 +271,39 @@ var spells = [
     active: false,
 },
 
+// Overpower
+{
+    id: 7384,
+    name: 'Overpower',
+    classname: 'Overpower',
+    iconname: 'ability_meleedamage',
+    maxrage: 25,
+    value1: 5,
+    minlevel: 12,
+    maxlevel: 27,
+    active: false,
+},
+{
+    id: 11584,
+    name: 'Overpower',
+    classname: 'Overpower',
+    iconname: 'ability_meleedamage',
+    maxrage: 25,
+    value1: 25,
+    minlevel: 28,
+    maxlevel: 59,
+    active: false,
+},
+{
+    id: 11585,
+    name: 'Overpower',
+    classname: 'Overpower',
+    iconname: 'ability_meleedamage',
+    maxrage: 25,
+    value1: 35,
+    minlevel: 60,
+    active: false,
+},
+
 
 ];

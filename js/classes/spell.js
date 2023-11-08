@@ -111,8 +111,8 @@ class Overpower extends Spell {
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = 35 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = 35 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        if (this.player.weaponrng) dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = this.value1 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
@@ -125,9 +125,9 @@ class Overpower extends Spell {
             this.player.auras.battlestance.use();
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer && this.player.rage <= this.minrage &&
-            ((this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
-            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer && (!this.maxrage || this.player.rage <= this.maxrage);
+            // ((this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
+            // (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 

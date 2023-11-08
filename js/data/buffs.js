@@ -1,5 +1,14 @@
 var buffs = [
    {
+      id: 71,
+      spellid: true,
+      name: "Defensive Stance",
+      iconname: "ability_warrior_defensivestance",
+      dmgmod: -10,
+      group: "zerkstance",
+      minlevel: 10,
+   },
+   {
       id: 2458,
       spellid: true,
       name: "Berserker Stance",
