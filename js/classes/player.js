@@ -435,6 +435,9 @@ class Player {
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
         }
+        if (this.auras.rend) {
+            this.auras.rend.idmg = 0;
+        }
         this.update();
     }
     update() {
@@ -662,6 +665,7 @@ class Player {
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.step();
 
         if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.step();
+        if (this.auras.rend && this.auras.rend.timer) this.auras.rend.step();
         if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.step();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.step();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.step();
@@ -696,6 +700,7 @@ class Player {
 
         if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
         if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.end();
+        if (this.auras.rend && this.auras.rend.timer) this.auras.rend.end();
         if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.end();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.end();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.end();

@@ -303,11 +303,14 @@ class Simulation {
 
                 // Execute phase
                 else if (player.spells.execute && step >= this.executestep) {
-                    if (player.spells.bloodthirst && player.stats.ap >= this.priorityap && player.spells.bloodthirst.canUse()) {
-                        player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
-                    }
-                    else if (player.spells.mortalstrike && player.stats.ap >= this.priorityap && player.spells.mortalstrike.canUse()) {
-                        player.spelldelay = 1; delayedspell = player.spells.mortalstrike;
+
+                    if (player.stats.ap >= player.spells.execute.priorityap) {
+                        if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                            player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
+                        }
+                        else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
+                            player.spelldelay = 1; delayedspell = player.spells.mortalstrike;
+                        }
                     }
                     else if (player.spells.execute.canUse()) {
                         player.spelldelay = 1; delayedspell = player.spells.execute;
@@ -329,6 +332,7 @@ class Simulation {
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) { player.spelldelay = 1; delayedspell = player.spells.whirlwind; }
                 else if (player.spells.overpower && player.spells.overpower.canUse()) { player.spelldelay = 1; delayedspell = player.spells.overpower; }
                 else if (player.spells.hamstring && player.spells.hamstring.canUse()) { player.spelldelay = 1; delayedspell = player.spells.hamstring; }
+                else if (player.auras.rend && player.auras.rend.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rend; }
 
                 if (player.heroicdelay) spellcheck = false;
             }
@@ -479,6 +483,9 @@ class Simulation {
 
         if (player.auras.deepwounds) {
             this.idmg += player.auras.deepwounds.idmg;
+        }
+        if (player.auras.rend) {
+            this.idmg += player.auras.rend.idmg;
         }
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;

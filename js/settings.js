@@ -362,6 +362,8 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
         if (spell.timetoend !== undefined)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
+        if (spell.priorityap !== undefined)
+            ul.append(`<li data-id="priorityapactive" class="${spell.priorityapactive ? 'active' : ''}">Don't use if Attack Power is higher than <input type="text" name="priorityap" value="${spell.priorityap}" data-numberonly="true" style="width: 25px" /></li>`);
 
         
         // if (spell.crusaders !== undefined)

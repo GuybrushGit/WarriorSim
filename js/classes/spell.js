@@ -25,6 +25,7 @@ class Spell {
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
+        if (spell.priorityapactive) this.priorityap = parseInt(spell.priorityap);
         if (typeof spell.globals !== 'undefined') this.globals = parseInt(spell.globals);
 
         // HS
@@ -198,7 +199,8 @@ class HeroicStrike extends Spell {
         this.cost = 15 - player.talents.impheroicstrike;
         this.bonus = player.aqbooks ? 157 : this.value1;
         this.useonly = true;
-        this.unqueuetimer = 200;
+        this.unqueuetimer = 300;
+        this.maxdelay = 300;
     }
     use() {
         this.player.nextswinghs = true;
@@ -220,7 +222,8 @@ class HeroicStrikeExecute extends Spell {
         this.excost = 15 - player.talents.executecost;
         this.bonus = player.aqbooks ? 157 : this.value1;
         this.useonly = true;
-        this.unqueuetimer = 200;
+        this.unqueuetimer = 300;
+        this.maxdelay = 300;
         if (this.exmacro) this.minrage = this.excost;
     }
     use() {
@@ -1269,5 +1272,52 @@ class ConsumedRage extends Aura {
             this.player.updateDmgMod();
             if (log) this.player.log(`${this.name} removed`);
         }
+    }
+}
+
+class Rend extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 9;
+        this.cost = 10;
+        this.idmg = 0;
+        this.totaldmg = 0;
+        this.lasttick = 0;
+        this.dmgmod = 1 + this.player.talents.rendmod / 100;
+    }
+    step() {
+        while (step >= this.nexttick) {
+            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod;
+            this.idmg += ~~(dmg / 3);
+            this.totaldmg += ~~(dmg / 3);
+
+            if (this.player.bleedrage) {
+                let oldRage = this.player.rage;
+                this.player.rage += this.player.bleedrage;
+                if (this.player.rage > 100) this.player.rage = 100;
+                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                    this.player.auras.consumedrage.use();
+            }
+
+            if (log) this.player.log(`${this.name} tick for ${~~(dmg / 3)}`);
+
+            this.nexttick += 3000;
+        }
+
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+        }
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.nexttick = step + 3000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        if (log) this.player.log(`${this.name} applied`);
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.player.rage >= this.cost;
     }
 }
