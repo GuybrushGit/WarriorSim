@@ -378,6 +378,7 @@ class Aura {
 
         let spell = spells.filter(s => s.id == this.id)[0];
         if (!spell) return;
+        if (spell.durationactive) this.duration = parseInt(spell.duration);
         if (spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
         if (spell.crusaders) this.crusaders = parseInt(spell.crusaders);
         if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
@@ -1259,7 +1260,7 @@ class ConsumedRage extends Aura {
 class Rend extends Aura {
     constructor(player, id) {
         super(player, id);
-        this.duration = 9;
+        this.duration = this.duration || 9;
         this.cost = 10;
         this.idmg = 0;
         this.totaldmg = 0;
@@ -1267,7 +1268,7 @@ class Rend extends Aura {
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
     }
     step() {
-        while (step >= this.nexttick) {
+        while (step >= this.nexttick && this.stacks) {
             let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod;
             this.idmg += ~~(dmg / 3);
             this.totaldmg += ~~(dmg / 3);
@@ -1283,6 +1284,7 @@ class Rend extends Aura {
             if (log) this.player.log(`${this.name} tick for ${~~(dmg / 3)}`);
 
             this.nexttick += 3000;
+            this.stacks--;
         }
 
         if (step >= this.timer) {
@@ -1296,6 +1298,7 @@ class Rend extends Aura {
         this.nexttick = step + 3000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
+        this.stacks = 3;
         if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {

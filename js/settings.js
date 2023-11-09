@@ -275,14 +275,14 @@ SIM.SETTINGS = {
         for (let spell of spells) {
 
             // race restriction
-            // if (spell.id == 26296 && storage.race !== "Troll") {
-            //     spell.active = false;
-            //     continue;
-            // }
-            // if (spell.id == 20572 && storage.race !== "Orc") {
-            //     spell.active = false;
-            //     continue;6
-            // }
+            if (spell.id == 26296 && storage.race !== "Troll") {
+                spell.active = false;
+                continue;
+            }
+            if (spell.id == 20572 && storage.race !== "Orc") {
+                spell.active = false;
+                continue;6
+            }
 
             // // level restriction
             let min = parseInt(spell.minlevel || 0);
@@ -293,24 +293,24 @@ SIM.SETTINGS = {
             }
 
             // // talent restriction
-            // let talent;
-            // for (let tree of talents)
-            //     for (let t of tree.t)
-            //         if (t.n == spell.name) talent = t;
-            // if (talent && talent.enable && talent.c == 0) {
-            //     spell.active = false;
-            //     continue;
-            // }
+            let talent;
+            for (let tree of talents)
+                for (let t of tree.t)
+                    if (t.n == spell.name) talent = t;
+            if (talent && talent.enable && talent.c == 0) {
+                spell.active = false;
+                continue;
+            }
 
             // // rune restrictions
-            // let rune;
-            // for (let type in runes)
-            //     for (let r of runes[type])
-            //         if (r.enable == spell.id) rune = r;
-            // if (rune && !rune.selected) {
-            //     spell.active = false;
-            //     continue;
-            // }
+            let rune;
+            for (let type in runes)
+                for (let r of runes[type])
+                    if (r.enable == spell.id) rune = r;
+            if (rune && !rune.selected) {
+                spell.active = false;
+                continue;
+            }
 
 
             let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">

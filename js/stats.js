@@ -116,6 +116,14 @@ SIM.STATS = {
             colors.push(view.colors[counter % view.colors.length]);
         }
 
+        // Rend
+        if (sim.player.auras.rend && sim.player.auras.rend.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.rend.name);
+            data.push((sim.player.auras.rend.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+
+
         view.dmgdata.datasets.push({
             data: data,
             fill: false,

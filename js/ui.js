@@ -793,7 +793,6 @@ SIM.UI = {
         if (!localStorage[mode]) localStorage[mode] = JSON.stringify(session);
 
         let storage = JSON.parse(localStorage[mode]);
-        storage.rotation = spells;
         if (!storage.level) storage.level = session.level;
         if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
         for (let prop in storage) {

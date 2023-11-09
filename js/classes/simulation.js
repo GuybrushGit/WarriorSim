@@ -324,7 +324,7 @@ class Simulation {
                 
                 // prevent using spells while waiting for consumed by rage proc
                 else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
-                else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
+                else if (player.auras.consumedrage && player.auras.consumedrage.rageblockactive && player.rage < player.auras.consumedrage.rageblock) { } 
 
                 // Normal phase - rage cost
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
@@ -344,7 +344,7 @@ class Simulation {
                 if (!player.spells.execute || step < this.executestep) {
                     // prevent using spells while waiting for consumed by rage proc
                     if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
-                    else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
+                    else if (player.auras.consumedrage && player.auras.consumedrage.rageblockactive && player.rage < player.auras.consumedrage.rageblock) { } 
                     else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { 
                         player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; 
                     
