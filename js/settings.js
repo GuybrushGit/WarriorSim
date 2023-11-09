@@ -192,35 +192,12 @@ SIM.SETTINGS = {
 
         view.fight.on('change', 'select[name="race"]', function (e) {
             var val = $(this).val();
-            var bloodfury = view.rotation.find('[data-id="20572"]');
-            var berserking = view.rotation.find('[data-id="26296"]');
-            var disableSpells = [];
-
-            if (val == "Orc") {
-                bloodfury.removeClass('hidden');
-            }
-            else {
-                bloodfury.addClass('hidden').removeClass('active');
-                disableSpells.push(20572);
-            }
-            if (val == "Troll") {
-                berserking.removeClass('hidden');
-            }
-            else {
-                berserking.addClass('hidden').removeClass('active');
-                disableSpells.push(26296);
-            }
-
-            for (let spell of spells) {
-                if (disableSpells.includes(spell.id))
-                    spell.active = false;
-            }
-
             view.bg.attr('data-race', val);
 
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
+            view.buildSpells();
         });
 
         view.fight.on('change', 'select[name="aqbooks"]', function (e) {
@@ -281,7 +258,7 @@ SIM.SETTINGS = {
             }
         });
 
-        view.rotation.on('click', '.details li', function (e) {
+        view.rotation.on('click', '.details li:not(.nobox)', function (e) {
             if (e.target.nodeName !== "LI") return;
             $(this).toggleClass('active');
             let active = $(this).hasClass('active');
@@ -326,6 +303,16 @@ SIM.SETTINGS = {
 
         for (let spell of spells) {
 
+            // race restriction
+            if (spell.id == 26296 && storage.race !== "Troll") {
+                spell.active = false;
+                continue;
+            }
+            if (spell.id == 20572 && storage.race !== "Orc") {
+                spell.active = false;
+                continue;
+            }
+
             // level restriction
             let min = parseInt(spell.minlevel || 0);
             let max = parseInt(spell.maxlevel || 60);
@@ -363,6 +350,9 @@ SIM.SETTINGS = {
         details.empty();
         details.append(`<label>${spell.name}</label>`);
         let ul = $("<ul></ul>");
+        
+        if (spell.haste !== undefined)
+            ul.append(`<li class="nobox ${spell.haste ? 'active' : ''}">Attack speed set at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
 
         if (typeof spell.globals === 'undefined' && typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
@@ -387,6 +377,7 @@ SIM.SETTINGS = {
         if (spell.timetoend !== undefined)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
 
+        
         // if (spell.crusaders !== undefined)
         //     ul.append(`<li data-id="active" class="${spell.crusaders ? 'active' : ''}">Use when <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
 

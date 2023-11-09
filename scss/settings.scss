@@ -276,6 +276,9 @@
                 &.active:before {
                     content: '✔';
                 }
+                &.nobox:before {
+                    display: none;
+                }
                 input[type="text"] {
                     width: 20px;
                     border-bottom: 1px solid #ddd;

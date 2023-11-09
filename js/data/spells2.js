@@ -449,4 +449,28 @@ var spells = [
     active: true,
 },
 
+// Berserking
+{
+    id: 26296,
+    name: 'Berserking',
+    classname: 'Berserking',
+    iconname: 'racial_troll_berserk',
+    timetoend: 11,
+    haste: 30,
+    aura: true,
+    active: true,
+},
+
+// Blood Fury
+{
+    id: 20572,
+    name: 'Blood Fury',
+    classname: 'BloodFury',
+    iconname: 'racial_orc_berserkerstrength',
+    timetoend: 16,
+    aura: true,
+    active: true,
+},
+
+
 ];

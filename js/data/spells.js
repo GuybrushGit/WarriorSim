@@ -9,17 +9,7 @@ var spells = [
     hidden: true,
 },
 
-{
-    id: 26296,
-    name: 'Berserking',
-    classname: 'Berserking',
-    iconname: 'racial_troll_berserk',
-    timetoend: 11,
-    haste: 30,
-    reaction: 300,
-    hidden: true,
-    aura: true,
-},
+
 {
     id: 20572,
     name: 'Blood Fury',
@@ -31,25 +21,7 @@ var spells = [
     aura: true,
 },
 
-{
-    id: 17528,
-    name: 'Mighty Rage Potion',
-    classname: 'MightyRagePotion',
-    iconname: 'inv_potion_41',
-    timetoend: 21,
-    crusaders: 0,
-    reaction: 100,
-    aura: true,
-},
-{
-    id: 16322,
-    name: 'Juju Flurry',
-    classname: 'JujuFlurry',
-    iconname: 'inv_misc_monsterscales_17',
-    timetoend: 15,
-    aura: true,
-    hidden: true,
-},
+
 
 
 
