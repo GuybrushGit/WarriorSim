@@ -552,11 +552,11 @@ class Player {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let low = Math.min(1.3 - 0.05 * diff, 0.91);
         let high = Math.min(1.2 - 0.03 * diff, 0.99);
-        if (this.weaponrng) return Math.random() * (high - low) + low;
-        else return avg(low, high);
+        if (this.weaponrng) return Math.random() * (high - low) + low, 0;
+        else return avg(low, high), 0;
     }
     getGlanceChance(weapon) {
-        return 10 + (this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type])) * 2;
+        return 10 + Math.max(this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type]), 0) * 2;
     }
     getMissChance(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
@@ -567,8 +567,7 @@ class Player {
     getDWMissChance(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let miss = 5 + (diff > 10 ? diff * 0.2 : diff * 0.1);
-        miss = miss * 0.8 + 20; //v1
-        //miss += 19; // v2
+        miss = miss * 0.8 + 20;
         miss -= (diff > 10 ? this.stats.hit - 1 : this.stats.hit);
         return miss;
     }
@@ -577,7 +576,7 @@ class Player {
         return Math.max(crit, 0);
     }
     getDodgeChance(weapon) {
-        return 5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1;
+        return Math.max(5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1, 0);
     }
     getArmorReduction() {
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);

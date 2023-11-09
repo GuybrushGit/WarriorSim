@@ -666,8 +666,8 @@ SIM.UI = {
         let mhcrit = player.crit + player.mh.crit;
         let ohcrit = player.crit + (player.oh ? player.oh.crit : 0);
         view.sidebar.find('#crit').html(mhcrit.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohcrit.toFixed(2) + '% <small>OH</small>' : ''));
-        let mhcap = 100 - player.mh.dwmiss - player.mh.dodge - player.mh.glanceChance;
-        let ohcap = player.oh ? 100 - player.oh.dwmiss - player.oh.dodge - player.oh.glanceChance : 0;
+        let mhcap = Math.max(0, 100 - player.mh.dwmiss - player.mh.dodge - player.mh.glanceChance);
+        let ohcap = Math.max(0, player.oh ? 100 - player.oh.dwmiss - player.oh.dodge - player.oh.glanceChance : 0);
         view.sidebar.find('#critcap').html(mhcap.toFixed(2) + '% <small>MH</small>'+ (player.oh ? space + ohcap.toFixed(2) + '% <small>OH</small>' : ''));
         let mhdmg = player.stats.dmgmod * player.mh.modifier * 100;
         let ohdmg = player.stats.dmgmod * (player.oh ? player.oh.modifier * 100 : 0);
