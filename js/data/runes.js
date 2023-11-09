@@ -61,7 +61,7 @@ var runes = {
      {
          id: 900009,
          name: 'Endless Rage',
-         description: "You generate 25% more Rage from all damage you deal.",
+         description: "You generate 25% more Rage from all damage you deal.<br />[ASSUMED NO EFFECT ON REFUNDS]",
          iconname: 'Endless-Rage',
          ragemod: 1.25,
      },
@@ -81,7 +81,7 @@ var runes = {
      {
          id: 900012,
          name: 'Quick Strike',
-         description: "A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS, ASSUMED X = 66, NO CD, 20 RAGE COST, NO SWING RESET, NO INTERACTION WITH HS QUEUE]",
+         description: "A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS, ASSUMED X = 66, SCALES WITH AP, NO CD, 20 RAGE COST, NO SWING RESET, NO INTERACTION WITH HS QUEUE]",
          iconname: 'inv_axe_03',
          twohandonly: true,
          enable: 900012,

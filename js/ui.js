@@ -1208,7 +1208,7 @@ SIM.UI = {
     loadRunes: function (type, editmode) {
         var view = this;
 
-        if (!runes[type] || runes[type].length == 0) return;
+        if (typeof runes === 'undefined' || !runes[type] || runes[type].length == 0) return;
 
         let table = `<table class="runes ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
                         <thead>

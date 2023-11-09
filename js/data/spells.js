@@ -540,7 +540,6 @@ var spells = [
     classname: 'RagingBlow',
     iconname: 'Raging-Blow',
     execute: true,
-    active: true,
 },
 {
     id: 900006,
@@ -552,7 +551,6 @@ var spells = [
     rageblockactive: true,
     aura: true,
     buff: true,
-    active: true,
 },
 {
     id: 900008,
