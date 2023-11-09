@@ -1252,7 +1252,7 @@ class ConsumedRage extends Aura {
             this.stacks = 0;
             this.firstuse = false;
             this.player.updateDmgMod();
-            if (log) this.player.log(`${this.name} rrremoved`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
