@@ -539,8 +539,8 @@ var spells = [
     name: 'Raging Blow',
     classname: 'RagingBlow',
     iconname: 'Raging-Blow',
-    minrage: 0,
-    minrageactive: true,
+    execute: true,
+    active: true,
 },
 {
     id: 900006,

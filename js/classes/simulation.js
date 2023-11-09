@@ -298,11 +298,14 @@ class Simulation {
                 else if (player.auras.earthstrike && player.auras.earthstrike.canUse() && step > this.earthstep) { player.spelldelay = 1; delayedspell = player.auras.earthstrike; }
                 else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.pummelstep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
                 else if (player.auras.zandalarian && player.auras.zandalarian.canUse() && step > this.zandalarstep) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
-
+                
                 // Execute phase
                 else if (player.spells.execute && step >= this.executestep) {
 
-                    if (player.stats.ap >= player.spells.execute.priorityap) {
+                    if (player.spells.ragingblow && player.spells.ragingblow.canUse(true)) { 
+                        player.spelldelay = 1; delayedspell = player.spells.ragingblow; 
+                    }
+                    else if (player.stats.ap >= player.spells.execute.priorityap) {
                         if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
                             player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
                         }
@@ -316,9 +319,9 @@ class Simulation {
                 }
 
                 // Normal phase - no cost
+                else if (player.spells.ragingblow && player.spells.ragingblow.canUse(false)) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
                 else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
-                else if (player.spells.ragingblow && player.spells.ragingblow.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
-
+                
                 // prevent using spells while waiting for consumed by rage proc
                 else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
                 else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
@@ -445,9 +448,9 @@ class Simulation {
             if (player.heroicdelay) player.heroicdelay += next;
 
             // Spells used by player
+            if (player.spells.ragingblow && player.spells.ragingblow.timer && !player.spells.ragingblow.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.berserkerrage && player.spells.berserkerrage.timer && !player.spells.berserkerrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && !player.spells.bloodthirst.step(next) && !player.spelldelay) spellcheck = true;
-            if (player.spells.ragingblow && player.spells.ragingblow.timer && !player.spells.ragingblow.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && !player.spells.mortalstrike.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.quickstrike && player.spells.quickstrike.timer && !player.spells.quickstrike.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.whirlwind && player.spells.whirlwind.timer && !player.spells.whirlwind.step(next) && !player.spelldelay) spellcheck = true;

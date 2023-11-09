@@ -31,6 +31,7 @@ class Spell {
         if (spell.consumedrage) this.consumedrage = spell.consumedrage;
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
         if (spell.exmacro) this.exmacro = spell.exmacro;
+        if (spell.execute) this.execute = spell.execute;
     }
     dmg() {
         return 0;
@@ -287,8 +288,9 @@ class RagingBlow extends Spell {
         else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
-    canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage && 
+    canUse(executephase) {
+        return !this.timer && !this.player.timer && 
+            (!executephase || this.execute) &&
             ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer));
     }
 }
