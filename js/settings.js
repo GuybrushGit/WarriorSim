@@ -133,28 +133,6 @@ SIM.SETTINGS = {
             SIM.UI.filterGear();
         });
 
-        view.rotation.on('click', '.spell', function (e) {
-            let t = e.target;
-            if (t.nodeName == "LI" || t.nodeName == "INPUT")
-                return;
-            $(this).toggleClass('active');
-            let id = $(this).data('id');
-            for (let spell of spells) {
-                if (spell.id == id)
-                    spell.active = $(this).hasClass('active');
-            }
-            SIM.UI.updateSession();
-        });
-
-        view.rotation.on('keyup', 'input[type="text"]', function (e) {
-            let id = $(this).parents('.spell').data('id');
-            for (let spell of spells) {
-                if (spell.id == id)
-                    spell[$(this).attr('name')] = $(this).val();
-            }
-            SIM.UI.updateSession();
-        });
-
         view.buffs.on('click', 'label', function(e) {
             var view = this;
             $(view.parentElement).find('div').toggleClass('hidden');
@@ -164,12 +142,6 @@ SIM.SETTINGS = {
         view.fight.on('click', 'label', function (e) {
             var view = this;
             $(view.parentElement).find('ul').toggleClass('hidden');
-            SIM.SETTINGS.toggleArticle(view);
-        });
-
-        view.rotation.on('click', 'label', function (e) {
-            var view = this;
-            $(view.parentElement).find('div:first').toggleClass('hidden');
             SIM.SETTINGS.toggleArticle(view);
         });
 
@@ -226,15 +198,15 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
-        view.rotation.on('click', '.spell2', function (e) {
+        view.rotation.on('click', '.spell', function (e) {
             e.stopPropagation();
             
         });
 
-        view.rotation.on('click', '.spell2 a', function (e) {
+        view.rotation.on('click', '.spell a', function (e) {
             e.stopPropagation();
             e.preventDefault();
-            let el = $(this).closest('.spell2');
+            let el = $(this).closest('.spell');
             let id = el.data('id');
             el.toggleClass('open');
             el.removeClass('fade');
@@ -265,7 +237,7 @@ SIM.SETTINGS = {
             let id = $(this).parents('.details').data('id');
 
             if ($(this).data('id') == 'active') {
-                view.rotation.find(`.spell2[data-id="${id}"]`).toggleClass('active', active);
+                view.rotation.find(`.spell[data-id="${id}"]`).toggleClass('active', active);
             }
 
             if (active && $(this).data('group')) {
@@ -291,9 +263,7 @@ SIM.SETTINGS = {
 
     },
 
-
-
-    buildSpells2: function () {
+    buildSpells: function () {
         const view = this;
         let storage = JSON.parse(localStorage[mode]);
         let level = parseInt(storage.level);
@@ -301,19 +271,20 @@ SIM.SETTINGS = {
         container.empty();
         if (view.rotation.find('.open')) view.hideSpellDetails(view.rotation.find('.open'))
 
+        let buffs = '';
         for (let spell of spells) {
 
             // race restriction
-            if (spell.id == 26296 && storage.race !== "Troll") {
-                spell.active = false;
-                continue;
-            }
-            if (spell.id == 20572 && storage.race !== "Orc") {
-                spell.active = false;
-                continue;
-            }
+            // if (spell.id == 26296 && storage.race !== "Troll") {
+            //     spell.active = false;
+            //     continue;
+            // }
+            // if (spell.id == 20572 && storage.race !== "Orc") {
+            //     spell.active = false;
+            //     continue;6
+            // }
 
-            // level restriction
+            // // level restriction
             let min = parseInt(spell.minlevel || 0);
             let max = parseInt(spell.maxlevel || 60);
             if (level < min || level > max) {
@@ -321,24 +292,39 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            // talent restriction
-            let talent;
-            for (let tree of talents)
-                for (let t of tree.t)
-                    if (t.n == spell.name) talent = t;
-            if (talent && talent.enable && talent.c == 0) {
-                spell.active = false;
-                continue;
-            }
+            // // talent restriction
+            // let talent;
+            // for (let tree of talents)
+            //     for (let t of tree.t)
+            //         if (t.n == spell.name) talent = t;
+            // if (talent && talent.enable && talent.c == 0) {
+            //     spell.active = false;
+            //     continue;
+            // }
 
-            let div = $(`<div data-id="${spell.id}" class="spell2 ${spell.active ? 'active' : ''}"><div class="icon">
+            // // rune restrictions
+            // let rune;
+            // for (let type in runes)
+            //     for (let r of runes[type])
+            //         if (r.enable == spell.id) rune = r;
+            // if (rune && !rune.selected) {
+            //     spell.active = false;
+            //     continue;
+            // }
+
+
+            let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
-            container.append(div);
+            if (spell.buff) buffs += div[0].outerHTML;
+            else container.append(div);
 
         }
+
+        container.append($('<div class="label">Buffs</div>'));
+        container.append(buffs);
 
 
     },
@@ -383,11 +369,22 @@ SIM.SETTINGS = {
 
 
 
+        
+        
+
+
+        details.css('visibility','hidden');
         details.append(ul);
-
-
-        el.css('margin-bottom', details.height() + 40 + 'px');
-        details.addClass('visible');
+        let height = details.height();
+        
+        setTimeout(function() {
+            details.css('visibility','');
+            el.css('margin-bottom', height + 30 + 'px');
+            details.css('top', el.position().top + 74 + 'px');
+            details.addClass('visible');
+        }, 200);
+        
+        
     },
 
     hideSpellDetails(el) {
@@ -406,99 +403,6 @@ SIM.SETTINGS = {
             label.classList.add("active")
             label.classList.remove("inactive")
         }
-    },
-
-    buildSpells: function () {
-        this.buildSpells2();
-        return;
-        var view = this;
-        let storage = JSON.parse(localStorage[mode]);
-        view.rotation.find('div:first').empty();
-        for (let spell of spells) {
-            let tooltip = spell.id == 115671 ? 11567 : spell.id;
-            let div = $(`<div data-id="${spell.id}" class="spell"><div class="icon">
-            <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="https://classic.wowhead.com/spell=${tooltip}" class="wh-tooltip"></a>
-            </div><ul class="options"></ul></div>`);
-
-            if (spell.timetoend !== undefined)
-                div.find('.options').append(`<li>Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds</li>`);
-            if (spell.minrage !== undefined)
-                div.find('.options').append(`<li>Use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
-            if (spell.maxrage !== undefined)
-                div.find('.options').append(`<li>Use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
-            if (spell.globals !== undefined)
-                div.find('.options').append(`<li>Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
-            if (spell.maincd !== undefined)
-                div.find('.options').append(`<li>BT/MS cooldown >= <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> secs</li>`);
-            if (spell.crusaders !== undefined)
-                div.find('.options').append(`<li>when <input type="text" name="crusaders" value="${spell.crusaders}" data-numberonly="true" /> crusaders are up</li>`);
-            if (spell.haste !== undefined)
-                div.find('.options').append(`<li>Attack speed at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
-            if (spell.priorityap !== undefined)
-                div.find('.options').append(`<li>Prioritize BT/MS when >= <input style="width:25px" type="text" name="priorityap" value="${spell.priorityap}" data-numberonly="true" /> AP</li>`);
-            if (spell.id == 23255)
-                div.find('.options').append(`<li>Include Deep Wounds damage</li>`);
-            if (spell.id == 11605)
-                div.find('.options').append(`<li>Slam macro with MH swing</li>`);
-            if (spell.id == 2687 || spell.id == 18499)
-                div.find('.options').append('<li>Used on cooldown below 80 rage</li>');
-            if (spell.reaction !== undefined)
-                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
-            if (spell.hidden)
-                div.addClass('hidden');
-            if (storage.race == "Orc" && spell.id == 20572)
-                div.removeClass('hidden');
-            if (storage.race == "Troll" && spell.id == 26296)
-                div.removeClass('hidden');
-            if (spell.active)
-                div.addClass('active');
-
-            if (spell.maincd !== undefined) {
-                div.find('.options li:first-of-type').append(' or');
-            }
-
-            if (spell.crusaders !== undefined) {
-                div.find('.options li:first-of-type').append(' or');
-            }
-
-            if (spell.id == 11567) {
-                div.find('.options').empty();
-                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage or BT/MS cooldown >= <input type="text" name="maincd" value="4" data-numberonly="true"> secs</li>`);
-                div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage, <input type="text" name="unqueuetimer" value="${spell.unqueuetimer}" data-numberonly="true" /> ms before MH swing</li>`);
-                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
-            }
-
-            if (spell.id == 115671) {
-                div.find('.options').empty();
-                div.find('.options').before('<label>Execute phase HS:</label>');
-                div.find('.options').append(`<li>Queue when above <input type="text" name="minrage" value="30" data-numberonly="true"> rage</li>`);
-                div.find('.options').append(`<li>Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage, <input type="text" name="unqueuetimer" value="${spell.unqueuetimer}" data-numberonly="true" /> ms before MH swing</li>`);
-                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
-            }
-
-            if (spell.id == 11585) {
-                div.find('.options').empty();
-                div.find('.options').append(`<li>Use when below <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage and</li>`);
-                div.find('.options').append(`<li>BT/MS cooldown >= <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> secs</li>`);
-                div.find('.options').append(`<li><input style="width:25px" type="text" name="reaction" value="${spell.reaction}" data-numberonly="true" /> ms reaction time</li>`);
-            }
-
-            if (spell.id == 900008) {
-                div.find('.options').empty();
-                div.find('.options').prepend(`<li>Open with ${spell.name}</li>`);
-            }
-
-            if (spell.id == 900006) {
-                div.find('.options').empty();
-                div.find('.options').prepend(`<li>Don't use rage until CbR procs.</li>`);
-            }
-
-            view.rotation.find('div:first').append(div);
-        }
-
-        view.rotation.children().eq(3).appendTo(view.rotation);
-        view.rotation.children().eq(19).appendTo(view.rotation);
     },
 
     buildBuffs: function () {

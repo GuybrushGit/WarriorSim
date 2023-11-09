@@ -191,6 +191,7 @@ SIM.UI = {
 
             view.updateSession();
             view.updateSidebar();
+            SIM.SETTINGS.buildSpells();
         });
     },
 
@@ -591,7 +592,6 @@ SIM.UI = {
             if (runes[type][i].id == tr.data('id')) {
                 runes[type][i].selected = false;
                 if (runes[type][i].enable) {
-                    $('.rotation [data-id="' + runes[type][i].enable + '"]').removeClass('active').addClass('hidden');
                     for (let spell of spells)
                         if (spell.id == runes[type][i].enable)
                             spell.active = false;
@@ -608,10 +608,6 @@ SIM.UI = {
         for(let i = 0; i < runes[type].length; i++) {
             if (runes[type][i].id == tr.data('id')) {
                 runes[type][i].selected = true;
-                if (runes[type][i].enable) {
-                    $('.rotation [data-id="' + runes[type][i].enable + '"]').removeClass('hidden');
-                    $('.rotation [data-id="' + runes[type][i].enable + '"] .icon').click();
-                }
             }
         }
     },
