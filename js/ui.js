@@ -311,7 +311,6 @@ SIM.UI = {
         async function simulateAll() {
             const ap = await simulateWeight(0, 50);
             updateStat("ap", ap);
-            console.log(player.auras.bloodfury);
             if (player.auras.bloodfury) {
                 updateStat("str", await simulateWeight(3, 25));
             } else {

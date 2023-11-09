@@ -353,17 +353,24 @@ SIM.SETTINGS = {
         if (typeof spell.unqueue !== 'undefined') 
             ul.append(`<li data-id="unqueueactive" class="${spell.unqueueactive ? 'active' : ''}">Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage before MH swing</li>`);
         if (typeof spell.exmacro !== 'undefined') 
-            ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Execute phase: Always queue when casting Execute</li>`);
-        if (typeof spell.exminrage !== 'undefined') 
-            ul.append(`<li data-id="exminrageactive" class="${spell.exminrageactive ? 'active' : ''}" data-group="ex">Execute phase: Queue when above <input type="text" name="exminrage" value="${spell.exminrage}" data-numberonly="true" /> rage</li>`);
-        if (typeof spell.exunqueue !== 'undefined') 
-            ul.append(`<li data-id="exunqueueactive" class="${spell.exunqueueactive ? 'active' : ''}">Execute phase: Unqueue if below <input type="text" name="exunqueue" value="${spell.exunqueue}" data-numberonly="true" /> rage before MH swing</li>`);
+            ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Always queue when casting Execute</li>`);
         if (typeof spell.globals !== 'undefined') 
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
         if (spell.timetoend !== undefined)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
         if (spell.priorityap !== undefined)
             ul.append(`<li data-id="priorityapactive" class="${spell.priorityapactive ? 'active' : ''}">Don't use if Attack Power is higher than <input type="text" name="priorityap" value="${spell.priorityap}" data-numberonly="true" style="width: 25px" /></li>`);
+        if (spell.procblock !== undefined)
+            ul.append(`<li data-id="procblock" class="${spell.procblock ? 'active' : ''}">Don't use rage until it procs</li>`);
+        if (spell.rageblock !== undefined)
+            ul.append(`<li data-id="rageblockactive" class="${spell.rageblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="rageblock" value="${spell.rageblock}" data-numberonly="true" /> rage</li>`);
+
+        if (spell.flagellation !== undefined)
+            ul.append(`<li data-id="flagellation" class="${spell.flagellation ? 'active' : ''}">Don't use when ${spell.id == 18499 ? "Bloodrage" : "Berserker Rage"} is up</li>`);
+        if (spell.consumedrage !== undefined)
+            ul.append(`<li data-id="consumedrage" class="${spell.consumedrage ? 'active' : ''}">Use only when Consumed by Rage procs</li>`);
+
+
 
         
         // if (spell.crusaders !== undefined)

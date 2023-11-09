@@ -15,7 +15,6 @@ onmessage = (event) => {
     if (params.globals.sod) importScripts('./data/gear_sod.min.js','./data/runes.min.js');
     else importScripts('./data/gear.min.js');
     updateGlobals(params.globals);
-    // console.log('starting sim-worker', params);
     const player = new Player(...params.player);
     const sim = new Simulation(player, (report) => {
         // Finished
@@ -31,4 +30,3 @@ onmessage = (event) => {
     sim.startSync();
 };
 
-// console.log('sim-worker loaded');

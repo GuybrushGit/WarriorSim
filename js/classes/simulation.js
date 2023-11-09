@@ -157,7 +157,6 @@ class Simulation {
             executeperc: parseInt($('input[name="executeperc"]').val()),
             startrage: parseInt($('input[name="startrage"]').val()),
             iterations: parseInt($('input[name="simulations"]').val()),
-            //priorityap: parseInt(spells[4].priorityap),
             batching: parseInt($('select[name="batching"]').val()),
         };
     }
@@ -183,7 +182,6 @@ class Simulation {
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
         this.spread = [];
-        //this.priorityap = parseInt(spells[4].priorityap);
 
         if (this.iterations == 1) log = true;
         else log = false;
@@ -319,15 +317,16 @@ class Simulation {
 
                 // Normal phase - no cost
                 else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
+                else if (player.spells.ragingblow && player.spells.ragingblow.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
 
                 // prevent using spells while waiting for consumed by rage proc
-                else if (player.auras.consumedrage && !player.auras.consumedrage.timer) { } 
+                else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
+                else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
 
                 // Normal phase - rage cost
                 else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                 else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodthirst; }
                 else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.mortalstrike; }
-                else if (player.spells.ragingblow && player.spells.ragingblow.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
                 else if (player.spells.quickstrike && player.spells.quickstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.quickstrike; }
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) { player.spelldelay = 1; delayedspell = player.spells.whirlwind; }
                 else if (player.spells.overpower && player.spells.overpower.canUse()) { player.spelldelay = 1; delayedspell = player.spells.overpower; }
@@ -340,11 +339,13 @@ class Simulation {
             // Heroic Strike
             if (spellcheck && !player.heroicdelay) {
                 if (!player.spells.execute || step < this.executestep) {
-                    if (player.auras.consumedrage && !player.auras.consumedrage.timer) { } // prevent using HS while waiting for consumed by rage proc
-                    else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; }
-                }
-                else {
-                    if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.canUse()) { player.heroicdelay = 1; delayedheroic = player.spells.heroicstrikeexecute; }
+                    // prevent using spells while waiting for consumed by rage proc
+                    if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
+                    else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
+                    else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { 
+                        player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; 
+                    
+                    }
                 }
 
                 spellcheck = false;
@@ -356,10 +357,6 @@ class Simulation {
                 // Prevent casting HS and other spells at the exact same time
                 if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
                     player.heroicdelay = delayedheroic.maxdelay - 49;
-
-                // Handled by Execute spell
-                if (player.heroicdelay && delayedheroic && delayedheroic instanceof HeroicStrikeExecute && delayedheroic.exmacro)
-                    player.heroicdelay = 0;
 
                 if (delayedspell.canUse()) {
                     this.idmg += player.cast(delayedspell, delayedheroic);
@@ -389,13 +386,6 @@ class Simulation {
                     player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                     this.player.nextswinghs = false;
                     if (log) this.player.log(`Heroic Strike unqueued`);
-                }
-            }
-            else {
-                if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.unqueue && player.nextswinghs &&
-                    player.rage < player.spells.heroicstrikeexecute.unqueue && player.mh.timer <= player.spells.heroicstrikeexecute.unqueuetimer) {
-                    this.player.nextswinghs = false;
-                    if (log) this.player.log(`Heroic Strike (Execute phase) unqueued`);
                 }
             }
 
@@ -439,12 +429,6 @@ class Simulation {
             if (!player.spells.execute || step < this.executestep) {
                 if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
                     let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
-                    if (timeleft > 0 && timeleft < next) next = timeleft;
-                }
-            }
-            else {
-                if (player.spells.heroicstrikeexecute && player.spells.heroicstrikeexecute.unqueue) {
-                    let timeleft = Math.max(player.mh.timer - player.spells.heroicstrikeexecute.unqueuetimer);
                     if (timeleft > 0 && timeleft < next) next = timeleft;
                 }
             }

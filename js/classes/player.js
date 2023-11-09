@@ -104,7 +104,6 @@ class Player {
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
-        if (this.spells.heroicstrike) this.spells.heroicstrikeexecute = new HeroicStrikeExecute(this, this.spells.heroicstrike.id);
         if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
         if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
         if (this.items.includes(20130)) this.auras.flask = new Flask(this);
@@ -753,11 +752,6 @@ class Player {
                 spell = this.spells.heroicstrike;
                 this.rage -= spell.cost;
             }
-            else if (this.spells.heroicstrikeexecute && this.spells.heroicstrikeexecute.cost <= this.rage) {
-                result = this.rollspell(this.spells.heroicstrikeexecute);
-                spell = this.spells.heroicstrikeexecute;
-                this.rage -= spell.cost;
-            }
             else {
                 result = this.rollweapon(weapon);
                 if (log) this.log(`Heroic Strike auto canceled`);
@@ -919,7 +913,7 @@ class Player {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
         }
-        if (!spell || spell instanceof HeroicStrike || spell instanceof HeroicStrikeExecute) {
+        if (!spell || spell instanceof HeroicStrike) {
             if (this.auras.flurry && this.auras.flurry.stacks)
                 this.auras.flurry.proc();
             if (this.auras.consumedrage && this.auras.consumedrage.stacks)

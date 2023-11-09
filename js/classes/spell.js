@@ -27,16 +27,10 @@ class Spell {
         if (spell.value2) this.value2 = spell.value2;
         if (spell.priorityapactive) this.priorityap = parseInt(spell.priorityap);
         if (typeof spell.globals !== 'undefined') this.globals = parseInt(spell.globals);
-
-        // HS
+        if (spell.flagellation) this.flagellation = spell.flagellation;
+        if (spell.consumedrage) this.consumedrage = spell.consumedrage;
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
-        if (this instanceof HeroicStrikeExecute) {
-            if (spell.exmacro) this.exmacro = spell.exmacro;
-            if (spell.exminrageactive) this.minrage = parseInt(spell.exminrage);
-            else this.minrage = 0;
-            if (spell.exunqueueactive) this.unqueue = parseInt(spell.exunqueue);
-            else this.unqueue = 0;
-        }
+        if (spell.exmacro) this.exmacro = spell.exmacro;
     }
     dmg() {
         return 0;
@@ -175,7 +169,6 @@ class Bloodrage extends Spell {
         super(player, id);
         this.cost = 0;
         this.rage = 10 + player.talents.bloodragebonus;
-        this.minrage = 80;
         this.cooldown = 60;
         this.useonly = true;
     }
@@ -189,7 +182,9 @@ class Bloodrage extends Spell {
             this.player.auras.consumedrage.use();
     }
     canUse() {
-        return this.timer == 0 && this.player.rage < this.minrage;
+        return this.timer == 0 && 
+            (!this.flagellation || !this.player.auras.bloodrage || !this.player.auras.bloodrage.timer) &&
+            (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
     }
 }
 
@@ -209,28 +204,8 @@ class HeroicStrike extends Spell {
         return !this.player.nextswinghs && this.cost <= this.player.rage && 
             ((!this.minrage && !this.maincd) ||
             (this.minrage && this.player.rage >= this.minrage) ||
-            (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
-            (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd))
-            && (!this.unqueue || (this.player.mh.timer > this.unqueuetimer));
-    }
-}
-
-class HeroicStrikeExecute extends Spell {
-    constructor(player, id) {
-        super(player, id, 'Heroic Strike (Execute Phase)');
-        this.cost = 15 - player.talents.impheroicstrike;
-        this.excost = 15 - player.talents.executecost;
-        this.bonus = player.aqbooks ? 157 : this.value1;
-        this.useonly = true;
-        this.unqueuetimer = 300;
-        this.maxdelay = 300;
-        if (this.exmacro) this.minrage = this.excost;
-    }
-    use() {
-        this.player.nextswinghs = true;
-    }
-    canUse() {
-        return !this.player.nextswinghs && this.cost <= this.player.rage && this.player.rage >= this.minrage
+            (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
+            (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)))
             && (!this.unqueue || (this.player.mh.timer > this.unqueuetimer));
     }
 }
@@ -337,7 +312,9 @@ class BerserkerRage extends Spell {
             this.player.auras.consumedrage.use();
     }
     canUse() {
-        return this.timer == 0 && this.player.rage < this.minrage;
+        return this.timer == 0 && !this.player.timer &&
+            (!this.flagellation || !this.player.auras.bloodrage || !this.player.auras.bloodrage.timer) &&
+            (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
     }
 }
 
@@ -404,6 +381,8 @@ class Aura {
         if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
+        if (spell.procblock) this.procblock = spell.procblock;
+        if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);;
 
     }
     use() {
@@ -1270,7 +1249,7 @@ class ConsumedRage extends Aura {
             this.stacks = 0;
             this.firstuse = false;
             this.player.updateDmgMod();
-            if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} rrremoved`);
         }
     }
 }
