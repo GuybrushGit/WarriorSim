@@ -104,14 +104,32 @@ SIM.UI = {
             li.addClass('active');
             li.siblings().removeClass('active');
             var type = li.data('type');
-            if (!type) type = li.parents('[data-type]').data('type');
+            let subtype = false;
+            if (!type) {
+                type = li.parents('[data-type]').data('type');
+                subtype = true;
+            }
+
+            view.main.find('.js-editmode').show();
+            view.main.find('.js-table').show();
 
             if (type == "mainhand" || type == "offhand" || type == "twohand")
                 view.loadWeapons(type);
             else if (type == "custom")
                 view.loadCustom();
+            else if (type == "profiles") {
+                view.loadProfiles(subtype);
+                view.main.find('.js-editmode').hide();
+                view.main.find('.js-table').hide();
+            }
             else
                 view.loadGear(type);
+        });
+
+        view.tcontainer.on('keyup', '[name="profilename"]', function(e) {
+            let value = e.target.value;
+            view.main.find('[data-type="profiles"] .active p').html(value);
+            view.updateSession();
         });
 
         view.tcontainer.on('click', 'table.gear td:not(.ppm)', function(e) {
@@ -202,6 +220,8 @@ SIM.UI = {
             view.loadWeapons(type, true);
         else if (type == "custom")
             view.loadCustom(true);
+        else if (type == "profiles")
+            view.loadProfiles(true);
         else
             view.loadGear(type, true);
     },
@@ -214,12 +234,18 @@ SIM.UI = {
             view.loadWeapons(type, false);
         else if (type == "custom")
             view.loadCustom(false);
+        else if (type == "profiles")
+            view.loadProfiles(false);
         else
             view.loadGear(type, false);
     },
 
     simulateDPS: function(rows) {
         let view = this;
+        if (rows && rows.length == 0) {
+            view.endLoading();
+            return;
+        }
         let dps = view.sidebar.find('#dps');
         let error = view.sidebar.find('#dpserr');
         let stats = view.sidebar.find('#stats');
@@ -653,7 +679,7 @@ SIM.UI = {
     updateSidebar: function () {
         var view = this;
         var player = new Player();
-        let storage = JSON.parse(localStorage[mode]);
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
         let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
         if (!player.mh) return;
@@ -700,7 +726,7 @@ SIM.UI = {
         view.talents.find("#points").text(Math.max(player.level - 9 - count, 0));
     },
 
-    updateSession: function () {
+    updateSession: function (i) {
         var view = this;
 
         let obj = {};
@@ -732,16 +758,6 @@ SIM.UI = {
                 arr.push(talent.c);
             _talents.push({ n: tree.n, t: arr });
         }
-
-        // view.rotation.find('.spell').each(function () {
-        //     var sp = {};
-        //     sp.id = $(this).attr('data-id');
-        //     sp.active = $(this).hasClass('active');
-        //     $(this).find('input').each(function () {
-        //         sp[$(this).attr('name')] = $(this).val();
-        //     });
-        //     _rotation.push(sp);
-        // });
 
         _rotation = spells;
 
@@ -783,18 +799,24 @@ SIM.UI = {
         obj.enchant = _enchant;
         obj.runes = _runes;
         obj.resistance = _resistance;
-        localStorage[mode] = JSON.stringify(obj);
+        obj.profilename = view.main.find('[data-type="profiles"] .active p').text();
+
+        let profileid = globalThis.profileid || 0;
+        localStorage[mode + profileid] = JSON.stringify(obj);
     },
 
     loadSession: function () {
         var view = this;
+        let profileid = globalThis.profileid || 0;
 
         if (localStorage.level) localStorage.clear(); // clear old style of storage
-        if (!localStorage[mode]) localStorage[mode] = JSON.stringify(session);
+        if (!localStorage[mode + profileid]) localStorage[mode + profileid] = JSON.stringify(session);
 
-        let storage = JSON.parse(localStorage[mode]);
+        let storage = JSON.parse(localStorage[mode + profileid]);
         if (!storage.level) storage.level = session.level;
         if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
+        if (!storage.profilename) storage.profilename = session.profilename;
+        
         for (let prop in storage) {
             view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
             view.fight.find('select[name="' + prop + '"]').val(storage[prop]);
@@ -821,8 +843,6 @@ SIM.UI = {
         for (let i of _phases)
             view.filter.find(`.phases [data-id="${i}"]`).addClass('active');
 
-        //if (!storage.version || parseInt(storage.version) < version) view.newVersion();
-
         var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
         for (let resist in resistances) {
             var element = resistances[resist];
@@ -830,6 +850,14 @@ SIM.UI = {
                 view.sidebar.find("."+element+"-resist.hidden").removeClass('hidden');
             }
         }
+
+        for(let i = 0; i <= 9; i++) {
+            if (typeof localStorage[mode + i] === 'undefined') continue;
+            let obj = JSON.parse(localStorage[mode + i]);
+            if (obj && obj.profilename)
+                view.main.find('[data-type="profiles"] .filter p')[i].innerText = obj.profilename;
+        }
+
     },
 
     filterGear: function () {
@@ -839,8 +867,42 @@ SIM.UI = {
             view.loadWeapons(type);
         else if (type == "custom")
             view.loadCustom();
+        else if (type == "profiles")
+            view.loadProfiles();
         else
             view.loadGear(type);
+    },
+    
+    loadProfiles: function (subtype) {
+        var view = this;
+        var index = view.main.find('nav li.active .filter .active').index();
+        let modei = mode + index;
+        let oldmodei = mode + globalThis.profileid;
+        globalThis.profileid = index;
+
+        if (typeof localStorage[modei] === 'undefined') {
+            localStorage[modei] = localStorage[oldmodei];
+            let storage = JSON.parse(localStorage[modei]);
+            storage.profilename = view.main.find('nav li.active .filter .active p').text();
+            localStorage[modei] = JSON.stringify(storage);
+        }
+
+        view.loadSession();
+        view.updateSidebar();
+        SIM.SETTINGS.buildSpells();
+        SIM.SETTINGS.buildBuffs();
+        SIM.SETTINGS.buildTalents();
+        SIM.SETTINGS.buildRunes();
+        let storage = JSON.parse(localStorage[modei]);
+
+        view.tcontainer.empty();
+        view.tcontainer.append(`<div class="profileoption">
+            <label>Edit name:</label>
+            <input type="text" name="profilename" value="${storage.profilename}">
+        </div>`);
+
+        if (subtype)
+            view.addAlert(`${storage.profilename} loaded`);
     },
 
     loadWeapons: function (type, editmode) {
@@ -956,6 +1018,7 @@ SIM.UI = {
 
         view.loadEnchants(type, editmode);
     },
+
     resistCheckList: function() {
         return {
             shadow: $(".resistances[data-id='shadow-resist']").prop("checked"),
@@ -968,6 +1031,7 @@ SIM.UI = {
 
     loadGear: function (type, editmode) {
         var view = this;
+        if (!type) return;
 
         var resistCheckList = SIM.UI.resistCheckList();
 
@@ -1249,16 +1313,17 @@ SIM.UI = {
 
     addAlert: function (msg) {
         var view = this;
-        view.alerts.empty().append('<div class="alert"><p>' + msg + '</p></div>');
-        view.alerts.find('.alert').click(function () { view.closeAlert(); });
-        setTimeout(function () { view.alerts.find('.alert').addClass('in-up') });
-        setTimeout(function () { view.closeAlert(); }, 4000);
+        let rng = (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+        view.alerts.empty().append(`<div id="alert${rng}" class="alert"><p>${msg}</p></div>`);
+        view.alerts.find('.alert').click(function () { view.closeAlert(rng); });
+        setTimeout(function () { view.alerts.find('#alert' + rng).addClass('in-up') });
+        setTimeout(function () { view.closeAlert(rng); }, 4000);
     },
 
-    closeAlert: function () {
+    closeAlert: function (rng) {
         var view = this;
-        view.alerts.find('.alert').removeClass('in-up');
-        setTimeout(function () { view.alerts.empty(); }, 1000);
+        view.alerts.find('#alert' + rng).removeClass('in-up');
+        setTimeout(function () { view.alerts.find('#alert' + rng).remove(); }, 1000);
     },
 
     firstSession: function () {

@@ -55,6 +55,7 @@ function updateGlobals(params) {
         for (let talent in params.talents[tree].t)
             talents[tree].t[talent].c = params.talents[tree].t[talent];
 
+    for (let j of buffs) j.active = false;
     for (let i of params.buffs)
         for (let j of buffs)
             if (i == j.id) j.active = true;

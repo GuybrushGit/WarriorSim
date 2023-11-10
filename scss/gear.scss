@@ -85,6 +85,7 @@ section.main {
                 display: none;
             }
         }
+        &.active[data-type="profiles"],
         &.active[data-type="mainhand"],
         &.active[data-type="offhand"],
         &.active[data-type="twohand"] {
@@ -164,6 +165,23 @@ section.main {
             height: 15px;
             fill: #ddd;
             vertical-align: middle;
+        }
+    }
+
+    .profileoption {
+        margin: 20px 50px;
+        border-bottom: 1px solid white;
+        width: 282px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4px;
+
+        input {
+            background: transparent;
+            text-align: right;
+            color: #1eff00;
+            border: 0;
+            outline: 0;
         }
     }
 }

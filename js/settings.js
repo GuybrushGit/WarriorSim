@@ -54,7 +54,7 @@ SIM.SETTINGS = {
             let total = view.getTalentTotal($(this));
             if (total < talent.y * 5) return;
 
-            let storage = JSON.parse(localStorage[mode]);
+            let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
             let level = parseInt(storage.level);
             let count = 0;
             for (let tree of talents)
@@ -265,7 +265,7 @@ SIM.SETTINGS = {
 
     buildSpells: function () {
         const view = this;
-        let storage = JSON.parse(localStorage[mode]);
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
         let container = view.rotation.find('div:first');
         container.empty();
@@ -304,14 +304,15 @@ SIM.SETTINGS = {
 
             // // rune restrictions
             let rune;
-            for (let type in runes)
-                for (let r of runes[type])
-                    if (r.enable == spell.id) rune = r;
-            if (rune && !rune.selected) {
-                spell.active = false;
-                continue;
+            if (typeof runes !== 'undefined') {
+                for (let type in runes)
+                    for (let r of runes[type])
+                        if (r.enable == spell.id) rune = r;
+                if (rune && !rune.selected) {
+                    spell.active = false;
+                    continue;
+                }
             }
-
 
             let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
@@ -379,10 +380,6 @@ SIM.SETTINGS = {
 
 
 
-        
-        
-
-
         details.css('visibility','hidden');
         details.append(ul);
         let height = details.height();
@@ -419,7 +416,7 @@ SIM.SETTINGS = {
         var view = this;
         view.buffs.empty();
         view.buffs.append('<label class="active">Buffs</label>');
-        let storage = JSON.parse(localStorage[mode]);
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
         let worldbuffs = '', consumes = '', other = '';
         for (let buff of buffs) {
