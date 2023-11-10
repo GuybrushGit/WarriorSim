@@ -66,12 +66,15 @@
         
         data.forEach(d => {
 
-          //if (d.name != "Cruel Barb") return; 
+          // check lvl 0 gear
+          // check non-stats gear
 
+          if (!d.slot) return;
 
+          if (d.subclass == "subclass") return;
           if (d.class != "Weapon" && d.class != "Armor") return;
-          if (d.requiredLevel > 25 || d.requiredLevel == 0) return;
-          if (d.quality == "Common" || d.quality == "Poor" || d.quality == "Uncommon") return;
+          if (d.requiredLevel == 0) return;
+          if (d.quality == "Common" || d.quality == "Poor") return;
           if (d.slot == "Held In Off-hand" || d.slot == "Non-equippable" || d.slot == "Relic" || d.slot == "Shirt" || d.slot == "Tabard" || d.slot == "Thrown") return;
 
           let slot = d.slot.toLowerCase();
@@ -80,19 +83,29 @@
           let obj = {
             name: d.name,
             source: (!d.source || d.source.category != "Boss Drop" ? "Other" : "Dungeon"),
-            sourceZone: (d.source && d.source.zone) || 0,
             type: d.subclass == "Fist Weapon" ? "Fist" : d.subclass,
             slot: d.slot,
             id: d.itemId,
-            reqLevel: d.requiredLevel,
-            phase: d.contentPhase,
+            r: d.requiredLevel,
+            //phase: d.contentPhase,
             //obj: d
           };
+
+          let brek = false;
           d.tooltip.forEach(tt => {
             if (/[+-]\d+ Stamina/.test(tt.label)) obj.sta = parseInt(tt.label);
             if (/[+-]\d+ Strength/.test(tt.label)) obj.str = parseInt(tt.label);
             if (/[+-]\d+ Agility/.test(tt.label)) obj.agi = parseInt(tt.label);
             if (/Equip: [+-]\d+ Attack Power/.test(tt.label)) obj.ap = parseInt(tt.label.replace("Equip: ",""));
+
+            let hit = tt.label.match(/Equip: Improves your chance to hit by (\d+)%./);
+            if (hit) obj.hit = parseInt(hit[1]);
+
+            let crit = tt.label.match(/Equip: Improves your chance to get a critical strike by (\d+)%./);
+            if (crit) obj.crit = parseInt(crit[1]);
+
+
+            if (/Classes: \w*/.test(tt.label) && tt.label.indexOf("Warrior") == -1) brek = true;
 
             let dmg = tt.label.match(/(\d+) - (\d+) Damage/);
             if (dmg) {
@@ -103,6 +116,10 @@
             let speed = tt.label.match(/Speed ([\d.]+)/);
             if (speed) obj.speed = parseFloat(speed[1]);
           });
+          if (brek) return;
+
+          //if (d.itemId == 23253) debugger;
+          if (!obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit) return;
 
           if (slot == "finger") {
             gear25["finger1"].push(obj);

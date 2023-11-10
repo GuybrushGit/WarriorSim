@@ -180,6 +180,7 @@ SIM.SETTINGS = {
 
         view.fight.on('keyup', 'input[type="text"]', function (e) {
             e.stopPropagation();
+            SIM.UI.filterGear();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildBuffs();
