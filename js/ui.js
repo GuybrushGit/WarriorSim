@@ -121,6 +121,7 @@ SIM.UI = {
                 view.loadProfiles(subtype);
                 view.main.find('.js-editmode').hide();
                 view.main.find('.js-table').hide();
+                view.main.find('.js-enchant').hide();
             }
             else
                 view.loadGear(type);
