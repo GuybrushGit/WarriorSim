@@ -555,6 +555,7 @@ var spells = [
     classname: 'RagingBlow',
     iconname: 'Raging-Blow',
     execute: true,
+    rune: true,
 },
 {
     id: 900006,
@@ -566,12 +567,14 @@ var spells = [
     rageblockactive: true,
     aura: true,
     buff: true,
+    rune: true,
 },
 {
     id: 900008,
     name: 'Victory Rush',
     classname: 'VictoryRush',
     iconname: 'Victory-Rush',
+    rune: true,
 },
 {
     id: 900012,
@@ -580,6 +583,7 @@ var spells = [
     iconname: 'inv_axe_03',
     minrage: 0,
     minrageactive: true,
+    rune: true,
 },
 
 ];

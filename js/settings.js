@@ -284,7 +284,7 @@ SIM.SETTINGS = {
                 continue;6
             }
 
-            // // level restriction
+            // level restriction
             let min = parseInt(spell.minlevel || 0);
             let max = parseInt(spell.maxlevel || 60);
             if (level < min || level > max) {
@@ -292,7 +292,7 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            // // talent restriction
+            // talent restriction
             let talent;
             for (let tree of talents)
                 for (let t of tree.t)
@@ -302,7 +302,7 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            // // rune restrictions
+            // rune restrictions
             let rune;
             if (typeof runes !== 'undefined') {
                 for (let type in runes)
@@ -312,6 +312,10 @@ SIM.SETTINGS = {
                     spell.active = false;
                     continue;
                 }
+            }
+            else if (spell.rune) {
+                spell.active = false;
+                continue;
             }
 
             let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
