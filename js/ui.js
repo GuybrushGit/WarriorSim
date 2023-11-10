@@ -1134,6 +1134,7 @@ SIM.UI = {
         table += '</tbody></table></section>';
 
         view.tcontainer.empty();
+        view.loadRunes(type, editmode);
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
@@ -1152,7 +1153,6 @@ SIM.UI = {
             }
         });
 
-        view.loadRunes(type, editmode);
         view.loadEnchants(type, editmode);
         view.updateSession();
         view.updateSidebar();

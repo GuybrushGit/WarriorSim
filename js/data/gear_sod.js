@@ -1,6 +1,15 @@
 var gear = {
   "head": [
     {
+      "name": "Sparkmetal Coif",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 1282,
+      "r": 20,
+      "str": 9
+    },
+    {
       "name": "Cloaked Hood",
       "source": "Dungeon",
       "type": "Leather",
@@ -98,6 +107,15 @@ var gear = {
       "sta": 7
     },
     {
+      "name": "Spirit Hunter Headdress",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 6720,
+      "r": 26,
+      "agi": 10
+    },
+    {
       "name": "Tusken Helm",
       "source": "Dungeon",
       "type": "Mail",
@@ -106,6 +124,26 @@ var gear = {
       "r": 28,
       "str": 9,
       "agi": 8
+    },
+    {
+      "name": "Fire Hardened Coif",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 6971,
+      "r": 20,
+      "agi": 7,
+      "sta": 8
+    },
+    {
+      "name": "Brutal Helm",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 7130,
+      "r": 20,
+      "agi": 7,
+      "sta": 8
     },
     {
       "name": "Raging Berserker's Helm",
@@ -268,6 +306,25 @@ var gear = {
       "ap": 32
     },
     {
+      "name": "Sentinel's Guard",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 9664,
+      "r": 40,
+      "agi": 9,
+      "sta": 12
+    },
+    {
+      "name": "Speedy Racer Goggles",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Head",
+      "id": 9653,
+      "r": 0,
+      "agi": 14
+    },
+    {
       "name": "White Bandit Mask",
       "source": "Other",
       "type": "Cloth",
@@ -288,6 +345,16 @@ var gear = {
       "sta": 17
     },
     {
+      "name": "Gnomish Goggles",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Head",
+      "id": 10545,
+      "r": 0,
+      "agi": 9,
+      "sta": 9
+    },
+    {
       "name": "Corpseshroud",
       "source": "Other",
       "type": "Cloth",
@@ -295,6 +362,35 @@ var gear = {
       "id": 10574,
       "r": 35,
       "agi": 5
+    },
+    {
+      "name": "Drakefire Headguard",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 10743,
+      "r": 40,
+      "str": 5
+    },
+    {
+      "name": "Lordrec Helmet",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 10741,
+      "r": 40,
+      "agi": 16,
+      "sta": 10
+    },
+    {
+      "name": "Avenguard Helm",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 10749,
+      "r": 40,
+      "agi": 5,
+      "sta": 25
     },
     {
       "name": "Icemetal Barbute",
@@ -305,6 +401,25 @@ var gear = {
       "r": 40,
       "str": 15,
       "sta": 10
+    },
+    {
+      "name": "Gemburst Circlet",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Head",
+      "id": 10751,
+      "r": 40,
+      "agi": 5,
+      "sta": 9
+    },
+    {
+      "name": "Helm of Exile",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 11124,
+      "r": 38,
+      "agi": 11
     },
     {
       "name": "Savage Gladiator Helm",
@@ -347,6 +462,15 @@ var gear = {
       "str": 12,
       "agi": 19,
       "sta": 18
+    },
+    {
+      "name": "Clayridge Helm",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 11913,
+      "r": 50,
+      "agi": 16
     },
     {
       "name": "Imperial Plate Helm",
@@ -429,6 +553,17 @@ var gear = {
       "r": 58,
       "sta": 20,
       "ap": 40,
+      "crit": 1
+    },
+    {
+      "name": "Mask of the Unforgiven",
+      "source": "Dungeon",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 13404,
+      "r": 52,
+      "sta": 12,
+      "hit": 2,
       "crit": 1
     },
     {
@@ -770,6 +905,16 @@ var gear = {
       "ap": 36
     },
     {
+      "name": "Sprightring Helm",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 17776,
+      "r": 41,
+      "agi": 15,
+      "sta": 10
+    },
+    {
       "name": "Felhide Cap",
       "source": "Dungeon",
       "type": "Leather",
@@ -778,6 +923,17 @@ var gear = {
       "r": 53,
       "agi": 21,
       "sta": 14
+    },
+    {
+      "name": "Backwood Helm",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 18421,
+      "r": 57,
+      "agi": 21,
+      "sta": 13,
+      "crit": 1
     },
     {
       "name": "Tattered Leather Hood",
@@ -845,6 +1001,38 @@ var gear = {
       "ap": 44
     },
     {
+      "name": "Bloodvine Lens",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 19998,
+      "r": 60,
+      "sta": 12,
+      "crit": 2
+    },
+    {
+      "name": "Ebon Mask",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 19984,
+      "r": 50,
+      "sta": 11,
+      "crit": 1,
+      "ap": 36
+    },
+    {
+      "name": "Skyfury Helm",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 20134,
+      "r": 58,
+      "str": 13,
+      "sta": 14,
+      "crit": 1
+    },
+    {
       "name": "Gurubashi Helm",
       "source": "Other",
       "type": "Plate",
@@ -856,6 +1044,48 @@ var gear = {
       "sta": 13
     },
     {
+      "name": "Fury Visor",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 20521,
+      "r": 50,
+      "str": 18,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "name": "Darkrune Helm",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 20551,
+      "r": 58,
+      "sta": 13,
+      "crit": 1
+    },
+    {
+      "name": "Undercity Reservist's Cap",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 20643,
+      "r": 42,
+      "str": 10,
+      "agi": 11,
+      "sta": 10
+    },
+    {
+      "name": "Southsea Head Bucket",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 20640,
+      "r": 40,
+      "str": 6,
+      "sta": 15
+    },
+    {
       "name": "Circlet of Restless Dreams",
       "source": "Other",
       "type": "Leather",
@@ -864,6 +1094,16 @@ var gear = {
       "r": 60,
       "agi": 21,
       "sta": 38
+    },
+    {
+      "name": "Helm of the Pathfinder",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 21317,
+      "r": 45,
+      "sta": 17,
+      "crit": 1
     },
     {
       "name": "Conqueror's Crown",
@@ -909,6 +1149,71 @@ var gear = {
       "str": 17,
       "agi": 19,
       "sta": 36
+    },
+    {
+      "name": "Helm of the Holy Avenger",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 21803,
+      "r": 60,
+      "sta": 17,
+      "crit": 1
+    },
+    {
+      "name": "Helm of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 21999,
+      "r": 58,
+      "str": 18,
+      "sta": 32,
+      "crit": 1
+    },
+    {
+      "name": "Darkmantle Cap",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 22005,
+      "r": 58,
+      "str": 13,
+      "agi": 26,
+      "sta": 18,
+      "crit": 1
+    },
+    {
+      "name": "Beastmaster's Cap",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Head",
+      "id": 22013,
+      "r": 58,
+      "agi": 22,
+      "sta": 21,
+      "hit": 1
+    },
+    {
+      "name": "Soulforge Helm",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Head",
+      "id": 22091,
+      "r": 58,
+      "str": 16,
+      "sta": 17
+    },
+    {
+      "name": "Feralheart Cowl",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Head",
+      "id": 22109,
+      "r": 58,
+      "str": 14,
+      "agi": 9,
+      "sta": 17
     },
     {
       "name": "Foreman's Head Protector",
@@ -1033,6 +1338,17 @@ var gear = {
   ],
   "neck": [
     {
+      "name": "Ethereal Talisman",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 4430,
+      "r": 34,
+      "str": 5,
+      "agi": 4,
+      "sta": 6
+    },
+    {
       "name": "Talisman of the Naga Lord",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -1083,6 +1399,16 @@ var gear = {
       "sta": 13
     },
     {
+      "name": "Amberglow Talisman",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 10824,
+      "r": 37,
+      "agi": 1,
+      "sta": 7
+    },
+    {
       "name": "Verek's Collar",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -1101,6 +1427,27 @@ var gear = {
       "r": 55,
       "sta": 7,
       "ap": 32
+    },
+    {
+      "name": "Conqueror's Medallion",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 12059,
+      "r": 52,
+      "str": 10,
+      "agi": 4,
+      "sta": 11
+    },
+    {
+      "name": "Emberfury Talisman",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 12929,
+      "r": 56,
+      "sta": 8,
+      "crit": 1
     },
     {
       "name": "Skibi's Pendant",
@@ -1163,6 +1510,26 @@ var gear = {
       "ap": 48
     },
     {
+      "name": "Mark of Fordring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 15411,
+      "r": 52,
+      "crit": 1,
+      "ap": 26
+    },
+    {
+      "name": "Will of the Martyr",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 17044,
+      "r": 55,
+      "sta": 10,
+      "ap": 30
+    },
+    {
       "name": "Medallion of Steadfast Might",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -1183,6 +1550,25 @@ var gear = {
       "sta": 14
     },
     {
+      "name": "Zealous Shadowshard Pendant",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 17772,
+      "r": 39,
+      "ap": 20
+    },
+    {
+      "name": "Eskhandar's Collar",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 18205,
+      "r": 60,
+      "sta": 17,
+      "crit": 1
+    },
+    {
       "name": "Evil Eye Pendant",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -1190,6 +1576,18 @@ var gear = {
       "id": 18381,
       "r": 57,
       "agi": 15
+    },
+    {
+      "name": "Onyxia Tooth Pendant",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 18404,
+      "r": 60,
+      "agi": 12,
+      "sta": 9,
+      "hit": 1,
+      "crit": 1
     },
     {
       "name": "Frostwolf Legionnaire's Pendant",
@@ -1210,6 +1608,17 @@ var gear = {
       "r": 55,
       "sta": 15,
       "ap": 18
+    },
+    {
+      "name": "Woven Ivy Necklace",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 19159,
+      "r": 46,
+      "str": 6,
+      "agi": 9,
+      "sta": 10
     },
     {
       "name": "Master Dragonslayer's Medallion",
@@ -1283,6 +1692,17 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Strength of Mugamba",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 19575,
+      "r": 60,
+      "str": 7,
+      "agi": 6,
+      "sta": 10
+    },
+    {
       "name": "Sentinel's Medallion",
       "source": "Other",
       "type": "Miscellaneous",
@@ -1300,6 +1720,16 @@ var gear = {
       "id": 19538,
       "r": 58,
       "agi": 15,
+      "sta": 10
+    },
+    {
+      "name": "Strength of Mugamba",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 19574,
+      "r": 60,
+      "str": 7,
       "sta": 10
     },
     {
@@ -1321,6 +1751,28 @@ var gear = {
       "r": 48,
       "agi": 12,
       "sta": 8
+    },
+    {
+      "name": "Strength of Mugamba",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 19576,
+      "r": 60,
+      "str": 8,
+      "agi": 8,
+      "sta": 13
+    },
+    {
+      "name": "Rage of Mugamba",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 19577,
+      "r": 60,
+      "str": 8,
+      "agi": 8,
+      "sta": 13
     },
     {
       "name": "The Eye of Hakkar",
@@ -1361,6 +1813,16 @@ var gear = {
       "r": 60,
       "sta": 21,
       "ap": 24
+    },
+    {
+      "name": "Sunprism Pendant",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 20649,
+      "r": 60,
+      "agi": 12,
+      "sta": 7
     },
     {
       "name": "Abyssal War Beads",
@@ -1436,6 +1898,17 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Beads of Ogre Might",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 22150,
+      "r": 58,
+      "sta": 7,
+      "ap": 24,
+      "hit": 1
+    },
+    {
       "name": "Pendant of Celerity",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -1443,6 +1916,27 @@ var gear = {
       "id": 22340,
       "r": 58,
       "agi": 15,
+      "hit": 1
+    },
+    {
+      "name": "Medallion of the Dawn",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 22659,
+      "r": 55,
+      "sta": 12,
+      "ap": 24,
+      "crit": 1
+    },
+    {
+      "name": "Mark of C'Thun",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Neck",
+      "id": 22732,
+      "r": 60,
+      "sta": 24,
       "hit": 1
     },
     {
@@ -1510,6 +2004,16 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Brigand's Pauldrons",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 3765,
+      "r": 29,
+      "str": 8,
+      "sta": 8
+    },
+    {
       "name": "Feline Mantle",
       "source": "Dungeon",
       "type": "Cloth",
@@ -1545,6 +2049,15 @@ var gear = {
       "id": 4252,
       "r": 23,
       "agi": 7
+    },
+    {
+      "name": "Grim Pauldrons",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 4443,
+      "r": 27,
+      "str": 7
     },
     {
       "name": "Lambent Scale Pauldrons",
@@ -1640,6 +2153,16 @@ var gear = {
       "str": 7
     },
     {
+      "name": "Enforcer Pauldrons",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 6747,
+      "r": 25,
+      "str": 8,
+      "sta": 8
+    },
+    {
       "name": "Batwing Mantle",
       "source": "Dungeon",
       "type": "Cloth",
@@ -1647,6 +2170,15 @@ var gear = {
       "id": 6697,
       "r": 27,
       "agi": 3
+    },
+    {
+      "name": "Sanguine Pauldrons",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 6792,
+      "r": 30,
+      "str": 8
     },
     {
       "name": "Herod's Shoulder",
@@ -1792,6 +2324,26 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Gemshale Pauldrons",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 9531,
+      "r": 40,
+      "str": 10,
+      "sta": 9
+    },
+    {
+      "name": "Failed Flying Experiment",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 9647,
+      "r": 40,
+      "str": 10,
+      "agi": 10
+    },
+    {
       "name": "Imbued Plate Pauldrons",
       "source": "Other",
       "type": "Plate",
@@ -1799,6 +2351,16 @@ var gear = {
       "id": 10374,
       "r": 54,
       "str": 13
+    },
+    {
+      "name": "Kaylari Shoulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 10745,
+      "r": 40,
+      "str": 11,
+      "sta": 10
     },
     {
       "name": "Fleshhide Shoulders",
@@ -1810,6 +2372,15 @@ var gear = {
       "str": 5,
       "agi": 6,
       "sta": 15
+    },
+    {
+      "name": "Loreskin Shoulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 11502,
+      "r": 38,
+      "str": 10
     },
     {
       "name": "Earthslag Shoulders",
@@ -1840,6 +2411,65 @@ var gear = {
       "r": 50,
       "str": 6,
       "sta": 5
+    },
+    {
+      "name": "Snarkshaw Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 11871,
+      "r": 50,
+      "str": 12,
+      "sta": 11
+    },
+    {
+      "name": "Clouddrift Mantle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 11874,
+      "r": 49,
+      "str": 12,
+      "agi": 12
+    },
+    {
+      "name": "Bark Iron Pauldrons",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 11889,
+      "r": 47,
+      "str": 11,
+      "agi": 5
+    },
+    {
+      "name": "Shizzle's Muzzle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 11916,
+      "r": 49,
+      "str": 6,
+      "sta": 6
+    },
+    {
+      "name": "Penance Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 11963,
+      "r": 48,
+      "agi": 8,
+      "sta": 11
+    },
+    {
+      "name": "Wyrmhide Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 12082,
+      "r": 52,
+      "hit": 2
     },
     {
       "name": "Imperial Plate Shoulders",
@@ -2132,6 +2762,16 @@ var gear = {
       "sta": 17
     },
     {
+      "name": "Stormshroud Shoulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 15058,
+      "r": 54,
+      "sta": 12,
+      "crit": 1
+    },
+    {
       "name": "Black Dragonscale Shoulders",
       "source": "Other",
       "type": "Mail",
@@ -2140,6 +2780,36 @@ var gear = {
       "r": 55,
       "sta": 9,
       "ap": 40
+    },
+    {
+      "name": "Wrangling Spaulders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 15698,
+      "r": 30,
+      "str": 8,
+      "agi": 2,
+      "sta": 6
+    },
+    {
+      "name": "Orchid Amice",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Shoulder",
+      "id": 15812,
+      "r": 53,
+      "str": 4,
+      "sta": 4
+    },
+    {
+      "name": "Shadowskin Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 15822,
+      "r": 50,
+      "agi": 18
     },
     {
       "name": "Lieutenant Commander's Plate Pauldrons",
@@ -2240,6 +2910,16 @@ var gear = {
       "sta": 15
     },
     {
+      "name": "Arcmetal Shoulders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 16793,
+      "r": 30,
+      "agi": 9,
+      "sta": 5
+    },
+    {
       "name": "Pauldrons of Might",
       "source": "Dungeon",
       "type": "Plate",
@@ -2260,6 +2940,16 @@ var gear = {
       "sta": 27
     },
     {
+      "name": "Duskwing Mantle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 16995,
+      "r": 56,
+      "agi": 17,
+      "sta": 6
+    },
+    {
       "name": "Phytoskin Spaulders",
       "source": "Dungeon",
       "type": "Leather",
@@ -2268,6 +2958,16 @@ var gear = {
       "r": 46,
       "agi": 16,
       "sta": 10
+    },
+    {
+      "name": "Hulkstone Pauldrons",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 17779,
+      "r": 41,
+      "str": 5,
+      "sta": 13
     },
     {
       "name": "Flamescarred Shoulders",
@@ -2331,6 +3031,17 @@ var gear = {
       "sta": 9
     },
     {
+      "name": "Emerald Peak Spaulders",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 19037,
+      "r": 39,
+      "str": 7,
+      "agi": 6,
+      "sta": 10
+    },
+    {
       "name": "Black Brood Pauldrons",
       "source": "Dungeon",
       "type": "Mail",
@@ -2382,6 +3093,16 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Darksoul Shoulders",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 19695,
+      "r": 60,
+      "sta": 24,
+      "hit": 1
+    },
+    {
       "name": "Bloodsoaked Pauldrons",
       "source": "Dungeon",
       "type": "Plate",
@@ -2415,6 +3136,18 @@ var gear = {
       "sta": null
     },
     {
+      "name": "Razorsteel Shoulders",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 20517,
+      "r": 50,
+      "str": 10,
+      "agi": 10,
+      "sta": 9,
+      "hit": 1
+    },
+    {
       "name": "Unnatural Leather Spaulders",
       "source": "Other",
       "type": "Leather",
@@ -2433,6 +3166,33 @@ var gear = {
       "r": 60,
       "str": 12,
       "sta": 16
+    },
+    {
+      "name": "Abyssal Leather Shoulders",
+      "source": "Dungeon",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 20689,
+      "r": 60,
+      "hit": 1
+    },
+    {
+      "name": "Abyssal Mail Pauldrons",
+      "source": "Dungeon",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 20680,
+      "r": 60,
+      "hit": 1
+    },
+    {
+      "name": "Abyssal Plate Epaulets",
+      "source": "Dungeon",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 20683,
+      "r": 60,
+      "hit": 1
     },
     {
       "name": "Conqueror's Spaulders",
@@ -2538,6 +3298,68 @@ var gear = {
       "r": 60,
       "str": 16,
       "sta": 17
+    },
+    {
+      "name": "Spaulders of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 22001,
+      "r": 58,
+      "str": 12,
+      "agi": 12,
+      "sta": 18
+    },
+    {
+      "name": "Darkmantle Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 22008,
+      "r": 58,
+      "agi": 24,
+      "sta": 10
+    },
+    {
+      "name": "Beastmaster's Mantle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 22016,
+      "r": 0,
+      "agi": 12,
+      "sta": 18
+    },
+    {
+      "name": "Soulforge Spaulders",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Shoulder",
+      "id": 22093,
+      "r": 0,
+      "str": 10,
+      "sta": 11
+    },
+    {
+      "name": "Pauldrons of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Shoulder",
+      "id": 22101,
+      "r": 0,
+      "str": 10,
+      "sta": 11
+    },
+    {
+      "name": "Feralheart Spaulders",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Shoulder",
+      "id": 22112,
+      "r": 58,
+      "str": 8,
+      "agi": 5,
+      "sta": 9
     },
     {
       "name": "Golem Fitted Pauldrons",
@@ -2649,6 +3471,15 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Yeti Fur Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 2805,
+      "r": 29,
+      "agi": 6
+    },
+    {
       "name": "Hide of Lupos",
       "source": "Dungeon",
       "type": "Cloth",
@@ -2657,6 +3488,25 @@ var gear = {
       "r": 18,
       "agi": 3,
       "sta": 2
+    },
+    {
+      "name": "Cloak of the People's Militia",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 3511,
+      "r": 10,
+      "agi": 2
+    },
+    {
+      "name": "Darktide Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 4114,
+      "r": 37,
+      "agi": 6,
+      "sta": 7
     },
     {
       "name": "Cloak of Night",
@@ -2668,6 +3518,16 @@ var gear = {
       "agi": 5
     },
     {
+      "name": "Dwarven Guard Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 4504,
+      "r": 28,
+      "agi": 1,
+      "sta": 6
+    },
+    {
       "name": "Lambent Scale Cloak",
       "source": "Other",
       "type": "Cloth",
@@ -2675,6 +3535,16 @@ var gear = {
       "id": 4706,
       "r": 19,
       "str": 4
+    },
+    {
+      "name": "Grimsteel Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 4643,
+      "r": 25,
+      "agi": 2,
+      "sta": 6
     },
     {
       "name": "Chief Brigadier Cloak",
@@ -2705,6 +3575,15 @@ var gear = {
       "r": 32,
       "str": 4,
       "agi": 10
+    },
+    {
+      "name": "Boar Hunter's Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 5314,
+      "r": 14,
+      "agi": 3
     },
     {
       "name": "Webwing Cloak",
@@ -2785,6 +3664,16 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Swiftrunner Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 6745,
+      "r": 30,
+      "agi": 6,
+      "sta": 2
+    },
+    {
       "name": "Glowing Thresher Cape",
       "source": "Dungeon",
       "type": "Cloth",
@@ -2844,6 +3733,25 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Garrison Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 9699,
+      "r": 30,
+      "agi": 3,
+      "sta": 6
+    },
+    {
+      "name": "Parachute Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 10518,
+      "r": 0,
+      "agi": 8
+    },
+    {
       "name": "Blackveil Cape",
       "source": "Dungeon",
       "type": "Cloth",
@@ -2854,6 +3762,16 @@ var gear = {
       "agi": 14
     },
     {
+      "name": "Battlehard Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 11858,
+      "r": 37,
+      "sta": 8,
+      "ap": 10
+    },
+    {
       "name": "The Emperor's New Cape",
       "source": "Dungeon",
       "type": "Cloth",
@@ -2862,6 +3780,16 @@ var gear = {
       "r": 55,
       "agi": 7,
       "sta": 16
+    },
+    {
+      "name": "Shaleskin Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 12066,
+      "r": 52,
+      "agi": 6,
+      "sta": 11
     },
     {
       "name": "Blisterbane Wrap",
@@ -3137,6 +4065,36 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Chemist's Smock",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 15703,
+      "r": 48,
+      "agi": 3,
+      "sta": 12
+    },
+    {
+      "name": "Cerise Drape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 15804,
+      "r": 51,
+      "agi": 6,
+      "sta": 7
+    },
+    {
+      "name": "Deep River Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 15789,
+      "r": 51,
+      "agi": 11,
+      "sta": 7
+    },
+    {
       "name": "Sergeant Major's Cape",
       "source": "Other",
       "type": "Cloth",
@@ -3170,6 +4128,16 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Spritekin Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 16990,
+      "r": 18,
+      "agi": 4,
+      "sta": 3
+    },
+    {
       "name": "Cloak of the Shrouded Mists",
       "source": "Dungeon",
       "type": "Cloth",
@@ -3188,6 +4156,16 @@ var gear = {
       "r": 60,
       "str": 9,
       "sta": 22
+    },
+    {
+      "name": "Eskhandar's Pelt",
+      "source": "Dungeon",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 18204,
+      "r": 60,
+      "sta": 20,
+      "crit": 1
     },
     {
       "name": "Shadewood Cloak",
@@ -3293,6 +4271,15 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Duskbat Drape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 19982,
+      "r": 50,
+      "agi": 14
+    },
+    {
       "name": "Deathguard's Cloak",
       "source": "Other",
       "type": "Cloth",
@@ -3315,6 +4302,16 @@ var gear = {
       "ap": 34
     },
     {
+      "name": "Tattered Hakkari Cape",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 20219,
+      "r": 40,
+      "str": 7,
+      "sta": 6
+    },
+    {
       "name": "Windshear Cape",
       "source": "Dungeon",
       "type": "Cloth",
@@ -3334,6 +4331,16 @@ var gear = {
       "r": 55,
       "str": 8,
       "sta": 8
+    },
+    {
+      "name": "Earthweave Cloak",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 21187,
+      "r": 60,
+      "agi": 15,
+      "hit": 1
     },
     {
       "name": "Drape of Unyielding Strength",
@@ -3420,6 +4427,16 @@ var gear = {
       "r": 60,
       "sta": 18,
       "ap": 28
+    },
+    {
+      "name": "Cryptfiend Silk Cloak",
+      "source": "Dungeon",
+      "type": "Cloth",
+      "slot": "Back",
+      "id": 22938,
+      "r": 60,
+      "sta": 14,
+      "hit": 1
     },
     {
       "name": "Cloak of the Scourge",
@@ -3533,6 +4550,16 @@ var gear = {
       "r": 39,
       "agi": 5,
       "sta": 15
+    },
+    {
+      "name": "Tunic of Westfall",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 2041,
+      "r": 14,
+      "agi": 11,
+      "sta": 5
     },
     {
       "name": "Dusty Chain Armor",
@@ -3721,6 +4748,17 @@ var gear = {
       "sta": 8
     },
     {
+      "name": "Bone-studded Leather",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 3431,
+      "r": 19,
+      "str": 6,
+      "agi": 1,
+      "sta": 5
+    },
+    {
       "name": "Copper Chain Vest",
       "source": "Other",
       "type": "Mail",
@@ -3728,6 +4766,55 @@ var gear = {
       "id": 3471,
       "r": 5,
       "str": 1
+    },
+    {
+      "name": "Camouflaged Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 3585,
+      "r": 10,
+      "agi": 2,
+      "sta": 6
+    },
+    {
+      "name": "Raptorbane Armor",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 3566,
+      "r": 22,
+      "sta": 3,
+      "ap": 30
+    },
+    {
+      "name": "Orcish War Chain",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 3733,
+      "r": 17,
+      "str": 6,
+      "sta": 3
+    },
+    {
+      "name": "Ribbed Breastplate",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 3750,
+      "r": 26,
+      "str": 5,
+      "sta": 5
+    },
+    {
+      "name": "Grunt Vest",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Chest",
+      "id": 3752,
+      "r": 17,
+      "str": 5
     },
     {
       "name": "Green Iron Hauberk",
@@ -3778,6 +4865,15 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Blackwater Tunic",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 4138,
+      "r": 37,
+      "str": 7
+    },
+    {
       "name": "Fine Leather Tunic",
       "source": "Other",
       "type": "Leather",
@@ -3786,6 +4882,17 @@ var gear = {
       "r": 12,
       "agi": 4,
       "sta": 3
+    },
+    {
+      "name": "Raptor Hunter Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 4119,
+      "r": 28,
+      "str": 4,
+      "agi": 3,
+      "sta": 16
     },
     {
       "name": "Green Leather Armor",
@@ -3817,6 +4924,16 @@ var gear = {
       "sta": 7
     },
     {
+      "name": "Blood-tinged Armor",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 4508,
+      "r": 32,
+      "str": 5,
+      "sta": 15
+    },
+    {
       "name": "Sleek Feathered Tunic",
       "source": "Dungeon",
       "type": "Leather",
@@ -3824,6 +4941,25 @@ var gear = {
       "id": 4861,
       "r": 5,
       "agi": 1
+    },
+    {
+      "name": "Mage Dragon Robe",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Chest",
+      "id": 4989,
+      "r": 0,
+      "str": 7
+    },
+    {
+      "name": "Dry Moss Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 5317,
+      "r": 17,
+      "agi": 2,
+      "sta": 8
     },
     {
       "name": "Murloc Scale Breastplate",
@@ -3844,6 +4980,25 @@ var gear = {
       "r": 29,
       "str": 9,
       "sta": 8
+    },
+    {
+      "name": "Snapbrook Armor",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 5814,
+      "r": 20,
+      "str": 4
+    },
+    {
+      "name": "Footman Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 6085,
+      "r": 5,
+      "agi": 1,
+      "sta": 2
     },
     {
       "name": "Wax-polished Armor",
@@ -3935,6 +5090,36 @@ var gear = {
       "sta": 11
     },
     {
+      "name": "Panther Armor",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 6670,
+      "r": 20,
+      "str": 2,
+      "agi": 9
+    },
+    {
+      "name": "Gelkis Marauder Chain",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 6773,
+      "r": 30,
+      "str": 14,
+      "agi": 7
+    },
+    {
+      "name": "Chestplate of Kor",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 6721,
+      "r": 19,
+      "str": 4,
+      "sta": 4
+    },
+    {
       "name": "Ironforge Breastplate",
       "source": "Other",
       "type": "Mail",
@@ -3943,6 +5128,46 @@ var gear = {
       "r": 15,
       "str": 3,
       "sta": 3
+    },
+    {
+      "name": "Baroque Apron",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Chest",
+      "id": 6801,
+      "r": 33,
+      "str": 6,
+      "sta": 6
+    },
+    {
+      "name": "Fire Hardened Hauberk",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 6972,
+      "r": 20,
+      "str": 5,
+      "sta": 14
+    },
+    {
+      "name": "Brutal Hauberk",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 7133,
+      "r": 20,
+      "str": 5,
+      "sta": 14
+    },
+    {
+      "name": "Wildwood Chain",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 7336,
+      "r": 17,
+      "str": 8,
+      "agi": 1
     },
     {
       "name": "Dusky Leather Armor",
@@ -3982,6 +5207,15 @@ var gear = {
       "id": 7914,
       "r": 27,
       "str": 12
+    },
+    {
+      "name": "Ornate Mithril Breastplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 7935,
+      "r": 43,
+      "crit": 1
     },
     {
       "name": "Heraldic Breastplate",
@@ -4072,6 +5306,25 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Honorguard Chestpiece",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 9650,
+      "r": 40,
+      "str": 22,
+      "sta": 3
+    },
+    {
+      "name": "Dawnrider's Chestpiece",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 9663,
+      "r": 40,
+      "agi": 16
+    },
+    {
       "name": "Scarlet Chestpiece",
       "source": "Dungeon",
       "type": "Mail",
@@ -4122,6 +5375,16 @@ var gear = {
       "agi": 19
     },
     {
+      "name": "Hakkari Breastplate",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 10781,
+      "r": 0,
+      "agi": 4,
+      "sta": 22
+    },
+    {
       "name": "Atal'ai Breastplate",
       "source": "Other",
       "type": "Mail",
@@ -4142,6 +5405,15 @@ var gear = {
       "sta": 15
     },
     {
+      "name": "Surveyor's Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 10827,
+      "r": 43,
+      "str": 11
+    },
+    {
       "name": "Warrior's Embrace",
       "source": "Other",
       "type": "Plate",
@@ -4150,6 +5422,27 @@ var gear = {
       "r": 49,
       "agi": 4,
       "sta": 11
+    },
+    {
+      "name": "Blazewind Breastplate",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 11193,
+      "r": 40,
+      "str": 3,
+      "agi": 23,
+      "sta": 5
+    },
+    {
+      "name": "Warforged Chestplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 11195,
+      "r": 40,
+      "str": 24,
+      "sta": 2
     },
     {
       "name": "Carapace of Anub'shiah",
@@ -4207,6 +5500,45 @@ var gear = {
       "crit": 2
     },
     {
+      "name": "Plainstalker Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 11876,
+      "r": 48,
+      "agi": 4,
+      "sta": 23
+    },
+    {
+      "name": "Splintsteel Armor",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 12049,
+      "r": 48,
+      "str": 12,
+      "sta": 12
+    },
+    {
+      "name": "Brindlethorn Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 12104,
+      "r": 0,
+      "sta": 22,
+      "ap": 20
+    },
+    {
+      "name": "Boulderskin Breastplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 12106,
+      "r": 0,
+      "str": 13
+    },
+    {
       "name": "Imperial Plate Chest",
       "source": "Other",
       "type": "Plate",
@@ -4247,6 +5579,17 @@ var gear = {
       "sta": 26
     },
     {
+      "name": "Breastplate of Bloodthirst",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 12757,
+      "r": 57,
+      "str": 13,
+      "sta": 20,
+      "crit": 2
+    },
+    {
       "name": "Mixologist's Tunic",
       "source": "Dungeon",
       "type": "Leather",
@@ -4256,6 +5599,17 @@ var gear = {
       "str": 18,
       "agi": 11,
       "sta": 18
+    },
+    {
+      "name": "Breastplate of the Chromatic Flight",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 12895,
+      "r": 57,
+      "str": 20,
+      "agi": 10,
+      "sta": 30
     },
     {
       "name": "Hydralick Armor",
@@ -4643,6 +5997,15 @@ var gear = {
       "ap": 50
     },
     {
+      "name": "Stormshroud Armor",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 15056,
+      "r": 52,
+      "crit": 2
+    },
+    {
       "name": "Warbear Harness",
       "source": "Other",
       "type": "Leather",
@@ -4661,6 +6024,45 @@ var gear = {
       "r": 56,
       "agi": 25,
       "sta": 7
+    },
+    {
+      "name": "Brawnhide Armor",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 15471,
+      "r": 25,
+      "agi": 4,
+      "sta": 9
+    },
+    {
+      "name": "Traphook Jerkin",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 15825,
+      "r": 55,
+      "str": 5,
+      "agi": 24
+    },
+    {
+      "name": "Willow Band Hauberk",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 15787,
+      "r": 52,
+      "agi": 20,
+      "sta": 10
+    },
+    {
+      "name": "Astoria Robes",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Chest",
+      "id": 15824,
+      "r": 55,
+      "str": 5
     },
     {
       "name": "Knight-Captain's Plate Chestguard",
@@ -4773,6 +6175,26 @@ var gear = {
       "sta": 40
     },
     {
+      "name": "Boorguard Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 17005,
+      "r": 21,
+      "agi": 7,
+      "sta": 6
+    },
+    {
+      "name": "Relentless Chain",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 17777,
+      "r": 41,
+      "sta": 10,
+      "ap": 20
+    },
+    {
       "name": "Fungus Shroud Armor",
       "source": "Dungeon",
       "type": "Leather",
@@ -4825,6 +6247,48 @@ var gear = {
       "crit": 1
     },
     {
+      "name": "Jangdor's Handcrafted Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 19042,
+      "r": 40,
+      "str": 6,
+      "agi": 7,
+      "sta": 15
+    },
+    {
+      "name": "Pratt's Handcrafted Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 19041,
+      "r": 40,
+      "str": 6,
+      "agi": 7,
+      "sta": 15
+    },
+    {
+      "name": "Charred Leather Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 19127,
+      "r": 45,
+      "agi": 18,
+      "sta": 8
+    },
+    {
+      "name": "Seared Mail Vest",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 19128,
+      "r": 45,
+      "agi": 11,
+      "sta": 11
+    },
+    {
       "name": "Malfurion's Blessed Bulwark",
       "source": "Dungeon",
       "type": "Leather",
@@ -4856,6 +6320,16 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Darksoul Breastplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 19693,
+      "r": 60,
+      "sta": 32,
+      "hit": 1
+    },
+    {
       "name": "Bloodsoul Breastplate",
       "source": "Other",
       "type": "Mail",
@@ -4875,6 +6349,17 @@ var gear = {
       "r": 60,
       "str": 17,
       "sta": 17
+    },
+    {
+      "name": "Zandalar Vindicator's Breastplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 19822,
+      "r": 60,
+      "str": 23,
+      "agi": 15,
+      "sta": 24
     },
     {
       "name": "Runed Bloodstained Hauberk",
@@ -4917,6 +6402,15 @@ var gear = {
       "agi": 3
     },
     {
+      "name": "Ursa's Embrace",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 21322,
+      "r": 45,
+      "agi": 17
+    },
+    {
       "name": "Conqueror's Breastplate",
       "source": "Other",
       "type": "Plate",
@@ -4926,6 +6420,16 @@ var gear = {
       "str": 34,
       "agi": 24,
       "sta": 38
+    },
+    {
+      "name": "Vest of the Den Watcher",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 21320,
+      "r": 45,
+      "agi": 20,
+      "sta": 12
     },
     {
       "name": "Thick Silithid Chestguard",
@@ -4973,6 +6477,62 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Breastplate of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 21997,
+      "r": 58,
+      "str": 21,
+      "agi": 13,
+      "sta": 26,
+      "hit": 1
+    },
+    {
+      "name": "Darkmantle Tunic",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 22009,
+      "r": 58,
+      "agi": 31,
+      "sta": 15,
+      "hit": 2
+    },
+    {
+      "name": "Beastmaster's Tunic",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 22060,
+      "r": 58,
+      "agi": 25,
+      "sta": 16,
+      "crit": 1
+    },
+    {
+      "name": "Soulforge Breastplate",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Chest",
+      "id": 22089,
+      "r": 58,
+      "str": 16,
+      "sta": 17,
+      "crit": 1
+    },
+    {
+      "name": "Feralheart Vest",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 22113,
+      "r": 58,
+      "str": 16,
+      "agi": 9,
+      "sta": 17
+    },
+    {
       "name": "Obsidian Mail Tunic",
       "source": "Other",
       "type": "Mail",
@@ -4991,6 +6551,27 @@ var gear = {
       "r": 60,
       "str": 38,
       "sta": 16
+    },
+    {
+      "name": "Vest of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Chest",
+      "id": 22102,
+      "r": 58,
+      "str": 12,
+      "sta": 17
+    },
+    {
+      "name": "Grizzled Pelt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Chest",
+      "id": 22274,
+      "r": 50,
+      "str": 17,
+      "agi": 16,
+      "sta": 11
     },
     {
       "name": "Cryptstalker Tunic",
@@ -5145,6 +6726,16 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Wolfmane Wristguards",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Wrist",
+      "id": 1306,
+      "r": 14,
+      "agi": 2,
+      "sta": 2
+    },
+    {
       "name": "Glowing Leather Bracers",
       "source": "Dungeon",
       "type": "Leather",
@@ -5223,6 +6814,16 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Darkspear Armsplints",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 4132,
+      "r": 30,
+      "str": 7,
+      "sta": 2
+    },
+    {
       "name": "Green Leather Bracers",
       "source": "Other",
       "type": "Leather",
@@ -5240,6 +6841,16 @@ var gear = {
       "r": 25,
       "str": 8,
       "sta": 3
+    },
+    {
+      "name": "War Rider Bracers",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 4745,
+      "r": 30,
+      "agi": 3,
+      "sta": 8
     },
     {
       "name": "Wolf Bracers",
@@ -5312,6 +6923,26 @@ var gear = {
       "sta": 7
     },
     {
+      "name": "Hexed Bracers",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 6665,
+      "r": 20,
+      "agi": 2,
+      "sta": 4
+    },
+    {
+      "name": "Beastial Manacles",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 6722,
+      "r": 20,
+      "str": 1,
+      "sta": 6
+    },
+    {
       "name": "Bands of Serra'kis",
       "source": "Dungeon",
       "type": "Leather",
@@ -5320,6 +6951,16 @@ var gear = {
       "r": 22,
       "str": 4,
       "sta": 2
+    },
+    {
+      "name": "Beetle Clasps",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 7003,
+      "r": 18,
+      "agi": 2,
+      "sta": 5
     },
     {
       "name": "Dusky Bracers",
@@ -5458,6 +7099,45 @@ var gear = {
       "sta": 9
     },
     {
+      "name": "Fire-welded Bracers",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 9535,
+      "r": 20,
+      "agi": 6,
+      "sta": 1
+    },
+    {
+      "name": "Duracin Bracers",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 10358,
+      "r": 30,
+      "agi": 7,
+      "sta": 3
+    },
+    {
+      "name": "Firwillow Wristbands",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Wrist",
+      "id": 10705,
+      "r": 38,
+      "agi": 2
+    },
+    {
+      "name": "Runesteel Vambraces",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 10746,
+      "r": 40,
+      "str": 2,
+      "sta": 11
+    },
+    {
       "name": "Rubicund Armguards",
       "source": "Dungeon",
       "type": "Mail",
@@ -5466,6 +7146,15 @@ var gear = {
       "r": 50,
       "agi": 8,
       "sta": 14
+    },
+    {
+      "name": "Crypt Demon Bracers",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 12112,
+      "r": 48,
+      "agi": 14
     },
     {
       "name": "Imperial Plate Bracers",
@@ -5485,6 +7174,16 @@ var gear = {
       "id": 12550,
       "r": 48,
       "str": 14
+    },
+    {
+      "name": "Battleborn Armbraces",
+      "source": "Dungeon",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 12936,
+      "r": 58,
+      "hit": 1,
+      "crit": 1
     },
     {
       "name": "Blackmist Armguards",
@@ -5773,6 +7472,46 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Grimtoll Wristguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 15459,
+      "r": 24,
+      "str": 5,
+      "agi": 1,
+      "sta": 2
+    },
+    {
+      "name": "Loamflake Bracers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Wrist",
+      "id": 15462,
+      "r": 23,
+      "agi": 5
+    },
+    {
+      "name": "Shining Armplates",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 15797,
+      "r": 52,
+      "str": 2,
+      "sta": 13
+    },
+    {
+      "name": "Blinkstrike Armguards",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 15860,
+      "r": 57,
+      "str": 3,
+      "crit": 1
+    },
+    {
       "name": "Marshal's Plate Bracers",
       "source": "Other",
       "type": "Plate",
@@ -5833,6 +7572,17 @@ var gear = {
       "id": 16714,
       "r": 52,
       "str": 7
+    },
+    {
+      "name": "Gripsteel Wristguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 16794,
+      "r": 32,
+      "str": 5,
+      "agi": 3,
+      "sta": 5
     },
     {
       "name": "Bracers of Valor",
@@ -6167,6 +7917,17 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Zandalar Vindicator's Armguards",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 19824,
+      "r": 60,
+      "str": 13,
+      "agi": 13,
+      "sta": 13
+    },
+    {
       "name": "Spitfire Bracers",
       "source": "Other",
       "type": "Mail",
@@ -6194,6 +7955,17 @@ var gear = {
       "r": 60,
       "sta": 17,
       "ap": 32
+    },
+    {
+      "name": "Deeprock Bracers",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 21184,
+      "r": 60,
+      "str": 19,
+      "agi": 10,
+      "sta": 8
     },
     {
       "name": "Bracers of Brutality",
@@ -6258,6 +8030,59 @@ var gear = {
       "r": 60,
       "sta": 14,
       "ap": 18
+    },
+    {
+      "name": "Bracers of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 21996,
+      "r": 58,
+      "str": 9,
+      "agi": 5,
+      "sta": 14
+    },
+    {
+      "name": "Darkmantle Bracers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Wrist",
+      "id": 22004,
+      "r": 58,
+      "str": 7,
+      "agi": 15,
+      "sta": 7
+    },
+    {
+      "name": "Beastmaster's Bindings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Wrist",
+      "id": 22011,
+      "r": 58,
+      "agi": 16,
+      "sta": 7
+    },
+    {
+      "name": "Soulforge Bracers",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Wrist",
+      "id": 22088,
+      "r": 58,
+      "str": 9,
+      "sta": 10
+    },
+    {
+      "name": "Feralheart Bracers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Wrist",
+      "id": 22108,
+      "r": 58,
+      "str": 6,
+      "agi": 6,
+      "sta": 6
     },
     {
       "name": "Wristguards of Renown",
@@ -6344,6 +8169,17 @@ var gear = {
       "sta": 13
     },
     {
+      "name": "Bracers of Subterfuge",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Wrist",
+      "id": 22668,
+      "r": 55,
+      "str": 10,
+      "agi": 15,
+      "sta": 12
+    },
+    {
       "name": "Wristguards of Vengeance",
       "source": "Dungeon",
       "type": "Plate",
@@ -6417,6 +8253,25 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Riding Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 1304,
+      "r": 15,
+      "agi": 3
+    },
+    {
+      "name": "Black Whelp Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 1302,
+      "r": 14,
+      "str": 2,
+      "agi": 3
+    },
+    {
       "name": "Ghoul Fingers",
       "source": "Dungeon",
       "type": "Leather",
@@ -6425,6 +8280,15 @@ var gear = {
       "r": 15,
       "str": 3,
       "agi": 3
+    },
+    {
+      "name": "Bridgeworker's Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 1303,
+      "r": 15,
+      "str": 4
     },
     {
       "name": "Blackrock Gauntlets",
@@ -6477,6 +8341,16 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Dusty Mining Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 2036,
+      "r": 14,
+      "str": 3,
+      "agi": 2
+    },
+    {
       "name": "Foreman's Gloves",
       "source": "Other",
       "type": "Leather",
@@ -6484,6 +8358,15 @@ var gear = {
       "id": 2167,
       "r": 15,
       "str": 5
+    },
+    {
+      "name": "Gloves of Brawn",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 2230,
+      "r": 21,
+      "str": 6
     },
     {
       "name": "Sapper's Gloves",
@@ -6584,6 +8467,16 @@ var gear = {
       "agi": 2
     },
     {
+      "name": "Rugged Mail Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 3458,
+      "r": 12,
+      "str": 3,
+      "sta": 1
+    },
+    {
       "name": "Silvered Bronze Gauntlets",
       "source": "Other",
       "type": "Mail",
@@ -6602,6 +8495,36 @@ var gear = {
       "r": 25,
       "str": 5,
       "sta": 6
+    },
+    {
+      "name": "Beerstained Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 3565,
+      "r": 20,
+      "str": 3,
+      "sta": 3
+    },
+    {
+      "name": "Night Watch Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 3559,
+      "r": 17,
+      "str": 4,
+      "agi": 1
+    },
+    {
+      "name": "Shepherd's Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 3754,
+      "r": 30,
+      "str": 7,
+      "agi": 6
     },
     {
       "name": "Aurora Gloves",
@@ -6652,6 +8575,25 @@ var gear = {
       "agi": 3
     },
     {
+      "name": "Tiger Hunter Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 4107,
+      "r": 28,
+      "str": 7,
+      "agi": 8
+    },
+    {
+      "name": "Gemmed Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 4121,
+      "r": 31,
+      "agi": 5
+    },
+    {
       "name": "Barbaric Gloves",
       "source": "Other",
       "type": "Leather",
@@ -6682,6 +8624,16 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Seawolf Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 4509,
+      "r": 35,
+      "str": 11,
+      "agi": 3
+    },
+    {
       "name": "Skeletal Gauntlets",
       "source": "Other",
       "type": "Mail",
@@ -6700,6 +8652,15 @@ var gear = {
       "str": 3
     },
     {
+      "name": "Prospector Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 4980,
+      "r": 30,
+      "agi": 8
+    },
+    {
       "name": "Gold-flecked Gloves",
       "source": "Dungeon",
       "type": "Cloth",
@@ -6707,6 +8668,46 @@ var gear = {
       "id": 5195,
       "r": 17,
       "str": 4
+    },
+    {
+      "name": "Gloves of the Moon",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 5299,
+      "r": 10,
+      "agi": 3,
+      "sta": 3
+    },
+    {
+      "name": "Riveted Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 5312,
+      "r": 13,
+      "str": 4,
+      "sta": 1
+    },
+    {
+      "name": "Hammerfist Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 5629,
+      "r": 15,
+      "str": 3,
+      "agi": 3
+    },
+    {
+      "name": "Hedgeseed Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 5822,
+      "r": 0,
+      "str": 5,
+      "sta": 2
     },
     {
       "name": "Serpent Gloves",
@@ -6758,6 +8759,16 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Dagmire Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 6481,
+      "r": 15,
+      "str": 5,
+      "agi": 2
+    },
+    {
       "name": "Deviate Scale Gloves",
       "source": "Other",
       "type": "Leather",
@@ -6766,6 +8777,44 @@ var gear = {
       "r": 16,
       "agi": 3,
       "sta": 3
+    },
+    {
+      "name": "Gloves of Kapelan",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 6744,
+      "r": 30,
+      "str": 7
+    },
+    {
+      "name": "Razzeric's Racing Grips",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 6727,
+      "r": 29,
+      "agi": 8,
+      "sta": 9
+    },
+    {
+      "name": "Braced Handguards",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 6784,
+      "r": 30,
+      "agi": 7,
+      "sta": 7
+    },
+    {
+      "name": "Gnomish Mechanic's Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 6732,
+      "r": 28,
+      "str": 8
     },
     {
       "name": "Ironforge Gauntlets",
@@ -6777,6 +8826,15 @@ var gear = {
       "ap": 12
     },
     {
+      "name": "Stormfire Gauntlets",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 6794,
+      "r": 30,
+      "str": 10
+    },
+    {
       "name": "Algae Fists",
       "source": "Dungeon",
       "type": "Mail",
@@ -6785,6 +8843,26 @@ var gear = {
       "r": 23,
       "str": 10,
       "sta": 4
+    },
+    {
+      "name": "Fire Hardened Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 6974,
+      "r": 20,
+      "str": 6,
+      "sta": 6
+    },
+    {
+      "name": "Brutal Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 7129,
+      "r": 20,
+      "str": 6,
+      "sta": 6
     },
     {
       "name": "Nimble Leather Gloves",
@@ -6812,6 +8890,15 @@ var gear = {
       "id": 7358,
       "r": 23,
       "agi": 8
+    },
+    {
+      "name": "Polar Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 7606,
+      "r": 15,
+      "str": 5
     },
     {
       "name": "Ebon Vise",
@@ -6861,6 +8948,15 @@ var gear = {
       "r": 40,
       "str": 16,
       "sta": 7
+    },
+    {
+      "name": "Ornate Mithril Gloves",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 7927,
+      "r": 40,
+      "crit": 1
     },
     {
       "name": "Hibernal Gloves",
@@ -6959,6 +9055,16 @@ var gear = {
       "agi": 13
     },
     {
+      "name": "Dragonscale Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 8347,
+      "r": 40,
+      "sta": 7,
+      "crit": 1
+    },
+    {
       "name": "Gauntlets of the Sea",
       "source": "Other",
       "type": "Leather",
@@ -6997,6 +9103,15 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Mud's Crushers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 9518,
+      "r": 32,
+      "str": 11
+    },
+    {
       "name": "Hotshot Pilot's Gloves",
       "source": "Other",
       "type": "Cloth",
@@ -7007,6 +9122,45 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Skilled Handling Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 9634,
+      "r": 38,
+      "agi": 6,
+      "sta": 6
+    },
+    {
+      "name": "Pratt's Handcrafted Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 9631,
+      "r": 40,
+      "str": 10,
+      "agi": 9
+    },
+    {
+      "name": "Granite Grips",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 9656,
+      "r": 44,
+      "str": 15
+    },
+    {
+      "name": "Jangdor's Handcrafted Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 9632,
+      "r": 40,
+      "str": 10,
+      "agi": 9
+    },
+    {
       "name": "Vice Grips",
       "source": "Dungeon",
       "type": "Plate",
@@ -7014,6 +9168,15 @@ var gear = {
       "id": 9640,
       "r": 43,
       "ap": 14
+    },
+    {
+      "name": "Rustler Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 9704,
+      "r": 38,
+      "str": 9
     },
     {
       "name": "Scarlet Gauntlets",
@@ -7067,6 +9230,15 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Brewer's Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 10637,
+      "r": 10,
+      "str": 2
+    },
+    {
       "name": "Murkwater Gauntlets",
       "source": "Other",
       "type": "Mail",
@@ -7075,6 +9247,15 @@ var gear = {
       "r": 41,
       "str": 13,
       "sta": 12
+    },
+    {
+      "name": "Jutebraid Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 10654,
+      "r": 15,
+      "str": 6
     },
     {
       "name": "Swine Fists",
@@ -7126,6 +9307,75 @@ var gear = {
       "r": 53,
       "agi": 10,
       "sta": 11
+    },
+    {
+      "name": "Maddening Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 11867,
+      "r": 48,
+      "str": 15,
+      "agi": 5
+    },
+    {
+      "name": "Grotslab Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 11918,
+      "r": 49,
+      "agi": 12
+    },
+    {
+      "name": "Brazen Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 12051,
+      "r": 48,
+      "str": 12,
+      "agi": 12,
+      "sta": 2
+    },
+    {
+      "name": "Lavaplate Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 12111,
+      "r": 52,
+      "str": 17,
+      "sta": 5
+    },
+    {
+      "name": "Nightfall Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 12114,
+      "r": 48,
+      "str": 12,
+      "agi": 12
+    },
+    {
+      "name": "Bingles' Flying Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 12522,
+      "r": 12,
+      "agi": 2
+    },
+    {
+      "name": "Stronghold Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 12639,
+      "r": 57,
+      "sta": 12,
+      "crit": 1
     },
     {
       "name": "Backusarian Gauntlets",
@@ -7190,6 +9440,15 @@ var gear = {
       "sta": 9
     },
     {
+      "name": "Trueaim Gauntlets",
+      "source": "Dungeon",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 13255,
+      "r": 54,
+      "hit": 1
+    },
+    {
       "name": "Skul's Fingerbone Claws",
       "source": "Dungeon",
       "type": "Leather",
@@ -7198,6 +9457,17 @@ var gear = {
       "r": 54,
       "sta": 10,
       "ap": 40
+    },
+    {
+      "name": "Voone's Vice Grips",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 13963,
+      "r": 55,
+      "agi": 9,
+      "sta": 6,
+      "hit": 2
     },
     {
       "name": "Gargoyle Slashers",
@@ -7455,6 +9725,46 @@ var gear = {
       "crit": 1
     },
     {
+      "name": "Palestrider Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 15463,
+      "r": 23,
+      "str": 5,
+      "sta": 2
+    },
+    {
+      "name": "Blight Leather Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 15708,
+      "r": 48,
+      "str": 8,
+      "agi": 13,
+      "sta": 8
+    },
+    {
+      "name": "Emerald Mist Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 15795,
+      "r": 53,
+      "str": 12,
+      "sta": 13
+    },
+    {
+      "name": "Bricksteel Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 15823,
+      "r": 50,
+      "str": 18
+    },
+    {
       "name": "Knight-Lieutenant's Plate Gauntlets",
       "source": "Other",
       "type": "Plate",
@@ -7549,6 +9859,16 @@ var gear = {
       "sta": 9
     },
     {
+      "name": "Shredder Operating Gloves",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Hands",
+      "id": 16740,
+      "r": 23,
+      "agi": 2,
+      "sta": 5
+    },
+    {
       "name": "Gauntlets of Might",
       "source": "Dungeon",
       "type": "Plate",
@@ -7570,6 +9890,26 @@ var gear = {
       "sta": 20
     },
     {
+      "name": "Warsong Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 16978,
+      "r": 22,
+      "str": 10,
+      "sta": 3
+    },
+    {
+      "name": "Sandspire Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 16986,
+      "r": 17,
+      "str": 5,
+      "sta": 2
+    },
+    {
       "name": "Rockgrip Gauntlets",
       "source": "Dungeon",
       "type": "Mail",
@@ -7578,6 +9918,25 @@ var gear = {
       "r": 48,
       "sta": 10,
       "ap": 28
+    },
+    {
+      "name": "Branchclaw Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 17770,
+      "r": 41,
+      "str": 12
+    },
+    {
+      "name": "Shadowskin Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 18238,
+      "r": 35,
+      "sta": 6,
+      "crit": 1
     },
     {
       "name": "Razor Gauntlets",
@@ -7597,6 +9956,17 @@ var gear = {
       "r": 56,
       "agi": 15,
       "hit": 1
+    },
+    {
+      "name": "Gordok's Handguards",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 18366,
+      "r": 60,
+      "str": 10,
+      "sta": 10,
+      "crit": 1
     },
     {
       "name": "Stonebark Gauntlets",
@@ -7679,6 +10049,16 @@ var gear = {
       "r": 59,
       "str": 23,
       "sta": 10
+    },
+    {
+      "name": "Slagplate Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 19126,
+      "r": 45,
+      "str": 12,
+      "sta": 7
     },
     {
       "name": "Chromatic Gauntlets",
@@ -7766,6 +10146,16 @@ var gear = {
       "crit": 1
     },
     {
+      "name": "Azurite Fists",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 20369,
+      "r": 50,
+      "agi": 6,
+      "sta": 7
+    },
+    {
       "name": "Shadow Panther Hide Gloves",
       "source": "Other",
       "type": "Leather",
@@ -7786,6 +10176,16 @@ var gear = {
       "agi": 12
     },
     {
+      "name": "Desert Wind Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 20650,
+      "r": 60,
+      "str": 11,
+      "sta": 10
+    },
+    {
       "name": "Gauntlets of the Shining Light",
       "source": "Other",
       "type": "Plate",
@@ -7795,6 +10195,47 @@ var gear = {
       "str": 15,
       "agi": 12,
       "sta": 15
+    },
+    {
+      "name": "Wastewalker's Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 20712,
+      "r": 58,
+      "str": 10,
+      "agi": 10,
+      "sta": 10
+    },
+    {
+      "name": "Desertstalkers's Gauntlets",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 20713,
+      "r": 58,
+      "agi": 16,
+      "sta": 15
+    },
+    {
+      "name": "Stormshroud Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 21278,
+      "r": 57,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "name": "Gloves of the Pathfinder",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 21319,
+      "r": 45,
+      "str": 13,
+      "agi": 12
     },
     {
       "name": "Gauntlets of New Life",
@@ -7958,6 +10399,70 @@ var gear = {
       "sta": 20
     },
     {
+      "name": "Gauntlets of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 21998,
+      "r": 58,
+      "str": 18,
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "name": "Darkmantle Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 22006,
+      "r": 58,
+      "str": 12,
+      "agi": 22,
+      "sta": 9
+    },
+    {
+      "name": "Soulforge Gauntlets",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 22090,
+      "r": 58,
+      "str": 9,
+      "sta": 10,
+      "crit": 1
+    },
+    {
+      "name": "Beastmaster's Gloves",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 22015,
+      "r": 58,
+      "agi": 14,
+      "sta": 12
+    },
+    {
+      "name": "Gauntlets of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 22099,
+      "r": 58,
+      "str": 9,
+      "sta": 12
+    },
+    {
+      "name": "Feralheart Gloves",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 22110,
+      "r": 58,
+      "str": 10,
+      "agi": 9,
+      "sta": 10
+    },
+    {
       "name": "Black Grasp of the Destroyer",
       "source": "Other",
       "type": "Mail",
@@ -8083,6 +10588,36 @@ var gear = {
       "sta": null
     },
     {
+      "name": "Handwraps of Undead Slaying",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Hands",
+      "id": 23081,
+      "r": 50,
+      "sta": 15,
+      "ap": 60
+    },
+    {
+      "name": "Gauntlets of Undead Slaying",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Hands",
+      "id": 23078,
+      "r": 50,
+      "sta": 15,
+      "ap": 60
+    },
+    {
+      "name": "Handguards of Undead Slaying",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Hands",
+      "id": 23082,
+      "r": 50,
+      "sta": 15,
+      "ap": 60
+    },
+    {
       "name": "The Frozen Clutch",
       "source": "Other",
       "type": "Mail",
@@ -8151,6 +10686,26 @@ var gear = {
       "r": 19,
       "agi": 4,
       "sta": 4
+    },
+    {
+      "name": "Belt of Vindication",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 3562,
+      "r": 22,
+      "agi": 4,
+      "sta": 2
+    },
+    {
+      "name": "Crusader Belt",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 3758,
+      "r": 26,
+      "str": 7,
+      "sta": 6
     },
     {
       "name": "Dark Leather Belt",
@@ -8261,6 +10816,26 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Cinched Belt",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 5328,
+      "r": 9,
+      "str": 2,
+      "sta": 2
+    },
+    {
+      "name": "Beastmaster's Girdle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 5355,
+      "r": 10,
+      "agi": 5,
+      "sta": 5
+    },
+    {
       "name": "Runescale Girdle",
       "source": "Other",
       "type": "Mail",
@@ -8268,6 +10843,16 @@ var gear = {
       "id": 5425,
       "r": 15,
       "str": 5
+    },
+    {
+      "name": "Steadfast Cinch",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 5609,
+      "r": 10,
+      "str": 4,
+      "sta": 3
     },
     {
       "name": "Warchief's Girdle",
@@ -8378,6 +10963,46 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Windborne Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 6719,
+      "r": 25,
+      "agi": 6,
+      "sta": 5
+    },
+    {
+      "name": "Magram Hunter's Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 6788,
+      "r": 30,
+      "agi": 8,
+      "sta": 9
+    },
+    {
+      "name": "Stonefist Girdle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 6742,
+      "r": 29,
+      "str": 6,
+      "sta": 5
+    },
+    {
+      "name": "Belt of the Stars",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 7107,
+      "r": 20,
+      "str": 6,
+      "sta": 6
+    },
+    {
       "name": "Dusky Belt",
       "source": "Other",
       "type": "Leather",
@@ -8456,6 +11081,45 @@ var gear = {
       "str": 12
     },
     {
+      "name": "Tharg's Shoelace",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 9705,
+      "r": 38,
+      "str": 13
+    },
+    {
+      "name": "Swashbuckler Sash",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Waist",
+      "id": 9636,
+      "r": 40,
+      "str": 10,
+      "sta": 9
+    },
+    {
+      "name": "Vinehedge Cinch",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 9657,
+      "r": 44,
+      "str": 14,
+      "sta": 3
+    },
+    {
+      "name": "Grappler's Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 9687,
+      "r": 30,
+      "str": 7,
+      "sta": 5
+    },
+    {
       "name": "Scarlet Belt",
       "source": "Other",
       "type": "Mail",
@@ -8495,6 +11159,16 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Nightscale Girdle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 10706,
+      "r": 38,
+      "str": 14,
+      "sta": 2
+    },
+    {
       "name": "Boar Champion's Belt",
       "source": "Dungeon",
       "type": "Mail",
@@ -8515,6 +11189,16 @@ var gear = {
       "sta": 8
     },
     {
+      "name": "Brightscale Girdle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 11229,
+      "r": 26,
+      "str": 6,
+      "sta": 6
+    },
+    {
       "name": "Girdle of Beastial Fury",
       "source": "Dungeon",
       "type": "Leather",
@@ -8524,6 +11208,43 @@ var gear = {
       "str": 8,
       "sta": 10,
       "ap": 30
+    },
+    {
+      "name": "Nagmara's Whipping Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 11866,
+      "r": 50,
+      "str": 8,
+      "sta": 14
+    },
+    {
+      "name": "Girdle of Reprisal",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 11861,
+      "r": 43,
+      "str": 12
+    },
+    {
+      "name": "Relic Hunter Belt",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Waist",
+      "id": 11936,
+      "r": 15,
+      "str": 2
+    },
+    {
+      "name": "Serpent Clasp Belt",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 12258,
+      "r": 39,
+      "crit": 1
     },
     {
       "name": "Heavy Notched Belt",
@@ -8660,6 +11381,28 @@ var gear = {
       "str": 11,
       "agi": 10,
       "sta": 10
+    },
+    {
+      "name": "Vosh'gajin's Strand",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 13962,
+      "r": 55,
+      "str": 9,
+      "sta": 6,
+      "crit": 1
+    },
+    {
+      "name": "Omokk's Girth Restrainer",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 13959,
+      "r": 55,
+      "str": 15,
+      "sta": 9,
+      "crit": 1
     },
     {
       "name": "Mystic's Belt",
@@ -8920,6 +11663,76 @@ var gear = {
       "sta": 13
     },
     {
+      "name": "Breakwater Girdle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 15404,
+      "r": 15,
+      "agi": 2,
+      "sta": 3
+    },
+    {
+      "name": "Windsong Cinch",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 15469,
+      "r": 25,
+      "sta": 5,
+      "ap": 12
+    },
+    {
+      "name": "Bracesteel Belt",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 15588,
+      "r": 31,
+      "str": 4,
+      "agi": 4,
+      "sta": 7
+    },
+    {
+      "name": "Ringtail Girdle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 15587,
+      "r": 31,
+      "sta": 5,
+      "ap": 16
+    },
+    {
+      "name": "Brantwood Sash",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Waist",
+      "id": 15707,
+      "r": 48,
+      "agi": 9
+    },
+    {
+      "name": "Gearforge Girdle",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 15709,
+      "r": 48,
+      "str": 16,
+      "agi": 4,
+      "sta": 5
+    },
+    {
+      "name": "Turquoise Sash",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Waist",
+      "id": 15791,
+      "r": 53,
+      "agi": 6
+    },
+    {
       "name": "Marshal's Plate Girdle",
       "source": "Other",
       "type": "Plate",
@@ -8940,6 +11753,17 @@ var gear = {
       "str": 25,
       "agi": 12,
       "sta": 15
+    },
+    {
+      "name": "Deftkin Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 16659,
+      "r": 23,
+      "agi": 4,
+      "sta": 3,
+      "ap": 12
     },
     {
       "name": "Cord of Elements",
@@ -9015,6 +11839,25 @@ var gear = {
       "sta": 20
     },
     {
+      "name": "Screecher Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 16987,
+      "r": 18,
+      "sta": 3,
+      "ap": 12
+    },
+    {
+      "name": "Sagebrush Girdle",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 17778,
+      "r": 41,
+      "agi": 15
+    },
+    {
       "name": "Warpwood Binding",
       "source": "Dungeon",
       "type": "Mail",
@@ -9034,6 +11877,16 @@ var gear = {
       "r": 55,
       "sta": 13,
       "ap": 28
+    },
+    {
+      "name": "Mugger's Belt",
+      "source": "Dungeon",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 18505,
+      "r": 57,
+      "sta": 16,
+      "crit": 1
     },
     {
       "name": "Elemental Plate Girdle",
@@ -9163,6 +12016,16 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Seared Mail Girdle",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 19125,
+      "r": 45,
+      "agi": 12,
+      "sta": 7
+    },
+    {
       "name": "Molten Belt",
       "source": "Other",
       "type": "Leather",
@@ -9215,6 +12078,17 @@ var gear = {
       "sta": 15
     },
     {
+      "name": "Zandalar Vindicator's Belt",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 19823,
+      "r": 60,
+      "str": 25,
+      "sta": 10,
+      "crit": 1
+    },
+    {
       "name": "Highlander's Plate Girdle",
       "source": "Other",
       "type": "Plate",
@@ -9257,6 +12131,18 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Belt of Preserved Heads",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 20216,
+      "r": 58,
+      "str": 14,
+      "agi": 15,
+      "sta": 11,
+      "hit": 1
+    },
+    {
       "name": "Defiler's Plate Girdle",
       "source": "Other",
       "type": "Mail",
@@ -9288,6 +12174,27 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Belt of Shrunken Heads",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 20213,
+      "r": 58,
+      "str": 23,
+      "agi": 7,
+      "sta": 11
+    },
+    {
+      "name": "Belt of Shriveled Heads",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 20215,
+      "r": 58,
+      "agi": 11,
+      "sta": 18
+    },
+    {
       "name": "Defiler's Plate Girdle",
       "source": "Other",
       "type": "Plate",
@@ -9308,6 +12215,16 @@ var gear = {
       "str": 8,
       "agi": 16,
       "sta": 10
+    },
+    {
+      "name": "Belt of the Den Watcher",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 21312,
+      "r": 45,
+      "sta": 6,
+      "ap": 24
     },
     {
       "name": "Ossirian's Binding",
@@ -9397,6 +12314,69 @@ var gear = {
       "str": 26,
       "agi": 19,
       "sta": 17
+    },
+    {
+      "name": "Darkmantle Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 22002,
+      "r": 58,
+      "str": 10,
+      "agi": 17,
+      "sta": 13
+    },
+    {
+      "name": "Belt of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 21994,
+      "r": 58,
+      "str": 15,
+      "agi": 9,
+      "sta": 12
+    },
+    {
+      "name": "Beastmaster's Belt",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 22010,
+      "r": 58,
+      "agi": 16,
+      "sta": 16
+    },
+    {
+      "name": "Soulforge Belt",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Waist",
+      "id": 22086,
+      "r": 58,
+      "str": 10,
+      "sta": 11
+    },
+    {
+      "name": "Feralheart Belt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Waist",
+      "id": 22106,
+      "r": 58,
+      "str": 6,
+      "agi": 7,
+      "sta": 9
+    },
+    {
+      "name": "Cord of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Waist",
+      "id": 22098,
+      "r": 58,
+      "str": 10,
+      "sta": 11
     },
     {
       "name": "Light Obsidian Belt",
@@ -9508,6 +12488,26 @@ var gear = {
   ],
   "legs": [
     {
+      "name": "Smith's Trousers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 1310,
+      "r": 15,
+      "str": 4,
+      "agi": 4
+    },
+    {
+      "name": "Frontier Britches",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 1436,
+      "r": 10,
+      "str": 3,
+      "agi": 3
+    },
+    {
       "name": "Basilisk Hide Pants",
       "source": "Other",
       "type": "Leather",
@@ -9537,6 +12537,16 @@ var gear = {
       "agi": 3
     },
     {
+      "name": "Lucky Trousers",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 1832,
+      "r": 10,
+      "agi": 2,
+      "sta": 2
+    },
+    {
       "name": "Stonemason Trousers",
       "source": "Dungeon",
       "type": "Leather",
@@ -9563,6 +12573,45 @@ var gear = {
       "id": 2233,
       "r": 22,
       "agi": 6
+    },
+    {
+      "name": "Malleable Chain Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 2545,
+      "r": 18,
+      "str": 7,
+      "agi": 3,
+      "sta": 3
+    },
+    {
+      "name": "Settler's Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 2694,
+      "r": 9,
+      "agi": 3
+    },
+    {
+      "name": "Stretched Leather Trousers",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 2818,
+      "r": 12,
+      "str": 2,
+      "agi": 2
+    },
+    {
+      "name": "Darkshire Mail Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 2906,
+      "r": 22,
+      "str": 6
     },
     {
       "name": "Burnt Leather Breeches",
@@ -9688,6 +12737,25 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Harvester's Pants",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 3578,
+      "r": 8,
+      "agi": 2
+    },
+    {
+      "name": "Mercenary Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 3751,
+      "r": 26,
+      "str": 7,
+      "agi": 7
+    },
+    {
       "name": "Green Iron Leggings",
       "source": "Other",
       "type": "Mail",
@@ -9734,6 +12802,27 @@ var gear = {
       "agi": 12
     },
     {
+      "name": "Panther Hunter Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 4108,
+      "r": 28,
+      "agi": 10,
+      "sta": 11
+    },
+    {
+      "name": "Stromgarde Cavalry Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 4741,
+      "r": 30,
+      "str": 8,
+      "agi": 2,
+      "sta": 6
+    },
+    {
       "name": "Legionnaire's Leggings",
       "source": "Other",
       "type": "Mail",
@@ -9772,6 +12861,43 @@ var gear = {
       "agi": 7
     },
     {
+      "name": "Kodo Hunter's Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 4909,
+      "r": 3,
+      "agi": 4
+    },
+    {
+      "name": "Artisan's Trousers",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 5016,
+      "r": 30,
+      "agi": 9
+    },
+    {
+      "name": "Greasy Tinker's Pants",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 5327,
+      "r": 13,
+      "str": 3,
+      "agi": 3
+    },
+    {
+      "name": "Sea Dog Britches",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 5310,
+      "r": 13,
+      "str": 4
+    },
+    {
       "name": "Brambleweed Leggings",
       "source": "Other",
       "type": "Leather",
@@ -9779,6 +12905,16 @@ var gear = {
       "id": 5422,
       "r": 15,
       "agi": 4
+    },
+    {
+      "name": "Vagabond Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 5617,
+      "r": 7,
+      "str": 2,
+      "agi": 1
     },
     {
       "name": "Dark Leather Pants",
@@ -9798,6 +12934,34 @@ var gear = {
       "r": 29,
       "agi": 7,
       "sta": 7
+    },
+    {
+      "name": "Stormwind Guard Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 6084,
+      "r": 5,
+      "str": 3
+    },
+    {
+      "name": "Chausses of Westfall",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 6087,
+      "r": 14,
+      "str": 11,
+      "sta": 5
+    },
+    {
+      "name": "Sacred Burial Trousers",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 6282,
+      "r": 19,
+      "str": 3
     },
     {
       "name": "Glimmering Mail Legguards",
@@ -9829,6 +12993,16 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Slick Deviate Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 6480,
+      "r": 13,
+      "agi": 4,
+      "sta": 4
+    },
+    {
       "name": "Ferine Leggings",
       "source": "Dungeon",
       "type": "Leather",
@@ -9837,6 +13011,35 @@ var gear = {
       "r": 29,
       "str": 9,
       "agi": 8
+    },
+    {
+      "name": "Juggernaut Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 6671,
+      "r": 20,
+      "str": 10
+    },
+    {
+      "name": "Fire Hardened Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 6973,
+      "r": 20,
+      "str": 7,
+      "sta": 7
+    },
+    {
+      "name": "Brutal Legguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 7132,
+      "r": 20,
+      "str": 7,
+      "sta": 7
     },
     {
       "name": "Light Leather Pants",
@@ -10046,6 +13249,27 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Triprunner Dungarees",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 9624,
+      "r": 25,
+      "str": 3,
+      "agi": 18,
+      "sta": 6
+    },
+    {
+      "name": "Gryphon Rider's Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 9652,
+      "r": 40,
+      "str": 15,
+      "agi": 15
+    },
+    {
       "name": "Colorful Kilt",
       "source": "Other",
       "type": "Cloth",
@@ -10125,6 +13349,26 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Dragonflight Leggings",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 10742,
+      "r": 40,
+      "str": 6,
+      "agi": 13
+    },
+    {
+      "name": "Centurion Legplates",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 10740,
+      "r": 40,
+      "str": 15,
+      "agi": 15
+    },
+    {
       "name": "Kilt of the Atal'ai Prophet",
       "source": "Dungeon",
       "type": "Cloth",
@@ -10143,6 +13387,16 @@ var gear = {
       "r": 49,
       "agi": 7,
       "sta": 10
+    },
+    {
+      "name": "Rainstrider Leggings",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 11123,
+      "r": 38,
+      "agi": 8,
+      "sta": 7
     },
     {
       "name": "Savage Gladiator Leggings",
@@ -10187,6 +13441,45 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Treetop Leggings",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 11911,
+      "r": 50,
+      "str": 8,
+      "sta": 8
+    },
+    {
+      "name": "Outrider Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 11882,
+      "r": 48,
+      "str": 16,
+      "sta": 16
+    },
+    {
+      "name": "Windshear Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 12041,
+      "r": 48,
+      "agi": 14,
+      "sta": 4
+    },
+    {
+      "name": "Leggings of the People's Militia",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Legs",
+      "id": 12295,
+      "r": 10,
+      "str": 2
+    },
+    {
       "name": "Imperial Plate Leggings",
       "source": "Other",
       "type": "Plate",
@@ -10205,6 +13498,17 @@ var gear = {
       "r": 58,
       "str": 20,
       "sta": 21
+    },
+    {
+      "name": "Legguards of the Chromatic Defier",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 12903,
+      "r": 57,
+      "str": 9,
+      "agi": 33,
+      "sta": 15
     },
     {
       "name": "Warmaster Legguards",
@@ -10548,6 +13852,15 @@ var gear = {
       "ap": 54
     },
     {
+      "name": "Stormshroud Pants",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 15057,
+      "r": 50,
+      "crit": 2
+    },
+    {
       "name": "Warbear Woolies",
       "source": "Other",
       "type": "Leather",
@@ -10586,6 +13899,67 @@ var gear = {
       "id": 15119,
       "r": 51,
       "agi": 9
+    },
+    {
+      "name": "Wildkeeper Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 15202,
+      "r": 15,
+      "agi": 4,
+      "sta": 1
+    },
+    {
+      "name": "Guststorm Legguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 15203,
+      "r": 15,
+      "str": 3,
+      "sta": 3
+    },
+    {
+      "name": "Dredgemire Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 15450,
+      "r": 9,
+      "agi": 2,
+      "sta": 2
+    },
+    {
+      "name": "Lightstep Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 15456,
+      "r": 30,
+      "agi": 13,
+      "sta": 5
+    },
+    {
+      "name": "Plainsguard Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 15470,
+      "r": 25,
+      "str": 7,
+      "sta": 8
+    },
+    {
+      "name": "Gargoyle Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 15451,
+      "r": 9,
+      "str": 2,
+      "agi": 2,
+      "sta": 2
     },
     {
       "name": "Knight-Captain's Plate Leggings",
@@ -10720,6 +14094,17 @@ var gear = {
       "sta": 27
     },
     {
+      "name": "Cobalt Legguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 17006,
+      "r": 21,
+      "str": 5,
+      "agi": 3,
+      "sta": 7
+    },
+    {
       "name": "Elemental Rockridge Leggings",
       "source": "Dungeon",
       "type": "Plate",
@@ -10812,6 +14197,26 @@ var gear = {
       "sta": 22
     },
     {
+      "name": "Laquered Wooden Plate Legplates",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 19117,
+      "r": 46,
+      "str": 17,
+      "sta": 10
+    },
+    {
+      "name": "Slagplate Leggings",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 19124,
+      "r": 45,
+      "str": 12,
+      "sta": 12
+    },
+    {
       "name": "Legguards of the Fallen Crusader",
       "source": "Dungeon",
       "type": "Plate",
@@ -10831,6 +14236,16 @@ var gear = {
       "r": 60,
       "agi": 17,
       "sta": 22
+    },
+    {
+      "name": "Darksoul Leggings",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 19694,
+      "r": 60,
+      "sta": 22,
+      "hit": 2
     },
     {
       "name": "Bloodstained Legplates",
@@ -10914,6 +14329,63 @@ var gear = {
       "sta": 20,
       "crit": 2,
       "ap": 48
+    },
+    {
+      "name": "Abyssal Leather Leggings",
+      "source": "Dungeon",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 20665,
+      "r": 57,
+      "crit": 1
+    },
+    {
+      "name": "Abyssal Mail Legguards",
+      "source": "Dungeon",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 20668,
+      "r": 57,
+      "crit": 1
+    },
+    {
+      "name": "Abyssal Plate Legplates",
+      "source": "Dungeon",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 20671,
+      "r": 57,
+      "crit": 1
+    },
+    {
+      "name": "Cenarion Reservist's Legguards",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 20702,
+      "r": 58,
+      "agi": 13,
+      "sta": 13
+    },
+    {
+      "name": "Cenarion Reservist's Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 20703,
+      "r": 58,
+      "sta": 13,
+      "ap": 26
+    },
+    {
+      "name": "Leggings of the Ursa",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 21316,
+      "r": 45,
+      "str": 17,
+      "crit": 1
     },
     {
       "name": "Conqueror's Legguards",
@@ -11002,6 +14474,69 @@ var gear = {
       "crit": 2
     },
     {
+      "name": "Legplates of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 22000,
+      "r": 58,
+      "str": 25,
+      "agi": 11,
+      "sta": 16
+    },
+    {
+      "name": "Beastmaster's Pants",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 22017,
+      "r": 58,
+      "agi": 28,
+      "sta": 14
+    },
+    {
+      "name": "Darkmantle Pants",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 22007,
+      "r": 58,
+      "str": 15,
+      "agi": 25,
+      "sta": 15
+    },
+    {
+      "name": "Soulforge Legplates",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 22092,
+      "r": 58,
+      "str": 16,
+      "sta": 17
+    },
+    {
+      "name": "Kilt of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 22100,
+      "r": 58,
+      "str": 10,
+      "sta": 17
+    },
+    {
+      "name": "Feralheart Kilt",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 22111,
+      "r": 58,
+      "str": 14,
+      "agi": 12,
+      "sta": 14
+    },
+    {
       "name": "Cryptstalker Legguards",
       "source": "Other",
       "type": "Mail",
@@ -11081,6 +14616,16 @@ var gear = {
       "crit": 1
     },
     {
+      "name": "Polar Leggings",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Legs",
+      "id": 22701,
+      "r": 60,
+      "agi": 15,
+      "sta": 28
+    },
+    {
       "name": "Outrider's Chain Leggings",
       "source": "Other",
       "type": "Mail",
@@ -11093,6 +14638,27 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Leggings of the Plague Hunter",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 22690,
+      "r": 55,
+      "agi": 20,
+      "sta": 16,
+      "crit": 1
+    },
+    {
+      "name": "Icebane Leggings",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Legs",
+      "id": 22699,
+      "r": 60,
+      "str": 10,
+      "sta": 25
+    },
+    {
       "name": "Outrider's Lizardhide Pants",
       "source": "Other",
       "type": "Leather",
@@ -11102,6 +14668,16 @@ var gear = {
       "str": 22,
       "agi": 10,
       "sta": 22
+    },
+    {
+      "name": "Icy Scale Leggings",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Legs",
+      "id": 22702,
+      "r": 60,
+      "agi": 15,
+      "sta": 28
     },
     {
       "name": "Sentinel's Chain Leggings",
@@ -11249,6 +14825,16 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Ambassador's Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 2033,
+      "r": 22,
+      "agi": 4,
+      "sta": 4
+    },
+    {
       "name": "Swampwalker Boots",
       "source": "Other",
       "type": "Leather",
@@ -11266,6 +14852,26 @@ var gear = {
       "id": 2583,
       "r": 14,
       "agi": 2
+    },
+    {
+      "name": "Gold Militia Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 2910,
+      "r": 15,
+      "str": 3,
+      "sta": 5
+    },
+    {
+      "name": "Mariner Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 2949,
+      "r": 20,
+      "agi": 1,
+      "sta": 6
     },
     {
       "name": "Inscribed Leather Boots",
@@ -11318,6 +14924,26 @@ var gear = {
       "sta": 7
     },
     {
+      "name": "Stomping Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 3741,
+      "r": 21,
+      "str": 4,
+      "agi": 4
+    },
+    {
+      "name": "Mantis Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 3764,
+      "r": 29,
+      "str": 3,
+      "agi": 2
+    },
+    {
       "name": "Golden Scale Boots",
       "source": "Other",
       "type": "Mail",
@@ -11367,6 +14993,25 @@ var gear = {
       "sta": 9
     },
     {
+      "name": "Excelsior Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 4109,
+      "r": 31,
+      "str": 7,
+      "agi": 9
+    },
+    {
+      "name": "Darkspear Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 4136,
+      "r": 30,
+      "str": 9
+    },
+    {
       "name": "Spider Silk Slippers",
       "source": "Other",
       "type": "Cloth",
@@ -11386,6 +15031,16 @@ var gear = {
       "agi": 6
     },
     {
+      "name": "Ironheel Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 4653,
+      "r": 35,
+      "str": 10,
+      "sta": 9
+    },
+    {
       "name": "Walking Boots",
       "source": "Other",
       "type": "Cloth",
@@ -11402,6 +15057,45 @@ var gear = {
       "id": 4788,
       "r": 15,
       "agi": 5
+    },
+    {
+      "name": "Padded Lamellar Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 5320,
+      "r": 9,
+      "str": 2,
+      "sta": 2
+    },
+    {
+      "name": "Darkstalker Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 5821,
+      "r": 0,
+      "agi": 5,
+      "sta": 2
+    },
+    {
+      "name": "Kimbra Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 6191,
+      "r": 17,
+      "agi": 4
+    },
+    {
+      "name": "Grizzled Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 6335,
+      "r": 16,
+      "str": 2,
+      "sta": 7
     },
     {
       "name": "Chief Brigadier Boots",
@@ -11444,6 +15138,72 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Rat Stompers",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 6478,
+      "r": 0,
+      "str": 3
+    },
+    {
+      "name": "Firewalker Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 6482,
+      "r": 21,
+      "str": 2
+    },
+    {
+      "name": "Draftsman Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 6668,
+      "r": 16,
+      "str": 5,
+      "sta": 5
+    },
+    {
+      "name": "Lancer Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 6752,
+      "r": 25,
+      "agi": 6,
+      "sta": 5
+    },
+    {
+      "name": "Dredge Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 6666,
+      "r": 17,
+      "agi": 3,
+      "sta": 4
+    },
+    {
+      "name": "Hellion Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 6791,
+      "r": 30,
+      "agi": 3
+    },
+    {
+      "name": "Nimbus Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 6998,
+      "r": 20,
+      "agi": 3
+    },
+    {
       "name": "Dusky Boots",
       "source": "Other",
       "type": "Leather",
@@ -11462,6 +15222,16 @@ var gear = {
       "r": 25,
       "str": 2,
       "sta": 11
+    },
+    {
+      "name": "Vorrel's Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 7751,
+      "r": 25,
+      "agi": 8,
+      "sta": 2
     },
     {
       "name": "Barbaric Iron Boots",
@@ -11611,6 +15381,74 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Durtfeet Stompers",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 9519,
+      "r": 32,
+      "str": 4
+    },
+    {
+      "name": "Jangdor's Handcrafted Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 9633,
+      "r": 40,
+      "agi": 11,
+      "sta": 6
+    },
+    {
+      "name": "Rushridge Boots",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 9662,
+      "r": 39,
+      "agi": 7,
+      "sta": 10
+    },
+    {
+      "name": "Pratt's Handcrafted Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 9630,
+      "r": 40,
+      "agi": 11,
+      "sta": 6
+    },
+    {
+      "name": "Shinkicker Boots",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 9637,
+      "r": 40,
+      "str": 10,
+      "agi": 9
+    },
+    {
+      "name": "Boots of the Maharishi",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 9658,
+      "r": 38,
+      "agi": 4
+    },
+    {
+      "name": "Gnomish Water Sinking Device",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 9646,
+      "r": 43,
+      "agi": -5,
+      "sta": 16
+    },
+    {
       "name": "Scarlet Boots",
       "source": "Other",
       "type": "Mail",
@@ -11657,6 +15495,56 @@ var gear = {
       "id": 10582,
       "r": 31,
       "agi": 5
+    },
+    {
+      "name": "Trailblazer Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 10653,
+      "r": 15,
+      "agi": 7,
+      "sta": 3
+    },
+    {
+      "name": "Enormous Ogre Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 10702,
+      "r": 38,
+      "str": 9,
+      "sta": 9
+    },
+    {
+      "name": "Encarmine Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 10700,
+      "r": 38,
+      "str": 4,
+      "sta": 8
+    },
+    {
+      "name": "Steelsmith Greaves",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 10707,
+      "r": 45,
+      "str": 11,
+      "sta": 11
+    },
+    {
+      "name": "Wanderlust Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 10748,
+      "r": 37,
+      "str": 5,
+      "agi": 10
     },
     {
       "name": "Slitherscale Boots",
@@ -11710,6 +15598,65 @@ var gear = {
       "str": 10,
       "agi": 15,
       "sta": 13
+    },
+    {
+      "name": "Rancor Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 11865,
+      "r": 48,
+      "agi": 12
+    },
+    {
+      "name": "Rambling Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 11853,
+      "r": 9,
+      "agi": 3,
+      "sta": 1
+    },
+    {
+      "name": "Cragplate Greaves",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 11919,
+      "r": 49,
+      "str": 12,
+      "sta": 12
+    },
+    {
+      "name": "Archaeologist's Quarry Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 11908,
+      "r": 49,
+      "agi": 9,
+      "sta": 10
+    },
+    {
+      "name": "Shieldplate Sabatons",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 12021,
+      "r": 48,
+      "str": 12,
+      "sta": 11
+    },
+    {
+      "name": "Hazecover Boots",
+      "source": "Other",
+      "type": "Cloth",
+      "slot": "Feet",
+      "id": 12050,
+      "r": 48,
+      "agi": 4,
+      "sta": 8
     },
     {
       "name": "Imperial Plate Boots",
@@ -12128,6 +16075,16 @@ var gear = {
       "sta": 14
     },
     {
+      "name": "Swiftfoot Treads",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 15861,
+      "r": 57,
+      "str": 5,
+      "agi": 18
+    },
+    {
       "name": "Knight-Lieutenant's Plate Boots",
       "source": "Other",
       "type": "Plate",
@@ -12254,6 +16211,16 @@ var gear = {
       "sta": 30
     },
     {
+      "name": "Warsong Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 16977,
+      "r": 22,
+      "agi": 8,
+      "sta": 6
+    },
+    {
       "name": "Black Dragonscale Boots",
       "source": "Other",
       "type": "Mail",
@@ -12262,6 +16229,16 @@ var gear = {
       "r": 56,
       "sta": 10,
       "ap": 28
+    },
+    {
+      "name": "Jungle Boots",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 17688,
+      "r": 30,
+      "str": 7,
+      "sta": 4
     },
     {
       "name": "Albino Crocscale Boots",
@@ -12292,6 +16269,15 @@ var gear = {
       "r": 57,
       "sta": 18,
       "ap": 22
+    },
+    {
+      "name": "Spry Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 18411,
+      "r": 54,
+      "agi": 12
     },
     {
       "name": "Mud Stained Boots",
@@ -12505,6 +16491,16 @@ var gear = {
       "sta": 8
     },
     {
+      "name": "Whisperwalk Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 20255,
+      "r": 50,
+      "agi": 18,
+      "sta": 4
+    },
+    {
       "name": "Acid Inscribed Greaves",
       "source": "Other",
       "type": "Plate",
@@ -12523,6 +16519,27 @@ var gear = {
       "r": 60,
       "str": 10,
       "sta": 12
+    },
+    {
+      "name": "Crystal Lined Greaves",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 20711,
+      "r": 58,
+      "str": 12,
+      "sta": 12
+    },
+    {
+      "name": "Dunestalker's Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 20715,
+      "r": 58,
+      "str": 9,
+      "agi": 19,
+      "sta": 10
     },
     {
       "name": "Conqueror's Greaves",
@@ -12654,6 +16671,68 @@ var gear = {
       "str": 15,
       "agi": 10,
       "sta": 15
+    },
+    {
+      "name": "Darkmantle Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 22003,
+      "r": 58,
+      "agi": 24,
+      "sta": 10
+    },
+    {
+      "name": "Soulforge Boots",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 22087,
+      "r": 58,
+      "str": 12,
+      "sta": 13
+    },
+    {
+      "name": "Beastmaster's Boots",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 22061,
+      "r": 58,
+      "agi": 24,
+      "sta": 9
+    },
+    {
+      "name": "Boots of The Five Thunders",
+      "source": "Other",
+      "type": "Mail",
+      "slot": "Feet",
+      "id": 22096,
+      "r": 58,
+      "str": 12,
+      "sta": 13
+    },
+    {
+      "name": "Boots of Heroism",
+      "source": "Other",
+      "type": "Plate",
+      "slot": "Feet",
+      "id": 21995,
+      "r": 58,
+      "str": 20,
+      "sta": 20,
+      "hit": 1
+    },
+    {
+      "name": "Feralheart Boots",
+      "source": "Other",
+      "type": "Leather",
+      "slot": "Feet",
+      "id": 22107,
+      "r": 58,
+      "str": 12,
+      "agi": 7,
+      "sta": 13
     },
     {
       "name": "Entrenching Boots",
@@ -12803,6 +16882,17 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Seal of Wrynn",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 2933,
+      "r": 16,
+      "str": 3,
+      "agi": 3,
+      "sta": 4
+    },
+    {
       "name": "Ring of the Underwood",
       "source": "Other",
       "type": "Miscellaneous",
@@ -12812,6 +16902,17 @@ var gear = {
       "str": 2,
       "agi": 10,
       "sta": 3
+    },
+    {
+      "name": "Seafire Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 4549,
+      "r": 35,
+      "str": 2,
+      "agi": 2,
+      "sta": 10
     },
     {
       "name": "Inscribed Gold Ring",
@@ -12824,6 +16925,16 @@ var gear = {
       "sta": 8
     },
     {
+      "name": "Bounty Hunter's Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 5351,
+      "r": 11,
+      "agi": 3,
+      "sta": 1
+    },
+    {
       "name": "Silverlaine's Family Seal",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -12832,6 +16943,44 @@ var gear = {
       "r": 21,
       "str": 7,
       "sta": 3
+    },
+    {
+      "name": "Seal of Sylvanas",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6414,
+      "r": 18,
+      "str": 3,
+      "sta": 8
+    },
+    {
+      "name": "Monkey Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6748,
+      "r": 22,
+      "agi": 6
+    },
+    {
+      "name": "Jaina's Signet Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6757,
+      "r": 28,
+      "str": 3,
+      "sta": 7
+    },
+    {
+      "name": "Tiger Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6749,
+      "r": 22,
+      "str": 6
     },
     {
       "name": "Falcon's Hook",
@@ -12865,6 +17014,35 @@ var gear = {
       "sta": 1
     },
     {
+      "name": "Masons Fraternity Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 9533,
+      "r": 40,
+      "agi": 13,
+      "sta": 5
+    },
+    {
+      "name": "Seedtime Hoop",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 9655,
+      "r": 42,
+      "str": 4
+    },
+    {
+      "name": "Mark of Hakkar",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 10780,
+      "r": 0,
+      "str": 7,
+      "sta": 10
+    },
+    {
       "name": "Cyclopean Band",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -12873,6 +17051,15 @@ var gear = {
       "r": 49,
       "str": 4,
       "sta": 8
+    },
+    {
+      "name": "White Bone Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 11862,
+      "r": 48,
+      "ap": 24
     },
     {
       "name": "Ring of the Moon",
@@ -12903,6 +17090,27 @@ var gear = {
       "r": 19,
       "str": 4,
       "sta": 2
+    },
+    {
+      "name": "Thrall's Resolve",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 12544,
+      "r": 48,
+      "str": 4,
+      "sta": 7
+    },
+    {
+      "name": "Magni's Will",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 12548,
+      "r": 50,
+      "str": 6,
+      "sta": 7,
+      "crit": 1
     },
     {
       "name": "Blush Ember Ring",
@@ -12946,6 +17154,15 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Band of the Penitent",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 13217,
+      "r": 55,
+      "crit": 1
+    },
+    {
       "name": "Band of Flesh",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -12979,6 +17196,16 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Band of the Fist",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 17694,
+      "r": 17,
+      "str": 3,
+      "agi": 3
+    },
+    {
       "name": "Band of Vigor",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -12988,6 +17215,27 @@ var gear = {
       "str": 8,
       "agi": 7,
       "sta": 7
+    },
+    {
+      "name": "Ring of Living Stone",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18400,
+      "r": 54,
+      "str": 10,
+      "sta": 9
+    },
+    {
+      "name": "Ocean's Breeze",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18399,
+      "r": 55,
+      "str": 4,
+      "agi": 7,
+      "sta": 4
     },
     {
       "name": "Gordok Nose Ring",
@@ -13018,6 +17266,16 @@ var gear = {
       "r": 58,
       "str": 14,
       "sta": 13
+    },
+    {
+      "name": "Band of Allegiance",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18585,
+      "r": 30,
+      "str": 9,
+      "sta": 4
     },
     {
       "name": "Hardened Stone Band",
@@ -13239,6 +17497,16 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Chivalrous Signet",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 20505,
+      "r": 50,
+      "str": 7,
+      "sta": 7
+    },
+    {
       "name": "Ring of the Unliving",
       "source": "Other",
       "type": "Miscellaneous",
@@ -13258,6 +17526,16 @@ var gear = {
       "str": 7,
       "agi": 12,
       "sta": 12
+    },
+    {
+      "name": "Might of Cenarius",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 21189,
+      "r": 60,
+      "sta": 8,
+      "hit": 1
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -13290,6 +17568,17 @@ var gear = {
       "r": 60,
       "str": 12,
       "sta": 22
+    },
+    {
+      "name": "Band of Earthen Might",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 21182,
+      "r": 60,
+      "str": 6,
+      "crit": 1,
+      "hit": 1
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -13449,6 +17738,16 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Amalgam's Band",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 22326,
+      "r": 58,
+      "sta": 5,
+      "crit": 1
+    },
+    {
       "name": "Seal of the Gurubashi Berserker",
       "source": "Other",
       "type": "Miscellaneous",
@@ -13466,6 +17765,16 @@ var gear = {
       "id": 22961,
       "r": 60,
       "agi": 34
+    },
+    {
+      "name": "Signet of the Fallen Defender",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 23018,
+      "r": 60,
+      "sta": 24,
+      "hit": 1
     },
     {
       "name": "Band of Unnatural Forces",
@@ -13539,6 +17848,17 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Seal of Wrynn",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 2933,
+      "r": 16,
+      "str": 3,
+      "agi": 3,
+      "sta": 4
+    },
+    {
       "name": "Ring of the Underwood",
       "source": "Other",
       "type": "Miscellaneous",
@@ -13548,6 +17868,17 @@ var gear = {
       "str": 2,
       "agi": 10,
       "sta": 3
+    },
+    {
+      "name": "Seafire Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 4549,
+      "r": 35,
+      "str": 2,
+      "agi": 2,
+      "sta": 10
     },
     {
       "name": "Inscribed Gold Ring",
@@ -13560,6 +17891,16 @@ var gear = {
       "sta": 8
     },
     {
+      "name": "Bounty Hunter's Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 5351,
+      "r": 11,
+      "agi": 3,
+      "sta": 1
+    },
+    {
       "name": "Silverlaine's Family Seal",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -13568,6 +17909,44 @@ var gear = {
       "r": 21,
       "str": 7,
       "sta": 3
+    },
+    {
+      "name": "Seal of Sylvanas",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6414,
+      "r": 18,
+      "str": 3,
+      "sta": 8
+    },
+    {
+      "name": "Monkey Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6748,
+      "r": 22,
+      "agi": 6
+    },
+    {
+      "name": "Jaina's Signet Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6757,
+      "r": 28,
+      "str": 3,
+      "sta": 7
+    },
+    {
+      "name": "Tiger Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 6749,
+      "r": 22,
+      "str": 6
     },
     {
       "name": "Falcon's Hook",
@@ -13601,6 +17980,35 @@ var gear = {
       "sta": 1
     },
     {
+      "name": "Masons Fraternity Ring",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 9533,
+      "r": 40,
+      "agi": 13,
+      "sta": 5
+    },
+    {
+      "name": "Seedtime Hoop",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 9655,
+      "r": 42,
+      "str": 4
+    },
+    {
+      "name": "Mark of Hakkar",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 10780,
+      "r": 0,
+      "str": 7,
+      "sta": 10
+    },
+    {
       "name": "Cyclopean Band",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -13609,6 +18017,15 @@ var gear = {
       "r": 49,
       "str": 4,
       "sta": 8
+    },
+    {
+      "name": "White Bone Band",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 11862,
+      "r": 48,
+      "ap": 24
     },
     {
       "name": "Ring of the Moon",
@@ -13639,6 +18056,27 @@ var gear = {
       "r": 19,
       "str": 4,
       "sta": 2
+    },
+    {
+      "name": "Thrall's Resolve",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 12544,
+      "r": 48,
+      "str": 4,
+      "sta": 7
+    },
+    {
+      "name": "Magni's Will",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 12548,
+      "r": 50,
+      "str": 6,
+      "sta": 7,
+      "crit": 1
     },
     {
       "name": "Blush Ember Ring",
@@ -13682,6 +18120,15 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Band of the Penitent",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 13217,
+      "r": 55,
+      "crit": 1
+    },
+    {
       "name": "Band of Flesh",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -13715,6 +18162,16 @@ var gear = {
       "hit": 1
     },
     {
+      "name": "Band of the Fist",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 17694,
+      "r": 17,
+      "str": 3,
+      "agi": 3
+    },
+    {
       "name": "Band of Vigor",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -13724,6 +18181,27 @@ var gear = {
       "str": 8,
       "agi": 7,
       "sta": 7
+    },
+    {
+      "name": "Ring of Living Stone",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18400,
+      "r": 54,
+      "str": 10,
+      "sta": 9
+    },
+    {
+      "name": "Ocean's Breeze",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18399,
+      "r": 55,
+      "str": 4,
+      "agi": 7,
+      "sta": 4
     },
     {
       "name": "Gordok Nose Ring",
@@ -13754,6 +18232,16 @@ var gear = {
       "r": 58,
       "str": 14,
       "sta": 13
+    },
+    {
+      "name": "Band of Allegiance",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 18585,
+      "r": 30,
+      "str": 9,
+      "sta": 4
     },
     {
       "name": "Hardened Stone Band",
@@ -13975,6 +18463,16 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Chivalrous Signet",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 20505,
+      "r": 50,
+      "str": 7,
+      "sta": 7
+    },
+    {
       "name": "Ring of the Unliving",
       "source": "Other",
       "type": "Miscellaneous",
@@ -13994,6 +18492,16 @@ var gear = {
       "str": 7,
       "agi": 12,
       "sta": 12
+    },
+    {
+      "name": "Might of Cenarius",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 21189,
+      "r": 60,
+      "sta": 8,
+      "hit": 1
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -14026,6 +18534,17 @@ var gear = {
       "r": 60,
       "str": 12,
       "sta": 22
+    },
+    {
+      "name": "Band of Earthen Might",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 21182,
+      "r": 60,
+      "str": 6,
+      "crit": 1,
+      "hit": 1
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -14185,6 +18704,16 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Amalgam's Band",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 22326,
+      "r": 58,
+      "sta": 5,
+      "crit": 1
+    },
+    {
       "name": "Seal of the Gurubashi Berserker",
       "source": "Other",
       "type": "Miscellaneous",
@@ -14202,6 +18731,16 @@ var gear = {
       "id": 22961,
       "r": 60,
       "agi": 34
+    },
+    {
+      "name": "Signet of the Fallen Defender",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Finger",
+      "id": 23018,
+      "r": 60,
+      "sta": 24,
+      "hit": 1
     },
     {
       "name": "Band of Unnatural Forces",
@@ -14226,6 +18765,24 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Seal of the Dawn",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 13209,
+      "r": 55,
+      "ap": 81
+    },
+    {
+      "name": "Blackhand's Breadth",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 13965,
+      "r": 55,
+      "crit": 2
+    },
+    {
       "name": "Counterattack Lodestone",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -14233,6 +18790,16 @@ var gear = {
       "id": 18537,
       "r": 58,
       "ap": 22
+    },
+    {
+      "name": "Rune of the Guard Captain",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 19120,
+      "r": 46,
+      "ap": 20,
+      "hit": 1
     },
     {
       "name": "Drake Fang Talisman",
@@ -14252,6 +18819,25 @@ var gear = {
       "id": 23041,
       "r": 60,
       "ap": 64
+    },
+    {
+      "name": "Kiss of the Spider",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 22954,
+      "r": 60,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "name": "Mark of the Champion",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 23206,
+      "r": 60,
+      "ap": 150
     }
   ],
   "trinket2": [
@@ -14265,6 +18851,24 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Seal of the Dawn",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 13209,
+      "r": 55,
+      "ap": 81
+    },
+    {
+      "name": "Blackhand's Breadth",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 13965,
+      "r": 55,
+      "crit": 2
+    },
+    {
       "name": "Counterattack Lodestone",
       "source": "Dungeon",
       "type": "Miscellaneous",
@@ -14272,6 +18876,16 @@ var gear = {
       "id": 18537,
       "r": 58,
       "ap": 22
+    },
+    {
+      "name": "Rune of the Guard Captain",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 19120,
+      "r": 46,
+      "ap": 20,
+      "hit": 1
     },
     {
       "name": "Drake Fang Talisman",
@@ -14291,6 +18905,25 @@ var gear = {
       "id": 23041,
       "r": 60,
       "ap": 64
+    },
+    {
+      "name": "Kiss of the Spider",
+      "source": "Dungeon",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 22954,
+      "r": 60,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "name": "Mark of the Champion",
+      "source": "Other",
+      "type": "Miscellaneous",
+      "slot": "Trinket",
+      "id": 23206,
+      "r": 60,
+      "ap": 150
     }
   ],
   "ranged": [
@@ -14533,6 +19166,20 @@ var gear = {
       "ap": 8
     },
     {
+      "name": "Gorewood Bow",
+      "source": "Other",
+      "type": "Bow",
+      "slot": "Ranged",
+      "id": 16996,
+      "r": 56,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "speed": 2.5,
+      "str": 2,
+      "agi": 3,
+      "sta": 9
+    },
+    {
       "name": "Striker's Mark",
       "source": "Dungeon",
       "type": "Bow",
@@ -14543,6 +19190,31 @@ var gear = {
       "maxdmg": 129,
       "speed": 2.5,
       "ap": 22,
+      "hit": 1
+    },
+    {
+      "name": "Blastershot Launcher",
+      "source": "Dungeon",
+      "type": "Gun",
+      "slot": "Ranged",
+      "id": 17072,
+      "r": 60,
+      "mindmg": 73,
+      "maxdmg": 136,
+      "speed": 2.6,
+      "sta": 6,
+      "crit": 1
+    },
+    {
+      "name": "Core Marksman Rifle",
+      "source": "Other",
+      "type": "Gun",
+      "slot": "Ranged",
+      "id": 18282,
+      "r": 60,
+      "mindmg": 64,
+      "maxdmg": 120,
+      "speed": 2.5,
       "hit": 1
     },
     {
@@ -14620,6 +19292,32 @@ var gear = {
       "speed": 2.6,
       "agi": 4,
       "sta": 6
+    },
+    {
+      "name": "Bloodseeker",
+      "source": "Other",
+      "type": "Crossbow",
+      "slot": "Ranged",
+      "id": 19107,
+      "r": 51,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "speed": 3.3,
+      "str": 8,
+      "agi": 7
+    },
+    {
+      "name": "Highland Bow",
+      "source": "Other",
+      "type": "Bow",
+      "slot": "Ranged",
+      "id": 19114,
+      "r": 46,
+      "mindmg": 41,
+      "maxdmg": 77,
+      "speed": 2.5,
+      "agi": 5,
+      "sta": 4
     },
     {
       "name": "Heartstriker",
@@ -14868,6 +19566,31 @@ var gear = {
       "ap": 20
     },
     {
+      "name": "Fahrad's Reloading Repeater",
+      "source": "Other",
+      "type": "Crossbow",
+      "slot": "Ranged",
+      "id": 22347,
+      "r": 60,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "speed": 3.2,
+      "agi": 4,
+      "hit": 1
+    },
+    {
+      "name": "The Purifier",
+      "source": "Other",
+      "type": "Gun",
+      "slot": "Ranged",
+      "id": 22656,
+      "r": 55,
+      "mindmg": 71,
+      "maxdmg": 132,
+      "speed": 3,
+      "crit": 1
+    },
+    {
       "name": "Soulstring",
       "source": "Other",
       "type": "Bow",
@@ -15070,6 +19793,18 @@ var gear = {
       "str": 3
     },
     {
+      "name": "Fist of the People's Militia",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 1480,
+      "r": 9,
+      "mindmg": 9,
+      "maxdmg": 18,
+      "speed": 1.6,
+      "str": 2
+    },
+    {
       "name": "Heavy Marauder Scimitar",
       "source": "Dungeon",
       "type": "Sword",
@@ -15259,6 +19994,19 @@ var gear = {
       "str": 3
     },
     {
+      "name": "Solid Shortblade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 2074,
+      "r": 14,
+      "mindmg": 16,
+      "maxdmg": 30,
+      "speed": 2.5,
+      "str": 1,
+      "sta": 1
+    },
+    {
       "name": "Brackclaw",
       "source": "Dungeon",
       "type": "Dagger",
@@ -15284,6 +20032,18 @@ var gear = {
       "str": 7,
       "sta": 5,
       "crit": 1
+    },
+    {
+      "name": "Craftsman's Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 2218,
+      "r": 8,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "speed": 1.7,
+      "agi": 1
     },
     {
       "name": "Diamond Hammer",
@@ -15361,6 +20121,18 @@ var gear = {
       "str": 2
     },
     {
+      "name": "Thornblade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 2908,
+      "r": 16,
+      "mindmg": 11,
+      "maxdmg": 21,
+      "speed": 1.6,
+      "agi": 3
+    },
+    {
       "name": "Prison Shank",
       "source": "Dungeon",
       "type": "Dagger",
@@ -15400,6 +20172,18 @@ var gear = {
       "agi": 1
     },
     {
+      "name": "Thelsamar Axe",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 3154,
+      "r": 13,
+      "mindmg": 13,
+      "maxdmg": 25,
+      "speed": 2.1,
+      "agi": 2
+    },
+    {
       "name": "Doomspike",
       "source": "Other",
       "type": "Dagger",
@@ -15411,6 +20195,18 @@ var gear = {
       "speed": 1.5,
       "str": 3,
       "sta": 3
+    },
+    {
+      "name": "Talonstrike",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Main Hand",
+      "id": 3462,
+      "r": 10,
+      "mindmg": 13,
+      "maxdmg": 26,
+      "speed": 1.6,
+      "agi": 3
     },
     {
       "name": "Mighty Iron Hammer",
@@ -15462,6 +20258,43 @@ var gear = {
       "sta": 1
     },
     {
+      "name": "Daryl's Shortsword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 3572,
+      "r": 11,
+      "mindmg": 14,
+      "maxdmg": 26,
+      "speed": 2.3,
+      "agi": 2
+    },
+    {
+      "name": "Bonegrinding Pestle",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 3570,
+      "r": 9,
+      "mindmg": 13,
+      "maxdmg": 26,
+      "speed": 2.4,
+      "str": 2
+    },
+    {
+      "name": "Serrated Knife",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 3581,
+      "r": 12,
+      "mindmg": 10,
+      "maxdmg": 19,
+      "speed": 1.6,
+      "agi": 1,
+      "sta": 1
+    },
+    {
       "name": "Jade Serpentblade",
       "source": "Other",
       "type": "Sword",
@@ -15486,6 +20319,19 @@ var gear = {
       "speed": 1.9,
       "str": 7,
       "agi": 8
+    },
+    {
+      "name": "Guerrilla Cleaver",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 4126,
+      "r": 30,
+      "mindmg": 34,
+      "maxdmg": 65,
+      "speed": 2.8,
+      "agi": 3,
+      "sta": 4
     },
     {
       "name": "Cranial Thumper",
@@ -15550,6 +20396,18 @@ var gear = {
       "agi": 5
     },
     {
+      "name": "Black Water Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 4511,
+      "r": 35,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "speed": 2.7,
+      "str": 7
+    },
+    {
       "name": "Enamelled Broadsword",
       "source": "Other",
       "type": "Sword",
@@ -15608,6 +20466,79 @@ var gear = {
       "maxdmg": 25,
       "speed": 1.8,
       "str": 1
+    },
+    {
+      "name": "Skorn's Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 4971,
+      "r": 6,
+      "mindmg": 12,
+      "maxdmg": 23,
+      "speed": 2.7,
+      "str": 1
+    },
+    {
+      "name": "Compact Fighting Knife",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 4974,
+      "r": 5,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "speed": 1.5,
+      "agi": 1
+    },
+    {
+      "name": "Stinging Mace",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 4948,
+      "r": 4,
+      "mindmg": 9,
+      "maxdmg": 18,
+      "speed": 2.3,
+      "str": 1
+    },
+    {
+      "name": "Jagged Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 4947,
+      "r": 4,
+      "mindmg": 6,
+      "maxdmg": 12,
+      "speed": 1.5,
+      "str": 1
+    },
+    {
+      "name": "Ryedol's Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 4978,
+      "r": 35,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "speed": 2.5,
+      "str": 6
+    },
+    {
+      "name": "Sword of Hammerfall",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Main Hand",
+      "id": 4977,
+      "r": 30,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "speed": 2.3,
+      "str": 4,
+      "sta": 5
     },
     {
       "name": "Ritual Blade",
@@ -15671,6 +20602,18 @@ var gear = {
       "agi": 3
     },
     {
+      "name": "Harpy Skinner",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 5279,
+      "r": 12,
+      "mindmg": 9,
+      "maxdmg": 18,
+      "speed": 1.4,
+      "agi": 3
+    },
+    {
       "name": "Scarlet Kris",
       "source": "Other",
       "type": "Dagger",
@@ -15709,6 +20652,18 @@ var gear = {
       "agi": 1
     },
     {
+      "name": "Pointed Axe",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 5344,
+      "r": 9,
+      "mindmg": 9,
+      "maxdmg": 18,
+      "speed": 1.9,
+      "agi": 1
+    },
+    {
       "name": "Pearl-handled Dagger",
       "source": "Other",
       "type": "Dagger",
@@ -15733,6 +20688,19 @@ var gear = {
       "speed": 1.8,
       "str": 3,
       "sta": 3
+    },
+    {
+      "name": "Hardwood Cudgel",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 5757,
+      "r": 12,
+      "mindmg": 18,
+      "maxdmg": 34,
+      "speed": 2.6,
+      "str": 2,
+      "sta": 2
     },
     {
       "name": "Spikelash Dagger",
@@ -15785,6 +20753,19 @@ var gear = {
       "agi": 2
     },
     {
+      "name": "Wingblade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Main Hand",
+      "id": 6504,
+      "r": 10,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "speed": 2.2,
+      "agi": 5,
+      "sta": 2
+    },
+    {
       "name": "Butcher's Slicer",
       "source": "Dungeon",
       "type": "Sword",
@@ -15808,6 +20789,33 @@ var gear = {
       "maxdmg": 75,
       "speed": 2.4,
       "str": 6
+    },
+    {
+      "name": "Sword of Omen",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 6802,
+      "r": 33,
+      "mindmg": 39,
+      "maxdmg": 74,
+      "speed": 1.9,
+      "str": 9,
+      "agi": 3,
+      "sta": 4
+    },
+    {
+      "name": "Windstorm Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 6804,
+      "r": 25,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "speed": 2.1,
+      "str": 4,
+      "sta": 5
     },
     {
       "name": "Ironspine's Fist",
@@ -16063,6 +21071,18 @@ var gear = {
       "agi": 4
     },
     {
+      "name": "Silent Hunter",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 9520,
+      "r": 30,
+      "mindmg": 29,
+      "maxdmg": 54,
+      "speed": 1.8,
+      "agi": 7
+    },
+    {
       "name": "Oscillating Power Hammer",
       "source": "Other",
       "type": "Mace",
@@ -16074,6 +21094,31 @@ var gear = {
       "speed": 2,
       "str": 5,
       "sta": 1
+    },
+    {
+      "name": "Force of the Hippogryph",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 9684,
+      "r": 40,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "speed": 2.4,
+      "agi": 9
+    },
+    {
+      "name": "Tok'kar's Murloc Shanker",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 9680,
+      "r": 35,
+      "mindmg": 28,
+      "maxdmg": 52,
+      "speed": 1.6,
+      "agi": 6,
+      "sta": 3
     },
     {
       "name": "Reforged Blade of Heroes",
@@ -16101,6 +21146,54 @@ var gear = {
       "str": 5
     },
     {
+      "name": "Enchanted Azsharite Felbane Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Main Hand",
+      "id": 10696,
+      "r": 45,
+      "mindmg": 50,
+      "maxdmg": 93,
+      "speed": 2,
+      "ap": 33
+    },
+    {
+      "name": "Enchanted Azsharite Felbane Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 10697,
+      "r": 45,
+      "mindmg": 37,
+      "maxdmg": 70,
+      "speed": 1.5,
+      "ap": 33
+    },
+    {
+      "name": "Fiendish Skiv",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 10703,
+      "r": 38,
+      "mindmg": 35,
+      "maxdmg": 66,
+      "speed": 1.9,
+      "str": 8
+    },
+    {
+      "name": "Axe of the Ebon Drake",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 10744,
+      "r": 40,
+      "mindmg": 40,
+      "maxdmg": 75,
+      "speed": 1.9,
+      "str": 9
+    },
+    {
       "name": "Eater of the Dead",
       "source": "Dungeon",
       "type": "Axe",
@@ -16111,6 +21204,18 @@ var gear = {
       "maxdmg": 92,
       "speed": 2.2,
       "ap": 30
+    },
+    {
+      "name": "Vanquisher's Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 10823,
+      "r": 37,
+      "mindmg": 46,
+      "maxdmg": 86,
+      "speed": 2.2,
+      "ap": 28
     },
     {
       "name": "Tooth of Eranikus",
@@ -16124,6 +21229,18 @@ var gear = {
       "speed": 2.4,
       "str": 6,
       "hit": 1
+    },
+    {
+      "name": "Belgrom's Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 11120,
+      "r": 44,
+      "mindmg": 64,
+      "maxdmg": 120,
+      "speed": 2.8,
+      "str": 10
     },
     {
       "name": "Grizzle's Skinner",
@@ -16162,6 +21279,55 @@ var gear = {
       "maxdmg": 96,
       "speed": 2,
       "str": 5
+    },
+    {
+      "name": "Ceremonial Elven Blade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 11856,
+      "r": 40,
+      "mindmg": 33,
+      "maxdmg": 63,
+      "speed": 1.8,
+      "agi": 6,
+      "sta": 3
+    },
+    {
+      "name": "Beastsmasher",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 11906,
+      "r": 50,
+      "mindmg": 48,
+      "maxdmg": 90,
+      "speed": 2.1,
+      "ap": 30
+    },
+    {
+      "name": "Swiftstrike Cudgel",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 11964,
+      "r": 50,
+      "mindmg": 36,
+      "maxdmg": 68,
+      "speed": 1.6,
+      "hit": 1
+    },
+    {
+      "name": "Blade of Reckoning",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 12061,
+      "r": 50,
+      "mindmg": 60,
+      "maxdmg": 112,
+      "speed": 2.4,
+      "ap": 22
     },
     {
       "name": "Glinting Steel Dagger",
@@ -16263,6 +21429,18 @@ var gear = {
       "maxdmg": 92,
       "speed": 1.7,
       "str": 4,
+      "crit": 1
+    },
+    {
+      "name": "Dawn's Edge",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 12774,
+      "r": 50,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "speed": 2.1,
       "crit": 1
     },
     {
@@ -16482,6 +21660,92 @@ var gear = {
       "sta": 1
     },
     {
+      "name": "Hammer of Orgrimmar",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 15445,
+      "r": 9,
+      "mindmg": 18,
+      "maxdmg": 35,
+      "speed": 2.9,
+      "str": 1,
+      "sta": 1
+    },
+    {
+      "name": "Tidecrest Blade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15705,
+      "r": 49,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "speed": 2.6,
+      "str": 8
+    },
+    {
+      "name": "Hunt Tracker Blade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 15706,
+      "r": 49,
+      "mindmg": 35,
+      "maxdmg": 66,
+      "speed": 1.5,
+      "agi": 8
+    },
+    {
+      "name": "Beasthunter Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 15783,
+      "r": 53,
+      "mindmg": 42,
+      "maxdmg": 79,
+      "speed": 1.7,
+      "ap": 33
+    },
+    {
+      "name": "Beaststalker Blade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15782,
+      "r": 53,
+      "mindmg": 55,
+      "maxdmg": 103,
+      "speed": 2.2,
+      "ap": 33
+    },
+    {
+      "name": "Mirah's Song",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15806,
+      "r": 55,
+      "mindmg": 57,
+      "maxdmg": 87,
+      "speed": 1.8,
+      "str": 9,
+      "agi": 9
+    },
+    {
+      "name": "Blitzcleaver",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 15862,
+      "r": 50,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "speed": 2.2,
+      "ap": 20
+    },
+    {
       "name": "High Warlord's Blade",
       "source": "Other",
       "type": "Sword",
@@ -16496,6 +21760,31 @@ var gear = {
       "ap": 28
     },
     {
+      "name": "Slatemetal Cutlass",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 16890,
+      "r": 20,
+      "mindmg": 19,
+      "maxdmg": 35,
+      "speed": 2.2,
+      "str": 2,
+      "agi": 2
+    },
+    {
+      "name": "Outlaw Sabre",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 16886,
+      "r": 25,
+      "mindmg": 35,
+      "maxdmg": 67,
+      "speed": 2.7,
+      "ap": 15
+    },
+    {
       "name": "Dark Iron Destroyer",
       "source": "Other",
       "type": "Axe",
@@ -16506,6 +21795,19 @@ var gear = {
       "maxdmg": 134,
       "speed": 2.4,
       "str": 10
+    },
+    {
+      "name": "Gutterblade",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 17046,
+      "r": 18,
+      "mindmg": 25,
+      "maxdmg": 46,
+      "speed": 2.2,
+      "str": 3,
+      "sta": 3
     },
     {
       "name": "Hurley's Tankard",
@@ -16810,6 +22112,19 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "name": "Zorbin's Mega-Slicer",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 19040,
+      "r": 45,
+      "mindmg": 46,
+      "maxdmg": 86,
+      "speed": 2.3,
+      "agi": 6,
+      "sta": 5
     },
     {
       "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -17213,6 +22528,19 @@ var gear = {
       "ap": 12
     },
     {
+      "name": "Thekal's Grasp",
+      "source": "Dungeon",
+      "type": "Fist",
+      "slot": "Main Hand",
+      "id": 19896,
+      "r": 60,
+      "mindmg": 72,
+      "maxdmg": 135,
+      "speed": 2.2,
+      "sta": 13,
+      "crit": 1
+    },
+    {
       "name": "Fiery Retributer",
       "source": "Dungeon",
       "type": "Sword",
@@ -17351,6 +22679,18 @@ var gear = {
       "maxdmg": 133,
       "speed": 2.5,
       "ap": 28
+    },
+    {
+      "name": "Brann's Trusty Pick",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Main Hand",
+      "id": 20723,
+      "r": 58,
+      "mindmg": 70,
+      "maxdmg": 130,
+      "speed": 2.7,
+      "str": 11
     },
     {
       "name": "Death's Sting",
@@ -17518,6 +22858,18 @@ var gear = {
       "ap": 32
     },
     {
+      "name": "The Jaw Breaker",
+      "source": "Dungeon",
+      "type": "Mace",
+      "slot": "One-Hand",
+      "id": 22322,
+      "r": 56,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "speed": 1.6,
+      "crit": 1
+    },
+    {
       "name": "Lefty's Brass Knuckle",
       "source": "Other",
       "type": "Fist",
@@ -17529,6 +22881,45 @@ var gear = {
       "speed": 1.5,
       "str": 5,
       "agi": 12
+    },
+    {
+      "name": "The Thunderwood Poker",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 22377,
+      "r": 60,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "speed": 1.8,
+      "agi": 13,
+      "sta": 6
+    },
+    {
+      "name": "Ravenholdt Slicer",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 22378,
+      "r": 60,
+      "mindmg": 83,
+      "maxdmg": 156,
+      "speed": 2.8,
+      "sta": 6,
+      "ap": 26
+    },
+    {
+      "name": "Persuader",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Main Hand",
+      "id": 22384,
+      "r": 58,
+      "mindmg": 86,
+      "maxdmg": 161,
+      "speed": 2.7,
+      "hit": 1,
+      "crit": 1
     },
     {
       "name": "Willey's Back Scratcher",
@@ -17583,6 +22974,19 @@ var gear = {
       "speed": 2.6,
       "ap": 36,
       "crit": 1
+    },
+    {
+      "name": "Widow's Remorse",
+      "source": "Dungeon",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 22806,
+      "r": 60,
+      "mindmg": 70,
+      "maxdmg": 131,
+      "speed": 1.6,
+      "sta": 17,
+      "hit": 1
     },
     {
       "name": "The Castigator",
@@ -17869,6 +23273,19 @@ var gear = {
       "str": 2
     },
     {
+      "name": "Solid Shortblade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 2074,
+      "r": 14,
+      "mindmg": 16,
+      "maxdmg": 30,
+      "speed": 2.5,
+      "str": 1,
+      "sta": 1
+    },
+    {
       "name": "Brackclaw",
       "source": "Dungeon",
       "type": "Dagger",
@@ -17879,6 +23296,18 @@ var gear = {
       "maxdmg": 18,
       "speed": 1.4,
       "str": 1,
+      "agi": 1
+    },
+    {
+      "name": "Craftsman's Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 2218,
+      "r": 8,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "speed": 1.7,
       "agi": 1
     },
     {
@@ -17905,6 +23334,28 @@ var gear = {
       "maxdmg": 14,
       "speed": 1.5,
       "agi": 1
+    },
+    {
+      "name": "Gold Lion Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 2916,
+      "r": 26,
+      "str": 2,
+      "sta": 5
+    },
+    {
+      "name": "Thornblade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 2908,
+      "r": 16,
+      "mindmg": 11,
+      "maxdmg": 21,
+      "speed": 1.6,
+      "agi": 3
     },
     {
       "name": "Prison Shank",
@@ -17946,6 +23397,15 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Faerleia's Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 3450,
+      "r": 12,
+      "str": 2
+    },
+    {
       "name": "Deadly Bronze Poniard",
       "source": "Other",
       "type": "Dagger",
@@ -17956,6 +23416,31 @@ var gear = {
       "maxdmg": 30,
       "speed": 1.8,
       "agi": 4
+    },
+    {
+      "name": "Daryl's Shortsword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 3572,
+      "r": 11,
+      "mindmg": 14,
+      "maxdmg": 26,
+      "speed": 2.3,
+      "agi": 2
+    },
+    {
+      "name": "Serrated Knife",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 3581,
+      "r": 12,
+      "mindmg": 10,
+      "maxdmg": 19,
+      "speed": 1.6,
+      "agi": 1,
+      "sta": 1
     },
     {
       "name": "Burnished Shield",
@@ -17997,6 +23482,25 @@ var gear = {
       "sta": 1
     },
     {
+      "name": "Deadskull Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 3761,
+      "r": 19,
+      "str": 1,
+      "sta": 7
+    },
+    {
+      "name": "Lunar Buckler",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 3763,
+      "r": 30,
+      "str": 3
+    },
+    {
       "name": "Jade Serpentblade",
       "source": "Other",
       "type": "Sword",
@@ -18031,6 +23535,26 @@ var gear = {
       "speed": 1.9,
       "str": 7,
       "agi": 8
+    },
+    {
+      "name": "Grom'gol Buckler",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 4115,
+      "r": 33,
+      "str": 2,
+      "sta": 3
+    },
+    {
+      "name": "Collection Plate",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 4129,
+      "r": 30,
+      "str": 2,
+      "sta": 9
     },
     {
       "name": "Dust Bowl",
@@ -18076,6 +23600,25 @@ var gear = {
       "sta": 6
     },
     {
+      "name": "Pit Fighter's Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 4507,
+      "r": 32,
+      "str": 8,
+      "sta": 3
+    },
+    {
+      "name": "Salbac Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 4652,
+      "r": 35,
+      "str": 9
+    },
+    {
       "name": "Bear Buckler",
       "source": "Other",
       "type": "Shield",
@@ -18096,6 +23639,30 @@ var gear = {
       "maxdmg": 55,
       "speed": 2.8,
       "ap": 8
+    },
+    {
+      "name": "Compact Fighting Knife",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 4974,
+      "r": 5,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "speed": 1.5,
+      "agi": 1
+    },
+    {
+      "name": "Jagged Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 4947,
+      "r": 4,
+      "mindmg": 6,
+      "maxdmg": 12,
+      "speed": 1.5,
+      "str": 1
     },
     {
       "name": "Ritual Blade",
@@ -18159,6 +23726,18 @@ var gear = {
       "agi": 3
     },
     {
+      "name": "Harpy Skinner",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 5279,
+      "r": 12,
+      "mindmg": 9,
+      "maxdmg": 18,
+      "speed": 1.4,
+      "agi": 3
+    },
+    {
       "name": "Scarlet Kris",
       "source": "Other",
       "type": "Dagger",
@@ -18219,6 +23798,16 @@ var gear = {
       "speed": 1.8,
       "str": 3,
       "sta": 3
+    },
+    {
+      "name": "Crest of Darkshire",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 6223,
+      "r": 20,
+      "str": 2,
+      "sta": 7
     },
     {
       "name": "Spikelash Dagger",
@@ -18292,6 +23881,17 @@ var gear = {
       "sta": 2
     },
     {
+      "name": "Marbled Buckler",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 6725,
+      "r": 29,
+      "str": 5,
+      "agi": 5,
+      "sta": 5
+    },
+    {
       "name": "Pronged Reaver",
       "source": "Dungeon",
       "type": "Axe",
@@ -18302,6 +23902,38 @@ var gear = {
       "maxdmg": 75,
       "speed": 2.4,
       "str": 6
+    },
+    {
+      "name": "Sword of Omen",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 6802,
+      "r": 33,
+      "mindmg": 39,
+      "maxdmg": 74,
+      "speed": 1.9,
+      "str": 9,
+      "agi": 3,
+      "sta": 4
+    },
+    {
+      "name": "Furen's Favor",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 6970,
+      "r": 20,
+      "str": 3
+    },
+    {
+      "name": "Ruga's Bulwark",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 7120,
+      "r": 20,
+      "str": 3
     },
     {
       "name": "Stormwind Guard Shield",
@@ -18334,6 +23966,15 @@ var gear = {
       "maxdmg": 72,
       "speed": 2.4,
       "str": 7
+    },
+    {
+      "name": "Vile Protector",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 7747,
+      "r": 28,
+      "str": 4
     },
     {
       "name": "Fight Club",
@@ -18538,6 +24179,18 @@ var gear = {
       "agi": 4
     },
     {
+      "name": "Silent Hunter",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 9520,
+      "r": 30,
+      "mindmg": 29,
+      "maxdmg": 54,
+      "speed": 1.8,
+      "agi": 7
+    },
+    {
       "name": "Oscillating Power Hammer",
       "source": "Other",
       "type": "Mace",
@@ -18549,6 +24202,28 @@ var gear = {
       "speed": 2,
       "str": 5,
       "sta": 1
+    },
+    {
+      "name": "Optomatic Deflector",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 9643,
+      "r": 43,
+      "str": 5
+    },
+    {
+      "name": "Tok'kar's Murloc Shanker",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 9680,
+      "r": 35,
+      "mindmg": 28,
+      "maxdmg": 52,
+      "speed": 1.6,
+      "agi": 6,
+      "sta": 3
     },
     {
       "name": "Reforged Blade of Heroes",
@@ -18576,6 +24251,40 @@ var gear = {
       "str": 5
     },
     {
+      "name": "Aegis of Battle",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 10686,
+      "r": 40,
+      "agi": 6,
+      "sta": 10
+    },
+    {
+      "name": "Enchanted Azsharite Felbane Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 10697,
+      "r": 45,
+      "mindmg": 37,
+      "maxdmg": 70,
+      "speed": 1.5,
+      "ap": 33
+    },
+    {
+      "name": "Fiendish Skiv",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 10703,
+      "r": 38,
+      "mindmg": 35,
+      "maxdmg": 66,
+      "speed": 1.9,
+      "str": 8
+    },
+    {
       "name": "Savage Boar's Guard",
       "source": "Dungeon",
       "type": "Shield",
@@ -18584,6 +24293,18 @@ var gear = {
       "r": 37,
       "str": 11,
       "sta": 6
+    },
+    {
+      "name": "Vanquisher's Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 10823,
+      "r": 37,
+      "mindmg": 46,
+      "maxdmg": 86,
+      "speed": 2.2,
+      "ap": 28
     },
     {
       "name": "Crest of Supremacy",
@@ -18617,6 +24338,54 @@ var gear = {
       "maxdmg": 60,
       "speed": 1.4,
       "str": 10
+    },
+    {
+      "name": "Ceremonial Elven Blade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 11856,
+      "r": 40,
+      "mindmg": 33,
+      "maxdmg": 63,
+      "speed": 1.8,
+      "agi": 6,
+      "sta": 3
+    },
+    {
+      "name": "White Bone Shredder",
+      "source": "Other",
+      "type": "Fist",
+      "slot": "Off Hand",
+      "id": 11863,
+      "r": 48,
+      "mindmg": 30,
+      "maxdmg": 57,
+      "speed": 1.4,
+      "str": 4,
+      "agi": 7
+    },
+    {
+      "name": "Shizzle's Drizzle Blocker",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 11915,
+      "r": 49,
+      "str": 13,
+      "sta": 1
+    },
+    {
+      "name": "Blade of Reckoning",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 12061,
+      "r": 50,
+      "mindmg": 60,
+      "maxdmg": 112,
+      "speed": 2.4,
+      "ap": 22
     },
     {
       "name": "Glinting Steel Dagger",
@@ -18680,6 +24449,18 @@ var gear = {
       "maxdmg": 92,
       "speed": 1.7,
       "str": 4,
+      "crit": 1
+    },
+    {
+      "name": "Dawn's Edge",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 12774,
+      "r": 50,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "speed": 2.1,
       "crit": 1
     },
     {
@@ -18924,6 +24705,110 @@ var gear = {
       "sta": 5
     },
     {
+      "name": "Steelcap Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 15207,
+      "r": 17,
+      "str": 2,
+      "sta": 2
+    },
+    {
+      "name": "Clink Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 15466,
+      "r": 24,
+      "str": 3,
+      "agi": 2,
+      "sta": 4
+    },
+    {
+      "name": "Studded Ring Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 15695,
+      "r": 32,
+      "str": 6,
+      "sta": 4
+    },
+    {
+      "name": "Tidecrest Blade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15705,
+      "r": 49,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "speed": 2.6,
+      "str": 8
+    },
+    {
+      "name": "Hunt Tracker Blade",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 15706,
+      "r": 49,
+      "mindmg": 35,
+      "maxdmg": 66,
+      "speed": 1.5,
+      "agi": 8
+    },
+    {
+      "name": "Beasthunter Dagger",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 15783,
+      "r": 53,
+      "mindmg": 42,
+      "maxdmg": 79,
+      "speed": 1.7,
+      "ap": 33
+    },
+    {
+      "name": "Beaststalker Blade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15782,
+      "r": 53,
+      "mindmg": 55,
+      "maxdmg": 103,
+      "speed": 2.2,
+      "ap": 33
+    },
+    {
+      "name": "Mirah's Song",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 15806,
+      "r": 55,
+      "mindmg": 57,
+      "maxdmg": 87,
+      "speed": 1.8,
+      "str": 9,
+      "agi": 9
+    },
+    {
+      "name": "Blitzcleaver",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 15862,
+      "r": 50,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "speed": 2.2,
+      "ap": 20
+    },
+    {
       "name": "Bristlebark Buckler",
       "source": "Other",
       "type": "Shield",
@@ -18986,6 +24871,54 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "name": "Driftmire Shield",
+      "source": "Other",
+      "type": "Shield",
+      "slot": "Off Hand",
+      "id": 16660,
+      "r": 23,
+      "str": 2,
+      "sta": 3
+    },
+    {
+      "name": "Slatemetal Cutlass",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 16890,
+      "r": 20,
+      "mindmg": 19,
+      "maxdmg": 35,
+      "speed": 2.2,
+      "str": 2,
+      "agi": 2
+    },
+    {
+      "name": "Outlaw Sabre",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 16886,
+      "r": 25,
+      "mindmg": 35,
+      "maxdmg": 67,
+      "speed": 2.7,
+      "ap": 15
+    },
+    {
+      "name": "Gutterblade",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "One-Hand",
+      "id": 17046,
+      "r": 18,
+      "mindmg": 25,
+      "maxdmg": 46,
+      "speed": 2.2,
+      "str": 3,
+      "sta": 3
     },
     {
       "name": "Eskhandar's Left Claw",
@@ -19282,6 +25215,19 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "name": "Zorbin's Mega-Slicer",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 19040,
+      "r": 45,
+      "mindmg": 46,
+      "maxdmg": 86,
+      "speed": 2.3,
+      "agi": 6,
+      "sta": 5
     },
     {
       "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -19933,6 +25879,18 @@ var gear = {
       "ap": 32
     },
     {
+      "name": "The Jaw Breaker",
+      "source": "Dungeon",
+      "type": "Mace",
+      "slot": "One-Hand",
+      "id": 22322,
+      "r": 56,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "speed": 1.6,
+      "crit": 1
+    },
+    {
       "name": "Lefty's Brass Knuckle",
       "source": "Other",
       "type": "Fist",
@@ -19944,6 +25902,32 @@ var gear = {
       "speed": 1.5,
       "str": 5,
       "agi": 12
+    },
+    {
+      "name": "The Thunderwood Poker",
+      "source": "Other",
+      "type": "Dagger",
+      "slot": "One-Hand",
+      "id": 22377,
+      "r": 60,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "speed": 1.8,
+      "agi": 13,
+      "sta": 6
+    },
+    {
+      "name": "Ravenholdt Slicer",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 22378,
+      "r": 60,
+      "mindmg": 83,
+      "maxdmg": 156,
+      "speed": 2.8,
+      "sta": 6,
+      "ap": 26
     },
     {
       "name": "Maexxna's Fang",
@@ -19985,6 +25969,19 @@ var gear = {
       "speed": 2.6,
       "ap": 36,
       "crit": 1
+    },
+    {
+      "name": "Widow's Remorse",
+      "source": "Dungeon",
+      "type": "Sword",
+      "slot": "One-Hand",
+      "id": 22806,
+      "r": 60,
+      "mindmg": 70,
+      "maxdmg": 131,
+      "speed": 1.6,
+      "sta": 17,
+      "hit": 1
     },
     {
       "name": "The Castigator",
@@ -20200,6 +26197,31 @@ var gear = {
       "maxdmg": 53,
       "speed": 3.2,
       "agi": 6,
+      "sta": 3
+    },
+    {
+      "name": "Hardened Root Staff",
+      "source": "Other",
+      "type": "Staff",
+      "slot": "Two-Hand",
+      "id": 1317,
+      "r": 22,
+      "mindmg": 44,
+      "maxdmg": 67,
+      "speed": 3.3,
+      "str": 1
+    },
+    {
+      "name": "Headbasher",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 1264,
+      "r": 22,
+      "mindmg": 32,
+      "maxdmg": 49,
+      "speed": 2.3,
+      "str": 8,
       "sta": 3
     },
     {
@@ -20529,6 +26551,18 @@ var gear = {
       "sta": 11
     },
     {
+      "name": "Coldridge Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 3103,
+      "r": 6,
+      "mindmg": 18,
+      "maxdmg": 27,
+      "speed": 2.7,
+      "str": 1
+    },
+    {
       "name": "Arced War Axe",
       "source": "Dungeon",
       "type": "Axe",
@@ -20555,6 +26589,19 @@ var gear = {
       "sta": 10
     },
     {
+      "name": "Ancient War Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 3209,
+      "r": 23,
+      "mindmg": 57,
+      "maxdmg": 86,
+      "speed": 3.3,
+      "str": 9,
+      "sta": 6
+    },
+    {
       "name": "Onyx Claymore",
       "source": "Other",
       "type": "Sword",
@@ -20566,6 +26613,31 @@ var gear = {
       "speed": 2.8,
       "str": 9,
       "sta": 5
+    },
+    {
+      "name": "Bonecracker",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 3440,
+      "r": 7,
+      "mindmg": 23,
+      "maxdmg": 35,
+      "speed": 3.2,
+      "str": 3
+    },
+    {
+      "name": "Logsplitter",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 3586,
+      "r": 9,
+      "mindmg": 31,
+      "maxdmg": 47,
+      "speed": 3.6,
+      "str": 3,
+      "sta": 2
     },
     {
       "name": "Shadow Crescent Axe",
@@ -20607,6 +26679,18 @@ var gear = {
       "sta": 4
     },
     {
+      "name": "Frost Tiger Blade",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 3854,
+      "r": 35,
+      "mindmg": 78,
+      "maxdmg": 118,
+      "speed": 3.4,
+      "crit": 1
+    },
+    {
       "name": "Heavy Spiked Mace",
       "source": "Other",
       "type": "Mace",
@@ -20631,6 +26715,42 @@ var gear = {
       "str": 8
     },
     {
+      "name": "Steady Bastard Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 4939,
+      "r": 4,
+      "mindmg": 16,
+      "maxdmg": 25,
+      "speed": 2.7,
+      "agi": 2
+    },
+    {
+      "name": "Goblin Smasher",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 4964,
+      "r": 5,
+      "mindmg": 20,
+      "maxdmg": 31,
+      "speed": 3.1,
+      "str": 2
+    },
+    {
+      "name": "Rock Pulverizer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 4983,
+      "r": 30,
+      "mindmg": 92,
+      "maxdmg": 139,
+      "speed": 3.7,
+      "ap": 34
+    },
+    {
       "name": "Impaling Harpoon",
       "source": "Dungeon",
       "type": "Polearm",
@@ -20643,6 +26763,18 @@ var gear = {
       "agi": 7
     },
     {
+      "name": "Demolition Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 5322,
+      "r": 17,
+      "mindmg": 32,
+      "maxdmg": 49,
+      "speed": 2.3,
+      "str": 9
+    },
+    {
       "name": "Boahn's Fang",
       "source": "Other",
       "type": "Axe",
@@ -20653,6 +26785,44 @@ var gear = {
       "maxdmg": 53,
       "speed": 2.5,
       "str": 9
+    },
+    {
+      "name": "Woodsman Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 5615,
+      "r": 12,
+      "mindmg": 34,
+      "maxdmg": 52,
+      "speed": 3.3,
+      "agi": 2,
+      "sta": 5
+    },
+    {
+      "name": "Seraph's Strike",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 5614,
+      "r": 13,
+      "mindmg": 54,
+      "maxdmg": 81,
+      "speed": 3.2,
+      "str": 3
+    },
+    {
+      "name": "Skullchipper",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 5626,
+      "r": 15,
+      "mindmg": 36,
+      "maxdmg": 55,
+      "speed": 3.5,
+      "str": 6,
+      "sta": 1
     },
     {
       "name": "Scythe Axe",
@@ -20668,6 +26838,44 @@ var gear = {
       "sta": 3
     },
     {
+      "name": "Emil's Brand",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 5813,
+      "r": 24,
+      "mindmg": 53,
+      "maxdmg": 81,
+      "speed": 3.1,
+      "str": 11,
+      "sta": 3
+    },
+    {
+      "name": "Orc Crusher",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 6093,
+      "r": 18,
+      "mindmg": 52,
+      "maxdmg": 79,
+      "speed": 3.6,
+      "str": 8,
+      "sta": 4
+    },
+    {
+      "name": "Piercing Axe",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 6094,
+      "r": 14,
+      "mindmg": 31,
+      "maxdmg": 47,
+      "speed": 3.3,
+      "agi": 5
+    },
+    {
       "name": "Burrowing Shovel",
       "source": "Dungeon",
       "type": "Mace",
@@ -20678,6 +26886,19 @@ var gear = {
       "maxdmg": 28,
       "speed": 2.3,
       "agi": 4
+    },
+    {
+      "name": "Balanced Fighting Stick",
+      "source": "Other",
+      "type": "Staff",
+      "slot": "Two-Hand",
+      "id": 6215,
+      "r": 5,
+      "mindmg": 18,
+      "maxdmg": 21,
+      "speed": 2.2,
+      "agi": 2,
+      "sta": 2
     },
     {
       "name": "The Pacifier",
@@ -20716,6 +26937,58 @@ var gear = {
       "maxdmg": 62,
       "speed": 2.6,
       "agi": 11
+    },
+    {
+      "name": "Bonebiter",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 6830,
+      "r": 34,
+      "mindmg": 105,
+      "maxdmg": 159,
+      "speed": 3.4,
+      "str": 20,
+      "sta": 10
+    },
+    {
+      "name": "Whirlwind Axe",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 6975,
+      "r": 30,
+      "mindmg": 102,
+      "maxdmg": 154,
+      "speed": 3.6,
+      "str": 15,
+      "sta": 14
+    },
+    {
+      "name": "Whirlwind Sword",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 6977,
+      "r": 30,
+      "mindmg": 82,
+      "maxdmg": 124,
+      "speed": 2.9,
+      "str": 15,
+      "sta": 14
+    },
+    {
+      "name": "Whirlwind Warhammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 6976,
+      "r": 30,
+      "mindmg": 97,
+      "maxdmg": 146,
+      "speed": 3.4,
+      "str": 15,
+      "sta": 14
     },
     {
       "name": "Smite's Mighty Hammer",
@@ -20862,6 +27135,19 @@ var gear = {
       "agi": 5
     },
     {
+      "name": "Skullsplitter",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 9521,
+      "r": 30,
+      "mindmg": 70,
+      "maxdmg": 105,
+      "speed": 2.9,
+      "str": 15,
+      "sta": 4
+    },
+    {
       "name": "Thermaplugg's Left Arm",
       "source": "Dungeon",
       "type": "Axe",
@@ -20901,6 +27187,32 @@ var gear = {
       "agi": 23
     },
     {
+      "name": "Dwarven Charge",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 9626,
+      "r": 35,
+      "mindmg": 72,
+      "maxdmg": 109,
+      "speed": 2.9,
+      "str": 12,
+      "sta": 11
+    },
+    {
+      "name": "Tok'kar's Murloc Chopper",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 9679,
+      "r": 35,
+      "mindmg": 83,
+      "maxdmg": 125,
+      "speed": 3.2,
+      "str": 15,
+      "sta": 6
+    },
+    {
       "name": "Manslayer",
       "source": "Other",
       "type": "Axe",
@@ -20926,6 +27238,31 @@ var gear = {
       "str": 16,
       "agi": 5,
       "sta": 7
+    },
+    {
+      "name": "Will of the Mountain Giant",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 10652,
+      "r": 40,
+      "mindmg": 88,
+      "maxdmg": 133,
+      "speed": 2.8,
+      "str": 15,
+      "sta": 14
+    },
+    {
+      "name": "Enchanted Azsharite Felbane Staff",
+      "source": "Other",
+      "type": "Staff",
+      "slot": "Two-Hand",
+      "id": 10698,
+      "r": 45,
+      "mindmg": 104,
+      "maxdmg": 157,
+      "speed": 2.8,
+      "ap": 78
     },
     {
       "name": "X'caliboar",
@@ -20979,6 +27316,18 @@ var gear = {
       "sta": 11
     },
     {
+      "name": "Beastslayer",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 11907,
+      "r": 50,
+      "mindmg": 112,
+      "maxdmg": 169,
+      "speed": 3.3,
+      "ap": 72
+    },
+    {
       "name": "Dreadforge Retaliator",
       "source": "Dungeon",
       "type": "Axe",
@@ -20990,6 +27339,32 @@ var gear = {
       "speed": 3.7,
       "crit": 1,
       "ap": 30
+    },
+    {
+      "name": "Impervious Giant",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 11921,
+      "r": 52,
+      "mindmg": 105,
+      "maxdmg": 159,
+      "speed": 2.7,
+      "hit": 1,
+      "crit": 2
+    },
+    {
+      "name": "Limb Cleaver",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 12000,
+      "r": 50,
+      "mindmg": 82,
+      "maxdmg": 123,
+      "speed": 2.4,
+      "str": 21,
+      "sta": 6
     },
     {
       "name": "Big Stick",
@@ -21063,6 +27438,18 @@ var gear = {
       "speed": 2.7,
       "str": 11,
       "sta": 5
+    },
+    {
+      "name": "Enchanted Battlehammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 12776,
+      "r": 51,
+      "mindmg": 100,
+      "maxdmg": 150,
+      "speed": 2.6,
+      "hit": 2
     },
     {
       "name": "Corruption",
@@ -21298,6 +27685,18 @@ var gear = {
       "sta": 15
     },
     {
+      "name": "Frenzied Striker",
+      "source": "Other",
+      "type": "Polearm",
+      "slot": "Two-Hand",
+      "id": 13056,
+      "r": 51,
+      "mindmg": 108,
+      "maxdmg": 162,
+      "speed": 2.8,
+      "hit": 2
+    },
+    {
       "name": "Fist of Omokk",
       "source": "Dungeon",
       "type": "Mace",
@@ -21338,6 +27737,33 @@ var gear = {
       "sta": 12
     },
     {
+      "name": "Axe of Orgrimmar",
+      "source": "Other",
+      "type": "Axe",
+      "slot": "Two-Hand",
+      "id": 15424,
+      "r": 9,
+      "mindmg": 31,
+      "maxdmg": 47,
+      "speed": 3.3,
+      "str": 3,
+      "sta": 3
+    },
+    {
+      "name": "Brute Hammer",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 15464,
+      "r": 24,
+      "mindmg": 50,
+      "maxdmg": 76,
+      "speed": 3.3,
+      "str": 4,
+      "agi": 1,
+      "sta": 8
+    },
+    {
       "name": "Earthshaker",
       "source": "Dungeon",
       "type": "Mace",
@@ -21348,6 +27774,19 @@ var gear = {
       "maxdmg": 263,
       "speed": 3.5,
       "ap": 22
+    },
+    {
+      "name": "Bonereaver's Edge",
+      "source": "Dungeon",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 17076,
+      "r": 60,
+      "mindmg": 206,
+      "maxdmg": 310,
+      "speed": 3.4,
+      "sta": 16,
+      "crit": 1
     },
     {
       "name": "Sulfuras, Hand of Ragnaros",
@@ -21385,6 +27824,19 @@ var gear = {
       "maxdmg": 185,
       "speed": 3.1,
       "str": 26,
+      "crit": 1
+    },
+    {
+      "name": "Bonecrusher",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 18420,
+      "r": 57,
+      "mindmg": 129,
+      "maxdmg": 194,
+      "speed": 3,
+      "str": 30,
       "crit": 1
     },
     {
@@ -21592,6 +28044,20 @@ var gear = {
       "crit": 1
     },
     {
+      "name": "Ice Barbed Spear",
+      "source": "Other",
+      "type": "Polearm",
+      "slot": "Two-Hand",
+      "id": 19106,
+      "r": 51,
+      "mindmg": 155,
+      "maxdmg": 233,
+      "speed": 3.6,
+      "str": 13,
+      "agi": 21,
+      "sta": 20
+    },
+    {
       "name": "Blackfury",
       "source": "Other",
       "type": "Polearm",
@@ -21776,6 +28242,19 @@ var gear = {
       "ap": 117
     },
     {
+      "name": "Hunting Spear",
+      "source": "Other",
+      "type": "Polearm",
+      "slot": "Two-Hand",
+      "id": 20083,
+      "r": 50,
+      "mindmg": 111,
+      "maxdmg": 168,
+      "speed": 3.1,
+      "sta": 17,
+      "crit": 1
+    },
+    {
       "name": "Lightforged Blade",
       "source": "Other",
       "type": "Sword",
@@ -21787,6 +28266,34 @@ var gear = {
       "speed": 3.3,
       "str": 9,
       "sta": 9
+    },
+    {
+      "name": "Feral Staff",
+      "source": "Other",
+      "type": "Staff",
+      "slot": "Two-Hand",
+      "id": 20522,
+      "r": 0,
+      "mindmg": 108,
+      "maxdmg": 162,
+      "speed": 3,
+      "str": 17,
+      "agi": 16
+    },
+    {
+      "name": "Wildstaff",
+      "source": "Other",
+      "type": "Staff",
+      "slot": "Two-Hand",
+      "id": 20556,
+      "r": 50,
+      "mindmg": 90,
+      "maxdmg": 135,
+      "speed": 2.5,
+      "str": 10,
+      "sta": 10,
+      "hit": 1,
+      "crit": 1
     },
     {
       "name": "Stonecutting Glaive",
@@ -21944,6 +28451,34 @@ var gear = {
       "maxdmg": 226,
       "speed": 3.6,
       "agi": 35
+    },
+    {
+      "name": "Doomulus Prime",
+      "source": "Other",
+      "type": "Mace",
+      "slot": "Two-Hand",
+      "id": 22348,
+      "r": 60,
+      "mindmg": 158,
+      "maxdmg": 265,
+      "speed": 3.8,
+      "str": 22,
+      "sta": 22,
+      "hit": 1
+    },
+    {
+      "name": "Corrupted Ashbringer",
+      "source": "Other",
+      "type": "Sword",
+      "slot": "Two-Hand",
+      "id": 22691,
+      "r": 60,
+      "mindmg": 259,
+      "maxdmg": 389,
+      "speed": 3.6,
+      "sta": -25,
+      "crit": 2,
+      "hit": 1
     },
     {
       "name": "Severance",
