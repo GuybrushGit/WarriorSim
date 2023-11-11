@@ -348,7 +348,7 @@ SIM.UI = {
             const crit = await simulateWeight(1, 2);
             updateStat("crit", crit);
 
-            const agiCrit = player.stats.agimod / 20;
+            const agiCrit = player.stats.agimod * player.agipercrit;
             updateStat("agi", {weight: crit.weight * agiCrit, error: crit.error * agiCrit});
 
             updateStat("hit", await simulateWeight(2, 2));

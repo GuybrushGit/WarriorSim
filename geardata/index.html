@@ -71,6 +71,7 @@
           if (!d.slot) return;
 
           if (d.subclass == "Shield") return;
+          if (d.subclass == "Cloth" && d.slot != "Back") return;
           if (d.class != "Weapon" && d.class != "Armor") return;
           if (d.quality == "Common" || d.quality == "Poor") return;
           if (d.slot == "Held In Off-hand" || d.slot == "Non-equippable" || d.slot == "Relic" || d.slot == "Shirt" || d.slot == "Tabard" || d.slot == "Thrown") return;
