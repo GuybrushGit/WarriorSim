@@ -550,7 +550,7 @@ var spells = [
 
 // Runes
 {
-    id: 900003,
+    id: 402911,
     name: 'Raging Blow',
     classname: 'RagingBlow',
     iconname: 'Raging-Blow',
@@ -558,7 +558,7 @@ var spells = [
     rune: true,
 },
 {
-    id: 900006,
+    id: 425418,
     name: 'Consumed by Rage',
     classname: 'ConsumedRage',
     iconname: 'Consumed-by-Rage',
@@ -570,14 +570,14 @@ var spells = [
     rune: true,
 },
 {
-    id: 900008,
+    id: 402927,
     name: 'Victory Rush',
     classname: 'VictoryRush',
     iconname: 'Victory-Rush',
     rune: true,
 },
 {
-    id: 900012,
+    id: 429765,
     name: 'Quick Strike',
     classname: 'QuickStrike',
     iconname: 'inv_axe_03',

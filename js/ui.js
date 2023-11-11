@@ -1308,7 +1308,7 @@ SIM.UI = {
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td>${item.name}</td>
+                        <td><a href="https://classic.wowhead.com/spell=${item.id}"></a>${item.name}</td>
                         <td>${item.description}</td>
                     </tr>`;
         }
