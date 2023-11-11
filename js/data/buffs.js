@@ -678,6 +678,14 @@ var buffs = [
       dmgmod: 5,
       worldbuff: true,
    },
+   {
+      id: 427143,
+      spellid: true,
+      name: "Curse of Vulnerability",
+      iconname: "Ability_creature_cursed_02",
+      group: "",
+      bonusdmg: 2,
+   },
 
 
    

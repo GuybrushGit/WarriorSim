@@ -22987,6 +22987,19 @@ var gear = {
       "rand": 672
     },
     {
+      "id": 790,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 18,
+      "name": "Forester's Axe of the Tiger",
+      "speed": 2.5,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
       "id": 816,
       "type": "Dagger",
       "slot": "onehand",
@@ -23009,6 +23022,17 @@ var gear = {
       "maxdmg": 17
     },
     {
+      "id": 826,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 10,
+      "name": "Brutish Riverpaw Axe",
+      "speed": 2.8,
+      "str": 1,
+      "mindmg": 15,
+      "maxdmg": 29
+    },
+    {
       "id": 827,
       "type": "Mace",
       "slot": "mainhand",
@@ -23018,6 +23042,19 @@ var gear = {
       "str": 2,
       "mindmg": 14,
       "maxdmg": 26
+    },
+    {
+      "id": 863,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "name": "Gloom Reaper of the Tiger",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
     },
     {
       "id": 864,
@@ -23044,6 +23081,18 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": 885,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 19,
+      "name": "Black Metal Axe",
+      "speed": 2.1,
+      "str": 2,
+      "sta": 2,
+      "mindmg": 18,
+      "maxdmg": 34
     },
     {
       "id": 920,
@@ -23081,6 +23130,18 @@ var gear = {
       "maxdmg": 27
     },
     {
+      "id": 1292,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 20,
+      "name": "Butcher's Cleaver",
+      "speed": 1.7,
+      "agi": 2,
+      "str": 5,
+      "mindmg": 23,
+      "maxdmg": 32
+    },
+    {
       "id": 1296,
       "type": "Mace",
       "slot": "mainhand",
@@ -23102,6 +23163,29 @@ var gear = {
       "sta": 2,
       "mindmg": 18,
       "maxdmg": 34
+    },
+    {
+      "id": 1454,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 22,
+      "name": "Axe of the Enforcer",
+      "speed": 2.6,
+      "str": 4,
+      "sta": 3,
+      "mindmg": 31,
+      "maxdmg": 58
+    },
+    {
+      "id": 1459,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 19,
+      "name": "Shadowhide Scalper",
+      "speed": 2.9,
+      "str": 3,
+      "mindmg": 25,
+      "maxdmg": 47
     },
     {
       "id": 1469,
@@ -23148,6 +23232,19 @@ var gear = {
       "sta": 3,
       "mindmg": 28,
       "maxdmg": 54
+    },
+    {
+      "id": 1602,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 34,
+      "name": "Sickle Axe",
+      "speed": 2.6,
+      "agi": 5,
+      "str": 6,
+      "sta": 3,
+      "mindmg": 48,
+      "maxdmg": 90
     },
     {
       "id": 1608,
@@ -23243,6 +23340,19 @@ var gear = {
       "maxdmg": 24
     },
     {
+      "id": 1994,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "name": "Ebonclaw Reaver of the Tiger",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
       "id": 2020,
       "type": "Dagger",
       "slot": "onehand",
@@ -23287,6 +23397,19 @@ var gear = {
       "sta": 1,
       "mindmg": 16,
       "maxdmg": 30
+    },
+    {
+      "id": 2080,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "name": "Hillborne Axe of the Tiger",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
     },
     {
       "id": 2194,
@@ -23337,6 +23460,17 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 2265,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 8,
+      "name": "Stonesplinter Axe",
+      "speed": 2.2,
+      "str": 1,
+      "mindmg": 10,
+      "maxdmg": 20
+    },
+    {
       "id": 2266,
       "type": "Dagger",
       "slot": "onehand",
@@ -23346,6 +23480,30 @@ var gear = {
       "agi": 1,
       "mindmg": 7,
       "maxdmg": 14
+    },
+    {
+      "id": 2807,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 18,
+      "name": "Guillotine Axe",
+      "speed": 2.7,
+      "agi": 3,
+      "str": 3,
+      "mindmg": 28,
+      "maxdmg": 53
+    },
+    {
+      "id": 2815,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 40,
+      "name": "Curve-bladed Ripper",
+      "speed": 1.9,
+      "str": 8,
+      "sta": 5,
+      "mindmg": 40,
+      "maxdmg": 75
     },
     {
       "id": 2819,
@@ -23372,6 +23530,18 @@ var gear = {
       "maxdmg": 30
     },
     {
+      "id": 2878,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 25,
+      "name": "Bearded Boneaxe",
+      "speed": 1.9,
+      "agi": 4,
+      "str": 4,
+      "mindmg": 25,
+      "maxdmg": 47
+    },
+    {
       "id": 2908,
       "type": "Dagger",
       "slot": "onehand",
@@ -23393,6 +23563,17 @@ var gear = {
       "sta": 2,
       "mindmg": 21,
       "maxdmg": 39
+    },
+    {
+      "id": 3154,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 13,
+      "name": "Thelsamar Axe",
+      "speed": 2.1,
+      "agi": 2,
+      "mindmg": 13,
+      "maxdmg": 25
     },
     {
       "id": 3186,
@@ -23454,6 +23635,18 @@ var gear = {
       "agi": 3,
       "mindmg": 13,
       "maxdmg": 26
+    },
+    {
+      "id": 3489,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 12,
+      "name": "Thick War Axe",
+      "speed": 2.5,
+      "str": 1,
+      "sta": 1,
+      "mindmg": 15,
+      "maxdmg": 28
     },
     {
       "id": 3490,
@@ -23573,6 +23766,18 @@ var gear = {
       "maxdmg": 78
     },
     {
+      "id": 4126,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 30,
+      "name": "Guerrilla Cleaver",
+      "speed": 2.8,
+      "agi": 3,
+      "sta": 4,
+      "mindmg": 34,
+      "maxdmg": 65
+    },
+    {
       "id": 4303,
       "type": "Mace",
       "slot": "mainhand",
@@ -23594,6 +23799,18 @@ var gear = {
       "sta": 2,
       "mindmg": 17,
       "maxdmg": 32
+    },
+    {
+      "id": 4445,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 18,
+      "name": "Flesh Carver",
+      "speed": 2.3,
+      "agi": 2,
+      "sta": 2,
+      "mindmg": 18,
+      "maxdmg": 35
     },
     {
       "id": 4446,
@@ -23664,6 +23881,17 @@ var gear = {
       "maxdmg": 24
     },
     {
+      "id": 4824,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 22,
+      "name": "Blurred Axe",
+      "speed": 1.7,
+      "agi": 4,
+      "mindmg": 16,
+      "maxdmg": 31
+    },
+    {
       "id": 4947,
       "type": "Dagger",
       "slot": "onehand",
@@ -23684,6 +23912,17 @@ var gear = {
       "str": 1,
       "mindmg": 9,
       "maxdmg": 18
+    },
+    {
+      "id": 4949,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 16,
+      "name": "Orcish Cleaver",
+      "speed": 1.8,
+      "str": 1,
+      "mindmg": 13,
+      "maxdmg": 25
     },
     {
       "id": 4971,
@@ -23753,6 +23992,18 @@ var gear = {
       "maxdmg": 25
     },
     {
+      "id": 5196,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 17,
+      "name": "Smite's Reaver",
+      "speed": 1.9,
+      "str": 2,
+      "sta": 1,
+      "mindmg": 14,
+      "maxdmg": 28
+    },
+    {
       "id": 5197,
       "type": "Mace",
       "slot": "onehand",
@@ -23762,6 +24013,17 @@ var gear = {
       "str": 3,
       "mindmg": 20,
       "maxdmg": 39
+    },
+    {
+      "id": 5255,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 10,
+      "name": "Quilboar Tomahawk",
+      "speed": 2.5,
+      "agi": 1,
+      "mindmg": 13,
+      "maxdmg": 26
     },
     {
       "id": 5256,
@@ -23795,6 +24057,17 @@ var gear = {
       "name": "Harpy Skinner",
       "speed": 1.4,
       "agi": 3,
+      "mindmg": 9,
+      "maxdmg": 18
+    },
+    {
+      "id": 5344,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 9,
+      "name": "Pointed Axe",
+      "speed": 1.9,
+      "agi": 1,
       "mindmg": 9,
       "maxdmg": 18
     },
@@ -23905,6 +24178,17 @@ var gear = {
       "maxdmg": 44
     },
     {
+      "id": 6692,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 31,
+      "name": "Pronged Reaver",
+      "speed": 2.4,
+      "str": 6,
+      "mindmg": 40,
+      "maxdmg": 75
+    },
+    {
       "id": 6802,
       "type": "Sword",
       "slot": "onehand",
@@ -23962,6 +24246,41 @@ var gear = {
       "str": 7,
       "mindmg": 31,
       "maxdmg": 59
+    },
+    {
+      "id": 7761,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 33,
+      "name": "Steelclaw Reaver",
+      "speed": 1.8,
+      "agi": 3,
+      "sta": 8,
+      "mindmg": 32,
+      "maxdmg": 61
+    },
+    {
+      "id": 7786,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Headsplitter",
+      "speed": 2.3,
+      "str": 3,
+      "sta": 5,
+      "mindmg": 30,
+      "maxdmg": 57
+    },
+    {
+      "id": 7942,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 39,
+      "name": "Blue Glittering Axe",
+      "speed": 1.8,
+      "agi": 8,
+      "mindmg": 32,
+      "maxdmg": 61
     },
     {
       "id": 7943,
@@ -24071,6 +24390,18 @@ var gear = {
       "maxdmg": 91
     },
     {
+      "id": 9378,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 33,
+      "name": "Shovelphlange's Mining Axe",
+      "speed": 2.8,
+      "str": 6,
+      "mindmg": 50,
+      "maxdmg": 94,
+      "ap": null
+    },
+    {
       "id": 9384,
       "type": "Dagger",
       "slot": "onehand",
@@ -24131,6 +24462,17 @@ var gear = {
       "maxdmg": 101
     },
     {
+      "id": 9465,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 40,
+      "name": "Digmaster 5000",
+      "speed": 1.8,
+      "agi": 4,
+      "mindmg": 38,
+      "maxdmg": 71
+    },
+    {
       "id": 9488,
       "type": "Mace",
       "slot": "onehand",
@@ -24164,6 +24506,17 @@ var gear = {
       "sta": 3,
       "mindmg": 28,
       "maxdmg": 52
+    },
+    {
+      "id": 9684,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 40,
+      "name": "Force of the Hippogryph",
+      "speed": 2.4,
+      "agi": 9,
+      "mindmg": 51,
+      "maxdmg": 95
     },
     {
       "id": 9718,
@@ -24200,6 +24553,17 @@ var gear = {
       "maxdmg": 66
     },
     {
+      "id": 10744,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 40,
+      "name": "Axe of the Ebon Drake",
+      "speed": 1.9,
+      "str": 9,
+      "mindmg": 40,
+      "maxdmg": 75
+    },
+    {
       "id": 10828,
       "type": "Dagger",
       "slot": "onehand",
@@ -24213,6 +24577,18 @@ var gear = {
       "rand": 690
     },
     {
+      "id": 10837,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 51,
+      "name": "Tooth of Eranikus",
+      "speed": 2.4,
+      "str": 6,
+      "mindmg": 62,
+      "maxdmg": 116,
+      "hit": 1
+    },
+    {
       "id": 11120,
       "type": "Mace",
       "slot": "mainhand",
@@ -24222,6 +24598,19 @@ var gear = {
       "str": 10,
       "mindmg": 64,
       "maxdmg": 120
+    },
+    {
+      "id": 11702,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 50,
+      "name": "Grizzle's Skinner",
+      "speed": 2.4,
+      "agi": 6,
+      "str": 8,
+      "sta": 5,
+      "mindmg": 61,
+      "maxdmg": 114
     },
     {
       "id": 11743,
@@ -24280,6 +24669,20 @@ var gear = {
       "maxdmg": 37
     },
     {
+      "id": 12527,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 48,
+      "name": "Ribsplitter of the Tiger",
+      "speed": 2.7,
+      "mindmg": 66,
+      "maxdmg": 124,
+      "ap": null,
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
       "id": 12535,
       "type": "Sword",
       "slot": "onehand",
@@ -24303,6 +24706,41 @@ var gear = {
       "maxdmg": 207,
       "crit": 1,
       "ap": null
+    },
+    {
+      "id": 12773,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 50,
+      "name": "Ornate Thorium Handaxe",
+      "speed": 1.9,
+      "str": 10,
+      "mindmg": 43,
+      "maxdmg": 81
+    },
+    {
+      "id": 12774,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "name": "Dawn's Edge",
+      "speed": 2.1,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "crit": 1
+    },
+    {
+      "id": 12779,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 52,
+      "name": "Rune Edge",
+      "speed": 2.3,
+      "agi": 5,
+      "str": 5,
+      "sta": 5,
+      "mindmg": 54,
+      "maxdmg": 102
     },
     {
       "id": 12783,
@@ -24329,6 +24767,17 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 12990,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 18,
+      "name": "Razor's Edge",
+      "speed": 2.4,
+      "str": 4,
+      "mindmg": 25,
+      "maxdmg": 48
+    },
+    {
       "id": 13006,
       "type": "Mace",
       "slot": "mainhand",
@@ -24339,6 +24788,29 @@ var gear = {
       "sta": 10,
       "mindmg": 80,
       "maxdmg": 149
+    },
+    {
+      "id": 13014,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 48,
+      "name": "Axe of Rin'ji",
+      "speed": 1.9,
+      "agi": 5,
+      "sta": 11,
+      "mindmg": 46,
+      "maxdmg": 87
+    },
+    {
+      "id": 13015,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Serathil",
+      "speed": 1.9,
+      "str": 9,
+      "mindmg": 53,
+      "maxdmg": 99
     },
     {
       "id": 13024,
@@ -24682,6 +25154,149 @@ var gear = {
       "rand": 687
     },
     {
+      "id": 15230,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 20,
+      "name": "Ridge Cleaver of the Tiger",
+      "speed": 2.2,
+      "mindmg": 19,
+      "maxdmg": 37,
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 15231,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "name": "Splitting Hatchet of the Tiger",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15232,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "name": "Hacking Cleaver of the Tiger",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15233,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 34,
+      "name": "Savage Axe of the Tiger",
+      "speed": 2.8,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15234,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 35,
+      "name": "Greater Scythe of the Tiger",
+      "speed": 2.8,
+      "mindmg": 43,
+      "maxdmg": 81,
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 15235,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "name": "Crescent Edge of the Tiger",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 15236,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "name": "Moon Cleaver of the Tiger",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 15237,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "name": "Corpse Harvester of the Tiger",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 15238,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "name": "Warlord's Axe of the Tiger",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 15239,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Felstone Reaver of the Tiger",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 15240,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "name": "Demon's Claw of the Tiger",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 15241,
       "type": "Dagger",
       "slot": "onehand",
@@ -24844,6 +25459,29 @@ var gear = {
       "maxdmg": 35
     },
     {
+      "id": 17016,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 60,
+      "name": "Dark Iron Destroyer",
+      "speed": 2.4,
+      "str": 10,
+      "mindmg": 71,
+      "maxdmg": 134
+    },
+    {
+      "id": 17046,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 18,
+      "name": "Gutterblade",
+      "speed": 2.2,
+      "str": 3,
+      "sta": 3,
+      "mindmg": 25,
+      "maxdmg": 46
+    },
+    {
       "id": 18044,
       "type": "Mace",
       "slot": "mainhand",
@@ -24878,6 +25516,17 @@ var gear = {
       "maxdmg": 112
     },
     {
+      "id": 18347,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Well Balanced Axe",
+      "speed": 1.9,
+      "agi": 11,
+      "mindmg": 48,
+      "maxdmg": 90
+    },
+    {
       "id": 18376,
       "type": "Mace",
       "slot": "onehand",
@@ -24900,6 +25549,18 @@ var gear = {
       "sta": 7,
       "mindmg": 51,
       "maxdmg": 78
+    },
+    {
+      "id": 18498,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 55,
+      "name": "Hedgecutter",
+      "speed": 1.9,
+      "str": 5,
+      "sta": 12,
+      "mindmg": 60,
+      "maxdmg": 90
     },
     {
       "id": 18582,
@@ -24961,6 +25622,18 @@ var gear = {
       "maxdmg": 131
     },
     {
+      "id": 18737,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 57,
+      "name": "Bone Slicing Hatchet",
+      "speed": 1.7,
+      "agi": 13,
+      "sta": 5,
+      "mindmg": 48,
+      "maxdmg": 90
+    },
+    {
       "id": 18805,
       "type": "Dagger",
       "slot": "onehand",
@@ -24970,6 +25643,32 @@ var gear = {
       "sta": 9,
       "mindmg": 57,
       "maxdmg": 107,
+      "crit": 1,
+      "ap": null
+    },
+    {
+      "id": 18827,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Grand Marshal's Handaxe",
+      "speed": 2.9,
+      "sta": 7,
+      "mindmg": 138,
+      "maxdmg": 207,
+      "crit": 1,
+      "ap": null
+    },
+    {
+      "id": 18828,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "High Warlord's Cleaver",
+      "speed": 2.9,
+      "sta": 7,
+      "mindmg": 138,
+      "maxdmg": 207,
       "crit": 1,
       "ap": null
     },
@@ -25099,6 +25798,17 @@ var gear = {
       "maxdmg": 100
     },
     {
+      "id": 19103,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Frostbite",
+      "speed": 2.7,
+      "str": 15,
+      "mindmg": 80,
+      "maxdmg": 150
+    },
+    {
       "id": 19104,
       "type": "Mace",
       "slot": "onehand",
@@ -25157,6 +25867,19 @@ var gear = {
       "sta": 7,
       "mindmg": 106,
       "maxdmg": 198
+    },
+    {
+      "id": 19362,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Doom's Edge",
+      "speed": 2.3,
+      "agi": 16,
+      "str": 9,
+      "sta": 7,
+      "mindmg": 83,
+      "maxdmg": 154
     },
     {
       "id": 19365,
@@ -25400,6 +26123,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 19921,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Zulian Hacker of the Tiger",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 19968,
       "type": "Sword",
       "slot": "mainhand",
@@ -25531,6 +26267,30 @@ var gear = {
       "maxdmg": 130
     },
     {
+      "id": 20723,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 58,
+      "name": "Brann's Trusty Pick",
+      "speed": 2.7,
+      "str": 11,
+      "mindmg": 70,
+      "maxdmg": 130
+    },
+    {
+      "id": 21242,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Blessed Qiraji War Axe",
+      "speed": 2.6,
+      "sta": 9,
+      "mindmg": 110,
+      "maxdmg": 205,
+      "crit": 1,
+      "ap": null
+    },
+    {
       "id": 21244,
       "type": "Dagger",
       "slot": "onehand",
@@ -25555,6 +26315,19 @@ var gear = {
       "sta": 12,
       "mindmg": 89,
       "maxdmg": 166
+    },
+    {
+      "id": 21392,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Sickle of Unyielding Strength",
+      "speed": 2.1,
+      "agi": 6,
+      "str": 15,
+      "sta": 9,
+      "mindmg": 75,
+      "maxdmg": 141
     },
     {
       "id": 21520,
@@ -25733,6 +26506,18 @@ var gear = {
       "ap": null
     },
     {
+      "id": 22816,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Hatchet of Sundered Bone",
+      "speed": 2.6,
+      "mindmg": 119,
+      "maxdmg": 221,
+      "ap": null,
+      "crit": 1
+    },
+    {
       "id": 23014,
       "type": "Sword",
       "slot": "onehand",
@@ -25843,6 +26628,19 @@ var gear = {
       "maxdmg": 17
     },
     {
+      "id": 863,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "name": "Gloom Reaper of the Tiger",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
       "id": 864,
       "type": "Sword",
       "slot": "onehand",
@@ -25882,6 +26680,30 @@ var gear = {
       "rand": 681
     },
     {
+      "id": 1292,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 20,
+      "name": "Butcher's Cleaver",
+      "speed": 1.7,
+      "agi": 2,
+      "str": 5,
+      "mindmg": 23,
+      "maxdmg": 32
+    },
+    {
+      "id": 1454,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 22,
+      "name": "Axe of the Enforcer",
+      "speed": 2.6,
+      "str": 4,
+      "sta": 3,
+      "mindmg": 31,
+      "maxdmg": 58
+    },
+    {
       "id": 1483,
       "type": "Mace",
       "slot": "onehand",
@@ -25892,6 +26714,19 @@ var gear = {
       "sta": 3,
       "mindmg": 25,
       "maxdmg": 48
+    },
+    {
+      "id": 1602,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 34,
+      "name": "Sickle Axe",
+      "speed": 2.6,
+      "agi": 5,
+      "str": 6,
+      "sta": 3,
+      "mindmg": 48,
+      "maxdmg": 90
     },
     {
       "id": 1608,
@@ -25953,6 +26788,19 @@ var gear = {
       "maxdmg": 24
     },
     {
+      "id": 1994,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "name": "Ebonclaw Reaver of the Tiger",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
       "id": 2020,
       "type": "Dagger",
       "slot": "onehand",
@@ -25974,6 +26822,19 @@ var gear = {
       "sta": 1,
       "mindmg": 16,
       "maxdmg": 30
+    },
+    {
+      "id": 2080,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "name": "Hillborne Axe of the Tiger",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
     },
     {
       "id": 2194,
@@ -26245,6 +27106,18 @@ var gear = {
       "maxdmg": 25
     },
     {
+      "id": 5196,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 17,
+      "name": "Smite's Reaver",
+      "speed": 1.9,
+      "str": 2,
+      "sta": 1,
+      "mindmg": 14,
+      "maxdmg": 28
+    },
+    {
       "id": 5197,
       "type": "Mace",
       "slot": "onehand",
@@ -26362,6 +27235,17 @@ var gear = {
       "maxdmg": 44
     },
     {
+      "id": 6692,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 31,
+      "name": "Pronged Reaver",
+      "speed": 2.4,
+      "str": 6,
+      "mindmg": 40,
+      "maxdmg": 75
+    },
+    {
       "id": 6802,
       "type": "Sword",
       "slot": "onehand",
@@ -26396,6 +27280,29 @@ var gear = {
       "sta": 6,
       "mindmg": 41,
       "maxdmg": 76
+    },
+    {
+      "id": 7786,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Headsplitter",
+      "speed": 2.3,
+      "str": 3,
+      "sta": 5,
+      "mindmg": 30,
+      "maxdmg": 57
+    },
+    {
+      "id": 7942,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 39,
+      "name": "Blue Glittering Axe",
+      "speed": 1.8,
+      "agi": 8,
+      "mindmg": 32,
+      "maxdmg": 61
     },
     {
       "id": 7947,
@@ -26445,6 +27352,18 @@ var gear = {
       "sta": 4,
       "mindmg": 49,
       "maxdmg": 91
+    },
+    {
+      "id": 9378,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 33,
+      "name": "Shovelphlange's Mining Axe",
+      "speed": 2.8,
+      "str": 6,
+      "mindmg": 50,
+      "maxdmg": 94,
+      "ap": null
     },
     {
       "id": 9384,
@@ -26505,6 +27424,17 @@ var gear = {
       "str": 8,
       "mindmg": 54,
       "maxdmg": 101
+    },
+    {
+      "id": 9465,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 40,
+      "name": "Digmaster 5000",
+      "speed": 1.8,
+      "agi": 4,
+      "mindmg": 38,
+      "maxdmg": 71
     },
     {
       "id": 9488,
@@ -26648,6 +27578,17 @@ var gear = {
       "ap": null
     },
     {
+      "id": 12774,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "name": "Dawn's Edge",
+      "speed": 2.1,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "crit": 1
+    },
+    {
       "id": 12783,
       "type": "Dagger",
       "slot": "onehand",
@@ -26658,6 +27599,40 @@ var gear = {
       "mindmg": 49,
       "maxdmg": 92,
       "crit": 1
+    },
+    {
+      "id": 12990,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 18,
+      "name": "Razor's Edge",
+      "speed": 2.4,
+      "str": 4,
+      "mindmg": 25,
+      "maxdmg": 48
+    },
+    {
+      "id": 13014,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 48,
+      "name": "Axe of Rin'ji",
+      "speed": 1.9,
+      "agi": 5,
+      "sta": 11,
+      "mindmg": 46,
+      "maxdmg": 87
+    },
+    {
+      "id": 13015,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Serathil",
+      "speed": 1.9,
+      "str": 9,
+      "mindmg": 53,
+      "maxdmg": 99
     },
     {
       "id": 13034,
@@ -26875,6 +27850,110 @@ var gear = {
       "rand": 687
     },
     {
+      "id": 15231,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "name": "Splitting Hatchet of the Tiger",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15232,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "name": "Hacking Cleaver of the Tiger",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15235,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "name": "Crescent Edge of the Tiger",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 15236,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "name": "Moon Cleaver of the Tiger",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 15237,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "name": "Corpse Harvester of the Tiger",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 15238,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "name": "Warlord's Axe of the Tiger",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 15239,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Felstone Reaver of the Tiger",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 15240,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "name": "Demon's Claw of the Tiger",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 15241,
       "type": "Dagger",
       "slot": "onehand",
@@ -27012,6 +28091,18 @@ var gear = {
       "maxdmg": 35
     },
     {
+      "id": 17046,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 18,
+      "name": "Gutterblade",
+      "speed": 2.2,
+      "str": 3,
+      "sta": 3,
+      "mindmg": 25,
+      "maxdmg": 46
+    },
+    {
       "id": 18310,
       "type": "Sword",
       "slot": "onehand",
@@ -27021,6 +28112,17 @@ var gear = {
       "agi": 5,
       "mindmg": 74,
       "maxdmg": 112
+    },
+    {
+      "id": 18347,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "name": "Well Balanced Axe",
+      "speed": 1.9,
+      "agi": 11,
+      "mindmg": 48,
+      "maxdmg": 90
     },
     {
       "id": 18376,
@@ -27033,6 +28135,18 @@ var gear = {
       "sta": 11,
       "mindmg": 62,
       "maxdmg": 117
+    },
+    {
+      "id": 18498,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 55,
+      "name": "Hedgecutter",
+      "speed": 1.9,
+      "str": 5,
+      "sta": 12,
+      "mindmg": 60,
+      "maxdmg": 90
     },
     {
       "id": 18582,
@@ -27083,6 +28197,18 @@ var gear = {
       "maxdmg": 131
     },
     {
+      "id": 18737,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 57,
+      "name": "Bone Slicing Hatchet",
+      "speed": 1.7,
+      "agi": 13,
+      "sta": 5,
+      "mindmg": 48,
+      "maxdmg": 90
+    },
+    {
       "id": 18805,
       "type": "Dagger",
       "slot": "onehand",
@@ -27092,6 +28218,32 @@ var gear = {
       "sta": 9,
       "mindmg": 57,
       "maxdmg": 107,
+      "crit": 1,
+      "ap": null
+    },
+    {
+      "id": 18827,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Grand Marshal's Handaxe",
+      "speed": 2.9,
+      "sta": 7,
+      "mindmg": 138,
+      "maxdmg": 207,
+      "crit": 1,
+      "ap": null
+    },
+    {
+      "id": 18828,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "High Warlord's Cleaver",
+      "speed": 2.9,
+      "sta": 7,
+      "mindmg": 138,
+      "maxdmg": 207,
       "crit": 1,
       "ap": null
     },
@@ -27195,6 +28347,17 @@ var gear = {
       "maxdmg": 100
     },
     {
+      "id": 19103,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Frostbite",
+      "speed": 2.7,
+      "str": 15,
+      "mindmg": 80,
+      "maxdmg": 150
+    },
+    {
       "id": 19104,
       "type": "Mace",
       "slot": "onehand",
@@ -27241,6 +28404,19 @@ var gear = {
       "sta": 7,
       "mindmg": 106,
       "maxdmg": 198
+    },
+    {
+      "id": 19362,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Doom's Edge",
+      "speed": 2.3,
+      "agi": 16,
+      "str": 9,
+      "sta": 7,
+      "mindmg": 83,
+      "maxdmg": 154
     },
     {
       "id": 19542,
@@ -27447,6 +28623,19 @@ var gear = {
       "ap": null
     },
     {
+      "id": 19921,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Zulian Hacker of the Tiger",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 20279,
       "type": "Dagger",
       "slot": "onehand",
@@ -27543,6 +28732,19 @@ var gear = {
       "maxdmg": 123
     },
     {
+      "id": 21242,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Blessed Qiraji War Axe",
+      "speed": 2.6,
+      "sta": 9,
+      "mindmg": 110,
+      "maxdmg": 205,
+      "crit": 1,
+      "ap": null
+    },
+    {
       "id": 21244,
       "type": "Dagger",
       "slot": "onehand",
@@ -27567,6 +28769,19 @@ var gear = {
       "sta": 12,
       "mindmg": 89,
       "maxdmg": 166
+    },
+    {
+      "id": 21392,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Sickle of Unyielding Strength",
+      "speed": 2.1,
+      "agi": 6,
+      "str": 15,
+      "sta": 9,
+      "mindmg": 75,
+      "maxdmg": 141
     },
     {
       "id": 21520,
@@ -27719,6 +28934,18 @@ var gear = {
       "crit": 1,
       "hit": 1,
       "ap": null
+    },
+    {
+      "id": 22816,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "name": "Hatchet of Sundered Bone",
+      "speed": 2.6,
+      "mindmg": 119,
+      "maxdmg": 221,
+      "ap": null,
+      "crit": 1
     },
     {
       "id": 23014,
