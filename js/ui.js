@@ -919,7 +919,6 @@ SIM.UI = {
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
                                 <th>Name</th>
-                                <th>Source</th>
                                 <th>Sta</th>
                                 <th>Str</th>
                                 <th>Agi</th>
@@ -944,7 +943,7 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            if (item.r > level || item.r < (level -20)) {
+            if (item.r > level || item.r < (level -20) || item.r == 0) {
                 item.selected = false;
                 continue;
             }
@@ -982,8 +981,7 @@ SIM.UI = {
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
 
-            table +=`<td>${item.source}</td>
-                        <td>${item.sta || ''}</td>
+            table +=`<td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
@@ -1053,7 +1051,6 @@ SIM.UI = {
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
                                 <th>Name</th>
-                                <th>Source</th>
                                 <th>Sta</th>
                                 <th>Str</th>
                                 <th>Agi</th>
@@ -1074,7 +1071,7 @@ SIM.UI = {
 
         for (let item of gear[type]) {
             
-            if (item.r > level || item.r < (level -20)) {
+            if (item.r > level || (item.r < (level -20) && item.r !== 0)) {
                 item.selected = false;
                 continue;
             }
@@ -1114,8 +1111,7 @@ SIM.UI = {
 
 
             var resistCheckList = SIM.UI.resistCheckList();
-            table += `<td>${item.source || ''}</td>
-                        <td>${item.sta || ''}</td>
+            table += `<td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>

@@ -1,0 +1,346 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Warrior DPS Sim</title>
+
+  <link href="dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="rawdata.js"></script>
+</head>
+<body>
+
+  <textarea style="width: 100%; height: 100vh;">
+
+    </textarea>
+
+    <script>
+      var gear = {
+          head: [],
+          neck: [],
+          shoulder: [],
+          back: [],
+          chest: [],
+          wrist: [],
+          hands: [],
+          waist: [],
+          legs: [],
+          feet: [],
+          finger1: [],
+          finger2: [],
+          trinket1: [],
+          trinket2: [],
+          ranged: [],
+          mainhand: [],
+          offhand: [],
+          twohand: []
+        };
+      $(document).ready(function () {
+
+        // midnight mace bonus dmg
+
+        var loadItems = function(data) {
+          var rows = data.split(/\r?\n|\r/);
+          rows.forEach(row => {
+            let obj = {};
+            let fields = row.split(',');
+            obj.id = parseInt(fields[0]);
+            obj.type = getType(fields[1],fields[2]);
+            if (!obj.type) return;
+            obj.slot = getSlot(fields[4]);
+            if (!obj.slot) return;
+            let sparse = getSparse(obj.id);
+            if (!sparse) { 
+              console.log(obj.id + " has no sparse"); 
+              return;
+            }
+            if (sparse.classFlag && !(1 & sparse.classFlag)) return; // warrior cant use
+            if (obj.type == "Cloth" && obj.slot != "back") return;
+            obj.r = parseInt(fields[5]);
+            if (!obj.r) obj.r = getQuestLevel(obj.id);
+            if (!obj.r) obj.r = 0;
+            obj.name = sparse.n;
+            if (sparse.s) obj.speed = (sparse.s / 1000);
+            if (sparse.agi) obj.agi = sparse.agi;
+            if (sparse.str) obj.str = sparse.str;
+            if (sparse.sta) obj.sta = sparse.sta;
+            if (sparse.min) obj.mindmg = sparse.min;
+            if (sparse.max) obj.maxdmg = sparse.max;
+
+            let effects = getEffects(obj.id);
+            if (effects.length) {
+              effects.forEach(e => {
+                if (/Attack Power \d+/.test(e)) obj.ap = parseInt(e.replace("Attack Power ",""));
+                let hit = e.match(/Increased Hit Chance (\d+)/);
+                if (hit) obj.hit = parseInt(hit[1]);
+                let crit = e.match(/Increased Critical (\d+)/);
+                if (crit) obj.crit = parseInt(crit[1]);
+              })
+            }
+
+            if (sparse.randenchant) {
+              let suff = getItemSuffixes(obj.id);
+              if (!suff.s) return;
+              suff.s.forEach(s => {
+                if (/[+-]\d+ Strength/.test(s)) { obj.str = parseInt(s); }
+                if (/[+-]\d+ Agility/.test(s)) { obj.agi = parseInt(s); }
+              });
+              obj.name += " of the Tiger";
+              obj.rand = suff.id;
+            }
+
+            if (!!(!obj.ppm && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit) && 
+                  obj.id !== 21568 && obj.id !== 21567) return;
+
+            if (obj.slot == "finger") {
+              gear["finger1"].push(obj);
+              gear["finger2"].push(obj);
+            }
+            else if (obj.slot == "trinket") {
+              gear["trinket1"].push(obj);
+              gear["trinket2"].push(obj);
+            }
+            else if (obj.slot == "onehand") {
+              gear["mainhand"].push(obj);
+              gear["offhand"].push(obj);
+            }
+            else {
+              gear[obj.slot].push(obj);
+            }
+          });
+
+          document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+
+        }
+
+        var getItemSuffixes = function(id) {
+          let result = [], result2 = [];
+          let ench;
+          for(let j = 0; j < item_template.length; j++) {
+            if (item_template[j][0] == id)
+              ench = item_template[j][1];
+          }
+          for(let i = 0; i < item_enchantment_template.length; i++) {
+            if (item_enchantment_template[i][0] == ench) {
+              result.push(item_enchantment_template[i][1]);
+            }
+          }
+          let high = { id: 0, s: ''};
+          for(let x = 0; x < result.length; x++) {
+            for(let y = 0; y < suffixes.length; y++) {
+              if (result[x] >= 669 && result[x] <= 753) {
+                if (suffixes[y].id == result[x] && suffixes[y].id > high.id) {
+                  high = suffixes[y];
+                }
+              }
+            }
+          }
+          return high;
+        }
+
+        var itemSparse = [];
+        var loadItemSparse = function(data) {
+          var rows = data.split(/\r?\n|\r/);
+          rows.forEach(row => {
+            let fields = row.split(',');
+            if (fields[0] == "ID") return;
+            itemSparse.push({
+              id: fields[0],
+              n: fields[6] && fields[6].replaceAll("\"",""),
+              s: parseInt(fields[64]),
+              min: parseInt(fields[72]),
+              max: parseInt(fields[77]),
+              str: getStat(fields, 4),
+              agi: getStat(fields, 3),
+              sta: getStat(fields, 7),
+              classFlag: parseInt(fields[69]),
+              randenchant: parseInt(fields[71]),
+            });
+          });
+        }
+        var getStat = function(fields, type) {
+          let stat = 0;
+          if (fields[113] == type) stat += parseInt(fields[90]);
+          if (fields[114] == type) stat += parseInt(fields[91]);
+          if (fields[115] == type) stat += parseInt(fields[92]);
+          if (fields[116] == type) stat += parseInt(fields[93]);
+          if (fields[117] == type) stat += parseInt(fields[94]);
+          if (fields[118] == type) stat += parseInt(fields[95]);
+          if (fields[119] == type) stat += parseInt(fields[96]);
+          if (fields[120] == type) stat += parseInt(fields[97]);
+          if (fields[121] == type) stat += parseInt(fields[98]);
+          if (fields[122] == type) stat += parseInt(fields[99]);
+          if (fields[123] == type) stat += parseInt(fields[100]);
+          return stat;
+        }
+        var getSparse = function(id) {
+          for(let r of itemSparse) {
+            if (r.id == id) { 
+              return r;
+            }
+          }
+        }
+
+        var itemEffect = [];
+        var loadItemEffect = function(data) {
+          var rows = data.split(/\r?\n|\r/);
+          rows.forEach(row => {
+            let fields = row.split(',');
+            if (fields[0] == "ID") return;
+            itemEffect.push({
+              id: parseInt(fields[9]),
+              s: parseInt(fields[7]),
+            });
+          });
+        }
+        var getEffects = function(id) {
+          let effects = [];
+          for(let r of itemEffect) {
+            if (r.id == id) { 
+              let spellName = getSpellName(r.s);
+              if (!spellName) {
+                console.log("spell name not found " + r.s);
+              }
+              else {
+                effects.push(spellName);
+              }
+            }
+          }
+          return effects;
+        }
+
+        var spellNames = [];
+        var loadSpellName = function(data) {
+          var rows = data.split(/\r?\n|\r/);
+          rows.forEach(row => {
+            let fields = row.split(',');
+            if (fields[0] == "ID") return;
+            spellNames.push({
+              id: parseInt(fields[0]),
+              n: fields[1],
+            });
+          });
+        }
+        var getSpellName = function(id) {
+          for(let r of spellNames) {
+            if (r.id == id) 
+              return r.n;
+          }
+        }
+
+        $.ajax({
+          url: 'Item.csv',
+          dataType: 'text',
+        }).done((data) => {
+          setTimeout(function() {
+            loadItems(data);
+          },100);
+        });
+
+        $.ajax({
+          url: 'ItemSparse.csv',
+          dataType: 'text',
+        }).done(loadItemSparse);
+
+        $.ajax({
+          url: 'ItemEffect.csv',
+          dataType: 'text',
+        }).done(loadItemEffect);
+
+        $.ajax({
+          url: 'SpellName.csv',
+          dataType: 'text',
+        }).done(loadSpellName);
+
+        var getSlot = function(id) {
+          switch(id) {
+            case "1": return "head";
+            case "2": return "neck";
+            case "3": return "shoulder";
+            case "5": return "chest";
+            case "6": return "waist";
+            case "7": return "legs";
+            case "8": return "feet";
+            case "9": return "wrist";
+            case "10": return "hands";
+            case "11": return "finger";
+            case "12": return "trinket";
+            case "13": return "onehand";
+            case "14": return "offhand";
+            case "15": return "ranged";
+            case "16": return "back";
+            case "17": return "twohand";
+            case "20": return "chest";
+            case "21": return "mainhand";
+            case "21": return "offhand";
+            case "26": return "ranged";
+          }
+        }
+
+        var getType = function(cl, subcl) {
+          // Armor
+          if (cl == "4") {
+            switch(subcl) {
+              case "0": return "Miscellaneous";
+              case "1": return "Cloth";
+              case "2": return "Leather";
+              case "3": return "Mail";
+              case "4": return "Plate";
+            }
+          }
+          if (cl == "2") { // Weapon
+            switch(subcl) {
+              case "1": return "Axe";
+              case "2": return "Bows";
+              case "3": return "Guns";
+              case "4": return "Mace";
+              case "5": return "Mace";
+              case "6": return "Polearm";
+              case "7": return "Sword";
+              case "8": return "Sword";
+              case "10": return "Staff";
+              case "13": return "Fist";
+              case "14": return "Miscellaneous";
+              case "15": return "Dagger";
+            }
+          }
+        }
+
+        return;
+
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear25, null, 2) + "; var enchant = " + JSON.stringify(enchant25, null, 2) + "; var sets = [];";
+      });
+    </script>
+
+
+<script>
+
+  var getQuestLevel = function(id) {
+    let questId;
+    if (id == 22016)  return 58;
+    if (id == 22101)  return 58;
+    if (id == 22093)  return 58;
+    if (id == 10781)  return 46;
+    if (id == 10780)  return 46;
+
+    for(let i = 0; i < rawdata.length; i++)
+      if (rawdata[i].itemId == id && rawdata[i].source && rawdata[i].source.quests) 
+        questId = rawdata[i].source.quests[0].questId;
+    if (!questId) return 0;
+    for(let i = 0; i < questLevel.length; i++) {
+      if (questLevel[i][0] == questId) return questLevel[i][1];
+    }
+    return 0;
+  };
+
+
+</script>
+
+</body>
+
+</html>
