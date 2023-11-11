@@ -629,4 +629,28 @@ var buffs = [
       minlevel: 60,
       other: true,
    },
+
+   {
+      id: 430947,
+      spellid: true,
+      name: "Boon of Blackfathom",
+      iconname: "Achievement_boss_bazil_akumai",
+      group: "",
+      ap: 20,
+      crit: 2,
+      spellcrit: 2,
+      worldbuff: true,
+   },
+   {
+      id: 430352,
+      spellid: true,
+      name: "Ashenvale Rallying Cry",
+      iconname: "spell_misc_warsongfocus",
+      group: "",
+      dmgmod: 5,
+      worldbuff: true,
+   },
+
+
+   
 ];

@@ -1237,6 +1237,7 @@ SIM.UI = {
                                 // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
                                 // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
                                 `<th>Crit</th>
+                                <th>Hit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -1264,6 +1265,7 @@ SIM.UI = {
                         // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
                         // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         `<td>${item.crit || ''}</td>
+                        <td>${item.hit || ''}</td>
                         <td>${item.dmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
