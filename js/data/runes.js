@@ -17,7 +17,7 @@ var runes = {
      {
          id: 402911,
          name: 'Raging Blow',
-         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.<BR/>[ASSUMED NO SWING RESET, 8 SECOND CD AND NO RAGE COST]",
+         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.",
          iconname: 'Raging-Blow',
          enable: 402911
      },
@@ -81,7 +81,7 @@ var runes = {
      {
          id: 429765,
          name: 'Quick Strike',
-         description: "A reckless instant melee attack with your two-handed weapon dealing X physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS, ASSUMED X = 66, SCALES WITH AP, NO CD, 20 RAGE COST, NO SWING RESET, NO INTERACTION WITH HS QUEUE]",
+         description: "A reckless instant melee attack with your two-handed weapon dealing (Attack power * 15 / 100) to (Attack power * 25 / 100) physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS DOES IT INTERACT WITH HS QUEUE?]",
          iconname: 'inv_axe_03',
          twohandonly: true,
          enable: 429765,

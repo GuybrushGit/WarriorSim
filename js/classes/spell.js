@@ -327,10 +327,7 @@ class QuickStrike extends Spell {
         this.cooldown = 0;
     }
     dmg() {
-        let dmg;
-        if (this.player.weaponrng) dmg = 66;
-        else dmg = 66;
-        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        return ~~rng(this.player.stats.ap * 0.15, this.player.stats.ap * 0.25);
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
