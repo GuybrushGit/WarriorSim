@@ -1329,3 +1329,22 @@ class Vibroblade extends Aura {
         }
     }
 }
+
+class VoidMadness extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Void Madness');
+        this.duration = 10;
+        this.mult_stats = { haste: 10 };
+    }
+    use() {
+        this.player.timer = 1500;
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateHaste();
+        if (log) this.player.log(`${this.name} applied`);
+    }
+    canUse() {
+        return this.firstuse && !this.player.itemtimer && !this.timer && !this.player.timer;
+    }
+}
