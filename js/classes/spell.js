@@ -1305,3 +1305,26 @@ class Rend extends Aura {
         return !this.timer && !this.player.timer && this.player.rage >= this.cost;
     }
 }
+
+class Vibroblade extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 30;
+        this.armor = 100;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateArmorReduction();
+        if (log) this.player.log(`${this.name} applied`);
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateArmorReduction();
+            if (log) this.player.log(`${this.name} removed`);
+        }
+    }
+}

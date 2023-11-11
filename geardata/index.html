@@ -70,7 +70,7 @@
 
           if (!d.slot) return;
 
-          if (d.subclass == "subclass") return;
+          if (d.subclass == "Shield") return;
           if (d.class != "Weapon" && d.class != "Armor") return;
           if (d.quality == "Common" || d.quality == "Poor") return;
           if (d.slot == "Held In Off-hand" || d.slot == "Non-equippable" || d.slot == "Relic" || d.slot == "Shirt" || d.slot == "Tabard" || d.slot == "Thrown") return;
@@ -78,8 +78,6 @@
           if (d.requiredLevel == 0 && d.source && d.source.quests) {
             d.requiredLevel = getQuestLevel(d.source.quests[0].questId);
           }
-
-          //if (d.requiredLevel > 25) return;
 
           let slot = d.slot.toLowerCase();
           slot = slot.replace(" ","");
@@ -96,6 +94,7 @@
 
           let brek = false;
           let randenchant = false;
+          let chance = false;
           d.tooltip.forEach(tt => {
             if (/[+-]\d+ Stamina/.test(tt.label)) obj.sta = parseInt(tt.label);
             if (/[+-]\d+ Strength/.test(tt.label)) obj.str = parseInt(tt.label);
@@ -107,6 +106,7 @@
             if (crit) obj.crit = parseInt(crit[1]);
             if (/Classes: \w*/.test(tt.label) && tt.label.indexOf("Warrior") == -1) brek = true;
             if (tt.label == "<Random enchantment>") randenchant = true;
+            if (tt.label.indexOf("Chance on hit") > -1) { chance = tt.label; brek = true; }
 
             let dmg = tt.label.match(/(\d+) - (\d+) Damage/);
             if (dmg) {
@@ -118,8 +118,7 @@
             if (speed) obj.speed = parseFloat(speed[1]);
             
           });
-          if (brek) return;
-
+          
           if (randenchant) {
             let suff = getItemSuffixes(obj.id); // only gets highest tiger
             if (!suff.s) return;
@@ -133,7 +132,17 @@
             obj.rand = suff.id;
           }
 
-          // if (!!(!obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit)) return;
+          // Exceptions
+          if (obj.id == 9485 || obj.id == 9465) { // Vibroblade
+            obj.procspell = "Vibroblade";
+            obj.ppm = 1;
+            brek = false;
+          }
+
+          if (brek) return;
+          if (!!(!obj.ppm && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit) && 
+                  obj.id !== 21568 && obj.id !== 21567) return;
+
           if (slot == "finger") {
             gear25["finger1"].push(obj);
             gear25["finger2"].push(obj);
