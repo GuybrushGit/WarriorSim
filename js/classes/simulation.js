@@ -19,7 +19,7 @@ const TYPE = {
 
 class SimulationWorker {
     constructor(callback_finished, callback_update, callback_error) {
-        this.worker = new Worker('/dist/js/sim-worker.min.js');
+        this.worker = new Worker('./dist/js/sim-worker.min.js');
         this.worker.onerror = (...args) => {
             callback_error(...args);
             this.worker.terminate();

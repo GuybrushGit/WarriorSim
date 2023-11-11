@@ -5,60 +5,34 @@
   <meta name="viewport" content="width=device-width">
   <title>Warrior DPS Sim</title>
 
-  <link href="/dist/css/theme.default.min.css" rel="stylesheet">
-  <link href="/dist/css/style.css" rel="stylesheet">
+  <link href="dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
-  <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="/dist/js/libs/jquery.tablesorter.min.js"></script>
-  <script type="text/javascript" src="/dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
-  <script type="text/javascript" src="/dist/js/libs/Chart.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
+  <script type="text/javascript" src="dist/js/libs/Chart.min.js"></script>
 
-  <script type="text/javascript" src="/dist/js/classes/player.min.js"></script>
-  <script type="text/javascript" src="/dist/js/classes/simulation.min.js"></script>
-  <script type="text/javascript" src="/dist/js/classes/spell.min.js"></script>
-  <script type="text/javascript" src="/dist/js/classes/weapon.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/gear_sod.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/runes.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/levelstats.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/buffs.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/spells.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/talents.min.js"></script>
-  <script type="text/javascript" src="/dist/js/data/session_sod.min.js"></script>
-  <script type="text/javascript" src="/dist/js/globals.min.js"></script>
-  <script type="text/javascript" src="/dist/js/settings.min.js"></script>
-  <script type="text/javascript" src="/dist/js/stats.min.js"></script>
-  <script type="text/javascript" src="/dist/js/ui.min.js"></script>
+  <script type="text/javascript" src="dist/js/classes/player.min.js"></script>
+  <script type="text/javascript" src="dist/js/classes/simulation.min.js"></script>
+  <script type="text/javascript" src="dist/js/classes/spell.min.js"></script>
+  <script type="text/javascript" src="dist/js/classes/weapon.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/gear.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/levelstats.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/buffs.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/spells.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/talents.min.js"></script>
+  <script type="text/javascript" src="dist/js/data/session.min.js"></script>
+  <script type="text/javascript" src="dist/js/globals.min.js"></script>
+  <script type="text/javascript" src="dist/js/settings.min.js"></script>
+  <script type="text/javascript" src="dist/js/stats.min.js"></script>
+  <script type="text/javascript" src="dist/js/ui.min.js"></script>
 
   <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
   <script src="https://wow.zamimg.com/widgets/power.js"></script>
-  <script>var mode = "sod";</script>
-<!-- 
-  TODO 
-
-  default session
-  enchants
-  sunder and devastate
-  check rend scaling
-  improve profiles
-
-  later:
-  review adjacents
-  revamp filters
-  resists
-  crusaders
-  fix windfury ranks
-  aq books
-  scrape wowhead
-  fix rune ids
-  runes
-  buffs
-  spells
-  enchants
-  talents
-
--->
+  <script>var mode = "classic";</script>
 
 </head>
 <body>
@@ -66,8 +40,8 @@
 
   <section class="sidebar">
     <div class="tabs">
-      <a href="/" class="btn js-classic">Classic</a>
-      <a href="/sod/" class="btn js-sod active">Season of Discovery</a>
+      <a href="/classic.html" class="btn js-classic active">Classic</a>
+      <a href="/" class="btn js-sod">Season of Discovery</a>
     </div>
     
     <div class="bg"></div>
@@ -162,7 +136,6 @@
       <div class="manual"><a href="https://docs.google.com/document/d/1-ugglMDHqIQlEDiE2z9G7zuI-kgyvb2kvgPobWbcxy0/edit" target="_blank">User Manual</a></div>
       <div class="manual"><a href="https://github.com/GuybrushGit/WarriorSim" target="_blank">Github</a></div>
     </div>
-    
   </section>
 
   <section class="settings">
@@ -174,13 +147,13 @@
         <ul>
           <li>
             <label>Level</label>
-            <input type="range" name="slider-level" min="1" max="60" value="25" class="slider">
-            <input type="text" name="level" value="25" data-numberonly="true">
+            <input type="range" name="slider-level" min="1" max="60" value="60" class="slider">
+            <input type="text" name="level" value="60" data-numberonly="true">
           </li>
           <li>
             <label>Target Level</label>
-            <input type="range"  name="slider-targetlevel" min="1" max="63" value="28" class="slider">
-            <input type="text" name="targetlevel" value="28" data-numberonly="true">
+            <input type="range"  name="slider-targetlevel" min="1" max="63" value="63" class="slider">
+            <input type="text" name="targetlevel" value="63" data-numberonly="true">
           </li>
           <li>
             <label>Race</label>
@@ -440,7 +413,7 @@
         <li data-type="trinket1"><p>Trinket 1</p></li>
         <li data-type="trinket2"><p>Trinket 2</p></li>
         <li data-type="ranged"><p>Ranged</p></li>
-        <!-- <li data-type="custom"><p>Custom</p></li> -->
+        <li data-type="custom"><p>Custom</p></li>
       </ul>
     </nav>
 

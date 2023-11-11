@@ -320,7 +320,7 @@ SIM.SETTINGS = {
             }
 
             let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
-            <img src="/dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
+            <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
@@ -436,7 +436,7 @@ SIM.SETTINGS = {
             let group = buff.group ? `data-group="${buff.group}"` : '';
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"` : '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
-                            <img src="/dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
+                            <img src="dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
                             <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             if (buff.worldbuff) worldbuffs += html;
@@ -462,7 +462,7 @@ SIM.SETTINGS = {
             for (let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
             for (let talent of tree.t) {
                 let div = $('<div class="icon" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
-                div.html('<img src="/dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
+                div.html('<img src="dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
                 if (talent.c >= talent.m) div.addClass('maxed');
                 div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);

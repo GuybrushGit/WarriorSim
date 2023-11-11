@@ -46,7 +46,7 @@ function getGlobalsDelta() {
         gear: _gear,
         enchant: _enchant,
         runes: _runes,
-        sod: window.location.href.indexOf("sod") > -1
+        sod: window.location.href.indexOf("classic.html") == -1
     }
 }
 
