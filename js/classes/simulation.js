@@ -388,7 +388,7 @@ class Simulation {
                 if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs &&
                     player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                     this.player.nextswinghs = false;
-                    if (log) this.player.log(`Heroic Strike unqueued`);
+                    //if (log) this.player.log(`Heroic Strike unqueued`);
                 }
             }
 
