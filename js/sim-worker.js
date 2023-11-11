@@ -3,9 +3,9 @@ importScripts(
     './data/levelstats.min.js',
     './data/spells.min.js',
     './data/talents.min.js',
-    './classes/player.js',
-    './classes/simulation.js',
-    './classes/spell.js',
+    './classes/player.min.js',
+    './classes/simulation.min.js',
+    './classes/spell.min.js',
     './classes/weapon.min.js',
     './globals.min.js',
 );

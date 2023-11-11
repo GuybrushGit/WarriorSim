@@ -9,7 +9,7 @@ gulp.task("js", function () {
         .src(["js/**/*.js", "lib/*.mjs"])
         .pipe(
             minify({
-                noSource: false,
+                noSource: true,
                 ext: {
                     min: ".min.js",
                 },
