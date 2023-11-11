@@ -114,6 +114,31 @@
             }
           });
 
+
+          // custom items
+          gear["chest"].push({
+            id: 210794,
+            type: "Mail",
+            slot: "chest",
+            name: "Shifting Silver Breastplate",
+            str: 14,
+            sta: 6,
+            hit: 1,
+            r: 25,
+          });
+          gear["hands"].push({
+            id: 211423,
+            type: "Leather",
+            slot: "hands",
+            name: "Void-Touched Leather Gloves",
+            agi: 6,
+            sta: 6,
+            hit: 1,
+            r: 25,
+          });
+
+          
+
           document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
 
         }

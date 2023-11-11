@@ -54,7 +54,7 @@ var runes = {
       {
          id: 900008,
          name: 'Victory Rush',
-         description: "Instantly attack the target causing X damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.<BR/>[ASSUMED X = Attack power * 45 / 100]",
+         description: "Instantly attack the target causing Attack power * 45 / 100 damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
          iconname: 'Victory-Rush',
          enable: 900008,
      },

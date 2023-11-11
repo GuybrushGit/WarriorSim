@@ -5,7 +5,7 @@ var buffs = [
       name: "Defensive Stance",
       iconname: "ability_warrior_defensivestance",
       dmgmod: -10,
-      group: "zerkstance",
+      group: "stance",
       minlevel: 10,
    },
    {
@@ -14,8 +14,17 @@ var buffs = [
       name: "Berserker Stance",
       iconname: "Ability_Racial_Avatar",
       crit: 3,
-      group: "zerkstance",
+      group: "stance",
       minlevel: 30,
+   },
+   {
+      id: 413479,
+      spellid: true,
+      name: "Gladiator Stance",
+      iconname: "inv_helmet_08",
+      dmgmod: 10,
+      group: "stance",
+      minlevel: 1,
    },
    {
       id: 6673,
@@ -341,7 +350,7 @@ var buffs = [
       spellid: true,
       name: "Windfury Totem",
       iconname: "spell_nature_windfury",
-      group: "",
+      group: "windfury",
       wfap: 229,
       minlevel: 42,
       maxlevel: 51,
@@ -351,7 +360,7 @@ var buffs = [
       spellid: true,
       name: "Windfury Totem",
       iconname: "spell_nature_windfury",
-      group: "",
+      group: "windfury",
       wfap: 315,
       minlevel: 52
    },
@@ -413,6 +422,25 @@ var buffs = [
       str: 61,
       minlevel: 52,
    },
+   {
+      id: 425600,
+      spellid: true,
+      name: "Horn of Lordaeron",
+      iconname: "inv_misc_horn_03",
+      str: 6,
+      agi: 6,
+   },
+   {
+      id: 407975,
+      spellid: true,
+      name: "Wild Strikes",
+      iconname: "ability_druid_swipe",
+      group: "windfury",
+      wfapperc: 20,
+   },
+
+   
+   
    {
       id: 8410,
       name: "R.O.I.D.S.",

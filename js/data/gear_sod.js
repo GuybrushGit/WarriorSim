@@ -7991,6 +7991,16 @@ var gear = {
       "str": 21,
       "sta": 23,
       "crit": 1
+    },
+    {
+      "id": 210794,
+      "type": "Mail",
+      "slot": "chest",
+      "name": "Shifting Silver Breastplate",
+      "str": 14,
+      "sta": 6,
+      "hit": 1,
+      "r": 25
     }
   ],
   "wrist": [
@@ -12821,6 +12831,16 @@ var gear = {
       "name": "Knight-Lieutenant's Plate Gauntlets",
       "str": 17,
       "sta": 17
+    },
+    {
+      "id": 211423,
+      "type": "Leather",
+      "slot": "hands",
+      "name": "Void-Touched Leather Gloves",
+      "agi": 6,
+      "sta": 6,
+      "hit": 1,
+      "r": 25
     }
   ],
   "waist": [

@@ -44,7 +44,7 @@ class Spell {
     step(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            //if (log) this.player.log(`${this.name} off cooldown`);
+            if (log) this.player.log(`${this.name} off cooldown`);
         }
         else {
             this.timer -= a;
@@ -110,7 +110,7 @@ class Overpower extends Spell {
         this.player.timer = 1500;
         this.player.dodgetimer = 0;
         this.timer = this.cooldown * 1000;
-        if (this.player.zerkstance) {
+        if (this.player.stance && !this.player.gladstance) {
             this.player.auras.battlestance.use();
             this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);
         }
@@ -153,7 +153,7 @@ class Execute extends Spell {
             this.timer = 0;
             if (this.result != RESULT.MISS && this.result != RESULT.DODGE)
                 this.player.rage = 0;
-            //if (log) this.player.log(`Execute batch (${Object.keys(RESULT)[this.result]})`);
+            if (log) this.player.log(`Execute batch (${Object.keys(RESULT)[this.result]})`);
         }
         else {
             this.timer -= a;
@@ -377,6 +377,7 @@ class Aura {
         this.useonly = true;
 
         let spell = spells.filter(s => s.id == this.id)[0];
+        if (!spell) spell = buffs.filter(s => s.id == this.id)[0];
         if (!spell) return;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         if (spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
@@ -385,7 +386,9 @@ class Aura {
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
         if (spell.procblock) this.procblock = spell.procblock;
-        if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);;
+        if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);
+        if (spell.wfap) this.wfap = parseInt(spell.wfap);
+        if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
 
     }
     use() {
@@ -393,7 +396,7 @@ class Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAuras();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -401,7 +404,7 @@ class Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateAuras();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     end() {
@@ -423,7 +426,7 @@ class Recklessness extends Aura {
         this.player.timer = 1500;
         this.starttimer = step;
         this.player.updateAuras();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && step >= this.usestep;
@@ -442,7 +445,7 @@ class Flurry extends Aura {
             this.uptime += step - this.starttimer;
             this.timer = 0;
             this.player.updateHaste();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     use() {
@@ -452,7 +455,7 @@ class Flurry extends Aura {
             this.player.updateHaste();
         }
         this.stacks = 3;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
 }
 
@@ -481,7 +484,7 @@ class DeepWounds extends Aura {
                     this.player.auras.consumedrage.use();
             }
 
-            //if (log) this.player.log(`${this.name} tick for ${~~(dmg / 4)}`);
+            if (log) this.player.log(`${this.name} tick for ${~~(dmg / 4)}`);
 
             this.nexttick += 3000;
         }
@@ -497,7 +500,7 @@ class DeepWounds extends Aura {
         this.nexttick = step + 3000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
 }
 
@@ -512,14 +515,14 @@ class Crusader extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateStrength();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateStrength();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -536,7 +539,7 @@ class Cloudkeeper extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAuras();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.player.itemtimer && !this.timer && !this.player.timer;
@@ -554,7 +557,7 @@ class Felstriker extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.update();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -562,7 +565,7 @@ class Felstriker extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.update();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -580,7 +583,7 @@ class DeathWish extends Aura {
         this.player.timer = 1500;
         this.starttimer = step;
         this.player.updateDmgMod();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && this.player.rage >= 10 && (step >= this.usestep ||
@@ -593,7 +596,7 @@ class DeathWish extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateDmgMod();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -612,7 +615,7 @@ class BattleStance extends Aura {
             this.firstuse = false;
             this.player.updateAuras();
             this.player.rage = Math.min(this.player.rage, this.player.talents.rageretained);
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -632,7 +635,7 @@ class MightyRagePotion extends Aura {
         this.player.updateStrength();
         if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
             this.player.auras.consumedrage.use();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && (step >= this.usestep ||
@@ -645,7 +648,7 @@ class MightyRagePotion extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateStrength();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -654,7 +657,7 @@ class BloodFury extends Aura {
     constructor(player, id) {
         super(player, id, 'Blood Fury');
         this.duration = 15;
-        this.mult_stats = { apmod: 25 };
+        this.mult_stats = { baseapmod: 25 };
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -662,7 +665,7 @@ class BloodFury extends Aura {
         this.starttimer = step;
         this.player.timer = 1500;
         this.player.updateAuras();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -670,7 +673,7 @@ class BloodFury extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateAuras();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     canUse() {
@@ -690,7 +693,7 @@ class Berserking extends Aura {
         this.player.rage -= 5;
         this.player.timer = 1500;
         this.player.updateHaste();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -698,7 +701,7 @@ class Berserking extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     canUse() {
@@ -718,7 +721,7 @@ class Empyrean extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -726,7 +729,7 @@ class Empyrean extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -743,7 +746,7 @@ class Eskhandar extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -751,7 +754,7 @@ class Eskhandar extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -768,7 +771,7 @@ class Zeal extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateBonusDmg();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -776,7 +779,7 @@ class Zeal extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateBonusDmg();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -795,7 +798,7 @@ class Annihilator extends Aura {
         this.starttimer = step;
         this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
         this.player.updateArmorReduction();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -803,7 +806,7 @@ class Annihilator extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -821,7 +824,7 @@ class Rivenspike extends Aura {
         this.starttimer = step;
         this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
         this.player.updateArmorReduction();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -829,7 +832,7 @@ class Rivenspike extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -847,7 +850,7 @@ class Bonereaver extends Aura {
         this.starttimer = step;
         this.stacks = this.stacks > 2 ? 3 : this.stacks + 1;
         this.player.updateArmorReduction();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -855,7 +858,7 @@ class Bonereaver extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -890,7 +893,7 @@ class Pummeler extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -898,7 +901,7 @@ class Pummeler extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateHaste();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     canUse() {
@@ -909,7 +912,8 @@ class Pummeler extends Aura {
 class Windfury extends Aura {
     constructor(player, id) {
         super(player, id);
-        this.stats = { ap: 315 };
+        if (this.wfap) this.stats = { ap: this.wfap };
+        if (this.wfapperc) this.mult_stats = { apmod: this.wfapperc };
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -919,7 +923,7 @@ class Windfury extends Aura {
         this.stacks = 2;
         this.player.updateAP();
         this.player.extraattacks++;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     proc() {
         if (this.stacks < 2) {
@@ -940,7 +944,7 @@ class Windfury extends Aura {
             this.stacks = 0;
             this.firstuse = false;
             this.player.updateAP();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -958,7 +962,7 @@ class Swarmguard extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.stacks = 0;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && step >= this.usestep;
@@ -966,7 +970,7 @@ class Swarmguard extends Aura {
     proc() {
         this.stacks = Math.min(this.stacks + 1, 6);
         this.player.updateArmorReduction();
-        //if (log) this.player.log(`${this.name} proc`);
+        if (log) this.player.log(`${this.name} proc`);
     }
     step() {
         if (step >= this.timer) {
@@ -975,7 +979,7 @@ class Swarmguard extends Aura {
             this.stacks = 0;
             this.firstuse = false;
             this.player.updateArmorReduction();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -993,7 +997,7 @@ class Flask extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAuras();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
@@ -1013,7 +1017,7 @@ class Slayer extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAP();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
@@ -1033,7 +1037,7 @@ class Spider extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
@@ -1052,7 +1056,7 @@ class Earthstrike extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAP();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
@@ -1073,7 +1077,7 @@ class Gabbar extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAP();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
@@ -1082,14 +1086,14 @@ class Gabbar extends Aura {
         if ((step - this.starttimer) % 2000 == 0) {
             this.stats.ap += 65;
             this.player.updateAP();
-            //if (log) this.player.log(`${this.name} tick`);
+            if (log) this.player.log(`${this.name} tick`);
         }
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.firstuse = false;
             this.player.updateAP();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -1113,19 +1117,19 @@ class BloodrageAura extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if ((step - this.starttimer) % 1000 == 0) {
             this.player.rage = Math.min(this.player.rage + 1, 100);
             if (this.player.auras.consumedrage && this.player.rage > 80 && this.player.rage <= 81)
                 this.player.auras.consumedrage.use();
-            //if (log) this.player.log(`${this.name} tick`);
+            if (log) this.player.log(`${this.name} tick`);
         }
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
         return this.timer;
     }
@@ -1144,7 +1148,7 @@ class Zandalarian extends Aura {
         this.starttimer = step;
         this.stats.bonusdmg = 40;
         this.player.updateBonusDmg();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     proc() {
         this.stats.bonusdmg -= 2;
@@ -1164,7 +1168,7 @@ class Zandalarian extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.player.updateBonusDmg();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -1189,14 +1193,14 @@ class Flagellation extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateDmgMod();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateDmgMod();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -1211,13 +1215,13 @@ class BerserkerRageAura extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -1234,7 +1238,7 @@ class ConsumedRage extends Aura {
             this.uptime += step - this.starttimer;
             this.timer = 0;
             this.player.updateDmgMod();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
     use() {
@@ -1243,7 +1247,7 @@ class ConsumedRage extends Aura {
         this.starttimer = step;
         this.stacks = 12;
         this.player.updateDmgMod();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
@@ -1252,7 +1256,7 @@ class ConsumedRage extends Aura {
             this.stacks = 0;
             this.firstuse = false;
             this.player.updateDmgMod();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }
@@ -1281,7 +1285,7 @@ class Rend extends Aura {
                     this.player.auras.consumedrage.use();
             }
 
-            //if (log) this.player.log(`${this.name} tick for ${~~(dmg / 3)}`);
+            if (log) this.player.log(`${this.name} tick for ${~~(dmg / 3)}`);
 
             this.nexttick += 3000;
             this.stacks--;
@@ -1299,7 +1303,7 @@ class Rend extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.stacks = 3;
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     canUse() {
         return !this.timer && !this.player.timer && this.player.rage >= this.cost;
@@ -1317,14 +1321,14 @@ class Vibroblade extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateArmorReduction();
-        //if (log) this.player.log(`${this.name} applied`);
+        if (log) this.player.log(`${this.name} applied`);
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateArmorReduction();
-            //if (log) this.player.log(`${this.name} removed`);
+            if (log) this.player.log(`${this.name} removed`);
         }
     }
 }

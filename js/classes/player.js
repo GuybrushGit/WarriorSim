@@ -52,6 +52,7 @@ class Player {
             agimod: 1,
             dmgmod: 1,
             apmod: 1,
+            baseapmod: 1,
             resist: {
                 shadow: 0,
                 arcane: 0,
@@ -374,12 +375,14 @@ class Player {
                     shoutap = ~~(shoutap * (1 + this.talents.impbattleshout));
                     apbonus = shoutap - buff.ap;
                 }
-                if (buff.group == "zerkstance")
-                    this.zerkstance = true;
+                if (buff.group == "stance")
+                    this.stance = true;
                 if (buff.group == "vaelbuff")
                     this.vaelbuff = true;
                 if (buff.group == "dragonbreath")
                     this.dragonbreath = true;
+                if (buff.id == 413479)
+                    this.gladstance = true;
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;
@@ -473,8 +476,9 @@ class Player {
         this.stats.crit += this.stats.agi * this.agipercrit;
         this.crit = this.getCritChance();
 
-        if (this.stats.apmod != 1)
-            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+        if (this.stats.baseapmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
+        this.stats.ap = ~~(this.stats.ap * this.stats.apmod);
     }
     getAgiPerCrit(level) {
         let table = [0.2500, 0.2381, 0.2381, 0.2273, 0.2174, 0.2083, 0.2083, 0.2000, 0.1923, 0.1923,0.1852, 0.1786, 0.1667, 0.1613, 0.1563, 0.1515, 0.1471, 0.1389, 0.1351, 0.1282,0.1282, 0.1250, 0.1190, 0.1163, 0.1111, 0.1087, 0.1064, 0.1020, 0.1000, 0.0962,0.0943, 0.0926, 0.0893, 0.0877, 0.0847, 0.0833, 0.0820, 0.0794, 0.0781, 0.0758,0.0735, 0.0725, 0.0704, 0.0694, 0.0676, 0.0667, 0.0649, 0.0633, 0.0625, 0.0610,0.0595, 0.0588, 0.0575, 0.0562, 0.0549, 0.0543, 0.0532, 0.0521, 0.0510, 0.0500];
@@ -483,6 +487,8 @@ class Player {
     updateStrength() {
         this.stats.str = this.base.str;
         this.stats.ap = this.base.ap;
+        this.stats.apmod = this.base.apmod;
+        this.stats.baseapmod = this.base.baseapmod;
 
         for (let name in this.auras) {
             if (this.auras[name].timer) {
@@ -490,24 +496,39 @@ class Player {
                     this.stats.str += this.auras[name].stats.str;
                 if (this.auras[name].stats.ap)
                     this.stats.ap += this.auras[name].stats.ap;
+                if (this.auras[name].mult_stats.apmod)
+                    this.stats.apmod *= (1 + this.auras[name].mult_stats.apmod / 100);
+                if (this.auras[name].mult_stats.baseapmod)
+                    this.stats.baseapmod *= (1 + this.auras[name].mult_stats.baseapmod / 100);
             }
         }
         this.stats.str = ~~(this.stats.str * this.stats.strmod);
         this.stats.ap += this.stats.str * 2;
 
-        if (this.stats.apmod != 1)
-            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+        if (this.stats.baseapmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
+        this.stats.ap = ~~(this.stats.ap * this.stats.apmod);
     }
     updateAP() {
         this.stats.ap = this.base.ap;
+        this.stats.apmod = this.base.apmod;
+        this.stats.baseapmod = this.base.apmod;
         for (let name in this.auras) {
-            if (this.auras[name].timer && this.auras[name].stats.ap)
+            if (this.auras[name].timer && this.auras[name].stats.ap) {
                 this.stats.ap += this.auras[name].stats.ap;
+            }
+            if (this.auras[name].timer && this.auras[name].mult_stats.apmod) {
+                this.stats.apmod *= (1 + this.auras[name].mult_stats.apmod / 100);
+            }
+            if (this.auras[name].timer && this.auras[name].mult_stats.baseapmod) {
+                this.stats.baseapmod *= (1 + this.auras[name].mult_stats.baseapmod / 100);
+            }
         }
         this.stats.ap += this.stats.str * 2;
 
-        if (this.stats.apmod != 1)
-            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.apmod - 1));
+        if (this.stats.baseapmod != 1)
+            this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
+        this.stats.ap = ~~(this.stats.ap * this.stats.apmod);
     }
     updateHaste() {
         this.stats.haste = this.base.haste;
@@ -615,7 +636,7 @@ class Player {
     steptimer(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            //if (log) this.log('Global CD off');
+            if (log) this.log('Global CD off');
             return true;
         }
         else {
@@ -626,7 +647,7 @@ class Player {
     stepitemtimer(a) {
         if (this.itemtimer <= a) {
             this.itemtimer = 0;
-            //if (log) this.log('Item CD off');
+            if (log) this.log('Item CD off');
             return true;
         }
         else {
@@ -760,7 +781,7 @@ class Player {
             }
             else {
                 result = this.rollweapon(weapon);
-                //if (log) this.log(`Heroic Strike auto canceled`);
+                if (log) this.log(`Heroic Strike auto canceled`);
             }
         }
         else {
@@ -792,7 +813,7 @@ class Player {
             weapon.data[result]++;
         }
         weapon.totalprocdmg += procdmg;
-        //if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})`);
+        if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})`);
         return done + procdmg;
     }
     attackoh(weapon) {
@@ -821,14 +842,14 @@ class Player {
         weapon.data[result]++;
         weapon.totaldmg += done;
         weapon.totalprocdmg += procdmg;
-        //if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`);
+        if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`);
         return done + procdmg;
     }
     cast(spell, delayedheroic) {
         this.stepauras();
         spell.use(delayedheroic);
         if (spell.useonly) {
-            //if (log) this.log(`${spell.name} used`);
+            if (log) this.log(`${spell.name} used`);
             return 0;
         }
         let procdmg = 0;
@@ -848,7 +869,7 @@ class Player {
         spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
-        //if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]}).`);
+        if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]}).`);
         return done + procdmg;
     }
     dealdamage(dmg, result, weapon, spell) {
@@ -871,7 +892,7 @@ class Player {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
-                //if (log) this.log(`${weapon.name} proc`);
+                if (log) this.log(`${weapon.name} proc`);
                 if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
@@ -885,14 +906,14 @@ class Player {
                 weapon.windfury.use();
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
-                //if (log) this.log(`Trinket 1 proc`);
+                if (log) this.log(`Trinket 1 proc`);
                 if (this.trinketproc1.extra)
                     this.batchedextras += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
-                //if (log) this.log(`Trinket 2 proc`);
+                if (log) this.log(`Trinket 2 proc`);
                 if (this.trinketproc2.extra)
                     this.batchedextras += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
@@ -901,12 +922,12 @@ class Player {
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
-                //if (log) this.log(`Misc proc`);
+                if (log) this.log(`Misc proc`);
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng10k() < this.talents.swordproc * 100){
                     this.extraattacks++;
-                    //if (log) this.log(`Sword talent proc`);
+                    if (log) this.log(`Sword talent proc`);
                 }
             }
             if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {
