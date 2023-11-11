@@ -180,7 +180,8 @@ SIM.SETTINGS = {
 
         view.fight.on('keyup', 'input[type="text"]', function (e) {
             e.stopPropagation();
-            SIM.UI.filterGear();
+            if (!view.body.find('.active[data-type="profiles"]'))
+                SIM.UI.filterGear();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildBuffs();
