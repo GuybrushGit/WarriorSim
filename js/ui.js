@@ -1008,9 +1008,10 @@ SIM.UI = {
 
         view.tcontainer.empty();
         view.tcontainer.append(table);
+        let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ?  [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
+            sortList: editmode ?  [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -1136,9 +1137,10 @@ SIM.UI = {
         view.tcontainer.empty();
         view.loadRunes(type, editmode);
         view.tcontainer.append(table);
+        let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
+            sortList: editmode ? [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));

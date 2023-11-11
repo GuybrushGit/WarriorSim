@@ -142,6 +142,10 @@ section.main {
         }
     }
 
+    table.runes {
+        cursor: pointer;
+    }
+
     progress {
         width: 80%;
         max-width: calc(100% - 320px);
