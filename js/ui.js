@@ -40,7 +40,7 @@ SIM.UI = {
             e.preventDefault();
             $(this).toggleClass('active');
             window.scrollTo(0, 0);
-            $('section.settings').height(view.body.outerHeight());
+            $('section.settings').css('min-height', view.body.outerHeight() + 'px');
             $('section.settings').toggleClass('active');
             view.sidebar.find('.js-stats').removeClass('active');
             $('section.stats').removeClass('active');
@@ -104,14 +104,33 @@ SIM.UI = {
             li.addClass('active');
             li.siblings().removeClass('active');
             var type = li.data('type');
-            if (!type) type = li.parents('[data-type]').data('type');
+            let subtype = false;
+            if (!type) {
+                type = li.parents('[data-type]').data('type');
+                subtype = true;
+            }
+
+            view.main.find('.js-editmode').show();
+            view.main.find('.js-table').show();
 
             if (type == "mainhand" || type == "offhand" || type == "twohand")
                 view.loadWeapons(type);
             else if (type == "custom")
                 view.loadCustom();
+            else if (type == "profiles") {
+                view.loadProfiles(subtype);
+                view.main.find('.js-editmode').hide();
+                view.main.find('.js-table').hide();
+                view.main.find('.js-enchant').hide();
+            }
             else
                 view.loadGear(type);
+        });
+
+        view.tcontainer.on('keyup', '[name="profilename"]', function(e) {
+            let value = e.target.value;
+            view.main.find('[data-type="profiles"] .active p').html(value);
+            view.updateSession();
         });
 
         view.tcontainer.on('click', 'table.gear td:not(.ppm)', function(e) {
@@ -166,6 +185,33 @@ SIM.UI = {
             view.updateSession();
             view.updateSidebar();
         });
+
+        view.tcontainer.on('click', 'table.runes td:not(.ppm)', function(e) {
+            var table = $(this).parents('table');
+            var tr = $(this).parent();
+            var temp = tr.data('temp');
+
+            if (table.hasClass('editmode')) {
+                if (tr.hasClass('hidden'))
+                    view.rowShowRunes(tr);
+                else
+                    view.rowHideRunes(tr);
+                return;
+            }
+
+            if (tr.hasClass('active')) {
+                view.rowDisableRunes(tr);
+            }
+            else {
+                let disable = table.find('tr.active').first();
+                if (disable.length) view.rowDisableRunes(disable);
+                view.rowEnableRunes(tr);
+            }
+
+            view.updateSession();
+            view.updateSidebar();
+            SIM.SETTINGS.buildSpells();
+        });
     },
 
     enableEditMode: function() {
@@ -175,6 +221,8 @@ SIM.UI = {
             view.loadWeapons(type, true);
         else if (type == "custom")
             view.loadCustom(true);
+        else if (type == "profiles")
+            view.loadProfiles(true);
         else
             view.loadGear(type, true);
     },
@@ -187,17 +235,24 @@ SIM.UI = {
             view.loadWeapons(type, false);
         else if (type == "custom")
             view.loadCustom(false);
+        else if (type == "profiles")
+            view.loadProfiles(false);
         else
             view.loadGear(type, false);
     },
 
     simulateDPS: function(rows) {
         let view = this;
+        if (rows && rows.length == 0) {
+            view.endLoading();
+            return;
+        }
         let dps = view.sidebar.find('#dps');
         let error = view.sidebar.find('#dpserr');
         let stats = view.sidebar.find('#stats');
         let time = view.sidebar.find('#time');
         let btn = view.sidebar.find('.js-dps');
+        view.sidebar.find('#weights-div').css('display', '');
         let weights = (rows === "stats");
         if (weights) {
             rows = undefined;
@@ -283,7 +338,6 @@ SIM.UI = {
         async function simulateAll() {
             const ap = await simulateWeight(0, 50);
             updateStat("ap", ap);
-            console.log(player.auras.bloodfury);
             if (player.auras.bloodfury) {
                 updateStat("str", await simulateWeight(3, 25));
             } else {
@@ -294,7 +348,7 @@ SIM.UI = {
             const crit = await simulateWeight(1, 2);
             updateStat("crit", crit);
 
-            const agiCrit = player.stats.agimod / 20;
+            const agiCrit = player.stats.agimod * player.agipercrit;
             updateStat("agi", {weight: crit.weight * agiCrit, error: crit.error * agiCrit});
 
             updateStat("hit", await simulateWeight(2, 2));
@@ -556,6 +610,59 @@ SIM.UI = {
         }
     },
 
+    rowDisableRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id')) {
+                runes[type][i].selected = false;
+                if (runes[type][i].enable) {
+                    for (let spell of spells)
+                        if (spell.id == runes[type][i].enable)
+                            spell.active = false;
+                }
+            }
+               
+        }
+    },
+
+    rowEnableRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.addClass('active');
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id')) {
+                runes[type][i].selected = true;
+            }
+        }
+    },
+
+    rowHideRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('active');
+        tr.addClass('hidden');
+        tr.find('.hide').html(eyesvghidden);
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id')) {
+                runes[type][i].hidden = true;
+                runes[type][i].selected = false;
+            }
+        }
+    },
+
+    rowShowRunes: function(tr) {
+        var table = tr.parents('table');
+        var type = table.data('type');
+        tr.removeClass('hidden');
+        tr.find('.hide').html(eyesvg);
+        for(let i = 0; i < runes[type].length; i++) {
+            if (runes[type][i].id == tr.data('id'))
+                runes[type][i].hidden = false;
+        }
+    },
+
     startLoading: function() {
         let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.addClass('loading');
@@ -573,6 +680,7 @@ SIM.UI = {
     updateSidebar: function () {
         var view = this;
         var player = new Player();
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
         let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
         if (!player.mh) return;
@@ -585,8 +693,8 @@ SIM.UI = {
         let mhcrit = player.crit + player.mh.crit;
         let ohcrit = player.crit + (player.oh ? player.oh.crit : 0);
         view.sidebar.find('#crit').html(mhcrit.toFixed(2) + '% <small>MH</small>' + (player.oh ? space + ohcrit.toFixed(2) + '% <small>OH</small>' : ''));
-        let mhcap = 100 - player.mh.dwmiss - player.mh.dodge - player.mh.glanceChance;
-        let ohcap = player.oh ? 100 - player.oh.dwmiss - player.oh.dodge - player.oh.glanceChance : 0;
+        let mhcap = Math.max(0, 100 - player.mh.dwmiss - player.mh.dodge - player.mh.glanceChance);
+        let ohcap = Math.max(0, player.oh ? 100 - player.oh.dwmiss - player.oh.dodge - player.oh.glanceChance : 0);
         view.sidebar.find('#critcap').html(mhcap.toFixed(2) + '% <small>MH</small>'+ (player.oh ? space + ohcap.toFixed(2) + '% <small>OH</small>' : ''));
         let mhdmg = player.stats.dmgmod * player.mh.modifier * 100;
         let ohdmg = player.stats.dmgmod * (player.oh ? player.oh.modifier * 100 : 0);
@@ -597,7 +705,8 @@ SIM.UI = {
         view.sidebar.find('#nature-resist').html(player.stats.resist.nature);
         view.sidebar.find('#fire-resist').html(player.stats.resist.fire);
         view.sidebar.find('#frost-resist').html(player.stats.resist.frost);
-        view.sidebar.find('#race').text(localStorage.race);
+        view.sidebar.find('#race').text(storage.race);
+        view.sidebar.find('#level').text(storage.level);
         view.sidebar.find('#sets').empty();
 
         for (let set of sets) {
@@ -610,29 +719,36 @@ SIM.UI = {
             if (counter >= set.bonus[0].count)
                 view.sidebar.find('#sets').append(`<a href="https://classic.wowhead.com/item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
         }
+
+        let count = 0;
+        for (let tree of talents)
+            for (let talent of tree.t)
+                count += talent.c;
+        view.talents.find("#points").text(Math.max(player.level - 9 - count, 0));
     },
 
-    updateSession: function () {
+    updateSession: function (i) {
         var view = this;
 
-        localStorage.level = view.fight.find('input[name="level"]').val();
-        localStorage.race = view.fight.find('select[name="race"]').val();
-        localStorage.simulations = view.fight.find('input[name="simulations"]').val();
-        localStorage.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
-        localStorage.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
-        localStorage.executeperc = view.fight.find('input[name="executeperc"]').val();
-        localStorage.startrage = view.fight.find('input[name="startrage"]').val();
-        localStorage.targetlevel = view.fight.find('input[name="targetlevel"]').val();
-        localStorage.targetarmor = view.fight.find('input[name="targetarmor"]').val();
-        localStorage.targetresistance = view.fight.find('input[name="targetresistance"]').val();
-        localStorage.adjacent = view.fight.find('input[name="adjacent"]').val();
-        localStorage.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
-        localStorage.aqbooks = view.fight.find('select[name="aqbooks"]').val();
-        localStorage.weaponrng = view.fight.find('select[name="weaponrng"]').val();
-        localStorage.spelldamage = view.fight.find('input[name="spelldamage"]').val();
-        localStorage.batching = view.fight.find('select[name="batching"]').val();
+        let obj = {};
+        obj.level = view.fight.find('input[name="level"]').val();
+        obj.race = view.fight.find('select[name="race"]').val();
+        obj.simulations = view.fight.find('input[name="simulations"]').val();
+        obj.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
+        obj.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
+        obj.executeperc = view.fight.find('input[name="executeperc"]').val();
+        obj.startrage = view.fight.find('input[name="startrage"]').val();
+        obj.targetlevel = view.fight.find('input[name="targetlevel"]').val();
+        obj.targetarmor = view.fight.find('input[name="targetarmor"]').val();
+        obj.targetresistance = view.fight.find('input[name="targetresistance"]').val();
+        obj.adjacent = view.fight.find('input[name="adjacent"]').val();
+        obj.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
+        obj.aqbooks = view.fight.find('select[name="aqbooks"]').val();
+        obj.weaponrng = view.fight.find('select[name="weaponrng"]').val();
+        obj.spelldamage = view.fight.find('input[name="spelldamage"]').val();
+        obj.batching = view.fight.find('select[name="batching"]').val();
 
-        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _resistance = {};
+        let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
         view.filter.find('.sources .active').each(function () { _sources.push($(this).attr('data-id')); });
         view.filter.find('.phases .active').each(function () { _phases.push($(this).attr('data-id')); });
@@ -644,15 +760,7 @@ SIM.UI = {
             _talents.push({ n: tree.n, t: arr });
         }
 
-        view.rotation.find('.spell').each(function () {
-            var sp = {};
-            sp.id = $(this).attr('data-id');
-            sp.active = $(this).hasClass('active');
-            $(this).find('input').each(function () {
-                sp[$(this).attr('name')] = $(this).val();
-            });
-            _rotation.push(sp);
-        });
+        _rotation = spells;
 
         for (let type in gear) {
             _gear[type] = [];
@@ -668,53 +776,73 @@ SIM.UI = {
             }
         }
 
+        if (typeof runes !== "undefined") {
+            for (let type in runes) {
+                _runes[type] = [];
+                for (let item of runes[type]) {
+                    _runes[type].push({id:item.id,selected:item.selected,hidden:item.hidden});
+                }
+            }
+        }
+
         var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
         for (let resist in resistances) {
             var element = resistances[resist];
             _resistance[element] = $(".resistances[data-id='"+element+"-resist']").prop("checked");
         }
 
-        localStorage.buffs = JSON.stringify(_buffs);
-        localStorage.rotation = JSON.stringify(_rotation);
-        localStorage.sources = JSON.stringify(_sources);
-        localStorage.phases = JSON.stringify(_phases);
-        localStorage.talents = JSON.stringify(_talents);
-        localStorage.gear = JSON.stringify(_gear);
-        localStorage.enchant = JSON.stringify(_enchant);
-        localStorage.resistances = JSON.stringify(_resistance);
+        obj.buffs = _buffs;
+        obj.rotation = _rotation;
+        obj.sources = _sources;
+        obj.phases = _phases;
+        obj.talents = _talents;
+        obj.gear = _gear;
+        obj.enchant = _enchant;
+        obj.runes = _runes;
+        obj.resistance = _resistance;
+        obj.profilename = view.main.find('[data-type="profiles"] .active p').text();
+
+        let profileid = globalThis.profileid || 0;
+        localStorage[mode + profileid] = JSON.stringify(obj);
     },
 
     loadSession: function () {
         var view = this;
+        let profileid = globalThis.profileid || 0;
 
-        if (!localStorage.length) view.firstSession();
+        if (localStorage.level) localStorage.clear(); // clear old style of storage
+        if (!localStorage[mode + profileid]) localStorage[mode + profileid] = JSON.stringify(session);
 
-        for (let prop in localStorage) {
-            view.fight.find('input[name="' + prop + '"]').val(localStorage[prop]);
-            view.fight.find('select[name="' + prop + '"]').val(localStorage[prop]);
+        let storage = JSON.parse(localStorage[mode + profileid]);
+        if (!storage.level) storage.level = session.level;
+        if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
+        if (!storage.profilename) storage.profilename = session.profilename;
+        
+        for (let prop in storage) {
+            view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
+            view.fight.find('select[name="' + prop + '"]').val(storage[prop]);
+            view.fight.find('.slider[name="slider-' + prop + '"]').val(storage[prop]);
         }
-
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
 
         updateGlobals({
-            talents: !localStorage.talents ? JSON.parse(session.talents) : JSON.parse(localStorage.talents),
-            buffs: !localStorage.buffs ? JSON.parse(session.buffs) : JSON.parse(localStorage.buffs),
-            rotation: !localStorage.rotation ? JSON.parse(session.rotation) : JSON.parse(localStorage.rotation),
-            gear: !localStorage.gear ? JSON.parse(session.gear) : JSON.parse(localStorage.gear),
-            enchant: !localStorage.enchant ? JSON.parse(session.enchant) : JSON.parse(localStorage.enchant),
-            resistances: !localStorage.resistances ? null : JSON.parse(localStorage.resistances),
+            talents: !storage.talents ? session.talents : storage.talents,
+            buffs: !storage.buffs ? session.buffs : storage.buffs,
+            rotation: !storage.rotation ? session.rotation : storage.rotation,
+            gear: !storage.gear ? session.gear : storage.gear,
+            enchant: !storage.enchant ? session.enchant : storage.enchant,
+            runes: !storage.runes ? session.runes || {} : storage.runes,
+            resistances: !storage.resistances ? null : storage.resistances,
         });
 
-        let _sources = !localStorage.sources ? JSON.parse(session.sources) : JSON.parse(localStorage.sources);
-        let _phases = !localStorage.phases ? JSON.parse(session.phases) : JSON.parse(localStorage.phases);
+        let _sources = !storage.sources ? session.sources : storage.sources;
+        let _phases = !storage.phases ? session.phases : storage.phases;
 
         for (let i of _sources)
             view.filter.find(`.sources [data-id="${i}"]`).addClass('active');
 
         for (let i of _phases)
             view.filter.find(`.phases [data-id="${i}"]`).addClass('active');
-
-        if (!localStorage.version || parseInt(localStorage.version) < version) view.newVersion();
 
         var resistances = ['shadow', 'arcane', 'nature', 'fire', 'frost'];
         for (let resist in resistances) {
@@ -723,6 +851,14 @@ SIM.UI = {
                 view.sidebar.find("."+element+"-resist.hidden").removeClass('hidden');
             }
         }
+
+        for(let i = 0; i <= 9; i++) {
+            if (typeof localStorage[mode + i] === 'undefined') continue;
+            let obj = JSON.parse(localStorage[mode + i]);
+            if (obj && obj.profilename)
+                view.main.find('[data-type="profiles"] .filter p')[i].innerText = obj.profilename;
+        }
+
     },
 
     filterGear: function () {
@@ -732,13 +868,50 @@ SIM.UI = {
             view.loadWeapons(type);
         else if (type == "custom")
             view.loadCustom();
+        else if (type == "profiles")
+            view.loadProfiles();
         else
             view.loadGear(type);
+    },
+    
+    loadProfiles: function (subtype) {
+        var view = this;
+        var index = view.main.find('nav li.active .filter .active').index();
+        let modei = mode + index;
+        let oldmodei = mode + globalThis.profileid;
+        globalThis.profileid = index;
+
+        if (typeof localStorage[modei] === 'undefined') {
+            localStorage[modei] = localStorage[oldmodei];
+            let storage = JSON.parse(localStorage[modei]);
+            storage.profilename = view.main.find('nav li.active .filter .active p').text();
+            localStorage[modei] = JSON.stringify(storage);
+        }
+
+        view.loadSession();
+        view.updateSidebar();
+        SIM.SETTINGS.buildSpells();
+        SIM.SETTINGS.buildBuffs();
+        SIM.SETTINGS.buildTalents();
+        SIM.SETTINGS.buildRunes();
+        let storage = JSON.parse(localStorage[modei]);
+
+        view.tcontainer.empty();
+        view.tcontainer.append(`<div class="profileoption">
+            <label>Edit name:</label>
+            <input type="text" name="profilename" value="${storage.profilename}">
+        </div>`);
+
+        if (subtype)
+            view.addAlert(`${storage.profilename} loaded`);
     },
 
     loadWeapons: function (type, editmode) {
         var view = this;
         var filter = view.main.find('nav li.active .filter .active').text();
+
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
+        let level = parseInt(storage.level);
 
         var resistCheckList = SIM.UI.resistCheckList();
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
@@ -752,13 +925,13 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Crit</th>
-                                <th>Hit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
-                                <th>Min</th>
+                                <th>Hit</th>`+ 
+                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
+                                `<th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
                                 <th>Skill</th>
@@ -771,6 +944,11 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
+            if (item.r > level || item.r < (level -20)) {
+                item.selected = false;
+                continue;
+            }
+
             if (filter && filter != "All") {
                 if (filter == "Mace & Sword") {
                     if (item.type != "Mace" && item.type != "Sword") continue;
@@ -782,7 +960,7 @@ SIM.UI = {
                     continue;
             }
 
-            let source = item.source.toLowerCase(), phase = item.phase;
+            let source = (item.source || "").toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
 
@@ -810,13 +988,13 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.crit || ''}</td>
-                        <td>${item.hit || ''}</td>
-                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        <td>${item.mindmg || ''}</td>
+                        <td>${item.hit || ''}</td>` +
+                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
+                        `<td>${item.mindmg || ''}</td>
                         <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
@@ -830,9 +1008,10 @@ SIM.UI = {
 
         view.tcontainer.empty();
         view.tcontainer.append(table);
+        let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ?  [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
+            sortList: editmode ?  [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -849,6 +1028,7 @@ SIM.UI = {
 
         view.loadEnchants(type, editmode);
     },
+
     resistCheckList: function() {
         return {
             shadow: $(".resistances[data-id='shadow-resist']").prop("checked"),
@@ -861,8 +1041,11 @@ SIM.UI = {
 
     loadGear: function (type, editmode) {
         var view = this;
+        if (!type) return;
 
         var resistCheckList = SIM.UI.resistCheckList();
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
+        let level = parseInt(storage.level);
 
         var max = 1;
         let table = `<table class="gear ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="${max}">
@@ -876,13 +1059,13 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Hit</th>
-                                <th>Crit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
-                                <th>Skill</th>
+                                <th>Crit</th>` +
+                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
+                                `<th>Skill</th>
                                 <th>Type</th>
                                 <th>DPS</th>
                             </tr>
@@ -890,8 +1073,13 @@ SIM.UI = {
                     <tbody>`;
 
         for (let item of gear[type]) {
+            
+            if (item.r > level || item.r < (level -20)) {
+                item.selected = false;
+                continue;
+            }
 
-            let source = item.source.toLowerCase(), phase = item.phase;
+            let source = (item.source || "").toLowerCase(), phase = item.phase;
             if (item.source == 'Lethon' || item.source == 'Emeriss' || item.source == 'Kazzak' || item.source == 'Azuregos' || item.source == 'Ysondre' || item.source == 'Taerar' || item.source == 'Green Dragons')
                 source = 'worldboss';
 
@@ -932,13 +1120,13 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.crit || ''}</td>
-                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        <td>${item.skill || ''}</td>
+                        <td>${item.crit || ''}</td>` + 
+                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
+                        `<td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -947,10 +1135,12 @@ SIM.UI = {
         table += '</tbody></table></section>';
 
         view.tcontainer.empty();
+        view.loadRunes(type, editmode);
         view.tcontainer.append(table);
+        let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: true,
-            sortList: editmode ? [[20, 1],[1, 0]] : [[19, 1],[0, 0]],
+            sortList: editmode ? [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -983,13 +1173,13 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Hit</th>
-                                <th>Crit</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
-                                <th>Skill</th>
+                                <th>Crit</th>` +
+                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
+                                `<th>Skill</th>
                                 <th>DPS</th>
                             </tr>
                         </thead>
@@ -1004,13 +1194,13 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.crit || ''}</td>
-                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        <td>${item.skill_1 || ''}</td>
+                        <td>${item.crit || ''}</td>` +
+                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
+                        `<td>${item.skill_1 || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
         }
@@ -1040,13 +1230,13 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
-                                <th>Haste</th>
-                                <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">Shadow Resist</th>
-                                <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">Arcane Resist</th>
-                                <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">Nature Resist</th>
-                                <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">Fire Resist</th>
-                                <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">Frost Resist</th>
-                                <th>Crit</th>
+                                <th>Haste</th>`+
+                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
+                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
+                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
+                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
+                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
+                                `<th>Crit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -1067,13 +1257,13 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.haste || ''}</td>
-                        <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        <td>${item.crit || ''}</td>
+                        <td>${item.haste || ''}</td>` +
+                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
+                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
+                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
+                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
+                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
+                        `<td>${item.crit || ''}</td>
                         <td>${item.dmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
@@ -1096,18 +1286,62 @@ SIM.UI = {
         view.main.find('.js-enchant').show();
     },
 
-    addAlert: function (msg) {
+    loadRunes: function (type, editmode) {
         var view = this;
-        view.alerts.empty().append('<div class="alert"><p>' + msg + '</p></div>');
-        view.alerts.find('.alert').click(function () { view.closeAlert(); });
-        setTimeout(function () { view.alerts.find('.alert').addClass('in-up') });
-        setTimeout(function () { view.closeAlert(); }, 4000);
+
+        if (typeof runes === 'undefined' || !runes[type] || runes[type].length == 0) return;
+
+        let table = `<table class="runes ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
+                        <thead>
+                            <tr>
+                                ${editmode ? '<th></th>' : ''}
+                                <th>Rune</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                    <tbody>`;
+
+        for (let item of runes[type]) {
+
+            if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
+                continue;
+
+            if (item.hidden && !editmode) continue;
+
+            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
+                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
+                        <td>${item.name}</td>
+                        <td>${item.description}</td>
+                    </tr>`;
+        }
+
+        table += '</tbody></table></section>';
+
+        if ($(table).find('tbody tr').length == 0) return;
+
+        view.tcontainer.append(table);
+        view.tcontainer.find('table.runes').tablesorter({
+            widthFixed: true,
+            sortList: editmode ? [[1, 0]] : [[0, 0]],
+            headers: {
+                0: { sorter: "text" }
+            }
+        });
     },
 
-    closeAlert: function () {
+    addAlert: function (msg) {
         var view = this;
-        view.alerts.find('.alert').removeClass('in-up');
-        setTimeout(function () { view.alerts.empty(); }, 1000);
+        let rng = (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+        view.alerts.empty().append(`<div id="alert${rng}" class="alert"><p>${msg}</p></div>`);
+        view.alerts.find('.alert').click(function () { view.closeAlert(rng); });
+        setTimeout(function () { view.alerts.find('#alert' + rng).addClass('in-up') });
+        setTimeout(function () { view.closeAlert(rng); }, 4000);
+    },
+
+    closeAlert: function (rng) {
+        var view = this;
+        view.alerts.find('#alert' + rng).removeClass('in-up');
+        setTimeout(function () { view.alerts.find('#alert' + rng).remove(); }, 1000);
     },
 
     firstSession: function () {
@@ -1117,7 +1351,7 @@ SIM.UI = {
     newVersion: function() {
         var view = this;
 
-        localStorage.version = version;
+        localStorage[mode].version = version;
 
         if (!view.filter.find(`.phases [data-id="4"]`).hasClass('active'))
             setTimeout(() => { view.filter.find(`.phases [data-id="4"]`).click() }, 100);

@@ -1,0 +1,468 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Warrior DPS Sim</title>
+
+  <link href="/dist/css/theme.default.min.css" rel="stylesheet">
+  <link href="/dist/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/dist/js/libs/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="/dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
+  <script type="text/javascript" src="/dist/js/libs/Chart.min.js"></script>
+
+  <script type="text/javascript" src="/dist/js/classes/player.min.js"></script>
+  <script type="text/javascript" src="/dist/js/classes/simulation.min.js"></script>
+  <script type="text/javascript" src="/dist/js/classes/spell.min.js"></script>
+  <script type="text/javascript" src="/dist/js/classes/weapon.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/gear_sod.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/runes.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/levelstats.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/buffs.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/spells.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/talents.min.js"></script>
+  <script type="text/javascript" src="/dist/js/data/session_sod.min.js"></script>
+  <script type="text/javascript" src="/dist/js/globals.min.js"></script>
+  <script type="text/javascript" src="/dist/js/settings.min.js"></script>
+  <script type="text/javascript" src="/dist/js/stats.min.js"></script>
+  <script type="text/javascript" src="/dist/js/ui.min.js"></script>
+
+  <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
+  <script src="https://wow.zamimg.com/widgets/power.js"></script>
+  <script>var mode = "sod";</script>
+<!-- 
+  TODO 
+
+  default session
+  enchants
+  sunder and devastate
+  check rend scaling
+  improve profiles
+
+  later:
+  review adjacents
+  revamp filters
+  resists
+  crusaders
+  fix windfury ranks
+  aq books
+  scrape wowhead
+  fix rune ids
+  runes
+  buffs
+  spells
+  enchants
+  talents
+
+-->
+
+</head>
+<body>
+  <div class="alerts"></div>
+
+  <section class="sidebar">
+    <div class="tabs">
+      <a href="/" class="btn js-classic">Classic</a>
+      <a href="/sod/" class="btn js-sod active">Season of Discovery</a>
+    </div>
+    
+    <div class="bg"></div>
+    <div class="character">
+      <p><span id="race">Human</span> Warrior</p>
+      <p>Level <span id="level"></span></p>
+
+      <ul>
+        <li>
+          <label>Attack Power</label>
+          <span id="ap"></span>
+        </li>
+        <li>
+          <label>Strength</label>
+          <span id="str"></span>
+        </li>
+        <li>
+          <label>Agility</label>
+          <span id="agi"></span>
+        </li>
+        <li>
+          <label>Hit</label>
+          <span id="hit"></span>
+        </li>
+        <li>
+          <label>Skill</label>
+          <span id="skill"></span>
+        </li>
+        <li>
+          <label>Miss</label>
+          <span id="miss"></span>
+        </li>
+        <li>
+          <label>Crit</label>
+          <span id="crit"></span>
+        </li>
+        <li>
+          <label>Crit Cap</label>
+          <span id="critcap"></span>
+        </li>
+        <li>
+          <label>Dmg %</label>
+          <span id="dmgmod"></span>
+        </li>
+        <li>
+          <label>Haste</label>
+          <span id="haste"></span>
+        </li>
+        <li class="shadow-resist hidden">
+          <label>Shadow Resist</label>
+          <span id="shadow-resist"></span>
+        </li>
+        <li class="arcane-resist hidden">
+          <label>Arcane Resist</label>
+          <span id="arcane-resist"></span>
+        </li>
+        <li class="nature-resist hidden">
+          <label>Nature Resist</label>
+          <span id="nature-resist"></span>
+        </li>
+        <li class="frost-resist hidden">
+          <label>Frost Resist</label>
+          <span id="frost-resist"></span>
+        </li>
+        <li class="fire-resist hidden">
+          <label>Fire Resist</label>
+          <span id="fire-resist"></span>
+        </li>
+        <li>
+          <label>Sets</label>
+          <span id="sets"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <div id="weights-div">
+        <div id="weight-str"><span class="stat-name">Strength:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-agi"><span class="stat-name">Agility:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-ap"><span class="stat-name">Attack Power:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+      </div>
+      <div id="dps-box"><span id="dps"></span><span id="dpserr"></span></div>
+      <div id="stats"></div>
+      <div id="time"></div>
+      <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-weights">STAT WEIGHTS</a>
+      <a href="#" class="btn js-table">SHEET DPS</a>
+      <a href="#" class="btn js-stats disabled">STATS</a>
+      <a href="#" class="btn js-settings">SETTINGS</a>
+      <div class="author">made by Guybrush-Golemagg</div>
+      <div class="manual"><a href="https://docs.google.com/document/d/1-ugglMDHqIQlEDiE2z9G7zuI-kgyvb2kvgPobWbcxy0/edit" target="_blank">User Manual</a></div>
+      <div class="manual"><a href="https://github.com/GuybrushGit/WarriorSim" target="_blank">Github</a></div>
+    </div>
+    
+  </section>
+
+  <section class="settings">
+    <a href="#" class="btn-close"></a>
+    <div class="wrapper">
+
+      <article class="fight">
+        <label class="active">Settings</label>
+        <ul>
+          <li>
+            <label>Level</label>
+            <input type="range" name="slider-level" min="1" max="60" value="25" class="slider">
+            <input type="text" name="level" value="25" data-numberonly="true">
+          </li>
+          <li>
+            <label>Target Level</label>
+            <input type="range"  name="slider-targetlevel" min="1" max="63" value="28" class="slider">
+            <input type="text" name="targetlevel" value="28" data-numberonly="true">
+          </li>
+          <li>
+            <label>Race</label>
+            <select dir="rtl" name="race">
+              <option value="Human">Human</option>
+              <option value="Dwarf">Dwarf</option>
+              <option value="Gnome">Gnome</option>
+              <option value="Night Elf">Night Elf</option>
+              <option value="Undead">Undead</option>
+              <option value="Orc">Orc</option>
+              <option value="Tauren">Tauren</option>
+              <option value="Troll">Troll</option>
+            </select>
+          </li>
+          <li>
+            <label>Simulations</label>
+            <input type="text" name="simulations" value="50000" data-numberonly="true">
+          </li>
+          <li>
+            <label>Fight Duration (min)</label>
+            <input type="text" name="timesecsmin" value="50" data-numberonly="true">
+          </li>
+          <li>
+            <label>Fight Duration (max)</label>
+            <input type="text" name="timesecsmax" value="60" data-numberonly="true">
+          </li>
+          <li>
+            <label>Execute phase percentage</label>
+            <input type="text" name="executeperc" value="20" data-numberonly="true">
+          </li>
+          <li>
+            <label>Initial Rage</label>
+            <input type="text" name="startrage" value="0" data-numberonly="true">
+          </li>
+          <li>
+            <label>Target Resistance</label>
+            <input type="text" name="targetresistance" value="24" data-numberonly="true">
+          </li>
+          <li style="display: none;">
+            <label>Adjacent Targets</label>
+            <input type="text" name="adjacent" value="0" data-numberonly="true">
+          </li>
+          <li style="display: none;">
+            <label>Adjacent Targets Level</label>
+            <input type="text" name="adjacentlevel" value="60" data-numberonly="true">
+          </li>
+          <li>
+            <label>Target Armor</label>
+            <input type="text" name="targetarmor" value="336" data-numberonly="true">
+          </li>
+          <li>
+            <label>AQ Books</label>
+            <select dir="rtl" name="aqbooks">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </li>
+          <li>
+            <label>Weapon Damage RNG</label>
+            <select dir="rtl" name="weaponrng">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </li>
+          <li>
+            <label>Spell Damage</label>
+            <input type="text" name="spelldamage" value="0" data-numberonly="true">
+          </li>
+          <li>
+            <label>Spell Batching</label>
+            <select name="batching" dir="rtl">
+              <option value="10" selected>10</option>
+              <option value="400">400</option>
+            </select>
+          </li>
+        </ul>
+      </article>
+
+      <article class="buffs">
+        <label class="active">Buffs</label>
+      </article>
+
+      <article class="rotation">
+        <label class="active">Rotation</label>
+        <div></div>
+        <div class="details">
+        </div>
+      </article>
+
+      <article class="talents">
+        <label class="active">Talents</label>
+        <div class="top">
+          <p>Points available: <span id="points"></span></p>
+          <a href="#" class="js-talents-reset">Reset</a>
+        </div>
+      </article>
+
+      <article class="filter">
+        <label class="active">Gear Filter</label>
+        <ul class="sources">
+          <li data-id="quest">Quest</li>
+          <li data-id="crafting">Crafting</li>
+          <li data-id="dungeon">Dungeon</li>
+          <li data-id="onyxia">Onyxia</li>
+          <li data-id="mc">Molten Core</li>
+          <li data-id="bwl">Blackwing Lair</li>
+          <li data-id="zg">Zul'Gurub</li>
+          <li data-id="aq20">AQ20</li>
+          <li data-id="aq40">AQ40</li>
+          <li data-id="naxx">Naxxramas</li>
+          <li data-id="worldboss">World Boss</li>
+          <li data-id="pvp">PvP</li>
+          <li class="js-toggle" data-id="resistances-list">Resistances
+            <ul class="resistances-list hidden">
+              <li>
+                <label>
+                    Shadow Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="shadow-resist" name="shadow-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Arcane Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="arcane-resist" name="arcane-resist">
+                </label>
+              </li>
+              </li>
+                <label>
+                    Nature Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="nature-resist" name="nature-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Fire Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="fire-resist" name="fire-resist">
+                </label>
+              </li>
+              <li>
+                <label>
+                    Frost Resist
+                    <input type="checkbox" class="resistances js-toggle" data-id="frost-resist" name="frost-resist">
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li data-id="other">Other</li>
+        </ul>
+        <ul class="phases">
+          <li data-id="1" data-sources="onyxia,mc">P1</li>
+          <li data-id="2" data-sources="">P2</li>
+          <li data-id="3" data-sources="bwl">P3</li>
+          <li data-id="4" data-sources="zg">P4</li>
+          <li data-id="5" data-sources="aq20,aq40">P5</li>
+          <li data-id="6" data-sources="naxx">P6</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="stats">
+    <a href="#" class="btn-close"></a>
+    <div class="wrapper">
+
+      <article>
+        <label>Fight Details</label>
+        <div class="container-table"></div>
+      </article>
+
+      <article>
+        <label>Damage</label>
+        <div class="container-dmg"><canvas></canvas></div>
+        <div class="legend"></div>
+      </article>
+
+      <article>
+        <label>Aura Uptime</label>
+        <div class="container-aura"><canvas></canvas></div>
+      </article>
+
+      <article>
+        <label>DPS Spread</label>
+        <div class="container-spread"><canvas></canvas></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="main">
+    <nav>
+      <ul>
+        <li data-type="profiles">
+          <p>Profiles</p>
+          <ul class="filter">
+            <li class="active"><p>Profile 1</p></li>
+            <li><p>Profile 2</p></li>
+            <li><p>Profile 3</p></li>
+            <li><p>Profile 4</p></li>
+            <li><p>Profile 5</p></li>
+            <li><p>Profile 6</p></li>
+            <li><p>Profile 7</p></li>
+            <li><p>Profile 8</p></li>
+            <li><p>Profile 9</p></li>
+            <li><p>Profile 10</p></li>
+          </ul>
+        </li>
+        <li data-type="mainhand" class="active">
+          <p>Main Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Dagger</p></li>
+            <li><p>Fist</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+            <li><p>Axe, Dagger & Sword</p></li>
+          </ul>
+        </li>
+        <li data-type="offhand">
+          <p>Off Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Dagger</p></li>
+            <li><p>Fist</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+            <li><p>Axe, Dagger & Sword</p></li>
+          </ul>
+        </li>
+        <li data-type="twohand">
+          <p>Two Hand</p>
+          <ul class="filter">
+            <li class="active"><p>All</p></li>
+            <li><p>Axe</p></li>
+            <li><p>Mace</p></li>
+            <li><p>Polearm</p></li>
+            <li><p>Sword</p></li>
+            <li><p>Mace & Sword</p></li>
+          </ul>
+        </li>
+        <li data-type="head"><p>Head</p></li>
+        <li data-type="neck"><p>Neck</p></li>
+        <li data-type="shoulder"><p>Shoulder</p></li>
+        <li data-type="back"><p>Back</p></li>
+        <li data-type="chest"><p>Chest</p></li>
+        <li data-type="wrist"><p>Wrist</p></li>
+        <li data-type="hands"><p>Hands</p></li>
+        <li data-type="waist"><p>Waist</p></li>
+        <li data-type="legs"><p>Legs</p></li>
+        <li data-type="feet"><p>Feet</p></li>
+        <li data-type="finger1"><p>Ring 1</p></li>
+        <li data-type="finger2"><p>Ring 2</p></li>
+        <li data-type="trinket1"><p>Trinket 1</p></li>
+        <li data-type="trinket2"><p>Trinket 2</p></li>
+        <li data-type="ranged"><p>Ranged</p></li>
+        <!-- <li data-type="custom"><p>Custom</p></li> -->
+      </ul>
+    </nav>
+
+    <div class="table-container"></div>
+    <div class="button-container">
+      <a href="#" class="btn js-editmode">SHOW / HIDE ROWS</a>
+      <a href="#" class="btn js-enchant">ENCHANTS DPS</a>
+      <a href="#" class="btn js-table">GEAR DPS</a>
+    </div>
+
+    <progress value="0" max="100"></progress>
+  </section>
+
+
+  <script>
+    $(document).ready(function () {
+      SIM.UI.init();
+      SIM.SETTINGS.init();
+      SIM.STATS.init();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,7 +1,6 @@
 importScripts(
     './data/buffs.min.js',
-    './data/gear.min.js',
-    './data/races.min.js',
+    './data/levelstats.min.js',
     './data/spells.min.js',
     './data/talents.min.js',
     './classes/player.min.js',
@@ -13,8 +12,9 @@ importScripts(
 
 onmessage = (event) => {
     const params = event.data;
+    if (params.globals.sod) importScripts('./data/gear_sod.min.js','./data/runes.min.js');
+    else importScripts('./data/gear.min.js');
     updateGlobals(params.globals);
-    // console.log('starting sim-worker', params);
     const player = new Player(...params.player);
     const sim = new Simulation(player, (report) => {
         // Finished
@@ -30,4 +30,3 @@ onmessage = (event) => {
     sim.startSync();
 };
 
-// console.log('sim-worker loaded');

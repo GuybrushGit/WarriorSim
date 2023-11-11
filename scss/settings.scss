@@ -1,9 +1,6 @@
-.hidden {
-    display: none;
-}
 .settings {
     width: 0;
-    height: 100%;
+    height: auto;
     min-height: 1060px;
     background: #272727;
     transition: all 0.3s ease-in-out;
@@ -28,6 +25,8 @@
     .wrapper {
         opacity: 0;
         transition: none;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     article {
@@ -35,7 +34,7 @@
         vertical-align: top;
         border: 1px solid #ddd;
         border-radius: 2px;
-        margin: 20px auto;
+        margin: 20px auto 10px;
         position: relative;
         padding: 20px;
         box-sizing: border-box;
@@ -111,6 +110,8 @@
             padding: 5px 10px;
             overflow: hidden;
             font-size: 12px;
+            display: flex;
+            justify-content: space-between;
 
             &:first-child {
                 padding-top: 0;
@@ -128,78 +129,123 @@
                 cursor: pointer;
             }
         }
+
+        input[name="level"], input[name="targetlevel"] {
+            width: 24px;
+        }
+
+        .slider {
+            width: 140px;
+            margin-left: auto;
+        }
     }
 
     .buffs {
         font-size: 0;
-        width: 330px;
+        width: 426px;
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 3px;
+        }
     }
 
     .rotation {
-        width: calc(100% - 670px);
+        width: calc(100% - 766px);
         font-size: 0;
 
+        & > div {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        } 
+
+        .label {
+            width: 100%;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
         .spell {
-            padding-left: 30px;
-            display: inline-block;
-            vertical-align: middle;
-            width: calc(50% - 30px);
-            position: relative;
-            cursor: pointer;
-            margin-bottom: 4px;
-            min-height: 38px;
-            &.hidden {
-                display: none;
+            transition: all 0.2s ease-in;
+            &:hover, &.open {
+                .icon {
+                    border-color: #ffcd45;
+                }
             }
-            &:before {
-                content: '';
-                width: 16px;
-                height: 16px;
-                line-height: 16px;
-                border: 1px solid #ddd;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 12px;
-                text-align: center;
+            &.fade {
+                opacity: 0.3;
             }
-
-            label {
-                font-weight: bold;
-                position: absolute;
-                left: 0;
-                top: -14px;
-                font-size: 11px;
-            }
-
-            &[data-id="11567"] {
-                width: 100%;
-            }
-
-            &[data-id="115671"] {
-                width: 100%;
-                margin-top: 26px;
-            }
-
             &.active {
-                border-color: #6e6d6d;
+                opacity: 1;
                 img {
                     filter: none;
                 }
+            }
+        }
+
+        .details {
+            width: 100%;
+            margin-top: 10;
+            border-top: 1px solid white;
+            padding-top: 10px;
+            position: absolute;
+            top: 94px;
+            left: 0;
+            margin: 0 20px;
+            width: calc(100% - 40px);
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+            &.visible {
+                opacity: 1;
+            }
+            label {
+                font-size: 12px;
+                position: absolute;
+                top: -20px;
+                font-weight: bold;
+            }
+            li {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
                 &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    border: 1px solid #ddd;
+                    font-size: 12px;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+                &.active:before {
                     content: '✔';
                 }
+                &.nobox:before {
+                    display: none;
+                }
+                input[type="text"] {
+                    width: 20px;
+                    border-bottom: 1px solid #ddd;
+                    text-align: center;
+                    font-size: 11px;
+                    margin: 0 6px;
+                }
             }
-
         }
 
         .icon {
             display: inline-block;
             vertical-align: middle;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin: 4px 0;
+            border: 1px solid #525252;
         }
 
         .options {
@@ -224,12 +270,41 @@
        
     }
 
+    .runes {
+        width: 100%;
+
+        .container {
+            display: flex; 
+            gap: 40px;
+            & > div {
+                width: 33%;
+                &:before {
+                    font-size: 12px;
+                    font-family: Open Sans,sans-serif;
+                }
+                &.chest:before {
+                    content: "Chest:";
+                }
+                &.legs:before {
+                    content: "Legs:";
+                }
+                &.gloves:before {
+                    content: "Gloves:";
+                }
+            }
+        }
+        .spell {
+            width: 100%;
+        }
+    }
+
     .talents {
         width: calc(100% - 251px);
         display: inline-flex;
         position: relative;
         justify-content: center;
         margin-top: 10px;
+        flex-wrap: wrap;
 
         table {
             padding: 0 10px 0;
@@ -285,6 +360,23 @@
                 &:before {
                     color: $icon-border;
                 }
+            }
+        }
+
+        .top {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            span {
+                color: #1eff00;
+                font-weight: bold;
+            }
+            a {
+                color: white;
+                font-size: 12px;
             }
         }
     }

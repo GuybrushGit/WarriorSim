@@ -56,7 +56,7 @@ SIM.STATS = {
             let aura = sim.player.auras[name];
             if (!aura.uptime) continue;
             view.auradata.labels.push(aura.name);
-            data.push((aura.uptime / sim.totalduration / 10).toFixed(2));
+            data.push(Math.min((aura.uptime / sim.totalduration / 10).toFixed(2), 100));
             colors.push(view.colors[counter % view.colors.length]);
             counter++;
         }
@@ -115,6 +115,14 @@ SIM.STATS = {
             data.push((sim.player.auras.deepwounds.totaldmg / sim.totalduration).toFixed(2));
             colors.push(view.colors[counter % view.colors.length]);
         }
+
+        // Rend
+        if (sim.player.auras.rend && sim.player.auras.rend.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.rend.name);
+            data.push((sim.player.auras.rend.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+
 
         view.dmgdata.datasets.push({
             data: data,
