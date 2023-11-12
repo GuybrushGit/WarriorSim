@@ -82,7 +82,7 @@ class Weapon {
                 this.basebonusdmg += buff.bonusdmg;
         if (enchant && enchant.bonusdmg) 
             this.basebonusdmg += enchant.bonusdmg;
-        if (!this.windfury && !this.wildstrikes && tempenchant && tempenchant.bonusdmg) 
+        if (tempenchant && tempenchant.bonusdmg) 
             this.basebonusdmg += tempenchant.bonusdmg;
         if (this.player.items.includes(21189))
             this.basebonusdmg += 4;

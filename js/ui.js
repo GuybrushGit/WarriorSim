@@ -1215,6 +1215,9 @@ SIM.UI = {
         var view = this;
         view.main.find('.js-enchant').hide();
 
+        let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
+        let level = parseInt(storage.level);
+
         if (!enchant[type] || enchant[type].length == 0) return;
 
         var resistCheckList = SIM.UI.resistCheckList();
@@ -1243,6 +1246,11 @@ SIM.UI = {
 
         for (let item of enchant[type]) {
 
+            if (item.r > level) {
+                item.selected = false;
+                continue;
+            }
+
             if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
                 continue;
 
@@ -1262,7 +1270,7 @@ SIM.UI = {
                         // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
                         `<td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.dmg || ''}</td>
+                        <td>${item.bonusdmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
