@@ -68,8 +68,9 @@ var runes = {
      {
          id: 403195,
          name: 'Devastate',
-         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.<BR/>[NOT IMPLEMENTED]",
+         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
          iconname: 'Devastate',
+         devastate: true,
      },
      {
          id: 430472,

@@ -10,7 +10,6 @@ gulp.task("js", function () {
     return gulp
         .src(["js/**/*.js", "lib/*.mjs"])
         .pipe(rename(function (path) {
-            // Updates the object in-place
             path.extname = ".min.js";
         }))
         .pipe(gulp.dest("dist/js"));

@@ -284,7 +284,6 @@ class Simulation {
                 // Use GCD spells
                 else if (player.timer) { }
                 else if (player.spells.victoryrush && player.spells.victoryrush.canUse()) { player.spelldelay = 1; delayedspell = player.spells.victoryrush; }
-                else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                 else if (player.auras.flask && player.auras.flask.canUse() && step > this.flaskstep) { player.spelldelay = 1; delayedspell = player.auras.flask; }
                 else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) { player.spelldelay = 1; delayedspell = player.auras.cloudkeeper; }
                 else if (player.auras.voidmadness && player.auras.voidmadness.canUse() && step > this.voidstep) { player.spelldelay = 1; delayedspell = player.auras.voidmadness; }
@@ -333,6 +332,7 @@ class Simulation {
                 else if (player.spells.quickstrike && player.spells.quickstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.quickstrike; }
                 else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) { player.spelldelay = 1; delayedspell = player.spells.whirlwind; }
                 else if (player.spells.overpower && player.spells.overpower.canUse()) { player.spelldelay = 1; delayedspell = player.spells.overpower; }
+                else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                 else if (player.spells.hamstring && player.spells.hamstring.canUse()) { player.spelldelay = 1; delayedspell = player.spells.hamstring; }
                 else if (player.auras.rend && player.auras.rend.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rend; }
 
@@ -463,6 +463,7 @@ class Simulation {
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.hamstring && player.spells.hamstring.timer && !player.spells.hamstring.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.spells.sunderarmor && player.spells.sunderarmor.timer && !player.spells.sunderarmor.step(next) && !player.spelldelay) spellcheck = true;
 
             // Auras with periodic ticks
             if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step() && !player.spelldelay) spellcheck = true;

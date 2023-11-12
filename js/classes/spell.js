@@ -26,12 +26,12 @@ class Spell {
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
         if (spell.priorityapactive) this.priorityap = parseInt(spell.priorityap);
-        if (typeof spell.globals !== 'undefined') this.globals = parseInt(spell.globals);
         if (spell.flagellation) this.flagellation = spell.flagellation;
         if (spell.consumedrage) this.consumedrage = spell.consumedrage;
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
         if (spell.exmacro) this.exmacro = spell.exmacro;
         if (spell.execute) this.execute = spell.execute;
+        if (spell.globalsactive) this.globals = spell.globals;
     }
     dmg() {
         return 0;
@@ -54,6 +54,7 @@ class Spell {
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
     }
+    failed() {}
 }
 
 class Bloodthirst extends Spell {
@@ -238,10 +239,24 @@ class SunderArmor extends Spell {
     use() {
         this.player.timer = 1500;
         this.player.rage -= this.cost;
-        this.stacks++;
+        this.timer = this.cooldown * 1000;
+        this.stacks = Math.min(6, this.stacks + 1);
+    }
+    dmg() {
+        if (!this.devastate) return 0;
+        let dmg;
+        let mod = 1 + 0.1 * (this.stacks - 1);
+        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return (dmg * mod) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
-        return !this.player.timer && this.stacks < this.globals && this.cost <= this.player.rage;
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage &&
+            (!this.minrage || this.player.rage >= this.minrage) &&
+            (!this.globals || this.stacks < this.globals);
+    }
+    failed() {
+        this.stacks--;
     }
 }
 

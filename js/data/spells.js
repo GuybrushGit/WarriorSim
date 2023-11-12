@@ -247,7 +247,12 @@ var spells = [
     name: 'Sunder Armor',
     classname: 'SunderArmor',
     iconname: 'ability_warrior_sunder',
+    minrage: 50,
+    minrageactive: false,
+    duration: 15,
+    durationactive: false,
     globals: 1,
+    globalsactive: false,
     active: false,
 },
 

@@ -117,6 +117,8 @@ class Player {
         if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
         if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
         if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
+        if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) this.spells.sunderarmor.devastate = true;
+
         this.update();
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
@@ -338,6 +340,10 @@ class Player {
                     if (item.dmgdw && this.oh) {
                         this.base.dmgmod *= (1 + item.dmgdw / 100) || 1;
                     }
+                    // Devastate
+                    if (item.devastate) {
+                        this.devastate = item.devastate;
+                    }
                 }
             }
         }
@@ -385,6 +391,8 @@ class Player {
                     this.dragonbreath = true;
                 if (buff.id == 413479)
                     this.gladstance = true;
+                if (buff.id == 71)
+                    this.defstance = true;
 
                 this.base.ap += (buff.ap || 0) + apbonus;
                 this.base.agi += buff.agi || 0;
@@ -866,10 +874,14 @@ class Player {
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result);
 
-        if (result == RESULT.DODGE) {
+        if (result == RESULT.MISS) {
+            spell.failed();
+        }
+        else if (result == RESULT.DODGE) {
+            spell.failed();
             this.dodgetimer = 5000;
         }
-        if (result == RESULT.CRIT) {
+        else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
             this.proccrit();
         }

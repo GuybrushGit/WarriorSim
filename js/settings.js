@@ -347,22 +347,22 @@ SIM.SETTINGS = {
         if (spell.haste !== undefined)
             ul.append(`<li class="nobox ${spell.haste ? 'active' : ''}">Attack speed set at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
 
-        if (typeof spell.globals === 'undefined' && typeof spell.timetoend === 'undefined')
+        if (typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
-        if (typeof spell.minrage !== 'undefined') 
+        if (typeof spell.minrage !== 'undefined' && spell.id != 11597) 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">${spell.name == "Heroic Strike" ? 'Queue' : 'Use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
+        if (typeof spell.minrage !== 'undefined' && spell.id == 11597) 
+            ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}" data-group="usage">Only use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maxrage !== 'undefined') 
             ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Don't use when above <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maincd !== 'undefined') 
             ul.append(`<li data-id="maincdactive" class="${spell.maincdactive ? 'active' : ''}">Don't ${spell.name == "Heroic Strike" ? 'queue' : 'use'} if BT / MS cooldown shorter than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> seconds</li>`);
         if (typeof spell.duration !== 'undefined') 
-            ul.append(`<li data-id="durationactive" class="${spell.durationactive ? 'active' : ''}">Only use every <input type="text" name="duration" value="${spell.duration}" data-numberonly="true" /> seconds</li>`);
+            ul.append(`<li data-id="durationactive" class="${spell.durationactive ? 'active' : ''}" data-group="usage">Only use every <input type="text" name="duration" value="${spell.duration}" data-numberonly="true" /> seconds</li>`);
         if (typeof spell.unqueue !== 'undefined') 
             ul.append(`<li data-id="unqueueactive" class="${spell.unqueueactive ? 'active' : ''}">Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage before MH swing</li>`);
         if (typeof spell.exmacro !== 'undefined') 
             ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Always queue when casting Execute</li>`);
-        if (typeof spell.globals !== 'undefined') 
-            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
         if (spell.timetoend !== undefined)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
         if (spell.priorityap !== undefined)
@@ -377,7 +377,9 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="consumedrage" class="${spell.consumedrage ? 'active' : ''}">Use only when Consumed by Rage procs</li>`);
         if (spell.execute !== undefined)
             ul.append(`<li data-id="execute" class="${spell.execute ? 'active' : ''}">Use during Execute phase</li>`);
-
+        if (typeof spell.globals !== 'undefined') 
+            ul.append(`<li data-id="globalsactive" class="${spell.globalsactive ? 'active' : ''}" data-group="usage">Only use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
+        
 
 
         
