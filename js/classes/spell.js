@@ -23,8 +23,8 @@ class Spell {
         if (spell.reaction) this.maxdelay = parseInt(spell.reaction);
         if (spell.cooldown) this.cooldown = parseInt(spell.cooldown) || 0;
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
-        if (spell.value1) this.value1 = spell.value1;
-        if (spell.value2) this.value2 = spell.value2;
+        if (spell.value1) this.value1 = parseInt(spell.value1);
+        if (spell.value2) this.value2 = parseInt(spell.value2);
         if (spell.priorityapactive) this.priorityap = parseInt(spell.priorityap);
         if (spell.flagellation) this.flagellation = spell.flagellation;
         if (spell.consumedrage) this.consumedrage = spell.consumedrage;
@@ -1277,7 +1277,8 @@ class ConsumedRage extends Aura {
 class Rend extends Aura {
     constructor(player, id) {
         super(player, id);
-        this.duration = this.duration || 9;
+        let dur = this.value2 * 3;
+        this.duration = Math.max(this.duration || dur, dur);
         this.cost = 10;
         this.idmg = 0;
         this.totaldmg = 0;
@@ -1287,8 +1288,8 @@ class Rend extends Aura {
     step() {
         while (step >= this.nexttick && this.stacks) {
             let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod;
-            this.idmg += ~~(dmg / 3);
-            this.totaldmg += ~~(dmg / 3);
+            this.idmg += ~~(dmg / this.value2);
+            this.totaldmg += ~~(dmg / this.value2);
 
             if (this.player.bleedrage) {
                 let oldRage = this.player.rage;
@@ -1298,7 +1299,7 @@ class Rend extends Aura {
                     this.player.auras.consumedrage.use();
             }
 
-            /* start-log */ if (log) this.player.log(`${this.name} tick for ${~~(dmg / 3)}`); /* end-log */
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${~~(dmg / this.value2)}`); /* end-log */
 
             this.nexttick += 3000;
             this.stacks--;
@@ -1315,7 +1316,7 @@ class Rend extends Aura {
         this.nexttick = step + 3000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.stacks = 3;
+        this.stacks = this.value2;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {

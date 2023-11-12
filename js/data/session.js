@@ -37,7 +37,7 @@ var session = {
            "minlevel": 4,
            "maxlevel": 9,
            "value1": 15,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -50,7 +50,7 @@ var session = {
            "minlevel": 10,
            "maxlevel": 19,
            "value1": 28,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -63,7 +63,7 @@ var session = {
            "minlevel": 20,
            "maxlevel": 29,
            "value1": 45,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -76,7 +76,7 @@ var session = {
            "minlevel": 30,
            "maxlevel": 39,
            "value1": 66,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -89,7 +89,7 @@ var session = {
            "minlevel": 40,
            "maxlevel": 49,
            "value1": 98,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -102,7 +102,7 @@ var session = {
            "minlevel": 50,
            "maxlevel": 59,
            "value1": 126,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true
@@ -114,7 +114,7 @@ var session = {
            "iconname": "ability_gouge",
            "minlevel": 60,
            "value1": 147,
-           "duration": 10,
+           "duration": 16,
            "durationactive": true,
            "active": false,
            "aura": true

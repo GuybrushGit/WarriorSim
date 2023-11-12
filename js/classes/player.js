@@ -591,8 +591,8 @@ class Player {
     }
     getGlanceReduction(weapon) {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
-        let low = Math.min(1.3 - 0.05 * diff, 0.91);
-        let high = Math.min(1.2 - 0.03 * diff, 0.99);
+        let low = Math.max(Math.min(1.3 - 0.05 * diff, 0.91), 0.01);
+        let high = Math.max(Math.min(1.2 - 0.03 * diff, 0.99), 0.2);
         if (this.weaponrng) return Math.random() * (high - low) + low;
         else return avg(low, high);
     }
