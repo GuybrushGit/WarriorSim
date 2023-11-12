@@ -1251,8 +1251,8 @@ SIM.UI = {
                 continue;
             }
 
-            if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
-                continue;
+            // if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
+            //     continue;
 
             if (item.hidden && !editmode) continue;
 
