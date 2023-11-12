@@ -421,6 +421,10 @@ class Simulation {
                 next = 1000 - ((step - player.auras.bloodrage.starttimer) % 1000);
             if (player.auras.gabbar && player.auras.gabbar.timer && (2000 - ((step - player.auras.gabbar.starttimer) % 2000)) < next)
                 next = 2000 - ((step - player.auras.gabbar.starttimer) % 2000);
+            if (player.auras.rend && player.auras.rend.timer && (3000 - ((step - player.auras.rend.starttimer) % 3000)) < next)
+                next = 3000 - ((step - player.auras.rend.starttimer) % 3000);
+            if (player.auras.deepwounds && player.auras.deepwounds.timer && (3000 - ((step - player.auras.deepwounds.starttimer) % 3000)) < next)
+                next = 3000 - ((step - player.auras.deepwounds.starttimer) % 3000);
 
             // Spells used by player
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && player.spells.bloodthirst.timer < next) next = player.spells.bloodthirst.timer;
@@ -468,6 +472,8 @@ class Simulation {
             // Auras with periodic ticks
             if (player.auras.bloodrage && player.auras.bloodrage.timer && !player.auras.bloodrage.step() && !player.spelldelay) spellcheck = true;
             if (player.auras.gabbar && player.auras.gabbar.timer) player.auras.gabbar.step();
+            if (player.auras.rend && player.auras.rend.timer && !player.auras.rend.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.deepwounds && player.auras.deepwounds.timer && !player.auras.deepwounds.step() && !player.spelldelay) spellcheck = true;
         }
 
         // Fight done
