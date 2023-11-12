@@ -641,7 +641,7 @@ class Player {
     steptimer(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            //if (log) this.log('Global CD off');
+            /* start-log */ if (log) this.log('Global CD off'); /* end-log */
             return true;
         }
         else {
@@ -652,7 +652,7 @@ class Player {
     stepitemtimer(a) {
         if (this.itemtimer <= a) {
             this.itemtimer = 0;
-            //if (log) this.log('Item CD off');
+            /* start-log */ if (log) this.log('Item CD off'); /* end-log */
             return true;
         }
         else {
@@ -790,7 +790,7 @@ class Player {
             }
             else {
                 result = this.rollweapon(weapon);
-                //if (log) this.log(`Heroic Strike auto canceled`);
+                /* start-log */ if (log) this.log(`Heroic Strike auto canceled`); /* end-log */
             }
         }
         else {
@@ -822,7 +822,7 @@ class Player {
             weapon.data[result]++;
         }
         weapon.totalprocdmg += procdmg;
-        //if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})`);
+        /* start-log */ if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})`); /* end-log */
         return done + procdmg;
     }
     attackoh(weapon) {
@@ -851,14 +851,14 @@ class Player {
         weapon.data[result]++;
         weapon.totaldmg += done;
         weapon.totalprocdmg += procdmg;
-        //if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`);
+        /* start-log */ if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
         return done + procdmg;
     }
     cast(spell, delayedheroic) {
         this.stepauras();
         spell.use(delayedheroic);
         if (spell.useonly) {
-            //if (log) this.log(`${spell.name} used`);
+            /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
         let procdmg = 0;
@@ -878,7 +878,7 @@ class Player {
         spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
-        //if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]}).`);
+        /* start-log */ if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]}).`); /* end-log */
         return done + procdmg;
     }
     dealdamage(dmg, result, weapon, spell) {
@@ -901,7 +901,7 @@ class Player {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
-                //if (log) this.log(`${weapon.name} proc`);
+                /* start-log */ if (log) this.log(`${weapon.name} proc`); /* end-log */
                 if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
@@ -916,14 +916,14 @@ class Player {
                 weapon.windfury.use(weapon.offhand);
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
-                //if (log) this.log(`Trinket 1 proc`);
+                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
                 if (this.trinketproc1.extra)
                     this.batchedextras += this.trinketproc1.extra;
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
             }
             if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
-                //if (log) this.log(`Trinket 2 proc`);
+                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
                 if (this.trinketproc2.extra)
                     this.batchedextras += this.trinketproc2.extra;
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
@@ -932,12 +932,12 @@ class Player {
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
-                //if (log) this.log(`Misc proc`);
+                /* start-log */ if (log) this.log(`Misc proc`); /* end-log */
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng10k() < this.talents.swordproc * 100){
                     this.mhextras++;
-                    //if (log) this.log(`Sword talent proc`);
+                    /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
                 }
             }
             if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {

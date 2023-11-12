@@ -13,9 +13,13 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "dist": "gulp sass && gulp js",
+    "dist": "gulp sass && gulp js-build",
     "dev": "gulp"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp-rename": "^2.0.0",
+    "gulp-strip-code": "^0.1.4"
+  }
 }
