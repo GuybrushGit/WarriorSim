@@ -1303,10 +1303,14 @@ class Rend extends Aura {
 
             this.nexttick += 3000;
             this.stacks--;
+
+            if (!this.stacks) {
+                this.uptime += (step - this.starttimer);
+                /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+            }
         }
 
         if (step >= this.timer) {
-            this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.firstuse = false;
         }
@@ -1321,6 +1325,12 @@ class Rend extends Aura {
     }
     canUse() {
         return !this.timer && !this.player.timer && this.player.rage >= this.cost;
+    }
+    end() {
+        if (this.stacks)
+            this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
     }
 }
 
