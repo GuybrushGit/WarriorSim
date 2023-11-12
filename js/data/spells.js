@@ -420,6 +420,7 @@ var spells = [
     name: 'Berserker Rage',
     classname: 'BerserkerRage',
     iconname: 'spell_nature_ancestralguardian',
+    minlevel: 32,
     active: true,
     buff: true,
     flagellation: true,
