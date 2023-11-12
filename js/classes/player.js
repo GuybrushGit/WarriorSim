@@ -25,7 +25,8 @@ class Player {
         this.timer = 0;
         this.itemtimer = 0;
         this.dodgetimer = 0;
-        this.extraattacks = 0;
+        this.mhextras = 0;
+        this.ohextras = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
@@ -423,7 +424,8 @@ class Player {
         this.mh.timer = 0;
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
-        this.extraattacks = 0;
+        this.mhextras = 0;
+        this.ohextras = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
@@ -690,6 +692,7 @@ class Player {
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
+        if (this.oh && this.oh.windfury && this.oh.windfury.timer) this.oh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.step();
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.step();
@@ -725,6 +728,7 @@ class Player {
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
+        if (this.oh && this.oh.windfury && this.oh.windfury.timer) this.oh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.end();
         if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.end();
@@ -901,14 +905,15 @@ class Player {
                 if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
-                if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
+                if (weapon.proc1.extra && weapon.offhand) this.ohextras += weapon.proc1.extra;
+                if (weapon.proc1.extra && !weapon.offhand) this.mhextras += weapon.proc1.extra;
             }
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2);
             }
             if (weapon.windfury && !this.auras.windfury.timer && rng10k() < 2000) {
-                weapon.windfury.use();
+                weapon.windfury.use(weapon.offhand);
             }
             if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
                 //if (log) this.log(`Trinket 1 proc`);
@@ -931,7 +936,7 @@ class Player {
             }
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
                 if (rng10k() < this.talents.swordproc * 100){
-                    this.extraattacks++;
+                    this.mhextras++;
                     //if (log) this.log(`Sword talent proc`);
                 }
             }
@@ -952,6 +957,8 @@ class Player {
                 this.auras.consumedrage.proc();
             if (this.mh.windfury && this.mh.windfury.stacks)
                 this.mh.windfury.proc();
+            if (this.oh && this.oh.windfury && this.oh.windfury.stacks)
+                this.oh.windfury.proc();
         }
         return procdmg;
     }

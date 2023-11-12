@@ -71,6 +71,7 @@
             if (sparse.sta) obj.sta = sparse.sta;
             if (sparse.min) obj.mindmg = sparse.min;
             if (sparse.max) obj.maxdmg = sparse.max;
+            if (obj.id != 13016) return;
 
             let effects = getEffects(obj.id);
             if (effects.length) {
