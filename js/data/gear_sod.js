@@ -29838,11 +29838,7 @@ var gear = {
       "speed": 1.8,
       "mindmg": 56,
       "maxdmg": 105,
-      "str": 7,
-      "proc": {
-        "magic": true,
-        "dmg": 2
-      }
+      "str": 7
     },
     {
       "id": 20003,

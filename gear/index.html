@@ -125,7 +125,7 @@
               }
               if (proc2 && !proc) proc = proc2;
               if (proc && (proc.spell || proc.extra || proc.dmg || proc.tick) && obj.slot !== "ranged") obj.proc = proc;
-
+              if (item.ID == 19968) delete obj.proc;
             });
           }
 

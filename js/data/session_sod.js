@@ -272,6 +272,7 @@ var session = {
             "name": "Sunder Armor",
             "classname": "SunderArmor",
             "iconname": "ability_warrior_sunder",
+            "globalsactive": true,
             "globals": 1,
             "active": true
         },

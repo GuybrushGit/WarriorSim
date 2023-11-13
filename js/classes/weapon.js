@@ -100,6 +100,8 @@ class Weapon {
             this.basebonusdmg += tempenchant.bonusdmg;
         if (this.player.items.includes(21189))
             this.basebonusdmg += 4;
+        if (this.player.items.includes(19968) || item.id == 19968)
+            this.basebonusdmg += 2;
         this.bonusdmg = this.basebonusdmg;
     }
     dmg(heroicstrike) {
