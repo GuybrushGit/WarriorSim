@@ -70,6 +70,8 @@
           if (parseInt(sparse.ItemDelay)) obj.speed = parseInt(sparse.ItemDelay) / 1000;
           if (parseInt(sparse.MinDamage_0)) obj.mindmg = parseInt(sparse.MinDamage_0);
           if (parseInt(sparse.MaxDamage_0)) obj.maxdmg = parseInt(sparse.MaxDamage_0);
+          if (parseInt(sparse.MinDamage_1)) obj.mindmg += parseInt(sparse.MinDamage_1);
+          if (parseInt(sparse.MaxDamage_1)) obj.maxdmg += parseInt(sparse.MaxDamage_1);
 
           let agi = getStat(sparse, 3);
           let str = getStat(sparse, 4);
@@ -77,10 +79,7 @@
           if (agi) obj.agi = agi;
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
-          
-          //if (obj.id != 17182 && obj.id != 13016 && obj.id != 19874 && obj.id != 19324) continue;
-
-
+        
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
           if (spells.length) {
             spells.forEach((spell, index) => {
@@ -96,22 +95,35 @@
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
+                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95) {
+                    obj.skill = parseInt(e.EffectBasePoints) + 1;
+                    if (item.ClassID != "2") {
+                      if (item.ID == 14551) obj.type = "Varied";
+                      else if (e.EffectMiscValue_0 == 44) obj.type = "Axe";
+                      else if (e.EffectMiscValue_0 == 173) obj.type = "Dagger";
+                      else if (e.EffectMiscValue_0 == 43) obj.type = "Sword";
+                      else delete obj.skill;
+                    }
+                  }
                 });
               }
+
+            // gear/:140 check Blade of Eternal Darkness
+            // gear/:140 check Halberd of Smiting
+            // gear/:140 check Fiery Retributer
 
               // procs
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
                 if (item.ClassID != "2") {
-                  console.log("Items not implemented: " + obj.name);
+                  //console.log("Items not implemented: " + obj.name);
                 }
                 else {
                   proc2 = getProcFromSpell(triggerSpell[0].EffectTriggerSpell);
                 }
               }
               if (proc2 && !proc) proc = proc2;
-              else if (proc2 && proc) console.log("This shouldn't happen: " + obj.name);
               if (proc && (proc.spell || proc.extra || proc.dmg || proc.tick) && obj.slot !== "ranged") obj.proc = proc;
 
             });
@@ -128,8 +140,17 @@
             obj.rand = suff.id;
           }
 
-          if (!!(!obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit) && 
-              obj.id !== 21568 && obj.id !== 21567) continue;
+
+          let include = false, exclude = false;
+          if (obj.id == 21568) include = true;
+          if (obj.id == 21567) include = true;
+          if (obj.id == 17780) exclude = true;
+          if (obj.id == 13136) debugger;
+          
+
+          if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
+          if (exclude) continue;
+          if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
 
           if (obj.slot == "finger") {
             gear["finger1"].push(obj);
@@ -200,7 +221,6 @@
           "ap": 10
         });
 
-        console.log(gear);
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
 
       }
