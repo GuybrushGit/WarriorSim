@@ -533,6 +533,14 @@ var buffs = [
       consume: true,
    },
    {
+      id: 6662,
+      name: "Elixir of Giant Growth",
+      iconname: "inv_potion_10",
+      str: 8,
+      minlevel: 8,
+      consume: true,
+   },
+   {
       id: 9206,
       name: "Elixir of Giants",
       iconname: "inv_potion_61",
