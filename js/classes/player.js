@@ -452,6 +452,12 @@ class Player {
         if (this.auras.rend) {
             this.auras.rend.idmg = 0;
         }
+        if (this.auras.weaponbleedmh) {
+            this.auras.weaponbleedmh.idmg = 0;
+        }
+        if (this.auras.weaponbleedoh) {
+            this.auras.weaponbleedoh.idmg = 0;
+        }
         this.update();
     }
     update() {
@@ -710,6 +716,8 @@ class Player {
         if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.step();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.step();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.step();
+        if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.step();
+        if (this.auras.weaponbleedoh && this.auras.weaponbleedoh.timer) this.auras.weaponbleedoh.step();
     }
     endauras() {
 
@@ -747,6 +755,8 @@ class Player {
         if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.end();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.end();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.end();
+        if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.end();
+        if (this.auras.weaponbleedoh && this.auras.weaponbleedoh.timer) this.auras.weaponbleedoh.end();
 
     }
     rollweapon(weapon) {
@@ -913,12 +923,12 @@ class Player {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
-                /* start-log */ if (log) this.log(`${weapon.name} proc`); /* end-log */
                 if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 if (weapon.proc1.extra && weapon.offhand) this.ohextras += weapon.proc1.extra;
                 if (weapon.proc1.extra && !weapon.offhand) this.mhextras += weapon.proc1.extra;
+                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
             }
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();

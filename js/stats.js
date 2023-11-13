@@ -123,6 +123,19 @@ SIM.STATS = {
             colors.push(view.colors[counter % view.colors.length]);
         }
 
+        // weapon bleed
+        if (sim.player.auras.weaponbleedmh && sim.player.auras.weaponbleedmh.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.weaponbleedmh.name);
+            data.push((sim.player.auras.weaponbleedmh.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+        if (sim.player.auras.weaponbleedoh && sim.player.auras.weaponbleedoh.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.weaponbleedoh.name);
+            data.push((sim.player.auras.weaponbleedoh.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+
+
 
         view.dmgdata.datasets.push({
             data: data,

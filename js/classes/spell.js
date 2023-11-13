@@ -1375,3 +1375,46 @@ class VoidMadness extends Aura {
         return this.firstuse && !this.player.itemtimer && !this.timer && !this.player.timer;
     }
 }
+
+class WeaponBleed extends Aura {
+    constructor(player, id, duration, interval, dmg, offhand) {
+        super(player, id, 'Weapon Bleed' + (offhand ? ' OH' : ' MH'));
+        this.duration = parseInt(duration) / 1000;
+        this.interval = parseInt(interval);
+        this.ticks = duration / interval;
+        this.dmg = parseInt(dmg);
+        this.idmg = 0;
+        this.totaldmg = 0;
+        this.lasttick = 0;
+    }
+    step() {
+        while (step >= this.nexttick) {
+            this.idmg += this.dmg;
+            this.totaldmg += this.dmg;
+
+            if (this.player.bleedrage) {
+                let oldRage = this.player.rage;
+                this.player.rage += this.player.bleedrage;
+                if (this.player.rage > 100) this.player.rage = 100;
+                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                    this.player.auras.consumedrage.use();
+            }
+
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${this.dmg}`); /* end-log */
+
+            this.nexttick += this.interval;
+        }
+
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+        }
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.nexttick = step + this.interval;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+    }
+}

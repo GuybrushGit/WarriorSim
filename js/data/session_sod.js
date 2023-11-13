@@ -34,6 +34,7 @@ var session = {
             "maxlevel": 9,
             "value1": 15,
             value2: 3,
+            duration: 10,
             "durationactive": true,
             "active": false,
             "aura": true
@@ -47,6 +48,7 @@ var session = {
             "maxlevel": 19,
             "value1": 28,
             value2: 4,
+            duration: 13,
             "durationactive": true,
             "active": false,
             "aura": true
@@ -60,6 +62,7 @@ var session = {
             "maxlevel": 29,
             "value1": 45,
             value2: 5,
+            duration: 16,
             "durationactive": true,
             "active": true,
             "aura": true
@@ -73,6 +76,7 @@ var session = {
             "maxlevel": 39,
             "value1": 66,
             value2: 6,
+            duration: 19,
             "durationactive": true,
             "active": false,
             "aura": true
@@ -86,6 +90,7 @@ var session = {
             "maxlevel": 49,
             "value1": 98,
             value2: 7,
+            duration: 22,
             "durationactive": true,
             "active": false,
             "aura": true
@@ -99,6 +104,7 @@ var session = {
             "maxlevel": 59,
             "value1": 126,
             value2: 7,
+            duration: 22,
             "durationactive": true,
             "active": false,
             "aura": true
@@ -111,6 +117,7 @@ var session = {
             "minlevel": 60,
             "value1": 147,
             value2: 7,
+            duration: 22,
             "durationactive": true,
             "active": false,
             "aura": true

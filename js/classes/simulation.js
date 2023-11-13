@@ -425,6 +425,10 @@ class Simulation {
                 next = 3000 - ((step - player.auras.rend.starttimer) % 3000);
             if (player.auras.deepwounds && player.auras.deepwounds.timer && (3000 - ((step - player.auras.deepwounds.starttimer) % 3000)) < next)
                 next = 3000 - ((step - player.auras.deepwounds.starttimer) % 3000);
+            if (player.auras.weaponbleedmh && player.auras.weaponbleedmh.timer && (player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval)) < next)
+                next = player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval);
+            if (player.auras.weaponbleedoh && player.auras.weaponbleedoh.timer && (player.auras.weaponbleedoh.interval - ((step - player.auras.weaponbleedoh.starttimer) % player.auras.weaponbleedoh.interval)) < next)
+                next = player.auras.weaponbleedoh.interval - ((step - player.auras.weaponbleedoh.starttimer) % player.auras.weaponbleedoh.interval);
 
             // Spells used by player
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && player.spells.bloodthirst.timer < next) next = player.spells.bloodthirst.timer;
@@ -474,6 +478,8 @@ class Simulation {
             if (player.auras.gabbar && player.auras.gabbar.timer) player.auras.gabbar.step();
             if (player.auras.rend && player.auras.rend.timer && !player.auras.rend.step() && !player.spelldelay) spellcheck = true;
             if (player.auras.deepwounds && player.auras.deepwounds.timer && !player.auras.deepwounds.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.weaponbleedmh && player.auras.weaponbleedmh.timer && !player.auras.weaponbleedmh.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.weaponbleedoh && player.auras.weaponbleedoh.timer && !player.auras.weaponbleedoh.step() && !player.spelldelay) spellcheck = true;
         }
 
         // Fight done
@@ -484,6 +490,12 @@ class Simulation {
         }
         if (player.auras.rend) {
             this.idmg += player.auras.rend.idmg;
+        }
+        if (player.auras.weaponbleedmh) {
+            this.idmg += player.auras.weaponbleedmh.idmg;
+        }
+        if (player.auras.weaponbleedoh) {
+            this.idmg += player.auras.weaponbleedoh.idmg;
         }
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;
