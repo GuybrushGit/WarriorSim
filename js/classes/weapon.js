@@ -61,9 +61,10 @@ class Weapon {
             }
         }
         
-        if (enchant && enchant.ppm) {
+        if (enchant && (enchant.ppm || enchant.chance)) {
             this.proc2 = {};
-            this.proc2.chance = ~~(this.speed * enchant.ppm / 0.006);
+            if (enchant.ppm) this.proc2.chance = ~~(this.speed * enchant.ppm / 0.006);
+            if (enchant.chance) this.proc2.chance = enchant.chance * 100;
             if (enchant.magicdmg) this.proc2.magicdmg = enchant.magicdmg;
             if (enchant.procspell && !offhand) {
                 player.auras.crusader1 = new Crusader(player);

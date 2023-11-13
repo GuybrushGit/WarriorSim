@@ -87,6 +87,38 @@ var enchant = {
           "name": "Superior Striking",
           "bonusdmg": 5,
        },
+       {
+         "id": 13943,
+         "spellid": true,
+         "name": "Greater Striking",
+         "bonusdmg": 4,
+      },
+      {
+         "id": 13693,
+         "spellid": true,
+         "name": "Striking",
+         "bonusdmg": 3,
+      },
+      {
+         "id": 13503,
+         "spellid": true,
+         "name": "Lesser Striking",
+         "bonusdmg": 2,
+      },
+      {
+         "id": 7788,
+         "spellid": true,
+         "name": "Minor Striking",
+         "bonusdmg": 1,
+      },
+      {
+         "id": 6296,
+         "spellid": true,
+         "name": "Fiery Blaze",
+         "chance": 15,
+         "magicdmg": 12,
+         "r": 40
+      },
     ],
     "offhand": [
       {
@@ -171,11 +203,43 @@ var enchant = {
         "magicdmg": 33
      },
      {
-        "id": 20031,
-        "spellid": true,
-        "name": "Superior Striking",
-        "bonusdmg": 5,
-     },
+      "id": 20031,
+      "spellid": true,
+      "name": "Superior Striking",
+      "bonusdmg": 5,
+   },
+   {
+     "id": 13943,
+     "spellid": true,
+     "name": "Greater Striking",
+     "bonusdmg": 4,
+  },
+  {
+     "id": 13693,
+     "spellid": true,
+     "name": "Striking",
+     "bonusdmg": 3,
+  },
+  {
+     "id": 13503,
+     "spellid": true,
+     "name": "Lesser Striking",
+     "bonusdmg": 2,
+  },
+  {
+     "id": 7788,
+     "spellid": true,
+     "name": "Minor Striking",
+     "bonusdmg": 1,
+  },
+  {
+   "id": 6296,
+   "spellid": true,
+   "name": "Fiery Blaze",
+   "chance": 15,
+   "magicdmg": 12,
+   "r": 40
+},
     ],
     "twohand": [
        {
@@ -267,21 +331,49 @@ var enchant = {
           "magicdmg": 33
        },
        {
-          "id": 20030,
-          "spellid": true,
-          "name": "Superior Impact",
-          "bonusdmg": 9,
-       },
-       {
           "id": 6043,
           "name": "Iron Counterweight",
           "haste": 3,
-       }
+       },
+       {
+         "id": 20030,
+         "spellid": true,
+         "name": "Superior Impact",
+         "bonusdmg": 9,
+      },
+      {
+         "id": 13937,
+         "spellid": true,
+         "name": "Greater Impact",
+         "bonusdmg": 7,
+      },
+      {
+         "id": 13695,
+         "spellid": true,
+         "name": "Impact",
+         "bonusdmg": 5,
+      },
+      {
+         "id": 13529,
+         "spellid": true,
+         "name": "Lesser Impact",
+         "bonusdmg": 3,
+      },
+      {
+         "id": 7745,
+         "spellid": true,
+         "name": "Minor Impact",
+         "bonusdmg": 2,
+      },
+      {
+         "id": 6296,
+         "spellid": true,
+         "name": "Fiery Blaze",
+         "chance": 15,
+         "magicdmg": 12,
+         "r": 40
+      },
     ],
-
-
-
-
     "head": [
       {
          "name": "Ice Guard",

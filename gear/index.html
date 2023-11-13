@@ -39,9 +39,6 @@
         twohand: []
       };
 
-      // add fiery blaze enchant
-      // remove Red Whelp Gloves
-
       var init = async function() {
         await loadTable('Item');
         await loadTable('ItemEffect');
@@ -172,6 +169,35 @@
           sta: 6,
           hit: 1,
           r: 25,
+        });
+
+        gear["twohand"].push({
+          "id": 9999999,
+          "type": "Sword",
+          "slot": "twohand",
+          "r": 25,
+          "name": "Fathomblade",
+          "speed": 2.5,
+          "mindmg": 48,
+          "maxdmg": 73,
+          "hit": 1
+        });
+
+        gear["trinket1"].push({
+          "id": 9999998,
+          "type": "Miscellaneous",
+          "slot": "trinket",
+          "r": 25,
+          "name": "Avenger's Void Pearl",
+          "ap": 10
+        });
+        gear["trinket2"].push({
+          "id": 9999998,
+          "type": "Miscellaneous",
+          "slot": "trinket",
+          "r": 25,
+          "name": "Avenger's Void Pearl",
+          "ap": 10
         });
 
         console.log(gear);

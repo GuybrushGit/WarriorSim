@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Warrior DPS Sim</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/js/data/gear.js"></script>
+</head>
+<body>
+
+  <textarea style="width: 100%; height: 100vh;">
+
+    </textarea>
+
+    <script>
+      $(document).ready(function () {
+
+
+        for(let type in gear) {
+          for(let item of gear[type]) {
+            if (item.ppm || item.procchance) {
+              item.proc = {};
+              if (item.ppm) { item.proc.ppm = item.ppm; }
+              if (item.procchance) { item.proc.chance = item.procchance; }
+              if (item.magicdmg) { item.proc.magic = true; item.proc.dmg = item.magicdmg; }
+              if (item.physdmg) { item.proc.dmg = item.physdmg; }
+              if (item.procgcd) { item.proc.procgcd = item.procgcd; }
+              if (item.binaryspell) { item.proc.binaryspell = item.binaryspell; }
+              if (item.procspell) { item.proc.spell = item.procspell; }
+              if (item.coeff) { item.proc.coeff = item.coeff; }
+              if (item.procextra) { item.proc.extra = item.procextra; }
+              if (item.procchance) { item.proc.extra = item.procextra; }
+              delete item.ppm;
+              delete item.magicdmg;
+              delete item.physdmg;
+              delete item.procgcd;
+              delete item.binaryspell;
+              delete item.procspell;
+              delete item.coeff;
+              delete item.procextra;
+              delete item.procchance;
+            }
+          }
+        }
+
+
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+      });
+    </script>
+
+</body>
+
+</html>

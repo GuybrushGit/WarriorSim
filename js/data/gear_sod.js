@@ -23049,6 +23049,14 @@ var gear = {
         "interval": "2000",
         "duration": "4000"
       }
+    },
+    {
+      "id": 9999998,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 25,
+      "name": "Avenger's Void Pearl",
+      "ap": 10
     }
   ],
   "trinket2": [
@@ -23244,6 +23252,14 @@ var gear = {
         "interval": "2000",
         "duration": "4000"
       }
+    },
+    {
+      "id": 9999998,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 25,
+      "name": "Avenger's Void Pearl",
+      "ap": 10
     }
   ],
   "ranged": [
@@ -36831,6 +36847,17 @@ var gear = {
       "maxdmg": 338,
       "sta": 28,
       "ap": 420
+    },
+    {
+      "id": 9999999,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 25,
+      "name": "Fathomblade",
+      "speed": 2.5,
+      "mindmg": 48,
+      "maxdmg": 73,
+      "hit": 1
     }
   ]
 };
