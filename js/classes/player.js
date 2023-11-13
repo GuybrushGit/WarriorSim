@@ -922,8 +922,8 @@ class Player {
     procattack(spell, weapon, result) {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
-            if (weapon.proc1 && rng10k() < weapon.proc1.chance) {
-                if (weapon.proc1.spell && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) weapon.proc1.spell.use();
+            if (weapon.proc1 && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
+                if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 if (weapon.proc1.extra && weapon.offhand) this.ohextras += weapon.proc1.extra;
