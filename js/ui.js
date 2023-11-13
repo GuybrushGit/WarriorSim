@@ -489,8 +489,11 @@ SIM.UI = {
             },
             (iteration, report) => {
                 // Update
-                updateFn(Math.floor((iteration / report.iterations) * 100));
-                dps.text((report.totaldmg / report.totalduration).toFixed(2));
+                let perc = Math.floor((iteration / report.iterations) * 100);
+                if (perc < 100) {
+                    updateFn(perc);
+                    dps.text((report.totaldmg / report.totalduration).toFixed(2));
+                }
             },
             (error) => {
                 dps.text('ERROR');
