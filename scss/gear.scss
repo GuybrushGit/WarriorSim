@@ -110,6 +110,10 @@ section.main {
                 float: left;
             }
         }
+        .js-import, .js-export {
+            float: left;
+            margin-right: 20px;
+        }
         @include mobile {
             display: flex;
             flex-direction: column;
@@ -174,8 +178,14 @@ section.main {
         }
     }
 
+    .profilejson {
+        height: 270px;
+        width: 600px;
+        margin-top: 40px;
+    }
+
     .profileoption {
-        margin: 20px 50px;
+        margin: 20px 0;
         border-bottom: 1px solid white;
         width: 282px;
         display: flex;
