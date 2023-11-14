@@ -286,16 +286,16 @@
             line-height: 34px;
             margin: 0 0 0 20px;
         }
-        span {
+        .dps {
             display: none;
-            margin: 0 auto 0 20px;
-            height: 34px;
+            margin: 0 auto 0 16px;
             line-height: 34px;
+            font-size: 22px;
         }
     }
 
     .menu-button-container {
-        display: flex;
+        display: none;
         height: 100%;
         width: 30px;
         cursor: pointer;
@@ -352,6 +352,10 @@
         min-height: auto;
         z-index: 10;
 
+        .menu-button-container {
+            display: flex;
+        }
+
         &.closed {
             //height: 60px;
             max-height: 60px;
@@ -363,7 +367,7 @@
                 height: 60px;
                 min-height: 60px;
                 border-top: 2px solid #717171;
-                .btn, span {
+                .btn, .dps {
                     display: block;
                 }
             }

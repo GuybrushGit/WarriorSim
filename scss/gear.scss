@@ -92,6 +92,9 @@ section.main {
 
     .table-container {
         padding: 20px 40px;
+        @include mobile {
+            padding: 10px 20px 20px;
+        }
     }
 
     .table-container:empty + .btn {
@@ -106,6 +109,11 @@ section.main {
             &:first-child {
                 float: left;
             }
+        }
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -173,6 +181,9 @@ section.main {
         display: flex;
         justify-content: space-between;
         padding-bottom: 4px;
+        @include mobile {
+            margin: 0;
+        }
 
         input {
             background: transparent;

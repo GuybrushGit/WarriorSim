@@ -76,6 +76,11 @@ SIM.UI = {
             view.tcontainer.find('table.gear tbody tr td:last-of-type').html('');
             view.startLoading();
             view.simulateDPS(rows);
+
+            // mobile
+            view.sidebar.addClass('closed');
+            view.sidebar.find('.menu-button-container').removeClass('open');
+            if (window.innerWidth < 960) view.sidebar.get(0).scrollTop = 0;
         });
 
         view.main.on('click', '.js-enchant', function(e) {
