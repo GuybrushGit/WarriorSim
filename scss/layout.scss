@@ -13,8 +13,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     display: flex;
-    &.sidebar-mobile-open {
-        overflow: hidden;
+    @include mobile {
+        &.sidebar-mobile-open {
+            overflow: hidden;
+        }
     }
 }
 
