@@ -85,6 +85,7 @@ SIM.UI = {
             view.sidebar.addClass('closed');
             view.sidebar.find('.menu-button-container').removeClass('open');
             if (window.innerWidth < 960) view.sidebar.get(0).scrollTop = 0;
+            view.body.removeClass('sidebar-mobile-open');
         });
 
         view.main.on('click', '.js-enchant', function(e) {
