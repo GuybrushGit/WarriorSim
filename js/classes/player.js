@@ -256,7 +256,7 @@ class Player {
         if (type == "mainhand")
             this.mh = new Weapon(this, item, ench, tempench, false, false);
 
-        if (type == "offhand")
+        if (type == "offhand" && item.type != "Shield")
             this.oh = new Weapon(this, item, ench, tempench, true, false);
 
         if (type == "twohand")

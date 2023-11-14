@@ -31012,6 +31012,15 @@ var gear = {
       "maxdmg": 94
     },
     {
+      "id": 1203,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "name": "Aegis of Stormwind",
+      "str": 6,
+      "sta": 15
+    },
+    {
       "id": 1207,
       "type": "Mace",
       "slot": "onehand",
@@ -31162,6 +31171,15 @@ var gear = {
       "mindmg": 12,
       "maxdmg": 24,
       "agi": 2
+    },
+    {
+      "id": 1979,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "name": "Wall of the Dead",
+      "str": 10,
+      "sta": 15
     },
     {
       "id": 1994,
@@ -31356,6 +31374,15 @@ var gear = {
       }
     },
     {
+      "id": 2916,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "name": "Gold Lion Shield",
+      "str": 2,
+      "sta": 5
+    },
+    {
       "id": 2941,
       "type": "Dagger",
       "slot": "onehand",
@@ -31434,6 +31461,14 @@ var gear = {
       "sta": 3
     },
     {
+      "id": 3450,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 12,
+      "name": "Faerleia's Shield",
+      "str": 2
+    },
+    {
       "id": 3490,
       "type": "Dagger",
       "slot": "onehand",
@@ -31468,6 +31503,49 @@ var gear = {
       "sta": 1
     },
     {
+      "id": 3651,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 10,
+      "name": "Veteran Shield",
+      "str": 2
+    },
+    {
+      "id": 3655,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 16,
+      "name": "Burnished Shield",
+      "str": 2,
+      "sta": 3
+    },
+    {
+      "id": 3656,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 22,
+      "name": "Lambent Scale Shield",
+      "str": 4,
+      "sta": 2
+    },
+    {
+      "id": 3761,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "name": "Deadskull Shield",
+      "str": 1,
+      "sta": 7
+    },
+    {
+      "id": 3763,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 30,
+      "name": "Lunar Buckler",
+      "str": 3
+    },
+    {
       "id": 3850,
       "type": "Sword",
       "slot": "onehand",
@@ -31478,6 +31556,15 @@ var gear = {
       "maxdmg": 62,
       "agi": 4,
       "str": 4
+    },
+    {
+      "id": 4065,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "name": "Combat Shield",
+      "str": 7,
+      "sta": 2
     },
     {
       "id": 4088,
@@ -31513,6 +31600,32 @@ var gear = {
       "maxdmg": 78,
       "agi": 8,
       "str": 7
+    },
+    {
+      "id": 4115,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 33,
+      "name": "Grom'gol Buckler",
+      "str": 2,
+      "sta": 3
+    },
+    {
+      "id": 4129,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 30,
+      "name": "Collection Plate",
+      "str": 2,
+      "sta": 9
+    },
+    {
+      "id": 4290,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 13,
+      "name": "Dust Bowl",
+      "str": 2
     },
     {
       "id": 4446,
@@ -31559,6 +31672,24 @@ var gear = {
       "agi": 5
     },
     {
+      "id": 4477,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "name": "Nefarious Buckler",
+      "str": 3,
+      "sta": 6
+    },
+    {
+      "id": 4507,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "name": "Pit Fighter's Shield",
+      "str": 8,
+      "sta": 3
+    },
+    {
       "id": 4571,
       "type": "Dagger",
       "slot": "onehand",
@@ -31570,6 +31701,23 @@ var gear = {
       "agi": 2,
       "str": 1,
       "rand": 670
+    },
+    {
+      "id": 4652,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 35,
+      "name": "Salbac Shield",
+      "str": 9
+    },
+    {
+      "id": 4821,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "name": "Bear Buckler",
+      "str": 3,
+      "sta": 3
     },
     {
       "id": 4825,
@@ -31712,6 +31860,15 @@ var gear = {
       }
     },
     {
+      "id": 5443,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "name": "Gold-plated Buckler",
+      "agi": 2,
+      "sta": 5
+    },
+    {
       "id": 5540,
       "type": "Dagger",
       "slot": "onehand",
@@ -31797,6 +31954,24 @@ var gear = {
       }
     },
     {
+      "id": 6223,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "name": "Crest of Darkshire",
+      "str": 2,
+      "sta": 7
+    },
+    {
+      "id": 6320,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 23,
+      "name": "Commander's Crest",
+      "str": 6,
+      "sta": 3
+    },
+    {
       "id": 6331,
       "type": "Dagger",
       "slot": "onehand",
@@ -31830,6 +32005,15 @@ var gear = {
       "str": 4
     },
     {
+      "id": 6400,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "name": "Glimmering Shield",
+      "str": 4,
+      "sta": 3
+    },
+    {
       "id": 6448,
       "type": "Dagger",
       "slot": "onehand",
@@ -31856,6 +32040,66 @@ var gear = {
         "interval": "3000",
         "duration": "15000"
       }
+    },
+    {
+      "id": 6559,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 11,
+      "name": "Bard's Buckler of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 6560,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 12,
+      "name": "Soldier's Shield of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 6571,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "name": "Scouting Buckler of the Tiger",
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 6572,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "name": "Defender Shield of the Tiger",
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 6598,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 23,
+      "name": "Dervish Buckler of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 6599,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "name": "Battleforge Shield of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
     },
     {
       "id": 6633,
@@ -31900,6 +32144,16 @@ var gear = {
       "mindmg": 40,
       "maxdmg": 75,
       "str": 6
+    },
+    {
+      "id": 6725,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "name": "Marbled Buckler",
+      "agi": 5,
+      "str": 5,
+      "sta": 5
     },
     {
       "id": 6802,
@@ -31957,6 +32211,121 @@ var gear = {
       }
     },
     {
+      "id": 6970,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "name": "Furen's Favor",
+      "str": 3
+    },
+    {
+      "id": 7108,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 6,
+      "name": "Infantry Shield of the Tiger",
+      "agi": 1,
+      "str": 1,
+      "rand": 669
+    },
+    {
+      "id": 7120,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "name": "Ruga's Bulwark",
+      "str": 3
+    },
+    {
+      "id": 7188,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "name": "Stormwind Guard Shield",
+      "str": 2,
+      "sta": 4
+    },
+    {
+      "id": 7330,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "name": "Infiltrator Buckler of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 7331,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "name": "Phalanx Shield of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 7463,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 33,
+      "name": "Sentinel Buckler of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 7465,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 34,
+      "name": "Knight's Crest of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 7495,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 39,
+      "name": "Captain's Buckler of the Tiger",
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 7496,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 38,
+      "name": "Field Plate Shield of the Tiger",
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 7536,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "name": "Champion's Wall Shield of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 7537,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 44,
+      "name": "Gothic Shield of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 7682,
       "type": "Dagger",
       "slot": "onehand",
@@ -31988,6 +32357,15 @@ var gear = {
       "maxdmg": 49
     },
     {
+      "id": 7726,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 39,
+      "name": "Aegis of the Scarlet Commander",
+      "str": 7,
+      "sta": 8
+    },
+    {
       "id": 7736,
       "type": "Mace",
       "slot": "onehand",
@@ -31998,6 +32376,14 @@ var gear = {
       "maxdmg": 76,
       "str": 6,
       "sta": 6
+    },
+    {
+      "id": 7747,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "name": "Vile Protector",
+      "str": 4
     },
     {
       "id": 7786,
@@ -32047,6 +32433,24 @@ var gear = {
         "procgcd": true,
         "dmg": 15
       }
+    },
+    {
+      "id": 8134,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 46,
+      "name": "Myrmidon's Defender",
+      "agi": 2,
+      "sta": 2
+    },
+    {
+      "id": 8135,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "name": "Chromite Shield",
+      "str": 3,
+      "sta": 10
     },
     {
       "id": 8190,
@@ -32113,6 +32517,23 @@ var gear = {
         "interval": "1000",
         "duration": "3000"
       }
+    },
+    {
+      "id": 8313,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "name": "Hero's Buckler",
+      "str": 7
+    },
+    {
+      "id": 8320,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "name": "Alabaster Shield",
+      "str": 3,
+      "sta": 13
     },
     {
       "id": 9359,
@@ -32342,6 +32763,14 @@ var gear = {
       "agi": 7
     },
     {
+      "id": 9643,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "name": "Optomatic Deflector",
+      "str": 5
+    },
+    {
       "id": 9680,
       "type": "Dagger",
       "slot": "onehand",
@@ -32366,6 +32795,256 @@ var gear = {
       "sta": 8
     },
     {
+      "id": 9753,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "name": "Gypsy Buckler of the Tiger",
+      "agi": 1,
+      "str": 1,
+      "rand": 669
+    },
+    {
+      "id": 9764,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 8,
+      "name": "Cadet Shield of the Tiger",
+      "agi": 1,
+      "str": 1,
+      "rand": 669
+    },
+    {
+      "id": 9778,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "name": "Bandit Buckler of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 9790,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "name": "Raider's Shield of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 9804,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 21,
+      "name": "Superior Buckler of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 9816,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "name": "Fortified Shield of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 9858,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "name": "Archer's Buckler of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 9873,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "name": "Renegade Shield of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 9899,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 37,
+      "name": "Jazeraint Shield of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 9918,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "name": "Brigade Defender of the Tiger",
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 9935,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "name": "Embossed Plate Shield of the Tiger",
+      "agi": 7,
+      "str": 7,
+      "rand": 687
+    },
+    {
+      "id": 9958,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "name": "Warmonger's Buckler of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 9974,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 47,
+      "name": "Overlord's Shield of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 10078,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "name": "Lord's Crest of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 10093,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "name": "Revenant Deflector of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 10158,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 59,
+      "name": "Mercurial Guard of the Tiger",
+      "agi": 11,
+      "str": 11,
+      "rand": 699
+    },
+    {
+      "id": 10195,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "name": "Crusader's Shield of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 10204,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "name": "Heavy Lamellar Shield of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 10271,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Masterwork Shield of the Tiger",
+      "agi": 11,
+      "str": 11,
+      "rand": 699
+    },
+    {
+      "id": 10362,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "name": "Ornate Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 10363,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "name": "Engraved Wall of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 10364,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "name": "Templar Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 10365,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 54,
+      "name": "Emerald Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 10366,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "name": "Demon Guard of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 10367,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Hyperion Shield of the Tiger",
+      "agi": 11,
+      "str": 11,
+      "rand": 699
+    },
+    {
       "id": 10571,
       "type": "Mace",
       "slot": "onehand",
@@ -32385,6 +33064,15 @@ var gear = {
       "speed": 1.4,
       "mindmg": 32,
       "maxdmg": 60
+    },
+    {
+      "id": 10686,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "name": "Aegis of Battle",
+      "agi": 6,
+      "sta": 10
     },
     {
       "id": 10703,
@@ -32422,6 +33110,15 @@ var gear = {
         "procgcd": true,
         "dmg": 25
       }
+    },
+    {
+      "id": 10767,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 37,
+      "name": "Savage Boar's Guard",
+      "str": 11,
+      "sta": 6
     },
     {
       "id": 10772,
@@ -32497,6 +33194,16 @@ var gear = {
       "rand": 690
     },
     {
+      "id": 10835,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 51,
+      "name": "Crest of Supremacy",
+      "agi": 6,
+      "str": 6,
+      "sta": 7
+    },
+    {
       "id": 10847,
       "type": "Sword",
       "slot": "onehand",
@@ -32505,6 +33212,15 @@ var gear = {
       "speed": 2.5,
       "mindmg": 72,
       "maxdmg": 135
+    },
+    {
+      "id": 11631,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 47,
+      "name": "Stoneshell Guard",
+      "str": 6,
+      "sta": 9
     },
     {
       "id": 11635,
@@ -32557,6 +33273,15 @@ var gear = {
       "maxdmg": 63,
       "agi": 6,
       "sta": 3
+    },
+    {
+      "id": 11915,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "name": "Shizzle's Drizzle Blocker",
+      "str": 13,
+      "sta": 1
     },
     {
       "id": 11922,
@@ -32679,7 +33404,7 @@ var gear = {
       "mindmg": 54,
       "maxdmg": 101,
       "proc": {
-        "spell": "Felstriker",
+        "spell": "Felstriker"
       }
     },
     {
@@ -32731,6 +33456,15 @@ var gear = {
       "mindmg": 25,
       "maxdmg": 48,
       "str": 4
+    },
+    {
+      "id": 12997,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "name": "Redbeard Crest",
+      "str": 6,
+      "sta": 3
     },
     {
       "id": 13014,
@@ -32821,6 +33555,32 @@ var gear = {
       "maxdmg": 132,
       "str": 3,
       "crit": 1
+    },
+    {
+      "id": 13079,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 25,
+      "name": "Shield of Thorsen",
+      "str": 7
+    },
+    {
+      "id": 13081,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 33,
+      "name": "Skullance Shield",
+      "agi": 4,
+      "str": 8,
+      "sta": 5
+    },
+    {
+      "id": 13083,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "name": "Garrett Family Crest",
+      "agi": 5
     },
     {
       "id": 13182,
@@ -33028,6 +33788,162 @@ var gear = {
         "magic": true,
         "dmg": 90
       }
+    },
+    {
+      "id": 14607,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "name": "Hawkeye's Buckler",
+      "str": 5
+    },
+    {
+      "id": 14609,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 12,
+      "name": "Deprecated Ceremonial Buckler",
+      "str": 1
+    },
+    {
+      "id": 14729,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "name": "War Paint Shield",
+      "str": 2
+    },
+    {
+      "id": 14777,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 39,
+      "name": "Ravager's Shield",
+      "str": 3
+    },
+    {
+      "id": 14780,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 44,
+      "name": "Khan's Buckler",
+      "agi": 3,
+      "sta": 5
+    },
+    {
+      "id": 14790,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "name": "Protector Buckler",
+      "agi": 3
+    },
+    {
+      "id": 14825,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 38,
+      "name": "Symbolic Crest",
+      "str": 4,
+      "sta": 7
+    },
+    {
+      "id": 14842,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "name": "Tyrant's Shield",
+      "str": 9,
+      "sta": 5
+    },
+    {
+      "id": 14902,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 36,
+      "name": "Saltstone Shield of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 14916,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "name": "Jade Deflector of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 14930,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "name": "Lofty Shield of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 14947,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "name": "Warbringer's Shield of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 14954,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 46,
+      "name": "Bloodforged Shield of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 14964,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 51,
+      "name": "High Chief's Shield of the Tiger",
+      "agi": 9,
+      "str": 9,
+      "rand": 693
+    },
+    {
+      "id": 14973,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "name": "Glorious Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15113,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "name": "Rigid Buckler of the Tiger",
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 15207,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "name": "Steelcap Shield",
+      "str": 2,
+      "sta": 2
     },
     {
       "id": 15211,
@@ -33381,6 +34297,115 @@ var gear = {
       "rand": 690
     },
     {
+      "id": 15466,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "name": "Clink Shield",
+      "agi": 2,
+      "str": 3,
+      "sta": 4
+    },
+    {
+      "id": 15486,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "name": "War Torn Shield of the Tiger",
+      "agi": 1,
+      "str": 1,
+      "rand": 669
+    },
+    {
+      "id": 15494,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 13,
+      "name": "Bloodspattered Shield of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 15504,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "name": "Outrunner's Shield of the Tiger",
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 15512,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "name": "Grunt's Shield of the Tiger",
+      "agi": 3,
+      "str": 3,
+      "rand": 675
+    },
+    {
+      "id": 15522,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "name": "Spiked Chain Shield of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 15530,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "name": "Sentry's Shield of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 15543,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "name": "Wicked Chain Shield of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 15552,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "name": "Thick Scale Shield of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 15569,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 35,
+      "name": "Marauder's Crest of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 15695,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "name": "Studded Ring Shield",
+      "str": 6,
+      "sta": 4
+    },
+    {
       "id": 15705,
       "type": "Sword",
       "slot": "onehand",
@@ -33456,6 +34481,90 @@ var gear = {
       "mindmg": 49,
       "maxdmg": 92,
       "ap": 20
+    },
+    {
+      "id": 15887,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "name": "Heroic Guard of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15888,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "name": "Deprecated Glorious Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15889,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "name": "Deprecated Jademir Scale Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15892,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 27,
+      "name": "Slayer's Shield",
+      "agi": 3,
+      "str": 6
+    },
+    {
+      "id": 15894,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "name": "Bristlebark Buckler",
+      "agi": 2
+    },
+    {
+      "id": 15943,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "name": "Imbued Shield",
+      "str": 3,
+      "sta": 14
+    },
+    {
+      "id": 15990,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 34,
+      "name": "Enduring Shield",
+      "agi": 3,
+      "str": 6,
+      "sta": 4
+    },
+    {
+      "id": 15991,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "name": "Warleader's Shield",
+      "agi": 4,
+      "sta": 14
+    },
+    {
+      "id": 16660,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 23,
+      "name": "Driftmire Shield",
+      "str": 2,
+      "sta": 3
     },
     {
       "id": 16886,
@@ -33649,6 +34758,14 @@ var gear = {
       }
     },
     {
+      "id": 18303,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "name": "Nimble Buckler",
+      "agi": 5
+    },
+    {
       "id": 18310,
       "type": "Sword",
       "slot": "onehand",
@@ -33779,6 +34896,15 @@ var gear = {
       "sta": 5
     },
     {
+      "id": 18756,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "name": "Dreadguard's Protector",
+      "str": 18,
+      "sta": 5
+    },
+    {
       "id": 18758,
       "type": "Dagger",
       "slot": "onehand",
@@ -33814,6 +34940,24 @@ var gear = {
         "magic": true,
         "dmg": 48
       }
+    },
+    {
+      "id": 18825,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Grand Marshal's Aegis",
+      "str": 10,
+      "sta": 23
+    },
+    {
+      "id": 18826,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "High Warlord's Shield Wall",
+      "str": 10,
+      "sta": 23
     },
     {
       "id": 18827,
@@ -34743,6 +35887,15 @@ var gear = {
       "sta": 9
     },
     {
+      "id": 21485,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Buru's Skull Fragment",
+      "str": 11,
+      "sta": 20
+    },
+    {
       "id": 21498,
       "type": "Dagger",
       "slot": "onehand",
@@ -35176,6 +36329,74 @@ var gear = {
       "sta": 2
     },
     {
+      "id": 3654,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 9,
+      "name": "Brackwater Shield",
+      "agi": 1,
+      "sta": 1
+    },
+    {
+      "id": 9843,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "name": "Banded Shield of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
+    },
+    {
+      "id": 8282,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 46,
+      "name": "Valorous Shield",
+      "str": 6,
+      "sta": 9
+    },
+    {
+      "id": 15307,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "name": "Feral Buckler of the Tiger",
+      "agi": 2,
+      "str": 2,
+      "rand": 672
+    },
+    {
+      "id": 15563,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "name": "Pillager's Shield of the Tiger",
+      "agi": 6,
+      "str": 6,
+      "rand": 684
+    },
+    {
+      "id": 14912,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "name": "Brutish Shield of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
+      "id": 14982,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Exalted Shield of the Tiger",
+      "agi": 11,
+      "str": 11,
+      "rand": 699
+    },
+    {
       "id": 16345,
       "type": "Sword",
       "slot": "onehand",
@@ -35187,6 +36408,15 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "id": 14852,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "name": "Sunscale Shield",
+      "str": 5,
+      "sta": 10
     },
     {
       "id": 23451,
