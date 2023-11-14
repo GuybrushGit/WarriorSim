@@ -18,6 +18,7 @@
     </textarea>
 
     <script>
+
       $(document).ready(function () {
 
 
@@ -34,7 +35,6 @@
               if (item.procspell) { item.proc.spell = item.procspell; }
               if (item.coeff) { item.proc.coeff = item.coeff; }
               if (item.procextra) { item.proc.extra = item.procextra; }
-              if (item.procchance) { item.proc.extra = item.procextra; }
               delete item.ppm;
               delete item.magicdmg;
               delete item.physdmg;
@@ -47,7 +47,6 @@
             }
           }
         }
-
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       });

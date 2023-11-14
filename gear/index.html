@@ -107,17 +107,13 @@
                   }
                 });
               }
-
-            // gear/:140 check Blade of Eternal Darkness
-            // gear/:140 check Halberd of Smiting
-            // gear/:140 check Fiery Retributer
-
+              
               // procs
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
                 if (item.ClassID != "2") {
-                  //console.log("Items not implemented: " + obj.name);
+                  console.log("check: " + obj.name);
                 }
                 else {
                   proc2 = getProcFromSpell(triggerSpell[0].EffectTriggerSpell);
