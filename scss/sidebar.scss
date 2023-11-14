@@ -191,11 +191,14 @@
 
     #dps-box {
         text-align: center;
+        display: flex;
+        align-items: baseline;
     }
     .dps {
         font-size: 26px;
         font-weight: bold;
         color: $item-uncommon;
+        height: 34px;
         &:after {
             content: " DPS";
             font-size: 14px;
@@ -208,6 +211,7 @@
         font-size: 14px;
         font-weight: bold;
         color: $item-uncommon;
+        margin-left: 4px;
         &:before {
             content: " \00b1";
         }

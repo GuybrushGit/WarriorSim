@@ -44,6 +44,7 @@ SIM.UI = {
             $('section.settings').toggleClass('active');
             view.sidebar.find('.js-stats').removeClass('active');
             $('section.stats').removeClass('active');
+            view.body.removeClass('sidebar-mobile-open');
         });
 
         view.sidebar.find('.js-dps').click(function (e) {
@@ -68,6 +69,7 @@ SIM.UI = {
             $('section.stats').toggleClass('active');
             view.sidebar.find('.js-settings').removeClass('active');
             $('section.settings').removeClass('active');
+            view.body.removeClass('sidebar-mobile-open');
         });
 
         view.body.on('click', '.js-table', function(e) {

@@ -267,11 +267,20 @@ var buffs = [
       minlevel: 60
    },
    {
+      id: 409580,
+      spellid: true,
+      name: "Aspect of the Lion",
+      iconname: "ability_hunter_pet_cat",
+      group: "kings",
+      strmod: 10,
+      agimod: 10,
+   },
+   {
       id: 20217,
       spellid: true,
       name: "Blessing of Kings",
       iconname: "spell_magic_magearmor",
-      group: "",
+      group: "kings",
       strmod: 10,
       agimod: 10,
       minlevel: 20,

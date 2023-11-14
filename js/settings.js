@@ -31,6 +31,7 @@ SIM.SETTINGS = {
             e.preventDefault();
             $('.js-settings').removeClass('active');
             $('section.settings').removeClass('active');
+            view.body.addClass('sidebar-mobile-open');
         });
         view.buffs.on('click', '.icon', function (e) {
             let obj = $(this).toggleClass('active');

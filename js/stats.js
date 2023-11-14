@@ -28,6 +28,7 @@ SIM.STATS = {
             e.preventDefault();
             $('.js-stats').removeClass('active');
             $('section.stats').removeClass('active');
+            view.body.addClass('sidebar-mobile-open');
         });
     },
 
