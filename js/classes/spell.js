@@ -11,7 +11,7 @@ class Spell {
         this.data = [0, 0, 0, 0, 0];
         this.name = name || this.constructor.name;
         this.useonly = false;
-        this.maxdelay = 100;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.weaponspell = true;
         this.minrage = 0;
 
@@ -20,7 +20,6 @@ class Spell {
         if (spell.minrageactive) this.minrage = parseInt(spell.minrage);
         if (spell.maxrageactive) this.maxrage = parseInt(spell.maxrage);
         if (spell.maincdactive) this.maincd = parseInt(spell.maincd) * 1000;
-        if (spell.reaction) this.maxdelay = parseInt(spell.reaction);
         if (spell.cooldown) this.cooldown = parseInt(spell.cooldown) || 0;
         if (spell.durationactive) this.cooldown = Math.max(parseInt(spell.duration), this.cooldown);
         if (spell.value1) this.value1 = parseInt(spell.value1);
@@ -81,8 +80,7 @@ class Whirlwind extends Spell {
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
@@ -103,8 +101,7 @@ class Overpower extends Spell {
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = this.value1 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     use() {
@@ -196,8 +193,8 @@ class HeroicStrike extends Spell {
         this.cost = 15 - player.talents.impheroicstrike;
         this.bonus = player.aqbooks ? 157 : this.value1;
         this.useonly = true;
-        this.unqueuetimer = 300;
-        this.maxdelay = 300;
+        this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     use() {
         this.player.nextswinghs = true;
@@ -220,8 +217,7 @@ class MortalStrike extends Spell {
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = 160 + avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
@@ -246,8 +242,7 @@ class SunderArmor extends Spell {
         if (!this.devastate) return 0;
         let dmg;
         let mod = 1 + 0.1 * (this.stacks - 1);
-        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return (dmg * mod) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {
@@ -299,8 +294,7 @@ class RagingBlow extends Spell {
     }
     dmg() {
         let dmg;
-        if (this.player.weaponrng) dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        else dmg = avg(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse(executephase) {
@@ -385,7 +379,7 @@ class Aura {
         this.stacks = 0;
         this.uptime = 0;
         this.name = name || this.constructor.name;
-        this.maxdelay = 100;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.useonly = true;
 
         let spell = spells.filter(s => s.id == this.id)[0];

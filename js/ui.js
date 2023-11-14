@@ -225,6 +225,7 @@ SIM.UI = {
             $(this).parents('.sidebar').toggleClass('closed');
             $(this).parents('.sidebar').get(0).scrollTop = 0;
             $(this).toggleClass('open');
+            view.body.toggleClass('sidebar-mobile-open');
         });
     },
 
@@ -761,8 +762,8 @@ SIM.UI = {
         obj.adjacent = view.fight.find('input[name="adjacent"]').val();
         obj.adjacentlevel = view.fight.find('input[name="adjacentlevel"]').val();
         obj.aqbooks = view.fight.find('select[name="aqbooks"]').val();
-        obj.weaponrng = view.fight.find('select[name="weaponrng"]').val();
-        obj.spelldamage = view.fight.find('input[name="spelldamage"]').val();
+        obj.reactionmin = view.fight.find('input[name="reactionmin"]').val();
+        obj.reactionmax = view.fight.find('input[name="reactionmax"]').val();
         obj.batching = view.fight.find('select[name="batching"]').val();
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};

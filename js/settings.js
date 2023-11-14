@@ -188,21 +188,10 @@ SIM.SETTINGS = {
             view.buildSpells();
         });
 
-        view.fight.on('change', 'select[name="weaponrng"]', function (e) {
-            e.stopPropagation();
-            SIM.UI.updateSession();
-            SIM.UI.updateSidebar();
-        });
-
         view.fight.on('change', 'select[name="batching"]', function (e) {
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
-        });
-
-        view.rotation.on('click', '.spell', function (e) {
-            e.stopPropagation();
-            
         });
 
         view.rotation.on('click', '.spell a', function (e) {

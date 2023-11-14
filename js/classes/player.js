@@ -4,8 +4,8 @@ class Player {
             level: $('input[name="level"]').val(),
             race: $('select[name="race"]').val(),
             aqbooks: $('select[name="aqbooks"]').val() == "Yes",
-            weaponrng: $('select[name="weaponrng"]').val() == "Yes",
-            spelldamage: parseInt($('input[name="spelldamage"]').val()),
+            reactionmin: parseInt($('input[name="reactionmin"]').val()),
+            reactionmax: parseInt($('input[name="reactionmax"]').val()),
             target: {
                 level: parseInt($('input[name="targetlevel"]').val()),
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
@@ -32,8 +32,9 @@ class Player {
         this.nextswingcl = false;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
-        this.weaponrng = config.weaponrng;
-        this.spelldamage = config.spelldamage;
+        this.reactionmin = config.reactionmin;
+        this.reactionmax = config.reactionmax;
+        this.spelldamage = 0;
         this.target = config.target;
         this.base = {
             ap: 0,
@@ -599,8 +600,7 @@ class Player {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let low = Math.max(Math.min(1.3 - 0.05 * diff, 0.91), 0.01);
         let high = Math.max(Math.min(1.2 - 0.03 * diff, 0.99), 0.2);
-        if (this.weaponrng) return Math.random() * (high - low) + low;
-        else return avg(low, high);
+        return Math.random() * (high - low) + low;
     }
     getGlanceChance(weapon) {
         return 10 + Math.max(this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type]), 0) * 2;
@@ -988,7 +988,6 @@ class Player {
         let mod = 1;
         let miss = 1700;
         let dmg = proc.magicdmg;
-        //if (proc.gcd && this.timer && this.timer < 1500) return 0;
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
