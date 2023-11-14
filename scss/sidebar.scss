@@ -1,6 +1,6 @@
 .sidebar {
     min-width: 320px;
-    width: 20%;
+    width: 380px;
     min-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 10;
 
     .bg {
         background-position: center center;
@@ -191,7 +192,7 @@
     #dps-box {
         text-align: center;
     }
-    #dps {
+    .dps {
         font-size: 26px;
         font-weight: bold;
         color: $item-uncommon;
@@ -263,6 +264,109 @@
         a {
             color: #ddd !important;
             text-decoration: none;
+        }
+    }
+
+    /***** MOBILE *****/
+
+    .sidebar-mobile {
+        width: 100%;
+        height: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        border: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        .btn {
+            display: none;
+            width: 140px;
+            height: 34px;
+            line-height: 34px;
+            margin: 0 0 0 20px;
+        }
+        span {
+            display: none;
+            margin: 0 auto 0 20px;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+
+    .menu-button-container {
+        display: flex;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 10px;
+        top: auto;
+        height: 40px;
+        right: 20px;
+    }
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+    content: '';
+        margin-top: 8px;
+    }
+
+    .menu-button-container.open .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+
+    .menu-button-container.open .menu-button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .menu-button-container.open .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+    }
+
+    @include mobile {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        transition: all 0.2s ease-in;
+        min-height: auto;
+        z-index: 10;
+
+        &.closed {
+            //height: 60px;
+            max-height: 60px;
+            overflow: hidden;
+            .bg {
+                opacity: 0;
+            }
+            .sidebar-mobile {
+                height: 60px;
+                min-height: 60px;
+                border-top: 2px solid #717171;
+                .btn, span {
+                    display: block;
+                }
+            }
         }
     }
 }

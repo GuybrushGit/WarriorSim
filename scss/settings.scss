@@ -7,13 +7,12 @@
     box-sizing: border-box;
     overflow: hidden;
     position: absolute;
-    left: 20%;
+    left: 380px;
     top: 0;
     z-index: 10;
 
     &.active {
-        width: 80%;
-        max-width: calc(100% - 320px);
+        width: calc(100% - 380px);
 
         .wrapper {
             opacity: 1;
@@ -459,22 +458,23 @@
         display: none;
     }
 
-    @media (min-width: 0px) and (max-width: 1600px) {
-        left: 320px;
-        .rotation {
+    @include mobile {
+        z-index: 11;
+        
+        &.active {
             width: 100%;
+            left: 0;
         }
-        .fight, .buffs {
-            width: calc(50% - 2px);
-        }
-    }
 
-    @media (min-width: 0px) and (max-width: 1350px) {
-        .talents {
-            width: 100%;
+        article {
+            width: 100% !important;
         }
-        .filter {
-            width: 100%;
+
+        .talents table {
+            border: 0;
+            th {
+                padding: 5px 0 20px;
+            }
         }
     }
 

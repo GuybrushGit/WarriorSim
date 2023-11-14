@@ -6,13 +6,12 @@
     box-sizing: border-box;
     overflow: hidden;
     position: fixed;
-    left: 20%;
+    left: 380px;
     top: 0;
     z-index: 10;
 
     &.active {
-        width: 80%;
-        max-width: calc(100% - 320px);
+        width: calc(100% - 380px);
 
         .wrapper {
             opacity: 1;
@@ -120,5 +119,18 @@
         height: 100%;
         display: inline-block;
         vertical-align: top;
+    }
+
+    @include mobile {
+        z-index: 11;
+        
+        &.active {
+            width: 100%;
+            left: 0;
+        }
+
+        article {
+            width: 100% !important;
+        }
     }
 }

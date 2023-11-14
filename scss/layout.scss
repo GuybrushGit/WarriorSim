@@ -12,11 +12,10 @@ body {
     color: #ddd;
     margin: 0;
     overflow-x: hidden;
+    display: flex;
 }
 
 section {
-    display: inline-block;
-    vertical-align: top;
     font-size: 14px;
     position: relative;
 }

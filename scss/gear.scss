@@ -1,15 +1,9 @@
 
 section.main {
-    width: 80%;
-    max-width: calc(100% - 320px);
     min-height: 100vh;
-    box-sizing: border-box;
-    position: relative;
-    left: 20%;
-
-    @media (min-width: 0px) and (max-width: 1600px) {
-        left: 320px;
-    }
+    width: 100%;
+    padding-left: 380px;
+    overflow: hidden;
 
     nav {
         width: 100%;
@@ -187,6 +181,20 @@ section.main {
             border: 0;
             outline: 0;
         }
+    }
+    
+    @include tablet {
+        th:not(:first-child):not(:last-child) {
+            display: none;
+        }
+        td:not(:first-child):not(:last-child) {
+            display: none;
+        }
+    }
+    @include mobile {
+        padding-bottom: 40px;
+        padding-left: 0;
+        box-sizing: border-box;
     }
 }
 

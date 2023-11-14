@@ -62,7 +62,14 @@
 <body>
   <div class="alerts"></div>
 
-  <section class="sidebar">
+  <section class="sidebar closed">
+    <div class="sidebar-mobile">
+      <a href="#" class="btn js-dps">DPS</a>
+      <span class="dps">1235</span>
+      <label class="menu-button-container">
+        <div class="menu-button"></div>
+      </label>
+    </div>
     <div class="tabs">
       <a href="classic.html" class="btn js-classic">Classic</a>
       <a href="." class="btn js-sod active">Season of Discovery</a>
@@ -148,7 +155,7 @@
         <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
         <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
       </div>
-      <div id="dps-box"><span id="dps"></span><span id="dpserr"></span></div>
+      <div id="dps-box"><span class="dps"></span><span id="dpserr"></span></div>
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
