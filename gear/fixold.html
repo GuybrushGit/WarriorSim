@@ -21,6 +21,14 @@
 
       $(document).ready(function () {
 
+        // let asd = [];
+        // for(let type in gear) {
+        //   for(let item of gear[type]) {
+        //     if (item.proc && item.proc.ppm && item.proc.ppm != "1") {
+        //       asd.push({ i: item.id, p: item.proc.ppm });
+        //     }
+        //   }
+        // }
 
         for(let type in gear) {
           for(let item of gear[type]) {
@@ -48,7 +56,7 @@
           }
         }
 
-        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear) + ";";
       });
     </script>
 

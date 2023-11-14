@@ -72,6 +72,7 @@
           if (parseInt(sparse.MaxDamage_0)) obj.maxdmg = parseInt(sparse.MaxDamage_0);
           if (parseInt(sparse.MinDamage_1)) obj.mindmg += parseInt(sparse.MinDamage_1);
           if (parseInt(sparse.MaxDamage_1)) obj.maxdmg += parseInt(sparse.MaxDamage_1);
+          if (item.ClassID == "2" && (!obj.mindmg || !obj.maxdmg)) continue;
 
           let agi = getStat(sparse, 3);
           let str = getStat(sparse, 4);
@@ -107,7 +108,7 @@
                   }
                 });
               }
-              
+
               // procs
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
@@ -122,6 +123,20 @@
               if (proc2 && !proc) proc = proc2;
               if (proc && (proc.spell || proc.extra || proc.dmg || proc.tick) && obj.slot !== "ranged") obj.proc = proc;
               if (item.ID == 19968) delete obj.proc;
+
+              // custom spells
+              for(let c of customSpells) {
+                if (c.i == item.ID) {
+                  obj.proc = obj.proc || {};
+                  obj.proc.spell = c.s;
+                }
+              }
+              for(let c of customPPM) {
+                if (c.i == item.ID) {
+                  obj.proc = obj.proc || {};
+                  obj.proc.ppm = c.p;
+                }
+              }
             });
           }
 
@@ -141,7 +156,8 @@
           if (obj.id == 21568) include = true;
           if (obj.id == 21567) include = true;
           if (obj.id == 17780) exclude = true;
-          if (obj.id == 13136) debugger;
+
+          
           
 
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
@@ -221,6 +237,43 @@
 
       }
 
+      var customSpells = [
+        {i:13246,s:"Avenger"},
+        {i:12798,s:"Annihilator"},
+        {i:13286,s:"Rivenspike"},
+        {i:12590,s:"Felstriker"},
+        {i:18203,s:"Eskhandar"},
+        {i:17112,s:"Empyrean"},
+        {i:6622,s:"Zeal"},
+        {i:13246,s:"Avenger"},
+        {i:12590,s:"Felstriker"},
+        {i:13286,s:"Rivenspike"},
+        {i:17076,s:"Bonereaver"},
+        {i:647,s:"Destiny"},
+        {i:19334,s:"Untamed"}
+      ];
+
+      var customPPM = [
+        {i:811,p:0.8},
+        {i:17068,p:0.8},
+        {i:871,p:1.8},
+        {i:19170,p:0.4},
+        {i:11684,p:0.8},
+        {i:23221,p:2},
+        {i:6622,p:1.8},
+        {i:19019,p:6},
+        {i:17075,p:0.6},
+        {i:17068,p:0.8},
+        {i:871,p:1.8},
+        {i:19170,p:0.4},
+        {i:23221,p:2},
+        {i:19019,p:6},
+        {i:17075,p:0.6},
+        {i:19918,p:4},
+        {i:17182,p:0.7},
+        {i:17076,p:2}
+      ];
+
       var getProcFromSpell = function(id) {
 
         let effects = getRows('SpellEffect', 'SpellID', id);
@@ -269,7 +322,6 @@
         // cus
 
       }
-    
       var getRow = function(table, id) {
         for(let r of globalThis[table]) if (r.ID == id) return r;
       }

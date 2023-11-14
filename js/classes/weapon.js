@@ -35,7 +35,7 @@ class Weapon {
 
         if (item.proc) {
             this.proc1 = {};
-            this.proc1.chance = ~~(item.speed * (item.ppm || 1) / 0.006);
+            this.proc1.chance = ~~(item.speed * (item.proc.ppm || 1) / 0.006);
             if (item.proc.dmg && !item.proc.magic) this.proc1.physdmg = item.proc.dmg;
             if (item.proc.dmg && item.proc.magic) this.proc1.magicdmg = item.proc.dmg;
             if (item.proc.binaryspell) this.proc1.binaryspell = true;
@@ -56,7 +56,9 @@ class Weapon {
             }
             // custom spells
             if (item.proc.spell) {
-                player.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(player)');
+                if (!player.auras[item.proc.spell.toLowerCase()]) {
+                    player.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(player)');
+                }
                 this.proc1.spell = player.auras[item.proc.spell.toLowerCase()];
             }
         }

@@ -23741,16 +23741,6 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 19226,
-      "type": "Fist",
-      "slot": "ranged",
-      "r": 1,
-      "name": "Fast Test Fist",
-      "speed": 0.5,
-      "mindmg": 1,
-      "hit": -75
-    },
-    {
       "id": 19350,
       "type": "Bows",
       "slot": "ranged",
@@ -24193,7 +24183,8 @@ var gear = {
       "maxdmg": 146,
       "proc": {
         "magic": true,
-        "dmg": 108
+        "dmg": 108,
+        "ppm": 0.8
       }
     },
     {
@@ -24309,7 +24300,8 @@ var gear = {
       "mindmg": 37,
       "maxdmg": 69,
       "proc": {
-        "extra": 1
+        "extra": 1,
+        "ppm": 1.8
       }
     },
     {
@@ -25882,7 +25874,11 @@ var gear = {
       "name": "Sword of Zeal",
       "speed": 2.8,
       "mindmg": 81,
-      "maxdmg": 151
+      "maxdmg": 151,
+      "proc": {
+        "spell": "Zeal",
+        "ppm": 1.8
+      }
     },
     {
       "id": 6633,
@@ -26907,7 +26903,8 @@ var gear = {
       "mindmg": 73,
       "maxdmg": 136,
       "proc": {
-        "extra": 2
+        "extra": 2,
+        "ppm": 0.8
       }
     },
     {
@@ -27175,7 +27172,10 @@ var gear = {
       "name": "Felstriker",
       "speed": 1.7,
       "mindmg": 54,
-      "maxdmg": 101
+      "maxdmg": 101,
+      "proc": {
+        "spell": "Felstriker"
+      }
     },
     {
       "id": 12621,
@@ -27353,7 +27353,10 @@ var gear = {
       "name": "Annihilator",
       "speed": 1.7,
       "mindmg": 49,
-      "maxdmg": 92
+      "maxdmg": 92,
+      "proc": {
+        "spell": "Annihilator"
+      }
     },
     {
       "id": 12940,
@@ -27632,7 +27635,10 @@ var gear = {
       "name": "Argent Avenger",
       "speed": 2.2,
       "mindmg": 71,
-      "maxdmg": 108
+      "maxdmg": 108,
+      "proc": {
+        "spell": "Avenger"
+      }
     },
     {
       "id": 13286,
@@ -27642,7 +27648,10 @@ var gear = {
       "name": "Rivenspike",
       "speed": 2.9,
       "mindmg": 77,
-      "maxdmg": 144
+      "maxdmg": 144,
+      "proc": {
+        "spell": "Rivenspike"
+      }
     },
     {
       "id": 13349,
@@ -28511,7 +28520,8 @@ var gear = {
       "proc": {
         "magic": true,
         "procgcd": true,
-        "dmg": 125
+        "dmg": 125,
+        "ppm": 0.8
       }
     },
     {
@@ -28549,7 +28559,8 @@ var gear = {
       "mindmg": 100,
       "maxdmg": 187,
       "proc": {
-        "dmg": 240
+        "dmg": 240,
+        "ppm": 0.6
       }
     },
     {
@@ -28582,7 +28593,10 @@ var gear = {
       "name": "Empyrean Demolisher",
       "speed": 2.8,
       "mindmg": 94,
-      "maxdmg": 175
+      "maxdmg": 175,
+      "proc": {
+        "spell": "Empyrean"
+      }
     },
     {
       "id": 17142,
@@ -28717,7 +28731,10 @@ var gear = {
       "speed": 1.5,
       "mindmg": 50,
       "maxdmg": 94,
-      "agi": 4
+      "agi": 4,
+      "proc": {
+        "spell": "Eskhandar"
+      }
     },
     {
       "id": 18310,
@@ -29119,7 +29136,8 @@ var gear = {
       "proc": {
         "magic": true,
         "binaryspell": true,
-        "dmg": 300
+        "dmg": 300,
+        "ppm": 6
       }
     },
     {
@@ -29233,7 +29251,8 @@ var gear = {
       "proc": {
         "magic": true,
         "procgcd": true,
-        "dmg": 200
+        "dmg": 200,
+        "ppm": 0.4
       }
     },
     {
@@ -30175,14 +30194,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 21516,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "Dagger of Spell Penetration - Fire 150 Resist (TEST)",
-      "mindmg": 1
-    },
-    {
       "id": 21520,
       "type": "Sword",
       "slot": "onehand",
@@ -30696,7 +30707,8 @@ var gear = {
       "maxdmg": 238,
       "proc": {
         "magic": true,
-        "dmg": 125
+        "dmg": 125,
+        "ppm": 2
       }
     },
     {
@@ -30826,14 +30838,6 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 21518,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "Dagger of Spell Penetration - Frost 150 Resist (TEST)",
-      "mindmg": 1
-    },
-    {
       "id": 23464,
       "type": "Mace",
       "slot": "onehand",
@@ -30956,7 +30960,8 @@ var gear = {
       "mindmg": 37,
       "maxdmg": 69,
       "proc": {
-        "extra": 1
+        "extra": 1,
+        "ppm": 1.8
       }
     },
     {
@@ -32672,7 +32677,10 @@ var gear = {
       "name": "Felstriker",
       "speed": 1.7,
       "mindmg": 54,
-      "maxdmg": 101
+      "maxdmg": 101,
+      "proc": {
+        "spell": "Felstriker",
+      }
     },
     {
       "id": 12774,
@@ -32881,7 +32889,10 @@ var gear = {
       "name": "Argent Avenger",
       "speed": 2.2,
       "mindmg": 71,
-      "maxdmg": 108
+      "maxdmg": 108,
+      "proc": {
+        "spell": "Avenger"
+      }
     },
     {
       "id": 13286,
@@ -32891,7 +32902,10 @@ var gear = {
       "name": "Rivenspike",
       "speed": 2.9,
       "mindmg": 77,
-      "maxdmg": 144
+      "maxdmg": 144,
+      "proc": {
+        "spell": "Rivenspike"
+      }
     },
     {
       "id": 13360,
@@ -33531,7 +33545,8 @@ var gear = {
       "proc": {
         "magic": true,
         "procgcd": true,
-        "dmg": 125
+        "dmg": 125,
+        "ppm": 0.8
       }
     },
     {
@@ -33569,7 +33584,8 @@ var gear = {
       "mindmg": 100,
       "maxdmg": 187,
       "proc": {
-        "dmg": 240
+        "dmg": 240,
+        "ppm": 0.6
       }
     },
     {
@@ -33904,7 +33920,8 @@ var gear = {
       "proc": {
         "magic": true,
         "binaryspell": true,
-        "dmg": 300
+        "dmg": 300,
+        "ppm": 6
       }
     },
     {
@@ -34018,7 +34035,8 @@ var gear = {
       "proc": {
         "magic": true,
         "procgcd": true,
-        "dmg": 200
+        "dmg": 200,
+        "ppm": 0.4
       }
     },
     {
@@ -34737,14 +34755,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 21516,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "Dagger of Spell Penetration - Fire 150 Resist (TEST)",
-      "mindmg": 1
-    },
-    {
       "id": 21520,
       "type": "Sword",
       "slot": "onehand",
@@ -35091,7 +35101,8 @@ var gear = {
       "maxdmg": 238,
       "proc": {
         "magic": true,
-        "dmg": 125
+        "dmg": 125,
+        "ppm": 2
       }
     },
     {
@@ -35211,14 +35222,6 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 21518,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "Dagger of Spell Penetration - Frost 150 Resist (TEST)",
-      "mindmg": 1
-    },
-    {
       "id": 23464,
       "type": "Mace",
       "slot": "onehand",
@@ -35252,7 +35255,10 @@ var gear = {
       "name": "Destiny",
       "speed": 2.6,
       "mindmg": 112,
-      "maxdmg": 168
+      "maxdmg": 168,
+      "proc": {
+        "spell": "Destiny"
+      }
     },
     {
       "id": 756,
@@ -38825,6 +38831,10 @@ var gear = {
       "mindmg": 206,
       "maxdmg": 310,
       "sta": 16,
+      "proc": {
+        "spell": "Bonereaver",
+        "ppm": 2
+      },
       "crit": 1
     },
     {
@@ -38865,7 +38875,8 @@ var gear = {
         "dmg": 303,
         "tick": 15,
         "interval": "2000",
-        "duration": "10000"
+        "duration": "10000",
+        "ppm": 0.7
       }
     },
     {
@@ -39541,7 +39552,10 @@ var gear = {
       "mindmg": 192,
       "maxdmg": 289,
       "agi": 22,
-      "sta": 16
+      "sta": 16,
+      "proc": {
+        "spell": "Untamed"
+      }
     },
     {
       "id": 19353,
@@ -39773,14 +39787,6 @@ var gear = {
       }
     },
     {
-      "id": 19879,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Alex's Test Beatdown Staff",
-      "mindmg": 1
-    },
-    {
       "id": 19884,
       "type": "Staff",
       "slot": "twohand",
@@ -39824,7 +39830,8 @@ var gear = {
       "mindmg": 177,
       "maxdmg": 266,
       "proc": {
-        "dmg": 210
+        "dmg": 210,
+        "ppm": 4
       }
     },
     {
@@ -40108,22 +40115,6 @@ var gear = {
       "maxdmg": 252,
       "str": 16,
       "crit": 2
-    },
-    {
-      "id": 21101,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "name": "Staff of Spell Penetration - Fire (TEST)",
-      "mindmg": 1
-    },
-    {
-      "id": 21102,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "name": "Staff of Spell Penetration - Frost (TEST)",
-      "mindmg": 1
     },
     {
       "id": 21125,

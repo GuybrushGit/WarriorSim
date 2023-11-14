@@ -1000,7 +1000,7 @@ SIM.UI = {
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
-                        <td class="ppm"><p contenteditable="true">${item.ppm || ''}</p></td>
+                        <td class="ppm"><p contenteditable="true">${item.proc && item.proc.ppm || ''}</p></td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
         }
