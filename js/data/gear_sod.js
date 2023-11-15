@@ -30770,6 +30770,54 @@ var gear = {
       "ap": 18
     },
     {
+      "id": 212582,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Protector's Sword",
+      "speed": 2.7,
+      "mindmg": 40,
+      "maxdmg": 61,
+      "str": 5,
+      "sta": 3
+    },
+    {
+      "id": 212583,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Sentinel's Blade",
+      "speed": 1.7,
+      "mindmg": 23,
+      "maxdmg": 41,
+      "agi": 5,
+      "sta": 3
+    },
+    {
+      "id": 212586,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Legionnaire's Sword",
+      "speed": 2.7,
+      "mindmg": 40,
+      "maxdmg": 61,
+      "str": 5,
+      "sta": 3
+    },
+    {
+      "id": 212587,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Scout's Blade",
+      "speed": 1.7,
+      "mindmg": 23,
+      "maxdmg": 41,
+      "agi": 5,
+      "sta": 3
+    },
+    {
       "id": 12976,
       "type": "Sword",
       "slot": "onehand",
@@ -36317,6 +36365,54 @@ var gear = {
       "ap": 18
     },
     {
+      "id": 212582,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Protector's Sword",
+      "speed": 2.7,
+      "mindmg": 40,
+      "maxdmg": 61,
+      "str": 5,
+      "sta": 3
+    },
+    {
+      "id": 212583,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Sentinel's Blade",
+      "speed": 1.7,
+      "mindmg": 23,
+      "maxdmg": 41,
+      "agi": 5,
+      "sta": 3
+    },
+    {
+      "id": 212586,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Legionnaire's Sword",
+      "speed": 2.7,
+      "mindmg": 40,
+      "maxdmg": 61,
+      "str": 5,
+      "sta": 3
+    },
+    {
+      "id": 212587,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "name": "Scout's Blade",
+      "speed": 1.7,
+      "mindmg": 23,
+      "maxdmg": 41,
+      "agi": 5,
+      "sta": 3
+    },
+    {
       "id": 12976,
       "type": "Sword",
       "slot": "onehand",
@@ -41784,6 +41880,28 @@ var gear = {
       "mindmg": 235,
       "maxdmg": 353,
       "sta": 28
+    },
+    {
+      "id": 212580,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 25,
+      "name": "Lorekeeper's Staff",
+      "speed": 2.9,
+      "mindmg": 55,
+      "maxdmg": 85,
+      "sta": 9
+    },
+    {
+      "id": 212584,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 25,
+      "name": "Advisor's Gnarled Staff",
+      "speed": 2.9,
+      "mindmg": 55,
+      "maxdmg": 85,
+      "sta": 9
     },
     {
       "id": 17223,

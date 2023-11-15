@@ -10842,7 +10842,7 @@ ID,Name_lang
 410110,"Engrave Gloves - Beast Mastery"
 410111,"Engrave Pants - Kill Command"
 410113,"Engrave Chest - Master Marksman"
-410115,"Engrave Belt - Aspect of the Lion"
+410115,"Engrave Chest - Aspect of the Lion"
 410121,"Engrave Gloves - Chimera Shot"
 410122,"Engrave Chest - Lone Wolf"
 410123,"Engrave Gloves - Explosive Shot"
@@ -11273,6 +11273,7 @@ ID,Name_lang
 426923,"Fire Form"
 426925,"Water Form"
 427020,"Replace Supplies"
+427063,"Mantle of the Second War"
 427116,"Battlefield Genius"
 427123,"S03 - Ashenvale PvP Event - Leader Area Buff - Alliance Power Level Controller"
 427143,"Curse of Vulnerability"
@@ -11292,6 +11293,7 @@ ID,Name_lang
 428113,"Dark Ritual Portal"
 428172,"Dark Ritual Stalker"
 428279,"Dark Ritual Failed"
+428425,"Phoenix Bindings"
 428482,"Shadow Seep"
 428484,"Mirror Void Elemental"
 428489,"Planar Shift"
@@ -11382,6 +11384,7 @@ ID,Name_lang
 431060,"Flight Insurance"
 431980,"[DNT] Shaman Questgiver Invisibility"
 431981,"[DNT] Shaman Questgiver Grant Visibility"
+432069,"Tangled Causality"
 8327,Suicide
 8328,Suicide
 8329,Suicide
