@@ -6,6 +6,7 @@ class Player {
             aqbooks: $('select[name="aqbooks"]').val() == "Yes",
             reactionmin: parseInt($('input[name="reactionmin"]').val()),
             reactionmax: parseInt($('input[name="reactionmax"]').val()),
+            adjacent: parseInt($('input[name="adjacent"]').val()),
             target: {
                 level: parseInt($('input[name="targetlevel"]').val()),
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
@@ -34,6 +35,7 @@ class Player {
         this.aqbooks = config.aqbooks;
         this.reactionmin = config.reactionmin;
         this.reactionmax = config.reactionmax;
+        this.adjacent = config.adjacent;
         this.spelldamage = 0;
         this.target = config.target;
         this.base = {
@@ -872,9 +874,11 @@ class Player {
         /* start-log */ if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
         return done + procdmg;
     }
-    cast(spell, delayedheroic) {
-        this.stepauras();
-        spell.use(delayedheroic);
+    cast(spell, delayedheroic, adjacent) {
+        if (!adjacent) {
+            this.stepauras();
+            spell.use(delayedheroic);
+        }
         if (spell.useonly) {
             /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
@@ -882,6 +886,7 @@ class Player {
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
+        // adjacents proc?
         procdmg = this.procattack(spell, this.mh, result);
 
         if (result == RESULT.MISS) {
@@ -893,25 +898,26 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
+            // adjacents proc?
             this.proccrit();
         }
 
-        let done = this.dealdamage(dmg, result, this.mh, spell);
+        let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
         spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]}).`); /* end-log */
+        /* start-log */ if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
         return done + procdmg;
     }
-    dealdamage(dmg, result, weapon, spell) {
+    dealdamage(dmg, result, weapon, spell, adjacent) {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             dmg *= this.stats.dmgmod;
             dmg *= (1 - this.armorReduction);
-            this.addRage(dmg, result, weapon, spell);
+            if (!adjacent) this.addRage(dmg, result, weapon, spell);
             return ~~dmg;
         }
         else {
-            this.addRage(dmg, result, weapon, spell);
+            if (!adjacent) this.addRage(dmg, result, weapon, spell);
             return 0;
         }
     }

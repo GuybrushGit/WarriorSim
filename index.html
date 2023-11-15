@@ -40,7 +40,6 @@
 
   improve profiles
   check rest of the items
-  export / import profiles
   runes UI
   cleaves
   
@@ -223,14 +222,6 @@
             <label>Target Resistance</label>
             <input type="text" name="targetresistance" value="24" data-numberonly="true">
           </li>
-          <li style="display: none;">
-            <label>Adjacent Targets</label>
-            <input type="text" name="adjacent" value="0" data-numberonly="true">
-          </li>
-          <li style="display: none;">
-            <label>Adjacent Targets Level</label>
-            <input type="text" name="adjacentlevel" value="60" data-numberonly="true">
-          </li>
           <li>
             <label>Target Armor</label>
             <input type="text" name="targetarmor" value="336" data-numberonly="true">
@@ -258,6 +249,11 @@
             <input type="text" name="reactionmax" value="300" data-numberonly="true">
           </li>
         </ul>
+        <li>
+          <label>Adjacent Mobs</label>
+          <input type="range"  name="slider-adjacent" min="0" max="3" value="0" class="slider">
+          <input type="text" name="adjacent" value="0" data-numberonly="true">
+        </li>
       </article>
 
       <article class="buffs">

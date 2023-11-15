@@ -365,6 +365,12 @@ class Simulation {
                     this.idmg += player.cast(delayedspell, delayedheroic);
                     player.spelldelay = 0;
                     spellcheck = true;
+
+                    if (delayedspell instanceof Whirlwind) {
+                        for (let i = 0; i < player.adjacent; i++) {
+                            this.idmg += player.cast(delayedspell, delayedheroic, i+1);
+                        }
+                    }
                 }
                 else {
                     player.spelldelay = 0;
