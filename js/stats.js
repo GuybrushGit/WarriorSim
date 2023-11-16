@@ -116,6 +116,21 @@ SIM.STATS = {
             data.push((sim.player.auras.deepwounds.totaldmg / sim.totalduration).toFixed(2));
             colors.push(view.colors[counter % view.colors.length]);
         }
+        if (sim.player.auras.deepwounds2 && sim.player.auras.deepwounds2.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.deepwounds2.name);
+            data.push((sim.player.auras.deepwounds2.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+        if (sim.player.auras.deepwounds3 && sim.player.auras.deepwounds3.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.deepwounds3.name);
+            data.push((sim.player.auras.deepwounds3.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
+        if (sim.player.auras.deepwounds4 && sim.player.auras.deepwounds4.totaldmg) {
+            view.dmgdata.labels.push(sim.player.auras.deepwounds4.name);
+            data.push((sim.player.auras.deepwounds4.totaldmg / sim.totalduration).toFixed(2));
+            colors.push(view.colors[counter % view.colors.length]);
+        }
 
         // Rend
         if (sim.player.auras.rend && sim.player.auras.rend.totaldmg) {

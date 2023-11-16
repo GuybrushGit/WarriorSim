@@ -346,8 +346,10 @@ class Simulation {
                     if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
                     else if (player.auras.consumedrage && player.auras.consumedrage.rageblockactive && player.rage < player.auras.consumedrage.rageblock) { } 
                     else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { 
-                        player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike; 
-                    
+                        player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike;
+                    }
+                    else if (player.spells.cleave && player.spells.cleave.canUse()) { 
+                        player.heroicdelay = 1; delayedheroic = player.spells.cleave;
                     }
                 }
 
@@ -396,6 +398,11 @@ class Simulation {
                     this.player.nextswinghs = false;
                     /* start-log */ if (log) this.player.log(`Heroic Strike unqueued`); /* end-log */
                 }
+                else if (player.spells.cleave && player.spells.cleave.unqueue && player.nextswinghs &&
+                    player.rage < player.spells.cleave.unqueue && player.mh.timer <= player.spells.cleave.unqueuetimer) {
+                    this.player.nextswinghs = false;
+                    /* start-log */ if (log) this.player.log(`Cleave unqueued`); /* end-log */
+                }
             }
 
             // Extra attacks
@@ -431,6 +438,14 @@ class Simulation {
                 next = 3000 - ((step - player.auras.rend.starttimer) % 3000);
             if (player.auras.deepwounds && player.auras.deepwounds.timer && (3000 - ((step - player.auras.deepwounds.starttimer) % 3000)) < next)
                 next = 3000 - ((step - player.auras.deepwounds.starttimer) % 3000);
+            if (player.adjacent) {
+                if (player.auras.deepwounds2 && player.auras.deepwounds2.timer && (3000 - ((step - player.auras.deepwounds2.starttimer) % 3000)) < next)
+                next = 3000 - ((step - player.auras.deepwounds2.starttimer) % 3000);
+                if (player.auras.deepwounds3 && player.auras.deepwounds3.timer && (3000 - ((step - player.auras.deepwounds3.starttimer) % 3000)) < next)
+                next = 3000 - ((step - player.auras.deepwounds3.starttimer) % 3000);
+                if (player.auras.deepwounds4 && player.auras.deepwounds4.timer && (3000 - ((step - player.auras.deepwounds4.starttimer) % 3000)) < next)
+                next = 3000 - ((step - player.auras.deepwounds4.starttimer) % 3000);
+            }
             if (player.auras.weaponbleedmh && player.auras.weaponbleedmh.timer && (player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval)) < next)
                 next = player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval);
             if (player.auras.weaponbleedoh && player.auras.weaponbleedoh.timer && (player.auras.weaponbleedoh.interval - ((step - player.auras.weaponbleedoh.starttimer) % player.auras.weaponbleedoh.interval)) < next)
@@ -450,6 +465,10 @@ class Simulation {
             if (!player.spells.execute || step < this.executestep) {
                 if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
                     let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
+                    if (timeleft > 0 && timeleft < next) next = timeleft;
+                }
+                else if (player.spells.cleave && player.spells.cleave.unqueue) {
+                    let timeleft = Math.max(player.mh.timer - player.spells.cleave.unqueuetimer);
                     if (timeleft > 0 && timeleft < next) next = timeleft;
                 }
             }
@@ -486,6 +505,11 @@ class Simulation {
             if (player.auras.deepwounds && player.auras.deepwounds.timer && !player.auras.deepwounds.step() && !player.spelldelay) spellcheck = true;
             if (player.auras.weaponbleedmh && player.auras.weaponbleedmh.timer && !player.auras.weaponbleedmh.step() && !player.spelldelay) spellcheck = true;
             if (player.auras.weaponbleedoh && player.auras.weaponbleedoh.timer && !player.auras.weaponbleedoh.step() && !player.spelldelay) spellcheck = true;
+            if (player.adjacent) {
+                if (player.auras.deepwounds2 && player.auras.deepwounds2.timer && !player.auras.deepwounds2.step() && !player.spelldelay) spellcheck = true;
+                if (player.auras.deepwounds3 && player.auras.deepwounds3.timer && !player.auras.deepwounds3.step() && !player.spelldelay) spellcheck = true;
+                if (player.auras.deepwounds4 && player.auras.deepwounds4.timer && !player.auras.deepwounds4.step() && !player.spelldelay) spellcheck = true;
+            }
         }
 
         // Fight done
@@ -493,6 +517,15 @@ class Simulation {
 
         if (player.auras.deepwounds) {
             this.idmg += player.auras.deepwounds.idmg;
+        }
+        if (player.auras.deepwounds2) {
+            this.idmg += player.auras.deepwounds2.idmg;
+        }
+        if (player.auras.deepwounds3) {
+            this.idmg += player.auras.deepwounds3.idmg;
+        }
+        if (player.auras.deepwounds4) {
+            this.idmg += player.auras.deepwounds4.idmg;
         }
         if (player.auras.rend) {
             this.idmg += player.auras.rend.idmg;

@@ -136,9 +136,15 @@ class Execute extends Spell {
     }
     use(delayedheroic) {
         // HS + Execute macro
-        if (delayedheroic && delayedheroic.exmacro && delayedheroic.canUse()) {
-            this.player.cast(delayedheroic);
-            this.player.heroicdelay = 0;
+        if (delayedheroic && delayedheroic.exmacro) {
+            if (delayedheroic.canUse()) {
+                this.player.cast(delayedheroic);
+                this.player.heroicdelay = 0;
+            }
+            else if (delayedheroic instanceof Cleave && delayedheroic.backupheroic && delayedheroic.backupheroic.canUse()) {
+                this.player.cast(delayedheroic.backupheroic);
+                this.player.heroicdelay = 0;
+            }
         }
 
         this.player.timer = 1500;
@@ -195,6 +201,39 @@ class HeroicStrike extends Spell {
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+    }
+    use() {
+        this.player.nextswinghs = true;
+    }
+    canUse() {
+        return !this.player.nextswinghs && this.cost <= this.player.rage && 
+            ((!this.minrage && !this.maincd) ||
+            (this.minrage && this.player.rage >= this.minrage) ||
+            (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
+            (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)))
+            && (!this.unqueue || (this.player.mh.timer > this.unqueuetimer));
+    }
+}
+
+class Cleave extends Spell {
+    constructor(player, id) {
+        super(player, id);
+        this.cost = 20;
+        this.bonus = this.value1;
+        this.useonly = true;
+        this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+
+        if (this.exmacro) {
+            for (let spell of spells) {
+                let min = parseInt(spell.minlevel || 0);
+                let max = parseInt(spell.maxlevel || 60);
+                if (spell.name == "Heroic Strike" && player.level >= min && player.level <= max) {
+                    this.backupheroic = new HeroicStrike(player, spell.id);
+                    this.backupheroic.exmacro = true;
+                }
+            }
+        }
     }
     use() {
         this.player.nextswinghs = true;
@@ -466,8 +505,8 @@ class Flurry extends Aura {
 }
 
 class DeepWounds extends Aura {
-    constructor(player, id) {
-        super(player, id, 'Deep Wounds');
+    constructor(player, id, adjacent) {
+        super(player, id, 'Deep Wounds' + (adjacent ? ' ' + adjacent : ''));
         this.duration = 12;
         this.idmg = 0;
         this.totaldmg = 0;

@@ -107,6 +107,10 @@ class Player {
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
+        if (this.adjacent && this.talents.deepwounds) {
+            for (let i = 2; i <= (this.adjacent + 1); i++)
+                this.auras['deepwounds' + i] = new DeepWounds(this, null, i);
+        }
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
@@ -452,6 +456,15 @@ class Player {
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
         }
+        if (this.auras.deepwounds2) {
+            this.auras.deepwounds2.idmg = 0;
+        }
+        if (this.auras.deepwounds3) {
+            this.auras.deepwounds3.idmg = 0;
+        }
+        if (this.auras.deepwounds4) {
+            this.auras.deepwounds4.idmg = 0;
+        }
         if (this.auras.rend) {
             this.auras.rend.idmg = 0;
         }
@@ -720,6 +733,12 @@ class Player {
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.step();
         if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.step();
         if (this.auras.weaponbleedoh && this.auras.weaponbleedoh.timer) this.auras.weaponbleedoh.step();
+
+        if (this.adjacent) {
+            if (this.auras.deepwounds2 && this.auras.deepwounds2.timer) this.auras.deepwounds2.step();
+            if (this.auras.deepwounds3 && this.auras.deepwounds3.timer) this.auras.deepwounds3.step();
+            if (this.auras.deepwounds4 && this.auras.deepwounds4.timer) this.auras.deepwounds4.step();
+        }
     }
     endauras() {
 
@@ -753,6 +772,9 @@ class Player {
 
         if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
         if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.end();
+        if (this.auras.deepwounds2 && this.auras.deepwounds2.timer) this.auras.deepwounds2.end();
+        if (this.auras.deepwounds3 && this.auras.deepwounds3.timer) this.auras.deepwounds3.end();
+        if (this.auras.deepwounds4 && this.auras.deepwounds4.timer) this.auras.deepwounds4.end();
         if (this.auras.rend && this.auras.rend.timer) this.auras.rend.end();
         if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.end();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.end();
@@ -794,7 +816,7 @@ class Player {
         if (roll < tmp && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmh(weapon) {
+    attackmh(weapon, adjacent) {
         this.stepauras();
 
         let spell = null;
@@ -808,6 +830,15 @@ class Player {
                 spell = this.spells.heroicstrike;
                 this.rage -= spell.cost;
             }
+            else if (this.spells.cleave && this.spells.cleave.cost <= this.rage) {
+                result = this.rollspell(this.spells.cleave);
+                spell = this.spells.cleave;
+                if (!adjacent) {
+                    this.nextswinghs = true;
+                    this.attackmh(weapon, 1);
+                    this.rage -= spell.cost;
+                }
+            }
             else {
                 result = this.rollweapon(weapon);
                 /* start-log */ if (log) this.log(`Heroic Strike auto canceled`); /* end-log */
@@ -818,7 +849,7 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        procdmg = this.procattack(spell, weapon, result);
+        if (!adjacent) procdmg = this.procattack(spell, weapon, result);
 
         if (result == RESULT.DODGE) {
             this.dodgetimer = 5000;
@@ -828,11 +859,11 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
-            this.proccrit();
+            this.proccrit(adjacent);
         }
 
         weapon.use();
-        let done = this.dealdamage(dmg, result, weapon, spell);
+        let done = this.dealdamage(dmg, result, weapon, spell, adjacent);
         if (spell) {
             spell.totaldmg += done;
             spell.data[result]++;
@@ -886,8 +917,7 @@ class Player {
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
-        // adjacents proc?
-        procdmg = this.procattack(spell, this.mh, result);
+        if (!adjacent) procdmg = this.procattack(spell, this.mh, result);
 
         if (result == RESULT.MISS) {
             spell.failed();
@@ -898,12 +928,11 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
-            // adjacents proc?
             this.proccrit();
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
-        spell.data[result]++;
+        if (!adjacent) spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
         /* start-log */ if (log) this.log(`${spell.name} for ${done + procdmg} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
@@ -921,9 +950,12 @@ class Player {
             return 0;
         }
     }
-    proccrit() {
+    proccrit(adjacent) {
         if (this.auras.flurry) this.auras.flurry.use();
-        if (this.auras.deepwounds) this.auras.deepwounds.use();
+        if (this.auras.deepwounds) {
+            if (!adjacent) this.auras.deepwounds.use();
+            else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use();
+        }
     }
     procattack(spell, weapon, result) {
         let procdmg = 0;
@@ -978,7 +1010,7 @@ class Player {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
         }
-        if (!spell || spell instanceof HeroicStrike) {
+        if (!spell || spell instanceof HeroicStrike || spell instanceof Cleave) {
             if (this.auras.flurry && this.auras.flurry.stacks)
                 this.auras.flurry.proc();
             if (this.auras.consumedrage && this.auras.consumedrage.stacks)
