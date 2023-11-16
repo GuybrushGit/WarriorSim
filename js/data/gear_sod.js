@@ -2807,6 +2807,15 @@ var gear = {
       "sta": 24,
       "crit": 1,
       "ap": 20
+    },
+    {
+      "id": 9999997,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "name": "High Tide Choker",
+      "str": 7,
+      "agi": 4,
+      "r": 25
     }
   ],
   "shoulder": [
@@ -5784,6 +5793,14 @@ var gear = {
       "sta": 23,
       "ap": 30,
       "hit": 1
+    },
+    {
+      "id": 9999996,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "name": "Shimmering Thresher Cape",
+      "str": 6,
+      "r": 25
     }
   ],
   "chest": [
@@ -22937,7 +22954,7 @@ var gear = {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
-      "r": 0,
+      "r": 53,
       "name": "Hand of Justice",
       "proc": {
         "extra": 1,
@@ -22996,6 +23013,13 @@ var gear = {
       "r": 58,
       "name": "Counterattack Lodestone",
       "ap": 22
+    },
+    {
+      "id": 19024,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "name": "Arena Grand Master"
     },
     {
       "id": 19120,
@@ -23144,7 +23168,7 @@ var gear = {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
-      "r": 0,
+      "r": 53,
       "name": "Hand of Justice",
       "proc": {
         "extra": 1,
@@ -23203,6 +23227,13 @@ var gear = {
       "r": 58,
       "name": "Counterattack Lodestone",
       "ap": 22
+    },
+    {
+      "id": 19024,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "name": "Arena Grand Master"
     },
     {
       "id": 19120,

@@ -199,6 +199,8 @@
 
           let include = false, exclude = false;
           if (obj.id == 21568) include = true;
+          if (obj.id == 18706) include = true;
+          if (obj.id == 19024) include = true;
           if (obj.id == 21567) include = true;
           if (obj.id == 17780) exclude = true;
 
@@ -228,6 +230,23 @@
         }
 
         // custom items
+        gear["neck"].push({
+          id: 9999997,
+          type: "Miscellaneous",
+          slot: "neck",
+          name: "High Tide Choker",
+          str: 7,
+          agi: 4,
+          r: 25,
+        });
+        gear["back"].push({
+          id: 9999996,
+          type: "Miscellaneous",
+          slot: "neck",
+          name: "Shimmering Thresher Cape",
+          str: 6,
+          r: 25,
+        });
         gear["chest"].push({
           id: 210794,
           type: "Mail",
