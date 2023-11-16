@@ -82,10 +82,15 @@ class Weapon {
         }
 
         for (let buff of buffs) {
-            if (buff.group == "windfury" && buff.active && !this.offhand) {
-                this.player.auras.windfury = new Windfury(this.player, buff.id);
-                this.windfury = this.player.auras.windfury;
-                this.wildstrikes = buff.id == 407975;
+            if (buff.group == "windfury" && buff.active) {
+                if (!this.player.auras.windfury)
+                    this.player.auras.windfury = new Windfury(this.player, buff.id);
+
+                // Wild Strikes
+                if (buff.id == 407975 || !this.offhand) {
+                    this.windfury = this.player.auras.windfury;
+                    this.wildstrikes = buff.id == 407975;
+                }
             }
         }
 
@@ -94,7 +99,7 @@ class Weapon {
                 this.basebonusdmg += buff.bonusdmg;
         if (enchant && enchant.bonusdmg) 
             this.basebonusdmg += enchant.bonusdmg;
-        if (!this.windfury && !this.wildstrikes && tempenchant && tempenchant.bonusdmg)
+        if ((!this.windfury || this.wildstrikes) && tempenchant && tempenchant.bonusdmg)
             this.basebonusdmg += tempenchant.bonusdmg;
         if (this.player.items.includes(21189))
             this.basebonusdmg += 4;
