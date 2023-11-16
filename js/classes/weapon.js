@@ -4,7 +4,8 @@ var WEAPONTYPE = {
     DAGGER: 2,
     AXE: 3,
     FIST: 4,
-    POLEARM: 5
+    POLEARM: 5,
+    STAFF: 6
 }
 
 class Weapon {

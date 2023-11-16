@@ -51,6 +51,7 @@ class Player {
             skill_3: this.level * 5,
             skill_4: this.level * 5,
             skill_5: this.level * 5,
+            skill_6: this.level * 5,
             haste: 1,
             strmod: 1,
             agimod: 1,
@@ -145,8 +146,8 @@ class Player {
             // race,class,level,str,agi,sta,inte,spi
             let stats = l.split(",");
             if (stats[0] == raceid && stats[2] == this.level) {
-                this.base.aprace = 160;
-                this.base.ap += 160;
+                this.base.aprace = (this.level * 3) - 20;
+                this.base.ap += (this.level * 3) - 20;
                 this.base.str += parseInt(stats[3]);
                 this.base.agi += parseInt(stats[4]);
                 this.base.skill_0 += raceid == "1" ? 5 : 0;
