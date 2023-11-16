@@ -18,10 +18,10 @@ gulp.task("js", function () {
 gulp.task("js-build", function () {
     return gulp
         .src(["js/**/*.js", "lib/*.mjs"])
-        .pipe(stripCode({
-            start_comment: "start-log",
-            end_comment: "end-log"
-          }))
+        // .pipe(stripCode({
+        //     start_comment: "start-log",
+        //     end_comment: "end-log"
+        //   }))
         .pipe(
             minify({
                 noSource: true,
