@@ -960,15 +960,14 @@ class Windfury extends Aura {
         if (this.wfap) this.stats = { ap: this.wfap };
         if (this.wfapperc) this.mult_stats = { apmod: this.wfapperc };
     }
-    use(offhand) {
+    use() {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + 1500;
         this.starttimer = step;
         this.mintime = step % batching;
         this.stacks = 2;
         this.player.updateAP();
-        if (offhand) this.player.ohextras++;
-        if (!offhand) this.player.mhextras++;
+        this.player.extraattacks++;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     proc() {

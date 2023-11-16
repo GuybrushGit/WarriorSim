@@ -406,13 +406,9 @@ class Simulation {
             }
 
             // Extra attacks
-            if (player.mhextras > 0) {
+            if (player.extraattacks > 0) {
                 player.mh.timer = 0;
-                player.mhextras--;
-            }
-            if (player.ohextras > 0) {
-                player.oh.timer = 0;
-                player.ohextras--;
+                player.extraattacks--;
             }
             if (player.batchedextras > 0) {
                 player.mh.timer = batching - (step % batching);
