@@ -202,18 +202,18 @@ class Player {
                     // Blazefury Medallion
                     if (item.id == 17111) {
                         this.attackproc = {};
-                        this.attackproc.chance = item.procchance * 100;
-                        this.attackproc.magicdmg = item.magicdmg;
+                        this.attackproc.chance = item.proc.chance * 100;
+                        this.attackproc.magicdmg = item.proc.dmg;
                     }
 
-                    if (item.procchance && (type == "trinket1" || type == "trinket2")) {
+                    if (item.proc && item.proc.chance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
-                        proc.chance = item.procchance * 100;
-                        proc.extra = item.procextra;
-                        proc.magicdmg = item.magicdmg;
-                        if (item.procspell) {
-                            this.auras[item.procspell.toLowerCase()] = eval('new ' + item.procspell + '(this)');
-                            proc.spell = this.auras[item.procspell.toLowerCase()];
+                        proc.chance = item.proc.chance * 100;
+                        proc.extra = item.proc.extra;
+                        proc.magicdmg = item.proc.dmg;
+                        if (item.spell) {
+                            this.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(this)');
+                            proc.spell = this.auras[item.proc.spell.toLowerCase()];
                         }
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
                     }

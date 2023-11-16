@@ -80,6 +80,8 @@
           if (agi) obj.agi = agi;
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
+
+          if (item.ID == 11815) debugger;
         
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
           if (spells.length) {
@@ -156,7 +158,7 @@
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2") {
+                if (item.ClassID != "2" && item.ID != 11815) {
                   console.log("check: " + obj.name);
                 }
                 else {
@@ -356,6 +358,10 @@
           // custom rules
           if (id == 21151 || id == 21992 || id == 24388) {
             proc.binaryspell = true;
+          }
+          // todo: custom chances
+          if (id == 15601) {
+            proc.chance = 2;
           }
           if (id == 11791) proc.spell = "Vibroblade";
         });

@@ -22937,8 +22937,12 @@ var gear = {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
-      "r": 53,
+      "r": 0,
       "name": "Hand of Justice",
+      "proc": {
+        "extra": 1,
+        "chance": 2
+      },
       "ap": 20
     },
     {
@@ -23140,8 +23144,12 @@ var gear = {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
-      "r": 53,
+      "r": 0,
       "name": "Hand of Justice",
+      "proc": {
+        "extra": 1,
+        "chance": 2
+      },
       "ap": 20
     },
     {
