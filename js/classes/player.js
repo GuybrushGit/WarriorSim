@@ -813,7 +813,7 @@ class Player {
         if (roll < tmp && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmh(weapon, adjacent, previousResult) {
+    attackmh(weapon, adjacent, damageSoFar) {
         this.stepauras();
 
         let spell = null;
@@ -842,9 +842,7 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        // Will proc on adjacent attack if main attack failed
-        if (!adjacent || previousResult == RESULT.DODGE || previousResult == RESULT.MISS)
-            procdmg = this.procattack(spell, weapon, result, adjacent);
+        procdmg = this.procattack(spell, weapon, result, adjacent, damageSoFar);
 
         if (result == RESULT.DODGE) {
             this.dodgetimer = 5000;
@@ -872,7 +870,7 @@ class Player {
 
         if (spell instanceof Cleave && !adjacent) {
             this.nextswinghs = true;
-            done += this.attackmh(weapon, 1, result);
+            done += this.attackmh(weapon, 1, done);
         }
         return done + procdmg;
     }
@@ -905,7 +903,7 @@ class Player {
         /* start-log */ if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
         return done + procdmg;
     }
-    cast(spell, delayedheroic, adjacent, previousResult) {
+    cast(spell, delayedheroic, adjacent, damageSoFar) {
         if (!adjacent) {
             this.stepauras();
             spell.use(delayedheroic);
@@ -917,9 +915,7 @@ class Player {
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
-        // Will proc on adjacent attack if main attack failed
-        if (!adjacent || previousResult == RESULT.MISS) 
-            procdmg = this.procattack(spell, this.mh, result, adjacent);
+        procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
 
         if (result == RESULT.MISS) {
             spell.failed();
@@ -959,47 +955,62 @@ class Player {
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use();
         }
     }
-    procattack(spell, weapon, result, adjacent) {
+    procattack(spell, weapon, result, adjacent, damageSoFar) {
         let procdmg = 0;
+        let extras = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
-            if (weapon.proc1 && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
+            if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
-                if (weapon.proc1.extra) this.extraattacks += weapon.proc1.extra;
+                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
+            }
+            // Extra attacks roll only once per multi target attack
+            if (weapon.proc1 && weapon.proc1.extra && !damageSoFar && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
+                // Multiple extras procs off a non spel will only grant extra attack(s) from one source
+                if (spell) this.extraattacks += weapon.proc1.extra;
+                else extras = weapon.proc1.extra;
                 /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
             }
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2);
             }
-            if (weapon.windfury && !this.auras.windfury.timer && rng10k() < 2000) {
-                weapon.windfury.use();
-            }
-            if (this.trinketproc1 && rng10k() < this.trinketproc1.chance) {
-                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
-                if (this.trinketproc1.extra)
-                    this.batchedextras += this.trinketproc1.extra;
+            if (this.trinketproc1 && !this.trinketproc1.extra && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
+                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
             }
-            if (this.trinketproc2 && rng10k() < this.trinketproc2.chance) {
-                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
-                if (this.trinketproc2.extra)
-                    this.batchedextras += this.trinketproc2.extra;
+            if (this.trinketproc1 && this.trinketproc1.extra && !damageSoFar && rng10k() < this.trinketproc1.chance) {
+                if (spell) this.batchedextras += this.trinketproc1.extra;
+                else batchedextras = this.trinketproc1.extra;
+                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
+            }
+            if (this.trinketproc2 && !this.trinketproc2.extra  && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
                 if (this.trinketproc2.spell) this.trinketproc2.spell.use();
+                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
+            }
+            if (this.trinketproc2 && this.trinketproc2.extra && !damageSoFar && rng10k() < this.trinketproc2.chance) {
+                if (spell) this.batchedextras += this.trinketproc2.extra;
+                else batchedextras = this.trinketproc2.extra;
+                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
                 /* start-log */ if (log) this.log(`Misc proc`); /* end-log */
             }
-            if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD) {
-                if (rng10k() < this.talents.swordproc * 100){
-                    this.extraattacks++;
-                    /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
-                }
+            // Sword spec shouldnt be able to proc itself
+            if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD && !damageSoFar && this.swordspecstep != step && rng10k() < this.talents.swordproc * 100) {
+                this.swordspecstep = step;
+                if (spell) this.extraattacks++;
+                else extras++;
+                /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
+            }
+            if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
+                if (!spell) extras = 0;
+                weapon.windfury.use();
             }
             if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {
                 this.auras.swarmguard.proc();
@@ -1010,6 +1021,7 @@ class Player {
             if (this.dragonbreath && rng10k() < 400) {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
+            if (extras) this.extraattacks += extras;
         }
         if (!spell || spell instanceof HeroicStrike || (spell instanceof Cleave && !adjacent)) {
             if (this.auras.flurry && this.auras.flurry.stacks)
