@@ -813,7 +813,7 @@ class Player {
         if (roll < tmp && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    attackmh(weapon, adjacent) {
+    attackmh(weapon, adjacent, previousResult) {
         this.stepauras();
 
         let spell = null;
@@ -842,7 +842,9 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        if (!adjacent) procdmg = this.procattack(spell, weapon, result);
+        // Will proc on adjacent attack if main attack failed
+        if (!adjacent || previousResult == RESULT.DODGE || previousResult == RESULT.MISS)
+            procdmg = this.procattack(spell, weapon, result, adjacent);
 
         if (result == RESULT.DODGE) {
             this.dodgetimer = 5000;
@@ -870,7 +872,7 @@ class Player {
 
         if (spell instanceof Cleave && !adjacent) {
             this.nextswinghs = true;
-            done += this.attackmh(weapon, 1);
+            done += this.attackmh(weapon, 1, result);
         }
         return done + procdmg;
     }
@@ -903,7 +905,7 @@ class Player {
         /* start-log */ if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
         return done + procdmg;
     }
-    cast(spell, delayedheroic, adjacent) {
+    cast(spell, delayedheroic, adjacent, previousResult) {
         if (!adjacent) {
             this.stepauras();
             spell.use(delayedheroic);
@@ -915,7 +917,9 @@ class Player {
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
-        if (!adjacent) procdmg = this.procattack(spell, this.mh, result);
+        // Will proc on adjacent attack if main attack failed
+        if (!adjacent || previousResult == RESULT.MISS) 
+            procdmg = this.procattack(spell, this.mh, result, adjacent);
 
         if (result == RESULT.MISS) {
             spell.failed();
@@ -955,7 +959,7 @@ class Player {
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use();
         }
     }
-    procattack(spell, weapon, result) {
+    procattack(spell, weapon, result, adjacent) {
         let procdmg = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
@@ -1007,7 +1011,7 @@ class Player {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
         }
-        if (!spell || spell instanceof HeroicStrike || spell instanceof Cleave) {
+        if (!spell || spell instanceof HeroicStrike || (spell instanceof Cleave && !adjacent)) {
             if (this.auras.flurry && this.auras.flurry.stacks)
                 this.auras.flurry.proc();
             if (this.auras.consumedrage && this.auras.consumedrage.stacks)

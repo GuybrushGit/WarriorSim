@@ -364,13 +364,15 @@ class Simulation {
                     player.heroicdelay = delayedheroic.maxdelay - 49;
 
                 if (delayedspell.canUse()) {
-                    this.idmg += player.cast(delayedspell, delayedheroic);
+                    let done = player.cast(delayedspell, delayedheroic)
+                    this.idmg += done;
                     player.spelldelay = 0;
                     spellcheck = true;
 
                     if (delayedspell instanceof Whirlwind) {
                         for (let i = 0; i < player.adjacent; i++) {
-                            this.idmg += player.cast(delayedspell, delayedheroic, player.adjacent);
+                            done += player.cast(delayedspell, delayedheroic, player.adjacent, !done ? RESULT.MISS : RESULT.HIT);
+                            this.idmg += done;
                         }
                     }
                 }
