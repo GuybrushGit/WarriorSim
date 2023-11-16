@@ -866,7 +866,7 @@ class Player {
         let done = this.dealdamage(dmg, result, weapon, spell, adjacent);
         if (spell) {
             spell.totaldmg += done;
-            spell.data[result]++;
+            if (!adjacent) spell.data[result]++;
         }
         else {
             weapon.totaldmg += done;
@@ -928,7 +928,7 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
-            this.proccrit();
+            this.proccrit(adjacent);
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
