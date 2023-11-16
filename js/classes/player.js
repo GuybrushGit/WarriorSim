@@ -958,6 +958,7 @@ class Player {
     procattack(spell, weapon, result, adjacent, damageSoFar) {
         let procdmg = 0;
         let extras = 0;
+        let batchedextras = 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
@@ -1022,6 +1023,7 @@ class Player {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
             if (extras) this.extraattacks += extras;
+            if (batchedextras) this.batchedextras += batchedextras;
         }
         if (!spell || spell instanceof HeroicStrike || (spell instanceof Cleave && !adjacent)) {
             if (this.auras.flurry && this.auras.flurry.stacks)
