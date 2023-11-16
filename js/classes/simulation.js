@@ -370,7 +370,7 @@ class Simulation {
 
                     if (delayedspell instanceof Whirlwind) {
                         for (let i = 0; i < player.adjacent; i++) {
-                            this.idmg += player.cast(delayedspell, delayedheroic, i+1);
+                            this.idmg += player.cast(delayedspell, delayedheroic, player.adjacent);
                         }
                     }
                 }

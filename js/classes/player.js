@@ -833,11 +833,7 @@ class Player {
             else if (this.spells.cleave && this.spells.cleave.cost <= this.rage) {
                 result = this.rollspell(this.spells.cleave);
                 spell = this.spells.cleave;
-                if (!adjacent) {
-                    this.nextswinghs = true;
-                    this.attackmh(weapon, 1);
-                    this.rage -= spell.cost;
-                }
+                if (adjacent) this.rage -= spell.cost;
             }
             else {
                 result = this.rollweapon(weapon);
@@ -873,7 +869,12 @@ class Player {
             weapon.data[result]++;
         }
         weapon.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})`); /* end-log */
+        /* start-log */ if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${done + procdmg} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}`); /* end-log */
+
+        if (spell instanceof Cleave && !adjacent) {
+            this.nextswinghs = true;
+            done += this.attackmh(weapon, 1);
+        }
         return done + procdmg;
     }
     attackoh(weapon) {
