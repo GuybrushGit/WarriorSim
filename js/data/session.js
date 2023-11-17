@@ -599,6 +599,10 @@ var session = {
        "onyxia",
        "mc",
        "bwl",
+       "zg",
+       "aq20",
+       "aq40",
+       "naxx",
        "worldboss",
        "pvp",
        "other"
@@ -606,7 +610,10 @@ var session = {
    "phases": [
        "1",
        "2",
-       "3"
+       "3",
+       "4",
+       "5",
+       "6"
    ],
    "talents": [
        {
