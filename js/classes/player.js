@@ -22,6 +22,7 @@ class Player {
         this.rage = 0;
         this.ragemod = 1;
         this.level = config.level;
+        this.rageconversion = ((0.0091107836 * this.level * this.level) + 3.225598133 * this.level) + 4.2652911;
         this.agipercrit = this.getAgiPerCrit(this.level);
         this.timer = 0;
         this.itemtimer = 0;
@@ -657,9 +658,10 @@ class Player {
         }
         else {
             if (result == RESULT.DODGE)
-                this.rage += (weapon.avgdmg() / 230.6) * 7.5 * 0.75;
+                this.rage += (weapon.avgdmg() / this.rageconversion) * 7.5 * 0.75;
             else if (result != RESULT.MISS)
-                this.rage += (dmg / 230.6) * 7.5 * this.ragemod;
+                this.rage += (dmg / this.rageconversion) * 7.5 * this.ragemod;
+                //this.rage += (dmg / 230.6) * 7.5 * this.ragemod;
         }
         if (this.rage > 100) this.rage = 100;
 
