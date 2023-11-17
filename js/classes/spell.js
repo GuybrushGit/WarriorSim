@@ -1353,6 +1353,7 @@ class Rend extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.stacks = this.value2;
+        this.player.rage -= this.cost;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
