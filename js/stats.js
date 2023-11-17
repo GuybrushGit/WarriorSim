@@ -330,8 +330,6 @@ SIM.STATS = {
             let dps = (totaldmg / sim.totalduration).toFixed(2);
             let dpr = (dps / (sim.player.auras.rend.cost * (uses / i))).toFixed(2);
             html += `<tr><td>${sim.player.auras.rend.name}</td><td></td><td></td><td></td><td></td><td></td><td>${(uses / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;
-        
-       
         }
 
         html += '</tbody></table>';

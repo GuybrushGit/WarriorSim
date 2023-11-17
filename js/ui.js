@@ -1455,7 +1455,7 @@ SIM.UI = {
                 }
         }
 
-        let str = JSON.stringify(minified);
+        let str = btoa(JSON.stringify(minified));
         view.main.find('[name="profilejson"]').val(str);
         navigator.clipboard.writeText(str);
         view.addAlert('Profile copied to clipboard');
@@ -1466,7 +1466,7 @@ SIM.UI = {
         const view = this;
         try {
             let str = view.main.find('[name="profilejson"]').val();
-            let minified = JSON.parse(str);
+            let minified = str[0] == '{' ? JSON.parse(str) : JSON.parse(atob(str));
             let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
 
