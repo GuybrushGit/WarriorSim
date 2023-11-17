@@ -323,7 +323,7 @@ class Simulation {
                 else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
                 
                 // prevent using spells while waiting for consumed by rage proc
-                else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
+                else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 80) { } 
                 else if (player.auras.consumedrage && player.auras.consumedrage.rageblockactive && player.rage < player.auras.consumedrage.rageblock) { } 
 
                 // Normal phase - rage cost
