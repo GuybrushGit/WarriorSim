@@ -343,7 +343,7 @@ class Simulation {
             if (spellcheck && !player.heroicdelay) {
                 if (!player.spells.execute || step < this.executestep) {
                     // prevent using spells while waiting for consumed by rage proc
-                    if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer) { } 
+                    if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 80) { } 
                     else if (player.auras.consumedrage && player.auras.consumedrage.rageblockactive && player.rage < player.auras.consumedrage.rageblock) { } 
                     else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { 
                         player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike;

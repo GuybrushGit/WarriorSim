@@ -661,7 +661,6 @@ class Player {
                 this.rage += (weapon.avgdmg() / this.rageconversion) * 7.5 * 0.75;
             else if (result != RESULT.MISS)
                 this.rage += (dmg / this.rageconversion) * 7.5 * this.ragemod;
-                //this.rage += (dmg / 230.6) * 7.5 * this.ragemod;
         }
         if (this.rage > 100) this.rage = 100;
 
