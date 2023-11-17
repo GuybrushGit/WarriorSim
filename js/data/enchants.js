@@ -542,7 +542,7 @@ var enchant = {
          "phase": 1
       }
 
-      
+
    ],
    "wrist": [
       {
@@ -588,11 +588,11 @@ var enchant = {
          "phase": 1
       },
 
-      
 
 
 
-      
+
+
    ],
    "hands": [
       {
