@@ -167,7 +167,9 @@ class Execute extends Spell {
         return this.timer;
     }
     canUse() {
-        return !this.player.timer && this.cost <= this.player.rage;
+        return !this.player.timer && this.cost <= this.player.rage && 
+            (!this.player.auras.consumedrage || !this.player.auras.consumedrage.executestacks || 
+             this.player.auras.consumedrage.executestacks <= this.player.auras.consumedrage.stacks);
     }
 }
 
@@ -434,6 +436,7 @@ class Aura {
         if (spell.value2) this.value2 = spell.value2;
         if (spell.procblock) this.procblock = spell.procblock;
         if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);
+        if (spell.executestacksactive) this.executestacks = parseInt(spell.executestacks);
         if (spell.wfap) this.wfap = parseInt(spell.wfap);
         if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
 

@@ -389,8 +389,9 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="execute" class="${spell.execute ? 'active' : ''}">Use during Execute phase</li>`);
         if (typeof spell.globals !== 'undefined') 
             ul.append(`<li data-id="globalsactive" class="${spell.globalsactive ? 'active' : ''}" data-group="usage">Only use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
+        if (spell.executestacks !== undefined)
+            ul.append(`<li data-id="executestacksactive" class="${spell.executestacksactive ? 'active' : ''}">Don't execute when below <input type="text" name="executestacks" value="${spell.executestacks}" data-numberonly="true" /> CbR charges</li>`);
         
-
 
         
         // if (spell.crusaders !== undefined)

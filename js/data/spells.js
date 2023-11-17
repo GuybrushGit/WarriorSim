@@ -659,6 +659,8 @@ var spells = [
     procblock: true,
     rageblock: 70,
     rageblockactive: true,
+    executestacks: 8,
+    executestacksactive: false,
     aura: true,
     buff: true,
     rune: true,

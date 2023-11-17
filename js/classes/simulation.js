@@ -306,6 +306,9 @@ class Simulation {
                     if (player.spells.ragingblow && player.spells.ragingblow.canUse(true)) { 
                         player.spelldelay = 1; delayedspell = player.spells.ragingblow; 
                     }
+                    else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { 
+                        player.spelldelay = 1; delayedspell = player.spells.berserkerrage; 
+                    }
                     else if (player.stats.ap >= player.spells.execute.priorityap) {
                         if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
                             player.spelldelay = 1; delayedspell = player.spells.bloodthirst;

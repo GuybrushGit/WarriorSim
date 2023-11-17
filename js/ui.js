@@ -1423,6 +1423,8 @@ SIM.UI = {
                 if (typeof spell.procblock !== 'undefined') obj.procblock = spell.procblock;
                 if (typeof spell.rageblock !== 'undefined') obj.rageblock = spell.rageblock;
                 if (typeof spell.rageblockactive !== 'undefined') obj.rageblockactive = spell.rageblockactive;
+                if (typeof spell.executestacks !== 'undefined') obj.executestacks = spell.executestacks;
+                if (typeof spell.executestacksactive !== 'undefined') obj.executestacksactive = spell.executestacksactive;
                 if (typeof spell.minrage !== 'undefined') obj.minrage = spell.minrage;
                 if (typeof spell.minrageactive !== 'undefined') obj.minrageactive = spell.minrageactive;
                 if (typeof spell.maxrage !== 'undefined') obj.maxrage = spell.maxrage;
@@ -1493,6 +1495,8 @@ SIM.UI = {
                     if (typeof newspell.procblock !== 'undefined') spell.procblock = newspell.procblock;
                     if (typeof newspell.rageblock !== 'undefined') spell.rageblock = newspell.rageblock;
                     if (typeof newspell.rageblockactive !== 'undefined') spell.rageblockactive = newspell.rageblockactive;
+                    if (typeof newspell.executestacks !== 'undefined') spell.executestacks = newspell.executestacks;
+                    if (typeof newspell.executestacksactive !== 'undefined') spell.executestacksactive = newspell.executestacksactive;
                     if (typeof newspell.minrage !== 'undefined') spell.minrage = newspell.minrage;
                     if (typeof newspell.minrageactive !== 'undefined') spell.minrageactive = newspell.minrageactive;
                     if (typeof newspell.maxrage !== 'undefined') spell.maxrage = newspell.maxrage;
