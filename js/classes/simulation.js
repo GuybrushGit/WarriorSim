@@ -91,6 +91,7 @@ class SimulationWorkerParallel {
                             result.player.auras[id] = src;
                         } else {
                             dst.uptime += src.uptime;
+                            if (src.uses) dst.uses += src.uses;
                             if (src.totaldmg) {
                                 dst.totaldmg = (dst.totaldmg || 0) + src.totaldmg;
                             }

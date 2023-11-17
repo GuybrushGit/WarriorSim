@@ -128,6 +128,7 @@ class Execute extends Spell {
         super(player, id);
         this.cost = 15 - player.talents.executecost;
         this.usedrage = 0;
+        this.totalusedrage = 0;
         this.refund = false;
         this.weaponspell = false;
     }
@@ -150,6 +151,7 @@ class Execute extends Spell {
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.usedrage = ~~this.player.rage;
+        this.totalusedrage += this.usedrage;
         this.timer = batching - (step % batching);
     }
     step(a) {
@@ -1315,6 +1317,7 @@ class Rend extends Aura {
         this.idmg = 0;
         this.totaldmg = 0;
         this.lasttick = 0;
+        this.uses = 0;
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
     }
     step() {
@@ -1354,6 +1357,7 @@ class Rend extends Aura {
         this.starttimer = step;
         this.stacks = this.value2;
         this.player.rage -= this.cost;
+        this.uses++;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
