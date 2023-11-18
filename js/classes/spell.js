@@ -343,7 +343,9 @@ class RagingBlow extends Spell {
     canUse(executephase) {
         return !this.timer && !this.player.timer && 
             (!executephase || this.execute) &&
-            ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer));
+            ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) 
+              || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer)
+              || (this.player.auras.consumedrage && this.player.auras.consumedrage.timer));
     }
 }
 
