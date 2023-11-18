@@ -1398,7 +1398,7 @@ SIM.UI = {
 
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let minified = {};
-        
+
 
         for(let prop in storage) {
             if (typeof storage[prop] == 'string') minified[prop] = storage[prop];
