@@ -653,14 +653,18 @@ class Player {
         }
         if (spell) {
             if (spell instanceof Execute) spell.result = result;
-            if (result == RESULT.MISS || result == RESULT.DODGE)
+            if (result == RESULT.MISS || result == RESULT.DODGE) {
                 this.rage += spell.refund ? spell.cost * 0.8 : 0;
+                oldRage += (spell.cost || 0) + (spell.usedrage || 0); // prevent cbr proccing on refunds
+            }
         }
         else {
-            if (result == RESULT.DODGE)
+            if (result == RESULT.DODGE) {
                 this.rage += (weapon.avgdmg() / this.rageconversion) * 7.5 * 0.75;
-            else if (result != RESULT.MISS)
+            }
+            else if (result != RESULT.MISS) {
                 this.rage += (dmg / this.rageconversion) * 7.5 * this.ragemod;
+            }
         }
         if (this.rage > 100) this.rage = 100;
 

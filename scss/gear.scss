@@ -203,6 +203,27 @@ section.main {
             outline: 0;
         }
     }
+
+    .runes {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+
+        label {
+            text-align: center;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-left: 4px;
+        }
+
+        .active .icon {
+            border-color: #ffcd45;
+            img {
+                filter: none;
+            }
+        }
+    }
     
     @include tablet {
         th:not(:first-child):not(:last-child) {

@@ -210,26 +210,17 @@ SIM.UI = {
             view.updateSidebar();
         });
 
-        view.tcontainer.on('click', 'table.runes td:not(.ppm)', function(e) {
-            var table = $(this).parents('table');
-            var tr = $(this).parent();
-            var temp = tr.data('temp');
+        view.tcontainer.on('click', '.runes .icon', function(e) {
+            var parent = $(this).parents('.runes');
+            var rune = $(this).parent();
 
-            if (table.hasClass('editmode')) {
-                if (tr.hasClass('hidden'))
-                    view.rowShowRunes(tr);
-                else
-                    view.rowHideRunes(tr);
-                return;
-            }
-
-            if (tr.hasClass('active')) {
-                view.rowDisableRunes(tr);
+            if (rune.hasClass('active')) {
+                view.rowDisableRunes(rune);
             }
             else {
-                let disable = table.find('tr.active').first();
+                let disable = parent.find('.rune.active').first();
                 if (disable.length) view.rowDisableRunes(disable);
-                view.rowEnableRunes(tr);
+                view.rowEnableRunes(rune);
             }
 
             view.updateSession();
@@ -645,12 +636,12 @@ SIM.UI = {
         }
     },
 
-    rowDisableRunes: function(tr) {
-        var table = tr.parents('table');
-        var type = table.data('type');
-        tr.removeClass('active');
+    rowDisableRunes: function(div) {
+        var parent = div.parents('.runes');
+        var type = parent.data('type');
+        div.removeClass('active');
         for(let i = 0; i < runes[type].length; i++) {
-            if (runes[type][i].id == tr.data('id')) {
+            if (runes[type][i].id == div.data('id')) {
                 runes[type][i].selected = false;
                 if (runes[type][i].enable) {
                     for (let spell of spells)
@@ -662,39 +653,19 @@ SIM.UI = {
         }
     },
 
-    rowEnableRunes: function(tr) {
-        var table = tr.parents('table');
-        var type = table.data('type');
-        tr.addClass('active');
+    rowEnableRunes: function(div) {
+        var parent = div.parents('.runes');
+        var type = parent.data('type');
+        div.addClass('active');
         for(let i = 0; i < runes[type].length; i++) {
-            if (runes[type][i].id == tr.data('id')) {
+            if (runes[type][i].id == div.data('id')) {
                 runes[type][i].selected = true;
+                if (runes[type][i].enable) {
+                    for (let spell of spells)
+                        if (spell.id == runes[type][i].enable)
+                            spell.active = true;
+                }
             }
-        }
-    },
-
-    rowHideRunes: function(tr) {
-        var table = tr.parents('table');
-        var type = table.data('type');
-        tr.removeClass('active');
-        tr.addClass('hidden');
-        tr.find('.hide').html(eyesvghidden);
-        for(let i = 0; i < runes[type].length; i++) {
-            if (runes[type][i].id == tr.data('id')) {
-                runes[type][i].hidden = true;
-                runes[type][i].selected = false;
-            }
-        }
-    },
-
-    rowShowRunes: function(tr) {
-        var table = tr.parents('table');
-        var type = table.data('type');
-        tr.removeClass('hidden');
-        tr.find('.hide').html(eyesvg);
-        for(let i = 0; i < runes[type].length; i++) {
-            if (runes[type][i].id == tr.data('id'))
-                runes[type][i].hidden = false;
         }
     },
 
@@ -1336,42 +1307,20 @@ SIM.UI = {
 
         if (typeof runes === 'undefined' || !runes[type] || runes[type].length == 0) return;
 
-        let table = `<table class="runes ${editmode ? 'editmode' : ''}" data-type="${type}" data-max="1">
-                        <thead>
-                            <tr>
-                                ${editmode ? '<th></th>' : ''}
-                                <th>Rune</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                    <tbody>`;
-
+        let html = $(`<div class="runes" data-type="${type}"></div>`);
+        html.append('<label>Runes</label>')
         for (let item of runes[type]) {
 
-            if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
-                continue;
-
-            if (item.hidden && !editmode) continue;
-
-            table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
-                        ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/spell=${item.id}"></a>${item.name}</td>
-                        <td>${item.description}</td>
-                    </tr>`;
+            html.append(`
+                <div data-id="${item.id}" class="rune ${item.selected ? 'active' : ''}">
+                    <div class="icon">
+                        <img src="dist/img/${item.iconname}.jpg " alt="Bloodrage">
+                        <a href="https://classic.wowhead.com/spell=${item.id}" class="wh-tooltip"></a>
+                    </div>
+                </div>`);
         }
 
-        table += '</tbody></table></section>';
-
-        if ($(table).find('tbody tr').length == 0) return;
-
-        view.tcontainer.append(table);
-        view.tcontainer.find('table.runes').tablesorter({
-            widthFixed: false,
-            sortList: editmode ? [[1, 0]] : [[0, 0]],
-            headers: {
-                0: { sorter: "text" }
-            }
-        });
+        view.tcontainer.append(html);
     },
 
     addAlert: function (msg) {
