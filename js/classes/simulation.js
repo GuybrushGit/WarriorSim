@@ -225,6 +225,7 @@ class Simulation {
         this.executestep = this.maxsteps - parseInt(this.maxsteps * (this.executeperc / 100));
         let delayedspell, delayedheroic;
         let spellcheck = false;
+        let canSpellQueue = false;
         let next = 0;
 
         // determine when to use item auras
@@ -361,11 +362,11 @@ class Simulation {
             }
 
             // Cast spells
-            if (player.spelldelay && delayedspell && player.spelldelay > delayedspell.maxdelay) {
+            if (player.spelldelay && delayedspell && (canSpellQueue || player.spelldelay > delayedspell.maxdelay)) {
 
                 // Prevent casting HS and other spells at the exact same time
                 if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
-                    player.heroicdelay = delayedheroic.maxdelay - 49;
+                    player.heroicdelay = delayedheroic.maxdelay - 99;
 
                 if (delayedspell.canUse()) {
                     let done = player.cast(delayedspell, delayedheroic)
@@ -480,7 +481,8 @@ class Simulation {
             if (player.oh) player.oh.step(next);
 
             // Determine if a spell check should happen next step
-            if (player.timer && player.steptimer(next) && !player.spelldelay) spellcheck = true;
+            canSpellQueue = false;
+            if (player.timer && player.steptimer(next) && !player.spelldelay) { spellcheck = true; canSpellQueue = true; }
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
