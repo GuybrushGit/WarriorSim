@@ -1031,6 +1031,8 @@ class Player {
                 this.auras.flurry.proc();
             if (this.auras.consumedrage && this.auras.consumedrage.stacks)
                 this.auras.consumedrage.proc();
+        }
+        if (!spell) {
             if (this.mh.windfury && this.mh.windfury.stacks)
                 this.mh.windfury.proc();
         }

@@ -990,7 +990,7 @@ class Windfury extends Aura {
         }
     }
     step() {
-        if (step >= this.timer) {
+        if (step >= this.timer || this.stacks == 0) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.stacks = 0;
