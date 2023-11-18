@@ -1589,15 +1589,6 @@ var gear = {
       "ap": 36
     },
     {
-      "id": 19986,
-      "type": "Leather",
-      "slot": "head",
-      "r": 0,
-      "name": "Pirate's Eye Patch",
-      "agi": 12,
-      "sta": 20
-    },
-    {
       "id": 19998,
       "type": "Leather",
       "slot": "head",
@@ -1617,25 +1608,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 20138,
-      "type": "Plate",
-      "slot": "head",
-      "r": 60,
-      "name": "90 Epic Warrior Helm",
-      "str": 32,
-      "sta": 31,
-      "hit": 2
-    },
-    {
-      "id": 20246,
-      "type": "Plate",
-      "slot": "head",
-      "r": 60,
-      "name": "90 Green Warrior Helm",
-      "str": 28,
-      "sta": 27
-    },
-    {
       "id": 20263,
       "type": "Plate",
       "slot": "head",
@@ -1644,43 +1616,6 @@ var gear = {
       "agi": 21,
       "str": 22,
       "sta": 13
-    },
-    {
-      "id": 20270,
-      "type": "Leather",
-      "slot": "head",
-      "r": 60,
-      "name": "90 Epic Rogue Cap",
-      "agi": 25,
-      "str": 24,
-      "sta": 25
-    },
-    {
-      "id": 20286,
-      "type": "Plate",
-      "slot": "head",
-      "r": 58,
-      "name": "63 Green Warrior Helm",
-      "str": 19,
-      "sta": 18
-    },
-    {
-      "id": 20301,
-      "type": "Leather",
-      "slot": "head",
-      "r": 60,
-      "name": "90 Green Rogue Cap",
-      "agi": 32,
-      "sta": 20
-    },
-    {
-      "id": 20315,
-      "type": "Leather",
-      "slot": "head",
-      "r": 58,
-      "name": "63 Green Rogue Cap",
-      "agi": 21,
-      "sta": 14
     },
     {
       "id": 20521,
@@ -1769,16 +1704,6 @@ var gear = {
       "agi": 11,
       "str": 21,
       "sta": 28
-    },
-    {
-      "id": 21614,
-      "type": "Leather",
-      "slot": "head",
-      "r": 60,
-      "name": "Wormhide Protector",
-      "agi": 24,
-      "str": 18,
-      "sta": 26
     },
     {
       "id": 21693,
@@ -1948,15 +1873,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 19743,
-      "type": "Leather",
-      "slot": "head",
-      "r": 33,
-      "name": "Cloaked Hood TEST",
-      "agi": 10,
-      "sta": 10
-    },
-    {
       "id": 14584,
       "type": "Leather",
       "slot": "head",
@@ -2064,16 +1980,6 @@ var gear = {
       "name": "Wolfpack Medallion",
       "agi": 3,
       "sta": 5
-    },
-    {
-      "id": 7427,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 26,
-      "name": "Cerulean Talisman of the Tiger",
-      "agi": 5,
-      "str": 5,
-      "rand": 681
     },
     {
       "id": 7550,
@@ -2348,16 +2254,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 17782,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "name": "Talisman of Binding Shard",
-      "agi": 5,
-      "str": 13,
-      "sta": 8
-    },
-    {
       "id": 18205,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -2562,53 +2458,6 @@ var gear = {
       "ap": 40
     },
     {
-      "id": 20248,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "name": "90 Green Warrior Neck",
-      "str": 16,
-      "sta": 15
-    },
-    {
-      "id": 20275,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "name": "90 Epic Rogue Neck",
-      "agi": 14,
-      "str": 13,
-      "sta": 14,
-      "crit": 1
-    },
-    {
-      "id": 20288,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 58,
-      "name": "63 Green Warrior Neck",
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20305,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "name": "90 Green Rogue Neck",
-      "agi": 18,
-      "sta": 11
-    },
-    {
-      "id": 20319,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 58,
-      "name": "63 Green Rogue Neck",
-      "agi": 12,
-      "sta": 7
-    },
-    {
       "id": 20442,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -2702,16 +2551,6 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 20143,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 0,
-      "name": "90 Epic Warrior Neck",
-      "str": 18,
-      "sta": 17,
-      "crit": 1
-    },
-    {
       "id": 10299,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -2720,16 +2559,6 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
-    },
-    {
-      "id": 17783,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "name": "Talisman of Binding Fragment",
-      "agi": 5,
-      "str": 13,
-      "sta": 8
     },
     {
       "id": 20622,
@@ -2819,14 +2648,6 @@ var gear = {
     }
   ],
   "shoulder": [
-    {
-      "id": 907,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 1,
-      "name": "Black Mail Shoulderpads of might (Test)",
-      "agi": 12
-    },
     {
       "id": 2264,
       "type": "Leather",
@@ -4035,14 +3856,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 17769,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 0,
-      "name": "Sagebrush Spaulders",
-      "agi": 15
-    },
-    {
       "id": 17779,
       "type": "Plate",
       "slot": "shoulder",
@@ -4050,16 +3863,6 @@ var gear = {
       "name": "Hulkstone Pauldrons",
       "str": 5,
       "sta": 13
-    },
-    {
-      "id": 18320,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 53,
-      "name": "Demonheart Spaulders",
-      "agi": 14,
-      "str": 9,
-      "sta": 14
     },
     {
       "id": 18374,
@@ -4200,63 +4003,6 @@ var gear = {
       "agi": 17,
       "str": 18,
       "sta": 20
-    },
-    {
-      "id": 20140,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "90 Epic Warrior Pauldrons",
-      "str": 24,
-      "sta": 23,
-      "crit": 1
-    },
-    {
-      "id": 20249,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "90 Green Warrior Pauldrons",
-      "str": 21,
-      "sta": 20
-    },
-    {
-      "id": 20273,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "90 Epic Rogue Spaulders",
-      "agi": 19,
-      "str": 18,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 20289,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 58,
-      "name": "63 Green Warrior Pauldrons",
-      "str": 14,
-      "sta": 14
-    },
-    {
-      "id": 20308,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "90 Green Rogue Spaulders",
-      "agi": 24,
-      "sta": 15
-    },
-    {
-      "id": 20322,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 58,
-      "name": "63 Green Rogue Spaulders",
-      "agi": 17,
-      "sta": 10
     },
     {
       "id": 20517,
@@ -4497,16 +4243,6 @@ var gear = {
       "name": "Icebane Pauldrons",
       "str": 9,
       "sta": 18
-    },
-    {
-      "id": 23034,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "Nax PH Crit Plate Shoulders",
-      "str": 33,
-      "sta": 18,
-      "crit": 1
     },
     {
       "id": 23243,
@@ -5530,17 +5266,6 @@ var gear = {
       "ap": 34
     },
     {
-      "id": 20145,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "name": "90 Epic Warrior Cloak",
-      "str": 18,
-      "sta": 17,
-      "crit": 1,
-      "hit": 1
-    },
-    {
       "id": 20219,
       "type": "Cloth",
       "slot": "back",
@@ -5548,53 +5273,6 @@ var gear = {
       "name": "Tattered Hakkari Cape",
       "str": 7,
       "sta": 6
-    },
-    {
-      "id": 20241,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "name": "90 Green Warrior Cloak",
-      "str": 16,
-      "sta": 15
-    },
-    {
-      "id": 20276,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "name": "90 Epic Rogue Cloak",
-      "agi": 14,
-      "str": 13,
-      "sta": 14,
-      "crit": 1
-    },
-    {
-      "id": 20283,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 58,
-      "name": "63 Green Warrior Cloak",
-      "str": 14,
-      "sta": 14
-    },
-    {
-      "id": 20302,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "name": "90 Green Rogue Cloak",
-      "agi": 18,
-      "sta": 11
-    },
-    {
-      "id": 20316,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 58,
-      "name": "63 Green Rogue Cloak",
-      "agi": 12,
-      "sta": 7
     },
     {
       "id": 20691,
@@ -5664,14 +5342,6 @@ var gear = {
       "agi": 26,
       "str": 11,
       "sta": 15
-    },
-    {
-      "id": 22230,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 0,
-      "name": "Frightmaw Hide",
-      "str": 15
     },
     {
       "id": 22938,
@@ -5796,7 +5466,7 @@ var gear = {
     },
     {
       "id": 9999996,
-      "type": "Miscellaneous",
+      "type": "Cloth",
       "slot": "neck",
       "name": "Shimmering Thresher Cape",
       "str": 6,
@@ -7373,17 +7043,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 15141,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 57,
-      "name": "Onyxia Scale Breastplate",
-      "agi": 15,
-      "str": 15,
-      "sta": 15,
-      "crit": 1
-    },
-    {
       "id": 15311,
       "type": "Leather",
       "slot": "chest",
@@ -7771,62 +7430,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 20136,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 60,
-      "name": "90 Epic Warrior Breastplate",
-      "str": 32,
-      "sta": 31,
-      "hit": 2
-    },
-    {
-      "id": 20240,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 60,
-      "name": "90 Green Warrior Breastplate",
-      "str": 28,
-      "sta": 27
-    },
-    {
-      "id": 20274,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 60,
-      "name": "90 Epic Rogue Tunic",
-      "agi": 25,
-      "str": 24,
-      "sta": 25
-    },
-    {
-      "id": 20282,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "name": "63 Green Warrior Breastplate",
-      "str": 19,
-      "sta": 18
-    },
-    {
-      "id": 20309,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 60,
-      "name": "90 Green Rogue Tunic",
-      "agi": 32,
-      "sta": 20
-    },
-    {
-      "id": 20323,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "name": "63 Green Rogue Tunic",
-      "agi": 21,
-      "sta": 14
-    },
-    {
       "id": 20380,
       "type": "Mail",
       "slot": "chest",
@@ -8112,70 +7715,6 @@ var gear = {
       "name": "Brutal Hauberk",
       "str": 5,
       "sta": 14
-    },
-    {
-      "id": 12189,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Strength Chest",
-      "str": 100
-    },
-    {
-      "id": 12244,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Agility Chest",
-      "agi": 100
-    },
-    {
-      "id": 13586,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Crit Chest",
-      "crit": 10
-    },
-    {
-      "id": 13711,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Attack Power Chest",
-      "ap": 200
-    },
-    {
-      "id": 13712,
-      "type": "Sword",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Sword Chest",
-      "skill": 40
-    },
-    {
-      "id": 13717,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Hit Chance Chest",
-      "hit": 10
-    },
-    {
-      "id": 16211,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Quality Modifier Chest",
-      "agi": 100
-    },
-    {
-      "id": 16213,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 55,
-      "name": "Test Quality Modifier Chest",
-      "agi": 100
     },
     {
       "id": 16721,
@@ -9416,24 +8955,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16404,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 55,
-      "name": "Knight-Captain's Plate Wristguards",
-      "str": 10,
-      "sta": 14
-    },
-    {
-      "id": 16512,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 55,
-      "name": "Legionnaire's Plate Bracers",
-      "str": 10,
-      "sta": 14
-    },
-    {
       "id": 16546,
       "type": "Plate",
       "slot": "wrist",
@@ -9790,64 +9311,6 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 20135,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 60,
-      "name": "90 Epic Warrior Bracelets",
-      "str": 18,
-      "sta": 17,
-      "crit": 1,
-      "hit": 1
-    },
-    {
-      "id": 20239,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 60,
-      "name": "90 Green Warrior Bracelets",
-      "str": 16,
-      "sta": 15
-    },
-    {
-      "id": 20269,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 60,
-      "name": "90 Epic Rogue Bracers",
-      "agi": 14,
-      "str": 13,
-      "sta": 14,
-      "crit": 1
-    },
-    {
-      "id": 20281,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 58,
-      "name": "63 Green Warrior Bracelets",
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20300,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 60,
-      "name": "90 Green Rogue Bracers",
-      "agi": 18,
-      "sta": 11
-    },
-    {
-      "id": 20314,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 58,
-      "name": "63 Green Rogue Bracers",
-      "agi": 12,
-      "sta": 7
-    },
-    {
       "id": 20615,
       "type": "Leather",
       "slot": "wrist",
@@ -9903,24 +9366,6 @@ var gear = {
       "name": "Sand Reaver Wristguards",
       "agi": 16,
       "sta": 11
-    },
-    {
-      "id": 21584,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 60,
-      "name": "Bracers of Eternal Reckoning",
-      "agi": 26,
-      "sta": 20
-    },
-    {
-      "id": 21587,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 60,
-      "name": "Wristguards of Castigation",
-      "str": 8,
-      "sta": 15
     },
     {
       "id": 21602,
@@ -10102,33 +9547,6 @@ var gear = {
       "name": "Beetle Clasps",
       "agi": 2,
       "sta": 5
-    },
-    {
-      "id": 13749,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 100,
-      "name": "[PH] Leather Bracers of the Rising Dawn",
-      "agi": 1,
-      "sta": 2
-    },
-    {
-      "id": 13746,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 100,
-      "name": "[PH] Mail Bracers of the Rising Dawn",
-      "agi": 1,
-      "sta": 2
-    },
-    {
-      "id": 13744,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 100,
-      "name": "[PH] Plate Bracers of the Rising Dawn",
-      "agi": 1,
-      "sta": 2
     },
     {
       "id": 16481,
@@ -11595,30 +11013,6 @@ var gear = {
       "ap": 40
     },
     {
-      "id": 13732,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 1,
-      "name": "[PH] Rising Dawn Mitts",
-      "agi": 2
-    },
-    {
-      "id": 13733,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 1,
-      "name": "[PH] Rising Dawn Fists",
-      "str": 2
-    },
-    {
-      "id": 13734,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 1,
-      "name": "[PH] Rising Dawn Gauntlets",
-      "str": 2
-    },
-    {
       "id": 13957,
       "type": "Leather",
       "slot": "hands",
@@ -12665,25 +12059,6 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 20137,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "name": "90 Epic Warrior Gauntlets",
-      "str": 24,
-      "sta": 23,
-      "crit": 1
-    },
-    {
-      "id": 20242,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "name": "90 Green Warrior Gauntlets",
-      "str": 21,
-      "sta": 20
-    },
-    {
       "id": 20257,
       "type": "Mail",
       "slot": "hands",
@@ -12702,44 +12077,6 @@ var gear = {
       "str": 15,
       "sta": 10,
       "crit": 1
-    },
-    {
-      "id": 20271,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 60,
-      "name": "90 Epic Rogue Gloves",
-      "agi": 19,
-      "str": 18,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 20284,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 58,
-      "name": "63 Green Warrior Gauntlets",
-      "str": 14,
-      "sta": 14
-    },
-    {
-      "id": 20304,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 60,
-      "name": "90 Green Rogue Gloves",
-      "agi": 24,
-      "sta": 15
-    },
-    {
-      "id": 20318,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 58,
-      "name": "63 Green Rogue Gloves",
-      "agi": 17,
-      "sta": 10
     },
     {
       "id": 20369,
@@ -13103,17 +12440,6 @@ var gear = {
       "name": "Blood Guard's Plate Gauntlets",
       "str": 17,
       "sta": 17
-    },
-    {
-      "id": 23072,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "name": "Fists of the Unrelenting",
-      "str": 26,
-      "sta": 26,
-      "crit": 1,
-      "hit": 1
     },
     {
       "id": 23170,
@@ -15118,26 +14444,6 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 16407,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 55,
-      "name": "Knight-Captain's Plate Girdle",
-      "agi": 6,
-      "str": 19,
-      "sta": 8
-    },
-    {
-      "id": 16511,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 55,
-      "name": "Legionnaire's Plate Cinch",
-      "agi": 6,
-      "str": 19,
-      "sta": 8
-    },
-    {
       "id": 16547,
       "type": "Plate",
       "slot": "waist",
@@ -15423,15 +14729,6 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 20142,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 60,
-      "name": "90 Epic Warrior Waistband",
-      "str": 24,
-      "sta": 23
-    },
-    {
       "id": 20213,
       "type": "Plate",
       "slot": "waist",
@@ -15462,15 +14759,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 20252,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 60,
-      "name": "90 Green Warrior Waistband",
-      "str": 21,
-      "sta": 20
-    },
-    {
       "id": 20261,
       "type": "Leather",
       "slot": "waist",
@@ -15478,44 +14766,6 @@ var gear = {
       "name": "Shadow Panther Hide Belt",
       "agi": 16,
       "str": 8,
-      "sta": 10
-    },
-    {
-      "id": 20267,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 60,
-      "name": "90 Epic Rogue Belt",
-      "agi": 19,
-      "str": 18,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 20292,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 58,
-      "name": "63 Green Warrior Waistband",
-      "str": 14,
-      "sta": 14
-    },
-    {
-      "id": 20297,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 60,
-      "name": "90 Green Rogue Belt",
-      "agi": 24,
-      "sta": 15
-    },
-    {
-      "id": 20311,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 58,
-      "name": "63 Green Rogue Belt",
-      "agi": 17,
       "sta": 10
     },
     {
@@ -17624,24 +16874,6 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 20139,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "name": "90 Epic Warrior Legplates",
-      "str": 32,
-      "sta": 31
-    },
-    {
-      "id": 20247,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "name": "90 Green Warrior Legplates",
-      "str": 28,
-      "sta": 27
-    },
-    {
       "id": 20260,
       "type": "Mail",
       "slot": "legs",
@@ -17649,43 +16881,6 @@ var gear = {
       "name": "Seafury Leggings",
       "str": 15,
       "sta": 15
-    },
-    {
-      "id": 20272,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 60,
-      "name": "90 Epic Rogue Pants",
-      "agi": 25,
-      "str": 24,
-      "sta": 25
-    },
-    {
-      "id": 20287,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 58,
-      "name": "63 Green Warrior Legplates",
-      "str": 19,
-      "sta": 18
-    },
-    {
-      "id": 20306,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 60,
-      "name": "90 Green Rogue Pants",
-      "agi": 32,
-      "sta": 20
-    },
-    {
-      "id": 20320,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 58,
-      "name": "63 Green Rogue Pants",
-      "agi": 21,
-      "sta": 14
     },
     {
       "id": 20617,
@@ -18668,14 +17863,6 @@ var gear = {
       "name": "Lancer Boots",
       "agi": 6,
       "sta": 5
-    },
-    {
-      "id": 7187,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 20,
-      "name": "VanCleef's Boots",
-      "agi": 6
     },
     {
       "id": 7390,
@@ -20031,25 +19218,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 20141,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "name": "90 Epic Warrior Sabatons",
-      "str": 24,
-      "sta": 23,
-      "crit": 1
-    },
-    {
-      "id": 20251,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "name": "90 Green Warrior Sabatons",
-      "str": 21,
-      "sta": 20
-    },
-    {
       "id": 20255,
       "type": "Leather",
       "slot": "feet",
@@ -20057,44 +19225,6 @@ var gear = {
       "name": "Whisperwalk Boots",
       "agi": 18,
       "sta": 4
-    },
-    {
-      "id": 20268,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 60,
-      "name": "90 Epic Rogue Boots",
-      "agi": 19,
-      "str": 18,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 20291,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 58,
-      "name": "63 Green Warrior Sabatons",
-      "str": 14,
-      "sta": 14
-    },
-    {
-      "id": 20298,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 60,
-      "name": "90 Green Rogue Boots",
-      "agi": 24,
-      "sta": 15
-    },
-    {
-      "id": 20312,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 58,
-      "name": "63 Green Rogue Boots",
-      "agi": 17,
-      "sta": 10
     },
     {
       "id": 20619,
@@ -20181,25 +19311,6 @@ var gear = {
       "agi": 17,
       "str": 13,
       "sta": 20
-    },
-    {
-      "id": 21612,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 60,
-      "name": "Wormscale Stompers",
-      "agi": 26,
-      "sta": 12
-    },
-    {
-      "id": 21613,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 60,
-      "name": "Wormhide Boots",
-      "agi": 32,
-      "str": 18,
-      "sta": 13
     },
     {
       "id": 21645,
@@ -20573,21 +19684,6 @@ var gear = {
   ],
   "finger1": [
     {
-      "id": 996,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 1,
-      "name": "Ring of Righteous Flame (TEST)",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
-    },
-    {
       "id": 1076,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -20670,14 +19766,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 5008,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 31,
-      "name": "Quicksilver Ring",
-      "agi": 7
-    },
-    {
       "id": 5010,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -20729,26 +19817,6 @@ var gear = {
       "name": "Jaina's Signet Ring",
       "str": 3,
       "sta": 7
-    },
-    {
-      "id": 7426,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 25,
-      "name": "Cerulean Ring of the Tiger",
-      "agi": 4,
-      "str": 4,
-      "rand": 678
-    },
-    {
-      "id": 7547,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 41,
-      "name": "Onyx Ring of the Tiger",
-      "agi": 8,
-      "str": 8,
-      "rand": 690
     },
     {
       "id": 7552,
@@ -21057,14 +20125,6 @@ var gear = {
       "hit": 2
     },
     {
-      "id": 17108,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "Mark of Deflection",
-      "str": 10
-    },
-    {
       "id": 17713,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -21319,45 +20379,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 20144,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 0,
-      "name": "90 Epic Warrior Ring",
-      "str": 18,
-      "sta": 17,
-      "crit": 1
-    },
-    {
-      "id": 20277,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "90 Epic Rogue Ring",
-      "agi": 14,
-      "str": 13,
-      "sta": 14,
-      "crit": 1
-    },
-    {
-      "id": 20290,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "name": "63 Green Warrior Ring",
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20321,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "name": "63 Green Rogue Ring",
-      "agi": 12,
-      "sta": 7
-    },
-    {
       "id": 20429,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -21588,24 +20609,6 @@ var gear = {
       "agi": 14,
       "sta": 8,
       "hit": 1
-    },
-    {
-      "id": 20250,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 0,
-      "name": "90 Green Warrior Ring",
-      "str": 16,
-      "sta": 15
-    },
-    {
-      "id": 20307,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "90 Green Rogue Ring",
-      "agi": 18,
-      "sta": 11
     },
     {
       "id": 21197,
@@ -21734,21 +20737,6 @@ var gear = {
   ],
   "finger2": [
     {
-      "id": 996,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 1,
-      "name": "Ring of Righteous Flame (TEST)",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
-    },
-    {
       "id": 1076,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -21831,14 +20819,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 5008,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 31,
-      "name": "Quicksilver Ring",
-      "agi": 7
-    },
-    {
       "id": 5010,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -21890,26 +20870,6 @@ var gear = {
       "name": "Jaina's Signet Ring",
       "str": 3,
       "sta": 7
-    },
-    {
-      "id": 7426,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 25,
-      "name": "Cerulean Ring of the Tiger",
-      "agi": 4,
-      "str": 4,
-      "rand": 678
-    },
-    {
-      "id": 7547,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 41,
-      "name": "Onyx Ring of the Tiger",
-      "agi": 8,
-      "str": 8,
-      "rand": 690
     },
     {
       "id": 7552,
@@ -22218,14 +21178,6 @@ var gear = {
       "hit": 2
     },
     {
-      "id": 17108,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "Mark of Deflection",
-      "str": 10
-    },
-    {
       "id": 17713,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -22480,45 +21432,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 20144,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 0,
-      "name": "90 Epic Warrior Ring",
-      "str": 18,
-      "sta": 17,
-      "crit": 1
-    },
-    {
-      "id": 20277,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "90 Epic Rogue Ring",
-      "agi": 14,
-      "str": 13,
-      "sta": 14,
-      "crit": 1
-    },
-    {
-      "id": 20290,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "name": "63 Green Warrior Ring",
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20321,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "name": "63 Green Rogue Ring",
-      "agi": 12,
-      "sta": 7
-    },
-    {
       "id": 20429,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -22751,24 +21664,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 20250,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 0,
-      "name": "90 Green Warrior Ring",
-      "str": 16,
-      "sta": 15
-    },
-    {
-      "id": 20307,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "name": "90 Green Rogue Ring",
-      "agi": 18,
-      "sta": 11
-    },
-    {
       "id": 21197,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -22895,48 +21790,6 @@ var gear = {
   ],
   "trinket1": [
     {
-      "id": 1258,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Bind On Use Test Item",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
-    },
-    {
-      "id": 1444,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Deprecated Inferno Stone",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 8,
-        "interval": "3000",
-        "duration": "15000",
-        "dmg": 19
-      }
-    },
-    {
-      "id": 1914,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Deprecated Miniature Silver Hammer",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 14
-      }
-    },
-    {
       "id": 10455,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -23082,21 +21935,6 @@ var gear = {
       "r": 60,
       "name": "Slayer's Crest",
       "ap": 64
-    },
-    {
-      "id": 8688,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Bind On Acquire Test Item",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
     },
     {
       "id": 9999998,
@@ -23109,48 +21947,6 @@ var gear = {
   ],
   "trinket2": [
     {
-      "id": 1258,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Bind On Use Test Item",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
-    },
-    {
-      "id": 1444,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Deprecated Inferno Stone",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 8,
-        "interval": "3000",
-        "duration": "15000",
-        "dmg": 19
-      }
-    },
-    {
-      "id": 1914,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Deprecated Miniature Silver Hammer",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 14
-      }
-    },
-    {
       "id": 10455,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -23296,21 +22092,6 @@ var gear = {
       "r": 60,
       "name": "Slayer's Crest",
       "ap": 64
-    },
-    {
-      "id": 8688,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 35,
-      "name": "Bind On Acquire Test Item",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 18,
-        "tick": 1,
-        "interval": "2000",
-        "duration": "4000"
-      }
     },
     {
       "id": 9999998,
@@ -23887,30 +22668,6 @@ var gear = {
       "ap": 30
     },
     {
-      "id": 19868,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "name": "Mandokir's Sting DEPRECATED",
-      "speed": 3,
-      "mindmg": 90,
-      "maxdmg": 135,
-      "agi": 11,
-      "sta": 8
-    },
-    {
-      "id": 19966,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "name": "Thrice Strung Longbow DEPRECATED",
-      "speed": 2.8,
-      "mindmg": 78,
-      "maxdmg": 118,
-      "agi": 10,
-      "sta": 4
-    },
-    {
       "id": 19993,
       "type": "Bows",
       "slot": "ranged",
@@ -23933,80 +22690,6 @@ var gear = {
       "maxdmg": 127,
       "agi": 11,
       "sta": 8
-    },
-    {
-      "id": 20146,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 60,
-      "name": "90 Epic Warrior Gun",
-      "speed": 2.5,
-      "mindmg": 101,
-      "maxdmg": 189,
-      "str": 10,
-      "sta": 10,
-      "crit": 1
-    },
-    {
-      "id": 20245,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 60,
-      "name": "90 Green Warrior Gun",
-      "speed": 2.5,
-      "mindmg": 81,
-      "maxdmg": 151,
-      "str": 9,
-      "sta": 8
-    },
-    {
-      "id": 20278,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "name": "90 Epic Rogue Bow",
-      "speed": 2.5,
-      "mindmg": 101,
-      "maxdmg": 189,
-      "agi": 8,
-      "str": 7,
-      "sta": 8
-    },
-    {
-      "id": 20285,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 58,
-      "name": "63 Green Warrior Gun",
-      "speed": 2.5,
-      "mindmg": 51,
-      "maxdmg": 96,
-      "str": 6,
-      "sta": 6
-    },
-    {
-      "id": 20299,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "name": "90 Green Rogue Bow",
-      "speed": 2.5,
-      "mindmg": 81,
-      "maxdmg": 151,
-      "agi": 10,
-      "sta": 6
-    },
-    {
-      "id": 20313,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 58,
-      "name": "63 Green Rogue Bow",
-      "speed": 2.5,
-      "mindmg": 51,
-      "maxdmg": 96,
-      "agi": 7,
-      "sta": 4
     },
     {
       "id": 20663,
@@ -24830,16 +23513,6 @@ var gear = {
       }
     },
     {
-      "id": 2189,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 95,
-      "name": "Tigole's Boomstick (TEST)",
-      "speed": 1,
-      "mindmg": 63,
-      "maxdmg": 117
-    },
-    {
       "id": 2194,
       "type": "Mace",
       "slot": "onehand",
@@ -25292,36 +23965,6 @@ var gear = {
       "maxdmg": 62,
       "agi": 4,
       "str": 4
-    },
-    {
-      "id": 3895,
-      "type": "Axe",
-      "slot": "mainhand",
-      "r": 25,
-      "name": "TEST Legendary",
-      "speed": 1,
-      "mindmg": 16,
-      "maxdmg": 31
-    },
-    {
-      "id": 3933,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 18,
-      "name": "Deprecated Moon Glaive",
-      "speed": 1.6,
-      "mindmg": 17,
-      "maxdmg": 32
-    },
-    {
-      "id": 3934,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 19,
-      "name": "Deprecated Warden Blade",
-      "speed": 2,
-      "mindmg": 25,
-      "maxdmg": 38
     },
     {
       "id": 4088,
@@ -26374,16 +25017,6 @@ var gear = {
       "speed": 1.7,
       "mindmg": 34,
       "maxdmg": 65
-    },
-    {
-      "id": 9380,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 45,
-      "name": "Jang'thraze the Protector",
-      "speed": 1.9,
-      "mindmg": 44,
-      "maxdmg": 83
     },
     {
       "id": 9384,
@@ -28437,19 +27070,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 16792,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 32,
-      "name": "Giant Club of the Tiger",
-      "speed": 1.9,
-      "mindmg": 26,
-      "maxdmg": 49,
-      "agi": 5,
-      "str": 5,
-      "rand": 681
-    },
-    {
       "id": 16886,
       "type": "Sword",
       "slot": "onehand",
@@ -28638,17 +27258,6 @@ var gear = {
       }
     },
     {
-      "id": 17142,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "Shard of the Defiler",
-      "speed": 1.1,
-      "mindmg": 62,
-      "maxdmg": 76,
-      "crit": 15
-    },
-    {
       "id": 17704,
       "type": "Axe",
       "slot": "mainhand",
@@ -28697,17 +27306,6 @@ var gear = {
       "maxdmg": 101
     },
     {
-      "id": 17733,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 48,
-      "name": "Fist of Stone",
-      "speed": 1.8,
-      "mindmg": 44,
-      "maxdmg": 83,
-      "sta": 11
-    },
-    {
       "id": 17752,
       "type": "Dagger",
       "slot": "onehand",
@@ -28720,23 +27318,6 @@ var gear = {
         "magic": true,
         "procgcd": true,
         "dmg": 70
-      }
-    },
-    {
-      "id": 17802,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 100,
-      "name": "Thunderfury Blessed Blade of the Windseeker DEPRECATED",
-      "speed": 1.9,
-      "mindmg": 98,
-      "maxdmg": 183,
-      "agi": 5,
-      "sta": 8,
-      "proc": {
-        "magic": true,
-        "binaryspell": true,
-        "dmg": 300
       }
     },
     {
@@ -28910,43 +27491,6 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 18582,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "The Twin Blades of Azzinoth",
-      "speed": 1.5,
-      "mindmg": 172,
-      "maxdmg": 199,
-      "agi": 75,
-      "sta": 100,
-      "hit": 20
-    },
-    {
-      "id": 18583,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "Warglaive of Azzinoth (Right)",
-      "speed": 1,
-      "mindmg": 115,
-      "maxdmg": 155,
-      "agi": 40,
-      "sta": 50
-    },
-    {
-      "id": 18584,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "Warglaive of Azzinoth (Left)",
-      "speed": 1,
-      "mindmg": 115,
-      "maxdmg": 155,
-      "agi": 60,
-      "sta": 50
-    },
-    {
       "id": 18671,
       "type": "Mace",
       "slot": "mainhand",
@@ -28995,16 +27539,6 @@ var gear = {
       "speed": 1.8,
       "mindmg": 51,
       "maxdmg": 96
-    },
-    {
-      "id": 18800,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "name": "TEST 1H Amberseal Keeper",
-      "speed": 2.5,
-      "mindmg": 85,
-      "maxdmg": 159
     },
     {
       "id": 18805,
@@ -29295,26 +27829,6 @@ var gear = {
       }
     },
     {
-      "id": 19313,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1300 Test Dagger 63 blue",
-      "speed": 1.3,
-      "mindmg": 37,
-      "maxdmg": 70
-    },
-    {
-      "id": 19314,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2000 Test Dagger 63 blue",
-      "speed": 2,
-      "mindmg": 58,
-      "maxdmg": 108
-    },
-    {
       "id": 19324,
       "type": "Dagger",
       "slot": "onehand",
@@ -29435,76 +27949,6 @@ var gear = {
       "str": 13,
       "sta": 7,
       "crit": 1
-    },
-    {
-      "id": 19427,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1500 Test sword 63 blue",
-      "speed": 1.5,
-      "mindmg": 43,
-      "maxdmg": 81
-    },
-    {
-      "id": 19428,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2900 Test sword 63 blue",
-      "speed": 2.9,
-      "mindmg": 84,
-      "maxdmg": 156
-    },
-    {
-      "id": 19456,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "2900 Test sword 80 purple",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 233
-    },
-    {
-      "id": 19457,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "1500 Test sword 80 purple",
-      "speed": 1.5,
-      "mindmg": 64,
-      "maxdmg": 121
-    },
-    {
-      "id": 19502,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 63 blue",
-      "speed": 2.2,
-      "mindmg": 63,
-      "maxdmg": 119
-    },
-    {
-      "id": 19503,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 80 purple",
-      "speed": 2.2,
-      "mindmg": 95,
-      "maxdmg": 177
-    },
-    {
-      "id": 19504,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 70 purple",
-      "speed": 2.2,
-      "mindmg": 79,
-      "maxdmg": 148
     },
     {
       "id": 19542,
@@ -29699,26 +28143,6 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 19622,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1800 Test Dagger 63 blue",
-      "speed": 1.8,
-      "mindmg": 52,
-      "maxdmg": 97
-    },
-    {
-      "id": 19810,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1000 Test dagger 60 blue",
-      "speed": 1,
-      "mindmg": 27,
-      "maxdmg": 51
-    },
-    {
       "id": 19852,
       "type": "Axe",
       "slot": "onehand",
@@ -29899,18 +28323,6 @@ var gear = {
       "str": 7
     },
     {
-      "id": 20003,
-      "type": "Fist",
-      "slot": "mainhand",
-      "r": 0,
-      "name": "Devilsaur Claws",
-      "speed": 2,
-      "mindmg": 48,
-      "maxdmg": 90,
-      "agi": 4,
-      "hit": 1
-    },
-    {
       "id": 20035,
       "type": "Dagger",
       "slot": "onehand",
@@ -29930,43 +28342,6 @@ var gear = {
       "mindmg": 56,
       "maxdmg": 105,
       "sta": 8
-    },
-    {
-      "id": 20279,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "90 Epic Rogue Dagger",
-      "speed": 2,
-      "mindmg": 104,
-      "maxdmg": 194,
-      "agi": 11,
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20303,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "90 Green Rogue Dagger",
-      "speed": 2,
-      "mindmg": 83,
-      "maxdmg": 155,
-      "agi": 14,
-      "sta": 8
-    },
-    {
-      "id": 20317,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "63 Green Rogue Dagger",
-      "speed": 2,
-      "mindmg": 52,
-      "maxdmg": 98,
-      "agi": 9,
-      "sta": 6
     },
     {
       "id": 20430,
@@ -30147,16 +28522,6 @@ var gear = {
       "skill": 3
     },
     {
-      "id": 21127,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "name": "Ahn'Qiraj Mace [PH]",
-      "speed": 2.6,
-      "mindmg": 117,
-      "maxdmg": 176
-    },
-    {
       "id": 21242,
       "type": "Axe",
       "slot": "onehand",
@@ -30328,16 +28693,6 @@ var gear = {
       "sta": 9,
       "crit": 1,
       "ap": 20
-    },
-    {
-      "id": 21782,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2000 Test sword 63 blue",
-      "speed": 2,
-      "mindmg": 58,
-      "maxdmg": 108
     },
     {
       "id": 21802,
@@ -30580,19 +28935,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 22805,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "Naxxramas Sword 1H 1 [PH]",
-      "speed": 2.6,
-      "mindmg": 106,
-      "maxdmg": 198,
-      "agi": 14,
-      "str": 14,
-      "sta": 7
-    },
-    {
       "id": 22806,
       "type": "Sword",
       "slot": "onehand",
@@ -30785,16 +29127,6 @@ var gear = {
       "maxdmg": 143,
       "sta": 14,
       "skill": 6
-    },
-    {
-      "id": 24071,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 0,
-      "name": "Bland Dagger",
-      "speed": 1.8,
-      "mindmg": 82,
-      "maxdmg": 82
     },
     {
       "id": 24222,
@@ -32657,16 +30989,6 @@ var gear = {
       "maxdmg": 65
     },
     {
-      "id": 9380,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 45,
-      "name": "Jang'thraze the Protector",
-      "speed": 1.9,
-      "mindmg": 44,
-      "maxdmg": 83
-    },
-    {
       "id": 9384,
       "type": "Dagger",
       "slot": "onehand",
@@ -33885,14 +32207,6 @@ var gear = {
       "str": 5
     },
     {
-      "id": 14609,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 12,
-      "name": "Deprecated Ceremonial Buckler",
-      "str": 1
-    },
-    {
       "id": 14729,
       "type": "Shield",
       "slot": "offhand",
@@ -34580,26 +32894,6 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15888,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 55,
-      "name": "Deprecated Glorious Shield of the Tiger",
-      "agi": 10,
-      "str": 10,
-      "rand": 696
-    },
-    {
-      "id": 15889,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 52,
-      "name": "Deprecated Jademir Scale Shield of the Tiger",
-      "agi": 10,
-      "str": 10,
-      "rand": 696
-    },
-    {
       "id": 15892,
       "type": "Shield",
       "slot": "offhand",
@@ -34796,17 +33090,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 17142,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "Shard of the Defiler",
-      "speed": 1.1,
-      "mindmg": 62,
-      "maxdmg": 76,
-      "crit": 15
-    },
-    {
       "id": 17705,
       "type": "Sword",
       "slot": "onehand",
@@ -34843,14 +33126,6 @@ var gear = {
         "procgcd": true,
         "dmg": 70
       }
-    },
-    {
-      "id": 18303,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 53,
-      "name": "Nimble Buckler",
-      "agi": 5
     },
     {
       "id": 18310,
@@ -34920,43 +33195,6 @@ var gear = {
       "maxdmg": 90,
       "str": 5,
       "sta": 12
-    },
-    {
-      "id": 18582,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "The Twin Blades of Azzinoth",
-      "speed": 1.5,
-      "mindmg": 172,
-      "maxdmg": 199,
-      "agi": 75,
-      "sta": 100,
-      "hit": 20
-    },
-    {
-      "id": 18583,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "Warglaive of Azzinoth (Right)",
-      "speed": 1,
-      "mindmg": 115,
-      "maxdmg": 155,
-      "agi": 40,
-      "sta": 50
-    },
-    {
-      "id": 18584,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 70,
-      "name": "Warglaive of Azzinoth (Left)",
-      "speed": 1,
-      "mindmg": 115,
-      "maxdmg": 155,
-      "agi": 60,
-      "sta": 50
     },
     {
       "id": 18683,
@@ -35271,26 +33509,6 @@ var gear = {
       }
     },
     {
-      "id": 19313,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1300 Test Dagger 63 blue",
-      "speed": 1.3,
-      "mindmg": 37,
-      "maxdmg": 70
-    },
-    {
-      "id": 19314,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2000 Test Dagger 63 blue",
-      "speed": 2,
-      "mindmg": 58,
-      "maxdmg": 108
-    },
-    {
       "id": 19324,
       "type": "Dagger",
       "slot": "onehand",
@@ -35375,76 +33593,6 @@ var gear = {
       "maxdmg": 188,
       "sta": 13,
       "ap": 36
-    },
-    {
-      "id": 19427,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1500 Test sword 63 blue",
-      "speed": 1.5,
-      "mindmg": 43,
-      "maxdmg": 81
-    },
-    {
-      "id": 19428,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2900 Test sword 63 blue",
-      "speed": 2.9,
-      "mindmg": 84,
-      "maxdmg": 156
-    },
-    {
-      "id": 19456,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "2900 Test sword 80 purple",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 233
-    },
-    {
-      "id": 19457,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "1500 Test sword 80 purple",
-      "speed": 1.5,
-      "mindmg": 64,
-      "maxdmg": 121
-    },
-    {
-      "id": 19502,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 63 blue",
-      "speed": 2.2,
-      "mindmg": 63,
-      "maxdmg": 119
-    },
-    {
-      "id": 19503,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 80 purple",
-      "speed": 2.2,
-      "mindmg": 95,
-      "maxdmg": 177
-    },
-    {
-      "id": 19504,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2200 Test sword 70 purple",
-      "speed": 2.2,
-      "mindmg": 79,
-      "maxdmg": 148
     },
     {
       "id": 19542,
@@ -35639,26 +33787,6 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 19622,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1800 Test Dagger 63 blue",
-      "speed": 1.8,
-      "mindmg": 52,
-      "maxdmg": 97
-    },
-    {
-      "id": 19810,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "1000 Test dagger 60 blue",
-      "speed": 1,
-      "mindmg": 27,
-      "maxdmg": 51
-    },
-    {
       "id": 19852,
       "type": "Axe",
       "slot": "onehand",
@@ -35760,43 +33888,6 @@ var gear = {
       "mindmg": 56,
       "maxdmg": 105,
       "sta": 8
-    },
-    {
-      "id": 20279,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "90 Epic Rogue Dagger",
-      "speed": 2,
-      "mindmg": 104,
-      "maxdmg": 194,
-      "agi": 11,
-      "str": 10,
-      "sta": 10
-    },
-    {
-      "id": 20303,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "name": "90 Green Rogue Dagger",
-      "speed": 2,
-      "mindmg": 83,
-      "maxdmg": 155,
-      "agi": 14,
-      "sta": 8
-    },
-    {
-      "id": 20317,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "name": "63 Green Rogue Dagger",
-      "speed": 2,
-      "mindmg": 52,
-      "maxdmg": 98,
-      "agi": 9,
-      "sta": 6
     },
     {
       "id": 20430,
@@ -36047,16 +34138,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 21782,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "name": "2000 Test sword 63 blue",
-      "speed": 2,
-      "mindmg": 58,
-      "maxdmg": 108
-    },
-    {
       "id": 21837,
       "type": "Mace",
       "slot": "onehand",
@@ -36173,19 +34254,6 @@ var gear = {
       "sta": 8,
       "ap": 36,
       "hit": 1
-    },
-    {
-      "id": 22805,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "name": "Naxxramas Sword 1H 1 [PH]",
-      "speed": 2.6,
-      "mindmg": 106,
-      "maxdmg": 198,
-      "agi": 14,
-      "str": 14,
-      "sta": 7
     },
     {
       "id": 22806,
@@ -36380,16 +34448,6 @@ var gear = {
       "maxdmg": 143,
       "sta": 14,
       "skill": 6
-    },
-    {
-      "id": 24071,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 0,
-      "name": "Bland Dagger",
-      "speed": 1.8,
-      "mindmg": 82,
-      "maxdmg": 82
     },
     {
       "id": 24222,
@@ -37720,24 +35778,6 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 3687,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 35,
-      "name": "Deprecated Unholy Avenger",
-      "speed": 3,
-      "mindmg": 97,
-      "maxdmg": 146,
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 40,
-        "tick": 3,
-        "interval": "2000",
-        "duration": "6000"
-      }
-    },
-    {
       "id": 3822,
       "type": "Sword",
       "slot": "twohand",
@@ -38715,18 +36755,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 9685,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 46,
-      "name": "Will of the Mountain Giant",
-      "speed": 2.8,
-      "mindmg": 88,
-      "maxdmg": 133,
-      "str": 15,
-      "sta": 14
-    },
-    {
       "id": 10570,
       "type": "Axe",
       "slot": "twohand",
@@ -39612,21 +37640,6 @@ var gear = {
       "mindmg": 127,
       "maxdmg": 191,
       "sta": 6
-    },
-    {
-      "id": 13262,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Ashbringer",
-      "speed": 3,
-      "mindmg": 231,
-      "maxdmg": 297,
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 700
-      }
     },
     {
       "id": 13285,
@@ -40626,37 +38639,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 18881,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "name": "TEST Ragnaros Hammer",
-      "speed": 3,
-      "mindmg": 180,
-      "maxdmg": 302,
-      "str": 12,
-      "sta": 12,
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 303,
-        "tick": 15,
-        "interval": "2000",
-        "duration": "10000"
-      }
-    },
-    {
-      "id": 18882,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "name": "TEST Level 80 Epic",
-      "speed": 3.4,
-      "mindmg": 218,
-      "maxdmg": 328,
-      "crit": 1
-    },
-    {
       "id": 19101,
       "type": "Staff",
       "slot": "twohand",
@@ -40713,186 +38695,6 @@ var gear = {
       "speed": 3.5,
       "mindmg": 187,
       "maxdmg": 282
-    },
-    {
-      "id": 19184,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3800 Test 2h Axe 63 blue",
-      "speed": 3.8,
-      "mindmg": 163,
-      "maxdmg": 246
-    },
-    {
-      "id": 19185,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2100 Test 2h Axe 63 blue",
-      "speed": 2.1,
-      "mindmg": 90,
-      "maxdmg": 136
-    },
-    {
-      "id": 19186,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2700 Test 2h Axe 63 blue",
-      "speed": 2.7,
-      "mindmg": 116,
-      "maxdmg": 175
-    },
-    {
-      "id": 19187,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3200 Test 2h Axe 63 blue",
-      "speed": 3.2,
-      "mindmg": 138,
-      "maxdmg": 207
-    },
-    {
-      "id": 19188,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2200 Test 2h Axe 63 blue",
-      "speed": 2.2,
-      "mindmg": 94,
-      "maxdmg": 142
-    },
-    {
-      "id": 19189,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2300 Test 2h Axe 63 blue",
-      "speed": 2.3,
-      "mindmg": 99,
-      "maxdmg": 149
-    },
-    {
-      "id": 19190,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2400 Test 2h Axe 63 blue",
-      "speed": 2.4,
-      "mindmg": 103,
-      "maxdmg": 155
-    },
-    {
-      "id": 19191,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2500 Test 2h Axe 63 blue",
-      "speed": 2.5,
-      "mindmg": 107,
-      "maxdmg": 162
-    },
-    {
-      "id": 19192,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2600 Test 2h Axe 63 blue",
-      "speed": 2.6,
-      "mindmg": 112,
-      "maxdmg": 168
-    },
-    {
-      "id": 19193,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2800 Test 2h Axe 63 blue",
-      "speed": 2.8,
-      "mindmg": 120,
-      "maxdmg": 181
-    },
-    {
-      "id": 19194,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2900 Test 2h Axe 63 blue",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 188
-    },
-    {
-      "id": 19195,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3000 Test 2h Axe 63 blue",
-      "speed": 3,
-      "mindmg": 129,
-      "maxdmg": 194
-    },
-    {
-      "id": 19196,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3100 Test 2h Axe 63 blue",
-      "speed": 3.1,
-      "mindmg": 133,
-      "maxdmg": 201
-    },
-    {
-      "id": 19197,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3300 Test 2h Axe 63 blue",
-      "speed": 3.3,
-      "mindmg": 142,
-      "maxdmg": 214
-    },
-    {
-      "id": 19198,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3400 Test 2h Axe 63 blue",
-      "speed": 3.4,
-      "mindmg": 146,
-      "maxdmg": 220
-    },
-    {
-      "id": 19199,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3500 Test 2h Axe 63 blue",
-      "speed": 3.5,
-      "mindmg": 151,
-      "maxdmg": 227
-    },
-    {
-      "id": 19200,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3600 Test 2h Axe 63 blue",
-      "speed": 3.6,
-      "mindmg": 155,
-      "maxdmg": 233
-    },
-    {
-      "id": 19201,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "3700 Test 2h Axe 63 blue",
-      "speed": 3.7,
-      "mindmg": 159,
-      "maxdmg": 240
     },
     {
       "id": 19323,
@@ -41009,16 +38811,6 @@ var gear = {
       "ap": 86
     },
     {
-      "id": 19455,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "name": "3500 Test 2h Axe 70 purple",
-      "speed": 3.5,
-      "mindmg": 187,
-      "maxdmg": 282
-    },
-    {
       "id": 19566,
       "type": "Staff",
       "slot": "twohand",
@@ -41105,26 +38897,6 @@ var gear = {
       "mindmg": 64,
       "maxdmg": 97,
       "sta": 11
-    },
-    {
-      "id": 19662,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "name": "3500 Test 2h Axe 80 purple",
-      "speed": 3.5,
-      "mindmg": 225,
-      "maxdmg": 338
-    },
-    {
-      "id": 19809,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2500 Test 2h Axe 60 blue",
-      "speed": 2.5,
-      "mindmg": 102,
-      "maxdmg": 154
     },
     {
       "id": 19854,
@@ -41267,30 +39039,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 20149,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "name": "90 Epic Warrior Axe",
-      "speed": 3.5,
-      "mindmg": 271,
-      "maxdmg": 408,
-      "str": 32,
-      "sta": 31
-    },
-    {
-      "id": 20238,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "name": "90 Green Warrior Axe",
-      "speed": 3.5,
-      "mindmg": 216,
-      "maxdmg": 325,
-      "str": 28,
-      "sta": 27
-    },
-    {
       "id": 20258,
       "type": "Staff",
       "slot": "twohand",
@@ -41300,57 +39048,6 @@ var gear = {
       "mindmg": 115,
       "maxdmg": 174,
       "sta": 13
-    },
-    {
-      "id": 20280,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "63 Green Warrior Axe",
-      "speed": 3.5,
-      "mindmg": 137,
-      "maxdmg": 206,
-      "str": 19,
-      "sta": 18
-    },
-    {
-      "id": 20334,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "90 Epic Frost Staff",
-      "speed": 2.7,
-      "mindmg": 209,
-      "maxdmg": 315,
-      "sta": 16
-    },
-    {
-      "id": 20370,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Test Staff 90 epic",
-      "speed": 2.4,
-      "mindmg": 186,
-      "maxdmg": 280,
-      "agi": 16,
-      "str": 37,
-      "sta": 15,
-      "ap": 574
-    },
-    {
-      "id": 20372,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Test Staff 77 epic",
-      "speed": 2.4,
-      "mindmg": 146,
-      "maxdmg": 219,
-      "agi": 21,
-      "str": 22,
-      "sta": 21,
-      "ap": 280
     },
     {
       "id": 20425,
@@ -41535,16 +39232,6 @@ var gear = {
       "mindmg": 189,
       "maxdmg": 284,
       "sta": 32
-    },
-    {
-      "id": 21276,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Blessed Qiraji Naturalist Staff UNUSED",
-      "speed": 3,
-      "mindmg": 192,
-      "maxdmg": 289
     },
     {
       "id": 21452,
@@ -41827,18 +39514,6 @@ var gear = {
       "ap": 98
     },
     {
-      "id": 22814,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Naxxramas Sword 2H 2 [PH]",
-      "speed": 3.5,
-      "mindmg": 229,
-      "maxdmg": 344,
-      "sta": 33,
-      "ap": 86
-    },
-    {
       "id": 22815,
       "type": "Axe",
       "slot": "twohand",
@@ -41850,18 +39525,6 @@ var gear = {
       "str": 43,
       "sta": 18,
       "crit": 2
-    },
-    {
-      "id": 22817,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Naxxramas Polearm [PH]",
-      "speed": 3.7,
-      "mindmg": 225,
-      "maxdmg": 338,
-      "agi": 41,
-      "sta": 31
     },
     {
       "id": 23039,
@@ -41957,36 +39620,6 @@ var gear = {
       }
     },
     {
-      "id": 19158,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "name": "TEST Sulfuras Hand of Ragnaros",
-      "speed": 3,
-      "mindmg": 180,
-      "maxdmg": 302,
-      "str": 12,
-      "sta": 12,
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 303,
-        "tick": 15,
-        "interval": "2000",
-        "duration": "10000"
-      }
-    },
-    {
-      "id": 19811,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 58,
-      "name": "2500 Test 2h Axe 60 blue (bear)",
-      "speed": 2.5,
-      "mindmg": 102,
-      "maxdmg": 154
-    },
-    {
       "id": 20220,
       "type": "Staff",
       "slot": "twohand",
@@ -42007,16 +39640,6 @@ var gear = {
       "mindmg": 189,
       "maxdmg": 284,
       "sta": 23
-    },
-    {
-      "id": 22391,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "name": "Monster - Staff Lord Valthalak",
-      "speed": 2.1,
-      "mindmg": 90,
-      "maxdmg": 136
     },
     {
       "id": 22630,
