@@ -1,4 +1,4 @@
-var gear2 = {
+var gear = {
   "head": [
     {
       "id": 1280,
@@ -7721,6 +7721,33 @@ var gear2 = {
       "hit": 1
     },
     {
+      "id": 23087,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 58,
+      "name": "Breastplate of Undead Slaying",
+      "sta": 20,
+      "ap": 81
+    },
+    {
+      "id": 23088,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 58,
+      "name": "Chestguard of Undead Slaying",
+      "sta": 20,
+      "ap": 81
+    },
+    {
+      "id": 23089,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 58,
+      "name": "Tunic of Undead Slaying",
+      "sta": 20,
+      "ap": 81
+    },
+    {
       "id": 23226,
       "type": "Leather",
       "slot": "chest",
@@ -9613,6 +9640,24 @@ var gear2 = {
       "crit": 1
     },
     {
+      "id": 23090,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 58,
+      "name": "Bracers of Undead Slaying",
+      "sta": 10,
+      "ap": 45
+    },
+    {
+      "id": 23092,
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 58,
+      "name": "Wristguards of Undead Slaying",
+      "sta": 10,
+      "ap": 45
+    },
+    {
       "id": 14561,
       "type": "Leather",
       "slot": "wrist",
@@ -9667,6 +9712,15 @@ var gear2 = {
       "agi": 11,
       "str": 12,
       "sta": 7
+    },
+    {
+      "id": 23093,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 58,
+      "name": "Wristwraps of Undead Slaying",
+      "sta": 10,
+      "ap": 45
     }
   ],
   "hands": [
@@ -9686,7 +9740,7 @@ var gear2 = {
       "r": 37,
       "name": "Gloves of Holy Might",
       "crit": 1,
-      "ap": 20
+      "ap": 50
     },
     {
       "id": 888,
@@ -12546,6 +12600,33 @@ var gear2 = {
       "name": "Blood Guard's Plate Gauntlets",
       "str": 17,
       "sta": 17
+    },
+    {
+      "id": 23078,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 50,
+      "name": "Gauntlets of Undead Slaying",
+      "sta": 15,
+      "ap": 60
+    },
+    {
+      "id": 23081,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 50,
+      "name": "Handwraps of Undead Slaying",
+      "sta": 15,
+      "ap": 60
+    },
+    {
+      "id": 23082,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 50,
+      "name": "Handguards of Undead Slaying",
+      "sta": 15,
+      "ap": 60
     },
     {
       "id": 23170,
@@ -21981,6 +22062,14 @@ var gear2 = {
       }
     },
     {
+      "id": 13209,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "name": "Seal of the Dawn",
+      "ap": 81
+    },
+    {
       "id": 13213,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22112,6 +22201,14 @@ var gear2 = {
       "ap": 64
     },
     {
+      "id": 23206,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Mark of the Champion",
+      "ap": 150
+    },
+    {
       "id": 23570,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22144,14 +22241,6 @@ var gear2 = {
       "r": 25,
       "name": "Avenger's Void Pearl",
       "ap": 10
-    },
-    {
-      "id": 13209,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Seal of the Dawn",
-      "ap": 81
     }
   ],
   "trinket2": [
@@ -22205,6 +22294,14 @@ var gear2 = {
       }
     },
     {
+      "id": 13209,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "name": "Seal of the Dawn",
+      "ap": 81
+    },
+    {
       "id": 13213,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22336,6 +22433,14 @@ var gear2 = {
       "ap": 64
     },
     {
+      "id": 23206,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Mark of the Champion",
+      "ap": 150
+    },
+    {
       "id": 23570,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22368,14 +22473,6 @@ var gear2 = {
       "r": 25,
       "name": "Avenger's Void Pearl",
       "ap": 10
-    },
-    {
-      "id": 13209,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Seal of the Dawn",
-      "ap": 81
     }
   ],
   "ranged": [
@@ -25841,6 +25938,17 @@ var gear2 = {
       }
     },
     {
+      "id": 10805,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 49,
+      "name": "Eater of the Dead",
+      "speed": 2.2,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "ap": 30
+    },
+    {
       "id": 10823,
       "type": "Sword",
       "slot": "onehand",
@@ -27935,7 +28043,8 @@ var gear2 = {
       "name": "Specter's Blade",
       "speed": 1.8,
       "mindmg": 51,
-      "maxdmg": 96
+      "maxdmg": 96,
+      "ap": 45
     },
     {
       "id": 18805,
@@ -33720,7 +33829,8 @@ var gear2 = {
       "name": "Specter's Blade",
       "speed": 1.8,
       "mindmg": 51,
-      "maxdmg": 96
+      "maxdmg": 96,
+      "ap": 45
     },
     {
       "id": 18805,
@@ -37893,7 +38003,8 @@ var gear2 = {
       "name": "Hellslayer Battle Axe",
       "speed": 2.9,
       "mindmg": 82,
-      "maxdmg": 124
+      "maxdmg": 124,
+      "ap": 66
     },
     {
       "id": 13018,

@@ -53,6 +53,8 @@
         for (let item of Item) {
           let obj = {};
           obj.id = parseInt(item.ID);
+          // if (obj.id == 19866) debugger;
+
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
           obj.slot = getSlot(item.InventoryType);
@@ -78,6 +80,10 @@
           if (agi) obj.agi = agi;
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
+
+          
+
+          
         
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
           if (spells.length) {
@@ -89,12 +95,14 @@
               if (spell.TriggerType == "1") { // On Equip
                 effects.forEach(e => {
                   if (e.Effect == 6 && e.EffectAura == 99)
-                    obj.ap = parseInt(e.EffectBasePoints) + 1;
+                    obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
+                  if (e.Effect == 6 && e.EffectAura == 102 && e.EffectMiscValue_0 & 32)
+                    obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 54)
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
-                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95) {
+                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95 && e.EffectMiscValue_0 != 226) {
                     obj.skill = parseInt(e.EffectBasePoints) + 1;
                     if (item.ClassID != "2") {
                       if (item.ID == 14551) obj.type = "Varied";
@@ -139,13 +147,15 @@
           }
 
           if (parseInt(sparse.RandomSelect)) {
-            let suff = getItemSuffixes(obj.id);
+            let suff = getItemSuffixes(obj.id, sparse.OverallQualityID);
             if (!suff.s) continue;
             suff.s.forEach(s => {
               if (/[+-]\d+ Strength/.test(s)) { obj.str = parseInt(s); }
               if (/[+-]\d+ Agility/.test(s)) { obj.agi = parseInt(s); }
+              if (/[+-]\d+ Stamina/.test(s)) { obj.sta = parseInt(s); }
             });
-            obj.name += " of the Tiger";
+            if (suff.id < 2000) obj.name += " of the Tiger";
+            else obj.name += " of Striking";
             obj.rand = suff.id;
           }
 
@@ -172,9 +182,7 @@
           // https://www.wowhead.com/classic/item=9418/stoneslayer
           // https://www.wowhead.com/classic/item=12469/mutilator
           // mark of the champion
-
-          // compare gear with gear_sod
-          // lvl 60 trinkets
+          // compare lvl 60 trinkets
 
           
           
@@ -274,23 +282,6 @@
           "r": 25,
           "name": "Avenger's Void Pearl",
           "ap": 10
-        });
-
-        gear["trinket1"].push({
-          "id": 13209,
-          "type": "Miscellaneous",
-          "slot": "trinket",
-          "r": 55,
-          "name": "Seal of the Dawn",
-          "ap": 81
-        });
-        gear["trinket2"].push({
-          "id": 13209,
-          "type": "Miscellaneous",
-          "slot": "trinket",
-          "r": 55,
-          "name": "Seal of the Dawn",
-          "ap": 81
         });
 
         
@@ -429,7 +420,7 @@
           });
         });
       }
-      var getItemSuffixes = function(id) {
+      var getItemSuffixes = function(id, quality) {
           let result = [], result2 = [];
           let ench;
           for(let j = 0; j < item_template.length; j++) {
@@ -444,7 +435,8 @@
           let high = { id: 0, s: ''};
           for(let x = 0; x < result.length; x++) {
             for(let y = 0; y < suffixes.length; y++) {
-              if (result[x] >= 669 && result[x] <= 753) {
+              if ((result[x] >= 669 && result[x] <= 753) || // of the Tiger
+                  (quality >= 3 && (result[x] == 2149 || result[x] == 2150 || result[x] == 2151 || result[x] == 2154 || result[x] == 2157 || result[x] == 2158 || result[x] == 2163))) { // of Striking
                 if (suffixes[y].id == result[x] && suffixes[y].id > high.id) {
                   high = suffixes[y];
                 }
@@ -473,7 +465,7 @@
           case "17": return "twohand";
           case "20": return "chest";
           case "21": return "mainhand";
-          case "21": return "offhand";
+          case "22": return "offhand";
           case "26": return "ranged";
         }
       }
@@ -504,6 +496,7 @@
             case "13": return "Fist";
             case "14": return "Miscellaneous";
             case "15": return "Dagger";
+            case "18": return "Crossbow";
           }
         }
       }
