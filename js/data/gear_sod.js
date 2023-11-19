@@ -2243,7 +2243,12 @@ var gear = {
       "r": 60,
       "name": "Blazefury Medallion",
       "agi": 13,
-      "sta": 14
+      "sta": 14,
+      "proc": {
+        "magic": true,
+        "dmg": 2,
+        "chance": 100
+      }
     },
     {
       "id": 17772,
@@ -3389,6 +3394,14 @@ var gear = {
       "agi": 10,
       "str": 10,
       "sta": 10
+    },
+    {
+      "id": 14552,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 50,
+      "name": "Stockade Pauldrons",
+      "sta": 20
     },
     {
       "id": 14587,
@@ -10101,6 +10114,18 @@ var gear = {
       "sta": 6
     },
     {
+      "id": 7284,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 19,
+      "name": "Red Whelp Gloves",
+      "proc": {
+        "magic": true,
+        "dmg": 20,
+        "chance": 5
+      }
+    },
+    {
       "id": 7348,
       "type": "Leather",
       "slot": "hands",
@@ -10919,6 +10944,18 @@ var gear = {
       "name": "Nightfall Gloves",
       "agi": 12,
       "str": 12
+    },
+    {
+      "id": 12631,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 53,
+      "name": "Fiery Plate Gauntlets",
+      "proc": {
+        "magic": true,
+        "dmg": 4,
+        "chance": 100
+      }
     },
     {
       "id": 12637,
@@ -21884,6 +21921,18 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 19289,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Darkmoon Card: Maelstrom",
+      "proc": {
+        "magic": true,
+        "dmg": 250,
+        "chance": 2
+      }
+    },
+    {
       "id": 19406,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -21891,6 +21940,20 @@ var gear = {
       "name": "Drake Fang Talisman",
       "ap": 56,
       "hit": 2
+    },
+    {
+      "id": 20130,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "name": "Diamond Flask"
+    },
+    {
+      "id": 21180,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Earthstrike"
     },
     {
       "id": 21567,
@@ -21907,6 +21970,13 @@ var gear = {
       "r": 20,
       "name": "Rune of Duty",
       "sta": 4
+    },
+    {
+      "id": 21670,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Badge of the Swarmguard"
     },
     {
       "id": 21891,
@@ -21937,12 +22007,46 @@ var gear = {
       "ap": 64
     },
     {
+      "id": 23570,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Jom Gabbar"
+    },
+    {
+      "id": 22321,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 56,
+      "name": "Heart of Wyrmthalak",
+      "proc": {
+        "magic": true,
+        "dmg": 150,
+        "chance": 2
+      }
+    },
+    {
+      "id": 19949,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 58,
+      "name": "Zandalarian Hero Medallion"
+    },
+    {
       "id": 9999998,
       "type": "Miscellaneous",
       "slot": "trinket",
       "r": 25,
       "name": "Avenger's Void Pearl",
       "ap": 10
+    },
+    {
+      "id": 13209,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "name": "Seal of the Dawn",
+      "ap": 81
     }
   ],
   "trinket2": [
@@ -22041,6 +22145,18 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 19289,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Darkmoon Card: Maelstrom",
+      "proc": {
+        "magic": true,
+        "dmg": 250,
+        "chance": 2
+      }
+    },
+    {
       "id": 19406,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22048,6 +22164,20 @@ var gear = {
       "name": "Drake Fang Talisman",
       "ap": 56,
       "hit": 2
+    },
+    {
+      "id": 20130,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "name": "Diamond Flask"
+    },
+    {
+      "id": 21180,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Earthstrike"
     },
     {
       "id": 21567,
@@ -22064,6 +22194,13 @@ var gear = {
       "r": 20,
       "name": "Rune of Duty",
       "sta": 4
+    },
+    {
+      "id": 21670,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Badge of the Swarmguard"
     },
     {
       "id": 21891,
@@ -22094,12 +22231,46 @@ var gear = {
       "ap": 64
     },
     {
+      "id": 23570,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "name": "Jom Gabbar"
+    },
+    {
+      "id": 22321,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 56,
+      "name": "Heart of Wyrmthalak",
+      "proc": {
+        "magic": true,
+        "dmg": 150,
+        "chance": 2
+      }
+    },
+    {
+      "id": 19949,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 58,
+      "name": "Zandalarian Hero Medallion"
+    },
+    {
       "id": 9999998,
       "type": "Miscellaneous",
       "slot": "trinket",
       "r": 25,
       "name": "Avenger's Void Pearl",
       "ap": 10
+    },
+    {
+      "id": 13209,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "name": "Seal of the Dawn",
+      "ap": 81
     }
   ],
   "ranged": [
@@ -28320,7 +28491,12 @@ var gear = {
       "speed": 1.8,
       "mindmg": 56,
       "maxdmg": 105,
-      "str": 7
+      "str": 7,
+      "proc": {
+        "magic": true,
+        "dmg": 2,
+        "chance": 100
+      }
     },
     {
       "id": 20035,

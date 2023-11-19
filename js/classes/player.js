@@ -200,12 +200,6 @@ class Player {
                     if (type == "mainhand" || type == "offhand" || type == "twohand")
                         this.addWeapon(item, type);
 
-                    // Blazefury Medallion
-                    if (item.id == 17111) {
-                        this.attackproc = {};
-                        this.attackproc.chance = item.proc.chance * 100;
-                        this.attackproc.magicdmg = item.proc.dmg;
-                    }
 
                     if (item.proc && item.proc.chance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
@@ -217,6 +211,11 @@ class Player {
                             proc.spell = this.auras[item.proc.spell.toLowerCase()];
                         }
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
+                    }
+                    else if (item.proc && item.proc.chance) {
+                        this.attackproc = {};
+                        this.attackproc.chance = item.proc.chance * 100;
+                        this.attackproc.magicdmg = item.proc.dmg;
                     }
 
                     this.items.push(item.id);
@@ -967,7 +966,7 @@ class Player {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
-                if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
+                if (weapon.proc1.magicdmg) procdmg += weapon.proc1.chance == 10000 ? weapon.proc1.magicdmg : this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
             }
@@ -1003,7 +1002,7 @@ class Player {
                 /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
-                if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
+                if (this.attackproc.magicdmg) procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
                 /* start-log */ if (log) this.log(`Misc proc`); /* end-log */
             }

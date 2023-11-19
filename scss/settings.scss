@@ -142,7 +142,7 @@
 
     .buffs {
         font-size: 0;
-        width: 426px;
+        width: calc((100% - 330px) / 2);
         .label {
             font-size: 12px;
             font-weight: bold;
@@ -152,7 +152,7 @@
     }
 
     .rotation {
-        width: calc(100% - 766px);
+        width: calc((100% - 330px) / 2);
         font-size: 0;
 
         & > div {

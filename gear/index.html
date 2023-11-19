@@ -58,10 +58,7 @@
           obj.slot = getSlot(item.InventoryType);
           if (!obj.slot) continue;
           let sparse = getRow('ItemSparse', item.ID);
-          if (!sparse) { 
-            //console.log(obj.id + " has no sparse"); 
-            continue;
-          }
+          if (!sparse) continue;
           if (sparse.AllowableClass != "-1" && !(1 & parseInt(sparse.AllowableClass))) continue;
           if (obj.type == "Cloth" && obj.slot != "back") continue;
           obj.r = parseInt(item.RequiredLevel);
@@ -110,54 +107,11 @@
                 });
               }
 
-              // check: Thunderbrew's Boot Flask
-              // gear/:135 check: Freezing Band
-              // gear/:135 check: Guardian Talisman
-              // gear/:135 check: Deprecated Static Charm
-              // gear/:135 check: Red Whelp Gloves
-              // gear/:135 check: Green Whelp Armor
-              // gear/:135 check: Truesilver Breastplate
-              // gear/:135 check: Horned Viking Helmet
-              // gear/:135 check: Uther's Strength
-              // gear/:135 check: Force of Will
-              // gear/:135 check: Hand of Justice
-              // gear/:135 check: Girdle of Reprisal
-              // gear/:135 check: Linken's Boomerang
-              // gear/:135 check: Demon Forged Breastplate
-              // gear/:135 check: Fiery Plate Gauntlets
-              // gear/:135 check: Storm Gauntlets
-              // gear/:135 check: Invulnerable Mail
-              // gear/:135 check: Orb of Fire
-              // gear/:135 check: Piccolo of the Flaming Fire
-              // gear/:135 check: Ramstein's Lightning Bolts
-              // gear/:135 check: Cloak of Fire
-              // gear/:135 check: The Lion Horn of Stormwind
-              // gear/:135 check: Blazefury Medallion
-              // gear/:135 check: Mark of the Chosen
-              // gear/:135 check: Darkmoon Card: Heroism
-              // gear/:135 check: Darkmoon Card: Blue Dragon
-              // gear/:135 check: Darkmoon Card: Maelstrom
-              // gear/:135 check: Zandalarian Hero Badge
-              // gear/:135 check: Wrath of Cenarius
-              // gear/:135 check: Scarab Brooch
-              // gear/:135 check: Badge of the Swarmguard
-              // gear/:135 check: Petrified Scarab
-              // gear/:135 check: Beastmaster's Cap
-              // gear/:135 check: Beastmaster's Gloves
-              // gear/:135 check: Beastmaster's Tunic
-              // gear/:135 check: Beastmaster's Boots
-              // gear/:135 check: Black Grasp of the Destroyer
-              // gear/:135 check: Talisman of Ascendance
-              // gear/:135 check: Jom Gabbar
-              // gear/:135 check: Heart of Wyrmthalak
-              // gear/:135 check: Zandalarian Hero Charm
-              // might of cenarius
-
               // procs
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2" && item.ID != 11815) {
+                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 7284) {
                   //console.log("check: " + obj.name);
                 }
                 else {
@@ -166,7 +120,6 @@
               }
               if (proc2 && !proc) proc = proc2;
               if (proc && (proc.spell || proc.extra || proc.dmg || proc.tick) && obj.slot !== "ranged") obj.proc = proc;
-              if (item.ID == 19968) delete obj.proc;
 
               // custom spells
               for(let c of customSpells) {
@@ -178,7 +131,8 @@
               for(let c of customPPM) {
                 if (c.i == item.ID) {
                   obj.proc = obj.proc || {};
-                  obj.proc.ppm = c.p;
+                  if (c.p) obj.proc.ppm = c.p;
+                  if (c.c) obj.proc.chance = c.c;
                 }
               }
             });
@@ -201,12 +155,38 @@
           if (obj.id == 18706) include = true;
           if (obj.id == 19024) include = true;
           if (obj.id == 21567) include = true;
+          if (obj.id == 19949) include = true;
+          if (obj.id == 23570) include = true;
+          if (obj.id == 21670) include = true;
+          if (obj.id == 20130) include = true;
+          if (obj.id == 21180) include = true;
+          if (obj.id == 14552) include = true;
           if (obj.id == 17780) exclude = true;
+
+          // todo items
+          // https://www.wowhead.com/classic/item=869/dazzling-longsword
+          // https://www.wowhead.com/classic/item=7961/phantom-blade
+          // https://www.wowhead.com/classic/item=10626/ragehammer
+          // https://www.wowhead.com/classic/item=9423/the-jackhammer
+          // https://www.wowhead.com/classic/item=11817/lord-generals-sword
+          // https://www.wowhead.com/classic/item=9418/stoneslayer
+          // https://www.wowhead.com/classic/item=12469/mutilator
+
+          // compare gear with gear_sod
+
+          
+          
 
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
           if (exclude) continue;
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
           if (isUnobtainable(obj.id)) continue;
+          
+          // if (include) continue;
+          // if (exclude || obj.proc || obj.str || obj.agi || obj.ap || obj.crit || obj.hit || obj.skill) continue;
+          // if (isUnobtainable(obj.id)) continue;
+          // if (parseInt(sparse.OverallQualityID) < 2) continue;
+          // if (spells.length == 0) continue;
 
           if (obj.slot == "finger") {
             gear["finger1"].push(obj);
@@ -294,6 +274,25 @@
           "ap": 10
         });
 
+        gear["trinket1"].push({
+          "id": 13209,
+          "type": "Miscellaneous",
+          "slot": "trinket",
+          "r": 55,
+          "name": "Seal of the Dawn",
+          "ap": 81
+        });
+        gear["trinket2"].push({
+          "id": 13209,
+          "type": "Miscellaneous",
+          "slot": "trinket",
+          "r": 55,
+          "name": "Seal of the Dawn",
+          "ap": 81
+        });
+
+        
+
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
 
@@ -310,7 +309,10 @@
         {i:13286,s:"Rivenspike"},
         {i:17076,s:"Bonereaver"},
         {i:647,s:"Destiny"},
-        {i:19334,s:"Untamed"}
+        {i:19334,s:"Untamed"},
+        {i:9465,s:"Vibroblade"},
+        {i:9485,s:"Vibroblade"},
+        
       ];
 
       var customPPM = [
@@ -331,7 +333,14 @@
         {i:17075,p:0.6},
         {i:19918,p:4},
         {i:17182,p:0.7},
-        {i:17076,p:2}
+        {i:17076,p:2},
+        {i:11815,c:2},
+        {i:19289,c:2},
+        {i:22321,c:2},
+        {i:17111,c:100},
+        {i:12631,c:100},
+        {i:7284,c:5},
+        {i:19968,c:100},
       ];
 
       var getProcFromSpell = function(id) {
@@ -374,11 +383,6 @@
           if (id == 21151 || id == 21992 || id == 24388) {
             proc.binaryspell = true;
           }
-          // todo: custom chances
-          if (id == 15601) {
-            proc.chance = 2;
-          }
-          if (id == 11791) proc.spell = "Vibroblade";
         });
 
         if (proc.spell || proc.extra || proc.dmg || proc.tick) return proc;
