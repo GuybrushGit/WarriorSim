@@ -1,0 +1,117 @@
+.profiles {
+    width: 0;
+    height: auto;
+    min-height: 1060px;
+    background: #272727;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    left: 380px;
+    top: 0;
+    z-index: 10;
+
+    &.active {
+        width: calc(100% - 380px);
+
+        .wrapper {
+            opacity: 1;
+            transition: opacity 0.2s ease-in;
+            transition-delay: .3s;
+        }
+    }
+
+    .wrapper {
+        opacity: 0;
+        transition: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 60px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .profile {
+        width: 260px;
+        min-width: 260px;
+        height: 640px;
+        border-radius: 10px;
+        border: 1px solid #525252;
+        padding: 16px;
+        text-align: center;
+        background: #181818;
+        cursor: pointer;
+
+        &.active {
+            border-color: $icon-border;
+        }
+
+        & > p {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 4px 0;
+            text-shadow: 1px 1px #00008b;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        .title {
+            border-bottom: 1px solid #525252;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            width: 80%;
+            margin: 0 auto 12px;
+        }
+
+        li {
+            border-bottom: 1px solid hsla(0,0%,87%,.4);
+            padding: 4px 10px;
+            overflow: hidden;
+            font-size: 12px;
+            text-align: left;
+            height: 30px;
+            box-sizing: border-box;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            p {
+                margin: 0;
+                float: left;
+                padding: 2px 0;
+            }
+
+            img {
+                float: right;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #525252;
+            }
+
+            &[data-quality="2"] { color: $item-uncommon; }
+            &[data-quality="3"] { color: $item-rare; }
+            &[data-quality="4"] { color: $item-epic; }
+            &[data-quality="5"] { color: $item-legendary; }
+        }
+    }
+
+    @include mobile {
+        z-index: 11;
+        
+        &.active {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

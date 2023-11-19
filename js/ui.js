@@ -47,6 +47,19 @@ SIM.UI = {
             view.body.removeClass('sidebar-mobile-open');
         });
 
+        view.sidebar.find('.js-profiles').click(function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            window.scrollTo(0, 0);
+            $('section.profiles').css('min-height', view.body.outerHeight() + 'px');
+            $('section.profiles').toggleClass('active');
+            view.sidebar.find('.js-stats').removeClass('active');
+            view.sidebar.find('.js-settings').removeClass('active');
+            $('section.stats').removeClass('active');
+            $('section.settings').removeClass('active');
+            view.body.removeClass('sidebar-mobile-open');
+        });
+
         view.sidebar.find('.js-dps').click(function (e) {
             e.preventDefault();
             view.disableEditMode();
@@ -1314,7 +1327,7 @@ SIM.UI = {
             html.append(`
                 <div data-id="${item.id}" class="rune ${item.selected ? 'active' : ''}">
                     <div class="icon">
-                        <img src="dist/img/${item.iconname}.jpg " alt="Bloodrage">
+                        <img src="dist/img/${item.iconname}.jpg" alt="${item.name}">
                         <a href="https://classic.wowhead.com/spell=${item.id}" class="wh-tooltip"></a>
                     </div>
                 </div>`);

@@ -67,6 +67,7 @@
           obj.r = parseInt(item.RequiredLevel);
           if (!obj.r) obj.r = getQuestLevel(item.ID);
           if (!obj.r) obj.r = 0;
+          obj.q = sparse.OverallQualityID;
           obj.name = sparse.Display_lang.replaceAll("\"","");
           if (parseInt(sparse.ItemDelay)) obj.speed = parseInt(sparse.ItemDelay) / 1000;
           if (parseInt(sparse.MinDamage_0)) obj.mindmg = parseInt(sparse.MinDamage_0);
