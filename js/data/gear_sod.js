@@ -1,4 +1,4 @@
-var gear = {
+var gear2 = {
   "head": [
     {
       "id": 1280,
@@ -4045,6 +4045,42 @@ var gear = {
       "name": "Acid Inscribed Pauldrons",
       "str": 12,
       "sta": 16
+    },
+    {
+      "id": 20680,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 60,
+      "name": "Abyssal Mail Pauldrons of Striking",
+      "hit": 1,
+      "str": 13,
+      "agi": 13,
+      "sta": 13,
+      "rand": 2158
+    },
+    {
+      "id": 20683,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "name": "Abyssal Plate Epaulets of Striking",
+      "hit": 1,
+      "str": 13,
+      "agi": 13,
+      "sta": 13,
+      "rand": 2158
+    },
+    {
+      "id": 20689,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 60,
+      "name": "Abyssal Leather Shoulders of Striking",
+      "hit": 1,
+      "str": 13,
+      "agi": 13,
+      "sta": 13,
+      "rand": 2158
     },
     {
       "id": 21330,
@@ -9340,6 +9376,39 @@ var gear = {
       "name": "Dragonbone Wristguards",
       "str": 9,
       "sta": 13
+    },
+    {
+      "id": 20681,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 60,
+      "name": "Abyssal Leather Bracers of Striking",
+      "str": 11,
+      "agi": 11,
+      "sta": 12,
+      "rand": 2163
+    },
+    {
+      "id": 20684,
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 60,
+      "name": "Abyssal Mail Armguards of Striking",
+      "str": 11,
+      "agi": 11,
+      "sta": 12,
+      "rand": 2163
+    },
+    {
+      "id": 20687,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "name": "Abyssal Plate Vambraces of Striking",
+      "str": 11,
+      "agi": 11,
+      "sta": 12,
+      "rand": 2163
     },
     {
       "id": 21184,
@@ -16958,6 +17027,42 @@ var gear = {
       "sta": 20
     },
     {
+      "id": 20665,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 57,
+      "name": "Abyssal Leather Leggings of Striking",
+      "crit": 1,
+      "str": 15,
+      "agi": 15,
+      "sta": 15,
+      "rand": 2157
+    },
+    {
+      "id": 20668,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 57,
+      "name": "Abyssal Mail Legguards of Striking",
+      "crit": 1,
+      "str": 15,
+      "agi": 15,
+      "sta": 15,
+      "rand": 2157
+    },
+    {
+      "id": 20671,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 57,
+      "name": "Abyssal Plate Legplates of Striking",
+      "crit": 1,
+      "str": 15,
+      "agi": 15,
+      "sta": 15,
+      "rand": 2157
+    },
+    {
       "id": 20703,
       "type": "Leather",
       "slot": "legs",
@@ -22404,6 +22509,18 @@ var gear = {
       "agi": 3
     },
     {
+      "id": 12651,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 54,
+      "name": "Blackcrow",
+      "speed": 3.2,
+      "mindmg": 77,
+      "maxdmg": 117,
+      "agi": 3,
+      "hit": 1
+    },
+    {
       "id": 12653,
       "type": "Bows",
       "slot": "ranged",
@@ -22436,6 +22553,41 @@ var gear = {
       "mindmg": 40,
       "maxdmg": 76,
       "agi": 10,
+      "sta": 4
+    },
+    {
+      "id": 13038,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 35,
+      "name": "Swiftwind",
+      "speed": 2,
+      "mindmg": 34,
+      "maxdmg": 51,
+      "agi": 7
+    },
+    {
+      "id": 13039,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 43,
+      "name": "Skull Splitting Crossbow",
+      "speed": 2.6,
+      "mindmg": 52,
+      "maxdmg": 79,
+      "str": 3,
+      "ap": 14
+    },
+    {
+      "id": 13040,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 51,
+      "name": "Heartseeking Crossbow",
+      "speed": 3.1,
+      "mindmg": 71,
+      "maxdmg": 108,
+      "agi": 9,
       "sta": 4
     },
     {
@@ -22708,6 +22860,18 @@ var gear = {
       "agi": 11
     },
     {
+      "id": 18738,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 56,
+      "name": "Carapace Spine Crossbow",
+      "speed": 3.3,
+      "mindmg": 82,
+      "maxdmg": 124,
+      "agi": 4,
+      "sta": 9
+    },
+    {
       "id": 18755,
       "type": "Guns",
       "slot": "ranged",
@@ -22718,6 +22882,18 @@ var gear = {
       "maxdmg": 108,
       "agi": 4,
       "sta": 6
+    },
+    {
+      "id": 19107,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 51,
+      "name": "Bloodseeker",
+      "speed": 3.3,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "agi": 7,
+      "str": 8
     },
     {
       "id": 19114,
@@ -22863,6 +23039,18 @@ var gear = {
       "sta": 8
     },
     {
+      "id": 20599,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 60,
+      "name": "Polished Ironwood Crossbow",
+      "speed": 3.1,
+      "mindmg": 101,
+      "maxdmg": 153,
+      "sta": 5,
+      "ap": 24
+    },
+    {
       "id": 20663,
       "type": "Bows",
       "slot": "ranged",
@@ -22885,6 +23073,20 @@ var gear = {
       "maxdmg": 122,
       "sta": 4,
       "ap": 20
+    },
+    {
+      "id": 21459,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 60,
+      "name": "Crossbow of Imminent Doom",
+      "speed": 3.1,
+      "mindmg": 103,
+      "maxdmg": 155,
+      "agi": 7,
+      "str": 5,
+      "sta": 5,
+      "hit": 1
     },
     {
       "id": 21478,
@@ -22933,6 +23135,18 @@ var gear = {
       "ap": 20
     },
     {
+      "id": 22347,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 60,
+      "name": "Fahrad's Reloading Repeater",
+      "speed": 3.2,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "agi": 4,
+      "hit": 1
+    },
+    {
       "id": 22656,
       "type": "Guns",
       "slot": "ranged",
@@ -22967,6 +23181,18 @@ var gear = {
       "sta": 6,
       "crit": 1,
       "ap": 16
+    },
+    {
+      "id": 22812,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 60,
+      "name": "Nerubian Slavemaker",
+      "speed": 3.2,
+      "mindmg": 128,
+      "maxdmg": 238,
+      "ap": 24,
+      "crit": 1
     },
     {
       "id": 23557,
@@ -31860,6 +32086,18 @@ var gear = {
       "sta": 3
     },
     {
+      "id": 11863,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 48,
+      "name": "White Bone Shredder",
+      "speed": 1.4,
+      "mindmg": 30,
+      "maxdmg": 57,
+      "agi": 7,
+      "str": 4
+    },
+    {
       "id": 11915,
       "type": "Shield",
       "slot": "offhand",
@@ -32030,6 +32268,16 @@ var gear = {
       "maxdmg": 92,
       "str": 4,
       "crit": 1
+    },
+    {
+      "id": 12939,
+      "type": "Sword",
+      "slot": "offhand",
+      "r": 58,
+      "name": "Dal'Rend's Tribal Guardian",
+      "speed": 1.8,
+      "mindmg": 52,
+      "maxdmg": 97
     },
     {
       "id": 12990,
@@ -32289,6 +32537,22 @@ var gear = {
       "mindmg": 40,
       "maxdmg": 74,
       "ap": 30
+    },
+    {
+      "id": 13399,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 54,
+      "name": "Gargoyle Shredder Talons",
+      "speed": 1.8,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "proc": {
+        "tick": 11,
+        "interval": "3000",
+        "duration": "30000",
+        "bleed": true
+      }
     },
     {
       "id": 13401,
@@ -33289,6 +33553,22 @@ var gear = {
       "maxdmg": 101
     },
     {
+      "id": 17738,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 47,
+      "name": "Claw of Celebras",
+      "speed": 1.8,
+      "mindmg": 43,
+      "maxdmg": 81,
+      "proc": {
+        "magic": true,
+        "tick": 9,
+        "interval": "2000",
+        "duration": "20000"
+      }
+    },
+    {
       "id": 17752,
       "type": "Dagger",
       "slot": "onehand",
@@ -33301,6 +33581,22 @@ var gear = {
         "magic": true,
         "procgcd": true,
         "dmg": 70
+      }
+    },
+    {
+      "id": 18202,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Eskhandar's Left Claw",
+      "speed": 1.5,
+      "mindmg": 50,
+      "maxdmg": 94,
+      "agi": 4,
+      "proc": {
+        "tick": 15,
+        "interval": "3000",
+        "duration": "30000"
       }
     },
     {
@@ -33336,6 +33632,17 @@ var gear = {
       "maxdmg": 117,
       "str": 7,
       "sta": 11
+    },
+    {
+      "id": 18392,
+      "type": "Dagger",
+      "slot": "offhand",
+      "r": 57,
+      "name": "Distracting Dagger",
+      "speed": 1.3,
+      "mindmg": 42,
+      "maxdmg": 64,
+      "skill": 6
     },
     {
       "id": 18463,
@@ -33521,6 +33828,32 @@ var gear = {
       "speed": 2,
       "mindmg": 95,
       "maxdmg": 143,
+      "sta": 7,
+      "crit": 1,
+      "ap": 28
+    },
+    {
+      "id": 18847,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Grand Marshal's Left Hand Blade",
+      "speed": 2.9,
+      "mindmg": 138,
+      "maxdmg": 207,
+      "sta": 7,
+      "crit": 1,
+      "ap": 28
+    },
+    {
+      "id": 18848,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "name": "High Warlord's Left Claw",
+      "speed": 2.9,
+      "mindmg": 138,
+      "maxdmg": 207,
       "sta": 7,
       "crit": 1,
       "ap": 28
@@ -33990,6 +34323,17 @@ var gear = {
       "ap": 28
     },
     {
+      "id": 19866,
+      "type": "Sword",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Warblade of the Hakkari",
+      "speed": 1.7,
+      "mindmg": 57,
+      "maxdmg": 106,
+      "ap": 40
+    },
+    {
       "id": 19901,
       "type": "Sword",
       "slot": "onehand",
@@ -34018,6 +34362,21 @@ var gear = {
       "proc": {
         "magic": true,
         "dmg": 78
+      }
+    },
+    {
+      "id": 19910,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Arlokk's Grasp",
+      "speed": 1.5,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 70
       }
     },
     {
@@ -34588,6 +34947,20 @@ var gear = {
         "dmg": 125,
         "ppm": 2
       }
+    },
+    {
+      "id": 23242,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "name": "Claw of the Frost Wyrm",
+      "speed": 1.5,
+      "mindmg": 75,
+      "maxdmg": 140,
+      "sta": 8,
+      "crit": 1,
+      "hit": 1,
+      "ap": 22
     },
     {
       "id": 23454,
