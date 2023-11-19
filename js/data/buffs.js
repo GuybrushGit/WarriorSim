@@ -84,6 +84,17 @@ var buffs = [
       group: "battleshout",
       ap: 193,
       minlevel: 52,
+      aq: false,
+   },
+   {
+      id: 25289,
+      spellid: true,
+      name: "Battle Shout",
+      iconname: "Ability_Warrior_BattleShout",
+      group: "battleshout",
+      ap: 232,
+      minlevel: 60,
+      aq: true,
    },
    {
       id: 22888,
@@ -341,7 +352,7 @@ var buffs = [
       name: "Blessing of Might",
       iconname: "spell_holy_fistofjustice",
       group: "blessingmight",
-      ap: 186,
+      ap: 155,
       minlevel: 52
    },
    {

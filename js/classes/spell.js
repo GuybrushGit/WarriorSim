@@ -199,7 +199,7 @@ class HeroicStrike extends Spell {
     constructor(player, id) {
         super(player, id, "Heroic Strike");
         this.cost = 15 - player.talents.impheroicstrike;
-        this.bonus = player.aqbooks ? 157 : this.value1;
+        this.bonus = this.value1;
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);

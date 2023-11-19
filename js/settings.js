@@ -177,6 +177,8 @@ SIM.SETTINGS = {
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
+            view.buildSpells();
+            view.buildBuffs();
         });
 
         view.fight.on('keyup', 'input[type="text"]', function (e) {
@@ -287,7 +289,7 @@ SIM.SETTINGS = {
             }
             if (spell.id == 20572 && storage.race !== "Orc") {
                 spell.active = false;
-                continue;6
+                continue;
             }
 
             // level restriction
@@ -329,6 +331,17 @@ SIM.SETTINGS = {
                 spell.active = false;
                 continue;
             }
+
+            // aq restriction
+            if (storage.aqbooks == "Yes" && typeof spell.aq !== 'undefined' && spell.aq === false) {
+                spell.active = false;
+                continue;
+            }
+            if (storage.aqbooks == "No" && spell.aq) {
+                spell.active = false;
+                continue;
+            }
+
 
             let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
@@ -443,12 +456,25 @@ SIM.SETTINGS = {
         let level = parseInt(storage.level);
         let worldbuffs = '', consumes = '', other = '';
         for (let buff of buffs) {
+
+            // level restrictions
             let min = parseInt(buff.minlevel || 0);
             let max = parseInt(buff.maxlevel || 60);
             if (level < min || level > max) {
                 buff.active = false;
                 continue;
             }
+
+            // aq restriction
+            if (storage.aqbooks == "Yes" && typeof buff.aq !== 'undefined' && buff.aq === false) {
+                buff.active = false;
+                continue;
+            }
+            if (storage.aqbooks == "No" && buff.aq) {
+                buff.active = false;
+                continue;
+            }
+
             let wh = buff.spellid ? 'spell' : 'item';
             let active = buff.active ? 'active' : '';
             let group = buff.group ? `data-group="${buff.group}"` : '';
