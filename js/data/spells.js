@@ -661,7 +661,7 @@ var spells = [
     rageblockactive: true,
     chargeblock: 4,
     chargeblockactive: false,
-    erageblock: 70,
+    erageblock: 80,
     erageblockactive: false,
     echargeblock: 4,
     echargeblockactive: false,
