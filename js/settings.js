@@ -389,8 +389,12 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="execute" class="${spell.execute ? 'active' : ''}">Use during Execute phase</li>`);
         if (typeof spell.globals !== 'undefined') 
             ul.append(`<li data-id="globalsactive" class="${spell.globalsactive ? 'active' : ''}" data-group="usage">Only use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
-        if (spell.executestacks !== undefined)
-            ul.append(`<li data-id="executestacksactive" class="${spell.executestacksactive ? 'active' : ''}">Don't execute when below <input type="text" name="executestacks" value="${spell.executestacks}" data-numberonly="true" /> CbR charges</li>`);
+        if (spell.chargeblock !== undefined)
+            ul.append(`<li data-id="chargeblockactive" class="${spell.chargeblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="chargeblock" value="${spell.chargeblock}" data-numberonly="true" /> CbR charges</li>`);
+        if (spell.erageblock !== undefined)
+            ul.append(`<div class="label">Execute Phase:</div><li data-id="erageblockactive" class="${spell.erageblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="erageblock" value="${spell.erageblock}" data-numberonly="true" /> rage</li>`);
+        if (spell.echargeblock !== undefined)
+            ul.append(`<li data-id="echargeblockactive" class="${spell.echargeblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="echargeblock" value="${spell.echargeblock}" data-numberonly="true" /> CbR charges</li>`);
         
 
         
