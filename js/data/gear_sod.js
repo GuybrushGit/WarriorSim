@@ -1427,15 +1427,6 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 16677,
-      "type": "Mail",
-      "slot": "head",
-      "r": 57,
-      "name": "Beaststalker's Cap",
-      "agi": 20,
-      "sta": 20
-    },
-    {
       "id": 16707,
       "type": "Leather",
       "slot": "head",
@@ -1735,27 +1726,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 22005,
-      "type": "Leather",
-      "slot": "head",
-      "r": 58,
-      "name": "Darkmantle Cap",
-      "agi": 26,
-      "str": 13,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 22013,
-      "type": "Mail",
-      "slot": "head",
-      "r": 58,
-      "name": "Beastmaster's Cap",
-      "agi": 22,
-      "sta": 21,
-      "hit": 1
-    },
-    {
       "id": 22091,
       "type": "Plate",
       "slot": "head",
@@ -1801,28 +1771,6 @@ var gear = {
       "name": "Dreadnaught Helmet",
       "str": 21,
       "sta": 45
-    },
-    {
-      "id": 22438,
-      "type": "Mail",
-      "slot": "head",
-      "r": 60,
-      "name": "Cryptstalker Headpiece",
-      "agi": 31,
-      "sta": 30,
-      "crit": 2
-    },
-    {
-      "id": 22478,
-      "type": "Leather",
-      "slot": "head",
-      "r": 60,
-      "name": "Bonescythe Helmet",
-      "agi": 30,
-      "str": 18,
-      "sta": 29,
-      "hit": 1,
-      "crit": 2
     },
     {
       "id": 22718,
@@ -3786,15 +3734,6 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 16679,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 55,
-      "name": "Beaststalker's Mantle",
-      "agi": 11,
-      "sta": 17
-    },
-    {
       "id": 16708,
       "type": "Leather",
       "slot": "shoulder",
@@ -4188,24 +4127,6 @@ var gear = {
       "sta": 18
     },
     {
-      "id": 22008,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 58,
-      "name": "Darkmantle Spaulders",
-      "agi": 24,
-      "sta": 10
-    },
-    {
-      "id": 22016,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 58,
-      "name": "Beastmaster's Mantle",
-      "agi": 12,
-      "sta": 18
-    },
-    {
       "id": 22093,
       "type": "Plate",
       "slot": "shoulder",
@@ -4260,28 +4181,6 @@ var gear = {
       "name": "Dreadnaught Pauldrons",
       "str": 16,
       "sta": 29,
-      "hit": 1
-    },
-    {
-      "id": 22439,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "Cryptstalker Spaulders",
-      "agi": 29,
-      "sta": 23,
-      "crit": 1
-    },
-    {
-      "id": 22479,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 60,
-      "name": "Bonescythe Pauldrons",
-      "agi": 22,
-      "str": 22,
-      "sta": 15,
-      "crit": 1,
       "hit": 1
     },
     {
@@ -7272,16 +7171,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16674,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 58,
-      "name": "Beaststalker's Tunic",
-      "agi": 21,
-      "str": 5,
-      "sta": 16
-    },
-    {
       "id": 16865,
       "type": "Plate",
       "slot": "chest",
@@ -7584,26 +7473,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 22009,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "name": "Darkmantle Tunic",
-      "agi": 31,
-      "sta": 15,
-      "hit": 2
-    },
-    {
-      "id": 22060,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 58,
-      "name": "Beastmaster's Tunic",
-      "agi": 25,
-      "sta": 16,
-      "crit": 1
-    },
-    {
       "id": 22102,
       "type": "Mail",
       "slot": "chest",
@@ -7649,28 +7518,6 @@ var gear = {
       "str": 21,
       "sta": 43,
       "hit": 2
-    },
-    {
-      "id": 22436,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 60,
-      "name": "Cryptstalker Tunic",
-      "agi": 45,
-      "sta": 27,
-      "hit": 1,
-      "crit": 1
-    },
-    {
-      "id": 22476,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 60,
-      "name": "Bonescythe Breastplate",
-      "sta": 29,
-      "crit": 2,
-      "ap": 80,
-      "hit": 1
     },
     {
       "id": 22661,
@@ -9041,15 +8888,6 @@ var gear = {
       "sta": 17
     },
     {
-      "id": 16681,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 52,
-      "name": "Beaststalker's Bindings",
-      "agi": 15,
-      "sta": 7
-    },
-    {
       "id": 16710,
       "type": "Leather",
       "slot": "wrist",
@@ -9516,25 +9354,6 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 22004,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 58,
-      "name": "Darkmantle Bracers",
-      "agi": 15,
-      "str": 7,
-      "sta": 7
-    },
-    {
-      "id": 22011,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 58,
-      "name": "Beastmaster's Bindings",
-      "agi": 16,
-      "sta": 7
-    },
-    {
       "id": 22088,
       "type": "Plate",
       "slot": "wrist",
@@ -9571,26 +9390,6 @@ var gear = {
       "name": "Dreadnaught Bracers",
       "str": 14,
       "sta": 28
-    },
-    {
-      "id": 22443,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 60,
-      "name": "Cryptstalker Wristguards",
-      "agi": 26,
-      "sta": 16,
-      "hit": 1
-    },
-    {
-      "id": 22483,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 60,
-      "name": "Bonescythe Bracers",
-      "agi": 26,
-      "sta": 14,
-      "crit": 1
     },
     {
       "id": 22663,
@@ -11949,15 +11748,6 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 16676,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 54,
-      "name": "Beaststalker's Gloves",
-      "agi": 14,
-      "sta": 9
-    },
-    {
       "id": 16712,
       "type": "Leather",
       "slot": "hands",
@@ -12459,25 +12249,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 22006,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 58,
-      "name": "Darkmantle Gloves",
-      "agi": 22,
-      "str": 12,
-      "sta": 9
-    },
-    {
-      "id": 22015,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 58,
-      "name": "Beastmaster's Gloves",
-      "agi": 14,
-      "sta": 12
-    },
-    {
       "id": 22090,
       "type": "Plate",
       "slot": "hands",
@@ -12523,27 +12294,6 @@ var gear = {
       "name": "Dreadnaught Gauntlets",
       "str": 17,
       "sta": 27
-    },
-    {
-      "id": 22441,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 60,
-      "name": "Cryptstalker Handguards",
-      "agi": 24,
-      "sta": 21,
-      "crit": 1
-    },
-    {
-      "id": 22481,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 60,
-      "name": "Bonescythe Gauntlets",
-      "sta": 20,
-      "hit": 1,
-      "ap": 66,
-      "crit": 1
     },
     {
       "id": 22662,
@@ -12958,15 +12708,6 @@ var gear = {
       "name": "Cinched Belt",
       "str": 2,
       "sta": 2
-    },
-    {
-      "id": 5355,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 10,
-      "name": "Beastmaster's Girdle",
-      "agi": 5,
-      "sta": 5
     },
     {
       "id": 5425,
@@ -14660,16 +14401,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 16680,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 53,
-      "name": "Beaststalker's Belt",
-      "agi": 10,
-      "str": 9,
-      "sta": 6
-    },
-    {
       "id": 16713,
       "type": "Leather",
       "slot": "waist",
@@ -15056,25 +14787,6 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 22002,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 58,
-      "name": "Darkmantle Belt",
-      "agi": 17,
-      "str": 10,
-      "sta": 13
-    },
-    {
-      "id": 22010,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 58,
-      "name": "Beastmaster's Belt",
-      "agi": 16,
-      "sta": 16
-    },
-    {
       "id": 22086,
       "type": "Plate",
       "slot": "waist",
@@ -15155,28 +14867,6 @@ var gear = {
       "name": "Dreadnaught Waistguard",
       "str": 20,
       "sta": 26
-    },
-    {
-      "id": 22442,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 60,
-      "name": "Cryptstalker Girdle",
-      "agi": 23,
-      "sta": 22,
-      "hit": 1,
-      "crit": 1
-    },
-    {
-      "id": 22482,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 60,
-      "name": "Bonescythe Waistguard",
-      "agi": 24,
-      "str": 23,
-      "sta": 20,
-      "crit": 1
     },
     {
       "id": 23219,
@@ -17250,25 +16940,6 @@ var gear = {
       "sta": 16
     },
     {
-      "id": 22007,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 58,
-      "name": "Darkmantle Pants",
-      "agi": 25,
-      "str": 15,
-      "sta": 15
-    },
-    {
-      "id": 22017,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 58,
-      "name": "Beastmaster's Pants",
-      "agi": 28,
-      "sta": 14
-    },
-    {
       "id": 22111,
       "type": "Leather",
       "slot": "legs",
@@ -17296,28 +16967,6 @@ var gear = {
       "name": "Dreadnaught Legplates",
       "str": 23,
       "sta": 37
-    },
-    {
-      "id": 22437,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 60,
-      "name": "Cryptstalker Legguards",
-      "agi": 42,
-      "sta": 26,
-      "crit": 1
-    },
-    {
-      "id": 22477,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 60,
-      "name": "Bonescythe Legplates",
-      "agi": 32,
-      "str": 31,
-      "sta": 25,
-      "crit": 1,
-      "hit": 1
     },
     {
       "id": 22651,
@@ -17634,16 +17283,6 @@ var gear = {
       "sta": 28,
       "crit": 2,
       "hit": 1
-    },
-    {
-      "id": 16678,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 56,
-      "name": "Beaststalker's Pants",
-      "agi": 26,
-      "str": 6,
-      "sta": 6
     },
     {
       "id": 16867,
@@ -19193,15 +18832,6 @@ var gear = {
       "agi": 9
     },
     {
-      "id": 16675,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 54,
-      "name": "Beaststalker's Boots",
-      "agi": 21,
-      "sta": 9
-    },
-    {
       "id": 16711,
       "type": "Leather",
       "slot": "feet",
@@ -19597,24 +19227,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 22003,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 58,
-      "name": "Darkmantle Boots",
-      "agi": 24,
-      "sta": 10
-    },
-    {
-      "id": 22061,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 58,
-      "name": "Beastmaster's Boots",
-      "agi": 24,
-      "sta": 9
-    },
-    {
       "id": 22096,
       "type": "Mail",
       "slot": "feet",
@@ -19641,27 +19253,6 @@ var gear = {
       "name": "Dreadnaught Sabatons",
       "str": 15,
       "sta": 34
-    },
-    {
-      "id": 22440,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 60,
-      "name": "Cryptstalker Boots",
-      "agi": 33,
-      "sta": 19,
-      "hit": 1
-    },
-    {
-      "id": 22480,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 60,
-      "name": "Bonescythe Sabatons",
-      "sta": 18,
-      "hit": 1,
-      "crit": 1,
-      "ap": 64
     },
     {
       "id": 22858,
@@ -22013,20 +21604,6 @@ var gear = {
   ],
   "trinket1": [
     {
-      "id": 10455,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 48,
-      "name": "Chained Essence of Eranikus",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 50,
-        "interval": "5000",
-        "duration": "45000"
-      }
-    },
-    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22039,48 +21616,12 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 11905,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 47,
-      "name": "Linken's Boomerang",
-      "speed": 0.5,
-      "proc": {
-        "procgcd": true,
-        "dmg": 150
-      }
-    },
-    {
-      "id": 13171,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Smokey's Lighter",
-      "proc": {
-        "magic": true,
-        "dmg": 125
-      }
-    },
-    {
       "id": 13209,
       "type": "Miscellaneous",
       "slot": "trinket",
       "r": 55,
       "name": "Seal of the Dawn",
       "ap": 81
-    },
-    {
-      "id": 13213,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Smolderweb's Eye",
-      "proc": {
-        "magic": true,
-        "tick": 20,
-        "interval": "2000",
-        "duration": "20000"
-      }
     },
     {
       "id": 13965,
@@ -22171,17 +21712,6 @@ var gear = {
       "slot": "trinket",
       "r": 60,
       "name": "Badge of the Swarmguard"
-    },
-    {
-      "id": 21891,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "name": "Shard of the Fallen Star",
-      "proc": {
-        "magic": true,
-        "dmg": 421
-      }
     },
     {
       "id": 22954,
@@ -22245,20 +21775,6 @@ var gear = {
   ],
   "trinket2": [
     {
-      "id": 10455,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 48,
-      "name": "Chained Essence of Eranikus",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 50,
-        "interval": "5000",
-        "duration": "45000"
-      }
-    },
-    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -22271,48 +21787,12 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 11905,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 47,
-      "name": "Linken's Boomerang",
-      "speed": 0.5,
-      "proc": {
-        "procgcd": true,
-        "dmg": 150
-      }
-    },
-    {
-      "id": 13171,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Smokey's Lighter",
-      "proc": {
-        "magic": true,
-        "dmg": 125
-      }
-    },
-    {
       "id": 13209,
       "type": "Miscellaneous",
       "slot": "trinket",
       "r": 55,
       "name": "Seal of the Dawn",
       "ap": 81
-    },
-    {
-      "id": 13213,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "name": "Smolderweb's Eye",
-      "proc": {
-        "magic": true,
-        "tick": 20,
-        "interval": "2000",
-        "duration": "20000"
-      }
     },
     {
       "id": 13965,
@@ -22403,17 +21883,6 @@ var gear = {
       "slot": "trinket",
       "r": 60,
       "name": "Badge of the Swarmguard"
-    },
-    {
-      "id": 21891,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "name": "Shard of the Fallen Star",
-      "proc": {
-        "magic": true,
-        "dmg": 421
-      }
     },
     {
       "id": 22954,
@@ -40076,17 +39545,6 @@ var gear = {
       "maxdmg": 200
     },
     {
-      "id": 22589,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Atiesh Greatstaff of the Guardian",
-      "speed": 2.9,
-      "mindmg": 225,
-      "maxdmg": 338,
-      "sta": 31
-    },
-    {
       "id": 22691,
       "type": "Sword",
       "slot": "twohand",
@@ -40300,40 +39758,6 @@ var gear = {
       "mindmg": 189,
       "maxdmg": 284,
       "sta": 23
-    },
-    {
-      "id": 22630,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Atiesh Greatstaff of the Guardian",
-      "speed": 2.9,
-      "mindmg": 225,
-      "maxdmg": 338,
-      "sta": 30
-    },
-    {
-      "id": 22631,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Atiesh Greatstaff of the Guardian",
-      "speed": 2.9,
-      "mindmg": 225,
-      "maxdmg": 338,
-      "sta": 28
-    },
-    {
-      "id": 22632,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "name": "Atiesh Greatstaff of the Guardian",
-      "speed": 2.9,
-      "mindmg": 225,
-      "maxdmg": 338,
-      "sta": 28,
-      "ap": 420
     },
     {
       "id": 9999999,
