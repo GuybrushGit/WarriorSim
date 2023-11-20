@@ -39,6 +39,7 @@
     }
 
     .profile {
+        position: relative;
         width: 260px;
         min-width: 260px;
         height: 640px;
@@ -71,6 +72,24 @@
             margin-bottom: 10px;
             width: 80%;
             margin: 0 auto 12px;
+            display: flex;
+            justify-content: space-between;
+            input {
+                background: transparent;
+                border: 0;
+                outline: none;
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                &.edit {
+                    background: white;
+                    color: black;
+                }
+            }
+            svg {
+                top: 4px;
+                position: relative;
+            }
         }
 
         li {
@@ -103,6 +122,60 @@
             &[data-quality="3"] { color: $item-rare; }
             &[data-quality="4"] { color: $item-epic; }
             &[data-quality="5"] { color: $item-legendary; }
+        }
+    }
+
+    .add-profile {
+        width: 260px;
+        min-width: 260px;
+        height: 640px;
+        border-radius: 10px;
+        border: 1px solid #525252;
+        padding: 16px;
+        text-align: center;
+        background: #181818;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+            margin-bottom: 70px;
+            margin-top: 0;
+        }
+
+        svg {
+            width: 200px;
+            height: 200px;
+            color: #525252;
+            line {
+                transition: all 0.2s ease-in;
+                stroke: currentColor;
+            }
+        }
+
+        &:hover {
+            svg line {
+                stroke: #fff;
+            }
+        }
+    }
+
+    .export-profile {
+        position: absolute;
+        bottom: 22px;
+        right: 60px;
+    }
+
+    .delete-profile {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        svg {
+            width: 24px;
+            height: 24px;
         }
     }
 

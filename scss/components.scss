@@ -256,6 +256,7 @@
 }
 
 .alerts {
+    pointer-events: none;
     position: fixed;
     left: 0;
     bottom: 20px;
@@ -263,6 +264,7 @@
     z-index: 999;
 }
 .alert {
+    pointer-events: all;
     padding: 20px;
     border-radius: 4px;
     color: #721c24;
