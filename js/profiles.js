@@ -204,7 +204,7 @@ SIM.PROFILES = {
 
     getItemHTML(item) {
         let icon = '';
-        if (runes[item.slot]) {
+        if (typeof runes !== 'undefined' && runes[item.slot]) {
             for (let rune of runes[item.slot]) {
                 if (rune.selected) {
                     icon = `<img src="dist/img/${rune.iconname}.jpg">`
