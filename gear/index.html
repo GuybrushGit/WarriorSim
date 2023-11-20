@@ -53,15 +53,14 @@
         for (let item of Item) {
           let obj = {};
           obj.id = parseInt(item.ID);
+          if (obj.id == 22478) debugger;
+
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
           obj.slot = getSlot(item.InventoryType);
           if (!obj.slot) continue;
           let sparse = getRow('ItemSparse', item.ID);
-          if (!sparse) { 
-            //console.log(obj.id + " has no sparse"); 
-            continue;
-          }
+          if (!sparse) continue;
           if (sparse.AllowableClass != "-1" && !(1 & parseInt(sparse.AllowableClass))) continue;
           if (obj.type == "Cloth" && obj.slot != "back") continue;
           obj.r = parseInt(item.RequiredLevel);
@@ -82,6 +81,16 @@
           if (agi) obj.agi = agi;
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
+
+          if (parseInt(item.Resistances_2) || parseInt(item.Resistances_3) || parseInt(item.Resistances_4) || parseInt(item.Resistances_5)) obj.resist = {};
+          if (parseInt(item.Resistances_2)) obj.resist.fire = parseInt(item.Resistances_2);
+          if (parseInt(item.Resistances_3)) obj.resist.nature = parseInt(item.Resistances_3);
+          if (parseInt(item.Resistances_4)) obj.resist.frost = parseInt(item.Resistances_4);
+          if (parseInt(item.Resistances_5)) obj.resist.shadow = parseInt(item.Resistances_5);
+
+          
+
+          
         
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
           if (spells.length) {
@@ -93,12 +102,14 @@
               if (spell.TriggerType == "1") { // On Equip
                 effects.forEach(e => {
                   if (e.Effect == 6 && e.EffectAura == 99)
-                    obj.ap = parseInt(e.EffectBasePoints) + 1;
+                    obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
+                  if (e.Effect == 6 && e.EffectAura == 102 && e.EffectMiscValue_0 & 32)
+                    obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 54)
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
-                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95) {
+                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95 && e.EffectMiscValue_0 != 226) {
                     obj.skill = parseInt(e.EffectBasePoints) + 1;
                     if (item.ClassID != "2") {
                       if (item.ID == 14551) obj.type = "Varied";
@@ -111,54 +122,11 @@
                 });
               }
 
-              // check: Thunderbrew's Boot Flask
-              // gear/:135 check: Freezing Band
-              // gear/:135 check: Guardian Talisman
-              // gear/:135 check: Deprecated Static Charm
-              // gear/:135 check: Red Whelp Gloves
-              // gear/:135 check: Green Whelp Armor
-              // gear/:135 check: Truesilver Breastplate
-              // gear/:135 check: Horned Viking Helmet
-              // gear/:135 check: Uther's Strength
-              // gear/:135 check: Force of Will
-              // gear/:135 check: Hand of Justice
-              // gear/:135 check: Girdle of Reprisal
-              // gear/:135 check: Linken's Boomerang
-              // gear/:135 check: Demon Forged Breastplate
-              // gear/:135 check: Fiery Plate Gauntlets
-              // gear/:135 check: Storm Gauntlets
-              // gear/:135 check: Invulnerable Mail
-              // gear/:135 check: Orb of Fire
-              // gear/:135 check: Piccolo of the Flaming Fire
-              // gear/:135 check: Ramstein's Lightning Bolts
-              // gear/:135 check: Cloak of Fire
-              // gear/:135 check: The Lion Horn of Stormwind
-              // gear/:135 check: Blazefury Medallion
-              // gear/:135 check: Mark of the Chosen
-              // gear/:135 check: Darkmoon Card: Heroism
-              // gear/:135 check: Darkmoon Card: Blue Dragon
-              // gear/:135 check: Darkmoon Card: Maelstrom
-              // gear/:135 check: Zandalarian Hero Badge
-              // gear/:135 check: Wrath of Cenarius
-              // gear/:135 check: Scarab Brooch
-              // gear/:135 check: Badge of the Swarmguard
-              // gear/:135 check: Petrified Scarab
-              // gear/:135 check: Beastmaster's Cap
-              // gear/:135 check: Beastmaster's Gloves
-              // gear/:135 check: Beastmaster's Tunic
-              // gear/:135 check: Beastmaster's Boots
-              // gear/:135 check: Black Grasp of the Destroyer
-              // gear/:135 check: Talisman of Ascendance
-              // gear/:135 check: Jom Gabbar
-              // gear/:135 check: Heart of Wyrmthalak
-              // gear/:135 check: Zandalarian Hero Charm
-              // might of cenarius
-
               // procs
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2" && item.ID != 11815) {
+                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 7284) {
                   //console.log("check: " + obj.name);
                 }
                 else {
@@ -167,7 +135,6 @@
               }
               if (proc2 && !proc) proc = proc2;
               if (proc && (proc.spell || proc.extra || proc.dmg || proc.tick) && obj.slot !== "ranged") obj.proc = proc;
-              if (item.ID == 19968) delete obj.proc;
 
               // custom spells
               for(let c of customSpells) {
@@ -179,20 +146,23 @@
               for(let c of customPPM) {
                 if (c.i == item.ID) {
                   obj.proc = obj.proc || {};
-                  obj.proc.ppm = c.p;
+                  if (c.p) obj.proc.ppm = c.p;
+                  if (c.c) obj.proc.chance = c.c;
                 }
               }
             });
           }
 
           if (parseInt(sparse.RandomSelect)) {
-            let suff = getItemSuffixes(obj.id);
+            let suff = getItemSuffixes(obj.id, sparse.OverallQualityID);
             if (!suff.s) continue;
             suff.s.forEach(s => {
               if (/[+-]\d+ Strength/.test(s)) { obj.str = parseInt(s); }
               if (/[+-]\d+ Agility/.test(s)) { obj.agi = parseInt(s); }
+              if (/[+-]\d+ Stamina/.test(s)) { obj.sta = parseInt(s); }
             });
-            obj.name += " of the Tiger";
+            if (suff.id < 2000) obj.name += " of the Tiger";
+            else obj.name += " of Striking";
             obj.rand = suff.id;
           }
 
@@ -202,12 +172,59 @@
           if (obj.id == 18706) include = true;
           if (obj.id == 19024) include = true;
           if (obj.id == 21567) include = true;
+          if (obj.id == 19949) include = true;
+          if (obj.id == 23570) include = true;
+          if (obj.id == 21670) include = true;
+          if (obj.id == 20130) include = true;
+          if (obj.id == 21180) include = true;
+          if (obj.id == 14552) include = true;
           if (obj.id == 17780) exclude = true;
+          if (obj.id == 11905) exclude = true;
+          if (obj.id == 10455) exclude = true;
+          if (obj.id == 13213) exclude = true;
+          if (obj.id == 21891) exclude = true;
+          if (obj.id == 13171) exclude = true;
+          if (obj.name.indexOf('Bonescythe') > -1) exclude = true;
+          if (obj.name.indexOf('Beastmaster') > -1) exclude = true;
+          if (obj.name.indexOf('Beaststalker') > -1) exclude = true;
+          if (obj.name.indexOf('Cryptstalker') > -1) exclude = true;
+          if (obj.name.indexOf('Darkmantle') > -1) exclude = true;
+          if (obj.name.indexOf('Atiesh') > -1) exclude = true;
+          
+
+
+          // todo items
+          // https://www.wowhead.com/classic/item=869/dazzling-longsword
+          // https://www.wowhead.com/classic/item=7961/phantom-blade
+          // https://www.wowhead.com/classic/item=10626/ragehammer
+          // https://www.wowhead.com/classic/item=9423/the-jackhammer
+          // https://www.wowhead.com/classic/item=11817/lord-generals-sword
+          // https://www.wowhead.com/classic/item=9418/stoneslayer
+          // https://www.wowhead.com/classic/item=12469/mutilator
+          // https://www.wowhead.com/classic/item=13204/bashguuder
+          // https://www.wowhead.com/classic/item=22988/the-end-of-dreams
+          // https://www.wowhead.com/classic/item=19901/zulian-slicer
+          // https://www.wowhead.com/classic/item=12709/pips-skinner
+          // https://www.wowhead.com/classic/item=12790/arcanite-champion
+          // https://www.wowhead.com/classic/item=11607/dark-iron-sunderer
+          // https://www.wowhead.com/classic/item=12802/darkspear
+          // https://www.wowhead.com/classic/item=17766/princess-theradras-scepter
+          // https://www.wowhead.com/classic/item=23039/the-eye-of-nerub
+          // https://www.wowhead.com/classic/item=16007/flawless-arcanite-rifle
+
+          
+          
 
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
           if (exclude) continue;
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
           if (isUnobtainable(obj.id)) continue;
+          
+          // if (include) continue;
+          // if (exclude || obj.proc || obj.str || obj.agi || obj.ap || obj.crit || obj.hit || obj.skill) continue;
+          // if (isUnobtainable(obj.id)) continue;
+          // if (parseInt(sparse.OverallQualityID) < 2) continue;
+          // if (spells.length == 0) continue;
 
           if (obj.slot == "finger") {
             gear["finger1"].push(obj);
@@ -311,7 +328,10 @@
         {i:13286,s:"Rivenspike"},
         {i:17076,s:"Bonereaver"},
         {i:647,s:"Destiny"},
-        {i:19334,s:"Untamed"}
+        {i:19334,s:"Untamed"},
+        {i:9465,s:"Vibroblade"},
+        {i:9485,s:"Vibroblade"},
+        
       ];
 
       var customPPM = [
@@ -332,7 +352,14 @@
         {i:17075,p:0.6},
         {i:19918,p:4},
         {i:17182,p:0.7},
-        {i:17076,p:2}
+        {i:17076,p:2},
+        {i:11815,c:2},
+        {i:19289,c:2},
+        {i:22321,c:2},
+        {i:17111,c:100},
+        {i:12631,c:100},
+        {i:7284,c:5},
+        {i:19968,c:100},
       ];
 
       var getProcFromSpell = function(id) {
@@ -375,11 +402,6 @@
           if (id == 21151 || id == 21992 || id == 24388) {
             proc.binaryspell = true;
           }
-          // todo: custom chances
-          if (id == 15601) {
-            proc.chance = 2;
-          }
-          if (id == 11791) proc.spell = "Vibroblade";
         });
 
         if (proc.spell || proc.extra || proc.dmg || proc.tick) return proc;
@@ -424,7 +446,7 @@
           });
         });
       }
-      var getItemSuffixes = function(id) {
+      var getItemSuffixes = function(id, quality) {
           let result = [], result2 = [];
           let ench;
           for(let j = 0; j < item_template.length; j++) {
@@ -439,7 +461,8 @@
           let high = { id: 0, s: ''};
           for(let x = 0; x < result.length; x++) {
             for(let y = 0; y < suffixes.length; y++) {
-              if (result[x] >= 669 && result[x] <= 753) {
+              if ((result[x] >= 669 && result[x] <= 753) || // of the Tiger
+                  (quality >= 3 && (result[x] == 2149 || result[x] == 2150 || result[x] == 2151 || result[x] == 2154 || result[x] == 2157 || result[x] == 2158 || result[x] == 2163))) { // of Striking
                 if (suffixes[y].id == result[x] && suffixes[y].id > high.id) {
                   high = suffixes[y];
                 }
@@ -468,7 +491,7 @@
           case "17": return "twohand";
           case "20": return "chest";
           case "21": return "mainhand";
-          case "21": return "offhand";
+          case "22": return "offhand";
           case "26": return "ranged";
         }
       }
@@ -499,6 +522,7 @@
             case "13": return "Fist";
             case "14": return "Miscellaneous";
             case "15": return "Dagger";
+            case "18": return "Crossbow";
           }
         }
       }

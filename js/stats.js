@@ -318,9 +318,9 @@ SIM.STATS = {
             let total = data.reduce((a, b) => a + b, 0);
             if (!total) continue;
             let dps = (sim.player.spells[name].totaldmg / sim.totalduration).toFixed(2);
-            let dpr = (dps / (sim.player.spells[name].cost * (total / i))).toFixed(2);
+            let dpr = ((sim.player.spells[name].totaldmg / i) / (sim.player.spells[name].cost * (total / i))).toFixed(2);
             if (name == "execute")
-                dpr = (dps / ((sim.player.spells[name].cost * (total / i)) + (sim.player.spells[name].totalusedrage / i))).toFixed(2);
+                dpr = ((sim.player.spells[name].totaldmg / i) / ((sim.player.spells[name].cost * (total / i)) + (sim.player.spells[name].totalusedrage / i))).toFixed(2);
             html += `<tr><td>${n}</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;
         }
 
@@ -328,7 +328,7 @@ SIM.STATS = {
             let totaldmg = sim.player.auras.rend.totaldmg;
             let uses = sim.player.auras.rend.uses;
             let dps = (totaldmg / sim.totalduration).toFixed(2);
-            let dpr = (dps / (sim.player.auras.rend.cost * (uses / i))).toFixed(2);
+            let dpr = ((totaldmg / i) / (sim.player.auras.rend.cost * (uses / i))).toFixed(2);
             html += `<tr><td>${sim.player.auras.rend.name}</td><td></td><td></td><td></td><td></td><td></td><td>${(uses / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;
         }
 

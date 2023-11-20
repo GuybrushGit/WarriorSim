@@ -167,9 +167,7 @@ class Execute extends Spell {
         return this.timer;
     }
     canUse() {
-        return !this.player.timer && this.cost <= this.player.rage && 
-            (!this.player.auras.consumedrage || !this.player.auras.consumedrage.executestacks || 
-             this.player.auras.consumedrage.executestacks <= this.player.auras.consumedrage.stacks);
+        return !this.player.timer && this.cost <= this.player.rage;
     }
 }
 
@@ -201,7 +199,7 @@ class HeroicStrike extends Spell {
     constructor(player, id) {
         super(player, id, "Heroic Strike");
         this.cost = 15 - player.talents.impheroicstrike;
-        this.bonus = player.aqbooks ? 157 : this.value1;
+        this.bonus = this.value1;
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
@@ -438,7 +436,9 @@ class Aura {
         if (spell.value2) this.value2 = spell.value2;
         if (spell.procblock) this.procblock = spell.procblock;
         if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);
-        if (spell.executestacksactive) this.executestacks = parseInt(spell.executestacks);
+        if (spell.erageblockactive) this.erageblock = parseInt(spell.erageblock);
+        if (spell.chargeblockactive) this.chargeblock = parseInt(spell.chargeblock);
+        if (spell.echargeblockactive) this.echargeblock = parseInt(spell.echargeblock);
         if (spell.wfap) this.wfap = parseInt(spell.wfap);
         if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
 

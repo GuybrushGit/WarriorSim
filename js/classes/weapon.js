@@ -36,7 +36,7 @@ class Weapon {
 
         if (item.proc) {
             this.proc1 = {};
-            this.proc1.chance = ~~(item.speed * (item.proc.ppm || 1) / 0.006);
+            this.proc1.chance = item.proc.chance ? item.proc.chance * 100 : ~~(item.speed * (item.proc.ppm || 1) / 0.006);
             if (item.proc.dmg && !item.proc.magic) this.proc1.physdmg = item.proc.dmg;
             if (item.proc.dmg && item.proc.magic) this.proc1.magicdmg = item.proc.dmg;
             if (item.proc.binaryspell) this.proc1.binaryspell = true;

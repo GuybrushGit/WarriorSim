@@ -11,6 +11,8 @@ SIM.UI = {
         view.loadSession();
         view.loadWeapons("mainhand");
         view.updateSidebar();
+        view.main.find('.js-import').hide();
+        view.main.find('.js-export').hide();
 
         view.body.on('click', '.wh-tooltip, .tablesorter-default a', function (e) {
             e.preventDefault();
@@ -239,6 +241,18 @@ SIM.UI = {
             $(this).toggleClass('open');
             view.body.toggleClass('sidebar-mobile-open');
         });
+
+        view.tcontainer.on('keyup', 'input[name="search"]', function (e) {
+            e.preventDefault();
+            if (e.key == "Escape") $(this).val('');
+            let val = $(this).val();
+            view.tcontainer.find('.gear td:first-child').each(function() {
+                let td = $(this).get(0);
+                if (!val || td.textContent.toLowerCase().indexOf(val.toLowerCase()) > -1) td.parentElement.classList.remove('filtered');
+                else td.parentElement.classList.add('filtered');
+            });
+        });
+
     },
 
     enableEditMode: function() {
@@ -889,16 +903,12 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Crit</th>
-                                <th>Hit</th>`+ 
-                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
-                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
-                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
-                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
-                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
-                                `<th>Min</th>
+                                <th>Hit</th>
+                                <th>Min</th>
                                 <th>Max</th>
                                 <th>Speed</th>
                                 <th>Skill</th>
+                                <th>Resist</th>
                                 <th>Type</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -939,11 +949,23 @@ SIM.UI = {
             if (source && !view.filter.find('.sources [data-id="' + source + '"]').hasClass('active'))
                 continue;
 
+            if (source === 'resistances-list' && !$(".resistances[data-id='"+item.subsource+"-resist']").prop("checked")) {
+                continue;
+            }
+
             if (item.hidden && !editmode) continue;
 
             let tooltip = item.id, rand = '';
             if (tooltip == 199211) tooltip = 19921;
             if (item.rand) rand = '?rand=' + item.rand;
+
+            let resist = '';
+            if (item.resist) {
+                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
+                if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
+                if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+            }
 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
@@ -954,16 +976,12 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.crit || ''}</td>
-                        <td>${item.hit || ''}</td>` +
-                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        `<td>${item.mindmg || ''}</td>
+                        <td>${item.hit || ''}</td>
+                        <td>${item.mindmg || ''}</td>
                         <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.type || ''}</td>
                         <td class="ppm"><p contenteditable="true">${item.proc && item.proc.ppm || ''}</p></td>
                         <td>${item.dps || ''}</td>
@@ -973,6 +991,7 @@ SIM.UI = {
         table += '</tbody></table></section>';
 
         view.tcontainer.empty();
+        view.tcontainer.append(`<div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>`);
         view.tcontainer.append(table);
         let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
@@ -1024,13 +1043,9 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Hit</th>
-                                <th>Crit</th>` +
-                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
-                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
-                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
-                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
-                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
-                                `<th>Skill</th>
+                                <th>Crit</th>
+                                <th>Skill</th>
+                                <th>Resist</th>
                                 <th>Type</th>
                                 <th>DPS</th>
                             </tr>
@@ -1073,24 +1088,26 @@ SIM.UI = {
             if (tooltip == 198981) tooltip = 19898;
             if (item.rand) rand = '?rand=' + item.rand;
 
+            let resist = '';
+            if (item.resist) {
+                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
+                if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
+                if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+            }
+
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
 
-
-            var resistCheckList = SIM.UI.resistCheckList();
             table += `<td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.crit || ''}</td>` + 
-                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        `<td>${item.skill || ''}</td>
+                        <td>${item.crit || ''}</td>
+                        <td>${item.skill || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -1100,6 +1117,7 @@ SIM.UI = {
 
         view.tcontainer.empty();
         view.loadRunes(type, editmode);
+        view.tcontainer.append(`<div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>`);
         view.tcontainer.append(table);
         let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
@@ -1137,19 +1155,23 @@ SIM.UI = {
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Hit</th>
-                                <th>Crit</th>` +
-                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
-                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
-                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
-                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
-                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
-                                `<th>Skill</th>
+                                <th>Crit</th>
+                                <th>Skill</th>
+                                <th>Resist</th>
                                 <th>DPS</th>
                             </tr>
                         </thead>
                     <tbody>`;
 
         for (let item of gear.custom) {
+            let resist = '';
+            if (item.resist) {
+                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
+                if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
+                if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+            }
+
             if (item.hidden && !editmode) continue;
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
@@ -1158,13 +1180,9 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.crit || ''}</td>` +
-                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        `<td>${item.skill_1 || ''}</td>
+                        <td>${item.crit || ''}</td>
+                        <td>${item.skill_1 || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
         }
@@ -1197,13 +1215,9 @@ SIM.UI = {
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
-                                <th>Haste</th>`+
-                                // <th class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">SR</th>
-                                // <th class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">AR</th>
-                                // <th class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">NR</th>
-                                // <th class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">FiR</th>
-                                // <th class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">FR</th>
-                                `<th>Crit</th>
+                                <th>Haste</th>
+                                <th>Resist</th>
+                                <th>Crit</th>
                                 <th>Hit</th>
                                 <th>Damage</th>
                                 <th>PPM</th>
@@ -1219,10 +1233,18 @@ SIM.UI = {
                 continue;
             }
 
-            // if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
-            //     continue;
+            if (item.phase && !view.filter.find('.phases [data-id="' + item.phase + '"]').hasClass('active'))
+                continue;
 
             if (item.hidden && !editmode) continue;
+
+            let resist = '';
+            if (item.resist) {
+                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
+                if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
+                if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+            }
 
             table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
@@ -1230,13 +1252,9 @@ SIM.UI = {
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.haste || ''}</td>` +
-                        // <td class="shadow-resist ${resistCheckList.shadow ? '' : 'hidden'}">${(item.resist || {}).shadow || ''}</td>
-                        // <td class="arcane-resist ${resistCheckList.arcane ? '' : 'hidden'}">${(item.resist || {}).arcane || ''}</td>
-                        // <td class="nature-resist ${resistCheckList.nature ? '' : 'hidden'}">${(item.resist || {}).nature || ''}</td>
-                        // <td class="fire-resist ${resistCheckList.fire ? '' : 'hidden'}">${(item.resist || {}).fire || ''}</td>
-                        // <td class="frost-resist ${resistCheckList.frost ? '' : 'hidden'}">${(item.resist || {}).frost || ''}</td>
-                        `<td>${item.crit || ''}</td>
+                        <td>${item.haste || ''}</td>
+                        <td>${resist || ''}</td>
+                        <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.bonusdmg || ''}</td>
                         <td>${item.ppm || ''}</td>
@@ -1304,3 +1322,4 @@ SIM.UI = {
 
 var eyesvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>';
 var eyesvghidden = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.885 14.988l3.104-3.098.011.11c0 1.654-1.346 3-3 3l-.115-.012zm8.048-8.032l-3.274 3.268c.212.554.341 1.149.341 1.776 0 2.757-2.243 5-5 5-.631 0-1.229-.13-1.785-.344l-2.377 2.372c1.276.588 2.671.972 4.177.972 7.733 0 11.985-8.449 11.985-8.449s-1.415-2.478-4.067-4.595zm1.431-3.536l-18.619 18.58-1.382-1.422 3.455-3.447c-3.022-2.45-4.818-5.58-4.818-5.58s4.446-7.551 12.015-7.551c1.825 0 3.456.426 4.886 1.075l3.081-3.075 1.382 1.42zm-13.751 10.922l1.519-1.515c-.077-.264-.132-.538-.132-.827 0-1.654 1.346-3 3-3 .291 0 .567.055.833.134l1.518-1.515c-.704-.382-1.496-.619-2.351-.619-2.757 0-5 2.243-5 5 0 .852.235 1.641.613 2.342z"/></svg>';
+var searchSVG = '<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="20px" height="20px"><path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>';

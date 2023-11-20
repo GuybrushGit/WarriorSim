@@ -200,12 +200,6 @@ class Player {
                     if (type == "mainhand" || type == "offhand" || type == "twohand")
                         this.addWeapon(item, type);
 
-                    // Blazefury Medallion
-                    if (item.id == 17111) {
-                        this.attackproc = {};
-                        this.attackproc.chance = item.proc.chance * 100;
-                        this.attackproc.magicdmg = item.proc.dmg;
-                    }
 
                     if (item.proc && item.proc.chance && (type == "trinket1" || type == "trinket2")) {
                         let proc = {};
@@ -217,6 +211,11 @@ class Player {
                             proc.spell = this.auras[item.proc.spell.toLowerCase()];
                         }
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
+                    }
+                    else if (item.proc && item.proc.chance) {
+                        this.attackproc = {};
+                        this.attackproc.chance = item.proc.chance * 100;
+                        this.attackproc.magicdmg = item.proc.dmg;
                     }
 
                     this.items.push(item.id);
@@ -386,8 +385,8 @@ class Player {
             if (buff.active) {
                 let apbonus = 0;
                 if (buff.group == "battleshout") {
-                    let shoutap = this.aqbooks ? buff.ap + 39 : buff.ap;
-                    if (buff.id == 27578 && this.enhancedbs) shoutap += 30;
+                    let shoutap = buff.ap;
+                    if (this.enhancedbs) shoutap += 30;
                     shoutap = ~~(shoutap * (1 + this.talents.impbattleshout));
                     apbonus = shoutap - buff.ap;
                 }
@@ -413,11 +412,11 @@ class Player {
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
 
-                if (buff.group == "blessingmight" && this.aqbooks)
+                if (buff.group == "blessingmight" && this.aqbooks && this.level == 60)
                     this.base.ap += 36;
-                if (buff.group == "graceair" && this.aqbooks)
+                if (buff.group == "graceair" && this.aqbooks && this.level == 60)
                     this.base.agi += 10;
-                if (buff.group == "strengthearth" && this.aqbooks)
+                if (buff.group == "strengthearth" && this.aqbooks && this.level == 60)
                     this.base.str += 16;
             }
         }
@@ -967,7 +966,7 @@ class Player {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
-                if (weapon.proc1.magicdmg) procdmg += this.magicproc(weapon.proc1);
+                if (weapon.proc1.magicdmg) procdmg += weapon.proc1.chance == 10000 ? weapon.proc1.magicdmg : this.magicproc(weapon.proc1);
                 if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
                 /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
             }
@@ -1003,7 +1002,7 @@ class Player {
                 /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
-                if (this.attackproc.magicdmg) procdmg += this.magicproc(this.attackproc);
+                if (this.attackproc.magicdmg) procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
                 /* start-log */ if (log) this.log(`Misc proc`); /* end-log */
             }
@@ -1074,8 +1073,11 @@ class Player {
         };
     }
     log(msg) {
-        let color = '\x1b[36m';
+        let color = '\x1b[33m';
         if (msg.indexOf('attack') > 1 || msg.indexOf('Global') > -1) color = '\x1b[90m';
+        else if (msg.indexOf('tick') > 1) color = '\x1b[31m';
+        else if (msg.indexOf(' for ') > -1) color = '\x1b[35m';
+        else if (msg.indexOf('applied') > 1 || msg.indexOf('removed') > -1) color = '\x1b[36m';
         console.log(color+'%s\x1b[0m',`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);
     }
 }

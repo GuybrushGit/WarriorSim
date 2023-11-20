@@ -310,6 +310,8 @@ class Simulation {
                     else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { 
                         player.spelldelay = 1; delayedspell = player.spells.berserkerrage; 
                     }
+                    else if (player.auras.consumedrage && player.auras.consumedrage.erageblock && player.rage < player.auras.consumedrage.erageblock) { } 
+                    else if (player.auras.consumedrage && player.auras.consumedrage.echargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.echargeblock && player.rage < 80) { } 
                     else if (player.stats.ap >= player.spells.execute.priorityap) {
                         if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
                             player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
@@ -330,6 +332,7 @@ class Simulation {
                 // prevent using spells while waiting for consumed by rage proc
                 else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 80) { } 
                 else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
+                else if (player.auras.consumedrage && player.auras.consumedrage.chargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.chargeblock && player.rage < 80) { } 
 
                 // Normal phase - rage cost
                 else if (player.spells.overpower && player.spells.overpower.canUse()) { player.spelldelay = 1; delayedspell = player.spells.overpower; }
@@ -350,6 +353,8 @@ class Simulation {
                     // prevent using spells while waiting for consumed by rage proc
                     if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 80) { } 
                     else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
+                    else if (player.auras.consumedrage && player.auras.consumedrage.chargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.chargeblock && player.rage < 80) { } 
+
                     else if (player.spells.heroicstrike && player.spells.heroicstrike.canUse()) { 
                         player.heroicdelay = 1; delayedheroic = player.spells.heroicstrike;
                     }

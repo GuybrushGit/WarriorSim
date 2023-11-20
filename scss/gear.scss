@@ -178,6 +178,10 @@ section.main {
         }
     }
 
+    .filtered {
+        display: none;
+    }
+
     .profilejson {
         height: 270px;
         width: 600px;
@@ -209,6 +213,7 @@ section.main {
         justify-content: left;
         align-items: center;
         flex-wrap: wrap;
+        margin-bottom: 20px;
 
         label {
             text-align: center;
@@ -224,7 +229,27 @@ section.main {
             }
         }
     }
+
     
+    .search {
+        position: relative;
+        width: 222px;
+        input {
+            background: #171717;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid hsla(0,0%,87%,.4);
+            padding: 5px 10px;
+            width: 200px;
+        }
+        svg {
+            position: absolute;
+            right: 6px;
+            top: 4px;
+            fill: white;
+            font-size: 12px;
+        }
+    }
     @include tablet {
         th:not(:first-child):not(:last-child) {
             display: none;
@@ -239,4 +264,5 @@ section.main {
         box-sizing: border-box;
     }
 }
+
 
