@@ -317,6 +317,9 @@ var gear = {
       "name": "Helm of Fire",
       "agi": 17,
       "sta": 10,
+      "resist": {
+        "fire": 5
+      },
       "proc": {
         "magic": true,
         "dmg": 331,
@@ -734,7 +737,10 @@ var gear = {
       "r": 40,
       "name": "Icemetal Barbute",
       "str": 15,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "frost": 10
+      }
     },
     {
       "id": 11124,
@@ -788,7 +794,10 @@ var gear = {
       "name": "Ghostshroud",
       "agi": 19,
       "str": 12,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "shadow": 5
+      }
     },
     {
       "id": 12427,
@@ -1462,7 +1471,10 @@ var gear = {
       "r": 60,
       "name": "Helm of Might",
       "str": 15,
-      "sta": 35
+      "sta": 35,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 16963,
@@ -1471,7 +1483,11 @@ var gear = {
       "r": 60,
       "name": "Helm of Wrath",
       "str": 17,
-      "sta": 40
+      "sta": 40,
+      "resist": {
+        "frost": 10,
+        "shadow": 10
+      }
     },
     {
       "id": 17767,
@@ -1480,6 +1496,9 @@ var gear = {
       "r": 46,
       "name": "Bloomsprout Headpiece",
       "sta": 18,
+      "resist": {
+        "nature": 10
+      },
       "ap": 36
     },
     {
@@ -1498,7 +1517,11 @@ var gear = {
       "r": 53,
       "name": "Felhide Cap",
       "agi": 21,
-      "sta": 14
+      "sta": 14,
+      "resist": {
+        "fire": 8,
+        "shadow": 8
+      }
     },
     {
       "id": 18421,
@@ -1527,7 +1550,10 @@ var gear = {
       "r": 58,
       "name": "Grand Crusader's Helm",
       "str": 16,
-      "sta": 16
+      "sta": 16,
+      "resist": {
+        "shadow": 15
+      }
     },
     {
       "id": 18817,
@@ -1536,6 +1562,9 @@ var gear = {
       "r": 60,
       "name": "Crown of Destruction",
       "sta": 23,
+      "resist": {
+        "fire": 10
+      },
       "crit": 2,
       "ap": 44
     },
@@ -1625,6 +1654,9 @@ var gear = {
       "r": 58,
       "name": "Darkrune Helm",
       "sta": 13,
+      "resist": {
+        "shadow": 25
+      },
       "crit": 1
     },
     {
@@ -1789,7 +1821,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Helmet",
       "str": 12,
-      "sta": 24
+      "sta": 24,
+      "resist": {
+        "frost": 44
+      }
     },
     {
       "id": 23020,
@@ -1798,7 +1833,10 @@ var gear = {
       "r": 60,
       "name": "Polar Helmet",
       "agi": 18,
-      "sta": 24
+      "sta": 24,
+      "resist": {
+        "frost": 44
+      }
     },
     {
       "id": 23033,
@@ -1807,7 +1845,10 @@ var gear = {
       "r": 60,
       "name": "Icy Scale Coif",
       "agi": 18,
-      "sta": 24
+      "sta": 24,
+      "resist": {
+        "frost": 44
+      }
     },
     {
       "id": 23244,
@@ -2110,6 +2151,9 @@ var gear = {
       "r": 56,
       "name": "Emberfury Talisman",
       "sta": 8,
+      "resist": {
+        "fire": 7
+      },
       "crit": 1
     },
     {
@@ -2192,6 +2236,9 @@ var gear = {
       "name": "Blazefury Medallion",
       "agi": 13,
       "sta": 14,
+      "resist": {
+        "fire": 12
+      },
       "proc": {
         "magic": true,
         "dmg": 2,
@@ -2231,6 +2278,9 @@ var gear = {
       "name": "Onyxia Tooth Pendant",
       "agi": 12,
       "sta": 9,
+      "resist": {
+        "fire": 10
+      },
       "hit": 1,
       "crit": 1
     },
@@ -2463,6 +2513,9 @@ var gear = {
       "r": 60,
       "name": "Amulet of Foul Warding",
       "sta": 12,
+      "resist": {
+        "nature": 20
+      },
       "ap": 24
     },
     {
@@ -3331,7 +3384,10 @@ var gear = {
       "r": 52,
       "name": "Wailing Nightbane Pauldrons",
       "str": 14,
-      "sta": 14
+      "sta": 14,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 14503,
@@ -3574,6 +3630,9 @@ var gear = {
       "r": 55,
       "name": "Black Dragonscale Shoulders",
       "sta": 9,
+      "resist": {
+        "fire": 6
+      },
       "ap": 40
     },
     {
@@ -3778,7 +3837,10 @@ var gear = {
       "r": 60,
       "name": "Pauldrons of Might",
       "str": 15,
-      "sta": 22
+      "sta": 22,
+      "resist": {
+        "shadow": 7
+      }
     },
     {
       "id": 16961,
@@ -3787,7 +3849,10 @@ var gear = {
       "r": 60,
       "name": "Pauldrons of Wrath",
       "str": 13,
-      "sta": 27
+      "sta": 27,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 16995,
@@ -3805,7 +3870,10 @@ var gear = {
       "r": 46,
       "name": "Phytoskin Spaulders",
       "agi": 16,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "nature": 10
+      }
     },
     {
       "id": 17779,
@@ -3824,7 +3892,10 @@ var gear = {
       "name": "Flamescarred Shoulders",
       "agi": 12,
       "str": 12,
-      "sta": 11
+      "sta": 11,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 18384,
@@ -3860,7 +3931,11 @@ var gear = {
       "r": 52,
       "name": "Icy Tomb Spaulders",
       "agi": 11,
-      "sta": 11
+      "sta": 11,
+      "resist": {
+        "frost": 10,
+        "shadow": 10
+      }
     },
     {
       "id": 18742,
@@ -3974,6 +4049,9 @@ var gear = {
       "r": 60,
       "name": "Unnatural Leather Spaulders",
       "sta": 19,
+      "resist": {
+        "nature": 25
+      },
       "ap": 18
     },
     {
@@ -3983,7 +4061,10 @@ var gear = {
       "r": 60,
       "name": "Acid Inscribed Pauldrons",
       "str": 12,
-      "sta": 16
+      "sta": 16,
+      "resist": {
+        "nature": 25
+      }
     },
     {
       "id": 20680,
@@ -4190,7 +4271,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Pauldrons",
       "str": 9,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "frost": 33
+      }
     },
     {
       "id": 23243,
@@ -4679,7 +4763,10 @@ var gear = {
       "r": 50,
       "name": "Blisterbane Wrap",
       "agi": 15,
-      "sta": 3
+      "sta": 3,
+      "resist": {
+        "shadow": 6
+      }
     },
     {
       "id": 13108,
@@ -4696,7 +4783,11 @@ var gear = {
       "slot": "back",
       "r": 44,
       "name": "Blackflame Cape",
-      "agi": 12
+      "agi": 12,
+      "resist": {
+        "fire": 5,
+        "shadow": 5
+      }
     },
     {
       "id": 13121,
@@ -5082,7 +5173,11 @@ var gear = {
       "r": 60,
       "name": "Cloak of the Shrouded Mists",
       "agi": 22,
-      "sta": 12
+      "sta": 12,
+      "resist": {
+        "fire": 6,
+        "nature": 6
+      }
     },
     {
       "id": 17107,
@@ -5091,7 +5186,11 @@ var gear = {
       "r": 60,
       "name": "Dragon's Blood Cape",
       "str": 9,
-      "sta": 22
+      "sta": 22,
+      "resist": {
+        "fire": 5,
+        "shadow": 5
+      }
     },
     {
       "id": 18204,
@@ -5109,7 +5208,10 @@ var gear = {
       "r": 54,
       "name": "Shadewood Cloak",
       "str": 13,
-      "sta": 7
+      "sta": 7,
+      "resist": {
+        "nature": 7
+      }
     },
     {
       "id": 18511,
@@ -5146,7 +5248,10 @@ var gear = {
       "r": 57,
       "name": "Pale Moon Cloak",
       "str": 8,
-      "sta": 12
+      "sta": 12,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 19083,
@@ -5155,6 +5260,9 @@ var gear = {
       "r": 55,
       "name": "Frostwolf Legionnaire's Cloak",
       "sta": 11,
+      "resist": {
+        "frost": 5
+      },
       "ap": 24
     },
     {
@@ -5164,6 +5272,9 @@ var gear = {
       "r": 55,
       "name": "Stormpike Soldier's Cloak",
       "sta": 11,
+      "resist": {
+        "frost": 5
+      },
       "ap": 24
     },
     {
@@ -5490,7 +5601,10 @@ var gear = {
       "r": 39,
       "name": "Icemail Jerkin",
       "agi": 5,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "frost": 10
+      }
     },
     {
       "id": 2016,
@@ -6536,6 +6650,10 @@ var gear = {
       "name": "Nightbrace Tunic",
       "agi": 5,
       "sta": 10,
+      "resist": {
+        "fire": 10,
+        "shadow": 10
+      },
       "ap": 50
     },
     {
@@ -6583,7 +6701,10 @@ var gear = {
       "name": "Breastplate of the Chromatic Flight",
       "agi": 10,
       "str": 20,
-      "sta": 30
+      "sta": 30,
+      "resist": {
+        "fire": 15
+      }
     },
     {
       "id": 13067,
@@ -6593,7 +6714,10 @@ var gear = {
       "name": "Hydralick Armor",
       "agi": 8,
       "str": 13,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 13090,
@@ -6640,7 +6764,10 @@ var gear = {
       "r": 54,
       "name": "Skul's Cold Embrace",
       "str": 19,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "frost": 10
+      }
     },
     {
       "id": 13944,
@@ -6962,6 +7089,9 @@ var gear = {
       "r": 53,
       "name": "Black Dragonscale Breastplate",
       "sta": 8,
+      "resist": {
+        "fire": 12
+      },
       "ap": 50
     },
     {
@@ -7177,7 +7307,10 @@ var gear = {
       "r": 60,
       "name": "Breastplate of Might",
       "str": 20,
-      "sta": 28
+      "sta": 28,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 16966,
@@ -7186,7 +7319,11 @@ var gear = {
       "r": 60,
       "name": "Breastplate of Wrath",
       "str": 17,
-      "sta": 40
+      "sta": 40,
+      "resist": {
+        "fire": 10,
+        "nature": 10
+      }
     },
     {
       "id": 17005,
@@ -7307,6 +7444,9 @@ var gear = {
       "r": 60,
       "name": "Interlaced Shadow Jerkin",
       "sta": 25,
+      "resist": {
+        "shadow": 30
+      },
       "ap": 28
     },
     {
@@ -7374,7 +7514,10 @@ var gear = {
       "r": 60,
       "name": "Dreamscale Breastplate",
       "agi": 15,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "nature": 30
+      }
     },
     {
       "id": 20479,
@@ -7428,7 +7571,13 @@ var gear = {
       "name": "Thick Silithid Chestguard",
       "agi": 21,
       "str": 15,
-      "sta": 30
+      "sta": 30,
+      "resist": {
+        "fire": 5,
+        "nature": 5,
+        "frost": 5,
+        "shadow": 5
+      }
     },
     {
       "id": 21652,
@@ -7438,7 +7587,10 @@ var gear = {
       "name": "Silithid Carapace Chestguard",
       "agi": 14,
       "str": 17,
-      "sta": 23
+      "sta": 23,
+      "resist": {
+        "nature": 35
+      }
     },
     {
       "id": 21680,
@@ -7526,7 +7678,10 @@ var gear = {
       "r": 60,
       "name": "Polar Tunic",
       "agi": 18,
-      "sta": 26
+      "sta": 26,
+      "resist": {
+        "frost": 40
+      }
     },
     {
       "id": 22664,
@@ -7535,6 +7690,9 @@ var gear = {
       "r": 60,
       "name": "Icy Scale Breastplate",
       "sta": 24,
+      "resist": {
+        "frost": 40
+      },
       "ap": 40
     },
     {
@@ -7544,7 +7702,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Breastplate",
       "str": 12,
-      "sta": 24
+      "sta": 24,
+      "resist": {
+        "frost": 42
+      }
     },
     {
       "id": 22872,
@@ -7696,7 +7857,10 @@ var gear = {
       "r": 60,
       "name": "Chestguard of Might",
       "str": 27,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 22089,
@@ -8321,6 +8485,9 @@ var gear = {
       "slot": "wrist",
       "r": 47,
       "name": "Darkwater Bracers of the Tiger",
+      "resist": {
+        "shadow": 7
+      },
       "agi": 10,
       "str": 9,
       "rand": 694
@@ -8340,6 +8507,9 @@ var gear = {
       "slot": "wrist",
       "r": 52,
       "name": "Emberplate Armguards of the Tiger",
+      "resist": {
+        "fire": 10
+      },
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -8386,6 +8556,9 @@ var gear = {
       "name": "Blackmist Armguards",
       "str": 5,
       "sta": 13,
+      "resist": {
+        "shadow": 10
+      },
       "hit": 1
     },
     {
@@ -9231,6 +9404,12 @@ var gear = {
       "r": 60,
       "name": "Dragonspur Wraps",
       "sta": 17,
+      "resist": {
+        "fire": 4,
+        "nature": 4,
+        "frost": 4,
+        "shadow": 4
+      },
       "ap": 32
     },
     {
@@ -9341,6 +9520,9 @@ var gear = {
       "r": 60,
       "name": "Beetle Scaled Wristguards",
       "sta": 14,
+      "resist": {
+        "nature": 15
+      },
       "ap": 18
     },
     {
@@ -9398,7 +9580,10 @@ var gear = {
       "r": 60,
       "name": "Polar Bracers",
       "agi": 12,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "frost": 20
+      }
     },
     {
       "id": 22665,
@@ -9407,6 +9592,9 @@ var gear = {
       "r": 60,
       "name": "Icy Scale Bracers",
       "sta": 17,
+      "resist": {
+        "frost": 20
+      },
       "ap": 32
     },
     {
@@ -9426,7 +9614,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Bracers",
       "str": 6,
-      "sta": 13
+      "sta": 13,
+      "resist": {
+        "frost": 24
+      }
     },
     {
       "id": 22936,
@@ -10790,6 +10981,9 @@ var gear = {
       "slot": "hands",
       "r": 37,
       "name": "Arachnid Gloves of the Tiger",
+      "resist": {
+        "nature": 10
+      },
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -10820,7 +11014,10 @@ var gear = {
       "r": 53,
       "name": "Molten Fists",
       "agi": 10,
-      "sta": 11
+      "sta": 11,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 11867,
@@ -10873,6 +11070,9 @@ var gear = {
       "slot": "hands",
       "r": 53,
       "name": "Fiery Plate Gauntlets",
+      "resist": {
+        "fire": 10
+      },
       "proc": {
         "magic": true,
         "dmg": 4,
@@ -11784,6 +11984,9 @@ var gear = {
       "name": "Gauntlets of Might",
       "str": 22,
       "sta": 17,
+      "resist": {
+        "fire": 7
+      },
       "hit": 1
     },
     {
@@ -11793,7 +11996,10 @@ var gear = {
       "r": 60,
       "name": "Gauntlets of Wrath",
       "str": 15,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 16978,
@@ -11845,7 +12051,10 @@ var gear = {
       "r": 54,
       "name": "Stonebark Gauntlets",
       "agi": 10,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "nature": 16
+      }
     },
     {
       "id": 18349,
@@ -11884,6 +12093,10 @@ var gear = {
       "name": "Doomhide Gauntlets",
       "agi": 14,
       "sta": 14,
+      "resist": {
+        "fire": 8,
+        "shadow": 8
+      },
       "ap": 42
     },
     {
@@ -11901,7 +12114,10 @@ var gear = {
       "r": 53,
       "name": "Plaguebat Fur Gloves",
       "agi": 13,
-      "sta": 14
+      "sta": 14,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 18823,
@@ -11911,6 +12127,10 @@ var gear = {
       "name": "Aged Core Leather Gloves",
       "str": 15,
       "sta": 15,
+      "resist": {
+        "fire": 8,
+        "shadow": 5
+      },
       "crit": 1,
       "skill": 5
     },
@@ -11957,6 +12177,12 @@ var gear = {
       "slot": "hands",
       "r": 60,
       "name": "Chromatic Gauntlets",
+      "resist": {
+        "fire": 5,
+        "nature": 5,
+        "frost": 5,
+        "shadow": 5
+      },
       "ap": 44,
       "crit": 1
     },
@@ -11967,7 +12193,10 @@ var gear = {
       "r": 60,
       "name": "Dark Iron Gauntlets",
       "agi": 12,
-      "sta": 16
+      "sta": 16,
+      "resist": {
+        "fire": 28
+      }
     },
     {
       "id": 19686,
@@ -12177,7 +12406,10 @@ var gear = {
       "name": "Gloves of the Hidden Temple",
       "agi": 21,
       "str": 18,
-      "sta": 22
+      "sta": 22,
+      "resist": {
+        "shadow": 6
+      }
     },
     {
       "id": 21623,
@@ -12227,7 +12459,10 @@ var gear = {
       "name": "Bile-Covered Gauntlets",
       "agi": 17,
       "str": 10,
-      "sta": 21
+      "sta": 21,
+      "resist": {
+        "nature": 20
+      }
     },
     {
       "id": 21691,
@@ -12236,7 +12471,10 @@ var gear = {
       "r": 60,
       "name": "Ooze-ridden Gauntlets",
       "str": 13,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "nature": 25
+      }
     },
     {
       "id": 21998,
@@ -12302,7 +12540,10 @@ var gear = {
       "r": 60,
       "name": "Polar Gloves",
       "agi": 18,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "frost": 30
+      }
     },
     {
       "id": 22666,
@@ -12311,6 +12552,9 @@ var gear = {
       "r": 60,
       "name": "Icy Scale Gauntlets",
       "sta": 22,
+      "resist": {
+        "frost": 30
+      },
       "ap": 22
     },
     {
@@ -12320,7 +12564,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Gauntlets",
       "str": 9,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "frost": 32
+      }
     },
     {
       "id": 22714,
@@ -13698,7 +13945,10 @@ var gear = {
       "name": "Frostbite Girdle",
       "agi": 15,
       "str": 5,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "frost": 10
+      }
     },
     {
       "id": 14588,
@@ -14436,7 +14686,10 @@ var gear = {
       "r": 60,
       "name": "Belt of Might",
       "str": 21,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "fire": 7
+      }
     },
     {
       "id": 16960,
@@ -14445,7 +14698,10 @@ var gear = {
       "r": 60,
       "name": "Waistband of Wrath",
       "str": 20,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 17778,
@@ -14492,7 +14748,10 @@ var gear = {
       "name": "Unmelting Ice Girdle",
       "agi": 14,
       "str": 14,
-      "sta": 14
+      "sta": 14,
+      "resist": {
+        "frost": 16
+      }
     },
     {
       "id": 19043,
@@ -14529,7 +14788,10 @@ var gear = {
       "name": "Frostwolf Plate Belt",
       "agi": 7,
       "str": 18,
-      "sta": 8
+      "sta": 8,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 19088,
@@ -14538,7 +14800,10 @@ var gear = {
       "r": 55,
       "name": "Frostwolf Mail Belt",
       "agi": 12,
-      "sta": 12
+      "sta": 12,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 19089,
@@ -14548,7 +14813,10 @@ var gear = {
       "name": "Frostwolf Leather Belt",
       "agi": 10,
       "str": 11,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 19125,
@@ -14577,7 +14845,10 @@ var gear = {
       "r": 60,
       "name": "Molten Belt",
       "agi": 28,
-      "sta": 16
+      "sta": 16,
+      "resist": {
+        "fire": 12
+      }
     },
     {
       "id": 19380,
@@ -14990,7 +15261,10 @@ var gear = {
       "name": "Stormpike Plate Girdle",
       "agi": 7,
       "str": 18,
-      "sta": 8
+      "sta": 8,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 19092,
@@ -14999,7 +15273,10 @@ var gear = {
       "r": 55,
       "name": "Stormpike Mail Girdle",
       "agi": 12,
-      "sta": 12
+      "sta": 12,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 19093,
@@ -15009,7 +15286,10 @@ var gear = {
       "name": "Stormpike Leather Girdle",
       "agi": 10,
       "str": 11,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "frost": 5
+      }
     },
     {
       "id": 20204,
@@ -15686,7 +15966,10 @@ var gear = {
       "r": 25,
       "name": "Petrolspill Leggings",
       "agi": 14,
-      "sta": 6
+      "sta": 6,
+      "resist": {
+        "fire": -10
+      }
     },
     {
       "id": 9624,
@@ -15956,7 +16239,10 @@ var gear = {
       "r": 48,
       "name": "Searingscale Leggings",
       "agi": 13,
-      "sta": 13
+      "sta": 13,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 11802,
@@ -16021,7 +16307,13 @@ var gear = {
       "name": "Legguards of the Chromatic Defier",
       "agi": 33,
       "str": 9,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "fire": 5,
+        "nature": 5,
+        "frost": 5,
+        "shadow": 5
+      }
     },
     {
       "id": 12963,
@@ -16075,7 +16367,10 @@ var gear = {
       "r": 34,
       "name": "Firemane Leggings",
       "str": 19,
-      "sta": 5
+      "sta": 5,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 13130,
@@ -16368,6 +16663,9 @@ var gear = {
       "r": 57,
       "name": "Black Dragonscale Leggings",
       "sta": 8,
+      "resist": {
+        "fire": 13
+      },
       "ap": 54
     },
     {
@@ -16600,7 +16898,10 @@ var gear = {
       "r": 49,
       "name": "Elemental Rockridge Leggings",
       "str": 20,
-      "sta": 18
+      "sta": 18,
+      "resist": {
+        "nature": 10
+      }
     },
     {
       "id": 17754,
@@ -16674,7 +16975,11 @@ var gear = {
       "r": 56,
       "name": "Flamewaker Legplates",
       "str": 18,
-      "sta": 22
+      "sta": 22,
+      "resist": {
+        "fire": 11,
+        "shadow": 11
+      }
     },
     {
       "id": 19117,
@@ -16711,7 +17016,10 @@ var gear = {
       "r": 60,
       "name": "Emberweave Leggings",
       "agi": 17,
-      "sta": 22
+      "sta": 22,
+      "resist": {
+        "fire": 35
+      }
     },
     {
       "id": 19694,
@@ -16840,6 +17148,9 @@ var gear = {
       "r": 58,
       "name": "Cenarion Reservist's Leggings",
       "sta": 13,
+      "resist": {
+        "nature": 25
+      },
       "ap": 26
     },
     {
@@ -16899,7 +17210,10 @@ var gear = {
       "r": 60,
       "name": "Onyx Embedded Leggings",
       "agi": 23,
-      "sta": 23
+      "sta": 23,
+      "resist": {
+        "shadow": 30
+      }
     },
     {
       "id": 21626,
@@ -16908,6 +17222,9 @@ var gear = {
       "r": 60,
       "name": "Slime-coated Leggings",
       "sta": 28,
+      "resist": {
+        "nature": 28
+      },
       "ap": 40
     },
     {
@@ -17007,7 +17324,10 @@ var gear = {
       "r": 60,
       "name": "Icebane Leggings",
       "str": 10,
-      "sta": 25
+      "sta": 25,
+      "resist": {
+        "frost": 40
+      }
     },
     {
       "id": 22701,
@@ -17016,7 +17336,10 @@ var gear = {
       "r": 60,
       "name": "Polar Leggings",
       "agi": 15,
-      "sta": 28
+      "sta": 28,
+      "resist": {
+        "frost": 40
+      }
     },
     {
       "id": 22702,
@@ -17025,7 +17348,10 @@ var gear = {
       "r": 60,
       "name": "Icy Scale Leggings",
       "agi": 15,
-      "sta": 28
+      "sta": 28,
+      "resist": {
+        "frost": 40
+      }
     },
     {
       "id": 22740,
@@ -17291,7 +17617,10 @@ var gear = {
       "r": 60,
       "name": "Legplates of Might",
       "str": 24,
-      "sta": 23
+      "sta": 23,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 16962,
@@ -17300,7 +17629,10 @@ var gear = {
       "r": 60,
       "name": "Legplates of Wrath",
       "str": 19,
-      "sta": 27
+      "sta": 27,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 20702,
@@ -17309,7 +17641,10 @@ var gear = {
       "r": 58,
       "name": "Cenarion Reservist's Legguards",
       "agi": 13,
-      "sta": 13
+      "sta": 13,
+      "resist": {
+        "nature": 25
+      }
     },
     {
       "id": 22092,
@@ -18856,7 +19191,10 @@ var gear = {
       "r": 60,
       "name": "Sabatons of Might",
       "str": 15,
-      "sta": 26
+      "sta": 26,
+      "resist": {
+        "shadow": 7
+      }
     },
     {
       "id": 16965,
@@ -18865,7 +19203,10 @@ var gear = {
       "r": 60,
       "name": "Sabatons of Wrath",
       "str": 13,
-      "sta": 30
+      "sta": 30,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 16977,
@@ -18883,7 +19224,10 @@ var gear = {
       "r": 54,
       "name": "Corehound Boots",
       "agi": 13,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "fire": 24
+      }
     },
     {
       "id": 16984,
@@ -18892,6 +19236,9 @@ var gear = {
       "r": 56,
       "name": "Black Dragonscale Boots",
       "sta": 10,
+      "resist": {
+        "fire": 24
+      },
       "ap": 28
     },
     {
@@ -18910,7 +19257,10 @@ var gear = {
       "r": 48,
       "name": "Albino Crocscale Boots",
       "agi": 20,
-      "sta": 5
+      "sta": 5,
+      "resist": {
+        "nature": 5
+      }
     },
     {
       "id": 18043,
@@ -18919,7 +19269,10 @@ var gear = {
       "r": 52,
       "name": "Coal Miner Boots",
       "str": 9,
-      "sta": 17
+      "sta": 17,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 18379,
@@ -19046,6 +19399,9 @@ var gear = {
       "slot": "feet",
       "r": 60,
       "name": "Dark Iron Boots of the Tiger",
+      "resist": {
+        "fire": 28
+      },
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -19086,7 +19442,10 @@ var gear = {
       "r": 60,
       "name": "Acid Inscribed Greaves",
       "str": 8,
-      "sta": 19
+      "sta": 19,
+      "resist": {
+        "nature": 25
+      }
     },
     {
       "id": 20629,
@@ -19163,7 +19522,10 @@ var gear = {
       "name": "Drudge Boots",
       "agi": 17,
       "str": 13,
-      "sta": 20
+      "sta": 20,
+      "resist": {
+        "nature": 20
+      }
     },
     {
       "id": 21645,
@@ -19666,6 +20028,9 @@ var gear = {
       "slot": "finger",
       "r": 32,
       "name": "Charged Gear of the Tiger",
+      "resist": {
+        "nature": 5
+      },
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -19954,6 +20319,9 @@ var gear = {
       "slot": "finger",
       "r": 60,
       "name": "Ragnaros Core of the Tiger",
+      "resist": {
+        "fire": 18
+      },
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -19976,7 +20344,10 @@ var gear = {
       "name": "Ocean's Breeze",
       "agi": 7,
       "str": 4,
-      "sta": 4
+      "sta": 4,
+      "resist": {
+        "fire": 15
+      }
     },
     {
       "id": 18400,
@@ -20719,6 +21090,9 @@ var gear = {
       "slot": "finger",
       "r": 32,
       "name": "Charged Gear of the Tiger",
+      "resist": {
+        "nature": 5
+      },
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -21007,6 +21381,9 @@ var gear = {
       "slot": "finger",
       "r": 60,
       "name": "Ragnaros Core of the Tiger",
+      "resist": {
+        "fire": 18
+      },
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -21029,7 +21406,10 @@ var gear = {
       "name": "Ocean's Breeze",
       "agi": 7,
       "str": 4,
-      "sta": 4
+      "sta": 4,
+      "resist": {
+        "fire": 15
+      }
     },
     {
       "id": 18400,
@@ -22447,7 +22827,10 @@ var gear = {
       "mindmg": 57,
       "maxdmg": 108,
       "agi": 4,
-      "sta": 6
+      "sta": 6,
+      "resist": {
+        "shadow": 6
+      }
     },
     {
       "id": 19107,
@@ -22614,6 +22997,9 @@ var gear = {
       "mindmg": 101,
       "maxdmg": 153,
       "sta": 5,
+      "resist": {
+        "nature": 7
+      },
       "ap": 24
     },
     {
@@ -22663,6 +23049,9 @@ var gear = {
       "speed": 2.2,
       "mindmg": 59,
       "maxdmg": 111,
+      "resist": {
+        "nature": 8
+      },
       "ap": 22
     },
     {
@@ -23057,7 +23446,10 @@ var gear = {
       "name": "Midnight Mace",
       "speed": 2.5,
       "mindmg": 46,
-      "maxdmg": 94
+      "maxdmg": 94,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 1207,
@@ -23518,7 +23910,10 @@ var gear = {
       "name": "Blackfang",
       "speed": 1.5,
       "mindmg": 17,
-      "maxdmg": 32
+      "maxdmg": 32,
+      "resist": {
+        "shadow": 5
+      }
     },
     {
       "id": 2243,
@@ -25265,7 +25660,10 @@ var gear = {
       "speed": 1.8,
       "mindmg": 31,
       "maxdmg": 59,
-      "str": 5
+      "str": 5,
+      "resist": {
+        "shadow": 5
+      }
     },
     {
       "id": 10623,
@@ -25437,6 +25835,9 @@ var gear = {
       "speed": 1.5,
       "mindmg": 38,
       "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -26464,6 +26865,9 @@ var gear = {
       "speed": 1.3,
       "mindmg": 41,
       "maxdmg": 77,
+      "resist": {
+        "fire": 10
+      },
       "proc": {
         "magic": true,
         "dmg": 90
@@ -27091,7 +27495,10 @@ var gear = {
       "speed": 2.4,
       "mindmg": 71,
       "maxdmg": 134,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "fire": 6
+      }
     },
     {
       "id": 17016,
@@ -27102,7 +27509,10 @@ var gear = {
       "speed": 2.4,
       "mindmg": 71,
       "maxdmg": 134,
-      "str": 10
+      "str": 10,
+      "resist": {
+        "fire": 6
+      }
     },
     {
       "id": 17046,
@@ -27681,6 +28091,10 @@ var gear = {
       "maxdmg": 183,
       "agi": 5,
       "sta": 8,
+      "resist": {
+        "fire": 8,
+        "nature": 9
+      },
       "proc": {
         "magic": true,
         "binaryspell": true,
@@ -27796,6 +28210,9 @@ var gear = {
       "mindmg": 90,
       "maxdmg": 168,
       "sta": 9,
+      "resist": {
+        "fire": 7
+      },
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -29408,7 +29825,10 @@ var gear = {
       "name": "Midnight Mace",
       "speed": 2.5,
       "mindmg": 46,
-      "maxdmg": 94
+      "maxdmg": 94,
+      "resist": {
+        "shadow": 10
+      }
     },
     {
       "id": 1203,
@@ -29700,7 +30120,10 @@ var gear = {
       "name": "Blackfang",
       "speed": 1.5,
       "mindmg": 17,
-      "maxdmg": 32
+      "maxdmg": 32,
+      "resist": {
+        "shadow": 5
+      }
     },
     {
       "id": 2243,
@@ -31442,7 +31865,10 @@ var gear = {
       "speed": 1.8,
       "mindmg": 31,
       "maxdmg": 59,
-      "str": 5
+      "str": 5,
+      "resist": {
+        "shadow": 5
+      }
     },
     {
       "id": 10625,
@@ -31578,6 +32004,9 @@ var gear = {
       "speed": 1.5,
       "mindmg": 38,
       "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -32211,6 +32640,9 @@ var gear = {
       "speed": 1.3,
       "mindmg": 41,
       "maxdmg": 77,
+      "resist": {
+        "fire": 10
+      },
       "proc": {
         "magic": true,
         "dmg": 90
@@ -33474,6 +33906,10 @@ var gear = {
       "maxdmg": 183,
       "agi": 5,
       "sta": 8,
+      "resist": {
+        "fire": 8,
+        "nature": 9
+      },
       "proc": {
         "magic": true,
         "binaryspell": true,
@@ -33589,6 +34025,9 @@ var gear = {
       "mindmg": 90,
       "maxdmg": 168,
       "sta": 9,
+      "resist": {
+        "fire": 7
+      },
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -34843,7 +35282,10 @@ var gear = {
       "speed": 3.1,
       "mindmg": 127,
       "maxdmg": 191,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "nature": 15
+      }
     },
     {
       "id": 866,
@@ -34965,7 +35407,11 @@ var gear = {
       "name": "Elemental Mage Staff",
       "speed": 3.2,
       "mindmg": 147,
-      "maxdmg": 221
+      "maxdmg": 221,
+      "resist": {
+        "fire": 20,
+        "frost": 20
+      }
     },
     {
       "id": 1155,
@@ -35264,7 +35710,10 @@ var gear = {
       "speed": 3.2,
       "mindmg": 95,
       "maxdmg": 143,
-      "str": 20
+      "str": 20,
+      "resist": {
+        "nature": 10
+      }
     },
     {
       "id": 1726,
@@ -36334,7 +36783,10 @@ var gear = {
       "speed": 2.9,
       "mindmg": 49,
       "maxdmg": 74,
-      "sta": 2
+      "sta": 2,
+      "resist": {
+        "nature": 5
+      }
     },
     {
       "id": 6679,
@@ -36748,7 +37200,10 @@ var gear = {
       "name": "Hydrocane",
       "speed": 2.8,
       "mindmg": 48,
-      "maxdmg": 73
+      "maxdmg": 73,
+      "resist": {
+        "frost": 15
+      }
     },
     {
       "id": 9459,
@@ -37016,7 +37471,10 @@ var gear = {
       "speed": 2.9,
       "mindmg": 106,
       "maxdmg": 160,
-      "sta": 10
+      "sta": 10,
+      "resist": {
+        "fire": 10
+      }
     },
     {
       "id": 11786,
@@ -37104,7 +37562,10 @@ var gear = {
       "speed": 3.3,
       "mindmg": 133,
       "maxdmg": 200,
-      "sta": 11
+      "sta": 11,
+      "resist": {
+        "frost": 10
+      }
     },
     {
       "id": 12000,
@@ -37127,6 +37588,9 @@ var gear = {
       "speed": 2.9,
       "mindmg": 108,
       "maxdmg": 162,
+      "resist": {
+        "fire": 10
+      },
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -37554,7 +38018,10 @@ var gear = {
       "mindmg": 107,
       "maxdmg": 162,
       "str": 20,
-      "sta": 15
+      "sta": 15,
+      "resist": {
+        "fire": 5
+      }
     },
     {
       "id": 13047,
@@ -38363,7 +38830,13 @@ var gear = {
       "name": "Amberseal Keeper",
       "speed": 3.3,
       "mindmg": 168,
-      "maxdmg": 252
+      "maxdmg": 252,
+      "resist": {
+        "fire": 5,
+        "nature": 5,
+        "frost": 5,
+        "shadow": 5
+      }
     },
     {
       "id": 17182,
@@ -38376,6 +38849,9 @@ var gear = {
       "maxdmg": 372,
       "str": 12,
       "sta": 12,
+      "resist": {
+        "fire": 30
+      },
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -38616,7 +39092,10 @@ var gear = {
       "speed": 2.9,
       "mindmg": 155,
       "maxdmg": 234,
-      "sta": 25
+      "sta": 25,
+      "resist": {
+        "fire": 15
+      }
     },
     {
       "id": 18822,
@@ -38813,6 +39292,9 @@ var gear = {
       "maxdmg": 158,
       "str": 35,
       "sta": 15,
+      "resist": {
+        "fire": 10
+      },
       "crit": 1
     },
     {
@@ -39210,7 +39692,12 @@ var gear = {
       "mindmg": 118,
       "maxdmg": 178,
       "str": 9,
-      "sta": 9
+      "sta": 9,
+      "resist": {
+        "fire": 10,
+        "frost": 10,
+        "shadow": 10
+      }
     },
     {
       "id": 20522,
@@ -39258,7 +39745,10 @@ var gear = {
       "speed": 2.6,
       "mindmg": 142,
       "maxdmg": 213,
-      "sta": 12
+      "sta": 12,
+      "resist": {
+        "nature": 20
+      }
     },
     {
       "id": 20654,
@@ -39326,7 +39816,13 @@ var gear = {
       "speed": 2.9,
       "mindmg": 170,
       "maxdmg": 255,
-      "sta": 21
+      "sta": 21,
+      "resist": {
+        "fire": 10,
+        "nature": 10,
+        "frost": 10,
+        "shadow": 10
+      }
     },
     {
       "id": 21134,

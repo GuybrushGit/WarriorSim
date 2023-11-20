@@ -81,6 +81,12 @@
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
 
+          if (parseInt(item.Resistances_2) || parseInt(item.Resistances_3) || parseInt(item.Resistances_4) || parseInt(item.Resistances_5)) obj.resist = {};
+          if (parseInt(item.Resistances_2)) obj.resist.fire = parseInt(item.Resistances_2);
+          if (parseInt(item.Resistances_3)) obj.resist.nature = parseInt(item.Resistances_3);
+          if (parseInt(item.Resistances_4)) obj.resist.frost = parseInt(item.Resistances_4);
+          if (parseInt(item.Resistances_5)) obj.resist.shadow = parseInt(item.Resistances_5);
+
           
 
           
