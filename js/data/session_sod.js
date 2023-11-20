@@ -7,7 +7,7 @@ var session = {
     "executeperc": "20",
     "startrage": "0",
     "targetlevel": "28",
-    "targetarmor": "242",
+    "targetarmor": "137",
     "targetresistance": "24",
     "adjacent": "0",
     "aqbooks": "No",
