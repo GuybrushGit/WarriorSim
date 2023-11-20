@@ -1,0 +1,223 @@
+.profiles {
+    width: 0;
+    height: auto;
+    min-height: 1060px;
+    background: #272727;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    left: 380px;
+    top: 0;
+    z-index: 10;
+
+    &.active {
+        width: calc(100% - 380px);
+
+        .wrapper {
+            opacity: 1;
+            transition: opacity 0.2s ease-in;
+            transition-delay: .3s;
+        }
+    }
+
+    .wrapper {
+        opacity: 0;
+        transition: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 80px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .profile {
+        position: relative;
+        width: 260px;
+        min-width: 260px;
+        height: 630px;
+        border-radius: 10px;
+        border: 1px solid #525252;
+        padding: 16px;
+        text-align: center;
+        background: #181818;
+        cursor: pointer;
+
+        &.active {
+            border-color: $icon-border;
+        }
+
+        & > p {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 4px 0;
+            text-shadow: 1px 1px #00008b;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        .title {
+            border-bottom: 1px solid #525252;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            width: 80%;
+            margin: 0 auto 12px;
+            display: flex;
+            justify-content: space-between;
+            input {
+                background: transparent;
+                border: 0;
+                outline: none;
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                &.edit {
+                    background: white;
+                    color: black;
+                }
+            }
+            svg {
+                top: 4px;
+                position: relative;
+            }
+        }
+
+        li {
+            border-bottom: 1px solid hsla(0,0%,87%,.4);
+            padding: 4px 10px;
+            overflow: hidden;
+            font-size: 12px;
+            text-align: left;
+            height: 30px;
+            box-sizing: border-box;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            p {
+                margin: 0;
+                float: left;
+                padding: 2px 0;
+            }
+
+            img {
+                float: right;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #525252;
+            }
+
+            &[data-quality="2"] { color: $item-uncommon; }
+            &[data-quality="3"] { color: $item-rare; }
+            &[data-quality="4"] { color: $item-epic; }
+            &[data-quality="5"] { color: $item-legendary; }
+        }
+    }
+
+    .add-profile, .import-profile {
+        width: 260px;
+        min-width: 260px;
+        height: 293px;
+        border-radius: 10px;
+        border: 1px solid #525252;
+        padding: 16px;
+        text-align: center;
+        background: #181818;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+            margin-bottom: 70px;
+            margin-top: 0;
+        }
+
+        svg {
+            width: 160px;
+            height: 160px;
+            color: #525252;
+            transition: all 0.2s ease-in;
+        }
+
+        &:hover svg {
+            color: white;
+        }
+    }
+
+    .add-profile {
+        margin-bottom: 10px;
+    }
+
+    .export-profile {
+        position: absolute;
+        bottom: 22px;
+        right: 60px;
+    }
+
+    .delete-profile {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    @include mobile {
+        z-index: 11;
+        
+        &.active {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+.import-modal {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    &.open {
+        display: flex;
+    }
+
+    &-container {
+        position: relative;
+        background: white;
+        border-radius: 10px;
+        width: 500px;
+        height: 300px;
+    }
+    textarea {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .btn-close {
+        &:before, &:after {
+            background-color: black;
+        }
+    }
+}
