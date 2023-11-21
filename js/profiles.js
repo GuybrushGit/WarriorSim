@@ -44,6 +44,7 @@ SIM.PROFILES = {
         view.container.on('click','.import-profile', function (e) {
             e.preventDefault();
             view.modal.addClass('open');
+            view.textarea.focus();
         });
 
         view.container.on('click','.delete-profile', function (e) {

@@ -383,12 +383,18 @@ class Player {
     addBuffs() {
         for (let buff of buffs) {
             if (buff.active) {
-                let apbonus = 0;
+                let ap = 0, str = 0, agi = 0;
                 if (buff.group == "battleshout") {
-                    let shoutap = buff.ap;
-                    if (this.enhancedbs) shoutap += 30;
-                    shoutap = ~~(shoutap * (1 + this.talents.impbattleshout));
-                    apbonus = shoutap - buff.ap;
+                    ap = ~~((buff.ap + (this.enhancedbs ? 30 : 0)) * (1 + this.talents.impbattleshout));
+                }
+                if (buff.name == "Blessing of Might") {
+                    let impmight = buffs.filter(s => s.mightmod && s.active)[0];
+                    ap = ~~(buff.ap * (impmight ? impmight.mightmod : 1));
+                }
+                if (buff.name == "Mark of the Wild") {
+                    let impmotw = buffs.filter(s => s.motwmod && s.active)[0];
+                    str = ~~(buff.str * (impmotw ? impmotw.motwmod : 1));
+                    agi = ~~(buff.agi * (impmotw ? impmotw.motwmod : 1));
                 }
                 if (buff.group == "stance")
                     this.stance = true;
@@ -400,10 +406,10 @@ class Player {
                     this.gladstance = true;
                 if (buff.id == 71)
                     this.defstance = true;
-
-                this.base.ap += (buff.ap || 0) + apbonus;
-                this.base.agi += buff.agi || 0;
-                this.base.str += buff.str || 0;
+                
+                this.base.ap += ap || buff.ap || 0;
+                this.base.agi += agi || buff.agi || 0;
+                this.base.str += str || buff.str || 0;
                 this.base.crit += buff.crit || 0;
                 this.base.hit += buff.hit || 0;
                 this.base.spellcrit += buff.spellcrit || 0;
@@ -411,13 +417,6 @@ class Player {
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
-
-                if (buff.group == "blessingmight" && this.aqbooks && this.level == 60)
-                    this.base.ap += 36;
-                if (buff.group == "graceair" && this.aqbooks && this.level == 60)
-                    this.base.agi += 10;
-                if (buff.group == "strengthearth" && this.aqbooks && this.level == 60)
-                    this.base.str += 16;
             }
         }
     }
