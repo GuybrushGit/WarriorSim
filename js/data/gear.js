@@ -3042,6 +3042,17 @@ var gear = {
   ],
   "finger1": [
     {
+      "id": 2246,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "4",
+      "name": "Myrmidon's Signet",
+      "agi": 7,
+      "str": 10,
+      "sta": 17
+    },
+    {
       "name": "Prismatic Band of Fire Resistance",
       "source": "World Drop",
       "subsource": "fire",
@@ -3317,6 +3328,17 @@ var gear = {
     }
   ],
   "finger2": [
+    {
+      "id": 2246,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "4",
+      "name": "Myrmidon's Signet",
+      "agi": 7,
+      "str": 10,
+      "sta": 17
+    },
     {
       "name": "Prismatic Band of Fire Resistance",
       "source": "World Drop",
