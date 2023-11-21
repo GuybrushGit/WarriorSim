@@ -465,12 +465,18 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            // aq restriction
+            // aq restrictions
             if (storage.aqbooks == "Yes" && typeof buff.aq !== 'undefined' && buff.aq === false) {
                 buff.active = false;
                 continue;
             }
             if (storage.aqbooks == "No" && buff.aq) {
+                buff.active = false;
+                continue;
+            }
+
+            // sod restrictions
+            if (mode !== "sod" && buff.sod) {
                 buff.active = false;
                 continue;
             }

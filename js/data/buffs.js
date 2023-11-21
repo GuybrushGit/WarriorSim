@@ -25,6 +25,7 @@ var buffs = [
       dmgmod: 10,
       group: "stance",
       minlevel: 1,
+      sod: true,
    },
    {
       id: 6673,
@@ -293,6 +294,7 @@ var buffs = [
       group: "kings",
       strmod: 10,
       agimod: 10,
+      sod: true,
    },
    {
       id: 20217,
@@ -390,6 +392,7 @@ var buffs = [
       group: "blessingmight",
       str: 6,
       agi: 6,
+      sod: true,
    },
    {
       id: 8512,
@@ -507,6 +510,7 @@ var buffs = [
       iconname: "ability_druid_swipe",
       group: "windfury",
       wfapperc: 20,
+      sod: true,
    },
 
    
@@ -747,6 +751,7 @@ var buffs = [
       crit: 2,
       spellcrit: 2,
       worldbuff: true,
+      sod: true,
    },
    {
       id: 430352,
@@ -756,6 +761,7 @@ var buffs = [
       group: "",
       dmgmod: 5,
       worldbuff: true,
+      sod: true,
    },
    {
       id: 427143,
@@ -764,6 +770,7 @@ var buffs = [
       iconname: "Ability_creature_cursed_02",
       group: "",
       bonusdmg: 2,
+      sod: true,
    },
 
 

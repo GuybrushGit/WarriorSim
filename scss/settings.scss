@@ -26,6 +26,7 @@
         transition: none;
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     article {
@@ -103,7 +104,7 @@
     }
 
     .fight {
-        width: 330px;
+        width: calc(33.333% - 10px);
 
         li {
             border-bottom: 1px solid rgba(221,221,221,0.4);
@@ -142,7 +143,7 @@
 
     .buffs {
         font-size: 0;
-        width: calc((100% - 340px) / 2);
+        width: calc(33.333% - 10px);
         .label {
             font-size: 12px;
             font-weight: bold;
@@ -152,7 +153,7 @@
     }
 
     .rotation {
-        width: calc((100% - 340px) / 2);
+        width: calc(33.333%);
         font-size: 0;
 
         & > div {
@@ -273,36 +274,8 @@
         }
     }
 
-    .runes {
-        width: 100%;
-
-        .container {
-            display: flex; 
-            gap: 40px;
-            & > div {
-                width: 33%;
-                &:before {
-                    font-size: 12px;
-                    font-family: Open Sans,sans-serif;
-                }
-                &.chest:before {
-                    content: "Chest:";
-                }
-                &.legs:before {
-                    content: "Legs:";
-                }
-                &.gloves:before {
-                    content: "Gloves:";
-                }
-            }
-        }
-        .spell {
-            width: 100%;
-        }
-    }
-
     .talents {
-        width: calc(100% - 251px);
+        width: calc(80% - 10px);
         display: inline-flex;
         position: relative;
         justify-content: center;
@@ -385,9 +358,8 @@
     }
 
     .filter {
-        display: inline-block;
+        width: 20%;
         padding: 20px 30px;
-        width: 245px;
         margin-top: 10px;
 
         .sources {

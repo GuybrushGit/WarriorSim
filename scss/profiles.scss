@@ -98,7 +98,7 @@
             overflow: hidden;
             font-size: 12px;
             text-align: left;
-            height: 30px;
+            min-height: 30px;
             box-sizing: border-box;
 
             &:last-child {
