@@ -1282,7 +1282,7 @@ class ConsumedRage extends Aura {
     constructor(player, id) {
         super(player, id, 'Consumed by Rage');
         this.duration = 12;
-        this.mult_stats = { dmgmod: 25 };
+        this.mult_stats = { dmgmod: 20 };
     }
     proc() {
         this.stacks--;
