@@ -87,8 +87,8 @@ class Whirlwind extends Spell {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
         ((!this.minrage && !this.maincd) ||
          (this.minrage && this.player.rage >= this.minrage) ||
-         (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
-         (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)));
+         (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+         (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -118,8 +118,8 @@ class Overpower extends Spell {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.dodgetimer &&
         ((!this.maxrage && !this.maincd) ||
          (this.maxrage && this.player.rage <= this.maxrage) ||
-         (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
-         (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)));
+         (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+         (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
@@ -211,8 +211,8 @@ class HeroicStrike extends Spell {
         return !this.player.nextswinghs && this.cost <= this.player.rage && 
             ((!this.minrage && !this.maincd) ||
             (this.minrage && this.player.rage >= this.minrage) ||
-            (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
-            (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)))
+            (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd))
             && (!this.unqueue || (this.player.mh.timer > this.unqueuetimer));
     }
 }
@@ -244,8 +244,8 @@ class Cleave extends Spell {
         return !this.player.nextswinghs && this.cost <= this.player.rage && 
             ((!this.minrage && !this.maincd) ||
             (this.minrage && this.player.rage >= this.minrage) ||
-            (this.maincd && (!this.player.spells.bloodthirst || this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd)) ||
-            (this.maincd && (!this.player.spells.mortalstrike || this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd)))
+            (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd))
             && (!this.unqueue || (this.player.mh.timer > this.unqueuetimer));
     }
 }
