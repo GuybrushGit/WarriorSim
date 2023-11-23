@@ -20,6 +20,7 @@ SIM.SETTINGS = {
         view.rotation = view.body.find('article.rotation');
         view.talents = view.body.find('article.talents');
         view.filter = view.body.find('article.filter');
+        view.runes = view.body.find('article.runes');
         view.close = view.body.find('section.settings .btn-close');
         view.bg = view.body.find('section.sidebar .bg');
     },
@@ -157,6 +158,13 @@ SIM.SETTINGS = {
             $(view.parentElement).find('table').toggleClass('hidden').end().find('#top').toggleClass('hidden top');
             SIM.SETTINGS.toggleArticle(view);
         });
+
+        view.runes.on('click', 'label', function (e) {
+            var view = this;
+            $(view.parentElement).find('div').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
         view.filter.on('click', 'label', function (e) {
             var view = this;
             $(view.parentElement).find('ul').toggleClass('hidden');
@@ -536,6 +544,29 @@ SIM.SETTINGS = {
                 if (rune.enable && rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').removeClass('hidden');
                 if (rune.enable && !rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').addClass('hidden');
             }
+        }
+        let type_of_runes = ["chest", "hands", "legs"]
+        for (let tree_name of type_of_runes) {
+            let table = $('<table>');
+            let tbody = $('<tbody>');
+            let tree = $(`<tr name="${tree_name}">`)
+            for(let i = 0; i < runes[tree_name].length; i++) {
+                let this_rune = runes[tree_name][i];
+                let td = $('<td>');
+                let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
+                let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
+                sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
+                sub_div.append(`<a href="https://classic.wowhead.com/spell=${this_rune.id}" class="wh-tooltip"></a>`);
+                rune_div.append(sub_div);
+                td.append(rune_div); 
+                tree.append(td);
+            }
+            let tr = $('<tr>');
+            let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
+            tr.append(tree_header)
+            table.append(tr).append(tree);
+            tbody.append(table)
+            view.runes.find('#runes-area').append(tbody);
         }
     },
 
