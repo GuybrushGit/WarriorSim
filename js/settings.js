@@ -140,6 +140,12 @@ SIM.SETTINGS = {
             SIM.SETTINGS.toggleArticle(view);
         });
 
+        view.rotation.on('click', 'label', function(e) {
+            var view = this;
+            $(view.parentElement).find('div').toggleClass('hidden');
+            SIM.SETTINGS.toggleArticle(view);
+        });
+
         view.fight.on('click', 'label', function (e) {
             var view = this;
             $(view.parentElement).find('ul').toggleClass('hidden');
@@ -148,7 +154,7 @@ SIM.SETTINGS = {
 
         view.talents.on('click', 'label', function (e) {
             var view = this;
-            $(view.parentElement).find('table').toggleClass('hidden');
+            $(view.parentElement).find('table').toggleClass('hidden').end().find('#top').toggleClass('hidden top');
             SIM.SETTINGS.toggleArticle(view);
         });
         view.filter.on('click', 'label', function (e) {
