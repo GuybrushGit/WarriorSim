@@ -27,6 +27,7 @@ SIM.UI = {
         view.fight = view.body.find('article.fight');
         view.rotation = view.body.find('article.rotation');
         view.talents = view.body.find('article.talents');
+        view.runes = view.body.find('article.runes');
         view.filter = view.body.find('article.filter');
         view.main = view.body.find('section.main');
         view.sidebar = view.body.find('section.sidebar');
@@ -214,6 +215,33 @@ SIM.UI = {
 
             view.updateSession();
             view.updateSidebar();
+        });
+
+        view.runes.on('click', '.rune .icon', function(e) {
+            var current_open_page =  $(`nav`).children('ul').children('li.active').find('p:first').text().toLowerCase().replace(/\s/g, '');
+            var rune_type = $(this).closest('tr[name]').attr('name');
+            var rune_id = $(this).parent().attr('data-id').toString();;
+            view.loadGear(rune_type);
+            var parent = view.tcontainer.find($(`.runes[data-type="${rune_type}"]`));
+            var rune = parent.find($(`[data-id="${rune_id}"]`));
+            if (rune.hasClass('active')) {
+                view.rowDisableRunes(rune);
+            } else {
+                parent.children('div').each(function(index, element) {
+                    view.rowDisableRunes($(element));
+                });
+                view.rowEnableRunes(rune);
+            }
+            view.updateSession();
+            view.updateSidebar();
+            SIM.SETTINGS.buildSpells();
+
+            if (current_open_page == "mainhand" || current_open_page == "offhand" || current_open_page == "twohand")
+                view.loadWeapons(current_open_page);
+            else if (current_open_page == "custom")
+                view.loadCustom();
+            else 
+                view.loadGear(current_open_page);
         });
 
         view.tcontainer.on('click', '.runes .icon', function(e) {
@@ -665,12 +693,16 @@ SIM.UI = {
             }
                
         }
+        var settings_parent = this.body.find('article.runes');
+        var rune_lookup = $(`tr[name="${type}"]`);
+        settings_parent.find(rune_lookup).find('div').removeClass('active');
     },
 
     rowEnableRunes: function(div) {
         var parent = div.parents('.runes');
         var type = parent.data('type');
         div.addClass('active');
+        let this_spell_id = 0;
         for(let i = 0; i < runes[type].length; i++) {
             if (runes[type][i].id == div.data('id')) {
                 runes[type][i].selected = true;
@@ -679,8 +711,12 @@ SIM.UI = {
                         if (spell.id == runes[type][i].enable)
                             spell.active = true;
                 }
+                this_spell_id = runes[type][i].id;
             }
         }
+        var settings_parent = this.body.find('article.runes');
+        var rune_lookup = $(`[data-id="${this_spell_id}"]`);
+        settings_parent.find(rune_lookup).children('div').addClass('active');
     },
 
     startLoading: function() {
