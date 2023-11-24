@@ -275,11 +275,11 @@
     }
 
     .talents {
-        width: calc(80% - 10px);
+        width: calc(75% - 10px);
         display: inline-flex;
         position: relative;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 0;
         flex-wrap: wrap;
 
         table {
@@ -358,9 +358,9 @@
     }
 
     .filter {
-        width: 20%;
+        width: 25%;
         padding: 20px 30px;
-        margin-top: 10px;
+        margin-top: 0;
 
         .sources {
             > li {
@@ -429,6 +429,11 @@
                 }
             }
         }
+    }
+
+    .runes {
+        width: 25%;
+        margin-top: 0;
     }
     .hidden {
         display: none;
