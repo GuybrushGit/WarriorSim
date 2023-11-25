@@ -107,7 +107,7 @@
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
-                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95 && e.EffectMiscValue_0 != 226) {
+                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95 && e.EffectMiscValue_0 != 226 && e.EffectMiscValue_0 != 393 && e.EffectMiscValue_0 != 45 && e.EffectMiscValue_0 != 46) {
                     obj.skill = parseInt(e.EffectBasePoints) + 1;
                     if (item.ClassID != "2") {
                       if (item.ID == 14551) obj.type = "Varied";
@@ -182,30 +182,16 @@
           if (obj.id == 13213) exclude = true;
           if (obj.id == 21891) exclude = true;
           if (obj.id == 13171) exclude = true;
+          if (obj.id == 22988) exclude = true;
+          if (obj.id == 16007) exclude = true;
+          if (obj.id == 12802) exclude = true;
           if (obj.name.indexOf('Bonescythe') > -1) exclude = true;
           if (obj.name.indexOf('Beastmaster') > -1) exclude = true;
           if (obj.name.indexOf('Beaststalker') > -1) exclude = true;
           if (obj.name.indexOf('Cryptstalker') > -1) exclude = true;
           if (obj.name.indexOf('Darkmantle') > -1) exclude = true;
           if (obj.name.indexOf('Atiesh') > -1) exclude = true;
-          
 
-
-          // todo items
-
-          // https://www.wowhead.com/classic/item=13204/bashguuder
-          // https://www.wowhead.com/classic/item=22988/the-end-of-dreams
-          // https://www.wowhead.com/classic/item=19901/zulian-slicer
-          // https://www.wowhead.com/classic/item=12709/pips-skinner
-          // https://www.wowhead.com/classic/item=12790/arcanite-champion
-          // https://www.wowhead.com/classic/item=11607/dark-iron-sunderer
-          // https://www.wowhead.com/classic/item=12802/darkspear
-          // https://www.wowhead.com/classic/item=17766/princess-theradras-scepter
-          // https://www.wowhead.com/classic/item=23039/the-eye-of-nerub
-          // https://www.wowhead.com/classic/item=16007/flawless-arcanite-rifle
-
-          
-          
 
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
           if (exclude) continue;
@@ -331,7 +317,7 @@
         {i:6622,s:"Zeal"},
         {i:13246,s:"Avenger"},
         {i:12590,s:"Felstriker"},
-        {i:13286,s:"Rivenspike"},
+        {i:13204,s:"Rivenspike"},
         {i:17076,s:"Bonereaver"},
         {i:647,s:"Destiny"},
         {i:19334,s:"Untamed"},
@@ -343,13 +329,9 @@
         {i:9423,s:"Jackhammer"},
         {i:11817,s:"LordGeneral"},
         {i:9418,s:"Stoneslayer"},
-
-        
-
-        
-        
-        
-        
+        {i:17766,s:"Vibroblade"},
+        {i:11607,s:"CleaveArmor"},
+        {i:12790,s:"StrengthChampion"},
       ];
 
       var customPPM = [

@@ -27427,19 +27427,6 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 16007,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Flawless Arcanite Rifle",
-      "speed": 3,
-      "mindmg": 65,
-      "maxdmg": 122,
-      "skill": 4
-    },
-    {
       "id": 16996,
       "type": "Bows",
       "slot": "ranged",
@@ -31553,8 +31540,7 @@ var gear = {
       "name": "Pip's Skinner",
       "speed": 1.3,
       "mindmg": 37,
-      "maxdmg": 70,
-      "skill": 10
+      "maxdmg": 70
     },
     {
       "id": 12773,
@@ -32039,7 +32025,10 @@ var gear = {
       "speed": 1.8,
       "mindmg": 49,
       "maxdmg": 93,
-      "str": 9
+      "str": 9,
+      "proc": {
+        "spell": "Rivenspike"
+      }
     },
     {
       "id": 13218,
@@ -34320,8 +34309,7 @@ var gear = {
         "magic": true,
         "dmg": 84
       },
-      "ap": 12,
-      "skill": 10
+      "ap": 12
     },
     {
       "id": 19903,
@@ -35207,20 +35195,6 @@ var gear = {
       "mindmg": 83,
       "maxdmg": 156,
       "sta": 12
-    },
-    {
-      "id": 22988,
-      "type": "Mace",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "83",
-      "name": "The End of Dreams",
-      "speed": 1.9,
-      "mindmg": 86,
-      "maxdmg": 162,
-      "sta": 13,
-      "ap": 305
     },
     {
       "id": 23014,
@@ -38820,7 +38794,10 @@ var gear = {
       "speed": 1.8,
       "mindmg": 49,
       "maxdmg": 93,
-      "str": 9
+      "str": 9,
+      "proc": {
+        "spell": "Rivenspike"
+      }
     },
     {
       "id": 13218,
@@ -41031,8 +41008,7 @@ var gear = {
         "magic": true,
         "dmg": 84
       },
-      "ap": 12,
-      "skill": 10
+      "ap": 12
     },
     {
       "id": 19908,
@@ -41616,20 +41592,6 @@ var gear = {
       "mindmg": 83,
       "maxdmg": 156,
       "sta": 12
-    },
-    {
-      "id": 22988,
-      "type": "Mace",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "83",
-      "name": "The End of Dreams",
-      "speed": 1.9,
-      "mindmg": 86,
-      "maxdmg": 162,
-      "sta": 13,
-      "ap": 305
     },
     {
       "id": 23014,
@@ -44634,7 +44596,10 @@ var gear = {
       "name": "Dark Iron Sunderer",
       "speed": 2.6,
       "mindmg": 101,
-      "maxdmg": 153
+      "maxdmg": 153,
+      "proc": {
+        "spell": "CleaveArmor"
+      }
     },
     {
       "id": 11608,
@@ -45036,7 +45001,10 @@ var gear = {
       "name": "Arcanite Champion",
       "speed": 3,
       "mindmg": 129,
-      "maxdmg": 194
+      "maxdmg": 194,
+      "proc": {
+        "spell": "StrengthChampion"
+      }
     },
     {
       "id": 12796,
@@ -45050,18 +45018,6 @@ var gear = {
       "mindmg": 163,
       "maxdmg": 246,
       "str": 15
-    },
-    {
-      "id": 12802,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Darkspear",
-      "speed": 3.2,
-      "mindmg": 131,
-      "maxdmg": 197
     },
     {
       "id": 12969,
@@ -46328,7 +46284,8 @@ var gear = {
       "mindmg": 126,
       "maxdmg": 190,
       "proc": {
-        "dmg": 160
+        "dmg": 160,
+        "spell": "Vibroblade"
       }
     },
     {
@@ -47766,8 +47723,7 @@ var gear = {
       "mindmg": 251,
       "maxdmg": 378,
       "agi": 45,
-      "sta": 22,
-      "skill": 4
+      "sta": 22
     },
     {
       "id": 23124,
