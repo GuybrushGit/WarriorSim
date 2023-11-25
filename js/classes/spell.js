@@ -258,7 +258,7 @@ class MortalStrike extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = 160 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse() {

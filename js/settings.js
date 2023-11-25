@@ -70,6 +70,8 @@ SIM.SETTINGS = {
             if (talent.c >= talent.m) $(this).addClass('maxed');
             if (talent.enable)
                 $('.rotation [data-id="' + talent.enable + '"]').removeClass('hidden');
+            if (talent.enablename)
+                $('.rotation [data-name="' + talent.enablename + '"]').removeClass('hidden');
             $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
@@ -86,6 +88,12 @@ SIM.SETTINGS = {
                 $('.rotation [data-id="' + talent.enable + '"]').removeClass('active').addClass('hidden');
                 for (let spell of spells)
                     if (spell.id == talent.enable)
+                        spell.active = false;
+            }
+            if (talent.c == 0 && talent.enablename) {
+                $('.rotation [data-name="' + talent.enablename + '"]').removeClass('active').addClass('hidden');
+                for (let spell of spells)
+                    if (spell.name == talent.enablename)
                         spell.active = false;
             }
             $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
@@ -357,7 +365,7 @@ SIM.SETTINGS = {
             }
 
 
-            let div = $(`<div data-id="${spell.id}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
+            let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
