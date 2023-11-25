@@ -53,7 +53,7 @@
         for (let item of Item) {
           let obj = {};
           obj.id = parseInt(item.ID);
-          if (obj.id == 22478) debugger;
+          //if (obj.id == 22478) debugger;
 
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
@@ -89,10 +89,7 @@
           if (parseInt(item.Resistances_4)) obj.resist.frost = parseInt(item.Resistances_4);
           if (parseInt(item.Resistances_5)) obj.resist.shadow = parseInt(item.Resistances_5);
 
-          
 
-          
-        
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
           if (spells.length) {
             spells.forEach((spell, index) => {
@@ -195,12 +192,7 @@
 
 
           // todo items
-          // https://www.wowhead.com/classic/item=869/dazzling-longsword
-          // https://www.wowhead.com/classic/item=7961/phantom-blade
-          // https://www.wowhead.com/classic/item=10626/ragehammer
-          // https://www.wowhead.com/classic/item=9423/the-jackhammer
-          // https://www.wowhead.com/classic/item=11817/lord-generals-sword
-          // https://www.wowhead.com/classic/item=9418/stoneslayer
+
           // https://www.wowhead.com/classic/item=13204/bashguuder
           // https://www.wowhead.com/classic/item=22988/the-end-of-dreams
           // https://www.wowhead.com/classic/item=19901/zulian-slicer
@@ -345,6 +337,18 @@
         {i:19334,s:"Untamed"},
         {i:9465,s:"Vibroblade"},
         {i:9485,s:"Vibroblade"},
+        {i:869,s:"Vibroblade"},
+        {i:7961,s:"Vibroblade"},
+        {i:10626,s:"Ragehammer"},
+        {i:9423,s:"Jackhammer"},
+        {i:11817,s:"LordGeneral"},
+        {i:9418,s:"Stoneslayer"},
+
+        
+
+        
+        
+        
         
       ];
 

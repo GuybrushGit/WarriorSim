@@ -579,9 +579,15 @@ class Player {
             this.stats.haste *= (1 + this.auras.spider.mult_stats.haste / 100);
         if (this.auras.voidmadness && this.auras.voidmadness.timer)
             this.stats.haste *= (1 + this.auras.voidmadness.mult_stats.haste / 100);
+        if (this.auras.jackhammer && this.auras.jackhammer.timer)
+            this.stats.haste *= (1 + this.auras.jackhammer.mult_stats.haste / 100);
+        if (this.auras.ragehammer && this.auras.ragehammer.timer)
+            this.stats.haste *= (1 + this.auras.ragehammer.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
+        if (this.auras.stoneslayer && this.auras.stoneslayer.timer)
+            bonus += this.auras.stoneslayer.stats.bonusdmg;
         if (this.auras.zeal && this.auras.zeal.timer)
             bonus += this.auras.zeal.stats.bonusdmg;
         if (this.auras.zandalarian && this.auras.zandalarian.timer)

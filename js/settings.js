@@ -424,12 +424,6 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="echargeblockactive" class="${spell.echargeblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="echargeblock" value="${spell.echargeblock}" data-numberonly="true" /> CbR charges</li>`);
         
 
-        
-        // if (spell.crusaders !== undefined)
-        //     ul.append(`<li data-id="active" class="${spell.crusaders ? 'active' : ''}">Use when <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
-
-
-
         details.css('visibility','hidden');
         details.append(ul);
         let height = details.height();

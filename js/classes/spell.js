@@ -1460,3 +1460,86 @@ class WeaponBleed extends Aura {
         this.starttimer = step;
     }
 }
+
+class Ragehammer extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 15;
+        this.stats = { ap: 20 }
+        this.mult_stats = { haste: 5 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAP();
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateAP();
+            this.player.updateHaste();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+
+class Jackhammer extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 10;
+        this.mult_stats = { haste: 30 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateHaste();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+
+class LordGeneral extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 30;
+        this.stats = { ap: 50 };
+    }
+}
+
+class Stoneslayer extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 8;
+        this.stats = { bonusdmg: 10 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateBonusDmg();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateBonusDmg();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}

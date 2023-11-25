@@ -28196,7 +28196,10 @@ var gear = {
       "name": "Dazzling Longsword",
       "speed": 1.7,
       "mindmg": 37,
-      "maxdmg": 70
+      "maxdmg": 70,
+      "proc": {
+        "spell": "Vibroblade"
+      }
     },
     {
       "id": 871,
@@ -30363,7 +30366,10 @@ var gear = {
       "name": "Phantom Blade",
       "speed": 2.6,
       "mindmg": 59,
-      "maxdmg": 111
+      "maxdmg": 111,
+      "proc": {
+        "spell": "Vibroblade"
+      }
     },
     {
       "id": 8006,
@@ -31287,7 +31293,10 @@ var gear = {
       "name": "Lord General's Sword",
       "speed": 2.6,
       "mindmg": 67,
-      "maxdmg": 125
+      "maxdmg": 125,
+      "proc": {
+        "spell": "LordGeneral"
+      }
     },
     {
       "id": 11856,
@@ -44271,7 +44280,10 @@ var gear = {
       "name": "Stoneslayer",
       "speed": 3.9,
       "mindmg": 133,
-      "maxdmg": 200
+      "maxdmg": 200,
+      "proc": {
+        "spell": "Stoneslayer"
+      }
     },
     {
       "id": 9423,
@@ -44283,7 +44295,10 @@ var gear = {
       "name": "The Jackhammer",
       "speed": 2.5,
       "mindmg": 79,
-      "maxdmg": 119
+      "maxdmg": 119,
+      "proc": {
+        "spell": "Jackhammer"
+      }
     },
     {
       "id": 9425,
@@ -44522,7 +44537,10 @@ var gear = {
       "name": "Ragehammer",
       "speed": 3.7,
       "mindmg": 128,
-      "maxdmg": 193
+      "maxdmg": 193,
+      "proc": {
+        "spell": "Ragehammer"
+      }
     },
     {
       "id": 10627,
