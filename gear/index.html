@@ -67,6 +67,7 @@
           if (!obj.r) obj.r = getQuestLevel(item.ID);
           if (!obj.r) obj.r = 0;
           obj.q = sparse.OverallQualityID;
+          obj.i = sparse.ItemLevel;
           obj.name = sparse.Display_lang.replaceAll("\"","");
           if (parseInt(sparse.ItemDelay)) obj.speed = parseInt(sparse.ItemDelay) / 1000;
           if (parseInt(sparse.MinDamage_0)) obj.mindmg = parseInt(sparse.MinDamage_0);
@@ -252,6 +253,8 @@
           str: 7,
           agi: 4,
           r: 25,
+          q: 3,
+          i: 25
         });
         gear["back"].push({
           id: 9999996,
@@ -260,6 +263,8 @@
           name: "Shimmering Thresher Cape",
           str: 6,
           r: 25,
+          q: 3,
+          i: 25
         });
         gear["chest"].push({
           id: 210794,
@@ -270,6 +275,8 @@
           sta: 6,
           hit: 1,
           r: 25,
+          q: 4,
+          i: 35
         });
         gear["hands"].push({
           id: 211423,
@@ -280,6 +287,8 @@
           sta: 6,
           hit: 1,
           r: 25,
+          q: 4,
+          i: 35
         });
 
         gear["twohand"].push({
@@ -291,7 +300,9 @@
           "speed": 2.5,
           "mindmg": 48,
           "maxdmg": 73,
-          "hit": 1
+          "hit": 1,
+          q: 3,
+          i: 25
         });
 
         gear["trinket1"].push({
@@ -300,7 +311,9 @@
           "slot": "trinket",
           "r": 25,
           "name": "Avenger's Void Pearl",
-          "ap": 10
+          "ap": 10,
+          q: 3,
+          i: 25
         });
         gear["trinket2"].push({
           "id": 9999998,
@@ -308,7 +321,9 @@
           "slot": "trinket",
           "r": 25,
           "name": "Avenger's Void Pearl",
-          "ap": 10
+          "ap": 10,
+          q: 3,
+          i: 25
         });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";

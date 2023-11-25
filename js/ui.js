@@ -274,11 +274,18 @@ SIM.UI = {
             e.preventDefault();
             if (e.key == "Escape") $(this).val('');
             let val = $(this).val();
-            view.tcontainer.find('.gear td:first-child').each(function() {
+            view.tcontainer.find('.gear td:nth-child(2)').each(function() {
                 let td = $(this).get(0);
                 if (!val || td.textContent.toLowerCase().indexOf(val.toLowerCase()) > -1) td.parentElement.classList.remove('filtered');
                 else td.parentElement.classList.add('filtered');
             });
+        });
+
+        view.tcontainer.on('click', '.filters label', function (e) {
+            $(this).toggleClass('active');
+            globalThis[$(this).attr('id')] = $(this).hasClass('active');
+            view.updateSession();
+            view.filterGear();
         });
 
     },
@@ -802,6 +809,9 @@ SIM.UI = {
         obj.reactionmin = view.fight.find('input[name="reactionmin"]').val();
         obj.reactionmax = view.fight.find('input[name="reactionmax"]').val();
         obj.batching = view.fight.find('select[name="batching"]').val();
+        obj.filter_tiger = view.main.find('#filter_tiger').hasClass('active');
+        obj.filter_green = view.main.find('#filter_green').hasClass('active');
+        obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
@@ -872,7 +882,13 @@ SIM.UI = {
         if (!storage.level) storage.level = session.level;
         if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
         if (!storage.profilename) storage.profilename = session.profilename;
+        if (typeof storage.filter_tiger == 'undefined') storage.filter_tiger = true;
+        if (typeof storage.filter_green == 'undefined') storage.filter_green = true;
+        if (typeof storage.filter_blue == 'undefined') storage.filter_blue = true;
         globalThis.profilename = storage.profilename;
+        globalThis.filter_tiger = storage.filter_tiger;
+        globalThis.filter_green = storage.filter_green;
+        globalThis.filter_blue = storage.filter_blue;
         
         for (let prop in storage) {
             view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
@@ -933,6 +949,7 @@ SIM.UI = {
                         <thead>
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
+                                <th>ilvl</th>
                                 <th>Name</th>
                                 <th>Sta</th>
                                 <th>Str</th>
@@ -954,7 +971,14 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            if (item.r > level || item.r < (level -20) || item.r == 0) {
+            if (item.r > level || (item.q < 4 && item.i < (level - 7))) {
+                item.selected = false;
+                continue;
+            }
+
+            if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+                (globalThis.filter_green === false && item.q == "2") ||
+                (globalThis.filter_blue === false && item.q == "3")) {
                 item.selected = false;
                 continue;
             }
@@ -1005,7 +1029,8 @@ SIM.UI = {
 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
+                        <td data-quality="${item.q}"><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.i}</td>
+                        <td>${item.name}</td>`
 
             table +=`<td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
@@ -1027,12 +1052,19 @@ SIM.UI = {
         table += '</tbody></table></section>';
 
         view.tcontainer.empty();
-        view.tcontainer.append(`<div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>`);
+        view.tcontainer.append(`<div class="topgear">
+            <div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>
+            <div class="filters">
+                <label id="filter_tiger" class="${globalThis.filter_tiger ? 'active' : ''}">Of the Tiger</label>
+                <label id="filter_green" class="${globalThis.filter_green ? 'active' : ''}">Greens</label>
+                <label id="filter_blue" class="${globalThis.filter_blue ? 'active' : ''}">Blues</label>
+            </div>
+        </div>`);
         view.tcontainer.append(table);
         let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: false,
-            sortList: editmode ?  [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
+            sortList: editmode ?  [[dpsrow, 1],[2, 0]] : [[dpsrow-1, 1],[1, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
@@ -1073,6 +1105,7 @@ SIM.UI = {
                         <thead>
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
+                                <th>ilvl</th>
                                 <th>Name</th>
                                 <th>Sta</th>
                                 <th>Str</th>
@@ -1090,7 +1123,14 @@ SIM.UI = {
 
         for (let item of gear[type]) {
             
-            if (item.r > level || (item.r < (level -20) && item.r !== 0)) {
+            if (item.r > level || (item.q < 4 && item.i < (level - 7))) {
+                item.selected = false;
+                continue;
+            }
+
+            if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+                (globalThis.filter_green === false && item.q == "2") ||
+                (globalThis.filter_blue === false && item.q == "3")) {
                 item.selected = false;
                 continue;
             }
@@ -1134,7 +1174,8 @@ SIM.UI = {
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.name}</td>`
+                        <td data-quality="${item.q}"><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.i}</td>
+                        <td>${item.name}</td>`
 
             table += `<td>${item.sta || ''}</td>
                         <td>${item.str || ''}</td>
@@ -1153,12 +1194,19 @@ SIM.UI = {
 
         view.tcontainer.empty();
         view.loadRunes(type, editmode);
-        view.tcontainer.append(`<div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>`);
+        view.tcontainer.append(`<div class="topgear">
+            <div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>
+            <div class="filters">
+                <label id="filter_tiger" class="${globalThis.filter_tiger ? 'active' : ''}">Of the Tiger</label>
+                <label id="filter_green" class="${globalThis.filter_green ? 'active' : ''}">Greens</label>
+                <label id="filter_blue" class="${globalThis.filter_blue ? 'active' : ''}">Blues</label>
+            </div>
+        </div>`);
         view.tcontainer.append(table);
         let dpsrow = view.tcontainer.find('table.gear th').length;
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: false,
-            sortList: editmode ? [[dpsrow, 1],[1, 0]] : [[dpsrow-1, 1],[0, 0]],
+            sortList: editmode ? [[dpsrow, 1],[2, 0]] : [[dpsrow-1, 1],[1, 0]],
             textSorter : {
                 19 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));

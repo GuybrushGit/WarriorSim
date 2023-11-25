@@ -90,6 +90,11 @@ section.main {
         }
     }
 
+    [data-quality="2"] { color: $item-uncommon; }
+    [data-quality="3"] { color: $item-rare; }
+    [data-quality="4"] { color: $item-epic; }
+    [data-quality="5"] { color: $item-legendary; }
+
     .table-container {
         padding: 20px 40px;
         @include mobile {
@@ -121,23 +126,23 @@ section.main {
         }
     }
 
-    select {
-        display: none;
-        position: absolute;
-        bottom: -24px;
-        left: 0;
-        background: transparent;
-        color: white;
-        border: none;
-        width: 80px;
-        margin: 0px 12px;
-        outline: none;
-        cursor: pointer;
-        option {
-            background: #123;
-            color: white;
-        }
-    }
+    // select {
+    //     display: none;
+    //     position: absolute;
+    //     bottom: -24px;
+    //     left: 0;
+    //     background: transparent;
+    //     color: white;
+    //     border: none;
+    //     width: 80px;
+    //     margin: 0px 12px;
+    //     outline: none;
+    //     cursor: pointer;
+    //     option {
+    //         background: #123;
+    //         color: white;
+    //     }
+    // }
 
     table.enchant {
         margin-top: 40px;
@@ -145,6 +150,12 @@ section.main {
         tbody td.hide + td {
             width: 20%;
             min-width: 20%;
+        }
+    }
+
+    table.gear:not([data-type="custom"]) {
+        th:first-child {
+            width: 10px;
         }
     }
 
@@ -250,6 +261,42 @@ section.main {
             font-size: 12px;
         }
     }
+
+    .topgear {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+        label {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            &:before {
+                content: "";
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                background: #171717;
+                border-radius: 3px;
+                border: 1px solid hsla(0,0%,87%,.4);;
+                font-size: 12px;
+                text-align: center;
+                margin-right: 6px;
+                display: block;
+            }
+            &.active:before {
+                content: "✔";
+            }
+        }
+    }
+
+
     @include tablet {
         th:not(:first-child):not(:last-child) {
             display: none;

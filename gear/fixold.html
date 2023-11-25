@@ -10,7 +10,7 @@
 
   <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="/js/data/gear.js"></script>
-  <script type="text/javascript" src="/js/data/session.js"></script>
+  <script type="text/javascript" src="rawdata.js"></script>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
     <script>
 
-      $(document).ready(function () {
+      $(document).ready(async function () {
 
         // for (let type in session.gear) {
         //   let arr = [];
@@ -33,16 +33,23 @@
         //   session.gear[type] = arr;
         // }
 
+        await loadTable('ItemSparse');
+        
 
-        // for(let type in gear) {
-        //   for(let item of gear[type]) {
-        //     let found = false;
-        //     for (let item2 of gear2[type]) {
-        //       if (item2.id == item.id) found = true;
-        //     }
-        //     if (!found) console.log(item);
-        //   }
-        // }
+        for(let type in gear) {
+          for(let item of gear[type]) {
+            let id = item.id;
+            if (id == 145541) id = 14554;
+            if (id == 199211) id = 19921;
+            let sparse = getRow('ItemSparse', id);
+            if (!sparse) {
+              console.log(item.id + ' not found');
+              continue;
+            }
+            item.q = sparse.OverallQualityID;
+            item.i = sparse.ItemLevel;
+          }
+        }
 
         // for(let type in gear) {
         //   for(let item of gear[type]) {
@@ -70,8 +77,42 @@
         //   }
         // }
 
-        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear) + ";";
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       });
+
+      var loadTable = async function(table) {
+        return $.ajax({
+          url: table + '.csv',
+          dataType: 'text',
+        }).done((data) => {
+          globalThis[table] = [];
+          var rows = data.split(/\r?\n|\r/);
+          var th = rows[0].split(',');
+          rows.forEach(row => {
+            if (row == rows[0]) return;
+
+            // strip commas inside strings
+            let count = 0;
+            for(let i = 0; i < row.length; i++) {
+              if (row[i] == '"') count++;
+              if (row[i] == ',' && count % 2 == 1) {
+                row = row.slice(0, i) + row.slice(i+1);
+              } 
+            }
+
+            let fields = row.split(',');
+            let obj = {};
+            for (let i = 0; i < fields.length; i++) {
+              obj[th[i]] = fields[i];
+            }
+            globalThis[table].push(obj);
+          });
+        });
+      }
+
+      var getRow = function(table, id) {
+          for(let r of globalThis[table]) if (r.ID == id) return r;
+        }
     </script>
 
 </body>
