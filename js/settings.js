@@ -539,6 +539,7 @@ SIM.SETTINGS = {
     buildRunes: function () {
         var view = this;
         if (typeof runes === "undefined") return;
+        view.runes.find('#runes-area').empty();
         for (let type in runes) {
             for (let i in runes[type]) {
                 let rune = runes[type][i];
