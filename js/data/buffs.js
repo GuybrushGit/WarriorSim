@@ -778,6 +778,24 @@ var buffs = [
       bonusdmg: 2,
       sod: true,
    },
+   {
+      id: 6532,
+      name: "Bright Baubles",
+      iconname: "inv_misc_gem_variety_02",
+      group: "bauble",
+      skill_7: 75,
+      other: true,
+      sod: true,
+   },
+   {
+      id: 6533,
+      name: "Aquadynamic Fish Attractor",
+      iconname: "inv_misc_food_26",
+      group: "bauble",
+      skill_7: 100,
+      other: true,
+      sod: true,
+   },
 
 
    

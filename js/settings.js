@@ -364,7 +364,6 @@ SIM.SETTINGS = {
                 continue;
             }
 
-
             let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>

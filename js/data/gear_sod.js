@@ -41847,6 +41847,16 @@ var gear = {
       "sta": 1
     },
     {
+      "id": 6746,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 25,
+      "q": "2",
+      "i": "40",
+      "name": "Basalt Buckler",
+      "sta": 2
+    },
+    {
       "id": 9843,
       "type": "Shield",
       "slot": "offhand",
@@ -43787,6 +43797,45 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 6365,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 5,
+      "q": "1",
+      "i": "10",
+      "name": "Strong Fishing Pole",
+      "speed": 3,
+      "mindmg": 13,
+      "maxdmg": 21,
+      "skill": 5
+    },
+    {
+      "id": 6366,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 15,
+      "q": "1",
+      "i": "20",
+      "name": "Darkwood Fishing Pole",
+      "speed": 3,
+      "mindmg": 28,
+      "maxdmg": 43,
+      "skill": 15
+    },
+    {
+      "id": 6367,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 25,
+      "q": "1",
+      "i": "30",
+      "name": "Big Iron Fishing Pole",
+      "speed": 3,
+      "mindmg": 45,
+      "maxdmg": 69,
+      "skill": 20
+    },
+    {
       "id": 6505,
       "type": "Staff",
       "slot": "twohand",
@@ -44747,6 +44796,19 @@ var gear = {
       "maxdmg": 123,
       "str": 21,
       "sta": 6
+    },
+    {
+      "id": 12225,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 10,
+      "q": "1",
+      "i": "10",
+      "name": "Blump Family Fishing Pole",
+      "speed": 3,
+      "mindmg": 13,
+      "maxdmg": 21,
+      "skill": 3
     },
     {
       "id": 12243,
@@ -46670,6 +46732,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 19022,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 44,
+      "q": "2",
+      "i": "50",
+      "name": "Nat Pagle's Extreme Angler FC-5000",
+      "speed": 3,
+      "mindmg": 93,
+      "maxdmg": 140,
+      "skill": 25
+    },
+    {
       "id": 19101,
       "type": "Staff",
       "slot": "twohand",
@@ -47114,6 +47189,19 @@ var gear = {
       "maxdmg": 246
     },
     {
+      "id": 19970,
+      "type": "Fishing Pole",
+      "slot": "twohand",
+      "r": 35,
+      "q": "3",
+      "i": "20",
+      "name": "Arcanite Fishing Pole",
+      "speed": 3,
+      "mindmg": 42,
+      "maxdmg": 63,
+      "skill": 35
+    },
+    {
       "id": 20069,
       "type": "Staff",
       "slot": "twohand",
@@ -47197,20 +47285,6 @@ var gear = {
         "frost": 10,
         "shadow": 10
       }
-    },
-    {
-      "id": 20522,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 0,
-      "q": "3",
-      "i": "52",
-      "name": "Feral Staff",
-      "speed": 3,
-      "mindmg": 108,
-      "maxdmg": 162,
-      "agi": 16,
-      "str": 17
     },
     {
       "id": 20536,

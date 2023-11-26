@@ -52,6 +52,7 @@ class Player {
             skill_4: this.level * 5,
             skill_5: this.level * 5,
             skill_6: this.level * 5,
+            skill_7: (this.level < 35 ? 225 : 300),
             haste: 1,
             strmod: 1,
             agimod: 1,
@@ -192,7 +193,7 @@ class Player {
                             this.base['skill_3'] += item.skill;
                         }
                         else {
-                            let sk = WEAPONTYPE[item.type.toUpperCase()];
+                            let sk = WEAPONTYPE[item.type.replace(' ','').toUpperCase()];
                             this.base['skill_' + sk] += item.skill;
                         }
                     }
@@ -236,7 +237,7 @@ class Player {
                                 this.base['skill_3'] -= item.skill;
                             }
                             else {
-                                let sk = WEAPONTYPE[item.type.toUpperCase()];
+                                let sk = WEAPONTYPE[item.type.replace(' ','').toUpperCase()];
                                 this.base['skill_' + sk] -= item.skill;
                             }
                         }
@@ -419,12 +420,14 @@ class Player {
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+                this.base.skill_7 += buff.skill_7 || 0;
             }
         }
     }
     addSpells() {
         for (let spell of spells) {
             if (spell.active) {
+                if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
                 if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
             }

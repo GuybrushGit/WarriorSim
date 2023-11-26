@@ -5,7 +5,8 @@ var WEAPONTYPE = {
     AXE: 3,
     FIST: 4,
     POLEARM: 5,
-    STAFF: 6
+    STAFF: 6,
+    FISHINGPOLE: 7,
 }
 
 class Weapon {
@@ -25,7 +26,7 @@ class Weapon {
         this.crit = 0;
         this.basebonusdmg = 0;
         this.bonusdmg = 0;
-        this.type = WEAPONTYPE[item.type.toUpperCase()] || 0;
+        this.type = WEAPONTYPE[item.type.replace(' ','').toUpperCase()] || 0;
         this.totaldmg = 0;
         this.totalprocdmg = 0;
         this.data = [0,0,0,0,0];

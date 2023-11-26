@@ -165,6 +165,9 @@
           }
 
 
+          if (obj.id == 19970) obj.r = 35;
+
+
           let include = false, exclude = false;
           if (obj.id == 21568) include = true;
           if (obj.id == 18706) include = true;
@@ -176,6 +179,8 @@
           if (obj.id == 20130) include = true;
           if (obj.id == 21180) include = true;
           if (obj.id == 14552) include = true;
+          if (obj.id == 6746) include = true;
+          
           if (obj.id == 17780) exclude = true;
           if (obj.id == 11905) exclude = true;
           if (obj.id == 10455) exclude = true;
@@ -185,6 +190,8 @@
           if (obj.id == 22988) exclude = true;
           if (obj.id == 16007) exclude = true;
           if (obj.id == 12802) exclude = true;
+          if (obj.id == 20522) exclude = true;
+
           if (obj.name.indexOf('Bonescythe') > -1) exclude = true;
           if (obj.name.indexOf('Beastmaster') > -1) exclude = true;
           if (obj.name.indexOf('Beaststalker') > -1) exclude = true;
@@ -523,6 +530,7 @@
             case "14": return "Miscellaneous";
             case "15": return "Dagger";
             case "18": return "Crossbow";
+            case "20": return "Fishing Pole";
           }
         }
       }
