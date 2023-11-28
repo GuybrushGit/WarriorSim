@@ -408,22 +408,11 @@ SIM.UI = {
             line.find('.stat-error').text(error.toFixed(2));
         }
         async function simulateAll() {
-            const ap = await simulateWeight(0, 50);
-            updateStat("ap", ap);
-            if (player.auras.bloodfury) {
-                updateStat("str", await simulateWeight(3, 25));
-            } else {
-                const strAp = 2 * player.stats.strmod;
-                updateStat("str", {weight: ap.weight * strAp, error: ap.error * strAp});
-            }
-
-            const crit = await simulateWeight(1, 2);
-            updateStat("crit", crit);
-
-            const agiCrit = player.stats.agimod * player.agipercrit;
-            updateStat("agi", {weight: crit.weight * agiCrit, error: crit.error * agiCrit});
-
-            updateStat("hit", await simulateWeight(2, 2));
+            updateStat("agi", await simulateWeight(4, 20));
+            updateStat("str", await simulateWeight(3, 20));
+            updateStat("ap", await simulateWeight(0, 40));
+            updateStat("crit", await simulateWeight(1, 1));
+            updateStat("hit", await simulateWeight(2, 1));
         }
 
         simulateAll().then(
