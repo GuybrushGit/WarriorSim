@@ -216,14 +216,6 @@
             <label>Target Resistance</label>
             <input type="text" name="targetresistance" value="24" data-numberonly="true">
           </li>
-          <li style="display: none;">
-            <label>Adjacent Targets</label>
-            <input type="text" name="adjacent" value="0" data-numberonly="true">
-          </li>
-          <li style="display: none;">
-            <label>Adjacent Targets Level</label>
-            <input type="text" name="adjacentlevel" value="60" data-numberonly="true">
-          </li>
           <li>
             <label><a href="https://docs.google.com/spreadsheets/d/1Z4mfptLX97dcZzeZhl2qP5mqmcpo8lMTMRxcZjc7PpI/edit?usp=sharing" target="_blank">Target Armor</a></label>
             <input type="text" name="targetarmor" value="336" data-numberonly="true">
@@ -249,6 +241,11 @@
           <li>
             <label>Reaction Time (max)</label>
             <input type="text" name="reactionmax" value="300" data-numberonly="true">
+          </li>
+          <li>
+            <label>Adjacent Mobs</label>
+            <input type="range"  name="slider-adjacent" min="0" max="3" value="0" class="slider">
+            <input type="text" name="adjacent" value="0" data-numberonly="true">
           </li>
         </ul>
       </article>
