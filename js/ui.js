@@ -971,7 +971,7 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            if (item.r > level || (item.q < 4 && item.i < (level - 7))) {
+            if (item.r > level || (mode == "sod" && item.q < 4 && item.i < (level - 7))) {
                 item.selected = false;
                 continue;
             }
@@ -1123,7 +1123,7 @@ SIM.UI = {
 
         for (let item of gear[type]) {
             
-            if (item.r > level || (item.q < 4 && item.i < (level - 7))) {
+            if (item.r > level || (mode == "sod" && item.q < 4 && item.i < (level - 7))) {
                 item.selected = false;
                 continue;
             }

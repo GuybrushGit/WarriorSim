@@ -8001,27 +8001,6 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 12104,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 0,
-      "q": "2",
-      "i": "60",
-      "name": "Brindlethorn Tunic",
-      "sta": 22,
-      "ap": 20
-    },
-    {
-      "id": 12106,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 0,
-      "q": "2",
-      "i": "60",
-      "name": "Boulderskin Breastplate",
-      "str": 13
-    },
-    {
       "id": 12422,
       "type": "Plate",
       "slot": "chest",
