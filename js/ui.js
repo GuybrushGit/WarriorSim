@@ -1015,6 +1015,7 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
@@ -1160,6 +1161,7 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
@@ -1244,6 +1246,7 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             if (item.hidden && !editmode) continue;
@@ -1318,6 +1321,7 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
