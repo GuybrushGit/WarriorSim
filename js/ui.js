@@ -1286,14 +1286,14 @@ SIM.UI = {
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
                                 <th>Enchant</th>
+                                <th>Damage</th>
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
-                                <th>Haste</th>
-                                <th>Resist</th>
                                 <th>Crit</th>
                                 <th>Hit</th>
-                                <th>Damage</th>
+                                <th>Haste</th>
+                                <th>Resist</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
                             </tr>
@@ -1323,14 +1323,14 @@ SIM.UI = {
             table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
                         <td><a href="${WEB_DB_URL}${item.spellid ? 'spell' : 'item'}=${item.id}"></a>${item.name}</td>
+                        <td>${item.bonusdmg || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.haste || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
+                        <td>${item.haste || ''}</td>
                         <td>${resist || ''}</td>
-                        <td>${item.bonusdmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -1343,9 +1343,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: false,
-            sortList: editmode ? [[14, 1]] : [[13, 1]],
+            sortList: editmode ? [[12, 1]] : [[11, 1]],
             headers: {
-                13: { sorter: "text" }
+                11: { sorter: "text" }
             }
         });
 
