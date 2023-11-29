@@ -547,28 +547,33 @@ SIM.SETTINGS = {
                 if (rune.enable && !rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').addClass('hidden');
             }
         }
-        let type_of_runes = ["chest", "hands", "legs"]
+        var type_of_runes = $('nav > ul > li').map(function() {
+            return $(this).data('type');
+          }).get();
         for (let tree_name of type_of_runes) {
-            let table = $('<table>');
-            let tbody = $('<tbody>');
-            let tree = $(`<tr name="${tree_name}">`)
-            for(let i = 0; i < runes[tree_name].length; i++) {
-                let this_rune = runes[tree_name][i];
-                let td = $('<td>');
-                let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
-                let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
-                sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
-                sub_div.append(`<a href="${WEB_DB_URL}spell=${this_rune.id}" class="wh-tooltip"></a>`);
-                rune_div.append(sub_div);
-                td.append(rune_div); 
-                tree.append(td);
+            if (!runes.hasOwnProperty(tree_name)) {
+            } else {
+                let table = $('<table>');
+                let tbody = $('<tbody>');
+                let tree = $(`<tr name="${tree_name}">`)
+                for(let i = 0; i < runes[tree_name].length; i++) {
+                    let this_rune = runes[tree_name][i];
+                    let td = $('<td>');
+                    let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
+                    let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
+                    sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
+                    sub_div.append(`<a href="${WEB_DB_URL}spell=${this_rune.id}" class="wh-tooltip"></a>`);
+                    rune_div.append(sub_div);
+                    td.append(rune_div); 
+                    tree.append(td);
+                }
+                let tr = $('<tr>');
+                let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
+                tr.append(tree_header)
+                table.append(tr).append(tree);
+                tbody.append(table)
+                view.runes.find('#runes-area').append(tbody);
             }
-            let tr = $('<tr>');
-            let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
-            tr.append(tree_header)
-            table.append(tr).append(tree);
-            tbody.append(table)
-            view.runes.find('#runes-area').append(tbody);
         }
     },
 
