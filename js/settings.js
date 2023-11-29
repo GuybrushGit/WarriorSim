@@ -1,5 +1,3 @@
-const WEB_DB_URL = "https://classic.wowhead.com/";
-
 var SIM = SIM || {}
 
 SIM.SETTINGS = {

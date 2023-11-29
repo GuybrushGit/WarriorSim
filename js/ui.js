@@ -1,4 +1,5 @@
 const MAX_WORKERS = navigator.hardwareConcurrency || 8;
+const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
 
@@ -1326,9 +1327,9 @@ SIM.UI = {
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.haste || ''}</td>
-                        <td>${resist || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.bonusdmg || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
