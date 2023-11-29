@@ -855,7 +855,7 @@ SIM.UI = {
         obj.runes = _runes;
         obj.resistance = _resistance;
         if (globalThis.profilename) obj.profilename = globalThis.profilename;
- 
+
         let profileid = globalThis.profileid || 0;
         localStorage[mode + profileid] = JSON.stringify(obj);
     },
@@ -1010,7 +1010,7 @@ SIM.UI = {
 
             let resist = '';
             if (item.resist) {
-                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.fire) resist += item.resist.fire + ' FiR';
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
@@ -1155,7 +1155,7 @@ SIM.UI = {
 
             let resist = '';
             if (item.resist) {
-                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.fire) resist += item.resist.fire + ' FiR';
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
