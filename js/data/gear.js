@@ -3611,7 +3611,6 @@ var gear = {
   "finger1": [
     {
       "id": 2246,
-      "type": "Miscellaneous",
       "slot": "finger",
       "r": 53,
       "q": "4",
@@ -3959,7 +3958,6 @@ var gear = {
   "finger2": [
     {
       "id": 2246,
-      "type": "Miscellaneous",
       "slot": "finger",
       "r": 53,
       "q": "4",
