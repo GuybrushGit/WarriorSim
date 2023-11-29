@@ -169,7 +169,7 @@ SIM.PROFILES = {
                     <p></p>
                     <p>${talents}</p>
                     <ul>${items}</ul>
-                    <div class="export-profile" title="Export" ${i == 0 ? 'style="right: 20px"' : ''}>${svgExport}</div>
+                    <div class="export-profile" title="Export">${svgExport}</div>
                     ${i > 0 ? `<div class="delete-profile" title="Delete">${svgThrash}</div>` : ''}
                 </div>`);
             view.container.append(profile);
