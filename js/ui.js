@@ -1,4 +1,5 @@
 const MAX_WORKERS = navigator.hardwareConcurrency || 8;
+const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
 
@@ -769,7 +770,7 @@ SIM.UI = {
             if (counter == 0)
                 continue;
             if (counter >= set.bonus[0].count)
-                view.sidebar.find('#sets').append(`<a href="https://classic.wowhead.com/item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
+                view.sidebar.find('#sets').append(`<a href="${WEB_DB_URL}item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
         }
 
         let count = 0;
@@ -855,7 +856,7 @@ SIM.UI = {
         obj.runes = _runes;
         obj.resistance = _resistance;
         if (globalThis.profilename) obj.profilename = globalThis.profilename;
- 
+
         let profileid = globalThis.profileid || 0;
         localStorage[mode + profileid] = JSON.stringify(obj);
     },
@@ -941,6 +942,7 @@ SIM.UI = {
                                 <th>ilvl</th>
                                 <th>Name</th>
                                 <th>Sta</th>
+                                <th>Res</th>
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
@@ -950,7 +952,6 @@ SIM.UI = {
                                 <th>Max</th>
                                 <th>Speed</th>
                                 <th>Skill</th>
-                                <th>Resist</th>
                                 <th>Type</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
@@ -1010,18 +1011,20 @@ SIM.UI = {
 
             let resist = '';
             if (item.resist) {
-                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.fire) resist += item.resist.fire + ' FiR';
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" data-name="${item.name}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td data-quality="${item.q}"><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.i}</td>
+                        <td data-quality="${item.q}"><a href="${WEB_DB_URL}item=${tooltip}${rand}"></a>${item.i}</td>
                         <td>${item.name}</td>`
 
             table +=`<td>${item.sta || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
@@ -1031,7 +1034,6 @@ SIM.UI = {
                         <td>${item.maxdmg || ''}</td>
                         <td>${item.speed || ''}</td>
                         <td>${item.skill || ''}</td>
-                        <td>${resist || ''}</td>
                         <td>${item.type || ''}</td>
                         <td class="ppm"><p contenteditable="true">${item.proc && item.proc.ppm || ''}</p></td>
                         <td>${item.dps || ''}</td>
@@ -1097,13 +1099,13 @@ SIM.UI = {
                                 <th>ilvl</th>
                                 <th>Name</th>
                                 <th>Sta</th>
+                                <th>Res</th>
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
                                 <th>Skill</th>
-                                <th>Resist</th>
                                 <th>Type</th>
                                 <th>DPS</th>
                             </tr>
@@ -1155,25 +1157,26 @@ SIM.UI = {
 
             let resist = '';
             if (item.resist) {
-                if (item.resist.fire) resist += item.resist.fire + ' FiR'; 
+                if (item.resist.fire) resist += item.resist.fire + ' FiR';
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td data-quality="${item.q}"><a href="https://classic.wowhead.com/item=${tooltip}${rand}"></a>${item.i}</td>
+                        <td data-quality="${item.q}"><a href="${WEB_DB_URL}item=${tooltip}${rand}"></a>${item.i}</td>
                         <td>${item.name}</td>`
 
             table += `<td>${item.sta || ''}</td>
+                        <td>${resist || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.skill || ''}</td>
-                        <td>${resist || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -1230,7 +1233,6 @@ SIM.UI = {
                                 <th>Hit</th>
                                 <th>Crit</th>
                                 <th>Skill</th>
-                                <th>Resist</th>
                                 <th>DPS</th>
                             </tr>
                         </thead>
@@ -1243,6 +1245,7 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             if (item.hidden && !editmode) continue;
@@ -1255,7 +1258,6 @@ SIM.UI = {
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.skill_1 || ''}</td>
-                        <td>${resist || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
         }
@@ -1266,7 +1268,7 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.gear').tablesorter({
             widthFixed: false,
-            sortList: editmode ? [[11, 1]] : [[10, 1]],
+            sortList: editmode ? [[9, 1]] : [[8, 1]],
         });
     },
 
@@ -1285,14 +1287,14 @@ SIM.UI = {
                             <tr>
                                 ${editmode ? '<th></th>' : ''}
                                 <th>Enchant</th>
+                                <th>Res</th>
+                                <th>Damage</th>
                                 <th>Str</th>
                                 <th>Agi</th>
                                 <th>AP</th>
-                                <th>Haste</th>
-                                <th>Resist</th>
                                 <th>Crit</th>
                                 <th>Hit</th>
-                                <th>Damage</th>
+                                <th>Haste</th>
                                 <th>PPM</th>
                                 <th>DPS</th>
                             </tr>
@@ -1317,19 +1319,20 @@ SIM.UI = {
                 if (item.resist.frost) resist += (resist.length ? ' + ' : '') + item.resist.frost + ' FR';
                 if (item.resist.nature) resist += (resist.length ? ' + ' : '') + item.resist.nature + ' NR';
                 if (item.resist.shadow) resist += (resist.length ? ' + ' : '') + item.resist.shadow + ' SR';
+                if (item.resist.arcane) resist += (resist.length ? ' + ' : '') + item.resist.arcane + ' AR';
             }
 
             table += `<tr data-id="${item.id}" data-temp="${item.temp || false}" class="${item.selected ? 'active' : ''} ${item.hidden ? 'hidden' : ''}">
                         ${editmode ? '<td class="hide">' + (item.hidden ? eyesvghidden : eyesvg) + '</td>' : ''}
-                        <td><a href="https://classic.wowhead.com/${item.spellid ? 'spell' : 'item'}=${item.id}"></a>${item.name}</td>
+                        <td><a href="${WEB_DB_URL}${item.spellid ? 'spell' : 'item'}=${item.id}"></a>${item.name}</td>
+                        <td>${resist || ''}</td>
+                        <td>${item.bonusdmg || ''}</td>
                         <td>${item.str || ''}</td>
                         <td>${item.agi || ''}</td>
                         <td>${item.ap || ''}</td>
-                        <td>${item.haste || ''}</td>
-                        <td>${resist || ''}</td>
                         <td>${item.crit || ''}</td>
                         <td>${item.hit || ''}</td>
-                        <td>${item.bonusdmg || ''}</td>
+                        <td>${item.haste || ''}</td>
                         <td>${item.ppm || ''}</td>
                         <td>${item.dps || ''}</td>
                     </tr>`;
@@ -1342,9 +1345,9 @@ SIM.UI = {
         view.tcontainer.append(table);
         view.tcontainer.find('table.enchant').tablesorter({
             widthFixed: false,
-            sortList: editmode ? [[14, 1]] : [[13, 1]],
+            sortList: editmode ? [[12, 1]] : [[11, 1]],
             headers: {
-                13: { sorter: "text" }
+                11: { sorter: "text" }
             }
         });
 
@@ -1364,7 +1367,7 @@ SIM.UI = {
                 <div data-id="${item.id}" class="rune ${item.selected ? 'active' : ''}">
                     <div class="icon">
                         <img src="dist/img/${item.iconname}.jpg" alt="${item.name}">
-                        <a href="https://classic.wowhead.com/spell=${item.id}" class="wh-tooltip"></a>
+                        <a href="${WEB_DB_URL}spell=${item.id}" class="wh-tooltip"></a>
                     </div>
                 </div>`);
         }

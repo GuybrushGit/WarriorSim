@@ -3611,7 +3611,6 @@ var gear = {
   "finger1": [
     {
       "id": 2246,
-      "type": "Miscellaneous",
       "slot": "finger",
       "r": 53,
       "q": "4",
@@ -3959,7 +3958,6 @@ var gear = {
   "finger2": [
     {
       "id": 2246,
-      "type": "Miscellaneous",
       "slot": "finger",
       "r": 53,
       "q": "4",
@@ -8926,6 +8924,23 @@ var gear = {
       "type": "Mace",
       "q": "4",
       "i": "75"
+    },
+    {
+      "name": "Demonshear",
+      "mindmg": 163,
+      "maxdmg": 246,
+      "speed": 3.8,
+      "id": 13348,
+      "source": "Dungeon",
+      "phase": 1,
+      "type": "Sword",
+      "proc": {
+        "ppm": 1,
+        "magic": true,
+        "dmg": 270
+      },
+      "q": "3",
+      "i": "63"
     }
   ],
   "custom": [
