@@ -284,7 +284,7 @@ class SunderArmor extends Spell {
         let dmg;
         let mod = 1 + 0.1 * (this.stacks - 1);
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        return (dmg * mod) + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        return (dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed) * mod;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage &&
