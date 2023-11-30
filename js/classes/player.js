@@ -413,7 +413,7 @@ class Player {
                     this.gladstance = true;
                 if (buff.id == 71)
                     this.defstance = true;
-                
+
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;
                 this.base.str += str || buff.str || 0;

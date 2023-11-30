@@ -519,8 +519,7 @@ var buffs = [
       sod: true,
    },
 
-   
-   
+   // Consumes
    {
       id: 8410,
       name: "R.O.I.D.S.",
@@ -747,6 +746,7 @@ var buffs = [
       other: true,
    },
 
+   // SoD Extras
    {
       id: 430947,
       spellid: true,
@@ -796,7 +796,4 @@ var buffs = [
       other: true,
       sod: true,
    },
-
-
-   
 ];

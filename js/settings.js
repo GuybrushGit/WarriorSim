@@ -72,7 +72,7 @@ SIM.SETTINGS = {
                 $('.rotation [data-id="' + talent.enable + '"]').removeClass('hidden');
             if (talent.enablename)
                 $('.rotation [data-name="' + talent.enablename + '"]').removeClass('hidden');
-            $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
+            $(this).find('a').attr('href', WEB_DB_URL + 'spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
             view.buildSpells();
@@ -96,7 +96,7 @@ SIM.SETTINGS = {
                     if (spell.name == talent.enablename)
                         spell.active = false;
             }
-            $(this).find('a').attr('href', 'https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
+            $(this).find('a').attr('href', WEB_DB_URL + 'spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1]);
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });
@@ -366,7 +366,7 @@ SIM.SETTINGS = {
 
             let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="https://classic.wowhead.com/spell=${spell.id}" class="wh-tooltip"></a>
+            <a href="${WEB_DB_URL}spell=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
             if (spell.buff) buffs += div[0].outerHTML;
@@ -502,7 +502,7 @@ SIM.SETTINGS = {
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"` : '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
                             <img src="dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
-                            <a href="https://classic.wowhead.com/${wh}=${buff.id}" class="wh-tooltip"></a>
+                            <a href="${WEB_DB_URL}${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             if (buff.worldbuff) worldbuffs += html;
             else if (buff.consume) consumes += html;
@@ -529,7 +529,7 @@ SIM.SETTINGS = {
                 let div = $('<div class="icon" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
                 div.html('<img src="dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
                 if (talent.c >= talent.m) div.addClass('maxed');
-                div.append('<a href="https://classic.wowhead.com/spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
+                div.append('<a href="${WEB_DB_URL}spell=' + talent.s[talent.c == 0 ? 0 : talent.c - 1] + '" class="wh-tooltip"></a>');
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
             }
             view.talents.append(table);
@@ -547,28 +547,33 @@ SIM.SETTINGS = {
                 if (rune.enable && !rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').addClass('hidden');
             }
         }
-        let type_of_runes = ["chest", "hands", "legs"]
+        var type_of_runes = $('nav > ul > li').map(function() {
+            return $(this).data('type');
+          }).get();
         for (let tree_name of type_of_runes) {
-            let table = $('<table>');
-            let tbody = $('<tbody>');
-            let tree = $(`<tr name="${tree_name}">`)
-            for(let i = 0; i < runes[tree_name].length; i++) {
-                let this_rune = runes[tree_name][i];
-                let td = $('<td>');
-                let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
-                let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
-                sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
-                sub_div.append(`<a href="https://classic.wowhead.com/spell=${this_rune.id}" class="wh-tooltip"></a>`);
-                rune_div.append(sub_div);
-                td.append(rune_div); 
-                tree.append(td);
+            if (!runes.hasOwnProperty(tree_name)) {
+            } else {
+                let table = $('<table>');
+                let tbody = $('<tbody>');
+                let tree = $(`<tr name="${tree_name}">`)
+                for(let i = 0; i < runes[tree_name].length; i++) {
+                    let this_rune = runes[tree_name][i];
+                    let td = $('<td>');
+                    let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
+                    let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
+                    sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
+                    sub_div.append(`<a href="${WEB_DB_URL}spell=${this_rune.id}" class="wh-tooltip"></a>`);
+                    rune_div.append(sub_div);
+                    td.append(rune_div); 
+                    tree.append(td);
+                }
+                let tr = $('<tr>');
+                let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
+                tr.append(tree_header)
+                table.append(tr).append(tree);
+                tbody.append(table)
+                view.runes.find('#runes-area').append(tbody);
             }
-            let tr = $('<tr>');
-            let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
-            tr.append(tree_header)
-            table.append(tr).append(tree);
-            tbody.append(table)
-            view.runes.find('#runes-area').append(tbody);
         }
     },
 
