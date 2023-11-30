@@ -84,11 +84,8 @@ class Weapon {
 
         for (let buff of buffs) {
             if (buff.group == "windfury" && buff.active) {
-                if (!this.player.auras.windfury)
+                if (!this.player.auras.windfury && !this.offhand) {
                     this.player.auras.windfury = new Windfury(this.player, buff.id);
-
-                // Wild Strikes
-                if (buff.id == 407975 || !this.offhand) {
                     this.windfury = this.player.auras.windfury;
                     this.wildstrikes = buff.id == 407975;
                 }
