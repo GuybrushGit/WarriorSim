@@ -23,7 +23,7 @@ class Player {
         this.ragemod = 1;
         this.level = config.level;
         this.rageconversion = ((0.0091107836 * this.level * this.level) + 3.225598133 * this.level) + 4.2652911;
-        if (this.level = 25) this.rageconversion = 82.25;
+        if (this.level == 25) this.rageconversion = 82.25;
         this.agipercrit = this.getAgiPerCrit(this.level);
         this.timer = 0;
         this.itemtimer = 0;
