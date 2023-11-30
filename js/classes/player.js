@@ -130,7 +130,10 @@ class Player {
         if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
         if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
         if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
-        if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) this.spells.sunderarmor.devastate = true;
+        if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
+            this.spells.sunderarmor.devastate = true;
+            this.spells.sunderarmor.nocrit = false;
+        }
 
         this.update();
         if (this.oh)
