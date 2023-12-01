@@ -53,7 +53,7 @@
         for (let item of Item) {
           let obj = {};
           obj.id = parseInt(item.ID);
-          //if (obj.id == 22478) debugger;
+          if (obj.id == 1280) debugger;
 
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
@@ -70,10 +70,10 @@
           obj.i = sparse.ItemLevel;
           obj.name = sparse.Display_lang.replaceAll("\"","");
           if (parseInt(sparse.ItemDelay)) obj.speed = parseInt(sparse.ItemDelay) / 1000;
-          if (parseInt(sparse.MinDamage_0)) obj.mindmg = parseInt(sparse.MinDamage_0);
-          if (parseInt(sparse.MaxDamage_0)) obj.maxdmg = parseInt(sparse.MaxDamage_0);
-          if (parseInt(sparse.MinDamage_1)) obj.mindmg += parseInt(sparse.MinDamage_1);
-          if (parseInt(sparse.MaxDamage_1)) obj.maxdmg += parseInt(sparse.MaxDamage_1);
+          if (parseInt(sparse["MinDamage[0]"])) obj.mindmg = parseInt(sparse["MinDamage[0]"]);
+          if (parseInt(sparse["MaxDamage[0]"])) obj.maxdmg = parseInt(sparse["MaxDamage[0]"]);
+          if (parseInt(sparse["MinDamage[1]"])) obj.mindmg += parseInt(sparse["MinDamage[1]"]);
+          if (parseInt(sparse["MaxDamage[1]"])) obj.maxdmg += parseInt(sparse["MaxDamage[1]"]);
           if (item.ClassID == "2" && (!obj.mindmg || !obj.maxdmg)) continue;
 
           let agi = getStat(sparse, 3);
@@ -83,11 +83,11 @@
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
 
-          if (parseInt(item.Resistances_2) || parseInt(item.Resistances_3) || parseInt(item.Resistances_4) || parseInt(item.Resistances_5)) obj.resist = {};
-          if (parseInt(item.Resistances_2)) obj.resist.fire = parseInt(item.Resistances_2);
-          if (parseInt(item.Resistances_3)) obj.resist.nature = parseInt(item.Resistances_3);
-          if (parseInt(item.Resistances_4)) obj.resist.frost = parseInt(item.Resistances_4);
-          if (parseInt(item.Resistances_5)) obj.resist.shadow = parseInt(item.Resistances_5);
+          if (parseInt(item["Resistances[2]"]) || parseInt(item["Resistances[3]"]) || parseInt(item["Resistances[4]"]) || parseInt(item["Resistances[5]"])) obj.resist = {};
+          if (parseInt(item["Resistances[2]"])) obj.resist.fire = parseInt(item["Resistances[2]"]);
+          if (parseInt(item["Resistances[3]"])) obj.resist.nature = parseInt(item["Resistances[3]"]);
+          if (parseInt(item["Resistances[4]"])) obj.resist.frost = parseInt(item["Resistances[4]"]);
+          if (parseInt(item["Resistances[5]"])) obj.resist.shadow = parseInt(item["Resistances[5]"]);
 
 
           let spells = getRows('ItemEffect', 'ParentItemID', item.ID);
@@ -101,19 +101,19 @@
                 effects.forEach(e => {
                   if (e.Effect == 6 && e.EffectAura == 99)
                     obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
-                  if (e.Effect == 6 && e.EffectAura == 102 && e.EffectMiscValue_0 & 32)
+                  if (e.Effect == 6 && e.EffectAura == 102 && e["EffectMiscValue[0]"] & 32)
                     obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 54)
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
-                  if (e.Effect == 6 && e.EffectAura == 30 && e.EffectMiscValue_0 != 95 && e.EffectMiscValue_0 != 226 && e.EffectMiscValue_0 != 393 && e.EffectMiscValue_0 != 45 && e.EffectMiscValue_0 != 46) {
+                  if (e.Effect == 6 && e.EffectAura == 30 && e["EffectMiscValue[0]"] != 95 && e["EffectMiscValue[0]"] != 226 && e["EffectMiscValue[0]"] != 393 && e["EffectMiscValue[0]"] != 45 && e["EffectMiscValue[0]"] != 46) {
                     obj.skill = parseInt(e.EffectBasePoints) + 1;
                     if (item.ClassID != "2") {
                       if (item.ID == 14551) obj.type = "Varied";
-                      else if (e.EffectMiscValue_0 == 44) obj.type = "Axe";
-                      else if (e.EffectMiscValue_0 == 173) obj.type = "Dagger";
-                      else if (e.EffectMiscValue_0 == 43) obj.type = "Sword";
+                      else if (e["EffectMiscValue[0]"] == 44) obj.type = "Axe";
+                      else if (e["EffectMiscValue[0]"] == 173) obj.type = "Dagger";
+                      else if (e["EffectMiscValue[0]"] == 43) obj.type = "Sword";
                       else delete obj.skill;
                     }
                   }
@@ -235,86 +235,16 @@
         }
 
         // custom items
-        gear["neck"].push({
-          id: 9999997,
-          type: "Miscellaneous",
-          slot: "neck",
-          name: "High Tide Choker",
-          str: 7,
-          agi: 4,
-          r: 25,
-          q: 3,
-          i: 25
-        });
-        gear["back"].push({
-          id: 9999996,
-          type: "Cloth",
-          slot: "neck",
-          name: "Shimmering Thresher Cape",
-          str: 6,
-          r: 25,
-          q: 3,
-          i: 25
-        });
-        gear["chest"].push({
-          id: 210794,
-          type: "Mail",
-          slot: "chest",
-          name: "Shifting Silver Breastplate",
-          str: 14,
-          sta: 6,
-          hit: 1,
-          r: 25,
-          q: 4,
-          i: 35
-        });
-        gear["hands"].push({
-          id: 211423,
-          type: "Leather",
-          slot: "hands",
-          name: "Void-Touched Leather Gloves",
-          agi: 6,
-          sta: 6,
-          hit: 1,
-          r: 25,
-          q: 4,
-          i: 35
-        });
-
-        gear["twohand"].push({
-          "id": 9999999,
-          "type": "Sword",
-          "slot": "twohand",
-          "r": 25,
-          "name": "Fathomblade",
-          "speed": 2.5,
-          "mindmg": 48,
-          "maxdmg": 73,
-          "hit": 1,
-          q: 3,
-          i: 25
-        });
-
-        gear["trinket1"].push({
-          "id": 9999998,
-          "type": "Miscellaneous",
-          "slot": "trinket",
-          "r": 25,
-          "name": "Avenger's Void Pearl",
-          "ap": 10,
-          q: 3,
-          i: 25
-        });
-        gear["trinket2"].push({
-          "id": 9999998,
-          "type": "Miscellaneous",
-          "slot": "trinket",
-          "r": 25,
-          "name": "Avenger's Void Pearl",
-          "ap": 10,
-          q: 3,
-          i: 25
-        });
+        // gear["trinket2"].push({
+        //   "id": 9999998,
+        //   "type": "Miscellaneous",
+        //   "slot": "trinket",
+        //   "r": 25,
+        //   "name": "Avenger's Void Pearl",
+        //   "ap": 10,
+        //   q: 3,
+        //   i: 25
+        // });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
@@ -558,16 +488,16 @@
       };
       var getStat = function(obj, type) {
         let stat = 0;
-        if (obj.StatModifier_bonusStat_0 == type) stat += parseInt(obj.StatModifier_bonusAmount_0);
-        if (obj.StatModifier_bonusStat_1 == type) stat += parseInt(obj.StatModifier_bonusAmount_1);
-        if (obj.StatModifier_bonusStat_2 == type) stat += parseInt(obj.StatModifier_bonusAmount_2);
-        if (obj.StatModifier_bonusStat_3 == type) stat += parseInt(obj.StatModifier_bonusAmount_3);
-        if (obj.StatModifier_bonusStat_4 == type) stat += parseInt(obj.StatModifier_bonusAmount_4);
-        if (obj.StatModifier_bonusStat_5 == type) stat += parseInt(obj.StatModifier_bonusAmount_5);
-        if (obj.StatModifier_bonusStat_6 == type) stat += parseInt(obj.StatModifier_bonusAmount_6);
-        if (obj.StatModifier_bonusStat_7 == type) stat += parseInt(obj.StatModifier_bonusAmount_7);
-        if (obj.StatModifier_bonusStat_8 == type) stat += parseInt(obj.StatModifier_bonusAmount_8);
-        if (obj.StatModifier_bonusStat_9 == type) stat += parseInt(obj.StatModifier_bonusAmount_9);
+        if (obj["StatModifier_bonusStat[0]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[0]"]);
+        if (obj["StatModifier_bonusStat[1]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[1]"]);
+        if (obj["StatModifier_bonusStat[2]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[2]"]);
+        if (obj["StatModifier_bonusStat[3]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[3]"]);
+        if (obj["StatModifier_bonusStat[4]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[4]"]);
+        if (obj["StatModifier_bonusStat[5]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[5]"]);
+        if (obj["StatModifier_bonusStat[6]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[6]"]);
+        if (obj["StatModifier_bonusStat[7]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[7]"]);
+        if (obj["StatModifier_bonusStat[8]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[8]"]);
+        if (obj["StatModifier_bonusStat[9]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[9]"]);
         return stat;
       }
       var isUnobtainable = function(id) {
