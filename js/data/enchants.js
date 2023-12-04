@@ -814,4 +814,22 @@ var enchant = {
          { count: 3, stats: { sta: 0 } }
       ]
    },
+   {
+      id: 1578,
+      name: 'Blackfathom Slayer\'s Leather',
+      items: [211510,211511,211512],
+      bonus: [
+         { count: 2, stats: { ap: 12 } },
+         { count: 3, stats: { hit: 1 } }
+      ]
+   },
+   {
+      id: 1577,
+      name: 'Blackfathom Avenger\'s Mail',
+      items: [211506,211504,211505],
+      bonus: [
+         { count: 2, stats: { ap: 12 } },
+         { count: 3, stats: { hit: 1 } }
+      ]
+   },
 ];
