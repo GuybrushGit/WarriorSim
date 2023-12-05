@@ -1012,6 +1012,17 @@ var gear = {
       "hit": 2
     },
     {
+      "id": 12953,
+      "type": "Mail",
+      "slot": "head",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Dragoneye Coif",
+      "sta": 17,
+      "ap": 38
+    },
+    {
       "id": 13073,
       "type": "Plate",
       "slot": "head",
@@ -2427,6 +2438,18 @@ var gear = {
       "name": "Wolfpack Medallion",
       "agi": 3,
       "sta": 5
+    },
+    {
+      "id": 7427,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Cerulean Talisman of the Tiger",
+      "agi": 5,
+      "str": 5,
+      "rand": 681
     },
     {
       "id": 7550,
@@ -8032,6 +8055,16 @@ var gear = {
       "sta": 22
     },
     {
+      "id": 10784,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 47,
+      "q": "3",
+      "i": "52",
+      "name": "Atal'ai Breastplate",
+      "ap": 22
+    },
+    {
       "id": 10827,
       "type": "Leather",
       "slot": "chest",
@@ -10158,6 +10191,16 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": 9428,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 30,
+      "q": "3",
+      "i": "35",
+      "name": "Unearthed Bands",
+      "ap": 8
     },
     {
       "id": 9432,
@@ -18142,6 +18185,17 @@ var gear = {
       "skill": 5
     },
     {
+      "id": 18529,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Elemental Plate Girdle",
+      "str": 17,
+      "sta": 10
+    },
+    {
       "id": 18547,
       "type": "Plate",
       "slot": "waist",
@@ -24502,6 +24556,30 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 7426,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 7547,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
+    },
+    {
       "id": 7552,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -25806,6 +25884,30 @@ var gear = {
       "name": "Jaina's Signet Ring",
       "str": 3,
       "sta": 7
+    },
+    {
+      "id": 7426,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of the Tiger",
+      "agi": 4,
+      "str": 4,
+      "rand": 678
+    },
+    {
+      "id": 7547,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of the Tiger",
+      "agi": 8,
+      "str": 8,
+      "rand": 690
     },
     {
       "id": 7552,
@@ -30492,7 +30594,7 @@ var gear = {
       "id": 6804,
       "type": "Mace",
       "slot": "mainhand",
-      "r": 25,
+      "r": 26,
       "q": "2",
       "i": "40",
       "name": "Windstorm Hammer",
@@ -33366,6 +33468,21 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "id": 16792,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Giant Club of the Tiger",
+      "speed": 1.9,
+      "mindmg": 26,
+      "maxdmg": 49,
+      "agi": 5,
+      "str": 5,
+      "rand": 681
     },
     {
       "id": 16886,
@@ -40454,6 +40571,30 @@ var gear = {
       "q": "2",
       "i": "62",
       "name": "Heroic Guard of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15888,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Deprecated Glorious Shield of the Tiger",
+      "agi": 10,
+      "str": 10,
+      "rand": 696
+    },
+    {
+      "id": 15889,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Deprecated Jademir Scale Shield of the Tiger",
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -48616,22 +48757,6 @@ var gear = {
       "mindmg": 55,
       "maxdmg": 84,
       "sta": 11
-    },
-    {
-      "id": 209577,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 25,
-      "q": "3",
-      "i": "30",
-      "name": "Fist of the Wild",
-      "speed": 2.8,
-      "mindmg": 55,
-      "maxdmg": 83,
-      "agi": 6,
-      "str": 6,
-      "sta": 6,
-      "ap": 60
     },
     {
       "id": 211443,

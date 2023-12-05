@@ -152,16 +152,50 @@
           }
 
           if (parseInt(sparse.RandomSelect)) {
-            let suff = getItemSuffixes(obj.id, sparse.OverallQualityID);
-            if (!suff.s) continue;
-            suff.s.forEach(s => {
-              if (/[+-]\d+ Strength/.test(s)) { obj.str = parseInt(s); }
-              if (/[+-]\d+ Agility/.test(s)) { obj.agi = parseInt(s); }
-              if (/[+-]\d+ Stamina/.test(s)) { obj.sta = parseInt(s); }
-            });
-            if (suff.id < 2000) obj.name += " of the Tiger";
-            else obj.name += " of Striking";
-            obj.rand = suff.id;
+            let suffixFound = false;
+            let suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "tiger");
+            if (suff.s) {
+              let tiger = structuredClone(obj);
+              suff.s.forEach(s => {
+                if (/[+-]\d+ Strength/.test(s)) { tiger.str = parseInt(s); }
+                if (/[+-]\d+ Agility/.test(s)) { tiger.agi = parseInt(s); }
+                if (/[+-]\d+ Stamina/.test(s)) { tiger.sta = parseInt(s); }
+              });
+              tiger.name += " of the Tiger";
+              tiger.rand = suff.id;
+              addToGear(tiger);
+              suffixFound = true;
+            }
+
+            // suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "bear");
+            // if (suff.s) {
+            //   let bear = structuredClone(obj);
+            //   suff.s.forEach(s => {
+            //     if (/[+-]\d+ Strength/.test(s)) { bear.str = parseInt(s); }
+            //     if (/[+-]\d+ Agility/.test(s)) { bear.agi = parseInt(s); }
+            //     if (/[+-]\d+ Stamina/.test(s)) { bear.sta = parseInt(s); }
+            //   });
+            //   bear.name += " of the Bear";
+            //   bear.rand = suff.id;
+            //   addToGear(bear);
+            //   suffixFound = true;
+            // }
+
+            suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "striking");
+            if (suff.s) {
+              let striking = structuredClone(obj);
+              suff.s.forEach(s => {
+                if (/[+-]\d+ Strength/.test(s)) { striking.str = parseInt(s); }
+                if (/[+-]\d+ Agility/.test(s)) { striking.agi = parseInt(s); }
+                if (/[+-]\d+ Stamina/.test(s)) { striking.sta = parseInt(s); }
+              });
+              striking.name += " of Striking";
+              striking.rand = suff.id;
+              addToGear(striking);
+              suffixFound = true;
+            }
+
+            if (suffixFound) continue;
           }
 
 
@@ -193,6 +227,9 @@
           if (obj.id == 20522) exclude = true;
           if (obj.id == 12106) exclude = true;
           if (obj.id == 12104) exclude = true;
+          if (obj.id == 209577) exclude = true;
+
+          
 
 
           
@@ -216,21 +253,7 @@
           // if (parseInt(sparse.OverallQualityID) < 2) continue;
           // if (spells.length == 0) continue;
 
-          if (obj.slot == "finger") {
-            gear["finger1"].push(obj);
-            gear["finger2"].push(obj);
-          }
-          else if (obj.slot == "trinket") {
-            gear["trinket1"].push(obj);
-            gear["trinket2"].push(obj);
-          }
-          else if (obj.slot == "onehand") {
-            gear["mainhand"].push(obj);
-            gear["offhand"].push(obj);
-          }
-          else {
-            gear[obj.slot].push(obj);
-          }
+          addToGear(obj);
 
         }
 
@@ -247,6 +270,24 @@
         // });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+      }
+
+      var addToGear = function(obj) {
+        if (obj.slot == "finger") {
+          gear["finger1"].push(obj);
+          gear["finger2"].push(obj);
+        }
+        else if (obj.slot == "trinket") {
+          gear["trinket1"].push(obj);
+          gear["trinket2"].push(obj);
+        }
+        else if (obj.slot == "onehand") {
+          gear["mainhand"].push(obj);
+          gear["offhand"].push(obj);
+        }
+        else {
+          gear[obj.slot].push(obj);
+        }
       }
 
       var customSpells = [
@@ -388,7 +429,7 @@
           });
         });
       }
-      var getItemSuffixes = function(id, quality) {
+      var getItemSuffixes = function(id, quality, type) {
           let result = [], result2 = [];
           let ench;
           for(let j = 0; j < item_template.length; j++) {
@@ -403,8 +444,9 @@
           let high = { id: 0, s: ''};
           for(let x = 0; x < result.length; x++) {
             for(let y = 0; y < suffixes.length; y++) {
-              if ((result[x] >= 669 && result[x] <= 753) || // of the Tiger
-                  (quality >= 3 && (result[x] == 2149 || result[x] == 2150 || result[x] == 2151 || result[x] == 2154 || result[x] == 2157 || result[x] == 2158 || result[x] == 2163))) { // of Striking
+              if ((type == "tiger" && result[x] >= 669 && result[x] <= 753) || // of the Tiger
+                  (type == "bear" && result[x] >= 1179 && result[x] <= 1263) || // of the Bear
+                  (type == "striking" && quality >= 3 && (result[x] == 2149 || result[x] == 2150 || result[x] == 2151 || result[x] == 2154 || result[x] == 2157 || result[x] == 2158 || result[x] == 2163))) { // of Striking
                 if (suffixes[y].id == result[x] && suffixes[y].id > high.id) {
                   high = suffixes[y];
                 }
