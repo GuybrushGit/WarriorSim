@@ -28,7 +28,7 @@ var runes = {
          iconname: 'Warbringer',
      },
    ],
-   "hands": [
+   "legs": [
       {
          id: 403219,
          name: 'Furious Thunder',
@@ -50,7 +50,7 @@ var runes = {
          haste2h: 20,
      },
    ],
-   "legs": [
+   "hands": [
       {
          id: 402927,
          name: 'Victory Rush',
