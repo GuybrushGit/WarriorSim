@@ -209,7 +209,8 @@ SIM.PROFILES = {
             for (let rune of storage.runes[item.slot]) {
                 if (rune.selected) {
                     let r = runes[item.slot].filter(a => a.id == rune.id)[0];
-                    icon = `<img src="dist/img/${r.iconname}.jpg">`
+                    if (!r) rune.selected = false;
+                    else icon = `<img src="dist/img/${r.iconname}.jpg">`
                 }
             }
         }
