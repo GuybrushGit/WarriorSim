@@ -6784,18 +6784,6 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 213087,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 25,
-      "q": "3",
-      "i": "30",
-      "name": "Sergeant's Cloak",
-      "agi": 4,
-      "str": 4,
-      "sta": 4
-    },
-    {
       "id": 209523,
       "type": "Cloth",
       "slot": "back",
@@ -6814,6 +6802,18 @@ var gear = {
       "i": "30",
       "name": "Waterproof Scarf",
       "agi": 6
+    },
+    {
+      "id": 213087,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Sergeant's Cloak",
+      "agi": 4,
+      "str": 4,
+      "sta": 4
     },
     {
       "id": 213088,
@@ -18824,17 +18824,6 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 212590,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 12,
-      "q": "2",
-      "i": "17",
-      "name": "Hoist Strap",
-      "str": 2,
-      "sta": 2
-    },
-    {
       "id": 211457,
       "type": "Mail",
       "slot": "waist",
@@ -18844,6 +18833,17 @@ var gear = {
       "name": "Twilight Defender's Girdle",
       "str": 7,
       "sta": 9
+    },
+    {
+      "id": 212590,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Hoist Strap",
+      "str": 2,
+      "sta": 2
     }
   ],
   "legs": [
@@ -24336,16 +24336,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 212589,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 12,
-      "q": "2",
-      "i": "17",
-      "name": "Courier Treads",
-      "agi": 4
-    },
-    {
       "id": 211506,
       "type": "Mail",
       "slot": "feet",
@@ -24355,6 +24345,16 @@ var gear = {
       "name": "Twilight Avenger's Boots",
       "str": 10,
       "sta": 5
+    },
+    {
+      "id": 211508,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Twilight Elementalist's Footpads",
+      "agi": 5
     },
     {
       "id": 211511,
@@ -24369,14 +24369,14 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 211508,
+      "id": 212589,
       "type": "Leather",
       "slot": "feet",
-      "r": 25,
-      "q": "3",
-      "i": "30",
-      "name": "Twilight Elementalist's Footpads",
-      "agi": 5
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Courier Treads",
+      "agi": 4
     }
   ],
   "finger1": [

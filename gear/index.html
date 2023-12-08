@@ -402,7 +402,7 @@
       }
       var loadTable = async function(table) {
         return $.ajax({
-          url: table + '.csv',
+          url: table.toLowerCase() + '.csv',
           dataType: 'text',
         }).done((data) => {
           globalThis[table] = [];
