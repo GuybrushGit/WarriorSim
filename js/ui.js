@@ -799,6 +799,8 @@ SIM.UI = {
         obj.reactionmin = view.fight.find('input[name="reactionmin"]').val();
         obj.reactionmax = view.fight.find('input[name="reactionmax"]').val();
         obj.batching = view.fight.find('select[name="batching"]').val();
+        obj.filter_strength = view.main.find('#filter_strength').hasClass('active');
+        obj.filter_bear = view.main.find('#filter_bear').hasClass('active');
         obj.filter_tiger = view.main.find('#filter_tiger').hasClass('active');
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
@@ -872,10 +874,14 @@ SIM.UI = {
         if (!storage.level) storage.level = session.level;
         if (!storage.targetlevel) storage.targetlevel = session.targetlevel;
         if (!storage.profilename) storage.profilename = session.profilename;
+        if (typeof storage.filter_strength == 'undefined') storage.filter_strength = true;
+        if (typeof storage.filter_bear == 'undefined') storage.filter_bear = true;
         if (typeof storage.filter_tiger == 'undefined') storage.filter_tiger = true;
         if (typeof storage.filter_green == 'undefined') storage.filter_green = true;
         if (typeof storage.filter_blue == 'undefined') storage.filter_blue = true;
         globalThis.profilename = storage.profilename;
+        globalThis.filter_strength = storage.filter_strength;
+        globalThis.filter_bear = storage.filter_bear;
         globalThis.filter_tiger = storage.filter_tiger;
         globalThis.filter_green = storage.filter_green;
         globalThis.filter_blue = storage.filter_blue;
@@ -967,6 +973,8 @@ SIM.UI = {
             }
 
             if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+                (globalThis.filter_strength === false && item.name.toLowerCase().indexOf('of strength') > -1) ||
+                (globalThis.filter_bear === false && item.name.toLowerCase().indexOf('of the bear') > -1) ||
                 (globalThis.filter_green === false && item.q == "2") ||
                 (globalThis.filter_blue === false && item.q == "3")) {
                 item.selected = false;
@@ -1005,7 +1013,7 @@ SIM.UI = {
 
             if (item.hidden && !editmode) continue;
 
-            let tooltip = item.id, rand = '';
+            let tooltip = item.id.toString().split('|')[0], rand = '';
             if (tooltip == 199211) tooltip = 19921;
             if (item.rand) rand = '?rand=' + item.rand;
 
@@ -1046,6 +1054,8 @@ SIM.UI = {
         view.tcontainer.append(`<div class="topgear">
             <div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>
             <div class="filters">
+                <label id="filter_strength" class="${globalThis.filter_strength ? 'active' : ''}">Of Strength</label>
+                <label id="filter_bear" class="${globalThis.filter_bear ? 'active' : ''}">Of the Bear</label>
                 <label id="filter_tiger" class="${globalThis.filter_tiger ? 'active' : ''}">Of the Tiger</label>
                 <label id="filter_green" class="${globalThis.filter_green ? 'active' : ''}">Greens</label>
                 <label id="filter_blue" class="${globalThis.filter_blue ? 'active' : ''}">Blues</label>
@@ -1120,6 +1130,8 @@ SIM.UI = {
             }
 
             if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+                (globalThis.filter_strength === false && item.name.toLowerCase().indexOf('of strength') > -1) ||
+                (globalThis.filter_bear === false && item.name.toLowerCase().indexOf('of the bear') > -1) ||
                 (globalThis.filter_green === false && item.q == "2") ||
                 (globalThis.filter_blue === false && item.q == "3")) {
                 item.selected = false;
@@ -1150,7 +1162,7 @@ SIM.UI = {
 
             if (item.hidden && !editmode) continue;
 
-            let tooltip = item.id, rand = '';
+            let tooltip = item.id.toString().split('|')[0], rand = '';
             if (tooltip == 145541) tooltip = 14554;
             if (tooltip == 198981) tooltip = 19898;
             if (item.rand) rand = '?rand=' + item.rand;
@@ -1189,6 +1201,8 @@ SIM.UI = {
         view.tcontainer.append(`<div class="topgear">
             <div class="search"><input name="search" placeholder="Search" />${searchSVG}</div>
             <div class="filters">
+                <label id="filter_strength" class="${globalThis.filter_strength ? 'active' : ''}">Of Strength</label>
+                <label id="filter_bear" class="${globalThis.filter_bear ? 'active' : ''}">Of the Bear</label>
                 <label id="filter_tiger" class="${globalThis.filter_tiger ? 'active' : ''}">Of the Tiger</label>
                 <label id="filter_green" class="${globalThis.filter_green ? 'active' : ''}">Greens</label>
                 <label id="filter_blue" class="${globalThis.filter_blue ? 'active' : ''}">Blues</label>

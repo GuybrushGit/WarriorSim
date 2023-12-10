@@ -161,7 +161,7 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 7413,
+      "id": "7413|690",
       "type": "Leather",
       "slot": "head",
       "r": 28,
@@ -173,7 +173,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7420,
+      "id": "7413|1200",
+      "type": "Leather",
+      "slot": "head",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Infiltrator Cap of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7420|690",
       "type": "Mail",
       "slot": "head",
       "r": 28,
@@ -185,7 +197,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7441,
+      "id": "7420|1200",
+      "type": "Mail",
+      "slot": "head",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Phalanx Headguard of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7441|696",
       "type": "Leather",
       "slot": "head",
       "r": 33,
@@ -197,7 +221,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 7456,
+      "id": "7441|1206",
+      "type": "Leather",
+      "slot": "head",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Sentinel Cap of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7456|696",
       "type": "Mail",
       "slot": "head",
       "r": 33,
@@ -209,7 +245,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 7479,
+      "id": "7456|1206",
+      "type": "Mail",
+      "slot": "head",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knight's Headguard of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7479|699",
       "type": "Leather",
       "slot": "head",
       "r": 37,
@@ -221,7 +269,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 7488,
+      "id": "7479|1209",
+      "type": "Leather",
+      "slot": "head",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Ranger Helm of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "7488|699",
       "type": "Mail",
       "slot": "head",
       "r": 37,
@@ -233,7 +293,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 7529,
+      "id": "7488|1209",
+      "type": "Mail",
+      "slot": "head",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Captain's Circlet of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "7529|705",
       "type": "Leather",
       "slot": "head",
       "r": 42,
@@ -245,7 +317,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 7540,
+      "id": "7529|1215",
+      "type": "Leather",
+      "slot": "head",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Cabalist Helm of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "7540|705",
       "type": "Mail",
       "slot": "head",
       "r": 42,
@@ -255,6 +339,18 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "7540|1215",
+      "type": "Mail",
+      "slot": "head",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Champion's Helmet of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
     },
     {
       "id": 7719,
@@ -344,7 +440,7 @@ var gear = {
       "agi": 14
     },
     {
-      "id": 8214,
+      "id": "8214|702",
       "type": "Leather",
       "slot": "head",
       "r": 40,
@@ -354,6 +450,18 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "8214|1212",
+      "type": "Leather",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Wild Leather Helmet of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
     },
     {
       "id": 8279,
@@ -399,7 +507,7 @@ var gear = {
       }
     },
     {
-      "id": 9290,
+      "id": "9290|699",
       "type": "Plate",
       "slot": "head",
       "r": 40,
@@ -409,6 +517,18 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "9290|1209",
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Field Plate Helmet of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
     },
     {
       "id": 9375,
@@ -468,7 +588,7 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 9859,
+      "id": "9859|693",
       "type": "Leather",
       "slot": "head",
       "r": 31,
@@ -480,7 +600,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9870,
+      "id": "9859|1203",
+      "type": "Leather",
+      "slot": "head",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Archer's Cap of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9870|693",
       "type": "Mail",
       "slot": "head",
       "r": 31,
@@ -492,7 +624,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9889,
+      "id": "9870|1203",
+      "type": "Mail",
+      "slot": "head",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Renegade Circlet of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9889|699",
       "type": "Leather",
       "slot": "head",
       "r": 35,
@@ -504,7 +648,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 9902,
+      "id": "9889|1209",
+      "type": "Leather",
+      "slot": "head",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Huntsman's Cap of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9902|699",
       "type": "Mail",
       "slot": "head",
       "r": 36,
@@ -516,7 +672,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 9921,
+      "id": "9902|1209",
+      "type": "Mail",
+      "slot": "head",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Jazeraint Helm of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9921|702",
       "type": "Leather",
       "slot": "head",
       "r": 40,
@@ -528,7 +696,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 9932,
+      "id": "9921|1212",
+      "type": "Leather",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Tracker's Headband of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9932|702",
       "type": "Mail",
       "slot": "head",
       "r": 39,
@@ -540,7 +720,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 9953,
+      "id": "9932|1212",
+      "type": "Mail",
+      "slot": "head",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Brigade Circlet of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9953|708",
       "type": "Leather",
       "slot": "head",
       "r": 45,
@@ -552,7 +744,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 9963,
+      "id": "9953|1218",
+      "type": "Leather",
+      "slot": "head",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Chieftain's Headdress of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "9963|705",
       "type": "Mail",
       "slot": "head",
       "r": 43,
@@ -564,7 +768,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 9969,
+      "id": "9963|1215",
+      "type": "Mail",
+      "slot": "head",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Warmonger's Circlet of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "9969|702",
       "type": "Plate",
       "slot": "head",
       "r": 40,
@@ -576,7 +792,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10073,
+      "id": "9969|1212",
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Embossed Plate Helmet of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10073|711",
       "type": "Leather",
       "slot": "head",
       "r": 47,
@@ -588,7 +816,19 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10083,
+      "id": "10073|1221",
+      "type": "Leather",
+      "slot": "head",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Righteous Helmet of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10083|708",
       "type": "Mail",
       "slot": "head",
       "r": 46,
@@ -600,7 +840,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10090,
+      "id": "10083|1218",
+      "type": "Mail",
+      "slot": "head",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Lord's Crown of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10090|705",
       "type": "Plate",
       "slot": "head",
       "r": 41,
@@ -612,7 +864,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10111,
+      "id": "10090|1215",
+      "type": "Plate",
+      "slot": "head",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Gothic Plate Helmet of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10111|714",
       "type": "Leather",
       "slot": "head",
       "r": 52,
@@ -624,7 +888,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10123,
+      "id": "10111|1224",
+      "type": "Leather",
+      "slot": "head",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Wanderer's Hat of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10123|714",
       "type": "Mail",
       "slot": "head",
       "r": 52,
@@ -636,7 +912,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10132,
+      "id": "10123|1224",
+      "type": "Mail",
+      "slot": "head",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Ornate Circlet of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10132|708",
       "type": "Plate",
       "slot": "head",
       "r": 46,
@@ -648,7 +936,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10150,
+      "id": "10132|1218",
+      "type": "Plate",
+      "slot": "head",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Revenant Helmet of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10150|720",
       "type": "Leather",
       "slot": "head",
       "r": 57,
@@ -660,7 +960,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10160,
+      "id": "10150|1230",
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mighty Helmet of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10150|321",
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mighty Helmet of Strength",
+      "str": 29,
+      "rand": 321
+    },
+    {
+      "id": "10160|720",
       "type": "Mail",
       "slot": "head",
       "r": 57,
@@ -672,7 +995,19 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10168,
+      "id": "10160|1230",
+      "type": "Mail",
+      "slot": "head",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mercurial Circlet of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10168|714",
       "type": "Plate",
       "slot": "head",
       "r": 51,
@@ -684,7 +1019,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10187,
+      "id": "10168|1224",
+      "type": "Plate",
+      "slot": "head",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Templar Crown of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10187|714",
       "type": "Leather",
       "slot": "head",
       "r": 50,
@@ -696,7 +1043,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10198,
+      "id": "10187|1224",
+      "type": "Leather",
+      "slot": "head",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Swashbuckler's Eyepatch of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10198|711",
       "type": "Mail",
       "slot": "head",
       "r": 48,
@@ -708,7 +1067,19 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10207,
+      "id": "10198|1221",
+      "type": "Mail",
+      "slot": "head",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Crusader's Helm of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10207|708",
       "type": "Plate",
       "slot": "head",
       "r": 44,
@@ -720,7 +1091,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10226,
+      "id": "10207|1218",
+      "type": "Plate",
+      "slot": "head",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Overlord's Crown of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10226|720",
       "type": "Leather",
       "slot": "head",
       "r": 56,
@@ -732,7 +1115,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10235,
+      "id": "10226|1230",
+      "type": "Leather",
+      "slot": "head",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Nightshade Helmet of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10226|321",
+      "type": "Leather",
+      "slot": "head",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Nightshade Helmet of Strength",
+      "str": 29,
+      "rand": 321
+    },
+    {
+      "id": "10235|717",
       "type": "Mail",
       "slot": "head",
       "r": 54,
@@ -744,7 +1150,19 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 10241,
+      "id": "10235|1227",
+      "type": "Mail",
+      "slot": "head",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Engraved Helm of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10241|711",
       "type": "Plate",
       "slot": "head",
       "r": 48,
@@ -756,7 +1174,19 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10261,
+      "id": "10241|1221",
+      "type": "Plate",
+      "slot": "head",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Heavy Lamellar Helm of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10261|720",
       "type": "Leather",
       "slot": "head",
       "r": 58,
@@ -768,7 +1198,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10272,
+      "id": "10261|1230",
+      "type": "Leather",
+      "slot": "head",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Adventurer's Bandana of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10261|321",
+      "type": "Leather",
+      "slot": "head",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Adventurer's Bandana of Strength",
+      "str": 29,
+      "rand": 321
+    },
+    {
+      "id": "10272|720",
       "type": "Mail",
       "slot": "head",
       "r": 58,
@@ -780,7 +1233,19 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10279,
+      "id": "10272|1230",
+      "type": "Mail",
+      "slot": "head",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Masterwork Circlet of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10279|717",
       "type": "Plate",
       "slot": "head",
       "r": 53,
@@ -790,6 +1255,18 @@ var gear = {
       "agi": 17,
       "str": 17,
       "rand": 717
+    },
+    {
+      "id": "10279|1227",
+      "type": "Plate",
+      "slot": "head",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Emerald Helm of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
     },
     {
       "id": 10372,
@@ -803,7 +1280,7 @@ var gear = {
       "sta": 17
     },
     {
-      "id": 10379,
+      "id": "10379|720",
       "type": "Plate",
       "slot": "head",
       "r": 56,
@@ -815,7 +1292,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10388,
+      "id": "10379|1230",
+      "type": "Plate",
+      "slot": "head",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Commander's Helm of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10379|320",
+      "type": "Plate",
+      "slot": "head",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Commander's Helm of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10388|720",
       "type": "Plate",
       "slot": "head",
       "r": 58,
@@ -827,7 +1327,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10406,
+      "id": "10388|1230",
+      "type": "Plate",
+      "slot": "head",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Hyperion Helm of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10388|320",
+      "type": "Plate",
+      "slot": "head",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Hyperion Helm of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10406|690",
       "type": "Leather",
       "slot": "head",
       "r": 27,
@@ -839,7 +1362,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 10408,
+      "id": "10406|1200",
+      "type": "Leather",
+      "slot": "head",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Scaled Leather Headband of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10408|690",
       "type": "Mail",
       "slot": "head",
       "r": 27,
@@ -849,6 +1384,18 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "10408|1200",
+      "type": "Mail",
+      "slot": "head",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Banded Helm of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
     },
     {
       "id": 10741,
@@ -1239,7 +1786,7 @@ var gear = {
       "sta": 16
     },
     {
-      "id": 14899,
+      "id": "14899|699",
       "type": "Plate",
       "slot": "head",
       "r": 40,
@@ -1251,7 +1798,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14907,
+      "id": "14899|1209",
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Helm of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14907|705",
       "type": "Plate",
       "slot": "head",
       "r": 43,
@@ -1263,7 +1822,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14919,
+      "id": "14907|1215",
+      "type": "Plate",
+      "slot": "head",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Brutish Helmet of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14919|711",
       "type": "Plate",
       "slot": "head",
       "r": 47,
@@ -1275,7 +1846,19 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 14925,
+      "id": "14919|1221",
+      "type": "Plate",
+      "slot": "head",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Jade Circlet of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "14925|714",
       "type": "Plate",
       "slot": "head",
       "r": 52,
@@ -1287,7 +1870,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 14935,
+      "id": "14925|1224",
+      "type": "Plate",
+      "slot": "head",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Lofty Helm of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "14935|717",
       "type": "Plate",
       "slot": "head",
       "r": 55,
@@ -1299,7 +1894,19 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 14944,
+      "id": "14935|1227",
+      "type": "Plate",
+      "slot": "head",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Heroic Skullcap of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "14944|702",
       "type": "Plate",
       "slot": "head",
       "r": 40,
@@ -1311,7 +1918,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14952,
+      "id": "14944|1212",
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Warbringer's Crown of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14952|708",
       "type": "Plate",
       "slot": "head",
       "r": 45,
@@ -1323,7 +1942,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 14961,
+      "id": "14952|1218",
+      "type": "Plate",
+      "slot": "head",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Bloodforged Helmet of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14961|714",
       "type": "Plate",
       "slot": "head",
       "r": 50,
@@ -1335,7 +1966,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 14969,
+      "id": "14961|1224",
+      "type": "Plate",
+      "slot": "head",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "High Chief's Crown of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "14969|717",
       "type": "Plate",
       "slot": "head",
       "r": 54,
@@ -1347,7 +1990,19 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 14979,
+      "id": "14969|1227",
+      "type": "Plate",
+      "slot": "head",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Glorious Headdress of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "14979|723",
       "type": "Plate",
       "slot": "head",
       "r": 59,
@@ -1357,6 +2012,18 @@ var gear = {
       "agi": 19,
       "str": 19,
       "rand": 723
+    },
+    {
+      "id": "14979|1233",
+      "type": "Plate",
+      "slot": "head",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Exalted Helmet of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
     },
     {
       "id": 15086,
@@ -1370,7 +2037,7 @@ var gear = {
       "sta": 16
     },
     {
-      "id": 15129,
+      "id": "15129|690",
       "type": "Leather",
       "slot": "head",
       "r": 26,
@@ -1382,7 +2049,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15134,
+      "id": "15129|1200",
+      "type": "Leather",
+      "slot": "head",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Robust Helm of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15134|696",
       "type": "Leather",
       "slot": "head",
       "r": 32,
@@ -1394,7 +2073,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15146,
+      "id": "15134|1206",
+      "type": "Leather",
+      "slot": "head",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Cutthroat's Hat of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15146|696",
       "type": "Leather",
       "slot": "head",
       "r": 34,
@@ -1406,7 +2097,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15156,
+      "id": "15146|1206",
+      "type": "Leather",
+      "slot": "head",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Ghostwalker Crown of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15156|702",
       "type": "Leather",
       "slot": "head",
       "r": 38,
@@ -1418,7 +2121,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15167,
+      "id": "15156|1212",
+      "type": "Leather",
+      "slot": "head",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Nocturnal Cap of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15167|705",
       "type": "Leather",
       "slot": "head",
       "r": 43,
@@ -1430,7 +2145,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15175,
+      "id": "15167|1215",
+      "type": "Leather",
+      "slot": "head",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Imposing Bandana of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15175|708",
       "type": "Leather",
       "slot": "head",
       "r": 46,
@@ -1442,7 +2169,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15185,
+      "id": "15175|1218",
+      "type": "Leather",
+      "slot": "head",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Potent Helmet of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15185|714",
       "type": "Leather",
       "slot": "head",
       "r": 52,
@@ -1454,7 +2193,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15193,
+      "id": "15185|1224",
+      "type": "Leather",
+      "slot": "head",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Praetorian Coif of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15193|720",
       "type": "Leather",
       "slot": "head",
       "r": 57,
@@ -1466,7 +2217,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 15339,
+      "id": "15193|1230",
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Grand Crown of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15193|321",
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Grand Crown of Strength",
+      "str": 29,
+      "rand": 321
+    },
+    {
+      "id": "15339|693",
       "type": "Leather",
       "slot": "head",
       "r": 29,
@@ -1478,7 +2252,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15353,
+      "id": "15339|1203",
+      "type": "Leather",
+      "slot": "head",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Pathfinder Hat of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15353|696",
       "type": "Leather",
       "slot": "head",
       "r": 33,
@@ -1490,7 +2276,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15363,
+      "id": "15353|1206",
+      "type": "Leather",
+      "slot": "head",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Headhunter's Headdress of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15363|699",
       "type": "Leather",
       "slot": "head",
       "r": 37,
@@ -1502,7 +2300,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15373,
+      "id": "15363|1209",
+      "type": "Leather",
+      "slot": "head",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Trickster's Headdress of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15373|705",
       "type": "Leather",
       "slot": "head",
       "r": 42,
@@ -1514,7 +2324,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15384,
+      "id": "15373|1215",
+      "type": "Leather",
+      "slot": "head",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Wolf Rider's Headgear of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15384|708",
       "type": "Leather",
       "slot": "head",
       "r": 45,
@@ -1526,7 +2348,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15391,
+      "id": "15384|1218",
+      "type": "Leather",
+      "slot": "head",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Rageclaw Helm of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15391|714",
       "type": "Leather",
       "slot": "head",
       "r": 51,
@@ -1538,7 +2372,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15430,
+      "id": "15391|1224",
+      "type": "Leather",
+      "slot": "head",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Jadefire Cap of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15430|717",
       "type": "Leather",
       "slot": "head",
       "r": 55,
@@ -1550,7 +2396,19 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 15439,
+      "id": "15430|1227",
+      "type": "Leather",
+      "slot": "head",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Peerless Headband of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15439|723",
       "type": "Leather",
       "slot": "head",
       "r": 59,
@@ -1562,7 +2420,19 @@ var gear = {
       "rand": 723
     },
     {
-      "id": 15533,
+      "id": "15439|1233",
+      "type": "Leather",
+      "slot": "head",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Supreme Crown of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "15533|690",
       "type": "Mail",
       "slot": "head",
       "r": 26,
@@ -1574,7 +2444,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15540,
+      "id": "15533|1200",
+      "type": "Mail",
+      "slot": "head",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Sentry's Headdress of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15540|693",
       "type": "Mail",
       "slot": "head",
       "r": 29,
@@ -1586,7 +2468,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15550,
+      "id": "15540|1203",
+      "type": "Mail",
+      "slot": "head",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Wicked Chain Helmet of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15550|693",
       "type": "Mail",
       "slot": "head",
       "r": 30,
@@ -1598,7 +2492,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15558,
+      "id": "15550|1203",
+      "type": "Mail",
+      "slot": "head",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Thick Scale Crown of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15558|696",
       "type": "Mail",
       "slot": "head",
       "r": 32,
@@ -1610,7 +2516,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15572,
+      "id": "15558|1206",
+      "type": "Mail",
+      "slot": "head",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Pillager's Crown of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15572|696",
       "type": "Mail",
       "slot": "head",
       "r": 34,
@@ -1622,7 +2540,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15580,
+      "id": "15572|1206",
+      "type": "Mail",
+      "slot": "head",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Marauder's Circlet of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15580|699",
       "type": "Mail",
       "slot": "head",
       "r": 35,
@@ -1634,7 +2564,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15593,
+      "id": "15580|1209",
+      "type": "Mail",
+      "slot": "head",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Sparkleshell Headwrap of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15593|699",
       "type": "Mail",
       "slot": "head",
       "r": 37,
@@ -1646,7 +2588,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15602,
+      "id": "15593|1209",
+      "type": "Mail",
+      "slot": "head",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Steadfast Coronet of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15602|702",
       "type": "Mail",
       "slot": "head",
       "r": 40,
@@ -1658,7 +2612,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15615,
+      "id": "15602|1212",
+      "type": "Mail",
+      "slot": "head",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Ancient Crown of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15615|705",
       "type": "Mail",
       "slot": "head",
       "r": 41,
@@ -1670,7 +2636,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15623,
+      "id": "15615|1215",
+      "type": "Mail",
+      "slot": "head",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Bonelink Helmet of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15623|708",
       "type": "Mail",
       "slot": "head",
       "r": 45,
@@ -1682,7 +2660,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15634,
+      "id": "15623|1218",
+      "type": "Mail",
+      "slot": "head",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Gryphon Mail Crown of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15634|711",
       "type": "Mail",
       "slot": "head",
       "r": 47,
@@ -1694,7 +2684,19 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 15645,
+      "id": "15634|1221",
+      "type": "Mail",
+      "slot": "head",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Formidable Circlet of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15645|714",
       "type": "Mail",
       "slot": "head",
       "r": 50,
@@ -1706,7 +2708,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15651,
+      "id": "15645|1224",
+      "type": "Mail",
+      "slot": "head",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Ironhide Helmet of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15651|714",
       "type": "Mail",
       "slot": "head",
       "r": 51,
@@ -1718,7 +2732,19 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15664,
+      "id": "15651|1224",
+      "type": "Mail",
+      "slot": "head",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Merciless Crown of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15664|717",
       "type": "Mail",
       "slot": "head",
       "r": 55,
@@ -1730,7 +2756,19 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 15670,
+      "id": "15664|1227",
+      "type": "Mail",
+      "slot": "head",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Impenetrable Helmet of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15670|720",
       "type": "Mail",
       "slot": "head",
       "r": 56,
@@ -1742,7 +2780,19 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 15684,
+      "id": "15670|1230",
+      "type": "Mail",
+      "slot": "head",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magnificent Helmet of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15684|723",
       "type": "Mail",
       "slot": "head",
       "r": 59,
@@ -1752,6 +2802,18 @@ var gear = {
       "agi": 19,
       "str": 19,
       "rand": 723
+    },
+    {
+      "id": "15684|1233",
+      "type": "Mail",
+      "slot": "head",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Triumphant Skullcap of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
     },
     {
       "id": 16429,
@@ -2440,7 +3502,7 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 7427,
+      "id": "7427|681",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 26,
@@ -2450,6 +3512,29 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "7427|1189",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Cerulean Talisman of the Bear",
+      "sta": 5,
+      "str": 4,
+      "rand": 1189
+    },
+    {
+      "id": "7427|155",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Cerulean Talisman of Strength",
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 7550,
@@ -2485,7 +3570,7 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 10299,
+      "id": "10299|681",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 26,
@@ -2495,6 +3580,29 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "10299|1189",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Gnomeregan Amulet of the Bear",
+      "sta": 5,
+      "str": 4,
+      "rand": 1189
+    },
+    {
+      "id": "10299|155",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Gnomeregan Amulet of Strength",
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 10824,
@@ -2530,7 +3638,7 @@ var gear = {
       "ap": 32
     },
     {
-      "id": 11946,
+      "id": "11946|692",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 47,
@@ -2542,7 +3650,96 @@ var gear = {
       "rand": 692
     },
     {
-      "id": 12026,
+      "id": "11946|1202",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Fire Opal Necklace of the Bear",
+      "sta": 8,
+      "str": 9,
+      "rand": 1202
+    },
+    {
+      "id": "11946|193",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Fire Opal Necklace of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "12019|155",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Cerulean Talisman of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "12020|189",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Thallium Choker of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "12022|191",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Iridium Chain of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "12023|191",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Tellurium Necklace of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "12024|193",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Vanadium Talisman of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "12025|219",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Selenium Chain of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "12026|693",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 54,
@@ -2554,7 +3751,125 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12036,
+      "id": "12026|307",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Quicksilver Pendant of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12027|1206",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Vermilion Necklace of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12027|308",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Vermilion Necklace of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "12028|1191",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Basalt Necklace of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "12029|1191",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Greenstone Talisman of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "12030|1194",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Jet Chain of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "12031|1197",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Lodestone Necklace of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "12032|1200",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Onyx Choker of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "12034|1203",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Marble Necklace of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "12035|1203",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Obsidian Pendant of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "12036|696",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 57,
@@ -2566,7 +3881,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 12039,
+      "id": "12036|1206",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Necklace of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12036|307",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Necklace of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12039|681",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 28,
@@ -2578,7 +3916,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 12040,
+      "id": "12040|684",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 33,
@@ -2590,7 +3928,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12042,
+      "id": "12042|684",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 37,
@@ -2602,7 +3940,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12043,
+      "id": "12043|690",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 42,
@@ -2614,7 +3952,7 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 12044,
+      "id": "12044|690",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 46,
@@ -2626,7 +3964,7 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 12045,
+      "id": "12045|693",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 51,
@@ -2638,7 +3976,7 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12046,
+      "id": "12046|696",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 55,
@@ -2650,7 +3988,7 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 12047,
+      "id": "12047|678",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 25,
@@ -2662,7 +4000,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 12048,
+      "id": "12047|1188",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Spectral Necklace of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "12047|136",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Spectral Necklace of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "12048|699",
       "type": "Miscellaneous",
       "slot": "neck",
       "r": 60,
@@ -2672,6 +4033,29 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "12048|1209",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Pendant of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "12048|309",
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Pendant of Strength",
+      "str": 17,
+      "rand": 309
     },
     {
       "id": 12059,
@@ -3488,7 +4872,7 @@ var gear = {
       "str": 7
     },
     {
-      "id": 6597,
+      "id": "6597|684",
       "type": "Mail",
       "slot": "shoulder",
       "r": 23,
@@ -3498,6 +4882,29 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "6597|1194",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Shoulderguards of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "6597|6",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Shoulderguards of Strength",
+      "str": 1,
+      "rand": 6
     },
     {
       "id": 6747,
@@ -3521,7 +4928,7 @@ var gear = {
       "str": 8
     },
     {
-      "id": 7424,
+      "id": "7424|684",
       "type": "Mail",
       "slot": "shoulder",
       "r": 28,
@@ -3533,7 +4940,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7459,
+      "id": "7424|1194",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Phalanx Spaulders of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7459|690",
       "type": "Mail",
       "slot": "shoulder",
       "r": 33,
@@ -3543,6 +4962,42 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "7459|1200",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knight's Pauldrons of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7482|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Ranger Shoulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7532|1206",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Cabalist Spaulders of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 7718,
@@ -3642,6 +5097,18 @@ var gear = {
       "agi": 10
     },
     {
+      "id": "8210|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Wild Leather Shoulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
       "id": 8281,
       "type": "Plate",
       "slot": "shoulder",
@@ -3672,7 +5139,7 @@ var gear = {
       "str": 12
     },
     {
-      "id": 9292,
+      "id": "9292|693",
       "type": "Plate",
       "slot": "shoulder",
       "r": 40,
@@ -3682,6 +5149,30 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "9292|1203",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Field Plate Pauldrons of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9389|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Revelosh's Spaulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
     },
     {
       "id": 9411,
@@ -3727,7 +5218,7 @@ var gear = {
       "str": 10
     },
     {
-      "id": 9817,
+      "id": "9817|681",
       "type": "Mail",
       "slot": "shoulder",
       "r": 21,
@@ -3739,7 +5230,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9842,
+      "id": "9817|1191",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Fortified Spaulders of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9842|684",
       "type": "Mail",
       "slot": "shoulder",
       "r": 27,
@@ -3751,7 +5254,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9872,
+      "id": "9842|1194",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Banded Pauldrons of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9872|690",
       "type": "Mail",
       "slot": "shoulder",
       "r": 32,
@@ -3763,7 +5278,55 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 9971,
+      "id": "9872|1200",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Renegade Pauldrons of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9894|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Huntsman's Shoulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9923|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Tracker's Shoulderpads of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9955|1209",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Chieftain's Shoulders of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9971|693",
       "type": "Plate",
       "slot": "shoulder",
       "r": 40,
@@ -3775,7 +5338,31 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10092,
+      "id": "9971|1203",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Embossed Plate Pauldrons of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10075|1209",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Righteous Spaulders of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10092|696",
       "type": "Plate",
       "slot": "shoulder",
       "r": 42,
@@ -3787,7 +5374,31 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10134,
+      "id": "10092|1206",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Gothic Plate Spaulders of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10113|1212",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Wanderer's Shoulders of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10134|699",
       "type": "Plate",
       "slot": "shoulder",
       "r": 46,
@@ -3799,7 +5410,31 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10163,
+      "id": "10134|1209",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Revenant Shoulders of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10153|1218",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mighty Spaulders of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10163|706",
       "type": "Mail",
       "slot": "shoulder",
       "r": 57,
@@ -3811,7 +5446,30 @@ var gear = {
       "rand": 706
     },
     {
-      "id": 10170,
+      "id": "10163|1216",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mercurial Pauldrons of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
+    },
+    {
+      "id": "10163|313",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Mercurial Pauldrons of Strength",
+      "str": 21,
+      "rand": 313
+    },
+    {
+      "id": "10170|702",
       "type": "Plate",
       "slot": "shoulder",
       "r": 51,
@@ -3823,7 +5481,31 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10209,
+      "id": "10170|1212",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Templar Pauldrons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10189|1212",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Swashbuckler's Shoulderpads of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10209|699",
       "type": "Plate",
       "slot": "shoulder",
       "r": 45,
@@ -3835,7 +5517,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10228,
+      "id": "10209|1209",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Overlord's Spaulders of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10228|705",
       "type": "Leather",
       "slot": "shoulder",
       "r": 55,
@@ -3847,7 +5541,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10245,
+      "id": "10228|1215",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Nightshade Spaulders of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10228|314",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Nightshade Spaulders of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "10245|702",
       "type": "Plate",
       "slot": "shoulder",
       "r": 48,
@@ -3859,7 +5576,31 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10274,
+      "id": "10245|1212",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Heavy Lamellar Pauldrons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10263|1218",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Adventurer's Shoulders of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10274|706",
       "type": "Mail",
       "slot": "shoulder",
       "r": 58,
@@ -3871,7 +5612,30 @@ var gear = {
       "rand": 706
     },
     {
-      "id": 10281,
+      "id": "10274|1216",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Masterwork Pauldrons of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
+    },
+    {
+      "id": "10274|313",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Masterwork Pauldrons of Strength",
+      "str": 21,
+      "rand": 313
+    },
+    {
+      "id": "10281|705",
       "type": "Plate",
       "slot": "shoulder",
       "r": 53,
@@ -3881,6 +5645,18 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "10281|1216",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Emerald Pauldrons of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
     },
     {
       "id": 10374,
@@ -3893,7 +5669,7 @@ var gear = {
       "str": 13
     },
     {
-      "id": 10383,
+      "id": "10383|708",
       "type": "Plate",
       "slot": "shoulder",
       "r": 56,
@@ -3905,7 +5681,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10390,
+      "id": "10383|1218",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Commander's Pauldrons of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10390|708",
       "type": "Plate",
       "slot": "shoulder",
       "r": 58,
@@ -3915,6 +5703,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "10390|1218",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Hyperion Pauldrons of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
     },
     {
       "id": 10745,
@@ -3940,7 +5740,7 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 10783,
+      "id": "10783|705",
       "type": "Leather",
       "slot": "shoulder",
       "r": 47,
@@ -3950,6 +5750,29 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "10783|1215",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 47,
+      "q": "3",
+      "i": "52",
+      "name": "Atal'ai Spaulders of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10783|314",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 47,
+      "q": "3",
+      "i": "52",
+      "name": "Atal'ai Spaulders of Strength",
+      "str": 22,
+      "rand": 314
     },
     {
       "id": 11502,
@@ -4372,7 +6195,7 @@ var gear = {
       "sta": 17
     },
     {
-      "id": 14901,
+      "id": "14901|693",
       "type": "Plate",
       "slot": "shoulder",
       "r": 40,
@@ -4384,7 +6207,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14909,
+      "id": "14901|1203",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Shoulder Pads of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14909|693",
       "type": "Plate",
       "slot": "shoulder",
       "r": 40,
@@ -4396,7 +6231,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14921,
+      "id": "14909|1203",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brutish Shoulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14921|699",
       "type": "Plate",
       "slot": "shoulder",
       "r": 44,
@@ -4408,7 +6255,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14929,
+      "id": "14921|1209",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Jade Epaulets of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14929|702",
       "type": "Plate",
       "slot": "shoulder",
       "r": 49,
@@ -4420,7 +6279,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14937,
+      "id": "14929|1212",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Lofty Shoulder Pads of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14937|705",
       "type": "Plate",
       "slot": "shoulder",
       "r": 54,
@@ -4432,7 +6303,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14946,
+      "id": "14937|1216",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Heroic Pauldrons of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
+    },
+    {
+      "id": "14946|693",
       "type": "Plate",
       "slot": "shoulder",
       "r": 40,
@@ -4444,7 +6327,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14955,
+      "id": "14946|1203",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Warbringer's Spaulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14955|696",
       "type": "Plate",
       "slot": "shoulder",
       "r": 42,
@@ -4456,7 +6351,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14963,
+      "id": "14955|1206",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Bloodforged Shoulder Pads of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14963|702",
       "type": "Plate",
       "slot": "shoulder",
       "r": 48,
@@ -4468,7 +6375,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14971,
+      "id": "14963|1212",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "High Chief's Pauldrons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14971|702",
       "type": "Plate",
       "slot": "shoulder",
       "r": 52,
@@ -4480,7 +6399,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14981,
+      "id": "14971|1212",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Glorious Shoulder Pads of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14981|708",
       "type": "Plate",
       "slot": "shoulder",
       "r": 57,
@@ -4490,6 +6421,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "14981|1218",
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Exalted Epaulets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
     },
     {
       "id": 15051,
@@ -4517,7 +6460,91 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 15432,
+      "id": "15158|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Nocturnal Shoulder Pads of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15169|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Imposing Shoulders of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15177|1209",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Potent Shoulders of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15187|1212",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Praetorian Pauldrons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15375|1203",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Wolf Rider's Shoulder Pads of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15386|1206",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Rageclaw Shoulder Pads of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15395|1212",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jadefire Epaulets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15432|705",
       "type": "Leather",
       "slot": "shoulder",
       "r": 53,
@@ -4529,7 +6556,42 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15513,
+      "id": "15432|1215",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Peerless Shoulders of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15432|314",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Peerless Shoulders of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "15441|1218",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Shoulders of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15513|681",
       "type": "Mail",
       "slot": "shoulder",
       "r": 20,
@@ -4541,7 +6603,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15523,
+      "id": "15513|1191",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Grunt's Pauldrons of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15523|681",
       "type": "Mail",
       "slot": "shoulder",
       "r": 22,
@@ -4553,7 +6627,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15531,
+      "id": "15523|1191",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Spiked Chain Shoulder Pads of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15531|684",
       "type": "Mail",
       "slot": "shoulder",
       "r": 25,
@@ -4565,7 +6651,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15542,
+      "id": "15531|1194",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Sentry's Shoulderguards of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15531|6",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Sentry's Shoulderguards of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "15542|684",
       "type": "Mail",
       "slot": "shoulder",
       "r": 27,
@@ -4577,7 +6686,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15553,
+      "id": "15542|1194",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Wicked Chain Shoulder Pads of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15553|687",
       "type": "Mail",
       "slot": "shoulder",
       "r": 29,
@@ -4589,7 +6710,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15562,
+      "id": "15553|1197",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Thick Scale Shoulder Pads of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15562|687",
       "type": "Mail",
       "slot": "shoulder",
       "r": 31,
@@ -4601,7 +6734,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15677,
+      "id": "15562|1197",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Pillager's Pauldrons of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15677|706",
       "type": "Mail",
       "slot": "shoulder",
       "r": 56,
@@ -4613,7 +6758,30 @@ var gear = {
       "rand": 706
     },
     {
-      "id": 15686,
+      "id": "15677|1216",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magnificent Shoulders of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
+    },
+    {
+      "id": "15677|313",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magnificent Shoulders of Strength",
+      "str": 21,
+      "rand": 313
+    },
+    {
+      "id": "15686|706",
       "type": "Mail",
       "slot": "shoulder",
       "r": 58,
@@ -4625,7 +6793,30 @@ var gear = {
       "rand": 706
     },
     {
-      "id": 15693,
+      "id": "15686|1216",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Shoulder Pads of the Bear",
+      "sta": 14,
+      "str": 13,
+      "rand": 1216
+    },
+    {
+      "id": "15686|313",
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Shoulder Pads of Strength",
+      "str": 21,
+      "rand": 313
+    },
+    {
+      "id": "15693|705",
       "type": "Leather",
       "slot": "shoulder",
       "r": 54,
@@ -4635,6 +6826,29 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "15693|1215",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Grand Shoulders of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15693|314",
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Grand Shoulders of Strength",
+      "str": 22,
+      "rand": 314
     },
     {
       "id": 15698,
@@ -5594,7 +7808,7 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 6575,
+      "id": "6575|672",
       "type": "Cloth",
       "slot": "back",
       "r": 15,
@@ -5606,7 +7820,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 6593,
+      "id": "6575|1182",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Defender Cloak of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "6575|97",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Defender Cloak of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "6593|678",
       "type": "Cloth",
       "slot": "back",
       "r": 21,
@@ -5616,6 +7853,29 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "6593|1188",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battleforge Cloak of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6593|115",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battleforge Cloak of Strength",
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 6745,
@@ -5639,7 +7899,7 @@ var gear = {
       "str": 3
     },
     {
-      "id": 7419,
+      "id": "7419|678",
       "type": "Cloth",
       "slot": "back",
       "r": 25,
@@ -5651,7 +7911,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 7460,
+      "id": "7419|1188",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Phalanx Cloak of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "7419|136",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Phalanx Cloak of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "7460|681",
       "type": "Cloth",
       "slot": "back",
       "r": 29,
@@ -5663,7 +7946,42 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 7492,
+      "id": "7460|1191",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Knight's Cloak of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "7460|189",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Knight's Cloak of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "7483|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Ranger Cloak of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7492|684",
       "type": "Cloth",
       "slot": "back",
       "r": 34,
@@ -5673,6 +7991,41 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "7492|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Captain's Cloak of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7492|190",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Captain's Cloak of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "7533|1197",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Cabalist Cloak of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
     },
     {
       "id": 8120,
@@ -5695,6 +8048,18 @@ var gear = {
       "name": "Nightscape Cloak",
       "agi": 10,
       "sta": 3
+    },
+    {
+      "id": "8215|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Wild Leather Cloak of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
     },
     {
       "id": 8259,
@@ -5741,7 +8106,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 9779,
+      "id": "9779|674",
       "type": "Cloth",
       "slot": "back",
       "r": 13,
@@ -5753,7 +8118,7 @@ var gear = {
       "rand": 674
     },
     {
-      "id": 9786,
+      "id": "9786|672",
       "type": "Cloth",
       "slot": "back",
       "r": 11,
@@ -5765,7 +8130,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 9812,
+      "id": "9786|1182",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Raider's Cloak of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9786|24",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Raider's Cloak of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "9812|675",
       "type": "Cloth",
       "slot": "back",
       "r": 17,
@@ -5777,7 +8165,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9838,
+      "id": "9812|1185",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Fortified Cloak of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9812|115",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Fortified Cloak of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "9838|678",
       "type": "Cloth",
       "slot": "back",
       "r": 24,
@@ -5789,7 +8200,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9867,
+      "id": "9838|1188",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Banded Cloak of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9838|136",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Banded Cloak of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "9867|681",
       "type": "Cloth",
       "slot": "back",
       "r": 28,
@@ -5801,7 +8235,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9898,
+      "id": "9867|1191",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Renegade Cloak of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9867|155",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Renegade Cloak of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "9898|684",
       "type": "Cloth",
       "slot": "back",
       "r": 33,
@@ -5813,7 +8270,78 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 10148,
+      "id": "9898|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Jazeraint Cloak of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9898|190",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Jazeraint Cloak of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "9919|1197",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Tracker's Cloak of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9951|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Chieftain's Cloak of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10071|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Righteous Cloak of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10108|1203",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Wanderer's Cloak of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10148|694",
       "type": "Cloth",
       "slot": "back",
       "r": 53,
@@ -5825,7 +8353,43 @@ var gear = {
       "rand": 694
     },
     {
-      "id": 10258,
+      "id": "10148|1206",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Mighty Cloak of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10185|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Swashbuckler's Cape of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10224|1203",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Nightshade Cloak of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10258|694",
       "type": "Cloth",
       "slot": "back",
       "r": 55,
@@ -5835,6 +8399,18 @@ var gear = {
       "agi": 10,
       "str": 9,
       "rand": 694
+    },
+    {
+      "id": "10258|1206",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Adventurer's Cape of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 10518,
@@ -6198,7 +8774,115 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 15501,
+      "id": "15165|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Imposing Cape of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15173|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Potent Cape of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15183|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Praetorian Cloak of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15190|1203",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Grand Cloak of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15371|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Wolf Rider's Cloak of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15382|1197",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Rageclaw Cloak of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15392|1200",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Jadefire Cloak of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15427|1203",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Peerless Cloak of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15437|1206",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Supreme Cape of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15501|672",
       "type": "Cloth",
       "slot": "back",
       "r": 12,
@@ -6210,7 +8894,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15508,
+      "id": "15501|1182",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Outrunner's Cloak of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15501|24",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Outrunner's Cloak of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15508|672",
       "type": "Cloth",
       "slot": "back",
       "r": 14,
@@ -6222,7 +8929,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15519,
+      "id": "15508|1182",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Grunt's Cape of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15508|97",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Grunt's Cape of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15519|675",
       "type": "Cloth",
       "slot": "back",
       "r": 18,
@@ -6234,7 +8964,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15526,
+      "id": "15519|1185",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Spiked Chain Cloak of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15519|115",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Spiked Chain Cloak of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15526|675",
       "type": "Cloth",
       "slot": "back",
       "r": 19,
@@ -6246,7 +8999,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15537,
+      "id": "15526|1185",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Sentry's Cape of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15526|115",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Sentry's Cape of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15537|678",
       "type": "Cloth",
       "slot": "back",
       "r": 23,
@@ -6258,7 +9034,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15547,
+      "id": "15537|1188",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Wicked Chain Cloak of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15537|136",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Wicked Chain Cloak of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15547|678",
       "type": "Cloth",
       "slot": "back",
       "r": 24,
@@ -6270,7 +9069,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15559,
+      "id": "15547|1188",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Thick Scale Cloak of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15547|136",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Thick Scale Cloak of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15559|681",
       "type": "Cloth",
       "slot": "back",
       "r": 26,
@@ -6282,7 +9104,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15568,
+      "id": "15559|1191",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Pillager's Cloak of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15559|155",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Pillager's Cloak of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15568|681",
       "type": "Cloth",
       "slot": "back",
       "r": 28,
@@ -6294,7 +9139,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15579,
+      "id": "15568|1191",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Marauder's Cloak of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15568|155",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Marauder's Cloak of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15579|681",
       "type": "Cloth",
       "slot": "back",
       "r": 30,
@@ -6306,7 +9174,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15594,
+      "id": "15579|1191",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Sparkleshell Cloak of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15579|189",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Sparkleshell Cloak of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15594|684",
       "type": "Cloth",
       "slot": "back",
       "r": 32,
@@ -6316,6 +9207,29 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "15594|1194",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Steadfast Cloak of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15594|190",
+      "type": "Cloth",
+      "slot": "back",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Steadfast Cloak of Strength",
+      "str": 9,
+      "rand": 190
     },
     {
       "id": 15703,
@@ -7372,7 +10286,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 6336,
+      "id": "6336|672",
       "type": "Mail",
       "slot": "chest",
       "r": 8,
@@ -7382,6 +10296,29 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "6336|1182",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Infantry Tunic of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "6336|97",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Infantry Tunic of Strength",
+      "str": 4,
+      "rand": 97
     },
     {
       "id": 6396,
@@ -7405,7 +10342,7 @@ var gear = {
       "str": 2
     },
     {
-      "id": 6545,
+      "id": "6545|675",
       "type": "Mail",
       "slot": "chest",
       "r": 13,
@@ -7417,7 +10354,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6580,
+      "id": "6545|1185",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Soldier's Armor of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6545|115",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Soldier's Armor of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "6580|681",
       "type": "Mail",
       "slot": "chest",
       "r": 18,
@@ -7429,7 +10389,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 6592,
+      "id": "6580|1191",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Tunic of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "6580|189",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Tunic of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "6592|687",
       "type": "Mail",
       "slot": "chest",
       "r": 24,
@@ -7441,7 +10424,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 6603,
+      "id": "6592|1197",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Battleforge Armor of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "6592|192",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Battleforge Armor of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "6603|689",
       "type": "Leather",
       "slot": "chest",
       "r": 25,
@@ -7562,7 +10568,7 @@ var gear = {
       "agi": 14
     },
     {
-      "id": 7418,
+      "id": "7418|693",
       "type": "Mail",
       "slot": "chest",
       "r": 30,
@@ -7574,7 +10580,42 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7454,
+      "id": "7418|1203",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Phalanx Breastplate of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7418|220",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Phalanx Breastplate of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "7439|1209",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Sentinel Breastplate of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "7454|696",
       "type": "Mail",
       "slot": "chest",
       "r": 34,
@@ -7586,7 +10627,54 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 7538,
+      "id": "7454|1206",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Breastplate of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7454|308",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Breastplate of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "7477|1212",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Ranger Tunic of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "7527|1218",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Cabalist Chestpiece of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "7538|707",
       "type": "Mail",
       "slot": "chest",
       "r": 43,
@@ -7695,6 +10783,18 @@ var gear = {
       "agi": 15
     },
     {
+      "id": "8211|1212",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Wild Leather Vest of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
       "id": 8274,
       "type": "Plate",
       "slot": "chest",
@@ -7716,7 +10816,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 9286,
+      "id": "9286|702",
       "type": "Plate",
       "slot": "chest",
       "r": 40,
@@ -7726,6 +10826,29 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "9286|1212",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Field Plate Armor of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9286|311",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Field Plate Armor of Strength",
+      "str": 19,
+      "rand": 311
     },
     {
       "id": 9406,
@@ -7771,7 +10894,7 @@ var gear = {
       "agi": 16
     },
     {
-      "id": 9765,
+      "id": "9765|672",
       "type": "Mail",
       "slot": "chest",
       "r": 10,
@@ -7783,7 +10906,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 9782,
+      "id": "9765|1182",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Cadet Vest of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9765|97",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Cadet Vest of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "9782|681",
       "type": "Leather",
       "slot": "chest",
       "r": 18,
@@ -7795,7 +10941,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9783,
+      "id": "9783|678",
       "type": "Mail",
       "slot": "chest",
       "r": 15,
@@ -7807,7 +10953,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9809,
+      "id": "9783|1188",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Raider's Chestpiece of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9783|155",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Raider's Chestpiece of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "9809|689",
       "type": "Leather",
       "slot": "chest",
       "r": 23,
@@ -7819,7 +10988,7 @@ var gear = {
       "rand": 689
     },
     {
-      "id": 9818,
+      "id": "9818|684",
       "type": "Mail",
       "slot": "chest",
       "r": 20,
@@ -7831,7 +11000,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9836,
+      "id": "9818|1194",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Chain of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9818|191",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Chain of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9836|690",
       "type": "Mail",
       "slot": "chest",
       "r": 28,
@@ -7843,7 +11035,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 9866,
+      "id": "9836|1200",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Banded Armor of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9836|219",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Banded Armor of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "9866|696",
       "type": "Mail",
       "slot": "chest",
       "r": 33,
@@ -7855,7 +11070,66 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 9966,
+      "id": "9866|1206",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Renegade Chestguard of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9866|308",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Renegade Chestguard of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "9887|1212",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Huntsman's Armor of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9924|1215",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Tracker's Tunic of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "9950|1221",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Chieftain's Breastplate of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "9966|702",
       "type": "Plate",
       "slot": "chest",
       "r": 40,
@@ -7867,7 +11141,42 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10086,
+      "id": "9966|1212",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Embossed Plate Armor of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9966|311",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Embossed Plate Armor of Strength",
+      "str": 19,
+      "rand": 311
+    },
+    {
+      "id": "10070|1224",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Righteous Armor of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10086|708",
       "type": "Plate",
       "slot": "chest",
       "r": 44,
@@ -7879,7 +11188,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10105,
+      "id": "10086|1218",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Gothic Plate Armor of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10086|314",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Gothic Plate Armor of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "10105|718",
       "type": "Leather",
       "slot": "chest",
       "r": 55,
@@ -7891,7 +11223,30 @@ var gear = {
       "rand": 718
     },
     {
-      "id": 10128,
+      "id": "10105|1227",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Wanderer's Armor of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10105|319",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Wanderer's Armor of Strength",
+      "str": 27,
+      "rand": 319
+    },
+    {
+      "id": "10128|711",
       "type": "Plate",
       "slot": "chest",
       "r": 49,
@@ -7903,7 +11258,42 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10164,
+      "id": "10128|1221",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Revenant Chestplate of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10128|315",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Revenant Chestplate of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10151|1233",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Mighty Tunic of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10164|717",
       "type": "Plate",
       "slot": "chest",
       "r": 53,
@@ -7915,7 +11305,30 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 10182,
+      "id": "10164|1227",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Templar Chestplate of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10164|318",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Templar Chestplate of Strength",
+      "str": 26,
+      "rand": 318
+    },
+    {
+      "id": "10182|718",
       "type": "Leather",
       "slot": "chest",
       "r": 53,
@@ -7927,7 +11340,30 @@ var gear = {
       "rand": 718
     },
     {
-      "id": 10203,
+      "id": "10182|1227",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Swashbuckler's Breastplate of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10182|319",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Swashbuckler's Breastplate of Strength",
+      "str": 27,
+      "rand": 319
+    },
+    {
+      "id": "10203|711",
       "type": "Plate",
       "slot": "chest",
       "r": 47,
@@ -7939,7 +11375,53 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10240,
+      "id": "10203|1221",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Overlord's Chestplate of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10203|315",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Overlord's Chestplate of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10220|1230",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Nightshade Tunic of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10220|320",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Nightshade Tunic of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10240|714",
       "type": "Plate",
       "slot": "chest",
       "r": 50,
@@ -7951,7 +11433,42 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10275,
+      "id": "10240|1224",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Heavy Lamellar Chestpiece of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10240|317",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Heavy Lamellar Chestpiece of Strength",
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "10264|1233",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Adventurer's Tunic of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10275|717",
       "type": "Plate",
       "slot": "chest",
       "r": 55,
@@ -7961,6 +11478,29 @@ var gear = {
       "agi": 17,
       "str": 17,
       "rand": 717
+    },
+    {
+      "id": "10275|1227",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Emerald Breastplate of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10275|318",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Emerald Breastplate of Strength",
+      "str": 26,
+      "rand": 318
     },
     {
       "id": 10328,
@@ -7985,7 +11525,7 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 10378,
+      "id": "10378|720",
       "type": "Plate",
       "slot": "chest",
       "r": 58,
@@ -7997,7 +11537,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10384,
+      "id": "10378|1231",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Commander's Armor of the Bear",
+      "sta": 19,
+      "str": 18,
+      "rand": 1231
+    },
+    {
+      "id": "10378|320",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Commander's Armor of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10384|725",
       "type": "Plate",
       "slot": "chest",
       "r": 60,
@@ -8007,6 +11570,29 @@ var gear = {
       "agi": 19,
       "str": 20,
       "rand": 725
+    },
+    {
+      "id": "10384|1233",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Hyperion Armor of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10384|321",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Hyperion Armor of Strength",
+      "str": 29,
+      "rand": 321
     },
     {
       "id": 10399,
@@ -8612,7 +12198,7 @@ var gear = {
       "sta": 25
     },
     {
-      "id": 14895,
+      "id": "14895|699",
       "type": "Plate",
       "slot": "chest",
       "r": 40,
@@ -8624,7 +12210,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14904,
+      "id": "14895|1209",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Surcoat of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14895|309",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Surcoat of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "14904|708",
       "type": "Plate",
       "slot": "chest",
       "r": 45,
@@ -8636,7 +12245,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 14915,
+      "id": "14904|1218",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Brutish Breastplate of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14904|314",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Brutish Breastplate of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "14915|711",
       "type": "Plate",
       "slot": "chest",
       "r": 48,
@@ -8648,7 +12280,30 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 14924,
+      "id": "14915|1221",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jade Breastplate of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "14915|315",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jade Breastplate of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "14924|714",
       "type": "Plate",
       "slot": "chest",
       "r": 52,
@@ -8660,7 +12315,30 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 14931,
+      "id": "14924|1224",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Lofty Breastplate of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "14924|317",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Lofty Breastplate of Strength",
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "14931|720",
       "type": "Plate",
       "slot": "chest",
       "r": 57,
@@ -8672,7 +12350,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 14939,
+      "id": "14931|1231",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Heroic Armor of the Bear",
+      "sta": 19,
+      "str": 18,
+      "rand": 1231
+    },
+    {
+      "id": "14931|320",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Heroic Armor of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "14939|705",
       "type": "Plate",
       "slot": "chest",
       "r": 41,
@@ -8684,7 +12385,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14948,
+      "id": "14939|1215",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Warbringer's Chestguard of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14939|312",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Warbringer's Chestguard of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "14948|708",
       "type": "Plate",
       "slot": "chest",
       "r": 46,
@@ -8696,7 +12420,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 14958,
+      "id": "14948|1218",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Bloodforged Chestpiece of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14948|314",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Bloodforged Chestpiece of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "14958|714",
       "type": "Plate",
       "slot": "chest",
       "r": 51,
@@ -8708,7 +12455,30 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 14966,
+      "id": "14958|1224",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "High Chief's Armor of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "14958|317",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "High Chief's Armor of Strength",
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "14966|720",
       "type": "Plate",
       "slot": "chest",
       "r": 56,
@@ -8720,7 +12490,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 14975,
+      "id": "14966|1231",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Glorious Breastplate of the Bear",
+      "sta": 19,
+      "str": 18,
+      "rand": 1231
+    },
+    {
+      "id": "14966|320",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Glorious Breastplate of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "14975|725",
       "type": "Plate",
       "slot": "chest",
       "r": 60,
@@ -8730,6 +12523,29 @@ var gear = {
       "agi": 19,
       "str": 20,
       "rand": 725
+    },
+    {
+      "id": "14975|1233",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Exalted Harness of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "14975|321",
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Exalted Harness of Strength",
+      "str": 29,
+      "rand": 321
     },
     {
       "id": 15050,
@@ -8778,7 +12594,78 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 15311,
+      "id": "15159|1209",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Nocturnal Tunic of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15164|1215",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Imposing Vest of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15170|1221",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Potent Armor of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15179|1224",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Praetorian Padded Armor of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15195|1230",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Grand Breastplate of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15195|320",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Grand Breastplate of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15311|681",
       "type": "Leather",
       "slot": "chest",
       "r": 17,
@@ -8790,7 +12677,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15337,
+      "id": "15337|689",
       "type": "Leather",
       "slot": "chest",
       "r": 24,
@@ -8800,6 +12687,89 @@ var gear = {
       "agi": 7,
       "str": 8,
       "rand": 689
+    },
+    {
+      "id": "15359|1209",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Trickster's Vest of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15376|1215",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Wolf Rider's Padded Armor of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15381|1218",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Rageclaw Chestguard of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15390|1224",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Jadefire Chestguard of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15433|1230",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Peerless Armor of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15433|320",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Peerless Armor of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15442|1233",
+      "type": "Leather",
+      "slot": "chest",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Supreme Breastplate of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
     },
     {
       "id": 15471,
@@ -8813,7 +12783,7 @@ var gear = {
       "sta": 9
     },
     {
-      "id": 15479,
+      "id": "15479|669",
       "type": "Mail",
       "slot": "chest",
       "r": 6,
@@ -8825,7 +12795,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 15487,
+      "id": "15479|1179",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Charger's Armor of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "15479|23",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Charger's Armor of Strength",
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "15487|675",
       "type": "Mail",
       "slot": "chest",
       "r": 11,
@@ -8837,7 +12830,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15488,
+      "id": "15487|1185",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "War Torn Tunic of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15487|115",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "War Torn Tunic of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15488|678",
       "type": "Mail",
       "slot": "chest",
       "r": 16,
@@ -8849,7 +12865,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15500,
+      "id": "15488|1188",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Bloodspattered Surcoat of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15488|155",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Bloodspattered Surcoat of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15500|681",
       "type": "Mail",
       "slot": "chest",
       "r": 19,
@@ -8861,7 +12900,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15514,
+      "id": "15500|1191",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Outrunner's Chestguard of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15500|189",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Outrunner's Chestguard of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15514|684",
       "type": "Mail",
       "slot": "chest",
       "r": 21,
@@ -8873,7 +12935,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15518,
+      "id": "15514|1194",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Grunt's Chestpiece of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15514|191",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Grunt's Chestpiece of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15518|687",
       "type": "Mail",
       "slot": "chest",
       "r": 25,
@@ -8885,7 +12970,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15524,
+      "id": "15518|1197",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Spiked Chain Breastplate of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15518|192",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Spiked Chain Breastplate of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15524|690",
       "type": "Mail",
       "slot": "chest",
       "r": 26,
@@ -8897,7 +13005,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15536,
+      "id": "15524|1200",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Sentry's Surcoat of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15524|219",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Sentry's Surcoat of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "15536|693",
       "type": "Mail",
       "slot": "chest",
       "r": 29,
@@ -8909,7 +13040,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15546,
+      "id": "15536|1203",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Wicked Chain Chestpiece of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15536|220",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Wicked Chain Chestpiece of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "15546|693",
       "type": "Mail",
       "slot": "chest",
       "r": 31,
@@ -8921,7 +13075,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15557,
+      "id": "15546|1203",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Thick Scale Breastplate of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15546|220",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Thick Scale Breastplate of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "15557|696",
       "type": "Mail",
       "slot": "chest",
       "r": 32,
@@ -8933,7 +13110,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15601,
+      "id": "15557|1206",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Pillager's Chestguard of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15557|308",
+      "type": "Mail",
+      "slot": "chest",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Pillager's Chestguard of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "15601|707",
       "type": "Mail",
       "slot": "chest",
       "r": 41,
@@ -8945,7 +13145,7 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 15609,
+      "id": "15609|707",
       "type": "Mail",
       "slot": "chest",
       "r": 42,
@@ -9959,7 +14159,7 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 6550,
+      "id": "6550|669",
       "type": "Mail",
       "slot": "wrist",
       "r": 10,
@@ -9971,7 +14171,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 6574,
+      "id": "6550|1179",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Soldier's Wristguards of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "6550|23",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Soldier's Wristguards of Strength",
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "6574|675",
       "type": "Mail",
       "slot": "wrist",
       "r": 17,
@@ -9983,7 +14206,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6591,
+      "id": "6574|1185",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Defender Bracers of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6574|115",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Defender Bracers of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "6591|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 22,
@@ -9993,6 +14239,29 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "6591|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Battleforge Wristguards of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6591|115",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Battleforge Wristguards of Strength",
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 6665,
@@ -10049,7 +14318,7 @@ var gear = {
       "agi": 8
     },
     {
-      "id": 7416,
+      "id": "7416|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 26,
@@ -10061,7 +14330,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 7461,
+      "id": "7416|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Phalanx Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "7416|155",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Phalanx Bracers of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "7461|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 31,
@@ -10071,6 +14363,53 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "7461|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Knight's Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "7461|189",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Knight's Bracers of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "7484|1194",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Ranger Wristguards of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7534|1197",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Cabalist Bracers of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
     },
     {
       "id": 8118,
@@ -10181,7 +14520,7 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 9285,
+      "id": "9285|684",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10193,14 +14532,40 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9428,
+      "id": "9285|1194",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Vambraces of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9285|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Vambraces of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9428|1194",
       "type": "Leather",
       "slot": "wrist",
       "r": 30,
       "q": "3",
       "i": "35",
-      "name": "Unearthed Bands",
-      "ap": 8
+      "name": "Unearthed Bands of the Bear",
+      "ap": 8,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
     },
     {
       "id": 9432,
@@ -10225,7 +14590,7 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 9785,
+      "id": "9785|672",
       "type": "Mail",
       "slot": "wrist",
       "r": 12,
@@ -10237,7 +14602,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 9811,
+      "id": "9785|1182",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Raider's Bracers of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9785|24",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Raider's Bracers of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "9811|675",
       "type": "Mail",
       "slot": "wrist",
       "r": 19,
@@ -10249,7 +14637,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9837,
+      "id": "9811|1185",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Fortified Bracers of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9811|115",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Fortified Bracers of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "9837|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 25,
@@ -10261,7 +14672,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9865,
+      "id": "9837|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Banded Bracers of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9837|136",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Banded Bracers of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "9865|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 29,
@@ -10273,7 +14707,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9896,
+      "id": "9865|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Renegade Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9865|189",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Renegade Bracers of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "9896|684",
       "type": "Mail",
       "slot": "wrist",
       "r": 34,
@@ -10285,7 +14742,54 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9972,
+      "id": "9896|1194",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Jazeraint Bracers of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9896|190",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Jazeraint Bracers of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "9925|1197",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Tracker's Wristguards of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9949|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Chieftain's Bracers of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9972|684",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10297,7 +14801,42 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 10094,
+      "id": "9972|1194",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Embossed Plate Bracers of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9972|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Embossed Plate Bracers of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "10069|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Righteous Bracers of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10094|687",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10309,7 +14848,42 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 10127,
+      "id": "10094|1197",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Gothic Plate Vambraces of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "10094|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Gothic Plate Vambraces of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "10107|1203",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Wanderer's Bracers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10127|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 44,
@@ -10321,7 +14895,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 10147,
+      "id": "10127|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Revenant Bracers of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10127|193",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Revenant Bracers of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "10147|694",
       "type": "Leather",
       "slot": "wrist",
       "r": 55,
@@ -10333,7 +14930,19 @@ var gear = {
       "rand": 694
     },
     {
-      "id": 10156,
+      "id": "10147|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Mighty Armsplints of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10156|694",
       "type": "Mail",
       "slot": "wrist",
       "r": 55,
@@ -10345,7 +14954,7 @@ var gear = {
       "rand": 694
     },
     {
-      "id": 10171,
+      "id": "10171|693",
       "type": "Plate",
       "slot": "wrist",
       "r": 49,
@@ -10357,7 +14966,42 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10202,
+      "id": "10171|1203",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Templar Bracers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10171|219",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Templar Bracers of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "10184|1203",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Swashbuckler's Bracers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10202|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 43,
@@ -10369,7 +15013,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 10223,
+      "id": "10202|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Overlord's Vambraces of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10202|192",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Overlord's Vambraces of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "10223|694",
       "type": "Leather",
       "slot": "wrist",
       "r": 53,
@@ -10381,7 +15048,19 @@ var gear = {
       "rand": 694
     },
     {
-      "id": 10239,
+      "id": "10223|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Nightshade Armguards of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10239|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 46,
@@ -10393,7 +15072,42 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 10282,
+      "id": "10239|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Heavy Lamellar Vambraces of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10239|193",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Heavy Lamellar Vambraces of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "10256|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Adventurer's Bracers of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10282|693",
       "type": "Plate",
       "slot": "wrist",
       "r": 51,
@@ -10403,6 +15117,29 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "10282|1203",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Emerald Vambraces of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10282|220",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Emerald Vambraces of Strength",
+      "str": 14,
+      "rand": 220
     },
     {
       "id": 10358,
@@ -10416,7 +15153,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 10377,
+      "id": "10377|696",
       "type": "Plate",
       "slot": "wrist",
       "r": 54,
@@ -10428,7 +15165,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10391,
+      "id": "10377|1206",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Commander's Vambraces of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10377|307",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Commander's Vambraces of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10391|696",
       "type": "Plate",
       "slot": "wrist",
       "r": 55,
@@ -10438,6 +15198,29 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "10391|1206",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Hyperion Vambraces of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10391|307",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Hyperion Vambraces of Strength",
+      "str": 15,
+      "rand": 307
     },
     {
       "id": 10746,
@@ -10451,7 +15234,7 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 10800,
+      "id": "10800|694",
       "type": "Leather",
       "slot": "wrist",
       "r": 47,
@@ -10466,6 +15249,21 @@ var gear = {
       "rand": 694
     },
     {
+      "id": "10800|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 47,
+      "q": "3",
+      "i": "52",
+      "name": "Darkwater Bracers of the Bear",
+      "resist": {
+        "shadow": 7
+      },
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
       "id": 11679,
       "type": "Mail",
       "slot": "wrist",
@@ -10477,7 +15275,22 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 11767,
+      "id": "11764|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Cinderhide Armsplints of the Bear",
+      "resist": {
+        "fire": 10
+      },
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11767|696",
       "type": "Plate",
       "slot": "wrist",
       "r": 52,
@@ -10490,6 +15303,35 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "11767|1206",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Emberplate Armguards of the Bear",
+      "resist": {
+        "fire": 10
+      },
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11767|307",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Emberplate Armguards of Strength",
+      "resist": {
+        "fire": 10
+      },
+      "str": 15,
+      "rand": 307
     },
     {
       "id": 12112,
@@ -10820,7 +15662,7 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 14903,
+      "id": "14903|684",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10832,7 +15674,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 14910,
+      "id": "14903|1194",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Armsplints of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "14903|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Armsplints of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "14910|687",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10844,7 +15709,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 14914,
+      "id": "14910|1197",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Brutish Armguards of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "14910|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Brutish Armguards of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "14914|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 41,
@@ -10856,7 +15744,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14923,
+      "id": "14914|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Jade Bracers of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14914|192",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Jade Bracers of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "14923|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 45,
@@ -10868,7 +15779,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14938,
+      "id": "14923|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Lofty Armguards of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14923|193",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Lofty Armguards of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "14938|693",
       "type": "Plate",
       "slot": "wrist",
       "r": 51,
@@ -10880,7 +15814,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14941,
+      "id": "14938|1203",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Heroic Bracers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14938|220",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Heroic Bracers of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14941|684",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10892,7 +15849,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 14956,
+      "id": "14941|1194",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Armsplints of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "14941|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Armsplints of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "14956|687",
       "type": "Plate",
       "slot": "wrist",
       "r": 40,
@@ -10904,7 +15884,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 14965,
+      "id": "14956|1197",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Bloodforged Bindings of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "14956|191",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Bloodforged Bindings of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "14965|690",
       "type": "Plate",
       "slot": "wrist",
       "r": 44,
@@ -10916,7 +15919,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14974,
+      "id": "14965|1200",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "High Chief's Bindings of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14965|193",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "High Chief's Bindings of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "14974|693",
       "type": "Plate",
       "slot": "wrist",
       "r": 50,
@@ -10928,7 +15954,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14983,
+      "id": "14974|1203",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Glorious Bindings of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14974|220",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Glorious Bindings of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14983|696",
       "type": "Plate",
       "slot": "wrist",
       "r": 54,
@@ -10938,6 +15987,29 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "14983|1206",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Exalted Armsplints of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14983|307",
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Exalted Armsplints of Strength",
+      "str": 15,
+      "rand": 307
     },
     {
       "id": 15084,
@@ -10951,7 +16023,103 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 15436,
+      "id": "15163|1197",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Imposing Bracers of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15172|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Potent Bands of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15182|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Praetorian Wristbands of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15188|1203",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Grand Armguards of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15377|1194",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Wolf Rider's Wristbands of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15380|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Rageclaw Bracers of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15387|1200",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Jadefire Bracelets of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15425|1203",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Peerless Bracers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15436|694",
       "type": "Leather",
       "slot": "wrist",
       "r": 55,
@@ -10961,6 +16129,18 @@ var gear = {
       "agi": 10,
       "str": 9,
       "rand": 694
+    },
+    {
+      "id": "15436|1206",
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Supreme Bracers of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 15459,
@@ -10985,7 +16165,7 @@ var gear = {
       "agi": 5
     },
     {
-      "id": 15495,
+      "id": "15495|669",
       "type": "Mail",
       "slot": "wrist",
       "r": 10,
@@ -10997,7 +16177,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 15499,
+      "id": "15495|1179",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Wristbands of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "15495|23",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Wristbands of Strength",
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "15499|672",
       "type": "Mail",
       "slot": "wrist",
       "r": 13,
@@ -11009,7 +16212,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15507,
+      "id": "15499|1182",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Outrunner's Cuffs of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15499|24",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Outrunner's Cuffs of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15507|672",
       "type": "Mail",
       "slot": "wrist",
       "r": 14,
@@ -11021,7 +16247,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15517,
+      "id": "15507|1182",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Grunt's Bracers of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15507|97",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Grunt's Bracers of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15517|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 20,
@@ -11033,7 +16282,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15532,
+      "id": "15517|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Spiked Chain Wristbands of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15517|115",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Spiked Chain Wristbands of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15532|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 21,
@@ -11045,7 +16317,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15535,
+      "id": "15532|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Sentry's Armsplints of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15532|115",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Sentry's Armsplints of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15535|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 24,
@@ -11057,7 +16352,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15545,
+      "id": "15535|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Wicked Chain Bracers of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15535|136",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Wicked Chain Bracers of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15545|678",
       "type": "Mail",
       "slot": "wrist",
       "r": 25,
@@ -11069,7 +16387,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15556,
+      "id": "15545|1188",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Thick Scale Bracelets of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15545|136",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Thick Scale Bracelets of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15556|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 27,
@@ -11081,7 +16422,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15566,
+      "id": "15556|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Pillager's Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15556|155",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Pillager's Bracers of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15566|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 30,
@@ -11093,7 +16457,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15577,
+      "id": "15566|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Marauder's Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15566|189",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Marauder's Bracers of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15577|681",
       "type": "Mail",
       "slot": "wrist",
       "r": 31,
@@ -11105,7 +16492,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15590,
+      "id": "15577|1191",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Sparkleshell Bracers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15577|189",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Sparkleshell Bracers of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15590|684",
       "type": "Mail",
       "slot": "wrist",
       "r": 32,
@@ -11117,7 +16527,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15668,
+      "id": "15590|1194",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Steadfast Bracelets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15590|190",
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Steadfast Bracelets of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15668|694",
       "type": "Mail",
       "slot": "wrist",
       "r": 53,
@@ -12211,7 +17644,7 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 3474,
+      "id": "3474|672",
       "type": "Mail",
       "slot": "hands",
       "r": 10,
@@ -12221,6 +17654,29 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "3474|1182",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Gemmed Copper Gauntlets of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "3474|24",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Gemmed Copper Gauntlets of Strength",
+      "str": 3,
+      "rand": 24
     },
     {
       "id": 3483,
@@ -12484,7 +17940,7 @@ var gear = {
       "str": 5
     },
     {
-      "id": 6547,
+      "id": "6547|675",
       "type": "Mail",
       "slot": "hands",
       "r": 12,
@@ -12496,7 +17952,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6554,
+      "id": "6547|1185",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Gauntlets of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6547|97",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Gauntlets of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "6554|675",
       "type": "Leather",
       "slot": "hands",
       "r": 12,
@@ -12508,7 +17987,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6577,
+      "id": "6554|1185",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Bard's Gloves of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6577|678",
       "type": "Mail",
       "slot": "hands",
       "r": 18,
@@ -12520,7 +18011,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 6586,
+      "id": "6577|1188",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Gauntlets of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6577|136",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Gauntlets of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "6586|678",
       "type": "Leather",
       "slot": "hands",
       "r": 18,
@@ -12532,7 +18046,19 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 6595,
+      "id": "6586|1188",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Scouting Gloves of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6595|684",
       "type": "Mail",
       "slot": "hands",
       "r": 23,
@@ -12544,7 +18070,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 6605,
+      "id": "6595|1194",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Gauntlets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "6595|189",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Gauntlets of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "6605|684",
       "type": "Leather",
       "slot": "hands",
       "r": 23,
@@ -12554,6 +18103,18 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "6605|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Dervish Gloves of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
     },
     {
       "id": 6727,
@@ -12695,7 +18256,7 @@ var gear = {
       "ap": 16
     },
     {
-      "id": 7412,
+      "id": "7412|684",
       "type": "Leather",
       "slot": "hands",
       "r": 27,
@@ -12707,7 +18268,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7421,
+      "id": "7412|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Infiltrator Gloves of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7421|684",
       "type": "Mail",
       "slot": "hands",
       "r": 28,
@@ -12719,7 +18292,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7443,
+      "id": "7421|1194",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Phalanx Gauntlets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7421|190",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Phalanx Gauntlets of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "7443|690",
       "type": "Leather",
       "slot": "hands",
       "r": 32,
@@ -12731,7 +18327,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7457,
+      "id": "7443|1200",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Sentinel Gloves of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7457|690",
       "type": "Mail",
       "slot": "hands",
       "r": 32,
@@ -12743,7 +18351,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7480,
+      "id": "7457|1200",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Knight's Gauntlets of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7457|193",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Knight's Gauntlets of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "7480|693",
       "type": "Leather",
       "slot": "hands",
       "r": 36,
@@ -12755,7 +18386,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7489,
+      "id": "7480|1203",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Ranger Gloves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7480|6",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Ranger Gloves of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "7489|693",
       "type": "Mail",
       "slot": "hands",
       "r": 36,
@@ -12767,7 +18421,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7530,
+      "id": "7489|1203",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Captain's Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7530|696",
       "type": "Leather",
       "slot": "hands",
       "r": 41,
@@ -12779,7 +18445,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 7541,
+      "id": "7530|1206",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Cabalist Gloves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7541|696",
       "type": "Mail",
       "slot": "hands",
       "r": 41,
@@ -12789,6 +18467,18 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "7541|1206",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Champion's Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 7606,
@@ -12972,7 +18662,7 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 9287,
+      "id": "9287|693",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -12982,6 +18672,29 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "9287|1203",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9287|219",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Gauntlets of Strength",
+      "str": 13,
+      "rand": 219
     },
     {
       "id": 9366,
@@ -12994,7 +18707,7 @@ var gear = {
       "str": 11
     },
     {
-      "id": 9410,
+      "id": "9410|699",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -13004,6 +18717,29 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "9410|1209",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Cragfists of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9410|308",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Cragfists of Strength",
+      "str": 16,
+      "rand": 308
     },
     {
       "id": 9435,
@@ -13060,7 +18796,7 @@ var gear = {
       "str": 10
     },
     {
-      "id": 9640,
+      "id": "9640|702",
       "type": "Plate",
       "slot": "hands",
       "r": 43,
@@ -13071,6 +18807,31 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "9640|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 43,
+      "q": "3",
+      "i": "48",
+      "name": "Vice Grips of the Bear",
+      "ap": 14,
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9640|309",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 43,
+      "q": "3",
+      "i": "48",
+      "name": "Vice Grips of Strength",
+      "ap": 14,
+      "str": 17,
+      "rand": 309
     },
     {
       "id": 9656,
@@ -13093,7 +18854,7 @@ var gear = {
       "str": 9
     },
     {
-      "id": 9780,
+      "id": "9780|675",
       "type": "Leather",
       "slot": "hands",
       "r": 15,
@@ -13105,7 +18866,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9787,
+      "id": "9780|1185",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Bandit Gloves of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9787|675",
       "type": "Mail",
       "slot": "hands",
       "r": 14,
@@ -13117,7 +18890,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9806,
+      "id": "9787|1185",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Gauntlets of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9787|115",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Gauntlets of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "9806|681",
       "type": "Leather",
       "slot": "hands",
       "r": 22,
@@ -13129,7 +18925,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9813,
+      "id": "9806|1191",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Superior Gloves of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9813|681",
       "type": "Mail",
       "slot": "hands",
       "r": 20,
@@ -13141,7 +18949,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9832,
+      "id": "9813|1191",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Gauntlets of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9813|155",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Gauntlets of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "9832|684",
       "type": "Leather",
       "slot": "hands",
       "r": 26,
@@ -13153,7 +18984,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9839,
+      "id": "9832|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Scaled Leather Gloves of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9839|684",
       "type": "Mail",
       "slot": "hands",
       "r": 26,
@@ -13165,7 +19008,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9861,
+      "id": "9839|1194",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Banded Gauntlets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9839|190",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Banded Gauntlets of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "9861|687",
       "type": "Leather",
       "slot": "hands",
       "r": 30,
@@ -13177,7 +19043,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9868,
+      "id": "9861|1197",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Archer's Gloves of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9868|687",
       "type": "Mail",
       "slot": "hands",
       "r": 30,
@@ -13189,7 +19067,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9892,
+      "id": "9868|1197",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Renegade Gauntlets of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9868|192",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Renegade Gauntlets of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "9892|693",
       "type": "Leather",
       "slot": "hands",
       "r": 35,
@@ -13201,7 +19102,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9900,
+      "id": "9892|1203",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Huntsman's Gloves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9892|6",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Huntsman's Gloves of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "9900|693",
       "type": "Mail",
       "slot": "hands",
       "r": 35,
@@ -13213,7 +19137,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9920,
+      "id": "9900|1203",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Jazeraint Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9920|693",
       "type": "Leather",
       "slot": "hands",
       "r": 39,
@@ -13225,7 +19161,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9930,
+      "id": "9920|1203",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Tracker's Gloves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9930|693",
       "type": "Mail",
       "slot": "hands",
       "r": 38,
@@ -13237,7 +19185,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9952,
+      "id": "9930|1203",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Brigade Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9952|699",
       "type": "Leather",
       "slot": "hands",
       "r": 44,
@@ -13249,7 +19209,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 9960,
+      "id": "9952|1209",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Chieftain's Gloves of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9960|696",
       "type": "Mail",
       "slot": "hands",
       "r": 42,
@@ -13261,7 +19233,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 9967,
+      "id": "9960|1206",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Warmonger's Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9967|693",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -13273,7 +19257,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10072,
+      "id": "9967|1203",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Embossed Plate Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9967|220",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Embossed Plate Gauntlets of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "10072|699",
       "type": "Leather",
       "slot": "hands",
       "r": 46,
@@ -13285,7 +19292,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10080,
+      "id": "10072|1209",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Righteous Gloves of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10080|699",
       "type": "Mail",
       "slot": "hands",
       "r": 45,
@@ -13297,7 +19316,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10087,
+      "id": "10080|1209",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Lord's Gauntlets of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10087|696",
       "type": "Plate",
       "slot": "hands",
       "r": 41,
@@ -13309,7 +19340,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10110,
+      "id": "10087|1206",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Gothic Plate Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10087|307",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Gothic Plate Gauntlets of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10110|702",
       "type": "Leather",
       "slot": "hands",
       "r": 50,
@@ -13321,7 +19375,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10121,
+      "id": "10110|1212",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Wanderer's Gloves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10121|702",
       "type": "Mail",
       "slot": "hands",
       "r": 51,
@@ -13333,7 +19399,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10129,
+      "id": "10121|1212",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Ornate Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10129|699",
       "type": "Plate",
       "slot": "hands",
       "r": 45,
@@ -13345,7 +19423,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10149,
+      "id": "10129|1209",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Revenant Gauntlets of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10129|308",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Revenant Gauntlets of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10149|708",
       "type": "Leather",
       "slot": "hands",
       "r": 56,
@@ -13357,7 +19458,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10161,
+      "id": "10149|1218",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mighty Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10161|708",
       "type": "Mail",
       "slot": "hands",
       "r": 56,
@@ -13369,7 +19482,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10165,
+      "id": "10161|1218",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mercurial Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10165|702",
       "type": "Plate",
       "slot": "hands",
       "r": 50,
@@ -13381,7 +19506,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10186,
+      "id": "10165|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Templar Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10165|310",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Templar Gauntlets of Strength",
+      "str": 18,
+      "rand": 310
+    },
+    {
+      "id": "10186|702",
       "type": "Leather",
       "slot": "hands",
       "r": 48,
@@ -13393,7 +19541,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10196,
+      "id": "10186|1212",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Swashbuckler's Gloves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10196|702",
       "type": "Mail",
       "slot": "hands",
       "r": 47,
@@ -13405,7 +19565,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10205,
+      "id": "10196|1212",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Crusader's Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10205|699",
       "type": "Plate",
       "slot": "hands",
       "r": 44,
@@ -13417,7 +19589,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10225,
+      "id": "10205|1209",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Overlord's Gauntlets of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10205|308",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Overlord's Gauntlets of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10225|707",
       "type": "Leather",
       "slot": "hands",
       "r": 54,
@@ -13429,7 +19624,30 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 10232,
+      "id": "10225|1215",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Nightshade Gloves of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10225|314",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Nightshade Gloves of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "10232|705",
       "type": "Mail",
       "slot": "hands",
       "r": 53,
@@ -13441,7 +19659,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10242,
+      "id": "10232|1215",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Engraved Gauntlets of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10242|702",
       "type": "Plate",
       "slot": "hands",
       "r": 47,
@@ -13453,7 +19683,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10260,
+      "id": "10242|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Heavy Lamellar Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10242|309",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Heavy Lamellar Gauntlets of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "10260|708",
       "type": "Leather",
       "slot": "hands",
       "r": 58,
@@ -13465,7 +19718,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10268,
+      "id": "10260|1218",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Adventurer's Gloves of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10268|708",
       "type": "Mail",
       "slot": "hands",
       "r": 58,
@@ -13477,7 +19742,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10277,
+      "id": "10268|1218",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Masterwork Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10277|702",
       "type": "Plate",
       "slot": "hands",
       "r": 52,
@@ -13487,6 +19764,29 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "10277|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Emerald Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10277|310",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Emerald Gauntlets of Strength",
+      "str": 18,
+      "rand": 310
     },
     {
       "id": 10331,
@@ -13512,7 +19812,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 10380,
+      "id": "10380|705",
       "type": "Plate",
       "slot": "hands",
       "r": 55,
@@ -13524,7 +19824,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10386,
+      "id": "10380|1215",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Commander's Gauntlets of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10380|312",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Commander's Gauntlets of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "10386|708",
       "type": "Plate",
       "slot": "hands",
       "r": 57,
@@ -13534,6 +19857,29 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "10386|1218",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Hyperion Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10386|313",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Hyperion Gauntlets of Strength",
+      "str": 21,
+      "rand": 313
     },
     {
       "id": 10401,
@@ -13591,7 +19937,7 @@ var gear = {
       "str": 8
     },
     {
-      "id": 10777,
+      "id": "10777|696",
       "type": "Leather",
       "slot": "hands",
       "r": 37,
@@ -13604,6 +19950,21 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "10777|1206",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 37,
+      "q": "3",
+      "i": "42",
+      "name": "Arachnid Gloves of the Bear",
+      "resist": {
+        "nature": 10
+      },
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 11730,
@@ -13814,7 +20175,7 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 13258,
+      "id": "13258|710",
       "type": "Leather",
       "slot": "hands",
       "r": 56,
@@ -13824,6 +20185,18 @@ var gear = {
       "agi": 14,
       "str": 15,
       "rand": 710
+    },
+    {
+      "id": "13258|1220",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Slaghide Gauntlets of the Bear",
+      "sta": 14,
+      "str": 15,
+      "rand": 1220
     },
     {
       "id": 13395,
@@ -14084,7 +20457,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 14897,
+      "id": "14897|693",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -14096,7 +20469,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14905,
+      "id": "14897|1203",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14897|219",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Gauntlets of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "14905|693",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -14108,7 +20504,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14917,
+      "id": "14905|1203",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brutish Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14905|220",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brutish Gauntlets of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14917|696",
       "type": "Plate",
       "slot": "hands",
       "r": 43,
@@ -14120,7 +20539,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14926,
+      "id": "14917|1206",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Jade Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14917|307",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Jade Gauntlets of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "14926|702",
       "type": "Plate",
       "slot": "hands",
       "r": 48,
@@ -14132,7 +20574,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14933,
+      "id": "14926|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Lofty Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14926|309",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Lofty Gauntlets of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "14933|705",
       "type": "Plate",
       "slot": "hands",
       "r": 53,
@@ -14144,7 +20609,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14942,
+      "id": "14933|1215",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Heroic Gauntlets of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14933|312",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Heroic Gauntlets of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "14942|693",
       "type": "Plate",
       "slot": "hands",
       "r": 40,
@@ -14156,7 +20644,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14949,
+      "id": "14942|1203",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14942|219",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Gauntlets of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "14949|696",
       "type": "Plate",
       "slot": "hands",
       "r": 42,
@@ -14168,7 +20679,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14959,
+      "id": "14949|1206",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Bloodforged Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14949|307",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Bloodforged Gauntlets of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "14959|702",
       "type": "Plate",
       "slot": "hands",
       "r": 47,
@@ -14180,7 +20714,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14967,
+      "id": "14959|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "High Chief's Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14959|309",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "High Chief's Gauntlets of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "14967|702",
       "type": "Plate",
       "slot": "hands",
       "r": 51,
@@ -14192,7 +20749,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14976,
+      "id": "14967|1212",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Glorious Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14967|310",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Glorious Gauntlets of Strength",
+      "str": 18,
+      "rand": 310
+    },
+    {
+      "id": "14976|708",
       "type": "Plate",
       "slot": "hands",
       "r": 56,
@@ -14204,7 +20784,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15016,
+      "id": "14976|1218",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Exalted Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14976|313",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Exalted Gauntlets of Strength",
+      "str": 21,
+      "rand": 313
+    },
+    {
+      "id": "15016|675",
       "type": "Leather",
       "slot": "hands",
       "r": 11,
@@ -14214,6 +20817,18 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "15016|1185",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Lupine Handwraps of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
     },
     {
       "id": 15063,
@@ -14239,7 +20854,7 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 15115,
+      "id": "15115|678",
       "type": "Leather",
       "slot": "hands",
       "r": 17,
@@ -14251,7 +20866,19 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15125,
+      "id": "15115|1188",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Rigid Gloves of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15125|684",
       "type": "Leather",
       "slot": "hands",
       "r": 24,
@@ -14263,7 +20890,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15137,
+      "id": "15125|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Robust Gloves of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15137|684",
       "type": "Leather",
       "slot": "hands",
       "r": 28,
@@ -14275,7 +20914,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15149,
+      "id": "15137|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Cutthroat's Mitts of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15149|687",
       "type": "Leather",
       "slot": "hands",
       "r": 31,
@@ -14287,7 +20938,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15155,
+      "id": "15149|1197",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Ghostwalker Gloves of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15155|690",
       "type": "Leather",
       "slot": "hands",
       "r": 34,
@@ -14299,7 +20962,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15166,
+      "id": "15155|1200",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Nocturnal Gloves of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15166|693",
       "type": "Leather",
       "slot": "hands",
       "r": 40,
@@ -14311,7 +20986,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15174,
+      "id": "15166|1203",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Imposing Gloves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15174|699",
       "type": "Leather",
       "slot": "hands",
       "r": 45,
@@ -14323,7 +21010,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15184,
+      "id": "15174|1209",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Potent Gloves of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15184|702",
       "type": "Leather",
       "slot": "hands",
       "r": 49,
@@ -14335,7 +21034,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15192,
+      "id": "15184|1212",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Praetorian Gloves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15192|707",
       "type": "Leather",
       "slot": "hands",
       "r": 55,
@@ -14347,7 +21058,30 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 15310,
+      "id": "15192|1215",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Grand Gauntlets of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15192|314",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Grand Gauntlets of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "15310|675",
       "type": "Leather",
       "slot": "hands",
       "r": 13,
@@ -14359,7 +21093,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15334,
+      "id": "15310|1185",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Feral Gloves of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15334|681",
       "type": "Leather",
       "slot": "hands",
       "r": 22,
@@ -14371,7 +21117,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15343,
+      "id": "15334|1191",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Wrangler's Gloves of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15343|684",
       "type": "Leather",
       "slot": "hands",
       "r": 25,
@@ -14383,7 +21141,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15355,
+      "id": "15343|1194",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Pathfinder Gloves of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15355|687",
       "type": "Leather",
       "slot": "hands",
       "r": 29,
@@ -14395,7 +21165,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15365,
+      "id": "15355|1197",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Headhunter's Mitts of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15365|690",
       "type": "Leather",
       "slot": "hands",
       "r": 33,
@@ -14407,7 +21189,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15372,
+      "id": "15365|1200",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Trickster's Handwraps of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15372|693",
       "type": "Leather",
       "slot": "hands",
       "r": 38,
@@ -14419,7 +21213,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15383,
+      "id": "15372|1203",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Wolf Rider's Gloves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15383|696",
       "type": "Leather",
       "slot": "hands",
       "r": 43,
@@ -14431,7 +21237,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15393,
+      "id": "15383|1206",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Rageclaw Gloves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15393|702",
       "type": "Leather",
       "slot": "hands",
       "r": 47,
@@ -14443,7 +21261,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15429,
+      "id": "15393|1212",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Jadefire Gloves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15429|707",
       "type": "Leather",
       "slot": "hands",
       "r": 53,
@@ -14455,7 +21285,30 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 15438,
+      "id": "15429|1215",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Peerless Gloves of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15429|314",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Peerless Gloves of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "15438|708",
       "type": "Leather",
       "slot": "hands",
       "r": 58,
@@ -14465,6 +21318,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "15438|1218",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Gloves of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
     },
     {
       "id": 15463,
@@ -14478,7 +21343,7 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 15491,
+      "id": "15491|672",
       "type": "Mail",
       "slot": "hands",
       "r": 10,
@@ -14490,7 +21355,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15502,
+      "id": "15491|1182",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Gloves of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15491|24",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Gloves of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15502|675",
       "type": "Mail",
       "slot": "hands",
       "r": 15,
@@ -14502,7 +21390,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15509,
+      "id": "15502|1185",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Outrunner's Gloves of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15502|115",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Outrunner's Gloves of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15509|675",
       "type": "Mail",
       "slot": "hands",
       "r": 16,
@@ -14514,7 +21425,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15520,
+      "id": "15509|1185",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Grunt's Handwraps of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15509|115",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Grunt's Handwraps of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15520|681",
       "type": "Mail",
       "slot": "hands",
       "r": 21,
@@ -14526,7 +21460,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15527,
+      "id": "15520|1191",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Spiked Chain Gauntlets of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15520|155",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Spiked Chain Gauntlets of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15527|681",
       "type": "Mail",
       "slot": "hands",
       "r": 22,
@@ -14538,7 +21495,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15538,
+      "id": "15527|1191",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Sentry's Gloves of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15527|155",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Sentry's Gloves of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15538|684",
       "type": "Mail",
       "slot": "hands",
       "r": 25,
@@ -14550,7 +21530,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15548,
+      "id": "15538|1194",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Wicked Chain Gauntlets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15538|189",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Wicked Chain Gauntlets of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15548|684",
       "type": "Mail",
       "slot": "hands",
       "r": 27,
@@ -14562,7 +21565,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15560,
+      "id": "15548|1194",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Thick Scale Gauntlets of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15548|190",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Thick Scale Gauntlets of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15560|687",
       "type": "Mail",
       "slot": "hands",
       "r": 29,
@@ -14574,7 +21600,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15570,
+      "id": "15560|1197",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Pillager's Gloves of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15560|192",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Pillager's Gloves of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15570|687",
       "type": "Mail",
       "slot": "hands",
       "r": 31,
@@ -14586,7 +21635,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15581,
+      "id": "15570|1197",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Marauder's Gauntlets of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15570|192",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Marauder's Gauntlets of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15581|690",
       "type": "Mail",
       "slot": "hands",
       "r": 33,
@@ -14598,7 +21670,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15595,
+      "id": "15581|1200",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Sparkleshell Gauntlets of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15581|193",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Sparkleshell Gauntlets of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15595|690",
       "type": "Mail",
       "slot": "hands",
       "r": 34,
@@ -14610,7 +21705,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15605,
+      "id": "15595|1200",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Steadfast Gloves of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15595|193",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Steadfast Gloves of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15605|693",
       "type": "Mail",
       "slot": "hands",
       "r": 37,
@@ -14622,7 +21740,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15612,
+      "id": "15605|1203",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Ancient Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15612|693",
       "type": "Mail",
       "slot": "hands",
       "r": 39,
@@ -14634,7 +21764,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15625,
+      "id": "15612|1203",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Bonelink Gauntlets of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15625|696",
       "type": "Mail",
       "slot": "hands",
       "r": 42,
@@ -14646,7 +21788,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15635,
+      "id": "15625|1206",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Gryphon Mail Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15635|696",
       "type": "Mail",
       "slot": "hands",
       "r": 43,
@@ -14658,7 +21812,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15644,
+      "id": "15635|1206",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Formidable Gauntlets of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15644|702",
       "type": "Mail",
       "slot": "hands",
       "r": 47,
@@ -14670,7 +21836,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15653,
+      "id": "15644|1212",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Ironhide Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15653|702",
       "type": "Mail",
       "slot": "hands",
       "r": 48,
@@ -14682,7 +21860,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15662,
+      "id": "15653|1212",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Merciless Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15662|702",
       "type": "Mail",
       "slot": "hands",
       "r": 52,
@@ -14694,7 +21884,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15672,
+      "id": "15662|1212",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Impenetrable Gauntlets of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15672|705",
       "type": "Mail",
       "slot": "hands",
       "r": 55,
@@ -14706,7 +21908,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15682,
+      "id": "15672|1215",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Magnificent Gauntlets of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15682|708",
       "type": "Mail",
       "slot": "hands",
       "r": 58,
@@ -14716,6 +21930,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "15682|1218",
+      "type": "Mail",
+      "slot": "hands",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Gauntlets of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
     },
     {
       "id": 15708,
@@ -16048,7 +23274,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 6548,
+      "id": "6548|675",
       "type": "Mail",
       "slot": "waist",
       "r": 11,
@@ -16060,7 +23286,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6558,
+      "id": "6548|1185",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Soldier's Girdle of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6548|97",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Soldier's Girdle of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "6558|672",
       "type": "Leather",
       "slot": "waist",
       "r": 10,
@@ -16072,7 +23321,19 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 6576,
+      "id": "6558|1182",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bard's Belt of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "6576|678",
       "type": "Mail",
       "slot": "waist",
       "r": 17,
@@ -16084,7 +23345,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 6581,
+      "id": "6576|1188",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Defender Girdle of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6576|136",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Defender Girdle of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "6581|675",
       "type": "Leather",
       "slot": "waist",
       "r": 16,
@@ -16096,7 +23380,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6594,
+      "id": "6581|1185",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Scouting Belt of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6581|136",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Scouting Belt of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "6594|684",
       "type": "Mail",
       "slot": "waist",
       "r": 23,
@@ -16108,7 +23415,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 6600,
+      "id": "6594|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Girdle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "6594|189",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Girdle of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "6600|681",
       "type": "Leather",
       "slot": "waist",
       "r": 22,
@@ -16118,6 +23448,18 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "6600|1191",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Dervish Belt of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
     },
     {
       "id": 6719,
@@ -16175,7 +23517,7 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 7406,
+      "id": "7406|684",
       "type": "Leather",
       "slot": "waist",
       "r": 27,
@@ -16187,7 +23529,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7422,
+      "id": "7406|1194",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Infiltrator Cord of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7422|684",
       "type": "Mail",
       "slot": "waist",
       "r": 27,
@@ -16199,7 +23553,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7448,
+      "id": "7422|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Phalanx Girdle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7422|190",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Phalanx Girdle of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "7448|687",
       "type": "Leather",
       "slot": "waist",
       "r": 31,
@@ -16211,7 +23588,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 7462,
+      "id": "7448|1197",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Sentinel Girdle of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "7462|690",
       "type": "Mail",
       "slot": "waist",
       "r": 32,
@@ -16223,7 +23612,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7485,
+      "id": "7462|1200",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Knight's Girdle of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7462|193",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Knight's Girdle of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "7485|693",
       "type": "Leather",
       "slot": "waist",
       "r": 36,
@@ -16235,7 +23647,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7494,
+      "id": "7485|1203",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Ranger Cord of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7494|693",
       "type": "Mail",
       "slot": "waist",
       "r": 36,
@@ -16247,7 +23671,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7535,
+      "id": "7494|1203",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Captain's Waistguard of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7535|696",
       "type": "Leather",
       "slot": "waist",
       "r": 41,
@@ -16259,7 +23695,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 7546,
+      "id": "7535|1206",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Cabalist Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7546|696",
       "type": "Mail",
       "slot": "waist",
       "r": 41,
@@ -16269,6 +23717,18 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "7546|1206",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Champion's Girdle of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 8116,
@@ -16326,7 +23786,7 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 9288,
+      "id": "9288|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -16336,6 +23796,29 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "9288|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Girdle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9288|219",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Girdle of Strength",
+      "str": 13,
+      "rand": 219
     },
     {
       "id": 9405,
@@ -16380,7 +23863,7 @@ var gear = {
       "str": 13
     },
     {
-      "id": 9775,
+      "id": "9775|675",
       "type": "Leather",
       "slot": "waist",
       "r": 14,
@@ -16392,7 +23875,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9788,
+      "id": "9775|1185",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Bandit Cinch of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9775|136",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Bandit Cinch of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "9788|675",
       "type": "Mail",
       "slot": "waist",
       "r": 13,
@@ -16404,7 +23910,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9801,
+      "id": "9788|1185",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Raider's Belt of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9788|97",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Raider's Belt of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "9801|681",
       "type": "Leather",
       "slot": "waist",
       "r": 20,
@@ -16416,7 +23945,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9814,
+      "id": "9801|1191",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Superior Belt of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9814|678",
       "type": "Mail",
       "slot": "waist",
       "r": 19,
@@ -16428,7 +23969,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9827,
+      "id": "9814|1188",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Fortified Belt of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9814|136",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Fortified Belt of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "9827|684",
       "type": "Leather",
       "slot": "waist",
       "r": 25,
@@ -16440,7 +24004,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9840,
+      "id": "9827|1194",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Scaled Leather Belt of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9840|684",
       "type": "Mail",
       "slot": "waist",
       "r": 26,
@@ -16452,7 +24028,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9855,
+      "id": "9840|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Banded Girdle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9840|190",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Banded Girdle of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "9855|687",
       "type": "Leather",
       "slot": "waist",
       "r": 30,
@@ -16464,7 +24063,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9869,
+      "id": "9855|1197",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Archer's Belt of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9869|687",
       "type": "Mail",
       "slot": "waist",
       "r": 30,
@@ -16476,7 +24087,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9891,
+      "id": "9869|1197",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Renegade Belt of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9869|192",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Renegade Belt of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "9891|690",
       "type": "Leather",
       "slot": "waist",
       "r": 34,
@@ -16488,7 +24122,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 9901,
+      "id": "9891|1200",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Huntsman's Belt of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9901|693",
       "type": "Mail",
       "slot": "waist",
       "r": 35,
@@ -16500,7 +24146,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9916,
+      "id": "9901|1203",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Jazeraint Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9916|693",
       "type": "Leather",
       "slot": "waist",
       "r": 39,
@@ -16512,7 +24170,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9931,
+      "id": "9916|1203",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Tracker's Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9931|693",
       "type": "Mail",
       "slot": "waist",
       "r": 38,
@@ -16524,7 +24194,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 9947,
+      "id": "9931|1203",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Brigade Girdle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9947|696",
       "type": "Leather",
       "slot": "waist",
       "r": 43,
@@ -16536,7 +24218,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 9961,
+      "id": "9947|1206",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Chieftain's Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9961|696",
       "type": "Mail",
       "slot": "waist",
       "r": 42,
@@ -16548,7 +24242,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 9968,
+      "id": "9961|1206",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Warmonger's Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9968|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -16560,7 +24266,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10067,
+      "id": "9968|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Embossed Plate Girdle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9968|219",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Embossed Plate Girdle of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "10067|699",
       "type": "Leather",
       "slot": "waist",
       "r": 44,
@@ -16572,7 +24301,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10081,
+      "id": "10067|1209",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Righteous Waistguard of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10081|699",
       "type": "Mail",
       "slot": "waist",
       "r": 45,
@@ -16584,7 +24325,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10088,
+      "id": "10081|1209",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Lord's Girdle of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10088|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -16596,7 +24349,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10109,
+      "id": "10088|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Gothic Plate Girdle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10088|220",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Gothic Plate Girdle of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "10109|702",
       "type": "Leather",
       "slot": "waist",
       "r": 49,
@@ -16608,7 +24384,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10122,
+      "id": "10109|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Wanderer's Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10122|702",
       "type": "Mail",
       "slot": "waist",
       "r": 50,
@@ -16620,7 +24408,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10130,
+      "id": "10122|1212",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Ornate Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10130|699",
       "type": "Plate",
       "slot": "waist",
       "r": 45,
@@ -16632,7 +24432,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10145,
+      "id": "10130|1209",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Revenant Girdle of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10130|308",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Revenant Girdle of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10145|705",
       "type": "Leather",
       "slot": "waist",
       "r": 54,
@@ -16644,7 +24467,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10154,
+      "id": "10145|1215",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Mighty Girdle of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10145|312",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Mighty Girdle of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "10154|708",
       "type": "Mail",
       "slot": "waist",
       "r": 56,
@@ -16656,7 +24502,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10166,
+      "id": "10154|1218",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mercurial Girdle of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10166|702",
       "type": "Plate",
       "slot": "waist",
       "r": 49,
@@ -16668,7 +24526,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10190,
+      "id": "10166|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Templar Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10166|309",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Templar Girdle of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "10190|702",
       "type": "Leather",
       "slot": "waist",
       "r": 47,
@@ -16680,7 +24561,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10197,
+      "id": "10190|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Swashbuckler's Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10197|702",
       "type": "Mail",
       "slot": "waist",
       "r": 47,
@@ -16692,7 +24585,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10206,
+      "id": "10197|1212",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Crusader's Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10206|696",
       "type": "Plate",
       "slot": "waist",
       "r": 43,
@@ -16704,7 +24609,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10221,
+      "id": "10206|1206",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Overlord's Girdle of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10206|307",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Overlord's Girdle of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10221|705",
       "type": "Leather",
       "slot": "waist",
       "r": 53,
@@ -16716,7 +24644,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10233,
+      "id": "10221|1215",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Nightshade Girdle of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10221|312",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Nightshade Girdle of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "10233|702",
       "type": "Mail",
       "slot": "waist",
       "r": 52,
@@ -16728,7 +24679,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10243,
+      "id": "10233|1212",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Engraved Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10243|699",
       "type": "Plate",
       "slot": "waist",
       "r": 46,
@@ -16740,7 +24703,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10259,
+      "id": "10243|1209",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Heavy Lamellar Girdle of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10243|308",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Heavy Lamellar Girdle of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10259|708",
       "type": "Leather",
       "slot": "waist",
       "r": 57,
@@ -16752,7 +24738,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10269,
+      "id": "10259|1218",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Adventurer's Belt of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10269|708",
       "type": "Mail",
       "slot": "waist",
       "r": 57,
@@ -16764,7 +24762,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10278,
+      "id": "10269|1218",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Masterwork Girdle of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10278|702",
       "type": "Plate",
       "slot": "waist",
       "r": 50,
@@ -16774,6 +24784,29 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "10278|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Emerald Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10278|310",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Emerald Girdle of Strength",
+      "str": 18,
+      "rand": 310
     },
     {
       "id": 10329,
@@ -16798,7 +24831,7 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 10381,
+      "id": "10381|705",
       "type": "Plate",
       "slot": "waist",
       "r": 54,
@@ -16810,7 +24843,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10387,
+      "id": "10381|1215",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Commander's Girdle of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10381|312",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Commander's Girdle of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "10387|708",
       "type": "Plate",
       "slot": "waist",
       "r": 56,
@@ -16820,6 +24876,29 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "10387|1218",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Hyperion Girdle of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10387|313",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Hyperion Girdle of Strength",
+      "str": 21,
+      "rand": 313
     },
     {
       "id": 10403,
@@ -16865,7 +24944,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 10788,
+      "id": "10788|702",
       "type": "Plate",
       "slot": "waist",
       "r": 47,
@@ -16875,6 +24954,29 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "10788|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Atal'ai Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10788|309",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Atal'ai Girdle of Strength",
+      "str": 17,
+      "rand": 309
     },
     {
       "id": 10798,
@@ -17079,7 +25181,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 13387,
+      "id": "13387|706",
       "type": "Mail",
       "slot": "waist",
       "r": 56,
@@ -17351,7 +25453,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 14898,
+      "id": "14898|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -17363,7 +25465,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14906,
+      "id": "14898|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Girdle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14898|219",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Girdle of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "14906|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -17375,7 +25500,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14918,
+      "id": "14906|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Brutish Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14906|220",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Brutish Belt of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14918|696",
       "type": "Plate",
       "slot": "waist",
       "r": 42,
@@ -17387,7 +25535,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14927,
+      "id": "14918|1206",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Jade Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14918|307",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Jade Belt of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "14927|702",
       "type": "Plate",
       "slot": "waist",
       "r": 47,
@@ -17399,7 +25570,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14934,
+      "id": "14927|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Lofty Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14927|309",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Lofty Belt of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "14934|702",
       "type": "Plate",
       "slot": "waist",
       "r": 52,
@@ -17411,7 +25605,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14943,
+      "id": "14934|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Heroic Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14934|310",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Heroic Girdle of Strength",
+      "str": 18,
+      "rand": 310
+    },
+    {
+      "id": "14943|693",
       "type": "Plate",
       "slot": "waist",
       "r": 40,
@@ -17423,7 +25640,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14950,
+      "id": "14943|1203",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14943|219",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Warbringer's Belt of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "14950|696",
       "type": "Plate",
       "slot": "waist",
       "r": 41,
@@ -17435,7 +25675,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14960,
+      "id": "14950|1206",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Bloodforged Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14950|307",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Bloodforged Belt of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "14960|699",
       "type": "Plate",
       "slot": "waist",
       "r": 46,
@@ -17447,7 +25710,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14968,
+      "id": "14960|1209",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "High Chief's Belt of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14960|308",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "High Chief's Belt of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "14968|702",
       "type": "Plate",
       "slot": "waist",
       "r": 50,
@@ -17459,7 +25745,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14977,
+      "id": "14968|1212",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Glorious Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14968|310",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Glorious Belt of Strength",
+      "str": 18,
+      "rand": 310
+    },
+    {
+      "id": "14977|705",
       "type": "Plate",
       "slot": "waist",
       "r": 55,
@@ -17471,7 +25780,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15011,
+      "id": "14977|1215",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Exalted Girdle of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14977|312",
+      "type": "Plate",
+      "slot": "waist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Exalted Girdle of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "15011|672",
       "type": "Leather",
       "slot": "waist",
       "r": 10,
@@ -17481,6 +25813,18 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "15011|1182",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Lupine Cord of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
     },
     {
       "id": 15088,
@@ -17494,7 +25838,7 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 15110,
+      "id": "15110|675",
       "type": "Leather",
       "slot": "waist",
       "r": 15,
@@ -17506,7 +25850,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15120,
+      "id": "15110|1185",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Rigid Belt of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15110|136",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Rigid Belt of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15120|681",
       "type": "Leather",
       "slot": "waist",
       "r": 21,
@@ -17518,7 +25885,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15136,
+      "id": "15120|1191",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Robust Girdle of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15136|684",
       "type": "Leather",
       "slot": "waist",
       "r": 26,
@@ -17530,7 +25909,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15148,
+      "id": "15136|1194",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Cutthroat's Belt of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15148|687",
       "type": "Leather",
       "slot": "waist",
       "r": 29,
@@ -17542,7 +25933,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15154,
+      "id": "15148|1197",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Ghostwalker Belt of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15154|690",
       "type": "Leather",
       "slot": "waist",
       "r": 33,
@@ -17554,7 +25957,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15161,
+      "id": "15154|1200",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Nocturnal Sash of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15161|693",
       "type": "Leather",
       "slot": "waist",
       "r": 38,
@@ -17566,7 +25981,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15178,
+      "id": "15161|1203",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Imposing Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15178|696",
       "type": "Leather",
       "slot": "waist",
       "r": 42,
@@ -17578,7 +26005,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15180,
+      "id": "15178|1206",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Potent Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15180|702",
       "type": "Leather",
       "slot": "waist",
       "r": 48,
@@ -17590,7 +26029,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15191,
+      "id": "15180|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Praetorian Girdle of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15191|702",
       "type": "Leather",
       "slot": "waist",
       "r": 52,
@@ -17602,7 +26053,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15308,
+      "id": "15191|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Grand Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15308|675",
       "type": "Leather",
       "slot": "waist",
       "r": 12,
@@ -17614,7 +26077,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15329,
+      "id": "15308|1185",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Feral Cord of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15329|678",
       "type": "Leather",
       "slot": "waist",
       "r": 19,
@@ -17626,7 +26101,19 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15347,
+      "id": "15329|1188",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Wrangler's Belt of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15347|684",
       "type": "Leather",
       "slot": "waist",
       "r": 23,
@@ -17638,7 +26125,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15349,
+      "id": "15347|1194",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Pathfinder Belt of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15349|684",
       "type": "Leather",
       "slot": "waist",
       "r": 28,
@@ -17650,7 +26149,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15361,
+      "id": "15349|1194",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Headhunter's Belt of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15361|690",
       "type": "Leather",
       "slot": "waist",
       "r": 32,
@@ -17662,7 +26173,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15369,
+      "id": "15361|1200",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Trickster's Sash of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15369|693",
       "type": "Leather",
       "slot": "waist",
       "r": 37,
@@ -17674,7 +26197,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15378,
+      "id": "15369|1203",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Wolf Rider's Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15378|696",
       "type": "Leather",
       "slot": "waist",
       "r": 41,
@@ -17686,7 +26221,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15388,
+      "id": "15378|1206",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Rageclaw Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15388|702",
       "type": "Leather",
       "slot": "waist",
       "r": 47,
@@ -17696,6 +26243,18 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "15388|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Jadefire Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
     },
     {
       "id": 15404,
@@ -17709,7 +26268,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 15428,
+      "id": "15428|702",
       "type": "Leather",
       "slot": "waist",
       "r": 51,
@@ -17721,7 +26280,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15434,
+      "id": "15428|1212",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Peerless Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15434|708",
       "type": "Leather",
       "slot": "waist",
       "r": 56,
@@ -17731,6 +26302,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "15434|1218",
+      "type": "Leather",
+      "slot": "waist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Supreme Sash of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
     },
     {
       "id": 15469,
@@ -17744,7 +26327,7 @@ var gear = {
       "ap": 12
     },
     {
-      "id": 15492,
+      "id": "15492|672",
       "type": "Mail",
       "slot": "waist",
       "r": 10,
@@ -17756,7 +26339,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15497,
+      "id": "15492|1182",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Sash of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15492|24",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Bloodspattered Sash of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15497|675",
       "type": "Mail",
       "slot": "waist",
       "r": 14,
@@ -17768,7 +26374,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15510,
+      "id": "15497|1185",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Outrunner's Cord of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15497|115",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Outrunner's Cord of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15510|675",
       "type": "Mail",
       "slot": "waist",
       "r": 15,
@@ -17780,7 +26409,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15515,
+      "id": "15510|1185",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Grunt's Belt of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15510|115",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Grunt's Belt of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15515|681",
       "type": "Mail",
       "slot": "waist",
       "r": 20,
@@ -17792,7 +26444,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15528,
+      "id": "15515|1191",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Spiked Chain Belt of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15515|155",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Spiked Chain Belt of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15528|681",
       "type": "Mail",
       "slot": "waist",
       "r": 21,
@@ -17804,7 +26479,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15539,
+      "id": "15528|1191",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Sentry's Sash of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15528|155",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Sentry's Sash of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15539|684",
       "type": "Mail",
       "slot": "waist",
       "r": 25,
@@ -17816,7 +26514,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15549,
+      "id": "15539|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Wicked Chain Waistband of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15539|189",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Wicked Chain Waistband of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15549|684",
       "type": "Mail",
       "slot": "waist",
       "r": 26,
@@ -17828,7 +26549,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15554,
+      "id": "15549|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Thick Scale Belt of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15549|190",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Thick Scale Belt of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15554|684",
       "type": "Mail",
       "slot": "waist",
       "r": 28,
@@ -17840,7 +26584,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15571,
+      "id": "15554|1194",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Pillager's Girdle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15554|190",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Pillager's Girdle of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15571|687",
       "type": "Mail",
       "slot": "waist",
       "r": 30,
@@ -17852,7 +26619,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15575,
+      "id": "15571|1197",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Marauder's Belt of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15571|192",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Marauder's Belt of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15575|687",
       "type": "Mail",
       "slot": "waist",
       "r": 31,
@@ -17862,6 +26652,29 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "15575|1197",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Sparkleshell Belt of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15575|192",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Sparkleshell Belt of Strength",
+      "str": 11,
+      "rand": 192
     },
     {
       "id": 15587,
@@ -17887,7 +26700,7 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 15598,
+      "id": "15598|690",
       "type": "Mail",
       "slot": "waist",
       "r": 33,
@@ -17899,7 +26712,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15606,
+      "id": "15598|1200",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Steadfast Girdle of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15598|193",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Steadfast Girdle of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15606|693",
       "type": "Mail",
       "slot": "waist",
       "r": 36,
@@ -17911,7 +26747,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15613,
+      "id": "15606|1203",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Ancient Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15613|693",
       "type": "Mail",
       "slot": "waist",
       "r": 37,
@@ -17923,7 +26771,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15619,
+      "id": "15613|1203",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Bonelink Belt of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15619|696",
       "type": "Mail",
       "slot": "waist",
       "r": 43,
@@ -17935,7 +26795,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15636,
+      "id": "15619|1206",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Gryphon Mail Belt of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15636|699",
       "type": "Mail",
       "slot": "waist",
       "r": 44,
@@ -17947,7 +26819,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15641,
+      "id": "15636|1209",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Formidable Belt of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15641|699",
       "type": "Mail",
       "slot": "waist",
       "r": 46,
@@ -17959,7 +26843,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15654,
+      "id": "15641|1209",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Ironhide Belt of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15654|702",
       "type": "Mail",
       "slot": "waist",
       "r": 49,
@@ -17971,7 +26867,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15663,
+      "id": "15654|1212",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Merciless Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15663|702",
       "type": "Mail",
       "slot": "waist",
       "r": 51,
@@ -17983,7 +26891,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15673,
+      "id": "15663|1212",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Impenetrable Belt of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15673|705",
       "type": "Mail",
       "slot": "waist",
       "r": 53,
@@ -17995,7 +26915,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15683,
+      "id": "15673|1215",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Magnificent Belt of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15683|705",
       "type": "Mail",
       "slot": "waist",
       "r": 55,
@@ -18005,6 +26937,18 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "15683|1215",
+      "type": "Mail",
+      "slot": "waist",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Triumphant Girdle of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
     },
     {
       "id": 15709,
@@ -19313,7 +28257,19 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 6337,
+      "id": "6269|1181",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Pioneer Trousers of the Bear",
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "6337|669",
       "type": "Mail",
       "slot": "legs",
       "r": 7,
@@ -19323,6 +28279,29 @@ var gear = {
       "agi": 1,
       "str": 1,
       "rand": 669
+    },
+    {
+      "id": "6337|1179",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Infantry Leggings of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "6337|23",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Infantry Leggings of Strength",
+      "str": 2,
+      "rand": 23
     },
     {
       "id": 6386,
@@ -19357,7 +28336,7 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 6546,
+      "id": "6546|675",
       "type": "Mail",
       "slot": "legs",
       "r": 12,
@@ -19369,7 +28348,42 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6578,
+      "id": "6546|1189",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Leggings of the Bear",
+      "sta": 5,
+      "str": 4,
+      "rand": 1189
+    },
+    {
+      "id": "6546|115",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Leggings of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "6553|1185",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Bard's Trousers of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6578|681",
       "type": "Mail",
       "slot": "legs",
       "r": 18,
@@ -19381,7 +28395,42 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 6596,
+      "id": "6578|1191",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Leggings of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "6578|189",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Leggings of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "6587|1191",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Scouting Trousers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "6596|687",
       "type": "Mail",
       "slot": "legs",
       "r": 23,
@@ -19391,6 +28440,52 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "6596|1197",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Legguards of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "6596|192",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Battleforge Legguards of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "6607|1199",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Dervish Leggings of the Bear",
+      "sta": 7,
+      "str": 8,
+      "rand": 1199
+    },
+    {
+      "id": "6607|6",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Dervish Leggings of Strength",
+      "str": 1,
+      "rand": 6
     },
     {
       "id": 6671,
@@ -19456,7 +28551,19 @@ var gear = {
       "agi": 13
     },
     {
-      "id": 7423,
+      "id": "7414|1203",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Infiltrator Pants of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7423|693",
       "type": "Mail",
       "slot": "legs",
       "r": 29,
@@ -19468,7 +28575,42 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 7455,
+      "id": "7423|1203",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Phalanx Leggings of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7423|220",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Phalanx Leggings of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "7440|1206",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Sentinel Trousers of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7455|696",
       "type": "Mail",
       "slot": "legs",
       "r": 34,
@@ -19478,6 +28620,77 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "7455|1206",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Legguards of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7455|308",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Legguards of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "7478|1212",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Ranger Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "7487|1212",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Captain's Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "7528|1215",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Cabalist Leggings of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "7539|1215",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Champion's Leggings of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
     },
     {
       "id": 7760,
@@ -19571,6 +28784,18 @@ var gear = {
       "agi": 17
     },
     {
+      "id": "8212|1218",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Wild Leather Leggings of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
       "id": 8262,
       "type": "Leather",
       "slot": "legs",
@@ -19636,7 +28861,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 9291,
+      "id": "9291|702",
       "type": "Plate",
       "slot": "legs",
       "r": 40,
@@ -19646,6 +28871,29 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "9291|1212",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Field Plate Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9291|311",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Field Plate Leggings of Strength",
+      "str": 19,
+      "rand": 311
     },
     {
       "id": 9396,
@@ -19707,7 +28955,19 @@ var gear = {
       "str": 15
     },
     {
-      "id": 9763,
+      "id": "9756|1182",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Gypsy Trousers of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9763|675",
       "type": "Mail",
       "slot": "legs",
       "r": 9,
@@ -19719,7 +28979,42 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9789,
+      "id": "9763|1182",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Cadet Leggings of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9763|97",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Cadet Leggings of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "9781|1191",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Bandit Pants of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9789|678",
       "type": "Mail",
       "slot": "legs",
       "r": 14,
@@ -19731,7 +29026,53 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9815,
+      "id": "9789|1188",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Legguards of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9789|155",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Legguards of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "9808|1199",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Superior Leggings of the Bear",
+      "sta": 7,
+      "str": 8,
+      "rand": 1199
+    },
+    {
+      "id": "9808|6",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Superior Leggings of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "9815|684",
       "type": "Mail",
       "slot": "legs",
       "r": 20,
@@ -19743,7 +29084,42 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9841,
+      "id": "9815|1194",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Leggings of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9815|191",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Leggings of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9833|1200",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Scaled Leather Leggings of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9841|690",
       "type": "Mail",
       "slot": "legs",
       "r": 27,
@@ -19755,7 +29131,42 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 9871,
+      "id": "9841|1200",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Banded Leggings of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9841|219",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Banded Leggings of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "9862|1206",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Archer's Trousers of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9871|696",
       "type": "Mail",
       "slot": "legs",
       "r": 32,
@@ -19767,7 +29178,102 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 9970,
+      "id": "9871|1206",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Renegade Leggings of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9871|308",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Renegade Leggings of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "9893|1209",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Huntsman's Leggings of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9903|1209",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jazeraint Leggings of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9922|1215",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Tracker's Leggings of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "9933|1212",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brigade Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9954|1218",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Chieftain's Leggings of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "9964|1218",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Warmonger's Leggings of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "9970|702",
       "type": "Plate",
       "slot": "legs",
       "r": 40,
@@ -19779,7 +29285,54 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10091,
+      "id": "9970|1212",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Embossed Plate Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "9970|311",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "44",
+      "name": "Embossed Plate Leggings of Strength",
+      "str": 19,
+      "rand": 311
+    },
+    {
+      "id": "10074|1221",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Righteous Leggings of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10084|1221",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Lord's Legguards of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10091|705",
       "type": "Plate",
       "slot": "legs",
       "r": 42,
@@ -19791,7 +29344,54 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10133,
+      "id": "10091|1215",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Gothic Plate Leggings of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10091|312",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Gothic Plate Leggings of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "10112|1227",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Wanderer's Leggings of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10124|1224",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Ornate Legguards of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10133|711",
       "type": "Plate",
       "slot": "legs",
       "r": 47,
@@ -19803,7 +29403,30 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10152,
+      "id": "10133|1221",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Revenant Leggings of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10133|315",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Revenant Leggings of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10152|718",
       "type": "Leather",
       "slot": "legs",
       "r": 58,
@@ -19815,7 +29438,53 @@ var gear = {
       "rand": 718
     },
     {
-      "id": 10169,
+      "id": "10152|1230",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Mighty Leggings of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10152|319",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Mighty Leggings of Strength",
+      "str": 27,
+      "rand": 319
+    },
+    {
+      "id": "10162|1230",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Mercurial Legguards of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10162|320",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Mercurial Legguards of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10169|714",
       "type": "Plate",
       "slot": "legs",
       "r": 52,
@@ -19827,7 +29496,54 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 10208,
+      "id": "10169|1224",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Templar Legplates of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10169|317",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Templar Legplates of Strength",
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "10188|1224",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Swashbuckler's Leggings of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "10199|1221",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Crusader's Leggings of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10208|708",
       "type": "Plate",
       "slot": "legs",
       "r": 45,
@@ -19839,7 +29555,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 10227,
+      "id": "10208|1218",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Overlord's Legplates of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10208|314",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Overlord's Legplates of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "10227|718",
       "type": "Leather",
       "slot": "legs",
       "r": 57,
@@ -19851,7 +29590,42 @@ var gear = {
       "rand": 718
     },
     {
-      "id": 10244,
+      "id": "10227|1230",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Nightshade Leggings of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10227|319",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Nightshade Leggings of Strength",
+      "str": 27,
+      "rand": 319
+    },
+    {
+      "id": "10236|1227",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Engraved Leggings of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10244|711",
       "type": "Plate",
       "slot": "legs",
       "r": 49,
@@ -19863,7 +29637,54 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 10280,
+      "id": "10244|1221",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Heavy Lamellar Leggings of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "10244|315",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Heavy Lamellar Leggings of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10262|1233",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Adventurer's Legguards of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10273|1233",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Masterwork Legplates of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10280|717",
       "type": "Plate",
       "slot": "legs",
       "r": 54,
@@ -19873,6 +29694,29 @@ var gear = {
       "agi": 17,
       "str": 17,
       "rand": 717
+    },
+    {
+      "id": "10280|1227",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Emerald Legplates of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "10280|318",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Emerald Legplates of Strength",
+      "str": 26,
+      "rand": 318
     },
     {
       "id": 10330,
@@ -19896,7 +29740,7 @@ var gear = {
       "str": 18
     },
     {
-      "id": 10382,
+      "id": "10382|720",
       "type": "Plate",
       "slot": "legs",
       "r": 57,
@@ -19908,7 +29752,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 10389,
+      "id": "10382|1230",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Commander's Leggings of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "10382|320",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Commander's Leggings of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "10389|723",
       "type": "Plate",
       "slot": "legs",
       "r": 59,
@@ -19918,6 +29785,29 @@ var gear = {
       "agi": 19,
       "str": 19,
       "rand": 723
+    },
+    {
+      "id": "10389|1233",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Hyperion Legplates of the Bear",
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "10389|321",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Hyperion Legplates of Strength",
+      "str": 29,
+      "rand": 321
     },
     {
       "id": 10400,
@@ -19974,6 +29864,18 @@ var gear = {
       "name": "Centurion Legplates",
       "agi": 15,
       "str": 15
+    },
+    {
+      "id": "10785|1221",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Atal'ai Leggings of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
     },
     {
       "id": 10842,
@@ -20435,7 +30337,7 @@ var gear = {
       "sta": 18
     },
     {
-      "id": 14900,
+      "id": "14900|699",
       "type": "Plate",
       "slot": "legs",
       "r": 40,
@@ -20447,7 +30349,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14908,
+      "id": "14900|1209",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Legplates of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14900|309",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Legplates of Strength",
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "14908|705",
       "type": "Plate",
       "slot": "legs",
       "r": 43,
@@ -20459,7 +30384,30 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14920,
+      "id": "14908|1215",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Brutish Legguards of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14908|312",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Brutish Legguards of Strength",
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "14920|708",
       "type": "Plate",
       "slot": "legs",
       "r": 46,
@@ -20471,7 +30419,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 14928,
+      "id": "14920|1218",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Jade Legplates of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14920|314",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Jade Legplates of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "14928|714",
       "type": "Plate",
       "slot": "legs",
       "r": 50,
@@ -20483,7 +30454,30 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 14936,
+      "id": "14928|1224",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Lofty Legguards of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "14928|317",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Lofty Legguards of Strength",
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "14936|720",
       "type": "Plate",
       "slot": "legs",
       "r": 56,
@@ -20495,7 +30489,30 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 14945,
+      "id": "14936|1230",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Heroic Legplates of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "14936|320",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Heroic Legplates of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "14945|702",
       "type": "Plate",
       "slot": "legs",
       "r": 40,
@@ -20507,7 +30524,30 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14953,
+      "id": "14945|1212",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Warbringer's Legguards of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14945|311",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Warbringer's Legguards of Strength",
+      "str": 19,
+      "rand": 311
+    },
+    {
+      "id": "14953|708",
       "type": "Plate",
       "slot": "legs",
       "r": 44,
@@ -20519,7 +30559,30 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 14962,
+      "id": "14953|1218",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Bloodforged Legplates of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "14953|314",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Bloodforged Legplates of Strength",
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "14962|711",
       "type": "Plate",
       "slot": "legs",
       "r": 49,
@@ -20531,7 +30594,30 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 14970,
+      "id": "14962|1221",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "High Chief's Legguards of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "14962|315",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "High Chief's Legguards of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "14970|717",
       "type": "Plate",
       "slot": "legs",
       "r": 53,
@@ -20543,7 +30629,30 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 14980,
+      "id": "14970|1227",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Glorious Legplates of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "14970|318",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Glorious Legplates of Strength",
+      "str": 26,
+      "rand": 318
+    },
+    {
+      "id": "14980|720",
       "type": "Plate",
       "slot": "legs",
       "r": 58,
@@ -20553,6 +30662,53 @@ var gear = {
       "agi": 18,
       "str": 18,
       "rand": 720
+    },
+    {
+      "id": "14980|1230",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Exalted Legplates of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "14980|320",
+      "type": "Plate",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Exalted Legplates of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15009|1181",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Primal Leggings of the Bear",
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "15017|1188",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Lupine Leggings of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
     },
     {
       "id": 15052,
@@ -20613,7 +30769,114 @@ var gear = {
       "sta": 12
     },
     {
-      "id": 15194,
+      "id": "15117|1191",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Rigid Leggings of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15126|1199",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Robust Leggings of the Bear",
+      "sta": 7,
+      "str": 8,
+      "rand": 1199
+    },
+    {
+      "id": "15126|6",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Robust Leggings of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "15139|1200",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Cutthroat's Pants of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15151|1203",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Ghostwalker Legguards of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15157|1209",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Nocturnal Leggings of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15168|1212",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Imposing Pants of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15176|1218",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Potent Pants of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15186|1224",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Praetorian Leggings of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15194|718",
       "type": "Leather",
       "slot": "legs",
       "r": 56,
@@ -20623,6 +30886,29 @@ var gear = {
       "agi": 18,
       "str": 17,
       "rand": 718
+    },
+    {
+      "id": "15194|1230",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Grand Legguards of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15194|319",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Grand Legguards of Strength",
+      "str": 27,
+      "rand": 319
     },
     {
       "id": 15202,
@@ -20647,7 +30933,127 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 15440,
+      "id": "15303|1182",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Grizzly Pants of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15312|1188",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Feral Leggings of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15336|1194",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Wrangler's Leggings of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15344|1200",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Pathfinder Pants of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15358|1203",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Headhunter's Woolies of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15366|1209",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Trickster's Leggings of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15374|1212",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Wolf Rider's Leggings of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15385|1218",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Rageclaw Leggings of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15394|1221",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Jadefire Pants of the Bear",
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15431|1227",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Peerless Leggings of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15440|718",
       "type": "Leather",
       "slot": "legs",
       "r": 58,
@@ -20657,6 +31063,29 @@ var gear = {
       "agi": 18,
       "str": 17,
       "rand": 718
+    },
+    {
+      "id": "15440|1230",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Leggings of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15440|319",
+      "type": "Leather",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Leggings of Strength",
+      "str": 27,
+      "rand": 319
     },
     {
       "id": 15450,
@@ -20704,7 +31133,7 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 15477,
+      "id": "15477|669",
       "type": "Mail",
       "slot": "legs",
       "r": 6,
@@ -20716,7 +31145,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 15485,
+      "id": "15477|1179",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Charger's Pants of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "15477|23",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Charger's Pants of Strength",
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "15485|675",
       "type": "Mail",
       "slot": "legs",
       "r": 9,
@@ -20728,7 +31180,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15493,
+      "id": "15485|1182",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "War Torn Pants of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15485|97",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "War Torn Pants of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15493|675",
       "type": "Mail",
       "slot": "legs",
       "r": 13,
@@ -20740,7 +31215,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15503,
+      "id": "15493|1189",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Bloodspattered Loincloth of the Bear",
+      "sta": 5,
+      "str": 4,
+      "rand": 1189
+    },
+    {
+      "id": "15493|115",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Bloodspattered Loincloth of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15503|681",
       "type": "Mail",
       "slot": "legs",
       "r": 17,
@@ -20752,7 +31250,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15511,
+      "id": "15503|1191",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Outrunner's Legguards of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15503|189",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Outrunner's Legguards of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15511|681",
       "type": "Mail",
       "slot": "legs",
       "r": 19,
@@ -20764,7 +31285,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15521,
+      "id": "15511|1191",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Grunt's Legguards of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15511|189",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Grunt's Legguards of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15521|684",
       "type": "Mail",
       "slot": "legs",
       "r": 22,
@@ -20776,7 +31320,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15529,
+      "id": "15521|1194",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Spiked Chain Leggings of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15521|191",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Spiked Chain Leggings of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15529|687",
       "type": "Mail",
       "slot": "legs",
       "r": 24,
@@ -20788,7 +31355,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15541,
+      "id": "15529|1197",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Sentry's Leggings of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15529|192",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Sentry's Leggings of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15541|690",
       "type": "Mail",
       "slot": "legs",
       "r": 28,
@@ -20800,7 +31390,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15551,
+      "id": "15541|1200",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Wicked Chain Legguards of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15541|219",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Wicked Chain Legguards of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "15551|693",
       "type": "Mail",
       "slot": "legs",
       "r": 30,
@@ -20812,7 +31425,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15561,
+      "id": "15551|1203",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Thick Scale Legguards of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15551|220",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Thick Scale Legguards of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "15561|693",
       "type": "Mail",
       "slot": "legs",
       "r": 31,
@@ -20824,7 +31460,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 15573,
+      "id": "15561|1203",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Pillager's Leggings of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15561|220",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Pillager's Leggings of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "15573|696",
       "type": "Mail",
       "slot": "legs",
       "r": 33,
@@ -20834,6 +31493,183 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "15573|1206",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Marauder's Leggings of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15573|308",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Marauder's Leggings of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "15582|1209",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Sparkleshell Legguards of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15596|1209",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Steadfast Legplates of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15607|1212",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Ancient Legguards of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15616|1215",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Bonelink Legplates of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15627|1218",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Gryphon Mail Legguards of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15637|1218",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Formidable Legguards of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15646|1224",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Ironhide Legguards of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15655|1224",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Merciless Legguards of the Bear",
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15665|1227",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Impenetrable Legguards of the Bear",
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15676|1230",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magnificent Leggings of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15676|320",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magnificent Leggings of Strength",
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15685|1230",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Legplates of the Bear",
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15685|320",
+      "type": "Mail",
+      "slot": "legs",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Legplates of Strength",
+      "str": 28,
+      "rand": 320
     },
     {
       "id": 16431,
@@ -22074,7 +32910,7 @@ var gear = {
       "str": 5
     },
     {
-      "id": 6551,
+      "id": "6551|675",
       "type": "Mail",
       "slot": "feet",
       "r": 12,
@@ -22086,7 +32922,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6573,
+      "id": "6551|1185",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Boots of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6573|678",
       "type": "Mail",
       "slot": "feet",
       "r": 18,
@@ -22098,7 +32946,19 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 6590,
+      "id": "6573|1188",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Boots of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6590|684",
       "type": "Mail",
       "slot": "feet",
       "r": 24,
@@ -22108,6 +32968,18 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "6590|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Battleforge Boots of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
     },
     {
       "id": 6666,
@@ -22154,7 +33026,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 7417,
+      "id": "7417|687",
       "type": "Mail",
       "slot": "feet",
       "r": 29,
@@ -22166,7 +33038,19 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 7458,
+      "id": "7417|1197",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Phalanx Boots of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "7458|690",
       "type": "Mail",
       "slot": "feet",
       "r": 32,
@@ -22178,7 +33062,43 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7531,
+      "id": "7458|1200",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Knight's Boots of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7481|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Ranger Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7490|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Captain's Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "7531|696",
       "type": "Leather",
       "slot": "feet",
       "r": 41,
@@ -22188,6 +33108,30 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "7531|1206",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Cabalist Boots of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "7542|1206",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Champion's Greaves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
     },
     {
       "id": 7751,
@@ -22286,6 +33230,18 @@ var gear = {
       "agi": 12
     },
     {
+      "id": "8213|1209",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Wild Leather Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
       "id": 8256,
       "type": "Leather",
       "slot": "feet",
@@ -22330,7 +33286,7 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 9289,
+      "id": "9289|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -22340,6 +33296,18 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "9289|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Field Plate Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
     },
     {
       "id": 9382,
@@ -22353,7 +33321,7 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 9387,
+      "id": "9387|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -22363,6 +33331,18 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "9387|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "41",
+      "name": "Revelosh's Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
     },
     {
       "id": 9398,
@@ -22443,7 +33423,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 9776,
+      "id": "9776|678",
       "type": "Leather",
       "slot": "feet",
       "r": 15,
@@ -22455,7 +33435,18 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9784,
+      "id": "9776|136",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Bandit Boots of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "9784|675",
       "type": "Mail",
       "slot": "feet",
       "r": 14,
@@ -22467,7 +33458,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 9810,
+      "id": "9784|1185",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Boots of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "9810|681",
       "type": "Mail",
       "slot": "feet",
       "r": 20,
@@ -22479,7 +33482,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9864,
+      "id": "9810|1191",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Boots of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9864|687",
       "type": "Mail",
       "slot": "feet",
       "r": 31,
@@ -22491,7 +33506,91 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9973,
+      "id": "9864|1197",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Renegade Boots of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9885|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Huntsman's Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9895|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Jazeraint Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9917|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Tracker's Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9926|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Brigade Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9948|1209",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Chieftain's Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "9962|1206",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Warmonger's Greaves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "9973|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -22503,7 +33602,43 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10089,
+      "id": "9973|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "42",
+      "name": "Embossed Plate Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10068|1209",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Righteous Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10082|1209",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Lord's Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10089|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -22515,7 +33650,43 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10131,
+      "id": "10089|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Gothic Sabatons of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10106|1212",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Wanderer's Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10119|1212",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Ornate Greaves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10131|699",
       "type": "Plate",
       "slot": "feet",
       "r": 45,
@@ -22527,7 +33698,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10146,
+      "id": "10131|1209",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Revenant Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10146|707",
       "type": "Leather",
       "slot": "feet",
       "r": 56,
@@ -22539,7 +33722,42 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 10167,
+      "id": "10146|1218",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mighty Boots of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10146|315",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mighty Boots of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10155|1218",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Mercurial Greaves of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10167|702",
       "type": "Plate",
       "slot": "feet",
       "r": 50,
@@ -22551,7 +33769,43 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10201,
+      "id": "10167|1212",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Templar Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10183|1212",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Swashbuckler's Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10192|1212",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Crusader's Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10201|696",
       "type": "Plate",
       "slot": "feet",
       "r": 43,
@@ -22563,7 +33817,43 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10238,
+      "id": "10201|1206",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Overlord's Greaves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10222|1217",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Nightshade Boots of the Bear",
+      "sta": 13,
+      "str": 14,
+      "rand": 1217
+    },
+    {
+      "id": "10234|1215",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Engraved Boots of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10238|702",
       "type": "Plate",
       "slot": "feet",
       "r": 47,
@@ -22575,7 +33865,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 10257,
+      "id": "10238|1212",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Heavy Lamellar Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "10257|707",
       "type": "Leather",
       "slot": "feet",
       "r": 57,
@@ -22587,7 +33889,42 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 10276,
+      "id": "10257|1218",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Adventurer's Boots of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10257|315",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Adventurer's Boots of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "10270|1218",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Masterwork Boots of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "10276|702",
       "type": "Plate",
       "slot": "feet",
       "r": 51,
@@ -22597,6 +33934,18 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "10276|1212",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Emerald Sabatons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
     },
     {
       "id": 10332,
@@ -22620,7 +33969,7 @@ var gear = {
       "str": 13
     },
     {
-      "id": 10376,
+      "id": "10376|705",
       "type": "Plate",
       "slot": "feet",
       "r": 55,
@@ -22632,7 +33981,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 10385,
+      "id": "10376|1215",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Commander's Boots of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "10385|708",
       "type": "Plate",
       "slot": "feet",
       "r": 57,
@@ -22642,6 +34003,18 @@ var gear = {
       "agi": 14,
       "str": 14,
       "rand": 708
+    },
+    {
+      "id": "10385|1220",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Hyperion Greaves of the Bear",
+      "sta": 14,
+      "str": 15,
+      "rand": 1220
     },
     {
       "id": 10402,
@@ -22655,7 +34028,7 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 10409,
+      "id": "10409|684",
       "type": "Mail",
       "slot": "feet",
       "r": 27,
@@ -22665,6 +34038,18 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "10409|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Banded Boots of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
     },
     {
       "id": 10411,
@@ -22730,6 +34115,18 @@ var gear = {
       "name": "Wanderlust Boots",
       "agi": 10,
       "str": 5
+    },
+    {
+      "id": "10786|1212",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Atal'ai Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
     },
     {
       "id": 10801,
@@ -23238,7 +34635,7 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 14896,
+      "id": "14896|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -23250,7 +34647,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14911,
+      "id": "14896|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "40",
+      "name": "Saltstone Sabatons of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14911|696",
       "type": "Plate",
       "slot": "feet",
       "r": 41,
@@ -23262,7 +34671,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14913,
+      "id": "14911|1206",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Brutish Boots of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14913|699",
       "type": "Plate",
       "slot": "feet",
       "r": 44,
@@ -23274,7 +34695,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14922,
+      "id": "14913|1209",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Jade Greaves of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14922|702",
       "type": "Plate",
       "slot": "feet",
       "r": 48,
@@ -23286,7 +34719,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14932,
+      "id": "14922|1212",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Lofty Sabatons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14932|705",
       "type": "Plate",
       "slot": "feet",
       "r": 53,
@@ -23298,7 +34743,19 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 14940,
+      "id": "14932|1215",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Heroic Greaves of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "14940|693",
       "type": "Plate",
       "slot": "feet",
       "r": 40,
@@ -23310,7 +34767,19 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14951,
+      "id": "14940|1203",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "43",
+      "name": "Warbringer's Sabatons  of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14951|696",
       "type": "Plate",
       "slot": "feet",
       "r": 42,
@@ -23322,7 +34791,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14957,
+      "id": "14951|1206",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Bloodforged Sabatons of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14957|699",
       "type": "Plate",
       "slot": "feet",
       "r": 46,
@@ -23334,7 +34815,19 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 14972,
+      "id": "14957|1209",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "High Chief's Sabatons of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14972|702",
       "type": "Plate",
       "slot": "feet",
       "r": 51,
@@ -23346,7 +34839,19 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 14978,
+      "id": "14972|1212",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Glorious Sabatons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "14978|708",
       "type": "Plate",
       "slot": "feet",
       "r": 58,
@@ -23358,7 +34863,19 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15111,
+      "id": "14978|1220",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Exalted Sabatons of the Bear",
+      "sta": 14,
+      "str": 15,
+      "rand": 1220
+    },
+    {
+      "id": "15111|678",
       "type": "Leather",
       "slot": "feet",
       "r": 16,
@@ -23370,7 +34887,90 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15379,
+      "id": "15111|136",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Rigid Moccasins of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15152|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Nocturnal Shoes of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15162|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Imposing Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15171|1209",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Potent Boots of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15181|1212",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Praetorian Boots of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15189|1217",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Grand Boots of the Bear",
+      "sta": 13,
+      "str": 14,
+      "rand": 1217
+    },
+    {
+      "id": "15370|1203",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Wolf Rider's Boots of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15379|696",
       "type": "Leather",
       "slot": "feet",
       "r": 43,
@@ -23382,7 +34982,43 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15435,
+      "id": "15379|1206",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Rageclaw Boots of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15389|1212",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jadefire Sabatons of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15426|1217",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Peerless Boots of the Bear",
+      "sta": 13,
+      "str": 14,
+      "rand": 1217
+    },
+    {
+      "id": "15435|707",
       "type": "Leather",
       "slot": "feet",
       "r": 58,
@@ -23394,7 +35030,30 @@ var gear = {
       "rand": 707
     },
     {
-      "id": 15489,
+      "id": "15435|1218",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Shoes of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15435|315",
+      "type": "Leather",
+      "slot": "feet",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Supreme Shoes of Strength",
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "15489|675",
       "type": "Mail",
       "slot": "feet",
       "r": 11,
@@ -23406,7 +35065,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15498,
+      "id": "15489|1185",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Bloodspattered Sabatons of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15498|675",
       "type": "Mail",
       "slot": "feet",
       "r": 15,
@@ -23418,7 +35089,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15506,
+      "id": "15498|1185",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Outrunner's Slippers of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15506|675",
       "type": "Mail",
       "slot": "feet",
       "r": 16,
@@ -23430,7 +35113,19 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15516,
+      "id": "15506|1185",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Grunt's AnkleWraps of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15516|681",
       "type": "Mail",
       "slot": "feet",
       "r": 22,
@@ -23442,7 +35137,19 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15525,
+      "id": "15516|1191",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Spiked Chain Slippers of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15525|684",
       "type": "Mail",
       "slot": "feet",
       "r": 23,
@@ -23454,7 +35161,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15534,
+      "id": "15525|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Sentry's Slippers of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15534|684",
       "type": "Mail",
       "slot": "feet",
       "r": 26,
@@ -23466,7 +35185,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15544,
+      "id": "15534|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Wicked Chain Boots of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15544|684",
       "type": "Mail",
       "slot": "feet",
       "r": 27,
@@ -23478,7 +35209,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15555,
+      "id": "15544|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Thick Scale Sabatons of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15555|684",
       "type": "Mail",
       "slot": "feet",
       "r": 28,
@@ -23490,7 +35233,19 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15565,
+      "id": "15555|1194",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Pillager's Boots of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15565|690",
       "type": "Mail",
       "slot": "feet",
       "r": 33,
@@ -23502,7 +35257,19 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15576,
+      "id": "15565|1200",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Marauder's Boots of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15576|690",
       "type": "Mail",
       "slot": "feet",
       "r": 34,
@@ -23512,6 +35279,138 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "15576|1200",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Sparkleshell Sabatons of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15589|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Steadfast Stompers of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15599|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Ancient Greaves of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15614|1203",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Bonelink Sabatons of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "15626|1206",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Gryphon Mail Greaves of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15630|1209",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Formidable Sabatons of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15642|1212",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Ironhide Greaves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15658|1215",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Impenetrable Sabatons of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15674|1215",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Magnificent Greaves of the Bear",
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15678|1218",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Triumphant Sabatons of the Bear",
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15694|1212",
+      "type": "Mail",
+      "slot": "feet",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Merciless Greaves of the Bear",
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
     },
     {
       "id": 15861,
@@ -23881,7 +35780,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 20039,
+      "id": "20039|699",
       "type": "Plate",
       "slot": "feet",
       "r": 60,
@@ -23894,6 +35793,21 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "20039|1209",
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Dark Iron Boots of the Bear",
+      "resist": {
+        "fire": 28
+      },
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
     },
     {
       "id": 20048,
@@ -24556,7 +36470,7 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 7426,
+      "id": "7426|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 25,
@@ -24568,7 +36482,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 7547,
+      "id": "7426|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "7426|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "7547|690",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 41,
@@ -24578,6 +36515,29 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "7547|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7547|192",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of Strength",
+      "str": 11,
+      "rand": 192
     },
     {
       "id": 7552,
@@ -24614,7 +36574,7 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 9461,
+      "id": "9461|687",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 32,
@@ -24627,6 +36587,35 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "9461|1197",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 32,
+      "q": "3",
+      "i": "37",
+      "name": "Charged Gear of the Bear",
+      "resist": {
+        "nature": 5
+      },
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9461|191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 32,
+      "q": "3",
+      "i": "37",
+      "name": "Charged Gear of Strength",
+      "resist": {
+        "nature": 5
+      },
+      "str": 10,
+      "rand": 191
     },
     {
       "id": 9533,
@@ -24650,7 +36639,7 @@ var gear = {
       "str": 4
     },
     {
-      "id": 10298,
+      "id": "10298|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 25,
@@ -24660,6 +36649,29 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "10298|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Gnomeregan Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "10298|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Gnomeregan Band of Strength",
+      "str": 6,
+      "rand": 136
     },
     {
       "id": 10780,
@@ -24673,7 +36685,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 10795,
+      "id": "10795|696",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 49,
@@ -24685,7 +36697,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 11118,
+      "id": "10795|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "3",
+      "i": "54",
+      "name": "Drakeclaw Band of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10795|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "3",
+      "i": "54",
+      "name": "Drakeclaw Band of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "11118|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 42,
@@ -24695,6 +36730,29 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "11118|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Archaedic Stone of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "11118|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Archaedic Stone of Strength",
+      "str": 13,
+      "rand": 219
     },
     {
       "id": 11824,
@@ -24718,7 +36776,7 @@ var gear = {
       "ap": 24
     },
     {
-      "id": 11945,
+      "id": "11945|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 48,
@@ -24730,7 +36788,331 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12006,
+      "id": "11945|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Dark Iron Ring of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "11945|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Dark Iron Ring of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "11977|1201",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Serpentine Loop of the Bear",
+      "sta": 9,
+      "str": 8,
+      "rand": 1201
+    },
+    {
+      "id": "11979|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Peridot Circle of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11980|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Opal Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11991|1205",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Quicksilver Ring of the Bear",
+      "sta": 9,
+      "str": 10,
+      "rand": 1205
+    },
+    {
+      "id": "11993|1185",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Clay Ring of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "11993|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Clay Ring of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "11994|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Coral Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "11994|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Coral Band of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "11995|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Ivory Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "11995|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Ivory Band of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "11996|1191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Basalt Ring of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "11996|189",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Basalt Ring of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "11997|1194",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Greenstone Circle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "11997|190",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Greenstone Circle of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "11998|1194",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jet Loop of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "11998|191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jet Loop of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "11999|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Lodestone Hoop of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "11999|192",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Lodestone Hoop of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "12001|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Onyx Ring of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "12001|193",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Onyx Ring of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "12002|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Marble Circle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "12002|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Marble Circle of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "12004|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Obsidian Band of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12004|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Obsidian Band of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12005|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12005|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Ring of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12006|675",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 17,
@@ -24742,7 +37124,7 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 12007,
+      "id": "12007|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 20,
@@ -24754,7 +37136,7 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 12008,
+      "id": "12008|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 23,
@@ -24766,7 +37148,7 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 12009,
+      "id": "12009|681",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 28,
@@ -24778,7 +37160,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 12010,
+      "id": "12010|684",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 32,
@@ -24790,7 +37172,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12011,
+      "id": "12011|684",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 36,
@@ -24802,7 +37184,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12012,
+      "id": "12012|687",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 40,
@@ -24814,7 +37196,7 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 12013,
+      "id": "12013|690",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 44,
@@ -24826,7 +37208,7 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 12014,
+      "id": "12014|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 48,
@@ -24838,7 +37220,7 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12015,
+      "id": "12015|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 52,
@@ -24850,7 +37232,7 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12016,
+      "id": "12016|696",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 56,
@@ -24862,7 +37244,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 12017,
+      "id": "12016|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Jungle Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12017|699",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 60,
@@ -24872,6 +37266,29 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "12017|1209",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Band of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "12017|308",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Band of Strength",
+      "str": 16,
+      "rand": 308
     },
     {
       "id": 12052,
@@ -25032,7 +37449,7 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 17982,
+      "id": "17982|675",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 60,
@@ -25045,6 +37462,35 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "17982|1185",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Ragnaros Core of the Bear",
+      "resist": {
+        "fire": 18
+      },
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "17982|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Ragnaros Core of Strength",
+      "resist": {
+        "fire": 18
+      },
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 18302,
@@ -25886,7 +38332,7 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 7426,
+      "id": "7426|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 25,
@@ -25898,7 +38344,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 7547,
+      "id": "7426|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "7426|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Cerulean Ring of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "7547|690",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 41,
@@ -25908,6 +38377,29 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "7547|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7547|192",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Onyx Ring of Strength",
+      "str": 11,
+      "rand": 192
     },
     {
       "id": 7552,
@@ -25944,7 +38436,7 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 9461,
+      "id": "9461|687",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 32,
@@ -25957,6 +38449,35 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "9461|1197",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 32,
+      "q": "3",
+      "i": "37",
+      "name": "Charged Gear of the Bear",
+      "resist": {
+        "nature": 5
+      },
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9461|191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 32,
+      "q": "3",
+      "i": "37",
+      "name": "Charged Gear of Strength",
+      "resist": {
+        "nature": 5
+      },
+      "str": 10,
+      "rand": 191
     },
     {
       "id": 9533,
@@ -25980,7 +38501,7 @@ var gear = {
       "str": 4
     },
     {
-      "id": 10298,
+      "id": "10298|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 25,
@@ -25990,6 +38511,29 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "10298|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Gnomeregan Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "10298|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Gnomeregan Band of Strength",
+      "str": 6,
+      "rand": 136
     },
     {
       "id": 10780,
@@ -26003,7 +38547,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 10795,
+      "id": "10795|696",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 49,
@@ -26015,7 +38559,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 11118,
+      "id": "10795|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "3",
+      "i": "54",
+      "name": "Drakeclaw Band of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10795|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "3",
+      "i": "54",
+      "name": "Drakeclaw Band of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "11118|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 42,
@@ -26025,6 +38592,29 @@ var gear = {
       "agi": 9,
       "str": 9,
       "rand": 693
+    },
+    {
+      "id": "11118|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Archaedic Stone of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "11118|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Archaedic Stone of Strength",
+      "str": 13,
+      "rand": 219
     },
     {
       "id": 11824,
@@ -26048,7 +38638,7 @@ var gear = {
       "ap": 24
     },
     {
-      "id": 11945,
+      "id": "11945|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 48,
@@ -26060,7 +38650,331 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12006,
+      "id": "11945|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Dark Iron Ring of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "11945|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Dark Iron Ring of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "11977|1201",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Serpentine Loop of the Bear",
+      "sta": 9,
+      "str": 8,
+      "rand": 1201
+    },
+    {
+      "id": "11979|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Peridot Circle of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11980|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Opal Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "11991|1205",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Quicksilver Ring of the Bear",
+      "sta": 9,
+      "str": 10,
+      "rand": 1205
+    },
+    {
+      "id": "11993|1185",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Clay Ring of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "11993|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Clay Ring of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "11994|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Coral Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "11994|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Coral Band of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "11995|1188",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Ivory Band of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "11995|136",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Ivory Band of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "11996|1191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Basalt Ring of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "11996|189",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Basalt Ring of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "11997|1194",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Greenstone Circle of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "11997|190",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Greenstone Circle of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "11998|1194",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jet Loop of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "11998|191",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jet Loop of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "11999|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Lodestone Hoop of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "11999|192",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Lodestone Hoop of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "12001|1200",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Onyx Ring of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "12001|193",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Onyx Ring of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "12002|1203",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Marble Circle of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "12002|219",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Marble Circle of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "12004|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Obsidian Band of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12004|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Obsidian Band of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12005|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12005|307",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Granite Ring of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "12006|675",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 17,
@@ -26072,7 +38986,7 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 12007,
+      "id": "12007|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 20,
@@ -26084,7 +38998,7 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 12008,
+      "id": "12008|678",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 23,
@@ -26096,7 +39010,7 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 12009,
+      "id": "12009|681",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 28,
@@ -26108,7 +39022,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 12010,
+      "id": "12010|684",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 32,
@@ -26120,7 +39034,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12011,
+      "id": "12011|684",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 36,
@@ -26132,7 +39046,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 12012,
+      "id": "12012|687",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 40,
@@ -26144,7 +39058,7 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 12013,
+      "id": "12013|690",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 44,
@@ -26156,7 +39070,7 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 12014,
+      "id": "12014|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 48,
@@ -26168,7 +39082,7 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12015,
+      "id": "12015|693",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 52,
@@ -26180,7 +39094,7 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 12016,
+      "id": "12016|696",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 56,
@@ -26192,7 +39106,19 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 12017,
+      "id": "12016|1206",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Jungle Ring of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "12017|699",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 60,
@@ -26202,6 +39128,29 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "12017|1209",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Band of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "12017|308",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Prismatic Band of Strength",
+      "str": 16,
+      "rand": 308
     },
     {
       "id": 12052,
@@ -26362,7 +39311,7 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 17982,
+      "id": "17982|675",
       "type": "Miscellaneous",
       "slot": "finger",
       "r": 60,
@@ -26375,6 +39324,35 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "17982|1185",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Ragnaros Core of the Bear",
+      "resist": {
+        "fire": 18
+      },
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "17982|115",
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Ragnaros Core of Strength",
+      "resist": {
+        "fire": 18
+      },
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 18302,
@@ -27495,7 +40473,7 @@ var gear = {
       "agi": 1
     },
     {
-      "id": 3430,
+      "id": "3430|678",
       "type": "Guns",
       "slot": "ranged",
       "r": 39,
@@ -27510,7 +40488,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 4087,
+      "id": "3430|1188",
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sniper Rifle of the Bear",
+      "speed": 3,
+      "mindmg": 56,
+      "maxdmg": 65,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "3430|136",
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sniper Rifle of Strength",
+      "speed": 3,
+      "mindmg": 56,
+      "maxdmg": 65,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "4087|678",
       "type": "Bows",
       "slot": "ranged",
       "r": 36,
@@ -27525,7 +40532,21 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 4089,
+      "id": "4087|115",
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Trueshot Bow of Strength",
+      "speed": 1.9,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "4089|678",
       "type": "Guns",
       "slot": "ranged",
       "r": 43,
@@ -27771,7 +40792,7 @@ var gear = {
       "ap": 8
     },
     {
-      "id": 15287,
+      "id": "15287|678",
       "type": "Bows",
       "slot": "ranged",
       "r": 40,
@@ -27786,7 +40807,50 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15289,
+      "id": "15287|1188",
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Crusader Bow of the Bear",
+      "speed": 2.2,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15287|136",
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Crusader Bow of Strength",
+      "speed": 2.2,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15288|189",
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Blasthorn Bow of Strength",
+      "speed": 2.6,
+      "mindmg": 51,
+      "maxdmg": 96,
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15289|684",
       "type": "Bows",
       "slot": "ranged",
       "r": 60,
@@ -27801,7 +40865,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15291,
+      "id": "15291|681",
       "type": "Bows",
       "slot": "ranged",
       "r": 46,
@@ -27816,7 +40880,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15294,
+      "id": "15294|681",
       "type": "Bows",
       "slot": "ranged",
       "r": 48,
@@ -27831,7 +40895,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15295,
+      "id": "15295|681",
       "type": "Bows",
       "slot": "ranged",
       "r": 50,
@@ -27846,7 +40910,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15296,
+      "id": "15296|684",
       "type": "Bows",
       "slot": "ranged",
       "r": 58,
@@ -27861,7 +40925,7 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15323,
+      "id": "15323|681",
       "type": "Guns",
       "slot": "ranged",
       "r": 45,
@@ -27876,7 +40940,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15324,
+      "id": "15324|681",
       "type": "Guns",
       "slot": "ranged",
       "r": 51,
@@ -27891,7 +40955,7 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15325,
+      "id": "15325|681",
       "type": "Guns",
       "slot": "ranged",
       "r": 55,
@@ -28458,6 +41522,20 @@ var gear = {
   ],
   "mainhand": [
     {
+      "id": "727|6",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Notched Shortsword of Strength",
+      "speed": 2.1,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "str": 1,
+      "rand": 6
+    },
+    {
       "id": 754,
       "type": "Sword",
       "slot": "onehand",
@@ -28488,7 +41566,7 @@ var gear = {
       "agi": 6
     },
     {
-      "id": 789,
+      "id": "789|672",
       "type": "Mace",
       "slot": "mainhand",
       "r": 17,
@@ -28503,7 +41581,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 790,
+      "id": "789|1182",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Stout Battlehammer of the Bear",
+      "speed": 2.3,
+      "mindmg": 17,
+      "maxdmg": 33,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "789|24",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Stout Battlehammer of Strength",
+      "speed": 2.3,
+      "mindmg": 17,
+      "maxdmg": 33,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "790|675",
       "type": "Axe",
       "slot": "mainhand",
       "r": 18,
@@ -28516,6 +41623,35 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "790|1185",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Forester's Axe of the Bear",
+      "speed": 2.5,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "790|97",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Forester's Axe of Strength",
+      "speed": 2.5,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "str": 4,
+      "rand": 97
     },
     {
       "id": 809,
@@ -28622,7 +41758,7 @@ var gear = {
       "str": 2
     },
     {
-      "id": 863,
+      "id": "863|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 32,
@@ -28637,7 +41773,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 864,
+      "id": "863|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Gloom Reaper of the Bear",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "863|155",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Gloom Reaper of Strength",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "864|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 33,
@@ -28652,7 +41817,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 865,
+      "id": "864|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knightly Longsword of the Bear",
+      "speed": 1.5,
+      "mindmg": 21,
+      "maxdmg": 40,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "864|155",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knightly Longsword of Strength",
+      "speed": 1.5,
+      "mindmg": 21,
+      "maxdmg": 40,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "865|678",
       "type": "Mace",
       "slot": "onehand",
       "r": 26,
@@ -28665,6 +41859,35 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "865|1188",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Leaden Mace of the Bear",
+      "speed": 2.9,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "865|115",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Leaden Mace of Strength",
+      "speed": 2.9,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 868,
@@ -28795,7 +42018,7 @@ var gear = {
       }
     },
     {
-      "id": 1207,
+      "id": "1207|681",
       "type": "Mace",
       "slot": "onehand",
       "r": 34,
@@ -28808,6 +42031,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "1207|1191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Murphstar of the Bear",
+      "speed": 2.1,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "1207|155",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Murphstar of Strength",
+      "speed": 2.1,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 1214,
@@ -29012,7 +42264,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 1608,
+      "id": "1608|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 42,
@@ -29025,6 +42277,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "1608|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Skullcrusher Mace of the Bear",
+      "speed": 2.7,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "1608|189",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Skullcrusher Mace of Strength",
+      "speed": 2.7,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 1721,
@@ -29150,7 +42431,7 @@ var gear = {
       "agi": 2
     },
     {
-      "id": 1994,
+      "id": "1994|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 41,
@@ -29163,6 +42444,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "1994|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Ebonclaw Reaver of the Bear",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "1994|190",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Ebonclaw Reaver of Strength",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "str": 9,
+      "rand": 190
     },
     {
       "id": 2011,
@@ -29218,6 +42528,35 @@ var gear = {
       "str": 3
     },
     {
+      "id": "2073|1181",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Dwarven Hatchet of the Bear",
+      "speed": 2,
+      "mindmg": 10,
+      "maxdmg": 20,
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "2073|6",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Dwarven Hatchet of Strength",
+      "speed": 2,
+      "mindmg": 10,
+      "maxdmg": 20,
+      "str": 1,
+      "rand": 6
+    },
+    {
       "id": 2074,
       "type": "Sword",
       "slot": "onehand",
@@ -29232,7 +42571,64 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 2080,
+      "id": "2075|23",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Priest's Mace of Strength",
+      "speed": 2,
+      "mindmg": 9,
+      "maxdmg": 17,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2078|23",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Northern Shortsword of Strength",
+      "speed": 2.2,
+      "mindmg": 14,
+      "maxdmg": 26,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2079|1181",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Sergeant's Warhammer of the Bear",
+      "speed": 2.1,
+      "mindmg": 12,
+      "maxdmg": 24,
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "2079|23",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Sergeant's Warhammer of Strength",
+      "speed": 2.1,
+      "mindmg": 12,
+      "maxdmg": 24,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2080|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 29,
@@ -29245,6 +42641,64 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "2080|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Hillborne Axe of the Bear",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "2080|136",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Hillborne Axe of Strength",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "2140|1179",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Carving Knife of the Bear",
+      "speed": 1.6,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "2140|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Carving Knife of Strength",
+      "speed": 1.6,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "str": 2,
+      "rand": 23
     },
     {
       "id": 2163,
@@ -29434,6 +42888,35 @@ var gear = {
       "maxdmg": 32
     },
     {
+      "id": "2632|1179",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Curved Dagger of the Bear",
+      "speed": 1.6,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "2632|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Curved Dagger of Strength",
+      "speed": 1.6,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "str": 2,
+      "rand": 23
+    },
+    {
       "id": 2807,
       "type": "Axe",
       "slot": "mainhand",
@@ -29474,7 +42957,7 @@ var gear = {
       "maxdmg": 63
     },
     {
-      "id": 2819,
+      "id": "2819|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 23,
@@ -29487,6 +42970,35 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "2819|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cross Dagger of the Bear",
+      "speed": 1.3,
+      "mindmg": 13,
+      "maxdmg": 25,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "2819|115",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cross Dagger of Strength",
+      "speed": 1.3,
+      "mindmg": 13,
+      "maxdmg": 25,
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 2821,
@@ -29588,7 +43100,21 @@ var gear = {
       "agi": 2
     },
     {
-      "id": 3186,
+      "id": "3184|24",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Hook Dagger of Strength",
+      "speed": 1.5,
+      "mindmg": 10,
+      "maxdmg": 20,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "3186|677",
       "type": "Sword",
       "slot": "mainhand",
       "r": 25,
@@ -29603,7 +43129,36 @@ var gear = {
       "rand": 677
     },
     {
-      "id": 3187,
+      "id": "3186|1187",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Viking Sword of the Bear",
+      "speed": 2.7,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "sta": 3,
+      "str": 4,
+      "rand": 1187
+    },
+    {
+      "id": "3186|115",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Viking Sword of Strength",
+      "speed": 2.7,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "3187|681",
       "type": "Dagger",
       "slot": "onehand",
       "r": 39,
@@ -29616,6 +43171,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "3187|1191",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sacrificial Kris of the Bear",
+      "speed": 1.4,
+      "mindmg": 25,
+      "maxdmg": 47,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "3187|189",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sacrificial Kris of Strength",
+      "speed": 1.4,
+      "mindmg": 25,
+      "maxdmg": 47,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 3222,
@@ -29783,7 +43367,7 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 3740,
+      "id": "3740|672",
       "type": "Sword",
       "slot": "mainhand",
       "r": 19,
@@ -29796,6 +43380,35 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "3740|1182",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Decapitating Sword of the Bear",
+      "speed": 2.6,
+      "mindmg": 22,
+      "maxdmg": 42,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "3740|24",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Decapitating Sword of Strength",
+      "speed": 2.6,
+      "mindmg": 22,
+      "maxdmg": 42,
+      "str": 3,
+      "rand": 24
     },
     {
       "id": 3850,
@@ -29812,7 +43425,7 @@ var gear = {
       "str": 4
     },
     {
-      "id": 4088,
+      "id": "4088|684",
       "type": "Dagger",
       "slot": "onehand",
       "r": 42,
@@ -29825,6 +43438,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "4088|1194",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Dreadblade of the Bear",
+      "speed": 1.5,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "4088|189",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Dreadblade of Strength",
+      "speed": 1.5,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 4090,
@@ -29971,7 +43613,64 @@ var gear = {
       "str": 7
     },
     {
-      "id": 4571,
+      "id": "4561|1181",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Scalping Tomahawk of the Bear",
+      "speed": 1.8,
+      "mindmg": 7,
+      "maxdmg": 14,
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "4561|6",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Scalping Tomahawk of Strength",
+      "speed": 1.8,
+      "mindmg": 7,
+      "maxdmg": 14,
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "4568|24",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Grunt Axe of Strength",
+      "speed": 2.3,
+      "mindmg": 17,
+      "maxdmg": 32,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "4569|23",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Staunch Hammer of Strength",
+      "speed": 2.2,
+      "mindmg": 11,
+      "maxdmg": 21,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "4571|670",
       "type": "Dagger",
       "slot": "onehand",
       "r": 12,
@@ -29984,6 +43683,20 @@ var gear = {
       "agi": 2,
       "str": 1,
       "rand": 670
+    },
+    {
+      "id": "4571|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "War Knife of Strength",
+      "speed": 1.7,
+      "mindmg": 10,
+      "maxdmg": 19,
+      "str": 2,
+      "rand": 23
     },
     {
       "id": 4765,
@@ -30896,7 +44609,7 @@ var gear = {
       }
     },
     {
-      "id": 8194,
+      "id": "8194|681",
       "type": "Mace",
       "slot": "onehand",
       "r": 38,
@@ -30911,7 +44624,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 8196,
+      "id": "8194|1191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Goblin Nutcracker of the Bear",
+      "speed": 2.2,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "8194|155",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Goblin Nutcracker of Strength",
+      "speed": 2.2,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "8196|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 38,
@@ -30924,6 +44666,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "8196|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Ebon Scimitar of the Bear",
+      "speed": 1.9,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "8196|189",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Ebon Scimitar of Strength",
+      "speed": 1.9,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 8223,
@@ -31559,7 +45330,7 @@ var gear = {
       "ap": 28
     },
     {
-      "id": 10828,
+      "id": "10828|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 51,
@@ -31575,6 +45346,41 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "10828|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Dire Nail of the Bear",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10828|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Dire Nail of Strength",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 10837,
@@ -31929,7 +45735,7 @@ var gear = {
       "ap": 12
     },
     {
-      "id": 12527,
+      "id": "12527|687",
       "type": "Axe",
       "slot": "mainhand",
       "r": 48,
@@ -31943,6 +45749,37 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "12527|1197",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Ribsplitter of the Bear",
+      "speed": 2.7,
+      "mindmg": 66,
+      "maxdmg": 124,
+      "ap": 10,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "12527|192",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Ribsplitter of Strength",
+      "speed": 2.7,
+      "mindmg": 66,
+      "maxdmg": 124,
+      "ap": 10,
+      "str": 11,
+      "rand": 192
     },
     {
       "id": 12531,
@@ -32812,7 +46649,21 @@ var gear = {
       }
     },
     {
-      "id": 15211,
+      "id": "15210|23",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Raider Shortsword of Strength",
+      "speed": 1.9,
+      "mindmg": 11,
+      "maxdmg": 20,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "15211|672",
       "type": "Sword",
       "slot": "onehand",
       "r": 17,
@@ -32827,7 +46678,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15212,
+      "id": "15211|1182",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Militant Shortsword of the Bear",
+      "speed": 2.5,
+      "mindmg": 19,
+      "maxdmg": 36,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15211|24",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Militant Shortsword of Strength",
+      "speed": 2.5,
+      "mindmg": 19,
+      "maxdmg": 36,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15212|675",
       "type": "Sword",
       "slot": "mainhand",
       "r": 22,
@@ -32842,7 +46722,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15213,
+      "id": "15212|1185",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Fighter Broadsword of the Bear",
+      "speed": 2.8,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15212|97",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Fighter Broadsword of Strength",
+      "speed": 2.8,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15213|678",
       "type": "Sword",
       "slot": "onehand",
       "r": 31,
@@ -32857,7 +46766,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15214,
+      "id": "15213|1188",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Mercenary Blade of the Bear",
+      "speed": 2.4,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15213|136",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Mercenary Blade of Strength",
+      "speed": 2.4,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15214|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 35,
@@ -32872,7 +46810,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15215,
+      "id": "15214|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Nobles Brand of the Bear",
+      "speed": 2.1,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15214|155",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Nobles Brand of Strength",
+      "speed": 2.1,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15215|681",
       "type": "Sword",
       "slot": "mainhand",
       "r": 40,
@@ -32887,7 +46854,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15216,
+      "id": "15215|1191",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Furious Falchion of the Bear",
+      "speed": 2.5,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15215|189",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Furious Falchion of Strength",
+      "speed": 2.5,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15216|684",
       "type": "Sword",
       "slot": "onehand",
       "r": 46,
@@ -32902,7 +46898,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15217,
+      "id": "15216|1194",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Rune Sword of the Bear",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15216|190",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Rune Sword of Strength",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15217|684",
       "type": "Sword",
       "slot": "onehand",
       "r": 49,
@@ -32917,7 +46942,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15218,
+      "id": "15217|1194",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Widow Blade of the Bear",
+      "speed": 2,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15217|191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Widow Blade of Strength",
+      "speed": 2,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15218|687",
       "type": "Sword",
       "slot": "onehand",
       "r": 52,
@@ -32932,7 +46986,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15219,
+      "id": "15218|1197",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Crystal Sword of the Bear",
+      "speed": 2.3,
+      "mindmg": 54,
+      "maxdmg": 102,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15218|191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Crystal Sword of Strength",
+      "speed": 2.3,
+      "mindmg": 54,
+      "maxdmg": 102,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15219|687",
       "type": "Sword",
       "slot": "onehand",
       "r": 54,
@@ -32947,7 +47030,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15220,
+      "id": "15219|1197",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Dimensional Blade of the Bear",
+      "speed": 1.6,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15219|192",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Dimensional Blade of Strength",
+      "speed": 1.6,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15220|690",
       "type": "Sword",
       "slot": "mainhand",
       "r": 57,
@@ -32962,7 +47074,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15221,
+      "id": "15220|1200",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Battlefell Sabre of the Bear",
+      "speed": 2.2,
+      "mindmg": 57,
+      "maxdmg": 106,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15220|193",
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Battlefell Sabre of Strength",
+      "speed": 2.2,
+      "mindmg": 57,
+      "maxdmg": 106,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15221|690",
       "type": "Sword",
       "slot": "onehand",
       "r": 60,
@@ -32977,7 +47118,50 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15223,
+      "id": "15221|1200",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Holy War Sword of the Bear",
+      "speed": 2.2,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15221|193",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Holy War Sword of Strength",
+      "speed": 2.2,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15222|24",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Barbed Club of Strength",
+      "speed": 2.3,
+      "mindmg": 15,
+      "maxdmg": 29,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15223|672",
       "type": "Mace",
       "slot": "mainhand",
       "r": 19,
@@ -32992,7 +47176,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15224,
+      "id": "15223|1182",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Jagged Star of the Bear",
+      "speed": 2.8,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15223|24",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Jagged Star of Strength",
+      "speed": 2.8,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15224|675",
       "type": "Mace",
       "slot": "onehand",
       "r": 20,
@@ -33007,7 +47220,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15225,
+      "id": "15224|1185",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Battlesmasher of the Bear",
+      "speed": 2.7,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15224|97",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Battlesmasher of Strength",
+      "speed": 2.7,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15225|678",
       "type": "Mace",
       "slot": "mainhand",
       "r": 28,
@@ -33022,7 +47264,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15226,
+      "id": "15225|1188",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Sequoia Hammer of the Bear",
+      "speed": 2.7,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15225|115",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Sequoia Hammer of Strength",
+      "speed": 2.7,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15226|681",
       "type": "Mace",
       "slot": "mainhand",
       "r": 32,
@@ -33037,7 +47308,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15227,
+      "id": "15226|1191",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Giant Club of the Bear",
+      "speed": 1.9,
+      "mindmg": 26,
+      "maxdmg": 49,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15226|155",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Giant Club of Strength",
+      "speed": 1.9,
+      "mindmg": 26,
+      "maxdmg": 49,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15227|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 44,
@@ -33052,7 +47352,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15228,
+      "id": "15227|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Diamond-Tip Bludgeon of the Bear",
+      "speed": 2.4,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15227|190",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Diamond-Tip Bludgeon of Strength",
+      "speed": 2.4,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15228|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 48,
@@ -33067,7 +47396,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15229,
+      "id": "15228|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Smashing Star of the Bear",
+      "speed": 2.8,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15228|191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Smashing Star of Strength",
+      "speed": 2.8,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15229|687",
       "type": "Mace",
       "slot": "onehand",
       "r": 50,
@@ -33082,7 +47440,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15230,
+      "id": "15229|1197",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Blesswind Hammer of the Bear",
+      "speed": 2.1,
+      "mindmg": 48,
+      "maxdmg": 90,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15229|191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Blesswind Hammer of Strength",
+      "speed": 2.1,
+      "mindmg": 48,
+      "maxdmg": 90,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15230|675",
       "type": "Axe",
       "slot": "mainhand",
       "r": 20,
@@ -33097,7 +47484,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15231,
+      "id": "15230|1185",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Ridge Cleaver of the Bear",
+      "speed": 2.2,
+      "mindmg": 19,
+      "maxdmg": 37,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15230|97",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Ridge Cleaver of Strength",
+      "speed": 2.2,
+      "mindmg": 19,
+      "maxdmg": 37,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15231|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 26,
@@ -33112,7 +47528,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15232,
+      "id": "15231|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Splitting Hatchet of the Bear",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15231|115",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Splitting Hatchet of Strength",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15232|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 28,
@@ -33127,7 +47572,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15233,
+      "id": "15232|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Hacking Cleaver of the Bear",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15232|115",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Hacking Cleaver of Strength",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15233|678",
       "type": "Axe",
       "slot": "mainhand",
       "r": 34,
@@ -33142,7 +47616,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15234,
+      "id": "15233|1188",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Savage Axe of the Bear",
+      "speed": 2.8,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15233|155",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Savage Axe of Strength",
+      "speed": 2.8,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15234|681",
       "type": "Axe",
       "slot": "mainhand",
       "r": 35,
@@ -33157,7 +47660,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15235,
+      "id": "15234|1191",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Greater Scythe of the Bear",
+      "speed": 2.8,
+      "mindmg": 43,
+      "maxdmg": 81,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15234|155",
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Greater Scythe of Strength",
+      "speed": 2.8,
+      "mindmg": 43,
+      "maxdmg": 81,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15235|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 43,
@@ -33172,7 +47704,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15236,
+      "id": "15235|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Crescent Edge of the Bear",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15235|190",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Crescent Edge of Strength",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15236|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 47,
@@ -33187,7 +47748,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15237,
+      "id": "15236|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Moon Cleaver of the Bear",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15236|191",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Moon Cleaver of Strength",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15237|687",
       "type": "Axe",
       "slot": "onehand",
       "r": 50,
@@ -33202,7 +47792,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15238,
+      "id": "15237|1197",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Corpse Harvester of the Bear",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15237|191",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Corpse Harvester of Strength",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15238|687",
       "type": "Axe",
       "slot": "onehand",
       "r": 53,
@@ -33217,7 +47836,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15239,
+      "id": "15238|1197",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Warlord's Axe of the Bear",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15238|192",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Warlord's Axe of Strength",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15239|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 56,
@@ -33232,7 +47880,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15240,
+      "id": "15239|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Felstone Reaver of the Bear",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15239|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Felstone Reaver of Strength",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15240|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 59,
@@ -33247,7 +47924,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15241,
+      "id": "15240|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Demon's Claw of the Bear",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15240|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Demon's Claw of Strength",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15241|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 21,
@@ -33262,7 +47968,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15242,
+      "id": "15241|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battle Knife of the Bear",
+      "speed": 1.6,
+      "mindmg": 15,
+      "maxdmg": 28,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15241|97",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battle Knife of Strength",
+      "speed": 1.6,
+      "mindmg": 15,
+      "maxdmg": 28,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15242|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 25,
@@ -33277,7 +48012,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15243,
+      "id": "15242|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Honed Stiletto of the Bear",
+      "speed": 1.4,
+      "mindmg": 15,
+      "maxdmg": 29,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15242|115",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Honed Stiletto of Strength",
+      "speed": 1.4,
+      "mindmg": 15,
+      "maxdmg": 29,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15243|678",
       "type": "Dagger",
       "slot": "onehand",
       "r": 31,
@@ -33292,7 +48056,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15244,
+      "id": "15243|1188",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Deadly Kris of the Bear",
+      "speed": 1.4,
+      "mindmg": 18,
+      "maxdmg": 35,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15243|136",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Deadly Kris of Strength",
+      "speed": 1.4,
+      "mindmg": 18,
+      "maxdmg": 35,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15244|681",
       "type": "Dagger",
       "slot": "onehand",
       "r": 37,
@@ -33307,7 +48100,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15245,
+      "id": "15244|1191",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Razor Blade of the Bear",
+      "speed": 1.7,
+      "mindmg": 28,
+      "maxdmg": 53,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15244|155",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Razor Blade of Strength",
+      "speed": 1.7,
+      "mindmg": 28,
+      "maxdmg": 53,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15245|684",
       "type": "Dagger",
       "slot": "onehand",
       "r": 45,
@@ -33322,7 +48144,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15246,
+      "id": "15245|1194",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Vorpal Dagger of the Bear",
+      "speed": 1.6,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15245|190",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Vorpal Dagger of Strength",
+      "speed": 1.6,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15246|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 57,
@@ -33337,7 +48188,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15247,
+      "id": "15246|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Demon Blade of the Bear",
+      "speed": 1.8,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15246|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Demon Blade of Strength",
+      "speed": 1.8,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15247|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 59,
@@ -33350,6 +48230,35 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "15247|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Bloodstrike Dagger of the Bear",
+      "speed": 1.7,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15247|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Bloodstrike Dagger of Strength",
+      "speed": 1.7,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 15445,
@@ -33470,7 +48379,7 @@ var gear = {
       "ap": 28
     },
     {
-      "id": 16792,
+      "id": "16792|681",
       "type": "Mace",
       "slot": "mainhand",
       "r": 32,
@@ -33483,6 +48392,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "16792|1191",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Giant Club of the Bear",
+      "speed": 1.9,
+      "mindmg": 26,
+      "maxdmg": 49,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "16792|155",
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Giant Club of Strength",
+      "speed": 1.9,
+      "mindmg": 26,
+      "maxdmg": 49,
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 16886,
@@ -34902,7 +49840,7 @@ var gear = {
       }
     },
     {
-      "id": 19921,
+      "id": "19921|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 60,
@@ -34916,6 +49854,37 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "19921|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Zulian Hacker of the Bear",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "skill": 2,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "19921|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Zulian Hacker of Strength",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "skill": 2,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 19961,
@@ -36156,6 +51125,20 @@ var gear = {
   ],
   "offhand": [
     {
+      "id": "727|6",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Notched Shortsword of Strength",
+      "speed": 2.1,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "str": 1,
+      "rand": 6
+    },
+    {
       "id": 754,
       "type": "Sword",
       "slot": "onehand",
@@ -36212,7 +51195,7 @@ var gear = {
       "agi": 2
     },
     {
-      "id": 863,
+      "id": "863|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 32,
@@ -36227,7 +51210,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 864,
+      "id": "863|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Gloom Reaper of the Bear",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "863|155",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Gloom Reaper of Strength",
+      "speed": 2.7,
+      "mindmg": 37,
+      "maxdmg": 69,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "864|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 33,
@@ -36242,7 +51254,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 865,
+      "id": "864|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knightly Longsword of the Bear",
+      "speed": 1.5,
+      "mindmg": 21,
+      "maxdmg": 40,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "864|155",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Knightly Longsword of Strength",
+      "speed": 1.5,
+      "mindmg": 21,
+      "maxdmg": 40,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "865|678",
       "type": "Mace",
       "slot": "onehand",
       "r": 26,
@@ -36255,6 +51296,35 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "865|1188",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Leaden Mace of the Bear",
+      "speed": 2.9,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "865|115",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Leaden Mace of Strength",
+      "speed": 2.9,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 871,
@@ -36342,7 +51412,7 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 1207,
+      "id": "1207|681",
       "type": "Mace",
       "slot": "onehand",
       "r": 34,
@@ -36355,6 +51425,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "1207|1191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Murphstar of the Bear",
+      "speed": 2.1,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "1207|155",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Murphstar of Strength",
+      "speed": 2.1,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 1265,
@@ -36449,7 +51548,7 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 1608,
+      "id": "1608|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 42,
@@ -36462,6 +51561,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "1608|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Skullcrusher Mace of the Bear",
+      "speed": 2.7,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "1608|189",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Skullcrusher Mace of Strength",
+      "speed": 2.7,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 1935,
@@ -36529,7 +51657,7 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 1994,
+      "id": "1994|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 41,
@@ -36542,6 +51670,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "1994|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Ebonclaw Reaver of the Bear",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "1994|190",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Ebonclaw Reaver of Strength",
+      "speed": 1.8,
+      "mindmg": 34,
+      "maxdmg": 64,
+      "str": 9,
+      "rand": 190
     },
     {
       "id": 2020,
@@ -36571,7 +51728,50 @@ var gear = {
       "sta": 1
     },
     {
-      "id": 2080,
+      "id": "2078|23",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Northern Shortsword of Strength",
+      "speed": 2.2,
+      "mindmg": 14,
+      "maxdmg": 26,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2079|1181",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Sergeant's Warhammer of the Bear",
+      "speed": 2.1,
+      "mindmg": 12,
+      "maxdmg": 24,
+      "sta": 1,
+      "str": 2,
+      "rand": 1181
+    },
+    {
+      "id": "2079|23",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Sergeant's Warhammer of Strength",
+      "speed": 2.1,
+      "mindmg": 12,
+      "maxdmg": 24,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2080|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 29,
@@ -36584,6 +51784,64 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "2080|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Hillborne Axe of the Bear",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "2080|136",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Hillborne Axe of Strength",
+      "speed": 2.2,
+      "mindmg": 27,
+      "maxdmg": 51,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "2140|1179",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Carving Knife of the Bear",
+      "speed": 1.6,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "2140|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Carving Knife of Strength",
+      "speed": 1.6,
+      "mindmg": 6,
+      "maxdmg": 13,
+      "str": 2,
+      "rand": 23
     },
     {
       "id": 2163,
@@ -36711,7 +51969,36 @@ var gear = {
       "maxdmg": 32
     },
     {
-      "id": 2819,
+      "id": "2632|1179",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Curved Dagger of the Bear",
+      "speed": 1.6,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "2632|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 9,
+      "q": "2",
+      "i": "14",
+      "name": "Curved Dagger of Strength",
+      "speed": 1.6,
+      "mindmg": 8,
+      "maxdmg": 15,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "2819|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 23,
@@ -36724,6 +52011,35 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "2819|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cross Dagger of the Bear",
+      "speed": 1.3,
+      "mindmg": 13,
+      "maxdmg": 25,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "2819|115",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cross Dagger of Strength",
+      "speed": 1.3,
+      "mindmg": 13,
+      "maxdmg": 25,
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 2908,
@@ -36796,7 +52112,21 @@ var gear = {
       }
     },
     {
-      "id": 3187,
+      "id": "3184|24",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Hook Dagger of Strength",
+      "speed": 1.5,
+      "mindmg": 10,
+      "maxdmg": 20,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "3187|681",
       "type": "Dagger",
       "slot": "onehand",
       "r": 39,
@@ -36809,6 +52139,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "3187|1191",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sacrificial Kris of the Bear",
+      "speed": 1.4,
+      "mindmg": 25,
+      "maxdmg": 47,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "3187|189",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Sacrificial Kris of Strength",
+      "speed": 1.4,
+      "mindmg": 25,
+      "maxdmg": 47,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 3222,
@@ -36996,7 +52355,7 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 4088,
+      "id": "4088|684",
       "type": "Dagger",
       "slot": "onehand",
       "r": 42,
@@ -37009,6 +52368,35 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "4088|1194",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Dreadblade of the Bear",
+      "speed": 1.5,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "4088|189",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Dreadblade of Strength",
+      "speed": 1.5,
+      "mindmg": 29,
+      "maxdmg": 55,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 4090,
@@ -37141,7 +52529,21 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 4571,
+      "id": "4568|24",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Grunt Axe of Strength",
+      "speed": 2.3,
+      "mindmg": 17,
+      "maxdmg": 32,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "4571|670",
       "type": "Dagger",
       "slot": "onehand",
       "r": 12,
@@ -37154,6 +52556,20 @@ var gear = {
       "agi": 2,
       "str": 1,
       "rand": 670
+    },
+    {
+      "id": "4571|23",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "War Knife of Strength",
+      "speed": 1.7,
+      "mindmg": 10,
+      "maxdmg": 19,
+      "str": 2,
+      "rand": 23
     },
     {
       "id": 4652,
@@ -37553,7 +52969,7 @@ var gear = {
       }
     },
     {
-      "id": 6559,
+      "id": "6559|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 11,
@@ -37565,7 +52981,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 6560,
+      "id": "6559|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Bard's Buckler of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "6559|24",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Bard's Buckler of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "6560|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 12,
@@ -37577,7 +53016,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 6571,
+      "id": "6560|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Shield of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "6560|24",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 12,
+      "q": "2",
+      "i": "17",
+      "name": "Soldier's Shield of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "6571|675",
       "type": "Shield",
       "slot": "offhand",
       "r": 17,
@@ -37589,7 +53051,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6572,
+      "id": "6571|1185",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Scouting Buckler of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6571|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Scouting Buckler of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "6572|675",
       "type": "Shield",
       "slot": "offhand",
       "r": 18,
@@ -37601,7 +53086,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 6598,
+      "id": "6572|1185",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Shield of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "6572|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Defender Shield of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "6598|678",
       "type": "Shield",
       "slot": "offhand",
       "r": 23,
@@ -37613,7 +53121,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 6599,
+      "id": "6598|1188",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Dervish Buckler of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6598|136",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Dervish Buckler of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "6599|678",
       "type": "Shield",
       "slot": "offhand",
       "r": 24,
@@ -37623,6 +53154,29 @@ var gear = {
       "agi": 4,
       "str": 4,
       "rand": 678
+    },
+    {
+      "id": "6599|1188",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Battleforge Shield of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "6599|136",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Battleforge Shield of Strength",
+      "str": 6,
+      "rand": 136
     },
     {
       "id": 6633,
@@ -37772,7 +53326,7 @@ var gear = {
       "str": 3
     },
     {
-      "id": 7108,
+      "id": "7108|669",
       "type": "Shield",
       "slot": "offhand",
       "r": 6,
@@ -37782,6 +53336,29 @@ var gear = {
       "agi": 1,
       "str": 1,
       "rand": 669
+    },
+    {
+      "id": "7108|1179",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Infantry Shield of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "7108|6",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 6,
+      "q": "2",
+      "i": "11",
+      "name": "Infantry Shield of Strength",
+      "str": 1,
+      "rand": 6
     },
     {
       "id": 7120,
@@ -37805,7 +53382,7 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 7330,
+      "id": "7330|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 28,
@@ -37817,7 +53394,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 7331,
+      "id": "7330|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Infiltrator Buckler of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "7330|155",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Infiltrator Buckler of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "7331|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 29,
@@ -37829,7 +53429,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 7463,
+      "id": "7331|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Phalanx Shield of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "7331|189",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Phalanx Shield of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "7463|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 33,
@@ -37841,7 +53464,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7465,
+      "id": "7463|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Sentinel Buckler of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7463|190",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Sentinel Buckler of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "7465|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 34,
@@ -37853,7 +53499,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 7495,
+      "id": "7465|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Crest of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "7465|190",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 34,
+      "q": "2",
+      "i": "39",
+      "name": "Knight's Crest of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "7495|687",
       "type": "Shield",
       "slot": "offhand",
       "r": 39,
@@ -37865,7 +53534,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 7496,
+      "id": "7495|1197",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Captain's Buckler of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "7495|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Captain's Buckler of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "7496|687",
       "type": "Shield",
       "slot": "offhand",
       "r": 38,
@@ -37877,7 +53569,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 7536,
+      "id": "7496|1197",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Field Plate Shield of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "7496|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Field Plate Shield of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "7536|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 43,
@@ -37889,7 +53604,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 7537,
+      "id": "7536|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Champion's Wall Shield of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7536|192",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Champion's Wall Shield of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "7537|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 44,
@@ -37899,6 +53637,29 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "7537|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Gothic Shield of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "7537|193",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Gothic Shield of Strength",
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 7682,
@@ -38067,7 +53828,7 @@ var gear = {
       }
     },
     {
-      "id": 8194,
+      "id": "8194|681",
       "type": "Mace",
       "slot": "onehand",
       "r": 38,
@@ -38082,7 +53843,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 8196,
+      "id": "8194|1191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Goblin Nutcracker of the Bear",
+      "speed": 2.2,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "8194|155",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Goblin Nutcracker of Strength",
+      "speed": 2.2,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "8196|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 38,
@@ -38095,6 +53885,35 @@ var gear = {
       "agi": 5,
       "str": 5,
       "rand": 681
+    },
+    {
+      "id": "8196|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Ebon Scimitar of the Bear",
+      "speed": 1.9,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "8196|189",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Ebon Scimitar of Strength",
+      "speed": 1.9,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "str": 8,
+      "rand": 189
     },
     {
       "id": 8223,
@@ -38449,7 +54268,7 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 9753,
+      "id": "9753|669",
       "type": "Shield",
       "slot": "offhand",
       "r": 7,
@@ -38461,7 +54280,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 9764,
+      "id": "9753|1179",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Gypsy Buckler of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "9753|6",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Gypsy Buckler of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "9764|669",
       "type": "Shield",
       "slot": "offhand",
       "r": 8,
@@ -38473,7 +54315,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 9778,
+      "id": "9764|1179",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Cadet Shield of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "9764|23",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Cadet Shield of Strength",
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "9778|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 15,
@@ -38485,7 +54350,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 9790,
+      "id": "9778|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Bandit Buckler of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9778|97",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Bandit Buckler of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "9790|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 14,
@@ -38497,7 +54385,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 9804,
+      "id": "9790|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Shield of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "9790|97",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Raider's Shield of Strength",
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "9804|678",
       "type": "Shield",
       "slot": "offhand",
       "r": 21,
@@ -38509,7 +54420,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9816,
+      "id": "9804|1188",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Superior Buckler of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9804|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Superior Buckler of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "9816|678",
       "type": "Shield",
       "slot": "offhand",
       "r": 20,
@@ -38521,7 +54455,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 9843,
+      "id": "9816|1188",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Shield of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "9816|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Fortified Shield of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "9843|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 28,
@@ -38533,7 +54490,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9858,
+      "id": "9843|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Banded Shield of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9843|155",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Banded Shield of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "9858|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 31,
@@ -38545,7 +54525,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 9873,
+      "id": "9858|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Archer's Buckler of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "9858|189",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Archer's Buckler of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "9873|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 32,
@@ -38557,7 +54560,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9899,
+      "id": "9873|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Renegade Shield of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9873|190",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Renegade Shield of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "9899|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 37,
@@ -38569,7 +54595,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 9918,
+      "id": "9899|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jazeraint Shield of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "9899|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Jazeraint Shield of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9918|687",
       "type": "Shield",
       "slot": "offhand",
       "r": 40,
@@ -38581,7 +54630,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9935,
+      "id": "9918|1197",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brigade Defender of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9918|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Brigade Defender of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9935|687",
       "type": "Shield",
       "slot": "offhand",
       "r": 40,
@@ -38593,7 +54665,30 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 9958,
+      "id": "9935|1197",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Embossed Plate Shield of the Bear",
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "9935|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "2",
+      "i": "45",
+      "name": "Embossed Plate Shield of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "9958|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 45,
@@ -38605,7 +54700,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 9974,
+      "id": "9958|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Warmonger's Buckler of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "9958|193",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Warmonger's Buckler of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "9974|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 47,
@@ -38617,7 +54735,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10078,
+      "id": "9974|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Overlord's Shield of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "9974|219",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Overlord's Shield of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "10078|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 48,
@@ -38629,7 +54770,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10093,
+      "id": "10078|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Lord's Crest of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10078|219",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Lord's Crest of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "10093|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 49,
@@ -38641,7 +54805,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10158,
+      "id": "10093|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Revenant Deflector of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10093|219",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Revenant Deflector of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "10158|699",
       "type": "Shield",
       "slot": "offhand",
       "r": 59,
@@ -38653,7 +54840,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10195,
+      "id": "10158|1209",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Mercurial Guard of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10158|308",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Mercurial Guard of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10195|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 50,
@@ -38665,7 +54875,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10204,
+      "id": "10195|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Crusader's Shield of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10195|220",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Crusader's Shield of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "10204|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 50,
@@ -38677,7 +54910,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 10271,
+      "id": "10204|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Heavy Lamellar Shield of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "10204|220",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Heavy Lamellar Shield of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "10271|699",
       "type": "Shield",
       "slot": "offhand",
       "r": 60,
@@ -38689,7 +54945,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 10362,
+      "id": "10271|1209",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Masterwork Shield of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10271|308",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Masterwork Shield of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "10362|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 53,
@@ -38701,7 +54980,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10363,
+      "id": "10362|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Ornate Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10362|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Ornate Shield of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10363|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 55,
@@ -38713,7 +55015,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10364,
+      "id": "10363|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Engraved Wall of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10363|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Engraved Wall of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10364|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 53,
@@ -38725,7 +55050,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10365,
+      "id": "10364|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Templar Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10364|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Templar Shield of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10365|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 54,
@@ -38737,7 +55085,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10366,
+      "id": "10365|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Emerald Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10365|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Emerald Shield of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10366|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 58,
@@ -38749,7 +55120,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 10367,
+      "id": "10366|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Demon Guard of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "10366|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Demon Guard of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "10367|699",
       "type": "Shield",
       "slot": "offhand",
       "r": 60,
@@ -38759,6 +55153,29 @@ var gear = {
       "agi": 11,
       "str": 11,
       "rand": 699
+    },
+    {
+      "id": "10367|1209",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Hyperion Shield of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "10367|308",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Hyperion Shield of Strength",
+      "str": 16,
+      "rand": 308
     },
     {
       "id": 10571,
@@ -38922,7 +55339,7 @@ var gear = {
       "ap": 28
     },
     {
-      "id": 10828,
+      "id": "10828|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 51,
@@ -38938,6 +55355,41 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "10828|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Dire Nail of the Bear",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "10828|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Dire Nail of Strength",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "resist": {
+        "shadow": 5
+      },
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 10835,
@@ -39784,7 +56236,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 14902,
+      "id": "14902|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 36,
@@ -39796,7 +56248,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 14912,
+      "id": "14902|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Shield of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "14902|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Saltstone Shield of Strength",
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "14912|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 45,
@@ -39808,7 +56283,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14916,
+      "id": "14912|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Brutish Shield of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14912|193",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Brutish Shield of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "14916|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 48,
@@ -39820,7 +56318,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14930,
+      "id": "14916|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jade Deflector of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14916|219",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Jade Deflector of Strength",
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "14930|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 52,
@@ -39832,7 +56353,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14947,
+      "id": "14930|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Lofty Shield of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14930|220",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Lofty Shield of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14947|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 41,
@@ -39844,7 +56388,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14954,
+      "id": "14947|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Warbringer's Shield of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14947|192",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Warbringer's Shield of Strength",
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "14954|690",
       "type": "Shield",
       "slot": "offhand",
       "r": 46,
@@ -39856,7 +56423,30 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 14964,
+      "id": "14954|1200",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Bloodforged Shield of the Bear",
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "14954|193",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Bloodforged Shield of Strength",
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "14964|693",
       "type": "Shield",
       "slot": "offhand",
       "r": 51,
@@ -39868,7 +56458,30 @@ var gear = {
       "rand": 693
     },
     {
-      "id": 14973,
+      "id": "14964|1203",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "High Chief's Shield of the Bear",
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
+      "id": "14964|220",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "High Chief's Shield of Strength",
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "14973|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 55,
@@ -39880,7 +56493,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 14982,
+      "id": "14973|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Glorious Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "14973|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Glorious Shield of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "14982|699",
       "type": "Shield",
       "slot": "offhand",
       "r": 60,
@@ -39892,7 +56528,30 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15113,
+      "id": "14982|1209",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Exalted Shield of the Bear",
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "14982|308",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Exalted Shield of Strength",
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "15113|675",
       "type": "Shield",
       "slot": "offhand",
       "r": 18,
@@ -39902,6 +56561,29 @@ var gear = {
       "agi": 3,
       "str": 3,
       "rand": 675
+    },
+    {
+      "id": "15113|1185",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Rigid Buckler of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15113|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Rigid Buckler of Strength",
+      "str": 5,
+      "rand": 115
     },
     {
       "id": 15207,
@@ -39915,7 +56597,21 @@ var gear = {
       "sta": 2
     },
     {
-      "id": 15211,
+      "id": "15210|23",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Raider Shortsword of Strength",
+      "speed": 1.9,
+      "mindmg": 11,
+      "maxdmg": 20,
+      "str": 2,
+      "rand": 23
+    },
+    {
+      "id": "15211|672",
       "type": "Sword",
       "slot": "onehand",
       "r": 17,
@@ -39930,7 +56626,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15213,
+      "id": "15211|1182",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Militant Shortsword of the Bear",
+      "speed": 2.5,
+      "mindmg": 19,
+      "maxdmg": 36,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15211|24",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Militant Shortsword of Strength",
+      "speed": 2.5,
+      "mindmg": 19,
+      "maxdmg": 36,
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15213|678",
       "type": "Sword",
       "slot": "onehand",
       "r": 31,
@@ -39945,7 +56670,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15214,
+      "id": "15213|1188",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Mercenary Blade of the Bear",
+      "speed": 2.4,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15213|136",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Mercenary Blade of Strength",
+      "speed": 2.4,
+      "mindmg": 31,
+      "maxdmg": 59,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15214|681",
       "type": "Sword",
       "slot": "onehand",
       "r": 35,
@@ -39960,7 +56714,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15216,
+      "id": "15214|1191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Nobles Brand of the Bear",
+      "speed": 2.1,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15214|155",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Nobles Brand of Strength",
+      "speed": 2.1,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15216|684",
       "type": "Sword",
       "slot": "onehand",
       "r": 46,
@@ -39975,7 +56758,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15217,
+      "id": "15216|1194",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Rune Sword of the Bear",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15216|190",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 46,
+      "q": "2",
+      "i": "51",
+      "name": "Rune Sword of Strength",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15217|684",
       "type": "Sword",
       "slot": "onehand",
       "r": 49,
@@ -39990,7 +56802,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15218,
+      "id": "15217|1194",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Widow Blade of the Bear",
+      "speed": 2,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15217|191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Widow Blade of Strength",
+      "speed": 2,
+      "mindmg": 45,
+      "maxdmg": 84,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15218|687",
       "type": "Sword",
       "slot": "onehand",
       "r": 52,
@@ -40005,7 +56846,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15219,
+      "id": "15218|1197",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Crystal Sword of the Bear",
+      "speed": 2.3,
+      "mindmg": 54,
+      "maxdmg": 102,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15218|191",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Crystal Sword of Strength",
+      "speed": 2.3,
+      "mindmg": 54,
+      "maxdmg": 102,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15219|687",
       "type": "Sword",
       "slot": "onehand",
       "r": 54,
@@ -40020,7 +56890,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15221,
+      "id": "15219|1197",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Dimensional Blade of the Bear",
+      "speed": 1.6,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15219|192",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Dimensional Blade of Strength",
+      "speed": 1.6,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15221|690",
       "type": "Sword",
       "slot": "onehand",
       "r": 60,
@@ -40035,7 +56934,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15224,
+      "id": "15221|1200",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Holy War Sword of the Bear",
+      "speed": 2.2,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15221|193",
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Holy War Sword of Strength",
+      "speed": 2.2,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15224|675",
       "type": "Mace",
       "slot": "onehand",
       "r": 20,
@@ -40050,7 +56978,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15227,
+      "id": "15224|1185",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Battlesmasher of the Bear",
+      "speed": 2.7,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15224|97",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Battlesmasher of Strength",
+      "speed": 2.7,
+      "mindmg": 24,
+      "maxdmg": 45,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15227|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 44,
@@ -40065,7 +57022,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15228,
+      "id": "15227|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Diamond-Tip Bludgeon of the Bear",
+      "speed": 2.4,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15227|190",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Diamond-Tip Bludgeon of Strength",
+      "speed": 2.4,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15228|684",
       "type": "Mace",
       "slot": "onehand",
       "r": 48,
@@ -40080,7 +57066,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15229,
+      "id": "15228|1194",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Smashing Star of the Bear",
+      "speed": 2.8,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15228|191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 48,
+      "q": "2",
+      "i": "53",
+      "name": "Smashing Star of Strength",
+      "speed": 2.8,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15229|687",
       "type": "Mace",
       "slot": "onehand",
       "r": 50,
@@ -40095,7 +57110,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15231,
+      "id": "15229|1197",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Blesswind Hammer of the Bear",
+      "speed": 2.1,
+      "mindmg": 48,
+      "maxdmg": 90,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15229|191",
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Blesswind Hammer of Strength",
+      "speed": 2.1,
+      "mindmg": 48,
+      "maxdmg": 90,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15231|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 26,
@@ -40110,7 +57154,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15232,
+      "id": "15231|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Splitting Hatchet of the Bear",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15231|115",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Splitting Hatchet of Strength",
+      "speed": 1.8,
+      "mindmg": 20,
+      "maxdmg": 38,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15232|678",
       "type": "Axe",
       "slot": "onehand",
       "r": 28,
@@ -40125,7 +57198,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15235,
+      "id": "15232|1188",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Hacking Cleaver of the Bear",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15232|115",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 28,
+      "q": "2",
+      "i": "33",
+      "name": "Hacking Cleaver of Strength",
+      "speed": 1.9,
+      "mindmg": 22,
+      "maxdmg": 43,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15235|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 43,
@@ -40140,7 +57242,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15236,
+      "id": "15235|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Crescent Edge of the Bear",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15235|190",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Crescent Edge of Strength",
+      "speed": 2.1,
+      "mindmg": 42,
+      "maxdmg": 78,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15236|684",
       "type": "Axe",
       "slot": "onehand",
       "r": 47,
@@ -40155,7 +57286,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15237,
+      "id": "15236|1194",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Moon Cleaver of the Bear",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15236|191",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Moon Cleaver of Strength",
+      "speed": 2.2,
+      "mindmg": 47,
+      "maxdmg": 89,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15237|687",
       "type": "Axe",
       "slot": "onehand",
       "r": 50,
@@ -40170,7 +57330,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15238,
+      "id": "15237|1197",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Corpse Harvester of the Bear",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15237|191",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 50,
+      "q": "2",
+      "i": "55",
+      "name": "Corpse Harvester of Strength",
+      "speed": 2.6,
+      "mindmg": 59,
+      "maxdmg": 111,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15238|687",
       "type": "Axe",
       "slot": "onehand",
       "r": 53,
@@ -40185,7 +57374,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 15239,
+      "id": "15238|1197",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Warlord's Axe of the Bear",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "15238|192",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Warlord's Axe of Strength",
+      "speed": 2.3,
+      "mindmg": 55,
+      "maxdmg": 104,
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "15239|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 56,
@@ -40200,7 +57418,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15240,
+      "id": "15239|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Felstone Reaver of the Bear",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15239|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Felstone Reaver of Strength",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15240|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 59,
@@ -40215,7 +57462,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15241,
+      "id": "15240|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Demon's Claw of the Bear",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15240|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Demon's Claw of Strength",
+      "speed": 2.3,
+      "mindmg": 61,
+      "maxdmg": 115,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15241|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 21,
@@ -40230,7 +57506,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15242,
+      "id": "15241|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battle Knife of the Bear",
+      "speed": 1.6,
+      "mindmg": 15,
+      "maxdmg": 28,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15241|97",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Battle Knife of Strength",
+      "speed": 1.6,
+      "mindmg": 15,
+      "maxdmg": 28,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "15242|675",
       "type": "Dagger",
       "slot": "onehand",
       "r": 25,
@@ -40245,7 +57550,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15243,
+      "id": "15242|1185",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Honed Stiletto of the Bear",
+      "speed": 1.4,
+      "mindmg": 15,
+      "maxdmg": 29,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15242|115",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Honed Stiletto of Strength",
+      "speed": 1.4,
+      "mindmg": 15,
+      "maxdmg": 29,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15243|678",
       "type": "Dagger",
       "slot": "onehand",
       "r": 31,
@@ -40260,7 +57594,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15244,
+      "id": "15243|1188",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Deadly Kris of the Bear",
+      "speed": 1.4,
+      "mindmg": 18,
+      "maxdmg": 35,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15243|136",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Deadly Kris of Strength",
+      "speed": 1.4,
+      "mindmg": 18,
+      "maxdmg": 35,
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15244|681",
       "type": "Dagger",
       "slot": "onehand",
       "r": 37,
@@ -40275,7 +57638,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15245,
+      "id": "15244|1191",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Razor Blade of the Bear",
+      "speed": 1.7,
+      "mindmg": 28,
+      "maxdmg": 53,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15244|155",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Razor Blade of Strength",
+      "speed": 1.7,
+      "mindmg": 28,
+      "maxdmg": 53,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15245|684",
       "type": "Dagger",
       "slot": "onehand",
       "r": 45,
@@ -40290,7 +57682,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15246,
+      "id": "15245|1194",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Vorpal Dagger of the Bear",
+      "speed": 1.6,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15245|190",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Vorpal Dagger of Strength",
+      "speed": 1.6,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15246|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 57,
@@ -40305,7 +57726,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15247,
+      "id": "15246|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Demon Blade of the Bear",
+      "speed": 1.8,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15246|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Demon Blade of Strength",
+      "speed": 1.8,
+      "mindmg": 46,
+      "maxdmg": 87,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15247|690",
       "type": "Dagger",
       "slot": "onehand",
       "r": 59,
@@ -40320,7 +57770,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15307,
+      "id": "15247|1200",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Bloodstrike Dagger of the Bear",
+      "speed": 1.7,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15247|193",
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 59,
+      "q": "2",
+      "i": "64",
+      "name": "Bloodstrike Dagger of Strength",
+      "speed": 1.7,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "str": 12,
+      "rand": 193
+    },
+    {
+      "id": "15307|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 14,
@@ -40330,6 +57809,29 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "15307|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Feral Buckler of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15307|97",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Feral Buckler of Strength",
+      "str": 4,
+      "rand": 97
     },
     {
       "id": 15466,
@@ -40344,7 +57846,7 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 15486,
+      "id": "15486|669",
       "type": "Shield",
       "slot": "offhand",
       "r": 7,
@@ -40356,7 +57858,30 @@ var gear = {
       "rand": 669
     },
     {
-      "id": 15494,
+      "id": "15486|1179",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "War Torn Shield of the Bear",
+      "sta": 1,
+      "str": 1,
+      "rand": 1179
+    },
+    {
+      "id": "15486|6",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "War Torn Shield of Strength",
+      "str": 1,
+      "rand": 6
+    },
+    {
+      "id": "15494|672",
       "type": "Shield",
       "slot": "offhand",
       "r": 13,
@@ -40368,7 +57893,30 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 15504,
+      "id": "15494|1182",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Bloodspattered Shield of the Bear",
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "15494|24",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Bloodspattered Shield of Strength",
+      "str": 3,
+      "rand": 24
+    },
+    {
+      "id": "15504|675",
       "type": "Shield",
       "slot": "offhand",
       "r": 17,
@@ -40380,7 +57928,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15512,
+      "id": "15504|1185",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Outrunner's Shield of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15504|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Outrunner's Shield of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15512|675",
       "type": "Shield",
       "slot": "offhand",
       "r": 19,
@@ -40392,7 +57963,30 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15522,
+      "id": "15512|1185",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Grunt's Shield of the Bear",
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15512|115",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Grunt's Shield of Strength",
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15522|678",
       "type": "Shield",
       "slot": "offhand",
       "r": 24,
@@ -40404,7 +57998,30 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15530,
+      "id": "15522|1188",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Spiked Chain Shield of the Bear",
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15522|136",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Spiked Chain Shield of Strength",
+      "str": 6,
+      "rand": 136
+    },
+    {
+      "id": "15530|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 26,
@@ -40416,7 +58033,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15543,
+      "id": "15530|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Sentry's Shield of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15530|155",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "q": "2",
+      "i": "31",
+      "name": "Sentry's Shield of Strength",
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15543|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 29,
@@ -40428,7 +58068,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15552,
+      "id": "15543|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Wicked Chain Shield of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15543|189",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Wicked Chain Shield of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15552|681",
       "type": "Shield",
       "slot": "offhand",
       "r": 31,
@@ -40440,7 +58103,30 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15563,
+      "id": "15552|1191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Thick Scale Shield of the Bear",
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15552|189",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Thick Scale Shield of Strength",
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15563|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 32,
@@ -40452,7 +58138,30 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15569,
+      "id": "15563|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Pillager's Shield of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15563|190",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "q": "2",
+      "i": "37",
+      "name": "Pillager's Shield of Strength",
+      "str": 9,
+      "rand": 190
+    },
+    {
+      "id": "15569|684",
       "type": "Shield",
       "slot": "offhand",
       "r": 35,
@@ -40462,6 +58171,29 @@ var gear = {
       "agi": 6,
       "str": 6,
       "rand": 684
+    },
+    {
+      "id": "15569|1194",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Marauder's Crest of the Bear",
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15569|191",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Marauder's Crest of Strength",
+      "str": 10,
+      "rand": 191
     },
     {
       "id": 15695,
@@ -40564,7 +58296,7 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 15887,
+      "id": "15887|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 57,
@@ -40576,7 +58308,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15888,
+      "id": "15887|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Heroic Guard of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15887|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Heroic Guard of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "15888|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 55,
@@ -40588,7 +58343,30 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15889,
+      "id": "15888|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Deprecated Glorious Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15888|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Deprecated Glorious Shield of Strength",
+      "str": 15,
+      "rand": 307
+    },
+    {
+      "id": "15889|696",
       "type": "Shield",
       "slot": "offhand",
       "r": 52,
@@ -40598,6 +58376,29 @@ var gear = {
       "agi": 10,
       "str": 10,
       "rand": 696
+    },
+    {
+      "id": "15889|1206",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Deprecated Jademir Scale Shield of the Bear",
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15889|307",
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Deprecated Jademir Scale Shield of Strength",
+      "str": 15,
+      "rand": 307
     },
     {
       "id": 15892,
@@ -41838,7 +59639,7 @@ var gear = {
       }
     },
     {
-      "id": 19921,
+      "id": "19921|690",
       "type": "Axe",
       "slot": "onehand",
       "r": 60,
@@ -41852,6 +59653,37 @@ var gear = {
       "agi": 8,
       "str": 8,
       "rand": 690
+    },
+    {
+      "id": "19921|1200",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Zulian Hacker of the Bear",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "skill": 2,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "19921|193",
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Zulian Hacker of Strength",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "skill": 2,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 19961,
@@ -42842,7 +60674,7 @@ var gear = {
       }
     },
     {
-      "id": 866,
+      "id": "866|702",
       "type": "Staff",
       "slot": "twohand",
       "r": 37,
@@ -42855,6 +60687,35 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "866|1209",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Monk's Staff of the Bear",
+      "speed": 2.4,
+      "mindmg": 60,
+      "maxdmg": 90,
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "866|311",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Monk's Staff of Strength",
+      "speed": 2.4,
+      "mindmg": 60,
+      "maxdmg": 90,
+      "str": 19,
+      "rand": 311
     },
     {
       "id": 870,
@@ -43223,7 +61084,7 @@ var gear = {
       "maxdmg": 213
     },
     {
-      "id": 1613,
+      "id": "1613|703",
       "type": "Staff",
       "slot": "twohand",
       "r": 39,
@@ -43238,7 +61099,22 @@ var gear = {
       "rand": 703
     },
     {
-      "id": 1625,
+      "id": "1613|1212",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 39,
+      "q": "2",
+      "i": "44",
+      "name": "Spiritchaser Staff of the Bear",
+      "speed": 2.8,
+      "mindmg": 75,
+      "maxdmg": 113,
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "1625|699",
       "type": "Sword",
       "slot": "twohand",
       "r": 36,
@@ -43253,7 +61129,36 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 1639,
+      "id": "1625|1211",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Exquisite Flamberge of the Bear",
+      "speed": 3,
+      "mindmg": 72,
+      "maxdmg": 109,
+      "sta": 11,
+      "str": 12,
+      "rand": 1211
+    },
+    {
+      "id": "1625|310",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Exquisite Flamberge of Strength",
+      "speed": 3,
+      "mindmg": 72,
+      "maxdmg": 109,
+      "str": 18,
+      "rand": 310
+    },
+    {
+      "id": "1639|708",
       "type": "Axe",
       "slot": "twohand",
       "r": 44,
@@ -43268,7 +61173,36 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 1640,
+      "id": "1639|1218",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Grinning Axe of the Bear",
+      "speed": 2.8,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "1639|314",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Grinning Axe of Strength",
+      "speed": 2.8,
+      "mindmg": 85,
+      "maxdmg": 128,
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "1640|702",
       "type": "Axe",
       "slot": "twohand",
       "r": 37,
@@ -43281,6 +61215,35 @@ var gear = {
       "agi": 12,
       "str": 12,
       "rand": 702
+    },
+    {
+      "id": "1640|1211",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Monstrous War Axe of the Bear",
+      "speed": 3.7,
+      "mindmg": 92,
+      "maxdmg": 139,
+      "sta": 11,
+      "str": 12,
+      "rand": 1211
+    },
+    {
+      "id": "1640|311",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 37,
+      "q": "2",
+      "i": "42",
+      "name": "Monstrous War Axe of Strength",
+      "speed": 3.7,
+      "mindmg": 92,
+      "maxdmg": 139,
+      "str": 19,
+      "rand": 311
     },
     {
       "id": 1679,
@@ -43417,7 +61380,7 @@ var gear = {
       }
     },
     {
-      "id": 1990,
+      "id": "1990|695",
       "type": "Mace",
       "slot": "twohand",
       "r": 31,
@@ -43430,6 +61393,35 @@ var gear = {
       "agi": 9,
       "str": 10,
       "rand": 695
+    },
+    {
+      "id": "1990|1206",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Ballast Maul of the Bear",
+      "speed": 3.4,
+      "mindmg": 67,
+      "maxdmg": 101,
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "1990|308",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 31,
+      "q": "2",
+      "i": "36",
+      "name": "Ballast Maul of Strength",
+      "speed": 3.4,
+      "mindmg": 67,
+      "maxdmg": 101,
+      "str": 16,
+      "rand": 308
     },
     {
       "id": 1991,
@@ -43528,7 +61520,7 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 2072,
+      "id": "2072|687",
       "type": "Staff",
       "slot": "twohand",
       "r": 22,
@@ -43541,6 +61533,50 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "2072|1199",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 22,
+      "q": "2",
+      "i": "27",
+      "name": "Dwarven Magestaff of the Bear",
+      "speed": 2.8,
+      "mindmg": 41,
+      "maxdmg": 62,
+      "sta": 7,
+      "str": 8,
+      "rand": 1199
+    },
+    {
+      "id": "2077|1197",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Magician Staff of the Bear",
+      "speed": 3,
+      "mindmg": 47,
+      "maxdmg": 71,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "2077|193",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 24,
+      "q": "2",
+      "i": "29",
+      "name": "Magician Staff of Strength",
+      "speed": 3,
+      "mindmg": 47,
+      "maxdmg": 71,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 2084,
@@ -43803,6 +61839,21 @@ var gear = {
       "str": 1
     },
     {
+      "id": "3185|1203",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Acrobatic Staff of the Bear",
+      "speed": 2.2,
+      "mindmg": 40,
+      "maxdmg": 61,
+      "sta": 9,
+      "str": 9,
+      "rand": 1203
+    },
+    {
       "id": 3191,
       "type": "Axe",
       "slot": "twohand",
@@ -43817,7 +61868,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 3192,
+      "id": "3192|672",
       "type": "Sword",
       "slot": "twohand",
       "r": 7,
@@ -43832,7 +61883,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 3193,
+      "id": "3192|1182",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Short Bastard Sword of the Bear",
+      "speed": 3,
+      "mindmg": 20,
+      "maxdmg": 30,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "3192|97",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 7,
+      "q": "2",
+      "i": "12",
+      "name": "Short Bastard Sword of Strength",
+      "speed": 3,
+      "mindmg": 20,
+      "maxdmg": 30,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "3193|683",
       "type": "Mace",
       "slot": "twohand",
       "r": 16,
@@ -43845,6 +61925,35 @@ var gear = {
       "agi": 5,
       "str": 6,
       "rand": 683
+    },
+    {
+      "id": "3193|1188",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Oak Mallet of the Bear",
+      "speed": 3.5,
+      "mindmg": 38,
+      "maxdmg": 58,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "3193|155",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 16,
+      "q": "2",
+      "i": "21",
+      "name": "Oak Mallet of Strength",
+      "speed": 3.5,
+      "mindmg": 38,
+      "maxdmg": 58,
+      "str": 7,
+      "rand": 155
     },
     {
       "id": 3194,
@@ -43864,7 +61973,7 @@ var gear = {
       }
     },
     {
-      "id": 3195,
+      "id": "3195|675",
       "type": "Axe",
       "slot": "twohand",
       "r": 13,
@@ -43879,7 +61988,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 3196,
+      "id": "3195|1185",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Barbaric Battle Axe of the Bear",
+      "speed": 3.6,
+      "mindmg": 34,
+      "maxdmg": 52,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "3195|115",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Barbaric Battle Axe of Strength",
+      "speed": 3.6,
+      "mindmg": 34,
+      "maxdmg": 52,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "3196|679",
       "type": "Sword",
       "slot": "twohand",
       "r": 13,
@@ -43894,7 +62032,36 @@ var gear = {
       "rand": 679
     },
     {
-      "id": 3197,
+      "id": "3196|1185",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Edged Bastard Sword of the Bear",
+      "speed": 3.1,
+      "mindmg": 29,
+      "maxdmg": 44,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "3196|115",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 13,
+      "q": "2",
+      "i": "18",
+      "name": "Edged Bastard Sword of Strength",
+      "speed": 3.1,
+      "mindmg": 29,
+      "maxdmg": 44,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "3197|695",
       "type": "Sword",
       "slot": "twohand",
       "r": 30,
@@ -43909,7 +62076,36 @@ var gear = {
       "rand": 695
     },
     {
-      "id": 3198,
+      "id": "3197|1204",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Stonecutter Claymore of the Bear",
+      "speed": 3.1,
+      "mindmg": 59,
+      "maxdmg": 89,
+      "sta": 10,
+      "str": 9,
+      "rand": 1204
+    },
+    {
+      "id": "3197|220",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Stonecutter Claymore of Strength",
+      "speed": 3.1,
+      "mindmg": 59,
+      "maxdmg": 89,
+      "str": 14,
+      "rand": 220
+    },
+    {
+      "id": "3198|681",
       "type": "Mace",
       "slot": "twohand",
       "r": 18,
@@ -43924,7 +62120,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 3199,
+      "id": "3198|1191",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Battering Hammer of the Bear",
+      "speed": 3.1,
+      "mindmg": 37,
+      "maxdmg": 57,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "3198|189",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 18,
+      "q": "2",
+      "i": "23",
+      "name": "Battering Hammer of Strength",
+      "speed": 3.1,
+      "mindmg": 37,
+      "maxdmg": 57,
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "3199|681",
       "type": "Axe",
       "slot": "twohand",
       "r": 17,
@@ -43939,7 +62164,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 3201,
+      "id": "3199|1191",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Battle Slayer of the Bear",
+      "speed": 3.3,
+      "mindmg": 38,
+      "maxdmg": 58,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "3199|189",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 17,
+      "q": "2",
+      "i": "22",
+      "name": "Battle Slayer of Strength",
+      "speed": 3.3,
+      "mindmg": 38,
+      "maxdmg": 58,
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "3201|687",
       "type": "Axe",
       "slot": "twohand",
       "r": 23,
@@ -43952,6 +62206,35 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "3201|1197",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Barbarian War Axe of the Bear",
+      "speed": 3.1,
+      "mindmg": 47,
+      "maxdmg": 71,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "3201|193",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Barbarian War Axe of Strength",
+      "speed": 3.1,
+      "mindmg": 47,
+      "maxdmg": 71,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 3203,
@@ -43968,7 +62251,7 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 3206,
+      "id": "3206|687",
       "type": "Sword",
       "slot": "twohand",
       "r": 23,
@@ -43983,7 +62266,36 @@ var gear = {
       "rand": 687
     },
     {
-      "id": 3208,
+      "id": "3206|1197",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cavalier Two-hander of the Bear",
+      "speed": 2.9,
+      "mindmg": 44,
+      "maxdmg": 66,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "3206|192",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 23,
+      "q": "2",
+      "i": "28",
+      "name": "Cavalier Two-hander of Strength",
+      "speed": 2.9,
+      "mindmg": 44,
+      "maxdmg": 66,
+      "str": 11,
+      "rand": 192
+    },
+    {
+      "id": "3208|705",
       "type": "Mace",
       "slot": "twohand",
       "r": 43,
@@ -43996,6 +62308,35 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "3208|1215",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Conk Hammer of the Bear",
+      "speed": 3.5,
+      "mindmg": 104,
+      "maxdmg": 157,
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "3208|312",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 43,
+      "q": "2",
+      "i": "48",
+      "name": "Conk Hammer of Strength",
+      "speed": 3.5,
+      "mindmg": 104,
+      "maxdmg": 157,
+      "str": 20,
+      "rand": 312
     },
     {
       "id": 3209,
@@ -44012,7 +62353,7 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 3210,
+      "id": "3210|687",
       "type": "Axe",
       "slot": "twohand",
       "r": 25,
@@ -44025,6 +62366,35 @@ var gear = {
       "agi": 7,
       "str": 7,
       "rand": 687
+    },
+    {
+      "id": "3210|1197",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Brutal War Axe of the Bear",
+      "speed": 3.6,
+      "mindmg": 58,
+      "maxdmg": 88,
+      "sta": 7,
+      "str": 7,
+      "rand": 1197
+    },
+    {
+      "id": "3210|193",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 25,
+      "q": "2",
+      "i": "30",
+      "name": "Brutal War Axe of Strength",
+      "speed": 3.6,
+      "mindmg": 58,
+      "maxdmg": 88,
+      "str": 12,
+      "rand": 193
     },
     {
       "id": 3415,
@@ -44171,7 +62541,7 @@ var gear = {
       "skill": 7
     },
     {
-      "id": 4562,
+      "id": "4562|672",
       "type": "Axe",
       "slot": "twohand",
       "r": 5,
@@ -44186,7 +62556,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 4564,
+      "id": "4562|1182",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Severing Axe of the Bear",
+      "speed": 3.2,
+      "mindmg": 18,
+      "maxdmg": 27,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "4562|97",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Severing Axe of Strength",
+      "speed": 3.2,
+      "mindmg": 18,
+      "maxdmg": 27,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "4564|672",
       "type": "Mace",
       "slot": "twohand",
       "r": 8,
@@ -44201,7 +62600,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 4566,
+      "id": "4564|1186",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Spiked Club of the Bear",
+      "speed": 3.1,
+      "mindmg": 22,
+      "maxdmg": 34,
+      "sta": 4,
+      "str": 3,
+      "rand": 1186
+    },
+    {
+      "id": "4564|97",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Spiked Club of Strength",
+      "speed": 3.1,
+      "mindmg": 22,
+      "maxdmg": 34,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "4566|675",
       "type": "Staff",
       "slot": "twohand",
       "r": 8,
@@ -44216,7 +62644,22 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 4567,
+      "id": "4566|1182",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 8,
+      "q": "2",
+      "i": "13",
+      "name": "Sturdy Quarterstaff of the Bear",
+      "speed": 2.8,
+      "mindmg": 20,
+      "maxdmg": 30,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "4567|679",
       "type": "Sword",
       "slot": "twohand",
       "r": 11,
@@ -44231,7 +62674,36 @@ var gear = {
       "rand": 679
     },
     {
-      "id": 4570,
+      "id": "4567|1185",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Merc Sword of the Bear",
+      "speed": 2.8,
+      "mindmg": 24,
+      "maxdmg": 36,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "4567|115",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Merc Sword of Strength",
+      "speed": 2.8,
+      "mindmg": 24,
+      "maxdmg": 36,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "4570|672",
       "type": "Mace",
       "slot": "twohand",
       "r": 10,
@@ -44244,6 +62716,50 @@ var gear = {
       "agi": 2,
       "str": 2,
       "rand": 672
+    },
+    {
+      "id": "4570|1186",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Birchwood Maul of the Bear",
+      "speed": 3.3,
+      "mindmg": 26,
+      "maxdmg": 40,
+      "sta": 4,
+      "str": 3,
+      "rand": 1186
+    },
+    {
+      "id": "4570|97",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 10,
+      "q": "2",
+      "i": "15",
+      "name": "Birchwood Maul of Strength",
+      "speed": 3.3,
+      "mindmg": 26,
+      "maxdmg": 40,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "4575|1191",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 14,
+      "q": "2",
+      "i": "19",
+      "name": "Medicine Staff of the Bear",
+      "speed": 2.5,
+      "mindmg": 25,
+      "maxdmg": 38,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
     },
     {
       "id": 4778,
@@ -44910,7 +63426,7 @@ var gear = {
       "maxdmg": 162
     },
     {
-      "id": 8178,
+      "id": "8178|672",
       "type": "Sword",
       "slot": "twohand",
       "r": 5,
@@ -44925,7 +63441,36 @@ var gear = {
       "rand": 672
     },
     {
-      "id": 8199,
+      "id": "8178|1182",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Training Sword of the Bear",
+      "speed": 3.5,
+      "mindmg": 20,
+      "maxdmg": 30,
+      "sta": 2,
+      "str": 2,
+      "rand": 1182
+    },
+    {
+      "id": "8178|97",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 5,
+      "q": "2",
+      "i": "10",
+      "name": "Training Sword of Strength",
+      "speed": 3.5,
+      "mindmg": 20,
+      "maxdmg": 30,
+      "str": 4,
+      "rand": 97
+    },
+    {
+      "id": "8199|705",
       "type": "Sword",
       "slot": "twohand",
       "r": 42,
@@ -44938,6 +63483,35 @@ var gear = {
       "agi": 13,
       "str": 13,
       "rand": 705
+    },
+    {
+      "id": "8199|1215",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Battlefield Destroyer of the Bear",
+      "speed": 3.1,
+      "mindmg": 90,
+      "maxdmg": 136,
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "8199|312",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 42,
+      "q": "2",
+      "i": "47",
+      "name": "Battlefield Destroyer of Strength",
+      "speed": 3.1,
+      "mindmg": 90,
+      "maxdmg": 136,
+      "str": 20,
+      "rand": 312
     },
     {
       "id": 9372,
@@ -46481,7 +65055,7 @@ var gear = {
       }
     },
     {
-      "id": 15248,
+      "id": "15248|678",
       "type": "Sword",
       "slot": "twohand",
       "r": 15,
@@ -46496,7 +65070,36 @@ var gear = {
       "rand": 678
     },
     {
-      "id": 15249,
+      "id": "15248|1188",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Gleaming Claymore of the Bear",
+      "speed": 2.9,
+      "mindmg": 30,
+      "maxdmg": 46,
+      "sta": 4,
+      "str": 4,
+      "rand": 1188
+    },
+    {
+      "id": "15248|155",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 15,
+      "q": "2",
+      "i": "20",
+      "name": "Gleaming Claymore of Strength",
+      "speed": 2.9,
+      "mindmg": 30,
+      "maxdmg": 46,
+      "str": 7,
+      "rand": 155
+    },
+    {
+      "id": "15249|684",
       "type": "Sword",
       "slot": "twohand",
       "r": 21,
@@ -46511,7 +65114,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15250,
+      "id": "15249|1194",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Polished Zweihander of the Bear",
+      "speed": 3.6,
+      "mindmg": 50,
+      "maxdmg": 76,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15249|191",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 21,
+      "q": "2",
+      "i": "26",
+      "name": "Polished Zweihander of Strength",
+      "speed": 3.6,
+      "mindmg": 50,
+      "maxdmg": 76,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15250|690",
       "type": "Sword",
       "slot": "twohand",
       "r": 27,
@@ -46526,7 +65158,36 @@ var gear = {
       "rand": 690
     },
     {
-      "id": 15251,
+      "id": "15250|1200",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Glimmering Flamberge of the Bear",
+      "speed": 3.2,
+      "mindmg": 55,
+      "maxdmg": 84,
+      "sta": 8,
+      "str": 8,
+      "rand": 1200
+    },
+    {
+      "id": "15250|219",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 27,
+      "q": "2",
+      "i": "32",
+      "name": "Glimmering Flamberge of Strength",
+      "speed": 3.2,
+      "mindmg": 55,
+      "maxdmg": 84,
+      "str": 13,
+      "rand": 219
+    },
+    {
+      "id": "15251|702",
       "type": "Sword",
       "slot": "twohand",
       "r": 38,
@@ -46541,7 +65202,36 @@ var gear = {
       "rand": 702
     },
     {
-      "id": 15252,
+      "id": "15251|1212",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Headstriker Sword of the Bear",
+      "speed": 2.4,
+      "mindmg": 62,
+      "maxdmg": 94,
+      "sta": 12,
+      "str": 12,
+      "rand": 1212
+    },
+    {
+      "id": "15251|311",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 38,
+      "q": "2",
+      "i": "43",
+      "name": "Headstriker Sword of Strength",
+      "speed": 2.4,
+      "mindmg": 62,
+      "maxdmg": 94,
+      "str": 19,
+      "rand": 311
+    },
+    {
+      "id": "15252|708",
       "type": "Sword",
       "slot": "twohand",
       "r": 44,
@@ -46556,7 +65246,36 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15253,
+      "id": "15252|1218",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Tusker Sword of the Bear",
+      "speed": 3.7,
+      "mindmg": 112,
+      "maxdmg": 169,
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15252|314",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 44,
+      "q": "2",
+      "i": "49",
+      "name": "Tusker Sword of Strength",
+      "speed": 3.7,
+      "mindmg": 112,
+      "maxdmg": 169,
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "15253|711",
       "type": "Sword",
       "slot": "twohand",
       "r": 47,
@@ -46571,7 +65290,36 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 15254,
+      "id": "15253|1221",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Beheading Blade of the Bear",
+      "speed": 3.5,
+      "mindmg": 113,
+      "maxdmg": 170,
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15253|315",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Beheading Blade of Strength",
+      "speed": 3.5,
+      "mindmg": 113,
+      "maxdmg": 170,
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "15254|711",
       "type": "Sword",
       "slot": "twohand",
       "r": 49,
@@ -46586,7 +65334,36 @@ var gear = {
       "rand": 711
     },
     {
-      "id": 15255,
+      "id": "15254|1221",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Dark Espadon of the Bear",
+      "speed": 3.3,
+      "mindmg": 110,
+      "maxdmg": 166,
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15254|315",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Dark Espadon of Strength",
+      "speed": 3.3,
+      "mindmg": 110,
+      "maxdmg": 166,
+      "str": 23,
+      "rand": 315
+    },
+    {
+      "id": "15255|715",
       "type": "Sword",
       "slot": "twohand",
       "r": 52,
@@ -46601,7 +65378,36 @@ var gear = {
       "rand": 715
     },
     {
-      "id": 15256,
+      "id": "15255|1224",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Gallant Flamberge of the Bear",
+      "speed": 3.4,
+      "mindmg": 120,
+      "maxdmg": 181,
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15255|317",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 52,
+      "q": "2",
+      "i": "57",
+      "name": "Gallant Flamberge of Strength",
+      "speed": 3.4,
+      "mindmg": 120,
+      "maxdmg": 181,
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "15256|717",
       "type": "Sword",
       "slot": "twohand",
       "r": 54,
@@ -46616,7 +65422,36 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 15257,
+      "id": "15256|1227",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Massacre Sword of the Bear",
+      "speed": 3.8,
+      "mindmg": 139,
+      "maxdmg": 209,
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15256|318",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Massacre Sword of Strength",
+      "speed": 3.8,
+      "mindmg": 139,
+      "maxdmg": 209,
+      "str": 26,
+      "rand": 318
+    },
+    {
+      "id": "15257|720",
       "type": "Sword",
       "slot": "twohand",
       "r": 57,
@@ -46631,7 +65466,36 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 15258,
+      "id": "15257|1230",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Shin Blade of the Bear",
+      "speed": 2.2,
+      "mindmg": 84,
+      "maxdmg": 127,
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15257|320",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 57,
+      "q": "2",
+      "i": "62",
+      "name": "Shin Blade of Strength",
+      "speed": 2.2,
+      "mindmg": 84,
+      "maxdmg": 127,
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15258|723",
       "type": "Sword",
       "slot": "twohand",
       "r": 60,
@@ -46646,7 +65510,36 @@ var gear = {
       "rand": 723
     },
     {
-      "id": 15259,
+      "id": "15258|1233",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Divine Warblade of the Bear",
+      "speed": 2.7,
+      "mindmg": 109,
+      "maxdmg": 164,
+      "sta": 19,
+      "str": 19,
+      "rand": 1233
+    },
+    {
+      "id": "15258|321",
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 60,
+      "q": "2",
+      "i": "65",
+      "name": "Divine Warblade of Strength",
+      "speed": 2.7,
+      "mindmg": 109,
+      "maxdmg": 164,
+      "str": 29,
+      "rand": 321
+    },
+    {
+      "id": "15259|684",
       "type": "Mace",
       "slot": "twohand",
       "r": 20,
@@ -46661,7 +65554,36 @@ var gear = {
       "rand": 684
     },
     {
-      "id": 15260,
+      "id": "15259|1194",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Hefty Battlehammer of the Bear",
+      "speed": 3.2,
+      "mindmg": 43,
+      "maxdmg": 65,
+      "sta": 6,
+      "str": 6,
+      "rand": 1194
+    },
+    {
+      "id": "15259|191",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Hefty Battlehammer of Strength",
+      "speed": 3.2,
+      "mindmg": 43,
+      "maxdmg": 65,
+      "str": 10,
+      "rand": 191
+    },
+    {
+      "id": "15260|696",
       "type": "Mace",
       "slot": "twohand",
       "r": 33,
@@ -46676,7 +65598,36 @@ var gear = {
       "rand": 696
     },
     {
-      "id": 15261,
+      "id": "15260|1206",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Stone Hammer of the Bear",
+      "speed": 3,
+      "mindmg": 64,
+      "maxdmg": 96,
+      "sta": 10,
+      "str": 10,
+      "rand": 1206
+    },
+    {
+      "id": "15260|308",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Stone Hammer of Strength",
+      "speed": 3,
+      "mindmg": 64,
+      "maxdmg": 96,
+      "str": 16,
+      "rand": 308
+    },
+    {
+      "id": "15261|699",
       "type": "Mace",
       "slot": "twohand",
       "r": 35,
@@ -46691,7 +65642,36 @@ var gear = {
       "rand": 699
     },
     {
-      "id": 15262,
+      "id": "15261|1209",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Sequoia Branch of the Bear",
+      "speed": 3.8,
+      "mindmg": 88,
+      "maxdmg": 132,
+      "sta": 11,
+      "str": 11,
+      "rand": 1209
+    },
+    {
+      "id": "15261|309",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Sequoia Branch of Strength",
+      "speed": 3.8,
+      "mindmg": 88,
+      "maxdmg": 132,
+      "str": 17,
+      "rand": 309
+    },
+    {
+      "id": "15262|705",
       "type": "Mace",
       "slot": "twohand",
       "r": 41,
@@ -46706,7 +65686,36 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15263,
+      "id": "15262|1215",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Greater Maul of the Bear",
+      "speed": 3.4,
+      "mindmg": 97,
+      "maxdmg": 146,
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15262|312",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Greater Maul of Strength",
+      "speed": 3.4,
+      "mindmg": 97,
+      "maxdmg": 146,
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "15263|708",
       "type": "Mace",
       "slot": "twohand",
       "r": 45,
@@ -46721,7 +65730,36 @@ var gear = {
       "rand": 708
     },
     {
-      "id": 15264,
+      "id": "15263|1218",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Royal Mallet of the Bear",
+      "speed": 2.7,
+      "mindmg": 83,
+      "maxdmg": 126,
+      "sta": 14,
+      "str": 14,
+      "rand": 1218
+    },
+    {
+      "id": "15263|314",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 45,
+      "q": "2",
+      "i": "50",
+      "name": "Royal Mallet of Strength",
+      "speed": 2.7,
+      "mindmg": 83,
+      "maxdmg": 126,
+      "str": 22,
+      "rand": 314
+    },
+    {
+      "id": "15264|714",
       "type": "Mace",
       "slot": "twohand",
       "r": 51,
@@ -46736,7 +65774,36 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15265,
+      "id": "15264|1224",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Backbreaker of the Bear",
+      "speed": 3.1,
+      "mindmg": 107,
+      "maxdmg": 162,
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15264|317",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Backbreaker of Strength",
+      "speed": 3.1,
+      "mindmg": 107,
+      "maxdmg": 162,
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "15265|717",
       "type": "Mace",
       "slot": "twohand",
       "r": 53,
@@ -46751,7 +65818,36 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 15266,
+      "id": "15265|1227",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Painbringer of the Bear",
+      "speed": 2.8,
+      "mindmg": 100,
+      "maxdmg": 151,
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15265|318",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Painbringer of Strength",
+      "speed": 2.8,
+      "mindmg": 100,
+      "maxdmg": 151,
+      "str": 26,
+      "rand": 318
+    },
+    {
+      "id": "15266|720",
       "type": "Mace",
       "slot": "twohand",
       "r": 56,
@@ -46766,7 +65862,36 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 15267,
+      "id": "15266|1230",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Fierce Mauler of the Bear",
+      "speed": 3.3,
+      "mindmg": 125,
+      "maxdmg": 188,
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15266|320",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Fierce Mauler of Strength",
+      "speed": 3.3,
+      "mindmg": 125,
+      "maxdmg": 188,
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15267|720",
       "type": "Mace",
       "slot": "twohand",
       "r": 58,
@@ -46781,7 +65906,36 @@ var gear = {
       "rand": 720
     },
     {
-      "id": 15268,
+      "id": "15267|1230",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Brutehammer of the Bear",
+      "speed": 3.4,
+      "mindmg": 133,
+      "maxdmg": 200,
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15267|320",
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Brutehammer of Strength",
+      "speed": 3.4,
+      "mindmg": 133,
+      "maxdmg": 200,
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15268|675",
       "type": "Axe",
       "slot": "twohand",
       "r": 11,
@@ -46796,7 +65950,36 @@ var gear = {
       "rand": 675
     },
     {
-      "id": 15269,
+      "id": "15268|1185",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Twin-bladed Axe of the Bear",
+      "speed": 2.7,
+      "mindmg": 23,
+      "maxdmg": 35,
+      "sta": 3,
+      "str": 3,
+      "rand": 1185
+    },
+    {
+      "id": "15268|115",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 11,
+      "q": "2",
+      "i": "16",
+      "name": "Twin-bladed Axe of Strength",
+      "speed": 2.7,
+      "mindmg": 23,
+      "maxdmg": 35,
+      "str": 5,
+      "rand": 115
+    },
+    {
+      "id": "15269|681",
       "type": "Axe",
       "slot": "twohand",
       "r": 19,
@@ -46811,7 +65994,36 @@ var gear = {
       "rand": 681
     },
     {
-      "id": 15270,
+      "id": "15269|1191",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Massive Battle Axe of the Bear",
+      "speed": 3.3,
+      "mindmg": 42,
+      "maxdmg": 64,
+      "sta": 5,
+      "str": 5,
+      "rand": 1191
+    },
+    {
+      "id": "15269|189",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 19,
+      "q": "2",
+      "i": "24",
+      "name": "Massive Battle Axe of Strength",
+      "speed": 3.3,
+      "mindmg": 42,
+      "maxdmg": 64,
+      "str": 8,
+      "rand": 189
+    },
+    {
+      "id": "15270|705",
       "type": "Axe",
       "slot": "twohand",
       "r": 41,
@@ -46826,7 +66038,36 @@ var gear = {
       "rand": 705
     },
     {
-      "id": 15271,
+      "id": "15270|1215",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Gigantic War Axe of the Bear",
+      "speed": 3.2,
+      "mindmg": 91,
+      "maxdmg": 137,
+      "sta": 13,
+      "str": 13,
+      "rand": 1215
+    },
+    {
+      "id": "15270|312",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 41,
+      "q": "2",
+      "i": "46",
+      "name": "Gigantic War Axe of Strength",
+      "speed": 3.2,
+      "mindmg": 91,
+      "maxdmg": 137,
+      "str": 20,
+      "rand": 312
+    },
+    {
+      "id": "15271|714",
       "type": "Axe",
       "slot": "twohand",
       "r": 51,
@@ -46841,7 +66082,36 @@ var gear = {
       "rand": 714
     },
     {
-      "id": 15272,
+      "id": "15271|1224",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Colossal Great Axe of the Bear",
+      "speed": 3.8,
+      "mindmg": 132,
+      "maxdmg": 198,
+      "sta": 16,
+      "str": 16,
+      "rand": 1224
+    },
+    {
+      "id": "15271|317",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 51,
+      "q": "2",
+      "i": "56",
+      "name": "Colossal Great Axe of Strength",
+      "speed": 3.8,
+      "mindmg": 132,
+      "maxdmg": 198,
+      "str": 25,
+      "rand": 317
+    },
+    {
+      "id": "15272|717",
       "type": "Axe",
       "slot": "twohand",
       "r": 54,
@@ -46856,7 +66126,36 @@ var gear = {
       "rand": 717
     },
     {
-      "id": 15273,
+      "id": "15272|1227",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Razor Axe of the Bear",
+      "speed": 2.5,
+      "mindmg": 91,
+      "maxdmg": 138,
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15272|318",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 54,
+      "q": "2",
+      "i": "59",
+      "name": "Razor Axe of Strength",
+      "speed": 2.5,
+      "mindmg": 91,
+      "maxdmg": 138,
+      "str": 26,
+      "rand": 318
+    },
+    {
+      "id": "15273|720",
       "type": "Axe",
       "slot": "twohand",
       "r": 58,
@@ -46869,6 +66168,95 @@ var gear = {
       "agi": 18,
       "str": 18,
       "rand": 720
+    },
+    {
+      "id": "15273|1230",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Death Striker of the Bear",
+      "speed": 2.8,
+      "mindmg": 109,
+      "maxdmg": 165,
+      "sta": 18,
+      "str": 18,
+      "rand": 1230
+    },
+    {
+      "id": "15273|320",
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 58,
+      "q": "2",
+      "i": "63",
+      "name": "Death Striker of Strength",
+      "speed": 2.8,
+      "mindmg": 109,
+      "maxdmg": 165,
+      "str": 28,
+      "rand": 320
+    },
+    {
+      "id": "15274|1221",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 47,
+      "q": "2",
+      "i": "52",
+      "name": "Diviner Long Staff of the Bear",
+      "speed": 2.6,
+      "mindmg": 84,
+      "maxdmg": 126,
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15275|1221",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 49,
+      "q": "2",
+      "i": "54",
+      "name": "Thaumaturgist Staff of the Bear",
+      "speed": 3.6,
+      "mindmg": 120,
+      "maxdmg": 181,
+      "sta": 15,
+      "str": 15,
+      "rand": 1221
+    },
+    {
+      "id": "15276|1227",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 53,
+      "q": "2",
+      "i": "58",
+      "name": "Magus Long Staff of the Bear",
+      "speed": 3.4,
+      "mindmg": 122,
+      "maxdmg": 184,
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
+    },
+    {
+      "id": "15278|1227",
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 55,
+      "q": "2",
+      "i": "60",
+      "name": "Solstice Staff of the Bear",
+      "speed": 2.6,
+      "mindmg": 97,
+      "maxdmg": 146,
+      "sta": 17,
+      "str": 17,
+      "rand": 1227
     },
     {
       "id": 15418,

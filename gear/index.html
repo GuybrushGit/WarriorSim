@@ -163,23 +163,38 @@
               });
               tiger.name += " of the Tiger";
               tiger.rand = suff.id;
+              tiger.id += '|' + suff.id;
               addToGear(tiger);
               suffixFound = true;
             }
 
-            // suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "bear");
-            // if (suff.s) {
-            //   let bear = structuredClone(obj);
-            //   suff.s.forEach(s => {
-            //     if (/[+-]\d+ Strength/.test(s)) { bear.str = parseInt(s); }
-            //     if (/[+-]\d+ Agility/.test(s)) { bear.agi = parseInt(s); }
-            //     if (/[+-]\d+ Stamina/.test(s)) { bear.sta = parseInt(s); }
-            //   });
-            //   bear.name += " of the Bear";
-            //   bear.rand = suff.id;
-            //   addToGear(bear);
-            //   suffixFound = true;
-            // }
+            suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "bear");
+            if (suff.s) {
+              let bear = structuredClone(obj);
+              suff.s.forEach(s => {
+                if (/[+-]\d+ Strength/.test(s)) { bear.str = parseInt(s); }
+                if (/[+-]\d+ Agility/.test(s)) { bear.agi = parseInt(s); }
+                if (/[+-]\d+ Stamina/.test(s)) { bear.sta = parseInt(s); }
+              });
+              bear.name += " of the Bear";
+              bear.rand = suff.id;
+              bear.id += '|' + suff.id;
+              addToGear(bear);
+              suffixFound = true;
+            }
+
+            suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "strength");
+            if (suff.s) {
+              let strength = structuredClone(obj);
+              suff.s.forEach(s => {
+                if (/[+-]\d+ Strength/.test(s)) { strength.str = parseInt(s); }
+              });
+              strength.name += " of Strength";
+              strength.rand = suff.id;
+              strength.id += '|' + suff.id;
+              addToGear(strength);
+              suffixFound = true;
+            }
 
             suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "striking");
             if (suff.s) {
@@ -445,6 +460,7 @@
           for(let x = 0; x < result.length; x++) {
             for(let y = 0; y < suffixes.length; y++) {
               if ((type == "tiger" && result[x] >= 669 && result[x] <= 753) || // of the Tiger
+                  (type == "strength" && (result[x] == 6 || result[x] == 23 || result[x] == 24 || result[x] == 97 || result[x] == 115 || result[x] == 136 || result[x] == 155 || result[x] == 189 || result[x] == 190 || result[x] == 191 || result[x] == 192 || result[x] == 193 || result[x] == 219 || result[x] == 220 || (result[x] >= 307 && result[x] <= 332))) || // of Strength
                   (type == "bear" && result[x] >= 1179 && result[x] <= 1263) || // of the Bear
                   (type == "striking" && quality >= 3 && (result[x] == 2149 || result[x] == 2150 || result[x] == 2151 || result[x] == 2154 || result[x] == 2157 || result[x] == 2158 || result[x] == 2163))) { // of Striking
                 if (suffixes[y].id == result[x] && suffixes[y].id > high.id) {
