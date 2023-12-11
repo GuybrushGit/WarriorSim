@@ -187,16 +187,21 @@ SIM.PROFILES = {
         for(let type in storage.gear) {
             if (type == "twohand" || type == "mainhand" || type == "offhand") {
                 for  (let item of storage.gear[type]) {
-                    if (item.selected && item.id < 9999990) 
-                        html += view.getItemHTML(view.getItem(item.id), storage);
+                    if (item.selected) {
+                        let i = view.getItem(item.id);
+                        if (i) html += view.getItemHTML(i, storage);
+                    }
+                        
                 }
             }
         }
         for(let type in storage.gear) {
             if (type != "twohand" && type != "mainhand" && type != "offhand") {
                 for  (let item of storage.gear[type]) {
-                    if (item.selected && item.id < 9999990) 
-                        html += view.getItemHTML(view.getItem(item.id), storage);
+                    if (item.selected) {
+                        let i = view.getItem(item.id);
+                        html += view.getItemHTML(i, storage);
+                    }
                 }
             }
         }
