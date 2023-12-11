@@ -200,7 +200,7 @@ SIM.PROFILES = {
                 for  (let item of storage.gear[type]) {
                     if (item.selected) {
                         let i = view.getItem(item.id);
-                        html += view.getItemHTML(i, storage);
+                        if (i) html += view.getItemHTML(i, storage);
                     }
                 }
             }
