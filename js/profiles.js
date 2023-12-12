@@ -29,9 +29,9 @@ SIM.PROFILES = {
             view.body.addClass('sidebar-mobile-open');
         });
 
-        view.container.on('click','.profile ul', function (e) {
+        view.container.on('click','.profile', function (e) {
             e.preventDefault();
-            let p = $(this).parents('.profile');
+            let p = $(this);
             view.loadProfile(p);
             view.close.click();
         });
