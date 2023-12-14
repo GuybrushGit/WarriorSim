@@ -14,6 +14,9 @@ class Player {
                 defense: parseInt($('input[name="targetlevel"]').val()) * 5,
                 mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
                 binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60)))),
+                speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,
+                mindmg: parseInt($('input[name="targetmindmg"]').val()),
+                maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
             },
         };
     }

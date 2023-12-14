@@ -263,6 +263,16 @@ class Simulation {
                 if (player.auras.consumedrage && player.rage > 80)
                     player.auras.consumedrage.use();
             }
+            if (player.target.speed && step % player.target.speed == 0) {
+                let oldRage = player.rage;
+                let dmg = rng(player.target.mindmg, player.target.maxdmg);
+                let gained = dmg / player.rageconversion * 2.5;
+                player.rage = Math.min(player.rage + gained, 100);
+                spellcheck = true;
+                if (player.auras.consumedrage && player.rage > 80 && oldRage <= 80)
+                    player.auras.consumedrage.use();
+                /* start-log */ if (log) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
+            }
 
             // Attacks
             if (player.mh.timer <= 0) {
@@ -436,6 +446,7 @@ class Simulation {
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
 
             // Auras with periodic ticks
+            if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
             if (player.vaelbuff && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
             if (player.auras.bloodrage && player.auras.bloodrage.timer && (1000 - ((step - player.auras.bloodrage.starttimer) % 1000)) < next)

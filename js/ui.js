@@ -794,6 +794,9 @@ SIM.UI = {
         obj.targetlevel = view.fight.find('input[name="targetlevel"]').val();
         obj.targetarmor = view.fight.find('input[name="targetarmor"]').val();
         obj.targetresistance = view.fight.find('input[name="targetresistance"]').val();
+        obj.targetspeed = view.fight.find('input[name="targetspeed"]').val();
+        obj.targetmindmg = view.fight.find('input[name="targetmindmg"]').val();
+        obj.targetmaxdmg = view.fight.find('input[name="targetmaxdmg"]').val();
         obj.adjacent = view.fight.find('input[name="adjacent"]').val();
         obj.aqbooks = view.fight.find('select[name="aqbooks"]').val();
         obj.reactionmin = view.fight.find('input[name="reactionmin"]').val();
