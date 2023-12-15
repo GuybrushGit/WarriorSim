@@ -68147,6 +68147,22 @@ var gear = {
       "sta": 11
     },
     {
+      "id": 209577,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Fist of the Wild",
+      "speed": 2.8,
+      "mindmg": 55,
+      "maxdmg": 83,
+      "agi": 6,
+      "str": 6,
+      "sta": 6,
+      "ap": 0
+    },
+    {
       "id": 211443,
       "type": "Sword",
       "slot": "twohand",
