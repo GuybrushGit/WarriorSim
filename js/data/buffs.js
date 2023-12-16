@@ -518,6 +518,16 @@ var buffs = [
       wfapperc: 20,
       sod: true,
    },
+   {
+      id: 407995,
+      spellid: true,
+      name: "Mangle",
+      iconname: "ability_druid_mangle2",
+      bleedmod: 1.3,
+      sod: true,
+   },
+
+   
 
    // Consumes
    {

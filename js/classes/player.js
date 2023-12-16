@@ -419,6 +419,8 @@ class Player {
                     this.gladstance = true;
                 if (buff.id == 71)
                     this.defstance = true;
+                if (buff.bleedmod)
+                    this.bleedmod = buff.bleedmod;
 
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;

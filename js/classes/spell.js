@@ -524,9 +524,9 @@ class DeepWounds extends Aura {
             let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
-            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds;
-            this.idmg += ~~(dmg / 4);
-            this.totaldmg += ~~(dmg / 4);
+            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1);
+            this.idmg += dmg / 4;
+            this.totaldmg += dmg / 4;
 
             if (this.player.bleedrage) {
                 let oldRage = this.player.rage;
@@ -536,7 +536,7 @@ class DeepWounds extends Aura {
                     this.player.auras.consumedrage.use();
             }
 
-            /* start-log */ if (log) this.player.log(`${this.name} tick for ${~~(dmg / 4)}`); /* end-log */
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${(dmg / 4).toFixed(2)}`); /* end-log */
 
             this.nexttick += 3000;
         }
@@ -1327,9 +1327,9 @@ class Rend extends Aura {
     }
     step() {
         while (step >= this.nexttick && this.stacks) {
-            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod;
-            this.idmg += ~~(dmg / this.value2);
-            this.totaldmg += ~~(dmg / this.value2);
+            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod * (this.player.bleedmod || 1);
+            this.idmg += dmg / this.value2;
+            this.totaldmg +=dmg / this.value2;
 
             if (this.player.bleedrage) {
                 let oldRage = this.player.rage;
@@ -1339,7 +1339,7 @@ class Rend extends Aura {
                     this.player.auras.consumedrage.use();
             }
 
-            /* start-log */ if (log) this.player.log(`${this.name} tick for ${~~(dmg / this.value2)}`); /* end-log */
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${(dmg / this.value2).toFixed(2)}`); /* end-log */
 
             this.nexttick += 3000;
             this.stacks--;
@@ -1424,7 +1424,7 @@ class WeaponBleed extends Aura {
         this.duration = parseInt(duration) / 1000;
         this.interval = parseInt(interval);
         this.ticks = duration / interval;
-        this.dmg = parseInt(dmg);
+        this.dmg = parseInt(dmg) * (this.player.bleedmod || 1);
         this.idmg = 0;
         this.totaldmg = 0;
         this.lasttick = 0;
