@@ -523,13 +523,15 @@ class DeepWounds extends Aura {
     tickdmg() {
         let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
         let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
-        return (min + max) / 2;
+        let dmg = (min + max) / 2;
+        dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1); 
+        return dmg;
     }
     step() {
         while (step >= this.nexttick) {
             let dmg = this.saveddmg / this.ticksleft;
             this.saveddmg -= dmg;
-            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1);
+            dmg *= this.player.mh.modifier * this.player.stats.dmgmod;
             this.idmg += dmg;
             this.totaldmg += dmg;
             this.ticksleft--;
