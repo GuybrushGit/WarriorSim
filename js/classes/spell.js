@@ -517,7 +517,59 @@ class DeepWounds extends Aura {
         this.duration = 12;
         this.idmg = 0;
         this.totaldmg = 0;
-        this.lasttick = 0;
+        this.saveddmg = 0;
+        this.ticksleft = 0;
+    }
+    tickdmg() {
+        let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+        let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+        return (min + max) / 2;
+    }
+    step() {
+        while (step >= this.nexttick) {
+            let dmg = this.saveddmg / this.ticksleft;
+            this.saveddmg -= dmg;
+            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1);
+            this.idmg += dmg;
+            this.totaldmg += dmg;
+            this.ticksleft--;
+
+            if (this.player.bleedrage) {
+                let oldRage = this.player.rage;
+                this.player.rage += this.player.bleedrage;
+                if (this.player.rage > 100) this.player.rage = 100;
+                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                    this.player.auras.consumedrage.use();
+            }
+
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${dmg.toFixed(2)}`); /* end-log */
+
+            this.nexttick += 3000;
+        }
+
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+        }
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.ticksleft = 4;
+        this.saveddmg += this.tickdmg();
+        this.nexttick = step + 3000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
+class OldDeepWounds extends Aura {
+    constructor(player, id, adjacent) {
+        super(player, id, 'Deep Wounds' + (adjacent ? ' ' + adjacent : ''));
+        this.duration = 12;
+        this.idmg = 0;
+        this.totaldmg = 0;
     }
     step() {
         while (step >= this.nexttick) {
@@ -1321,7 +1373,6 @@ class Rend extends Aura {
         this.cost = 10;
         this.idmg = 0;
         this.totaldmg = 0;
-        this.lasttick = 0;
         this.uses = 0;
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
     }
@@ -1427,7 +1478,6 @@ class WeaponBleed extends Aura {
         this.dmg = parseInt(dmg) * (this.player.bleedmod || 1);
         this.idmg = 0;
         this.totaldmg = 0;
-        this.lasttick = 0;
     }
     step() {
         while (step >= this.nexttick) {
