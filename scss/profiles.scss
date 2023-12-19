@@ -42,7 +42,7 @@
         position: relative;
         width: 260px;
         min-width: 260px;
-        height: 630px;
+        height: 650px;
         border-radius: 10px;
         border: 1px solid #525252;
         padding: 16px;
@@ -128,7 +128,7 @@
     .add-profile, .import-profile {
         width: 260px;
         min-width: 260px;
-        height: 288px;
+        height: 298px;
         border-radius: 10px;
         border: 1px solid #525252;
         padding: 16px;
@@ -175,6 +175,24 @@
         svg {
             width: 24px;
             height: 24px;
+        }
+    }
+
+    .import-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .import-th, .import-dw {
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+        border: 1px solid #525252;
+        transition: all 0.2s ease-in;
+        &:hover {
+            border-color: white;
         }
     }
 

@@ -47,6 +47,20 @@ SIM.PROFILES = {
             view.textarea.focus();
         });
 
+        view.container.on('click','.import-th', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_th, index);
+        });
+
+        view.container.on('click','.import-dw', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_dw, index);
+        });
+
         view.container.on('click','.delete-profile', function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -177,7 +191,12 @@ SIM.PROFILES = {
 
         view.container.append(`<div>
             <div class="add-profile">${svgAdd}<p>Add Profile</p></div>
-            <div class="import-profile">${svgImport}<p>Import Profile</p></div>
+            <div class="import-profile">${svgImport}<p>Import Profile</p>
+            <div class="import-container">
+                <div class="import-th">2H BiS</div>
+                <div class="import-dw">DW BiS</div>
+            </div>
+            </div>
             </div>`);
     },
 
