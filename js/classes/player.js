@@ -115,8 +115,8 @@ class Player {
         this.addSpells();
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
-        if (this.talents.deepwounds) this.auras.deepwounds = new DeepWounds(this);
-        if (this.adjacent && this.talents.deepwounds) {
+        if (this.talents.deepwounds && globalThis.mode == "sod") this.auras.deepwounds = new DeepWounds(this);
+        if (this.adjacent && this.talents.deepwounds && globalThis.mode == "sod") {
             for (let i = 2; i <= (this.adjacent + 1); i++)
                 this.auras['deepwounds' + i] = new DeepWounds(this, null, i);
         }
