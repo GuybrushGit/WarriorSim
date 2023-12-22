@@ -254,13 +254,13 @@ class Simulation {
             if (next != 0 && step % 3000 == 0 && player.talents.angermanagement) {
                 player.rage = player.rage >= 99 ? 100 : player.rage + 1;
                 spellcheck = true;
-                if (player.auras.consumedrage && player.rage > 80 && player.rage <= 81)
+                if (player.auras.consumedrage && player.rage >= 80 && player.rage < 81)
                     player.auras.consumedrage.use();
             }
             if (player.vaelbuff && next != 0 && step % 1000 == 0) {
                 player.rage = player.rage >= 80 ? 100 : player.rage + 20;
                 spellcheck = true;
-                if (player.auras.consumedrage && player.rage > 80)
+                if (player.auras.consumedrage && player.rage >= 80)
                     player.auras.consumedrage.use();
             }
             if (player.target.speed && step % player.target.speed == 0) {
@@ -269,7 +269,7 @@ class Simulation {
                 let gained = dmg / player.rageconversion * 2.5;
                 player.rage = Math.min(player.rage + gained, 100);
                 spellcheck = true;
-                if (player.auras.consumedrage && player.rage > 80 && oldRage <= 80)
+                if (player.auras.consumedrage && player.rage >= 80 && oldRage < 80)
                     player.auras.consumedrage.use();
                 /* start-log */ if (log) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
             }

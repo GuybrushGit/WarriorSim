@@ -185,7 +185,7 @@ class Bloodrage extends Spell {
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.bloodrage.use();
         this.player.auras.flagellation && this.player.auras.flagellation.use();
-        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
             this.player.auras.consumedrage.use();
     }
     canUse() {
@@ -362,7 +362,7 @@ class BerserkerRage extends Spell {
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.berserkerrage.use();
         this.player.auras.flagellation && this.player.auras.flagellation.use();
-        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
             this.player.auras.consumedrage.use();
     }
     canUse() {
@@ -399,7 +399,7 @@ class RagePotion extends Spell {
         this.timer = this.cooldown * 1000;
         let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + ~~rng(this.value1, this.value2), 100);
-        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
             this.player.auras.consumedrage.use();
     }
     canUse() {
@@ -540,7 +540,7 @@ class DeepWounds extends Aura {
                 let oldRage = this.player.rage;
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
                     this.player.auras.consumedrage.use();
             }
 
@@ -586,7 +586,7 @@ class OldDeepWounds extends Aura {
                 let oldRage = this.player.rage;
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
                     this.player.auras.consumedrage.use();
             }
 
@@ -739,7 +739,7 @@ class MightyRagePotion extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateStrength();
-        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
             this.player.auras.consumedrage.use();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
@@ -1228,7 +1228,7 @@ class BloodrageAura extends Aura {
     step() {
         if ((step - this.starttimer) % 1000 == 0) {
             this.player.rage = Math.min(this.player.rage + 1, 100);
-            if (this.player.auras.consumedrage && this.player.rage > 80 && this.player.rage <= 81)
+            if (this.player.auras.consumedrage && this.player.rage >= 80 && this.player.rage < 81)
                 this.player.auras.consumedrage.use();
             /* start-log */ if (log) this.player.log(`${this.name} tick`); /* end-log */
         }
@@ -1388,7 +1388,7 @@ class Rend extends Aura {
                 let oldRage = this.player.rage;
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
                     this.player.auras.consumedrage.use();
             }
 
@@ -1490,7 +1490,7 @@ class WeaponBleed extends Aura {
                 let oldRage = this.player.rage;
                 this.player.rage += this.player.bleedrage;
                 if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 80)
                     this.player.auras.consumedrage.use();
             }
 

@@ -691,7 +691,7 @@ class Player {
         }
         if (this.rage > 100) this.rage = 100;
 
-        if (this.auras.consumedrage && oldRage <= 80 && this.rage > 80)
+        if (this.auras.consumedrage && oldRage < 80 && this.rage >= 80)
             this.auras.consumedrage.use();
     }
     steptimer(a) {
