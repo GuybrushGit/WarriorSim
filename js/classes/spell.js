@@ -185,7 +185,7 @@ class Bloodrage extends Spell {
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.bloodrage.use();
         this.player.auras.flagellation && this.player.auras.flagellation.use();
-        if (this.player.auras.consumedrage && oldRage <= 80 && this.player.rage > 80)
+        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage => 80)
             this.player.auras.consumedrage.use();
     }
     canUse() {
