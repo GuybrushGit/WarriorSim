@@ -1412,6 +1412,7 @@ class Rend extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.nexttick = step + 3000;
         this.timer = step + this.duration * 1000;
+        this.player.timer = 1500;
         this.starttimer = step;
         this.stacks = this.value2;
         this.player.rage -= this.cost;
