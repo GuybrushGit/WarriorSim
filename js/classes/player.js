@@ -115,10 +115,10 @@ class Player {
         this.addSpells();
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
-        if (this.talents.deepwounds && globalThis.runes) this.auras.deepwounds = new DeepWounds(this);
-        if (this.adjacent && this.talents.deepwounds && globalThis.runes) {
+        if (this.talents.deepwounds) this.auras.deepwounds = globalThis.runes ? new DeepWounds(this) : new OldDeepWounds(this);
+        if (this.adjacent && this.talents.deepwounds) {
             for (let i = 2; i <= (this.adjacent + 1); i++)
-                this.auras['deepwounds' + i] = new DeepWounds(this, null, i);
+                this.auras['deepwounds' + i] = globalThis.runes ? new DeepWounds(this, null, i) : new OldDeepWounds(this, null, i);
         }
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
