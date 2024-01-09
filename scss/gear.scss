@@ -273,6 +273,8 @@ section.main {
     .filters {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
         label {
             display: flex;
             align-items: center;
