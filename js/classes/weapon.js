@@ -52,7 +52,7 @@ class Weapon {
                 else this.proc1.physdmg = (item.proc.dmg || 0) + (item.proc.tick * ticks);
             }
             // bleeds need aura
-            if (item.proc.tick && item.proc.bleed) {
+            if (item.proc.tick && item.proc.bleed && !player.target.bleedimmune) {
                 player.auras["weaponbleed" + (this.offhand ? 'oh' : 'mh')] = new WeaponBleed(player, 0, item.proc.duration, item.proc.interval, item.proc.tick, this.offhand);
                 this.proc1.spell = player.auras["weaponbleed" + (this.offhand ? 'oh' : 'mh')];
             }

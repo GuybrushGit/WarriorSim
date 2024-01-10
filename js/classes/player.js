@@ -17,6 +17,7 @@ class Player {
                 speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,
                 mindmg: parseInt($('input[name="targetmindmg"]').val()),
                 maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
+                bleedimmune: $('select[name="bleedimmune"]').val() == "Yes",
             },
         };
     }
@@ -115,8 +116,8 @@ class Player {
         this.addSpells();
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
-        if (this.talents.deepwounds) this.auras.deepwounds = globalThis.runes ? new DeepWounds(this) : new OldDeepWounds(this);
-        if (this.adjacent && this.talents.deepwounds) {
+        if (this.talents.deepwounds && !this.target.bleedimmune) this.auras.deepwounds = globalThis.runes ? new DeepWounds(this) : new OldDeepWounds(this);
+        if (this.adjacent && this.talents.deepwounds && !this.target.bleedimmune) {
             for (let i = 2; i <= (this.adjacent + 1); i++)
                 this.auras['deepwounds' + i] = globalThis.runes ? new DeepWounds(this, null, i) : new OldDeepWounds(this, null, i);
         }
@@ -440,6 +441,7 @@ class Player {
         for (let spell of spells) {
             if (spell.active) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
+                if (spell.name == "Rend" && this.target.bleedimmune) continue;
                 if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
             }

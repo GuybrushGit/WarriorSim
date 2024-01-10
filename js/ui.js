@@ -283,6 +283,8 @@ SIM.UI = {
         });
 
         view.tcontainer.on('click', '.filters label', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
             $(this).toggleClass('active');
             globalThis[$(this).attr('id')] = $(this).hasClass('active');
             view.updateSession();
@@ -807,6 +809,8 @@ SIM.UI = {
         obj.filter_tiger = view.main.find('#filter_tiger').hasClass('active');
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
+        obj.bleedimmune = view.fight.find('select[name="bleedimmune"]').val();
+        
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};
         view.buffs.find('.active').each(function () { _buffs.push($(this).attr('data-id')); });
