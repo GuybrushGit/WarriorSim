@@ -407,6 +407,29 @@ class RagePotion extends Spell {
     }
 }
 
+class Slam extends Spell {
+    constructor(player, id) {
+        super(player, id);
+        this.cost = 15;
+        this.casttime = 1500 - (player.talents.impslam * 100);
+        this.mhthreshold = player.mh.speed * 1000 - 1000;
+    }
+    dmg() {
+        let dmg;
+        dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+    }
+    use() {
+        this.player.rage -= this.cost;
+        this.player.mh.use();
+        if (this.player.oh) this.player.oh.use();
+        /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && this.player.rage >= this.minrage;
+    }
+}
+
 /**************************************************** AURAS ****************************************************/
 
 class Aura {
