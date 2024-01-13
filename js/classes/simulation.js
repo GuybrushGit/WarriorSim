@@ -462,7 +462,7 @@ class Simulation {
             }
 
             // Determine when next step should happen
-            if (!player.mh.timer || (!player.spelldelay && spellcheck) || (!player.heroicdelay && spellcheck)) { next = 0; continue; }
+            if (!player.mh.timer || (!player.spelldelay && spellcheck && !slamstep) || (!player.heroicdelay && spellcheck && !slamstep)) { next = 0; continue; }
             next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
             if (!slamstep && player.spelldelay && (delayedspell.maxdelay - player.spelldelay) < next) next = delayedspell.maxdelay - player.spelldelay + 1;
             if (player.heroicdelay && (delayedheroic.maxdelay - player.heroicdelay) < next) next = delayedheroic.maxdelay - player.heroicdelay + 1;
