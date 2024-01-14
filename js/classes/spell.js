@@ -412,7 +412,7 @@ class Slam extends Spell {
         super(player, id);
         this.cost = 15;
         this.casttime = 1500 - (player.talents.impslam * 100);
-        this.mhthreshold = player.mh.speed * 1000 - 1000;
+        this.mhthreshold = player.mh.speed * 1000;
     }
     dmg() {
         let dmg;
@@ -426,7 +426,11 @@ class Slam extends Spell {
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && this.player.rage >= this.minrage;
+        return !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && 
+            ((!this.minrage && !this.maincd) ||
+            (this.minrage && this.player.rage >= this.minrage) ||
+            (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 
