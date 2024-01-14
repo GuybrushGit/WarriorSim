@@ -387,7 +387,7 @@ var talents = [
             ],
             c: 0,
             iconname: 'Ability_Warrior_SavageBlow',
-            enablename: 'Mortal Strike',
+            enable: 'Mortal Strike',
             aura: function (count) { return { mortalstrike: count } },
          }
       ]
