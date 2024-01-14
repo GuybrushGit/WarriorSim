@@ -426,7 +426,7 @@ class Slam extends Spell {
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && 
+        return !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && !this.player.auras.battlestance.timer &&
             ((!this.minrage && !this.maincd) ||
             (this.minrage && this.player.rage >= this.minrage) ||
             (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
