@@ -382,17 +382,20 @@ SIM.SETTINGS = {
 
     buildSpellDetails(spell, el) {
         const view = this;
+        let note = '';
         let details = view.rotation.find('.details');
         details.data('id',spell.id);
         details.empty();
         details.append(`<label>${spell.name}</label>`);
         let ul = $("<ul></ul>");
+
+        if (spell.name == "Slam") note = "Used after a swing reset";
         
         if (spell.haste !== undefined)
             ul.append(`<li class="nobox ${spell.haste ? 'active' : ''}">Attack speed set at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
 
         if (typeof spell.timetoend === 'undefined')
-            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled</li>`);
+            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled ${note ? ` - ${note}` : ''}</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id != 11597) 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">${spell.name == "Heroic Strike" ? 'Queue' : 'Use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id == 11597) 
