@@ -1099,11 +1099,11 @@ class Player {
         };
     }
     log(msg) {
-        let color = '\x1b[33m';
-        if (msg.indexOf('attack') > 1 || msg.indexOf('Global') > -1) color = '\x1b[90m';
-        else if (msg.indexOf('tick') > 1) color = '\x1b[31m';
-        else if (msg.indexOf(' for ') > -1) color = '\x1b[35m';
-        else if (msg.indexOf('applied') > 1 || msg.indexOf('removed') > -1) color = '\x1b[36m';
-        console.log(color+'%s\x1b[0m',`${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`);
+        let color = 'GoldenRod';
+        if (msg.indexOf('attack') > 1 || msg.indexOf('Global') > -1) color = 'Gray';
+        else if (msg.indexOf('tick') > 1) color = 'Tomato';
+        else if (msg.indexOf(' for ') > -1) color = 'DarkOrchid';
+        else if (msg.indexOf('applied') > 1 || msg.indexOf('removed') > -1) color = '#17A8B6';
+        console.log(`%c ${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`, `color: ${color}`);
     }
 }
