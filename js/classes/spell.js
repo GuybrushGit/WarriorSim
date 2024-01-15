@@ -226,7 +226,7 @@ class Cleave extends Spell {
     constructor(player, id) {
         super(player, id);
         this.cost = 20;
-        this.bonus = this.value1;
+        this.bonus = this.value1 * (1 + this.player.talents.cleavebonus / 100);
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
 
