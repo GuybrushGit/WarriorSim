@@ -48,6 +48,14 @@ var enchant = {
            "r": 50,
            "temp": true
         },
+        {
+         "id": 3824,
+         "name": "Shadow Oil",
+         "temp": true,
+         "r": 24,
+         "chance": 15,
+         "magicdmg": 56.5,
+       },
        {
           "id": 23800,
           "spellid": true,
@@ -169,6 +177,14 @@ var enchant = {
          "r": 50,
          "temp": true
       },
+      {
+         "id": 3824,
+         "name": "Shadow Oil",
+         "temp": true,
+         "r": 24,
+         "chance": 15,
+         "magicdmg": 56.5,
+       },
      {
         "id": 23800,
         "spellid": true,
@@ -297,6 +313,14 @@ var enchant = {
          "r": 50,
          "temp": true
       },
+      {
+         "id": 3824,
+         "name": "Shadow Oil",
+         "temp": true,
+         "r": 24,
+         "chance": 15,
+         "magicdmg": 56.5,
+       },
        {
           "id": 27837,
           "spellid": true,
