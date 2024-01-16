@@ -463,13 +463,18 @@ class Simulation {
             }
 
             // Determine when next step should happen
-            if (!player.mh.timer || (!player.spelldelay && spellcheck && !slamstep) || (!player.heroicdelay && spellcheck && !slamstep)) { next = 0; continue; }
-            next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
-            if (!slamstep && player.spelldelay && (delayedspell.maxdelay - player.spelldelay) < next) next = delayedspell.maxdelay - player.spelldelay + 1;
-            if (player.heroicdelay && (delayedheroic.maxdelay - player.heroicdelay) < next) next = delayedheroic.maxdelay - player.heroicdelay + 1;
+            if (!slamstep) {
+                if (!player.mh.timer || (!player.spelldelay && spellcheck) || (!player.heroicdelay && spellcheck)) { next = 0; continue; }
+                next = Math.min(player.mh.timer, player.oh ? player.oh.timer : 9999);
+                if (player.spelldelay && (delayedspell.maxdelay - player.spelldelay) < next) next = delayedspell.maxdelay - player.spelldelay + 1;
+                if (player.heroicdelay && (delayedheroic.maxdelay - player.heroicdelay) < next) next = delayedheroic.maxdelay - player.heroicdelay + 1;
+            }
+            else {
+                next = slamstep - step;
+            }
+
             if (player.timer && player.timer < next) next = player.timer;
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
-            if (slamstep && (slamstep - step) < next) next = slamstep - step;
 
             // Auras with periodic ticks
             if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
