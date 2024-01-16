@@ -274,7 +274,7 @@ class Simulation {
                     player.auras.consumedrage.use();
                 /* start-log */ if (log) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
             }
-                
+
              // Don't do anything while casting slam
             if (!slamstep) {
 
@@ -443,15 +443,7 @@ class Simulation {
                     }
                 }
 
-                // Extra attacks
-                if (player.extraattacks > 0) {
-                    player.mh.timer = 0;
-                    player.extraattacks--;
-                }
-                if (player.batchedextras > 0) {
-                    player.mh.timer = batching - (step % batching);
-                    player.batchedextras--;
-                }
+                
             }
 
             // Slam casting done
@@ -460,6 +452,16 @@ class Simulation {
                 this.idmg += done;
                 spellcheck = true;
                 slamstep = 0;
+            }
+
+            // Extra attacks
+            if (player.extraattacks > 0) {
+                player.mh.timer = 0;
+                player.extraattacks--;
+            }
+            if (player.batchedextras > 0) {
+                player.mh.timer = batching - (step % batching);
+                player.batchedextras--;
             }
 
             // Determine when next step should happen
