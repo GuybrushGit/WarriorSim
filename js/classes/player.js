@@ -471,6 +471,8 @@ class Player {
             this.auras[s].timer = 0;
             this.auras[s].firstuse = true;
             this.auras[s].stacks = 0;
+            if (this.auras[s].ticksleft) this.auras[s].ticksleft = 0;
+            if (this.auras[s].saveddmg) this.auras[s].saveddmg = 0;
         }
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
