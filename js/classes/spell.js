@@ -194,7 +194,7 @@ class Bloodrage extends Spell {
     }
     canUse() {
         return this.timer == 0 && 
-            (!this.flagellation || !this.player.auras.bloodrage || !this.player.auras.bloodrage.timer) &&
+            (!this.flagellation || !this.player.auras.flagellation || !this.player.auras.flagellation.timer) &&
             (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
     }
 }
@@ -376,7 +376,7 @@ class BerserkerRage extends Spell {
     }
     canUse() {
         return this.timer == 0 && !this.player.timer &&
-            (!this.flagellation || !this.player.auras.bloodrage || !this.player.auras.bloodrage.timer) &&
+            (!this.flagellation || !this.player.auras.flagellation || !this.player.auras.flagellation.timer) &&
             (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
     }
 }

@@ -419,7 +419,7 @@ SIM.SETTINGS = {
         if (spell.rageblock !== undefined)
             ul.append(`<li data-id="rageblockactive" class="${spell.rageblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="rageblock" value="${spell.rageblock}" data-numberonly="true" /> rage</li>`);
         if (spell.flagellation !== undefined)
-            ul.append(`<li data-id="flagellation" class="${spell.flagellation ? 'active' : ''}">Don't use when ${spell.id == 18499 ? "Bloodrage" : "Berserker Rage"} is up</li>`);
+            ul.append(`<li data-id="flagellation" class="${spell.flagellation ? 'active' : ''}">Don't use when Flagellation is up</li>`);
         if (spell.consumedrage !== undefined)
             ul.append(`<li data-id="consumedrage" class="${spell.consumedrage ? 'active' : ''}">Use only when Consumed by Rage procs</li>`);
         if (spell.execute !== undefined)
