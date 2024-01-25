@@ -4907,17 +4907,6 @@ var gear = {
       "rand": 6
     },
     {
-      "id": 6747,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 25,
-      "q": "2",
-      "i": "40",
-      "name": "Enforcer Pauldrons",
-      "str": 8,
-      "sta": 8
-    },
-    {
       "id": 6792,
       "type": "Mail",
       "slot": "shoulder",
