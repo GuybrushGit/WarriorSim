@@ -480,6 +480,7 @@ class Aura {
         if (spell.echargeblockactive) this.echargeblock = parseInt(spell.echargeblock);
         if (spell.wfap) this.wfap = parseInt(spell.wfap);
         if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
+        if (spell.stoptimeactive) this.stoptime = parseInt(spell.stoptime);
 
     }
     use() {
@@ -570,6 +571,7 @@ class DeepWounds extends Aura {
     }
     step() {
         while (step >= this.nexttick) {
+            this.player.stepauras(true);
             let dmg = this.saveddmg / this.ticksleft;
             this.saveddmg -= dmg;
             dmg *= this.player.mh.modifier * this.player.stats.dmgmod;

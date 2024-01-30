@@ -228,6 +228,7 @@ class Simulation {
         let canSpellQueue = false;
         let next = 0;
         let slamstep = 0;
+        let stopstep = 0;
 
         // determine when to use item auras
         let itemdelay = 1000;
@@ -248,6 +249,8 @@ class Simulation {
         if (player.auras.berserking) { player.auras.berserking.usestep = Math.max(this.maxsteps - player.auras.berserking.timetoend, 0); }
         if (player.auras.bloodfury) { player.auras.bloodfury.usestep = Math.max(this.maxsteps - player.auras.bloodfury.timetoend, 0); }
         if (player.auras.swarmguard) { player.auras.swarmguard.usestep = Math.max(this.maxsteps - player.auras.swarmguard.timetoend, 0); }
+
+        if (player.auras.recklessness && player.auras.recklessness.stoptime) stopstep = this.maxsteps - (player.auras.recklessness.stoptime * 1000);
 
         while (step < this.maxsteps) {
 
@@ -273,6 +276,13 @@ class Simulation {
                 if (player.auras.consumedrage && player.rage >= 80 && oldRage < 80)
                     player.auras.consumedrage.use();
                 /* start-log */ if (log) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
+            }
+
+            // Stop everything
+            if (stopstep && step > stopstep) {
+                player.timer = 20000;
+                player.mh.timer = 20000;
+                player.oh.timer = 20000;
             }
 
              // Don't do anything while casting slam
@@ -529,6 +539,7 @@ class Simulation {
             }
 
             step += next;
+            if (step > this.maxsteps) break;
             player.mh.step(next);
             if (player.oh) player.oh.step(next);
 

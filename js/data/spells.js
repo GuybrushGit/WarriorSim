@@ -615,6 +615,8 @@ var spells = [
     iconname: 'ability_criticalstrike',
     timetoend: 16,
     minlevel: 50,
+    stoptime: 5,
+    stoptimeactive: true,
     aura: true,
     active: true,
     buff: true,

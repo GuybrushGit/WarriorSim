@@ -305,6 +305,8 @@ SIM.PROFILES = {
                 if (typeof spell.exmacro !== 'undefined') obj.exmacro = spell.exmacro;
                 if (typeof spell.globals !== 'undefined') obj.globals = spell.globals;
                 if (typeof spell.globalsactive !== 'undefined') obj.globalsactive = spell.globalsactive;
+                if (typeof spell.stoptime !== 'undefined') obj.stoptime = spell.stoptime;
+                if (typeof spell.stoptimeactive !== 'undefined') obj.stoptimeactive = spell.stoptimeactive;
                 minified.rotation.push(obj);
             }
         }
@@ -374,6 +376,8 @@ SIM.PROFILES = {
                     if (typeof newspell.exmacro !== 'undefined') spell.exmacro = newspell.exmacro;
                     if (typeof newspell.globals !== 'undefined') spell.globals = newspell.globals;
                     if (typeof newspell.globalsactive !== 'undefined') spell.globalsactive = newspell.globalsactive;
+                    if (typeof newspell.stoptime !== 'undefined') spell.stoptime = newspell.stoptime;
+                    if (typeof newspell.stoptimeactive !== 'undefined') spell.stoptimeactive = newspell.stoptimeactive;
                 }
                 else {
                     spell.active = false;
