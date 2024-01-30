@@ -790,6 +790,16 @@ var buffs = [
       sod: true,
    },
    {
+      id: 438536,
+      spellid: true,
+      name: "Spark of Crazed Inspiration",
+      iconname: "achievement_boss_mekgineer_thermaplugg",
+      group: "",
+      haste: 20,
+      worldbuff: true,
+      sod: true,
+   },
+   {
       id: 427143,
       spellid: true,
       name: "Curse of Vulnerability",
