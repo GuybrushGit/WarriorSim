@@ -3464,6 +3464,50 @@ var gear = {
       "name": "Mask of Scorn",
       "str": 9,
       "sta": 7
+    },
+    {
+      "id": 215114,
+      "type": "Mail",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Glowing Hyperconductive Scale Coif",
+      "sta": 14,
+      "proc": {
+        "magic": true,
+        "dmg": 500
+      }
+    },
+    {
+      "id": 215166,
+      "type": "Leather",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Glowing Gneuro-Linked Cowl",
+      "agi": 14,
+      "str": 14,
+      "sta": 14,
+      "hit": 1,
+      "proc": {
+        "magic": true,
+        "dmg": 550
+      }
+    },
+    {
+      "id": 215382,
+      "type": "Mail",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Rad-Resistant Scale Hood",
+      "agi": 10,
+      "str": 11,
+      "sta": 11,
+      "hit": 1
     }
   ],
   "neck": [
@@ -4669,6 +4713,29 @@ var gear = {
       "name": "Glowing Fetish Amulet",
       "str": 6,
       "sta": 6
+    },
+    {
+      "id": 213343,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Justice Badge",
+      "str": 6,
+      "sta": 7
+    },
+    {
+      "id": 213344,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Gnomeregan Peace Officer's Torque",
+      "sta": 6,
+      "crit": 1,
+      "ap": 16
     }
   ],
   "shoulder": [
@@ -7570,6 +7637,49 @@ var gear = {
       "name": "Sentinel Pauldrons",
       "agi": 8,
       "sta": 10
+    },
+    {
+      "id": 213302,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Mantle of the Cunning Negotiator",
+      "agi": 14,
+      "sta": 11
+    },
+    {
+      "id": 213303,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Lightning Rod Spaulders",
+      "crit": 1
+    },
+    {
+      "id": 213304,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Troggslayer Pauldrons",
+      "str": 12,
+      "ap": 22
+    },
+    {
+      "id": 213305,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Machined Alloy Shoulderplates",
+      "str": 12,
+      "sta": 11
     }
   ],
   "back": [
@@ -9740,6 +9850,39 @@ var gear = {
       "agi": 4,
       "str": 4,
       "sta": 4
+    },
+    {
+      "id": 213307,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Drape of Dismantling",
+      "str": 6,
+      "sta": 4,
+      "hit": 1
+    },
+    {
+      "id": 213308,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Prototype Parachute Cloak",
+      "agi": 12,
+      "sta": 4
+    },
+    {
+      "id": 216621,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Blooddrenched Drape",
+      "crit": 1
     }
   ],
   "chest": [
@@ -13903,7 +14046,9 @@ var gear = {
       "sta": 18,
       "resist": {
         "fire": 10
-      }
+      },
+      "crit": 1,
+      "hit": 1
     },
     {
       "id": 211504,
@@ -13927,6 +14072,65 @@ var gear = {
       "name": "Twilight Slayer's Tunic",
       "agi": 13,
       "sta": 9
+    },
+    {
+      "id": 213312,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Insulated Apron",
+      "sta": 4,
+      "hit": 1
+    },
+    {
+      "id": 213313,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Insulated Chestguard",
+      "agi": 13,
+      "str": 17,
+      "sta": 10
+    },
+    {
+      "id": 213314,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Electromantic Chainmail",
+      "agi": 8,
+      "str": 4,
+      "sta": 7,
+      "crit": 1
+    },
+    {
+      "id": 213316,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "H.A.Z.A.R.D. Breastplate",
+      "agi": 11,
+      "str": 11,
+      "sta": 16
+    },
+    {
+      "id": 216485,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Shockforged Breastplate",
+      "sta": 3,
+      "crit": 1
     }
   ],
   "wrist": [
@@ -17391,6 +17595,49 @@ var gear = {
       "name": "Chittering Beetle Clasps",
       "agi": 4,
       "sta": 7
+    },
+    {
+      "id": 213317,
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Experimental Aim Stabilizers",
+      "agi": 7,
+      "ap": 22
+    },
+    {
+      "id": 213318,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Ornate Dark Iron Bangles",
+      "hit": 1
+    },
+    {
+      "id": 216701,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Sergeant Major's Plate Wristguards",
+      "str": 5,
+      "sta": 12
+    },
+    {
+      "id": 216705,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "First Sergeant's Plate Bracers",
+      "str": 5,
+      "sta": 12
     }
   ],
   "hands": [
@@ -22956,6 +23203,53 @@ var gear = {
       "name": "Void-Touched Leather Gauntlets",
       "sta": 5,
       "hit": 1
+    },
+    {
+      "id": 213288,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Grubbis Grubby Gauntlets",
+      "agi": 5,
+      "str": 9,
+      "crit": 1
+    },
+    {
+      "id": 213319,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Machinist's Gloves",
+      "agi": 6,
+      "str": 7,
+      "hit": 1
+    },
+    {
+      "id": 213320,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Fingers of Arcane Accuracy",
+      "agi": 6,
+      "sta": 7,
+      "hit": 1
+    },
+    {
+      "id": 213391,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "UNUSED Electrified Mithril Gauntlets",
+      "str": 16,
+      "sta": 7
     }
   ],
   "waist": [
@@ -27788,6 +28082,69 @@ var gear = {
       "name": "Hoist Strap",
       "str": 2,
       "sta": 2
+    },
+    {
+      "id": 213322,
+      "type": "Leather",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Skullduggery Waistband",
+      "agi": 4,
+      "str": 3,
+      "sta": 5,
+      "crit": 1,
+      "ap": 10
+    },
+    {
+      "id": 213324,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Electromagnetic Waistcord",
+      "sta": 5,
+      "hit": 1
+    },
+    {
+      "id": 213325,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Darkvision Girdle",
+      "agi": 4,
+      "str": 4,
+      "sta": 4,
+      "hit": 1,
+      "ap": 20
+    },
+    {
+      "id": 213326,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Girdle of Reclamation",
+      "str": 6,
+      "sta": 5,
+      "crit": 1
+    },
+    {
+      "id": 213327,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Belt of the Trogg Berserker",
+      "str": 9,
+      "sta": 5,
+      "crit": 1
     }
   ],
   "legs": [
@@ -32568,6 +32925,70 @@ var gear = {
       "agi": 7,
       "str": 10,
       "sta": 9
+    },
+    {
+      "id": 213299,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Petrolspill Pants",
+      "agi": 21,
+      "sta": 11,
+      "resist": {
+        "fire": -10
+      }
+    },
+    {
+      "id": 213330,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "H.A.Z.A.R.D. Legplates",
+      "str": 13,
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 213332,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Insulated Legguards",
+      "agi": 8,
+      "str": 13,
+      "sta": 14,
+      "hit": 1
+    },
+    {
+      "id": 213333,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Electromantic Chausses",
+      "agi": 10,
+      "str": 10,
+      "sta": 10,
+      "hit": 1
+    },
+    {
+      "id": 216676,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 0,
+      "q": "3",
+      "i": "45",
+      "name": "Nimble Triprunner Dungarees",
+      "agi": 21,
+      "str": 5,
+      "sta": 8
     }
   ],
   "feet": [
@@ -36291,6 +36712,64 @@ var gear = {
       "i": "17",
       "name": "Courier Treads",
       "agi": 4
+    },
+    {
+      "id": 213294,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Caverndeep Sabatons",
+      "agi": 9,
+      "str": 7,
+      "sta": 10
+    },
+    {
+      "id": 213335,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "H.A.Z.A.R.D. Boots",
+      "str": 13,
+      "sta": 12
+    },
+    {
+      "id": 213339,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Electromantic Grounding Sabatons",
+      "agi": 11,
+      "sta": 9
+    },
+    {
+      "id": 213340,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gnomebot Operators Boots",
+      "agi": 7,
+      "str": 9,
+      "sta": 9
+    },
+    {
+      "id": 213341,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Insulated Workboots",
+      "agi": 9,
+      "str": 8,
+      "sta": 8
     }
   ],
   "finger1": [
@@ -38153,6 +38632,21 @@ var gear = {
       "name": "Band of the Iron Fist",
       "agi": 7,
       "str": 4
+    },
+    {
+      "id": 213284,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Hypercharged Gear of Devastation",
+      "agi": 8,
+      "str": 7,
+      "sta": 10,
+      "resist": {
+        "nature": 5
+      }
     }
   ],
   "finger2": [
@@ -40015,6 +40509,21 @@ var gear = {
       "name": "Band of the Iron Fist",
       "agi": 7,
       "str": 4
+    },
+    {
+      "id": 213284,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Hypercharged Gear of Devastation",
+      "agi": 8,
+      "str": 7,
+      "sta": 10,
+      "resist": {
+        "nature": 5
+      }
     }
   ],
   "trinket1": [
@@ -40229,6 +40738,37 @@ var gear = {
         "shadow": 10
       },
       "ap": 18
+    },
+    {
+      "id": 213347,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Miniaturized Combustion Chamber",
+      "resist": {
+        "fire": 10
+      },
+      "proc": {
+        "magic": true,
+        "tick": 1,
+        "interval": "1000",
+        "duration": "10000"
+      }
+    },
+    {
+      "id": 213348,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gyromatic Experiment 420b",
+      "resist": {
+        "frost": 10
+      },
+      "ap": 18
     }
   ],
   "trinket2": [
@@ -40441,6 +40981,37 @@ var gear = {
       "name": "Avenger's Void Pearl",
       "resist": {
         "shadow": 10
+      },
+      "ap": 18
+    },
+    {
+      "id": 213347,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Miniaturized Combustion Chamber",
+      "resist": {
+        "fire": 10
+      },
+      "proc": {
+        "magic": true,
+        "tick": 1,
+        "interval": "1000",
+        "duration": "10000"
+      }
+    },
+    {
+      "id": 213348,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gyromatic Experiment 420b",
+      "resist": {
+        "frost": 10
       },
       "ap": 18
     }
@@ -41518,6 +42089,19 @@ var gear = {
       "mindmg": 29,
       "maxdmg": 55,
       "agi": 6
+    },
+    {
+      "id": 213355,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Falco's Sting",
+      "speed": 2,
+      "mindmg": 33,
+      "maxdmg": 62,
+      "agi": 8
     }
   ],
   "mainhand": [
@@ -51121,6 +51705,188 @@ var gear = {
       "maxdmg": 43,
       "agi": 6,
       "sta": 3
+    },
+    {
+      "id": 213105,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Shawarmageddon",
+      "speed": 2.6,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "proc": {
+        "magic": true,
+        "dmg": 8
+      }
+    },
+    {
+      "id": 213286,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Electrocutioner's Needle",
+      "speed": 1.7,
+      "mindmg": 41,
+      "maxdmg": 75,
+      "proc": {
+        "magic": true,
+        "dmg": 30
+      }
+    },
+    {
+      "id": 213291,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Toxic Revenger II",
+      "speed": 1.9,
+      "mindmg": 41,
+      "maxdmg": 75,
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "tick": 31,
+        "interval": "5000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 213295,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Ultrasonic Vibroblade",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63
+    },
+    {
+      "id": 213297,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Oscillating Blasthammer",
+      "speed": 2,
+      "mindmg": 43,
+      "maxdmg": 79,
+      "str": 5,
+      "sta": 7
+    },
+    {
+      "id": 213352,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gear-Mender's Grace",
+      "speed": 2.5,
+      "mindmg": 53,
+      "maxdmg": 99
+    },
+    {
+      "id": 213409,
+      "type": "Fist",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Mekkatorque's Arcano-Shredder",
+      "speed": 2.6,
+      "mindmg": 62,
+      "maxdmg": 115,
+      "agi": 3,
+      "str": 2,
+      "proc": {
+        "magic": true,
+        "dmg": 41
+      }
+    },
+    {
+      "id": 213410,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Glimmering Gizmoblade",
+      "speed": 1.2,
+      "mindmg": 26,
+      "maxdmg": 47,
+      "sta": 7
+    },
+    {
+      "id": 213560,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Mechanostrider Muffler",
+      "speed": 2.4,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "sta": 7,
+      "ap": 16
+    },
+    {
+      "id": 215235,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "2hander Animation as 1hander test copy",
+      "speed": 2.6,
+      "mindmg": 102,
+      "maxdmg": 153,
+      "agi": 9,
+      "str": 22
+    },
+    {
+      "id": 216496,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "4",
+      "i": "40",
+      "name": "Sanguine Skullcrusher",
+      "speed": 2.3,
+      "mindmg": 50,
+      "maxdmg": 93,
+      "agi": 6,
+      "str": 10
+    },
+    {
+      "id": 216497,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 40,
+      "q": "4",
+      "i": "40",
+      "name": "Exsanguinar",
+      "speed": 2,
+      "mindmg": 44,
+      "maxdmg": 81,
+      "sta": 6,
+      "proc": {
+        "tick": 6,
+        "interval": "2000",
+        "duration": "30000",
+        "bleed": true,
+        "dmg": 66
+      }
     }
   ],
   "offhand": [
@@ -60612,6 +61378,147 @@ var gear = {
       "maxdmg": 43,
       "agi": 6,
       "sta": 3
+    },
+    {
+      "id": 213105,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Shawarmageddon",
+      "speed": 2.6,
+      "mindmg": 49,
+      "maxdmg": 91,
+      "proc": {
+        "magic": true,
+        "dmg": 8
+      }
+    },
+    {
+      "id": 213291,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Toxic Revenger II",
+      "speed": 1.9,
+      "mindmg": 41,
+      "maxdmg": 75,
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "tick": 31,
+        "interval": "5000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 213295,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Ultrasonic Vibroblade",
+      "speed": 1.6,
+      "mindmg": 34,
+      "maxdmg": 63
+    },
+    {
+      "id": 213297,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Oscillating Blasthammer",
+      "speed": 2,
+      "mindmg": 43,
+      "maxdmg": 79,
+      "str": 5,
+      "sta": 7
+    },
+    {
+      "id": 213390,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Whirling Truesilver Gearwall",
+      "str": 9,
+      "sta": 10
+    },
+    {
+      "id": 213442,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Cogmaster's Claw",
+      "speed": 2.8,
+      "mindmg": 60,
+      "maxdmg": 111,
+      "agi": 6,
+      "str": 6,
+      "sta": 5
+    },
+    {
+      "id": 213560,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Mechanostrider Muffler",
+      "speed": 2.4,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "sta": 7,
+      "ap": 16
+    },
+    {
+      "id": 215235,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "2hander Animation as 1hander test copy",
+      "speed": 2.6,
+      "mindmg": 102,
+      "maxdmg": 153,
+      "agi": 9,
+      "str": 22
+    },
+    {
+      "id": 216496,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 40,
+      "q": "4",
+      "i": "40",
+      "name": "Sanguine Skullcrusher",
+      "speed": 2.3,
+      "mindmg": 50,
+      "maxdmg": 93,
+      "agi": 6,
+      "str": 10
+    },
+    {
+      "id": 216679,
+      "type": "Axe",
+      "slot": "offhand",
+      "r": 0,
+      "q": "3",
+      "i": "40",
+      "name": "Shoni's Dismantling Tool",
+      "speed": 1.9,
+      "mindmg": 37,
+      "maxdmg": 68
     }
   ],
   "twohand": [
@@ -68179,16 +69086,13 @@ var gear = {
       "id": 211940,
       "type": "Polearm",
       "slot": "twohand",
-      "r": 58,
+      "r": 59,
       "q": "3",
-      "i": "63",
+      "i": "64",
       "name": "Ecks'av's Tribal Guardian",
-      "speed": 3.5,
+      "speed": 3.7,
       "mindmg": 151,
-      "maxdmg": 227,
-      "proc": {
-        "dmg": 432
-      }
+      "maxdmg": 227
     },
     {
       "id": 211941,
@@ -68196,14 +69100,11 @@ var gear = {
       "slot": "twohand",
       "r": 58,
       "q": "3",
-      "i": "63",
+      "i": "66",
       "name": "Windwalker's Yari",
-      "speed": 3.5,
+      "speed": 3.6,
       "mindmg": 151,
-      "maxdmg": 227,
-      "proc": {
-        "dmg": 432
-      }
+      "maxdmg": 227
     },
     {
       "id": 211944,
@@ -68212,12 +69113,13 @@ var gear = {
       "r": 58,
       "q": "3",
       "i": "63",
-      "name": "Tojara's Will",
+      "name": "Tojara's Karma",
       "speed": 3.5,
       "mindmg": 151,
       "maxdmg": 227,
       "proc": {
-        "dmg": 432
+        "magic": true,
+        "dmg": 221
       }
     },
     {
@@ -68245,6 +69147,136 @@ var gear = {
       "mindmg": 57,
       "maxdmg": 87,
       "sta": 10
+    },
+    {
+      "id": 213289,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Hydrostaff",
+      "speed": 2.8,
+      "mindmg": 78,
+      "maxdmg": 117,
+      "resist": {
+        "frost": 23
+      }
+    },
+    {
+      "id": 213292,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gizmotron Gigachopper",
+      "speed": 3.2,
+      "mindmg": 102,
+      "maxdmg": 153,
+      "agi": 9,
+      "str": 22
+    },
+    {
+      "id": 213296,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Supercharged Headchopper",
+      "speed": 2.8,
+      "mindmg": 89,
+      "maxdmg": 133,
+      "str": 13,
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 90
+      }
+    },
+    {
+      "id": 213353,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Defibrillating Staff",
+      "speed": 3.3,
+      "mindmg": 117,
+      "maxdmg": 175,
+      "sta": 11
+    },
+    {
+      "id": 213354,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Staff of the Evil Genius",
+      "speed": 3.3,
+      "mindmg": 80,
+      "maxdmg": 121,
+      "sta": 4,
+      "hit": 1
+    },
+    {
+      "id": 213408,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Gyromatic Macro-Adjustor",
+      "speed": 3.2,
+      "mindmg": 101,
+      "maxdmg": 152,
+      "agi": 15,
+      "sta": 9
+    },
+    {
+      "id": 213416,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Thermaplugg's Rocket Cleaver",
+      "speed": 2.7,
+      "mindmg": 96,
+      "maxdmg": 143,
+      "str": 29,
+      "sta": 12
+    },
+    {
+      "id": 216495,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 40,
+      "q": "4",
+      "i": "40",
+      "name": "Sanguine Crusher",
+      "speed": 3.6,
+      "mindmg": 116,
+      "maxdmg": 175,
+      "str": 18,
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 217006,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 0,
+      "q": "3",
+      "i": "40",
+      "name": "Mechanic's Pipehammer",
+      "speed": 2.8,
+      "mindmg": 80,
+      "maxdmg": 112,
+      "sta": 21
     }
   ]
 };
