@@ -856,4 +856,30 @@ var enchant = {
          { count: 3, stats: { hit: 1 } }
       ]
    },
+   {
+      id: 1585,
+      name: 'Insulated Leathers',
+      items: [213313,213332,213341],
+      bonus: [
+         { count: 2, stats: { crit: 1 } },
+         { count: 3, stats: { skill_2: 5 } }
+      ]
+   },
+   {
+      id: 1590,
+      name: 'Electromantic Devastator\'s Mail',
+      items: [213314,213339,213333],
+      bonus: [
+         { count: 2, stats: { ap: 24 } }
+      ]
+   },
+   {
+      id: 1589,
+      name: 'H.A.Z.A.R.D. Suit',
+      items: [213316,213330,213335],
+      bonus: [
+         { count: 2, stats: { ap: 16 } },
+         { count: 3, stats: { hit: 16 } }
+      ]
+   },
 ];
