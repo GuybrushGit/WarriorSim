@@ -776,6 +776,7 @@ var buffs = [
       iconname: "spell_misc_warsongfocus",
       group: "",
       dmgmod: 5,
+      maxlevel: 39,
       worldbuff: true,
       sod: true,
    },

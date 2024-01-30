@@ -319,6 +319,8 @@ SIM.STATS = {
             if (!total) continue;
             let dps = (sim.player.spells[name].totaldmg / sim.totalduration).toFixed(2);
             let dpr = ((sim.player.spells[name].totaldmg / i) / (sim.player.spells[name].cost * (total / i))).toFixed(2);
+            if (name == "slam" && sim.player.spells[name].bloodsurge)
+                dpr = Infinity;
             if (name == "execute")
                 dpr = ((sim.player.spells[name].totaldmg / i) / ((sim.player.spells[name].cost * (total / i)) + (sim.player.spells[name].totalusedrage / i))).toFixed(2);
             html += `<tr><td>${n}</td><td>${(data[0] / total * 100).toFixed(2)}</td><td>${(data[3] / total * 100).toFixed(2)}</td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td>${(data[4] / total * 100).toFixed(2)}</td><td>${(total / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;

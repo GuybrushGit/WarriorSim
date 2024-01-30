@@ -616,7 +616,7 @@ var spells = [
     timetoend: 16,
     minlevel: 50,
     stoptime: 5,
-    stoptimeactive: true,
+    stoptimeactive: false,
     aura: true,
     active: true,
     buff: true,
@@ -713,6 +713,7 @@ var spells = [
     maxlevel: 37,
     maincd: 2,
     maincdactive: false,
+    bloodsurge: true,
     active: false,
 },
 {
@@ -727,6 +728,7 @@ var spells = [
     maxlevel: 45,
     maincd: 2,
     maincdactive: false,
+    bloodsurge: true,
     active: false,
 },
 {
@@ -741,6 +743,7 @@ var spells = [
     maxlevel: 53,
     maincd: 2,
     maincdactive: false,
+    bloodsurge: true,
     active: false,
 },
 {
@@ -754,6 +757,7 @@ var spells = [
     minlevel: 54,
     maincd: 2,
     maincdactive: false,
+    bloodsurge: true,
     active: false,
 },
 

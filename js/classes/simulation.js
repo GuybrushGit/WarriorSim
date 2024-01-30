@@ -352,6 +352,7 @@ class Simulation {
                     // Normal phase - no cost
                     else if (player.spells.ragingblow && player.spells.ragingblow.canUse(false)) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
                     else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
+                    else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
                     
                     // prevent using spells while waiting for consumed by rage proc
                     else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 80) { } 
@@ -402,6 +403,7 @@ class Simulation {
                         // Start casting slam
                         if (delayedspell instanceof Slam) {
                             slamstep = step + delayedspell.casttime;
+                            if (player.freeslam) slamstep = step;
                             player.timer = 1500;
                             player.heroicdelay = 0;
                             player.nextswinghs = false;

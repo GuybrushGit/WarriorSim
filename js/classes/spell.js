@@ -31,6 +31,7 @@ class Spell {
         if (spell.exmacro) this.exmacro = spell.exmacro;
         if (spell.execute) this.execute = spell.execute;
         if (spell.globalsactive) this.globals = spell.globals;
+        if (spell.bloodsurge) this.bloodsurge = spell.bloodsurge;
     }
     dmg() {
         return 0;
@@ -430,14 +431,16 @@ class Slam extends Spell {
         return dmg + (this.player.stats.ap / 14) * this.player.mh.speed;
     }
     use() {
-        this.player.rage -= this.cost;
+        if (!this.player.freeslam) this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.player.mh.use();
         if (this.player.oh) this.player.oh.use();
+        this.player.freeslam = false;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.player.timer && this.player.mh.timer > this.mhthreshold && this.cost <= this.player.rage && 
+        return !this.player.timer && this.player.mh.timer > this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
+            (!this.bloodsurge || this.player.freeslam) &&
             (!this.player.auras.battlestance || !this.player.auras.battlestance.timer) &&
             ((!this.minrage && !this.maincd) ||
             (this.minrage && this.player.rage >= this.minrage) ||

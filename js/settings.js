@@ -396,6 +396,8 @@ SIM.SETTINGS = {
 
         if (typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled ${note ? ` - ${note}` : ''}</li>`);
+        if (typeof spell.bloodsurge !== 'undefined') 
+            ul.append(`<li data-id="bloodsurge" class="${spell.bloodsurge ? 'active' : ''}">Use only when Blood Surge procs.</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id != 11597) 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">${spell.name == "Heroic Strike" ? 'Queue' : 'Use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id == 11597) 
@@ -572,7 +574,7 @@ SIM.SETTINGS = {
                     tree.append(td);
                 }
                 let tr = $('<tr>');
-                let tree_header = $(`<th colspawn="5">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
+                let tree_header = $(`<th style="text-align:left; padding-left: 4px;">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
                 tr.append(tree_header)
                 table.append(tr).append(tree);
                 tbody.append(table)

@@ -307,6 +307,7 @@ SIM.PROFILES = {
                 if (typeof spell.globalsactive !== 'undefined') obj.globalsactive = spell.globalsactive;
                 if (typeof spell.stoptime !== 'undefined') obj.stoptime = spell.stoptime;
                 if (typeof spell.stoptimeactive !== 'undefined') obj.stoptimeactive = spell.stoptimeactive;
+                if (typeof spell.bloodsurge !== 'undefined') obj.bloodsurge = spell.bloodsurge;
                 minified.rotation.push(obj);
             }
         }
@@ -378,6 +379,7 @@ SIM.PROFILES = {
                     if (typeof newspell.globalsactive !== 'undefined') spell.globalsactive = newspell.globalsactive;
                     if (typeof newspell.stoptime !== 'undefined') spell.stoptime = newspell.stoptime;
                     if (typeof newspell.stoptimeactive !== 'undefined') spell.stoptimeactive = newspell.stoptimeactive;
+                    if (typeof newspell.bloodsurge !== 'undefined') spell.bloodsurge = newspell.bloodsurge;
                 }
                 else {
                     spell.active = false;

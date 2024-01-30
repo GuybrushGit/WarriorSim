@@ -88,4 +88,21 @@ var runes = {
          enable: 429765,
      },
    ],
+   "waist": [
+        {
+            id: 999999,
+            name: 'Blood Surge',
+            description: "",
+            iconname: 'ability_warrior_bloodsurge',
+            bloodsurge: true,
+        },
+    ],
+    "feet": [
+        {
+            id: 999998,
+            name: 'Rallying Cry',
+            description: "",
+            iconname: 'ability_warrior_rallyingcry',
+        },
+    ],
 };

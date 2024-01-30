@@ -37,6 +37,7 @@ class Player {
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
+        this.freeslam = false;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
         this.reactionmin = config.reactionmin;
@@ -365,6 +366,10 @@ class Player {
                     if (item.devastate) {
                         this.devastate = item.devastate;
                     }
+                    // Blood Surge
+                    if (item.bloodsurge) {
+                        this.bloodsurge = item.bloodsurge;
+                    }
                 }
             }
         }
@@ -463,6 +468,7 @@ class Player {
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
+        this.freeslam = false;
         for (let s in this.spells) {
             this.spells[s].timer = 0;
             this.spells[s].stacks = 0;
@@ -1042,6 +1048,11 @@ class Player {
                 if (spell) this.extraattacks++;
                 else extras++;
                 /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
+            }
+            // Blood Surge
+            if (this.bloodsurge && (spell instanceof Whirlwind || spell instanceof Bloodthirst || spell instanceof HeroicStrike || spell instanceof QuickStrike) && rng10k() < 3000) {
+                this.freeslam = true;
+                /* start-log */ if (log) this.log(`Blood Surge proc`); /* end-log */
             }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;
