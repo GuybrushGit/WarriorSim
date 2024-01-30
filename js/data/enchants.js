@@ -879,7 +879,7 @@ var enchant = {
       items: [213316,213330,213335],
       bonus: [
          { count: 2, stats: { ap: 16 } },
-         { count: 3, stats: { hit: 16 } }
+         { count: 3, stats: { hit: 1 } }
       ]
    },
 ];
