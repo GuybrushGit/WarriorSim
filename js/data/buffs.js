@@ -581,7 +581,7 @@ var buffs = [
       iconname: "inv_potion_94",
       group: "elixir",
       agi: 25,
-      minlevel: 38,
+      minlevel: 41,
       consume: true,
    },
    {
@@ -631,12 +631,21 @@ var buffs = [
       consume: true,
    },
    {
+      id: 4426,
+      name: "Scroll of Strength III",
+      iconname: "inv_scroll_02",
+      group: "str",
+      str: 13,
+      minlevel: 40,
+      consume: true,
+   },
+   {
       id: 9206,
       name: "Elixir of Giants",
       iconname: "inv_potion_61",
       group: "str",
       str: 25,
-      minlevel: 38,
+      minlevel: 41,
       consume: true,
    },
    {
@@ -699,7 +708,7 @@ var buffs = [
       iconname: "inv_potion_28",
       group: "",
       bonusdmg: 8,
-      minlevel: 38,
+      minlevel: 41,
       other: true,
    },
    {

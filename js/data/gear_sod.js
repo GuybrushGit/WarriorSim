@@ -17414,7 +17414,7 @@ var gear = {
       "i": "42",
       "name": "Gloves of Holy Might",
       "crit": 1,
-      "ap": 50
+      "ap": 20
     },
     {
       "id": 888,
