@@ -683,7 +683,6 @@ class Cloudkeeper extends Aura {
         this.stats = { ap: 100 };
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -692,7 +691,7 @@ class Cloudkeeper extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && !this.player.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer;
     }
 }
 
@@ -1038,7 +1037,6 @@ class Pummeler extends Aura {
         this.name = 'Manual Crowd Pummeler';
     }
     use() {
-        this.player.timer = 1500;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1055,7 +1053,7 @@ class Pummeler extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
 }
 
@@ -1162,7 +1160,6 @@ class Slayer extends Aura {
         this.name = 'Slayer\'s Crest';
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1170,7 +1167,7 @@ class Slayer extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
 }
 
@@ -1182,7 +1179,6 @@ class Spider extends Aura {
         this.name = 'Kiss of the Spider';
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1190,7 +1186,7 @@ class Spider extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
 }
 
@@ -1201,7 +1197,6 @@ class Earthstrike extends Aura {
         this.stats = { ap: 280 };
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1209,7 +1204,7 @@ class Earthstrike extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
 }
 
@@ -1222,7 +1217,6 @@ class Gabbar extends Aura {
     }
     use() {
         this.stats.ap = 65;
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1230,7 +1224,7 @@ class Gabbar extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
     step() {
         if ((step - this.starttimer) % 2000 == 0) {
@@ -1292,7 +1286,6 @@ class Zandalarian extends Aura {
         this.stats = { bonusdmg: 40 };
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1310,7 +1303,7 @@ class Zandalarian extends Aura {
         //this.player.log(`${this.name} proc ${this.stats.bonusdmg} `);
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer;
     }
     step() {
         if (step >= this.timer) {
@@ -1505,7 +1498,6 @@ class VoidMadness extends Aura {
         this.mult_stats = { haste: 10 };
     }
     use() {
-        this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1513,7 +1505,7 @@ class VoidMadness extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && !this.player.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer;
     }
 }
 
