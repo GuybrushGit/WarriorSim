@@ -23226,7 +23226,8 @@ var gear = {
       "name": "Machinist's Gloves",
       "agi": 6,
       "str": 7,
-      "hit": 1
+      "hit": 1,
+      "ap": 30
     },
     {
       "id": 213320,
@@ -28145,6 +28146,16 @@ var gear = {
       "str": 9,
       "sta": 5,
       "crit": 1
+    },
+    {
+      "id": 215380,
+      "type": "Varied2H",
+      "slot": "waist",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Power-Assisted Lifting Belt",
+      "skill": 5
     }
   ],
   "legs": [
@@ -40528,6 +40539,20 @@ var gear = {
   ],
   "trinket1": [
     {
+      "id": 10577,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "q": "1",
+      "i": "41",
+      "name": "Goblin Mortar",
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 450
+      }
+    },
+    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -40740,24 +40765,6 @@ var gear = {
       "ap": 18
     },
     {
-      "id": 213347,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "Miniaturized Combustion Chamber",
-      "resist": {
-        "fire": 10
-      },
-      "proc": {
-        "magic": true,
-        "tick": 1,
-        "interval": "1000",
-        "duration": "10000"
-      }
-    },
-    {
       "id": 213348,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -40769,10 +40776,33 @@ var gear = {
         "frost": 10
       },
       "ap": 18
+    },
+    {
+      "id": 215461,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "40",
+      "name": "Domesticated Attack Chicken"
     }
   ],
   "trinket2": [
     {
+      "id": 10577,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "q": "1",
+      "i": "41",
+      "name": "Goblin Mortar",
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 450
+      }
+    },
+    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -40985,24 +41015,6 @@ var gear = {
       "ap": 18
     },
     {
-      "id": 213347,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "Miniaturized Combustion Chamber",
-      "resist": {
-        "fire": 10
-      },
-      "proc": {
-        "magic": true,
-        "tick": 1,
-        "interval": "1000",
-        "duration": "10000"
-      }
-    },
-    {
       "id": 213348,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -41014,6 +41026,15 @@ var gear = {
         "frost": 10
       },
       "ap": 18
+    },
+    {
+      "id": 215461,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 40,
+      "q": "3",
+      "i": "40",
+      "name": "Domesticated Attack Chicken"
     }
   ],
   "ranged": [
