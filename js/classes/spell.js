@@ -1495,6 +1495,29 @@ class Vibroblade extends Aura {
     }
 }
 
+class Ultrasonic extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 30;
+        this.armor = 160;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateArmorReduction();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateArmorReduction();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+
 class VoidMadness extends Aura {
     constructor(player, id) {
         super(player, id, 'Void Madness');

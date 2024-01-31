@@ -650,6 +650,8 @@ class Player {
             this.target.armor = Math.max(this.target.armor - (this.auras.rivenspike.stacks * this.auras.rivenspike.armor), 0);
         if (this.auras.vibroblade && this.auras.vibroblade.timer)
             this.target.armor = Math.max(this.target.armor - this.auras.vibroblade.armor, 0);
+        if (this.auras.ultrasonic && this.auras.ultrasonic.timer)
+            this.target.armor = Math.max(this.target.armor - this.auras.ultrasonic.armor, 0);
         if (this.auras.cleavearmor && this.auras.cleavearmor.timer)
             this.target.armor = Math.max(this.target.armor - this.auras.cleavearmor.armor, 0);
         if (this.auras.bonereaver && this.auras.bonereaver.timer)

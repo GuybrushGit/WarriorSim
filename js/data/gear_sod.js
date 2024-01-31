@@ -51767,7 +51767,10 @@ var gear = {
       "name": "Ultrasonic Vibroblade",
       "speed": 1.6,
       "mindmg": 34,
-      "maxdmg": 63
+      "maxdmg": 63,
+      "proc": {
+        "spell": "Ultrasonic"
+      }
     },
     {
       "id": 213297,
@@ -61424,7 +61427,10 @@ var gear = {
       "name": "Ultrasonic Vibroblade",
       "speed": 1.6,
       "mindmg": 34,
-      "maxdmg": 63
+      "maxdmg": 63,
+      "proc": {
+        "spell": "Ultrasonic"
+      }
     },
     {
       "id": 213297,
