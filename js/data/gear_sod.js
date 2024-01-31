@@ -7657,7 +7657,7 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Lightning Rod Spaulders",
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 213304,
@@ -7667,7 +7667,7 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Troggslayer Pauldrons",
-      "str": 12,
+      "agi": 12,
       "ap": 22
     },
     {
@@ -14081,7 +14081,6 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Insulated Apron",
-      "sta": 4,
       "hit": 1
     },
     {
@@ -14104,10 +14103,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Electromantic Chainmail",
-      "agi": 8,
-      "str": 4,
       "sta": 7,
-      "crit": 1
+      "crit": 1,
+      "ap": 26
     },
     {
       "id": 213316,
@@ -23212,8 +23210,8 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Grubbis Grubby Gauntlets",
-      "agi": 5,
       "str": 9,
+      "sta": 5,
       "crit": 1
     },
     {
@@ -28092,11 +28090,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Skullduggery Waistband",
-      "agi": 4,
-      "str": 3,
-      "sta": 5,
-      "crit": 1,
-      "ap": 10
+      "agi": 10,
+      "str": 10,
+      "sta": 6
     },
     {
       "id": 213324,
@@ -28117,11 +28113,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Darkvision Girdle",
-      "agi": 4,
-      "str": 4,
       "sta": 4,
       "hit": 1,
-      "ap": 20
+      "ap": 24
     },
     {
       "id": 213326,
@@ -28132,8 +28126,7 @@ var gear = {
       "i": "45",
       "name": "Girdle of Reclamation",
       "str": 6,
-      "sta": 5,
-      "crit": 1
+      "sta": 5
     },
     {
       "id": 213327,
@@ -28143,9 +28136,8 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Belt of the Trogg Berserker",
-      "str": 9,
-      "sta": 5,
-      "crit": 1
+      "str": 17,
+      "sta": 5
     },
     {
       "id": 215380,
@@ -28155,7 +28147,9 @@ var gear = {
       "q": "4",
       "i": "45",
       "name": "Power-Assisted Lifting Belt",
-      "skill": 5
+      "str": 14,
+      "sta": 15,
+      "skill": 3
     }
   ],
   "legs": [
@@ -32960,8 +32954,8 @@ var gear = {
       "i": "45",
       "name": "H.A.Z.A.R.D. Legplates",
       "str": 13,
-      "sta": 12,
-      "crit": 1
+      "sta": 15,
+      "hit": 1
     },
     {
       "id": 213332,
@@ -32984,10 +32978,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Electromantic Chausses",
-      "agi": 10,
-      "str": 10,
       "sta": 10,
-      "hit": 1
+      "hit": 1,
+      "ap": 28
     },
     {
       "id": 216676,
@@ -51777,12 +51770,12 @@ var gear = {
       "type": "Dagger",
       "slot": "onehand",
       "r": 40,
-      "q": "3",
+      "q": "4",
       "i": "45",
       "name": "Toxic Revenger II",
-      "speed": 1.9,
-      "mindmg": 41,
-      "maxdmg": 75,
+      "speed": 1.8,
+      "mindmg": 43,
+      "maxdmg": 80,
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -51799,9 +51792,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Ultrasonic Vibroblade",
-      "speed": 1.6,
-      "mindmg": 34,
-      "maxdmg": 63,
+      "speed": 2.3,
+      "mindmg": 49,
+      "maxdmg": 91,
       "proc": {
         "spell": "Ultrasonic"
       }
@@ -51814,9 +51807,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Oscillating Blasthammer",
-      "speed": 2,
-      "mindmg": 43,
-      "maxdmg": 79,
+      "speed": 2.4,
+      "mindmg": 52,
+      "maxdmg": 94,
       "str": 5,
       "sta": 7
     },
@@ -51847,7 +51840,7 @@ var gear = {
       "str": 2,
       "proc": {
         "magic": true,
-        "dmg": 41
+        "dmg": 31
       }
     },
     {
@@ -61422,12 +61415,12 @@ var gear = {
       "type": "Dagger",
       "slot": "onehand",
       "r": 40,
-      "q": "3",
+      "q": "4",
       "i": "45",
       "name": "Toxic Revenger II",
-      "speed": 1.9,
-      "mindmg": 41,
-      "maxdmg": 75,
+      "speed": 1.8,
+      "mindmg": 43,
+      "maxdmg": 80,
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -61444,9 +61437,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Ultrasonic Vibroblade",
-      "speed": 1.6,
-      "mindmg": 34,
-      "maxdmg": 63,
+      "speed": 2.3,
+      "mindmg": 49,
+      "maxdmg": 91,
       "proc": {
         "spell": "Ultrasonic"
       }
@@ -61459,9 +61452,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Oscillating Blasthammer",
-      "speed": 2,
-      "mindmg": 43,
-      "maxdmg": 79,
+      "speed": 2.4,
+      "mindmg": 52,
+      "maxdmg": 94,
       "str": 5,
       "sta": 7
     },
@@ -69255,9 +69248,9 @@ var gear = {
       "q": "4",
       "i": "45",
       "name": "Thermaplugg's Rocket Cleaver",
-      "speed": 2.7,
-      "mindmg": 96,
-      "maxdmg": 143,
+      "speed": 3.3,
+      "mindmg": 117,
+      "maxdmg": 175,
       "str": 29,
       "sta": 12
     },
@@ -69275,6 +69268,19 @@ var gear = {
       "str": 18,
       "sta": 12,
       "crit": 1
+    },
+    {
+      "id": 216884,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 125,
+      "q": "4",
+      "i": "200",
+      "name": "Bloodthirst Blade",
+      "speed": 4.2,
+      "mindmg": 229,
+      "maxdmg": 344,
+      "str": 333
     },
     {
       "id": 217006,
