@@ -422,7 +422,8 @@ class Slam extends Spell {
     constructor(player, id) {
         super(player, id);
         this.cost = 15 - player.ragecostbonus;
-        this.casttime = 1500 - (player.talents.impslam * 100);
+        this.casttime = player.precisetiming ? 0 : (1500 - (player.talents.impslam * 100));
+        this.cooldown = player.precisetiming ? 6 : 0;
         this.mhthreshold = player.mh.speed * 1000;
     }
     dmg() {
@@ -436,10 +437,11 @@ class Slam extends Spell {
         this.player.mh.use();
         if (this.player.oh) this.player.oh.use();
         this.player.freeslam = false;
+        this.timer = this.cooldown * 1000;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.player.timer && this.player.mh.timer > this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
+        return !this.timer && !this.player.timer && this.player.mh.timer > this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
             (!this.bloodsurge || this.player.freeslam) &&
             (!this.player.auras.battlestance || !this.player.auras.battlestance.timer) &&
             ((!this.minrage && !this.maincd) ||

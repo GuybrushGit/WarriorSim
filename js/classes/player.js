@@ -348,6 +348,10 @@ class Player {
                     if (item.focusedrage) {
                         this.ragecostbonus = 3;
                     }
+                    // Precise Timing
+                    if (item.precisetiming) {
+                        this.precisetiming = item.precisetiming;
+                    }
                 }
             }
         }

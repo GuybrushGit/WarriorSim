@@ -103,6 +103,13 @@ var runes = {
             iconname: 'ability_druid_enrage',
             focusedrage: true,
         },
+        {
+            id: 402922,
+            name: 'Precise Timing',
+            description: "",
+            iconname: 'inv_misc_pocketwatch_02',
+            precisetiming: true,
+        },
     ],
     "feet": [
         {
