@@ -49,6 +49,12 @@ var runes = {
          iconname: 'Frenzied-Assault',
          haste2h: 20,
      },
+     {
+        id: 403215,
+        name: 'Commanding Shout',
+        description: "",
+        iconname: 'ability_warrior_rallyingcry',
+    },
    ],
    "hands": [
       {
@@ -117,6 +123,18 @@ var runes = {
             name: 'Rallying Cry',
             description: "",
             iconname: 'ability_warrior_rallyingcry',
+        },
+        {
+            id: 402913,
+            name: 'Enraged Regeneration',
+            description: "",
+            iconname: 'ability_warrior_focusedrage',
+        },
+        {
+            id: 403338,
+            name: 'Intervene',
+            description: "",
+            iconname: 'ability_warrior_victoryrush',
         },
     ],
 };
