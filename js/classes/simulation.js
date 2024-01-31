@@ -244,6 +244,7 @@ class Simulation {
 
         // determine when to use player auras
         if (player.auras.deathwish) { player.auras.deathwish.usestep = Math.max(this.maxsteps - player.auras.deathwish.timetoend, 0); }
+        if (player.auras.mildlyirradiated) { player.auras.mildlyirradiated.usestep = Math.max(this.maxsteps - player.auras.mildlyirradiated.timetoend, 0); }
         if (player.auras.recklessness) { player.auras.recklessness.usestep = Math.max(this.maxsteps - player.auras.recklessness.timetoend, 0); }
         if (player.auras.mightyragepotion) { player.auras.mightyragepotion.usestep = Math.max(this.maxsteps - player.auras.mightyragepotion.timetoend, 0); }
         if (player.auras.berserking) { player.auras.berserking.usestep = Math.max(this.maxsteps - player.auras.berserking.timetoend, 0); }
@@ -306,7 +307,8 @@ class Simulation {
                     else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mightyragepotion; }
                     else if (player.spells.bloodrage && player.spells.bloodrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodrage; }
                     else if (player.spells.ragepotion && player.spells.ragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragepotion; }
-
+                    else if (player.auras.mildlyirradiated && player.auras.mildlyirradiated.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mildlyirradiated; }
+                    
                     else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) { player.spelldelay = 1; delayedspell = player.auras.cloudkeeper; }
                     else if (player.auras.voidmadness && player.auras.voidmadness.canUse() && step > this.voidstep) { player.spelldelay = 1; delayedspell = player.auras.voidmadness; }
                     else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.pummelstep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }

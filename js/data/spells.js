@@ -629,7 +629,6 @@ var spells = [
     classname: 'DeathWish',
     iconname: 'spell_shadow_deathpact',
     timetoend: 31,
-    crusaders: 2,
     aura: true,
     active: false,
     buff: true,
@@ -666,12 +665,24 @@ var spells = [
     classname: 'MightyRagePotion',
     iconname: 'inv_potion_41',
     timetoend: 21,
-    crusaders: 0,
     aura: true,
     minlevel: 46,
     value1: 45,
     value2: 75,
     active: true,
+    buff: true,
+},
+
+// Rejuv Potion
+{
+    id: 435973,
+    name: 'Mildly Irradiated Rejuvenation Potion',
+    classname: 'MildlyIrradiated',
+    iconname: 'inv_alchemy_elixir_03',
+    minlevel: 35,
+    timetoend: 16,
+    active: true,
+    aura: true,
     buff: true,
 },
 

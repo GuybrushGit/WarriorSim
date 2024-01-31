@@ -400,7 +400,6 @@ class RagePotion extends Spell {
     constructor(player, id) {
         super(player, id, 'Rage Potion');
         this.cost = 0;
-        this.rage = 100;
         this.minrage = 80;
         this.cooldown = 120;
         this.useonly = true;
@@ -1680,6 +1679,33 @@ class StrengthChampion extends Aura {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateStrength();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+
+class MildlyIrradiated extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Mildly Irradiated');
+        this.duration = 15;
+        this.stats = { ap: 40 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAP();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return this.firstuse && !this.timer && step >= this.usestep;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateAP();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
