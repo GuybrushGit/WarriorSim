@@ -38,6 +38,7 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.freeslam = false;
+        this.ragecostbonus = 0;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
         this.reactionmin = config.reactionmin;
@@ -116,6 +117,7 @@ class Player {
         this.addEnchants();
         this.addTempEnchants();
         this.addBuffs();
+        this.preAddRunes();
         this.addSpells();
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
@@ -332,6 +334,19 @@ class Player {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    preAddRunes() {
+        if (typeof runes === "undefined") return;
+        for (let type in runes) {
+            for (let item of runes[type]) {
+                if (item.selected) {
+                    // Focused Rage
+                    if (item.focusedrage) {
+                        this.ragecostbonus = 3;
                     }
                 }
             }

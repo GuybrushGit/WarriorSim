@@ -90,16 +90,23 @@ var runes = {
    ],
    "waist": [
         {
-            id: 999999,
+            id: 413380,
             name: 'Blood Surge',
             description: "",
             iconname: 'ability_warrior_bloodsurge',
             bloodsurge: true,
         },
+        {
+            id: 29787,
+            name: 'Focused Rage',
+            description: "",
+            iconname: 'ability_druid_enrage',
+            focusedrage: true,
+        },
     ],
     "feet": [
         {
-            id: 999998,
+            id: 426490,
             name: 'Rallying Cry',
             description: "",
             iconname: 'ability_warrior_rallyingcry',

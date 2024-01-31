@@ -61,7 +61,7 @@ class Spell {
 class Bloodthirst extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 30;
+        this.cost = 30 - player.ragecostbonus;
         this.cooldown = 6;
         this.weaponspell = false;
     }
@@ -76,7 +76,7 @@ class Bloodthirst extends Spell {
 class Whirlwind extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 25;
+        this.cost = 25 - player.ragecostbonus;
         this.cooldown = 10;
         this.refund = false;
     }
@@ -97,7 +97,7 @@ class Whirlwind extends Spell {
 class Overpower extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 5;
+        this.cost = 5 - player.ragecostbonus;
         this.cooldown = 5;
         this.canDodge = false;
     }
@@ -129,7 +129,7 @@ class Overpower extends Spell {
 class Execute extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 15 - player.talents.executecost;
+        this.cost = 15 - player.talents.executecost - player.ragecostbonus;
         this.usedrage = 0;
         this.totalusedrage = 0;
         this.refund = false;
@@ -203,7 +203,7 @@ class Bloodrage extends Spell {
 class HeroicStrike extends Spell {
     constructor(player, id) {
         super(player, id, "Heroic Strike");
-        this.cost = 15 - player.talents.impheroicstrike;
+        this.cost = 15 - player.talents.impheroicstrike - player.ragecostbonus;
         this.bonus = this.value1;
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
@@ -226,7 +226,7 @@ class HeroicStrike extends Spell {
 class Cleave extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 20;
+        this.cost = 20 - player.ragecostbonus;
         this.bonus = this.value1 * (1 + this.player.talents.cleavebonus / 100);
         this.useonly = true;
         this.unqueuetimer = 300 + rng(this.player.reactionmin, this.player.reactionmax);
@@ -260,7 +260,7 @@ class Cleave extends Spell {
 class MortalStrike extends Spell {
     constructor(player, id) {
         super(player, id, 'Mortal Strike');
-        this.cost = 30;
+        this.cost = 30 - player.ragecostbonus;
         this.cooldown = 6;
     }
     dmg() {
@@ -276,7 +276,7 @@ class MortalStrike extends Spell {
 class SunderArmor extends Spell {
     constructor(player, id) {
         super(player, id, 'Sunder Armor');
-        this.cost = 15 - player.talents.impsunderarmor;
+        this.cost = 15 - player.talents.impsunderarmor - player.ragecostbonus;
         this.stacks = 0;
         this.nocrit = true;
     }
@@ -307,7 +307,7 @@ class SunderArmor extends Spell {
 class Hamstring extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 10;
+        this.cost = 10 - player.ragecostbonus;
         if (player.items.includes(19577)) this.cost -= 2;
     }
     dmg() {
@@ -385,7 +385,7 @@ class BerserkerRage extends Spell {
 class QuickStrike extends Spell {
     constructor(player, id) {
         super(player, id, 'Quick Strike');
-        this.cost = 20 - player.talents.impheroicstrike;
+        this.cost = 20 - player.talents.impheroicstrike - player.ragecostbonus;
         this.cooldown = 0;
     }
     dmg() {
@@ -421,7 +421,7 @@ class RagePotion extends Spell {
 class Slam extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 15;
+        this.cost = 15 - player.ragecostbonus;
         this.casttime = 1500 - (player.talents.impslam * 100);
         this.mhthreshold = player.mh.speed * 1000;
     }
@@ -1412,7 +1412,7 @@ class Rend extends Aura {
         super(player, id);
         let dur = this.value2 * 3;
         this.duration = Math.max(this.duration || dur, dur);
-        this.cost = 10;
+        this.cost = 10 - player.ragecostbonus;
         this.idmg = 0;
         this.totaldmg = 0;
         this.uses = 0;
