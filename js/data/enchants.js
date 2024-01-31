@@ -127,6 +127,12 @@ var enchant = {
          "magicdmg": 12,
          "r": 40
       },
+      {
+         "id": 435481,
+         "spellid": true,
+         "name": "Dismantle",
+         "bonusdmg": 10,
+      },
     ],
     "offhand": [
       {
@@ -255,6 +261,12 @@ var enchant = {
    "chance": 15,
    "magicdmg": 12,
    "r": 40
+},
+{
+   "id": 435481,
+   "spellid": true,
+   "name": "Dismantle",
+   "bonusdmg": 10,
 },
     ],
     "twohand": [
@@ -396,6 +408,12 @@ var enchant = {
          "chance": 15,
          "magicdmg": 12,
          "r": 40
+      },
+      {
+         "id": 435481,
+         "spellid": true,
+         "name": "Dismantle",
+         "bonusdmg": 10,
       },
     ],
     "head": [
