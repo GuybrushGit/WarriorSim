@@ -235,6 +235,7 @@ class Simulation {
         if (player.auras.flask) { this.flaskstep = Math.max(this.maxsteps - 60000, 0); itemdelay += 60000; }
         if (player.auras.cloudkeeper) { this.cloudstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
         if (player.auras.voidmadness) { this.voidstep = Math.max(this.maxsteps - itemdelay - 10000, 0); itemdelay += 10000; }
+        if (player.auras.gyromaticacceleration) { this.gyrostep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 10000; }
         if (player.auras.slayer) { this.slayerstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
         if (player.auras.spider) { this.spiderstep = Math.max(this.maxsteps - itemdelay - 15000, 0); itemdelay += 15000; }
         if (player.auras.gabbar) { this.gabbarstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
@@ -311,6 +312,7 @@ class Simulation {
                     
                     else if (player.auras.cloudkeeper && player.auras.cloudkeeper.canUse() && step > this.cloudstep) { player.spelldelay = 1; delayedspell = player.auras.cloudkeeper; }
                     else if (player.auras.voidmadness && player.auras.voidmadness.canUse() && step > this.voidstep) { player.spelldelay = 1; delayedspell = player.auras.voidmadness; }
+                    else if (player.auras.gyromaticacceleration && player.auras.gyromaticacceleration.canUse() && step > this.gyrostep) { player.spelldelay = 1; delayedspell = player.auras.gyromaticacceleration; }
                     else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.pummelstep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
                     else if (player.auras.slayer && player.auras.slayer.canUse() && step > this.slayerstep) { player.spelldelay = 1; delayedspell = player.auras.slayer; }
                     else if (player.auras.spider && player.auras.spider.canUse() && step > this.spiderstep) { player.spelldelay = 1; delayedspell = player.auras.spider; }

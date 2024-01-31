@@ -1733,3 +1733,21 @@ class MildlyIrradiated extends Aura {
         }
     }
 }
+
+class GyromaticAcceleration extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Gyromatic Acceleration');
+        this.duration = 20;
+        this.mult_stats = { haste: 5 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return this.firstuse && !this.player.itemtimer && !this.timer;
+    }
+}

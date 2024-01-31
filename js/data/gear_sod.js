@@ -42091,6 +42091,20 @@ var gear = {
       "agi": 6
     },
     {
+      "id": 213293,
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Hi-tech Supergun Mk.VII",
+      "speed": 2.3,
+      "mindmg": 38,
+      "maxdmg": 71,
+      "sta": 4,
+      "ap": 12
+    },
+    {
       "id": 213355,
       "type": "Crossbow",
       "slot": "ranged",
@@ -51844,20 +51858,6 @@ var gear = {
       "ap": 16
     },
     {
-      "id": 215235,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "2hander Animation as 1hander test copy",
-      "speed": 2.6,
-      "mindmg": 102,
-      "maxdmg": 153,
-      "agi": 9,
-      "str": 22
-    },
-    {
       "id": 216496,
       "type": "Mace",
       "slot": "onehand",
@@ -61485,20 +61485,6 @@ var gear = {
       "maxdmg": 95,
       "sta": 7,
       "ap": 16
-    },
-    {
-      "id": 215235,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "2hander Animation as 1hander test copy",
-      "speed": 2.6,
-      "mindmg": 102,
-      "maxdmg": 153,
-      "agi": 9,
-      "str": 22
     },
     {
       "id": 216496,

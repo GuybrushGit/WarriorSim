@@ -53,7 +53,6 @@
         for (let item of Item) {
           let obj = {};
           obj.id = parseInt(item.ID);
-          if (obj.id == 1280) debugger;
 
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
@@ -79,9 +78,11 @@
           let agi = getStat(sparse, 3);
           let str = getStat(sparse, 4);
           let sta = getStat(sparse, 7);
+          let ap = getStat(sparse, 38);
           if (agi) obj.agi = agi;
           if (str) obj.str = str;
           if (sta) obj.sta = sta;
+          if (ap) obj.ap = ap;
 
           if (parseInt(item["Resistances[2]"]) || parseInt(item["Resistances[3]"]) || parseInt(item["Resistances[4]"]) || parseInt(item["Resistances[5]"])) obj.resist = {};
           if (parseInt(item["Resistances[2]"])) obj.resist.fire = parseInt(item["Resistances[2]"]);
@@ -213,7 +214,6 @@
             if (suffixFound) continue;
           }
 
-
           if (obj.id == 19970) obj.r = 35;
           if (obj.id == 867) obj.ap = 20;
 
@@ -243,6 +243,7 @@
           if (obj.id == 20522) exclude = true;
           if (obj.id == 12106) exclude = true;
           if (obj.id == 12104) exclude = true;
+          if (obj.id == 215235) exclude = true;
           if (obj.id == 209577) obj.ap = 0;
 
           
