@@ -795,7 +795,7 @@ var buffs = [
       name: "Spark of Crazed Inspiration",
       iconname: "achievement_boss_mekgineer_thermaplugg",
       group: "",
-      haste: 20,
+      haste: 10,
       worldbuff: true,
       sod: true,
    },
