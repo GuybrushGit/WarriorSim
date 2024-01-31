@@ -1751,3 +1751,35 @@ class GyromaticAcceleration extends Aura {
         return this.firstuse && !this.player.itemtimer && !this.timer;
     }
 }
+
+class Spicy extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Spicy!');
+        this.duration = 30;
+        this.mult_stats = { haste: 4 };
+    }
+    use() {
+        if (!this.firstuse) return;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.firstuse = false;
+        this.player.updateHaste();
+        this.player.attackproc = { chance: 500, magicdmg: 7 };
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateHaste();
+            delete this.player.attackproc;
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        delete this.player.attackproc;
+    }
+}

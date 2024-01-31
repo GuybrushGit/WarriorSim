@@ -637,6 +637,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.ragehammer.mult_stats.haste / 100);
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.timer)
             this.stats.haste *= (1 + this.auras.gyromaticacceleration.mult_stats.haste / 100);
+        if (this.auras.spicy && this.auras.spicy.timer)
+            this.stats.haste *= (1 + this.auras.spicy.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
@@ -1073,7 +1075,7 @@ class Player {
             if (this.attackproc && rng10k() < this.attackproc.chance) {
                 if (this.attackproc.magicdmg) procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
                 if (this.attackproc.spell) this.attackproc.spell.use();
-                /* start-log */ if (log) this.log(`Misc proc`); /* end-log */
+                /* start-log */ if (log) this.log(`Misc atk proc`); /* end-log */
             }
             // Sword spec shouldnt be able to proc itself
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD && !damageSoFar && this.swordspecstep != step && rng10k() < this.talents.swordproc * 100) {

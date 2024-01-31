@@ -51753,8 +51753,7 @@ var gear = {
       "mindmg": 49,
       "maxdmg": 91,
       "proc": {
-        "magic": true,
-        "dmg": 8
+        "spell": "Spicy"
       }
     },
     {
@@ -61415,8 +61414,7 @@ var gear = {
       "mindmg": 49,
       "maxdmg": 91,
       "proc": {
-        "magic": true,
-        "dmg": 8
+        "spell": "Spicy"
       }
     },
     {

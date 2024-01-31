@@ -142,6 +142,7 @@
               for(let c of customSpells) {
                 if (c.i == item.ID) {
                   obj.proc = obj.proc || {};
+                  if (item.ID == 213105) obj.proc = {};
                   obj.proc.spell = c.s;
                 }
               }
@@ -338,6 +339,7 @@
         {i:11607,s:"CleaveArmor"},
         {i:12790,s:"StrengthChampion"},
         {i:213295,s:"Ultrasonic"},
+        {i:213105,s:"Spicy"},
       ];
 
       var customPPM = [
