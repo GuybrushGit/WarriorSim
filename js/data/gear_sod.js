@@ -28134,6 +28134,18 @@ var gear = {
       "sta": 5
     },
     {
+      "id": 215115,
+      "type": "Cloth",
+      "slot": "waist",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Hyperconductive Goldwrap",
+      "sta": 9,
+      "crit": 1,
+      "hit": 1
+    },
+    {
       "id": 215380,
       "type": "Varied2H",
       "slot": "waist",

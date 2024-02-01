@@ -237,6 +237,7 @@ class Simulation {
         if (player.auras.voidmadness) { this.voidstep = Math.max(this.maxsteps - itemdelay - 10000, 0); itemdelay += 10000; }
         if (player.auras.gyromaticacceleration) { this.gyrostep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
         if (player.auras.gneurological) { this.gneurostep = Math.max(this.maxsteps - itemdelay - 10000, 0); itemdelay += 10000; }
+        if (player.auras.coinflip) { this.coinstep = Math.max(this.maxsteps - itemdelay - 30000, 0); itemdelay += 30000; }
         if (player.auras.slayer) { this.slayerstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
         if (player.auras.spider) { this.spiderstep = Math.max(this.maxsteps - itemdelay - 15000, 0); itemdelay += 15000; }
         if (player.auras.gabbar) { this.gabbarstep = Math.max(this.maxsteps - itemdelay - 20000, 0); itemdelay += 20000; }
@@ -315,6 +316,7 @@ class Simulation {
                     else if (player.auras.voidmadness && player.auras.voidmadness.canUse() && step > this.voidstep) { player.spelldelay = 1; delayedspell = player.auras.voidmadness; }
                     else if (player.auras.gyromaticacceleration && player.auras.gyromaticacceleration.canUse() && step > this.gyrostep) { player.spelldelay = 1; delayedspell = player.auras.gyromaticacceleration; }
                     else if (player.auras.gneurological && player.auras.gneurological.canUse() && step > this.gneurostep) { player.spelldelay = 1; delayedspell = player.auras.gneurological; }
+                    else if (player.auras.coinflip && player.auras.coinflip.canUse() && step > this.coinstep) { player.spelldelay = 1; delayedspell = player.auras.coinflip; }
                     else if (player.auras.pummeler && player.auras.pummeler.canUse() && step > this.pummelstep) { player.spelldelay = 1; delayedspell = player.auras.pummeler; }
                     else if (player.auras.slayer && player.auras.slayer.canUse() && step > this.slayerstep) { player.spelldelay = 1; delayedspell = player.auras.slayer; }
                     else if (player.auras.spider && player.auras.spider.canUse() && step > this.spiderstep) { player.spelldelay = 1; delayedspell = player.auras.spider; }

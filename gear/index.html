@@ -61,7 +61,7 @@
           let sparse = getRow('ItemSparse', item.ID);
           if (!sparse) continue;
           if (sparse.AllowableClass != "-1" && !(1 & parseInt(sparse.AllowableClass))) continue;
-          if (obj.type == "Cloth" && obj.slot != "back") continue;
+          if (obj.type == "Cloth" && obj.slot != "back" && obj.id != 215115) continue;
           obj.r = parseInt(item.RequiredLevel);
           if (!obj.r) obj.r = getQuestLevel(item.ID);
           if (!obj.r) obj.r = 0;
@@ -238,6 +238,8 @@
           if (obj.id == 14552) include = true;
           if (obj.id == 6746) include = true;
           if (obj.id == 215461) include = true;
+
+          
           
           if (obj.id == 17780) exclude = true;
           if (obj.id == 11905) exclude = true;

@@ -1801,3 +1801,23 @@ class GneuroLogical extends Aura {
         return this.firstuse && !this.player.itemtimer && !this.timer;
     }
 }
+
+class CoinFlip extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Coin Flip');
+        this.duration = 30;
+        this.stats = { crit: 3 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        if (rng10k() < 5000) {
+            this.timer = step + this.duration * 1000;
+            this.starttimer = step;
+            this.player.updateAuras();
+            /* start-log */ if (log) this.player.log(`${this.name} Crit applied`); /* end-log */
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.player.itemtimer && !this.timer;
+    }
+}
