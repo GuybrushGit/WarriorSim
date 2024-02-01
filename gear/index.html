@@ -254,6 +254,8 @@
           if (obj.id == 215235) exclude = true;
           if (obj.id == 213347) exclude = true;
           if (obj.id == 215114) exclude = true;
+          if (obj.id == 10577) exclude = true;
+          
           
 
 
@@ -283,16 +285,18 @@
         }
 
         // custom items
-        // gear["trinket2"].push({
-        //   "id": 9999998,
-        //   "type": "Miscellaneous",
-        //   "slot": "trinket",
-        //   "r": 25,
-        //   "name": "Avenger's Void Pearl",
-        //   "ap": 10,
-        //   q: 3,
-        //   i: 25
-        // });
+        gear["head"].push({
+          "id": 215161,
+          "type": "Plate",
+          "slot": "head",
+          "r": 40,
+          "q": "4",
+          "i": "45",
+          "name": "Tempered Interference-Negating Helmet",
+          "str": 16,
+          "sta": 16,
+          "crit": 1
+        });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }

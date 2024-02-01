@@ -3490,6 +3490,18 @@ var gear = {
       "str": 11,
       "sta": 11,
       "hit": 1
+    },
+    {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "str": 16,
+      "sta": 16,
+      "crit": 1
     }
   ],
   "neck": [
@@ -40514,20 +40526,6 @@ var gear = {
   ],
   "trinket1": [
     {
-      "id": 10577,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 0,
-      "q": "1",
-      "i": "41",
-      "name": "Goblin Mortar",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 450
-      }
-    },
-    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -40763,20 +40761,6 @@ var gear = {
     }
   ],
   "trinket2": [
-    {
-      "id": 10577,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 0,
-      "q": "1",
-      "i": "41",
-      "name": "Goblin Mortar",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 450
-      }
-    },
     {
       "id": 11815,
       "type": "Miscellaneous",

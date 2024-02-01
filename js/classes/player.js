@@ -141,6 +141,8 @@ class Player {
         if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
         if (this.items.includes(213348)) this.auras.gyromaticacceleration = new GyromaticAcceleration(this);
         if (this.items.includes(215166)) this.auras.gneurological = new GneuroLogical(this);
+        if (this.items.includes(215161)) this.auras.gneurological = new GneuroLogical(this);
+        
         if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
             this.spells.sunderarmor.devastate = true;
             this.spells.sunderarmor.nocrit = false;
