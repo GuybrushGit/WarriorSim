@@ -203,6 +203,18 @@ SIM.SETTINGS = {
             view.buildBuffs();
         });
 
+        view.fight.on('change', 'select[name="bleedimmune"]', function (e) {
+            e.stopPropagation();
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+
+        view.fight.on('change', 'select[name="armorprocs"]', function (e) {
+            e.stopPropagation();
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+
         view.fight.on('keyup', 'input[type="text"]', function (e) {
             e.stopPropagation();
             if (!view.body.find('.active[data-type="profiles"]').length)
