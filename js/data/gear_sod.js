@@ -45445,7 +45445,7 @@ var gear = {
       "id": 8708,
       "type": "Mace",
       "slot": "mainhand",
-      "r": 40,
+      "r": 41,
       "q": "4",
       "i": "50",
       "name": "Hammer of Expertise",
