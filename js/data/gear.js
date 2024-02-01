@@ -580,6 +580,17 @@ var gear = {
       "i": "92"
     },
     {
+      "name": "Medallion of the Dawn",
+      "crit": 1,
+      "sta": 12,
+      "ap": 23,
+      "source": "Quest",
+      "phase": 6,
+      "id": 22659,
+      "q": "4",
+      "i": "60"
+    },
+    {
       "name": "The Eye of Hakkar",
       "crit": 1,
       "ap": 40,
