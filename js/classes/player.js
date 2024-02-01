@@ -140,6 +140,7 @@ class Player {
         if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
         if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
         if (this.items.includes(213348)) this.auras.gyromaticacceleration = new GyromaticAcceleration(this);
+        if (this.items.includes(215166)) this.auras.gneurological = new GneuroLogical(this);
         if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
             this.spells.sunderarmor.devastate = true;
             this.spells.sunderarmor.nocrit = false;
@@ -637,6 +638,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.ragehammer.mult_stats.haste / 100);
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.timer)
             this.stats.haste *= (1 + this.auras.gyromaticacceleration.mult_stats.haste / 100);
+        if (this.auras.gneurological && this.auras.gneurological.timer)
+            this.stats.haste *= (1 + this.auras.gneurological.mult_stats.haste / 100);
         if (this.auras.spicy && this.auras.spicy.timer)
             this.stats.haste *= (1 + this.auras.spicy.mult_stats.haste / 100);
     }
@@ -781,6 +784,7 @@ class Player {
         if (this.auras.cloudkeeper && this.auras.cloudkeeper.firstuse && this.auras.cloudkeeper.timer) this.auras.cloudkeeper.step();
         if (this.auras.voidmadness && this.auras.voidmadness.firstuse && this.auras.voidmadness.timer) this.auras.voidmadness.step();
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.firstuse && this.auras.gyromaticacceleration.timer) this.auras.gyromaticacceleration.step();
+        if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.step();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.step();
         if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.step();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.step();
@@ -825,6 +829,7 @@ class Player {
         if (this.auras.cloudkeeper && this.auras.cloudkeeper.firstuse && this.auras.cloudkeeper.timer) this.auras.cloudkeeper.end();
         if (this.auras.voidmadness && this.auras.voidmadness.firstuse && this.auras.voidmadness.timer) this.auras.voidmadness.end();
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.firstuse && this.auras.gyromaticacceleration.timer) this.auras.gyromaticacceleration.end();
+        if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.end();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.end();
         if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.end();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.end();

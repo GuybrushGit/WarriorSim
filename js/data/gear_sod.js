@@ -51901,7 +51901,8 @@ var gear = {
         "interval": "2000",
         "duration": "30000",
         "bleed": true,
-        "dmg": 66
+        "dmg": 66,
+        "magic": true
       }
     }
   ],

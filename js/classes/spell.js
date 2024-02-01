@@ -1783,3 +1783,21 @@ class Spicy extends Aura {
         delete this.player.attackproc;
     }
 }
+
+class GneuroLogical extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Gneuro-Logical Shock');
+        this.duration = 10;
+        this.mult_stats = { haste: 20 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return this.firstuse && !this.player.itemtimer && !this.timer;
+    }
+}
