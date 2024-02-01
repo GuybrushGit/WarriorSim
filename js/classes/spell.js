@@ -32,6 +32,8 @@ class Spell {
         if (spell.execute) this.execute = spell.execute;
         if (spell.globalsactive) this.globals = spell.globals;
         if (spell.bloodsurge) this.bloodsurge = spell.bloodsurge;
+        if (spell.afterswing) this.afterswing = spell.afterswing;
+        if (spell.swingreset) this.swingreset = spell.swingreset;
     }
     dmg() {
         return 0;
@@ -423,7 +425,7 @@ class Slam extends Spell {
         this.cost = 15 - player.ragecostbonus;
         this.casttime = player.precisetiming ? 0 : (1500 - (player.talents.impslam * 100));
         this.cooldown = player.precisetiming ? 6 : 0;
-        this.mhthreshold = player.mh.speed * 1000;
+        this.mhthreshold = 0;
     }
     dmg() {
         let dmg;
@@ -433,14 +435,16 @@ class Slam extends Spell {
     use() {
         if (!this.player.freeslam) this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        this.player.mh.use();
-        if (this.player.oh) this.player.oh.use();
+        if (this.swingreset) {
+            this.player.mh.use();
+            if (this.player.oh) this.player.oh.use();
+        }
         this.player.freeslam = false;
         this.timer = this.cooldown * 1000;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.player.mh.timer > this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
+        return !this.timer && !this.player.timer && this.player.mh.timer >= this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
             (!this.bloodsurge || this.player.freeslam) &&
             (!this.player.auras.battlestance || !this.player.auras.battlestance.timer) &&
             ((!this.minrage && !this.maincd) ||

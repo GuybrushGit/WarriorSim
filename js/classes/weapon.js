@@ -124,7 +124,7 @@ class Weapon {
     }
     use() {
         this.timer = Math.round(this.speed * 1000 / this.player.stats.haste);
-        if (this.player.spells.slam && !this.offhand) this.player.spells.slam.mhthreshold = this.timer - 1000;
+        if (!this.offhand && this.player.spells.slam && this.player.spells.slam.afterswing) this.player.spells.slam.mhthreshold = this.timer - 1000;
     }
     step(next) {
         this.timer -= next;
