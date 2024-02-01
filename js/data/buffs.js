@@ -18,16 +18,6 @@ var buffs = [
       minlevel: 30,
    },
    {
-      id: 413479,
-      spellid: true,
-      name: "Gladiator Stance",
-      iconname: "inv_helmet_08",
-      dmgmod: 10,
-      group: "stance",
-      minlevel: 1,
-      sod: true,
-   },
-   {
       id: 6673,
       spellid: true,
       name: "Battle Shout",
