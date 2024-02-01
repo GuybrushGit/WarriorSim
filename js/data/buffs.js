@@ -765,6 +765,7 @@ var buffs = [
       ap: 20,
       crit: 2,
       spellcrit: 2,
+      maxlevel: 39,
       worldbuff: true,
       sod: true,
    },
