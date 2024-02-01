@@ -3466,6 +3466,18 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "str": 16,
+      "sta": 16,
+      "crit": 1
+    },
+    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -3492,16 +3504,14 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 215161,
-      "type": "Plate",
+      "id": 217279,
+      "type": "Mail",
       "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "str": 16,
-      "sta": 16,
-      "crit": 1
+      "r": 33,
+      "q": "2",
+      "i": "38",
+      "name": "Golden Scale Coif",
+      "str": 10
     }
   ],
   "neck": [
@@ -7674,6 +7684,27 @@ var gear = {
       "name": "Machined Alloy Shoulderplates",
       "str": 12,
       "sta": 11
+    },
+    {
+      "id": 217283,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 30,
+      "q": "2",
+      "i": "35",
+      "name": "Golden Scale Shoulders",
+      "str": 7
+    },
+    {
+      "id": 217307,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 36,
+      "q": "3",
+      "i": "41",
+      "name": "Revelosh's Spaulders",
+      "agi": 12,
+      "sta": 11
     }
   ],
   "back": [
@@ -9853,9 +9884,9 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Drape of Dismantling",
-      "str": 6,
-      "sta": 4,
-      "hit": 1
+      "agi": 6,
+      "str": 8,
+      "sta": 7
     },
     {
       "id": 213308,
@@ -14123,6 +14154,16 @@ var gear = {
       "name": "Shockforged Breastplate",
       "sta": 3,
       "crit": 1
+    },
+    {
+      "id": 217277,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Golden Scale Cuirass",
+      "str": 14
     }
   ],
   "wrist": [
@@ -17587,6 +17628,16 @@ var gear = {
       "name": "Chittering Beetle Clasps",
       "agi": 4,
       "sta": 7
+    },
+    {
+      "id": 217305,
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 35,
+      "q": "3",
+      "i": "40",
+      "name": "Revelosh's Armguards",
+      "agi": 9
     },
     {
       "id": 213317,
@@ -23243,6 +23294,16 @@ var gear = {
       "name": "UNUSED Electrified Mithril Gauntlets",
       "str": 16,
       "sta": 7
+    },
+    {
+      "id": 217273,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 36,
+      "q": "2",
+      "i": "41",
+      "name": "Golden Scale Gauntlets",
+      "str": 11
     }
   ],
   "waist": [
@@ -32999,6 +33060,16 @@ var gear = {
       "agi": 21,
       "str": 5,
       "sta": 8
+    },
+    {
+      "id": 217285,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 29,
+      "q": "2",
+      "i": "34",
+      "name": "Golden Scale Leggings",
+      "str": 11
     }
   ],
   "feet": [
@@ -36724,6 +36795,17 @@ var gear = {
       "agi": 4
     },
     {
+      "id": 217306,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "41",
+      "name": "Revelosh's Boots",
+      "str": 12,
+      "sta": 11
+    },
+    {
       "id": 213294,
       "type": "Plate",
       "slot": "feet",
@@ -36780,6 +36862,16 @@ var gear = {
       "agi": 9,
       "str": 8,
       "sta": 8
+    },
+    {
+      "id": 217275,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 35,
+      "q": "2",
+      "i": "40",
+      "name": "Golden Scale Boots",
+      "str": 8
     }
   ],
   "finger1": [
@@ -51718,11 +51810,11 @@ var gear = {
       "slot": "onehand",
       "r": 40,
       "q": "3",
-      "i": "45",
+      "i": "40",
       "name": "Shawarmageddon",
       "speed": 2.6,
-      "mindmg": 49,
-      "maxdmg": 91,
+      "mindmg": 50,
+      "maxdmg": 93,
       "proc": {
         "spell": "Spicy"
       }
@@ -61380,11 +61472,11 @@ var gear = {
       "slot": "onehand",
       "r": 40,
       "q": "3",
-      "i": "45",
+      "i": "40",
       "name": "Shawarmageddon",
       "speed": 2.6,
-      "mindmg": 49,
-      "maxdmg": 91,
+      "mindmg": 50,
+      "maxdmg": 93,
       "proc": {
         "spell": "Spicy"
       }
@@ -69273,6 +69365,32 @@ var gear = {
       "mindmg": 80,
       "maxdmg": 112,
       "sta": 21
+    },
+    {
+      "id": 217299,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 34,
+      "q": "3",
+      "i": "39",
+      "name": "Illusionary Rod",
+      "speed": 3.4,
+      "mindmg": 94,
+      "maxdmg": 142,
+      "sta": 7
+    },
+    {
+      "id": 217302,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 39,
+      "q": "3",
+      "i": "44",
+      "name": "Mograine's Might",
+      "speed": 3.2,
+      "mindmg": 100,
+      "maxdmg": 149,
+      "str": 17
     }
   ]
 };
