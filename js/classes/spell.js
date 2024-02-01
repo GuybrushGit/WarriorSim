@@ -941,7 +941,7 @@ class Annihilator extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 45;
-        this.armor = 200;
+        this.armor = player.target.armorprocs ? 200 : 0;
         this.stacks = 0;
     }
     use() {
@@ -968,7 +968,7 @@ class Rivenspike extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = 200;
+        this.armor = player.target.armorprocs ? 200 : 0;
         this.stacks = 0;
     }
     use() {
@@ -994,7 +994,7 @@ class Bonereaver extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 10;
-        this.armor = 700;
+        this.armor = player.target.armorprocs ? 700 : 0;
         this.stacks = 0;
     }
     use() {
@@ -1105,7 +1105,7 @@ class Swarmguard extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = 200;
+        this.armor = player.target.armorprocs ? 200 : 0;
         this.stacks = 0;
         this.chance = 5000;
         this.timetoend = 30000;
@@ -1476,7 +1476,7 @@ class Vibroblade extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = 100;
+        this.armor = player.target.armorprocs ? 100 : 0;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -1499,7 +1499,7 @@ class Ultrasonic extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = 160;
+        this.armor = player.target.armorprocs ? 160 : 0;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -1665,7 +1665,7 @@ class CleaveArmor extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 20;
-        this.armor = 300;
+        this.armor = player.target.armorprocs ? 300 : 0;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);

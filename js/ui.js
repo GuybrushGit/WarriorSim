@@ -810,6 +810,7 @@ SIM.UI = {
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
         obj.bleedimmune = view.fight.find('select[name="bleedimmune"]').val();
+        obj.armorprocs = view.fight.find('select[name="armorprocs"]').val();
         
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};

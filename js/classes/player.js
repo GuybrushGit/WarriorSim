@@ -19,6 +19,7 @@ class Player {
                 mindmg: parseInt($('input[name="targetmindmg"]').val()),
                 maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
                 bleedimmune: $('select[name="bleedimmune"]').val() == "Yes",
+                armorprocs: $('select[name="armorprocs"]').val() == "Yes",
             },
         };
     }
