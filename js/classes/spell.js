@@ -945,6 +945,7 @@ class Annihilator extends Aura {
         this.stacks = 0;
     }
     use() {
+        if (!this.armor) return;
         if (rng10k() < this.player.target.binaryresist) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
@@ -972,6 +973,7 @@ class Rivenspike extends Aura {
         this.stacks = 0;
     }
     use() {
+        if (!this.armor) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -998,6 +1000,7 @@ class Bonereaver extends Aura {
         this.stacks = 0;
     }
     use() {
+        if (!this.armor) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1105,7 +1108,7 @@ class Swarmguard extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = player.target.armorprocs ? 200 : 0;
+        this.armor = 200;
         this.stacks = 0;
         this.chance = 5000;
         this.timetoend = 30000;
@@ -1479,6 +1482,7 @@ class Vibroblade extends Aura {
         this.armor = player.target.armorprocs ? 100 : 0;
     }
     use() {
+        if (!this.armor) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1502,6 +1506,7 @@ class Ultrasonic extends Aura {
         this.armor = player.target.armorprocs ? 160 : 0;
     }
     use() {
+        if (!this.armor) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1668,6 +1673,7 @@ class CleaveArmor extends Aura {
         this.armor = player.target.armorprocs ? 300 : 0;
     }
     use() {
+        if (!this.armor) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
