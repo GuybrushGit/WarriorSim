@@ -3466,20 +3466,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 215114,
-      "type": "Mail",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Glowing Hyperconductive Scale Coif",
-      "sta": 14,
-      "proc": {
-        "magic": true,
-        "dmg": 500
-      }
-    },
-    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -3490,11 +3476,7 @@ var gear = {
       "agi": 14,
       "str": 14,
       "sta": 14,
-      "hit": 1,
-      "proc": {
-        "magic": true,
-        "dmg": 550
-      }
+      "hit": 1
     },
     {
       "id": 215382,
