@@ -23108,7 +23108,7 @@ $@spelldesc402174",
 402974,,,
 402975,,Follows killing an enemy.,
 403172,,,
-403195,,"While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals $403196s1% weapon damage, increased by $403196s2% per application of Sunder Armor already on the target.",
+403195,,"While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals damage equal to $403196s1% of your equipped weapon's damage per second, increased by $403196s2% per application of Sunder Armor already on the target.",
 403196,,"Sunder Armor also deals $s1% weapon damage, increased by $s2% per application of Sunder Armor already on the target.",
 403215,,"The warrior shouts, increasing the Stamina of all party members within $a1 yards by $s1.  Lasts $d.",Increases your Stamina by $s1.
 403218,,You generate $s1% more Rage from all damage you deal.,
@@ -26077,7 +26077,7 @@ $@spelldesc427726",
 $@spellicon431757
 $@spelldesc427726",
 431781,,,
-431839,,,
+431839,,,Knockbacks are more effective on you!
 431841,,,
 431842,,,
 431843,,,
@@ -26153,7 +26153,7 @@ $@spelldesc432264",
 
 $@spellicon432264
 $@spelldesc432264",
-432308,,,
+432308,,,Physical damage inflicted every $t1 sec.
 432330,,,
 432407,,,
 432417,,,
@@ -26275,7 +26275,7 @@ Movement speed reduced by $s2%."
 434689,,,
 434690,,,
 434698,,,Allies within $a1 yards of the Priestess of the Moon gain $427116s1% increased health and $427116s2% increased damage per living Keeper of the Grove in her army.
-434724,,,Movement speed decreased by $w2% and Nature damage taken increased by $w1%.
+434724,,,Nature damage taken increased by $w1%.
 434725,,,
 434738,,,
 434744,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
@@ -26826,8 +26826,8 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 438487,,,
 438501,,,
 438505,,,
-438536,,"Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s2%. 120 minute duration.","Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s3%. 120 minute duration."
-438537,,"Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s2%. 120 minute duration.
+438536,,"Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s3%. 120 minute duration.","Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s3%. 120 minute duration."
+438537,,"Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s3%. 120 minute duration.
 ","Increases critical strike chance of spells by $s1%, grants $s2 spell damage and healing, and increases melee and ranged attack speed by $s3%. 120 minute duration."
 438538,,"Charges an enemy, inflicting normal damage plus $s3 and stuns the opponent for $d.",
 438539,,"Inflicts normal damage plus $s1 to an enemy, knocking it back.",
@@ -26886,6 +26886,16 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 439670,,,
 439671,,,
 439672,,,
+439581,,,
+439944,,,
+439946,,,
+439947,,,
+440050,,,
+440052,,,
+440053,,,
+440080,,,
+440092,,,
+440093,,,
 439084,,Teaches you how to sew a Crimson Silk Robe.,
 439085,,,
 439086,,,
@@ -26945,6 +26955,17 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 439441,Rank 1,,
 439651,,Increased Fist Weapons +$s1.,
 439691,,Sends player to Gnomeregan.,
+439822,,,
+439823,,,
+439824,,,
+439826,,,
+439885,,,
+439939,,,
+439956,,,
+440014,,,Deals $w1 Fire damage every $t1 sec.
+440028,,,
+440073,,,
+440108,,,Cannot attack or use spells.
 439731,,,
 439870,,,
 439164,,,
@@ -26960,6 +26981,10 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 440054,,Creates a shadowy fiend to attack the target.  Caster receives $401988s1% mana when the Shadowfiend attacks. Lasts $d.,
 440123,,,
 439958,,,The Blood Loa rewards danger.
+440212,,Inflicts $s1 Frost damage in a 5 yard radius.,
+440236,,Use on Hypnotic Blade to create a powerful weapon.,
 440213,,,"The Blood Loa demands sport, not slaughter of the helpless! Leave your raid group or face his wrath! All stats and movement speed reduced by $s1%."
 440247,,,
 440285,,,"Your next Chain Lightning, Chain Heal,  or Lava Burst spell will be an instant cast spell."
+440505,,Gives the imbiber invisibility for $d.,Invisibility
+440632,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",

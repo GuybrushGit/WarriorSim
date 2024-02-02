@@ -23957,8 +23957,8 @@ ID,Name_lang
 436833,Widget Volley
 436834,Widget Volley
 436835,Nutty Shield
-436836,Acorn Fortress
-436837,Acorn Fortress
+436836,Widget Fortress
+436837,Widget Fortress
 436858,[DNT] Combat Dummy I
 436861,[DNT] Combat Dummy II
 436863,[DNT] Combat Dummy III
@@ -24125,6 +24125,16 @@ ID,Name_lang
 439670,[DNT] Punch Randomizer
 439671,[DNT] Special Ability Randomizer
 439672,Radioactive Bomb
+439581,[DNT] - Radiation Cloud Visual
+439944,Radiation Overdose
+439946,Gnomeregan Smash
+439947,[DNT] Teleport Player Back To Crowd Pummeler's Platform
+440050,The Claw!
+440052,The Claw!
+440053,The Claw!
+440080,Gear Toss
+440092,Gear Toss
+440093,Gear Toss
 439084,Pattern: Crimson Silk Robe
 439085,Crimson Silk Robe
 439086,Black Mageweave Vest
@@ -24184,6 +24194,17 @@ ID,Name_lang
 439441,Windfury Weapon
 439651,Increased Fist Weapons
 439691,Teleport to Booty Bay
+439822,Electrical Grid
+439823,Electrical Grid
+439824,Electrical Grid
+439826,Electrical Grid
+439885,[DNT] Jump to Ground
+439939,Freezing
+439956,Revive Pet
+440014,Sprocketfire
+440028,Nutty Shield
+440073,Self Repair
+440108,Pacify Self
 439731,Domesticated Attack Chicken
 439870,Hyperconductive Goldwrap
 439164,Dismantle
@@ -24199,6 +24220,10 @@ ID,Name_lang
 440054,Shadowfiend
 440123,[DNT] Despawn
 439958,"Kill, Maim, Bleed!"
+440212,Cryoblast
+440236,Imbue Blade
 440213,Fury of the Blood Loa
 440247,S03 - Tuning and Overrides Passive - Druid
 440285,Power Surge
+440505,Invisibility
+440632,Attack Power - Feral (+36)

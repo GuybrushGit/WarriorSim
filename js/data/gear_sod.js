@@ -33007,10 +33007,7 @@ var gear = {
       "i": "45",
       "name": "Petrolspill Pants",
       "agi": 21,
-      "sta": 11,
-      "resist": {
-        "fire": -10
-      }
+      "sta": 11
     },
     {
       "id": 213330,
@@ -51974,6 +51971,18 @@ var gear = {
         "dmg": 66,
         "magic": true
       }
+    },
+    {
+      "id": 217497,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 34,
+      "q": "3",
+      "i": "42",
+      "name": "Narpas Sword",
+      "speed": 2,
+      "mindmg": 40,
+      "maxdmg": 75
     }
   ],
   "offhand": [
@@ -69391,6 +69400,21 @@ var gear = {
       "mindmg": 100,
       "maxdmg": 149,
       "str": 17
+    },
+    {
+      "id": 217704,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 37,
+      "q": "3",
+      "i": "42",
+      "name": "Ironshod Bludgeon",
+      "speed": 2.5,
+      "mindmg": 74,
+      "maxdmg": 112,
+      "str": 8,
+      "sta": 20,
+      "ap": 37
     }
   ]
 };
