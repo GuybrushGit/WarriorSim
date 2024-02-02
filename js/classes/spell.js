@@ -346,7 +346,7 @@ class RagingBlow extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) * 0.8;
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse(executephase) {
@@ -391,7 +391,7 @@ class QuickStrike extends Spell {
         this.cooldown = 0;
     }
     dmg() {
-        return ~~rng(this.player.stats.ap * 0.15, this.player.stats.ap * 0.25);
+        return ~~rng(this.player.stats.ap * 0.10, this.player.stats.ap * 0.20);
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -1816,7 +1816,7 @@ class CoinFlip extends Aura {
     constructor(player, id) {
         super(player, id, 'Coin Flip');
         this.duration = 30;
-        this.stats = { crit: 3 };
+        this.stats = { crit: 10 };
     }
     use() {
         this.player.itemtimer = this.duration * 1000;
