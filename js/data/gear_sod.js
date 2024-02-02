@@ -7643,6 +7643,17 @@ var gear = {
       "sta": 10
     },
     {
+      "id": 217307,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 36,
+      "q": "3",
+      "i": "41",
+      "name": "Revelosh's Spaulders",
+      "agi": 12,
+      "sta": 11
+    },
+    {
       "id": 213302,
       "type": "Leather",
       "slot": "shoulder",
@@ -7694,17 +7705,6 @@ var gear = {
       "i": "35",
       "name": "Golden Scale Shoulders",
       "str": 7
-    },
-    {
-      "id": 217307,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 36,
-      "q": "3",
-      "i": "41",
-      "name": "Revelosh's Spaulders",
-      "agi": 12,
-      "sta": 11
     }
   ],
   "back": [
