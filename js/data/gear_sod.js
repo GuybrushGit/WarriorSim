@@ -23330,14 +23330,15 @@ var gear = {
     },
     {
       "id": 213278,
-      "type": "Leather",
+      "type": "FistMace",
       "slot": "hands",
       "r": 40,
       "q": "3",
       "i": "45",
       "name": "Bonk-Maestro's Handguards",
       "agi": 10,
-      "sta": 11
+      "sta": 11,
+      "skill": 3
     }
   ],
   "waist": [

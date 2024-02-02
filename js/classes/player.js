@@ -214,6 +214,10 @@ class Player {
                             this.base['skill_2'] += item.skill;
                             this.base['skill_3'] += item.skill;
                         }
+                        else if (item.type == 'FistMace') {
+                            this.base['skill_0'] += item.skill;
+                            this.base['skill_4'] += item.skill;
+                        }
                         else {
                             let sk = WEAPONTYPE[item.type.replace(' ','').toUpperCase()];
                             this.base['skill_' + sk] += item.skill;
@@ -262,6 +266,10 @@ class Player {
                                 this.base['skill_0'] += item.skill;
                                 this.base['skill_1'] += item.skill;
                                 this.base['skill_3'] += item.skill;
+                            }
+                            else if (item.type == 'FistMace') {
+                                this.base['skill_0'] -= item.skill;
+                                this.base['skill_4'] -= item.skill;
                             }
                             else {
                                 let sk = WEAPONTYPE[item.type.replace(' ','').toUpperCase()];
