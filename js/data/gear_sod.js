@@ -3512,6 +3512,29 @@ var gear = {
       "i": "38",
       "name": "Golden Scale Coif",
       "str": 10
+    },
+    {
+      "id": 213280,
+      "type": "Mail",
+      "slot": "head",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Marksman's Scopevisor",
+      "agi": 9,
+      "sta": 13,
+      "crit": 1
+    },
+    {
+      "id": 213417,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Truesilver Filament Coif",
+      "sta": 8,
+      "crit": 1
     }
   ],
   "neck": [
@@ -23304,6 +23327,17 @@ var gear = {
       "i": "41",
       "name": "Golden Scale Gauntlets",
       "str": 11
+    },
+    {
+      "id": 213278,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Bonk-Maestro's Handguards",
+      "agi": 10,
+      "sta": 11
     }
   ],
   "waist": [
