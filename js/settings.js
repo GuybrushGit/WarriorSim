@@ -401,15 +401,17 @@ SIM.SETTINGS = {
         details.append(`<label>${spell.name}</label>`);
         let ul = $("<ul></ul>");
 
-        if (spell.name == "Slam") note = "Used after a swing reset";
-        
         if (spell.haste !== undefined)
             ul.append(`<li class="nobox ${spell.haste ? 'active' : ''}">Attack speed set at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
 
         if (typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled ${note ? ` - ${note}` : ''}</li>`);
+        if (typeof spell.swingreset !== 'undefined') 
+            ul.append(`<li data-id="swingreset" class="${spell.swingreset ? 'active' : ''}">Resets swing timers</li>`);
+        if (typeof spell.afterswing !== 'undefined') 
+            ul.append(`<li data-id="afterswing" class="${spell.afterswing ? 'active' : ''}">Use only after a swing reset</li>`);
         if (typeof spell.bloodsurge !== 'undefined') 
-            ul.append(`<li data-id="bloodsurge" class="${spell.bloodsurge ? 'active' : ''}">Use only when Blood Surge procs.</li>`);
+            ul.append(`<li data-id="bloodsurge" class="${spell.bloodsurge ? 'active' : ''}">Use only when Blood Surge procs</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id != 11597) 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}">${spell.name == "Heroic Strike" ? 'Queue' : 'Use'} when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.minrage !== 'undefined' && spell.id == 11597) 

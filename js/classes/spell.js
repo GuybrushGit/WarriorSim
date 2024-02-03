@@ -32,6 +32,8 @@ class Spell {
         if (spell.execute) this.execute = spell.execute;
         if (spell.globalsactive) this.globals = spell.globals;
         if (spell.bloodsurge) this.bloodsurge = spell.bloodsurge;
+        if (spell.afterswing) this.afterswing = spell.afterswing;
+        if (spell.swingreset) this.swingreset = spell.swingreset;
     }
     dmg() {
         return 0;
@@ -289,10 +291,10 @@ class SunderArmor extends Spell {
     }
     dmg() {
         if (!this.devastate) return 0;
-        let dmg;
-        let mod = 0.6 + 0.06 * (this.stacks - 1);
-        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        return (dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed) * mod;
+        let mod = 1 + 0.1 * (this.stacks - 1);
+        let dmg = (this.player.mh.mindmg + this.player.mh.bonusdmg + this.player.mh.maxdmg + this.player.mh.bonusdmg) / 2;
+        let dps = (dmg  + (this.player.stats.ap / 14) * this.player.mh.speed)  / (this.player.mh.speed / this.player.stats.haste);
+        return dps * mod;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage &&
@@ -344,7 +346,7 @@ class RagingBlow extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) * 0.8;
         return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
     }
     canUse(executephase) {
@@ -389,7 +391,7 @@ class QuickStrike extends Spell {
         this.cooldown = 0;
     }
     dmg() {
-        return ~~rng(this.player.stats.ap * 0.15, this.player.stats.ap * 0.25);
+        return ~~rng(this.player.stats.ap * 0.10, this.player.stats.ap * 0.20);
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -423,7 +425,7 @@ class Slam extends Spell {
         this.cost = 15 - player.ragecostbonus;
         this.casttime = player.precisetiming ? 0 : (1500 - (player.talents.impslam * 100));
         this.cooldown = player.precisetiming ? 6 : 0;
-        this.mhthreshold = player.mh.speed * 1000;
+        this.mhthreshold = 0;
     }
     dmg() {
         let dmg;
@@ -433,14 +435,16 @@ class Slam extends Spell {
     use() {
         if (!this.player.freeslam) this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        this.player.mh.use();
-        if (this.player.oh) this.player.oh.use();
+        if (this.swingreset) {
+            this.player.mh.use();
+            if (this.player.oh) this.player.oh.use();
+        }
         this.player.freeslam = false;
         this.timer = this.cooldown * 1000;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.player.mh.timer > this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
+        return !this.timer && !this.player.timer && this.player.mh.timer >= this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
             (!this.bloodsurge || this.player.freeslam) &&
             (!this.player.auras.battlestance || !this.player.auras.battlestance.timer) &&
             ((!this.minrage && !this.maincd) ||
@@ -1812,7 +1816,7 @@ class CoinFlip extends Aura {
     constructor(player, id) {
         super(player, id, 'Coin Flip');
         this.duration = 30;
-        this.stats = { crit: 3 };
+        this.stats = { crit: 10 };
     }
     use() {
         this.player.itemtimer = this.duration * 1000;

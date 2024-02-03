@@ -115,6 +115,7 @@
                     if (item.ClassID != "2") {
                       if (item.ID == 14551) obj.type = "Varied";
                       else if (item.ID == 215380) obj.type = "Varied2H";
+                      else if (item.ID == 213278) obj.type = "FistMace";
                       else if (e["EffectMiscValue[0]"] == 44) obj.type = "Axe";
                       else if (e["EffectMiscValue[0]"] == 173) obj.type = "Dagger";
                       else if (e["EffectMiscValue[0]"] == 43) obj.type = "Sword";
@@ -219,6 +220,7 @@
           }
 
           if (obj.id == 19970) obj.r = 35;
+          if (obj.id == 8708) obj.r = 41;
           if (obj.id == 867) obj.ap = 20;
           if (obj.id == 216497) obj.proc.magic = true;
           if (obj.id == 215166) delete obj.proc;
@@ -287,18 +289,18 @@
         }
 
         // custom items
-        gear["head"].push({
-          "id": 215161,
-          "type": "Plate",
-          "slot": "head",
-          "r": 40,
-          "q": "4",
-          "i": "45",
-          "name": "Tempered Interference-Negating Helmet",
-          "str": 16,
-          "sta": 16,
-          "crit": 1
-        });
+        // gear["head"].push({
+        //   "id": 215161,
+        //   "type": "Plate",
+        //   "slot": "head",
+        //   "r": 40,
+        //   "q": "4",
+        //   "i": "45",
+        //   "name": "Tempered Interference-Negating Helmet",
+        //   "str": 16,
+        //   "sta": 16,
+        //   "crit": 1
+        // });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }

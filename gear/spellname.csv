@@ -23957,8 +23957,8 @@ ID,Name_lang
 436833,Widget Volley
 436834,Widget Volley
 436835,Nutty Shield
-436836,Acorn Fortress
-436837,Acorn Fortress
+436836,Widget Fortress
+436837,Widget Fortress
 436858,[DNT] Combat Dummy I
 436861,[DNT] Combat Dummy II
 436863,[DNT] Combat Dummy III
@@ -24066,8 +24066,8 @@ ID,Name_lang
 438487,Ride Vehicle
 438501,Inevitable Doom
 438505,Mech Pilot Transform (Red)
-438536,Spark of Crazed Inspiration
-438537,Spark of Crazed Inspiration
+438536,Spark of Inspiration
+438537,Spark of Inspiration
 438538,Charge
 438539,Uppercut
 438540,Charge
@@ -24077,7 +24077,7 @@ ID,Name_lang
 438547,[DNT] Hyperconductive Shock Visual
 438548,Charged Inspiration Visual
 438550,Uppercut
-438551,Call Bloodshot
+438551,Feast of Blood
 438561,Scrap Toss
 438567,Bruised
 438572,Vehicle Damaged
@@ -24088,7 +24088,7 @@ ID,Name_lang
 438669,[DNT] Give Trinket
 438683,Sprocketfire Punch
 438704,Sprocketfire Punch
-438710,Sprocketfire Punch
+438710,Sprocketfire
 438713,Furnace Surge
 438714,Furnace Surge
 438715,Furnace Surge
@@ -24100,7 +24100,7 @@ ID,Name_lang
 438721,Frozen Solid
 438723,Coolant Discharge
 438724,Frozen Shrapnel
-438725,Ice Bomb
+438725,Frost Bomb
 438726,Hazardous Hammer
 438727,Radiation Sickness
 438728,Radiation Leak
@@ -24108,9 +24108,122 @@ ID,Name_lang
 438732,Toxic Ventilation
 438735,High Voltage!
 438857,Walking Bomb Passive Proc (100%)
-438859,Walking Bomb Effect
+438859,Incendiary Bomb
 438861,Summon Bomb
 438862,Summon Bomb
 438863,Summon Bomb
 438865,Gnomeregan Smash
 438938,Translate Spell Notes
+439154,Sprocketfire Punch
+439158,Supercooled Smash
+439159,Supercooled Smash
+439336,Frozen Shrapnel
+439338,Walking Bomb Passive Proc (100%)
+439342,Hazardous Hammer
+439343,Hazardous Hammer
+439540,Walking Bomb Passive Proc (100%)
+439670,[DNT] Punch Randomizer
+439671,[DNT] Special Ability Randomizer
+439672,Radioactive Bomb
+439581,[DNT] - Radiation Cloud Visual
+439944,Radiation Overdose
+439946,Gnomeregan Smash
+439947,[DNT] Teleport Player Back To Crowd Pummeler's Platform
+440050,The Claw!
+440052,The Claw!
+440053,The Claw!
+440080,Gear Toss
+440092,Gear Toss
+440093,Gear Toss
+439084,Pattern: Crimson Silk Robe
+439085,Crimson Silk Robe
+439086,Black Mageweave Vest
+439087,Black Mageweave Vest
+439088,Black Mageweave Leggings
+439089,Black Mageweave Leggings
+439090,Pattern: Earthen Silk Belt
+439091,Earthen Silk Belt
+439092,Pattern: Crimson Silk Shoulders
+439093,Crimson Silk Shoulders
+439094,Long Silken Cloak
+439095,Long Silken Cloak
+439096,Pattern: Boots of the Enchanter
+439097,Boots of the Enchanter
+439098,Crimson Silk Belt
+439099,Crimson Silk Belt
+439100,Earthen Vest
+439101,Earthen Vest
+439102,Enchanter's Cowl
+439103,Enchanter's Cowl
+439104,Pattern: Enchanter's Cowl
+439105,Big Voodoo Mask
+439106,Pattern: Big Voodoo Mask
+439108,Big Voodoo Robe
+439109,Pattern: Big Voodoo Robe
+439110,Guardian Leather Bracers
+439111,Pattern: Guardian Leather Bracers
+439112,Guardian Belt
+439113,Pattern: Guardian Belt
+439114,Guardian Pants
+439115,Guardian Pants
+439116,Turtle Scale Breastplate
+439117,Turtle Scale Breastplate
+439118,Turtle Scale Gloves
+439119,Pattern: Turtle Scale Gloves
+439120,Golden Scale Gauntlets
+439121,Plans: Golden Scale Gauntlets
+439122,Golden Scale Boots
+439123,Plans: Golden Scale Boots
+439124,Golden Scale Cuirass
+439125,Plans: Golden Scale Cuirass
+439126,Golden Scale Coif
+439127,Plans: Golden Scale Coif
+439128,Moonsteel Broadsword
+439129,Plans: Moonsteel Broadsword
+439130,Golden Scale Shoulders
+439131,Plans: Golden Scale Shoulders
+439132,Golden Scale Leggings
+439133,Plans: Golden Scale Leggings
+439134,Greater Mystic Wand
+439135,Greater Mystic Wand
+439157,Enchanted Sigil: Innovation
+439155,Sigil of Innovation
+439156,Sigil of Innovation
+439431,Windfury Weapon
+439440,Windfury Weapon
+439441,Windfury Weapon
+439651,Increased Fist Weapons
+439691,Teleport to Booty Bay
+439822,Electrical Grid
+439823,Electrical Grid
+439824,Electrical Grid
+439826,Electrical Grid
+439885,[DNT] Jump to Ground
+439939,Freezing
+439956,Revive Pet
+440014,Sprocketfire
+440028,Nutty Shield
+440073,Self Repair
+440108,Pacify Self
+439731,Domesticated Attack Chicken
+439870,Hyperconductive Goldwrap
+439164,Dismantle
+439959,Lesser Arcane Elixir
+439960,Lesser Arcane Elixir
+439961,Recipe: Lesserr Arcane Elixir
+439995,Resurrection
+439996,Resurrection
+439998,Resurrection
+440077,BFD XP Grant [DNT]
+440072,Ghostly
+440106,Resurrection
+440054,Shadowfiend
+440123,[DNT] Despawn
+439958,"Kill, Maim, Bleed!"
+440212,Cryoblast
+440236,Imbue Blade
+440213,Fury of the Blood Loa
+440247,S03 - Tuning and Overrides Passive - Druid
+440285,Power Surge
+440505,Invisibility
+440632,Attack Power - Feral (+36)
