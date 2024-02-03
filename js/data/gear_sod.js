@@ -4720,17 +4720,6 @@ var gear = {
       "ap": 26
     },
     {
-      "name": "Medallion of the Dawn",
-      "crit": 1,
-      "sta": 12,
-      "ap": 23,
-      "source": "Quest",
-      "phase": 6,
-      "id": 22659,
-      "q": "4",
-      "i": "60"
-    },
-    {
       "id": 209422,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -49294,8 +49283,8 @@ var gear = {
       "i": "70",
       "name": "Fang of the Mystics",
       "speed": 1.5,
-      "mindmg": 54,
-      "maxdmg": 101
+      "mindmg": 39,
+      "maxdmg": 86
     },
     {
       "id": 17071,
@@ -49339,8 +49328,8 @@ var gear = {
       "i": "71",
       "name": "Azuresong Mageblade",
       "speed": 2.4,
-      "mindmg": 88,
-      "maxdmg": 164,
+      "mindmg": 64,
+      "maxdmg": 140,
       "sta": 7
     },
     {
@@ -49352,8 +49341,8 @@ var gear = {
       "i": "69",
       "name": "Aurastone Hammer",
       "speed": 2.7,
-      "mindmg": 95,
-      "maxdmg": 178,
+      "mindmg": 79,
+      "maxdmg": 162,
       "sta": 10
     },
     {
@@ -49890,8 +49879,8 @@ var gear = {
       "i": "65",
       "name": "Sorcerous Dagger",
       "speed": 1.4,
-      "mindmg": 46,
-      "maxdmg": 86,
+      "mindmg": 39,
+      "maxdmg": 79,
       "sta": 8
     },
     {
@@ -49903,8 +49892,8 @@ var gear = {
       "i": "80",
       "name": "Thunderfury Blessed Blade of the Windseeker",
       "speed": 1.9,
-      "mindmg": 98,
-      "maxdmg": 183,
+      "mindmg": 60,
+      "maxdmg": 145,
       "agi": 5,
       "sta": 8,
       "resist": {
@@ -50107,8 +50096,8 @@ var gear = {
       "i": "77",
       "name": "Claw of Chromaggus",
       "speed": 1.5,
-      "mindmg": 61,
-      "maxdmg": 114,
+      "mindmg": 37,
+      "maxdmg": 90,
       "sta": 7
     },
     {
@@ -50148,8 +50137,8 @@ var gear = {
       "i": "81",
       "name": "Lok'amir il Romathis",
       "speed": 2.1,
-      "mindmg": 92,
-      "maxdmg": 172,
+      "mindmg": 48,
+      "maxdmg": 128,
       "sta": 10
     },
     {
@@ -50460,8 +50449,8 @@ var gear = {
       "i": "68",
       "name": "Bloodcaller",
       "speed": 2,
-      "mindmg": 69,
-      "maxdmg": 130,
+      "mindmg": 53,
+      "maxdmg": 114,
       "sta": 12
     },
     {
@@ -50500,8 +50489,8 @@ var gear = {
       "i": "66",
       "name": "Jin'do's Hexxer",
       "speed": 2.4,
-      "mindmg": 80,
-      "maxdmg": 150,
+      "mindmg": 65,
+      "maxdmg": 135,
       "sta": 6
     },
     {
@@ -50544,8 +50533,8 @@ var gear = {
       "i": "65",
       "name": "Fang of Venoxis",
       "speed": 1.3,
-      "mindmg": 43,
-      "maxdmg": 80
+      "mindmg": 36,
+      "maxdmg": 73
     },
     {
       "id": 19908,
@@ -50632,8 +50621,8 @@ var gear = {
       "i": "68",
       "name": "Renataki's Soul Conduit",
       "speed": 2.1,
-      "mindmg": 66,
-      "maxdmg": 123
+      "mindmg": 58,
+      "maxdmg": 115
     },
     {
       "id": 19965,
@@ -50644,8 +50633,8 @@ var gear = {
       "i": "68",
       "name": "Wushoolay's Poker",
       "speed": 1.6,
-      "mindmg": 50,
-      "maxdmg": 94
+      "mindmg": 44,
+      "maxdmg": 88
     },
     {
       "id": 19968,
@@ -50686,8 +50675,8 @@ var gear = {
       "i": "65",
       "name": "Sageclaw",
       "speed": 1.7,
-      "mindmg": 56,
-      "maxdmg": 105,
+      "mindmg": 47,
+      "maxdmg": 96,
       "sta": 8
     },
     {
@@ -50699,8 +50688,8 @@ var gear = {
       "i": "65",
       "name": "Mindfang",
       "speed": 1.7,
-      "mindmg": 56,
-      "maxdmg": 105,
+      "mindmg": 47,
+      "maxdmg": 96,
       "sta": 8
     },
     {
@@ -50867,8 +50856,8 @@ var gear = {
       "i": "63",
       "name": "Elemental Attuned Blade",
       "speed": 2.1,
-      "mindmg": 67,
-      "maxdmg": 125
+      "mindmg": 59,
+      "maxdmg": 117
     },
     {
       "id": 20720,
@@ -50879,8 +50868,8 @@ var gear = {
       "i": "65",
       "name": "Dark Whisper Blade",
       "speed": 1.4,
-      "mindmg": 41,
-      "maxdmg": 78,
+      "mindmg": 40,
+      "maxdmg": 77,
       "sta": 6
     },
     {
@@ -50981,8 +50970,8 @@ var gear = {
       "i": "69",
       "name": "Stinger of Ayamiss",
       "speed": 2.4,
-      "mindmg": 85,
-      "maxdmg": 158,
+      "mindmg": 64,
+      "maxdmg": 137,
       "sta": 9
     },
     {
@@ -51023,8 +51012,8 @@ var gear = {
       "i": "76",
       "name": "Runesword of the Red",
       "speed": 2.2,
-      "mindmg": 88,
-      "maxdmg": 164,
+      "mindmg": 53,
+      "maxdmg": 129,
       "sta": 17
     },
     {
@@ -51051,8 +51040,8 @@ var gear = {
       "i": "76",
       "name": "Fang of Korialstrasz",
       "speed": 1.8,
-      "mindmg": 72,
-      "maxdmg": 135,
+      "mindmg": 44,
+      "maxdmg": 107,
       "sta": 9
     },
     {
@@ -51064,8 +51053,8 @@ var gear = {
       "i": "78",
       "name": "Sharpened Silithid Femur",
       "speed": 2.3,
-      "mindmg": 95,
-      "maxdmg": 178,
+      "mindmg": 54,
+      "maxdmg": 137,
       "sta": 14
     },
     {
@@ -51121,8 +51110,8 @@ var gear = {
       "i": "68",
       "name": "The Lost Kris of Zedd",
       "speed": 1.5,
-      "mindmg": 47,
-      "maxdmg": 88,
+      "mindmg": 42,
+      "maxdmg": 83,
       "sta": 6
     },
     {
@@ -51149,8 +51138,8 @@ var gear = {
       "i": "84",
       "name": "Scepter of the False Prophet",
       "speed": 1.8,
-      "mindmg": 83,
-      "maxdmg": 156,
+      "mindmg": 39,
+      "maxdmg": 112,
       "sta": 10
     },
     {
@@ -51255,8 +51244,8 @@ var gear = {
       "i": "65",
       "name": "Shivsprocket's Shiv",
       "speed": 1.5,
-      "mindmg": 44,
-      "maxdmg": 84,
+      "mindmg": 43,
+      "maxdmg": 83,
       "sta": 13
     },
     {
@@ -51268,8 +51257,8 @@ var gear = {
       "i": "65",
       "name": "Simone's Cultivating Hammer",
       "speed": 1.8,
-      "mindmg": 53,
-      "maxdmg": 100
+      "mindmg": 51,
+      "maxdmg": 98
     },
     {
       "id": 22383,
@@ -51280,8 +51269,8 @@ var gear = {
       "i": "64",
       "name": "Sageblade",
       "speed": 1.8,
-      "mindmg": 58,
-      "maxdmg": 109,
+      "mindmg": 49,
+      "maxdmg": 100,
       "sta": 14
     },
     {
@@ -51321,8 +51310,8 @@ var gear = {
       "i": "66",
       "name": "Verimonde's Last Resort",
       "speed": 1.4,
-      "mindmg": 42,
-      "maxdmg": 79,
+      "mindmg": 40,
+      "maxdmg": 77,
       "sta": 7
     },
     {
@@ -51334,8 +51323,8 @@ var gear = {
       "i": "68",
       "name": "Zulian Scepter of Rites",
       "speed": 2.6,
-      "mindmg": 81,
-      "maxdmg": 152,
+      "mindmg": 72,
+      "maxdmg": 143,
       "sta": 9
     },
     {
@@ -51375,8 +51364,8 @@ var gear = {
       "i": "81",
       "name": "Midnight Haze",
       "speed": 1.8,
-      "mindmg": 90,
-      "maxdmg": 136,
+      "mindmg": 52,
+      "maxdmg": 98,
       "sta": 20
     },
     {
@@ -51417,8 +51406,8 @@ var gear = {
       "i": "83",
       "name": "Wraith Blade",
       "speed": 1.8,
-      "mindmg": 82,
-      "maxdmg": 153,
+      "mindmg": 39,
+      "maxdmg": 110,
       "sta": 10
     },
     {
@@ -51460,8 +51449,8 @@ var gear = {
       "i": "81",
       "name": "The Widow's Embrace",
       "speed": 1.9,
-      "mindmg": 83,
-      "maxdmg": 156,
+      "mindmg": 43,
+      "maxdmg": 116,
       "sta": 12
     },
     {
@@ -51518,8 +51507,8 @@ var gear = {
       "i": "89",
       "name": "Hammer of the Twisting Nether",
       "speed": 1.9,
-      "mindmg": 97,
-      "maxdmg": 181,
+      "mindmg": 37,
+      "maxdmg": 121,
       "sta": 8
     },
     {
@@ -51573,8 +51562,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Mageblade",
       "speed": 2,
-      "mindmg": 95,
-      "maxdmg": 143,
+      "mindmg": 59,
+      "maxdmg": 107,
       "sta": 14
     },
     {
@@ -51586,8 +51575,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Warhammer",
       "speed": 2.9,
-      "mindmg": 138,
-      "maxdmg": 207,
+      "mindmg": 86,
+      "maxdmg": 155,
       "sta": 14
     },
     {
@@ -51614,8 +51603,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's Battle Mace",
       "speed": 2.9,
-      "mindmg": 138,
-      "maxdmg": 207,
+      "mindmg": 86,
+      "maxdmg": 155,
       "sta": 14
     },
     {
@@ -51627,8 +51616,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's Spellblade",
       "speed": 2,
-      "mindmg": 95,
-      "maxdmg": 143,
+      "mindmg": 59,
+      "maxdmg": 107,
       "sta": 14
     },
     {
@@ -51787,8 +51776,8 @@ var gear = {
       "i": "33",
       "name": "Dagger of Willing Sacrifice",
       "speed": 1.5,
-      "mindmg": 17,
-      "maxdmg": 32,
+      "mindmg": 13,
+      "maxdmg": 28,
       "sta": 4
     },
     {
@@ -51965,8 +51954,8 @@ var gear = {
       "i": "45",
       "name": "Glimmering Gizmoblade",
       "speed": 1.2,
-      "mindmg": 26,
-      "maxdmg": 47,
+      "mindmg": 21,
+      "maxdmg": 42,
       "sta": 7
     },
     {
@@ -59504,8 +59493,8 @@ var gear = {
       "i": "70",
       "name": "Fang of the Mystics",
       "speed": 1.5,
-      "mindmg": 54,
-      "maxdmg": 101
+      "mindmg": 39,
+      "maxdmg": 86
     },
     {
       "id": 17071,
@@ -59549,8 +59538,8 @@ var gear = {
       "i": "69",
       "name": "Aurastone Hammer",
       "speed": 2.7,
-      "mindmg": 95,
-      "maxdmg": 178,
+      "mindmg": 79,
+      "maxdmg": 162,
       "sta": 10
     },
     {
@@ -59976,8 +59965,8 @@ var gear = {
       "i": "80",
       "name": "Thunderfury Blessed Blade of the Windseeker",
       "speed": 1.9,
-      "mindmg": 98,
-      "maxdmg": 183,
+      "mindmg": 60,
+      "maxdmg": 145,
       "agi": 5,
       "sta": 8,
       "resist": {
@@ -60166,8 +60155,8 @@ var gear = {
       "i": "77",
       "name": "Claw of Chromaggus",
       "speed": 1.5,
-      "mindmg": 61,
-      "maxdmg": 114,
+      "mindmg": 37,
+      "maxdmg": 90,
       "sta": 7
     },
     {
@@ -60538,8 +60527,8 @@ var gear = {
       "i": "65",
       "name": "Arlokk's Grasp",
       "speed": 1.5,
-      "mindmg": 49,
-      "maxdmg": 92,
+      "mindmg": 42,
+      "maxdmg": 85,
       "proc": {
         "magic": true,
         "procgcd": true,
@@ -60626,8 +60615,8 @@ var gear = {
       "i": "65",
       "name": "Sageclaw",
       "speed": 1.7,
-      "mindmg": 56,
-      "maxdmg": 105,
+      "mindmg": 47,
+      "maxdmg": 96,
       "sta": 8
     },
     {
@@ -60639,8 +60628,8 @@ var gear = {
       "i": "65",
       "name": "Mindfang",
       "speed": 1.7,
-      "mindmg": 56,
-      "maxdmg": 105,
+      "mindmg": 47,
+      "maxdmg": 96,
       "sta": 8
     },
     {
@@ -61022,8 +61011,8 @@ var gear = {
       "i": "68",
       "name": "Zulian Scepter of Rites",
       "speed": 2.6,
-      "mindmg": 81,
-      "maxdmg": 152,
+      "mindmg": 72,
+      "maxdmg": 143,
       "sta": 9
     },
     {
@@ -61050,8 +61039,8 @@ var gear = {
       "i": "81",
       "name": "Midnight Haze",
       "speed": 1.8,
-      "mindmg": 90,
-      "maxdmg": 136,
+      "mindmg": 52,
+      "maxdmg": 98,
       "sta": 20
     },
     {
@@ -61092,8 +61081,8 @@ var gear = {
       "i": "83",
       "name": "Wraith Blade",
       "speed": 1.8,
-      "mindmg": 82,
-      "maxdmg": 153,
+      "mindmg": 39,
+      "maxdmg": 110,
       "sta": 10
     },
     {
@@ -61135,8 +61124,8 @@ var gear = {
       "i": "81",
       "name": "The Widow's Embrace",
       "speed": 1.9,
-      "mindmg": 83,
-      "maxdmg": 156,
+      "mindmg": 43,
+      "maxdmg": 116,
       "sta": 12
     },
     {
@@ -61193,8 +61182,8 @@ var gear = {
       "i": "89",
       "name": "Hammer of the Twisting Nether",
       "speed": 1.9,
-      "mindmg": 97,
-      "maxdmg": 181,
+      "mindmg": 37,
+      "maxdmg": 121,
       "sta": 8
     },
     {
@@ -61264,8 +61253,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Mageblade",
       "speed": 2,
-      "mindmg": 95,
-      "maxdmg": 143,
+      "mindmg": 59,
+      "maxdmg": 107,
       "sta": 14
     },
     {
@@ -61277,8 +61266,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Warhammer",
       "speed": 2.9,
-      "mindmg": 138,
-      "maxdmg": 207,
+      "mindmg": 86,
+      "maxdmg": 155,
       "sta": 14
     },
     {
@@ -61305,8 +61294,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's Battle Mace",
       "speed": 2.9,
-      "mindmg": 138,
-      "maxdmg": 207,
+      "mindmg": 86,
+      "maxdmg": 155,
       "sta": 14
     },
     {
@@ -61318,8 +61307,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's Spellblade",
       "speed": 2,
-      "mindmg": 95,
-      "maxdmg": 143,
+      "mindmg": 59,
+      "maxdmg": 107,
       "sta": 14
     },
     {
@@ -61461,8 +61450,8 @@ var gear = {
       "i": "33",
       "name": "Dagger of Willing Sacrifice",
       "speed": 1.5,
-      "mindmg": 17,
-      "maxdmg": 32,
+      "mindmg": 13,
+      "maxdmg": 28,
       "sta": 4
     },
     {
@@ -67435,8 +67424,8 @@ var gear = {
       "i": "67",
       "name": "Amberseal Keeper",
       "speed": 3.3,
-      "mindmg": 168,
-      "maxdmg": 252,
+      "mindmg": 145,
+      "maxdmg": 229,
       "resist": {
         "fire": 5,
         "nature": 5,
@@ -67813,8 +67802,8 @@ var gear = {
       "i": "70",
       "name": "Staff of Dominance",
       "speed": 2.9,
-      "mindmg": 155,
-      "maxdmg": 234,
+      "mindmg": 126,
+      "maxdmg": 205,
       "sta": 16
     },
     {
@@ -67886,8 +67875,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Stave",
       "speed": 3,
-      "mindmg": 185,
-      "maxdmg": 279,
+      "mindmg": 131,
+      "maxdmg": 225,
       "sta": 41
     },
     {
@@ -67899,8 +67888,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's War Staff",
       "speed": 3,
-      "mindmg": 185,
-      "maxdmg": 279,
+      "mindmg": 131,
+      "maxdmg": 225,
       "sta": 41
     },
     {
@@ -68089,8 +68078,8 @@ var gear = {
       "i": "75",
       "name": "Shadow Wing Focus Staff",
       "speed": 3.2,
-      "mindmg": 187,
-      "maxdmg": 282,
+      "mindmg": 143,
+      "maxdmg": 238,
       "sta": 22
     },
     {
@@ -68102,8 +68091,8 @@ var gear = {
       "i": "81",
       "name": "Staff of the Shadow Flame",
       "speed": 3.2,
-      "mindmg": 209,
-      "maxdmg": 315,
+      "mindmg": 142,
+      "maxdmg": 248,
       "sta": 24
     },
     {
@@ -68291,8 +68280,8 @@ var gear = {
       "i": "66",
       "name": "Jin'do's Judgement",
       "speed": 3.3,
-      "mindmg": 165,
-      "maxdmg": 248,
+      "mindmg": 144,
+      "maxdmg": 227,
       "sta": 10
     },
     {
@@ -68318,8 +68307,8 @@ var gear = {
       "i": "65",
       "name": "Will of Arlokk",
       "speed": 3,
-      "mindmg": 147,
-      "maxdmg": 222,
+      "mindmg": 129,
+      "maxdmg": 204,
       "sta": 15
     },
     {
@@ -68331,8 +68320,8 @@ var gear = {
       "i": "65",
       "name": "Jeklik's Crusher",
       "speed": 3.6,
-      "mindmg": 177,
-      "maxdmg": 266,
+      "mindmg": 159,
+      "maxdmg": 248,
       "proc": {
         "dmg": 210,
         "ppm": 4
@@ -68412,8 +68401,8 @@ var gear = {
       "i": "65",
       "name": "Ironbark Staff",
       "speed": 3.4,
-      "mindmg": 156,
-      "maxdmg": 262,
+      "mindmg": 137,
+      "maxdmg": 243,
       "sta": 19
     },
     {
@@ -68439,8 +68428,8 @@ var gear = {
       "i": "65",
       "name": "Ironbark Staff",
       "speed": 3.4,
-      "mindmg": 156,
-      "maxdmg": 262,
+      "mindmg": 137,
+      "maxdmg": 243,
       "sta": 19
     },
     {
@@ -68452,8 +68441,8 @@ var gear = {
       "i": "65",
       "name": "Zulian Ceremonial Staff",
       "speed": 2.6,
-      "mindmg": 115,
-      "maxdmg": 174,
+      "mindmg": 113,
+      "maxdmg": 172,
       "sta": 13
     },
     {
@@ -68539,8 +68528,8 @@ var gear = {
       "i": "71",
       "name": "Staff of Rampant Growth",
       "speed": 2.6,
-      "mindmg": 142,
-      "maxdmg": 213,
+      "mindmg": 114,
+      "maxdmg": 185,
       "sta": 12,
       "resist": {
         "nature": 20
@@ -68622,8 +68611,8 @@ var gear = {
       "i": "75",
       "name": "Staff of the Qiraji Prophets",
       "speed": 2.9,
-      "mindmg": 170,
-      "maxdmg": 255,
+      "mindmg": 130,
+      "maxdmg": 215,
       "sta": 21,
       "resist": {
         "fire": 10,
@@ -68668,8 +68657,8 @@ var gear = {
       "i": "79",
       "name": "Blessed Qiraji Acolyte Staff",
       "speed": 3,
-      "mindmg": 189,
-      "maxdmg": 284,
+      "mindmg": 132,
+      "maxdmg": 227,
       "sta": 32
     },
     {
@@ -68681,8 +68670,8 @@ var gear = {
       "i": "79",
       "name": "Blessed Qiraji Augur Staff",
       "speed": 3,
-      "mindmg": 189,
-      "maxdmg": 284,
+      "mindmg": 132,
+      "maxdmg": 227,
       "sta": 23
     },
     {
@@ -68694,8 +68683,8 @@ var gear = {
       "i": "72",
       "name": "Staff of the Ruins",
       "speed": 3.4,
-      "mindmg": 189,
-      "maxdmg": 284,
+      "mindmg": 152,
+      "maxdmg": 247,
       "sta": 24
     },
     {
@@ -68941,8 +68930,8 @@ var gear = {
       "i": "89",
       "name": "Soulseeker",
       "speed": 3.2,
-      "mindmg": 243,
-      "maxdmg": 366,
+      "mindmg": 143,
+      "maxdmg": 266,
       "sta": 30
     },
     {
@@ -68954,8 +68943,8 @@ var gear = {
       "i": "83",
       "name": "Brimstone Staff",
       "speed": 3.2,
-      "mindmg": 217,
-      "maxdmg": 327,
+      "mindmg": 141,
+      "maxdmg": 251,
       "sta": 31
     },
     {
@@ -68967,8 +68956,8 @@ var gear = {
       "i": "83",
       "name": "Spire of Twilight",
       "speed": 3.2,
-      "mindmg": 217,
-      "maxdmg": 327,
+      "mindmg": 141,
+      "maxdmg": 251,
       "sta": 30
     },
     {
@@ -69118,8 +69107,8 @@ var gear = {
       "i": "30",
       "name": "Rod of the Ancient Sleepwalker",
       "speed": 2,
-      "mindmg": 50,
-      "maxdmg": 76,
+      "mindmg": 37,
+      "maxdmg": 63,
       "resist": {
         "shadow": 5
       }
@@ -69192,8 +69181,8 @@ var gear = {
       "i": "30",
       "name": "Fist of the Wild",
       "speed": 2.8,
-      "mindmg": 55,
-      "maxdmg": 83,
+      "mindmg": 44,
+      "maxdmg": 72,
       "agi": 6,
       "str": 6,
       "sta": 6,
@@ -69221,8 +69210,8 @@ var gear = {
       "i": "64",
       "name": "Ecks'av's Tribal Guardian",
       "speed": 3.7,
-      "mindmg": 151,
-      "maxdmg": 227
+      "mindmg": 154,
+      "maxdmg": 230
     },
     {
       "id": 211941,
@@ -69233,8 +69222,8 @@ var gear = {
       "i": "66",
       "name": "Windwalker's Yari",
       "speed": 3.6,
-      "mindmg": 151,
-      "maxdmg": 227
+      "mindmg": 148,
+      "maxdmg": 224
     },
     {
       "id": 211944,
@@ -69245,8 +69234,8 @@ var gear = {
       "i": "63",
       "name": "Tojara's Karma",
       "speed": 3.5,
-      "mindmg": 151,
-      "maxdmg": 227,
+      "mindmg": 158,
+      "maxdmg": 234,
       "proc": {
         "magic": true,
         "dmg": 221
@@ -69334,8 +69323,8 @@ var gear = {
       "i": "45",
       "name": "Defibrillating Staff",
       "speed": 3.3,
-      "mindmg": 117,
-      "maxdmg": 175,
+      "mindmg": 102,
+      "maxdmg": 160,
       "sta": 11
     },
     {
@@ -69404,8 +69393,8 @@ var gear = {
       "i": "200",
       "name": "Bloodthirst Blade",
       "speed": 4.2,
-      "mindmg": 229,
-      "maxdmg": 344,
+      "mindmg": 649,
+      "maxdmg": 764,
       "str": 333
     },
     {
@@ -69456,8 +69445,8 @@ var gear = {
       "i": "42",
       "name": "Ironshod Bludgeon",
       "speed": 2.5,
-      "mindmg": 74,
-      "maxdmg": 112,
+      "mindmg": 68,
+      "maxdmg": 106,
       "str": 8,
       "sta": 20,
       "ap": 37

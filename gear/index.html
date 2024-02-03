@@ -69,8 +69,9 @@
           obj.i = sparse.ItemLevel;
           obj.name = sparse.Display_lang.replaceAll("\"","");
           if (parseInt(sparse.ItemDelay)) obj.speed = parseInt(sparse.ItemDelay) / 1000;
-          if (parseInt(sparse["MinDamage[0]"])) obj.mindmg = parseInt(sparse["MinDamage[0]"]);
-          if (parseInt(sparse["MaxDamage[0]"])) obj.maxdmg = parseInt(sparse["MaxDamage[0]"]);
+          let dmgModifier = parseInt(sparse.QualityModifier * obj.speed)
+          if (parseInt(sparse["MinDamage[0]"])) obj.mindmg = parseInt(sparse["MinDamage[0]"]) + dmgModifier;
+          if (parseInt(sparse["MaxDamage[0]"])) obj.maxdmg = parseInt(sparse["MaxDamage[0]"]) + dmgModifier;
           if (parseInt(sparse["MinDamage[1]"])) obj.mindmg += parseInt(sparse["MinDamage[1]"]);
           if (parseInt(sparse["MaxDamage[1]"])) obj.maxdmg += parseInt(sparse["MaxDamage[1]"]);
           if (item.ClassID == "2" && (!obj.mindmg || !obj.maxdmg)) continue;
