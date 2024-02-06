@@ -22210,7 +22210,7 @@ $@null",
 349863,,Restores your suspended world effects.,
 349981,,,"World effects suspended:
 
-$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]
+$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]$?$W11!=0[$@spelldesc348779 $@spellicon438536 $@spellname438536 (${$w11/60}m)][]
 
 
 While a world effect is suspended, you cannot benefit from it."
@@ -26211,6 +26211,7 @@ Deadly Poison and Instant Poison now gain increased damage from your Attack Powe
 433801,Rank 1,You attack all nearby enemies for $d causing weapon damage plus an additional $9633s1 every $t1 sec.,Attacking all nearby enemies for weapon damage + $9633s1.
 433804,,,Give tribute to the Blood Loa before someone makes tribute out of you.
 433805,,,
+433813,,Your next Soul Shard consuming spell cost no Soul Shards to cast.,Your next Soul Shard consuming spell cost no Soul Shards to cast.
 433819,,,
 433834,,,
 433862,,,
@@ -26469,12 +26470,12 @@ Movement speed reduced by $s2%."
 435960,,,
 435961,,Teaches you how to make a Hyperconductive Goldwap,
 435962,,,Filled with inspiration.
-435963,,Inflicts $s1 fire damage to those in the blast radius plus an additional $s3 nature damage every 2 sec for 10 seconds. Also reduces the movement speed of affected targets by 25% for $d. ,Silenced.
+435963,,Inflicts $s1 fire damage to those in the blast radius plus an additional $s3 nature damage every 2 sec for 10 seconds. Also reduces the movement speed of affected targets by 25% for $d. ,Irradiated. Suffering damage over time and movement is slowed.
 435964,,,
 435965,,Teaches you how to make a bundle of High-Yield Radiation Bombs.,
 435966,,,
 435967,,Teaches you how to make an Ez-Thro Radiation Bombs.,
-435968,,Inflicts $s1 fire damage to those in the blast radius plus an additional $s3 nature damage every 2 sec for 10 seconds. Also reduces the movement speed of affected targets by 25% for $d. ,Silenced.
+435968,,Inflicts $s1 fire damage to those in the blast radius plus an additional $s3 nature damage every 2 sec for 10 seconds. Also reduces the movement speed of affected targets by 25% for $d. ,Irradiated. Suffering damage over time and movement is slowed.
 435969,,,
 435970,,Teaches you how to distill a vial of Insulating Gniodine.,
 435971,,,
@@ -26617,6 +26618,7 @@ Damage dealt increased."
 436474,,,
 436475,,Allows you to look far into the distance.,Increased vision range until you move.
 436476,,Sends player to Gnomeregan.,
+436477,,"Unleash a violent tempest of steel and blood, causing $s1 Shadowstrike damage to all enemies within $a1 yards.",
 436478,,"Unleash a delayed explosion of blood and fire, causing $436479s1 Shadowflame damage to all targets within $436479a1 yards.",
 436479,,"A delayed explosion of blood and fire occurs around the caster, causing $s1 Shadowflame damage to all targets within $a1 yards.",
 436480,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
@@ -26874,30 +26876,6 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 438863,,,
 438865,,,
 438938,,Decipher the spell notes with a Comprehension Charm to learn a new Engraving spell.,
-439154,,,
-439158,,,
-439159,,,
-439336,,,
-439338,,,
-439342,,,
-439343,,,
-439540,,,
-439670,,,
-439671,,,
-439672,,,
-439581,,,
-439944,,,
-439946,,,
-439947,,,
-440050,,,
-440052,,,
-440053,,,
-440080,,,
-440092,,,
-440093,,,
-439624,,,
-439626,,,
-439627,,,
 439084,,Teaches you how to sew a Crimson Silk Robe.,
 439085,,,
 439086,,,
@@ -26949,50 +26927,100 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 439133,,Teaches you how to make Golden Scale Leggings.,
 439134,,Creates a greater mystic wand.,
 439135,,,
-439157,,Teaches you how to conjure a sigil of innovation. ,
+439154,,,
 439155,,"Gain an enchanted sigil of innovation, empowering you to deal up to $s1 increased damage and healing with spells, and increasing attack power by $s2 for $d. This can only be applied outside of combat. ","Empowered by Innovation. Dealing up to $s1 increased damage and healing with spells, and increasing attack power by increased $s2."
 439156,,,
+439157,,Teaches you how to conjure a sigil of innovation. ,
+439158,,,
+439159,,,
+439164,,,
+439336,,,
+439338,,,
+439342,,,
+439343,,,
 439431,Rank 1,Imbue the Shaman's weapon with wind.  Each hit has a 20% chance of granting you $8233s2 extra $lattack:attacks; with $8233s1 extra melee attack power.  Lasts for 5 minutes.,
 439440,Rank 1,,
 439441,Rank 1,,
+439540,,,
+439581,,,
+439624,,,
+439626,,,
+439627,,,
 439651,,Increased Fist Weapons +$s1.,
+439670,,,
+439671,,,
+439672,,,
 439691,,Sends player to Gnomeregan.,
+439731,,,
 439822,,,
 439823,,,
 439824,,,
 439826,,,
+439870,,,
 439885,,,
 439939,,,
+439944,,,
+439946,,,
+439947,,,
 439956,,,
-440014,,,Deals $w1 Fire damage every $t1 sec.
-440028,,,
-440073,,,
-440108,,,Cannot attack or use spells.
-439731,,,
-439870,,,
-439164,,,
+439958,,,The Blood Loa rewards danger.
 439959,,Increases spell damage by up to $s1 for $d.,Magical damage dealt by spells and abilities is increased by up to $s1.
 439960,,,
 439961,,Teaches you how to make a Lesser Arcane Elixir.,
 439995,,,
 439996,,,
 439998,,,
-440077,,,
-440072,,,You feel ghostly.
-440106,,,
+440014,,,Deals $w1 Fire damage every $t1 sec.
+440028,,,
+440050,,,
+440052,,,
+440053,,,
 440054,,Creates a shadowy fiend to attack the target.  Caster receives $401988s1% mana when the Shadowfiend attacks. Lasts $d.,
+440072,,,You feel ghostly.
+440073,,,
+440077,,,
+440080,,,
+440092,,,
+440093,,,
+440106,,,
+440108,,,Cannot attack or use spells.
 440123,,,
-439958,,,The Blood Loa rewards danger.
 440212,,Inflicts $s1 Frost damage in a 5 yard radius.,
-440236,,Use on Hypnotic Blade to create a powerful weapon.,
 440213,,,"The Blood Loa demands sport, not slaughter of the helpless! Leave your raid group or face his wrath! All stats and movement speed reduced by $s1%."
+440236,,Use on Hypnotic Blade to create a powerful weapon.,
 440247,,,
 440285,,,"Your next Chain Lightning, Chain Heal,  or Lava Burst spell will be an instant cast spell."
+440329,,,
+440414,,,
+440471,,,$w1 Nature damage every $t1 sec.
+440486,,,
 440505,,Gives the imbiber invisibility for $d.,Invisibility
 440632,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
+440636,,,
+440637,,,
+440638,,,
+440639,,,
+440640,,,
+440641,,,
+440642,,,
+440643,,,
 440651,,"Each time the target takes damage they gain a Sacred Shield, absorbing $s1 damage and increasing the paladin's chance to critically hit with Flash of Light by $s2% for up to $d.  They cannot gain this effect more than once every 6 sec.  Lasts $d.
 ",Absorbs damage and increases the casting paladin's chance to critically hit with Flash of Light by $s2%.
+440656,,,
+440664,,,
 440720,,,Is this what it feels like to be a paladin?
-433813,,Your next Soul Shard consuming spell cost no Soul Shards to cast.,Your next Soul Shard consuming spell cost no Soul Shards to cast.
-436477,,"Unleash a violent tempest of steel and blood, causing $s1 Shadowstrike damage to all enemies within $a1 yards.",
+440817,,,
+440818,,,
 440820,,..,
+440822,,,
+440823,,,
+440824,,,
+440825,,,
+440826,,,
+440840,,,
+440842,,,
+440843,,,
+440844,,,
+440845,,,
+440847,,,
+440848,,,

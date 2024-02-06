@@ -1841,7 +1841,7 @@ class CoinFlip extends Aura {
     constructor(player, id) {
         super(player, id, 'Coin Flip');
         this.duration = 30;
-        this.stats = { crit: 10 };
+        this.stats = { crit: 3 };
     }
     use() {
         this.player.itemtimer = this.duration * 1000;

@@ -3466,6 +3466,29 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 213280,
+      "type": "Mail",
+      "slot": "head",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Marksman's Scopevisor",
+      "agi": 9,
+      "sta": 13,
+      "crit": 1
+    },
+    {
+      "id": 213417,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Truesilver Filament Coif",
+      "sta": 8,
+      "crit": 1
+    },
+    {
       "id": 215161,
       "type": "Plate",
       "slot": "head",
@@ -3512,29 +3535,6 @@ var gear = {
       "i": "38",
       "name": "Golden Scale Coif",
       "str": 10
-    },
-    {
-      "id": 213280,
-      "type": "Mail",
-      "slot": "head",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "Marksman's Scopevisor",
-      "agi": 9,
-      "sta": 13,
-      "crit": 1
-    },
-    {
-      "id": 213417,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "Truesilver Filament Coif",
-      "sta": 8,
-      "crit": 1
     }
   ],
   "neck": [
@@ -7666,17 +7666,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 217307,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 36,
-      "q": "3",
-      "i": "41",
-      "name": "Revelosh's Spaulders",
-      "agi": 12,
-      "sta": 11
-    },
-    {
       "id": 213302,
       "type": "Leather",
       "slot": "shoulder",
@@ -7728,6 +7717,17 @@ var gear = {
       "i": "35",
       "name": "Golden Scale Shoulders",
       "str": 7
+    },
+    {
+      "id": 217307,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 36,
+      "q": "3",
+      "i": "41",
+      "name": "Revelosh's Spaulders",
+      "agi": 12,
+      "sta": 11
     }
   ],
   "back": [
@@ -17653,16 +17653,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 217305,
-      "type": "Mail",
-      "slot": "wrist",
-      "r": 35,
-      "q": "3",
-      "i": "40",
-      "name": "Revelosh's Armguards",
-      "agi": 9
-    },
-    {
       "id": 213317,
       "type": "Mail",
       "slot": "wrist",
@@ -17704,6 +17694,16 @@ var gear = {
       "name": "First Sergeant's Plate Bracers",
       "str": 5,
       "sta": 12
+    },
+    {
+      "id": 217305,
+      "type": "Mail",
+      "slot": "wrist",
+      "r": 35,
+      "q": "3",
+      "i": "40",
+      "name": "Revelosh's Armguards",
+      "agi": 9
     }
   ],
   "hands": [
@@ -23260,15 +23260,16 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 211502,
-      "type": "Leather",
+      "id": 213278,
+      "type": "FistMace",
       "slot": "hands",
-      "r": 25,
-      "q": "4",
-      "i": "30",
-      "name": "Void-Touched Leather Gauntlets",
-      "sta": 5,
-      "hit": 1
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Bonk-Maestro's Handguards",
+      "agi": 10,
+      "sta": 11,
+      "skill": 3
     },
     {
       "id": 213288,
@@ -23327,18 +23328,6 @@ var gear = {
       "i": "41",
       "name": "Golden Scale Gauntlets",
       "str": 11
-    },
-    {
-      "id": 213278,
-      "type": "FistMace",
-      "slot": "hands",
-      "r": 40,
-      "q": "3",
-      "i": "45",
-      "name": "Bonk-Maestro's Handguards",
-      "agi": 10,
-      "sta": 11,
-      "skill": 3
     }
   ],
   "waist": [
@@ -36827,17 +36816,6 @@ var gear = {
       "agi": 4
     },
     {
-      "id": 217306,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 40,
-      "q": "3",
-      "i": "41",
-      "name": "Revelosh's Boots",
-      "str": 12,
-      "sta": 11
-    },
-    {
       "id": 213294,
       "type": "Plate",
       "slot": "feet",
@@ -36904,6 +36882,17 @@ var gear = {
       "i": "40",
       "name": "Golden Scale Boots",
       "str": 8
+    },
+    {
+      "id": 217306,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 40,
+      "q": "3",
+      "i": "41",
+      "name": "Revelosh's Boots",
+      "str": 12,
+      "sta": 11
     }
   ],
   "finger1": [

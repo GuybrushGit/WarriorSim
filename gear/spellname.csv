@@ -23499,6 +23499,7 @@ ID,Name_lang
 433801,Bladestorm
 433804,Blood for the Blood Loa
 433805,Transparent
+433813,Neverending Soul Vessel
 433819,Green Holiday Hat Visual
 433834,Red Holiday Hat Visual
 433862,Spell Power
@@ -23864,6 +23865,7 @@ ID,Name_lang
 436474,Consume
 436475,Longsight
 436476,Teleport to Wirdal Wondergear
+436477,Blood Spattered Tempest
 436478,Infernal Impact
 436479,Infernal Impact
 436480,Attack Power - Feral (+80)
@@ -24114,30 +24116,6 @@ ID,Name_lang
 438863,Summon Bomb
 438865,Gnomeregan Smash
 438938,Translate Spell Notes
-439154,Sprocketfire Punch
-439158,Supercooled Smash
-439159,Supercooled Smash
-439336,Frozen Shrapnel
-439338,Walking Bomb Passive Proc (100%)
-439342,Hazardous Hammer
-439343,Hazardous Hammer
-439540,Walking Bomb Passive Proc (100%)
-439670,[DNT] Punch Randomizer
-439671,[DNT] Special Ability Randomizer
-439672,Radioactive Bomb
-439581,[DNT] - Radiation Cloud Visual
-439944,Radiation Overdose
-439946,Gnomeregan Smash
-439947,[DNT] Teleport Player Back To Crowd Pummeler's Platform
-440050,The Claw!
-440052,The Claw!
-440053,The Claw!
-440080,Gear Toss
-440092,Gear Toss
-440093,Gear Toss
-439624,Reputation - Merchant Faction
-439626,Reputation - Merchant Faction
-439627,Reputation - Merchant Faction
 439084,Pattern: Crimson Silk Robe
 439085,Crimson Silk Robe
 439086,Black Mageweave Vest
@@ -24189,49 +24167,99 @@ ID,Name_lang
 439133,Plans: Golden Scale Leggings
 439134,Greater Mystic Wand
 439135,Greater Mystic Wand
-439157,Enchanted Sigil: Innovation
+439154,Sprocketfire Punch
 439155,Sigil of Innovation
 439156,Sigil of Innovation
+439157,Enchanted Sigil: Innovation
+439158,Supercooled Smash
+439159,Supercooled Smash
+439164,Dismantle
+439336,Frozen Shrapnel
+439338,Walking Bomb Passive Proc (100%)
+439342,Hazardous Hammer
+439343,Hazardous Hammer
 439431,Windfury Weapon
 439440,Windfury Weapon
 439441,Windfury Weapon
+439540,Walking Bomb Passive Proc (100%)
+439581,[DNT] - Radiation Cloud Visual
+439624,Reputation - Merchant Faction
+439626,Reputation - Merchant Faction
+439627,Reputation - Merchant Faction
 439651,Increased Fist Weapons
+439670,[DNT] Punch Randomizer
+439671,[DNT] Special Ability Randomizer
+439672,Radioactive Bomb
 439691,Teleport to Booty Bay
+439731,Domesticated Attack Chicken
 439822,Electrical Grid
 439823,Electrical Grid
 439824,Electrical Grid
 439826,Electrical Grid
+439870,Hyperconductive Goldwrap
 439885,[DNT] Jump to Ground
 439939,Freezing
+439944,Radiation Overdose
+439946,Gnomeregan Smash
+439947,[DNT] Teleport Player Back To Crowd Pummeler's Platform
 439956,Revive Pet
-440014,Sprocketfire
-440028,Nutty Shield
-440073,Self Repair
-440108,Pacify Self
-439731,Domesticated Attack Chicken
-439870,Hyperconductive Goldwrap
-439164,Dismantle
+439958,"Kill, Maim, Bleed!"
 439959,Lesser Arcane Elixir
 439960,Lesser Arcane Elixir
 439961,Recipe: Lesserr Arcane Elixir
 439995,Resurrection
 439996,Resurrection
 439998,Resurrection
-440077,BFD XP Grant [DNT]
-440072,Ghostly
-440106,Resurrection
+440014,Sprocketfire
+440028,Nutty Shield
+440050,The Claw!
+440052,The Claw!
+440053,The Claw!
 440054,Shadowfiend
+440072,Ghostly
+440073,Self Repair
+440077,BFD XP Grant [DNT]
+440080,Gear Toss
+440092,Gear Toss
+440093,Gear Toss
+440106,Resurrection
+440108,Pacify Self
 440123,[DNT] Despawn
-439958,"Kill, Maim, Bleed!"
 440212,Cryoblast
-440236,Imbue Blade
 440213,Fury of the Blood Loa
+440236,Imbue Blade
 440247,S03 - Tuning and Overrides Passive - Druid
 440285,Power Surge
+440329,[DNT] Mechanical Unit Damage Reduction
+440414,Widget Volley
+440471,Toxic Ventilation
+440486,High Voltage!
 440505,Invisibility
 440632,Attack Power - Feral (+36)
+440636,Electrical Grid
+440637,Electrical Grid
+440638,Electrical Grid
+440639,Electrical Grid
+440640,Electrical Grid
+440641,Electrical Grid
+440642,Electrical Grid
+440643,Electrical Grid
 440651,Sacred Shield
+440656,High Voltage!
+440664,Sludge
 440720,Scooty's Not-Quite-Divine Shield
-433813,Neverending Soul Vessel
-436477,Blood Spattered Tempest
+440817,[DNT] Holdout Teleport - Teleport To Crowd Pummeler Room
+440818,[DNT] Holdout Teleport - Crowd Pummeler - Floating Visual
 440820,Destroy
+440822,[DNT] Holdout Teleport - Boss Floating Visual Dummy Periodic
+440823,[DNT] Holdout Teleport - Electrocutioner - Floating Visual
+440824,[DNT] Holdout Teleport - Thermaplugg - Floating Visual
+440825,[DNT] Holdout Teleport - Viscous Fallout - Floating Visual
+440826,[DNT] Holdout Teleport - Grubbis - Floating Visual
+440840,[DNT] Holdout Teleport - Crowd Pummeler - Unavailable Floating Visual
+440842,[DNT] Holdout Teleport - Electrocutioner - Unavailable Floating Visual
+440843,[DNT] Holdout Teleport - Thermaplugg - Unavailable Floating Visual
+440844,[DNT] Holdout Teleport - Holdout - Floating Visual
+440845,[DNT] Holdout Teleport - Teleport To Holdout
+440847,[DNT] Holdout Teleport - Teleport To Electrocutioner Room
+440848,[DNT] Holdout Teleport - Teleport To Thermaplugg Room
