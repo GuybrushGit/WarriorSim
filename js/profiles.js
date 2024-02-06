@@ -242,7 +242,7 @@ SIM.PROFILES = {
                 if (rune.selected) {
                     let r = runes[item.slot].filter(a => a.id == rune.id)[0];
                     if (!r) rune.selected = false;
-                    else icon = `<img src="dist/img/${r.iconname}.jpg">`
+                    else icon = `<img src="https://wow.zamimg.com/images/wow/icons/medium/${r.iconname}.jpg">`
                 }
             }
         }
@@ -291,6 +291,9 @@ SIM.PROFILES = {
                 if (typeof spell.duration !== 'undefined') obj.duration = spell.duration;
                 if (typeof spell.durationactive !== 'undefined') obj.durationactive = spell.durationactive;
                 if (typeof spell.timetoend !== 'undefined') obj.timetoend = spell.timetoend;
+                if (typeof spell.timetoendactive !== 'undefined') obj.timetoendactive = spell.timetoendactive;
+                if (typeof spell.timetostart !== 'undefined') obj.timetostart = spell.timetostart;
+                if (typeof spell.timetostartactive !== 'undefined') obj.timetostartactive = spell.timetostartactive;
                 if (typeof spell.crusaders !== 'undefined') obj.crusaders = spell.crusaders;
                 if (typeof spell.haste !== 'undefined') obj.haste = spell.haste;
                 if (typeof spell.procblock !== 'undefined') obj.procblock = spell.procblock;
@@ -318,6 +321,8 @@ SIM.PROFILES = {
                 if (typeof spell.bloodsurge !== 'undefined') obj.bloodsurge = spell.bloodsurge;
                 if (typeof spell.swingreset !== 'undefined') obj.swingreset = spell.swingreset;
                 if (typeof spell.afterswing !== 'undefined') obj.afterswing = spell.afterswing;
+                if (typeof spell.alwaystails !== 'undefined') obj.alwaystails = spell.alwaystails;
+                if (typeof spell.alwaysheads !== 'undefined') obj.alwaysheads = spell.alwaysheads;
                 minified.rotation.push(obj);
             }
         }
@@ -365,6 +370,9 @@ SIM.PROFILES = {
                     if (typeof newspell.duration !== 'undefined') spell.duration = newspell.duration;
                     if (typeof newspell.durationactive !== 'undefined') spell.durationactive = newspell.durationactive;
                     if (typeof newspell.timetoend !== 'undefined') spell.timetoend = newspell.timetoend;
+                    if (typeof newspell.timetoendactive !== 'undefined') spell.timetoendactive = newspell.timetoendactive;
+                    if (typeof newspell.timetostart !== 'undefined') spell.timetostart = newspell.timetostart;
+                    if (typeof newspell.timetostartactive !== 'undefined') spell.timetostartactive = newspell.timetostartactive;
                     if (typeof newspell.crusaders !== 'undefined') spell.crusaders = newspell.crusaders;
                     if (typeof newspell.haste !== 'undefined') spell.haste = newspell.haste;
                     if (typeof newspell.procblock !== 'undefined') spell.procblock = newspell.procblock;
@@ -392,6 +400,8 @@ SIM.PROFILES = {
                     if (typeof newspell.bloodsurge !== 'undefined') spell.bloodsurge = newspell.bloodsurge;
                     if (typeof newspell.afterswing !== 'undefined') spell.afterswing = newspell.afterswing;
                     if (typeof newspell.swingreset !== 'undefined') spell.swingreset = newspell.swingreset;
+                    if (typeof newspell.alwaystails !== 'undefined') spell.alwaystails = newspell.alwaystails;
+                    if (typeof newspell.alwaysheads !== 'undefined') spell.alwaysheads = newspell.alwaysheads;
                 }
                 else {
                     spell.active = false;

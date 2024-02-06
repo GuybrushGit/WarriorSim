@@ -34,6 +34,8 @@ class Spell {
         if (spell.bloodsurge) this.bloodsurge = spell.bloodsurge;
         if (spell.afterswing) this.afterswing = spell.afterswing;
         if (spell.swingreset) this.swingreset = spell.swingreset;
+        if (spell.timetoendactive) this.timetoend = parseInt(spell.timetoend) * 1000;
+        if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
     }
     dmg() {
         return 0;
@@ -406,6 +408,11 @@ class RagePotion extends Spell {
         this.cooldown = 120;
         this.useonly = true;
     }
+    prep(duration) {
+        if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
+        if (typeof this.timetostart !== 'undefined') this.usestep = this.timetostart;
+        return 0;
+    }
     use() {
         this.timer = this.cooldown * 1000;
         let oldRage = this.player.rage;
@@ -415,7 +422,7 @@ class RagePotion extends Spell {
             this.player.auras.consumedrage.use();
     }
     canUse() {
-        return this.timer == 0 && this.player.rage < this.minrage;
+        return this.timer == 0 && this.player.rage < this.minrage && step >= this.usestep;
     }
 }
 
@@ -476,7 +483,8 @@ class Aura {
         if (!spell) spell = buffs.filter(s => s.id == this.id)[0];
         if (!spell) return;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
-        if (spell.timetoend) this.timetoend = parseInt(spell.timetoend) * 1000;
+        if (spell.timetoendactive) this.timetoend = parseInt(spell.timetoend) * 1000;
+        if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
         if (spell.crusaders) this.crusaders = parseInt(spell.crusaders);
         if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
         if (spell.value1) this.value1 = spell.value1;
@@ -489,6 +497,9 @@ class Aura {
         if (spell.wfap) this.wfap = parseInt(spell.wfap);
         if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
         if (spell.stoptimeactive) this.stoptime = parseInt(spell.stoptime);
+        if (spell.alwaystails) this.alwaystails = spell.alwaystails;
+        if (spell.alwaysheads) this.alwaysheads = spell.alwaysheads;
+        if (spell.item) this.item = spell.item;
 
     }
     use() {
@@ -512,6 +523,21 @@ class Aura {
         this.uptime += (step - this.starttimer);
         this.timer = 0;
         this.stacks = 0;
+    }
+    prep(duration, itemdelay) {
+        if (typeof this.timetostart !== 'undefined') {
+            this.usestep = this.timetostart;
+        }
+        if (typeof this.timetoend !== 'undefined') {
+            if (this.item) {
+                this.usestep = Math.max(Math.min(duration - this.timetoend, duration - itemdelay - (this.duration * 1000)), 0);
+                return this.duration * 1000;
+            }
+            else {
+                this.usestep = Math.max(duration - this.timetoend, 0);
+            }
+        }
+        return 0;
     }
 }
 
@@ -699,7 +725,7 @@ class Cloudkeeper extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1064,7 +1090,7 @@ class Pummeler extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
 
@@ -1159,7 +1185,7 @@ class Flask extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
 
@@ -1178,7 +1204,7 @@ class Slayer extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
 
@@ -1197,7 +1223,7 @@ class Spider extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
 
@@ -1215,7 +1241,7 @@ class Earthstrike extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
 
@@ -1235,7 +1261,7 @@ class Gabbar extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
     step() {
         if ((step - this.starttimer) % 2000 == 0) {
@@ -1311,10 +1337,9 @@ class Zandalarian extends Aura {
             this.timer = step;
             this.step();
         }
-        //this.player.log(`${this.name} proc ${this.stats.bonusdmg} `);
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.itemtimer;
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
     step() {
         if (step >= this.timer) {
@@ -1541,7 +1566,7 @@ class VoidMadness extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1758,7 +1783,7 @@ class GyromaticAcceleration extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1808,7 +1833,7 @@ class GneuroLogical extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1820,7 +1845,9 @@ class CoinFlip extends Aura {
     }
     use() {
         this.player.itemtimer = this.duration * 1000;
-        if (rng10k() < 5000) {
+        this.firstuse = false;
+        if (this.alwaystails) return;
+        if (this.alwaysheads || rng10k() < 5000) {
             this.timer = step + this.duration * 1000;
             this.starttimer = step;
             this.player.updateAuras();
@@ -1828,6 +1855,6 @@ class CoinFlip extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer;
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }

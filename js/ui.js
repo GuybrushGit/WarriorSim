@@ -190,6 +190,7 @@ SIM.UI = {
 
             view.updateSession();
             view.updateSidebar();
+            SIM.SETTINGS.buildSpells();
         });
 
         view.tcontainer.on('click', 'table.enchant td:not(.ppm)', function(e) {
@@ -216,6 +217,7 @@ SIM.UI = {
 
             view.updateSession();
             view.updateSidebar();
+            SIM.SETTINGS.buildSpells();
         });
 
         view.runes.on('click', '.rune .icon', function(e) {
@@ -1388,7 +1390,7 @@ SIM.UI = {
             html.append(`
                 <div data-id="${item.id}" class="rune ${item.selected ? 'active' : ''}">
                     <div class="icon">
-                        <img src="dist/img/${item.iconname}.jpg" alt="${item.name}">
+                        <img src="https://wow.zamimg.com/images/wow/icons/medium/${item.iconname}.jpg" alt="${item.name}">
                         <a href="${WEB_DB_URL}spell=${item.id}" class="wh-tooltip"></a>
                     </div>
                 </div>`);

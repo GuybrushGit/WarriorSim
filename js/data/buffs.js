@@ -784,7 +784,7 @@ var buffs = [
       id: 438536,
       spellid: true,
       name: "Spark of Crazed Inspiration",
-      iconname: "achievement_boss_mekgineer_thermaplugg",
+      iconname: "achievement_boss_mekgineer_thermaplugg-",
       group: "",
       haste: 10,
       worldbuff: true,
