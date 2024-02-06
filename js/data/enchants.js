@@ -549,6 +549,7 @@ var enchant = {
              "fire": 5,
              "frost": 5
          },
+         "r": 41,
          "phase": 1,
          "id": 20014
       },
@@ -580,7 +581,8 @@ var enchant = {
          "name": "Greater Stats",
          "agi": 4,
          "str": 4,
-         "phase": 1
+         "phase": 1,
+         "r": 41,
       },
       {
          "id": 13941,
@@ -588,7 +590,8 @@ var enchant = {
          "name": "Stats",
          "agi": 3,
          "str": 3,
-         "phase": 1
+         "phase": 1,
+         "r": 41,
       },
       {
          "id": 13700,
@@ -615,14 +618,16 @@ var enchant = {
          "spellid": true,
          "name": "Superior Strength",
          "str": 9,
-         "phase": 1
+         "phase": 1,
+         "r": 41,
       },
       {
          "id": 13939,
          "spellid": true,
          "name": "Greater Strength",
          "str": 7,
-         "phase": 1
+         "phase": 1,
+         "r": 41,
       },
       {
          "id": 13661,
@@ -652,18 +657,13 @@ var enchant = {
          "str": 1,
          "phase": 1
       },
-
-
-
-
-
-
    ],
    "hands": [
       {
          "id": 25080,
          "spellid": true,
          "name": "Superior Agility",
+         "r": 41,
          "agi": 15,
          "phase": 5
       },
@@ -671,6 +671,7 @@ var enchant = {
          "id": 20012,
          "spellid": true,
          "name": "Greater Agility",
+         "r": 41,
          "agi": 7,
          "phase": 1
       },
@@ -678,6 +679,7 @@ var enchant = {
          "id": 20013,
          "spellid": true,
          "name": "Greater Strength",
+         "r": 41,
          "str": 7,
          "phase": 1
       },
@@ -731,6 +733,7 @@ var enchant = {
          "id": 20023,
          "spellid": true,
          "name": "Greater Agility",
+         "r": 41,
          "agi": 7,
          "phase": 1
       },
@@ -738,6 +741,7 @@ var enchant = {
          "id": 13935,
          "spellid": true,
          "name": "Agility",
+         "r": 41,
          "agi": 5,
          "phase": 1
       },
