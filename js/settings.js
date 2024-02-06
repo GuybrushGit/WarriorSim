@@ -266,8 +266,10 @@ SIM.SETTINGS = {
             let spell;
             for (let s of spells) if (s.id == id) spell = s;
 
-            if ($(this).data('id') == 'active') {
-                view.rotation.find(`.spell[data-id="${id}"]`).toggleClass('active', active);
+            if ($(this).data('id') == 'active' || $(this).data('id') == 'timetoendactive' || $(this).data('id') == 'timetostartactive') {
+
+                if (e.originalEvent && e.originalEvent.isTrusted)
+                    view.rotation.find(`.spell[data-id="${id}"]`).toggleClass('active', active);
 
                 if (active && spell.name == "Heroic Strike") {
                     for (let s of spells) 
@@ -314,6 +316,7 @@ SIM.SETTINGS = {
         if (view.rotation.find('.open')) view.hideSpellDetails(view.rotation.find('.open'))
 
         let buffs = '';
+        let items = '';
         for (let spell of spells) {
 
             // race restriction
@@ -376,18 +379,37 @@ SIM.SETTINGS = {
                 continue;
             }
 
-            let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
-            <img src="dist/img/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
-            <a href="${WEB_DB_URL}spell=${spell.id}" class="wh-tooltip"></a>
+            // item restriction
+            if (spell.item) {
+                let item;
+                for (let type in gear)
+                    for (let g of gear[type])
+                        if (spell.id == g.id && g.selected) item = g;
+                if (!item) {
+                    spell.active = false;
+                    continue;
+                }
+            }
+
+            let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active || spell.timetoendactive || spell.timetostartactive ? 'active' : ''}"><div class="icon">
+            <img src="https://wow.zamimg.com/images/wow/icons/medium/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
+            <a href="${WEB_DB_URL}${spell.item ? 'item' : 'spell'}=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
             if (spell.buff) buffs += div[0].outerHTML;
+            else if (spell.item) items += div[0].outerHTML;
             else container.append(div);
 
         }
 
         container.append($('<div class="label">Buffs</div>'));
         container.append(buffs);
+
+        if (items.length > 0) {
+            container.append($('<div class="label">Items</div>'));
+            container.append(items);
+        }
+        
 
 
     },
@@ -426,8 +448,10 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="unqueueactive" class="${spell.unqueueactive ? 'active' : ''}">Unqueue if below <input type="text" name="unqueue" value="${spell.unqueue}" data-numberonly="true" /> rage before MH swing</li>`);
         if (typeof spell.exmacro !== 'undefined') 
             ul.append(`<li data-id="exmacro" class="${spell.exmacro ? 'active' : ''}" data-group="ex">Always queue when casting Execute</li>`);
+        if (spell.timetostart !== undefined)
+            ul.append(`<li data-id="timetostartactive" data-group="timeto" class="${spell.timetostartactive ? 'active' : ''}">Use <input type="text" name="timetostart" value="${spell.timetostart}" data-numberonly="true" /> seconds from the start of the fight</li>`);
         if (spell.timetoend !== undefined)
-            ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Use on last <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds of the fight</li>`);
+            ul.append(`<li data-id="timetoendactive" data-group="timeto" class="${spell.timetoendactive ? 'active' : ''}">Use <input type="text" name="timetoend" value="${spell.timetoend}" data-numberonly="true" /> seconds from the end of the fight</li>`);
         if (spell.priorityap !== undefined)
             ul.append(`<li data-id="priorityapactive" class="${spell.priorityapactive ? 'active' : ''}">Don't use if Attack Power is higher than <input type="text" name="priorityap" value="${spell.priorityap}" data-numberonly="true" style="width: 25px" /></li>`);
         if (spell.procblock !== undefined)
@@ -450,7 +474,11 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="echargeblockactive" class="${spell.echargeblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="echargeblock" value="${spell.echargeblock}" data-numberonly="true" /> CbR charges</li>`);
         if (typeof spell.stoptime !== 'undefined') 
             ul.append(`<li data-id="stoptimeactive" class="${spell.stoptimeactive ? 'active' : ''}">Stop everything when <input type="text" name="stoptime" value="${spell.stoptime}" data-numberonly="true" /> seconds are left</li>`);
-        
+        if (spell.alwaysheads !== undefined)
+            ul.append(`<li data-id="alwaysheads" data-group="coinflip" class="${spell.alwaysheads ? 'active' : ''}">Always heads</li>`);
+        if (spell.alwaystails !== undefined)
+            ul.append(`<li data-id="alwaystails" data-group="coinflip" class="${spell.alwaystails ? 'active' : ''}">Always tails</li>`);
+
         details.css('visibility','hidden');
         details.append(ul);
         let height = details.height();
@@ -521,7 +549,7 @@ SIM.SETTINGS = {
             let group = buff.group ? `data-group="${buff.group}"` : '';
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"` : '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
-                            <img src="dist/img/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
+                            <img src="https://wow.zamimg.com/images/wow/icons/medium/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
                             <a href="${WEB_DB_URL}${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             if (buff.worldbuff) worldbuffs += html;
@@ -547,7 +575,7 @@ SIM.SETTINGS = {
             for (let i = 0; i < 7; i++) table.prepend('<tr><td></td><td></td><td></td><td></td></tr>');
             for (let talent of tree.t) {
                 let div = $('<div class="icon" data-count="' + talent.c + '" data-x="' + talent.x + '" data-y="' + talent.y + '"></div>');
-                div.html('<img src="dist/img/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
+                div.html('<img src="https://wow.zamimg.com/images/wow/icons/medium/' + talent.iconname.toLowerCase() + '.jpg" alt="' + talent.n + '" />');
                 if (talent.c >= talent.m) div.addClass('maxed');
                 div.append(`<a href="${WEB_DB_URL}spell=` + talent.s[talent.c == 0 ? 0 : talent.c - 1] + `" class="wh-tooltip"></a>`);
                 table.find('tr').eq(talent.y).children().eq(talent.x).append(div);
@@ -581,7 +609,7 @@ SIM.SETTINGS = {
                     let td = $('<td>');
                     let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
                     let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
-                    sub_div.html(`<img src="dist/img/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
+                    sub_div.html(`<img src="https://wow.zamimg.com/images/wow/icons/medium/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
                     sub_div.append(`<a href="${WEB_DB_URL}spell=${this_rune.id}" class="wh-tooltip"></a>`);
                     rune_div.append(sub_div);
                     td.append(rune_div); 

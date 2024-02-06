@@ -137,13 +137,13 @@ class Player {
         if (this.items.includes(22954)) this.auras.spider = new Spider(this);
         if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
         if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
-        if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
+        //if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
         if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
         if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
         if (this.items.includes(213348)) this.auras.gyromaticacceleration = new GyromaticAcceleration(this);
         if (this.items.includes(215166)) this.auras.gneurological = new GneuroLogical(this);
         if (this.items.includes(215161)) this.auras.gneurological = new GneuroLogical(this);
-        if (this.items.includes(215115)) this.auras.coinflip = new CoinFlip(this);
+        // if (this.items.includes(215115)) this.auras.coinflip = new CoinFlip(this);
         
         if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
             this.spells.sunderarmor.devastate = true;
@@ -484,8 +484,9 @@ class Player {
     }
     addSpells() {
         for (let spell of spells) {
-            if (spell.active) {
+            if (spell.active || spell.timetoendactive || spell.timetostartactive) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
+                if (spell.item && !this.items.includes(spell.id)) continue;
                 if (spell.name == "Rend" && this.target.bleedimmune) continue;
                 if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
