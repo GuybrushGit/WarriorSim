@@ -120,6 +120,13 @@ SIM.PROFILES = {
     deleteProfile(profile) {
         let index = profile.data('index');
         delete localStorage[mode + index];
+        let count = 0;
+        for(let i = 0; i < 40; i++) {
+            if (!localStorage[mode + i]) continue;
+            localStorage[mode + count] = localStorage[mode + i];
+            if (count != i) delete localStorage[mode + i];
+            count++;
+        }
         if (globalThis.profileid == index) globalThis.profileid = 0;
         this.buildProfiles();
         SIM.UI.addAlert(`Profile deleted`);
@@ -171,6 +178,7 @@ SIM.PROFILES = {
 
         let profileid = globalThis.profileid || 0;
         let i = 0;
+        let modeCount = Object.keys(localStorage).filter(d => d.indexOf(mode) > -1).length;
         do {
             if (!localStorage[mode + i]) continue;
             let storage = JSON.parse(localStorage[mode + i]);
@@ -184,7 +192,7 @@ SIM.PROFILES = {
                     <p>${talents}</p>
                     <ul>${items}</ul>
                     <div class="export-profile" title="Export">${svgExport}</div>
-                    ${i > 0 ? `<div class="delete-profile" title="Delete">${svgThrash}</div>` : ''}
+                    ${modeCount > 1 ? `<div class="delete-profile" title="Delete">${svgThrash}</div>`: ''}
                 </div>`);
             view.container.append(profile);
         } while (i++<40);
