@@ -232,12 +232,13 @@ class Simulation {
 
         // determine when to use on use items
         let itemdelay = 0;
-        for (let name in player.auras)
-            itemdelay += player.auras[name].prep(this.maxsteps, itemdelay);
-        for (let name in player.spells)
-            if (player.spells[name].prep)
-                player.spells[name].prep(this.maxsteps);
-
+        for(let spell of player.preporder) {
+            if (spell.aura) 
+                itemdelay += player.auras[spell.classname.toLowerCase()].prep(this.maxsteps, itemdelay);
+            else if (player.spells[spell.classname.toLowerCase()].prep)
+                player.spells[spell.classname.toLowerCase()].prep(this.maxsteps);
+        }
+       
         if (player.auras.recklessness && player.auras.recklessness.stoptime) stopstep = this.maxsteps - (player.auras.recklessness.stoptime * 1000);
 
 

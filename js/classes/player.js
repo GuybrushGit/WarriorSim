@@ -469,6 +469,7 @@ class Player {
         }
     }
     addSpells() {
+        this.preporder = [];
         for (let spell of spells) {
             if (spell.active || spell.timetoendactive || spell.timetostartactive) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
@@ -476,8 +477,11 @@ class Player {
                 if (spell.name == "Rend" && this.target.bleedimmune) continue;
                 if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
+                this.preporder.push(spell);
             }
         }
+        // sort by timetoend to prepare for usestep calculations
+        this.preporder.sort((a, b) => { return a.timetoend - b.timetoend; });
     }
     reset(rage) {
         this.rage = rage;
@@ -784,7 +788,7 @@ class Player {
         if (this.auras.voidmadness && this.auras.voidmadness.firstuse && this.auras.voidmadness.timer) this.auras.voidmadness.step();
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.firstuse && this.auras.gyromaticacceleration.timer) this.auras.gyromaticacceleration.step();
         if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.step();
-        if (this.auras.coinflip && this.auras.coinflip.firstuse && this.auras.coinflip.timer) this.auras.coinflip.step();
+        if (this.auras.coinflip && this.auras.coinflip.timer) this.auras.coinflip.step();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.step();
         if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.step();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.step();
@@ -830,7 +834,7 @@ class Player {
         if (this.auras.voidmadness && this.auras.voidmadness.firstuse && this.auras.voidmadness.timer) this.auras.voidmadness.end();
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.firstuse && this.auras.gyromaticacceleration.timer) this.auras.gyromaticacceleration.end();
         if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.end();
-        if (this.auras.coinflip && this.auras.coinflip.firstuse && this.auras.coinflip.timer) this.auras.coinflip.end();
+        if (this.auras.coinflip && this.auras.coinflip.timer) this.auras.coinflip.end();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.end();
         if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.end();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.end();

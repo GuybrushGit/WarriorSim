@@ -988,7 +988,7 @@ var spells = [
 {
     id: 21180,
     name: 'Earthstrike',
-    classname: 'Gabbar',
+    classname: 'Earthstrike',
     iconname: 'spell_nature_abolishmagic',
     item: true,
     aura: true,

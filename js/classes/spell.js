@@ -411,6 +411,7 @@ class RagePotion extends Spell {
     prep(duration) {
         if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
         if (typeof this.timetostart !== 'undefined') this.usestep = this.timetostart;
+        return 0;
     }
     use() {
         this.timer = this.cooldown * 1000;
@@ -1844,6 +1845,7 @@ class CoinFlip extends Aura {
     }
     use() {
         this.player.itemtimer = this.duration * 1000;
+        this.firstuse = false;
         if (this.alwaystails) return;
         if (this.alwaysheads || rng10k() < 5000) {
             this.timer = step + this.duration * 1000;
