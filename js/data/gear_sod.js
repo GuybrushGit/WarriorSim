@@ -3496,7 +3496,7 @@ var gear = {
       "q": "4",
       "i": "45",
       "name": "Tempered Interference-Negating Helmet",
-      "str": 16,
+      "str": 20,
       "sta": 16,
       "crit": 1
     },
@@ -3509,7 +3509,6 @@ var gear = {
       "i": "45",
       "name": "Glowing Gneuro-Linked Cowl",
       "agi": 14,
-      "str": 14,
       "sta": 14,
       "hit": 1
     },

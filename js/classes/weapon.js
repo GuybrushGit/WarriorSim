@@ -109,6 +109,8 @@ class Weapon {
             this.basebonusdmg += 4;
         if (this.player.items.includes(19968) || item.id == 19968)
             this.basebonusdmg += 2;
+        if (this.player.items.includes(215166))
+            this.basebonusdmg += 3;
         this.bonusdmg = this.basebonusdmg;
     }
     dmg(heroicstrike) {
