@@ -24021,8 +24021,7 @@ $@spelldesc409552",
 412009,,,
 412018,,"Each time the target takes damage they gain a Sacred Shield, absorbing $s1 damage and increasing the paladin's chance to critically hit with Flash of Light by $s2% for up to $d.  They cannot gain this effect more than once every 6 sec.  Lasts $d.
 ",Absorbs damage and increases the casting paladin's chance to critically hit with Flash of Light by $s2%.
-412019,,"Each time the target takes damage they gain a Sacred Shield, absorbing $412018s1 damage and increasing the Paladin's chance to critically hit with Flash of Light by $412018s2% for up to $412018d.  In addition, causes your Flash of Light to heal targets with Sacred Shield for an additional $s3% over $412020d. They cannot gain this effect more than once every $s2 sec.  Lasts $d.  This spell cannot be on more than one target at any one time.
-","Each time the target takes damage they gain a Sacred Shield, absorbing $412018s1 damage and increasing the Paladin's chance to critically hit with Flash of Light by $412018s2%.   The target cannot gain this effect more than once every $s2 sec."
+412019,,"Each time the target takes damage they gain a Sacred Shield, absorbing ${$412018m1*$<healpower>/100} damage and increasing the Paladin's chance to critically hit with Flash of Light by $412018s2% for up to $412018d.  In addition, causes your Flash of Light to heal targets with Sacred Shield for an additional $s3% over $412020d. They cannot gain this effect more than once every $s2 sec.  Lasts $d.  This spell cannot be on more than one target at any one time.","Each time the target takes damage they gain a Sacred Shield, absorbing ${$412018m1*$<healpower>/100} damage and increasing the Paladin's chance to critically hit with Flash of Light by $412018s2%.   The target cannot gain this effect more than once every $s2 sec."
 412020,,Heal over time.,Healing over $d.
 412040,,,
 412072,,,Shadow damage taken increased by ${$abs($s2)}%.
@@ -26896,6 +26895,9 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 440080,,,
 440092,,,
 440093,,,
+439624,,,
+439626,,,
+439627,,,
 439084,,Teaches you how to sew a Crimson Silk Robe.,
 439085,,,
 439086,,,
@@ -26988,3 +26990,9 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 440285,,,"Your next Chain Lightning, Chain Heal,  or Lava Burst spell will be an instant cast spell."
 440505,,Gives the imbiber invisibility for $d.,Invisibility
 440632,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
+440651,,"Each time the target takes damage they gain a Sacred Shield, absorbing $s1 damage and increasing the paladin's chance to critically hit with Flash of Light by $s2% for up to $d.  They cannot gain this effect more than once every 6 sec.  Lasts $d.
+",Absorbs damage and increases the casting paladin's chance to critically hit with Flash of Light by $s2%.
+440720,,,Is this what it feels like to be a paladin?
+433813,,Your next Soul Shard consuming spell cost no Soul Shards to cast.,Your next Soul Shard consuming spell cost no Soul Shards to cast.
+436477,,"Unleash a violent tempest of steel and blood, causing $s1 Shadowstrike damage to all enemies within $a1 yards.",
+440820,,..,
