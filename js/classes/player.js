@@ -130,20 +130,6 @@ class Player {
         if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
-        if (this.items.includes(9449)) this.auras.pummeler = new Pummeler(this);
-        if (this.items.includes(14554)) this.auras.cloudkeeper = new Cloudkeeper(this);
-        if (this.items.includes(20130)) this.auras.flask = new Flask(this);
-        if (this.items.includes(23041)) this.auras.slayer = new Slayer(this);
-        if (this.items.includes(22954)) this.auras.spider = new Spider(this);
-        if (this.items.includes(23570)) this.auras.gabbar = new Gabbar(this);
-        if (this.items.includes(21180)) this.auras.earthstrike = new Earthstrike(this);
-        //if (this.items.includes(21670)) this.auras.swarmguard = new Swarmguard(this);
-        if (this.items.includes(19949)) this.auras.zandalarian = new Zandalarian(this);
-        if (this.items.includes(211423)) this.auras.voidmadness = new VoidMadness(this);
-        if (this.items.includes(213348)) this.auras.gyromaticacceleration = new GyromaticAcceleration(this);
-        if (this.items.includes(215166)) this.auras.gneurological = new GneuroLogical(this);
-        if (this.items.includes(215161)) this.auras.gneurological = new GneuroLogical(this);
-        // if (this.items.includes(215115)) this.auras.coinflip = new CoinFlip(this);
         
         if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
             this.spells.sunderarmor.devastate = true;

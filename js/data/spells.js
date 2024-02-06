@@ -928,7 +928,7 @@ var spells = [
 {
     id: 215166,
     name: 'Glowing Gneuro-Linked Cowl',
-    classname: 'GyromaticAcceleration',
+    classname: 'GneuroLogical',
     iconname: 'inv_helmet_15',
     item: true,
     aura: true,
@@ -940,7 +940,7 @@ var spells = [
 {
     id: 215161,
     name: 'Tempered Interference-Negating Helmet',
-    classname: 'GyromaticAcceleration',
+    classname: 'GneuroLogical',
     iconname: 'inv_helmet_15',
     item: true,
     aura: true,
