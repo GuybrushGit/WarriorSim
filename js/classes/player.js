@@ -1061,6 +1061,7 @@ class Player {
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2);
+                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + procdmg : ''}`); /* end-log */
             }
             if (this.trinketproc1 && !this.trinketproc1.extra && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);

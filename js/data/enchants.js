@@ -60,18 +60,21 @@ var enchant = {
           "id": 23800,
           "spellid": true,
           "name": "Agility",
+          "r": 41,
           "agi": 15,
        },
        {
           "id": 23799,
           "spellid": true,
           "name": "Strength",
+          "r": 41,
           "str": 15,
        },
        {
           "id": 20034,
           "spellid": true,
           "name": "Crusader",
+          "r": 41,
           "ppm": 1,
           "procspell": "Crusader"
        },
@@ -79,6 +82,7 @@ var enchant = {
           "id": 13898,
           "spellid": true,
           "name": "Fiery",
+          "r": 41,
           "ppm": 6,
           "magicdmg": 44
        },
@@ -86,6 +90,7 @@ var enchant = {
           "id": 20032,
           "spellid": true,
           "name": "Lifestealing",
+          "r": 41,
           "ppm": 6,
           "magicdmg": 33
        },
@@ -93,12 +98,14 @@ var enchant = {
           "id": 20031,
           "spellid": true,
           "name": "Superior Striking",
+          "r": 41,
           "bonusdmg": 5,
        },
        {
          "id": 13943,
          "spellid": true,
          "name": "Greater Striking",
+         "r": 41,
          "bonusdmg": 4,
       },
       {
@@ -130,8 +137,10 @@ var enchant = {
       {
          "id": 435481,
          "spellid": true,
-         "name": "Dismantle",
-         "bonusdmg": 10,
+         "name": "Dismantle (15% chance)",
+         "chance": 15,
+         "magicdmg": 75,
+         "r": 40
       },
     ],
     "offhand": [
@@ -195,18 +204,21 @@ var enchant = {
         "id": 23800,
         "spellid": true,
         "name": "Agility",
+        "r": 41,
         "agi": 15,
      },
      {
         "id": 23799,
         "spellid": true,
         "name": "Strength",
+        "r": 41,
         "str": 15,
      },
      {
         "id": 20034,
         "spellid": true,
         "name": "Crusader",
+        "r": 41,
         "ppm": 1,
         "procspell": "Crusader"
      },
@@ -214,6 +226,7 @@ var enchant = {
         "id": 13898,
         "spellid": true,
         "name": "Fiery",
+        "r": 41,
         "ppm": 6,
         "magicdmg": 44
      },
@@ -221,6 +234,7 @@ var enchant = {
         "id": 20032,
         "spellid": true,
         "name": "Lifestealing",
+        "r": 41,
         "ppm": 6,
         "magicdmg": 33
      },
@@ -228,12 +242,14 @@ var enchant = {
       "id": 20031,
       "spellid": true,
       "name": "Superior Striking",
+      "r": 41,
       "bonusdmg": 5,
    },
    {
      "id": 13943,
      "spellid": true,
      "name": "Greater Striking",
+     "r": 41,
      "bonusdmg": 4,
   },
   {
@@ -265,8 +281,10 @@ var enchant = {
 {
    "id": 435481,
    "spellid": true,
-   "name": "Dismantle",
-   "bonusdmg": 10,
+   "name": "Dismantle (15% chance)",
+   "chance": 15,
+   "magicdmg": 75,
+   "r": 40
 },
     ],
     "twohand": [
@@ -350,12 +368,14 @@ var enchant = {
           "spellid": true,
           "name": "Crusader",
           "ppm": 1,
-          "procspell": "Crusader"
+          "procspell": "Crusader",
+          "r": 41,
        },
        {
           "id": 13898,
           "spellid": true,
           "name": "Fiery",
+          "r": 41,
           "ppm": 6,
           "magicdmg": 44
        },
@@ -363,6 +383,7 @@ var enchant = {
           "id": 20032,
           "spellid": true,
           "name": "Lifestealing",
+          "r": 41,
           "ppm": 6,
           "magicdmg": 33
        },
@@ -412,8 +433,10 @@ var enchant = {
       {
          "id": 435481,
          "spellid": true,
-         "name": "Dismantle",
-         "bonusdmg": 10,
+         "name": "Dismantle (15% chance)",
+         "chance": 15,
+         "magicdmg": 75,
+         "r": 40
       },
     ],
     "head": [
