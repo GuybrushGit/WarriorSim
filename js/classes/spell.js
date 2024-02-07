@@ -348,8 +348,8 @@ class RagingBlow extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg) * 0.8;
-        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return (dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed) * 0.8;
     }
     canUse(executephase) {
         return !this.timer && !this.player.timer && 
