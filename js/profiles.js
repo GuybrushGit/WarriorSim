@@ -288,7 +288,7 @@ SIM.PROFILES = {
         }
         minified.rotation = [];
         for (let spell of storage.rotation) {
-            if (spell.active || spell.timetoendactive || spell.timetostartactive) {
+            if (spell.active) {
                 let obj = {};
                 obj.id = spell.id;
                 if (typeof spell.duration !== 'undefined') obj.duration = spell.duration;

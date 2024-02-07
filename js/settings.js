@@ -292,6 +292,11 @@ SIM.SETTINGS = {
             }
 
             spell[$(this).data('id')] = active;
+
+            if (e.originalEvent && e.originalEvent.isTrusted && ($(this).data('id') == 'timetoendactive' || $(this).data('id') == 'timetostartactive')) {
+                spell.active = active;
+            }
+            
             SIM.UI.updateSession();
         });
 
@@ -391,7 +396,7 @@ SIM.SETTINGS = {
                 }
             }
 
-            let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active || spell.timetoendactive || spell.timetostartactive ? 'active' : ''}"><div class="icon">
+            let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="https://wow.zamimg.com/images/wow/icons/medium/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="${WEB_DB_URL}${spell.item ? 'item' : 'spell'}=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
