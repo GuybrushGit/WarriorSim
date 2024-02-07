@@ -394,6 +394,9 @@ SIM.SETTINGS = {
                     spell.active = false;
                     continue;
                 }
+                else if (spell.timetoendactive || spell.timetostartactive) {
+                    spell.active = true;
+                }
             }
 
             let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">

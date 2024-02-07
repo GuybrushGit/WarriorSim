@@ -471,7 +471,7 @@ class Player {
     addSpells() {
         this.preporder = [];
         for (let spell of spells) {
-            if (spell.active) {
+            if (spell.active || (spell.item && this.items.includes(spell.id) && (spell.timetoendactive || spell.timetostartactive))) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
                 if (spell.item && !this.items.includes(spell.id)) continue;
                 if (spell.name == "Rend" && this.target.bleedimmune) continue;
