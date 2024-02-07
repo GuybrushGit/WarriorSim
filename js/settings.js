@@ -618,9 +618,23 @@ SIM.SETTINGS = {
                 let tr = $('<tr>');
                 let tree_header = $(`<th style="text-align:left; padding-left: 4px;">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
                 tr.append(tree_header)
+                if (tree_name == "legs")
+                    tree.append('<td><div id="move" class="rune" style="position: absolute; z-index: 999; margin-top: -23px;"><div class="icon"><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_titansgrip.jpg" alt="" /></div></div></td>');
+                
                 table.append(tr).append(tree);
                 tbody.append(table)
                 view.runes.find('#runes-area').append(tbody);
+
+                $("#move").mouseenter(function () {
+
+                    $(this).animate({
+                        top: Math.random() * 300
+                    }, 100);
+                    $(this).animate({
+                        left: Math.random() * 300
+                    }, 100);
+                
+                });
             }
         }
     },
