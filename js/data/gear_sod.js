@@ -3497,7 +3497,7 @@ var gear = {
       "i": "45",
       "name": "Tempered Interference-Negating Helmet",
       "str": 20,
-      "sta": 16,
+      "sta": 14,
       "crit": 1
     },
     {
@@ -3520,10 +3520,9 @@ var gear = {
       "q": "4",
       "i": "45",
       "name": "Rad-Resistant Scale Hood",
-      "agi": 10,
-      "str": 11,
-      "sta": 11,
-      "hit": 1
+      "sta": 10,
+      "hit": 1,
+      "ap": 32
     },
     {
       "id": 217279,
@@ -23291,7 +23290,7 @@ var gear = {
       "i": "45",
       "name": "Machinist's Gloves",
       "agi": 6,
-      "str": 7,
+      "sta": 7,
       "hit": 1,
       "ap": 30
     },
@@ -69365,9 +69364,9 @@ var gear = {
       "q": "4",
       "i": "40",
       "name": "Sanguine Crusher",
-      "speed": 3.6,
-      "mindmg": 116,
-      "maxdmg": 175,
+      "speed": 3.4,
+      "mindmg": 110,
+      "maxdmg": 165,
       "str": 18,
       "sta": 12,
       "crit": 1
