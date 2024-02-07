@@ -871,6 +871,7 @@ var spells = [
     classname: 'Swarmguard',
     iconname: 'inv_misc_ahnqirajtrinket_04',
     item: true,
+    noitemcd: true,
     aura: true,
     timetoend: 30,
     timetoendactive: false,

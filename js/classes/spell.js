@@ -500,6 +500,7 @@ class Aura {
         if (spell.alwaystails) this.alwaystails = spell.alwaystails;
         if (spell.alwaysheads) this.alwaysheads = spell.alwaysheads;
         if (spell.item) this.item = spell.item;
+        if (spell.noitemcd) this.noitemcd = spell.noitemcd;
 
     }
     use() {
@@ -529,7 +530,7 @@ class Aura {
             this.usestep = this.timetostart;
         }
         if (typeof this.timetoend !== 'undefined') {
-            if (this.item) {
+            if (this.item && !this.noitemcd) {
                 this.usestep = Math.max(Math.min(duration - this.timetoend, duration - itemdelay - (this.duration * 1000)), 0);
                 return this.duration * 1000;
             }
