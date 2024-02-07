@@ -597,11 +597,19 @@ class DeepWounds extends Aura {
         this.saveddmg = 0;
         this.ticksleft = 0;
     }
-    tickdmg() {
-        let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
-        let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+    tickdmg(offhand) {
+        let min;
+        let max;
+        if (!offhand) {
+            min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+            max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
+        }
+        else {
+            min = this.player.oh.mindmg + this.player.oh.bonusdmg + (this.player.stats.ap / 14) * this.player.oh.speed;
+            max = this.player.oh.maxdmg + this.player.oh.bonusdmg + (this.player.stats.ap / 14) * this.player.oh.speed;
+        }
         let dmg = (min + max) / 2;
-        dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1); 
+        dmg *= (!offhand ? this.player.mh.modifier : this.player.oh.modifier) * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1); 
         return dmg;
     }
     step() {
@@ -630,15 +638,23 @@ class DeepWounds extends Aura {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
+            this.nexttick = 0;
             this.firstuse = false;
+            this.saveddmg = 0;
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
-    use() {
+    use(offhand) {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.ticksleft = 4;
-        this.saveddmg += this.tickdmg();
-        this.nexttick = step + 3000;
-        this.timer = step + this.duration * 1000;
+        this.saveddmg += this.tickdmg(offhand);
+        if (!this.nexttick) {
+            this.nexttick = step + 3000;
+            this.timer = step + this.duration * 1000;
+        }
+        else {
+            this.timer = this.nexttick - 3000 + this.duration * 1000;
+        }
         this.starttimer = step;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }

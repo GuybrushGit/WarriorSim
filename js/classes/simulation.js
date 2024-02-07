@@ -498,15 +498,16 @@ class Simulation {
                 next = 2000 - ((step - player.auras.gabbar.starttimer) % 2000);
             if (player.auras.rend && player.auras.rend.timer && (3000 - ((step - player.auras.rend.starttimer) % 3000)) < next)
                 next = 3000 - ((step - player.auras.rend.starttimer) % 3000);
-            if (player.auras.deepwounds && player.auras.deepwounds.timer && (3000 - ((step - player.auras.deepwounds.starttimer) % 3000)) < next)
-                next = 3000 - ((step - player.auras.deepwounds.starttimer) % 3000);
+
+            if (player.auras.deepwounds && player.auras.deepwounds.timer && (player.auras.deepwounds.nexttick - step) < next)
+                next = player.auras.deepwounds.nexttick - step;
             if (player.adjacent) {
-                if (player.auras.deepwounds2 && player.auras.deepwounds2.timer && (3000 - ((step - player.auras.deepwounds2.starttimer) % 3000)) < next)
-                next = 3000 - ((step - player.auras.deepwounds2.starttimer) % 3000);
-                if (player.auras.deepwounds3 && player.auras.deepwounds3.timer && (3000 - ((step - player.auras.deepwounds3.starttimer) % 3000)) < next)
-                next = 3000 - ((step - player.auras.deepwounds3.starttimer) % 3000);
-                if (player.auras.deepwounds4 && player.auras.deepwounds4.timer && (3000 - ((step - player.auras.deepwounds4.starttimer) % 3000)) < next)
-                next = 3000 - ((step - player.auras.deepwounds4.starttimer) % 3000);
+                if (player.auras.deepwounds2 && player.auras.deepwounds2.timer && (player.auras.deepwounds2.nexttick - step) < next)
+                    next = player.auras.deepwounds2.nexttick - step;
+                if (player.auras.deepwounds3 && player.auras.deepwounds3.timer && (player.auras.deepwounds3.nexttick - step) < next)
+                    next = player.auras.deepwounds3.nexttick - step;
+                if (player.auras.deepwounds4 && player.auras.deepwounds4.timer && (player.auras.deepwounds4.nexttick - step) < next)
+                    next = player.auras.deepwounds4.nexttick - step;
             }
             if (player.auras.weaponbleedmh && player.auras.weaponbleedmh.timer && (player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval)) < next)
                 next = player.auras.weaponbleedmh.interval - ((step - player.auras.weaponbleedmh.starttimer) % player.auras.weaponbleedmh.interval);

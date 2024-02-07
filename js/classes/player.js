@@ -508,6 +508,7 @@ class Player {
             this.auras[s].stacks = 0;
             if (this.auras[s].ticksleft) this.auras[s].ticksleft = 0;
             if (this.auras[s].saveddmg) this.auras[s].saveddmg = 0;
+            if (this.auras[s].nexttick) this.auras[s].nexttick = 0;
         }
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
@@ -937,7 +938,7 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
-            this.proccrit(adjacent);
+            this.proccrit(false, adjacent);
         }
 
         weapon.use();
@@ -977,7 +978,7 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
-            this.proccrit();
+            this.proccrit(true);
         }
 
         weapon.use();
@@ -1011,7 +1012,7 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
-            this.proccrit(adjacent, spell);
+            this.proccrit(false, adjacent, spell);
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
@@ -1033,10 +1034,10 @@ class Player {
             return 0;
         }
     }
-    proccrit(adjacent, spell) {
+    proccrit(offhand, adjacent, spell) {
         if (this.auras.flurry) this.auras.flurry.use();
         if (this.auras.deepwounds && !(spell instanceof SunderArmor)) {
-            if (!adjacent) this.auras.deepwounds.use();
+            if (!adjacent) this.auras.deepwounds.use(offhand);
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use();
         }
     }
