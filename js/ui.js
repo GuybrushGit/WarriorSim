@@ -607,6 +607,12 @@ SIM.UI = {
             for(let i = 0; i < enchant.twohand.length; i++)
                 enchant.twohand[i].selected = false;
         }
+
+        for(let i = 0; i < spells.length; i++) {
+            if (spells[i].item && spells[i].id == tr.data('id') && !spells[i].timetoendactive && !spells[i].timetostartactive) {
+                spells[i].timetoendactive = true;
+            }
+        }
     },
 
     rowHideItem: function(tr) {

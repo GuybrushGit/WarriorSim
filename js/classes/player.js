@@ -119,7 +119,7 @@ class Player {
         this.addTempEnchants();
         this.addBuffs();
         this.preAddRunes();
-        this.addSpells();
+        this.addSpells(testItem);
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.talents.deepwounds && !this.target.bleedimmune && this.mode !== 'classic') this.auras.deepwounds = this.mode == "sod" ? new DeepWounds(this) : new OldDeepWounds(this);
@@ -468,9 +468,12 @@ class Player {
             }
         }
     }
-    addSpells() {
+    addSpells(testItem) {
         this.preporder = [];
         for (let spell of spells) {
+            if (spell.item && this.items.includes(spell.id) && spell.id == testItem && spell.id == testItem && !spell.timetoendactive && !spell.timetostartactive) {
+                spell.timetoendactive = true;
+            }
             if (spell.active || (spell.item && this.items.includes(spell.id) && (spell.timetoendactive || spell.timetostartactive))) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
                 if (spell.item && !this.items.includes(spell.id)) continue;
@@ -1038,7 +1041,7 @@ class Player {
         if (this.auras.flurry) this.auras.flurry.use();
         if (this.auras.deepwounds && !(spell instanceof SunderArmor)) {
             if (!adjacent) this.auras.deepwounds.use(offhand);
-            else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use();
+            else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use(offhand);
         }
     }
     procattack(spell, weapon, result, adjacent, damageSoFar) {
