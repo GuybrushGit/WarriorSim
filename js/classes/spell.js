@@ -775,6 +775,7 @@ class DeathWish extends Aura {
         super(player, id, 'Death Wish');
         this.duration = 30;
         this.mult_stats = { dmgmod: 20 };
+        this.cooldown = 180;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -787,13 +788,13 @@ class DeathWish extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && this.player.rage >= 10 && step >= this.usestep;
+        return !this.timer && !this.player.timer && this.player.rage >= 10 && step >= this.usestep;
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            this.firstuse = false;
+            this.usestep = this.starttimer + (this.cooldown * 1000);
             this.player.updateDmgMod();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
