@@ -39,6 +39,7 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.freeslam = false;
+        this.bleedmod = this.level == 40 ? 0.8 : 1;
         this.ragecostbonus = 0;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
@@ -452,7 +453,7 @@ class Player {
                 if (buff.id == 71)
                     this.defstance = true;
                 if (buff.bleedmod)
-                    this.bleedmod = buff.bleedmod;
+                    this.bleedmod *= buff.bleedmod;
 
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;

@@ -23469,9 +23469,9 @@ In addition, you regenerate $417051s2 rage every time you dodge while in Bear Fo
 408245,,"Heals the target over 7 sec.  When Lifebloom completes its duration or is dispelled, the target instantly heals.  This effect can stack up to 3 times on the same target.",
 408246,,Gaining mana when Lifebloom expires.,
 408247,,"Heals a friendly target for ${$m1/100*$<healpower>} to ${$M1/100*$<healpower>}. Heals for an additional 20% if you have a Rejuvenation, Regrowth, Lifebloom, or Wild Growth effect active on the target. This spell benefits from and triggers all effects associated with Healing Touch.",
-408248,,"Starfire increases the critical strike chance of your next two Wraths by $s1%, and Wrath increases the critical strike chance of your next Starfire by $s2%, both effects stacking up to $408250u charges. Both spells also gain $s3% chance at all times to not lose casting time when you take damage.",
+408248,,"Starfire increases the critical strike chance of your next two Wraths by $s1%, and Wrath reduces the cast time of your next Starfire by ${$408255m1/-1000}.1 sec, both effects stacking up to $408250u charges. Both spells also gain $s3% chance at all times to not lose casting time when you take damage.",
 408250,,Increased critical strike chance on Wrath.,Your next $m2 Wrath casts have ${$m1/$m2}% increased critical strike chance.
-408255,,Increased critical strike chance on Starfire.,Your next $m2 Starfire casts have ${$m1/$m2}% increased critical strike chance.
+408255,,,Your next $m2 Starfire casts have ${$m1/$m2/-1000}.1  sec reduced cast time.
 408258,,Your damaging spell critical strikes grant you $408261s1% of your mana regeneration while casting for $408261d and increase Nature damage dealt to the target by $437132s2% for $437132d.,
 408261,,Allows $s1% of your Mana regeneration to continue while casting.,Regenerating $s1% of your normal Mana regeneration while casting spells.
 408307,,Increases your healing power by $s2% of your Nature spell damage for $d.,Healing power increased by $w2.
@@ -26279,9 +26279,9 @@ Movement speed reduced by $s2%."
 434725,,,
 434738,,,
 434744,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
-434752,,Teleport to a party member. Both you and the target must be resting at an in or city.,
+434752,,Teleport to a party member. Both you and the target must be resting at an inn or city.,
 434753,,Summon a prized catch from a nearby school of fish.,
-434754,,Polymorph the target into an Odd Melon.,
+434754,Odd Melon,Polymorph the target into an Odd Melon.,
 434755,,Teleport to the targeted location.,
 434762,,,
 434814,,Mix with the Tears of Theradras to create an Elemental Salve capable of purifying corruption.,
@@ -26767,8 +26767,8 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 437311,,"Begins a ritual that creates a summoning portal.  The summoning portal can be used by 2 party or raid members to summon a targeted party or raid member.  The ritual portal requires the caster and 2 additional party or raid members to complete.  In order to participate, all players must be out of combat and right-click the portal and not move until the ritual is complete.",
 437327,,"Harness the latent arcane energy in the nearby air to give you charged inspiration, reducing the mana cost of all spells by $M% and increasing damage and healing done by up to $s2 for $d.",You have gained charged inspiration. Mana cost for all spells is reduced and spell power is increased.
 437340,,"Engage the radiation mitigation protocols in this helmet, causing you to immediately remove all active poison effects and gain immunity to all Nature damage for $d.",Immune to Nature damage.
-437349,,"Inflicts gneruo-logical shock, instantly dealing $s3 damage to yourself but also increasing your melee and ranged attack speed by $s1% for $d. ",Attack speed increased.
-437357,Rank 3,"Gain gneruomantic meditation, allowing $s% of your mana regeneration to continue while casting and increasing damage and healing done by spells by up to $s2 for $d seconds. ",Spell power increased and gaining mana while casting.
+437349,,"Inflicts gneuro-logical shock, instantly dealing $s3 damage to yourself but also increasing your melee and ranged attack speed by $s1% for $d. ",Attack speed increased.
+437357,Rank 3,"Gain gneuromantic meditation, allowing $s% of your mana regeneration to continue while casting and increasing damage and healing done by spells by up to $s2 for $d seconds. ",Spell power increased and gaining mana while casting.
 437362,,"Inflicts hyperconductive shock, instantly dealing $s2 damage to yourself but also increasing your spell casting speed by $s% for $d. ",Casting speed increased.
 437367,,On a successful block the whirling razor-sharp gears on this shield inflict $s physical damage to the attacker and $437388s1 physical damage to the bearer.,
 437368,,Pull a hyperconductive coin from your belt and flip it: On a roll of heads you gain $437698s1% increased chance to crit with spells and melee attacks for the next $437698d seconds. On a roll of tails you gain $437699s1% movement speed for the next $437699d seconds. ,
@@ -27025,3 +27025,15 @@ This spell is considered Arcane, Fire, and Frost for interactions with other spe
 440847,,,
 440848,,,
 440981,,+$s1 Weapon Damage.,
+441042,,,
+441281,,,
+441282,,,
+441260,,,
+441335,,,
+441448,,,Electrically charged!
+441455,,,
+441447,,,
+441456,,,
+441457,,,
+441458,,,
+441459,,,
