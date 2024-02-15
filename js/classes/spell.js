@@ -338,7 +338,13 @@ class Hamstring extends Spell {
     constructor(player, id) {
         super(player, id);
         this.cost = 10 - player.ragecostbonus;
-        if (player.items.includes(19577)) this.cost -= 2;
+        if (player.items.includes(19577))
+            this.cost -= 2;
+        if (player.items.includes(16548) ||
+            player.items.includes(16484) ||
+            player.items.includes(22868) ||
+            player.items.includes(23286))
+            this.cost -= 3;
     }
     dmg() {
         let dmg;
