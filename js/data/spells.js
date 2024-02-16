@@ -531,6 +531,7 @@ var spells = [
     buff: true,
     flagellation: true,
     consumedrage: true,
+    zerkerpriority: false,
 },
 
 // Whirlwind

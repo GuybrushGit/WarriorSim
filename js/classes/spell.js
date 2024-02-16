@@ -36,6 +36,8 @@ class Spell {
         if (spell.swingreset) this.swingreset = spell.swingreset;
         if (spell.timetoendactive) this.timetoend = parseInt(spell.timetoend) * 1000;
         if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
+        if (spell.zerkerpriority) this.zerkerpriority = spell.zerkerpriority;
+        
     }
     dmg() {
         return 0;

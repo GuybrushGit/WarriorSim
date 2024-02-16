@@ -486,6 +486,8 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="alwaysheads" data-group="coinflip" class="${spell.alwaysheads ? 'active' : ''}">Always heads</li>`);
         if (spell.alwaystails !== undefined)
             ul.append(`<li data-id="alwaystails" data-group="coinflip" class="${spell.alwaystails ? 'active' : ''}">Always tails</li>`);
+        if (spell.zerkerpriority !== undefined)
+            ul.append(`<li data-id="zerkerpriority" class="${spell.zerkerpriority ? 'active' : ''}">Prioritize over Bloodrage</li>`);
 
         details.css('visibility','hidden');
         details.append(ul);
