@@ -436,8 +436,6 @@ SIM.SETTINGS = {
 
         if (typeof spell.timetoend === 'undefined')
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled ${note ? ` - ${note}` : ''}</li>`);
-        if (typeof spell.swingreset !== 'undefined') 
-            ul.append(`<li data-id="swingreset" class="${spell.swingreset ? 'active' : ''}">Resets swing timers</li>`);
         if (typeof spell.afterswing !== 'undefined') 
             ul.append(`<li data-id="afterswing" class="${spell.afterswing ? 'active' : ''}">Use only after a swing reset</li>`);
         if (typeof spell.bloodsurge !== 'undefined') 

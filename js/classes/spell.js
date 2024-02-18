@@ -444,7 +444,7 @@ class Slam extends Spell {
     use() {
         if (!this.player.freeslam) this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.swingreset) {
+        if (this.casttime && !this.player.freeslam) {
             this.player.mh.use();
             if (this.player.oh) this.player.oh.use();
         }
