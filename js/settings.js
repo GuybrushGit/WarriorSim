@@ -203,7 +203,7 @@ SIM.SETTINGS = {
             view.buildBuffs();
         });
 
-        view.fight.on('change', 'select[name="bleedimmune"]', function (e) {
+        view.fight.on('change', 'select[name="bleedreduction"]', function (e) {
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();

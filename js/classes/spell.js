@@ -611,7 +611,7 @@ class DeepWounds extends Aura {
             max = this.player.oh.maxdmg + this.player.oh.bonusdmg + (this.player.stats.ap / 14) * this.player.oh.speed;
         }
         let dmg = (min + max) / 2;
-        dmg *= (!offhand ? this.player.mh.modifier : this.player.oh.modifier) * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1); 
+        dmg *= (!offhand ? this.player.mh.modifier : this.player.oh.modifier) * this.player.stats.dmgmod * this.player.talents.deepwounds * this.player.bleedmod; 
         return dmg;
     }
     step() {
@@ -674,7 +674,7 @@ class OldDeepWounds extends Aura {
             let min = this.player.mh.mindmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let max = this.player.mh.maxdmg + this.player.mh.bonusdmg + (this.player.stats.ap / 14) * this.player.mh.speed;
             let dmg = (min + max) / 2;
-            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * (this.player.bleedmod || 1);
+            dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * this.player.bleedmod;
             this.idmg += dmg / 4;
             this.totaldmg += dmg / 4;
 
@@ -1473,7 +1473,7 @@ class Rend extends Aura {
     }
     step() {
         while (step >= this.nexttick && this.stacks) {
-            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod * (this.player.bleedmod || 1);
+            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
             this.idmg += dmg / this.value2;
             this.totaldmg +=dmg / this.value2;
 
@@ -1596,7 +1596,7 @@ class WeaponBleed extends Aura {
         this.duration = parseInt(duration) / 1000;
         this.interval = parseInt(interval);
         this.ticks = duration / interval;
-        this.dmg = parseInt(dmg) * (this.player.bleedmod || 1);
+        this.dmg = parseInt(dmg) * this.player.bleedmod;
         this.idmg = 0;
         this.totaldmg = 0;
     }

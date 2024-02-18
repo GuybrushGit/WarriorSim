@@ -817,7 +817,7 @@ SIM.UI = {
         obj.filter_tiger = view.main.find('#filter_tiger').hasClass('active');
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
-        obj.bleedimmune = view.fight.find('select[name="bleedimmune"]').val();
+        obj.bleedreduction = view.fight.find('select[name="bleedreduction"]').val();
         obj.armorprocs = view.fight.find('select[name="armorprocs"]').val();
         
 

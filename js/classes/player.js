@@ -18,7 +18,7 @@ class Player {
                 speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,
                 mindmg: parseInt($('input[name="targetmindmg"]').val()),
                 maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
-                bleedimmune: $('select[name="bleedimmune"]').val() == "Yes",
+                bleedreduction: $('select[name="bleedreduction"]').val(),
                 armorprocs: $('select[name="armorprocs"]').val() == "Yes",
             },
         };
@@ -40,7 +40,6 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.freeslam = false;
-        this.bleedmod = this.level == 40 ? 0.8 : 1;
         this.ragecostbonus = 0;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
@@ -50,6 +49,7 @@ class Player {
         this.spelldamage = 0;
         this.target = config.target;
         this.mode = config.mode;
+        this.bleedmod = parseFloat(this.target.bleedreduction);
         this.base = {
             ap: 0,
             agi: 0,
@@ -124,8 +124,8 @@ class Player {
         this.addSpells(testItem);
         this.addRunes();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
-        if (this.talents.deepwounds && !this.target.bleedimmune && this.mode !== 'classic') this.auras.deepwounds = this.mode == "sod" ? new DeepWounds(this) : new OldDeepWounds(this);
-        if (this.adjacent && this.talents.deepwounds && !this.target.bleedimmune && this.mode !== 'classic') {
+        if (this.talents.deepwounds && this.mode !== 'classic') this.auras.deepwounds = this.mode == "sod" ? new DeepWounds(this) : new OldDeepWounds(this);
+        if (this.adjacent && this.talents.deepwounds && this.mode !== 'classic') {
             for (let i = 2; i <= (this.adjacent + 1); i++)
                 this.auras['deepwounds' + i] = this.mode == "sod" ? new DeepWounds(this, null, i) : new OldDeepWounds(this, null, i);
         }
@@ -479,7 +479,6 @@ class Player {
             if (spell.active || (spell.item && this.items.includes(spell.id) && (spell.timetoendactive || spell.timetostartactive))) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
                 if (spell.item && !this.items.includes(spell.id)) continue;
-                if (spell.name == "Rend" && this.target.bleedimmune) continue;
                 if (spell.aura) this.auras[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 else this.spells[spell.classname.toLowerCase()] = eval(`new ${spell.classname}(this, ${spell.id})`);
                 this.preporder.push(spell);
