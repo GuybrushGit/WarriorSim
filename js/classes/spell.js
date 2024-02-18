@@ -1579,14 +1579,13 @@ class VoidMadness extends Aura {
         this.mult_stats = { haste: 10 };
     }
     use() {
-        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
+        return this.firstuse && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1796,14 +1795,13 @@ class GyromaticAcceleration extends Aura {
         this.mult_stats = { haste: 5 };
     }
     use() {
-        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
+        return this.firstuse && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1846,14 +1844,13 @@ class GneuroLogical extends Aura {
         this.mult_stats = { haste: 20 };
     }
     use() {
-        this.player.itemtimer = this.duration * 1000;
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateHaste();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
+        return this.firstuse && !this.timer && step >= this.usestep;
     }
 }
 
@@ -1864,7 +1861,6 @@ class CoinFlip extends Aura {
         this.stats = { crit: 3 };
     }
     use() {
-        this.player.itemtimer = this.duration * 1000;
         this.firstuse = false;
         if (this.alwaystails) return;
         if (this.alwaysheads || rng10k() < 5000) {
@@ -1875,6 +1871,6 @@ class CoinFlip extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
+        return this.firstuse && !this.timer && step >= this.usestep;
     }
 }
