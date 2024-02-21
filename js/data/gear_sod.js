@@ -51917,7 +51917,8 @@ var gear = {
       "str": 2,
       "proc": {
         "magic": true,
-        "dmg": 31
+        "dmg": 31,
+        "ppm": 5
       }
     },
     {
