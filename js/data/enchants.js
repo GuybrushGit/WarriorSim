@@ -137,8 +137,8 @@ var enchant = {
       {
          "id": 435481,
          "spellid": true,
-         "name": "Dismantle (15% chance)",
-         "chance": 15,
+         "name": "Dismantle (Assumed 2 PPM)",
+         "ppm": 2, 
          "magicdmg": 75,
          "r": 40
       },
@@ -281,8 +281,8 @@ var enchant = {
 {
    "id": 435481,
    "spellid": true,
-   "name": "Dismantle (15% chance)",
-   "chance": 15,
+   "name": "Dismantle (Assumed 2 PPM)",
+   "ppm": 2, 
    "magicdmg": 75,
    "r": 40
 },
@@ -433,8 +433,8 @@ var enchant = {
       {
          "id": 435481,
          "spellid": true,
-         "name": "Dismantle (15% chance)",
-         "chance": 15,
+         "name": "Dismantle (Assumed 2 PPM)",
+         "ppm": 2, 
          "magicdmg": 75,
          "r": 40
       },
