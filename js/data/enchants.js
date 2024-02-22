@@ -17,7 +17,7 @@ var enchant = {
            "id": 12404,
            "name": "Dense Stone",
            "bonusdmg": 8,
-           "r": 35,
+           "r": 41,
            "temp": true
         },
         {
@@ -161,7 +161,7 @@ var enchant = {
          "id": 12404,
          "name": "Dense Stone",
          "bonusdmg": 8,
-         "r": 35,
+         "r": 41,
          "temp": true
       },
       {
@@ -312,7 +312,7 @@ var enchant = {
          "id": 12404,
          "name": "Dense Stone",
          "bonusdmg": 8,
-         "r": 35,
+         "r": 41,
          "temp": true
       },
       {
@@ -355,12 +355,14 @@ var enchant = {
           "id": 27837,
           "spellid": true,
           "name": "2H Agility",
+          "r": 41,
           "agi": 25,
        },
        {
           "id": 23799,
           "spellid": true,
           "name": "Strength",
+          "r": 41,
           "str": 15,
        },
        {
@@ -396,12 +398,14 @@ var enchant = {
          "id": 20030,
          "spellid": true,
          "name": "Superior Impact",
+         "r": 41,
          "bonusdmg": 9,
       },
       {
          "id": 13937,
          "spellid": true,
          "name": "Greater Impact",
+         "r": 41,
          "bonusdmg": 7,
       },
       {
