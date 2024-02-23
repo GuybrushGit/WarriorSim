@@ -3112,6 +3112,7 @@ var gear = {
       "name": "Skyfury Helm",
       "str": 13,
       "sta": 14,
+      "spellcrit": 2,
       "crit": 1
     },
     {
@@ -3279,7 +3280,8 @@ var gear = {
       "i": "60",
       "name": "Soulforge Helm",
       "str": 16,
-      "sta": 17
+      "sta": 17,
+      "spellcrit": 1
     },
     {
       "id": 22109,
@@ -3475,7 +3477,8 @@ var gear = {
       "name": "Marksman's Scopevisor",
       "agi": 9,
       "sta": 13,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 213417,
@@ -3486,7 +3489,8 @@ var gear = {
       "i": "45",
       "name": "Truesilver Filament Coif",
       "sta": 8,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 215161,
@@ -3498,7 +3502,8 @@ var gear = {
       "name": "Tempered Interference-Negating Helmet",
       "str": 20,
       "sta": 14,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 215166,
@@ -4760,6 +4765,7 @@ var gear = {
       "name": "Gnomeregan Peace Officer's Torque",
       "sta": 6,
       "crit": 1,
+      "spellcrit": 1,
       "ap": 16
     }
   ],
@@ -9916,7 +9922,8 @@ var gear = {
       "q": "3",
       "i": "45",
       "name": "Blooddrenched Drape",
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     }
   ],
   "chest": [
@@ -13850,7 +13857,8 @@ var gear = {
       "i": "60",
       "name": "Vest of The Five Thunders",
       "str": 12,
-      "sta": 17
+      "sta": 17,
+      "spellcrit": 1
     },
     {
       "id": 22113,
@@ -14139,6 +14147,7 @@ var gear = {
       "name": "Electromantic Chainmail",
       "sta": 7,
       "crit": 1,
+      "spellcrit": 1,
       "ap": 26
     },
     {
@@ -14162,7 +14171,8 @@ var gear = {
       "i": "45",
       "name": "Shockforged Breastplate",
       "sta": 3,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 217277,
@@ -22626,7 +22636,8 @@ var gear = {
         "shadow": 5
       },
       "ap": 44,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 19164,
@@ -22699,7 +22710,8 @@ var gear = {
       "name": "Seafury Gauntlets",
       "str": 10,
       "sta": 9,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 20259,
@@ -22722,7 +22734,8 @@ var gear = {
       "i": "52",
       "name": "Azurite Fists",
       "agi": 6,
-      "sta": 7
+      "sta": 7,
+      "spellcrit": 1
     },
     {
       "id": 20480,
@@ -22856,7 +22869,8 @@ var gear = {
       "i": "68",
       "name": "Slimy Scaled Gauntlets",
       "str": 6,
-      "sta": 18
+      "sta": 18,
+      "spellcrit": 1
     },
     {
       "id": 21501,
@@ -22931,7 +22945,8 @@ var gear = {
       "i": "78",
       "name": "Gauntlets of Kalimdor",
       "str": 14,
-      "sta": 15
+      "sta": 15,
+      "spellcrit": 1
     },
     {
       "id": 21672,
@@ -23267,7 +23282,8 @@ var gear = {
       "name": "Grubbis Grubby Gauntlets",
       "str": 9,
       "sta": 5,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 213319,
@@ -28214,6 +28230,7 @@ var gear = {
       "name": "Hyperconductive Goldwrap",
       "sta": 9,
       "crit": 1,
+      "spellcrit": 1,
       "hit": 1
     },
     {
@@ -32697,7 +32714,8 @@ var gear = {
       "i": "76",
       "name": "Legplates of Blazing Light",
       "str": 9,
-      "sta": 17
+      "sta": 17,
+      "spellcrit": 1
     },
     {
       "id": 22000,
@@ -32817,7 +32835,8 @@ var gear = {
       "name": "Outrider's Mail Leggings",
       "str": 14,
       "sta": 22,
-      "crit": 1
+      "crit": 1,
+      "spellcrit": 1
     },
     {
       "id": 22690,
@@ -49259,7 +49278,8 @@ var gear = {
       "name": "Fang of the Mystics",
       "speed": 1.5,
       "mindmg": 39,
-      "maxdmg": 86
+      "maxdmg": 86,
+      "spellcrit": 1
     },
     {
       "id": 17071,
@@ -49305,7 +49325,8 @@ var gear = {
       "speed": 2.4,
       "mindmg": 64,
       "maxdmg": 140,
-      "sta": 7
+      "sta": 7,
+      "spellcrit": 1
     },
     {
       "id": 17105,
@@ -49389,7 +49410,8 @@ var gear = {
       "name": "Inventor's Focal Sword",
       "speed": 2.2,
       "mindmg": 54,
-      "maxdmg": 101
+      "maxdmg": 101,
+      "spellcrit": 1
     },
     {
       "id": 17752,
@@ -50466,7 +50488,8 @@ var gear = {
       "speed": 2.4,
       "mindmg": 65,
       "maxdmg": 135,
-      "sta": 6
+      "sta": 6,
+      "spellcrit": 1
     },
     {
       "id": 19896,
@@ -50652,7 +50675,8 @@ var gear = {
       "speed": 1.7,
       "mindmg": 47,
       "maxdmg": 96,
-      "sta": 8
+      "sta": 8,
+      "spellcrit": 1
     },
     {
       "id": 20214,
@@ -50665,7 +50689,8 @@ var gear = {
       "speed": 1.7,
       "mindmg": 47,
       "maxdmg": 96,
-      "sta": 8
+      "sta": 8,
+      "spellcrit": 1
     },
     {
       "id": 20430,
@@ -50947,7 +50972,8 @@ var gear = {
       "speed": 2.4,
       "mindmg": 64,
       "maxdmg": 137,
-      "sta": 9
+      "sta": 9,
+      "spellcrit": 1
     },
     {
       "id": 21498,
@@ -51030,7 +51056,8 @@ var gear = {
       "speed": 2.3,
       "mindmg": 54,
       "maxdmg": 137,
-      "sta": 14
+      "sta": 14,
+      "spellcrit": 1
     },
     {
       "id": 21650,
@@ -51087,7 +51114,8 @@ var gear = {
       "speed": 1.5,
       "mindmg": 42,
       "maxdmg": 83,
-      "sta": 6
+      "sta": 6,
+      "spellcrit": 1
     },
     {
       "id": 21837,
@@ -51180,7 +51208,8 @@ var gear = {
       "speed": 1.5,
       "mindmg": 42,
       "maxdmg": 80,
-      "sta": 4
+      "sta": 4,
+      "spellcrit": 1
     },
     {
       "id": 22377,
@@ -51383,7 +51412,8 @@ var gear = {
       "speed": 1.8,
       "mindmg": 39,
       "maxdmg": 110,
-      "sta": 10
+      "sta": 10,
+      "spellcrit": 1
     },
     {
       "id": 22808,
@@ -51539,7 +51569,8 @@ var gear = {
       "speed": 2,
       "mindmg": 59,
       "maxdmg": 107,
-      "sta": 14
+      "sta": 14,
+      "spellcrit": 1
     },
     {
       "id": 23454,
@@ -51593,7 +51624,8 @@ var gear = {
       "speed": 2,
       "mindmg": 59,
       "maxdmg": 107,
-      "sta": 14
+      "sta": 14,
+      "spellcrit": 1
     },
     {
       "id": 23467,
@@ -59470,7 +59502,8 @@ var gear = {
       "name": "Fang of the Mystics",
       "speed": 1.5,
       "mindmg": 39,
-      "maxdmg": 86
+      "maxdmg": 86,
+      "spellcrit": 1
     },
     {
       "id": 17071,
@@ -59543,7 +59576,8 @@ var gear = {
       "name": "Inventor's Focal Sword",
       "speed": 2.2,
       "mindmg": 54,
-      "maxdmg": 101
+      "maxdmg": 101,
+      "spellcrit": 1
     },
     {
       "id": 17738,
@@ -60593,7 +60627,8 @@ var gear = {
       "speed": 1.7,
       "mindmg": 47,
       "maxdmg": 96,
-      "sta": 8
+      "sta": 8,
+      "spellcrit": 1
     },
     {
       "id": 20214,
@@ -60606,7 +60641,8 @@ var gear = {
       "speed": 1.7,
       "mindmg": 47,
       "maxdmg": 96,
-      "sta": 8
+      "sta": 8,
+      "spellcrit": 1
     },
     {
       "id": 20430,
@@ -61059,7 +61095,8 @@ var gear = {
       "speed": 1.8,
       "mindmg": 39,
       "maxdmg": 110,
-      "sta": 10
+      "sta": 10,
+      "spellcrit": 1
     },
     {
       "id": 22808,
@@ -61231,7 +61268,8 @@ var gear = {
       "speed": 2,
       "mindmg": 59,
       "maxdmg": 107,
-      "sta": 14
+      "sta": 14,
+      "spellcrit": 1
     },
     {
       "id": 23454,
@@ -61285,7 +61323,8 @@ var gear = {
       "speed": 2,
       "mindmg": 59,
       "maxdmg": 107,
-      "sta": 14
+      "sta": 14,
+      "spellcrit": 1
     },
     {
       "id": 23467,
@@ -65013,7 +65052,8 @@ var gear = {
       "sta": 10,
       "resist": {
         "fire": 10
-      }
+      },
+      "spellcrit": 1
     },
     {
       "id": 11786,
@@ -67636,7 +67676,8 @@ var gear = {
       "speed": 2.7,
       "mindmg": 116,
       "maxdmg": 175,
-      "sta": 11
+      "sta": 11,
+      "spellcrit": 1
     },
     {
       "id": 18538,
@@ -67780,7 +67821,8 @@ var gear = {
       "speed": 2.9,
       "mindmg": 126,
       "maxdmg": 205,
-      "sta": 16
+      "sta": 16,
+      "spellcrit": 1
     },
     {
       "id": 18867,
@@ -68069,7 +68111,8 @@ var gear = {
       "speed": 3.2,
       "mindmg": 142,
       "maxdmg": 248,
-      "sta": 24
+      "sta": 24,
+      "spellcrit": 2
     },
     {
       "id": 19357,
@@ -68379,7 +68422,8 @@ var gear = {
       "speed": 3.4,
       "mindmg": 137,
       "maxdmg": 243,
-      "sta": 19
+      "sta": 19,
+      "spellcrit": 2
     },
     {
       "id": 20083,
@@ -68406,7 +68450,8 @@ var gear = {
       "speed": 3.4,
       "mindmg": 137,
       "maxdmg": 243,
-      "sta": 19
+      "sta": 19,
+      "spellcrit": 2
     },
     {
       "id": 20258,
@@ -68622,7 +68667,8 @@ var gear = {
       "name": "Fist of Cenarius",
       "speed": 3.5,
       "mindmg": 175,
-      "maxdmg": 263
+      "maxdmg": 263,
+      "spellcrit": 2
     },
     {
       "id": 21273,
@@ -68635,7 +68681,8 @@ var gear = {
       "speed": 3,
       "mindmg": 132,
       "maxdmg": 227,
-      "sta": 32
+      "sta": 32,
+      "spellcrit": 1
     },
     {
       "id": 21275,
@@ -68661,7 +68708,8 @@ var gear = {
       "speed": 3.4,
       "mindmg": 152,
       "maxdmg": 247,
-      "sta": 24
+      "sta": 24,
+      "spellcrit": 1
     },
     {
       "id": 21492,
@@ -68860,7 +68908,8 @@ var gear = {
       "name": "Moonshadow Stave",
       "speed": 3.7,
       "mindmg": 133,
-      "maxdmg": 200
+      "maxdmg": 200,
+      "spellcrit": 1
     },
     {
       "id": 22691,
@@ -68908,7 +68957,8 @@ var gear = {
       "speed": 3.2,
       "mindmg": 143,
       "maxdmg": 266,
-      "sta": 30
+      "sta": 30,
+      "spellcrit": 2
     },
     {
       "id": 22800,
@@ -68921,7 +68971,8 @@ var gear = {
       "speed": 3.2,
       "mindmg": 141,
       "maxdmg": 251,
-      "sta": 31
+      "sta": 31,
+      "spellcrit": 1
     },
     {
       "id": 22801,
@@ -69003,7 +69054,8 @@ var gear = {
       "speed": 3.9,
       "mindmg": 160,
       "maxdmg": 241,
-      "sta": 8
+      "sta": 8,
+      "spellcrit": 1
     },
     {
       "id": 23171,

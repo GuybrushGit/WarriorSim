@@ -111,6 +111,8 @@
                     obj.hit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 52)
                     obj.crit = parseInt(e.EffectBasePoints) + 1;
+                  if (e.Effect == 6 && e.EffectAura == 71)
+                    obj.spellcrit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 30 && e["EffectMiscValue[0]"] != 95 && e["EffectMiscValue[0]"] != 226 && e["EffectMiscValue[0]"] != 393 && e["EffectMiscValue[0]"] != 45 && e["EffectMiscValue[0]"] != 46) {
                     obj.skill = parseInt(e.EffectBasePoints) + 1;
                     if (item.ClassID != "2") {

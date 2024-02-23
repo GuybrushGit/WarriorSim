@@ -13,8 +13,7 @@ class Player {
                 basearmor: parseInt($('input[name="targetarmor"]').val()),
                 armor: parseInt($('input[name="targetarmor"]').val()),
                 defense: parseInt($('input[name="targetlevel"]').val()) * 5,
-                mitigation: 1 - 15 * (parseInt($('input[name="targetresistance"]').val()) / 6000),
-                binaryresist: parseInt(10000 - (8300 * (1 - (parseInt($('input[name="targetresistance"]').val()) * 0.15 / 60)))),
+                resistance: parseInt($('input[name="targetresistance"]').val()),
                 speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,
                 mindmg: parseInt($('input[name="targetmindmg"]').val()),
                 maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
@@ -50,6 +49,9 @@ class Player {
         this.target = config.target;
         this.mode = config.mode;
         this.bleedmod = parseFloat(this.target.bleedreduction);
+        this.target.misschance = this.getTargetSpellMiss();
+        this.target.mitigation = this.getTargetSpellMitigation();
+        this.target.binaryresist = this.getTargetSpellBinaryResist();
         this.base = {
             ap: 0,
             agi: 0,
@@ -69,6 +71,7 @@ class Player {
             strmod: 1,
             agimod: 1,
             dmgmod: 1,
+            spelldmgmod: 1,
             apmod: 1,
             baseapmod: 1,
             resist: {
@@ -465,6 +468,7 @@ class Player {
                 this.base.agimod *= (1 + buff.agimod / 100) || 1;
                 this.base.strmod *= (1 + buff.strmod / 100) || 1;
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
+                this.base.spelldmgmod *= (1 + buff.spelldmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
                 this.base.skill_7 += buff.skill_7 || 0;
             }
@@ -578,6 +582,25 @@ class Player {
         let table = [0.2500, 0.2381, 0.2381, 0.2273, 0.2174, 0.2083, 0.2083, 0.2000, 0.1923, 0.1923,0.1852, 0.1786, 0.1667, 0.1613, 0.1563, 0.1515, 0.1471, 0.1389, 0.1351, 0.1282,0.1282, 0.1250, 0.1190, 0.1163, 0.1111, 0.1087, 0.1064, 0.1020, 0.1000, 0.0962,0.0943, 0.0926, 0.0893, 0.0877, 0.0847, 0.0833, 0.0820, 0.0794, 0.0781, 0.0758,0.0735, 0.0725, 0.0704, 0.0694, 0.0676, 0.0667, 0.0649, 0.0633, 0.0625, 0.0610,0.0595, 0.0588, 0.0575, 0.0562, 0.0549, 0.0543, 0.0532, 0.0521, 0.0510, 0.0500];
         return table[parseInt(level) - 1];
     }
+    getTargetSpellMiss() {
+        let resist = 100;
+        let diff = this.target.level - this.level;
+        if (diff == -2) resist = 200;
+        if (diff == -1) resist = 300;
+        if (diff == 0) resist = 400;
+        if (diff == 1) resist = 500;
+        if (diff == 2) resist = 600;
+        if (diff == 3) resist = 1700;
+        if (diff == 4) resist = 2800;
+        if (diff > 4) resist = 2800 + (1100 * (diff - 4));
+        return resist;
+    }
+    getTargetSpellMitigation() {
+        return 1 - 15 * (this.target.resistance / (this.level * 100));
+    }
+    getTargetSpellBinaryResist() {
+        return parseInt(10000 - ((10000 - this.target.misschance) * (1 - (this.target.resistance * 0.15 / (this.level * 100)))))
+    }
     updateStrength() {
         this.stats.str = this.base.str;
         this.stats.ap = this.base.ap;
@@ -683,6 +706,7 @@ class Player {
     }
     updateDmgMod() {
         this.stats.dmgmod = this.base.dmgmod;
+        this.stats.spelldmgmod = this.base.spelldmgmod;
         for (let name in this.auras) {
             if (this.auras[name].timer && this.auras[name].mult_stats.dmgmod)
                 this.stats.dmgmod *= (1 + this.auras[name].mult_stats.dmgmod / 100);
@@ -1135,14 +1159,14 @@ class Player {
     }
     magicproc(proc) {
         let mod = 1;
-        let miss = 1700;
+        let miss = this.target.misschance;
         let dmg = proc.magicdmg;
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
         if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1.5;
         if (proc.coeff) dmg += this.spelldamage * proc.coeff;
-        return ~~(dmg * mod);
+        return ~~(dmg * mod * this.stats.spelldmgmod);
     }
     physproc(dmg) {
         let tmp = 0;
