@@ -209,7 +209,7 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
-        view.fight.on('change', 'select[name="armorprocs"]', function (e) {
+        view.fight.on('change', 'select[name="targetbasearmor"]', function (e) {
             e.stopPropagation();
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
@@ -525,7 +525,7 @@ SIM.SETTINGS = {
         view.buffs.append('<label class="active">Buffs</label>');
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
-        let worldbuffs = '', consumes = '', other = '';
+        let worldbuffs = '', consumes = '', other = '', armor = '';
         for (let buff of buffs) {
 
             // level restrictions
@@ -563,6 +563,7 @@ SIM.SETTINGS = {
             if (buff.worldbuff) worldbuffs += html;
             else if (buff.consume) consumes += html;
             else if (buff.other) other += html;
+            else if (buff.armor || buff.improvedexposed) armor += html;
             else view.buffs.append(html);
         }
         view.buffs.append('<div class="label">Consumables</div>');
@@ -571,6 +572,8 @@ SIM.SETTINGS = {
         view.buffs.append(worldbuffs);
         view.buffs.append('<div class="label">Other</div>');
         view.buffs.append(other);
+        view.buffs.append(`<div class="label">Armor (Current: <span id="currentarmor"></span>)</div>`);
+        view.buffs.append(armor);
         SIM.UI.updateSession();
         SIM.UI.updateSidebar();
     },

@@ -135,6 +135,14 @@
             width: 24px;
         }
 
+        input[name="targetcustomarmor"] {
+            position: absolute;
+            right: 30px;
+            &.focus {
+                z-index: 10;
+            }
+        }
+
         .slider {
             width: 140px;
             margin-left: auto;

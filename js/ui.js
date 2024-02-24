@@ -802,7 +802,8 @@ SIM.UI = {
         obj.executeperc = view.fight.find('input[name="executeperc"]').val();
         obj.startrage = view.fight.find('input[name="startrage"]').val();
         obj.targetlevel = view.fight.find('input[name="targetlevel"]').val();
-        obj.targetarmor = view.fight.find('input[name="targetarmor"]').val();
+        obj.targetbasearmor = view.fight.find('select[name="targetbasearmor"]').val();
+        obj.targetcustomarmor = view.fight.find('input[name="targetcustomarmor"]').val();
         obj.targetresistance = view.fight.find('input[name="targetresistance"]').val();
         obj.targetspeed = view.fight.find('input[name="targetspeed"]').val();
         obj.targetmindmg = view.fight.find('input[name="targetmindmg"]').val();
@@ -818,7 +819,6 @@ SIM.UI = {
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
         obj.bleedreduction = view.fight.find('select[name="bleedreduction"]').val();
-        obj.armorprocs = view.fight.find('select[name="armorprocs"]').val();
         
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};

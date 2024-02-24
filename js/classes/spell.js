@@ -991,11 +991,11 @@ class Annihilator extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 45;
-        this.armor = player.target.armorprocs ? 200 : 0;
+        this.armor = 200;
         this.stacks = 0;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (rng10k() < this.player.target.binaryresist) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
@@ -1019,11 +1019,11 @@ class Rivenspike extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = player.target.armorprocs ? 200 : 0;
+        this.armor = 200;
         this.stacks = 0;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1046,11 +1046,11 @@ class Bonereaver extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 10;
-        this.armor = player.target.armorprocs ? 700 : 0;
+        this.armor = 700;
         this.stacks = 0;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1528,10 +1528,10 @@ class Vibroblade extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = player.target.armorprocs ? 100 : 0;
+        this.armor = 100;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1552,10 +1552,10 @@ class Ultrasonic extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.armor = player.target.armorprocs ? 160 : 0;
+        this.armor = 160;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1718,10 +1718,10 @@ class CleaveArmor extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 20;
-        this.armor = player.target.armorprocs ? 300 : 0;
+        this.armor = 300;
     }
     use() {
-        if (!this.armor) return;
+        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
