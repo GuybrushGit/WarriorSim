@@ -217,8 +217,12 @@
             <input type="text" name="targetresistance" value="24" data-numberonly="true">
           </li>
           <li>
-            <label><a href="https://docs.google.com/spreadsheets/d/1Z4mfptLX97dcZzeZhl2qP5mqmcpo8lMTMRxcZjc7PpI/edit?usp=sharing" target="_blank">Target Armor</a></label>
-            <input type="text" name="targetarmor" value="336" data-numberonly="true">
+            <label>Target Base Armor</a></label>
+            <select dir="rtl" name="targetbasearmor">
+              <option value="4455">Mekgineer Thermaplugg [4455]</option>
+              <option value="3731">Mechanical Menagerie [3731]</option>
+              <option value="2250">Viscous Fallout [2250]</option>
+            </select>
           </li>
           <li>
             <label>Target Attack Speed</label>
@@ -265,13 +269,6 @@
               <option value="1">None</option>
               <option value="0.8">20%</option>
               <option value="0">100%</option>
-            </select>
-          </li>
-          <li>
-            <label>Armor Reduction Procs</label>
-            <select dir="rtl" name="armorprocs">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
             </select>
           </li>
         </ul>

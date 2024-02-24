@@ -10,15 +10,14 @@ class Player {
             mode: globalThis.mode,
             target: {
                 level: parseInt($('input[name="targetlevel"]').val()),
-                basearmor: parseInt($('input[name="targetarmor"]').val()),
-                armor: parseInt($('input[name="targetarmor"]').val()),
+                basearmor: parseInt($('select[name="targetbasearmor"]').val()),
+                armor: parseInt($('select[name="targetbasearmor"]').val()),
                 defense: parseInt($('input[name="targetlevel"]').val()) * 5,
                 resistance: parseInt($('input[name="targetresistance"]').val()),
                 speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,
                 mindmg: parseInt($('input[name="targetmindmg"]').val()),
                 maxdmg: parseInt($('input[name="targetmaxdmg"]').val()),
                 bleedreduction: $('select[name="bleedreduction"]').val(),
-                armorprocs: $('select[name="armorprocs"]').val() == "Yes",
             },
         };
     }
@@ -429,6 +428,12 @@ class Player {
         }
     }
     addBuffs() {
+        this.target.basearmorbuffed = this.target.basearmor;
+        for (let buff of buffs) {
+            if (buff.active && buff.improvedexposed) {
+                this.improvedexposed = true;
+            }
+        }
         for (let buff of buffs) {
             if (buff.active) {
                 let ap = 0, str = 0, agi = 0;
@@ -458,6 +463,12 @@ class Player {
                     this.defstance = true;
                 if (buff.bleedmod)
                     this.bleedmod *= buff.bleedmod;
+                if (buff.armor) 
+                    this.target.basearmorbuffed -= buff.armor + (buff.name == "Expose Armor" && this.improvedexposed ? buff.armor * 0.5 : 0);
+                if (buff.armorperlevel) 
+                    this.target.basearmorbuffed -= (buff.armorperlevel * this.level);
+                if (buff.name == "Faerie Fire")
+                    this.faeriefire = true;
 
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;
@@ -473,6 +484,9 @@ class Player {
                 this.base.skill_7 += buff.skill_7 || 0;
             }
         }
+        this.target.basearmorbuffed = Math.max(this.target.basearmorbuffed, 0);
+        if (typeof $ !== 'undefined')
+            $("#currentarmor").text(this.target.basearmorbuffed);
     }
     addSpells(testItem) {
         this.preporder = [];
@@ -687,7 +701,7 @@ class Player {
             this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
     }
     updateArmorReduction() {
-        this.target.armor = this.target.basearmor;
+        this.target.armor = this.target.basearmorbuffed;
         if (this.auras.annihilator && this.auras.annihilator.timer)
             this.target.armor = Math.max(this.target.armor - (this.auras.annihilator.stacks * this.auras.annihilator.armor), 0);
         if (this.auras.rivenspike && this.auras.rivenspike.timer)
