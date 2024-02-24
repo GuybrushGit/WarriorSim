@@ -10,8 +10,7 @@ class Player {
             mode: globalThis.mode,
             target: {
                 level: parseInt($('input[name="targetlevel"]').val()),
-                basearmor: parseInt($('select[name="targetbasearmor"]').val()),
-                armor: parseInt($('select[name="targetbasearmor"]').val()),
+                basearmor: parseInt($('select[name="targetbasearmor"]').val() || $('input[name="targetcustomarmor"]').val()),
                 defense: parseInt($('input[name="targetlevel"]').val()) * 5,
                 resistance: parseInt($('input[name="targetresistance"]').val()),
                 speed: parseFloat($('input[name="targetspeed"]').val()) * 1000,

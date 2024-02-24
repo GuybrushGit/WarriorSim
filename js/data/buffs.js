@@ -873,6 +873,7 @@ var buffs = [
    {
       id: 402799,
       spellid: true,
+      sod: true,
       name: "Homunculi",
       iconname: "spell_shadow_twistedfaith",
       group: "sunder",
