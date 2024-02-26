@@ -324,6 +324,11 @@ SIM.SETTINGS = {
         let items = '';
         for (let spell of spells) {
 
+            if (spell.sod && mode !== "sod") {
+                spell.active = false;
+                continue;
+            }
+
             // race restriction
             if (spell.id == 26296 && storage.race !== "Troll") {
                 spell.active = false;
