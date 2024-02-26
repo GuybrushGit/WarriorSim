@@ -296,18 +296,18 @@
         }
 
         // custom items
-        // gear["head"].push({
-        //   "id": 215161,
-        //   "type": "Plate",
-        //   "slot": "head",
-        //   "r": 40,
-        //   "q": "4",
-        //   "i": "45",
-        //   "name": "Tempered Interference-Negating Helmet",
-        //   "str": 16,
-        //   "sta": 16,
-        //   "crit": 1
-        // });
+        gear["hands"].push({
+          "id": '213319a',
+          "type": "Leather",
+          "slot": "hands",
+          "r": 40,
+          "q": "3",
+          "i": "45",
+          "name": "Machinist's Gloves (no AP)",
+          "agi": 6,
+          "sta": 7,
+          "hit": 1,
+        });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }

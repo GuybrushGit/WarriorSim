@@ -23330,6 +23330,18 @@ var gear = {
       "i": "41",
       "name": "Golden Scale Gauntlets",
       "str": 11
+    },
+    {
+      "id": "213319a",
+      "type": "Leather",
+      "slot": "hands",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Machinist's Gloves (no AP)",
+      "agi": 6,
+      "sta": 7,
+      "hit": 1
     }
   ],
   "waist": [
