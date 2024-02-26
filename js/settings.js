@@ -209,12 +209,6 @@ SIM.SETTINGS = {
             SIM.UI.updateSidebar();
         });
 
-        view.fight.on('change', 'select[name="targetbasearmor"]', function (e) {
-            e.stopPropagation();
-            SIM.UI.updateSession();
-            SIM.UI.updateSidebar();
-        });
-
         view.fight.on('keyup', 'input[type="text"]', function (e) {
             e.stopPropagation();
             if (!view.body.find('.active[data-type="profiles"]').length)
@@ -227,6 +221,35 @@ SIM.SETTINGS = {
 
         view.fight.on('change', 'select[name="batching"]', function (e) {
             e.stopPropagation();
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+
+        view.fight.on('input', 'input[name="targetcustomarmor"]', function (e) {
+            e.stopPropagation();
+            let base = $('select[name="targetbasearmor"]').get(0);
+            base.options[base.options.length - 1].innerHTML = $(this).val();
+
+            SIM.UI.updateSession();
+            SIM.UI.updateSidebar();
+        });
+
+        view.fight.on('change', 'select[name="targetbasearmor"]', function (e) {
+            e.stopPropagation();
+            let custom = $('input[name="targetcustomarmor"]');
+
+            if (this.selectedOptions[0].dataset.custom) {
+                this.selectedOptions[0].innerHTML = '';
+                custom.val(0);
+                custom.addClass('focus');
+                custom.focus();
+            }
+            else {
+                this.options[this.options.length - 1].innerHTML = 'Custom Value';
+                custom.val('');
+                custom.removeClass('focus');
+            }
+
             SIM.UI.updateSession();
             SIM.UI.updateSidebar();
         });

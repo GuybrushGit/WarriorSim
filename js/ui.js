@@ -915,6 +915,16 @@ SIM.UI = {
         }
         view.sidebar.find('.bg').attr('data-race', view.fight.find('select[name="race"]').val());
 
+        let basearmor = $('select[name="targetbasearmor"]').get(0);
+        if (storage.targetcustomarmor) {
+            $('input[name="targetcustomarmor"]').addClass('focus');
+            basearmor.options[basearmor.options.length - 1].innerHTML = '';
+        }
+        else {
+            $('input[name="targetcustomarmor"]').removeClass('focus');
+            basearmor.options[basearmor.options.length - 1].innerHTML = 'Custom Value';
+        }
+
         updateGlobals({
             talents: !storage.talents ? session.talents : storage.talents,
             buffs: !storage.buffs ? session.buffs : storage.buffs,
