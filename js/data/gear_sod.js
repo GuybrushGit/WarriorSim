@@ -23643,7 +23643,7 @@ var gear = {
       "slot": "waist",
       "r": 19,
       "q": "3",
-      "i": "24",
+      "i": 30,
       "name": "Cobrahn's Grasp",
       "agi": 3,
       "str": 8
