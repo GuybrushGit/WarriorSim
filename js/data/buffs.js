@@ -686,6 +686,15 @@ var buffs = [
       consume: true,
    },
    {
+      id: 23060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
+   },
+   {
       id: 12217,
       name: "Dragonbreath Chili",
       iconname: "inv_drink_17",
