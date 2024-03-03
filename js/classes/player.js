@@ -1077,7 +1077,7 @@ class Player {
     }
     proccrit(offhand, adjacent, spell) {
         if (this.auras.flurry) this.auras.flurry.use();
-        if (this.auras.deepwounds && !(spell instanceof SunderArmor)) {
+        if (this.auras.deepwounds) {
             if (!adjacent) this.auras.deepwounds.use(offhand);
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use(offhand);
         }
