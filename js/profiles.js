@@ -181,6 +181,10 @@ SIM.PROFILES = {
         let modeCount = Object.keys(localStorage).filter(d => d.indexOf(mode) > -1).length;
         do {
             if (!localStorage[mode + i]) continue;
+            if (localStorage[mode + i] === "undefined") {
+                delete localStorage[mode + i];
+                continue;
+            };
             let storage = JSON.parse(localStorage[mode + i]);
             let items = view.getItemsHTML(storage);
             let talents = view.getTalents(storage);
