@@ -3031,7 +3031,7 @@ var gear = {
       "i": "61"
     },
     {
-      "name": "Cloudkeeper Legplates (Used last 30 secs)",
+      "name": "Cloudkeeper Legplates",
       "str": 20,
       "sta": 20,
       "agi": 20,
@@ -4392,7 +4392,7 @@ var gear = {
       "i": "51"
     },
     {
-      "name": "Zandalarian Hero Medallion (Used last 20 secs)",
+      "name": "Zandalarian Hero Medallion",
       "source": "ZG",
       "phase": "4",
       "id": 19949,
@@ -4400,7 +4400,7 @@ var gear = {
       "i": "68"
     },
     {
-      "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
+      "name": "Badge of the Swarmguard (10 PPM)",
       "source": "AQ40",
       "phase": "5",
       "id": 21670,
@@ -4440,7 +4440,7 @@ var gear = {
       "i": "66"
     },
     {
-      "name": "Diamond Flask (Used last 60 secs)",
+      "name": "Diamond Flask",
       "source": "Quest",
       "phase": "3",
       "id": 20130,
@@ -4459,7 +4459,7 @@ var gear = {
       "i": "75"
     },
     {
-      "name": "Earthstrike (Used last 20 secs)",
+      "name": "Earthstrike",
       "source": "Quest",
       "phase": "5",
       "id": 21180,
@@ -4493,7 +4493,7 @@ var gear = {
       "i": "61"
     },
     {
-      "name": "Jom Gabbar (Used last 20 secs)",
+      "name": "Jom Gabbar",
       "source": "AQ40",
       "phase": "5",
       "id": 23570,
@@ -4501,7 +4501,7 @@ var gear = {
       "i": "81"
     },
     {
-      "name": "Kiss of the Spider (Used last 15 secs)",
+      "name": "Kiss of the Spider",
       "crit": 1,
       "hit": 1,
       "source": "Naxx",
@@ -4530,7 +4530,7 @@ var gear = {
       "i": "61"
     },
     {
-      "name": "Slayer's Crest (Used last 20 secs)",
+      "name": "Slayer's Crest",
       "ap": 64,
       "source": "Naxx",
       "phase": "6",
@@ -4615,7 +4615,7 @@ var gear = {
       "i": "51"
     },
     {
-      "name": "Zandalarian Hero Medallion (Used last 20 secs)",
+      "name": "Zandalarian Hero Medallion",
       "source": "ZG",
       "phase": "4",
       "id": 19949,
@@ -4623,7 +4623,7 @@ var gear = {
       "i": "68"
     },
     {
-      "name": "Badge of the Swarmguard (Used last 30 secs / 50% proc chance)",
+      "name": "Badge of the Swarmguard (10 PPM)",
       "source": "AQ40",
       "phase": "5",
       "id": 21670,
@@ -4663,7 +4663,7 @@ var gear = {
       "i": "66"
     },
     {
-      "name": "Diamond Flask (Used last 60 secs)",
+      "name": "Diamond Flask",
       "source": "Quest",
       "phase": "3",
       "id": 20130,
@@ -4682,7 +4682,7 @@ var gear = {
       "i": "75"
     },
     {
-      "name": "Earthstrike (Used last 20 secs)",
+      "name": "Earthstrike",
       "source": "Quest",
       "phase": "5",
       "id": 21180,
@@ -4716,7 +4716,7 @@ var gear = {
       "i": "61"
     },
     {
-      "name": "Jom Gabbar (Used last 20 secs)",
+      "name": "Jom Gabbar",
       "source": "AQ40",
       "phase": "5",
       "id": 23570,
@@ -4724,7 +4724,7 @@ var gear = {
       "i": "81"
     },
     {
-      "name": "Kiss of the Spider (Used last 15 secs)",
+      "name": "Kiss of the Spider",
       "crit": 1,
       "hit": 1,
       "source": "Naxx",
@@ -4753,7 +4753,7 @@ var gear = {
       "i": "61"
     },
     {
-      "name": "Slayer's Crest (Used last 20 secs)",
+      "name": "Slayer's Crest",
       "ap": 64,
       "source": "Naxx",
       "phase": "6",
@@ -8475,7 +8475,7 @@ var gear = {
       "i": "65"
     },
     {
-      "name": "Manual Crowd Pummeler (Used last 30 secs)",
+      "name": "Manual Crowd Pummeler",
       "str": 16,
       "agi": 5,
       "mindmg": 46,

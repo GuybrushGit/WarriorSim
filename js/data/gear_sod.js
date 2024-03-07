@@ -4767,6 +4767,28 @@ var gear = {
       "crit": 1,
       "spellcrit": 1,
       "ap": 16
+    },
+    {
+      "id": 219136,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 0,
+      "q": "3",
+      "i": "20",
+      "name": "Tenacity Pendant",
+      "str": 4,
+      "sta": 4
+    },
+    {
+      "id": 219137,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 0,
+      "q": "3",
+      "i": "20",
+      "name": "Initiative Pendant",
+      "agi": 4,
+      "sta": 4
     }
   ],
   "shoulder": [
@@ -38787,6 +38809,28 @@ var gear = {
       "resist": {
         "nature": 5
       }
+    },
+    {
+      "id": 219022,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "2",
+      "i": "20",
+      "name": "Hauler's Ring",
+      "str": 2,
+      "sta": 2
+    },
+    {
+      "id": 219024,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "2",
+      "i": "20",
+      "name": "Messenger's Ring",
+      "agi": 2,
+      "sta": 2
     }
   ],
   "finger2": [
@@ -40664,6 +40708,28 @@ var gear = {
       "resist": {
         "nature": 5
       }
+    },
+    {
+      "id": 219022,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "2",
+      "i": "20",
+      "name": "Hauler's Ring",
+      "str": 2,
+      "sta": 2
+    },
+    {
+      "id": 219024,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "2",
+      "i": "20",
+      "name": "Messenger's Ring",
+      "agi": 2,
+      "sta": 2
     }
   ],
   "trinket1": [

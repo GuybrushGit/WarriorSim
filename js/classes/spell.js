@@ -1160,7 +1160,7 @@ class Swarmguard extends Aura {
         this.duration = 30;
         this.armor = 200;
         this.stacks = 0;
-        this.chance = 5000;
+        this.chance = ~~(player.mh.speed * 10 / 0.006); // 10 PPM
         this.timetoend = 30000;
     }
     use() {
