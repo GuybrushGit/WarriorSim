@@ -695,6 +695,14 @@ var buffs = [
       haste: 5
    },
    {
+      id: 217308,
+      name: "Enchanted Sigil: Innovation",
+      iconname: "inv_sigil_mimiron",
+      minlevel: 40,
+      other: true,
+      ap: 20
+   },
+   {
       id: 12217,
       name: "Dragonbreath Chili",
       iconname: "inv_drink_17",
