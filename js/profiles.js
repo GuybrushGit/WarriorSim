@@ -204,7 +204,7 @@ SIM.PROFILES = {
         view.container.append(`<div>
             <div class="add-profile">${svgAdd}<p>Add Profile</p></div>
             <div class="import-profile">${svgImport}<p>Import Profile</p>
-            ${false && mode == "sod" ? 
+            ${mode == "sod" ? 
                 `<div class="import-container">
                     <div class="import-th">2H BiS</div>
                     <div class="import-dw">DW BiS</div>
