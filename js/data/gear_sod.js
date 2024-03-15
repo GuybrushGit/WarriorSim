@@ -64777,7 +64777,8 @@ var gear = {
       "mindmg": 124,
       "maxdmg": 187,
       "proc": {
-        "dmg": 300
+        "dmg": 300,
+        "ppm": 0.5
       }
     },
     {
