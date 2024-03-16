@@ -156,6 +156,7 @@ var runes = {
             name: 'Wrecking Crew',
             description: "",
             iconname: 'ability_warrior_trauma',
+            wreckingcrew: true,
         },
     ],
     "head": [
@@ -164,6 +165,7 @@ var runes = {
             name: 'Shield Mastery',
             description: "",
             iconname: 'ability_warrior_shieldguard',
+            dmgshield: 10
         },
         {
             id: 426953,

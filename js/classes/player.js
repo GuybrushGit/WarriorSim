@@ -291,6 +291,9 @@ class Player {
         if (type == "offhand" && item.type != "Shield")
             this.oh = new Weapon(this, item, ench, tempench, true, false);
 
+        if (type == "offhand" && item.type == "Shield")
+            this.shield = item;
+
         if (type == "twohand")
             this.mh = new Weapon(this, item, ench, tempench, false, true);
 
@@ -382,21 +385,24 @@ class Player {
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
                     }
-                    // Flagellation
                     if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
                         this.auras[item.name.toLowerCase()] = eval(`new ${item.name}(this)`);
                     }
-                    // Single-Minded Fury
                     if (item.dmgdw && this.oh) {
                         this.base.dmgmod *= (1 + item.dmgdw / 100) || 1;
                     }
-                    // Devastate
                     if (item.devastate) {
                         this.devastate = item.devastate;
                     }
-                    // Blood Surge
                     if (item.bloodsurge) {
                         this.bloodsurge = item.bloodsurge;
+                    }
+                    if (item.wreckingcrew) {
+                        this.wreckingcrew = item.wreckingcrew;
+                        this.auras.wreckingcrew = new WreckingCrew(this);
+                    }
+                    if (item.dmgshield && this.shield) {
+                        this.base.dmgmod *= (1 + item.dmgshield / 100) || 1;
                     }
                 }
             }
@@ -844,6 +850,7 @@ class Player {
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
+        if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -892,6 +899,7 @@ class Player {
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
+        if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
@@ -1086,6 +1094,7 @@ class Player {
             if (!adjacent) this.auras.deepwounds.use(offhand);
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use(offhand);
         }
+        if (this.auras.wreckingcrew) this.auras.wreckingcrew.use();
     }
     procattack(spell, weapon, result, adjacent, damageSoFar) {
         let procdmg = 0;
