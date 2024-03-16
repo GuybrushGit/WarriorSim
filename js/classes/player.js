@@ -32,6 +32,7 @@ class Player {
         this.timer = 0;
         this.itemtimer = 0;
         this.dodgetimer = 0;
+        this.crittimer = 0;
         this.extraattacks = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
@@ -509,6 +510,7 @@ class Player {
         this.timer = 0;
         this.itemtimer = 0;
         this.dodgetimer = 0;
+        this.crittimer = 0;
         this.spelldelay = 0;
         this.heroicdelay = 0;
         this.mh.timer = 0;
@@ -841,6 +843,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
+        if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -888,6 +891,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
+        if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
@@ -1076,6 +1080,7 @@ class Player {
         }
     }
     proccrit(offhand, adjacent, spell) {
+        this.crittimer = 1;
         if (this.auras.flurry) this.auras.flurry.use();
         if (this.auras.deepwounds) {
             if (!adjacent) this.auras.deepwounds.use(offhand);
@@ -1142,6 +1147,11 @@ class Player {
                 this.freeslam = true;
                 /* start-log */ if (log) this.log(`Blood Surge proc`); /* end-log */
             }
+            // Rampage
+            if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5 && rng10k() < 8000) {
+                this.auras.rampage.proc();
+                /* start-log */ if (log) this.log(`Rampage proc`); /* end-log */
+            }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;
                 weapon.windfury.use();
@@ -1187,7 +1197,7 @@ class Player {
         tmp += Math.max(this.mh.miss, 0) * 100;
         if (roll < tmp) dmg = 0;
         tmp += this.mh.dodge * 100;
-        if (roll < tmp) { this.dodgetimer = 5000; dmg = 0; }
+        if (roll < tmp) { dmg = 0; }
         roll = rng10k();
         let crit = this.crit + this.mh.crit;
         if (roll < (crit * 100)) dmg *= 2;

@@ -853,6 +853,16 @@ var spells = [
     maincdactive: false,
     rune: true,
 },
+{
+    id: 427070,
+    name: 'Rampage',
+    classname: 'Rampage',
+    iconname: 'ability_warrior_rampage',
+    active: true,
+    rune: true,
+    buff: true,
+    aura: true,
+},
 
 // Items
 {

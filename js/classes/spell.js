@@ -1878,3 +1878,42 @@ class CoinFlip extends Aura {
         return this.firstuse && !this.timer && step >= this.usestep;
     }
 }
+
+class Rampage extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 30;
+        this.mult_stats = { apmod: 2 };
+        this.stacks = 0;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.player.rage -= 20;
+        this.player.timer = 1500;
+        this.player.crittimer = 0;
+        this.starttimer = step;
+        this.stacks = 1;
+        this.mult_stats.apmod = 2;
+        this.player.updateAP();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    proc() {
+        this.stacks++;
+        this.mult_stats.apmod = this.stacks * 2;
+        this.player.updateAP();
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.player.crittimer && this.player.rage >= 20;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateAP();
+            this.player.crittimer = 0;
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}

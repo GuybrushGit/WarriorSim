@@ -137,4 +137,45 @@ var runes = {
             iconname: 'ability_warrior_victoryrush',
         },
     ],
+    "wrist": [
+        {
+            id: 427070,
+            name: 'Rampage',
+            description: "",
+            iconname: 'ability_warrior_rampage',
+            enable: 427070,
+        },
+        {
+            id: 426978,
+            name: 'Sword and Board',
+            description: "",
+            iconname: 'ability_warrior_swordandboard',
+        },
+        {
+            id: 427065,
+            name: 'Wrecking Crew',
+            description: "",
+            iconname: 'ability_warrior_trauma',
+        },
+    ],
+    "head": [
+        {
+            id: 426980,
+            name: 'Shield Mastery',
+            description: "",
+            iconname: 'ability_warrior_shieldguard',
+        },
+        {
+            id: 426953,
+            name: 'Taste for Blood',
+            description: "",
+            iconname: 'ability_rogue_hungerforblood',
+        },
+        {
+            id: 426972,
+            name: 'Vigilance',
+            description: "",
+            iconname: 'ability_warrior_vigilance',
+        },
+    ],
 };
