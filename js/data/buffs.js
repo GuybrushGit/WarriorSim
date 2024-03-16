@@ -673,7 +673,7 @@ var buffs = [
       iconname: "inv_misc_fish_13",
       group: "food",
       agi: 10,
-      minlevel: 35,
+      minlevel: 41,
       consume: true,
    },
    {
