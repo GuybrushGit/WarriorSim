@@ -398,7 +398,11 @@ class QuickStrike extends Spell {
         return ~~rng(this.player.stats.ap * 0.10, this.player.stats.ap * 0.20);
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
+            ((!this.minrage && !this.maincd) ||
+            (this.minrage && this.player.rage >= this.minrage) ||
+            (this.maincd && this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.maincd && this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
     }
 }
 

@@ -81,7 +81,24 @@ SIM.SETTINGS = {
         view.talents.on('contextmenu', '.icon', function (e) {
             e.preventDefault();
             let talent = view.getTalent($(this));
-            talent.c = talent.c < 1 ? 0 : talent.c - 1;
+            if (talent.c < 1) return;
+            talent.c--;
+
+            let valid = true;
+            let count = [];
+            let tree = $(this).parents('table').index() - 2;
+            for (let t of talents[tree].t)
+                count[t.y] = (count[t.y] || 0) + t.c;
+            for(let i = 0; i < count.length; i++)
+                count[i] += count[i-1] || 0;
+            for (let t of talents[tree].t)
+                if (t.c && t.y * 5 > count[t.y - 1])
+                    valid = false;
+            if (!valid) {
+                talent.c++;
+                return;
+            }
+
             $(this).attr('data-count', talent.c);
             $(this).removeClass('maxed');
             if (talent.c == 0 && talent.enable) {

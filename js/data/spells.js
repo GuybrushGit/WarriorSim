@@ -849,6 +849,8 @@ var spells = [
     iconname: 'inv_axe_03',
     minrage: 0,
     minrageactive: true,
+    maincd: 2,
+    maincdactive: false,
     rune: true,
 },
 
