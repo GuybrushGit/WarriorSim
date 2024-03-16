@@ -1180,16 +1180,12 @@ class Player {
             if (extras) this.extraattacks += extras;
             if (batchedextras) this.batchedextras += batchedextras;
         }
-        if (!spell || spell instanceof HeroicStrike || (spell instanceof Cleave && !adjacent)) {
-            if (this.auras.flurry && this.auras.flurry.stacks)
-                this.auras.flurry.proc();
-            if (this.auras.consumedrage && this.auras.consumedrage.stacks)
-                this.auras.consumedrage.proc();
-        }
-        if (!spell) {
-            if (this.mh.windfury && this.mh.windfury.stacks)
-                this.mh.windfury.proc();
-        }
+        if (!spell && this.auras.flurry && this.auras.flurry.stacks)
+            this.auras.flurry.proc();
+        if (!adjacent && this.auras.consumedrage && this.auras.consumedrage.stacks)
+            this.auras.consumedrage.proc();
+        if (!spell && this.mh.windfury && this.mh.windfury.stacks)
+            this.mh.windfury.proc();
         return procdmg;
     }
     magicproc(proc) {
