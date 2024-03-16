@@ -48,13 +48,7 @@ var runes = {
          description: "While wielding 2-handed weapons, your attack speed is increased by 20%.",
          iconname: 'ability_warrior_unrelentingassault',
          haste2h: 20,
-     },
-     {
-        id: 403215,
-        name: 'Commanding Shout',
-        description: "",
-        iconname: 'ability_warrior_rallyingcry',
-    },
+     }
    ],
    "hands": [
       {
@@ -172,6 +166,7 @@ var runes = {
             name: 'Taste for Blood',
             description: "",
             iconname: 'ability_rogue_hungerforblood',
+            tasteforblood: true,
         },
         {
             id: 426972,

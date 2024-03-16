@@ -404,6 +404,9 @@ class Player {
                     if (item.dmgshield && this.shield) {
                         this.base.dmgmod *= (1 + item.dmgshield / 100) || 1;
                     }
+                    if (item.tasteforblood) {
+                        this.tasteforblood = item.tasteforblood;
+                    }
                 }
             }
         }

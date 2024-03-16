@@ -1475,6 +1475,7 @@ class Rend extends Aura {
         this.totaldmg = 0;
         this.uses = 0;
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
+        this.tfbstep = -6000;
     }
     step() {
         while (step >= this.nexttick && this.stacks) {
@@ -1498,6 +1499,13 @@ class Rend extends Aura {
             if (!this.stacks) {
                 this.uptime += (step - this.starttimer);
                 /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+            }
+
+            // Taste for Blood
+            if (this.player.tasteforblood && (this.tfbstep + 6000) <= step) {
+                this.player.dodgetimer = 9000;
+                this.tfbstep = step;
+                /* start-log */ if (log) this.player.log(`Taste of Blood applied`); /* end-log */
             }
         }
 
@@ -1526,6 +1534,7 @@ class Rend extends Aura {
             this.uptime += (step - this.starttimer);
         this.timer = 0;
         this.stacks = 0;
+        this.tfbstep = -6000;
     }
 }
 
