@@ -466,7 +466,16 @@
         }
 
         .talents table {
-            border: 0;
+            height: auto;
+            tbody {
+                border: 0;
+                border-bottom: 1px solid white;
+                margin-bottom: 16px;
+            }
+            &:last-of-type tbody {
+                border-bottom: 0;
+                margin-bottom: 0;
+            }
             th {
                 padding: 5px 0 20px;
             }
