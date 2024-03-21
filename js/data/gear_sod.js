@@ -27815,6 +27815,18 @@ var gear = {
       "sta": 6
     },
     {
+      "id": 20089,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 40,
+      "q": "3",
+      "i": "43",
+      "name": "Highlander's Chain Girdle",
+      "sta": 6,
+      "ap": 8,
+      "crit": 1
+    },
+    {
       "id": 20126,
       "type": "Mail",
       "slot": "waist",
