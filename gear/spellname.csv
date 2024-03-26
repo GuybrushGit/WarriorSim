@@ -21051,6 +21051,11 @@ ID,Name_lang
 53601,Sacred Shield
 53672,Infusion of Light
 58597,Sacred Shield
+63624,Learn a Second Talent Specialization
+63644,Activate Secondary Spec
+63645,Activate Primary Spec
+63706,Learn Activate Your Primary Talent Spec
+63707,Learn Activate Your Secondary Talent Spec
 81744,Horde
 81748,Alliance
 219003,Idle
@@ -21597,6 +21602,7 @@ ID,Name_lang
 401699,Translate Spell Notes
 401724,Hot Streak
 401725,Brain Freeze
+401726,Advanced Warding
 401729,Arcane Blast
 401731,Living Bomb
 401732,Ice Lance
@@ -21608,6 +21614,7 @@ ID,Name_lang
 401744,Living Flame
 401749,Engrave Belt - Hot Streak
 401752,Engrave Boots - Brain Freeze
+401754,Engrave Helm - Advanced Warding
 401757,Engrave Gloves - Arcane Blast
 401759,Engrave Chest - Burnout
 401760,Engrave Gloves - Ice Lance
@@ -21656,6 +21663,11 @@ ID,Name_lang
 402755,Runecarving: Learn Engrave Quick Draw
 402758,Runecarving:  Learn Engrave Shuriken Toss
 402760,Runecarving:  Learn Engrave Deadly Brew
+402789,Eye of the Void
+402790,Shadow Bolt
+402791,Curse of Shadow
+402792,Curse of the Elements
+402794,Curse of Tongues
 402799,Homunculi
 402801,Homunculi
 402802,Homunculi
@@ -21670,14 +21682,16 @@ ID,Name_lang
 402842,Circle of Healing
 402843,Shadowfiend
 402844,Penance
+402846,Eye of the Void
 402848,Engrave Pants - Prayer of Mending
-402849,Engrave Gloves - Shadow Word - Death
+402849,Engrave Gloves - Shadow Word: Death
 402852,Engrave Pants - Homunculi
 402854,Engrave Pants - Shared Pain
 402855,Engrave Boots - Pain Suppression
 402859,Engrave Gloves - Circle of Healing
 402861,Engrave Pants - Shadowfiend
 402862,Engrave Gloves - Penance
+402864,Engrave Helm - Eye of the Void
 402877,Flagellation
 402906,Flagellation
 402911,Raging Blow
@@ -21770,6 +21784,7 @@ ID,Name_lang
 405194,Riptide
 405303,Duel The Swordsman
 405321,Riptide
+405322,Elwynn - Defeated Wandering Swordsman
 405324,Riptide
 405325,Elwynn - Wandering Swordsman Reward
 405360,Torrential Downpour
@@ -21821,6 +21836,7 @@ ID,Name_lang
 407627,Righteous Fury
 407628,Righteous Fury
 407631,Hand of Reckoning
+407632,Hammer of the Righteous
 407653,Forked Lightning
 407667,Forked Lightning
 407669,Avenger's Shield
@@ -21911,6 +21927,7 @@ ID,Name_lang
 408511,Water Shield
 408514,Earth Shield
 408519,Earth Shield
+408521,Riptide
 408524,Shield Mastery
 408525,Shield Mastery
 408531,Way of Earth
@@ -21939,6 +21956,7 @@ ID,Name_lang
 409064,Rune Scrying
 409073,Annihilation
 409075,Annihilation
+409076,Pain and Suffering
 409163,Engrave Belt - Focused Rage
 409214,Tanking Elite
 409215,Tanking Elite
@@ -22004,6 +22022,7 @@ ID,Name_lang
 409914,Crusader Strike
 409918,Inspiration (Judgement)
 409920,Learn Relic (Judgement)
+409922,Hammer of the Righteous
 409924,Divine Storm
 409925,Seal of Martyrdom
 409930,Libram of Judgement
@@ -22021,6 +22040,7 @@ ID,Name_lang
 409951,Spirit of the Alpha
 409952,Lava Burst
 409953,Lava Lash
+409954,Riptide
 409955,Way of Earth
 409957,Steady Shot
 409958,Master Marksman
@@ -22041,6 +22061,7 @@ ID,Name_lang
 410008,Engrave Pants - Avenger's Shield
 410010,Engrave Pants - Divine Sacrifice
 410011,Engrave Pants - Inspiration Exemplar
+410013,Engrave Bracers - Hammer of the Righteous
 410014,Engrave Chest - Divine Storm
 410015,Engrave Chest - Seal of Martyrdom
 410021,Engrave Chest - Wild Strikes
@@ -22064,6 +22085,7 @@ ID,Name_lang
 410101,Engrave Pants - Earth Shield
 410103,Engrave Boots - Spirit of the Alpha
 410104,Engrave Gloves - Lava Lash
+410105,Engrave Bracers - Riptide
 410107,Engrave Pants - Way of Earth
 410109,Engrave Belt - Steady Shot
 410110,Engrave Gloves - Beast Mastery
@@ -22141,6 +22163,7 @@ ID,Name_lang
 412107,Hate to Zero
 412113,Remove Greater Curse
 412114,Void Empowerment
+412115,Advanced Warding
 412116,Mana Shield
 412118,Mana Shield
 412120,Mana Shield
@@ -22179,6 +22202,7 @@ ID,Name_lang
 412507,Blood Frenzy
 412508,Blood Frenzy Rage Effect
 412510,Mass Regeneration
+412513,Gladiator Stance
 412526,Mind Flay
 412527,Shadowform
 412528,Ground Rupture
@@ -22210,6 +22234,7 @@ ID,Name_lang
 413052,Shadow Crash
 413247,Serendipity
 413248,Serendipity
+413251,Pain and Suffering
 413259,Mind Sear
 413260,Mind Sear
 413301,War Machine
@@ -22251,6 +22276,7 @@ ID,Name_lang
 414692,Sunfire
 414696,Sunfire
 414700,Sunfire
+414719,Elune's Fires
 414722,Slumbering Spirit
 414723,Summon Nature Spirit
 414724,Place Prairie Crown
@@ -22298,6 +22324,9 @@ ID,Name_lang
 415105,Power Surge
 415112,Vateya Timberhoof - Trade Quilboar Head For Rune Fragment
 415113,Vateya Timberhoof - Trade Harpy Head For Rune Fragment
+415140,Mental Dexterity
+415144,Mental Dexterity
+415231,Burn
 415233,Ghost Wolf
 415236,Healing Rain
 415240,Healing Rain
@@ -22315,12 +22344,19 @@ ID,Name_lang
 415342,Raptor Strike
 415343,Raptor Strike
 415352,Melee Specialist
+415358,Raptor Fury
+415362,Raptor Fury
 415370,Lone Wolf
 415372,Lone Wolf
 415399,Sniper Training
 415401,Sniper Training
+415405,Rapid Killing
+415407,Rapid Killing
+415413,Lock and Load
+415414,Lock and Load
 415423,Aspect of the Viper
 415424,Aspect of the Viper
+415428,Catlike Reflexes
 415429,Hunter Pet Scaling
 415431,Avoidance
 415449,Waist Rune Ability
@@ -22328,6 +22364,9 @@ ID,Name_lang
 415459,Spell Power
 415460,Burnout
 415467,Mass Regeneration
+415481,Pain and Suffering
+415596,Shield Mastery
+415598,Gladiator Stance
 415599,Single-Minded Fury
 415604,Everlasting Affliction
 415605,Demonic Tactics
@@ -22335,8 +22374,11 @@ ID,Name_lang
 415706,The Art of War
 415709,Survival of the Fittest
 415712,Power Surge
+415713,Mental Dexterity
 415714,Healing Rain
+415717,Catlike Reflexes
 415718,Aspect of the Viper
+415719,Lock and Load
 415723,Melee Specialist
 415725,Waylay
 415729,Enlightenment
@@ -22356,8 +22398,12 @@ ID,Name_lang
 415759,Skull Bash
 415760,Lacerate
 415761,Living Seed
+415762,Elune's Fires
+415768,Burn
 415816,Invigoration
+415817,Rapid Killing
 415818,Sniper Training
+415822,Raptor Fury
 415926,Engrave Boots - Waylay
 415934,Engrave Boots - Spell Power
 415936,Engrave Gloves - Living Bomb
@@ -22365,9 +22411,11 @@ ID,Name_lang
 415942,Engrave Chest - Enlightenment
 415948,Engrave Belt - Spellfrost Bolt
 415988,Vahi Bonesplitter - Trade Centaur Head For Rune Fragment
+415991,Engrave Helm - Pain and Suffering
 415995,Engrave Chest - Serendipity
 415996,Engrave Gloves - Mind Sear
 415997,Engrave Chest - Strength of Soul
+416002,Engrave Boots - Gladiator Stance
 416003,Engrave Gloves - Single-Minded Fury
 416004,Engrave Belt - Blood Surge
 416005,Engrave Belt - Precise Timing
@@ -22385,12 +22433,19 @@ ID,Name_lang
 416046,Engrave Pants - Skull Bash
 416049,Engrave Gloves - Lacerate
 416050,Engrave Chest - Living Seed
+416051,Engrave Bracers - Elune's Fires
 416054,Engrave Belt - Power Surge
+416055,Engrave Helm - Mental Dexterity
 416057,Engrave Chest - Healing Rain
+416066,Engrave Helm - Burn
+416083,Engrave Helm - Catlike Reflexes
 416084,Engrave Belt - Aspect of the Viper
+416085,Engrave Helm - Lock and Load
 416086,Engrave Belt - Melee Specialist
 416089,Engrave Boots - Invigoration
+416090,Engrave Helm - Rapid Killing
 416091,Engrave Pants - Sniper Training
+416093,Engrave Bracers - Raptor Fury
 416116,Water Elemental Scaling
 416153,Shadowfiend Scaling
 416186,Ba'so - Trade Letter for Rune
@@ -22912,6 +22967,7 @@ ID,Name_lang
 426182,Use Phylactery
 426190,Summon Lich
 426192,Diver Helm Test
+426195,Vengeance
 426197,Shadow Crash
 426198,Shadow Crash
 426199,Shadow Crash
@@ -22943,6 +22999,8 @@ ID,Name_lang
 426452,Engrave Belt - Shadow and Flame
 426454,Shadowflame
 426467,Engrave Boots - Shadowflame
+426469,Vengeance
+426470,Engrave Helm - Vengeance
 426487,Manifesting Dreams
 426489,Manifesting Dreams
 426490,Rallying Cry
@@ -22957,6 +23015,7 @@ ID,Name_lang
 426502,Homunculi
 426503,Homunculi
 426504,Homunculi
+426506,Eye of the Void
 426571,Search Corpse
 426597,Destroy
 426598,Spawn Omni Diffusion Armor
@@ -23338,7 +23397,7 @@ ID,Name_lang
 431268,Bough of Shadows
 431362,Soul Vessel
 431372,Schematic: Soul Vessel
-431384,[DNT] Player Damage Modifier
+431384,[DNT] Player Health Modifier
 431388,Improved Barkskin
 431389,Improved Frenzied Regeneration
 431446,Gore
@@ -23428,6 +23487,14 @@ ID,Name_lang
 432190,Wolfshead Trophy
 432216,Desolace Ritual
 432222,Tremble in Fear
+432233,Tidal Waves
+432234,Engrave Helm - Tidal Waves
+432235,Rolling Thunder
+432236,Engrave Bracers - Rolling Thunder
+432237,Static Shock
+432238,Engrave Bracers - Static Shock
+432240,Overcharged
+432241,Engrave Bracers - Overcharged
 432255,Focused Attacks
 432256,Focused Attacks
 432259,Combat Potency
@@ -23448,6 +23515,12 @@ ID,Name_lang
 432293,Engrave Helm - Combat Potency
 432294,Honor Among Thieves
 432295,Engrave Helm - Honor Among Thieves
+432296,Cut to the Chase
+432297,Engrave Bracers - Cut to the Chase
+432298,Carnage
+432299,Engrave Bracers - Carnage
+432300,Unfair Advantage
+432301,Engrave Bracers - Unfair Advantage
 432308,The Claw!
 432330,Channel
 432407,Gear Toss
@@ -23606,6 +23679,7 @@ ID,Name_lang
 435100,[DNT] Idol of the Heckler Roar Effect
 435102,[DNT] Idol of the Heckler Roar Proc Aura
 435111,[DNT] Idol of the Heckler Challenging Roar Dummy
+435112,Vengeance
 435113,The Claw!
 435117,Meditation on the Abyss
 435120,Learn Rune
@@ -23923,6 +23997,7 @@ ID,Name_lang
 436564,Blunderbuss
 436570,Cluck!
 436620,Duel The Swordsman
+436622,Defeated Wandering Swordsman
 436623,Wandering Swordsman Reward
 436641,Blood Moon Copy
 436655,Witherbark Gong
@@ -24007,20 +24082,46 @@ ID,Name_lang
 437280,Teleport to Searing Basin
 437281,Teleport to Stormwind
 437283,Teleport to Orgrimmar
+437301,Deep Slumber
+437304,Deep Slumber
+437306,Deep Slumber
 437311,Portal of Summoning
+437324,Deep Slumber
 437327,Charged Inspiration
 437340,Radical Rad Resistance
+437346,Fury of the Dreamer
 437349,Gneuro-Logical Shock
+437353,Corrosive Breath
 437357,Gneuromantic Meditation
 437362,Hyperconductive Shock
 437367,Razor-Sharp Gears
 437368,Coin Flip
+437375,Tail Sweep
 437377,Intense Concentration
 437382,Reinforced Willpower
 437388,Razor-Sharp Gears
+437390,Lethargic Poison
+437398,Waking Nightmare
+437410,Deep Slumber
+437416,Dreamwalker
+437418,Dreamwalker
+437424,Deep Slumber
+437425,Lethargic Poison
 437477,Gnomeregan Smash
 437499,[DNT] Discoverer's Delight - Modify Aura (PHASE)
+437503,Pillars of Might
+437511,Pillars of Might
+437515,Pillars of Might
+437524,Pillars of Might
+437525,Pillars of Might
+437579,Pillars of Might
+437584,Pillars of Might
+437585,Pillars of Might
 437589,[DNT] Wendel Mathers Escape
+437597,Demolishing Smash
+437598,Demolishing Smash
+437605,Demolishing Smash
+437617,Demolishing Smash
 437629,[DNT] Trigger
 437646,Remove Zandalari Ward
 437666,[DNT ] Equip Kurzen Uniform
@@ -24037,12 +24138,38 @@ ID,Name_lang
 437765,Bloodthirst
 437766,Leprous Machinesmith Toss
 437767,Leprous Defender Toss
+437776,Pillars of Might
+437789,Ritual Leader
+437791,Ritual Leader
 437799,String of Ears
+437805,Smite
 437807,[DNT] Captain Aransas Give Reward
+437809,Holy Fire
+437817,Holy Nova
+437821,Holy Nova
+437823,Holy Nova
+437837,Holy Nova
+437847,Mortal Lash
 437853,Summon Bomb
+437868,Agonizing Weakness
+437877,Infusion of Light
+437881,Infusion of Shadow
+437884,Consecration
+437887,Consecration
 437888,Summom Bomb Periodic
+437891,Holy Strike
+437915,Hammers of Justice
+437920,Divine Storm
+437921,Mass Penance
+437924,Mass Penance
+437927,Shadow Sermon: Pain
+437928,Psychic Scream
+437930,Power Word: Shield
+437951,Eating...
+437995,Draining...
 437997,Invigoration
 437999,Invigoration
+438019,Healing Wave
 438032,Electrical Grid
 438040,Redirect
 438045,Redirect
@@ -24051,7 +24178,11 @@ ID,Name_lang
 438079,Electrical Grid
 438088,[DNT] Trigger Swamp Chest Trap
 438089,Poison Dart
+438101,Devour
 438105,Bloody Commendation
+438130,Nauseous Gas
+438136,Nauseous Gas
+438142,Gunk
 438219,Wyvern
 438220,Wyvern
 438262,Channel
@@ -24059,10 +24190,17 @@ ID,Name_lang
 438279,Dance
 438286,[DNT] Kha'damu Zone Tracking Aura
 438288,Dark Presence
+438294,Thorns
 438295,Ariden's Sigil
 438305,Reveal Dark Rider
 438316,[DNT] Bigfoot Stomps
 438318,[DNT] Bigfoot Stomps
+438326,Thorns
+438335,Healing Ward
+438338,Healing Wave
+438339,Healing Wave
+438341,Renew
+438350,Shadow Bolt Volley
 438358,Bloodthirst
 438382,BFD XP Grant [DNT]
 438487,Ride Vehicle
@@ -24077,7 +24215,7 @@ ID,Name_lang
 438542,[DNT] Dark Rider Spawn
 438545,Relentless Strikes
 438547,[DNT] Hyperconductive Shock Visual
-438548,Charged Inspiration Visual
+438548,[DNT] Charged Inspiration Visual
 438550,Uppercut
 438551,Feast of Blood
 438561,Scrap Toss
@@ -24181,6 +24319,16 @@ ID,Name_lang
 439431,Windfury Weapon
 439440,Windfury Weapon
 439441,Windfury Weapon
+439462,Sebacious Poison
+439464,Numbing Poison
+439465,Atrophic Poison
+439471,Sebacious Poison
+439472,Numbing Poison
+439473,Atrophic Poison
+439500,Sebacious Poison
+439503,Atrophic Poison
+439505,Numbing Poison
+439512,Swipe
 439540,Walking Bomb Passive Proc (100%)
 439581,[DNT] - Radiation Cloud Visual
 439624,Reputation - Merchant Faction
@@ -24224,17 +24372,28 @@ ID,Name_lang
 440093,Gear Toss
 440106,Resurrection
 440108,Pacify Self
+440114,Sudden Death
 440123,[DNT] Despawn
 440212,Cryoblast
 440213,Fury of the Blood Loa
 440236,Imbue Blade
-440247,S03 - Tuning and Overrides Passive - Druid
+440247,S03 - Tuning and Overrides Passive - Priest
 440285,Power Surge
 440329,[DNT] Mechanical Unit Damage Reduction
 440414,Widget Volley
 440471,Toxic Ventilation
+440483,Enrage
 440486,High Voltage!
 440505,Invisibility
+440574,Earthgrab
+440580,Feral Spirit
+440586,Bash
+440589,Twin Howl
+440593,Spirit Hunt
+440594,Avoidance
+440595,Shaman Pet Scaling
+440609,Spirit Hunt
+440610,Spirit Walk
 440632,Attack Power - Feral (+36)
 440636,Electrical Grid
 440637,Electrical Grid
@@ -24247,7 +24406,14 @@ ID,Name_lang
 440651,Sacred Shield
 440656,High Voltage!
 440664,Sludge
+440667,Vindicator
+440668,Vindicator
+440675,Righteous Vengeance
+440677,Righteous Vengeance
 440720,Scooty's Not-Quite-Divine Shield
+440802,Frozen Orb
+440804,Frozen Orb
+440813,Frozen Orb
 440817,[DNT] Holdout Teleport - Teleport To Crowd Pummeler Room
 440818,[DNT] Holdout Teleport - Crowd Pummeler - Floating Visual
 440820,Destroy
@@ -24256,23 +24422,813 @@ ID,Name_lang
 440824,[DNT] Holdout Teleport - Thermaplugg - Floating Visual
 440825,[DNT] Holdout Teleport - Viscous Fallout - Floating Visual
 440826,[DNT] Holdout Teleport - Grubbis - Floating Visual
+440827,Throw Concoction
+440828,Zul'Farrak Cauldron
+440829,Combine Offerings
+440830,Imbue Emblem
 440840,[DNT] Holdout Teleport - Crowd Pummeler - Unavailable Floating Visual
+440841,Ward of the Dead
 440842,[DNT] Holdout Teleport - Electrocutioner - Unavailable Floating Visual
 440843,[DNT] Holdout Teleport - Thermaplugg - Unavailable Floating Visual
 440844,[DNT] Holdout Teleport - Holdout - Floating Visual
 440845,[DNT] Holdout Teleport - Teleport To Holdout
 440847,[DNT] Holdout Teleport - Teleport To Electrocutioner Room
 440848,[DNT] Holdout Teleport - Teleport To Thermaplugg Room
-440981,Weapon Damage 04
+440856,S03 - 50 - Rogue 45 Quest Start
+440873,Decimation
+440882,Infernal Armor
+440895,Mark of Chaos
+440981,Weapon Damage 03
+441004,[DNT] S03 - GNO Raid - Crowd Pummeler - Platform Area Trigger Dummy Aura
 441042,Gear Toss
+441100,Ride Kaiju
+441215,Ride Meka
+441260,Eclipse: Lunar
 441281,Sprocketfire
 441282,Radioactive Bomb
-441260,Eclipse: Lunar
 441335,Combat Pulse
-441448,Charged
-441455,Toxic Ventilation
 441447,Gear Toss
+441448,Charged
+441449,Flame Spray
+441450,Chain Burn
+441453,Electrified Net
+441454,Arcane Explosion
+441455,Toxic Ventilation
 441456,Gear Toss
 441457,Gear Toss
 441458,Gear Toss
 441459,Gear Toss
+441532,DNT Summon SF
+441540,DNT SF Proc
+441642,Gnomeregan Smash
+441739,Ghostly
+441785,Drained of Blood
+441924,[DNT] S03 - 40 - Druid Teleport Trigger
+441927,Ghostly
+442107,Blood for the Blood Loa
+442153,[DNT] Drained of Blood (Ghost)
+442188,[DNT] Drained of Blood (Death)
+442206,Dismantle
+442211,Berserk
+442222,Static Arc
+442223,Static Arc
+442225,Static Arc
+442226,Menace
+442233,Menace
+442241,Static Arc
+442299,Consume
+442543,S03 - Tuning and Overrides Passive - Mage
+442620,Wing Flap
+442622,Acid Breath
+442623,Wing Buffet
+442625,Delayed Wing Buffet
+442945,Saved by the Light
+442946,Near Death
+442947,"Feeling much better, thank you!"
+442948,Blessing of Protection
+443014,[DNT] Life Link
+443022,Red Beam
+443065,Life Link - 1. Initialize
+443233,[DNT] Health Link
+443237,[DNT] Health Link
+443265,Infernal Lasso
+443278,Seed of Renewal
+443290,[DNT] Health Link
+443291,[DNT] Health Link
+443302,Emerald Ward
+443320,Loyal Beta
+443358,Blademaster's Fury
+443359,Moonkin Form (Passive)
+443369,Chronostatic Preservation
+443395,Climbing Rope
+443464,Healing Blossom
+443469,[DNT] Grow Healing Blossom
+443518,Climbing Rope
+443540,Statue Beam
+443630,PvP Trinket
+443631,Seed of Renewal Effect
+443632,Filcher's Cowl
+443634,Conjure Ocean Water
+443635,Conjure Ocean Water
+443678,Seed of Renewal
+443758,Ken's Test Spell
+443766,Wing Buffet
+443774,Wing Buffet
+443790,Wing Buffet
+443793,Wing Buffet
+443813,High-Yield Radiation Bomb
+443827,Delayed Wing Buffet
+443828,Wing Buffet
+443829,Wing Buffet
+443830,Delayed Wing Buffet
+443848,Blood Infusion
+443856,Caustic Overflow
+443892,Blood Ritual
+443895,Blood Ritual
+443910,[DNT] Safe zone
+443916,Tides of Blood
+443917,Tides of Blood
+443923,Tides of Blood
+443930,Caustic Overflow
+443940,Bubbling Blood
+443944,Bubbling Blood
+443945,Bubbling Blood
+443953,Bubbling Blood
+443964,Spirit Chains
+443975,Spirit Chains
+443976,[DNT] Emerald Decay Visuals
+443990,Frightsome Howl
+443999,Blood Ritual
+444039,Insanity
+444046,Curse of Tongues
+444050,Blood Nova
+444132,Drain Blood
+444139,Drain Blood
+444165,Skeletal
+444253,Corrupted Blood
+444255,Corrupted Blood
+444261,Corrupted Blood
+444273,Corrupted Blood
+444280,Corrupted Blood
+444284,Corrupted Blood
+444285,Corrupted Blood
+444286,Corrupted Blood
+444290,Corrupted Blood
+444291,Corrupted Blood
+444313,[DNT] Emerald Decay Visuals
+444368,Fight Impostors
+444430,Fanaticism
+444509,Shield of the Elements
+444515,Combat Pulse
+444519,Deputize: Duskwood Mission I
+444522,Threatening Roar
+444524,Deputize: Duskwood Mission II
+444527,Deputize: Duskwood Mission III
+444528,Deputize: Duskwood Mission IV
+444530,Deputize: Duskwood Mission V
+444531,Deputize: Duskwood Mission VI
+444532,Deputize: Duskwood Mission VII
+444533,Deputize: Duskwood Mission VIII
+444534,Deputize: Duskwood Mission IX
+444535,Deputize: Duskwood Mission X
+444537,Deputize: Duskwood Mission XI
+444539,Deputize: Duskwood Mission XII
+444540,Deputize: Duskwood Mission XIII
+444541,Deputize: Duskwood Mission XIV
+444542,Deputize: Duskwood Mission XV
+444543,Deputize: Duskwood Mission XVI
+444544,Deputize: Duskwood Mission XVII
+444545,Deputize: Duskwood Mission XVIII
+444549,Activate Defender
+444550,Deputize: Ashenvale Mission I
+444551,Deputize: Ashenvale Mission II
+444552,Deputize: Ashenvale Mission III
+444553,Deputize: Ashenvale Mission IV
+444554,Deputize: Ashenvale Mission V
+444555,Deputize: Ashenvale Mission VI
+444556,Deputize: Ashenvale Mission VII
+444557,Deputize: Ashenvale Mission VIII
+444558,Deputize: Ashenvale Mission IX
+444559,Deputize: Ashenvale Mission X
+444561,Deputize: Ashenvale Mission XI
+444563,Deputize: Ashenvale Mission XII
+444565,Deputize: Ashenvale Mission XIII
+444566,Deputize: Ashenvale Mission XIV
+444567,Deputize: Ashenvale Mission XV
+444568,Deputize: Ashenvale Mission XVI
+444569,Deputize: Ashenvale Mission XVII
+444570,Deputize: Ashenvale Mission XVIII
+444571,Deputize: Hinterlands Mission I
+444573,Deputize: Hinterlands Mission II
+444574,Deputize: Hinterlands Mission III
+444575,Deputize: Hinterlands Mission IV
+444576,Deputize: Hinterlands Mission V
+444577,Deputize: Hinterlands Mission VI
+444578,Deputize: Hinterlands Mission VII
+444579,Deputize: Hinterlands Mission VIII
+444580,Deputize: Hinterlands Mission IX
+444581,Deputize: Hinterlands Mission X
+444582,Deputize: Hinterlands Mission XI
+444583,Deputize: Hinterlands Mission XII
+444584,Deputize: Hinterlands Mission XIII
+444585,Deputize: Hinterlands Mission XIV
+444586,Deputize: Hinterlands Mission XV
+444587,Deputize: Hinterlands Mission XVI
+444588,Deputize: Hinterlands Mission XVII
+444589,Deputize: Hinterlands Mission XVIII
+444590,Deputize: Feralas Mission I
+444591,Deputize: Feralas Mission II
+444592,Deputize: Feralas Mission III
+444593,Deputize: Feralas Mission IV
+444594,Deputize: Feralas Mission V
+444595,Deputize: Feralas Mission VI
+444596,Deputize: Feralas Mission VII
+444597,Deputize: Feralas Mission VIII
+444598,Deputize: Feralas Mission IX
+444599,Deputize: Feralas Mission X
+444600,Deputize: Feralas Mission XI
+444601,Deputize: Feralas Mission XII
+444602,Deputize: Feralas Mission XIII
+444603,Deputize: Feralas Mission XIV
+444604,Deputize: Feralas Mission XV
+444605,Deputize: Feralas Mission XVI
+444606,Deputize: Feralas Mission XVII
+444607,Deputize: Feralas Mission XVIII
+444651,S03 - Flag Tracking Quest - Paladin 50 Quest -  Aeonas Traveling (DNT
+444652,S03 - Un-Flag Tracking Quest - Paladin 50 Quest -  Aeonas Traveling (DNT
+444678,Lava Breath
+444680,Lava Breath
+444681,Lava Breath
+444682,Lava Breath
+444747,Summon Gasher
+444758,Emerald Nightmare
+444759,Emerald Nightmare
+444760,Emerald Nightmare
+444761,Hakkar
+444762,Emerald Nightmare
+444768,Avatar of Hakkar
+444781,Avatar of Hakkar
+444783,Avatar of Hakkar
+444812,Avatar of Hakkar
+444816,Avatar of Hakkar
+444831,Tamed Pet Passive (DND)
+444844,Create Duskwood Field Report
+444890,S03 - Flag Tracking Quest - Paladin 50 Quest -  Spoken to Aeonas in Felwood (DNT
+444891,S03 - Flag Tracking Quest - Paladin 50 Quest -  Spoken to Gregory in Felwood (DNT
+444892,Deathly Chill
+444893,Shadow Ritual
+444894,Holy Shock
+444895,Holy Smite
+444896,Hammer of the Righteous
+444904,Bloody Tears
+444906,Bloody Tears
+444935,Parasomnia
+444938,Parasomnia
+444960,Summon Loro
+444961,Summon Hukku
+444962,Summon Zul'Lor
+444963,Summon Mijan
+444964,Summon Zolo
+444973,Statue Empowerment
+444975,Statue Empowerment
+444987,Statue Destruction
+444991,Statue Destruction
+444996,Pillars of Might
+445000,Pillars of Might
+445080,Incite Madness
+445081,Burning Madness
+445158,Lucid Dreaming
+445168,Light and Dark
+445171,Light and Dark
+445181,Murky Sapta Sight
+445185,Climbing Rope
+445187,Permanent Feign Death
+445188,[DNT] Sleeping Copy
+445189,Climbing Rope
+445190,[DNT] Sleeping Copy
+445198,[DNT] Sleeping Copy
+445201,Climbing Rope
+445202,Climbing Rope
+445220,[DNT] Sleeping Copy
+445222,[DNT] Sleeping Copy
+445230,[DNT] Exit Dream
+445235,Lucid Dreaming
+445279,Enter Dream
+445280,Exit Dream
+445282,Disarm
+445283,Fervor
+445284,Fervor
+445285,Blood Frenzy
+445286,Blood Frenzy
+445287,Spinning Axes
+445288,Spinning Axes
+445289,Spinning Axes
+445411,[DNT] Combat Pulse
+445442,[DNT] AoE Damage Reduction
+445459,Explorer Imp
+445461,Test - Duel Talent - Grant Talent Groups
+445462,Test - Duel Talent - Activate Group 1
+445463,Test - Duel Talent - Activate Group 2
+445498,Bellowing Roar
+445501,Holy Smite
+445514,Clarifying Air - Give Sapta
+445517,Acid Shot
+445522,Imp on a Mission
+445527,Dream Awakening
+445530,Dream Awakening
+445532,Dream Awakening
+445544,Dream Awakening
+445545,Dream Awakening
+445548,Dream Awakening
+445551,Devour
+445552,Fire Patch
+445555,On Fire!!
+445558,Meathook
+445567,Acid Rain
+445571,Acid Rain
+445573,Acid Rain
+445575,Acid Rain
+445578,Fire Patch
+445703,Sleepy Time
+445716,[DNT] Visual Knockback
+445748,Combine Fragment of Air
+445770,Spinning Axes
+445799,Vision of Moderate Manifestations
+445800,Vision of Moderate Manifestations
+445801,Prismatic Shell
+445816,[DNT] End Mission
+445821,Spinning Axes
+445853,[DNT] Dream Portal
+445867,Recurrent Nightmare
+445868,Costly Awakening
+445870,Eye of Ysera
+445871,Grace of the Dreamer
+445875,Gloom
+445911,[DNT] Flower Scale
+445912,Atal'ai Serpent Totem
+445913,Atal'ai Serpent Totem
+445914,[DNT] Flower Growth
+445922,Atal'ai Serpent Totem
+445923,Atal'ai Serpent Totem
+445926,Atal'ai Serpent Totem
+445927,Atal'ai Serpent Totem
+445928,Atal'ai Serpent Totem
+445929,Atal'ai Serpent Totem
+445931,Atal'ai Serpent Totem
+445934,Spinning Axes
+445937,[DNT] Move Passengers To Next Seat
+445940,Unstable Cask
+445985,[DNT] Vine Open
+446034,Eternal Slumber
+446069,Tame Groddoc Infant
+446070,Tame Groddoc Infant
+446074,Close Fel Portal
+446087,[DNT] Groddoc Matriarch Give Rune
+446088,Leyline Attunement
+446089,Geode Hammer
+446090,Feast on Your Fear
+446091,Aura of Paralyzing Dread
+446092,Gneurostatc Protection
+446093,The Nightmare
+446094,Geode Hammer Proc Effect
+446095,Idol of the Raging Shambler
+446096,S03 - Flag Tracking Quest - ST Professions -  Looted Purple Stone (DNT)
+446097,Nightmare Resonance Crystal
+446098,Unorthodox Hex Stick
+446100,Inanimate
+446101,Atal'ai Blood Ceremony
+446102,Sacrifice to the Blood Loa
+446103,Blood Loa's Blessing
+446104,Atal'alarion's Enchanted Boulder
+446105,Summon Skeletal Wind Serpent
+446106,Gun Axe Shot
+446120,S03 - Flag Tracking Quest - ST Professions -  Spoken to Hannalah (DNT)
+446121,[DNT] Health Link
+446122,[DNT] Health Link
+446124,[DNT] Health Link
+446125,[DNT] Health Link
+446132,Replace Supplies
+446133,Replace Supplies
+446134,Replace Supplies
+446135,Replace Supplies
+446138,Eternal Slumber
+446140,Replace Supplies
+446141,Replace Supplies
+446142,Replace Supplies
+446144,Eternal Slumber
+446147,Replace Supplies
+446150,DNT SF Phase
+446153,Replace Supplies
+446156,Replace Supplies
+446158,Replace Supplies
+446159,Replace Supplies
+446160,S03 - Flag Tracking Quest - ST Professions -  Spoken to Alonso (DNT)
+446162,Replace Supplies
+446163,Replace Supplies
+446164,Replace Supplies
+446165,Replace Supplies
+446166,Replace Supplies
+446167,Replace Supplies
+446168,Replace Supplies
+446169,Improved Wrath/Starfire +3
+446170,Chain Heal Bonus (-0.1 sec cast time)
+446171,Replace Supplies
+446172,Replace Supplies
+446173,Replace Supplies
+446174,Replace Supplies
+446176,Replace Supplies
+446177,Replace Supplies
+446179,Shoulderplates of Dread
+446183,Paranoia Mantle
+446185,Shrieking Spaulders
+446186,Cacophonous Chain Shoulderguards
+446188,Fearmonger's Shoulderguards
+446189,Shoulderpads of Obsession
+446190,Wailing Chain Mantle
+446191,Baleful Pauldrons
+446192,Membrane of Dark Neurosis
+446193,Fractured Mind Pauldrons
+446194,Mantle of Insanity
+446195,Shoulderpads of the Deranged
+446212,Improved Swipe/Shred
+446213,Improved Holy Shield
+446214,Teach Nightmare Armaments - Blacksmithing
+446215,Teach Nightmare Armaments - Leatherworking
+446217,Teach Nightmare Armaments - Tailoring
+446219,Cries of Corrupted Ancestry
+446220,Totem of Tormented Ancestry
+446226,Flask of Everlasting Nightmares
+446228,Nightmarish Power
+446229,Teach Nightmare Armaments - Alchemy
+446231,Serpent's Ascension
+446233,Serpent's Ascension Trigger
+446236,Void-Powered Invoker's Vambraces
+446237,Void-Powered Slayer's Vambraces
+446238,Void-Powered Protector's Vambraces
+446239,Teach Nightmare Armaments - Engineering
+446240,Sigil of Living Dreams
+446243,Sigil of Living Dreams
+446244,Teach Nightmare Armaments - Enchanting
+446256,Atal'ai Mojo of Forbidden Magic
+446258,Shadow Bolt
+446265,Falling Rocks
+446267,Falling Rocks
+446269,Falling Rocks
+446270,Falling Rocks
+446274,Dream Fog
+446275,Dream Fog
+446278,Dragonkin Slayer 93
+446282,Attack Power - Feral (+78)
+446286,Relentless Strength
+446287,Unbound Soul
+446288,Elune's Favor
+446289,Relentless Strength
+446292,Sorrowful Wilting
+446294,Virulent Breath
+446295,Blinkmissile
+446296,Wake Up Dead
+446297,Unrestrained Power
+446298,Rift-ripping Roar
+446299,Familiar Chaos
+446301,Conceptualize Dreamscapes
+446303,Unrestrained Power
+446305,Unrestrained Power
+446310,Fragile Armor
+446311,Slime Time
+446313,Fragile Armor
+446314,Fragile Armor
+446317,Drain Life
+446319,Triple Bolt
+446322,Emerald Shroud
+446327,Enrage
+446335,Voodoo Frenzy
+446336,Atal'ai Mojo of War
+446338,Chain Lightning
+446339,Atal'ai Skeleton Totem
+446348,Vomit Comet
+446354,Shield Slam
+446355,Shield Spike
+446356,Improved Blocking
+446357,Hate to Zero
+446358,Attack
+446360,Hukku's Guardians
+446361,Shadow Bolt
+446362,Curse of Blood
+446363,Rebuild Iodax
+446364,Frailty
+446367,Charge
+446369,Charge
+446372,Corrupted Slam
+446373,Corrupted Slam
+446374,S03 - Tuning and Overrides Passive - Hunter
+446376,Corrupted Slam
+446382,Attuned to the Void
+446383,[DNT] Troll Object - Drum Death
+446384,Dunes Deck
+446385,Nightmares Deck
+446386,Plagues Deck
+446387,Wilds Deck
+446388,Sandstorm
+446389,Sandstorm
+446390,Torment
+446391,Torment
+446392,Decay
+446393,Decay
+446394,Overgrowth
+446395,Overgrowth
+446396,Atal'ai Mojo of Life
+446397,Rainbow Generator
+446398,Perceive
+446410,Animate Flame
+446420,[DNT] Animated Flame Spawn
+446444,Animate Flame
+446448,Duty of the Warden
+446450,Attack Power 15
+446451,Atal'ai Signet of Might
+446454,Channel Leycrysts
+446456,Anvilrage Armor
+446458,Increase Spell Dam +9
+446459,Atal'ai Signet of Mojo
+446460,Warden of Life
+446461,Warden of Spirit
+446466,Fire Crown
+446467,Mark of the Warden
+446468,Dreamer's Lament
+446470,Increase Healing 18
+446472,Atal'ai Signet of Serenity
+446487,Corrupted Breath
+446489,Backfire
+446504,EZ-Splode Blasting Charge
+446506,Spreading Corruption
+446509,Make Offering
+446515,Create Hinterlands Field Report
+446516,Create Ashenvale Field Report
+446517,Create Feralas Field Report
+446518,Echoes of Madness
+446528,Echoes of Madness
+446536,Mission Complete
+446541,Echoes of Insanity
+446545,Echoes of Insanity
+446552,Create Yorgen Farmstead Intelligence Report
+446553,Create Rotting Orchard Intelligence Report
+446555,Create Vul'gol Ogre Mound Intelligence Report
+446556,Create Forest Song Intelligence Report
+446558,Create Satyrnaar Intelligence Report
+446559,Create Warsong Lumber Camp Intelligence Report
+446562,Create Agol'watha Intelligence Report
+446563,Create Shaol'watha Intelligence Report
+446564,Create Skulk Rock Intelligence Report
+446565,Create Oneiros Intelligence Report
+446566,Create Twin Colossals Intelligence Report
+446567,Create Ruins of Ravenwind Intelligence Report
+446570,Echoes of the Depraved
+446572,Echoes of the Depraved
+446573,Plagued Shot
+446577,Echoes of Dread
+446578,Dreamharvest
+446579,Echoes of Dread
+446580,Murky Sapta Sight
+446581,Murky Sapta Sight
+446582,Murky Sapta Sight
+446586,Dizzying Spin
+446591,Escort Complete
+446592,Echoes of Fear
+446593,[DNT] Permanent Feign Death
+446594,Escort Complete
+446595,Escort Complete
+446596,Escort Complete
+446597,Echoes of Fear
+446601,Escort Complete
+446603,Escort Complete
+446604,Escort Complete
+446605,Escort Complete
+446606,Escort Complete
+446607,Purifying Fire - Give Sapta
+446609,Cleansing Water - Give Sapta
+446610,Purging Earth - Give Sapta
+446611,Escort Complete
+446612,Escort Complete
+446613,Escort Complete
+446618,Echoes of of the Damned
+446620,Echoes of of the Damned
+446621,Enter Dream
+446622,Enter Dream
+446623,Enter Dream
+446624,Exit Dream
+446625,Exit Dream
+446627,Exit Dream
+446628,Echoes of the Corrupt
+446630,Echoes of the Corrupt
+446631,Spare Change
+446637,Weapon Cleaning Cloth
+446639,Dessicated Dreams
+446640,Cleaned
+446660,Blood Ritual
+446661,Animate Flame
+446662,Blood Ritual
+446665,Share Dream
+446666,Rending Cleave
+446667,Blood Power
+446668,Vein Slash
+446669,Dreamscape
+446670,Gushing Wounds
+446671,Blood Obedience
+446672,Blood Alchemy
+446673,Blood-crazed Sprint
+446674,Blood Alchemy
+446675,Nightmare Siphon
+446676,Blood Alchemy
+446677,Nightmare Siphon
+446678,[DNT] Morphaz Sleep Phase and Anim
+446685,Blood-crazed Spirit
+446687,Anguish of the Dream
+446689,Anguish of the Dream
+446695,Fervor of the Temple Explorer
+446696,Vomit Comet
+446697,Vomit Comet
+446698,Fervor of the Temple Explorer
+446699,Gore
+446702,Searing Gaze
+446703,Keen Eyes
+446704,Agamaggan's Roar
+446705,Roar of the Dream
+446706,Roar of the Dream
+446707,Parasomnia
+446708,Attack Power - Feral (+73)
+446709,Roar of the Guardian
+446710,Roar of the Grove
+446711,Roar of the Grove
+446712,Roar of the Grove
+446713,Food
+446714,Drink
+446715,Jungle Durian
+446716,Egg Thief
+446720,Stinky!
+446721,[DNT] Turn Player Into Bones
+446722,Call of the Arena
+446723,Gurubashi Pit Figher's Bow
+446724,Bloodthirst Bow Health Drain Trigger
+446725,Thirst for Blood
+446727,Dragonkin Slayer 36
+446728,Judgement of the Loa
+446729,Troll Speed
+446730,Totem of Fiery Precision
+446731,Headhunter's Barbed Spear
+446732,Wake Up Dead
+446733,Sleepwalk
+446762,[DNT] Dream Fog
+446771,Vision of Moderate Manifestations
+446772,Vision of Moderate Manifestations
+446773,Vision of Moderate Manifestations
+446783,Revitalizing Waters
+446785,Revitalizing Waters
+446786,Revitalizing Waters
+446792,Revitalizing Waters
+446802,Combine Fragment of Fire
+446803,Combine Fragment of Earth
+446804,Combine Fragment of Water
+446806,Sunken Hex
+446810,Decay
+446838,Old Key
+446847,S03 - Tuning and Overrides Passive - All Classes
+446851,Flask of Nightmarish Mojo
+446860,Emerald Nightmare
+446888,Totem Challenge
+446889,Totem Challenge
+446891,Summon Agamaggan
+446898,[DNT] Morphaz Death Phase
+446901,Totem Challenge
+446906,[DNT] Summon Agamaggan Aura
+446908,Totem Challenge
+446912,Dreamscape
+446925,Nauseous Gas
+447031,[DNT] Spawn Nightmare Vines
+447032,[DNT] Spawn Nightmare Vines
+447033,[DNT] Spawn Nightmare Vines
+447036,[DNT] Stormcrow Nest
+447037,Devour
+447040,[DNT] Summon Enraged Stormcrow
+447051,Decipher Notes
+447054,Summon Enraged Voidwalker
+447106,[DNT] Nightmare Vines - Spawn Visual Dummy Spell
+447138,[DNT] Head of the Obliterator
+447238,[DNT] Backfire
+447255,Dragonkin Slayer 24
+447256,Summon Burning Imp
+447259,Charged Air
+447260,Summon Burning Imp
+447267,Static Buildup
+447274,Attack Power - Feral (+67)
+447280,Rift-ripping Roar
+447282,Rift-ripping Roar
+447283,Rift-ripping Roar
+447297,Summon Burning Imp
+447298,Summon Burning Imp
+447299,Summon Burning Imp
+447300,Summon Burning Imp
+447301,Dizzying Spin
+447302,Emerald Nightmare
+447397,Rift-ripping Roar
+447409,Emerald Nightmare
+447472,Brew Tincture
+447475,Satyrweed Tincture
+447483,Satyr Corruption
+447537,Combine Immolation Aura
+447544,Dizzy
+447546,Fireball
+447547,Flamestrike
+447548,Twisted Tranquility
+447549,Feedback
+447550,Emerald Nightmare
+447551,[DNT]Jabbey Give Rune
+447553,[DNT] Trigger Bat Chest Trap
+447554,Undying Slumber
+447555,Chest Pains
+447556,Combine Diseased Nature Staff
+447557,Awaken Diseased Forest Walker
+447561,[DNT] Deep Freeze
+447562,[DNT] Troll Object - Visual Aura
+447563,Blind
+447564,[DNT] Temporal Anomaly
+447569,[DNT] Move Troll Object
+447578,Gloom
+447579,Gloom
+447580,Gloom
+447581,Gloom
+447582,Wisp Detonate
+447584,Wisp Detonate
+447585,Creeping Nightmare
+447586,Summon Treant Allies
+447587,Force of Nature
+447588,Wake Up Dead
+447589,Deafening Screech
+447590,Infernal Lasso
+447591,Undying Fel Fire
+447890,Wake Up Dead
+447891,Bash
+447892,Skin of Rock
+447894,Sting of the Serpent
+447895,[DNT] Summon Blightbark
+447899,[DNT]Shrine of the Warden Trigger
+447906,[DNT] Shrine of the Moon Dummy
+447907,[DNT] Shrine of the Moon Trigger Effect
+447914,[DNT]Shrine of the Moon Trigger
+447920,[DNT] Summon Sagefeather
+447935,[DNT] Enraged Leywalker Spawn
+447947,Visual Effect (DNT)
+447986,[DNT] Shrine of the Beast Trigger
+447993,[DNT] Summon Whisperwing
+448084,Restless Dreams
+448085,Flask of Restless Dreams
+448106,Summon Spire Spiderling
+448107,Blood Howl
+448149,Hyjal's Wisdom
+448152,[DNT] Tanaris Arena Bounds
+448156,Spare Change
+448159,[DNT] Spawn Gos Greasebasher (Player)
+448160,Spare Change
+448223,Acid Rain
+448226,[DNT] Spawn Gos Greasebasher
+448231,[DNT] Spawn Wandering Swordsman (Player)
+448232,[DNT] Spawn Wandering Swordsman
+448244,Acid Rain
+448245,Acid Rain
+448246,Acid Rain
+448253,[DNT] Spawn Kajind (Player)
+448255,[DNT] Spawn Kajind
+448259,[DNT] Arena Victory
+448283,[DNT] Cosmetic - Alpha Fade 0.2
+448308,Parry Aura
+448323,Summon Fire Elemental
+448324,Increased Critical 2 - All
+448325,[DNT] Arena Defeat
+448340,[DNT] Summoned Quest Mob Damage Modifier
+448358,GNO XP Grant [DNT]
+448359,GNO XP Grant [DNT]
+448381,Close Fel Portal
+448406,Lledra's Vehicle Test [DNT]
+448409,Lledra's Vehicle Test [DNT]
+448415,Lledra's Vehicle Test [DNT]
+448434,[DNT] Create area trigger
+448450,Lledra's Vehicle Test [DNT]
+448451,Lledra's Vehicle Test [DNT]
+448467,Lledra's Vehicle Test [DNT]
+448471,Lledra's Vehicle Test [DNT]
+448472,Lledra's Vehicle Test [DNT]
+448510,[DNT] Fel Portal Visual Aura
+448526,Slime Time
+448545,Devour
+448572,Sleep
+448573,Triple Bolt
+448574,Triple Bolt
+448575,Triple Chomp
+448576,Triple Chomp
+448602,[DNT] Wing Buffet Visuals Test
+448603,[DNT] Wing Buffet Visuals Test - Stalker
+448614,Bargain Bush
+448618,Empty Supply Crate
+448624,Scroll of Spatial Mending
+448627,Attune Leyline
+448629,Intercept Supplies
+448642,Dreamharvest
+448653,Dreamharvest
+448686,Zila Gular
+448707,War Stomp
+448717,Knockback
+448779,Wake Up Dead
+448809,Blinkmissile
+448824,Devour
+448828,Overdrive
+448956,Combat Pulse
+448994,[DNT] Void Zone Visual
+448995,Rune Scrying
+449005,Shrine of the Watcher
+449006,Voidsight
+449007,Grant Voidsight
+449008,DNT Teach EoV
+449009,Protected by Shadows
+449010,Dispel Shadows (DNT)
+449011,Fire Crown
+449012,Escape Rope
+449013,Escape Rope
+449014,Fire Crown
