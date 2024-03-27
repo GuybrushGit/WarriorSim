@@ -221,6 +221,7 @@ SIM.UI = {
         });
 
         view.runes.on('click', '.rune .icon', function(e) {
+            e.preventDefault();
             var current_open_page =  $(`nav`).children('ul').children('li.active').find('p:first').text().toLowerCase().replace(/\s/g, '');
             var rune_type = $(this).closest('tr[name]').attr('name');
             var rune_id = $(this).parent().attr('data-id').toString();;
@@ -238,6 +239,7 @@ SIM.UI = {
             view.updateSession();
             view.updateSidebar();
             SIM.SETTINGS.buildSpells();
+            SIM.SETTINGS.buildBuffs();
 
             if (current_open_page == "mainhand" || current_open_page == "offhand" || current_open_page == "twohand")
                 view.loadWeapons(current_open_page);
@@ -248,6 +250,7 @@ SIM.UI = {
         });
 
         view.tcontainer.on('click', '.runes .icon', function(e) {
+            e.preventDefault();
             var parent = $(this).parents('.runes');
             var rune = $(this).parent();
 
@@ -263,6 +266,7 @@ SIM.UI = {
             view.updateSession();
             view.updateSidebar();
             SIM.SETTINGS.buildSpells();
+            SIM.SETTINGS.buildBuffs();
         });
 
         view.sidebar.find('.menu-button-container').click(function (e) {
@@ -696,6 +700,13 @@ SIM.UI = {
                     for (let spell of spells)
                         if (spell.id == runes[type][i].enable)
                             spell.active = false;
+                    for (let buff of buffs) {
+                        if (buff.id == runes[type][i].enable) 
+                            buff.active = false;
+                        if (buff.id == 2458 && runes[type][i].gladstance) 
+                            buff.active = true;
+                    }
+                        
                 }
             }
                
@@ -717,6 +728,12 @@ SIM.UI = {
                     for (let spell of spells)
                         if (spell.id == runes[type][i].enable)
                             spell.active = true;
+                    for (let buff of buffs) {
+                        if (buff.id == runes[type][i].enable)
+                            buff.active = true;
+                        if (buff.group == runes[type][i].buffgroup && buff.id !== runes[type][i].enable)
+                            buff.active = false;
+                    }
                 }
                 this_spell_id = runes[type][i].id;
             }

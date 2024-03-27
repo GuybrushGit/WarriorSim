@@ -490,7 +490,7 @@ SIM.SETTINGS = {
         if (typeof spell.minrage !== 'undefined' && spell.id == 11597) 
             ul.append(`<li data-id="minrageactive" class="${spell.minrageactive ? 'active' : ''}" data-group="usage">Only use when above <input type="text" name="minrage" value="${spell.minrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maxrage !== 'undefined') 
-            ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Don't use when above <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
+            ul.append(`<li data-id="maxrageactive" class="${spell.maxrageactive ? 'active' : ''}">Don't switch stance when above <input type="text" name="maxrage" value="${spell.maxrage}" data-numberonly="true" /> rage</li>`);
         if (typeof spell.maincd !== 'undefined') 
             ul.append(`<li data-id="maincdactive" class="${spell.maincdactive ? 'active' : ''}">Don't ${spell.name == "Heroic Strike" ? 'queue' : 'use'} if BT / MS cooldown shorter than <input type="text" name="maincd" value="${spell.maincd}" data-numberonly="true" /> seconds</li>`);
         if (typeof spell.duration !== 'undefined') 
@@ -570,7 +570,7 @@ SIM.SETTINGS = {
         view.buffs.append('<label class="active">Buffs</label>');
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
-        let worldbuffs = '', consumes = '', other = '', armor = '';
+        let worldbuffs = '', consumes = '', other = '', armor = '', stances = '';
         for (let buff of buffs) {
 
             // level restrictions
@@ -597,6 +597,22 @@ SIM.SETTINGS = {
                 continue;
             }
 
+            // rune restrictions
+            let rune;
+            if (typeof runes !== 'undefined') {
+                for (let type in runes)
+                    for (let r of runes[type])
+                        if (r.enable == buff.id) rune = r;
+                if (rune && !rune.selected) {
+                    buff.active = false;
+                    continue;
+                }
+            }
+            else if (buff.rune) {
+                buff.active = false;
+                continue;
+            }
+
             let wh = buff.spellid ? 'spell' : 'item';
             let active = buff.active ? 'active' : '';
             let group = buff.group ? `data-group="${buff.group}"` : '';
@@ -606,11 +622,13 @@ SIM.SETTINGS = {
                             <a href="${WEB_DB_URL}${wh}=${buff.id}" class="wh-tooltip"></a>
                         </div>`;
             if (buff.worldbuff) worldbuffs += html;
+            else if (buff.stance) stances += html;
             else if (buff.consume) consumes += html;
             else if (buff.other) other += html;
             else if (buff.armor || buff.improvedexposed) armor += html;
             else view.buffs.append(html);
         }
+        
         view.buffs.append('<div class="label">Consumables</div>');
         view.buffs.append(consumes);
         view.buffs.append('<div class="label">World Buffs</div>');
@@ -619,6 +637,8 @@ SIM.SETTINGS = {
         view.buffs.append(other);
         view.buffs.append(`<div class="label">Armor (Current: <span id="currentarmor"></span>)</div>`);
         view.buffs.append(armor);
+        view.buffs.append('<div class="label">Default Stance</div>');
+        view.buffs.append(stances);
         SIM.UI.updateSession();
         SIM.UI.updateSidebar();
     },
@@ -649,6 +669,10 @@ SIM.SETTINGS = {
                 let rune = runes[type][i];
                 if (rune.enable && rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').removeClass('hidden');
                 if (rune.enable && !rune.selected) view.rotation.find('[data-id="' + rune.enable + '"]').addClass('hidden');
+
+                // Glad Stance
+                if (rune.selected && rune.gladstance) view.buffs.find('[data-id="' + rune.enable + '"]').removeClass('hidden');
+                if (!rune.selected && rune.gladstance) view.buffs.find('[data-id="' + rune.enable + '"]').addClass('hidden');
             }
         }
         var type_of_runes = $('nav > ul > li').map(function() {

@@ -130,6 +130,15 @@ var runes = {
             description: "",
             iconname: 'ability_warrior_victoryrush',
         },
+        {
+            id: 413479,
+            name: 'Gladiator Stance',
+            description: "",
+            iconname: 'inv_helmet_08',
+            gladstance: true,
+            enable: 413479,
+            buffgroup: 'stance'
+        },
     ],
     "wrist": [
         {

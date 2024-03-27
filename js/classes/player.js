@@ -33,6 +33,7 @@ class Player {
         this.itemtimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
+        this.critdmg = 1;
         this.extraattacks = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
@@ -121,21 +122,22 @@ class Player {
         this.addSets();
         this.addEnchants();
         this.addTempEnchants();
-        this.addBuffs();
         this.preAddRunes();
+        this.addBuffs();
         this.addSpells(testItem);
         this.addRunes();
+        this.initStances();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.talents.deepwounds && this.mode !== 'classic') this.auras.deepwounds = this.mode == "sod" ? new DeepWounds(this) : new OldDeepWounds(this);
         if (this.adjacent && this.talents.deepwounds && this.mode !== 'classic') {
             for (let i = 2; i <= (this.adjacent + 1); i++)
                 this.auras['deepwounds' + i] = this.mode == "sod" ? new DeepWounds(this, null, i) : new OldDeepWounds(this, null, i);
         }
-        if (this.spells.overpower) this.auras.battlestance = new BattleStance(this);
+
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
         
-        if (this.defstance && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
+        if (this.basestance == 'def' && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
             this.spells.sunderarmor.devastate = true;
             this.spells.sunderarmor.nocrit = false;
         }
@@ -143,6 +145,17 @@ class Player {
         this.update();
         if (this.oh)
             this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
+    }
+    initStances() {
+        this.stance = this.basestance;
+        this.auras.battlestance = new BattleStance(this);
+        this.auras.berserkerstance = new BerserkerStance(this);
+        this.auras.defensivestance = new DefensiveStance(this);
+        this.auras.gladiatorstance = new GladiatorStance(this);
+        if (this.basestance == 'battle') this.auras.battlestance.timer = 1;
+        if (this.basestance == 'zerk') this.auras.berserkerstance.timer = 1;
+        if (this.basestance == 'def') this.auras.defensivestance.timer = 1;
+        if (this.basestance == 'glad') this.auras.gladiatorstance.timer = 1;
     }
     addRace() {
         for(let l of levelstats) {
@@ -356,11 +369,9 @@ class Player {
         for (let type in runes) {
             for (let item of runes[type]) {
                 if (item.selected) {
-                    // Focused Rage
                     if (item.focusedrage) {
                         this.ragecostbonus = 3;
                     }
-                    // Precise Timing
                     if (item.precisetiming) {
                         this.precisetiming = item.precisetiming;
                     }
@@ -460,16 +471,10 @@ class Player {
                     str = ~~(buff.str * (impmotw ? impmotw.motwmod : 1));
                     agi = ~~(buff.agi * (impmotw ? impmotw.motwmod : 1));
                 }
-                if (buff.group == "stance")
-                    this.stance = true;
                 if (buff.group == "vaelbuff")
                     this.vaelbuff = true;
                 if (buff.group == "dragonbreath")
                     this.dragonbreath = true;
-                if (buff.id == 413479)
-                    this.gladstance = true;
-                if (buff.id == 71)
-                    this.defstance = true;
                 if (buff.bleedmod)
                     this.bleedmod *= buff.bleedmod;
                 if (buff.armor) 
@@ -478,7 +483,16 @@ class Player {
                     this.target.basearmorbuffed -= (buff.armorperlevel * this.level);
                 if (buff.name == "Faerie Fire")
                     this.faeriefire = true;
-
+                if (buff.dmgshield && this.shield) {
+                    this.base.dmgmod *= (1 + buff.dmgshield / 100) || 1;
+                }
+                if (buff.stance) {
+                    this.basestance = buff.stance;
+                    if (buff.stance == 'glad' && !this.shield)
+                        this.basestance = 'battle';
+                    continue;
+                }
+                    
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;
                 this.base.str += str || buff.str || 0;
@@ -520,6 +534,7 @@ class Player {
         this.itemtimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
+        this.critdmg = 1;
         this.spelldelay = 0;
         this.heroicdelay = 0;
         this.mh.timer = 0;
@@ -563,6 +578,7 @@ class Player {
         if (this.auras.weaponbleedoh) {
             this.auras.weaponbleedoh.idmg = 0;
         }
+        this.initStances();
         this.update();
     }
     update() {
@@ -843,7 +859,6 @@ class Player {
         if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.step();
         if (this.auras.coinflip && this.auras.coinflip.timer) this.auras.coinflip.step();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.step();
-        if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.step();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.step();
         if (this.auras.berserking && this.auras.berserking.firstuse && this.auras.berserking.timer) this.auras.berserking.step();
         if (this.auras.slayer && this.auras.slayer.firstuse && this.auras.slayer.timer) this.auras.slayer.step();
@@ -891,7 +906,6 @@ class Player {
         if (this.auras.gneurological && this.auras.gneurological.firstuse && this.auras.gneurological.timer) this.auras.gneurological.end();
         if (this.auras.coinflip && this.auras.coinflip.timer) this.auras.coinflip.end();
         if (this.auras.flask && this.auras.flask.firstuse && this.auras.flask.timer) this.auras.flask.end();
-        if (this.auras.battlestance && this.auras.battlestance.timer) this.auras.battlestance.end();
         if (this.auras.bloodfury && this.auras.bloodfury.firstuse && this.auras.bloodfury.timer) this.auras.bloodfury.end();
         if (this.auras.berserking && this.auras.berserking.firstuse && this.auras.berserking.timer) this.auras.berserking.end();
         if (this.auras.slayer && this.auras.slayer.firstuse && this.auras.slayer.timer) this.auras.slayer.end();
@@ -994,6 +1008,7 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
+            dmg *= this.critdmg;
             this.proccrit(false, adjacent);
         }
 
@@ -1034,6 +1049,7 @@ class Player {
         }
         if (result == RESULT.CRIT) {
             dmg *= 2;
+            dmg *= this.critdmg;
             this.proccrit(true);
         }
 
@@ -1068,6 +1084,7 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             dmg *= 2 + this.talents.abilitiescrit;
+            dmg *= this.critdmg;
             this.proccrit(false, adjacent, spell);
         }
 
@@ -1226,5 +1243,20 @@ class Player {
         else if (msg.indexOf(' for ') > -1) color = 'DarkOrchid';
         else if (msg.indexOf('applied') > 1 || msg.indexOf('removed') > -1) color = '#17A8B6';
         console.log(`%c ${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`, `color: ${color}`);
+    }
+    switch(stance) {
+        if (this.stance == stance || this.stance == 'glad') return;
+        this.stance = stance;
+        this.auras.battlestance.timer = 0;
+        this.auras.berserkerstance.timer = 0;
+        this.auras.defensivestance.timer = 0;
+        this.auras.gladiatorstance.timer = 0;
+        if (stance == 'battle') this.auras.battlestance.timer = 1;
+        if (stance == 'zerk') this.auras.berserkerstance.timer = 1;
+        if (stance == 'def') this.auras.defensivestance.timer = 1;
+        if (stance == 'glad') this.auras.gladiatorstance.timer = 1;
+        this.rage = Math.min(this.rage, this.talents.rageretained);
+        this.updateAuras();
+        /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
     }
 }
