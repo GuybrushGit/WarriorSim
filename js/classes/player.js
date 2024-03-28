@@ -714,6 +714,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.jackhammer.mult_stats.haste / 100);
         if (this.auras.ragehammer && this.auras.ragehammer.timer)
             this.stats.haste *= (1 + this.auras.ragehammer.mult_stats.haste / 100);
+        if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
+            this.stats.haste *= (1 + this.auras.blisteringragehammer.mult_stats.haste / 100);
         if (this.auras.gyromaticacceleration && this.auras.gyromaticacceleration.timer)
             this.stats.haste *= (1 + this.auras.gyromaticacceleration.mult_stats.haste / 100);
         if (this.auras.gneurological && this.auras.gneurological.timer)
@@ -729,6 +731,8 @@ class Player {
             bonus += this.auras.zeal.stats.bonusdmg;
         if (this.auras.zandalarian && this.auras.zandalarian.timer)
             bonus += this.auras.zandalarian.stats.bonusdmg;
+        if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
+            bonus += this.auras.blisteringragehammer.stats.bonusdmg;
         this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
         if (this.oh)
             this.oh.bonusdmg = this.oh.basebonusdmg + bonus;

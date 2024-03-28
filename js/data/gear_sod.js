@@ -8096,7 +8096,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Shoulderplates of Dread",
+      "name": "Shoulderplates of Dread (no proc)",
       "agi": 12,
       "str": 12,
       "sta": 12,
@@ -8109,7 +8109,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Fearmonger's Shoulderguards",
+      "name": "Fearmonger's Shoulderguards (no proc)",
       "crit": 1
     },
     {
@@ -8119,7 +8119,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Shrieking Spaulders",
+      "name": "Shrieking Spaulders (no proc)",
       "agi": 17,
       "hit": 1
     },
@@ -8130,7 +8130,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Cacophonous Chain Shoulderguards",
+      "name": "Cacophonous Chain Shoulderguards (no proc)",
       "agi": 12,
       "str": 12,
       "sta": 12
@@ -8142,7 +8142,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Paranoia Mantle",
+      "name": "Paranoia Mantle (no proc)",
       "agi": 16,
       "sta": 14,
       "hit": 1
@@ -52765,8 +52765,7 @@ var gear = {
       "mindmg": 69,
       "maxdmg": 130,
       "str": 13,
-      "sta": 12,
-      "ap": 154
+      "sta": 12
     },
     {
       "id": 20648,
@@ -52917,8 +52916,7 @@ var gear = {
       "mindmg": 89,
       "maxdmg": 166,
       "str": 10,
-      "sta": 12,
-      "ap": 280
+      "sta": 12
     },
     {
       "id": 21392,
@@ -63051,8 +63049,7 @@ var gear = {
       "mindmg": 89,
       "maxdmg": 166,
       "str": 10,
-      "sta": 12,
-      "ap": 280
+      "sta": 12
     },
     {
       "id": 21392,
@@ -71882,8 +71879,7 @@ var gear = {
       "mindmg": 68,
       "maxdmg": 106,
       "str": 8,
-      "sta": 20,
-      "ap": 37
+      "sta": 20
     },
     {
       "id": 218083,
@@ -71994,7 +71990,10 @@ var gear = {
       "name": "Blistering Ragehammer",
       "speed": 3.7,
       "mindmg": 140,
-      "maxdmg": 211
+      "maxdmg": 211,
+      "proc": {
+        "spell": "BlisteringRagehammer"
+      }
     },
     {
       "id": 220590,
@@ -72065,8 +72064,7 @@ var gear = {
       "maxdmg": 114,
       "agi": 18,
       "str": 30,
-      "sta": 12,
-      "ap": 79
+      "sta": 12
     },
     {
       "id": 220686,
@@ -72107,8 +72105,7 @@ var gear = {
       "maxdmg": 94,
       "agi": 14,
       "str": 18,
-      "sta": 10,
-      "ap": 74
+      "sta": 10
     },
     {
       "id": 221518,
@@ -72138,8 +72135,7 @@ var gear = {
       "maxdmg": 174,
       "agi": 10,
       "str": 13,
-      "sta": 15,
-      "ap": 68
+      "sta": 15
     }
   ]
 };

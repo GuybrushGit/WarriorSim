@@ -49,6 +49,7 @@
         await loadTable('SpellMisc');
         await loadTable('SpellName');
         await loadTable('SpellDuration');
+        await loadTable('SpellShapeshift');
 
         for (let item of Item) {
           let obj = {};
@@ -101,6 +102,8 @@
               // stats
               if (spell.TriggerType == "1") { // On Equip
                 effects.forEach(e => {
+                  let shapeshift = getRows('SpellShapeshift', 'SpellID', e.SpellID)[0];
+                  if (shapeshift && shapeshift["ShapeshiftMask[0]"] == 145) return;
                   if (e.Effect == 6 && e.EffectAura == 99)
                     obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 102 && e["EffectMiscValue[0]"] & 32)
@@ -284,12 +287,8 @@
           if (exclude) continue;
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
           if (isUnobtainable(obj.id)) continue;
-          
-          // if (include) continue;
-          // if (exclude || obj.proc || obj.str || obj.agi || obj.ap || obj.crit || obj.hit || obj.skill) continue;
-          // if (isUnobtainable(obj.id)) continue;
-          // if (parseInt(sparse.OverallQualityID) < 2) continue;
-          // if (spells.length == 0) continue;
+
+          if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)'
 
           addToGear(obj);
 
@@ -362,6 +361,7 @@
         {i:869,s:"Vibroblade"},
         {i:7961,s:"Vibroblade"},
         {i:10626,s:"Ragehammer"},
+        {i:220569,s:"BlisteringRagehammer"},
         {i:9423,s:"Jackhammer"},
         {i:11817,s:"LordGeneral"},
         {i:9418,s:"Stoneslayer"},
