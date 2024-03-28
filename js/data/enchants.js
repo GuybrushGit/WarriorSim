@@ -931,4 +931,71 @@ var enchant = {
          { count: 3, stats: { hit: 1 } }
       ]
    },
+   {
+      id: 1618,
+      name: 'Blood Guard\'s Plate',
+      items: [220803,220796,220807,220800,220801,220798],
+      bonus: [
+         { count: 6, stats: { ap: 30 } }
+      ]
+   },
+   {
+      id: 1652,
+      name: 'Emerald Dream Plate',
+      items: [221381,221380,221379,221378,221377,221376],
+      bonus: [
+         { count: 6, stats: { ap: 20 } }
+      ]
+   },
+   {
+      id: 1619,
+      name: 'Knight-Lieutenant\'s Plate',
+      items: [220794,220797,220804,220795,220806,220799],
+      bonus: [
+         { count: 6, stats: { ap: 30 } }
+      ]
+   },
+   {
+      id: 1650,
+      name: 'Banished Martyr\'s Full Plate',
+      items: [220642,220643,220648],
+      bonus: [
+         { count: 2, stats: { hit: 1 } }
+      ]
+   },
+   {
+      id: 1649,
+      name: 'Wailing Berserker\'s Plate Armor',
+      items: [220653,220654,220656],
+      bonus: [
+         { count: 2, stats: { hit: 1 } },
+         { count: 3, stats: { str: 15 } },
+      ]
+   },
+   {
+      id: 321,
+      name: 'Imperial Plate',
+      items: [12424,12426,12425,12422,12427,12429,12428],
+      bonus: [
+         { count: 2, stats: { hit: 1 } },
+         { count: 3, stats: { str: 15 } },
+      ]
+   },
+   {
+      id: 142,
+      name: 'Stormshroud Armor',
+      items: [15056,15057,15058,21278],
+      bonus: [
+         { count: 2, stats: { magicdmg: 20, procchance: 5 } },
+         { count: 4, stats: { ap: 14 } }
+      ]
+   },
+   {
+      id: 1651,
+      name: 'Serpent\'s Ascension',
+      items: [220588,220589],
+      bonus: [
+         { count: 2, stats: { procspell: "SerpentAscension", procchance: 3 } }
+      ]
+   },
 ];

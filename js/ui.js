@@ -166,6 +166,7 @@ SIM.UI = {
         });
 
         view.tcontainer.on('click', 'table.gear td:not(.ppm)', function(e) {
+            e.preventDefault();
             var table = $(this).parents('table');
             var type = table.data('type');
             var max = table.data('max');
@@ -194,6 +195,7 @@ SIM.UI = {
         });
 
         view.tcontainer.on('click', 'table.enchant td:not(.ppm)', function(e) {
+            e.preventDefault();
             var table = $(this).parents('table');
             var tr = $(this).parent();
             var temp = tr.data('temp');

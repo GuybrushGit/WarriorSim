@@ -1980,3 +1980,23 @@ class WreckingCrew extends Aura {
         }
     }
 }
+
+class SerpentAscension extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Serpent\'s Ascension');
+        this.duration = 12;
+        this.stats = { ap: 150 };
+        this.cooldown = 120;
+        this.cooldowntimer = 0;
+    }
+    use() {
+        if (this.cooldowntimer > step) return;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.cooldowntimer = step + this.cooldown * 1000;
+        this.player.updateAP();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}

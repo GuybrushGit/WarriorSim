@@ -243,6 +243,7 @@ class Player {
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
                     }
                     else if (item.proc && item.proc.chance) {
+                        if (this.attackproc) console.log("Warning! overlapping attack procs!");
                         this.attackproc = {};
                         this.attackproc.chance = item.proc.chance * 100;
                         this.attackproc.magicdmg = item.proc.dmg;
@@ -434,11 +435,15 @@ class Player {
                 if (counter >= bonus.count) {
                     for (let prop in bonus.stats)
                         this.base[prop] += bonus.stats[prop] || 0;
-                    if (bonus.stats.procspell) {
+                    if (bonus.stats.procchance) {
+                        if (this.attackproc) console.log("Warning! overlapping attack procs!");
                         this.attackproc = {};
                         this.attackproc.chance = bonus.stats.procchance * 100;
-                        this.auras[bonus.stats.procspell.toLowerCase()] = eval('new ' + bonus.stats.procspell + '(this)');
-                        this.attackproc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
+                        if (bonus.stats.magicdmg) this.attackproc.magicdmg = bonus.stats.magicdmg;
+                        if (bonus.stats.procspell) {
+                            this.auras[bonus.stats.procspell.toLowerCase()] = eval('new ' + bonus.stats.procspell + '(this)');
+                            this.attackproc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
+                        } 
                     }
                     if (bonus.stats.enhancedbs) {
                         this.enhancedbs = true;
@@ -556,6 +561,7 @@ class Player {
             if (this.auras[s].ticksleft) this.auras[s].ticksleft = 0;
             if (this.auras[s].saveddmg) this.auras[s].saveddmg = 0;
             if (this.auras[s].nexttick) this.auras[s].nexttick = 0;
+            if (this.auras[s].cooldowntimer) this.auras[s].cooldowntimer = 0;
         }
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
@@ -1160,9 +1166,12 @@ class Player {
                 /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.attackproc && rng10k() < this.attackproc.chance) {
-                if (this.attackproc.magicdmg) procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
+                if (this.attackproc.magicdmg) { 
+                    procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
+                    /* start-log */ if (log) this.log(`Attack proc for ${procdmg}`); /* end-log */
+                }
                 if (this.attackproc.spell) this.attackproc.spell.use();
-                /* start-log */ if (log) this.log(`Misc atk proc`); /* end-log */
+                
             }
             // Sword spec shouldnt be able to proc itself
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD && !damageSoFar && this.swordspecstep != step && rng10k() < this.talents.swordproc * 100) {
