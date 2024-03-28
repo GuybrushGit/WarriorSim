@@ -1324,10 +1324,20 @@ class Gabbar extends Aura {
 
 class PrimalBlessing extends Aura {
     constructor(player, id) {
-        super(player, id);
+        super(player, id, 'Primal Blessing');
         this.duration = 12;
         this.stats = { ap: 300 };
-        this.name = 'Primal Blessing';
+        this.cooldown = 240;
+        this.cooldowntimer = 0;
+    }
+    use() {
+        if (this.cooldowntimer > step) return;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.cooldowntimer = step + this.cooldown * 1000;
+        this.player.updateAP();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
 }
 
@@ -1996,7 +2006,6 @@ class SerpentAscension extends Aura {
         this.starttimer = step;
         this.cooldowntimer = step + this.cooldown * 1000;
         this.player.updateAP();
-        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
 }

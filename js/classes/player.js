@@ -137,7 +137,7 @@ class Player {
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
         
-        if (this.basestance == 'def' && this.spells.sunderarmor && this.devastate && !this.oh && !this.mh.twohand) {
+        if ((this.basestance == 'def' || this.basestance == 'glad') && this.spells.sunderarmor && this.devastate && this.shield) {
             this.spells.sunderarmor.devastate = true;
             this.spells.sunderarmor.nocrit = false;
         }
