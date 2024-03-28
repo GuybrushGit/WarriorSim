@@ -2009,3 +2009,24 @@ class SerpentAscension extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
 }
+
+class VoodooFrenzy extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Voodoo Frenzy');
+        this.duration = 10;
+        this.cooldown = 40;
+        this.cooldowntimer = 0;
+    }
+    use() {
+        if (this.cooldowntimer > step) return;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.cooldowntimer = step + this.cooldown * 1000;
+        if (this.player.stats.str >= this.player.stats.agi) this.stats = { str: 35 };
+        else this.stats = { agi: 35 };
+        this.player.updateAuras();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+

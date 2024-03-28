@@ -478,6 +478,13 @@ var enchant = {
       }
    ],
    "shoulder": [
+      
+      {
+         "id": 221321,
+         "name": "Atal\'ai Signet of Might",
+         "ap": 15,
+         "r": 50
+      },
       {
          "name": "Frost Mantle of the Dawn",
          "source": "Quest",

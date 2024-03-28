@@ -718,6 +718,15 @@ var buffs = [
       ap: 20
    },
    {
+      id: 221196,
+      name: "Atal\'ai Mojo of War",
+      iconname: "inv_alchemy_potion_02",
+      ap: 48,
+      minlevel: 50,
+      voodoofrenzy: true,
+      other: true,
+   },
+   {
       id: 12217,
       name: "Dragonbreath Chili",
       iconname: "inv_drink_17",
@@ -788,6 +797,7 @@ var buffs = [
       minlevel: 60,
       other: true,
    },
+   
 
    // SoD Extras
    {

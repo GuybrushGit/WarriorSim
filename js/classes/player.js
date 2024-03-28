@@ -488,9 +488,10 @@ class Player {
                     this.target.basearmorbuffed -= (buff.armorperlevel * this.level);
                 if (buff.name == "Faerie Fire")
                     this.faeriefire = true;
-                if (buff.dmgshield && this.shield) {
+                if (buff.dmgshield && this.shield)
                     this.base.dmgmod *= (1 + buff.dmgshield / 100) || 1;
-                }
+                if (buff.voodoofrenzy)
+                    this.auras.voodoofrenzy = new VoodooFrenzy(this);
                 if (buff.stance) {
                     this.basestance = buff.stance;
                     if (buff.stance == 'glad' && !this.shield)
@@ -875,6 +876,7 @@ class Player {
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
+        if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -923,6 +925,8 @@ class Player {
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
+        if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
+        
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
@@ -1189,6 +1193,10 @@ class Player {
             if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5 && rng10k() < 8000) {
                 this.auras.rampage.proc();
                 /* start-log */ if (log) this.log(`Rampage proc`); /* end-log */
+            }
+            // Voodoo Frenzy
+            if (this.auras.voodoofrenzy && rng10k() < 1500) {
+                this.auras.voodoofrenzy.use();
             }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;
