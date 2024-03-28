@@ -2103,3 +2103,20 @@ class VoodooFrenzy extends Aura {
     }
 }
 
+class RoarGuardian extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Roar of the Guardian');
+        this.duration = 20;
+        this.stats = { ap: 70 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAP();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+}

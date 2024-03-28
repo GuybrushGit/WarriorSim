@@ -42750,6 +42750,16 @@ var gear = {
       }
     },
     {
+      "id": 221442,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "q": "4",
+      "i": "50",
+      "name": "Roar of the Guardian",
+      "sta": 10
+    },
+    {
       "id": 221474,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -43031,6 +43041,16 @@ var gear = {
         "interval": "3000",
         "duration": "24000"
       }
+    },
+    {
+      "id": 221442,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "q": "4",
+      "i": "50",
+      "name": "Roar of the Guardian",
+      "sta": 10
     },
     {
       "id": 221474,

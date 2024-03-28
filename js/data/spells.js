@@ -1083,6 +1083,18 @@ var spells = [
     timetostart: 0,
     timetostartactive: true,
 },
+{
+    id: 221442,
+    name: 'Roar of the Guardian',
+    classname: 'RoarGuardian',
+    iconname: 'spell_nature_spiritarmor',
+    item: true,
+    aura: true,
+    timetoend: 20,
+    timetoendactive: true,
+    timetostart: 0,
+    timetostartactive: false,
+},
 
 
 
