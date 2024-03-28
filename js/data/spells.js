@@ -1058,7 +1058,19 @@ var spells = [
     timetoendactive: false,
     timetostart: 0,
     timetostartactive: false,
-}
+},
+{
+    id: 8348,
+    name: 'Helm of Fire',
+    classname: 'Fireball',
+    iconname: 'inv_helmet_08',
+    item: true,
+    noitemcd: true,
+    timetoend: 30,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
 
 
 

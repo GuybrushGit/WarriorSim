@@ -585,6 +585,9 @@ class Player {
         if (this.auras.weaponbleedoh) {
             this.auras.weaponbleedoh.idmg = 0;
         }
+        if (this.spells.fireball) {
+            this.spells.fireball.idmg = 0;
+        }
         this.initStances();
         this.update();
     }
