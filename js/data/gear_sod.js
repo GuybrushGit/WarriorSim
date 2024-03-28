@@ -71971,14 +71971,7 @@ var gear = {
       "mindmg": 129,
       "maxdmg": 194,
       "str": 18,
-      "sta": 15,
-      "proc": {
-        "magic": true,
-        "dmg": 140,
-        "tick": 15,
-        "interval": "2000",
-        "duration": "10000"
-      }
+      "sta": 15
     },
     {
       "id": 220569,

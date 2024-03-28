@@ -1069,7 +1069,19 @@ var spells = [
     timetoend: 30,
     timetoendactive: false,
     timetostart: 0,
-    timetostartactive: false,
+    timetostartactive: true,
+},
+{
+    id: 220568,
+    name: 'Temple Explorer\'s Gun Axe',
+    classname: 'GunAxe',
+    iconname: 'inv_weapon_rifle_06',
+    item: true,
+    noitemcd: true,
+    timetoend: 30,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: true,
 },
 
 

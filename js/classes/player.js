@@ -588,6 +588,9 @@ class Player {
         if (this.spells.fireball) {
             this.spells.fireball.idmg = 0;
         }
+        if (this.spells.gunaxe) {
+            this.spells.gunaxe.idmg = 0;
+        }
         this.initStances();
         this.update();
     }

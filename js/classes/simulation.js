@@ -296,6 +296,7 @@ class Simulation {
                     else if (player.auras.mightyragepotion && player.auras.mightyragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mightyragepotion; }
                     else if (player.spells.ragepotion && player.spells.ragepotion.canUse()) { player.spelldelay = 1; delayedspell = player.spells.ragepotion; }
                     else if (player.spells.fireball && player.spells.fireball.canUse()) { player.spelldelay = 1; delayedspell = player.spells.fireball; }
+                    else if (player.spells.gunaxe && player.spells.gunaxe.canUse()) { player.spelldelay = 1; delayedspell = player.spells.gunaxe; }
                     else if (player.auras.mildlyirradiated && player.auras.mildlyirradiated.canUse()) { player.spelldelay = 1; delayedspell = player.auras.mildlyirradiated; }
                     
                     else if (!player.timer && player.spells.berserkerrage && player.spells.berserkerrage.zerkerpriority && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
@@ -610,6 +611,9 @@ class Simulation {
         }
         if (player.spells.fireball) {
             this.idmg += player.spells.fireball.idmg;
+        }
+        if (player.spells.gunaxe) {
+            this.idmg += player.spells.gunaxe.idmg;
         }
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;

@@ -229,6 +229,7 @@
           if (obj.id == 867) obj.ap = 20;
           if (obj.id == 216497) obj.proc.magic = true;
           if (obj.id == 215166) delete obj.proc;
+          if (obj.id == 220568) delete obj.proc;
           if (obj.id == 209577) obj.ap = 0;
           if (obj.id == 6460) obj.i = 30;
 
@@ -288,7 +289,7 @@
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
           if (isUnobtainable(obj.id)) continue;
 
-          if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)'
+          if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)';
 
           addToGear(obj);
 

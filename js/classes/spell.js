@@ -491,7 +491,30 @@ class Fireball extends Spell {
         this.timer = 1;
         let procdmg = this.player.magicproc(this.proc);
         this.idmg += procdmg;
-        /* start-log */ if (log) this.player.log(`Fireball proc for ${procdmg}`); /* end-log */
+        /* start-log */ if (log) this.player.log(`Fireball hit for ${procdmg}`); /* end-log */
+    }
+    canUse() {
+        return !this.timer && step >= this.usestep;
+    }
+}
+
+class GunAxe extends Spell {
+    constructor(player, id) {
+        super(player, id);
+        this.useonly = true;
+        this.proc = { magicdmg: 150 + 75 };
+        this.idmg = 0;
+    }
+    prep(duration) {
+        if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
+        if (typeof this.timetostart !== 'undefined') this.usestep = this.timetostart;
+        return 0;
+    }
+    use() {
+        this.timer = 1;
+        let procdmg = this.player.magicproc(this.proc);
+        this.idmg += procdmg;
+        /* start-log */ if (log) this.player.log(`Gun Axe hit for ${procdmg}`); /* end-log */
     }
     canUse() {
         return !this.timer && step >= this.usestep;
