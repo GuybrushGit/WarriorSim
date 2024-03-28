@@ -733,7 +733,7 @@ SIM.UI = {
                     for (let buff of buffs) {
                         if (buff.id == runes[type][i].enable)
                             buff.active = true;
-                        if (buff.group == runes[type][i].buffgroup && buff.id !== runes[type][i].enable)
+                        if (runes[type][i].buffgroup && buff.group == runes[type][i].buffgroup && buff.id !== runes[type][i].enable)
                             buff.active = false;
                     }
                 }
