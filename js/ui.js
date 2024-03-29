@@ -617,7 +617,7 @@ SIM.UI = {
         for(let i = 0; i < spells.length; i++) {
             if (spells[i].item && spells[i].id == tr.data('id') && !spells[i].timetoendactive && !spells[i].timetostartactive) {
                 // Blademasters Fury
-                if (spells[i] == 219223) spells[i].active = true;
+                if (spells[i].id == 219223) spells[i].active = true;
                 else spells[i].timetoendactive = true;
             }
         }

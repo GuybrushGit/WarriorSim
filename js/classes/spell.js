@@ -542,7 +542,7 @@ class BlademasterFury extends Spell {
     }
     canUse() {
         return !this.timer && !this.player.timer && 
-            (!this.player.spells.whirlwind || this.player.spells.whirlwind.timer >= 5000);
+            (!this.player.spells.whirlwind || this.player.spells.whirlwind.timer > 0);
     }
 }
 
