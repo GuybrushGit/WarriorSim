@@ -557,8 +557,16 @@ class ShieldSlam extends Spell {
         dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + this.player.stats.block;
         return dmg;
     }
+    use() {
+        this.player.timer = 1500;
+        if (!this.player.freeshieldslam) this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.player.freeshieldslam = false;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+    }
     canUse() {
-        return this.player.shield && !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
+        return this.player.shield && !this.timer && !this.player.timer && (this.player.freeshieldslam || this.cost <= this.player.rage) && 
+            (this.player.freeshieldslam || this.player.rage >= this.minrage);
     }
 }
 

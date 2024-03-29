@@ -153,6 +153,7 @@ var runes = {
             name: 'Sword and Board',
             description: "",
             iconname: 'ability_warrior_swordandboard',
+            swordboard: true,
         },
         {
             id: 427065,

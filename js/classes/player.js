@@ -410,6 +410,9 @@ class Player {
                     if (item.bloodsurge) {
                         this.bloodsurge = item.bloodsurge;
                     }
+                    if (item.swordboard) {
+                        this.swordboard = item.swordboard;
+                    }
                     if (item.wreckingcrew) {
                         this.wreckingcrew = item.wreckingcrew;
                         this.auras.wreckingcrew = new WreckingCrew(this);
@@ -1151,6 +1154,7 @@ class Player {
         let procdmg = 0;
         let extras = 0;
         let batchedextras = 0;
+        if (spell instanceof ShieldSlam) return 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
@@ -1209,6 +1213,12 @@ class Player {
             if (this.bloodsurge && (spell instanceof Whirlwind || spell instanceof Bloodthirst || spell instanceof HeroicStrike || spell instanceof QuickStrike) && rng10k() < 3000) {
                 this.freeslam = true;
                 /* start-log */ if (log) this.log(`Blood Surge proc`); /* end-log */
+            }
+            // Sword and Board
+            if (this.swordboard && this.spells.shieldslam && (spell instanceof SunderArmor) && rng10k() < 3000) {
+                this.freeshieldslam = true;
+                this.spells.shieldslam.timer = 0;
+                /* start-log */ if (log) this.log(`Sword and Board proc`); /* end-log */
             }
             // Rampage
             if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5 && rng10k() < 8000) {
