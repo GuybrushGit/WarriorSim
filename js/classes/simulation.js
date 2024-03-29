@@ -339,9 +339,9 @@ class Simulation {
                         else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { 
                             player.spelldelay = 1; delayedspell = player.spells.slam; 
                         }
-                        else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { 
-                            player.spelldelay = 1; delayedspell = player.spells.shieldslam; 
-                        }
+                        // else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { 
+                        //     player.spelldelay = 1; delayedspell = player.spells.shieldslam; 
+                        // }
                         else if (player.auras.consumedrage && player.auras.consumedrage.erageblock && player.rage < player.auras.consumedrage.erageblock) { } 
                         else if (player.auras.consumedrage && player.auras.consumedrage.echargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.echargeblock && player.rage < 80) { } 
                         else if (player.stats.ap >= player.spells.execute.priorityap) {
