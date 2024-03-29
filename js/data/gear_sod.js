@@ -56226,6 +56226,7 @@ var gear = {
       "q": "2",
       "i": "16",
       "name": "Bard's Buckler of the Tiger",
+      "block": 6,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -56238,6 +56239,7 @@ var gear = {
       "q": "2",
       "i": "16",
       "name": "Bard's Buckler of the Bear",
+      "block": 6,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -56250,6 +56252,7 @@ var gear = {
       "q": "2",
       "i": "16",
       "name": "Bard's Buckler of Strength",
+      "block": 6,
       "str": 3,
       "rand": 24
     },
@@ -56261,6 +56264,7 @@ var gear = {
       "q": "2",
       "i": "17",
       "name": "Soldier's Shield of the Tiger",
+      "block": 6,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -56273,6 +56277,7 @@ var gear = {
       "q": "2",
       "i": "17",
       "name": "Soldier's Shield of the Bear",
+      "block": 6,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -56285,6 +56290,7 @@ var gear = {
       "q": "2",
       "i": "17",
       "name": "Soldier's Shield of Strength",
+      "block": 6,
       "str": 3,
       "rand": 24
     },
@@ -56296,6 +56302,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Scouting Buckler of the Tiger",
+      "block": 8,
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -56308,6 +56315,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Scouting Buckler of the Bear",
+      "block": 8,
       "sta": 3,
       "str": 3,
       "rand": 1185
@@ -56320,6 +56328,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Scouting Buckler of Strength",
+      "block": 8,
       "str": 5,
       "rand": 115
     },
@@ -56331,6 +56340,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Defender Shield of the Tiger",
+      "block": 8,
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -56343,6 +56353,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Defender Shield of the Bear",
+      "block": 8,
       "sta": 3,
       "str": 3,
       "rand": 1185
@@ -56355,6 +56366,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Defender Shield of Strength",
+      "block": 8,
       "str": 5,
       "rand": 115
     },
@@ -56366,6 +56378,7 @@ var gear = {
       "q": "2",
       "i": "28",
       "name": "Dervish Buckler of the Tiger",
+      "block": 10,
       "agi": 4,
       "str": 4,
       "rand": 678
@@ -56378,6 +56391,7 @@ var gear = {
       "q": "2",
       "i": "28",
       "name": "Dervish Buckler of the Bear",
+      "block": 10,
       "sta": 4,
       "str": 4,
       "rand": 1188
@@ -56390,6 +56404,7 @@ var gear = {
       "q": "2",
       "i": "28",
       "name": "Dervish Buckler of Strength",
+      "block": 10,
       "str": 6,
       "rand": 136
     },
@@ -56401,6 +56416,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Battleforge Shield of the Tiger",
+      "block": 11,
       "agi": 4,
       "str": 4,
       "rand": 678
@@ -56413,6 +56429,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Battleforge Shield of the Bear",
+      "block": 11,
       "sta": 4,
       "str": 4,
       "rand": 1188
@@ -56425,6 +56442,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Battleforge Shield of Strength",
+      "block": 11,
       "str": 6,
       "rand": 136
     },
@@ -56621,6 +56639,7 @@ var gear = {
       "q": "2",
       "i": "11",
       "name": "Infantry Shield of the Tiger",
+      "block": 4,
       "agi": 1,
       "str": 1,
       "rand": 669
@@ -56633,6 +56652,7 @@ var gear = {
       "q": "2",
       "i": "11",
       "name": "Infantry Shield of the Bear",
+      "block": 4,
       "sta": 1,
       "str": 1,
       "rand": 1179
@@ -56645,6 +56665,7 @@ var gear = {
       "q": "2",
       "i": "11",
       "name": "Infantry Shield of Strength",
+      "block": 4,
       "str": 1,
       "rand": 6
     },
@@ -56679,6 +56700,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Infiltrator Buckler of the Tiger",
+      "block": 13,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -56691,6 +56713,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Infiltrator Buckler of the Bear",
+      "block": 13,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -56703,6 +56726,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Infiltrator Buckler of Strength",
+      "block": 13,
       "str": 7,
       "rand": 155
     },
@@ -56714,6 +56738,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Phalanx Shield of the Tiger",
+      "block": 13,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -56726,6 +56751,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Phalanx Shield of the Bear",
+      "block": 13,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -56738,6 +56764,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Phalanx Shield of Strength",
+      "block": 13,
       "str": 8,
       "rand": 189
     },
@@ -56749,6 +56776,7 @@ var gear = {
       "q": "2",
       "i": "38",
       "name": "Sentinel Buckler of the Tiger",
+      "block": 15,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -56761,6 +56789,7 @@ var gear = {
       "q": "2",
       "i": "38",
       "name": "Sentinel Buckler of the Bear",
+      "block": 15,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -56773,6 +56802,7 @@ var gear = {
       "q": "2",
       "i": "38",
       "name": "Sentinel Buckler of Strength",
+      "block": 15,
       "str": 9,
       "rand": 190
     },
@@ -56784,6 +56814,7 @@ var gear = {
       "q": "2",
       "i": "39",
       "name": "Knight's Crest of the Tiger",
+      "block": 16,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -56796,6 +56827,7 @@ var gear = {
       "q": "2",
       "i": "39",
       "name": "Knight's Crest of the Bear",
+      "block": 16,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -56808,6 +56840,7 @@ var gear = {
       "q": "2",
       "i": "39",
       "name": "Knight's Crest of Strength",
+      "block": 16,
       "str": 9,
       "rand": 190
     },
@@ -56819,6 +56852,7 @@ var gear = {
       "q": "2",
       "i": "44",
       "name": "Captain's Buckler of the Tiger",
+      "block": 20,
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -56831,6 +56865,7 @@ var gear = {
       "q": "2",
       "i": "44",
       "name": "Captain's Buckler of the Bear",
+      "block": 20,
       "sta": 7,
       "str": 7,
       "rand": 1197
@@ -56843,6 +56878,7 @@ var gear = {
       "q": "2",
       "i": "44",
       "name": "Captain's Buckler of Strength",
+      "block": 20,
       "str": 10,
       "rand": 191
     },
@@ -56854,6 +56890,7 @@ var gear = {
       "q": "2",
       "i": "43",
       "name": "Field Plate Shield of the Tiger",
+      "block": 19,
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -56866,6 +56903,7 @@ var gear = {
       "q": "2",
       "i": "43",
       "name": "Field Plate Shield of the Bear",
+      "block": 19,
       "sta": 7,
       "str": 7,
       "rand": 1197
@@ -56878,6 +56916,7 @@ var gear = {
       "q": "2",
       "i": "43",
       "name": "Field Plate Shield of Strength",
+      "block": 19,
       "str": 10,
       "rand": 191
     },
@@ -56889,6 +56928,7 @@ var gear = {
       "q": "2",
       "i": "48",
       "name": "Champion's Wall Shield of the Tiger",
+      "block": 23,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -56901,6 +56941,7 @@ var gear = {
       "q": "2",
       "i": "48",
       "name": "Champion's Wall Shield of the Bear",
+      "block": 23,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -56913,6 +56954,7 @@ var gear = {
       "q": "2",
       "i": "48",
       "name": "Champion's Wall Shield of Strength",
+      "block": 23,
       "str": 11,
       "rand": 192
     },
@@ -56924,6 +56966,7 @@ var gear = {
       "q": "2",
       "i": "49",
       "name": "Gothic Shield of the Tiger",
+      "block": 23,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -56936,6 +56979,7 @@ var gear = {
       "q": "2",
       "i": "49",
       "name": "Gothic Shield of the Bear",
+      "block": 23,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -56948,6 +56992,7 @@ var gear = {
       "q": "2",
       "i": "49",
       "name": "Gothic Shield of Strength",
+      "block": 23,
       "str": 12,
       "rand": 193
     },
@@ -57605,6 +57650,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "Gypsy Buckler of the Tiger",
+      "block": 4,
       "agi": 1,
       "str": 1,
       "rand": 669
@@ -57617,6 +57663,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "Gypsy Buckler of the Bear",
+      "block": 4,
       "sta": 1,
       "str": 1,
       "rand": 1179
@@ -57629,6 +57676,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "Gypsy Buckler of Strength",
+      "block": 4,
       "str": 1,
       "rand": 6
     },
@@ -57640,6 +57688,7 @@ var gear = {
       "q": "2",
       "i": "13",
       "name": "Cadet Shield of the Tiger",
+      "block": 5,
       "agi": 1,
       "str": 1,
       "rand": 669
@@ -57652,6 +57701,7 @@ var gear = {
       "q": "2",
       "i": "13",
       "name": "Cadet Shield of the Bear",
+      "block": 5,
       "sta": 1,
       "str": 1,
       "rand": 1179
@@ -57664,6 +57714,7 @@ var gear = {
       "q": "2",
       "i": "13",
       "name": "Cadet Shield of Strength",
+      "block": 5,
       "str": 2,
       "rand": 23
     },
@@ -57675,6 +57726,7 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "Bandit Buckler of the Tiger",
+      "block": 7,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -57687,6 +57739,7 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "Bandit Buckler of the Bear",
+      "block": 7,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -57699,6 +57752,7 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "Bandit Buckler of Strength",
+      "block": 7,
       "str": 4,
       "rand": 97
     },
@@ -57710,6 +57764,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Raider's Shield of the Tiger",
+      "block": 7,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -57722,6 +57777,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Raider's Shield of the Bear",
+      "block": 7,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -57734,6 +57790,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Raider's Shield of Strength",
+      "block": 7,
       "str": 4,
       "rand": 97
     },
@@ -57745,6 +57802,7 @@ var gear = {
       "q": "2",
       "i": "26",
       "name": "Superior Buckler of the Tiger",
+      "block": 9,
       "agi": 4,
       "str": 4,
       "rand": 678
@@ -57757,6 +57815,7 @@ var gear = {
       "q": "2",
       "i": "26",
       "name": "Superior Buckler of the Bear",
+      "block": 9,
       "sta": 4,
       "str": 4,
       "rand": 1188
@@ -57769,6 +57828,7 @@ var gear = {
       "q": "2",
       "i": "26",
       "name": "Superior Buckler of Strength",
+      "block": 9,
       "str": 5,
       "rand": 115
     },
@@ -57780,6 +57840,7 @@ var gear = {
       "q": "2",
       "i": "25",
       "name": "Fortified Shield of the Tiger",
+      "block": 9,
       "agi": 4,
       "str": 4,
       "rand": 678
@@ -57792,6 +57853,7 @@ var gear = {
       "q": "2",
       "i": "25",
       "name": "Fortified Shield of the Bear",
+      "block": 9,
       "sta": 4,
       "str": 4,
       "rand": 1188
@@ -57804,6 +57866,7 @@ var gear = {
       "q": "2",
       "i": "25",
       "name": "Fortified Shield of Strength",
+      "block": 9,
       "str": 5,
       "rand": 115
     },
@@ -57815,6 +57878,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Banded Shield of the Tiger",
+      "block": 13,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -57827,6 +57891,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Banded Shield of the Bear",
+      "block": 13,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -57839,6 +57904,7 @@ var gear = {
       "q": "2",
       "i": "33",
       "name": "Banded Shield of Strength",
+      "block": 13,
       "str": 7,
       "rand": 155
     },
@@ -57850,6 +57916,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Archer's Buckler of the Tiger",
+      "block": 14,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -57862,6 +57929,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Archer's Buckler of the Bear",
+      "block": 14,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -57874,6 +57942,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Archer's Buckler of Strength",
+      "block": 14,
       "str": 8,
       "rand": 189
     },
@@ -57885,6 +57954,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Renegade Shield of the Tiger",
+      "block": 15,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -57897,6 +57967,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Renegade Shield of the Bear",
+      "block": 15,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -57909,6 +57980,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Renegade Shield of Strength",
+      "block": 15,
       "str": 9,
       "rand": 190
     },
@@ -57920,6 +57992,7 @@ var gear = {
       "q": "2",
       "i": "42",
       "name": "Jazeraint Shield of the Tiger",
+      "block": 18,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -57932,6 +58005,7 @@ var gear = {
       "q": "2",
       "i": "42",
       "name": "Jazeraint Shield of the Bear",
+      "block": 18,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -57944,6 +58018,7 @@ var gear = {
       "q": "2",
       "i": "42",
       "name": "Jazeraint Shield of Strength",
+      "block": 18,
       "str": 10,
       "rand": 191
     },
@@ -57955,6 +58030,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Brigade Defender of the Tiger",
+      "block": 20,
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -57967,6 +58043,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Brigade Defender of the Bear",
+      "block": 20,
       "sta": 7,
       "str": 7,
       "rand": 1197
@@ -57979,6 +58056,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Brigade Defender of Strength",
+      "block": 20,
       "str": 10,
       "rand": 191
     },
@@ -57990,6 +58068,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Embossed Plate Shield of the Tiger",
+      "block": 20,
       "agi": 7,
       "str": 7,
       "rand": 687
@@ -58002,6 +58081,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Embossed Plate Shield of the Bear",
+      "block": 20,
       "sta": 7,
       "str": 7,
       "rand": 1197
@@ -58014,6 +58094,7 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Embossed Plate Shield of Strength",
+      "block": 20,
       "str": 10,
       "rand": 191
     },
@@ -58025,6 +58106,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Warmonger's Buckler of the Tiger",
+      "block": 24,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -58037,6 +58119,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Warmonger's Buckler of the Bear",
+      "block": 24,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -58049,6 +58132,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Warmonger's Buckler of Strength",
+      "block": 24,
       "str": 12,
       "rand": 193
     },
@@ -58060,6 +58144,7 @@ var gear = {
       "q": "2",
       "i": "52",
       "name": "Overlord's Shield of the Tiger",
+      "block": 26,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -58072,6 +58157,7 @@ var gear = {
       "q": "2",
       "i": "52",
       "name": "Overlord's Shield of the Bear",
+      "block": 26,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -58084,6 +58170,7 @@ var gear = {
       "q": "2",
       "i": "52",
       "name": "Overlord's Shield of Strength",
+      "block": 26,
       "str": 13,
       "rand": 219
     },
@@ -58095,6 +58182,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Lord's Crest of the Tiger",
+      "block": 27,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -58107,6 +58195,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Lord's Crest of the Bear",
+      "block": 27,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -58119,6 +58208,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Lord's Crest of Strength",
+      "block": 27,
       "str": 13,
       "rand": 219
     },
@@ -58130,6 +58220,7 @@ var gear = {
       "q": "2",
       "i": "54",
       "name": "Revenant Deflector of the Tiger",
+      "block": 28,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -58142,6 +58233,7 @@ var gear = {
       "q": "2",
       "i": "54",
       "name": "Revenant Deflector of the Bear",
+      "block": 28,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -58154,6 +58246,7 @@ var gear = {
       "q": "2",
       "i": "54",
       "name": "Revenant Deflector of Strength",
+      "block": 28,
       "str": 13,
       "rand": 219
     },
@@ -58165,6 +58258,7 @@ var gear = {
       "q": "2",
       "i": "64",
       "name": "Mercurial Guard of the Tiger",
+      "block": 37,
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -58177,6 +58271,7 @@ var gear = {
       "q": "2",
       "i": "64",
       "name": "Mercurial Guard of the Bear",
+      "block": 37,
       "sta": 11,
       "str": 11,
       "rand": 1209
@@ -58189,6 +58284,7 @@ var gear = {
       "q": "2",
       "i": "64",
       "name": "Mercurial Guard of Strength",
+      "block": 37,
       "str": 16,
       "rand": 308
     },
@@ -58200,6 +58296,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Crusader's Shield of the Tiger",
+      "block": 29,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -58212,6 +58309,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Crusader's Shield of the Bear",
+      "block": 29,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -58224,6 +58322,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Crusader's Shield of Strength",
+      "block": 29,
       "str": 14,
       "rand": 220
     },
@@ -58235,6 +58334,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Heavy Lamellar Shield of the Tiger",
+      "block": 29,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -58247,6 +58347,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Heavy Lamellar Shield of the Bear",
+      "block": 29,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -58259,6 +58360,7 @@ var gear = {
       "q": "2",
       "i": "55",
       "name": "Heavy Lamellar Shield of Strength",
+      "block": 29,
       "str": 14,
       "rand": 220
     },
@@ -58270,6 +58372,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Masterwork Shield of the Tiger",
+      "block": 38,
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -58282,6 +58385,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Masterwork Shield of the Bear",
+      "block": 38,
       "sta": 11,
       "str": 11,
       "rand": 1209
@@ -58294,6 +58398,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Masterwork Shield of Strength",
+      "block": 38,
       "str": 16,
       "rand": 308
     },
@@ -58305,6 +58410,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Ornate Shield of the Tiger",
+      "block": 32,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -58317,6 +58423,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Ornate Shield of the Bear",
+      "block": 32,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -58329,6 +58436,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Ornate Shield of Strength",
+      "block": 32,
       "str": 15,
       "rand": 307
     },
@@ -58340,6 +58448,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Engraved Wall of the Tiger",
+      "block": 34,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -58352,6 +58461,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Engraved Wall of the Bear",
+      "block": 34,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -58364,6 +58474,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Engraved Wall of Strength",
+      "block": 34,
       "str": 15,
       "rand": 307
     },
@@ -58375,6 +58486,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Templar Shield of the Tiger",
+      "block": 32,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -58387,6 +58499,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Templar Shield of the Bear",
+      "block": 32,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -58399,6 +58512,7 @@ var gear = {
       "q": "2",
       "i": "58",
       "name": "Templar Shield of Strength",
+      "block": 32,
       "str": 15,
       "rand": 307
     },
@@ -58410,6 +58524,7 @@ var gear = {
       "q": "2",
       "i": "59",
       "name": "Emerald Shield of the Tiger",
+      "block": 33,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -58422,6 +58537,7 @@ var gear = {
       "q": "2",
       "i": "59",
       "name": "Emerald Shield of the Bear",
+      "block": 33,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -58434,6 +58550,7 @@ var gear = {
       "q": "2",
       "i": "59",
       "name": "Emerald Shield of Strength",
+      "block": 33,
       "str": 15,
       "rand": 307
     },
@@ -58445,6 +58562,7 @@ var gear = {
       "q": "2",
       "i": "63",
       "name": "Demon Guard of the Tiger",
+      "block": 36,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -58457,6 +58575,7 @@ var gear = {
       "q": "2",
       "i": "63",
       "name": "Demon Guard of the Bear",
+      "block": 36,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -58469,6 +58588,7 @@ var gear = {
       "q": "2",
       "i": "63",
       "name": "Demon Guard of Strength",
+      "block": 36,
       "str": 15,
       "rand": 307
     },
@@ -58480,6 +58600,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Hyperion Shield of the Tiger",
+      "block": 38,
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -58492,6 +58613,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Hyperion Shield of the Bear",
+      "block": 38,
       "sta": 11,
       "str": 11,
       "rand": 1209
@@ -58504,6 +58626,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Hyperion Shield of Strength",
+      "block": 38,
       "str": 16,
       "rand": 308
     },
@@ -59722,6 +59845,7 @@ var gear = {
       "q": "2",
       "i": "41",
       "name": "Saltstone Shield of the Tiger",
+      "block": 17,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -59734,6 +59858,7 @@ var gear = {
       "q": "2",
       "i": "41",
       "name": "Saltstone Shield of the Bear",
+      "block": 17,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -59746,6 +59871,7 @@ var gear = {
       "q": "2",
       "i": "41",
       "name": "Saltstone Shield of Strength",
+      "block": 17,
       "str": 10,
       "rand": 191
     },
@@ -59757,6 +59883,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Brutish Shield of the Tiger",
+      "block": 24,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -59769,6 +59896,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Brutish Shield of the Bear",
+      "block": 24,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -59781,6 +59909,7 @@ var gear = {
       "q": "2",
       "i": "50",
       "name": "Brutish Shield of Strength",
+      "block": 24,
       "str": 12,
       "rand": 193
     },
@@ -59792,6 +59921,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Jade Deflector of the Tiger",
+      "block": 27,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -59804,6 +59934,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Jade Deflector of the Bear",
+      "block": 27,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -59816,6 +59947,7 @@ var gear = {
       "q": "2",
       "i": "53",
       "name": "Jade Deflector of Strength",
+      "block": 27,
       "str": 13,
       "rand": 219
     },
@@ -59827,6 +59959,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Lofty Shield of the Tiger",
+      "block": 31,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -59839,6 +59972,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Lofty Shield of the Bear",
+      "block": 31,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -59851,6 +59985,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Lofty Shield of Strength",
+      "block": 31,
       "str": 14,
       "rand": 220
     },
@@ -59862,6 +59997,7 @@ var gear = {
       "q": "2",
       "i": "46",
       "name": "Warbringer's Shield of the Tiger",
+      "block": 21,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -59874,6 +60010,7 @@ var gear = {
       "q": "2",
       "i": "46",
       "name": "Warbringer's Shield of the Bear",
+      "block": 21,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -59886,6 +60023,7 @@ var gear = {
       "q": "2",
       "i": "46",
       "name": "Warbringer's Shield of Strength",
+      "block": 21,
       "str": 11,
       "rand": 192
     },
@@ -59897,6 +60035,7 @@ var gear = {
       "q": "2",
       "i": "51",
       "name": "Bloodforged Shield of the Tiger",
+      "block": 25,
       "agi": 8,
       "str": 8,
       "rand": 690
@@ -59909,6 +60048,7 @@ var gear = {
       "q": "2",
       "i": "51",
       "name": "Bloodforged Shield of the Bear",
+      "block": 25,
       "sta": 8,
       "str": 8,
       "rand": 1200
@@ -59921,6 +60061,7 @@ var gear = {
       "q": "2",
       "i": "51",
       "name": "Bloodforged Shield of Strength",
+      "block": 25,
       "str": 12,
       "rand": 193
     },
@@ -59932,6 +60073,7 @@ var gear = {
       "q": "2",
       "i": "56",
       "name": "High Chief's Shield of the Tiger",
+      "block": 30,
       "agi": 9,
       "str": 9,
       "rand": 693
@@ -59944,6 +60086,7 @@ var gear = {
       "q": "2",
       "i": "56",
       "name": "High Chief's Shield of the Bear",
+      "block": 30,
       "sta": 9,
       "str": 9,
       "rand": 1203
@@ -59956,6 +60099,7 @@ var gear = {
       "q": "2",
       "i": "56",
       "name": "High Chief's Shield of Strength",
+      "block": 30,
       "str": 14,
       "rand": 220
     },
@@ -59967,6 +60111,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Glorious Shield of the Tiger",
+      "block": 34,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -59979,6 +60124,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Glorious Shield of the Bear",
+      "block": 34,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -59991,6 +60137,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Glorious Shield of Strength",
+      "block": 34,
       "str": 15,
       "rand": 307
     },
@@ -60002,6 +60149,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Exalted Shield of the Tiger",
+      "block": 38,
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -60014,6 +60162,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Exalted Shield of the Bear",
+      "block": 38,
       "sta": 11,
       "str": 11,
       "rand": 1209
@@ -60026,6 +60175,7 @@ var gear = {
       "q": "2",
       "i": "65",
       "name": "Exalted Shield of Strength",
+      "block": 38,
       "str": 16,
       "rand": 308
     },
@@ -60037,6 +60187,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Rigid Buckler of the Tiger",
+      "block": 8,
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -60049,6 +60200,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Rigid Buckler of the Bear",
+      "block": 8,
       "sta": 3,
       "str": 3,
       "rand": 1185
@@ -60061,6 +60213,7 @@ var gear = {
       "q": "2",
       "i": "23",
       "name": "Rigid Buckler of Strength",
+      "block": 8,
       "str": 5,
       "rand": 115
     },
@@ -61286,6 +61439,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Feral Buckler of the Tiger",
+      "block": 7,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -61298,6 +61452,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Feral Buckler of the Bear",
+      "block": 7,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -61310,6 +61465,7 @@ var gear = {
       "q": "2",
       "i": "19",
       "name": "Feral Buckler of Strength",
+      "block": 7,
       "str": 4,
       "rand": 97
     },
@@ -61334,6 +61490,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "War Torn Shield of the Tiger",
+      "block": 4,
       "agi": 1,
       "str": 1,
       "rand": 669
@@ -61346,6 +61503,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "War Torn Shield of the Bear",
+      "block": 4,
       "sta": 1,
       "str": 1,
       "rand": 1179
@@ -61358,6 +61516,7 @@ var gear = {
       "q": "2",
       "i": "12",
       "name": "War Torn Shield of Strength",
+      "block": 4,
       "str": 1,
       "rand": 6
     },
@@ -61369,6 +61528,7 @@ var gear = {
       "q": "2",
       "i": "18",
       "name": "Bloodspattered Shield of the Tiger",
+      "block": 6,
       "agi": 2,
       "str": 2,
       "rand": 672
@@ -61381,6 +61541,7 @@ var gear = {
       "q": "2",
       "i": "18",
       "name": "Bloodspattered Shield of the Bear",
+      "block": 6,
       "sta": 2,
       "str": 2,
       "rand": 1182
@@ -61393,6 +61554,7 @@ var gear = {
       "q": "2",
       "i": "18",
       "name": "Bloodspattered Shield of Strength",
+      "block": 6,
       "str": 3,
       "rand": 24
     },
@@ -61404,6 +61566,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Outrunner's Shield of the Tiger",
+      "block": 8,
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -61416,6 +61579,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Outrunner's Shield of the Bear",
+      "block": 8,
       "sta": 3,
       "str": 3,
       "rand": 1185
@@ -61428,6 +61592,7 @@ var gear = {
       "q": "2",
       "i": "22",
       "name": "Outrunner's Shield of Strength",
+      "block": 8,
       "str": 5,
       "rand": 115
     },
@@ -61439,6 +61604,7 @@ var gear = {
       "q": "2",
       "i": "24",
       "name": "Grunt's Shield of the Tiger",
+      "block": 9,
       "agi": 3,
       "str": 3,
       "rand": 675
@@ -61451,6 +61617,7 @@ var gear = {
       "q": "2",
       "i": "24",
       "name": "Grunt's Shield of the Bear",
+      "block": 9,
       "sta": 3,
       "str": 3,
       "rand": 1185
@@ -61463,6 +61630,7 @@ var gear = {
       "q": "2",
       "i": "24",
       "name": "Grunt's Shield of Strength",
+      "block": 9,
       "str": 5,
       "rand": 115
     },
@@ -61474,6 +61642,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Spiked Chain Shield of the Tiger",
+      "block": 11,
       "agi": 4,
       "str": 4,
       "rand": 678
@@ -61486,6 +61655,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Spiked Chain Shield of the Bear",
+      "block": 11,
       "sta": 4,
       "str": 4,
       "rand": 1188
@@ -61498,6 +61668,7 @@ var gear = {
       "q": "2",
       "i": "29",
       "name": "Spiked Chain Shield of Strength",
+      "block": 11,
       "str": 6,
       "rand": 136
     },
@@ -61509,6 +61680,7 @@ var gear = {
       "q": "2",
       "i": "31",
       "name": "Sentry's Shield of the Tiger",
+      "block": 12,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -61521,6 +61693,7 @@ var gear = {
       "q": "2",
       "i": "31",
       "name": "Sentry's Shield of the Bear",
+      "block": 12,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -61533,6 +61706,7 @@ var gear = {
       "q": "2",
       "i": "31",
       "name": "Sentry's Shield of Strength",
+      "block": 12,
       "str": 7,
       "rand": 155
     },
@@ -61544,6 +61718,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Wicked Chain Shield of the Tiger",
+      "block": 13,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -61556,6 +61731,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Wicked Chain Shield of the Bear",
+      "block": 13,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -61568,6 +61744,7 @@ var gear = {
       "q": "2",
       "i": "34",
       "name": "Wicked Chain Shield of Strength",
+      "block": 13,
       "str": 8,
       "rand": 189
     },
@@ -61579,6 +61756,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Thick Scale Shield of the Tiger",
+      "block": 14,
       "agi": 5,
       "str": 5,
       "rand": 681
@@ -61591,6 +61769,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Thick Scale Shield of the Bear",
+      "block": 14,
       "sta": 5,
       "str": 5,
       "rand": 1191
@@ -61603,6 +61782,7 @@ var gear = {
       "q": "2",
       "i": "36",
       "name": "Thick Scale Shield of Strength",
+      "block": 14,
       "str": 8,
       "rand": 189
     },
@@ -61614,6 +61794,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Pillager's Shield of the Tiger",
+      "block": 15,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -61626,6 +61807,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Pillager's Shield of the Bear",
+      "block": 15,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -61638,6 +61820,7 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Pillager's Shield of Strength",
+      "block": 15,
       "str": 9,
       "rand": 190
     },
@@ -61649,6 +61832,7 @@ var gear = {
       "q": "2",
       "i": "40",
       "name": "Marauder's Crest of the Tiger",
+      "block": 17,
       "agi": 6,
       "str": 6,
       "rand": 684
@@ -61661,6 +61845,7 @@ var gear = {
       "q": "2",
       "i": "40",
       "name": "Marauder's Crest of the Bear",
+      "block": 17,
       "sta": 6,
       "str": 6,
       "rand": 1194
@@ -61673,6 +61858,7 @@ var gear = {
       "q": "2",
       "i": "40",
       "name": "Marauder's Crest of Strength",
+      "block": 17,
       "str": 10,
       "rand": 191
     },
@@ -61785,6 +61971,7 @@ var gear = {
       "q": "2",
       "i": "62",
       "name": "Heroic Guard of the Tiger",
+      "block": 36,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -61797,6 +61984,7 @@ var gear = {
       "q": "2",
       "i": "62",
       "name": "Heroic Guard of the Bear",
+      "block": 36,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -61809,6 +61997,7 @@ var gear = {
       "q": "2",
       "i": "62",
       "name": "Heroic Guard of Strength",
+      "block": 36,
       "str": 15,
       "rand": 307
     },
@@ -61820,6 +62009,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Deprecated Glorious Shield of the Tiger",
+      "block": 34,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -61832,6 +62022,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Deprecated Glorious Shield of the Bear",
+      "block": 34,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -61844,6 +62035,7 @@ var gear = {
       "q": "2",
       "i": "60",
       "name": "Deprecated Glorious Shield of Strength",
+      "block": 34,
       "str": 15,
       "rand": 307
     },
@@ -61855,6 +62047,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Deprecated Jademir Scale Shield of the Tiger",
+      "block": 31,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -61867,6 +62060,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Deprecated Jademir Scale Shield of the Bear",
+      "block": 31,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -61879,6 +62073,7 @@ var gear = {
       "q": "2",
       "i": "57",
       "name": "Deprecated Jademir Scale Shield of Strength",
+      "block": 31,
       "str": 15,
       "rand": 307
     },

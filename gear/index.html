@@ -166,6 +166,12 @@
             });
           }
 
+          if (obj.type == "Shield") {
+            let shieldblock = getRows('ShieldBlockValue', 'Level', obj.i)[0];
+            let blockvalue = shieldblock[obj.q == "4" ? "Epic" : obj.q == "3" ? "Superior" : "Good"];
+            obj.block = parseInt(blockvalue);
+          }
+
           if (parseInt(sparse.RandomSelect)) {
             let suffixFound = false;
             let suff = getItemSuffixes(obj.id, sparse.OverallQualityID, "tiger");
@@ -285,12 +291,6 @@
           if (isUnobtainable(obj.id)) continue;
 
           if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)';
-
-          if (obj.type == "Shield") {
-            let shieldblock = getRows('ShieldBlockValue', 'Level', obj.i)[0];
-            let blockvalue = shieldblock[obj.q == "4" ? "Epic" : obj.q == "3" ? "Superior" : "Good"];
-            obj.block = parseInt(blockvalue);
-          }
 
           addToGear(obj);
         }
