@@ -1103,6 +1103,18 @@ var spells = [
     item: true,
     active: true,
 },
+{
+    id: 220632,
+    name: 'Atal\'ai Blood Ritual Medallion',
+    classname: 'RelentlessStrength',
+    iconname: 'inv_jewelry_necklace_26',
+    item: true,
+    aura: true,
+    timetoend: 20,
+    timetoendactive: true,
+    timetostart: 0,
+    timetostartactive: false,
+},
 
 
 

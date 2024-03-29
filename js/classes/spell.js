@@ -2146,3 +2146,39 @@ class RoarGuardian extends Aura {
         return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
+
+class RelentlessStrength extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Relentless Strength');
+        this.duration = 20;
+        this.stats = { bonusdmg: 20 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.stats.bonusdmg = 20;
+        this.player.updateBonusDmg();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    proc() {
+        this.stats.bonusdmg -= 1;
+        this.player.updateBonusDmg();
+        if (this.stats.bonusdmg <= 0) {
+            this.timer = step;
+            this.step();
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateBonusDmg();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}

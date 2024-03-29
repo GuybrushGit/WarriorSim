@@ -42750,6 +42750,15 @@ var gear = {
       }
     },
     {
+      "id": 220632,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Atal'ai Blood Ritual Medallion"
+    },
+    {
       "id": 221442,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -43041,6 +43050,15 @@ var gear = {
         "interval": "3000",
         "duration": "24000"
       }
+    },
+    {
+      "id": 220632,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Atal'ai Blood Ritual Medallion"
     },
     {
       "id": 221442,

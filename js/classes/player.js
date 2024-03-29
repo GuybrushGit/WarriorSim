@@ -737,6 +737,8 @@ class Player {
             bonus += this.auras.zeal.stats.bonusdmg;
         if (this.auras.zandalarian && this.auras.zandalarian.timer)
             bonus += this.auras.zandalarian.stats.bonusdmg;
+        if (this.auras.relentlessstrength && this.auras.relentlessstrength.timer)
+            bonus += this.auras.relentlessstrength.stats.bonusdmg;
         if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
             bonus += this.auras.blisteringragehammer.stats.bonusdmg;
         this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
@@ -885,6 +887,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.step();
+        if (this.auras.relentlessstrength && this.auras.relentlessstrength.firstuse && this.auras.relentlessstrength.timer) this.auras.relentlessstrength.step();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
@@ -935,6 +938,7 @@ class Player {
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
         if (this.auras.zandalarian && this.auras.zandalarian.firstuse && this.auras.zandalarian.timer) this.auras.zandalarian.end();
+        if (this.auras.relentlessstrength && this.auras.relentlessstrength.firstuse && this.auras.relentlessstrength.timer) this.auras.relentlessstrength.end();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
@@ -1219,6 +1223,9 @@ class Player {
             }
             if (this.auras.zandalarian && this.auras.zandalarian.timer) {
                 this.auras.zandalarian.proc();
+            }
+            if (this.auras.relentlessstrength && this.auras.relentlessstrength.timer) {
+                this.auras.relentlessstrength.proc();
             }
             if (this.dragonbreath && rng10k() < 400) {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
