@@ -1095,6 +1095,15 @@ var spells = [
     timetostart: 0,
     timetostartactive: false,
 },
+{
+    id: 219223,
+    name: 'Blademaster\'s Fury',
+    classname: 'BlademasterFury',
+    iconname: 'inv_sword_137',
+    item: true,
+    active: true,
+},
+
 
 
 

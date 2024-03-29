@@ -521,6 +521,32 @@ class GunAxe extends Spell {
     }
 }
 
+class BlademasterFury extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Blademaster\'s Fury');
+        this.cooldown = 120;
+    }
+    dmg() {
+        let dmg;
+        dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        return dmg + (this.player.stats.ap / 14) * this.player.mh.normSpeed;
+    }
+    use() {
+        this.player.timer = 1500;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        if (this.player.spells.whirlwind) {
+            this.player.spells.whirlwind.timer = 0;
+            /* start-log */ if (log) this.player.log(`${this.player.spells.whirlwind.name} off cooldown`); /* end-log */
+        }
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && 
+            (!this.player.spells.whirlwind || this.player.spells.whirlwind.timer >= 5000);
+    }
+}
+
+
 /**************************************************** AURAS ****************************************************/
 
 class Aura {
