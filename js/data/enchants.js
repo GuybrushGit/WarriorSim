@@ -84,7 +84,7 @@ var enchant = {
           "name": "Fiery",
           "r": 41,
           "ppm": 6,
-          "magicdmg": 44
+          "magicdmg": 40
        },
        {
           "id": 20032,
@@ -92,7 +92,7 @@ var enchant = {
           "name": "Lifestealing",
           "r": 41,
           "ppm": 6,
-          "magicdmg": 33
+          "magicdmg": 30
        },
        {
           "id": 20031,
@@ -131,7 +131,7 @@ var enchant = {
          "spellid": true,
          "name": "Fiery Blaze",
          "chance": 15,
-         "magicdmg": 12,
+         "magicdmg": 11,
          "r": 40
       },
       {
@@ -228,7 +228,7 @@ var enchant = {
         "name": "Fiery",
         "r": 41,
         "ppm": 6,
-        "magicdmg": 44
+        "magicdmg": 40
      },
      {
         "id": 20032,
@@ -236,7 +236,7 @@ var enchant = {
         "name": "Lifestealing",
         "r": 41,
         "ppm": 6,
-        "magicdmg": 33
+        "magicdmg": 30
      },
      {
       "id": 20031,
@@ -275,7 +275,7 @@ var enchant = {
    "spellid": true,
    "name": "Fiery Blaze",
    "chance": 15,
-   "magicdmg": 12,
+   "magicdmg": 11,
    "r": 40
 },
 {
@@ -379,7 +379,7 @@ var enchant = {
           "name": "Fiery",
           "r": 41,
           "ppm": 6,
-          "magicdmg": 44
+          "magicdmg": 40
        },
        {
           "id": 20032,
@@ -387,7 +387,7 @@ var enchant = {
           "name": "Lifestealing",
           "r": 41,
           "ppm": 6,
-          "magicdmg": 33
+          "magicdmg": 30
        },
        {
           "id": 6043,
@@ -431,7 +431,7 @@ var enchant = {
          "spellid": true,
          "name": "Fiery Blaze",
          "chance": 15,
-         "magicdmg": 12,
+         "magicdmg": 11,
          "r": 40
       },
       {

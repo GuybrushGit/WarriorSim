@@ -521,7 +521,9 @@ class Player {
         this.preporder = [];
         for (let spell of spells) {
             if (spell.item && this.items.includes(spell.id) && spell.id == testItem && spell.id == testItem && !spell.timetoendactive && !spell.timetostartactive) {
-                spell.timetoendactive = true;
+                // Blademasters Fury
+                if (spell.id == 219223) spell.active = true;
+                else spell.timetoendactive = true;
             }
             if (spell.active || (spell.item && this.items.includes(spell.id) && (spell.timetoendactive || spell.timetostartactive))) {
                 if (!spell.aura && this.mh.type == WEAPONTYPE.FISHINGPOLE) continue; 
