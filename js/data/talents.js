@@ -1121,6 +1121,7 @@ var talents = [
                1
             ],
             c: 0,
+            enable: 'Shield Slam',
             iconname: 'INV_Shield_05',
             aura: function (count) { return { shieldslam: count } },
          }

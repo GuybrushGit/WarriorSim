@@ -891,7 +891,7 @@ var enchant = {
       name: 'Battlegear of Might',
       items: [16864,16861,16865,16863,16866,16867,16868,16862],
       bonus: [
-         { count: 3, stats: { sta: 0 } }
+         { count: 3, stats: { block: 30 } }
       ]
    },
    {

@@ -7294,7 +7294,8 @@ var gear = {
       "sta": 27,
       "resist": {
         "fire": 10
-      }
+      },
+      "block": 27
     },
     {
       "id": 16995,
@@ -7916,7 +7917,8 @@ var gear = {
       "name": "Dreadnaught Pauldrons",
       "str": 16,
       "sta": 29,
-      "hit": 1
+      "hit": 1,
+      "block": 21
     },
     {
       "id": 22940,
@@ -14671,7 +14673,8 @@ var gear = {
       "i": "55",
       "name": "Will of the Atal'ai Warrior",
       "agi": 4,
-      "sta": 11
+      "sta": 11,
+      "block": 21
     },
     {
       "id": 220533,
@@ -14694,7 +14697,8 @@ var gear = {
       "name": "Banished Martyr's Plate Armor",
       "agi": 9,
       "str": 5,
-      "sta": 18
+      "sta": 18,
+      "block": 24
     },
     {
       "id": 220653,
@@ -18326,7 +18330,8 @@ var gear = {
       "i": "55",
       "name": "Void-Powered Protector's Vambraces",
       "str": 10,
-      "sta": 12
+      "sta": 12,
+      "block": 19
     }
   ],
   "hands": [
@@ -23713,7 +23718,8 @@ var gear = {
       "i": "88",
       "name": "Dreadnaught Gauntlets",
       "str": 17,
-      "sta": 27
+      "sta": 27,
+      "block": 21
     },
     {
       "id": 22662,
@@ -29105,7 +29111,8 @@ var gear = {
       "i": "88",
       "name": "Dreadnaught Waistguard",
       "str": 20,
-      "sta": 26
+      "sta": 26,
+      "block": 18
     },
     {
       "id": 23219,
@@ -29288,7 +29295,8 @@ var gear = {
       "i": "55",
       "name": "Atal'ai Serpentscale Girdle",
       "str": 13,
-      "sta": 14
+      "sta": 14,
+      "block": 14
     }
   ],
   "legs": [
@@ -33828,7 +33836,8 @@ var gear = {
       "i": "88",
       "name": "Dreadnaught Legplates",
       "str": 23,
-      "sta": 37
+      "sta": 37,
+      "block": 32
     },
     {
       "id": 22651,
@@ -37200,7 +37209,8 @@ var gear = {
       "sta": 30,
       "resist": {
         "fire": 10
-      }
+      },
+      "block": 14
     },
     {
       "id": 16977,
@@ -38498,7 +38508,8 @@ var gear = {
       "name": "Tenacious Troll Kickers",
       "str": 8,
       "sta": 10,
-      "hit": 1
+      "hit": 1,
+      "block": 18
     },
     {
       "id": 220562,
@@ -54568,6 +54579,34 @@ var gear = {
       }
     },
     {
+      "id": 1168,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 54,
+      "q": "4",
+      "i": "59",
+      "name": "Skullflame Shield",
+      "resist": {
+        "fire": 10,
+        "shadow": 10
+      },
+      "block": 40
+    },
+    {
+      "id": 1169,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "q": "4",
+      "i": "46",
+      "name": "Blackskull Shield",
+      "sta": 5,
+      "resist": {
+        "shadow": 10
+      },
+      "block": 30
+    },
+    {
       "id": 1203,
       "type": "Shield",
       "slot": "offhand",
@@ -54576,7 +54615,19 @@ var gear = {
       "i": "54",
       "name": "Aegis of Stormwind",
       "str": 6,
-      "sta": 15
+      "sta": 15,
+      "block": 33
+    },
+    {
+      "id": 1204,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 36,
+      "q": "4",
+      "i": "41",
+      "name": "The Green Tower",
+      "sta": 13,
+      "block": 25
     },
     {
       "id": "1207|681",
@@ -54821,7 +54872,8 @@ var gear = {
       "i": "50",
       "name": "Wall of the Dead",
       "str": 10,
-      "sta": 15
+      "sta": 15,
+      "block": 34
     },
     {
       "id": "1994|684",
@@ -54879,6 +54931,17 @@ var gear = {
       "mindmg": 8,
       "maxdmg": 17,
       "str": 2
+    },
+    {
+      "id": 2040,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 43,
+      "q": "3",
+      "i": "48",
+      "name": "Troll Protector",
+      "sta": 10,
+      "block": 27
     },
     {
       "id": 2074,
@@ -55247,7 +55310,8 @@ var gear = {
       "i": "34",
       "name": "Gold Lion Shield",
       "str": 2,
-      "sta": 5
+      "sta": 5,
+      "block": 13
     },
     {
       "id": 2941,
@@ -55390,7 +55454,8 @@ var gear = {
       "q": "2",
       "i": "15",
       "name": "Faerleia's Shield",
-      "str": 2
+      "str": 2,
+      "block": 5
     },
     {
       "id": 3490,
@@ -55440,7 +55505,8 @@ var gear = {
       "q": "2",
       "i": "15",
       "name": "Veteran Shield",
-      "str": 2
+      "str": 2,
+      "block": 5
     },
     {
       "id": 3654,
@@ -55451,7 +55517,8 @@ var gear = {
       "i": "14",
       "name": "Brackwater Shield",
       "agi": 1,
-      "sta": 1
+      "sta": 1,
+      "block": 5
     },
     {
       "id": 3655,
@@ -55462,7 +55529,8 @@ var gear = {
       "i": "21",
       "name": "Burnished Shield",
       "str": 2,
-      "sta": 3
+      "sta": 3,
+      "block": 7
     },
     {
       "id": 3656,
@@ -55473,7 +55541,8 @@ var gear = {
       "i": "27",
       "name": "Lambent Scale Shield",
       "str": 4,
-      "sta": 2
+      "sta": 2,
+      "block": 10
     },
     {
       "id": 3761,
@@ -55484,7 +55553,8 @@ var gear = {
       "i": "32",
       "name": "Deadskull Shield",
       "str": 1,
-      "sta": 7
+      "sta": 7,
+      "block": 12
     },
     {
       "id": 3763,
@@ -55494,7 +55564,8 @@ var gear = {
       "q": "2",
       "i": "40",
       "name": "Lunar Buckler",
-      "str": 3
+      "str": 3,
+      "block": 17
     },
     {
       "id": 3850,
@@ -55519,7 +55590,8 @@ var gear = {
       "i": "36",
       "name": "Combat Shield",
       "str": 7,
-      "sta": 2
+      "sta": 2,
+      "block": 14
     },
     {
       "id": "4088|684",
@@ -55600,7 +55672,8 @@ var gear = {
       "i": "37",
       "name": "Grom'gol Buckler",
       "str": 2,
-      "sta": 3
+      "sta": 3,
+      "block": 15
     },
     {
       "id": 4129,
@@ -55611,7 +55684,8 @@ var gear = {
       "i": "44",
       "name": "Collection Plate",
       "str": 2,
-      "sta": 9
+      "sta": 9,
+      "block": 20
     },
     {
       "id": 4290,
@@ -55621,7 +55695,8 @@ var gear = {
       "q": "2",
       "i": "18",
       "name": "Dust Bowl",
-      "str": 2
+      "str": 2,
+      "block": 6
     },
     {
       "id": 4446,
@@ -55682,7 +55757,8 @@ var gear = {
       "i": "34",
       "name": "Nefarious Buckler",
       "str": 3,
-      "sta": 6
+      "sta": 6,
+      "block": 13
     },
     {
       "id": 4507,
@@ -55693,7 +55769,8 @@ var gear = {
       "i": "42",
       "name": "Pit Fighter's Shield",
       "str": 8,
-      "sta": 3
+      "sta": 3,
+      "block": 18
     },
     {
       "id": "4568|24",
@@ -55746,7 +55823,8 @@ var gear = {
       "q": "2",
       "i": "45",
       "name": "Salbac Shield",
-      "str": 9
+      "str": 9,
+      "block": 20
     },
     {
       "id": 4821,
@@ -55757,7 +55835,8 @@ var gear = {
       "i": "23",
       "name": "Bear Buckler",
       "str": 3,
-      "sta": 3
+      "sta": 3,
+      "block": 8
     },
     {
       "id": 4825,
@@ -55932,7 +56011,8 @@ var gear = {
       "i": "20",
       "name": "Gold-plated Buckler",
       "agi": 2,
-      "sta": 5
+      "sta": 5,
+      "block": 9
     },
     {
       "id": 5540,
@@ -56040,7 +56120,8 @@ var gear = {
       "i": "35",
       "name": "Crest of Darkshire",
       "str": 2,
-      "sta": 7
+      "sta": 7,
+      "block": 14
     },
     {
       "id": 6320,
@@ -56051,7 +56132,8 @@ var gear = {
       "i": "28",
       "name": "Commander's Crest",
       "str": 6,
-      "sta": 3
+      "sta": 3,
+      "block": 13
     },
     {
       "id": 6331,
@@ -56101,7 +56183,8 @@ var gear = {
       "i": "31",
       "name": "Glimmering Shield",
       "str": 4,
-      "sta": 3
+      "sta": 3,
+      "block": 12
     },
     {
       "id": 6448,
@@ -56346,6 +56429,16 @@ var gear = {
       "rand": 136
     },
     {
+      "id": 6630,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 20,
+      "q": "3",
+      "i": "25",
+      "name": "Seedcloud Buckler",
+      "block": 11
+    },
+    {
       "id": 6633,
       "type": "Sword",
       "slot": "onehand",
@@ -56398,6 +56491,17 @@ var gear = {
       "str": 6
     },
     {
+      "id": 6694,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 31,
+      "q": "3",
+      "i": "36",
+      "name": "Heart of Agamaggan",
+      "sta": 7,
+      "block": 17
+    },
+    {
       "id": 6725,
       "type": "Shield",
       "slot": "offhand",
@@ -56407,7 +56511,8 @@ var gear = {
       "name": "Marbled Buckler",
       "agi": 5,
       "str": 5,
-      "sta": 5
+      "sta": 5,
+      "block": 17
     },
     {
       "id": 6746,
@@ -56417,7 +56522,8 @@ var gear = {
       "q": "2",
       "i": "40",
       "name": "Basalt Buckler",
-      "sta": 2
+      "sta": 2,
+      "block": 17
     },
     {
       "id": 6802,
@@ -56490,7 +56596,22 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "Furen's Favor",
-      "str": 3
+      "str": 3,
+      "block": 7
+    },
+    {
+      "id": 7002,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 18,
+      "q": "3",
+      "i": "29",
+      "name": "Arctic Buckler",
+      "sta": 3,
+      "resist": {
+        "frost": 5
+      },
+      "block": 13
     },
     {
       "id": "7108|669",
@@ -56535,7 +56656,8 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "Ruga's Bulwark",
-      "str": 3
+      "str": 3,
+      "block": 7
     },
     {
       "id": 7188,
@@ -56546,7 +56668,8 @@ var gear = {
       "i": "24",
       "name": "Stormwind Guard Shield",
       "str": 2,
-      "sta": 4
+      "sta": 4,
+      "block": 9
     },
     {
       "id": "7330|681",
@@ -56874,7 +56997,8 @@ var gear = {
       "i": "44",
       "name": "Aegis of the Scarlet Commander",
       "str": 7,
-      "sta": 8
+      "sta": 8,
+      "block": 23
     },
     {
       "id": 7736,
@@ -56898,7 +57022,8 @@ var gear = {
       "q": "2",
       "i": "41",
       "name": "Vile Protector",
-      "str": 4
+      "str": 4,
+      "block": 17
     },
     {
       "id": 7786,
@@ -56913,6 +57038,17 @@ var gear = {
       "maxdmg": 57,
       "str": 3,
       "sta": 5
+    },
+    {
+      "id": 7787,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 26,
+      "q": "3",
+      "i": "31",
+      "name": "Resplendent Guardian",
+      "sta": 7,
+      "block": 14
     },
     {
       "id": 7942,
@@ -56966,7 +57102,8 @@ var gear = {
       "i": "51",
       "name": "Myrmidon's Defender",
       "agi": 2,
-      "sta": 2
+      "sta": 2,
+      "block": 25
     },
     {
       "id": 8135,
@@ -56977,7 +57114,8 @@ var gear = {
       "i": "46",
       "name": "Chromite Shield",
       "str": 3,
-      "sta": 10
+      "sta": 10,
+      "block": 21
     },
     {
       "id": 8190,
@@ -57122,7 +57260,8 @@ var gear = {
       "i": "51",
       "name": "Valorous Shield",
       "str": 6,
-      "sta": 9
+      "sta": 9,
+      "block": 25
     },
     {
       "id": 8313,
@@ -57132,7 +57271,8 @@ var gear = {
       "q": "2",
       "i": "62",
       "name": "Hero's Buckler",
-      "str": 7
+      "str": 7,
+      "block": 36
     },
     {
       "id": 8320,
@@ -57143,7 +57283,8 @@ var gear = {
       "i": "57",
       "name": "Alabaster Shield",
       "str": 3,
-      "sta": 13
+      "sta": 13,
+      "block": 31
     },
     {
       "id": 9359,
@@ -57248,6 +57389,17 @@ var gear = {
       "sta": 5
     },
     {
+      "id": 9404,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 37,
+      "q": "3",
+      "i": "42",
+      "name": "Olaf's All Purpose Shield",
+      "sta": 11,
+      "block": 22
+    },
+    {
       "id": 9419,
       "type": "Mace",
       "slot": "onehand",
@@ -57322,6 +57474,16 @@ var gear = {
       "mindmg": 37,
       "maxdmg": 69,
       "sta": 2
+    },
+    {
+      "id": 9458,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 32,
+      "q": "3",
+      "i": "37",
+      "name": "Thermaplugg's Central Core",
+      "block": 18
     },
     {
       "id": 9465,
@@ -57404,7 +57566,8 @@ var gear = {
       "q": "2",
       "i": "51",
       "name": "Optomatic Deflector",
-      "str": 5
+      "str": 5,
+      "block": 25
     },
     {
       "id": 9680,
@@ -58381,7 +58544,8 @@ var gear = {
       "i": "55",
       "name": "Aegis of Battle",
       "agi": 6,
-      "sta": 10
+      "sta": 10,
+      "block": 29
     },
     {
       "id": 10703,
@@ -58435,7 +58599,8 @@ var gear = {
       "i": "42",
       "name": "Savage Boar's Guard",
       "str": 11,
-      "sta": 6
+      "sta": 6,
+      "block": 22
     },
     {
       "id": 10772,
@@ -58568,7 +58733,8 @@ var gear = {
       "name": "Crest of Supremacy",
       "agi": 6,
       "str": 6,
-      "sta": 7
+      "sta": 7,
+      "block": 35
     },
     {
       "id": 10847,
@@ -58591,7 +58757,8 @@ var gear = {
       "i": "52",
       "name": "Stoneshell Guard",
       "str": 6,
-      "sta": 9
+      "sta": 9,
+      "block": 31
     },
     {
       "id": 11635,
@@ -58640,6 +58807,20 @@ var gear = {
       }
     },
     {
+      "id": 11785,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Rock Golem Bulwark",
+      "sta": 10,
+      "resist": {
+        "nature": 10
+      },
+      "block": 36
+    },
+    {
       "id": 11856,
       "type": "Dagger",
       "slot": "onehand",
@@ -58676,7 +58857,8 @@ var gear = {
       "i": "55",
       "name": "Shizzle's Drizzle Blocker",
       "str": 13,
-      "sta": 1
+      "sta": 1,
+      "block": 29
     },
     {
       "id": 11922,
@@ -58823,6 +59005,20 @@ var gear = {
       }
     },
     {
+      "id": 12602,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Draconian Deflector",
+      "sta": 7,
+      "resist": {
+        "fire": 10
+      },
+      "block": 40
+    },
+    {
       "id": 12774,
       "type": "Axe",
       "slot": "onehand",
@@ -58915,7 +59111,8 @@ var gear = {
       "i": "24",
       "name": "Redbeard Crest",
       "str": 6,
-      "sta": 3
+      "sta": 3,
+      "block": 11
     },
     {
       "id": 13014,
@@ -59029,7 +59226,8 @@ var gear = {
       "q": "3",
       "i": "30",
       "name": "Shield of Thorsen",
-      "str": 7
+      "str": 7,
+      "block": 14
     },
     {
       "id": 13081,
@@ -59041,7 +59239,18 @@ var gear = {
       "name": "Skullance Shield",
       "agi": 4,
       "str": 8,
-      "sta": 5
+      "sta": 5,
+      "block": 19
+    },
+    {
+      "id": 13082,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 41,
+      "q": "3",
+      "i": "46",
+      "name": "Mountainside Buckler",
+      "block": 25
     },
     {
       "id": 13083,
@@ -59051,7 +59260,8 @@ var gear = {
       "q": "3",
       "i": "62",
       "name": "Garrett Family Crest",
-      "agi": 5
+      "agi": 5,
+      "block": 39
     },
     {
       "id": 13182,
@@ -59114,6 +59324,16 @@ var gear = {
       }
     },
     {
+      "id": 13205,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Rhombeard Protector",
+      "block": 38
+    },
+    {
       "id": 13218,
       "type": "Dagger",
       "slot": "onehand",
@@ -59124,6 +59344,26 @@ var gear = {
       "speed": 1.6,
       "mindmg": 45,
       "maxdmg": 84
+    },
+    {
+      "id": 13243,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "3",
+      "i": "62",
+      "name": "Argent Defender",
+      "block": 39
+    },
+    {
+      "id": 13245,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 15,
+      "q": "3",
+      "i": "20",
+      "name": "Kresh's Back",
+      "block": 9
     },
     {
       "id": 13246,
@@ -59139,6 +59379,17 @@ var gear = {
       "proc": {
         "spell": "Avenger"
       }
+    },
+    {
+      "id": 13254,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Astral Guard",
+      "sta": 6,
+      "block": 35
     },
     {
       "id": 13286,
@@ -59200,6 +59451,16 @@ var gear = {
       "ap": 30
     },
     {
+      "id": 13375,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Crest of Retribution",
+      "block": 38
+    },
+    {
       "id": 13399,
       "type": "Fist",
       "slot": "offhand",
@@ -59230,6 +59491,20 @@ var gear = {
       "maxdmg": 94
     },
     {
+      "id": 13529,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Husk of Nerub'enkan",
+      "sta": 10,
+      "resist": {
+        "nature": 15
+      },
+      "block": 38
+    },
+    {
       "id": 13964,
       "type": "Dagger",
       "slot": "onehand",
@@ -59256,6 +59531,21 @@ var gear = {
         "magic": true,
         "dmg": 90
       }
+    },
+    {
+      "id": 14002,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "63",
+      "name": "Darrowshire Strongguard",
+      "sta": 8,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      },
+      "block": 40
     },
     {
       "id": 14024,
@@ -59300,6 +59590,20 @@ var gear = {
       }
     },
     {
+      "id": 14528,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Rattlecage Buckler",
+      "sta": 7,
+      "resist": {
+        "shadow": 7
+      },
+      "block": 39
+    },
+    {
       "id": 14555,
       "type": "Dagger",
       "slot": "onehand",
@@ -59326,7 +59630,8 @@ var gear = {
       "q": "2",
       "i": "37",
       "name": "Hawkeye's Buckler",
-      "str": 5
+      "str": 5,
+      "block": 15
     },
     {
       "id": 14729,
@@ -59336,7 +59641,8 @@ var gear = {
       "q": "2",
       "i": "20",
       "name": "War Paint Shield",
-      "str": 2
+      "str": 2,
+      "block": 7
     },
     {
       "id": 14777,
@@ -59346,7 +59652,8 @@ var gear = {
       "q": "2",
       "i": "44",
       "name": "Ravager's Shield",
-      "str": 3
+      "str": 3,
+      "block": 20
     },
     {
       "id": 14780,
@@ -59357,7 +59664,8 @@ var gear = {
       "i": "49",
       "name": "Khan's Buckler",
       "agi": 3,
-      "sta": 5
+      "sta": 5,
+      "block": 23
     },
     {
       "id": 14790,
@@ -59367,7 +59675,8 @@ var gear = {
       "q": "2",
       "i": "54",
       "name": "Protector Buckler",
-      "agi": 3
+      "agi": 3,
+      "block": 28
     },
     {
       "id": 14825,
@@ -59378,7 +59687,8 @@ var gear = {
       "i": "43",
       "name": "Symbolic Crest",
       "str": 4,
-      "sta": 7
+      "sta": 7,
+      "block": 19
     },
     {
       "id": 14842,
@@ -59389,7 +59699,8 @@ var gear = {
       "i": "48",
       "name": "Tyrant's Shield",
       "str": 9,
-      "sta": 5
+      "sta": 5,
+      "block": 23
     },
     {
       "id": 14852,
@@ -59400,7 +59711,8 @@ var gear = {
       "i": "54",
       "name": "Sunscale Shield",
       "str": 5,
-      "sta": 10
+      "sta": 10,
+      "block": 28
     },
     {
       "id": "14902|684",
@@ -59761,7 +60073,8 @@ var gear = {
       "i": "20",
       "name": "Steelcap Shield",
       "str": 2,
-      "sta": 2
+      "sta": 2,
+      "block": 7
     },
     {
       "id": "15210|23",
@@ -61010,7 +61323,8 @@ var gear = {
       "name": "Clink Shield",
       "agi": 2,
       "str": 3,
-      "sta": 4
+      "sta": 4,
+      "block": 10
     },
     {
       "id": "15486|669",
@@ -61371,7 +61685,8 @@ var gear = {
       "i": "38",
       "name": "Studded Ring Shield",
       "str": 6,
-      "sta": 4
+      "sta": 4,
+      "block": 15
     },
     {
       "id": 15705,
@@ -61576,7 +61891,8 @@ var gear = {
       "i": "32",
       "name": "Slayer's Shield",
       "agi": 3,
-      "str": 6
+      "str": 6,
+      "block": 12
     },
     {
       "id": 15894,
@@ -61586,7 +61902,8 @@ var gear = {
       "q": "2",
       "i": "25",
       "name": "Bristlebark Buckler",
-      "agi": 2
+      "agi": 2,
+      "block": 9
     },
     {
       "id": 15943,
@@ -61597,7 +61914,8 @@ var gear = {
       "i": "61",
       "name": "Imbued Shield",
       "str": 3,
-      "sta": 14
+      "sta": 14,
+      "block": 35
     },
     {
       "id": 15990,
@@ -61609,7 +61927,8 @@ var gear = {
       "name": "Enduring Shield",
       "agi": 3,
       "str": 6,
-      "sta": 4
+      "sta": 4,
+      "block": 16
     },
     {
       "id": 15991,
@@ -61620,7 +61939,8 @@ var gear = {
       "i": "63",
       "name": "Warleader's Shield",
       "agi": 4,
-      "sta": 14
+      "sta": 14,
+      "block": 36
     },
     {
       "id": 16345,
@@ -61646,7 +61966,8 @@ var gear = {
       "i": "27",
       "name": "Driftmire Shield",
       "str": 2,
-      "sta": 3
+      "sta": 3,
+      "block": 10
     },
     {
       "id": 16886,
@@ -61674,6 +61995,17 @@ var gear = {
       "maxdmg": 35,
       "agi": 2,
       "str": 2
+    },
+    {
+      "id": 16998,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "62",
+      "name": "Sacred Protector",
+      "sta": 15,
+      "block": 39
     },
     {
       "id": 17002,
@@ -61735,6 +62067,17 @@ var gear = {
       "mindmg": 44,
       "maxdmg": 83,
       "sta": 6
+    },
+    {
+      "id": 17066,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "67",
+      "name": "Drillborer Disk",
+      "sta": 10,
+      "block": 46
     },
     {
       "id": 17068,
@@ -61813,6 +62156,17 @@ var gear = {
       "sta": 10
     },
     {
+      "id": 17106,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "Malistar's Defender",
+      "sta": 9,
+      "block": 52
+    },
+    {
       "id": 17705,
       "type": "Sword",
       "slot": "onehand",
@@ -61826,6 +62180,17 @@ var gear = {
       "proc": {
         "extra": 1
       }
+    },
+    {
+      "id": 17718,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Gizlock's Hypertech Buckler",
+      "sta": 5,
+      "block": 32
     },
     {
       "id": 17719,
@@ -61873,6 +62238,17 @@ var gear = {
         "procgcd": true,
         "dmg": 70
       }
+    },
+    {
+      "id": 18168,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Force Reactive Disk",
+      "sta": 11,
+      "block": 44
     },
     {
       "id": 18202,
@@ -61973,6 +62349,17 @@ var gear = {
       "ap": 28
     },
     {
+      "id": 18485,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Observer's Shield",
+      "sta": 9,
+      "block": 38
+    },
+    {
       "id": 18498,
       "type": "Axe",
       "slot": "onehand",
@@ -61987,6 +62374,38 @@ var gear = {
       "sta": 12
     },
     {
+      "id": 18499,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Barrier Shield",
+      "block": 39
+    },
+    {
+      "id": 18535,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "59",
+      "name": "Milli's Shield",
+      "sta": 7,
+      "block": 37
+    },
+    {
+      "id": 18673,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Avalanchion's Stony Hide",
+      "sta": 16,
+      "block": 37
+    },
+    {
       "id": 18683,
       "type": "Mace",
       "slot": "onehand",
@@ -61999,6 +62418,17 @@ var gear = {
       "maxdmg": 131,
       "str": 7,
       "sta": 12
+    },
+    {
+      "id": 18696,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Intricately Runed Shield",
+      "sta": 8,
+      "block": 39
     },
     {
       "id": 18737,
@@ -62023,7 +62453,8 @@ var gear = {
       "i": "62",
       "name": "Dreadguard's Protector",
       "str": 18,
-      "sta": 5
+      "sta": 5,
+      "block": 39
     },
     {
       "id": 18758,
@@ -62078,7 +62509,8 @@ var gear = {
       "i": "78",
       "name": "Grand Marshal's Aegis",
       "str": 10,
-      "sta": 23
+      "sta": 23,
+      "block": 55
     },
     {
       "id": 18826,
@@ -62089,7 +62521,8 @@ var gear = {
       "i": "78",
       "name": "High Warlord's Shield Wall",
       "str": 10,
-      "sta": 23
+      "sta": 23,
+      "block": 55
     },
     {
       "id": 18827,
@@ -62387,6 +62820,17 @@ var gear = {
       }
     },
     {
+      "id": 19321,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "The Immovable Object",
+      "sta": 15,
+      "block": 44
+    },
+    {
       "id": 19324,
       "type": "Dagger",
       "slot": "onehand",
@@ -62428,6 +62872,28 @@ var gear = {
       "mindmg": 37,
       "maxdmg": 90,
       "sta": 7
+    },
+    {
+      "id": 19348,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Red Dragonscale Protector",
+      "sta": 6,
+      "block": 51
+    },
+    {
+      "id": 19349,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "77",
+      "name": "Elementium Reinforced Bulwark",
+      "sta": 23,
+      "block": 54
     },
     {
       "id": 19351,
@@ -62742,6 +63208,16 @@ var gear = {
       "ap": 28
     },
     {
+      "id": 19862,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Aegis of the Blood God",
+      "block": 47
+    },
+    {
       "id": 19866,
       "type": "Sword",
       "slot": "offhand",
@@ -62804,6 +63280,17 @@ var gear = {
         "procgcd": true,
         "dmg": 70
       }
+    },
+    {
+      "id": 19915,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Zulian Defender",
+      "sta": 15,
+      "block": 43
     },
     {
       "id": "19921|690",
@@ -63030,6 +63517,17 @@ var gear = {
       "ap": 28
     },
     {
+      "id": 20688,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Earthen Guard",
+      "sta": 19,
+      "block": 44
+    },
+    {
       "id": 21126,
       "type": "Dagger",
       "slot": "onehand",
@@ -63090,6 +63588,17 @@ var gear = {
       "sta": 12
     },
     {
+      "id": 21269,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Blessed Qiraji Bulwark",
+      "sta": 20,
+      "block": 55
+    },
+    {
       "id": 21392,
       "type": "Axe",
       "slot": "onehand",
@@ -63113,7 +63622,8 @@ var gear = {
       "i": "68",
       "name": "Buru's Skull Fragment",
       "str": 11,
-      "sta": 20
+      "sta": 20,
+      "block": 47
     },
     {
       "id": 21498,
@@ -63158,6 +63668,17 @@ var gear = {
       "agi": 13,
       "str": 9,
       "sta": 14
+    },
+    {
+      "id": 21610,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "81",
+      "name": "Wormscale Blocker",
+      "sta": 10,
+      "block": 57
     },
     {
       "id": 21650,
@@ -63205,6 +63726,16 @@ var gear = {
       "ap": 32
     },
     {
+      "id": 22198,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Jagged Obsidian Shield",
+      "block": 48
+    },
+    {
       "id": 22266,
       "type": "Dagger",
       "slot": "onehand",
@@ -63242,6 +63773,17 @@ var gear = {
       "mindmg": 45,
       "maxdmg": 84,
       "crit": 1
+    },
+    {
+      "id": 22336,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Draconian Aegis of the Legion",
+      "sta": 7,
+      "block": 40
     },
     {
       "id": 22377,
@@ -63385,6 +63927,31 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 22818,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "83",
+      "name": "The Plague Bearer",
+      "sta": 21,
+      "resist": {
+        "frost": 15
+      },
+      "block": 59
+    },
+    {
+      "id": 22819,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "92",
+      "name": "Shield of Condemnation",
+      "sta": 10,
+      "block": 68
+    },
+    {
       "id": 22942,
       "type": "Mace",
       "slot": "onehand",
@@ -63411,6 +63978,17 @@ var gear = {
       "crit": 1,
       "hit": 1,
       "ap": 26
+    },
+    {
+      "id": 23043,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "90",
+      "name": "The Face of Death",
+      "sta": 21,
+      "block": 66
     },
     {
       "id": 23044,
@@ -63456,6 +64034,17 @@ var gear = {
       "sta": 8
     },
     {
+      "id": 23075,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "83",
+      "name": "Death's Bargain",
+      "sta": 12,
+      "block": 59
+    },
+    {
       "id": 23132,
       "type": "Sword",
       "slot": "onehand",
@@ -63467,6 +64056,17 @@ var gear = {
       "mindmg": 42,
       "maxdmg": 80,
       "sta": 14
+    },
+    {
+      "id": 23139,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Lord Blackwood's Buckler",
+      "sta": 10,
+      "block": 39
     },
     {
       "id": 23168,
@@ -63496,6 +64096,16 @@ var gear = {
         "dmg": 125,
         "ppm": 2
       }
+    },
+    {
+      "id": 23238,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "83",
+      "name": "Stygian Buckler",
+      "block": 59
     },
     {
       "id": 23242,
@@ -63631,7 +64241,8 @@ var gear = {
       "q": "3",
       "i": "30",
       "name": "Shell Plate Barrier",
-      "str": 12
+      "str": 12,
+      "block": 14
     },
     {
       "id": 209436,
@@ -63722,6 +64333,20 @@ var gear = {
       "mindmg": 13,
       "maxdmg": 28,
       "sta": 4
+    },
+    {
+      "id": 211460,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 0,
+      "q": "3",
+      "i": "33",
+      "name": "Ancient Arctic Buckler",
+      "sta": 7,
+      "resist": {
+        "frost": 5
+      },
+      "block": 15
     },
     {
       "id": 212582,
@@ -63843,6 +64468,17 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 213351,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "3",
+      "i": "45",
+      "name": "Irradiated Tower Shield",
+      "sta": 5,
+      "block": 24
+    },
+    {
       "id": 213390,
       "type": "Shield",
       "slot": "offhand",
@@ -63851,7 +64487,19 @@ var gear = {
       "i": "45",
       "name": "Whirling Truesilver Gearwall",
       "str": 9,
-      "sta": 10
+      "sta": 10,
+      "block": 29
+    },
+    {
+      "id": 213412,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Dielectric Safety Shield",
+      "speed": 2,
+      "block": 29
     },
     {
       "id": 213442,
@@ -64082,6 +64730,38 @@ var gear = {
       }
     },
     {
+      "id": 220600,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Crest of Preeminence",
+      "sta": 8,
+      "block": 34
+    },
+    {
+      "id": 220601,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Hakkari Witch Doctor's Guard",
+      "block": 34
+    },
+    {
+      "id": 220602,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Sewer Turtle Half-Shell",
+      "sta": 7,
+      "block": 34
+    },
+    {
       "id": 220674,
       "type": "Dagger",
       "slot": "onehand",
@@ -64092,6 +64772,28 @@ var gear = {
       "speed": 1.4,
       "mindmg": 36,
       "maxdmg": 66
+    },
+    {
+      "id": 221468,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "4",
+      "i": "50",
+      "name": "Wall of Whispers",
+      "sta": 6,
+      "block": 34
+    },
+    {
+      "id": 223197,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Defender of the Wilds",
+      "sta": 12,
+      "block": 34
     },
     {
       "id": 223329,

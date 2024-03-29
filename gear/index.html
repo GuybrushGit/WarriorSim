@@ -50,6 +50,7 @@
         await loadTable('SpellName');
         await loadTable('SpellDuration');
         await loadTable('SpellShapeshift');
+        await loadTable('ShieldBlockValue');
 
         for (let item of Item) {
           let obj = {};
@@ -128,6 +129,8 @@
                       else delete obj.skill;
                     }
                   }
+                  if (e.Effect == 6 && e.EffectAura == 564)
+                    obj.block = parseInt(e.EffectBasePoints) + 1;
                 });
               }
 
@@ -249,10 +252,6 @@
           if (obj.id == 221442) include = true;
           if (obj.id == 220632) include = true;
           
-
-          
-          
-          
           if (obj.id == 16336) exclude = true;
           if (obj.id == 17780) exclude = true;
           if (obj.id == 11905) exclude = true;
@@ -272,13 +271,6 @@
           if (obj.id == 10577) exclude = true;
           if (obj.id == 211502) exclude = true;
 
-          
-          
-          
-
-
-          
-
           if (obj.name.indexOf('Bonescythe') > -1) exclude = true;
           if (obj.name.indexOf('Beastmaster') > -1) exclude = true;
           if (obj.name.indexOf('Beaststalker') > -1) exclude = true;
@@ -286,7 +278,7 @@
           if (obj.name.indexOf('Darkmantle') > -1) exclude = true;
           if (obj.name.indexOf('Atiesh') > -1) exclude = true;
 
-
+          if (parseInt(sparse.OverallQualityID) >= 3 && obj.type == "Shield") include = true;
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
           if (exclude) continue;
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
@@ -294,8 +286,13 @@
 
           if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)';
 
-          addToGear(obj);
+          if (obj.type == "Shield") {
+            let shieldblock = getRows('ShieldBlockValue', 'Level', obj.i)[0];
+            let blockvalue = shieldblock[obj.q == "4" ? "Epic" : obj.q == "3" ? "Superior" : "Good"];
+            obj.block = parseInt(blockvalue);
+          }
 
+          addToGear(obj);
         }
 
         // custom items

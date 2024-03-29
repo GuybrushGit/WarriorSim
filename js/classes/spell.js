@@ -546,6 +546,22 @@ class BlademasterFury extends Spell {
     }
 }
 
+class ShieldSlam extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Shield Slam');
+        this.cost = 20 - player.ragecostbonus;
+        this.cooldown = 6;
+    }
+    dmg() {
+        let dmg;
+        dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + this.player.stats.block;
+        return dmg;
+    }
+    canUse() {
+        return this.player.shield && !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
+    }
+}
+
 
 /**************************************************** AURAS ****************************************************/
 
