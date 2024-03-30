@@ -222,8 +222,8 @@ SIM.PROFILES = {
                 `<div class="import-container">
                     <div class="import-gl">Glad Stance</div>
                     <div class="import-dw">50 Dual Wield</div>
-                    <div class="import-th-a">50 2H Fury</div>
-                    <div class="import-th-f">50 2H Arms</div>
+                    <div class="import-th-f">50 2H Fury</div>
+                    <div class="import-th-a">50 2H Arms</div>
                 </div>` : ''}
             </div>
             </div>`);
