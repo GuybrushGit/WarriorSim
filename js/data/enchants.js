@@ -474,7 +474,7 @@ var enchant = {
          "name": "Lesser Arcanum of Voracity (Str)",
          "str": 8,
          "phase": 1,
-         "r": 55
+         "r": 50
       }
    ],
    "shoulder": [

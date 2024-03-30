@@ -1,4 +1,4 @@
-const MAX_WORKERS = navigator.hardwareConcurrency || 8;
+const MAX_WORKERS = Math.min(8, navigator.hardwareConcurrency || 8);
 const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
