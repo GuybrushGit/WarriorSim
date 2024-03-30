@@ -1036,10 +1036,7 @@ SIM.UI = {
             }
 
             if (filter) {
-                if (filter == "All") {
-                    if (item.type == "Shield") continue;
-                }
-                else if (filter == "Mace & Sword") {
+                if (filter == "Mace & Sword") {
                     if (item.type != "Mace" && item.type != "Sword") continue;
                 }
                 else if (filter == "Axe, Dagger & Sword") {
