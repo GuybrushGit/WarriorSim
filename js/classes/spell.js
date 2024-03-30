@@ -1104,6 +1104,12 @@ class Zeal extends Aura {
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
+    }
 }
 
 class Annihilator extends Aura {
@@ -1499,6 +1505,12 @@ class Zandalarian extends Aura {
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
+    }
 }
 
 class Avenger extends Aura {
@@ -1829,6 +1841,12 @@ class BlisteringRagehammer extends Aura {
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
+    }
 }
 
 class Jackhammer extends Aura {
@@ -1884,6 +1902,12 @@ class Stoneslayer extends Aura {
             this.player.updateBonusDmg();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
+    }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
     }
 }
 
@@ -2204,5 +2228,11 @@ class RelentlessStrength extends Aura {
             this.player.updateBonusDmg();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
+    }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
     }
 }
