@@ -929,7 +929,6 @@ SIM.UI = {
         globalThis.filter_green = storage.filter_green;
         globalThis.filter_blue = storage.filter_blue;
         
-        if (storage.targetbasearmor == 4455) storage.targetbasearmor = 3731;
         for (let prop in storage) {
             view.fight.find('input[name="' + prop + '"]').val(storage[prop]);
             view.fight.find('select[name="' + prop + '"]').val(storage[prop]);

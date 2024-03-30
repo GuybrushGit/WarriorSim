@@ -47,11 +47,18 @@ SIM.PROFILES = {
             view.textarea.focus();
         });
 
-        view.container.on('click','.import-th', function (e) {
+        view.container.on('click','.import-th-a', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
-            view.importProfile(preset_th, index);
+            view.importProfile(preset_th_a, index);
+        });
+
+        view.container.on('click','.import-th-f', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_th_f, index);
         });
 
         view.container.on('click','.import-dw', function (e) {
@@ -59,6 +66,13 @@ SIM.PROFILES = {
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
             view.importProfile(preset_dw, index);
+        });
+
+        view.container.on('click','.import-gl', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_gl, index);
         });
 
         view.container.on('click','.delete-profile', function (e) {
@@ -206,8 +220,10 @@ SIM.PROFILES = {
             <div class="import-profile">${svgImport}<p>Import Profile</p>
             ${mode == "sod" ? 
                 `<div class="import-container">
-                    <div class="import-th">2H BiS</div>
-                    <div class="import-dw">DW BiS</div>
+                    <div class="import-gl">GLAD CHAD</div>
+                    <div class="import-dw">50 Dual Wield</div>
+                    <div class="import-th-a">50 2H Fury</div>
+                    <div class="import-th-f">50 2H Arms</div>
                 </div>` : ''}
             </div>
             </div>`);
@@ -357,6 +373,7 @@ SIM.PROFILES = {
         const view = this;
         try {
             let minified = str[0] == '{' ? JSON.parse(str) : JSON.parse(atob(str));
+            if (!localStorage[mode + (globalThis.profileid || 0)]) SIM.UI.loadSession();
             let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
 
@@ -366,10 +383,14 @@ SIM.PROFILES = {
             storage.buffs = minified.buffs;
             storage.talents = minified.talents;
 
-            for (let type in storage.gear) {
-                for (let item of storage.gear[type])
-                    if (item.id == minified.gear[type]) item.selected = true;
-                    else delete item.selected;
+            storage.gear = {};
+            for (let type in minified.gear) {
+                storage.gear[type] = [{id: minified.gear[type], selected: true}];
+            }
+            for (let spell of spells) {
+                if (!storage.rotation.filter(s => s.id == spell.id).length) {
+                    storage.rotation.push(spell);
+                }
             }
             for (let spell of storage.rotation) {
                 let newspell = minified.rotation.filter(s => s.id == spell.id)[0];
@@ -416,22 +437,18 @@ SIM.PROFILES = {
                     spell.active = false;
                 }
             }
-            for (let type in storage.runes) {
-                for (let item of storage.runes[type])
-                    if (item.id == minified.runes[type]) item.selected = true;
-                    else delete item.selected;
+            storage.runes = {};
+            for (let type in minified.runes) {
+                storage.runes[type] = [{id: minified.runes[type], selected: true}];
+            }
+            storage.enchant = {};
+            for (let type in minified.enchant) {
+                storage.enchant[type] = [];
+                for (let e of minified.enchant[type])
+                    storage.enchant[type].push({id: e, selected: true});
             }
 
-            for (let type in storage.enchant) {
-                for (let item of storage.enchant[type]) {
-                    if (minified.enchant[type] && minified.enchant[type].includes(item.id))
-                        item.selected = true;
-                    else
-                        delete item.selected;
-                }
-            }
-
-            let modei = mode + index;
+            let modei = mode + (index || 0);
             localStorage[modei] = JSON.stringify(storage);
             view.buildProfiles();
             SIM.UI.addAlert(storage.profilename + ' imported');

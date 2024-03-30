@@ -116,6 +116,8 @@
                 width: 20px;
                 height: 20px;
                 border: 1px solid #525252;
+                position: absolute;
+                right: 22px;
             }
 
             &[data-quality="2"] { color: $item-uncommon; }
@@ -182,17 +184,18 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-    }
-
-    .import-th, .import-dw {
-        width: 120px;
-        height: 30px;
-        line-height: 30px;
-        border-radius: 5px;
-        border: 1px solid #525252;
-        transition: all 0.2s ease-in;
-        &:hover {
-            border-color: white;
+        flex-wrap: wrap;
+        & > div {
+            width: 124px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 5px;
+            margin-top: 6px;
+            border: 1px solid #525252;
+            transition: all 0.2s ease-in;
+            &:hover {
+                border-color: white;
+            }
         }
     }
 
