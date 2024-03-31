@@ -51,6 +51,7 @@
         await loadTable('SpellDuration');
         await loadTable('SpellShapeshift');
         await loadTable('ShieldBlockValue');
+        await loadTable('Icons');
 
         for (let item of Item) {
           let obj = {};
@@ -77,6 +78,9 @@
           if (parseInt(sparse["MinDamage[1]"])) obj.mindmg += parseInt(sparse["MinDamage[1]"]);
           if (parseInt(sparse["MaxDamage[1]"])) obj.maxdmg += parseInt(sparse["MaxDamage[1]"]);
           if (item.ClassID == "2" && (!obj.mindmg || !obj.maxdmg)) continue;
+
+          let icon = getRow('Icons', item.IconFileDataID);
+          if (icon) obj.p = icon.path;
 
           let agi = getStat(sparse, 3);
           let str = getStat(sparse, 4);
