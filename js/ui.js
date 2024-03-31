@@ -1020,17 +1020,16 @@ SIM.UI = {
 
         for (let item of gear[type]) {
 
-            if (item.r > level || (mode == "sod" && item.q < 3 && item.i < (level - 7)) || (mode == "sod" && item.q == 3 && item.i < (level - 12))) {
-                item.selected = false;
+            if (!item.selected && (item.r > level || (mode == "sod" && item.q < 3 && item.i < (level - 7)) || (mode == "sod" && item.q == 3 && item.i < (level - 12)))) {
                 continue;
             }
 
-            if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+            if (!item.selected &&
+                ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
                 (globalThis.filter_strength === false && item.name.toLowerCase().indexOf('of strength') > -1) ||
                 (globalThis.filter_bear === false && item.name.toLowerCase().indexOf('of the bear') > -1) ||
                 (globalThis.filter_green === false && item.q == "2") ||
-                (globalThis.filter_blue === false && item.q == "3")) {
-                item.selected = false;
+                (globalThis.filter_blue === false && item.q == "3"))) {
                 continue;
             }
 
@@ -1177,17 +1176,16 @@ SIM.UI = {
 
         for (let item of gear[type]) {
             
-            if (item.r > level || (mode == "sod" && item.q < 3 && item.i < (level - 7)) || (mode == "sod" && item.q == 3 && item.i < (level - 12))) {
-                item.selected = false;
+            if (!item.selected && (item.r > level || (mode == "sod" && item.q < 3 && item.i < (level - 7)) || (mode == "sod" && item.q == 3 && item.i < (level - 12)))) {
                 continue;
             }
 
-            if ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
+            if (!item.selected &&
+                ((globalThis.filter_tiger === false && item.name.toLowerCase().indexOf('of the tiger') > -1) ||
                 (globalThis.filter_strength === false && item.name.toLowerCase().indexOf('of strength') > -1) ||
                 (globalThis.filter_bear === false && item.name.toLowerCase().indexOf('of the bear') > -1) ||
                 (globalThis.filter_green === false && item.q == "2") ||
-                (globalThis.filter_blue === false && item.q == "3")) {
-                item.selected = false;
+                (globalThis.filter_blue === false && item.q == "3"))) {
                 continue;
             }
 
