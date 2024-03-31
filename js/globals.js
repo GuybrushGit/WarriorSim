@@ -95,10 +95,11 @@ function updateGlobals(params) {
                     j.hidden = i.hidden;
                 }
 
-    for (let type in runes)
-        for (let j of runes[type])
-            if (j.selected) j.selected = false;
-
+    if (typeof runes !== 'undefined') {
+        for (let type in runes)
+            for (let j of runes[type])
+                if (j.selected) j.selected = false;
+    }
     for (let type in params.runes)
         for (let i of params.runes[type])
             for (let j of runes[type])
