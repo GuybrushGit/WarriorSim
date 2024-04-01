@@ -852,8 +852,23 @@ SIM.UI = {
                 }
             }
             $(`nav.paperdoll [data-type="${type}"]`).toggleClass('empty', empty);
-            $(`nav.paperdoll [data-type="${type}"] a`).attr('href', `${WEB_DB_URL}item=${href}`);
-            $(`nav.paperdoll [data-type="${type}"] img`).attr('src', `https://wow.zamimg.com/images/wow/icons/medium/${path}.jpg`);
+            $(`nav.paperdoll [data-type="${type}"] .item a`).attr('href', `${WEB_DB_URL}item=${href}`);
+            $(`nav.paperdoll [data-type="${type}"] .item img`).attr('src', `https://wow.zamimg.com/images/wow/icons/medium/${path}.jpg`);
+        }
+        for(let type in enchant) {
+            let path = icons[type];
+            let href = '#';
+            let empty = true;
+            for (let ench of enchant[type]) {
+                if (ench.selected) {
+                    path = ench.p;
+                    href = ench.id;
+                    empty = false;
+                }
+            }
+            $(`nav.paperdoll [data-type="${type}"] .enchant`).toggleClass('empty', empty);
+            $(`nav.paperdoll [data-type="${type}"] .enchant a`).attr('href', `${WEB_DB_URL}spell=${href}`);
+            $(`nav.paperdoll [data-type="${type}"] .enchant img`).attr('src', `https://wow.zamimg.com/images/wow/icons/small/spell_holy_greaterheal.jpg`);
         }
     },
 

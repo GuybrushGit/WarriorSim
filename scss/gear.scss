@@ -126,6 +126,22 @@ section.main {
         &:hover[data-type="mainhand"] .icon:after { content: 'MH'; }
         &:hover[data-type="offhand"] .icon:after { content: 'OH'; }
         &:hover[data-type="twohand"] .icon:after { content: '2H'; }
+
+        .enchant {
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            border-width: 1px;
+            width: 16px;
+            height: 16px;
+            border-color: #525252 !important;
+            &.empty {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
         
     }
 
