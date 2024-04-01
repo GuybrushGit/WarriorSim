@@ -39,13 +39,33 @@ section.main {
         font-size: 13px;
         cursor: pointer;
         transition: all 0.2s ease-in;
-        opacity: 0.5;
         text-shadow: 1px 1px darkblue;
-        &:hover, &.active {
-            opacity: 1;
-            color: white;
+        .icon {
+            position: relative;
+            border-width: 2px;
             &:after {
-                opacity: 1;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 16px;
+                color: #adadad;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-shadow: 0px 3px 3px #000;
+                font-family: Arial;
+                pointer-events: none;
+            }
+            img {
+                filter: none;
+            }
+        }
+        &:hover, &.active {
+            color: white;
+            .icon {
+                border-color: $icon-border;
             }
         }
         &.active .filter {
@@ -62,7 +82,16 @@ section.main {
             transition: all 0.2s ease-in;
             position: absolute;
             left: 0;
-            top: 32px;
+            top: 50px;
+            li {
+                opacity: 0.5;
+                &.active {
+                    opacity: 1;
+                }
+                &:after {
+                    display: none;
+                }
+            }
             &:before {
                 content: '';
                 width: 100%;
@@ -88,6 +117,16 @@ section.main {
                 margin-bottom: 0;
             }
         }
+        &[data-type="ranged"] {
+            margin-right: 20px;
+        }
+        &[data-type="wrist"] {
+            margin-right: 20px;
+        }
+        &:hover[data-type="mainhand"] .icon:after { content: 'MH'; }
+        &:hover[data-type="offhand"] .icon:after { content: 'OH'; }
+        &:hover[data-type="twohand"] .icon:after { content: '2H'; }
+        
     }
 
     [data-quality="2"] { color: $item-uncommon; }

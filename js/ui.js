@@ -139,10 +139,15 @@ SIM.UI = {
             view.importProfile();
         });
 
-        view.main.find('nav li p').click(function (e) {
+        view.main.find('nav li a').click(function (e) {
             e.preventDefault();
             e.stopPropagation();
-            let li = $(this).parent();
+        });
+
+        view.main.find('nav li p, nav li img').click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let li = $(this).parents('li');
             li.addClass('active');
             li.siblings().removeClass('active');
             var type = li.data('type');
@@ -767,6 +772,7 @@ SIM.UI = {
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
         let space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+        view.updatePaperdoll();
         if (!player.mh) return;
         view.sidebar.find('#str').text(player.stats.str);
         view.sidebar.find('#agi').text(player.stats.agi);
@@ -809,6 +815,46 @@ SIM.UI = {
             for (let talent of tree.t)
                 count += talent.c;
         view.talents.find("#points").text(Math.max(player.level - 9 - count, 0));
+    },
+
+    updatePaperdoll: function() {
+        const view = this;
+        let icons = {
+            mainhand: 'inventoryslot_mainhand',
+            offhand: 'inventoryslot_offhand',
+            twohand: 'inventoryslot_mainhand',
+            ranged: 'inventoryslot_ranged',
+            head: 'inventoryslot_head',
+            neck: 'inventoryslot_neck',
+            shoulder: 'inventoryslot_shoulder',
+            back: 'inventoryslot_chest',
+            chest: 'inventoryslot_chest',
+            wrist: 'inventoryslot_wrists',
+            hands: 'inventoryslot_hands',
+            waist: 'inventoryslot_waist',
+            legs: 'inventoryslot_legs',
+            feet: 'inventoryslot_feet',
+            finger1: 'inventoryslot_finger',
+            finger2: 'inventoryslot_finger',
+            trinket1: 'inventoryslot_trinket',
+            trinket2: 'inventoryslot_trinket',
+        }
+        for(let type in gear) {
+            let path = icons[type];
+            let href = '#';
+            let empty = true;
+            for (let item of gear[type]) {
+                if (item.selected) {
+                    path = item.p;
+                    let id = item.id.toString().split('|');
+                    href = id[0] + (id.length == 2 ? '?rand=' + id[1] : '');
+                    empty = false;
+                }
+            }
+            $(`nav.paperdoll [data-type="${type}"]`).toggleClass('empty', empty);
+            $(`nav.paperdoll [data-type="${type}"] a`).attr('href', `${WEB_DB_URL}item=${href}`);
+            $(`nav.paperdoll [data-type="${type}"] img`).attr('src', `https://wow.zamimg.com/images/wow/icons/medium/${path}.jpg`);
+        }
     },
 
     updateSession: function (i) {
@@ -1035,7 +1081,10 @@ SIM.UI = {
 
             if (filter) {
                 if (filter == "All") {
-                    if (item.type == "Shield") continue;
+                    if (type == "offhand" && (storage.buffs.includes("413479") || storage.buffs.includes("71"))) { // Glad & Def Stance
+                        if (item.type !== "Shield") continue;
+                    }
+                    else if (item.type == "Shield") continue;
                 }
                 else if (filter == "Mace & Sword") {
                     if (item.type != "Mace" && item.type != "Sword") continue;
@@ -1424,7 +1473,7 @@ SIM.UI = {
 
         if (typeof runes === 'undefined' || !runes[type] || runes[type].length == 0) return;
 
-        let html = $(`<div class="runes" data-type="${type}"></div>`);
+        let html = $(`<div class="runes" data-type="${type}" style="display: none"></div>`);
         html.append('<label>Runes</label>')
         for (let item of runes[type]) {
 

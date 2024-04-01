@@ -3995,7 +3995,8 @@ var gear = {
       "str": 20,
       "sta": 14,
       "crit": 1,
-      "spellcrit": 1
+      "spellcrit": 1,
+      "p": "inv_helmet_49"
     }
   ],
   "neck": [
@@ -26114,7 +26115,8 @@ var gear = {
       "name": "Machinist's Gloves (no AP)",
       "agi": 6,
       "sta": 7,
-      "hit": 1
+      "hit": 1,
+      "p": "inv_gauntlets_23"
     }
   ],
   "waist": [
