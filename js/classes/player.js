@@ -452,6 +452,9 @@ class Player {
                     if (bonus.stats.enhancedbs) {
                         this.enhancedbs = true;
                     }
+                    if (bonus.stats.extra) {
+                        this.setextra = bonus.stats.extra;
+                    }
                 }
             }
         }
@@ -1208,6 +1211,13 @@ class Player {
                 if (spell) this.extraattacks++;
                 else extras++;
                 /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
+            }
+            // Wailing set bonus extra
+            if (this.setextra && !damageSoFar && this.setextrastep != step && rng10k() < 500) {
+                this.setextrastep = step;
+                if (spell) this.extraattacks++;
+                else extras++;
+                /* start-log */ if (log) this.log(`Set bonus extra attack proc`); /* end-log */
             }
             // Blood Surge
             if (this.bloodsurge && (spell instanceof Whirlwind || spell instanceof Bloodthirst || spell instanceof HeroicStrike || spell instanceof QuickStrike) && rng10k() < 3000) {
