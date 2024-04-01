@@ -554,7 +554,7 @@ class ShieldSlam extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + this.player.stats.block;
+        dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + (this.player.stats.block * 2);
         return dmg;
     }
     use() {
