@@ -14154,7 +14154,10 @@ Movement speed reduced by $s2%."
 18997,,,
 19007,,,
 19027,,,
-19028,,"When active, $18814s1% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead.  In addition, both the demon and master will inflict $25228s1% more damage.  Lasts as long as the demon is active.",
+19028,,"When active, $18814s1% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead.  In addition, both the demon and master will inflict $25228s1% more damage.  Lasts as long as the demon is active.$?s435395[
+
+Cannot be used while Metamorphosis is active.][]
+",
 19029,,Combine 7 pieces of Living Rot inside the mortar and grind away with the pestle. Leave standing to allow coagulation.,
 19030,Shapeshift,"Shapeshifts into a bear for $d., increasing armor and hit points, as well as allowing the use of various bear abilities.","Shapeshifted into bear.
 Armor and hit points increased."
@@ -22861,8 +22864,8 @@ $@spelldesc399985",
 400573,,"Blasts the target with energy, dealing Arcane damage.  Each time you cast Arcane Blast, the damage and healing of all other Arcane spells is increased by $400573s1% and mana cost of Arcane Blast is increased by $400573s2%.  Effect stacks up to $400573u times and lasts $400573d.",Arcane spell damage and healing from all spells but Arcane Blast increased by $s1% and mana cost of Arcane Blast increased by $s2%.
 400574,,"Blasts the target with energy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} Arcane damage.  Each time you cast Arcane Blast, the damage and healing of all other Arcane spells is increased by $400573s1% and mana cost of Arcane Blast is increased by $400573s2%.  Effect stacks up to $400573u times and lasts $400573d or until any other Arcane damage or healing spell is cast.",
 400586,,"Blasts the target with energy, dealing Arcane damage.  Each time you cast Arcane Blast, the damage of all other Arcane spells is increased by $400573s1% and mana cost of Arcane Blast is increased by $400573s2%.  Effect stacks up to $400573u times and lasts $400573d.",Non-Arcane Blast Arcane spell damage increased by $s1% and mana cost of Arcane Blast increased by $s2%.
-400588,,"Gives your Arcane Blast a $h% chance, and your Fireball, Frostbolt, Frostfire Bolt, and Spellfrost Bolt spells a ${$h/2}% chance to reduce the channeled duration of your next Arcane Missiles spell by $400589s1%, reduce the mana cost by $400589s3%, and missiles will fire every 0.5 secs.",
-400589,,"Gives your Arcane Blast, Arcane Barrage, Fireball, Frostbolt and Frostfire Bolt spells a chance to reduce the channeled duration of the next Arcane Missiles spell by $400589s1%, reduce the mana cost by $s3%, and missiles will fire every 0.5 secs","Reduces the channeled duration of your next Arcane Missiles spell by $s1%, reduces the mana cost by $s3%, and the missiles fire every 0.5 secs."
+400588,,"Gives your Arcane Blast a $h% chance, and your Fireball and Frostbolt spells a ${$h/2}% chance to reduce the channeled duration of your next Arcane Missiles spell by $400589s1%, reduce the mana cost by $400589s3%, and missiles will fire every 0.5 secs.",
+400589,,"Gives your Arcane Blast, Fireball, and Frostbolt spells a chance to reduce the channeled duration of the next Arcane Missiles spell by $400589s1%, reduce the mana cost by $s3%, and missiles will fire every 0.5 secs","Reduces the channeled duration of your next Arcane Missiles spell by $s1%, reduces the mana cost by $s3%, and the missiles fire every 0.5 secs."
 400613,,"The target becomes a Living Bomb, taking ${$<power>*$400613m1/100*4} Fire damage over $d.  After $d or when the spell is dispelled, the target explodes dealing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards","Causes $w1 Fire damage every $t1 sec.  After $d or when the spell is dispelled, the target explodes causing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards."
 400614,,"The target becomes a Living Bomb, taking ${$<power>*$400613m1/100*4} Fire damage over $d.  After $d or when the spell is dispelled, the target explodes dealing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards.",
 400616,Rank 3,Blasts the enemy for $s1 Fire damage.,
@@ -24166,7 +24169,7 @@ Movement speed reduced to $s2% of normal."
 413052,,,
 413247,,,"Cast time of next Lesser Heal, Heal, Greater Heal, or Prayer of Healing reduced by $s1%."
 413248,,"Healing with Flash Heal reduces the cast time of your next Lesser Heal, Heal, Greater Heal, or Prayer of Healing by $413247s1% for $413247d, stacking up to $413247u times.",
-413251,,Mind Flay refreshes the duration of your Shadow Word: Pain on the target back to its maximum duration.,
+413251,,Mind Blast refreshes the duration of your Shadow Word: Pain on the target back to its maximum duration.,
 413259,,"Causes an explosion of shadow magic around the enemy target, causing ${$413260m1/100*$<damagepower>} to ${$413260M1/100*$<damagepower>} Shadow damage every $T1 sec for $d to all enemies within $413260a1 yards around the target.",Causing shadow damage to all targets within $413260a1 yards.
 413260,,"Causes an explosion of shadow magic around the enemy target, causing $s1 Shadow damage every 1 sec for $48045d to all enemies within $a1 yards around the target.",Causing shadow damage to all targets within $a1 yards.
 413301,,"Killing an enemy worth experience or Honor generates ${$413302s1/10} Rage.
@@ -25822,7 +25825,7 @@ $@spelldesc428861",
 429146,Rank 2,"Sends bolts of holy power in all directions, causing $s1 Holy damage to all targets within $a1 yds and Stunning Demon and Undead targets for $429147d.",
 429147,,,Stunned.
 429151,,Hurls a hammer that strikes an enemy for ${$m1*$<damagepower>+0.15*$SPH+0.15*$AP} to ${$M1*$<damagepower>+0.15*$SPH+0.15*$AP} Holy damage.  Only usable on enemies that have 20% or less health.,
-429152,,The cooldown on Hammer of Wrath is reset each time it damages an enemy below $s1% health.,
+429152,,Hammer of Wrath is now instant and the cooldown on Hammer of Wrath is reset each time it damages an enemy below $s1% health.,
 429154,,,
 429165,,,
 429167,,,
@@ -26517,7 +26520,7 @@ Movement speed reduced by $s2%."
 434837,,Punctures target's armor lowering it by $s1.,Armor decreased by $s1.
 434838,Rank 1,Blasts a target for $s1 Nature damage.,
 434839,,Discharge a mote of thunder dealing $s1 Nature damage.,
-434841,,"Discharge a blast of arcane energy dealing $s7 Arcane damage, reducing all resistances by $s1 and increasing all spell damage taken by $s2% for $d.",Reduces all resistances by $s1.  Increases spell damage taken by $s2%.
+434841,,"Discharge a blast of arcane energy dealing $s7 Arcane damage, reducing all resistances by $s1 and increasing all spell damage taken by $s2% for $d. Only affects enemies level 45 and below.",Reduces all resistances by $s1.  Increases spell damage taken by $s2%.
 434842,Rank 1,Blasts a target for $s1 Nature damage.,
 434851,,Restores mana.,
 434856,,,
@@ -27846,7 +27849,7 @@ Defense increased by $s2."
 446322,,Reduces the threat you generate by $s1% for $d.,Threat generation reduced by $s1%.
 446327,,Increases damage done by $s1 and attack speed by $s2% for $d.,Increased melee damage and attack speed.
 446335,,"Inspired by the Mojo of War, your size is increased and your Strength goes up by $s1 to match your new size.  Lasts $d.","Increases Strength by $s1 as well as increasing your size. Feel da voodoo, mon!"
-446336,,"Increases attack power by $s1. Chance on melee attack to grow in size, increasing Strength by 35 for 10 seconds. Only one type of Atal'ai potion may be active at any given time. This has no effect outside of Sunken Temple.",Attack power increased by $s1. Chance on successful melee hit to trigger Voodoo Frenzy.
+446336,,"Increases melee and ranged attack power by $s1. Chance on melee or ranged attack to grow in size, increasing Strength or Agility (whichever is higher) by $446335s1 for $446335d. Only one type of Atal'ai potion may be active at any given time. This has no effect outside of Sunken Temple.",Attack power increased by $s1. Chance on successful melee hit to trigger Voodoo Frenzy.
 446338,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, inflicting greater Nature damage to each successive target.",
 446339,,"Casts an Atal'ai Totem, which lasts $d. and periodically summons an Atal'ai Skeleton. Each Skeleton lasts $12504d.",
 446348,,,
@@ -27910,11 +27913,11 @@ The costume is already falling apart."
 446515,,,
 446516,,,
 446517,,,
-446518,,Damaging spells have a chance to increase your spell casting speed by $s1%.  This has no effect outside of areas under the influence of the Nightmare.,
+446518,,Damaging spells have a chance to increase your spell casting speed by $s1% for $446528d.  This has no effect outside of areas under the influence of the Nightmare.,
 446528,,Echoes from the void drive you to madness. Increasing your spell casting speed by $s1%.  This has no effect outside of areas under the influence of the Nightmare.,Casting speed increased.
 446536,,,
 446541,,Echoes from the void drive you to insanity. Increasing your healing by up to $s1.  This has no effect outside of areas under the influence of the Nightmare.,Healing power increased.
-446545,,Healing spells have a chance to increase your healing by up to $s1.  This has no effect outside of areas under the influence of the Nightmare.,
+446545,,Healing spells have a chance to increase your healing by up to $s1 for $446541d.  This has no effect outside of areas under the influence of the Nightmare.,
 446552,,,
 446553,,,
 446555,,,
@@ -27927,19 +27930,19 @@ The costume is already falling apart."
 446565,,,
 446566,,,
 446567,,,
-446570,,Damaging spells have a chance to increase your spell damage by $446572s1 and chance to dodge by $446572s2%.  This has no effect outside of areas under the influence of the Nightmare.,
+446570,,Damaging spells have a chance to increase your spell damage by $446572s1 and chance to dodge by $446572s2% for $446572d.  This has no effect outside of areas under the influence of the Nightmare.,
 446572,,Echoes from the void corrupt your thoughts. Increasing your spell damage by $446572s1 and chance to dodge by $446572s2%.  This has no effect outside of areas under the influence of the Nightmare.,Spell damage and dodge chance increased.
 446573,,Dazes an enemy.,"Enfeebled.
 Periodically suffering speed reductions and loss of control."
 446577,,"Your melee attacks have a chance to unleash echoes from the void, instilling you with a deep sense of dread. Increasing your attack speed by $446577s1% and attack power by $446577s2.  This has no effect outside of areas under the influence of the Nightmare.",Attack speed and attack power increased.
 446578,,,Missing some armor...
-446579,,Melee attacks have a chance to increase your attack speed by $446577s1% and attack power by $446577s2.  This has no effect outside of areas under the influence of the Nightmare.,Attack speed and attack power increased.
+446579,,Melee attacks have a chance to increase your attack speed by $446577s1% and attack power by $446577s2 for $446577d.  This has no effect outside of areas under the influence of the Nightmare.,Attack speed and attack power increased.
 446580,,Allows the shaman to see elemental spirits.,Detect elemental spirits.
 446581,,Allows the shaman to see elemental spirits.,Detect elemental spirits.
 446582,,Allows the shaman to see elemental spirits.,Detect elemental spirits.
 446586,Rank 1,You attack all nearby enemies for $d causing weapon damage plus an additional $9633s1 every $t1 sec.,Attacking all nearby enemies for weapon damage + $9633s1.
 446591,,,
-446592,,Melee attacks and harmful spells have a chance to increase spell damage by up to $446597s1.  This has no effect outside of areas under the influence of the Nightmare.,Spell power increased.
+446592,,Melee attacks and harmful spells have a chance to increase spell damage by up to $446597s1 for $446597d.  This has no effect outside of areas under the influence of the Nightmare.,Spell power increased.
 446593,,,
 446594,,,
 446595,,,
@@ -27957,7 +27960,7 @@ Periodically suffering speed reductions and loss of control."
 446612,,,
 446613,,,
 446618,,Melee and ranged attacks have a chance to increase your attack power by $s2.  This has no effect outside of areas under the influence of the Nightmare.,Attack power increased.
-446620,,Melee and ranged attacks have a chance to increase your attack power by $446618s2.  This has no effect outside of areas under the influence of the Nightmare.,Attack power increased.
+446620,,Melee and ranged attacks have a chance to increase your attack power by $446618s2 for $446618d.  This has no effect outside of areas under the influence of the Nightmare.,Attack power increased.
 446621,,,
 446622,,,
 446623,,,
@@ -27990,10 +27993,10 @@ Periodically suffering speed reductions and loss of control."
 446685,,Summons and dismisses a rideable Blood-crazed Spirit.,Increases speed by $s2%.
 446687,,"Increases the damage or healing of your next attack, ability, or spell by $s1.","Damage or healing of your next attack, ability, or spell increased by $s1."
 446689,,"Increases the damage or healing of your next attack, ability, or spell by $446687s1 when you kill a target that gives experience or honor. This effect cannot occur more than once every 10 seconds.",
-446695,,"Increases your chance to strike a critical hit by 5%, increases spell damage by 65, and increases all stats by 8%. 120 minute duration.","Increases your chance to strike a critical hit by 5%, increases spell damage by 65, and increases all stats by 8%. 120 minute duration."
+446695,,"Increases critical strike chance by $s1%, spell damage by $s2, and all stats by $s3%. 120 minute duration.","Increases critical strike chance by $s1%, spell damage by $s2, and all stats by $s3%. 120 minute duration."
 446696,,,
 446697,,,
-446698,,"Increases your chance to strike a critical hit by 5%, increases spell damage by 65, and increases all stats by 8%. 120 minute duration.","Increases your chance to strike a critical hit by 5%, increases spell damage by 65, and increases all stats by 8%. 120 minute duration."
+446698,,"Increases critical strike chance by $s1%, spell damage by $s2, and all stats by $s3%. 120 minute duration.","Increases critical strike chance by $s1%, spell damage by $s2, and all stats by $s3%. 120 minute duration."
 446699,,,
 446702,,,You've been spotted! Fire damage inflicted every $t1 sec.
 446703,,,Watching for thieves.
@@ -28122,7 +28125,7 @@ Suffering harmful effects."
 447891,,"Stuns an enemy, rendering it unable to move or attack for $d.",Stunned.
 447892,,,"Armor increased by $s1.
 Movement speed reduced by $s2%."
-447894,,"Poison the enemy dealing $s3 Nature damage, reducing Nature resistance by $s1 and increasing Holy and Nature damage taken by $s2% for $d.",Nature resistance reduced by $s1.  Holy and Nature spell damage taken increased by $s2%.
+447894,,"Poison the enemy dealing $s3 Nature damage, reducing Nature resistance by $s1 and increasing Holy and Nature damage taken by $s2% for $d. Only affects enemies level 55 and below.",Nature resistance reduced by $s1.  Holy and Nature spell damage taken increased by $s2%.
 447895,,,
 447899,,,
 447906,,,
@@ -28209,3 +28212,38 @@ Attack speed increased by $s2%."
 449012,,,
 449013,,,
 449014,,,A finishing touch to a Dark Iron Dwarf disguise.
+449162,,,
+449165,,,
+449200,,,
+449409,,"Inspired by the Mojo of War, your size is increased and your Strength goes up by $s1 to match your new size.  Lasts $d.","Increases Agility by $s1 as well as increasing your size. Feel da voodoo, mon!"
+449463,,,
+449729,,$@spelldesc424574,Inflicts eye-opening damage.
+449668,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
+449919,,Your damage spells have a chance to cause your target to take up to $449920s1 increased damage from subsequent spells.,
+449920,,,"Vulnerable to elemental power, increasing the damage taken from spells by up to $s1."
+449921,,Your Holy damage spells cause you to gain $449923s1 increased damage and healing power for $449923d.,
+449923,,,Healing increased by up to $s1.
+449924,,Shred reduces the mana cost of your next shapeshift cast within $449925d1 by $449925s1%.,
+449925,,Reduces the mana cost of all shapeshifting by $s1%.,Reduces the mana cost of all shapeshifting by $s1%.
+449926,,Improves your chance to hit with all spells and attacks by $s1% while in Bear or Dire Bear Forms.,
+449927,,"Causes the target to hemorrhage, increasing any damage dealt to the target by up to $s1.  Lasts $n charges or $d.",Increases damage taken by $s1.
+449928,,Backstab and Sinister Strike cause the target to take $449927s1 more damage from all sources for $449927n charges or $449927d.,
+449929,,Your healing spell critical strikes now have a $h% chance to activate Dreamstate. You must have the rune engraved.,
+449930,,Reduces the cast time of Healing Rain by $s1%.,
+449931,,"Dealing Fire damage over time causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
+449932,,Attack power increased by $s1.,Attack power increased by $s1.
+449933,,Increases Holy spell critical strike chance by $s1%.,
+449934,,Increases damage and healing done by Nature spells and effects by up to $s1.,Nature spell damage and healing dealt is increased by $s1
+449935,,Chance on spell cast to increase your Nature spell damage and healing by up to $449934s1 for $449934d.,
+449970,,Gives you a $h% chance to get an extra attack on the same target after dealing damage with your weapon.,
+449974,,Gain $449975s1 block value for $449975d after blocking.,
+449975,,Increases the block value of your shield by $s1.,
+449980,,Horn of Lordaeron reduces the cast time of your next $s1 Holy Light spells by ${$449982m1/-1000}.1 sec.,
+449982,,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.
+450012,,Dealing damage with Shadow Cleave reduces the cast time of your next Immolate spell by $450013s1%. Stacking up to $s1 times. Lasts $450013d.,
+450013,,Reduces the casting time of your next Immolate spell by $s1%.,Reduces the casting time of your next Immolate spell by $s1%.
+449825,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
+450005,,Reach into your coin purse and throw a handful of currency at your foes.,Pelted in the face with a handful of coins.
+450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
+450106,,Restores $s1 health.,
+450107,,Restores $s1 health.,

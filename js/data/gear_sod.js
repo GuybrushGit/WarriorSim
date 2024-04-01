@@ -8883,6 +8883,32 @@ var gear = {
       "str": 9,
       "sta": 10,
       "crit": 1
+    },
+    {
+      "id": 223531,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 45,
+      "q": "3",
+      "i": "50",
+      "name": "Big Bad Pauldrons",
+      "p": "inv_shoulder_01",
+      "agi": 8,
+      "str": 12,
+      "sta": 12
+    },
+    {
+      "id": 223544,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Dregmetal Spaulders",
+      "p": "inv_shoulder_30",
+      "agi": 10,
+      "str": 15,
+      "sta": 5
     }
   ],
   "back": [
@@ -15972,9 +15998,9 @@ var gear = {
       "i": "55",
       "name": "Wailing Berserker's Chestplate",
       "p": "inv_chest_wolf",
-      "agi": 16,
-      "str": 16,
-      "sta": 16
+      "agi": 14,
+      "str": 21,
+      "sta": 12
     },
     {
       "id": 220794,
@@ -16026,6 +16052,19 @@ var gear = {
       "p": "inv_chest_leather_02",
       "agi": 8,
       "sta": 28
+    },
+    {
+      "id": 223528,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 43,
+      "q": "3",
+      "i": "48",
+      "name": "Gahz'rilla Scale Armor",
+      "p": "inv_chest_chain_06",
+      "agi": 8,
+      "str": 15,
+      "sta": 10
     }
   ],
   "wrist": [
@@ -19908,6 +19947,18 @@ var gear = {
       "str": 10,
       "sta": 12,
       "block": 19
+    },
+    {
+      "id": 223537,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 40,
+      "q": "3",
+      "i": "42",
+      "name": "Skullplate Bracers",
+      "p": "inv_bracer_14",
+      "str": 8,
+      "sta": 9
     }
   ],
   "hands": [
@@ -37119,9 +37170,9 @@ var gear = {
       "i": "55",
       "name": "Banished Martyr's Plate Legguards",
       "p": "inv_pants_03",
-      "agi": 15,
-      "str": 16,
-      "sta": 15
+      "str": 11,
+      "sta": 18,
+      "block": 23
     },
     {
       "id": 220654,
@@ -41846,6 +41897,18 @@ var gear = {
       "p": "inv_boots_01",
       "sta": 7,
       "hit": 1
+    },
+    {
+      "id": 220648,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Banished Martyr's Plate Boots",
+      "p": "inv_boots_plate_05",
+      "str": 7,
+      "sta": 19
     },
     {
       "id": 220656,
@@ -48044,6 +48107,20 @@ var gear = {
       "maxdmg": 122,
       "p": "inv_waepon_bow_zulgrub_d_02",
       "agi": 8
+    },
+    {
+      "id": 223540,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Houndmaster's Bow",
+      "speed": 3.1,
+      "mindmg": 60,
+      "maxdmg": 111,
+      "p": "inv_weapon_bow_04",
+      "agi": 3
     }
   ],
   "mainhand": [
@@ -58199,7 +58276,7 @@ var gear = {
     {
       "id": 209694,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 25,
       "q": "3",
       "i": "31",
@@ -58213,7 +58290,7 @@ var gear = {
     {
       "id": 209818,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 25,
       "q": "3",
       "i": "30",
@@ -58241,7 +58318,7 @@ var gear = {
     {
       "id": 211456,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 25,
       "q": "3",
       "i": "33",
@@ -58784,6 +58861,59 @@ var gear = {
       "p": "inv_sword_21",
       "agi": 4,
       "sta": 11
+    },
+    {
+      "id": 223518,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 49,
+      "q": "3",
+      "i": "57",
+      "name": "Charstone Dirk",
+      "speed": 1.6,
+      "mindmg": 37,
+      "maxdmg": 72,
+      "p": "inv_weapon_shortblade_14"
+    },
+    {
+      "id": 223520,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 48,
+      "q": "3",
+      "i": "56",
+      "name": "Inventor's Focal Sword",
+      "speed": 1.4,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "p": "inv_sword_14",
+      "crit": 1
+    },
+    {
+      "id": 223524,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 48,
+      "q": "3",
+      "i": "56",
+      "name": "Fist of Stone",
+      "speed": 1.5,
+      "mindmg": 34,
+      "maxdmg": 66,
+      "p": "inv_hammer_17"
+    },
+    {
+      "id": 223527,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Gahz'rilla Fang",
+      "speed": 1.8,
+      "mindmg": 40,
+      "maxdmg": 74,
+      "p": "inv_misc_monsterfang_01"
     }
   ],
   "offhand": [
@@ -69723,48 +69853,6 @@ var gear = {
       }
     },
     {
-      "id": 209694,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 25,
-      "q": "3",
-      "i": "31",
-      "name": "Blackfathom Ritual Dagger",
-      "speed": 1.2,
-      "mindmg": 16,
-      "maxdmg": 31,
-      "p": "inv_weapon_shortblade_12",
-      "sta": 2
-    },
-    {
-      "id": 209818,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 25,
-      "q": "3",
-      "i": "30",
-      "name": "Sun-Touched Crescent",
-      "speed": 1.2,
-      "mindmg": 15,
-      "maxdmg": 30,
-      "p": "inv_weapon_shortblade_23",
-      "sta": 3
-    },
-    {
-      "id": 211456,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 25,
-      "q": "3",
-      "i": "33",
-      "name": "Dagger of Willing Sacrifice",
-      "speed": 1.5,
-      "mindmg": 13,
-      "maxdmg": 28,
-      "p": "inv_weapon_shortblade_02",
-      "sta": 4
-    },
-    {
       "id": 211460,
       "type": "Shield",
       "slot": "offhand",
@@ -70272,6 +70360,45 @@ var gear = {
       "p": "inv_sword_21",
       "agi": 4,
       "sta": 11
+    },
+    {
+      "id": 223520,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 48,
+      "q": "3",
+      "i": "56",
+      "name": "Inventor's Focal Sword",
+      "speed": 1.4,
+      "mindmg": 32,
+      "maxdmg": 61,
+      "p": "inv_sword_14",
+      "crit": 1
+    },
+    {
+      "id": 223527,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Gahz'rilla Fang",
+      "speed": 1.8,
+      "mindmg": 40,
+      "maxdmg": 74,
+      "p": "inv_misc_monsterfang_01"
+    },
+    {
+      "id": 223545,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Gizlock's Hypertech Buckler",
+      "p": "inv_shield_10",
+      "sta": 5,
+      "block": 32
     }
   ],
   "twohand": [
@@ -78807,15 +78934,16 @@ var gear = {
       "slot": "twohand",
       "r": 50,
       "q": "4",
-      "i": "55",
+      "i": "58",
       "name": "Ancient Divining Rod",
       "speed": 2,
-      "mindmg": 73,
-      "maxdmg": 114,
+      "mindmg": 72,
+      "maxdmg": 116,
       "p": "inv_staff_goldfeathered_01",
-      "agi": 18,
-      "str": 30,
-      "sta": 12
+      "agi": 19,
+      "str": 31,
+      "sta": 13,
+      "ap": 115
     },
     {
       "id": 220686,
@@ -78892,6 +79020,62 @@ var gear = {
       "agi": 10,
       "str": 13,
       "sta": 15
+    },
+    {
+      "id": 223526,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Sul'thraze the Lasher",
+      "speed": 3.4,
+      "mindmg": 142,
+      "maxdmg": 213,
+      "p": "inv_sword_40",
+      "str": 18,
+      "sta": 16,
+      "proc": {
+        "magic": true,
+        "dmg": 150,
+        "tick": 25,
+        "interval": "3000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 223536,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Grimlok's Charge",
+      "speed": 3.4,
+      "mindmg": 112,
+      "maxdmg": 168,
+      "p": "inv_spear_08",
+      "agi": 15,
+      "str": 10,
+      "sta": 15
+    },
+    {
+      "id": 223538,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Kindling Stave",
+      "speed": 2.9,
+      "mindmg": 106,
+      "maxdmg": 160,
+      "p": "inv_staff_18",
+      "sta": 10,
+      "resist": {
+        "fire": 10
+      },
+      "crit": 1
     }
   ]
 };
