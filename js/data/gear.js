@@ -46,7 +46,8 @@ var gear = {
       "phase": 6,
       "id": 23020,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_helmet_04"
     },
     {
       "name": "Icy Scale Coif",
@@ -61,7 +62,8 @@ var gear = {
       "phase": 6,
       "id": 23033,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_helmet_20"
     },
     {
       "name": "Icebane Helmet",
@@ -77,7 +79,8 @@ var gear = {
       "phase": 6,
       "id": 23019,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_helmet_06"
     },
     {
       "name": "Bramblewood Helm",
@@ -102,7 +105,8 @@ var gear = {
       "phase": 1,
       "id": 12587,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_helmet_46"
     },
     {
       "name": "Circlet of Restless Dreams",
@@ -115,7 +119,8 @@ var gear = {
       "phase": 4,
       "id": 20623,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_helmet_17"
     },
     {
       "name": "Conqueror's Crown",
@@ -128,7 +133,8 @@ var gear = {
       "phase": 5,
       "id": 21329,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_helmet_72"
     },
     {
       "name": "Crown of Destruction",
@@ -140,7 +146,8 @@ var gear = {
       "phase": 1,
       "id": 18817,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_crown_02"
     },
     {
       "name": "Dreadnaught Helmet",
@@ -153,7 +160,8 @@ var gear = {
       "phase": 6,
       "id": 22418,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_helmet_58"
     },
     {
       "name": "Expert Goldminer's Helmet",
@@ -166,7 +174,8 @@ var gear = {
       "phase": 1,
       "id": 9375,
       "q": "3",
-      "i": "38"
+      "i": "38",
+      "p": "inv_helmet_18"
     },
     {
       "name": "Fury Visor",
@@ -178,7 +187,8 @@ var gear = {
       "phase": 3,
       "id": 20521,
       "q": "3",
-      "i": "52"
+      "i": "52",
+      "p": "inv_helmet_01"
     },
     {
       "name": "Helm of Domination",
@@ -192,7 +202,8 @@ var gear = {
       "phase": 5,
       "id": 21460,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_helmet_09"
     },
     {
       "name": "Helm of Endless Rage",
@@ -204,7 +215,8 @@ var gear = {
       "phase": 3,
       "id": 19372,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_helmet_10"
     },
     {
       "name": "Helm of Heroism",
@@ -216,7 +228,8 @@ var gear = {
       "phase": 5,
       "id": 21999,
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_helmet_02"
     },
     {
       "name": "Helm of Might",
@@ -229,7 +242,8 @@ var gear = {
       "phase": 1,
       "id": 16866,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_helmet_09"
     },
     {
       "name": "Helm of the Executioner",
@@ -241,7 +255,8 @@ var gear = {
       "phase": 1,
       "id": 22411,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_helmet_01"
     },
     {
       "name": "Helm of Valor",
@@ -253,7 +268,8 @@ var gear = {
       "phase": 1,
       "id": 16731,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_helmet_02"
     },
     {
       "name": "Helm of Wrath",
@@ -269,7 +285,8 @@ var gear = {
       "phase": 1,
       "id": 16963,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_helmet_71"
     },
     {
       "name": "Lionheart Helm",
@@ -281,7 +298,8 @@ var gear = {
       "phase": 1,
       "id": 12640,
       "q": "4",
-      "i": "61"
+      "i": "61",
+      "p": "inv_helmet_36"
     },
     {
       "name": "Mask of the Unforgiven",
@@ -293,7 +311,8 @@ var gear = {
       "phase": 1,
       "id": 13404,
       "q": "3",
-      "i": "57"
+      "i": "57",
+      "p": "inv_misc_bandana_01"
     },
     {
       "name": "R10 Plate Helm",
@@ -306,7 +325,8 @@ var gear = {
       "phase": 2,
       "id": 23314,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_helmet_09"
     },
     {
       "name": "R13 Plate Helm",
@@ -318,7 +338,8 @@ var gear = {
       "phase": 2,
       "id": 16478,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_helmet_05"
     },
     {
       "name": "Foror's Eyepatch",
@@ -330,7 +351,8 @@ var gear = {
       "phase": 3,
       "id": 19945,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_helmet_46"
     },
     {
       "name": "Blooddrenched Mask",
@@ -342,7 +364,8 @@ var gear = {
       "phase": 4,
       "id": 22718,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_helmet_41"
     },
     {
       "name": "Southwind Helm",
@@ -355,7 +378,8 @@ var gear = {
       "phase": 5,
       "id": 21455,
       "q": "3",
-      "i": "74"
+      "i": "74",
+      "p": "inv_helmet_01"
     },
     {
       "name": "Ragefury Eyepatch",
@@ -367,7 +391,8 @@ var gear = {
       "phase": 1,
       "id": 11735,
       "q": "3",
-      "i": "57"
+      "i": "57",
+      "p": "inv_helmet_46"
     },
     {
       "name": "Gurubashi Helm",
@@ -379,7 +404,8 @@ var gear = {
       "phase": 4,
       "id": 20263,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_helmet_25"
     }
   ],
   "neck": [
@@ -431,7 +457,8 @@ var gear = {
       "phase": 3,
       "id": 19491,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_necklace_14"
     },
     {
       "name": "Barbed Choker",
@@ -442,7 +469,8 @@ var gear = {
       "phase": 5,
       "id": 21664,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_jewelry_necklace_ahnqiraj_02"
     },
     {
       "name": "Beads of Ogre Might",
@@ -453,7 +481,8 @@ var gear = {
       "phase": 5,
       "id": 22150,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_amulet_05"
     },
     {
       "name": "Blazefury Medallion",
@@ -468,7 +497,8 @@ var gear = {
         "dmg": 2
       },
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_talisman_01"
     },
     {
       "name": "Choker of the Shifting Sands",
@@ -478,7 +508,8 @@ var gear = {
       "phase": 5,
       "id": 21505,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_jewelry_necklace_ahnqiraj_03"
     },
     {
       "name": "Eskhandar's Collar",
@@ -489,7 +520,8 @@ var gear = {
       "phase": 1,
       "id": 18205,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_belt_12"
     },
     {
       "name": "Fury of the Forgotten Swarm",
@@ -500,7 +532,8 @@ var gear = {
       "phase": 5,
       "id": 21809,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_jewelry_necklace_14"
     },
     {
       "name": "Imperial Jewel",
@@ -510,7 +543,8 @@ var gear = {
       "phase": 1,
       "id": 11933,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_misc_gem_sapphire_01"
     },
     {
       "name": "Mark of Fordring",
@@ -520,7 +554,8 @@ var gear = {
       "phase": 1,
       "id": 15411,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_talisman_07"
     },
     {
       "name": "Onyxia Tooth Pendant",
@@ -535,7 +570,8 @@ var gear = {
       "phase": 1,
       "id": 18404,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_jewelry_necklace_09"
     },
     {
       "name": "Pendant of Celerity",
@@ -545,7 +581,8 @@ var gear = {
       "phase": 5,
       "id": 22340,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_necklace_04"
     },
     {
       "name": "Prestor's Talisman of Connivery",
@@ -555,7 +592,8 @@ var gear = {
       "phase": 3,
       "id": 19377,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_necklace_17"
     },
     {
       "name": "Sadist's Collar",
@@ -566,7 +604,8 @@ var gear = {
       "phase": 6,
       "id": 23023,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_necklace_29naxxramas"
     },
     {
       "name": "Stormrage's Talisman of Seething",
@@ -577,7 +616,8 @@ var gear = {
       "phase": 6,
       "id": 23053,
       "q": "4",
-      "i": "92"
+      "i": "92",
+      "p": "inv_jewelry_necklace_28naxxramas"
     },
     {
       "name": "Medallion of the Dawn",
@@ -588,7 +628,8 @@ var gear = {
       "phase": 6,
       "id": 22659,
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_jewelry_amulet_04"
     },
     {
       "name": "The Eye of Hakkar",
@@ -598,7 +639,8 @@ var gear = {
       "phase": 4,
       "id": 19856,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_necklace_22"
     },
     {
       "name": "Will of the Martyr",
@@ -608,7 +650,8 @@ var gear = {
       "phase": 1,
       "id": 17044,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_jewelry_talisman_07"
     },
     {
       "name": "Strength of Mugamba (Friendly)",
@@ -618,7 +661,8 @@ var gear = {
       "phase": 4,
       "id": 19574,
       "q": "2",
-      "i": "60"
+      "i": "60",
+      "p": "inv_jewelry_necklace_23"
     },
     {
       "name": "Strength of Mugamba (Honored)",
@@ -629,7 +673,8 @@ var gear = {
       "phase": 4,
       "id": 19575,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_jewelry_necklace_24"
     },
     {
       "name": "Strength of Mugamba (Revered)",
@@ -640,7 +685,8 @@ var gear = {
       "phase": 4,
       "id": 19576,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_necklace_25"
     },
     {
       "name": "Rage of Mugamba",
@@ -651,7 +697,8 @@ var gear = {
       "phase": 4,
       "id": 19577,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_necklace_26"
     },
     {
       "name": "Emberfury Talisman",
@@ -661,7 +708,8 @@ var gear = {
       "phase": 1,
       "id": 12929,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_jewelry_necklace_05"
     },
     {
       "name": "Pendant of the Qiraji Guardian",
@@ -673,7 +721,8 @@ var gear = {
       "source": "AQ40",
       "id": 21700,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_jewelry_necklace_ahnqiraj_01"
     }
   ],
   "shoulder": [
@@ -718,7 +767,8 @@ var gear = {
       "phase": "6",
       "id": 22940,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_shoulder_16"
     },
     {
       "name": "Icy Scale Spaulders",
@@ -785,7 +835,8 @@ var gear = {
       "phase": 2,
       "id": 18374,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_shoulder_24"
     },
     {
       "name": "Abyssal Plate Epaulets",
@@ -799,7 +850,8 @@ var gear = {
       "id": 20683,
       "rand": 2158,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_shoulder_22"
     },
     {
       "name": "Arathi Plate Spaulders",
@@ -811,7 +863,8 @@ var gear = {
       "phase": 4,
       "id": 20212,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_shoulder_01"
     },
     {
       "name": "Black Dragonscale Shoulders",
@@ -822,7 +875,8 @@ var gear = {
       "phase": 1,
       "id": 15051,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_shoulder_01"
     },
     {
       "name": "Bloodsoaked Pauldrons",
@@ -835,7 +889,8 @@ var gear = {
       "phase": 4,
       "id": 19878,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_shoulder_01"
     },
     {
       "name": "Chitinous Shoulderguards",
@@ -847,7 +902,8 @@ var gear = {
       "phase": 5,
       "id": 21474,
       "q": "3",
-      "i": "74"
+      "i": "74",
+      "p": "inv_shoulder_29"
     },
     {
       "name": "Conqueror's Spaulders",
@@ -861,7 +917,8 @@ var gear = {
       "phase": 5,
       "id": 21330,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_shoulder_35"
     },
     {
       "name": "Drake Talon Pauldrons",
@@ -874,7 +931,8 @@ var gear = {
       "phase": 3,
       "id": 19394,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_shoulder_23"
     },
     {
       "name": "Dreadnaught Pauldrons",
@@ -887,7 +945,8 @@ var gear = {
       "phase": 6,
       "id": 22419,
       "q": "4",
-      "i": "86"
+      "i": "86",
+      "p": "inv_shoulder_29"
     },
     {
       "name": "Pauldrons of Might",
@@ -899,7 +958,8 @@ var gear = {
       "phase": 1,
       "id": 16868,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_shoulder_15"
     },
     {
       "name": "Pauldrons of the Unrelenting",
@@ -912,7 +972,8 @@ var gear = {
       "phase": 5,
       "id": 21639,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_shoulder_29"
     },
     {
       "name": "Pauldrons of Wrath",
@@ -924,7 +985,8 @@ var gear = {
       "phase": 3,
       "id": 16961,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_shoulder_34"
     },
     {
       "name": "Polished Obsidian Pauldrons",
@@ -936,7 +998,8 @@ var gear = {
       "phase": 5,
       "id": 21805,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_shoulder_26"
     },
     {
       "name": "R10 Plate Shoulders",
@@ -948,7 +1011,8 @@ var gear = {
       "phase": 2,
       "id": 23315,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_shoulder_11"
     },
     {
       "name": "R13 Plate Shoulders",
@@ -961,7 +1025,8 @@ var gear = {
       "phase": 2,
       "id": 16480,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_shoulder_20"
     },
     {
       "name": "Razorsteel Shoulders",
@@ -974,7 +1039,8 @@ var gear = {
       "phase": 3,
       "id": 20517,
       "q": "3",
-      "i": "52"
+      "i": "52",
+      "p": "inv_shoulder_16"
     },
     {
       "name": "Spaulders of Heroism",
@@ -986,7 +1052,8 @@ var gear = {
       "phase": 5,
       "id": 22001,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_shoulder_30"
     },
     {
       "name": "Spaulders of Valor",
@@ -998,7 +1065,8 @@ var gear = {
       "phase": 1,
       "id": 16733,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_shoulder_30"
     },
     {
       "name": "Truestrike Shoulders",
@@ -1009,7 +1077,8 @@ var gear = {
       "phase": 1,
       "id": 12927,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_shoulder_10"
     },
     {
       "name": "Wyrmhide Spaulders",
@@ -1019,7 +1088,8 @@ var gear = {
       "phase": 1,
       "id": 12082,
       "q": "2",
-      "i": "58"
+      "i": "58",
+      "p": "inv_shoulder_16"
     },
     {
       "name": "Mantle of Wicked Revenge",
@@ -1031,7 +1101,8 @@ var gear = {
       "phase": 5,
       "id": 21665,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_shoulder_30"
     },
     {
       "name": "Darksoul Shoulders",
@@ -1042,7 +1113,8 @@ var gear = {
       "phase": 4,
       "id": 19695,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_shoulder_01"
     },
     {
       "name": "Wyrmslayer Spaulders",
@@ -1054,7 +1126,8 @@ var gear = {
       "phase": 4,
       "id": 13066,
       "q": "3",
-      "i": "51"
+      "i": "51",
+      "p": "inv_shoulder_24"
     }
   ],
   "back": [
@@ -1122,7 +1195,8 @@ var gear = {
       "phase": 3,
       "id": 19398,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_misc_cape_18"
     },
     {
       "name": "Cape of the Black Baron",
@@ -1133,7 +1207,8 @@ var gear = {
       "phase": 1,
       "id": 13340,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_misc_cape_20"
     },
     {
       "name": "Cloak of Concentrated Hatred",
@@ -1146,7 +1221,8 @@ var gear = {
       "phase": 5,
       "id": 21701,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_misc_cape_02"
     },
     {
       "name": "Cloak of Draconic Might",
@@ -1158,7 +1234,8 @@ var gear = {
       "phase": 3,
       "id": 19436,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_misc_cape_11"
     },
     {
       "name": "Cloak of the Fallen God",
@@ -1170,7 +1247,8 @@ var gear = {
       "phase": 5,
       "id": 21710,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_misc_cape_10"
     },
     {
       "name": "Cloak of the Golden Hive",
@@ -1183,7 +1261,8 @@ var gear = {
       "phase": 5,
       "id": 21621,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_misc_cape_01"
     },
     {
       "name": "Cloak of the Honor Guard",
@@ -1195,7 +1274,8 @@ var gear = {
       "phase": 4,
       "id": 20073,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_misc_cape_02"
     },
     {
       "name": "Cloak of the Scourge",
@@ -1207,7 +1287,8 @@ var gear = {
       "phase": 6,
       "id": 23030,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_misc_cape_naxxramas_01"
     },
     {
       "name": "Cloak of the Shrouded Mists",
@@ -1222,7 +1303,8 @@ var gear = {
       "phase": 1,
       "id": 17102,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_misc_cape_17"
     },
     {
       "name": "Dragon's Blood Cape",
@@ -1233,7 +1315,8 @@ var gear = {
       "phase": 1,
       "id": 17107,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_misc_cape_08"
     },
     {
       "name": "Drape of Unyielding Strength",
@@ -1246,7 +1329,8 @@ var gear = {
       "phase": 5,
       "id": 21394,
       "q": "4",
-      "i": "67"
+      "i": "67",
+      "p": "inv_misc_cape_20"
     },
     {
       "name": "Earthweave Cloak",
@@ -1257,7 +1341,8 @@ var gear = {
       "phase": 5,
       "id": 21187,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_misc_cape_07"
     },
     {
       "name": "Eskhandar's Pelt",
@@ -1268,7 +1353,8 @@ var gear = {
       "phase": 2,
       "id": 18204,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_misc_cape_07"
     },
     {
       "name": "Phantasmal Cloak",
@@ -1279,7 +1365,8 @@ var gear = {
       "phase": 1,
       "id": 18689,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_misc_cape_20"
     },
     {
       "name": "Puissant Cape",
@@ -1291,7 +1378,8 @@ var gear = {
       "phase": 2,
       "id": 18541,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_misc_cape_06"
     },
     {
       "name": "Sandstorm Cloak",
@@ -1304,7 +1392,8 @@ var gear = {
       "phase": 5,
       "id": 21456,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_misc_cape_06"
     },
     {
       "name": "Shroud of Dominion",
@@ -1316,7 +1405,8 @@ var gear = {
       "phase": 6,
       "id": 23045,
       "q": "4",
-      "i": "90"
+      "i": "90",
+      "p": "inv_misc_cape_naxxramas_03"
     },
     {
       "name": "Stoneskin Gargoyle Cape",
@@ -1328,7 +1418,8 @@ var gear = {
       "phase": 1,
       "id": 13397,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_misc_cape_19"
     },
     {
       "name": "Stormpike Soldier's Cloak",
@@ -1339,7 +1430,8 @@ var gear = {
       "phase": 2,
       "id": 19084,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_misc_cape_18"
     },
     {
       "name": "Zulian Tigerhide Cloak",
@@ -1351,7 +1443,8 @@ var gear = {
       "phase": 4,
       "id": 19907,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_misc_cape_10"
     },
     {
       "name": "Windshear Cape",
@@ -1363,7 +1456,8 @@ var gear = {
       "phase": 4,
       "id": 20691,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_misc_cape_20"
     },
     {
       "name": "Might of the Tribe",
@@ -1374,7 +1468,8 @@ var gear = {
       "phase": 4,
       "id": 22712,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_misc_cape_16"
     },
     {
       "name": "Shifting Cloak",
@@ -1385,7 +1480,8 @@ var gear = {
       "source": "Crafting",
       "id": 18511,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_misc_cape_20"
     },
     {
       "name": "Shroud of Domination",
@@ -1395,7 +1491,8 @@ var gear = {
       "phase": 1,
       "id": 22337,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_misc_cape_19"
     }
   ],
   "chest": [
@@ -1425,7 +1522,8 @@ var gear = {
       "phase": "6",
       "id": 22664,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_chest_plate09"
     },
     {
       "name": "Icebane Breastplate",
@@ -1441,7 +1539,8 @@ var gear = {
       "phase": "6",
       "id": 22669,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_chest_chain_11"
     },
     {
       "name": "Thorium Armor",
@@ -1487,7 +1586,8 @@ var gear = {
       "phase": "6",
       "id": 22661,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_chest_cloth_08"
     },
     {
       "name": "Ironvine Breastplate",
@@ -1527,7 +1627,8 @@ var gear = {
       "phase": 1,
       "id": 15050,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_chest_plate06"
     },
     {
       "name": "Bloodsoul Breastplate",
@@ -1539,7 +1640,8 @@ var gear = {
       "phase": 4,
       "id": 19690,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_chest_chain_14"
     },
     {
       "name": "Breastplate of Annihilation",
@@ -1552,7 +1654,8 @@ var gear = {
       "phase": 4,
       "id": 21814,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_chest_plate02"
     },
     {
       "name": "Breastplate of Bloodthirst",
@@ -1565,7 +1668,8 @@ var gear = {
       "phase": 1,
       "id": 12757,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_chest_chain_13"
     },
     {
       "name": "Breastplate of Heroism",
@@ -1578,7 +1682,8 @@ var gear = {
       "phase": 5,
       "id": 21997,
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_chest_plate03"
     },
     {
       "name": "Breastplate of Might",
@@ -1590,7 +1695,8 @@ var gear = {
       "phase": 1,
       "id": 16865,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_chest_plate16"
     },
     {
       "name": "Breastplate of the Chromatic Flight",
@@ -1606,7 +1712,8 @@ var gear = {
       "phase": 1,
       "id": 12895,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_chest_plate09"
     },
     {
       "name": "Breastplate of Valor",
@@ -1618,7 +1725,8 @@ var gear = {
       "phase": 1,
       "id": 16730,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_chest_plate03"
     },
     {
       "name": "Breastplate of Undead Slaying (vs Undead)",
@@ -1629,7 +1737,8 @@ var gear = {
       "phase": 6,
       "id": 23087,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_chest_plate10"
     },
     {
       "name": "Breastplate of Wrath",
@@ -1641,7 +1750,8 @@ var gear = {
       "phase": 3,
       "id": 16966,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_chest_plate16"
     },
     {
       "name": "Cadaverous Armor",
@@ -1653,7 +1763,8 @@ var gear = {
       "phase": 1,
       "id": 14637,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_chest_leather_03"
     },
     {
       "name": "Conqueror's Breastplate",
@@ -1666,7 +1777,8 @@ var gear = {
       "phase": 5,
       "id": 21331,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_chest_plate12"
     },
     {
       "name": "Deathdealer Breastplate",
@@ -1678,7 +1790,8 @@ var gear = {
       "phase": 1,
       "id": 11926,
       "q": "3",
-      "i": "57"
+      "i": "57",
+      "p": "inv_chest_chain_07"
     },
     {
       "name": "Ghoul Skin Tunic",
@@ -1690,7 +1803,8 @@ var gear = {
       "phase": 6,
       "id": 23226,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_chest_leather_02"
     },
     {
       "name": "Malfurion's Blessed Bulwark",
@@ -1701,7 +1815,8 @@ var gear = {
       "phase": 3,
       "id": 19405,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_chest_leather_08"
     },
     {
       "name": "Obsidian Mail Tunic",
@@ -1712,7 +1827,8 @@ var gear = {
       "phase": 5,
       "id": 22191,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_chest_chain_17"
     },
     {
       "name": "Ogre Forged Hauberk",
@@ -1725,7 +1841,8 @@ var gear = {
       "phase": 2,
       "id": 18530,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_chest_chain_12"
     },
     {
       "name": "Plated Abomination Ribcage",
@@ -1738,7 +1855,8 @@ var gear = {
       "phase": 6,
       "id": 23000,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_chest_chain_15"
     },
     {
       "name": "R13 Plate Armor",
@@ -1751,7 +1869,8 @@ var gear = {
       "phase": 2,
       "id": 16477,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_chest_plate03"
     },
     {
       "name": "R8 Plate Armor",
@@ -1763,7 +1882,8 @@ var gear = {
       "phase": 2,
       "id": 23300,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_chest_plate16"
     },
     {
       "name": "Runed Bloodstained Hauberk",
@@ -1775,7 +1895,8 @@ var gear = {
       "phase": 4,
       "id": 19904,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_chest_plate08"
     },
     {
       "name": "Savage Gladiator Chain",
@@ -1788,7 +1909,8 @@ var gear = {
       "phase": 1,
       "id": 11726,
       "q": "4",
-      "i": "57"
+      "i": "57",
+      "p": "inv_chest_chain_15"
     },
     {
       "name": "Zandalar Vindicator's Breastplate",
@@ -1801,7 +1923,8 @@ var gear = {
       "phase": 4,
       "id": 19822,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_chest_plate07"
     },
     {
       "name": "Tombstone Breastplate",
@@ -1813,7 +1936,8 @@ var gear = {
       "phase": 1,
       "id": 13944,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_chest_chain_17"
     },
     {
       "name": "Vest of Swift Execution",
@@ -1825,7 +1949,8 @@ var gear = {
       "phase": 5,
       "id": 21680,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_chest_cloth_45"
     },
     {
       "name": "Darksoul Breastplate",
@@ -1836,7 +1961,8 @@ var gear = {
       "phase": 4,
       "id": 19693,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_chest_plate08"
     },
     {
       "name": "Thick Obsidian Breastplate",
@@ -1847,7 +1973,8 @@ var gear = {
       "phase": 5,
       "id": 22196,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_chest_chain_17"
     }
   ],
   "wrist": [
@@ -1894,7 +2021,8 @@ var gear = {
       "phase": "6",
       "id": 22663,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_bracer_07"
     },
     {
       "name": "Icy Scale Bracers",
@@ -1909,7 +2037,8 @@ var gear = {
       "phase": "6",
       "id": 22665,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_bracer_07"
     },
     {
       "name": "Icebane Bracers",
@@ -1925,7 +2054,8 @@ var gear = {
       "phase": "6",
       "id": 22671,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_bracer_07"
     },
     {
       "name": "Sandstalker Bracer",
@@ -1966,7 +2096,8 @@ var gear = {
       "id": 20687,
       "rand": 2163,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_bracer_19"
     },
     {
       "name": "Battleborn Armbraces",
@@ -1977,7 +2108,8 @@ var gear = {
       "phase": 1,
       "id": 12936,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_bracer_17"
     },
     {
       "name": "Berserker Bracers",
@@ -1989,7 +2121,8 @@ var gear = {
       "phase": 3,
       "id": 19578,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_bracer_06"
     },
     {
       "name": "Bracelets of Wrath",
@@ -2000,7 +2133,8 @@ var gear = {
       "phase": 2,
       "id": 16959,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_bracer_19"
     },
     {
       "name": "Bracers of Brutality",
@@ -2012,7 +2146,8 @@ var gear = {
       "phase": 5,
       "id": 21457,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_bracer_19"
     },
     {
       "name": "Bracers of Heroism",
@@ -2025,7 +2160,8 @@ var gear = {
       "phase": 5,
       "id": 21996,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_bracer_18"
     },
     {
       "name": "Bracers of Might",
@@ -2036,7 +2172,8 @@ var gear = {
       "phase": 1,
       "id": 16861,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_bracer_19"
     },
     {
       "name": "Bracers of Undead Slaying (vs Undead)",
@@ -2047,7 +2184,8 @@ var gear = {
       "phase": 6,
       "id": 23090,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_bracer_14"
     },
     {
       "name": "Bracers of Valor",
@@ -2059,7 +2197,8 @@ var gear = {
       "phase": 1,
       "id": 16735,
       "q": "3",
-      "i": "57"
+      "i": "57",
+      "p": "inv_bracer_18"
     },
     {
       "name": "Deeprock Bracers",
@@ -2071,7 +2210,8 @@ var gear = {
       "phase": 5,
       "id": 21184,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_bracer_07"
     },
     {
       "name": "Gordok Bracers of Power",
@@ -2082,7 +2222,8 @@ var gear = {
       "phase": 2,
       "id": 18533,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_bracer_14"
     },
     {
       "name": "Hive Defiler Wristguards",
@@ -2093,7 +2234,8 @@ var gear = {
       "phase": 5,
       "id": 21618,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_bracer_02"
     },
     {
       "name": "Qiraji Execution Bracers",
@@ -2106,7 +2248,8 @@ var gear = {
       "phase": 5,
       "id": 21602,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_bracer_13"
     },
     {
       "name": "Scaled Bracers of the Gorger",
@@ -2118,7 +2261,8 @@ var gear = {
       "phase": 5,
       "id": 21491,
       "q": "3",
-      "i": "73"
+      "i": "73",
+      "p": "inv_bracer_03"
     },
     {
       "name": "Zandalar Vindicator's Armguards",
@@ -2130,7 +2274,8 @@ var gear = {
       "phase": 4,
       "id": 19824,
       "q": "4",
-      "i": "61"
+      "i": "61",
+      "p": "inv_bracer_14"
     },
     {
       "name": "Vambraces of the Sadist",
@@ -2142,7 +2287,8 @@ var gear = {
       "phase": 1,
       "id": 13400,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_bracer_17"
     },
     {
       "name": "Wristguards of Stability",
@@ -2153,7 +2299,8 @@ var gear = {
       "phase": 1,
       "id": 19146,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_bracer_04"
     },
     {
       "name": "Wristguards of True Flight",
@@ -2165,7 +2312,8 @@ var gear = {
       "phase": 1,
       "id": 18812,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_bracer_02"
     },
     {
       "name": "Wristguards of Vengeance",
@@ -2177,7 +2325,8 @@ var gear = {
       "phase": 6,
       "id": 22936,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_bracer_17"
     }
   ],
   "hands": [
@@ -2194,7 +2343,8 @@ var gear = {
       "phase": 1,
       "id": 19164,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_gauntlets_22"
     },
     {
       "name": "Molten Fists",
@@ -2210,7 +2360,8 @@ var gear = {
       "phase": 1,
       "id": 11814,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_gauntlets_04"
     },
     {
       "name": "Polar Gloves",
@@ -2225,7 +2376,8 @@ var gear = {
       "phase": 6,
       "id": 22662,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_gauntlets_06"
     },
     {
       "name": "Icy Scale Gauntlets",
@@ -2240,7 +2392,8 @@ var gear = {
       "phase": 6,
       "id": 22666,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_gauntlets_28"
     },
     {
       "name": "Icebane Gauntlets",
@@ -2256,7 +2409,8 @@ var gear = {
       "phase": 6,
       "id": 22670,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_gauntlets_28"
     },
     {
       "name": "Sandstalker Gauntlets",
@@ -2299,7 +2453,8 @@ var gear = {
       "phase": 1,
       "id": 18823,
       "q": "4",
-      "i": "69"
+      "i": "69",
+      "p": "inv_gauntlets_23"
     },
     {
       "name": "Devilsaur Gauntlets",
@@ -2311,7 +2466,8 @@ var gear = {
       "phase": 1,
       "id": 15063,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_gauntlets_26"
     },
     {
       "name": "Edgemaster's Handguards",
@@ -2322,7 +2478,8 @@ var gear = {
       "phase": 1,
       "id": 14551,
       "q": "4",
-      "i": "49"
+      "i": "49",
+      "p": "inv_gauntlets_30"
     },
     {
       "name": "Flameguard Gauntlets",
@@ -2334,7 +2491,8 @@ var gear = {
       "phase": 1,
       "id": 19143,
       "q": "4",
-      "i": "69"
+      "i": "69",
+      "p": "inv_gauntlets_26"
     },
     {
       "name": "Gauntlets of Annihilation",
@@ -2347,7 +2505,8 @@ var gear = {
       "phase": 5,
       "id": 21581,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_gauntlets_31"
     },
     {
       "name": "Gauntlets of Heroism",
@@ -2359,7 +2518,8 @@ var gear = {
       "phase": 5,
       "id": 21998,
       "q": "4",
-      "i": "55"
+      "i": "55",
+      "p": "inv_gauntlets_26"
     },
     {
       "name": "Gauntlets of Might",
@@ -2372,7 +2532,8 @@ var gear = {
       "phase": 1,
       "id": 16863,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_gauntlets_10"
     },
     {
       "name": "Gauntlets of Steadfast Determination",
@@ -2385,7 +2546,8 @@ var gear = {
       "phase": 5,
       "id": 21674,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_gauntlets_31"
     },
     {
       "name": "Gauntlets of the Immovable",
@@ -2398,7 +2560,8 @@ var gear = {
       "phase": 5,
       "id": 21479,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_gauntlets_31"
     },
     {
       "name": "Gauntlets of Undead Slaying (vs Undead)",
@@ -2409,7 +2572,8 @@ var gear = {
       "phase": 6,
       "id": 23078,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_gauntlets_29"
     },
     {
       "name": "Gauntlets of Valor",
@@ -2421,7 +2585,8 @@ var gear = {
       "phase": 1,
       "id": 16737,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_gauntlets_26"
     },
     {
       "name": "Gauntlets of Wrath",
@@ -2434,7 +2599,8 @@ var gear = {
       "phase": 3,
       "id": 16964,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_gauntlets_10"
     },
     {
       "name": "Gloves of Enforcement",
@@ -2447,7 +2613,8 @@ var gear = {
       "phase": 5,
       "id": 21672,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_gauntlets_17"
     },
     {
       "name": "R12 Plate Gauntlets",
@@ -2459,7 +2626,8 @@ var gear = {
       "phase": 2,
       "id": 16484,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_gauntlets_29"
     },
     {
       "name": "R7 Gauntlets",
@@ -2470,7 +2638,8 @@ var gear = {
       "phase": 2,
       "id": 23286,
       "q": "3",
-      "i": "66"
+      "i": "66",
+      "p": "inv_gauntlets_26"
     },
     {
       "name": "Reiver Claws",
@@ -2482,7 +2651,8 @@ var gear = {
       "phase": 1,
       "id": 13162,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_gauntlets_29"
     },
     {
       "name": "Sacrificial Gauntlets",
@@ -2494,7 +2664,8 @@ var gear = {
       "phase": 4,
       "id": 22714,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_gauntlets_31"
     },
     {
       "name": "Stronghold Gauntlets",
@@ -2506,7 +2677,8 @@ var gear = {
       "phase": 1,
       "id": 12639,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_gauntlets_30"
     },
     {
       "name": "Voone's Vice Grips",
@@ -2518,7 +2690,8 @@ var gear = {
       "phase": 1,
       "id": 13963,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_gauntlets_15"
     },
     {
       "name": "Chromatic Gauntlets",
@@ -2529,7 +2702,8 @@ var gear = {
       "phase": 3,
       "id": 19157,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_gauntlets_22"
     }
   ],
   "waist": [
@@ -2546,7 +2720,8 @@ var gear = {
       "phase": 1,
       "id": 19163,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_belt_13"
     },
     {
       "name": "Flamescarred Girdle",
@@ -2575,7 +2750,8 @@ var gear = {
       "phase": "1",
       "id": 14502,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_belt_10"
     },
     {
       "name": "Unmelting Ice Girdle",
@@ -2592,7 +2768,8 @@ var gear = {
       "phase": "2",
       "id": 18547,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_belt_31"
     },
     {
       "name": "Ironvine Belt",
@@ -2619,7 +2796,8 @@ var gear = {
       "phase": 2,
       "id": 20204,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_belt_14"
     },
     {
       "name": "Belt of Heroism",
@@ -2632,7 +2810,8 @@ var gear = {
       "phase": 5,
       "id": 21994,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_belt_34"
     },
     {
       "name": "Belt of Might",
@@ -2648,7 +2827,8 @@ var gear = {
       "phase": 1,
       "id": 16864,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_belt_09"
     },
     {
       "name": "Belt of Never-ending Agony",
@@ -2661,7 +2841,8 @@ var gear = {
       "phase": 5,
       "id": 21586,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_belt_26"
     },
     {
       "name": "Belt of Preserved Heads",
@@ -2674,7 +2855,8 @@ var gear = {
       "phase": 4,
       "id": 20216,
       "q": "3",
-      "i": "70"
+      "i": "70",
+      "p": "inv_belt_14"
     },
     {
       "name": "Belt of Shrunken Heads",
@@ -2686,7 +2868,8 @@ var gear = {
       "phase": 4,
       "id": 20213,
       "q": "3",
-      "i": "70"
+      "i": "70",
+      "p": "inv_belt_13"
     },
     {
       "name": "Belt of the Sand Reaver",
@@ -2698,7 +2881,8 @@ var gear = {
       "phase": 5,
       "id": 21503,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_belt_13"
     },
     {
       "name": "Belt of Valor",
@@ -2710,7 +2894,8 @@ var gear = {
       "phase": 1,
       "id": 16736,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_belt_34"
     },
     {
       "name": "Brigam Girdle",
@@ -2722,7 +2907,8 @@ var gear = {
       "phase": 1,
       "id": 13142,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_belt_33"
     },
     {
       "name": "Girdle of the Mentor",
@@ -2736,7 +2922,8 @@ var gear = {
       "phase": 6,
       "id": 23219,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_belt_13"
     },
     {
       "name": "Mugger's Belt",
@@ -2749,7 +2936,8 @@ var gear = {
       "phase": 2,
       "id": 18505,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_belt_02"
     },
     {
       "name": "Omokk's Girth Restrainer",
@@ -2761,7 +2949,8 @@ var gear = {
       "phase": 1,
       "id": 13959,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_belt_13"
     },
     {
       "name": "Frostwolf Plate Belt",
@@ -2773,7 +2962,8 @@ var gear = {
       "phase": 2,
       "id": 19087,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_belt_35"
     },
     {
       "name": "Onslaught Girdle",
@@ -2786,7 +2976,8 @@ var gear = {
       "phase": 1,
       "id": 19137,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_belt_29"
     },
     {
       "name": "Ossirian's Binding",
@@ -2799,7 +2990,8 @@ var gear = {
       "phase": 5,
       "id": 21463,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_belt_18"
     },
     {
       "name": "Royal Qiraji Belt",
@@ -2813,7 +3005,8 @@ var gear = {
       "phase": 5,
       "id": 21598,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_belt_31"
     },
     {
       "name": "Zandalar Vindicator's Belt",
@@ -2825,7 +3018,8 @@ var gear = {
       "phase": 4,
       "id": 19823,
       "q": "4",
-      "i": "61"
+      "i": "61",
+      "p": "inv_belt_32"
     },
     {
       "name": "Therazane's Link",
@@ -2837,7 +3031,8 @@ var gear = {
       "phase": 3,
       "id": 19380,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_belt_18"
     },
     {
       "name": "Triad Girdle",
@@ -2849,7 +3044,8 @@ var gear = {
       "phase": 5,
       "id": 21692,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_belt_18"
     },
     {
       "name": "Waistband of Wrath",
@@ -2861,7 +3057,8 @@ var gear = {
       "phase": 3,
       "id": 16960,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_belt_09"
     }
   ],
   "legs": [
@@ -2879,7 +3076,8 @@ var gear = {
       "phase": 1,
       "id": 19433,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_pants_mail_17"
     },
     {
       "name": "Dark Iron Leggings",
@@ -2921,7 +3119,8 @@ var gear = {
       "phase": "6",
       "id": 22701,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_pants_leather_21"
     },
     {
       "name": "Icy Scale Leggings",
@@ -2936,7 +3135,8 @@ var gear = {
       "phase": "6",
       "id": 22702,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_pants_mail_15"
     },
     {
       "name": "Icebane Leggings",
@@ -2952,7 +3152,8 @@ var gear = {
       "phase": "6",
       "id": 22702,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_pants_mail_15"
     },
     {
       "name": "Cenarion Reservist's Legplates",
@@ -2981,7 +3182,8 @@ var gear = {
       "id": 20671,
       "rand": 2157,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_pants_plate_12"
     },
     {
       "name": "Black Dragonscale Leggings",
@@ -2992,7 +3194,8 @@ var gear = {
       "phase": 1,
       "id": 15052,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_pants_03"
     },
     {
       "name": "Blademaster Leggings",
@@ -3005,7 +3208,8 @@ var gear = {
       "phase": 1,
       "id": 12963,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_pants_06"
     },
     {
       "name": "Bloodsoaked Legplates",
@@ -3017,7 +3221,8 @@ var gear = {
       "phase": 4,
       "id": 19855,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_pants_plate_21"
     },
     {
       "name": "Cadaverous Leggings",
@@ -3028,7 +3233,8 @@ var gear = {
       "phase": 1,
       "id": 14638,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_pants_07"
     },
     {
       "name": "Cloudkeeper Legplates",
@@ -3041,7 +3247,8 @@ var gear = {
       "phase": 1,
       "id": 14554,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_pants_04"
     },
     {
       "name": "Cloudkeeper Legplates (Not used)",
@@ -3068,7 +3275,8 @@ var gear = {
       "phase": 5,
       "id": 21332,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_pants_plate_03"
     },
     {
       "name": "Dark Heart Pants",
@@ -3080,7 +3288,8 @@ var gear = {
       "phase": 4,
       "id": 20627,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_pants_leather_11"
     },
     {
       "name": "Devilsaur Leggings",
@@ -3092,7 +3301,8 @@ var gear = {
       "phase": 1,
       "id": 15062,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_pants_wolf"
     },
     {
       "name": "Eldritch Reinforced Legplates",
@@ -3105,7 +3315,8 @@ var gear = {
       "phase": 2,
       "id": 18380,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_pants_04"
     },
     {
       "name": "Handcrafted Mastersmith Leggings",
@@ -3116,7 +3327,8 @@ var gear = {
       "phase": 1,
       "id": 13498,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_pants_04"
     },
     {
       "name": "Leggings of Apocalypse",
@@ -3129,7 +3341,8 @@ var gear = {
       "phase": 6,
       "id": 23071,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_pants_leather_09"
     },
     {
       "name": "Legguards of the Fallen Crusader",
@@ -3141,7 +3354,8 @@ var gear = {
       "phase": 3,
       "id": 19402,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_pants_plate_16"
     },
     {
       "name": "Legplates of Carnage",
@@ -3153,7 +3367,8 @@ var gear = {
       "phase": 6,
       "id": 23068,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_pants_plate_20"
     },
     {
       "name": "Legplates of Heroism",
@@ -3166,7 +3381,8 @@ var gear = {
       "phase": 5,
       "id": 22000,
       "q": "3",
-      "i": "66"
+      "i": "66",
+      "p": "inv_pants_04"
     },
     {
       "name": "Legplates of Might",
@@ -3179,7 +3395,8 @@ var gear = {
       "phase": 1,
       "id": 16867,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_pants_04"
     },
     {
       "name": "Legplates of the Qiraji Command",
@@ -3191,7 +3408,8 @@ var gear = {
       "phase": 5,
       "id": 21495,
       "q": "3",
-      "i": "71"
+      "i": "71",
+      "p": "inv_pants_plate_15"
     },
     {
       "name": "Legplates of Valor",
@@ -3203,7 +3421,8 @@ var gear = {
       "phase": 1,
       "id": 16732,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_pants_04"
     },
     {
       "name": "Legplates of Wrath",
@@ -3216,7 +3435,8 @@ var gear = {
       "phase": 1,
       "id": 16962,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_pants_04"
     },
     {
       "name": "R12 Plate Legguards",
@@ -3229,7 +3449,8 @@ var gear = {
       "phase": 2,
       "id": 16479,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_pants_04"
     },
     {
       "name": "R8 Plate Leggings",
@@ -3241,7 +3462,8 @@ var gear = {
       "phase": 2,
       "id": 23301,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_pants_06"
     },
     {
       "name": "Scaled Sand Reaver Leggings",
@@ -3253,7 +3475,8 @@ var gear = {
       "phase": 5,
       "id": 21651,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_pants_mail_10"
     },
     {
       "name": "Sentinel's Plate Legguards",
@@ -3266,7 +3489,8 @@ var gear = {
       "phase": 6,
       "id": 22672,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_pants_plate_20"
     },
     {
       "name": "Titanic Leggings",
@@ -3278,7 +3502,8 @@ var gear = {
       "phase": 5,
       "id": 22385,
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_pants_04"
     },
     {
       "name": "Darksoul Leggings",
@@ -3289,7 +3514,8 @@ var gear = {
       "phase": 4,
       "id": 19694,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_pants_plate_21"
     }
   ],
   "feet": [
@@ -3306,7 +3532,8 @@ var gear = {
       "phase": 1,
       "id": 16982,
       "q": "4",
-      "i": "59"
+      "i": "59",
+      "p": "inv_boots_07"
     },
     {
       "name": "Dark Iron Boots of the Tiger",
@@ -3361,7 +3588,8 @@ var gear = {
       "phase": 4,
       "id": 20208,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Battlechaser's Greaves",
@@ -3372,7 +3600,8 @@ var gear = {
       "phase": 1,
       "id": 12555,
       "q": "3",
-      "i": "55"
+      "i": "55",
+      "p": "inv_boots_plate_06"
     },
     {
       "name": "Black Dragonscale Boots",
@@ -3383,7 +3612,8 @@ var gear = {
       "phase": 1,
       "id": 16984,
       "q": "4",
-      "i": "61"
+      "i": "61",
+      "p": "inv_boots_plate_09"
     },
     {
       "name": "Blooddrenched Footpads",
@@ -3395,7 +3625,8 @@ var gear = {
       "phase": 4,
       "id": 19906,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_boots_chain_04"
     },
     {
       "name": "Bloodmail Boots",
@@ -3408,7 +3639,8 @@ var gear = {
       "phase": 1,
       "id": 14616,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_boots_01"
     },
     {
       "name": "Boots of Heroism",
@@ -3420,7 +3652,8 @@ var gear = {
       "phase": 5,
       "id": 21995,
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_boots_plate_03"
     },
     {
       "name": "Boots of the Fallen Hero",
@@ -3433,7 +3666,8 @@ var gear = {
       "phase": 5,
       "id": 21688,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_boots_plate_01"
     },
     {
       "name": "Boots of the Shadow Flame",
@@ -3445,7 +3679,8 @@ var gear = {
       "phase": 3,
       "id": 19381,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_boots_cloth_05"
     },
     {
       "name": "Boots of the Vanguard",
@@ -3457,7 +3692,8 @@ var gear = {
       "phase": 5,
       "id": 21493,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_boots_08"
     },
     {
       "name": "Boots of the Unwavering Will",
@@ -3470,7 +3706,8 @@ var gear = {
       "phase": 5,
       "id": 21706,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_boots_plate_06"
     },
     {
       "name": "Boots of Valor",
@@ -3482,7 +3719,8 @@ var gear = {
       "phase": 1,
       "id": 16734,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_boots_plate_03"
     },
     {
       "name": "Chromatic Boots",
@@ -3495,7 +3733,8 @@ var gear = {
       "phase": 3,
       "id": 19387,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Conqueror's Greaves",
@@ -3508,7 +3747,8 @@ var gear = {
       "phase": 5,
       "id": 21333,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_boots_plate_05"
     },
     {
       "name": "Pads of the Dread Wolf",
@@ -3519,7 +3759,8 @@ var gear = {
       "phase": 1,
       "id": 13210,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_boots_wolf"
     },
     {
       "name": "R12 Plate Boots",
@@ -3532,7 +3773,8 @@ var gear = {
       "phase": 2,
       "id": 16483,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_boots_plate_09"
     },
     {
       "name": "R7 Plate Boots",
@@ -3544,7 +3786,8 @@ var gear = {
       "phase": 2,
       "id": 23287,
       "q": "3",
-      "i": "66"
+      "i": "66",
+      "p": "inv_boots_plate_09"
     },
     {
       "name": "Sabatons of Might",
@@ -3556,7 +3799,8 @@ var gear = {
       "phase": 1,
       "id": 16862,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Sabatons of Wrath",
@@ -3568,7 +3812,8 @@ var gear = {
       "phase": 3,
       "id": 16965,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Sapphiron's Scale Boots",
@@ -3580,7 +3825,8 @@ var gear = {
       "phase": 1,
       "id": 13070,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_boots_plate_05"
     },
     {
       "name": "Slime Kickers",
@@ -3593,7 +3839,8 @@ var gear = {
       "phase": 5,
       "id": 21490,
       "q": "3",
-      "i": "73"
+      "i": "73",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Swiftwalker Boots",
@@ -3605,7 +3852,8 @@ var gear = {
       "phase": 1,
       "id": 12553,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_boots_02"
     },
     {
       "name": "Windreaver Greaves",
@@ -3616,7 +3864,8 @@ var gear = {
       "phase": 1,
       "id": 13967,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_boots_plate_04"
     },
     {
       "name": "Savage Gladiator Greaves",
@@ -3628,7 +3877,8 @@ var gear = {
       "phase": 1,
       "id": 11731,
       "q": "3",
-      "i": "57"
+      "i": "57",
+      "p": "inv_boots_01"
     }
   ],
   "finger1": [
@@ -3641,7 +3891,8 @@ var gear = {
       "agi": 7,
       "str": 10,
       "sta": 17,
-      "i": "58"
+      "i": "58",
+      "p": "inv_jewelry_ring_05"
     },
     {
       "name": "Prismatic Band of Fire Resistance",
@@ -3703,7 +3954,8 @@ var gear = {
       "phase": "3",
       "id": 19376,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_40"
     },
     {
       "name": "Band of Accuria",
@@ -3714,7 +3966,8 @@ var gear = {
       "phase": "1",
       "id": 17063,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_jewelry_ring_15"
     },
     {
       "name": "Band of Earthen Might",
@@ -3725,7 +3978,8 @@ var gear = {
       "phase": "5",
       "id": 21182,
       "q": "3",
-      "i": "66"
+      "i": "66",
+      "p": "inv_jewelry_ring_19"
     },
     {
       "name": "Band of Jin",
@@ -3736,7 +3990,8 @@ var gear = {
       "phase": "4",
       "id": 19925,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_ring_44"
     },
     {
       "name": "Band of Reanimation",
@@ -3746,7 +4001,8 @@ var gear = {
       "phase": "6",
       "id": 22961,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_49naxxramas"
     },
     {
       "name": "Band of the Ogre King",
@@ -3756,7 +4012,8 @@ var gear = {
       "phase": "2",
       "id": 18522,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_32"
     },
     {
       "name": "Band of Unnatural Forces",
@@ -3767,7 +4024,8 @@ var gear = {
       "phase": "6",
       "id": 23038,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_jewelry_ring_48naxxramas"
     },
     {
       "name": "Blackstone Ring",
@@ -3778,7 +4036,8 @@ var gear = {
       "phase": "1",
       "id": 17713,
       "q": "3",
-      "i": "54"
+      "i": "54",
+      "p": "inv_jewelry_ring_17"
     },
     {
       "name": "Circle of Applied Force",
@@ -3789,7 +4048,8 @@ var gear = {
       "phase": "3",
       "id": 19432,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_jewelry_ring_37"
     },
     {
       "name": "Don Julio's Band",
@@ -3801,7 +4061,8 @@ var gear = {
       "phase": "2",
       "id": 19325,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_35"
     },
     {
       "name": "Magni's Will",
@@ -3812,7 +4073,8 @@ var gear = {
       "phase": "1",
       "id": 12548,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_jewelry_ring_05"
     },
     {
       "name": "Master Dragonslayer's Ring",
@@ -3823,7 +4085,8 @@ var gear = {
       "phase": "3",
       "id": 19384,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_41"
     },
     {
       "name": "Might of Cenarius",
@@ -3833,7 +4096,8 @@ var gear = {
       "phase": "5",
       "id": 21189,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_jewelry_ring_41"
     },
     {
       "name": "Painweaver Band",
@@ -3844,7 +4108,8 @@ var gear = {
       "phase": "1",
       "id": 13098,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_18"
     },
     {
       "name": "Protector's Band",
@@ -3855,7 +4120,8 @@ var gear = {
       "phase": 3,
       "id": 19514,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_10"
     },
     {
       "name": "Quick Strike Ring",
@@ -3867,7 +4133,8 @@ var gear = {
       "phase": "1",
       "id": 18821,
       "q": "4",
-      "i": "67"
+      "i": "67",
+      "p": "inv_jewelry_ring_07"
     },
     {
       "name": "Ring of Emperor Vek'lor",
@@ -3879,7 +4146,8 @@ var gear = {
       "phase": "5",
       "id": 21601,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_jewelry_ring_ahnqiraj_01"
     },
     {
       "name": "Ring of Fury",
@@ -3890,7 +4158,8 @@ var gear = {
       "phase": "5",
       "id": 21477,
       "q": "3",
-      "i": "74"
+      "i": "74",
+      "p": "inv_jewelry_ring_ahnqiraj_04"
     },
     {
       "name": "Ring of the Godslayer",
@@ -3900,7 +4169,8 @@ var gear = {
       "phase": "5",
       "id": 21596,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_jewelry_ring_ahnqiraj_06"
     },
     {
       "name": "Ring of the Qiraji Fury",
@@ -3911,7 +4181,8 @@ var gear = {
       "phase": "5",
       "id": 21677,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_jewelry_ring_ahnqiraj_01"
     },
     {
       "name": "Seal of Jin",
@@ -3922,7 +4193,8 @@ var gear = {
       "phase": "4",
       "id": 19898,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_ring_44"
     },
     {
       "name": "Seal of the Gurubashi Berserker",
@@ -3932,7 +4204,8 @@ var gear = {
       "phase": "4",
       "id": 22722,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_20"
     },
     {
       "name": "Signet of the Fallen Defender",
@@ -3943,7 +4216,8 @@ var gear = {
       "phase": "6",
       "id": 23018,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_50naxxramas"
     },
     {
       "name": "Signet of Unyielding Strength",
@@ -3954,7 +4228,8 @@ var gear = {
       "phase": "5",
       "id": 21393,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_ahnqiraj_03"
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -3965,7 +4240,8 @@ var gear = {
       "phase": "5",
       "id": 21205,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_jewelry_ring_40"
     },
     {
       "name": "Tarnished Elven Ring",
@@ -3975,7 +4251,8 @@ var gear = {
       "phase": "2",
       "id": 18500,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_jewelry_ring_13"
     }
   ],
   "finger2": [
@@ -3988,7 +4265,8 @@ var gear = {
       "agi": 7,
       "str": 10,
       "sta": 17,
-      "i": "58"
+      "i": "58",
+      "p": "inv_jewelry_ring_05"
     },
     {
       "name": "Prismatic Band of Fire Resistance",
@@ -4050,7 +4328,8 @@ var gear = {
       "phase": "3",
       "id": 19376,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_40"
     },
     {
       "name": "Band of Accuria",
@@ -4061,7 +4340,8 @@ var gear = {
       "phase": "1",
       "id": 17063,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_jewelry_ring_15"
     },
     {
       "name": "Band of Earthen Might",
@@ -4072,7 +4352,8 @@ var gear = {
       "phase": "5",
       "id": 21182,
       "q": "3",
-      "i": "66"
+      "i": "66",
+      "p": "inv_jewelry_ring_19"
     },
     {
       "name": "Band of Jin",
@@ -4083,7 +4364,8 @@ var gear = {
       "phase": "4",
       "id": 19925,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_ring_44"
     },
     {
       "name": "Band of Reanimation",
@@ -4093,7 +4375,8 @@ var gear = {
       "phase": "6",
       "id": 22961,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_49naxxramas"
     },
     {
       "name": "Band of the Ogre King",
@@ -4103,7 +4386,8 @@ var gear = {
       "phase": "2",
       "id": 18522,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_32"
     },
     {
       "name": "Band of Unnatural Forces",
@@ -4114,7 +4398,8 @@ var gear = {
       "phase": "6",
       "id": 23038,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_jewelry_ring_48naxxramas"
     },
     {
       "name": "Blackstone Ring",
@@ -4125,7 +4410,8 @@ var gear = {
       "phase": "1",
       "id": 17713,
       "q": "3",
-      "i": "54"
+      "i": "54",
+      "p": "inv_jewelry_ring_17"
     },
     {
       "name": "Circle of Applied Force",
@@ -4136,7 +4422,8 @@ var gear = {
       "phase": "3",
       "id": 19432,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_jewelry_ring_37"
     },
     {
       "name": "Don Julio's Band",
@@ -4148,7 +4435,8 @@ var gear = {
       "phase": "2",
       "id": 19325,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_35"
     },
     {
       "name": "Magni's Will",
@@ -4159,7 +4447,8 @@ var gear = {
       "phase": "1",
       "id": 12548,
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_jewelry_ring_05"
     },
     {
       "name": "Master Dragonslayer's Ring",
@@ -4170,7 +4459,8 @@ var gear = {
       "phase": "3",
       "id": 19384,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_41"
     },
     {
       "name": "Might of Cenarius",
@@ -4180,7 +4470,8 @@ var gear = {
       "phase": "5",
       "id": 21189,
       "q": "4",
-      "i": "62"
+      "i": "62",
+      "p": "inv_jewelry_ring_41"
     },
     {
       "name": "Painweaver Band",
@@ -4191,7 +4482,8 @@ var gear = {
       "phase": "1",
       "id": 13098,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_18"
     },
     {
       "name": "Protector's Band",
@@ -4202,7 +4494,8 @@ var gear = {
       "phase": 3,
       "id": 19514,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_jewelry_ring_10"
     },
     {
       "name": "Quick Strike Ring",
@@ -4214,7 +4507,8 @@ var gear = {
       "phase": "1",
       "id": 18821,
       "q": "4",
-      "i": "67"
+      "i": "67",
+      "p": "inv_jewelry_ring_07"
     },
     {
       "name": "Ring of Emperor Vek'lor",
@@ -4226,7 +4520,8 @@ var gear = {
       "phase": "5",
       "id": 21601,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_jewelry_ring_ahnqiraj_01"
     },
     {
       "name": "Ring of Fury",
@@ -4237,7 +4532,8 @@ var gear = {
       "phase": "5",
       "id": 21477,
       "q": "3",
-      "i": "74"
+      "i": "74",
+      "p": "inv_jewelry_ring_ahnqiraj_04"
     },
     {
       "name": "Ring of the Godslayer",
@@ -4247,7 +4543,8 @@ var gear = {
       "phase": "5",
       "id": 21596,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_jewelry_ring_ahnqiraj_06"
     },
     {
       "name": "Ring of the Qiraji Fury",
@@ -4258,7 +4555,8 @@ var gear = {
       "phase": "5",
       "id": 21677,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_jewelry_ring_ahnqiraj_01"
     },
     {
       "name": "Seal of Jin",
@@ -4269,7 +4567,8 @@ var gear = {
       "phase": "4",
       "id": 19898,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_ring_44"
     },
     {
       "name": "Seal of the Gurubashi Berserker",
@@ -4279,7 +4578,8 @@ var gear = {
       "phase": "4",
       "id": 22722,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_20"
     },
     {
       "name": "Signet of the Fallen Defender",
@@ -4290,7 +4590,8 @@ var gear = {
       "phase": "6",
       "id": 23018,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_jewelry_ring_50naxxramas"
     },
     {
       "name": "Signet of Unyielding Strength",
@@ -4301,7 +4602,8 @@ var gear = {
       "phase": "5",
       "id": 21393,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_jewelry_ring_ahnqiraj_03"
     },
     {
       "name": "Signet Ring of the Bronze Dragonflight",
@@ -4312,7 +4614,8 @@ var gear = {
       "phase": "5",
       "id": 21205,
       "q": "4",
-      "i": "80"
+      "i": "80",
+      "p": "inv_jewelry_ring_40"
     },
     {
       "name": "Tarnished Elven Ring",
@@ -4322,7 +4625,8 @@ var gear = {
       "phase": "2",
       "id": 18500,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_jewelry_ring_13"
     }
   ],
   "trinket1": [
@@ -4397,7 +4701,8 @@ var gear = {
       "phase": "4",
       "id": 19949,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_necklace_13"
     },
     {
       "name": "Badge of the Swarmguard (10 PPM)",
@@ -4405,7 +4710,8 @@ var gear = {
       "phase": "5",
       "id": 21670,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_misc_ahnqirajtrinket_04"
     },
     {
       "name": "Blackhand's Breadth",
@@ -4414,7 +4720,8 @@ var gear = {
       "phase": "1",
       "id": 13965,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_misc_armorkit_09"
     },
     {
       "name": "Counterattack Lodestone",
@@ -4424,7 +4731,8 @@ var gear = {
       "phase": "2",
       "id": 18537,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_stone_02"
     },
     {
       "name": "Darkmoon Card: Maelstrom (Assumed 2% proc chance)",
@@ -4437,7 +4745,8 @@ var gear = {
         "dmg": 250
       },
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_misc_ticket_tarot_maelstrom_01"
     },
     {
       "name": "Diamond Flask",
@@ -4445,7 +4754,8 @@ var gear = {
       "phase": "3",
       "id": 20130,
       "q": "3",
-      "i": "52"
+      "i": "52",
+      "p": "inv_drink_01"
     },
     {
       "name": "Drake Fang Talisman",
@@ -4456,7 +4766,8 @@ var gear = {
       "phase": "3",
       "id": 19406,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_misc_bone_06"
     },
     {
       "name": "Earthstrike",
@@ -4464,7 +4775,8 @@ var gear = {
       "phase": "5",
       "id": 21180,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "spell_nature_abolishmagic"
     },
     {
       "name": "Hand of Justice",
@@ -4477,7 +4789,8 @@ var gear = {
         "extra": 1
       },
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_jewelry_talisman_01"
     },
     {
       "name": "Heart of Wyrmthalak (Assumed 2% proc chance)",
@@ -4490,7 +4803,8 @@ var gear = {
         "dmg": 165
       },
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_misc_gem_bloodstone_01"
     },
     {
       "name": "Jom Gabbar",
@@ -4498,7 +4812,8 @@ var gear = {
       "phase": "5",
       "id": 23570,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_misc_enggizmos_19"
     },
     {
       "name": "Kiss of the Spider",
@@ -4508,7 +4823,8 @@ var gear = {
       "phase": "6",
       "id": 22954,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_trinket_naxxramas04"
     },
     {
       "name": "Rune of the Guard Captain",
@@ -4518,7 +4834,8 @@ var gear = {
       "phase": "1",
       "id": 19120,
       "q": "2",
-      "i": "51"
+      "i": "51",
+      "p": "inv_misc_rune_07"
     },
     {
       "name": "Seal of the Dawn (vs Undead)",
@@ -4527,7 +4844,8 @@ var gear = {
       "phase": "1",
       "id": 13209,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_misc_armorkit_18"
     },
     {
       "name": "Slayer's Crest",
@@ -4536,7 +4854,8 @@ var gear = {
       "phase": "6",
       "id": 23041,
       "q": "4",
-      "i": "90"
+      "i": "90",
+      "p": "inv_trinket_naxxramas03"
     },
     {
       "name": "Mark of the Champion (vs Undead)",
@@ -4545,7 +4864,8 @@ var gear = {
       "phase": "6",
       "id": 23206,
       "q": "4",
-      "i": "90"
+      "i": "90",
+      "p": "inv_misc_token_argentdawn2"
     }
   ],
   "trinket2": [
@@ -4620,7 +4940,8 @@ var gear = {
       "phase": "4",
       "id": 19949,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_jewelry_necklace_13"
     },
     {
       "name": "Badge of the Swarmguard (10 PPM)",
@@ -4628,7 +4949,8 @@ var gear = {
       "phase": "5",
       "id": 21670,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_misc_ahnqirajtrinket_04"
     },
     {
       "name": "Blackhand's Breadth",
@@ -4637,7 +4959,8 @@ var gear = {
       "phase": "1",
       "id": 13965,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_misc_armorkit_09"
     },
     {
       "name": "Counterattack Lodestone",
@@ -4647,7 +4970,8 @@ var gear = {
       "phase": "2",
       "id": 18537,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_stone_02"
     },
     {
       "name": "Darkmoon Card: Maelstrom (Assumed 2% proc chance)",
@@ -4660,7 +4984,8 @@ var gear = {
         "dmg": 250
       },
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_misc_ticket_tarot_maelstrom_01"
     },
     {
       "name": "Diamond Flask",
@@ -4668,7 +4993,8 @@ var gear = {
       "phase": "3",
       "id": 20130,
       "q": "3",
-      "i": "52"
+      "i": "52",
+      "p": "inv_drink_01"
     },
     {
       "name": "Drake Fang Talisman",
@@ -4679,7 +5005,8 @@ var gear = {
       "phase": "3",
       "id": 19406,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_misc_bone_06"
     },
     {
       "name": "Earthstrike",
@@ -4687,7 +5014,8 @@ var gear = {
       "phase": "5",
       "id": 21180,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "spell_nature_abolishmagic"
     },
     {
       "name": "Hand of Justice",
@@ -4700,7 +5028,8 @@ var gear = {
         "extra": 1
       },
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_jewelry_talisman_01"
     },
     {
       "name": "Heart of Wyrmthalak (Assumed 2% proc chance)",
@@ -4713,7 +5042,8 @@ var gear = {
         "dmg": 165
       },
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_misc_gem_bloodstone_01"
     },
     {
       "name": "Jom Gabbar",
@@ -4721,7 +5051,8 @@ var gear = {
       "phase": "5",
       "id": 23570,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_misc_enggizmos_19"
     },
     {
       "name": "Kiss of the Spider",
@@ -4731,7 +5062,8 @@ var gear = {
       "phase": "6",
       "id": 22954,
       "q": "4",
-      "i": "85"
+      "i": "85",
+      "p": "inv_trinket_naxxramas04"
     },
     {
       "name": "Rune of the Guard Captain",
@@ -4741,7 +5073,8 @@ var gear = {
       "phase": "1",
       "id": 19120,
       "q": "2",
-      "i": "51"
+      "i": "51",
+      "p": "inv_misc_rune_07"
     },
     {
       "name": "Seal of the Dawn (vs Undead)",
@@ -4750,7 +5083,8 @@ var gear = {
       "phase": "1",
       "id": 13209,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_misc_armorkit_18"
     },
     {
       "name": "Slayer's Crest",
@@ -4759,7 +5093,8 @@ var gear = {
       "phase": "6",
       "id": 23041,
       "q": "4",
-      "i": "90"
+      "i": "90",
+      "p": "inv_trinket_naxxramas03"
     },
     {
       "name": "Mark of the Champion (vs Undead)",
@@ -4768,7 +5103,8 @@ var gear = {
       "phase": "6",
       "id": 23206,
       "q": "4",
-      "i": "90"
+      "i": "90",
+      "p": "inv_misc_token_argentdawn2"
     }
   ],
   "ranged": [
@@ -4784,7 +5120,8 @@ var gear = {
       "phase": "4",
       "id": 20599,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_weapon_crossbow_11"
     },
     {
       "name": "Bow of Taut Sinew",
@@ -4797,7 +5134,8 @@ var gear = {
       "phase": "5",
       "id": 21478,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_weapon_bow_13"
     },
     {
       "name": "Ancient Bone Bow",
@@ -4806,7 +5144,8 @@ var gear = {
       "phase": "1",
       "id": 18680,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_bow_08"
     },
     {
       "name": "Gorewood Bow",
@@ -4817,7 +5156,8 @@ var gear = {
       "phase": "1",
       "id": 16996,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_bow_04"
     },
     {
       "name": "Heartstriker",
@@ -4827,7 +5167,8 @@ var gear = {
       "phase": "3",
       "id": 19350,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_weapon_bow_09"
     },
     {
       "name": "Hoodoo Hunting Bow",
@@ -4837,7 +5178,8 @@ var gear = {
       "phase": "4",
       "id": 19993,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_waepon_bow_zulgrub_d_02"
     },
     {
       "name": "Huhuran's Stinger",
@@ -4846,7 +5188,8 @@ var gear = {
       "phase": "5",
       "id": 21616,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_weapon_bow_14"
     },
     {
       "name": "Malgen's Long Bow",
@@ -4856,7 +5199,8 @@ var gear = {
       "phase": "1",
       "id": 22318,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_bow_12"
     },
     {
       "name": "Mandokir's Sting",
@@ -4866,7 +5210,8 @@ var gear = {
       "phase": "4",
       "id": 20038,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_waepon_bow_zulgrub_d_01"
     },
     {
       "name": "Soulstring",
@@ -4877,7 +5222,8 @@ var gear = {
       "phase": "6",
       "id": 22811,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_weapon_bow_13"
     },
     {
       "name": "Outrunner's Bow",
@@ -4887,7 +5233,8 @@ var gear = {
       "phase": "2",
       "id": 19562,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_bow_02"
     },
     {
       "name": "Riphook",
@@ -4896,7 +5243,8 @@ var gear = {
       "phase": "1",
       "id": 12653,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_weapon_bow_08"
     },
     {
       "name": "Satyr's Bow",
@@ -4906,7 +5254,8 @@ var gear = {
       "phase": "2",
       "id": 18323,
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_weapon_bow_03"
     },
     {
       "name": "Striker's Mark",
@@ -4916,7 +5265,8 @@ var gear = {
       "phase": "1",
       "id": 17069,
       "q": "4",
-      "i": "69"
+      "i": "69",
+      "p": "inv_weapon_bow_08"
     },
     {
       "name": "Blackcrow",
@@ -4926,7 +5276,8 @@ var gear = {
       "phase": "1",
       "id": 12651,
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_weapon_crossbow_04"
     },
     {
       "name": "Bloodseeker",
@@ -4936,7 +5287,8 @@ var gear = {
       "phase": "2",
       "id": 19107,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_crossbow_07"
     },
     {
       "name": "Carapace Spine Crossbow",
@@ -4946,7 +5298,8 @@ var gear = {
       "phase": "1",
       "id": 18738,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_crossbow_04"
     },
     {
       "name": "Crossbow of Imminent Doom",
@@ -4958,7 +5311,8 @@ var gear = {
       "phase": "5",
       "id": 21459,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_weapon_crossbow_06"
     },
     {
       "name": "Fahrad's Reloading Repeater",
@@ -4968,7 +5322,8 @@ var gear = {
       "phase": "5",
       "id": 22347,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_crossbow_04"
     },
     {
       "name": "Heartseeking Crossbow",
@@ -4978,7 +5333,8 @@ var gear = {
       "phase": "1",
       "id": 13040,
       "q": "3",
-      "i": "56"
+      "i": "56",
+      "p": "inv_weapon_crossbow_04"
     },
     {
       "name": "Nerubian Slavemaker",
@@ -4988,7 +5344,8 @@ var gear = {
       "phase": "6",
       "id": 22812,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_weapon_crossbow_12"
     },
     {
       "name": "Skull Splitting Crossbow",
@@ -4998,7 +5355,8 @@ var gear = {
       "phase": "1",
       "id": 13039,
       "q": "3",
-      "i": "48"
+      "i": "48",
+      "p": "inv_weapon_crossbow_04"
     },
     {
       "name": "Blastershot Launcher",
@@ -5008,7 +5366,8 @@ var gear = {
       "phase": "1",
       "id": 17072,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_weapon_rifle_09"
     },
     {
       "name": "Burstshot Harquebus",
@@ -5018,7 +5377,8 @@ var gear = {
       "phase": "1",
       "id": 13248,
       "q": "3",
-      "i": "56"
+      "i": "56",
+      "p": "inv_weapon_rifle_06"
     },
     {
       "name": "Crystal Slugthrower",
@@ -5028,7 +5388,8 @@ var gear = {
       "phase": "4",
       "id": 20722,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_rifle_03"
     },
     {
       "name": "Dragonbreath Hand Cannon",
@@ -5038,7 +5399,8 @@ var gear = {
       "phase": "3",
       "id": 19368,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_weapon_rifle_02"
     },
     {
       "name": "Gurubashi Dwarf Destroyer",
@@ -5047,7 +5409,8 @@ var gear = {
       "phase": "4",
       "id": 19853,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_weapon_rifle_10"
     },
     {
       "name": "Guttbuster",
@@ -5057,7 +5420,8 @@ var gear = {
       "phase": "1",
       "id": 13139,
       "q": "3",
-      "i": "50"
+      "i": "50",
+      "p": "inv_weapon_rifle_08"
     },
     {
       "name": "Larvae of the Great Worm",
@@ -5067,7 +5431,8 @@ var gear = {
       "phase": "5",
       "id": 23557,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_weapon_rifle_10"
     },
     {
       "name": "Silithid Husked Launcher",
@@ -5077,7 +5442,8 @@ var gear = {
       "phase": "5",
       "id": 21800,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_weapon_rifle_10"
     },
     {
       "name": "Toxin Injector",
@@ -5087,7 +5453,8 @@ var gear = {
       "phase": "6",
       "id": 22810,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_weapon_rifle_11"
     },
     {
       "name": "Willey's Portable Howitzer",
@@ -5097,7 +5464,8 @@ var gear = {
       "phase": "1",
       "id": 13380,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_rifle_07"
     }
   ],
   "mainhand": [
@@ -5115,7 +5483,8 @@ var gear = {
         "spell": "Avenger"
       },
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_sword_05"
     },
     {
       "name": "Ancient Hakkari Manslayer",
@@ -5133,7 +5502,8 @@ var gear = {
         "coeff": 1
       },
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_axe_35"
     },
     {
       "name": "Annihilator",
@@ -5150,7 +5520,8 @@ var gear = {
         "spell": "Annihilator"
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_axe_12"
     },
     {
       "name": "Bashguuder",
@@ -5166,7 +5537,8 @@ var gear = {
         "spell": "Rivenspike"
       },
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_mace_15"
     },
     {
       "name": "Rivenspike",
@@ -5182,7 +5554,8 @@ var gear = {
         "spell": "Rivenspike"
       },
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_pick_05"
     },
     {
       "name": "Axe of the Deep Woods",
@@ -5201,7 +5574,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "57"
+      "i": "57",
+      "p": "inv_axe_07"
     },
     {
       "name": "Blessed Qiraji War Axe",
@@ -5216,7 +5590,8 @@ var gear = {
       "phase": 5,
       "id": 21242,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_axe_26"
     },
     {
       "name": "Bone Slicing Hatchet",
@@ -5230,7 +5605,8 @@ var gear = {
       "phase": 1,
       "id": 18737,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_11"
     },
     {
       "name": "Crul'Shorukh, Edge of Chaos",
@@ -5244,7 +5620,8 @@ var gear = {
       "phase": 3,
       "id": 19363,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_axe_12"
     },
     {
       "name": "Dark Iron Destroyer",
@@ -5258,7 +5635,8 @@ var gear = {
       "phase": 1,
       "id": 17016,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_axe_12"
     },
     {
       "name": "Deathbringer",
@@ -5276,7 +5654,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_axe_09"
     },
     {
       "name": "Doom's Edge",
@@ -5291,7 +5670,8 @@ var gear = {
       "phase": 3,
       "id": 19362,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_axe_15"
     },
     {
       "name": "Flurry Axe",
@@ -5307,7 +5687,8 @@ var gear = {
         "extra": 1
       },
       "q": "4",
-      "i": "47"
+      "i": "47",
+      "p": "inv_axe_17"
     },
     {
       "name": "Frostbite",
@@ -5320,7 +5701,8 @@ var gear = {
       "phase": 2,
       "id": 19103,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_axe_22"
     },
     {
       "name": "Hatchet of Sundered Bone",
@@ -5334,7 +5716,8 @@ var gear = {
       "phase": 6,
       "id": 22816,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_axe_08"
     },
     {
       "name": "Iceblade Hacker",
@@ -5347,7 +5730,8 @@ var gear = {
       "phase": 1,
       "id": 13952,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_03"
     },
     {
       "name": "R14 Axe",
@@ -5362,7 +5746,8 @@ var gear = {
       "phase": 2,
       "id": 18827,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_axe_24"
     },
     {
       "name": "Serathil",
@@ -5376,7 +5761,8 @@ var gear = {
       "phase": 1,
       "id": 13015,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_axe_08"
     },
     {
       "name": "Sickle of Unyielding Strength",
@@ -5392,7 +5778,8 @@ var gear = {
       "phase": 5,
       "id": 21392,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_axe_15"
     },
     {
       "name": "Soulrender",
@@ -5405,7 +5792,8 @@ var gear = {
       "phase": 4,
       "id": 20675,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_13"
     },
     {
       "name": "Zulian Hacker of Strength",
@@ -5453,7 +5841,8 @@ var gear = {
         "dmg": 99
       },
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_34"
     },
     {
       "name": "Black Amnesty",
@@ -5465,7 +5854,8 @@ var gear = {
       "phase": 3,
       "id": 19166,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Blessed Qiraji Pugio",
@@ -5481,7 +5871,8 @@ var gear = {
       "phase": 5,
       "id": 21244,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_weapon_shortblade_35"
     },
     {
       "name": "Bonescraper",
@@ -5494,7 +5885,8 @@ var gear = {
       "phase": 1,
       "id": 13368,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Core Hound Tooth",
@@ -5509,7 +5901,8 @@ var gear = {
       "phase": 1,
       "id": 18805,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_weapon_shortblade_11"
     },
     {
       "name": "Darrowspike",
@@ -5526,7 +5919,8 @@ var gear = {
         "dmg": 99
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_21"
     },
     {
       "name": "Death's Sting",
@@ -5541,7 +5935,8 @@ var gear = {
       "phase": 5,
       "id": 21126,
       "q": "4",
-      "i": "84"
+      "i": "84",
+      "p": "inv_weapon_shortblade_33"
     },
     {
       "name": "Dragonfang Blade",
@@ -5555,7 +5950,8 @@ var gear = {
       "phase": 3,
       "id": 19346,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_weapon_shortblade_29"
     },
     {
       "name": "Emerald Dragonfang",
@@ -5573,7 +5969,8 @@ var gear = {
         "dmg": 97
       },
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_weapon_shortblade_22"
     },
     {
       "name": "Fang of the Faceless",
@@ -5587,7 +5984,8 @@ var gear = {
       "phase": 4,
       "id": 19859,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_weapon_shortblade_30"
     },
     {
       "name": "Felstriker",
@@ -5603,7 +6001,8 @@ var gear = {
         "spell": "Felstriker"
       },
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_25"
     },
     {
       "name": "Finkle's Skinner",
@@ -5616,7 +6015,8 @@ var gear = {
       "phase": 1,
       "id": 12709,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_33"
     },
     {
       "name": "Glacial Blade",
@@ -5634,7 +6034,8 @@ var gear = {
         "dmg": 49
       },
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_shortblade_06"
     },
     {
       "name": "Gutgore Ripper",
@@ -5653,7 +6054,8 @@ var gear = {
         "binaryspell": true
       },
       "q": "4",
-      "i": "69"
+      "i": "69",
+      "p": "inv_weapon_shortblade_18"
     },
     {
       "name": "Harbinger of Doom",
@@ -5669,7 +6071,8 @@ var gear = {
       "phase": 6,
       "id": 23044,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_knife_1h_stratholme_d_03"
     },
     {
       "name": "Heartseeker",
@@ -5683,7 +6086,8 @@ var gear = {
       "phase": 1,
       "id": 12783,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_17"
     },
     {
       "name": "R14 Dagger",
@@ -5698,7 +6102,8 @@ var gear = {
       "phase": 2,
       "id": 18838,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_weapon_shortblade_26"
     },
     {
       "name": "Kingsfall",
@@ -5713,7 +6118,8 @@ var gear = {
       "phase": 6,
       "id": 22802,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_weapon_shortblade_37"
     },
     {
       "name": "Maexxna's Fang",
@@ -5728,7 +6134,8 @@ var gear = {
       "phase": 6,
       "id": 22804,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_knife_1h_stratholme_d_01"
     },
     {
       "name": "Perdition's Blade",
@@ -5745,7 +6152,8 @@ var gear = {
         "dmg": 53
       },
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_48"
     },
     {
       "name": "Qiraji Sacrificial Dagger",
@@ -5759,7 +6167,8 @@ var gear = {
       "phase": 5,
       "id": 21498,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Scarlet Kris",
@@ -5773,7 +6182,8 @@ var gear = {
       "phase": 1,
       "id": 5267,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_03"
     },
     {
       "name": "Scout's Blade",
@@ -5787,7 +6197,8 @@ var gear = {
       "phase": 2,
       "id": 19542,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_15"
     },
     {
       "name": "Shadowsong's Sorrow",
@@ -5802,7 +6213,8 @@ var gear = {
       "phase": 5,
       "id": 21522,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_weapon_shortblade_25"
     },
     {
       "name": "The Lobotomizer",
@@ -5818,7 +6230,8 @@ var gear = {
         "dmg": 250
       },
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_29"
     },
     {
       "name": "The Thunderwood Poker",
@@ -5832,7 +6245,8 @@ var gear = {
       "phase": 5,
       "id": 22377,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_17"
     },
     {
       "name": "Claw of the Black Drake",
@@ -5848,7 +6262,8 @@ var gear = {
       "phase": 3,
       "id": 19365,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_weapon_shortblade_27"
     },
     {
       "name": "Eskhandar's Right Claw",
@@ -5866,7 +6281,8 @@ var gear = {
         "spell": "Eskhandar"
       },
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_misc_monsterclaw_04"
     },
     {
       "name": "R14 Claw (MH)",
@@ -5882,7 +6298,8 @@ var gear = {
       "phase": 2,
       "id": 18844,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_misc_monsterclaw_03"
     },
     {
       "name": "Lefty's Brass Knuckle",
@@ -5896,7 +6313,8 @@ var gear = {
       "phase": 5,
       "id": 22317,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_gauntlets_11"
     },
     {
       "name": "Silithid Claw",
@@ -5911,7 +6329,8 @@ var gear = {
       "phase": 5,
       "id": 21673,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_misc_monsterclaw_03"
     },
     {
       "name": "Thekal's Grasp (1% chance on set)",
@@ -5926,7 +6345,8 @@ var gear = {
       "phase": 4,
       "id": 19896,
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_hand_01"
     },
     {
       "name": "Willey's Back Scratcher",
@@ -5941,7 +6361,8 @@ var gear = {
       "phase": 1,
       "id": 22404,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_shortblade_16"
     },
     {
       "name": "Anubisath Warhammer",
@@ -5956,7 +6377,8 @@ var gear = {
       "phase": 5,
       "id": 21837,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_hammer_11"
     },
     {
       "name": "Blessed Qiraji War Hammer",
@@ -5972,7 +6394,8 @@ var gear = {
       "phase": 5,
       "id": 21268,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_mace_24"
     },
     {
       "name": "Ebon Hand",
@@ -5991,7 +6414,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_hammer_19"
     },
     {
       "name": "Empyrean Demolisher",
@@ -6008,7 +6432,8 @@ var gear = {
         "spell": "Empyrean"
       },
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_hammer_05"
     },
     {
       "id": 11684,
@@ -6025,7 +6450,8 @@ var gear = {
         "extra": 2
       },
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "spell_frost_frostbrand"
     },
     {
       "name": "Hammer of Bestial Fury",
@@ -6041,7 +6467,8 @@ var gear = {
       "phase": 4,
       "id": 20580,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_mace_20"
     },
     {
       "name": "R14 Hammer",
@@ -6056,7 +6483,8 @@ var gear = {
       "phase": 2,
       "id": 18865,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_mace_13"
     },
     {
       "name": "Mass of McGowan",
@@ -6071,7 +6499,8 @@ var gear = {
       "phase": 1,
       "id": 13006,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_hammer_17"
     },
     {
       "name": "Misplaced Servo Arm",
@@ -6088,7 +6517,8 @@ var gear = {
         "dmg": 125
       },
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_mace_28"
     },
     {
       "name": "Persuader",
@@ -6103,7 +6533,8 @@ var gear = {
       "phase": 5,
       "id": 22384,
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_hammer_08"
     },
     {
       "name": "Sand Polished Hammer",
@@ -6118,7 +6549,8 @@ var gear = {
       "phase": 5,
       "id": 21715,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_mace_24"
     },
     {
       "name": "Sceptre of Smiting",
@@ -6137,7 +6569,8 @@ var gear = {
         "coeff": 1
       },
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_mace_08"
     },
     {
       "name": "Spineshatter",
@@ -6153,7 +6586,8 @@ var gear = {
       "phase": 3,
       "id": 19335,
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_mace_06"
     },
     {
       "name": "Stormstrike Hammer",
@@ -6166,7 +6600,8 @@ var gear = {
       "phase": 2,
       "id": 19104,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_hammer_21"
     },
     {
       "name": "The Castigator",
@@ -6182,7 +6617,8 @@ var gear = {
       "phase": 6,
       "id": 22808,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_mace_1h_stratholme_d_01"
     },
     {
       "name": "Timeworn Mace",
@@ -6197,7 +6633,8 @@ var gear = {
       "phase": 2,
       "id": 18376,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_mace_07"
     },
     {
       "name": "Ancient Qiraji Ripper",
@@ -6212,7 +6649,8 @@ var gear = {
       "phase": 5,
       "id": 21650,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_59"
     },
     {
       "name": "Blackguard",
@@ -6226,7 +6664,8 @@ var gear = {
       "phase": 3,
       "id": 19168,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_sword_39"
     },
     {
       "name": "Bloodlord's Defender",
@@ -6242,7 +6681,8 @@ var gear = {
       "phase": 4,
       "id": 19867,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_sword_54"
     },
     {
       "name": "Brutality Blade",
@@ -6257,7 +6697,8 @@ var gear = {
       "phase": 1,
       "id": 18832,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_sword_15"
     },
     {
       "name": "Cho'Rush's Blade",
@@ -6270,7 +6711,8 @@ var gear = {
       "phase": 2,
       "id": 18484,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_shortblade_04"
     },
     {
       "name": "Chromatically Tempered Sword",
@@ -6285,7 +6727,8 @@ var gear = {
       "phase": 3,
       "id": 19352,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_51"
     },
     {
       "name": "Cold Forged Blade",
@@ -6299,7 +6742,8 @@ var gear = {
       "phase": 2,
       "id": 19110,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_47"
     },
     {
       "name": "Dal'Rend's Sacred Charge",
@@ -6314,7 +6758,8 @@ var gear = {
       "phase": 1,
       "id": 12940,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_43"
     },
     {
       "name": "Dark Iron Reaver",
@@ -6328,7 +6773,8 @@ var gear = {
       "phase": 1,
       "id": 17015,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_48"
     },
     {
       "name": "Fiery Retributer",
@@ -6344,7 +6790,8 @@ var gear = {
       "phase": 4,
       "id": 19968,
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_01"
     },
     {
       "name": "Gressil, Dawn of Ruin",
@@ -6358,7 +6805,8 @@ var gear = {
       "phase": 6,
       "id": 23054,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_sword_61"
     },
     {
       "name": "Iblis, Blade of the Fallen Seraph",
@@ -6373,7 +6821,8 @@ var gear = {
       "phase": 6,
       "id": 23014,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_07"
     },
     {
       "name": "Krol Blade",
@@ -6389,7 +6838,8 @@ var gear = {
       "phase": 1,
       "id": 2244,
       "q": "4",
-      "i": "56"
+      "i": "56",
+      "p": "inv_sword_18"
     },
     {
       "name": "Maladath, Runed Blade of the Black Flight",
@@ -6403,7 +6853,8 @@ var gear = {
       "phase": 3,
       "id": 19351,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_sword_49"
     },
     {
       "id": 15806,
@@ -6417,7 +6868,8 @@ var gear = {
       "source": "Quest",
       "phase": 1,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_sword_34"
     },
     {
       "name": "Nightmare Blade",
@@ -6432,7 +6884,8 @@ var gear = {
       "phase": 4,
       "id": 20577,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_sword_44"
     },
     {
       "name": "Quel'Serrar",
@@ -6446,7 +6899,8 @@ var gear = {
       "phase": 2,
       "id": 18348,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_sword_01"
     },
     {
       "name": "R14 Longsword",
@@ -6461,7 +6915,8 @@ var gear = {
       "phase": 2,
       "id": 12584,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_sword_11"
     },
     {
       "name": "R14 Swift Blade",
@@ -6476,7 +6931,8 @@ var gear = {
       "phase": 2,
       "id": 23456,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_sword_05"
     },
     {
       "name": "Ravencrest's Legacy",
@@ -6491,7 +6947,8 @@ var gear = {
       "phase": 5,
       "id": 21520,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_sword_49"
     },
     {
       "name": "Ravenholdt Slicer",
@@ -6505,7 +6962,8 @@ var gear = {
       "phase": 5,
       "id": 22378,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_38"
     },
     {
       "name": "Sword of Zeal",
@@ -6522,7 +6980,8 @@ var gear = {
         "spell": "Zeal"
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_39"
     },
     {
       "name": "Zulian Slicer",
@@ -6541,7 +7000,8 @@ var gear = {
         "coeff": 1
       },
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_35"
     },
     {
       "name": "Teebu's Blazing Longsword",
@@ -6559,7 +7019,8 @@ var gear = {
         "dmg": 165
       },
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_22"
     },
     {
       "name": "The Hungering Cold",
@@ -6574,7 +7035,8 @@ var gear = {
       "phase": 6,
       "id": 23577,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_sword_62"
     },
     {
       "id": 17705,
@@ -6590,7 +7052,8 @@ var gear = {
         "extra": 1
       },
       "q": "3",
-      "i": "53"
+      "i": "53",
+      "p": "inv_sword_36"
     },
     {
       "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -6614,7 +7077,8 @@ var gear = {
         "binaryspell": true
       },
       "q": "5",
-      "i": "80"
+      "i": "80",
+      "p": "inv_sword_39"
     },
     {
       "name": "Warblade of the Hakkari (MH)",
@@ -6629,7 +7093,8 @@ var gear = {
       "phase": 4,
       "id": 19865,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_55"
     },
     {
       "name": "Widow's Remorse",
@@ -6644,7 +7109,8 @@ var gear = {
       "phase": 6,
       "id": 22806,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_60"
     },
     {
       "name": "Vis'kag the Bloodletter",
@@ -6660,7 +7126,8 @@ var gear = {
         "dmg": 240
       },
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_sword_18"
     },
     {
       "name": "Protector's Sword",
@@ -6674,7 +7141,8 @@ var gear = {
       "phase": 3,
       "id": 19554,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_27"
     },
     {
       "name": "Bonechill Hammer",
@@ -6691,7 +7159,8 @@ var gear = {
         "dmg": 99
       },
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_hammer_13"
     },
     {
       "name": "Hammer of the Vesper",
@@ -6705,7 +7174,8 @@ var gear = {
       "str": 7,
       "sta": 12,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_hammer_13"
     }
   ],
   "offhand": [
@@ -6723,7 +7193,8 @@ var gear = {
         "spell": "Avenger"
       },
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_sword_05"
     },
     {
       "name": "Ancient Hakkari Manslayer",
@@ -6741,7 +7212,8 @@ var gear = {
         "coeff": 1
       },
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_axe_35"
     },
     {
       "name": "Bashguuder",
@@ -6757,7 +7229,8 @@ var gear = {
         "spell": "Rivenspike"
       },
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_mace_15"
     },
     {
       "name": "Blessed Qiraji War Axe",
@@ -6772,7 +7245,8 @@ var gear = {
       "phase": 5,
       "id": 21242,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_axe_26"
     },
     {
       "name": "Bone Slicing Hatchet",
@@ -6786,7 +7260,8 @@ var gear = {
       "phase": 1,
       "id": 18737,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_11"
     },
     {
       "name": "Crul'Shorukh, Edge of Chaos",
@@ -6800,7 +7275,8 @@ var gear = {
       "phase": 3,
       "id": 19363,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_axe_12"
     },
     {
       "name": "Deathbringer",
@@ -6818,7 +7294,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_axe_09"
     },
     {
       "name": "Doom's Edge",
@@ -6833,7 +7310,8 @@ var gear = {
       "phase": 3,
       "id": 19362,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_axe_15"
     },
     {
       "name": "Flurry Axe",
@@ -6849,7 +7327,8 @@ var gear = {
         "extra": 1
       },
       "q": "4",
-      "i": "47"
+      "i": "47",
+      "p": "inv_axe_17"
     },
     {
       "name": "Frostbite",
@@ -6862,7 +7341,8 @@ var gear = {
       "phase": 2,
       "id": 19103,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_axe_22"
     },
     {
       "name": "Hatchet of Sundered Bone",
@@ -6876,7 +7356,8 @@ var gear = {
       "phase": 6,
       "id": 22816,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_axe_08"
     },
     {
       "name": "R14 Axe",
@@ -6891,7 +7372,8 @@ var gear = {
       "phase": 2,
       "id": 18827,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_axe_24"
     },
     {
       "name": "Serathil",
@@ -6905,7 +7387,8 @@ var gear = {
       "phase": 1,
       "id": 13015,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_axe_08"
     },
     {
       "name": "Sickle of Unyielding Strength",
@@ -6921,7 +7404,8 @@ var gear = {
       "phase": 5,
       "id": 21392,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_axe_15"
     },
     {
       "name": "Soulrender",
@@ -6934,7 +7418,8 @@ var gear = {
       "phase": 4,
       "id": 20675,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_13"
     },
     {
       "name": "Zulian Hacker of Strength",
@@ -6985,7 +7470,8 @@ var gear = {
         "dmg": 99
       },
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_34"
     },
     {
       "name": "Black Amnesty",
@@ -6997,7 +7483,8 @@ var gear = {
       "phase": 3,
       "id": 19166,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Blessed Qiraji Pugio",
@@ -7013,7 +7500,8 @@ var gear = {
       "phase": 5,
       "id": 21244,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_weapon_shortblade_35"
     },
     {
       "name": "Bonescraper",
@@ -7026,7 +7514,8 @@ var gear = {
       "phase": 1,
       "id": 13368,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Core Hound Tooth",
@@ -7041,7 +7530,8 @@ var gear = {
       "phase": 1,
       "id": 18805,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_weapon_shortblade_11"
     },
     {
       "name": "Darrowspike",
@@ -7058,7 +7548,8 @@ var gear = {
         "dmg": 99
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_21"
     },
     {
       "name": "Death's Sting",
@@ -7073,7 +7564,8 @@ var gear = {
       "phase": 5,
       "id": 21126,
       "q": "4",
-      "i": "84"
+      "i": "84",
+      "p": "inv_weapon_shortblade_33"
     },
     {
       "name": "Distracting Dagger",
@@ -7087,7 +7579,8 @@ var gear = {
       "phase": 2,
       "id": 18392,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_shortblade_05"
     },
     {
       "name": "Dragonfang Blade",
@@ -7101,7 +7594,8 @@ var gear = {
       "phase": 3,
       "id": 19346,
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_weapon_shortblade_29"
     },
     {
       "name": "Emerald Dragonfang",
@@ -7119,7 +7613,8 @@ var gear = {
         "dmg": 97
       },
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_weapon_shortblade_22"
     },
     {
       "name": "Fang of the Faceless",
@@ -7133,7 +7628,8 @@ var gear = {
       "phase": 4,
       "id": 19859,
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_weapon_shortblade_30"
     },
     {
       "name": "Felstriker",
@@ -7149,7 +7645,8 @@ var gear = {
         "spell": "Felstriker"
       },
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_25"
     },
     {
       "name": "Glacial Blade",
@@ -7167,7 +7664,8 @@ var gear = {
         "dmg": 49
       },
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_shortblade_06"
     },
     {
       "name": "Gutgore Ripper",
@@ -7186,7 +7684,8 @@ var gear = {
         "binaryspell": true
       },
       "q": "4",
-      "i": "69"
+      "i": "69",
+      "p": "inv_weapon_shortblade_18"
     },
     {
       "name": "Harbinger of Doom",
@@ -7202,7 +7701,8 @@ var gear = {
       "phase": 6,
       "id": 23044,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_knife_1h_stratholme_d_03"
     },
     {
       "name": "Heartseeker",
@@ -7216,7 +7716,8 @@ var gear = {
       "phase": 1,
       "id": 12783,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_17"
     },
     {
       "name": "R14 Dagger",
@@ -7231,7 +7732,8 @@ var gear = {
       "phase": 2,
       "id": 18838,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_weapon_shortblade_26"
     },
     {
       "name": "Kingsfall",
@@ -7246,7 +7748,8 @@ var gear = {
       "phase": 6,
       "id": 22802,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_weapon_shortblade_37"
     },
     {
       "name": "Maexxna's Fang",
@@ -7261,7 +7764,8 @@ var gear = {
       "phase": 6,
       "id": 22804,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_knife_1h_stratholme_d_01"
     },
     {
       "name": "Perdition's Blade",
@@ -7278,7 +7782,8 @@ var gear = {
         "dmg": 53
       },
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_48"
     },
     {
       "name": "Qiraji Sacrificial Dagger",
@@ -7292,7 +7797,8 @@ var gear = {
       "phase": 5,
       "id": 21498,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_weapon_shortblade_12"
     },
     {
       "name": "Scarlet Kris",
@@ -7306,7 +7812,8 @@ var gear = {
       "phase": 1,
       "id": 5267,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_03"
     },
     {
       "name": "Scout's Blade",
@@ -7320,7 +7827,8 @@ var gear = {
       "phase": 2,
       "id": 19542,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_shortblade_15"
     },
     {
       "name": "Shadowsong's Sorrow",
@@ -7335,7 +7843,8 @@ var gear = {
       "phase": 5,
       "id": 21522,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_weapon_shortblade_25"
     },
     {
       "name": "The Lobotomizer",
@@ -7351,7 +7860,8 @@ var gear = {
         "dmg": 250
       },
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_29"
     },
     {
       "name": "The Thunderwood Poker",
@@ -7365,7 +7875,8 @@ var gear = {
       "phase": 5,
       "id": 22377,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_17"
     },
     {
       "name": "Arlokk's Grasp (1% chance on set)",
@@ -7384,7 +7895,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_weapon_hand_01"
     },
     {
       "name": "Claw of the Frost Wyrm",
@@ -7401,7 +7913,8 @@ var gear = {
       "phase": 6,
       "id": 23242,
       "q": "4",
-      "i": "88"
+      "i": "88",
+      "p": "inv_weapon_hand_03"
     },
     {
       "name": "Eskhandar's Left Claw",
@@ -7415,7 +7928,8 @@ var gear = {
       "phase": 2,
       "id": 18202,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_misc_monsterclaw_04"
     },
     {
       "name": "R14 Claw (OH)",
@@ -7431,7 +7945,8 @@ var gear = {
       "phase": 2,
       "id": 18848,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_misc_monsterclaw_04"
     },
     {
       "name": "Lefty's Brass Knuckle",
@@ -7445,7 +7960,8 @@ var gear = {
       "phase": 5,
       "id": 22317,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_gauntlets_11"
     },
     {
       "name": "Anubisath Warhammer",
@@ -7460,7 +7976,8 @@ var gear = {
       "phase": 5,
       "id": 21837,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_hammer_11"
     },
     {
       "name": "Blessed Qiraji War Hammer",
@@ -7476,7 +7993,8 @@ var gear = {
       "phase": 5,
       "id": 21268,
       "q": "4",
-      "i": "79"
+      "i": "79",
+      "p": "inv_mace_24"
     },
     {
       "name": "Ebon Hand",
@@ -7495,7 +8013,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_hammer_19"
     },
     {
       "name": "R14 Hammer",
@@ -7510,7 +8029,8 @@ var gear = {
       "phase": 2,
       "id": 18865,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_mace_13"
     },
     {
       "name": "Misplaced Servo Arm",
@@ -7527,7 +8047,8 @@ var gear = {
         "dmg": 125
       },
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_mace_28"
     },
     {
       "name": "Sand Polished Hammer",
@@ -7542,7 +8063,8 @@ var gear = {
       "phase": 5,
       "id": 21715,
       "q": "4",
-      "i": "72"
+      "i": "72",
+      "p": "inv_mace_24"
     },
     {
       "name": "Sceptre of Smiting",
@@ -7561,7 +8083,8 @@ var gear = {
         "coeff": 1
       },
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_mace_08"
     },
     {
       "name": "Stormstrike Hammer",
@@ -7574,7 +8097,8 @@ var gear = {
       "phase": 2,
       "id": 19104,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_hammer_21"
     },
     {
       "name": "The Castigator",
@@ -7590,7 +8114,8 @@ var gear = {
       "phase": 6,
       "id": 22808,
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_mace_1h_stratholme_d_01"
     },
     {
       "name": "Timeworn Mace",
@@ -7605,7 +8130,8 @@ var gear = {
       "phase": 2,
       "id": 18376,
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_mace_07"
     },
     {
       "name": "Ancient Qiraji Ripper",
@@ -7620,7 +8146,8 @@ var gear = {
       "phase": 5,
       "id": 21650,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_59"
     },
     {
       "name": "Blackguard",
@@ -7634,7 +8161,8 @@ var gear = {
       "phase": 3,
       "id": 19168,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_sword_39"
     },
     {
       "name": "Brutality Blade",
@@ -7649,7 +8177,8 @@ var gear = {
       "phase": 1,
       "id": 18832,
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_sword_15"
     },
     {
       "name": "Cho'Rush's Blade",
@@ -7662,7 +8191,8 @@ var gear = {
       "phase": 2,
       "id": 18484,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_weapon_shortblade_04"
     },
     {
       "name": "Chromatically Tempered Sword",
@@ -7677,7 +8207,8 @@ var gear = {
       "phase": 3,
       "id": 19352,
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_51"
     },
     {
       "name": "Cold Forged Blade",
@@ -7691,7 +8222,8 @@ var gear = {
       "phase": 2,
       "id": 19110,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_47"
     },
     {
       "name": "Dal'Rend's Tribal Guardian",
@@ -7706,7 +8238,8 @@ var gear = {
       "phase": 1,
       "id": 12939,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_40"
     },
     {
       "name": "Gressil, Dawn of Ruin",
@@ -7720,7 +8253,8 @@ var gear = {
       "phase": 6,
       "id": 23054,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_sword_61"
     },
     {
       "name": "Iblis, Blade of the Fallen Seraph",
@@ -7735,7 +8269,8 @@ var gear = {
       "phase": 6,
       "id": 23014,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_07"
     },
     {
       "name": "Maladath, Runed Blade of the Black Flight",
@@ -7749,7 +8284,8 @@ var gear = {
       "phase": 3,
       "id": 19351,
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_sword_49"
     },
     {
       "id": 15806,
@@ -7763,7 +8299,8 @@ var gear = {
       "source": "Quest",
       "phase": 1,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_sword_34"
     },
     {
       "name": "Nightmare Blade",
@@ -7778,7 +8315,8 @@ var gear = {
       "phase": 4,
       "id": 20577,
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_sword_44"
     },
     {
       "name": "R14 Longsword",
@@ -7793,7 +8331,8 @@ var gear = {
       "phase": 2,
       "id": 12584,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_sword_11"
     },
     {
       "name": "R14 Swift Blade",
@@ -7808,7 +8347,8 @@ var gear = {
       "phase": 2,
       "id": 23456,
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_sword_05"
     },
     {
       "name": "Ravencrest's Legacy",
@@ -7823,7 +8363,8 @@ var gear = {
       "phase": 5,
       "id": 21520,
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_sword_49"
     },
     {
       "name": "Ravenholdt Slicer",
@@ -7837,7 +8378,8 @@ var gear = {
       "phase": 5,
       "id": 22378,
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_sword_38"
     },
     {
       "name": "Zulian Slicer",
@@ -7856,7 +8398,8 @@ var gear = {
         "coeff": 1
       },
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_35"
     },
     {
       "name": "The Hungering Cold",
@@ -7871,7 +8414,8 @@ var gear = {
       "phase": 6,
       "id": 23577,
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_sword_62"
     },
     {
       "id": 17705,
@@ -7887,7 +8431,8 @@ var gear = {
         "extra": 1
       },
       "q": "3",
-      "i": "53"
+      "i": "53",
+      "p": "inv_sword_36"
     },
     {
       "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -7907,7 +8452,8 @@ var gear = {
         "binaryspell": true
       },
       "q": "5",
-      "i": "80"
+      "i": "80",
+      "p": "inv_sword_39"
     },
     {
       "name": "Warblade of the Hakkari (OH)",
@@ -7921,7 +8467,8 @@ var gear = {
       "phase": 4,
       "id": 19866,
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_sword_55"
     },
     {
       "name": "Widow's Remorse",
@@ -7936,7 +8483,8 @@ var gear = {
       "phase": 6,
       "id": 22806,
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_60"
     },
     {
       "name": "Vis'kag the Bloodletter",
@@ -7952,7 +8500,8 @@ var gear = {
         "dmg": 240
       },
       "q": "4",
-      "i": "74"
+      "i": "74",
+      "p": "inv_sword_18"
     },
     {
       "name": "Protector's Sword",
@@ -7966,7 +8515,8 @@ var gear = {
       "phase": 3,
       "id": 19554,
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_27"
     },
     {
       "name": "Bonechill Hammer",
@@ -7983,7 +8533,8 @@ var gear = {
         "dmg": 99
       },
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_hammer_13"
     },
     {
       "name": "Hammer of the Vesper",
@@ -7997,7 +8548,8 @@ var gear = {
       "str": 7,
       "sta": 12,
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_hammer_13"
     },
     {
       "name": "Rivenspike",
@@ -8013,7 +8565,8 @@ var gear = {
         "spell": "Rivenspike"
       },
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_pick_05"
     }
   ],
   "twohand": [
@@ -8029,7 +8582,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_axe_09"
     },
     {
       "name": "Brain Hacker",
@@ -8045,7 +8599,8 @@ var gear = {
         "dmg": 250
       },
       "q": "4",
-      "i": "60"
+      "i": "60",
+      "p": "inv_weapon_halberd_10"
     },
     {
       "name": "Dark Edge of Insanity",
@@ -8060,7 +8615,8 @@ var gear = {
       "phase": 5,
       "type": "Axe",
       "q": "4",
-      "i": "84"
+      "i": "84",
+      "p": "inv_axe_24"
     },
     {
       "name": "Draconic Avenger",
@@ -8074,7 +8630,8 @@ var gear = {
       "phase": 3,
       "type": "Axe",
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_axe_21"
     },
     {
       "name": "Drake Talon Cleaver",
@@ -8092,7 +8649,8 @@ var gear = {
         "dmg": 240
       },
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_axe_10"
     },
     {
       "name": "Dreadforge Retaliator",
@@ -8106,7 +8664,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_axe_22"
     },
     {
       "name": "Gravestone War Axe",
@@ -8118,7 +8677,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_halberd_09"
     },
     {
       "name": "Gri'lek's Carver",
@@ -8130,7 +8690,8 @@ var gear = {
       "phase": 4,
       "type": "Axe",
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_axe_24"
     },
     {
       "name": "R14 Battle Axe",
@@ -8145,7 +8706,8 @@ var gear = {
       "phase": 2,
       "type": "Axe",
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_axe_21"
     },
     {
       "name": "Malicious Axe",
@@ -8159,7 +8721,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_axe_18"
     },
     {
       "name": "Neretzek, The Blood Drinker",
@@ -8178,7 +8741,8 @@ var gear = {
         "dmg": 152
       },
       "q": "4",
-      "i": "71"
+      "i": "71",
+      "p": "inv_axe_09"
     },
     {
       "name": "Nightfall",
@@ -8190,7 +8754,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_axe_12"
     },
     {
       "name": "Severance",
@@ -8205,7 +8770,8 @@ var gear = {
       "phase": 6,
       "type": "Axe",
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_axe_22"
     },
     {
       "name": "Spinal Reaper",
@@ -8218,7 +8784,8 @@ var gear = {
       "phase": 1,
       "type": "Axe",
       "q": "4",
-      "i": "76"
+      "i": "76",
+      "p": "inv_axe_09"
     },
     {
       "name": "The Nicker",
@@ -8234,7 +8801,8 @@ var gear = {
         "dmg": 100
       },
       "q": "3",
-      "i": "58"
+      "i": "58",
+      "p": "inv_weapon_halberd_11"
     },
     {
       "name": "Treant's Bane",
@@ -8249,7 +8817,8 @@ var gear = {
       "phase": 2,
       "type": "Axe",
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_axe_10"
     },
     {
       "name": "Zulian Stone Axe",
@@ -8263,7 +8832,8 @@ var gear = {
       "phase": 4,
       "type": "Axe",
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_axe_34"
     },
     {
       "name": "Bonecrusher",
@@ -8277,7 +8847,8 @@ var gear = {
       "phase": 2,
       "type": "Mace",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_mace_02"
     },
     {
       "name": "Crystal Spiked Maul",
@@ -8291,7 +8862,8 @@ var gear = {
       "phase": 4,
       "type": "Mace",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_hammer_10"
     },
     {
       "name": "Doomulus Prime",
@@ -8306,7 +8878,8 @@ var gear = {
       "phase": 5,
       "type": "Mace",
       "q": "3",
-      "i": "65"
+      "i": "65",
+      "p": "inv_hammer_10"
     },
     {
       "name": "Draconic Maul",
@@ -8321,7 +8894,8 @@ var gear = {
       "phase": 3,
       "type": "Mace",
       "q": "4",
-      "i": "70"
+      "i": "70",
+      "p": "inv_mace_05"
     },
     {
       "name": "Earthshaker",
@@ -8334,7 +8908,8 @@ var gear = {
       "phase": 1,
       "type": "Mace",
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_hammer_04"
     },
     {
       "name": "Fist of Omokk",
@@ -8348,7 +8923,8 @@ var gear = {
       "phase": 1,
       "type": "Mace",
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_hammer_04"
     },
     {
       "name": "Hammer of the Titans",
@@ -8361,7 +8937,8 @@ var gear = {
       "phase": 1,
       "type": "Mace",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_hammer_09"
     },
     {
       "name": "R14 Pulverizer",
@@ -8376,7 +8953,8 @@ var gear = {
       "phase": 2,
       "type": "Mace",
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_hammer_10"
     },
     {
       "name": "Jeklik's Crusher",
@@ -8392,7 +8970,8 @@ var gear = {
         "dmg": 210
       },
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_mace_19"
     },
     {
       "name": "Might of Menethil",
@@ -8407,7 +8986,8 @@ var gear = {
       "phase": 6,
       "type": "Mace",
       "q": "4",
-      "i": "89"
+      "i": "89",
+      "p": "inv_mace_25"
     },
     {
       "name": "Seeping Willow",
@@ -8419,7 +8999,8 @@ var gear = {
       "phase": 1,
       "type": "Mace",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_hammer_17"
     },
     {
       "name": "Sulfuras, Hand of Ragnaros",
@@ -8439,7 +9020,8 @@ var gear = {
         "procgcd": true
       },
       "q": "5",
-      "i": "80"
+      "i": "80",
+      "p": "inv_hammer_unique_sulfuras"
     },
     {
       "name": "Sulfuron Hammer",
@@ -8457,7 +9039,8 @@ var gear = {
         "procgcd": true
       },
       "q": "4",
-      "i": "67"
+      "i": "67",
+      "p": "inv_hammer_unique_sulfuras"
     },
     {
       "name": "The Unstoppable Force",
@@ -8472,7 +9055,8 @@ var gear = {
       "phase": 2,
       "type": "Mace",
       "q": "4",
-      "i": "65"
+      "i": "65",
+      "p": "inv_hammer_13"
     },
     {
       "name": "Manual Crowd Pummeler",
@@ -8486,7 +9070,8 @@ var gear = {
       "phase": 1,
       "type": "Mace",
       "q": "3",
-      "i": "34"
+      "i": "34",
+      "p": "inv_mace_14"
     },
     {
       "name": "Barb of the Sand Reaver",
@@ -8500,7 +9085,8 @@ var gear = {
       "phase": 5,
       "type": "Polearm",
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_weapon_halberd_ahnqiraj"
     },
     {
       "name": "Blackfury",
@@ -8515,7 +9101,8 @@ var gear = {
       "phase": 3,
       "type": "Polearm",
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_spear_08"
     },
     {
       "name": "Blackhand Doomsaw",
@@ -8531,7 +9118,8 @@ var gear = {
         "dmg": 432
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_weapon_halberd_04"
     },
     {
       "name": "Halberd of Smiting",
@@ -8547,7 +9135,8 @@ var gear = {
         "dmg": 564
       },
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_weapon_halberd_12"
     },
     {
       "name": "Huntsman's Harpoon",
@@ -8560,7 +9149,8 @@ var gear = {
       "phase": 2,
       "type": "Polearm",
       "q": "3",
-      "i": "61"
+      "i": "61",
+      "p": "inv_spear_06"
     },
     {
       "name": "R14 Polearm",
@@ -8575,7 +9165,8 @@ var gear = {
       "phase": 2,
       "type": "Polearm",
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_spear_01"
     },
     {
       "name": "Ice Barbed Spear",
@@ -8590,7 +9181,8 @@ var gear = {
       "phase": 2,
       "type": "Polearm",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_spear_04"
     },
     {
       "name": "Monstrous Glaive",
@@ -8603,7 +9195,8 @@ var gear = {
       "phase": 2,
       "type": "Polearm",
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_weapon_halberd_09"
     },
     {
       "name": "Thunderstrike",
@@ -8620,7 +9213,8 @@ var gear = {
         "dmg": 200
       },
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_spear_08"
     },
     {
       "name": "Peacemaker",
@@ -8634,7 +9228,8 @@ var gear = {
       "phase": 1,
       "type": "Polearm",
       "q": "3",
-      "i": "59"
+      "i": "59",
+      "p": "inv_spear_07"
     },
     {
       "name": "Pitchfork of Madness",
@@ -8646,7 +9241,8 @@ var gear = {
       "phase": 4,
       "type": "Polearm",
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_spear_03"
     },
     {
       "name": "Stonecutting Glaive",
@@ -8660,7 +9256,8 @@ var gear = {
       "phase": 4,
       "type": "Polearm",
       "q": "3",
-      "i": "60"
+      "i": "60",
+      "p": "inv_spear_06"
     },
     {
       "name": "The Eye of Nerub",
@@ -8674,7 +9271,8 @@ var gear = {
       "phase": 6,
       "type": "Polearm",
       "q": "4",
-      "i": "83"
+      "i": "83",
+      "p": "inv_weapon_halberd_04"
     },
     {
       "name": "Tigule's Harpoon",
@@ -8688,7 +9286,8 @@ var gear = {
       "phase": 4,
       "type": "Polearm",
       "q": "3",
-      "i": "68"
+      "i": "68",
+      "p": "inv_spear_04"
     },
     {
       "name": "Ashkandi, Greatsword of the Brotherhood",
@@ -8702,7 +9301,8 @@ var gear = {
       "phase": 3,
       "type": "Sword",
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_50"
     },
     {
       "name": "Barbarous Blade",
@@ -8716,7 +9316,8 @@ var gear = {
       "phase": 2,
       "type": "Sword",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_11"
     },
     {
       "name": "Blackblade of Shahram",
@@ -8728,7 +9329,8 @@ var gear = {
       "phase": 1,
       "type": "Sword",
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_29"
     },
     {
       "name": "Blade of Hanna",
@@ -8743,7 +9345,8 @@ var gear = {
       "phase": 1,
       "type": "Sword",
       "q": "4",
-      "i": "64"
+      "i": "64",
+      "p": "inv_sword_10"
     },
     {
       "name": "Bonereaver's Edge",
@@ -8761,7 +9364,8 @@ var gear = {
         "spell": "Bonereaver"
       },
       "q": "4",
-      "i": "77"
+      "i": "77",
+      "p": "inv_sword_12"
     },
     {
       "name": "Claymore of Unholy Might",
@@ -8775,7 +9379,8 @@ var gear = {
       "phase": 6,
       "type": "Sword",
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_46"
     },
     {
       "name": "Corrupted Ashbringer",
@@ -8794,7 +9399,8 @@ var gear = {
         "dmg": 200
       },
       "q": "4",
-      "i": "86"
+      "i": "86",
+      "p": "inv_sword_2h_ashbringercorrupt"
     },
     {
       "name": "Darkstone Claymore",
@@ -8808,7 +9414,8 @@ var gear = {
       "phase": 4,
       "type": "Sword",
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_sword_35"
     },
     {
       "name": "Destiny",
@@ -8824,7 +9431,8 @@ var gear = {
         "spell": "Destiny"
       },
       "q": "4",
-      "i": "57"
+      "i": "57",
+      "p": "inv_sword_19"
     },
     {
       "name": "R14 Greatsword",
@@ -8839,7 +9447,8 @@ var gear = {
       "phase": 2,
       "type": "Sword",
       "q": "4",
-      "i": "78"
+      "i": "78",
+      "p": "inv_sword_48"
     },
     {
       "name": "Kalimdor's Revenge",
@@ -8858,7 +9467,8 @@ var gear = {
         "dmg": 258
       },
       "q": "4",
-      "i": "81"
+      "i": "81",
+      "p": "inv_sword_56"
     },
     {
       "name": "Manslayer of the Qiraji",
@@ -8873,7 +9483,8 @@ var gear = {
       "phase": 5,
       "type": "Sword",
       "q": "4",
-      "i": "66"
+      "i": "66",
+      "p": "inv_sword_56"
     },
     {
       "name": "Obsidian Edged Blade",
@@ -8887,7 +9498,8 @@ var gear = {
       "skill": 8,
       "type": "Sword",
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_28"
     },
     {
       "name": "Relentless Scythe",
@@ -8902,7 +9514,8 @@ var gear = {
       "phase": 1,
       "type": "Sword",
       "q": "3",
-      "i": "62"
+      "i": "62",
+      "p": "inv_sword_18"
     },
     {
       "name": "Runeblade of Baron Rivendare",
@@ -8914,7 +9527,8 @@ var gear = {
       "phase": 1,
       "type": "Sword",
       "q": "4",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_17"
     },
     {
       "name": "The Untamed Blade",
@@ -8932,7 +9546,8 @@ var gear = {
         "spell": "Untamed"
       },
       "q": "4",
-      "i": "73"
+      "i": "73",
+      "p": "inv_sword_50"
     },
     {
       "name": "Typhoon",
@@ -8947,7 +9562,8 @@ var gear = {
       "phase": 2,
       "type": "Sword",
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_41"
     },
     {
       "name": "Warblade of Caer Darrow",
@@ -8959,7 +9575,8 @@ var gear = {
       "phase": 1,
       "type": "Sword",
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_39"
     },
     {
       "name": "Zin'rokh, Destroyer of Worlds",
@@ -8973,7 +9590,8 @@ var gear = {
       "phase": 4,
       "type": "Sword",
       "q": "4",
-      "i": "68"
+      "i": "68",
+      "p": "inv_sword_55"
     },
     {
       "name": "Herald of Woe",
@@ -8987,7 +9605,8 @@ var gear = {
       "phase": 3,
       "type": "Mace",
       "q": "4",
-      "i": "75"
+      "i": "75",
+      "p": "inv_mace_05"
     },
     {
       "name": "Demonshear",
@@ -9004,7 +9623,8 @@ var gear = {
         "dmg": 270
       },
       "q": "3",
-      "i": "63"
+      "i": "63",
+      "p": "inv_sword_14"
     }
   ],
   "custom": [

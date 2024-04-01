@@ -10,6 +10,7 @@
 
   <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="/js/data/gear.js"></script>
+  <script type="text/javascript" src="/js/data/gear_sod.js"></script>
   <script type="text/javascript" src="rawdata.js"></script>
 </head>
 <body>
@@ -33,46 +34,19 @@
         //   session.gear[type] = arr;
         // }
 
-        await loadTable('files');
-        
-        let test = '';
-        for(let file of files) {
-          if (!file.path) continue;
-          if (file.path.indexOf('interface/icons/') > -1) {
-            test += file.ID + ',' + file.path.replace('interface/icons/','').replace('.blp','') + '\r\n';
+
+        for(let type in gear) {
+          for(let item of gear[type]) {
+            if (!gearsod[type]) continue;
+            for(let itemsod of gearsod[type]) {
+              if (item.id == itemsod.id) item.p = itemsod.p;
+              
+            
+            }
           }
         }
-          
 
-        console.log(test);
-
-        // for(let type in gear) {
-        //   for(let item of gear[type]) {
-        //     if (item.ppm || item.procchance) {
-        //       item.proc = {};
-        //       if (item.ppm) { item.proc.ppm = item.ppm; }
-        //       if (item.procchance) { item.proc.chance = item.procchance; }
-        //       if (item.magicdmg) { item.proc.magic = true; item.proc.dmg = item.magicdmg; }
-        //       if (item.physdmg) { item.proc.dmg = item.physdmg; }
-        //       if (item.procgcd) { item.proc.procgcd = item.procgcd; }
-        //       if (item.binaryspell) { item.proc.binaryspell = item.binaryspell; }
-        //       if (item.procspell) { item.proc.spell = item.procspell; }
-        //       if (item.coeff) { item.proc.coeff = item.coeff; }
-        //       if (item.procextra) { item.proc.extra = item.procextra; }
-        //       delete item.ppm;
-        //       delete item.magicdmg;
-        //       delete item.physdmg;
-        //       delete item.procgcd;
-        //       delete item.binaryspell;
-        //       delete item.procspell;
-        //       delete item.coeff;
-        //       delete item.procextra;
-        //       delete item.procchance;
-        //     }
-        //   }
-        // }
-
-        //document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       });
 
       var loadTable = async function(table) {
