@@ -613,13 +613,16 @@ SIM.SETTINGS = {
                 continue;
             }
 
+            let tooltip = buff.id;
+            if (buff.id == 413479) tooltip = 412513;
+
             let wh = buff.spellid ? 'spell' : 'item';
             let active = buff.active ? 'active' : '';
             let group = buff.group ? `data-group="${buff.group}"` : '';
             let disable = buff.disableSpell ? `data-disable-spell="${buff.disableSpell}"` : '';
             let html = `<div data-id="${buff.id}" class="icon ${active}" ${group} ${disable}>
                             <img src="https://wow.zamimg.com/images/wow/icons/medium/${buff.iconname.toLowerCase()}.jpg " alt="${buff.name}">
-                            <a href="${WEB_DB_URL}${wh}=${buff.id}" class="wh-tooltip"></a>
+                            <a href="${WEB_DB_URL}${wh}=${tooltip}" class="wh-tooltip"></a>
                         </div>`;
             if (buff.worldbuff) worldbuffs += html;
             else if (buff.stance) stances += html;
@@ -689,8 +692,10 @@ SIM.SETTINGS = {
                     let td = $('<td>');
                     let rune_div = $(`<div data-id="${this_rune.id}" class="rune"></div>`);
                     let sub_div = $(`<div class="icon ${this_rune.selected ? 'active' : ''}"></div>`);
+                    let tooltip = this_rune.id;
+                    if (tooltip == 413479) tooltip = 412513;
                     sub_div.html(`<img src="https://wow.zamimg.com/images/wow/icons/medium/${this_rune.iconname}.jpg" alt="${this_rune.name}" />`);
-                    sub_div.append(`<a href="${WEB_DB_URL}spell=${this_rune.id}" class="wh-tooltip"></a>`);
+                    sub_div.append(`<a href="${WEB_DB_URL}spell=${tooltip}" class="wh-tooltip"></a>`);
                     rune_div.append(sub_div);
                     td.append(rune_div); 
                     tree.append(td);

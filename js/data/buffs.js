@@ -30,7 +30,7 @@ var buffs = [
       id: 413479,
       spellid: true,
       name: "Gladiator Stance",
-      iconname: "inv_helmet_08",
+      iconname: "achievement_featsofstrength_gladiator_08",
       dmgshield: 10,
       group: "stance",
       stance: 'glad',

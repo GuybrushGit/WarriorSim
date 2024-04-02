@@ -4,7 +4,7 @@ var runes = {
          id: 402877,
          name: 'Flagellation',
          description: "Gain a 25% bonus to physical damage done for 12 sec after activating Bloodrage or Berserker Rage.",
-         iconname: 'inv_mace_1h_stratholme_d_01',
+         iconname: 'ability_warrior_intensifyrage',
          flagellation: true,
      },
      {
@@ -33,7 +33,7 @@ var runes = {
          id: 403219,
          name: 'Furious Thunder',
          description: "Thunder Clap now increases the time between attacks by an additional 6% and can be used in any stance.",
-         iconname: 'spell_nature_lightning',
+         iconname: 'ability_thunderclap',
      },
      {
          id: 425418,
@@ -62,7 +62,7 @@ var runes = {
          id: 403218,
          name: 'Endless Rage',
          description: "You generate 25% more Rage from all damage you deal.<br />[ASSUMED NO EFFECT ON REFUNDS]",
-         iconname: 'ability_warrior_innerrage',
+         iconname: 'ability_warrior_endlessrage',
          ragemod: 1.25,
      },
      {
@@ -100,7 +100,7 @@ var runes = {
             id: 29787,
             name: 'Focused Rage',
             description: "",
-            iconname: 'ability_druid_enrage',
+            iconname: 'ability_warrior_focusedrage',
             focusedrage: true,
         },
         {
@@ -116,13 +116,13 @@ var runes = {
             id: 426490,
             name: 'Rallying Cry',
             description: "",
-            iconname: 'ability_warrior_rallyingcry',
+            iconname: 'ability_warrior_commandingshout',
         },
         {
             id: 402913,
             name: 'Enraged Regeneration',
             description: "",
-            iconname: 'ability_warrior_focusedrage',
+            iconname: 'ability_hunter_harass',
         },
         {
             id: 403338,
@@ -134,7 +134,7 @@ var runes = {
             id: 413479,
             name: 'Gladiator Stance',
             description: "",
-            iconname: 'inv_helmet_08',
+            iconname: 'achievement_featsofstrength_gladiator_08',
             gladstance: true,
             enable: 413479,
             buffgroup: 'stance'
