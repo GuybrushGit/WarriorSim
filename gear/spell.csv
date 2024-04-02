@@ -27879,8 +27879,8 @@ Defense increased by $s2."
 446389,,"Chance on spells and attacks to summon a sandstorm that circles you, dealing $s1 Nature damage to targets it passes through.",
 446390,,"Gives the wearer a chance on attack and spell cast to Torment their target, causing them to wander in suffering for $446391d.",
 446391,,Wandering aimlessly for $d.,Tormented.
-446392,,"Spells and attacks sometimes leech $s1 health from the target, and apply a stack of Decay. When decay reaches 5 stacks, the target takes $s2 damage.",
-446393,,,"Decaying. At 5 stacks, all stacks are consumed, and $s1 shadow damage is dealt."
+446392,,"Spells and attacks sometimes leech $446393s1 health from the target, and apply a stack of Decay. When decay reaches 5 stacks, the target takes $446810s1 damage.",
+446393,,,"Decaying. At 5 stacks, all stacks are consumed, and $446810s1 shadow damage is dealt."
 446394,,"Restore $446785s1 Energy, $446786s1% Mana, or $446783s1 Rage.","Restore $446785s1 Energy, $446786s1% Mana, or $446783s1 Rage."
 446395,,"Chance on successful heal to restore $446785s1 Energy, $446786s1% Mana, or $/10;446783s1 Rage.",
 446396,,"Increases healing done by $s1, mana regeneration by $s2 mana per 5 sec, and your heals have a chance to restore $446785s1 Energy, $446786s1% Mana, or $/10;446783s1 Rage. Only one Atal'ai potion can be active at any time. This has no effect outside of Sunken Temple.",Healing Done increased by $s1. Regenerate 11 mana every 5 sec. Chance on successful heal to restore your target's primary resource.
@@ -28191,7 +28191,7 @@ $@spellaura438136"
 448629,,You sometimes find additional Waylaid supplies from enemies.,
 448642,,,Missing some armor...
 448653,,,Missing some armor...
-448686,,Increases the damage of your next non-channeled Affliction based damage over time spell by $s1.,Damage of your next non-channeled Affliction based damage over time spell increased by $s1.
+448686,,Increases the damage of your next non-channeled Affliction based damage over time spell by $s1%.,Damage of your next non-channeled Affliction based damage over time spell increased by $s1%.
 448707,,Knocks nearby enemies back.,
 448717,,,
 448779,,,Hard sleep.
@@ -28215,9 +28215,24 @@ Attack speed increased by $s2%."
 449162,,,
 449165,,,
 449200,,,
+449288,,$s1 Nature damage.,
+449379,,,"Decaying. At 5 stacks, all stacks are consumed, and 150 to 250 shadow damage is dealt."
+449414,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
+449420,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
+450109,,,
+450110,,,
+449371,,,
+449422,,"Strikes enemies in a cone in front of the caster, knocking them back.",
 449409,,"Inspired by the Mojo of War, your size is increased and your Strength goes up by $s1 to match your new size.  Lasts $d.","Increases Agility by $s1 as well as increasing your size. Feel da voodoo, mon!"
+449431,,Inflicts $s1 Arcane damage to enemies in a selected area every $t1 sec. for $d.,
+449432,,"Curses the target with impending doom, causing $s1 Shadow damage after $d.  If the target dies from this damage, there is a chance that a Doomguard will be summoned.  Cannot be cast on players.",Causes $s1 Shadow damage after $d.
 449463,,,
 449729,,$@spelldesc424574,Inflicts eye-opening damage.
+449669,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
+450066,,..,
+450085,,,A finishing touch to a Dark Iron Dwarf disguise.
+450086,Rank 2,"Power infuses the target's party, increasing their Stamina by $s1 for $d.",Increases Stamina by $s1.
+450108,Rank 2,Allows the caster to see through the target's eyes for $d.  Will not work if the target is in another instance or on another continent.,Sight granted through target's eyes.
 449668,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
 449919,,Your damage spells have a chance to cause your target to take up to $449920s1 increased damage from subsequent spells.,
 449920,,,"Vulnerable to elemental power, increasing the damage taken from spells by up to $s1."
@@ -28230,7 +28245,7 @@ Attack speed increased by $s2%."
 449928,,Backstab and Sinister Strike cause the target to take $449927s1 more damage from all sources for $449927n charges or $449927d.,
 449929,,Your healing spell critical strikes now have a $h% chance to activate Dreamstate. You must have the rune engraved.,
 449930,,Reduces the cast time of Healing Rain by $s1%.,
-449931,,"Dealing Fire damage over time causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
+449931,,"Dealing Fire damage causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
 449932,,Attack power increased by $s1.,Attack power increased by $s1.
 449933,,Increases Holy spell critical strike chance by $s1%.,
 449934,,Increases damage and healing done by Nature spells and effects by up to $s1.,Nature spell damage and healing dealt is increased by $s1
@@ -28242,8 +28257,19 @@ Attack speed increased by $s2%."
 449982,,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.
 450012,,Dealing damage with Shadow Cleave reduces the cast time of your next Immolate spell by $450013s1%. Stacking up to $s1 times. Lasts $450013d.,
 450013,,Reduces the casting time of your next Immolate spell by $s1%.,Reduces the casting time of your next Immolate spell by $s1%.
+449869,,"Shoots a cloud of acidic breath at enemies in a cone in front of the caster, reducing their armor and inflicting Nature damage every $t1 sec. for $d.","Reduced armor.
+Nature damage inflicted every $t1 sec."
+449879,,,Asleep.
+449890,,"Inflicts $s1 damage on enemies in a cone behind the caster, knocking them back.",
+449907,,"Sends out a blast wave of magic, inflicting Arcane damage to nearby enemies.",
 449825,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
 450005,,Reach into your coin purse and throw a handful of currency at your foes.,Pelted in the face with a handful of coins.
+449995,,,
+449996,,,
+449997,,,
+450083,,Rapid Fire now also grants $450084s1% melee attack speed for $450084d.,
+450084,,Increases melee attack speed by $s1%.,Increases melee attack speed by $s1%.
+450098,,"The caster smashes the ground, inflicting $s1 Physical damage to all players and knocking them back.",
 450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
 450106,,Restores $s1 health.,
 450107,,Restores $s1 health.,
