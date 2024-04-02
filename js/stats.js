@@ -327,11 +327,12 @@ SIM.STATS = {
         }
 
         if (sim.player.auras.rend) {
+            let data = sim.player.auras.rend.data;
+            let total = data.reduce((a, b) => a + b, 0);
             let totaldmg = sim.player.auras.rend.totaldmg;
-            let uses = sim.player.auras.rend.uses;
             let dps = (totaldmg / sim.totalduration).toFixed(2);
-            let dpr = ((totaldmg / i) / (sim.player.auras.rend.cost * (uses / i))).toFixed(2);
-            html += `<tr><td>${sim.player.auras.rend.name}</td><td></td><td></td><td></td><td></td><td></td><td>${(uses / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;
+            let dpr = ((totaldmg / i) / (sim.player.auras.rend.cost * (total / i))).toFixed(2);
+            html += `<tr><td>${sim.player.auras.rend.name}</td><td></td><td></td><td>${(data[1] / total * 100).toFixed(2)}</td><td>${(data[2] / total * 100).toFixed(2)}</td><td></td><td>${(total / i).toFixed(2)}</td><td>${dpr}</td><td>${dps}</td></tr>`;
         }
 
         html += '</tbody></table>';

@@ -1613,7 +1613,9 @@ class Rend extends Aura {
         this.cost = 10 - player.ragecostbonus;
         this.idmg = 0;
         this.totaldmg = 0;
-        this.uses = 0;
+        this.data = [0, 0, 0, 0, 0];
+        this.canDodge = true;
+        this.nocrit = true;
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
         this.tfbstep = -6000;
     }
@@ -1655,6 +1657,14 @@ class Rend extends Aura {
         }
     }
     use() {
+        let result = this.player.rollspell(this);
+        this.data[result]++;
+        if (result == RESULT.MISS) return;
+        if (result == RESULT.DODGE) {
+            this.player.dodgetimer = 5000;
+            return;
+        }
+
         if (this.timer) this.uptime += (step - this.starttimer);
         this.nexttick = step + 3000;
         this.timer = step + this.duration * 1000;
@@ -1664,7 +1674,6 @@ class Rend extends Aura {
         if (this.player.stance == 'zerk')
             this.player.switch('battle');
         this.player.rage -= this.cost;
-        this.uses++;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
