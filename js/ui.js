@@ -954,9 +954,9 @@ SIM.UI = {
         if (localStorage.level) localStorage.clear(); // clear old style of storage
         if (!localStorage[mode + profileid]) localStorage[mode + profileid] = JSON.stringify(session);
 
-        // update everyone for P2
-        if (mode == "sod" && localStorage.sodPatch !== "2") {
-            localStorage.sodPatch = "2";
+        // update everyone for P3
+        if (mode == "sod" && localStorage.sodPatch !== "3") {
+            localStorage.sodPatch = "3";
             localStorage.sod0 = JSON.stringify(session);
         }
 
