@@ -3853,7 +3853,7 @@ var gear = {
       "q": "3",
       "i": "55",
       "name": "Ba'ham's Dusty Hat",
-      "p": "inv_helmet_51",
+      "p": "inv_helmet_50",
       "sta": 15,
       "crit": 1,
       "ap": 38
@@ -3983,6 +3983,20 @@ var gear = {
       "p": "inv_helmet_39",
       "str": 7,
       "sta": 7
+    },
+    {
+      "id": 223963,
+      "type": "Leather",
+      "slot": "head",
+      "r": 45,
+      "q": "3",
+      "i": "50",
+      "name": "Embrace of the Lycan",
+      "p": "ability_mount_whitedirewolf",
+      "agi": 9,
+      "str": 9,
+      "sta": 14,
+      "ap": 32
     },
     {
       "id": 215161,
@@ -8909,6 +8923,19 @@ var gear = {
       "agi": 10,
       "str": 15,
       "sta": 5
+    },
+    {
+      "id": 223987,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Splinthide Shoulders",
+      "p": "inv_shoulder_13",
+      "agi": 10,
+      "str": 11,
+      "sta": 10
     }
   ],
   "back": [
@@ -37228,6 +37255,21 @@ var gear = {
       "str": 11,
       "sta": 12,
       "crit": 1
+    },
+    {
+      "id": 223980,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Searingscale Leggings",
+      "p": "inv_pants_03",
+      "sta": 13,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1
     }
   ],
   "feet": [
@@ -41976,6 +42018,18 @@ var gear = {
       "resist": {
         "nature": 5
       }
+    },
+    {
+      "id": 223962,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 42,
+      "q": "3",
+      "i": "47",
+      "name": "Sandstalker Ankleguards",
+      "p": "inv_bracer_04",
+      "agi": 17,
+      "str": 8
     }
   ],
   "finger1": [
@@ -48116,10 +48170,24 @@ var gear = {
       "q": "3",
       "i": "53",
       "name": "Houndmaster's Bow",
+      "speed": 2.8,
+      "mindmg": 54,
+      "maxdmg": 100,
+      "p": "inv_weapon_bow_04",
+      "agi": 3
+    },
+    {
+      "id": 223982,
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Houndmaster's Rifle",
       "speed": 3.1,
       "mindmg": 60,
       "maxdmg": 111,
-      "p": "inv_weapon_bow_04",
+      "p": "inv_weapon_rifle_07",
       "agi": 3
     }
   ],
@@ -58586,6 +58654,19 @@ var gear = {
       "p": "inv_weapon_shortblade_79"
     },
     {
+      "id": 223518,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 49,
+      "q": "3",
+      "i": "57",
+      "name": "Charstone Dirk",
+      "speed": 1.6,
+      "mindmg": 37,
+      "maxdmg": 72,
+      "p": "inv_weapon_shortblade_14"
+    },
+    {
       "id": 220574,
       "type": "Axe",
       "slot": "onehand",
@@ -58774,8 +58855,8 @@ var gear = {
       "mindmg": 48,
       "maxdmg": 89,
       "p": "inv_weapon_shortblade_30",
-      "sta": 7,
-      "crit": 1
+      "agi": 11,
+      "str": 11
     },
     {
       "id": 220586,
@@ -58863,19 +58944,6 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 223518,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 49,
-      "q": "3",
-      "i": "57",
-      "name": "Charstone Dirk",
-      "speed": 1.6,
-      "mindmg": 37,
-      "maxdmg": 72,
-      "p": "inv_weapon_shortblade_14"
-    },
-    {
       "id": 223520,
       "type": "Sword",
       "slot": "onehand",
@@ -58914,6 +58982,38 @@ var gear = {
       "mindmg": 40,
       "maxdmg": 74,
       "p": "inv_misc_monsterfang_01"
+    },
+    {
+      "id": 223964,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 49,
+      "q": "4",
+      "i": "54",
+      "name": "Blade of Eternal Darkness",
+      "speed": 1.5,
+      "mindmg": 34,
+      "maxdmg": 70,
+      "p": "inv_sword_09",
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 100
+      }
+    },
+    {
+      "id": 223983,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 48,
+      "q": "3",
+      "i": "56",
+      "name": "Arbiter's Blade",
+      "speed": 2.4,
+      "mindmg": 57,
+      "maxdmg": 111,
+      "p": "inv_sword_23",
+      "sta": 11
     }
   ],
   "offhand": [
@@ -70252,8 +70352,8 @@ var gear = {
       "mindmg": 48,
       "maxdmg": 89,
       "p": "inv_weapon_shortblade_30",
-      "sta": 7,
-      "crit": 1
+      "agi": 11,
+      "str": 11
     },
     {
       "id": 220589,
@@ -78755,21 +78855,6 @@ var gear = {
       "sta": 20
     },
     {
-      "id": 218083,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "55",
-      "name": "Tail of Eranikus",
-      "speed": 3.4,
-      "mindmg": 176,
-      "maxdmg": 264,
-      "p": "inv_sword_84",
-      "str": 42,
-      "skill": 8
-    },
-    {
       "id": 219223,
       "type": "Sword",
       "slot": "twohand",
@@ -78778,9 +78863,11 @@ var gear = {
       "i": "50",
       "name": "Blademaster's Fury",
       "speed": 3,
-      "mindmg": 108,
-      "maxdmg": 162,
-      "p": "inv_sword_137"
+      "mindmg": 104,
+      "maxdmg": 157,
+      "p": "inv_sword_137",
+      "str": 17,
+      "sta": 10
     },
     {
       "id": 220173,
@@ -78997,11 +79084,11 @@ var gear = {
       "q": "3",
       "i": "55",
       "name": "Whisper",
-      "speed": 3.6,
-      "mindmg": 140,
-      "maxdmg": 202,
+      "speed": 2.6,
+      "mindmg": 109,
+      "maxdmg": 163,
       "p": "inv_hammer_05",
-      "str": 12,
+      "str": 20,
       "sta": 12,
       "crit": 1
     },
@@ -79029,12 +79116,12 @@ var gear = {
       "q": "4",
       "i": "55",
       "name": "Sul'thraze the Lasher",
-      "speed": 3.4,
-      "mindmg": 142,
-      "maxdmg": 213,
+      "speed": 2,
+      "mindmg": 84,
+      "maxdmg": 125,
       "p": "inv_sword_40",
-      "str": 18,
-      "sta": 16,
+      "str": 23,
+      "sta": 8,
       "proc": {
         "magic": true,
         "dmg": 150,

@@ -22223,7 +22223,7 @@ $@null",
 349863,,Restores your suspended world effects.,
 349981,,,"World effects suspended:
 
-$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]$?$W11!=0[$@spelldesc348779 $@spellicon438536 $@spellname438536 (${$w11/60}m)][]
+$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]$?$W11!=0[$@spelldesc348779 $@spellicon438536 $@spellname438536 (${$w11/60}m)][]$?$W12!=0[$@spelldesc348779 $@spellicon446695 $@spellname446695 (${$w12/60}m)][]
 
 
 While a world effect is suspended, you cannot benefit from it."
@@ -27074,7 +27074,7 @@ Resource cost increased by $s3%."
 437868,,"Causes dark magic to flow around targets, inflicting $s1 Shadow damage every $t1 sec and reducing damage done by $s2% for $d.","$s1 Shadow damage inflicted every $t1 sec.
 Damage done reduced by $s2%."
 437877,,Ogom gains an infusion of Light.,Ogom gains an infusion of Light.
-437881,,Jannala gains an infusion of Shadow.,Jannala gains an infusion of Shadow.
+437881,,Jammal'an gains an infusion of Shadow.,Jammal'an gains an infusion of Shadow.
 437884,,"The caster consecrates the ground for $d, inflicting $437887s1 Holy damage every $s1 sec to players within.",
 437887,,$@spelldesc437884,
 437888,,,
@@ -28273,3 +28273,5 @@ Nature damage inflicted every $t1 sec."
 450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
 450106,,Restores $s1 health.,
 450107,,Restores $s1 health.,
+450403,,Increases your critical strike chance with ranged weapons by $s1%.,
+450409,,"Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",

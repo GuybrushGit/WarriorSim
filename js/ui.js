@@ -848,7 +848,7 @@ SIM.UI = {
                 if (item.selected) {
                     path = item.p;
                     let id = item.id.toString().split('|');
-                    href = id[0] + (id.length == 2 ? '?rand=' + id[1] : '');
+                    href = id[0] + '' + (id.length == 2 ? '?rand=' + id[1] : '');
                     empty = false;
                 }
             }
