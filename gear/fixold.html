@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="/js/data/gear.js"></script>
   <script type="text/javascript" src="/js/data/gear_sod.js"></script>
+  <script type="text/javascript" src="/js/data/enchants.js"></script>
   <script type="text/javascript" src="rawdata.js"></script>
 </head>
 <body>
@@ -35,28 +35,44 @@
         // }
 
 
-        for(let type in gear) {
-          for(let item of gear[type]) {
-            if (!gearsod[type]) continue;
-            for(let itemsod of gearsod[type]) {
-              if (item.id == itemsod.id) item.p = itemsod.p;
-              
-            
+        // for(let type in gear) {
+        //   for(let item of gear[type]) {
+        //     if (!gearsod[type]) continue;
+        //     for(let itemsod of gearsod[type]) {
+        //       if (item.id == itemsod.id) item.p = itemsod.p;
+        //     }
+        //   }
+        // }
+
+
+        await loadTable('ItemEffect');
+        await loadTable('SpellEffect');
+
+        for(let type in enchant) {
+          for (let item of enchant[type]) {
+            if (item.spellid) {
+              let effects = getRows('SpellEffect', 'SpellID', item.id);
+              item.ench = effects[0]['EffectMiscValue[0]'];
+            }
+            else if (!item.temp) {
+              let spellid = getRows('ItemEffect', 'ParentItemID', item.id)[0].SpellID;
+              let effects = getRows('SpellEffect', 'SpellID', spellid);
+              item.ench = effects[0]['EffectMiscValue[0]'];
             }
           }
         }
 
-        document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
+        document.querySelector("textarea").value = "var enchant = " + JSON.stringify(enchant, null, 2) + ";";
       });
 
       var loadTable = async function(table) {
         return $.ajax({
-          url: table + '.csv',
+          url: table.toLowerCase() + '.csv',
           dataType: 'text',
         }).done((data) => {
           globalThis[table] = [];
           var rows = data.split(/\r?\n|\r/);
-          var th = rows[0].split(';');
+          var th = rows[0].split(',');
           rows.forEach(row => {
             if (row == rows[0]) return;
 
@@ -64,12 +80,12 @@
             let count = 0;
             for(let i = 0; i < row.length; i++) {
               if (row[i] == '"') count++;
-              if (row[i] == ';' && count % 2 == 1) {
+              if (row[i] == ',' && count % 2 == 1) {
                 row = row.slice(0, i) + row.slice(i+1);
               } 
             }
 
-            let fields = row.split(';');
+            let fields = row.split(',');
             let obj = {};
             for (let i = 0; i < fields.length; i++) {
               obj[th[i]] = fields[i];
@@ -78,10 +94,17 @@
           });
         });
       }
+      
 
       var getRow = function(table, id) {
-          for(let r of globalThis[table]) if (r.ID == id) return r;
-        }
+        for(let r of globalThis[table]) if (r.ID == id) return r;
+      }
+
+      var getRows = function(table, column, id) {
+        let result = [];
+        for(let r of globalThis[table]) if (r[column] == id) result.push(r);
+        return result;
+      }
     </script>
 
 </body>

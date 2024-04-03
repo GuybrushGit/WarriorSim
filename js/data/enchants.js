@@ -1,784 +1,856 @@
 var enchant = {
    "mainhand": [
-       {
-           "id": 211845,
-           "name": "Blackfathom Sharpening Stone",
-           "hit": 2,
-           "temp": true
-       },
-       {
-           "id": 18262,
-           "name": "Elemental Sharpening Stone",
-           "crit": 2,
-           "r": 50,
-           "temp": true
-        },
-        {
-           "id": 12404,
-           "name": "Dense Stone",
-           "bonusdmg": 8,
-           "r": 41,
-           "temp": true
-        },
-        {
-            "id": 7964,
-            "name": "Solid Sharpening Stone",
-            "bonusdmg": 6,
-            "r": 25,
-            "temp": true
-         },
-         {
-            "id": 2871,
-            "name": "Heavy Sharpening Stone",
-            "bonusdmg": 4,
-            "r": 15,
-            "temp": true
-         },
-         {
-            "id": 2863,
-            "name": "Coarse Sharpening Stone",
-            "bonusdmg": 3,
-            "r": 5,
-            "temp": true
-         },
-        {
-           "id": 23122,
-           "name": "Consecrated Sharpening Stone",
-           "ap": 108,
-           "r": 50,
-           "temp": true
-        },
-        {
-         "id": 3824,
-         "name": "Shadow Oil",
-         "temp": true,
-         "r": 24,
-         "chance": 15,
-         "magicdmg": 56.5,
-       },
-       {
-          "id": 23800,
-          "spellid": true,
-          "name": "Agility",
-          "r": 41,
-          "agi": 15,
-       },
-       {
-          "id": 23799,
-          "spellid": true,
-          "name": "Strength",
-          "r": 41,
-          "str": 15,
-       },
-       {
-          "id": 20034,
-          "spellid": true,
-          "name": "Crusader",
-          "r": 41,
-          "ppm": 1,
-          "procspell": "Crusader"
-       },
-       {
-          "id": 13898,
-          "spellid": true,
-          "name": "Fiery",
-          "r": 41,
-          "ppm": 6,
-          "magicdmg": 40
-       },
-       {
-          "id": 20032,
-          "spellid": true,
-          "name": "Lifestealing",
-          "r": 41,
-          "ppm": 6,
-          "magicdmg": 30
-       },
-       {
-          "id": 20031,
-          "spellid": true,
-          "name": "Superior Striking",
-          "r": 41,
-          "bonusdmg": 5,
-       },
-       {
-         "id": 13943,
-         "spellid": true,
-         "name": "Greater Striking",
-         "r": 41,
-         "bonusdmg": 4,
-      },
-      {
-         "id": 13693,
-         "spellid": true,
-         "name": "Striking",
-         "bonusdmg": 3,
-      },
-      {
-         "id": 13503,
-         "spellid": true,
-         "name": "Lesser Striking",
-         "bonusdmg": 2,
-      },
-      {
-         "id": 7788,
-         "spellid": true,
-         "name": "Minor Striking",
-         "bonusdmg": 1,
-      },
-      {
-         "id": 6296,
-         "spellid": true,
-         "name": "Fiery Blaze",
-         "chance": 15,
-         "magicdmg": 11,
-         "r": 40
-      },
-      {
-         "id": 435481,
-         "spellid": true,
-         "name": "Dismantle (Assumed 2 PPM)",
-         "ppm": 2, 
-         "magicdmg": 75,
-         "r": 40
-      },
-    ],
-    "offhand": [
-      {
-         "id": 211845,
-         "name": "Blackfathom Sharpening Stone",
-         "hit": 2,
-         "temp": true
+     {
+       "id": 211845,
+       "name": "Blackfathom Sharpening Stone",
+       "hit": 2,
+       "temp": true
      },
      {
-         "id": 18262,
-         "name": "Elemental Sharpening Stone",
-         "crit": 2,
-         "r": 50,
-         "temp": true
-      },
-      {
-         "id": 12404,
-         "name": "Dense Stone",
-         "bonusdmg": 8,
-         "r": 41,
-         "temp": true
-      },
-      {
-          "id": 7964,
-          "name": "Solid Sharpening Stone",
-          "bonusdmg": 6,
-          "r": 25,
-          "temp": true
-       },
-       {
-          "id": 2871,
-          "name": "Heavy Sharpening Stone",
-          "bonusdmg": 4,
-          "r": 15,
-          "temp": true
-       },
-       {
-          "id": 2863,
-          "name": "Coarse Sharpening Stone",
-          "bonusdmg": 3,
-          "r": 5,
-          "temp": true
-       },
-      {
-         "id": 23122,
-         "name": "Consecrated Sharpening Stone",
-         "ap": 108,
-         "r": 50,
-         "temp": true
-      },
-      {
-         "id": 3824,
-         "name": "Shadow Oil",
-         "temp": true,
-         "r": 24,
-         "chance": 15,
-         "magicdmg": 56.5,
-       },
-     {
-        "id": 23800,
-        "spellid": true,
-        "name": "Agility",
-        "r": 41,
-        "agi": 15,
+       "id": 18262,
+       "name": "Elemental Sharpening Stone",
+       "crit": 2,
+       "r": 50,
+       "temp": true
      },
      {
-        "id": 23799,
-        "spellid": true,
-        "name": "Strength",
-        "r": 41,
-        "str": 15,
+       "id": 12404,
+       "name": "Dense Stone",
+       "bonusdmg": 8,
+       "r": 41,
+       "temp": true
      },
      {
-        "id": 20034,
-        "spellid": true,
-        "name": "Crusader",
-        "r": 41,
-        "ppm": 1,
-        "procspell": "Crusader"
+       "id": 7964,
+       "name": "Solid Sharpening Stone",
+       "bonusdmg": 6,
+       "r": 25,
+       "temp": true
      },
      {
-        "id": 13898,
-        "spellid": true,
-        "name": "Fiery",
-        "r": 41,
-        "ppm": 6,
-        "magicdmg": 40
+       "id": 2871,
+       "name": "Heavy Sharpening Stone",
+       "bonusdmg": 4,
+       "r": 15,
+       "temp": true
      },
      {
-        "id": 20032,
-        "spellid": true,
-        "name": "Lifestealing",
-        "r": 41,
-        "ppm": 6,
-        "magicdmg": 30
+       "id": 2863,
+       "name": "Coarse Sharpening Stone",
+       "bonusdmg": 3,
+       "r": 5,
+       "temp": true
      },
      {
-      "id": 20031,
-      "spellid": true,
-      "name": "Superior Striking",
-      "r": 41,
-      "bonusdmg": 5,
-   },
-   {
-     "id": 13943,
-     "spellid": true,
-     "name": "Greater Striking",
-     "r": 41,
-     "bonusdmg": 4,
-  },
-  {
-     "id": 13693,
-     "spellid": true,
-     "name": "Striking",
-     "bonusdmg": 3,
-  },
-  {
-     "id": 13503,
-     "spellid": true,
-     "name": "Lesser Striking",
-     "bonusdmg": 2,
-  },
-  {
-     "id": 7788,
-     "spellid": true,
-     "name": "Minor Striking",
-     "bonusdmg": 1,
-  },
-  {
-   "id": 6296,
-   "spellid": true,
-   "name": "Fiery Blaze",
-   "chance": 15,
-   "magicdmg": 11,
-   "r": 40
-},
-{
-   "id": 435481,
-   "spellid": true,
-   "name": "Dismantle (Assumed 2 PPM)",
-   "ppm": 2, 
-   "magicdmg": 75,
-   "r": 40
-},
-    ],
-    "twohand": [
-       {
-           "id": 211845,
-           "name": "Blackfathom Sharpening Stone",
-           "hit": 2,
-           "temp": true
+       "id": 23122,
+       "name": "Consecrated Sharpening Stone",
+       "ap": 108,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 3824,
+       "name": "Shadow Oil",
+       "temp": true,
+       "r": 24,
+       "chance": 15,
+       "magicdmg": 56.5
+     },
+     {
+       "id": 23800,
+       "spellid": true,
+       "name": "Agility",
+       "r": 41,
+       "agi": 15,
+       "ench": "2564"
+     },
+     {
+       "id": 23799,
+       "spellid": true,
+       "name": "Strength",
+       "r": 41,
+       "str": 15,
+       "ench": "2563"
+     },
+     {
+       "id": 20034,
+       "spellid": true,
+       "name": "Crusader",
+       "r": 41,
+       "ppm": 1,
+       "procspell": "Crusader",
+       "ench": "1900"
+     },
+     {
+       "id": 13898,
+       "spellid": true,
+       "name": "Fiery",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 40,
+       "ench": "803"
+     },
+     {
+       "id": 20032,
+       "spellid": true,
+       "name": "Lifestealing",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 30,
+       "ench": "1898"
+     },
+     {
+       "id": 20031,
+       "spellid": true,
+       "name": "Superior Striking",
+       "r": 41,
+       "bonusdmg": 5,
+       "ench": "1897"
+     },
+     {
+       "id": 13943,
+       "spellid": true,
+       "name": "Greater Striking",
+       "r": 41,
+       "bonusdmg": 4,
+       "ench": "805"
+     },
+     {
+       "id": 13693,
+       "spellid": true,
+       "name": "Striking",
+       "bonusdmg": 3,
+       "ench": "943"
+     },
+     {
+       "id": 13503,
+       "spellid": true,
+       "name": "Lesser Striking",
+       "bonusdmg": 2,
+       "ench": "241"
+     },
+     {
+       "id": 7788,
+       "spellid": true,
+       "name": "Minor Striking",
+       "bonusdmg": 1,
+       "ench": "250"
+     },
+     {
+       "id": 6296,
+       "spellid": true,
+       "name": "Fiery Blaze",
+       "chance": 15,
+       "magicdmg": 11,
+       "r": 40,
+       "ench": "36"
+     },
+     {
+       "id": 435481,
+       "spellid": true,
+       "name": "Dismantle (Assumed 2 PPM)",
+       "ppm": 2,
+       "magicdmg": 75,
+       "r": 40,
+       "ench": "7210"
+     }
+   ],
+   "offhand": [
+     {
+       "id": 211845,
+       "name": "Blackfathom Sharpening Stone",
+       "hit": 2,
+       "temp": true
+     },
+     {
+       "id": 18262,
+       "name": "Elemental Sharpening Stone",
+       "crit": 2,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 12404,
+       "name": "Dense Stone",
+       "bonusdmg": 8,
+       "r": 41,
+       "temp": true
+     },
+     {
+       "id": 7964,
+       "name": "Solid Sharpening Stone",
+       "bonusdmg": 6,
+       "r": 25,
+       "temp": true
+     },
+     {
+       "id": 2871,
+       "name": "Heavy Sharpening Stone",
+       "bonusdmg": 4,
+       "r": 15,
+       "temp": true
+     },
+     {
+       "id": 2863,
+       "name": "Coarse Sharpening Stone",
+       "bonusdmg": 3,
+       "r": 5,
+       "temp": true
+     },
+     {
+       "id": 23122,
+       "name": "Consecrated Sharpening Stone",
+       "ap": 108,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 3824,
+       "name": "Shadow Oil",
+       "temp": true,
+       "r": 24,
+       "chance": 15,
+       "magicdmg": 56.5
+     },
+     {
+       "id": 23800,
+       "spellid": true,
+       "name": "Agility",
+       "r": 41,
+       "agi": 15,
+       "ench": "2564"
+     },
+     {
+       "id": 23799,
+       "spellid": true,
+       "name": "Strength",
+       "r": 41,
+       "str": 15,
+       "ench": "2563"
+     },
+     {
+       "id": 20034,
+       "spellid": true,
+       "name": "Crusader",
+       "r": 41,
+       "ppm": 1,
+       "procspell": "Crusader",
+       "ench": "1900"
+     },
+     {
+       "id": 13898,
+       "spellid": true,
+       "name": "Fiery",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 40,
+       "ench": "803"
+     },
+     {
+       "id": 20032,
+       "spellid": true,
+       "name": "Lifestealing",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 30,
+       "ench": "1898"
+     },
+     {
+       "id": 20031,
+       "spellid": true,
+       "name": "Superior Striking",
+       "r": 41,
+       "bonusdmg": 5,
+       "ench": "1897"
+     },
+     {
+       "id": 13943,
+       "spellid": true,
+       "name": "Greater Striking",
+       "r": 41,
+       "bonusdmg": 4,
+       "ench": "805"
+     },
+     {
+       "id": 13693,
+       "spellid": true,
+       "name": "Striking",
+       "bonusdmg": 3,
+       "ench": "943"
+     },
+     {
+       "id": 13503,
+       "spellid": true,
+       "name": "Lesser Striking",
+       "bonusdmg": 2,
+       "ench": "241"
+     },
+     {
+       "id": 7788,
+       "spellid": true,
+       "name": "Minor Striking",
+       "bonusdmg": 1,
+       "ench": "250"
+     },
+     {
+       "id": 6296,
+       "spellid": true,
+       "name": "Fiery Blaze",
+       "chance": 15,
+       "magicdmg": 11,
+       "r": 40,
+       "ench": "36"
+     },
+     {
+       "id": 435481,
+       "spellid": true,
+       "name": "Dismantle (Assumed 2 PPM)",
+       "ppm": 2,
+       "magicdmg": 75,
+       "r": 40,
+       "ench": "7210"
+     }
+   ],
+   "twohand": [
+     {
+       "id": 211845,
+       "name": "Blackfathom Sharpening Stone",
+       "hit": 2,
+       "temp": true
+     },
+     {
+       "id": 18262,
+       "name": "Elemental Sharpening Stone",
+       "crit": 2,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 23122,
+       "name": "Consecrated Sharpening Stone",
+       "ap": 108,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 12404,
+       "name": "Dense Stone",
+       "bonusdmg": 8,
+       "r": 41,
+       "temp": true
+     },
+     {
+       "id": 7964,
+       "name": "Solid Sharpening Stone",
+       "bonusdmg": 6,
+       "r": 25,
+       "temp": true
+     },
+     {
+       "id": 2871,
+       "name": "Heavy Sharpening Stone",
+       "bonusdmg": 4,
+       "r": 15,
+       "temp": true
+     },
+     {
+       "id": 2863,
+       "name": "Coarse Sharpening Stone",
+       "bonusdmg": 3,
+       "r": 5,
+       "temp": true
+     },
+     {
+       "id": 23122,
+       "name": "Consecrated Sharpening Stone",
+       "ap": 108,
+       "r": 50,
+       "temp": true
+     },
+     {
+       "id": 3824,
+       "name": "Shadow Oil",
+       "temp": true,
+       "r": 24,
+       "chance": 15,
+       "magicdmg": 56.5
+     },
+     {
+       "id": 27837,
+       "spellid": true,
+       "name": "2H Agility",
+       "r": 41,
+       "agi": 25,
+       "ench": "2646"
+     },
+     {
+       "id": 23799,
+       "spellid": true,
+       "name": "Strength",
+       "r": 41,
+       "str": 15,
+       "ench": "2563"
+     },
+     {
+       "id": 20034,
+       "spellid": true,
+       "name": "Crusader",
+       "ppm": 1,
+       "procspell": "Crusader",
+       "r": 41,
+       "ench": "1900"
+     },
+     {
+       "id": 13898,
+       "spellid": true,
+       "name": "Fiery",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 40,
+       "ench": "803"
+     },
+     {
+       "id": 20032,
+       "spellid": true,
+       "name": "Lifestealing",
+       "r": 41,
+       "ppm": 6,
+       "magicdmg": 30,
+       "ench": "1898"
+     },
+     {
+       "id": 6043,
+       "name": "Iron Counterweight",
+       "haste": 3,
+       "ench": "34"
+     },
+     {
+       "id": 20030,
+       "spellid": true,
+       "name": "Superior Impact",
+       "r": 41,
+       "bonusdmg": 9,
+       "ench": "1896"
+     },
+     {
+       "id": 13937,
+       "spellid": true,
+       "name": "Greater Impact",
+       "r": 41,
+       "bonusdmg": 7,
+       "ench": "963"
+     },
+     {
+       "id": 13695,
+       "spellid": true,
+       "name": "Impact",
+       "bonusdmg": 5,
+       "ench": "1897"
+     },
+     {
+       "id": 13529,
+       "spellid": true,
+       "name": "Lesser Impact",
+       "bonusdmg": 3,
+       "ench": "943"
+     },
+     {
+       "id": 7745,
+       "spellid": true,
+       "name": "Minor Impact",
+       "bonusdmg": 2,
+       "ench": "241"
+     },
+     {
+       "id": 6296,
+       "spellid": true,
+       "name": "Fiery Blaze",
+       "chance": 15,
+       "magicdmg": 11,
+       "r": 40,
+       "ench": "36"
+     },
+     {
+       "id": 435481,
+       "spellid": true,
+       "name": "Dismantle (Assumed 2 PPM)",
+       "ppm": 2,
+       "magicdmg": 75,
+       "r": 40,
+       "ench": "7210"
+     }
+   ],
+   "head": [
+     {
+       "name": "Ice Guard",
+       "source": "Quest",
+       "subsource": "frost",
+       "resist": {
+         "frost": 10
        },
-       {
-           "id": 18262,
-           "name": "Elemental Sharpening Stone",
-           "crit": 2,
-           "r": 50,
-           "temp": true
-        },
-        {
-           "id": 23122,
-           "name": "Consecrated Sharpening Stone",
-           "ap": 108,
-           "r": 50,
-           "temp": true
-        },
-        {
-         "id": 12404,
-         "name": "Dense Stone",
-         "bonusdmg": 8,
-         "r": 41,
-         "temp": true
-      },
-      {
-          "id": 7964,
-          "name": "Solid Sharpening Stone",
-          "bonusdmg": 6,
-          "r": 25,
-          "temp": true
-       },
-       {
-          "id": 2871,
-          "name": "Heavy Sharpening Stone",
-          "bonusdmg": 4,
-          "r": 15,
-          "temp": true
-       },
-       {
-          "id": 2863,
-          "name": "Coarse Sharpening Stone",
-          "bonusdmg": 3,
-          "r": 5,
-          "temp": true
-       },
-      {
-         "id": 23122,
-         "name": "Consecrated Sharpening Stone",
-         "ap": 108,
-         "r": 50,
-         "temp": true
-      },
-      {
-         "id": 3824,
-         "name": "Shadow Oil",
-         "temp": true,
-         "r": 24,
-         "chance": 15,
-         "magicdmg": 56.5,
-       },
-       {
-          "id": 27837,
-          "spellid": true,
-          "name": "2H Agility",
-          "r": 41,
-          "agi": 25,
-       },
-       {
-          "id": 23799,
-          "spellid": true,
-          "name": "Strength",
-          "r": 41,
-          "str": 15,
-       },
-       {
-          "id": 20034,
-          "spellid": true,
-          "name": "Crusader",
-          "ppm": 1,
-          "procspell": "Crusader",
-          "r": 41,
-       },
-       {
-          "id": 13898,
-          "spellid": true,
-          "name": "Fiery",
-          "r": 41,
-          "ppm": 6,
-          "magicdmg": 40
-       },
-       {
-          "id": 20032,
-          "spellid": true,
-          "name": "Lifestealing",
-          "r": 41,
-          "ppm": 6,
-          "magicdmg": 30
-       },
-       {
-          "id": 6043,
-          "name": "Iron Counterweight",
-          "haste": 3,
-       },
-       {
-         "id": 20030,
-         "spellid": true,
-         "name": "Superior Impact",
-         "r": 41,
-         "bonusdmg": 9,
-      },
-      {
-         "id": 13937,
-         "spellid": true,
-         "name": "Greater Impact",
-         "r": 41,
-         "bonusdmg": 7,
-      },
-      {
-         "id": 13695,
-         "spellid": true,
-         "name": "Impact",
-         "bonusdmg": 5,
-      },
-      {
-         "id": 13529,
-         "spellid": true,
-         "name": "Lesser Impact",
-         "bonusdmg": 3,
-      },
-      {
-         "id": 7745,
-         "spellid": true,
-         "name": "Minor Impact",
-         "bonusdmg": 2,
-      },
-      {
-         "id": 6296,
-         "spellid": true,
-         "name": "Fiery Blaze",
-         "chance": 15,
-         "magicdmg": 11,
-         "r": 40
-      },
-      {
-         "id": 435481,
-         "spellid": true,
-         "name": "Dismantle (Assumed 2 PPM)",
-         "ppm": 2, 
-         "magicdmg": 75,
-         "r": 40
-      },
-    ],
-    "head": [
-      {
-         "name": "Ice Guard",
-         "source": "Quest",
-         "subsource": "frost",
-         "resist": {
-             "frost": 10
-         },
-         "phase": "6",
-         "id": 22636,
-         "r": 55
-      },
-      {
-         "id": 18329,
-         "name": "Arcanum of Rapidity",
-         "haste": 1,
-         "phase": 2,
-         "r": 54
-      },
-      {
-         "id": 11647,
-         "name": "Lesser Arcanum of Voracity (Agi)",
-         "agi": 8,
-         "phase": 1,
-         "r": 50
-      },
-      {
-         "id": 11645,
-         "name": "Lesser Arcanum of Voracity (Str)",
-         "str": 8,
-         "phase": 1,
-         "r": 50
-      }
+       "phase": "6",
+       "id": 22636,
+       "r": 55,
+       "ench": "2682"
+     },
+     {
+       "id": 18329,
+       "name": "Arcanum of Rapidity",
+       "haste": 1,
+       "phase": 2,
+       "r": 54,
+       "ench": "2543"
+     },
+     {
+       "id": 11647,
+       "name": "Lesser Arcanum of Voracity (Agi)",
+       "agi": 8,
+       "phase": 1,
+       "r": 50,
+       "ench": "1508"
+     },
+     {
+       "id": 11645,
+       "name": "Lesser Arcanum of Voracity (Str)",
+       "str": 8,
+       "phase": 1,
+       "r": 50,
+       "ench": "1506"
+     }
    ],
    "shoulder": [
-      
-      {
-         "id": 221321,
-         "name": "Atal\'ai Signet of Might",
-         "ap": 15,
-         "r": 50
-      },
-      {
-         "name": "Frost Mantle of the Dawn",
-         "source": "Quest",
-         "subsource": "frost",
-         "resist": {
-             "frost": 5
-         },
-         "phase": "1",
-         "id": 18170,
-         "r": 55
-      },
-      {
-         "name": "Nature Mantle of the Dawn",
-         "source": "Quest",
-         "subsource": "nature",
-         "resist": {
-             "nature": 5
-         },
-         "phase": "1",
-         "id": 18172,
-         "r": 55
-      },
-      {
-         "id": 29483,
-         "spellid": true,
-         "name": "Might of the Scourge",
-         "ap": 26,
-         "crit": 1,
-         "phase": 6,
-         "r": 60
-      },
-      {
-         "id": 24422,
-         "spellid": true,
-         "name": "Zandalar Signet of Might",
-         "ap": 30,
-         "phase": 4,
-         "r": 58
-      }
+     {
+       "id": 221321,
+       "name": "Atal'ai Signet of Might",
+       "ap": 15,
+       "r": 50,
+       "ench": "7328"
+     },
+     {
+       "name": "Frost Mantle of the Dawn",
+       "source": "Quest",
+       "subsource": "frost",
+       "resist": {
+         "frost": 5
+       },
+       "phase": "1",
+       "id": 18170,
+       "r": 55,
+       "ench": "2484"
+     },
+     {
+       "name": "Nature Mantle of the Dawn",
+       "source": "Quest",
+       "subsource": "nature",
+       "resist": {
+         "nature": 5
+       },
+       "phase": "1",
+       "id": 18172,
+       "r": 55,
+       "ench": "2486"
+     },
+     {
+       "id": 29483,
+       "spellid": true,
+       "name": "Might of the Scourge",
+       "ap": 26,
+       "crit": 1,
+       "phase": 6,
+       "r": 60,
+       "ench": "2717"
+     },
+     {
+       "id": 24422,
+       "spellid": true,
+       "name": "Zandalar Signet of Might",
+       "ap": 30,
+       "phase": 4,
+       "r": 58,
+       "ench": "2606"
+     }
    ],
    "back": [
-      {
-         "spellid": true,
-         "name": "Greater Fire Resistance",
-         "source": "Quest",
-         "subsource": "fire",
-         "resist": {
-             "fire": 15
-         },
-         "phase": 4,
-         "id": 25081
-      },
-      {
-         "spellid": true,
-         "name": "Greater Nature Resistance",
-         "source": "Quest",
-         "subsource": "nature",
-         "resist": {
-             "nature": 15
-         },
-         "phase": 4,
-         "id": 25082
-      },
-      {
-         "spellid": true,
-         "name": "Greater Resistance",
-         "source": "Quest",
-         "subsource": "frost",
-         "resist": {
-             "shadow": 5,
-             "arcane": 5,
-             "nature": 5,
-             "fire": 5,
-             "frost": 5
-         },
-         "r": 41,
-         "phase": 1,
-         "id": 20014
-      },
-      {
-         "id": 25084,
-         "spellid": true,
-         "name": "Subtlety",
-         "phase": 5
-      },
-      {
-         "id": 13882,
-         "spellid": true,
-         "name": "Lesser Agility",
-         "agi": 3,
-         "phase": 1
-      },
-      {
-         "id": 13419,
-         "spellid": true,
-         "name": "Minor Agility",
-         "agi": 1,
-         "phase": 1
-      }
+     {
+       "spellid": true,
+       "name": "Greater Fire Resistance",
+       "source": "Quest",
+       "subsource": "fire",
+       "resist": {
+         "fire": 15
+       },
+       "phase": 4,
+       "id": 25081,
+       "ench": "2619"
+     },
+     {
+       "spellid": true,
+       "name": "Greater Nature Resistance",
+       "source": "Quest",
+       "subsource": "nature",
+       "resist": {
+         "nature": 15
+       },
+       "phase": 4,
+       "id": 25082,
+       "ench": "2620"
+     },
+     {
+       "spellid": true,
+       "name": "Greater Resistance",
+       "source": "Quest",
+       "subsource": "frost",
+       "resist": {
+         "shadow": 5,
+         "arcane": 5,
+         "nature": 5,
+         "fire": 5,
+         "frost": 5
+       },
+       "r": 41,
+       "phase": 1,
+       "id": 20014,
+       "ench": "1888"
+     },
+     {
+       "id": 25084,
+       "spellid": true,
+       "name": "Subtlety",
+       "phase": 5,
+       "ench": "2621"
+     },
+     {
+       "id": 13882,
+       "spellid": true,
+       "name": "Lesser Agility",
+       "agi": 3,
+       "phase": 1,
+       "ench": "849"
+     },
+     {
+       "id": 13419,
+       "spellid": true,
+       "name": "Minor Agility",
+       "agi": 1,
+       "phase": 1,
+       "ench": "247"
+     }
    ],
    "chest": [
-      {
-         "id": 20025,
-         "spellid": true,
-         "name": "Greater Stats",
-         "agi": 4,
-         "str": 4,
-         "phase": 1,
-         "r": 41,
-      },
-      {
-         "id": 13941,
-         "spellid": true,
-         "name": "Stats",
-         "agi": 3,
-         "str": 3,
-         "phase": 1,
-         "r": 41,
-      },
-      {
-         "id": 13700,
-         "spellid": true,
-         "name": "Lesser Stats",
-         "agi": 2,
-         "str": 2,
-         "phase": 1
-      },
-      {
-         "id": 13626,
-         "spellid": true,
-         "name": "Minor Stats",
-         "agi": 1,
-         "str": 1,
-         "phase": 1
-      }
-
-
+     {
+       "id": 20025,
+       "spellid": true,
+       "name": "Greater Stats",
+       "agi": 4,
+       "str": 4,
+       "phase": 1,
+       "r": 41,
+       "ench": "1891"
+     },
+     {
+       "id": 13941,
+       "spellid": true,
+       "name": "Stats",
+       "agi": 3,
+       "str": 3,
+       "phase": 1,
+       "r": 41,
+       "ench": "928"
+     },
+     {
+       "id": 13700,
+       "spellid": true,
+       "name": "Lesser Stats",
+       "agi": 2,
+       "str": 2,
+       "phase": 1,
+       "ench": "866"
+     },
+     {
+       "id": 13626,
+       "spellid": true,
+       "name": "Minor Stats",
+       "agi": 1,
+       "str": 1,
+       "phase": 1,
+       "ench": "847"
+     }
    ],
    "wrist": [
-      {
-         "id": 20010,
-         "spellid": true,
-         "name": "Superior Strength",
-         "str": 9,
-         "phase": 1,
-         "r": 41,
-      },
-      {
-         "id": 13939,
-         "spellid": true,
-         "name": "Greater Strength",
-         "str": 7,
-         "phase": 1,
-         "r": 41,
-      },
-      {
-         "id": 13661,
-         "spellid": true,
-         "name": "Strength",
-         "str": 5,
-         "phase": 1
-      },
-      {
-         "id": 13536,
-         "spellid": true,
-         "name": "Lesser Strength",
-         "str": 3,
-         "phase": 1
-      },
-      {
-         "id": 7779,
-         "spellid": true,
-         "name": "Minor Agility",
-         "agi": 1,
-         "phase": 1
-      },
-      {
-         "id": 7782,
-         "spellid": true,
-         "name": "Minor Strength",
-         "str": 1,
-         "phase": 1
-      },
+     {
+       "id": 20010,
+       "spellid": true,
+       "name": "Superior Strength",
+       "str": 9,
+       "phase": 1,
+       "r": 41,
+       "ench": "1885"
+     },
+     {
+       "id": 13939,
+       "spellid": true,
+       "name": "Greater Strength",
+       "str": 7,
+       "phase": 1,
+       "r": 41,
+       "ench": "927"
+     },
+     {
+       "id": 13661,
+       "spellid": true,
+       "name": "Strength",
+       "str": 5,
+       "phase": 1,
+       "ench": "856"
+     },
+     {
+       "id": 13536,
+       "spellid": true,
+       "name": "Lesser Strength",
+       "str": 3,
+       "phase": 1,
+       "ench": "823"
+     },
+     {
+       "id": 7779,
+       "spellid": true,
+       "name": "Minor Agility",
+       "agi": 1,
+       "phase": 1,
+       "ench": "247"
+     },
+     {
+       "id": 7782,
+       "spellid": true,
+       "name": "Minor Strength",
+       "str": 1,
+       "phase": 1,
+       "ench": "248"
+     }
    ],
    "hands": [
-      {
-         "id": 25080,
-         "spellid": true,
-         "name": "Superior Agility",
-         "r": 41,
-         "agi": 15,
-         "phase": 5
-      },
-      {
-         "id": 20012,
-         "spellid": true,
-         "name": "Greater Agility",
-         "r": 41,
-         "agi": 7,
-         "phase": 1
-      },
-      {
-         "id": 20013,
-         "spellid": true,
-         "name": "Greater Strength",
-         "r": 41,
-         "str": 7,
-         "phase": 1
-      },
-      {
-         "id": 13815,
-         "spellid": true,
-         "name": "Agility",
-         "agi": 5,
-         "phase": 1
-      },
-      {
-         "id": 13887,
-         "spellid": true,
-         "name": "Strength",
-         "str": 5,
-         "phase": 1
-      },
-      {
-         "id": 13948,
-         "spellid": true,
-         "name": "Minor Haste",
-         "haste": 1,
-         "phase": 1
-      }
+     {
+       "id": 25080,
+       "spellid": true,
+       "name": "Superior Agility",
+       "r": 41,
+       "agi": 15,
+       "phase": 5,
+       "ench": "2564"
+     },
+     {
+       "id": 20012,
+       "spellid": true,
+       "name": "Greater Agility",
+       "r": 41,
+       "agi": 7,
+       "phase": 1,
+       "ench": "1887"
+     },
+     {
+       "id": 20013,
+       "spellid": true,
+       "name": "Greater Strength",
+       "r": 41,
+       "str": 7,
+       "phase": 1,
+       "ench": "927"
+     },
+     {
+       "id": 13815,
+       "spellid": true,
+       "name": "Agility",
+       "agi": 5,
+       "phase": 1,
+       "ench": "904"
+     },
+     {
+       "id": 13887,
+       "spellid": true,
+       "name": "Strength",
+       "str": 5,
+       "phase": 1,
+       "ench": "856"
+     },
+     {
+       "id": 13948,
+       "spellid": true,
+       "name": "Minor Haste",
+       "haste": 1,
+       "phase": 1,
+       "ench": "931"
+     }
    ],
    "legs": [
-      {
-         "id": 18329,
-         "name": "Arcanum of Rapidity",
-         "haste": 1,
-         "phase": 2,
-         "r": 54
-      },
-      {
-         "id": 11647,
-         "name": "Lesser Arcanum of Voracity (Agi)",
-         "agi": 8,
-         "phase": 1,
-         "r": 50
-      },
-      {
-         "id": 11645,
-         "name": "Lesser Arcanum of Voracity (Str)",
-         "str": 8,
-         "phase": 1,
-         "r": 50
-      }
+     {
+       "id": 18329,
+       "name": "Arcanum of Rapidity",
+       "haste": 1,
+       "phase": 2,
+       "r": 54,
+       "ench": "2543"
+     },
+     {
+       "id": 11647,
+       "name": "Lesser Arcanum of Voracity (Agi)",
+       "agi": 8,
+       "phase": 1,
+       "r": 50,
+       "ench": "1508"
+     },
+     {
+       "id": 11645,
+       "name": "Lesser Arcanum of Voracity (Str)",
+       "str": 8,
+       "phase": 1,
+       "r": 50,
+       "ench": "1506"
+     }
    ],
    "feet": [
-      {
-         "id": 20023,
-         "spellid": true,
-         "name": "Greater Agility",
-         "r": 41,
-         "agi": 7,
-         "phase": 1
-      },
-      {
-         "id": 13935,
-         "spellid": true,
-         "name": "Agility",
-         "r": 41,
-         "agi": 5,
-         "phase": 1
-      },
-      {
-         "id": 13637,
-         "spellid": true,
-         "name": "Lesser Agility",
-         "agi": 3,
-         "phase": 1
-      },
-      {
-         "id": 7867,
-         "spellid": true,
-         "name": "Minor Agility",
-         "agi": 1,
-         "phase": 1
-      },
-      {
-         "id": 13890,
-         "spellid": true,
-         "name": "Minor Speed",
-         "phase": 1
-      }
-   ],
+     {
+       "id": 20023,
+       "spellid": true,
+       "name": "Greater Agility",
+       "r": 41,
+       "agi": 7,
+       "phase": 1,
+       "ench": "1887"
+     },
+     {
+       "id": 13935,
+       "spellid": true,
+       "name": "Agility",
+       "r": 41,
+       "agi": 5,
+       "phase": 1,
+       "ench": "904"
+     },
+     {
+       "id": 13637,
+       "spellid": true,
+       "name": "Lesser Agility",
+       "agi": 3,
+       "phase": 1,
+       "ench": "849"
+     },
+     {
+       "id": 7867,
+       "spellid": true,
+       "name": "Minor Agility",
+       "agi": 1,
+       "phase": 1,
+       "ench": "247"
+     },
+     {
+       "id": 13890,
+       "spellid": true,
+       "name": "Minor Speed",
+       "phase": 1,
+       "ench": "911"
+     }
+   ]
  };
-
  var sets = [
    {
       id: 143,

@@ -844,11 +844,18 @@ SIM.UI = {
             let path = icons[type];
             let href = '#';
             let empty = true;
+            let ench;
+            if (enchant[type]) {
+                for (let e of enchant[type])
+                    if (e.selected && e.ench) ench = e.ench;
+            }
             for (let item of gear[type]) {
                 if (item.selected) {
                     path = item.p;
                     let id = item.id.toString().split('|');
-                    href = id[0] + '' + (id.length == 2 ? '?rand=' + id[1] : '');
+                    href = id[0];
+                    if (ench) href += '?ench=' + ench;
+                    if (id.length == 2) href += (ench ? '&' : '?') + 'rand=' + id[1];
                     empty = false;
                 }
             }
