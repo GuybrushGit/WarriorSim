@@ -715,7 +715,17 @@ var buffs = [
       iconname: "inv_sigil_mimiron",
       minlevel: 40,
       other: true,
-      ap: 20
+      ap: 20,
+      sod: true,
+   },
+   {
+      id: 221024,
+      name: "Flask of Everlasting Nightmares",
+      iconname: "inv_alchemy_endlessflask_01",
+      ap: 45,
+      minlevel: 50,
+      other: true,
+      sod: true,
    },
    {
       id: 221196,
@@ -725,6 +735,7 @@ var buffs = [
       minlevel: 50,
       voodoofrenzy: true,
       other: true,
+      sod: true,
    },
    {
       id: 12217,
