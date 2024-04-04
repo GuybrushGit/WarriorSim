@@ -28196,7 +28196,7 @@ $@spellaura438136"
 448717,,,
 448779,,,Hard sleep.
 448809,,,Inflicts magical damage to enemies.
-448824,,,
+448824,,,$s1 Nature damage inflicted every $t1 sec.
 448828,,"Immobilizes the caster, but increases its attack speed by $s2% for $d.","Immobilized.
 Attack speed increased by $s2%."
 448956,,,
@@ -28215,7 +28215,10 @@ Attack speed increased by $s2%."
 449162,,,
 449165,,,
 449200,,,
-449288,,$s1 Nature damage.,
+449430,,,
+449958,,,
+449990,,,
+449994,,,
 449379,,,"Decaying. At 5 stacks, all stacks are consumed, and 150 to 250 shadow damage is dealt."
 449414,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
 449420,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
@@ -28227,7 +28230,6 @@ Attack speed increased by $s2%."
 449431,,Inflicts $s1 Arcane damage to enemies in a selected area every $t1 sec. for $d.,
 449432,,"Curses the target with impending doom, causing $s1 Shadow damage after $d.  If the target dies from this damage, there is a chance that a Doomguard will be summoned.  Cannot be cast on players.",Causes $s1 Shadow damage after $d.
 449463,,,
-449729,,$@spelldesc424574,Inflicts eye-opening damage.
 449669,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
 450066,,..,
 450085,,,A finishing touch to a Dark Iron Dwarf disguise.
@@ -28245,9 +28247,7 @@ Attack speed increased by $s2%."
 449928,,Backstab and Sinister Strike cause the target to take $449927s1 more damage from all sources for $449927n charges or $449927d.,
 449929,,Your healing spell critical strikes now have a $h% chance to activate Dreamstate. You must have the rune engraved.,
 449930,,Reduces the cast time of Healing Rain by $s1%.,
-449931,,"Dealing Fire damage causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
 449932,,Attack power increased by $s1.,Attack power increased by $s1.
-449933,,Increases Holy spell critical strike chance by $s1%.,
 449934,,Increases damage and healing done by Nature spells and effects by up to $s1.,Nature spell damage and healing dealt is increased by $s1
 449935,,Chance on spell cast to increase your Nature spell damage and healing by up to $449934s1 for $449934d.,
 449970,,Gives you a $h% chance to get an extra attack on the same target after dealing damage with your weapon.,
@@ -28257,6 +28257,7 @@ Attack speed increased by $s2%."
 449982,,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.
 450012,,Dealing damage with Shadow Cleave reduces the cast time of your next Immolate spell by $450013s1%. Stacking up to $s1 times. Lasts $450013d.,
 450013,,Reduces the casting time of your next Immolate spell by $s1%.,Reduces the casting time of your next Immolate spell by $s1%.
+449729,,$@spelldesc424574,Inflicts eye-opening damage.
 449869,,"Shoots a cloud of acidic breath at enemies in a cone in front of the caster, reducing their armor and inflicting Nature damage every $t1 sec. for $d.","Reduced armor.
 Nature damage inflicted every $t1 sec."
 449879,,,Asleep.
@@ -28267,11 +28268,41 @@ Nature damage inflicted every $t1 sec."
 449995,,,
 449996,,,
 449997,,,
+449203,,,
+449931,,"Dealing Fire damage causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
 450083,,Rapid Fire now also grants $450084s1% melee attack speed for $450084d.,
 450084,,Increases melee attack speed by $s1%.,Increases melee attack speed by $s1%.
+450091,,,
+450092,,,
 450098,,"The caster smashes the ground, inflicting $s1 Physical damage to all players and knocking them back.",
 450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
 450106,,Restores $s1 health.,
 450107,,Restores $s1 health.,
+450663,,Inflicts Nature damage to an enemy.,
+450662,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
+450659,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
+450658,,Heals an ally for $s1 damage every $t1 sec. for $d.,$s1 damage healed every $t1 sec.
+450654,,"Surrounds the caster with a shield woven of Shadow magic. The shield lasts $d., absorbs up to $s1 Physical or magical damage, and inflicts $s2 damage to melee attackers.","Shielded against Physical and magical damage.
+$s2 Shadow damage inflicted to melee attackers."
+450650,,Calls upon Holy magic to heal an ally.,
+450646,,"Utters a word of darkness, inflicting Shadow damage to an enemy every $t1 sec. for $d.",Shadow damage inflicted every $t1 sec.
+450644,,,
+450643,,"Infects an enemy for $d., causing it to inflict $3585s1 Nature damage to its nearby allies every $t1 sec.",Inflicting $3585s1 Nature damage to nearby allies every $t1 sec.
+450642,,,
+450640,,,"Physical damage taken is increased by $s1.
+Stamina reduced by $s2.
+$h% chance to spread Wandering Plague on hit."
+450607,,"Diseases an enemy for $d., increasing the Physical damage it takes by $s1 and reducing its Stamina by $s2. The diseased target has $h% chance of spreading its illness to one of its nearby allies when struck in combat.","Physical damage taken is increased by $s1.
+Stamina reduced by $s2.
+$h% chance to spread Wandering Plague on hit."
+450606,,,
+450603,,Calls upon Nature magic to heal an ally.,
+450602,,"Blasts an enemy with lightning, inflicting Nature damage.",
+450601,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, inflicting greater Nature damage to each successive target.",
+450600,,"Transforms an enemy into a frog, rendering it unable to attack or cast spells for $d.",Hexed.
+449933,,Increases Holy spell critical strike chance by $s1%.,
 450403,,Increases your critical strike chance with ranged weapons by $s1%.,
 450409,,"Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
+450667,Rank 1,"Allows the rogue to sneak around, but reduces your speed by $s3%.  Lasts until cancelled.",Stealthed.  Movement slowed by $s3%.
+449288,,$s1 Nature damage.,
+450588,,,

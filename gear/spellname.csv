@@ -24885,7 +24885,7 @@ ID,Name_lang
 446336,Atal'ai Mojo of War
 446338,Chain Lightning
 446339,Atal'ai Skeleton Totem
-446348,Vomit Comet
+446348,Revolting Retch
 446354,Shield Slam
 446355,Shield Spike
 446356,Improved Blocking
@@ -25024,7 +25024,7 @@ ID,Name_lang
 446687,Anguish of the Dream
 446689,Anguish of the Dream
 446695,Fervor of the Temple Explorer
-446696,Vomit Comet
+446696,Revolting Retch
 446697,Vomit Comet
 446698,Fervor of the Temple Explorer
 446699,Gore
@@ -25235,7 +25235,10 @@ ID,Name_lang
 449162,Teleport
 449165,Teleport
 449200,Dream Converter
-449288,Sandstorm
+449430,[DNT] Check Number of Passengers
+449958,Troll Object - Candle Display
+449990,Troll Object - Slab Display
+449994,Troll Object - Mask Display
 449379,Decay
 449414,Atal'ai Blood Ceremony
 449420,Atal'ai Blood Ceremony
@@ -25247,7 +25250,6 @@ ID,Name_lang
 449431,Starfall
 449432,Curse of Doom
 449463,[DNT] Explorer Imp - Cosmetic
-449729,Wake Up Dead
 449669,Retribution Aura
 450066,Destroy
 450085,Fire Crown
@@ -25265,9 +25267,7 @@ ID,Name_lang
 449928,Blood Corrupting
 449929,Exiled Dreamer
 449930,Emerald Rains
-449931,Fiery Strength
 449932,Fiery Strength
-449933,Holy Crit
 449934,The Furious Storm
 449935,The Furious Storm
 449970,Extra Attack
@@ -25277,6 +25277,7 @@ ID,Name_lang
 449982,For Lordaeron!!
 450012,Shadow Spark
 450013,Shadow Spark
+449729,Wake Up Dead
 449869,Corrosive Acid Breath
 449879,Dream Fog
 449890,Tail Sweep
@@ -25286,11 +25287,36 @@ ID,Name_lang
 449995,Reputation - Merchant Faction
 449996,Reputation - Merchant Faction
 449997,Reputation - Merchant Faction
+449203,Revolting Retch
+449931,Fiery Strength
 450083,Rapid Cutting
 450084,Rapid Cutting
+450091,Deep Slumber
+450092,Deep Slumber
 450098,Demolishing Smash
 450105,Purification
 450106,Healing Potion
 450107,Healing Potion
+450663,Acid Spit
+450662,Sleep
+450659,Shadow Bolt
+450658,Renew
+450654,Shadow Shield
+450650,Heal
+450646,Shadow Word: Pain
+450644,Volatile Infection
+450643,Volatile Infection
+450642,Volatile Infection
+450640,Wandering Plague
+450607,Wandering Plague
+450606,Wandering Plague
+450603,Healing Wave
+450602,Lightning Bolt
+450601,Chain Lightning
+450600,Hex
+449933,Holy Crit
 450403,Lethal Shots
 450409,Call of Sul'thraze
+450667,Stealth
+449288,Sandstorm
+450588,Summon Player

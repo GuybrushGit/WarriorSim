@@ -3783,6 +3783,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "p": "inv_helmet_49",
+      "str": 20,
+      "sta": 14,
+      "crit": 1
+    },
+    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -3997,20 +4010,6 @@ var gear = {
       "str": 9,
       "sta": 14,
       "ap": 32
-    },
-    {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "str": 20,
-      "sta": 14,
-      "crit": 1,
-      "spellcrit": 1,
-      "p": "inv_helmet_49"
     }
   ],
   "neck": [
@@ -44131,6 +44130,18 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 221193,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "3",
+      "i": "50",
+      "name": "Emerald Ring",
+      "p": "inv_jewelry_ring_37",
+      "sta": 12,
+      "ap": 14
+    },
+    {
       "id": 223194,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -44154,6 +44165,18 @@ var gear = {
       "p": "inv_jewelry_ring_05",
       "str": 10,
       "sta": 13
+    },
+    {
+      "id": 224004,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Emerald Ring",
+      "p": "inv_jewelry_ring_37",
+      "sta": 4,
+      "ap": 6
     }
   ],
   "finger2": [
@@ -46255,6 +46278,18 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 221193,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 45,
+      "q": "3",
+      "i": "50",
+      "name": "Emerald Ring",
+      "p": "inv_jewelry_ring_37",
+      "sta": 12,
+      "ap": 14
+    },
+    {
       "id": 223194,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -46278,6 +46313,18 @@ var gear = {
       "p": "inv_jewelry_ring_05",
       "str": 10,
       "sta": 13
+    },
+    {
+      "id": 224004,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 20,
+      "q": "2",
+      "i": "25",
+      "name": "Emerald Ring",
+      "p": "inv_jewelry_ring_37",
+      "sta": 4,
+      "ap": 6
     }
   ],
   "trinket1": [
@@ -79012,7 +79059,7 @@ var gear = {
       "speed": 2.1,
       "mindmg": 77,
       "maxdmg": 123,
-      "p": "inv_staff_01",
+      "p": "inv_staff_07",
       "sta": 30
     },
     {
@@ -79109,28 +79156,6 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 223526,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "55",
-      "name": "Sul'thraze the Lasher",
-      "speed": 2,
-      "mindmg": 84,
-      "maxdmg": 125,
-      "p": "inv_sword_40",
-      "str": 23,
-      "sta": 8,
-      "proc": {
-        "magic": true,
-        "dmg": 150,
-        "tick": 25,
-        "interval": "3000",
-        "duration": "15000"
-      }
-    },
-    {
       "id": 223536,
       "type": "Polearm",
       "slot": "twohand",
@@ -79163,6 +79188,28 @@ var gear = {
         "fire": 10
       },
       "crit": 1
+    },
+    {
+      "id": 223526,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Sul'thraze the Lasher",
+      "speed": 2,
+      "mindmg": 84,
+      "maxdmg": 125,
+      "p": "inv_sword_40",
+      "str": 23,
+      "sta": 8,
+      "proc": {
+        "magic": true,
+        "dmg": 150,
+        "tick": 25,
+        "interval": "3000",
+        "duration": "15000"
+      }
     }
   ]
 };
