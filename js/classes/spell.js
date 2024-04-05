@@ -1582,10 +1582,6 @@ class ConsumedRage extends Aura {
         }
     }
     use() {
-        if (this.player.auras.wreckingcrew && this.player.auras.wreckingcrew.timer) {
-            this.player.auras.wreckingcrew.timer = step;
-            this.player.auras.wreckingcrew.step();
-        }
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -2126,11 +2122,6 @@ class WreckingCrew extends Aura {
         this.duration = 6;
     }
     use() {
-        if (this.player.auras.consumedrage && this.player.auras.consumedrage.timer) {
-            return;
-            // this.player.auras.consumedrage.timer = step;
-            // this.player.auras.consumedrage.step();
-        }
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
