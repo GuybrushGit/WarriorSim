@@ -1031,7 +1031,7 @@ var spells = [
     id: 215161,
     name: 'Tempered Interference-Negating Helmet',
     classname: 'GneuroLogical',
-    iconname: 'inv_helmet_15',
+    iconname: 'inv_helmet_49',
     item: true,
     noitemcd: true,
     aura: true,

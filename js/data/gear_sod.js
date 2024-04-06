@@ -46553,7 +46553,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": "33",
+      "i": "45",
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {
@@ -46882,7 +46882,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": "33",
+      "i": "45",
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {
