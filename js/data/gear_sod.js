@@ -3783,19 +3783,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "p": "inv_helmet_49",
-      "str": 20,
-      "sta": 14,
-      "crit": 1
-    },
-    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -4010,6 +3997,20 @@ var gear = {
       "str": 9,
       "sta": 14,
       "ap": 32
+    },
+    {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "str": 20,
+      "sta": 14,
+      "crit": 1,
+      "spellcrit": 1,
+      "p": "inv_helmet_49"
     }
   ],
   "neck": [
@@ -43166,7 +43167,7 @@ var gear = {
       "id": 12548,
       "type": "Miscellaneous",
       "slot": "finger",
-      "r": 50,
+      "r": 51,
       "q": "3",
       "i": "60",
       "name": "Magni's Will",
@@ -45314,7 +45315,7 @@ var gear = {
       "id": 12548,
       "type": "Miscellaneous",
       "slot": "finger",
-      "r": 50,
+      "r": 51,
       "q": "3",
       "i": "60",
       "name": "Magni's Will",

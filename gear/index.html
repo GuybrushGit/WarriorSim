@@ -245,6 +245,7 @@
           if (obj.id == 220568) delete obj.proc;
           if (obj.id == 209577) obj.ap = 0;
           if (obj.id == 6460) obj.i = 30;
+          if (obj.id == 12548) obj.r = 51;
 
           let include = false, exclude = false;
           if (obj.id == 21568) include = true;
@@ -312,6 +313,20 @@
           "sta": 7,
           "hit": 1,
           "p": "inv_gauntlets_23",
+        });
+        gear["head"].push({
+          "id": 215161,
+          "type": "Plate",
+          "slot": "head",
+          "r": 40,
+          "q": "4",
+          "i": "45",
+          "name": "Tempered Interference-Negating Helmet",
+          "str": 20,
+          "sta": 14,
+          "crit": 1,
+          "spellcrit": 1,
+          "p": "inv_helmet_49"
         });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
