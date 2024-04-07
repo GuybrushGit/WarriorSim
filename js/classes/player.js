@@ -572,6 +572,7 @@ class Player {
             if (this.auras[s].saveddmg) this.auras[s].saveddmg = 0;
             if (this.auras[s].nexttick) this.auras[s].nexttick = 0;
             if (this.auras[s].cooldowntimer) this.auras[s].cooldowntimer = 0;
+            if (this.auras[s].tfbstep) this.auras[s].tfbstep = -6000;
         }
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
