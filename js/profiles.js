@@ -47,18 +47,11 @@ SIM.PROFILES = {
             view.textarea.focus();
         });
 
-        view.container.on('click','.import-th-a', function (e) {
+        view.container.on('click','.import-th', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
-            view.importProfile(preset_th_a, index);
-        });
-
-        view.container.on('click','.import-th-f', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            let index = view.container.find('.profile').last().data('index') + 1;
-            view.importProfile(preset_th_f, index);
+            view.importProfile(preset_th, index);
         });
 
         view.container.on('click','.import-dw', function (e) {
@@ -220,10 +213,9 @@ SIM.PROFILES = {
             <div class="import-profile">${svgImport}<p>Import Profile</p>
             ${mode == "sod" ? 
                 `<div class="import-container">
-                    <div class="import-gl">Glad Stance</div>
-                    <div class="import-dw">50 Dual Wield</div>
-                    <div class="import-th-f">50 2H Fury</div>
-                    <div class="import-th-a">50 2H Arms</div>
+                    <div class="import-gl" style="width: 100%;">Gladiator Stance</div>
+                    <div class="import-dw">50 DW Fury</div>
+                    <div class="import-th">50 2H Arms</div>
                 </div>` : ''}
             </div>
             </div>`);

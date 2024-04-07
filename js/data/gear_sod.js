@@ -21523,7 +21523,7 @@ var gear = {
       "r": 43,
       "q": "3",
       "i": "48",
-      "name": "Vice Grips of the Tiger",
+      "name": "Vice Grips of the Tigre",
       "p": "inv_gauntlets_26",
       "ap": 14,
       "agi": 12,
@@ -21537,7 +21537,7 @@ var gear = {
       "r": 43,
       "q": "3",
       "i": "48",
-      "name": "Vice Grips of the Bear",
+      "name": "Vice Grips of the Burr",
       "p": "inv_gauntlets_26",
       "ap": 14,
       "sta": 12,
@@ -21551,7 +21551,7 @@ var gear = {
       "r": 43,
       "q": "3",
       "i": "48",
-      "name": "Vice Grips of Strength",
+      "name": "Vice Grips of Stronk",
       "p": "inv_gauntlets_26",
       "ap": 14,
       "str": 17,
@@ -26195,6 +26195,18 @@ var gear = {
       "sta": 7,
       "hit": 1,
       "p": "inv_gauntlets_23"
+    },
+    {
+      "id": "9640|1563",
+      "type": "Plate",
+      "slot": "hands",
+      "r": 43,
+      "q": "3",
+      "i": "48",
+      "name": "Vice Grips of Power",
+      "p": "inv_gauntlets_26",
+      "ap": 48,
+      "rand": 1563
     }
   ],
   "waist": [
@@ -46553,7 +46565,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": "45",
+      "i": 45,
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {
@@ -46882,7 +46894,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": "45",
+      "i": 45,
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {

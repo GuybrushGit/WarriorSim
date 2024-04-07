@@ -186,7 +186,8 @@
                 if (/[+-]\d+ Agility/.test(s)) { tiger.agi = parseInt(s); }
                 if (/[+-]\d+ Stamina/.test(s)) { tiger.sta = parseInt(s); }
               });
-              tiger.name += " of the Tiger";
+              if (tiger.id == "9640") tiger.name += " of the Tigre";
+              else tiger.name += " of the Tiger";
               tiger.rand = suff.id;
               tiger.id += '|' + suff.id;
               addToGear(tiger);
@@ -201,7 +202,9 @@
                 if (/[+-]\d+ Agility/.test(s)) { bear.agi = parseInt(s); }
                 if (/[+-]\d+ Stamina/.test(s)) { bear.sta = parseInt(s); }
               });
-              bear.name += " of the Bear";
+
+              if (bear.id == "9640") bear.name += " of the Burr";
+              else bear.name += " of the Bear";
               bear.rand = suff.id;
               bear.id += '|' + suff.id;
               addToGear(bear);
@@ -214,7 +217,8 @@
               suff.s.forEach(s => {
                 if (/[+-]\d+ Strength/.test(s)) { strength.str = parseInt(s); }
               });
-              strength.name += " of Strength";
+              if (strength.id == "9640") strength.name += " of Stronk";
+              else strength.name += " of Strength";
               strength.rand = suff.id;
               strength.id += '|' + suff.id;
               addToGear(strength);
@@ -329,6 +333,19 @@
           "spellcrit": 1,
           "p": "inv_helmet_49"
         });
+        gear["hands"].push({
+          "id": "9640|1563",
+          "type": "Plate",
+          "slot": "hands",
+          "r": 43,
+          "q": "3",
+          "i": "48",
+          "name": "Vice Grips of Power",
+          "p": "inv_gauntlets_26",
+          "ap": 48,
+          "rand": 1563
+        });
+        
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
