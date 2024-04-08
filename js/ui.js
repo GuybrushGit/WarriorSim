@@ -230,7 +230,7 @@ SIM.UI = {
 
         view.runes.on('click', '.rune .icon', function(e) {
             e.preventDefault();
-            var current_open_page =  $(`nav`).children('ul').children('li.active').find('p:first').text().toLowerCase().replace(/\s/g, '');
+            var current_open_page =  $(`nav`).children('ul').children('li.active').data('type');
             var rune_type = $(this).closest('tr[name]').attr('name');
             var rune_id = $(this).parent().attr('data-id').toString();;
             view.loadGear(rune_type);
