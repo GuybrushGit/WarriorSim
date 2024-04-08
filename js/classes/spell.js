@@ -37,6 +37,7 @@ class Spell {
         if (spell.timetoendactive) this.timetoend = parseInt(spell.timetoend) * 1000;
         if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
         if (spell.zerkerpriority) this.zerkerpriority = spell.zerkerpriority;
+        if (spell.swordboard) this.swordboard = spell.swordboard;
         
     }
     dmg() {
@@ -551,6 +552,7 @@ class ShieldSlam extends Spell {
         super(player, id, 'Shield Slam');
         this.cost = 20 - player.ragecostbonus;
         this.cooldown = 6;
+        if (this.swordboard) this.cost = 0;
     }
     dmg() {
         let dmg;
@@ -565,8 +567,9 @@ class ShieldSlam extends Spell {
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     canUse() {
-        return this.player.shield && !this.timer && !this.player.timer && (this.player.freeshieldslam || this.cost <= this.player.rage) && 
-            (this.player.freeshieldslam || this.player.rage >= this.minrage);
+        return this.player.shield && !this.timer && !this.player.timer && (this.player.freeshieldslam || this.cost <= this.player.rage) 
+            && (this.player.freeshieldslam || this.player.rage >= this.minrage)
+            && (!this.swordboard || this.player.freeshieldslam);
     }
 }
 
