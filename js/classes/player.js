@@ -1045,9 +1045,9 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
+            this.proccrit(false, adjacent);
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
             dmg *= this.critdmg;
-            this.proccrit(false, adjacent);
         }
 
         weapon.use();
@@ -1086,9 +1086,9 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
+            this.proccrit(true);
             dmg *= 2;
             dmg *= this.critdmg;
-            this.proccrit(true);
         }
 
         weapon.use();
@@ -1121,9 +1121,9 @@ class Player {
             this.dodgetimer = 5000;
         }
         else if (result == RESULT.CRIT) {
+            this.proccrit(false, adjacent, spell);
             dmg *= 2 + this.talents.abilitiescrit;
             dmg *= this.critdmg;
-            this.proccrit(false, adjacent, spell);
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
