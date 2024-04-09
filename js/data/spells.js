@@ -743,7 +743,6 @@ var spells = [
     timetostart: 0,
     timetostartactive: false,
     minlevel: 26,
-    maxlevel: 45,
     value1: 30,
     value2: 60,
     active: true,
