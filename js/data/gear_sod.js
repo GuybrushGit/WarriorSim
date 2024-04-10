@@ -46565,7 +46565,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": 45,
+      "i": 40,
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {
@@ -46894,7 +46894,7 @@ var gear = {
       "slot": "trinket",
       "r": 25,
       "q": "3",
-      "i": 45,
+      "i": 40,
       "name": "Avenger's Void Pearl",
       "p": "inv_misc_gem_pearl_04",
       "resist": {
@@ -48126,7 +48126,7 @@ var gear = {
       "slot": "ranged",
       "r": 25,
       "q": "3",
-      "i": "30",
+      "i": 40,
       "name": "Naga Heartrender",
       "speed": 2.9,
       "mindmg": 30,
