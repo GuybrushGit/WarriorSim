@@ -576,7 +576,7 @@ var buffs = [
       group: "elixir",
       agi: 15,
       minlevel: 27,
-      maxlevel: 49,
+      maxlevel: 50,
       consume: true,
    },
    {
