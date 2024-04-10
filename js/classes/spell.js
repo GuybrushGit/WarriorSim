@@ -2089,13 +2089,15 @@ class Rampage extends Aura {
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
+        if (!this.timer) {
+            this.stacks =  1;
+            this.mult_stats.apmod = 2;
+        } 
         this.timer = step + this.duration * 1000;
         this.player.rage -= 20;
         this.player.timer = 1500;
         this.player.crittimer = 0;
         this.starttimer = step;
-        this.stacks = 1;
-        this.mult_stats.apmod = 2;
         this.player.updateAP();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
@@ -2106,7 +2108,7 @@ class Rampage extends Aura {
         this.player.updateAP();
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.player.crittimer && this.player.rage >= 20;
+        return (!this.timer || (this.timer - step) < 3000) && !this.player.timer && this.player.crittimer && this.player.rage >= 20;
     }
     step() {
         if (step >= this.timer) {

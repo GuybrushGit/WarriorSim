@@ -465,6 +465,12 @@ class Player {
             if (buff.active && buff.improvedexposed) {
                 this.improvedexposed = true;
             }
+            if (buff.active && buff.name == "Expose Armor") {
+                this.exposed = true;
+            }
+            if (buff.active && buff.name == "Homunculi") {
+                this.homunculi = true;
+            }
         }
         for (let buff of buffs) {
             if (buff.active) {
@@ -1112,6 +1118,9 @@ class Player {
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
+        if (spell instanceof SunderArmor && !this.homunculi && !this.exposed) {
+            procdmg += this.procattack(spell, this.mh, result, adjacent, damageSoFar);
+        }
 
         if (result == RESULT.MISS) {
             spell.failed();
@@ -1232,7 +1241,7 @@ class Player {
                 /* start-log */ if (log) this.log(`Sword and Board proc`); /* end-log */
             }
             // Rampage
-            if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5 && rng10k() < 8000) {
+            if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5) {
                 this.auras.rampage.proc();
                 /* start-log */ if (log) this.log(`Rampage proc`); /* end-log */
             }
