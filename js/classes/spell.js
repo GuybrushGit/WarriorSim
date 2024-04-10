@@ -299,6 +299,7 @@ class SunderArmor extends Spell {
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
         this.stacks = Math.min(6, this.stacks + 1);
+        if (this.player.homunculi || this.player.exposed) this.stacks = 6;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     dmg() {
