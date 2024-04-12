@@ -365,7 +365,7 @@ SIM.PROFILES = {
     importProfile(str, index) {
         const view = this;
         try {
-            let minified = str[0] == '{' ? JSON.parse(str) : JSON.parse(atob(str));
+            let minified = str[0] == '{' ? JSON.parse(str.trim()) : JSON.parse(atob(str.trim()));
             if (!localStorage[mode + (globalThis.profileid || 0)]) SIM.UI.loadSession();
             let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
 
