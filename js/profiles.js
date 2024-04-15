@@ -238,6 +238,7 @@ SIM.PROFILES = {
             }
         }
         for(let type in storage.gear) {
+            if (type == 'custom') continue;
             if (type != "twohand" && type != "mainhand" && type != "offhand") {
                 for  (let item of storage.gear[type]) {
                     if (item.selected) {
