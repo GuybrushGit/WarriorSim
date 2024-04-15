@@ -378,6 +378,7 @@ SIM.PROFILES = {
 
             storage.gear = {};
             for (let type in minified.gear) {
+                if (type == 'custom') continue;
                 storage.gear[type] = [{id: minified.gear[type], selected: true}];
             }
             for (let spell of spells) {

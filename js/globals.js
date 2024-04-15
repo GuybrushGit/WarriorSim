@@ -1,6 +1,7 @@
 function getGlobalsDelta() {
     const _gear = {};
     for (const type in gear) {
+        if (type == 'custom') continue;
         _gear[type] = gear[type].map((item) => {
             return {
                 id: item.id,
