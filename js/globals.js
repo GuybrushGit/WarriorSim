@@ -116,4 +116,6 @@ function updateGlobals(params) {
             $(".resistances[data-id='"+type+"-resist']").click()
         }
     }
+
+    delete gear["custom"];
 }
