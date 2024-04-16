@@ -7528,7 +7528,7 @@ Stamina reduced by $s2."
 10138,Rank 5,"Conjures $?s442543[${$max(20,$m1)}][$s1] $lbottle:bottles; of mineral water, providing the mage and $ghis:her; allies with something to drink.
 
 Conjured items disappear if logged out for more than 15 minutes.",
-10139,Rank 6,"Conjures $s1 $lbottle:bottles; of sparkling water, providing the mage and $ghis:her; allies with something to drink.
+10139,Rank 6,"Conjures $?s442543[${$max(20,$m1)}][$s1] $lbottle:bottles; of sparkling water, providing the mage and $ghis:her; allies with something to drink.
 
 Conjured items disappear if logged out for more than 15 minutes.",
 10140,Rank 7,"Conjures $s1 $lbottle:bottles; of crystal water, providing the mage and $ghis:her; allies with something to drink.
@@ -28011,19 +28011,19 @@ Periodically suffering speed reductions and loss of control."
 446712,,Increases healing power by $s1 for $d.,Increased healing by $s1.
 446713,,,Restores $/5;s1 health per second.
 446714,,,Restores $/5;s2 mana per second.
-446715,,Restores $26401o1 health and $26402o2 mana over $25695d.  Must remain seated while eating. ,
+446715,,Restores $446713o1 health and $446714o2 mana over $446714d.  Must remain seated while eating. ,
 446716,,,Mama's not going to be happy...
 446720,,"Uh oh, someone indulged in something pungent...","Uh oh, someone indulged in something pungent..."
 446721,,,
 446722,,Chance on hit to increase Strength by $s1 for $d.,Strength Increased by $s1.
-446723,,Chance on hit to increase Strength by $446722s1 for $4446722d.,Strength Increased by $446722s1.
+446723,,Chance on hit to increase Strength by $446722s1 for $446722d.,Strength Increased by $446722s1.
 446724,,Your ranged attacks leech $446725s1 health from targets.,
 446725,,Leech $446725s1 health worth of Shadow Damage.,
 446727,,+$s1 Attack Power when fighting Dragonkin.,
 446728,,The caster stuns targets for $d.,Stunned.
 446729,,Increases run speed by $s1% for $d1.,Increases run speed by $s1%.
 446730,,Increase the range of your Flame Shock spell by $s1 yards.,
-446731,,"Hurls the spear at the target, immbolizing them for $d.",Immobilized.
+446731,,"Hurls the spear at the target, immobilizing them for $d.",Immobilized.
 446732,,$@spelldesc424574,Inflicts eye-opening damage.
 446733,,"Takes control of a humanoid enemy up to level $s1 for $d, increases the magical damage it deals by $s2, and increases the Physical damage it deals by $s3.","Charmed.
 Magical damage dealt is increased by $s2.
@@ -28278,31 +28278,67 @@ Nature damage inflicted every $t1 sec."
 450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
 450106,,Restores $s1 health.,
 450107,,Restores $s1 health.,
-450663,,Inflicts Nature damage to an enemy.,
-450662,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
-450659,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
-450658,,Heals an ally for $s1 damage every $t1 sec. for $d.,$s1 damage healed every $t1 sec.
-450654,,"Surrounds the caster with a shield woven of Shadow magic. The shield lasts $d., absorbs up to $s1 Physical or magical damage, and inflicts $s2 damage to melee attackers.","Shielded against Physical and magical damage.
-$s2 Shadow damage inflicted to melee attackers."
-450650,,Calls upon Holy magic to heal an ally.,
-450646,,"Utters a word of darkness, inflicting Shadow damage to an enemy every $t1 sec. for $d.",Shadow damage inflicted every $t1 sec.
-450644,,,
-450643,,"Infects an enemy for $d., causing it to inflict $3585s1 Nature damage to its nearby allies every $t1 sec.",Inflicting $3585s1 Nature damage to nearby allies every $t1 sec.
-450642,,,
-450640,,,"Physical damage taken is increased by $s1.
-Stamina reduced by $s2.
-$h% chance to spread Wandering Plague on hit."
+450600,,"Transforms an enemy into a frog, rendering it unable to attack or cast spells for $d.",Hexed.
+450601,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, inflicting greater Nature damage to each successive target.",
+450602,,"Blasts an enemy with lightning, inflicting Nature damage.",
+450603,,Calls upon Nature magic to heal an ally.,
+450606,,,
 450607,,"Diseases an enemy for $d., increasing the Physical damage it takes by $s1 and reducing its Stamina by $s2. The diseased target has $h% chance of spreading its illness to one of its nearby allies when struck in combat.","Physical damage taken is increased by $s1.
 Stamina reduced by $s2.
 $h% chance to spread Wandering Plague on hit."
-450606,,,
-450603,,Calls upon Nature magic to heal an ally.,
-450602,,"Blasts an enemy with lightning, inflicting Nature damage.",
-450601,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, inflicting greater Nature damage to each successive target.",
-450600,,"Transforms an enemy into a frog, rendering it unable to attack or cast spells for $d.",Hexed.
+450640,,,"Physical damage taken is increased by $s1.
+Stamina reduced by $s2.
+$h% chance to spread Wandering Plague on hit."
+450642,,,
+450643,,"Infects an enemy for $d., causing it to inflict $3585s1 Nature damage to its nearby allies every $t1 sec.",Inflicting $3585s1 Nature damage to nearby allies every $t1 sec.
+450644,,,
+450646,,"Utters a word of darkness, inflicting Shadow damage to an enemy every $t1 sec. for $d.",Shadow damage inflicted every $t1 sec.
+450650,,Calls upon Holy magic to heal an ally.,
+450654,,"Surrounds the caster with a shield woven of Shadow magic. The shield lasts $d., absorbs up to $s1 Physical or magical damage, and inflicts $s2 damage to melee attackers.","Shielded against Physical and magical damage.
+$s2 Shadow damage inflicted to melee attackers."
+450658,,Heals an ally for $s1 damage every $t1 sec. for $d.,$s1 damage healed every $t1 sec.
+450659,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
+450662,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
+450663,,Inflicts Nature damage to an enemy.,
+450848,,,
+450849,,,
+450851,,,
+450852,,,
+450874,,,
+450881,,,
 449933,,Increases Holy spell critical strike chance by $s1%.,
 450403,,Increases your critical strike chance with ranged weapons by $s1%.,
 450409,,"Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
 450667,Rank 1,"Allows the rogue to sneak around, but reduces your speed by $s3%.  Lasts until cancelled.",Stealthed.  Movement slowed by $s3%.
 449288,,$s1 Nature damage.,
 450588,,,
+450804,,,
+450811,,,
+451092,,,
+451227,,,
+451398,,,A finishing touch to a Dark Iron Dwarf disguise.
+451415,,,
+451706,,,
+451726,,$?$a446847[Teaches you how to craft a Gnomish Death Ray][],
+451725,,$?$a446847[Teaches you how to craft a Gnomish Battle Chicken][],
+451724,,$?$a446847[Teaches you how to craft a Gnomish Net-o-Matic Projector][],
+451723,,$?$a446847[Teaches you how to craft a Gnomish Mind Control Cap][],
+451722,,$?$a446847[Teaches you how to craft a Gnomish Harm Prevention Belt][],
+451721,,$?$a446847[Teaches you how to craft a Gnomish Goggles][],
+451719,,$?$a446847[Teaches you how to craft a Goblin Construction Helmet][],
+451718,,$?$a446847[Teaches you how to craft a Goblin Bomb Dispenser][],
+451717,,$?$a446847[Teaches you how to craft a Gnomish Shrink Ray][],
+451716,,$?$a446847[Teaches you how to craft a Gnomish Rocket Boots][],
+451715,,$?$a446847[Teaches you how to craft a Goblin Rocket Boots][],
+451714,,$?$a446847[Teaches you how to craft a Goblin Mortar][],
+451713,,$?$a446847[Teaches you how to craft a Goblin Mining Helmet][],
+451712,,$?$a446847[Teaches you how to craft a Goblin Dragon Gun][],
+451711,,$?$a446847[Teaches you how to craft The Big One][],
+451710,,$?$a446847[Teaches you how to craft a Goblin Sapper Charge][],
+451709,,$?$a446847[Teaches you how to craft a Goblin Rocket Helm][],
+451730,,,
+452185,,,
+452154,,,
+408344,Rank 4,Instantly inflicts $11306s1 fire damage to enemies within $11306a1 yd of your active Fire totem.,
+452285,,,
+452574,,,

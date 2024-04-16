@@ -1072,7 +1072,7 @@ var enchant = {
    {
       id: 1651,
       name: 'Serpent\'s Ascension',
-      items: [220588,220589],
+      items: [220588,220589,224409],
       bonus: [
          { count: 2, stats: { procspell: "SerpentAscension", procchance: 3 } }
       ]

@@ -3783,6 +3783,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "p": "inv_helmet_49",
+      "str": 20,
+      "sta": 14,
+      "crit": 1
+    },
+    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -3974,7 +3987,7 @@ var gear = {
     },
     {
       "id": 223172,
-      "type": "Leather",
+      "type": "Mail",
       "slot": "head",
       "r": 0,
       "q": "3",
@@ -3997,20 +4010,6 @@ var gear = {
       "str": 9,
       "sta": 14,
       "ap": 32
-    },
-    {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "str": 20,
-      "sta": 14,
-      "crit": 1,
-      "spellcrit": 1,
-      "p": "inv_helmet_49"
     }
   ],
   "neck": [
@@ -8845,6 +8844,17 @@ var gear = {
       "agi": 12,
       "str": 12,
       "sta": 12
+    },
+    {
+      "id": 220745,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Membrane of Dark Neurosis",
+      "p": "inv_shoulder_18",
+      "hit": 1
     },
     {
       "id": 220747,
@@ -70559,6 +70569,25 @@ var gear = {
       "p": "inv_shield_10",
       "sta": 5,
       "block": 32
+    },
+    {
+      "id": 224409,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Serpent's Striker",
+      "speed": 2.6,
+      "mindmg": 73,
+      "maxdmg": 136,
+      "p": "inv_weapon_hand_01",
+      "agi": 9,
+      "sta": 7,
+      "proc": {
+        "magic": true,
+        "dmg": 51
+      }
     }
   ],
   "twohand": [

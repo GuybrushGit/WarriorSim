@@ -24768,7 +24768,7 @@ ID,Name_lang
 446089,Geode Hammer
 446090,Feast on Your Fear
 446091,Aura of Paralyzing Dread
-446092,Gneurostatc Protection
+446092,Gneurostatic Protection
 446093,The Nightmare
 446094,Geode Hammer Proc Effect
 446095,Idol of the Raging Shambler
@@ -25297,26 +25297,62 @@ ID,Name_lang
 450105,Purification
 450106,Healing Potion
 450107,Healing Potion
-450663,Acid Spit
-450662,Sleep
-450659,Shadow Bolt
-450658,Renew
-450654,Shadow Shield
-450650,Heal
-450646,Shadow Word: Pain
-450644,Volatile Infection
-450643,Volatile Infection
-450642,Volatile Infection
-450640,Wandering Plague
-450607,Wandering Plague
-450606,Wandering Plague
-450603,Healing Wave
-450602,Lightning Bolt
-450601,Chain Lightning
 450600,Hex
+450601,Chain Lightning
+450602,Lightning Bolt
+450603,Healing Wave
+450606,Wandering Plague
+450607,Wandering Plague
+450640,Wandering Plague
+450642,Volatile Infection
+450643,Volatile Infection
+450644,Volatile Infection
+450646,Shadow Word: Pain
+450650,Heal
+450654,Shadow Shield
+450658,Renew
+450659,Shadow Bolt
+450662,Sleep
+450663,Acid Spit
+450848,Daze
+450849,Hold Stein
+450851,Drink Stein
+450852,Sleep
+450874,Toss Stein
+450881,Toss Stein
 449933,Holy Crit
 450403,Lethal Shots
 450409,Call of Sul'thraze
 450667,Stealth
 449288,Sandstorm
 450588,Summon Player
+450804,Disallow Blink
+450811,Disallow Shadowstrike
+451092,Create Yellow Punch Card
+451227,Despawn Caster
+451398,Fire Crown
+451415,Sandstorm
+451706,Screaming Chain Pauldrons
+451726,Gnomish Death Ray
+451725,Gnomish Battle Chicken
+451724,Gnomish Net-o-Matic Projector
+451723,Gnomish Mind Control Cap
+451722,Gnomish Harm Prevention Belt
+451721,Gnomish Goggles
+451719,Goblin Construction Helmet
+451718,Goblin Bomb Dispenser
+451717,Gnomish Shrink Ray
+451716,Gnomish Rocket Boots
+451715,Goblin Rocket Boots
+451714,Goblin Mortar
+451713,Goblin Mining Helmet
+451712,Goblin Dragon Gun
+451711,The Big One
+451710,Goblin Sapper Charge
+451709,Goblin Rocket Helmet
+451730,[DNT] Threat Drop
+452185,Teleport Players
+452154,Rolling Thunder
+408344,Fire Nova
+452285,Summon Emerald Warden
+452574,Fragile Armor
