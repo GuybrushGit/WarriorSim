@@ -407,8 +407,8 @@ var buffs = [
       name: "Horn of Lordaeron",
       iconname: "inv_misc_horn_03",
       group: "blessingmight",
-      str: 26, //17 at lvl 25
-      agi: 26,
+      str: 45, //17 at lvl 25 - 26 at 40
+      agi: 45,
       sod: true,
    },
    {
