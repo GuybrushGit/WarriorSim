@@ -757,6 +757,17 @@ var buffs = [
       other: true,
    },
    {
+      id: 210708,
+      name: "Elixir of Coalesced Regret",
+      iconname: "inv_potion_19",
+      str: 1,
+      agi: 1,
+      sta: 1,
+      minlevel: 20,
+      other: true,
+      sod: true,
+   },
+   {
       id: 5206,
       name: "Bogling Root",
       iconname: "inv_misc_herb_07",
