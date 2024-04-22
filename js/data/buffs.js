@@ -878,9 +878,11 @@ var buffs = [
       spellid: true,
       name: "Curse of Vulnerability",
       iconname: "Ability_creature_cursed_02",
+      maxlevel: 40,
       group: "",
       bonusdmg: 2,
       sod: true,
+      other: true,
    },
    {
       id: 6532,
@@ -1096,6 +1098,13 @@ var buffs = [
       group: "reck",
       armor: 640,
       minlevel: 56,
+   },
+   {
+      id: 7344,
+      name: "Torch of Holy Flame",
+      iconname: "inv_staff_05",
+      armor: 50,
+      minlevel: 20,
    },
    
    
