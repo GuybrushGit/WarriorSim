@@ -186,10 +186,11 @@
                 if (/[+-]\d+ Agility/.test(s)) { tiger.agi = parseInt(s); }
                 if (/[+-]\d+ Stamina/.test(s)) { tiger.sta = parseInt(s); }
               });
-              if (tiger.id == "9640") tiger.name += " of the Tigre";
+              let suffid = suff.id;
+              if (tiger.id == "9640") { tiger.name += " of the Tigre"; suffid = 700; tiger.str = 11; }
               else tiger.name += " of the Tiger";
-              tiger.rand = suff.id;
-              tiger.id += '|' + suff.id;
+              tiger.rand = suffid;
+              tiger.id += '|' + suffid;
               addToGear(tiger);
               suffixFound = true;
             }

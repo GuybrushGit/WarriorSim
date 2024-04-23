@@ -21527,7 +21527,7 @@ var gear = {
       "str": 10
     },
     {
-      "id": "9640|702",
+      "id": "9640|700",
       "type": "Plate",
       "slot": "hands",
       "r": 43,
@@ -21537,8 +21537,8 @@ var gear = {
       "p": "inv_gauntlets_26",
       "ap": 14,
       "agi": 12,
-      "str": 12,
-      "rand": 702
+      "str": 11,
+      "rand": 700
     },
     {
       "id": "9640|1212",
