@@ -186,12 +186,10 @@
                 if (/[+-]\d+ Agility/.test(s)) { tiger.agi = parseInt(s); }
                 if (/[+-]\d+ Stamina/.test(s)) { tiger.sta = parseInt(s); }
               });
-              let suffid = suff.id;
-              if (tiger.id == "9640") { tiger.name += " of the Tigre"; suffid = 700; tiger.str = 11; }
-              else tiger.name += " of the Tiger";
-              tiger.rand = suffid;
-              tiger.id += '|' + suffid;
-              addToGear(tiger);
+              tiger.rand = suff.id;
+              tiger.id += '|' + suff.id;
+              if (tiger.id == "9640") { }
+              else addToGear(tiger);
               suffixFound = true;
             }
 
@@ -334,7 +332,48 @@
           "ap": 48,
           "rand": 1563
         });
-        
+        gear["hands"].push({
+          "id": "9640|700",
+          "type": "Plate",
+          "slot": "hands",
+          "r": 43,
+          "q": "3",
+          "i": "48",
+          "name": "Vice Grips of the Tigre (12 agi)",
+          "p": "inv_gauntlets_26",
+          "ap": 14,
+          "agi": 12,
+          "str": 11,
+          "rand": 700
+        });
+        gear["hands"].push({
+          "id": "9640|701",
+          "type": "Plate",
+          "slot": "hands",
+          "r": 43,
+          "q": "3",
+          "i": "48",
+          "name": "Vice Grips of the Tigre (12 str)",
+          "p": "inv_gauntlets_26",
+          "ap": 14,
+          "agi": 11,
+          "str": 12,
+          "rand": 701
+        });
+        gear["hands"].push({
+          "id": "9640|699",
+          "type": "Plate",
+          "slot": "hands",
+          "r": 43,
+          "q": "3",
+          "i": "48",
+          "name": "Vice Grips of the Tigre (11 / 11)",
+          "p": "inv_gauntlets_26",
+          "ap": 14,
+          "agi": 11,
+          "str": 11,
+          "rand": 699
+        });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
