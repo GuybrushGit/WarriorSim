@@ -727,6 +727,16 @@ var buffs = [
       minlevel: 40,
       other: true,
       ap: 20,
+      maxlevel: 49,
+      sod: true,
+   },
+   {
+      id: 221028,
+      name: "Enchanted Sigil: Living Dreams",
+      iconname: "inv_sigil_freya",
+      minlevel: 50,
+      other: true,
+      ap: 50,
       sod: true,
    },
    {
