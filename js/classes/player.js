@@ -820,6 +820,7 @@ class Player {
         return Math.max(5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1, 0);
     }
     getArmorReduction() {
+        if (isNaN(this.target.armor)) this.target.armor = 0;
         let r = this.target.armor / (this.target.armor + 400 + 85 * this.level);
         return r > 0.75 ? 0.75 : r;
     }
