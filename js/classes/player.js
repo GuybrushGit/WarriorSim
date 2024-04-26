@@ -1120,7 +1120,7 @@ class Player {
         let dmg = spell.dmg() * this.mh.modifier;
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
-        if (spell instanceof SunderArmor && !this.homunculi && !this.exposed) {
+        if (spell instanceof SunderArmor) {
             procdmg += this.procattack(spell, this.mh, result, adjacent, damageSoFar);
         }
 
