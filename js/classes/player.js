@@ -511,6 +511,9 @@ class Player {
                         this.basestance = 'battle';
                     continue;
                 }
+                if (buff.group == "trueshot" && this.mode == "sod") {
+                    buff.ap = buff.apsod;
+                }
                     
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;

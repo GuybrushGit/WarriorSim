@@ -280,7 +280,8 @@ var buffs = [
       name: "Trueshot Aura",
       iconname: "ability_trueshot",
       group: "trueshot",
-      ap: 100,
+      ap: 50,
+      apsod: 100,
       minlevel: 40,
       maxlevel: 49
    },
@@ -290,7 +291,8 @@ var buffs = [
       name: "Trueshot Aura",
       iconname: "ability_trueshot",
       group: "trueshot",
-      ap: 150,
+      ap: 75,
+      apsod: 150,
       minlevel: 50,
       maxlevel: 59
    },
@@ -300,7 +302,8 @@ var buffs = [
       name: "Trueshot Aura",
       iconname: "ability_trueshot",
       group: "trueshot",
-      ap: 200,
+      ap: 100,
+      apsod: 200,
       minlevel: 60
    },
    {
