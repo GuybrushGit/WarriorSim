@@ -2023,7 +2023,8 @@ class Spicy extends Aura {
         this.starttimer = step;
         this.firstuse = false;
         this.player.updateHaste();
-        this.player.attackproc = { chance: 500, magicdmg: 7 };
+        if (!this.player.attackproc1) this.player.attackproc1 = { chance: 500, magicdmg: 7, spicy: true };
+        if (!this.player.attackproc2) this.player.attackproc2 = { chance: 500, magicdmg: 7, spicy: true };
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
@@ -2031,7 +2032,8 @@ class Spicy extends Aura {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateHaste();
-            delete this.player.attackproc;
+            if (this.player.attackproc1 && this.player.attackproc1.spicy) delete this.player.attackproc1;
+            if (this.player.attackproc2 && this.player.attackproc2.spicy) delete this.player.attackproc2;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
@@ -2039,7 +2041,8 @@ class Spicy extends Aura {
         this.uptime += (step - this.starttimer);
         this.timer = 0;
         this.stacks = 0;
-        delete this.player.attackproc;
+        if (this.player.attackproc1 && this.player.attackproc1.spicy) delete this.player.attackproc1;
+        if (this.player.attackproc2 && this.player.attackproc2.spicy) delete this.player.attackproc2;
     }
 }
 

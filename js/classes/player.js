@@ -244,14 +244,16 @@ class Player {
                         this["trinketproc" + (this.trinketproc1 ? 2 : 1)] = proc;
                     }
                     else if (item.proc && item.proc.chance) {
-                        if (this.attackproc) console.log("Warning! overlapping attack procs!");
-                        this.attackproc = {};
-                        this.attackproc.chance = item.proc.chance * 100;
-                        if (item.proc.dmg) this.attackproc.magicdmg = item.proc.dmg;
+                        let proc = {}
+                        proc.chance = item.proc.chance * 100;
+                        if (item.proc.dmg) proc.magicdmg = item.proc.dmg;
                         if (item.proc.spell) {
                             this.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(this)');
-                            this.attackproc.spell = this.auras[item.proc.spell.toLowerCase()];
+                            proc.spell = this.auras[item.proc.spell.toLowerCase()];
                         }
+                        if (this.attackproc2) console.log("Warning! overlapping attack procs!");
+                        if (!this.attackproc1) this.attackproc1 = proc;
+                        else this.attackproc2 = proc;
                     }
 
                     this.items.push(item.id);
@@ -444,14 +446,16 @@ class Player {
                     for (let prop in bonus.stats)
                         this.base[prop] += bonus.stats[prop] || 0;
                     if (bonus.stats.procchance) {
-                        if (this.attackproc) console.log("Warning! overlapping attack procs!");
-                        this.attackproc = {};
-                        this.attackproc.chance = bonus.stats.procchance * 100;
-                        if (bonus.stats.magicdmg) this.attackproc.magicdmg = bonus.stats.magicdmg;
+                        let proc = {}
+                        proc.chance = bonus.stats.procchance * 100;
+                        if (bonus.stats.magicdmg) proc.magicdmg = bonus.stats.magicdmg;
                         if (bonus.stats.procspell) {
                             this.auras[bonus.stats.procspell.toLowerCase()] = eval('new ' + bonus.stats.procspell + '(this)');
-                            this.attackproc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
+                            proc.spell = this.auras[bonus.stats.procspell.toLowerCase()];
                         } 
+                        if (this.attackproc2) console.log("Warning! overlapping attack procs!");
+                        if (!this.attackproc1) this.attackproc1 = proc;
+                        else this.attackproc2 = proc;
                     }
                     if (bonus.stats.enhancedbs) {
                         this.enhancedbs = true;
@@ -924,7 +928,8 @@ class Player {
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.step();
-        if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.step();
+        if (this.attackproc1 && this.attackproc1.spell && this.attackproc1.spell.timer) this.attackproc1.spell.step();
+        if (this.attackproc2 && this.attackproc2.spell && this.attackproc2.spell.timer) this.attackproc2.spell.step();
 
         if (!nobleeds && this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.step();
         if (!nobleeds && this.auras.rend && this.auras.rend.timer) this.auras.rend.step();
@@ -976,7 +981,8 @@ class Player {
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.end();
         if (this.trinketproc2 && this.trinketproc2.spell && this.trinketproc2.spell.timer) this.trinketproc2.spell.end();
-        if (this.attackproc && this.attackproc.spell && this.attackproc.spell.timer) this.attackproc.spell.end();
+        if (this.attackproc1 && this.attackproc1.spell && this.attackproc1.spell.timer) this.attackproc1.spell.end();
+        if (this.attackproc2 && this.attackproc2.spell && this.attackproc2.spell.timer) this.attackproc2.spell.end();
 
         if (this.auras.flurry && this.auras.flurry.timer) this.auras.flurry.end();
         if (this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.end();
@@ -1218,13 +1224,19 @@ class Player {
                 else batchedextras = this.trinketproc2.extra;
                 /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
-            if (this.attackproc && rng10k() < this.attackproc.chance) {
-                if (this.attackproc.magicdmg) { 
-                    procdmg += this.attackproc.chance == 10000 ? this.attackproc.magicdmg : this.magicproc(this.attackproc);
+            if (this.attackproc1 && rng10k() < this.attackproc1.chance) {
+                if (this.attackproc1.magicdmg) { 
+                    procdmg += this.attackproc1.chance == 10000 ? this.attackproc1.magicdmg : this.magicproc(this.attackproc1);
                     /* start-log */ if (log) this.log(`Attack proc for ${procdmg}`); /* end-log */
                 }
-                if (this.attackproc.spell) this.attackproc.spell.use();
-                
+                if (this.attackproc1.spell) this.attackproc1.spell.use();
+            }
+            if (this.attackproc2 && rng10k() < this.attackproc2.chance) {
+                if (this.attackproc2.magicdmg) { 
+                    procdmg += this.attackproc2.chance == 10000 ? this.attackproc2.magicdmg : this.magicproc(this.attackproc2);
+                    /* start-log */ if (log) this.log(`Attack proc for ${procdmg}`); /* end-log */
+                }
+                if (this.attackproc2.spell) this.attackproc2.spell.use();
             }
             // Sword spec shouldnt be able to proc itself
             if (this.talents.swordproc && weapon.type == WEAPONTYPE.SWORD && !damageSoFar && this.swordspecstep != step && rng10k() < this.talents.swordproc * 100) {
