@@ -8802,11 +8802,15 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Shoulderplates of Dread (no proc)",
+      "name": "Shoulderplates of Dread (with proc)",
       "p": "inv_shoulder_24",
       "agi": 12,
       "str": 12,
       "sta": 12,
+      "proc": {
+        "spell": "EchoesDread",
+        "chance": 30
+      },
       "hit": 1
     },
     {
@@ -8816,7 +8820,7 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Fearmonger's Shoulderguards (no proc)",
+      "name": "Fearmonger's Shoulderguards",
       "p": "inv_shoulder_24",
       "crit": 1
     },
@@ -8839,11 +8843,15 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Cacophonous Chain Shoulderguards (no proc)",
+      "name": "Cacophonous Chain Shoulderguards (with proc)",
       "p": "inv_shoulder_15",
       "agi": 12,
       "str": 12,
-      "sta": 12
+      "sta": 12,
+      "proc": {
+        "spell": "EchoesDread",
+        "chance": 30
+      }
     },
     {
       "id": 220745,
@@ -8863,10 +8871,14 @@ var gear = {
       "r": 50,
       "q": "4",
       "i": "55",
-      "name": "Paranoia Mantle (no proc)",
+      "name": "Paranoia Mantle (with proc)",
       "p": "inv_shoulder_18",
       "agi": 16,
       "sta": 14,
+      "proc": {
+        "spell": "EchoesDread",
+        "chance": 30
+      },
       "hit": 1
     },
     {
@@ -8946,6 +8958,20 @@ var gear = {
       "agi": 10,
       "str": 11,
       "sta": 10
+    },
+    {
+      "id": 2207381,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 50,
+      "q": "4",
+      "i": "55",
+      "name": "Shoulderplates of Dread (no proc)",
+      "p": "inv_shoulder_24",
+      "agi": 12,
+      "str": 12,
+      "sta": 12,
+      "hit": 1
     }
   ],
   "back": [

@@ -302,7 +302,8 @@
           if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
           if (isUnobtainable(obj.id)) continue;
 
-          if (obj.id == 220743 || obj.id == 220740 || obj.id == 220747 || obj.id == 220738 || obj.id == 220742) obj.name += ' (no proc)';
+          if (obj.id == 220743 || obj.id == 220747 || obj.id == 220738) obj.name += ' (with proc)';
+          if (obj.id == 220742) obj.name += ' (no proc)';
 
           addToGear(obj);
         }
@@ -375,6 +376,20 @@
           "str": 11,
           "rand": 699
         });
+        gear["shoulder"].push({
+          "id": 2207381,
+          "type": "Plate",
+          "slot": "shoulder",
+          "r": 50,
+          "q": "4",
+          "i": "55",
+          "name": "Shoulderplates of Dread (no proc)",
+          "p": "inv_shoulder_24",
+          "agi": 12,
+          "str": 12,
+          "sta": 12,
+          "hit": 1
+        });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
@@ -425,6 +440,10 @@
         {i:12790,s:"StrengthChampion"},
         {i:213295,s:"Ultrasonic"},
         {i:213105,s:"Spicy"},
+        {i:220738,s:"EchoesDread"},
+        {i:220747,s:"EchoesDread"},
+        {i:220743,s:"EchoesDread"},
+        
         
       ];
 
@@ -456,6 +475,9 @@
         {i:19968,c:100},
         {i:213409,p:5},
         {i:9425,p:0.5},
+        {i:220738,c:30},
+        {i:220747,c:30},
+        {i:220743,c:30},
       ];
 
       var getProcFromSpell = function(id) {

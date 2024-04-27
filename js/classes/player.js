@@ -247,7 +247,11 @@ class Player {
                         if (this.attackproc) console.log("Warning! overlapping attack procs!");
                         this.attackproc = {};
                         this.attackproc.chance = item.proc.chance * 100;
-                        this.attackproc.magicdmg = item.proc.dmg;
+                        if (item.proc.dmg) this.attackproc.magicdmg = item.proc.dmg;
+                        if (item.proc.spell) {
+                            this.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(this)');
+                            this.attackproc.spell = this.auras[item.proc.spell.toLowerCase()];
+                        }
                     }
 
                     this.items.push(item.id);
@@ -749,6 +753,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.gneurological.mult_stats.haste / 100);
         if (this.auras.spicy && this.auras.spicy.timer)
             this.stats.haste *= (1 + this.auras.spicy.mult_stats.haste / 100);
+        if (this.auras.echoesdread && this.auras.echoesdread.timer)
+            this.stats.haste *= (1 + this.auras.echoesdread.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;

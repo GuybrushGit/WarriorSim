@@ -1273,6 +1273,9 @@ SIM.UI = {
             let tooltip = item.id.toString().split('|')[0], rand = '';
             if (tooltip == 145541) tooltip = 14554;
             if (tooltip == 198981) tooltip = 19898;
+            if (tooltip == 2207381) tooltip = 220738;
+
+            
             if (item.rand) rand = '?rand=' + item.rand;
 
             let resist = '';
