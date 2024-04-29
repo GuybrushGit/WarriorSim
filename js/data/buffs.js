@@ -770,6 +770,17 @@ var buffs = [
       other: true,
    },
    {
+      id: 449927,
+      name: "Blood Corruption",
+      spellid: true,
+      iconname: "ability_warrior_bloodnova",
+      group: "",
+      bonusdmg: 7,
+      minlevel: 50,
+      other: true,
+      sod: true,
+   },
+   {
       id: 210708,
       name: "Elixir of Coalesced Regret",
       iconname: "inv_potion_19",
