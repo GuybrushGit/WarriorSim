@@ -1068,9 +1068,9 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
-            this.proccrit(false, adjacent);
             dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
             dmg *= this.critdmg;
+            this.proccrit(false, adjacent);
         }
 
         weapon.use();
