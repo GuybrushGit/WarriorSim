@@ -1068,8 +1068,7 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
-            dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
-            dmg *= this.critdmg;
+            dmg *= 1 + (1 + (spell ? this.talents.abilitiescrit : 0)) * (1 + 2 * (this.critdmg - 1));
             this.proccrit(false, adjacent);
         }
 
@@ -1148,8 +1147,7 @@ class Player {
         }
         else if (result == RESULT.CRIT) {
             this.proccrit(false, adjacent, spell);
-            dmg *= 2 + this.talents.abilitiescrit;
-            dmg *= this.critdmg;
+            dmg *= 1 + (1 + this.talents.abilitiescrit) * (1 + 2 * (this.critdmg - 1));
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
