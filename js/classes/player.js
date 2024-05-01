@@ -72,6 +72,8 @@ class Player {
             agimod: 1,
             dmgmod: 1,
             spelldmgmod: 1,
+            moddmgdone: 0,
+            moddmgtaken: 0,
             apmod: 1,
             baseapmod: 1,
             resist: {
@@ -255,6 +257,13 @@ class Player {
                         if (!this.attackproc1) this.attackproc1 = proc;
                         else this.attackproc2 = proc;
                     }
+
+                    if (item.id == 21189)
+                        this.base['moddmgdone'] += 4;
+                    if (item.id == 19968)
+                        this.base['moddmgdone'] += 2;
+                    if (item.id == 215166)
+                        this.base['moddmgdone'] += 3;
 
                     this.items.push(item.id);
                 }
@@ -535,6 +544,8 @@ class Player {
                 this.base.spelldmgmod *= (1 + buff.spelldmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
                 this.base.skill_7 += buff.skill_7 || 0;
+                this.base.moddmgdone += buff.moddmgdone || 0;
+                this.base.moddmgtaken += buff.moddmgtaken || 0;
             }
         }
         this.target.basearmorbuffed = Math.max(this.target.basearmorbuffed, 0);
@@ -763,18 +774,20 @@ class Player {
     updateBonusDmg() {
         let bonus = 0;
         if (this.auras.stoneslayer && this.auras.stoneslayer.timer)
-            bonus += this.auras.stoneslayer.stats.bonusdmg;
+            bonus += this.auras.stoneslayer.stats.moddmgdone;
         if (this.auras.zeal && this.auras.zeal.timer)
-            bonus += this.auras.zeal.stats.bonusdmg;
+            bonus += this.auras.zeal.stats.moddmgdone;
         if (this.auras.zandalarian && this.auras.zandalarian.timer)
-            bonus += this.auras.zandalarian.stats.bonusdmg;
+            bonus += this.auras.zandalarian.stats.moddmgdone;
         if (this.auras.relentlessstrength && this.auras.relentlessstrength.timer)
-            bonus += this.auras.relentlessstrength.stats.bonusdmg;
+            bonus += this.auras.relentlessstrength.stats.moddmgdone;
         if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
-            bonus += this.auras.blisteringragehammer.stats.bonusdmg;
-        this.mh.bonusdmg = this.mh.basebonusdmg + bonus;
+            bonus += this.auras.blisteringragehammer.stats.moddmgdone;
+        this.stats.moddmgdone = this.base.moddmgdone + bonus;
+        this.stats.moddmgtaken = this.base.moddmgtaken;
+        this.mh.bonusdmg = this.mh.basebonusdmg;
         if (this.oh)
-            this.oh.bonusdmg = this.oh.basebonusdmg + bonus;
+            this.oh.bonusdmg = this.oh.basebonusdmg;
     }
     updateArmorReduction() {
         this.target.armor = this.target.basearmorbuffed;
