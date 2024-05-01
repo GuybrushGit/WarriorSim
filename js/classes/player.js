@@ -534,6 +534,13 @@ class Player {
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.spelldmgmod *= (1 + buff.spelldmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+                this.base.skill_0 += buff.skill_0 || 0;
+                this.base.skill_1 += buff.skill_1 || 0;
+                this.base.skill_2 += buff.skill_2 || 0;
+                this.base.skill_3 += buff.skill_3 || 0;
+                this.base.skill_4 += buff.skill_4 || 0;
+                this.base.skill_5 += buff.skill_5 || 0;
+                this.base.skill_6 += buff.skill_6 || 0;
                 this.base.skill_7 += buff.skill_7 || 0;
             }
         }

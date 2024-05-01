@@ -1130,6 +1130,54 @@ var buffs = [
       armor: 50,
       minlevel: 20,
    },
+   {
+      id: 20597,
+      name: "Increased Swords",
+      iconname: "ability_meleedamage",
+      spellid: true,
+      skill: true,
+      skill_1: 5
+   },
+   {
+      id: 20574,
+      name: "Increased Axes",
+      iconname: "inv_axe_02",
+      spellid: true,
+      skill: true,
+      skill_3: 5
+   },
+   {
+      id: 20864,
+      name: "Increased Maces",
+      iconname: "inv_hammer_05",
+      spellid: true,
+      skill: true,
+      skill_0: 5
+   },
+   {
+      id: 7576,
+      name: "Increased Daggers",
+      iconname: "inv_weapon_shortblade_14",
+      spellid: true,
+      skill: true,
+      skill_2: 5
+   },
+   {
+      id: 436285,
+      name: "Increased Fist",
+      iconname: "inv_gauntlets_04",
+      spellid: true,
+      skill: true,
+      skill_4: 5
+   },
+   {
+      id: 200,
+      name: "Increased Polearms",
+      iconname: "inv_spear_06",
+      spellid: true,
+      skill: true,
+      skill_5: 5
+   },
    
    
    
