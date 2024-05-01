@@ -2134,14 +2134,14 @@ class WreckingCrew extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.critdmg = 1.1;
+        this.player.critdmgbonus = 0.1;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            this.player.critdmg = 1;
+            this.player.critdmgbonus = 0;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }

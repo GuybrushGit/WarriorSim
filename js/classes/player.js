@@ -33,7 +33,7 @@ class Player {
         this.itemtimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
-        this.critdmg = 1;
+        this.critdmgbonus = 0;
         this.extraattacks = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
@@ -566,7 +566,7 @@ class Player {
         this.itemtimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
-        this.critdmg = 1;
+        this.critdmgbonus = 0;
         this.spelldelay = 0;
         this.heroicdelay = 0;
         this.mh.timer = 0;
@@ -1068,8 +1068,9 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
-            dmg *= 2 + (spell ? this.talents.abilitiescrit : 0);
-            dmg *= this.critdmg;
+            // 100% + baseCritDamage * (1 + CritStrikeDamageBonus) * (1 + IncreasedCritDamage * (1 + 100%/baseCritDamage))
+            let critmod = 1 + 1 * (1 + (spell ? this.talents.abilitiescrit : 0)) * (1 + this.critdmgbonus * 2)
+            dmg *= critmod;
             this.proccrit(false, adjacent);
         }
 
@@ -1109,9 +1110,9 @@ class Player {
             dmg *= this.getGlanceReduction(weapon);
         }
         if (result == RESULT.CRIT) {
+            let critmod = 1 + 1 * (1 + this.critdmgbonus * 2)
+            dmg *= critmod;
             this.proccrit(true);
-            dmg *= 2;
-            dmg *= this.critdmg;
         }
 
         weapon.use();
@@ -1147,9 +1148,9 @@ class Player {
             this.dodgetimer = 5000;
         }
         else if (result == RESULT.CRIT) {
+            let critmod = 1 + 1 * (1 + this.talents.abilitiescrit) * (1 + this.critdmgbonus * 2)
+            dmg *= critmod;
             this.proccrit(false, adjacent, spell);
-            dmg *= 2 + this.talents.abilitiescrit;
-            dmg *= this.critdmg;
         }
 
         let done = this.dealdamage(dmg, result, this.mh, spell, adjacent);
