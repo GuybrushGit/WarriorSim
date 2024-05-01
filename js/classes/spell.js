@@ -354,8 +354,8 @@ class VictoryRush extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        dmg = this.player.stats.ap * 0.45;
+        return dmg * this.player.stats.dmgmod;
     }
     canUse() {
         return !this.player.timer && !this.stacks;
