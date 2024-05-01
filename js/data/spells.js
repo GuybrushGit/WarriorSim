@@ -476,6 +476,97 @@ var spells = [
     active: false
 },
 
+// Thunder Clap
+{
+    id: 6343,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 10,
+    durationactive: true,
+    minlevel: 6,
+    maxlevel: 17,
+    value1: 1000,
+    active: false
+},
+{
+    id: 8198,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 14,
+    durationactive: true,
+    minlevel: 18,
+    maxlevel: 27,
+    value1: 2300,
+    active: false
+},
+{
+    id: 8204,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 18,
+    durationactive: true,
+    minlevel: 28,
+    maxlevel: 37,
+    value1: 3700,
+    active: false
+},
+{
+    id: 8205,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 22,
+    durationactive: true,
+    minlevel: 38,
+    maxlevel: 47,
+    value1: 5500,
+    active: false
+},
+{
+    id: 11580,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 26,
+    durationactive: true,
+    minlevel: 48,
+    maxlevel: 57,
+    value1: 1182,
+    active: false
+},
+{
+    id: 11581,
+    name: 'Thunder Clap',
+    classname: 'ThunderClap',
+    iconname: 'spell_nature_thunderclap',
+    cooldown: 4,
+    minrage: 50,
+    minrageactive: false,
+    duration: 30,
+    durationactive: true,
+    minlevel: 58,
+    value1: 10300,
+    active: false
+},
+
 // Execute
 {
     id: 5308,
