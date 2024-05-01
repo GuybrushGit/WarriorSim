@@ -1059,7 +1059,6 @@ class Player {
         }
 
         let dmg = weapon.dmg(spell);
-        dmg *= this.stats.dmgmod;
         procdmg = this.procattack(spell, weapon, result, adjacent, damageSoFar);
 
         if (result == RESULT.DODGE) {
@@ -1102,7 +1101,6 @@ class Player {
         result = this.rollweapon(weapon);
 
         let dmg = weapon.dmg();
-        dmg *= this.stats.dmgmod;
         procdmg = this.procattack(null, weapon, result);
 
         if (result == RESULT.DODGE) {
@@ -1136,7 +1134,6 @@ class Player {
         }
         let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
-        dmg *= this.stats.dmgmod;
         let result = this.rollspell(spell);
         procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
         if (spell instanceof SunderArmor) {
