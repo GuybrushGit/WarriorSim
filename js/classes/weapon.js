@@ -105,24 +105,18 @@ class Weapon {
             this.basebonusdmg += enchant.bonusdmg;
         if (!this.windfury && tempenchant && tempenchant.bonusdmg)
             this.basebonusdmg += tempenchant.bonusdmg;
-        if (this.player.items.includes(21189))
-            this.basebonusdmg += 4;
-        if (this.player.items.includes(19968) || item.id == 19968)
-            this.basebonusdmg += 2;
-        if (this.player.items.includes(215166))
-            this.basebonusdmg += 3;
         this.bonusdmg = this.basebonusdmg;
     }
     dmg(heroicstrike) {
         let dmg;
-        dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed;
+        dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed + this.player.stats.moddmgdone;
         if (heroicstrike) dmg += heroicstrike.bonus;
-        return dmg * this.modifier;
+        return dmg * this.modifier * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
     }
     avgdmg() {
-        let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.normSpeed;
-        dmg *= this.modifier * this.player.stats.dmgmod * (1 - this.player.armorReduction);
-        return dmg;
+        let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.normSpeed + this.player.stats.moddmgdone;
+        dmg = dmg * this.modifier * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * (1 - this.player.armorReduction);
     }
     use() {
         this.timer = Math.round(this.speed * 1000 / this.player.stats.haste);
