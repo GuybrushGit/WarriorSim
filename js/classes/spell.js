@@ -1695,7 +1695,7 @@ class Rend extends Aura {
         }
     }
     use() {
-        let result = this.player.rollspell(this);
+        let result = this.player.rollmeleespell(this);
         this.data[result]++;
         if (result == RESULT.MISS) return;
         if (result == RESULT.DODGE) {
