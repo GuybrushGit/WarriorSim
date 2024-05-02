@@ -453,7 +453,7 @@ class Simulation {
                         player.spelldelay = 0;
                         spellcheck = true;
 
-                        if (delayedspell instanceof Whirlwind || delayedspell instanceof BlademasterFury) {
+                        if (delayedspell instanceof Whirlwind || delayedspell instanceof BlademasterFury || delayedspell instanceof ThunderClap) {
                             for (let i = 0; i < player.adjacent; i++) {
                                 done = player.cast(delayedspell, delayedheroic, player.adjacent, done);
                                 this.idmg += done;
