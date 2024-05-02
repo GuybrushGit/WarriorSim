@@ -572,7 +572,7 @@ SIM.SETTINGS = {
         view.buffs.append('<label class="active">Buffs</label>');
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
-        let worldbuffs = '', consumes = '', other = '', armor = '', stances = '';
+        let worldbuffs = '', consumes = '', other = '', armor = '', stances = '', skills = '';
         for (let buff of buffs) {
 
             // level restrictions
@@ -631,6 +631,7 @@ SIM.SETTINGS = {
             else if (buff.consume) consumes += html;
             else if (buff.other) other += html;
             else if (buff.armor || buff.improvedexposed) armor += html;
+            else if (buff.skill) skills += html;
             else view.buffs.append(html);
         }
         
@@ -644,6 +645,8 @@ SIM.SETTINGS = {
         view.buffs.append(armor);
         view.buffs.append('<div class="label">Default Stance</div>');
         view.buffs.append(stances);
+        view.buffs.append('<div class="label">Skill</div>');
+        view.buffs.append(skills);
         SIM.UI.updateSession();
         SIM.UI.updateSidebar();
     },

@@ -537,6 +537,13 @@ class Player {
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.spelldmgmod *= (1 + buff.spelldmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+                this.base.skill_0 += buff.skill_0 || 0;
+                this.base.skill_1 += buff.skill_1 || 0;
+                this.base.skill_2 += buff.skill_2 || 0;
+                this.base.skill_3 += buff.skill_3 || 0;
+                this.base.skill_4 += buff.skill_4 || 0;
+                this.base.skill_5 += buff.skill_5 || 0;
+                this.base.skill_6 += buff.skill_6 || 0;
                 this.base.skill_7 += buff.skill_7 || 0;
             }
         }
@@ -1334,7 +1341,7 @@ class Player {
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
-        if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1.5;
+        if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1 + 0.5 * (1 + this.critdmgbonus * 3);
         if (proc.coeff) dmg += this.spelldamage * proc.coeff;
         return (dmg * mod * this.stats.spelldmgmod);
     }
@@ -1347,7 +1354,7 @@ class Player {
         if (roll < tmp) { dmg = 0; }
         roll = rng10k();
         let crit = this.crit + this.mh.crit;
-        if (roll < (crit * 100)) dmg *= 2;
+        if (roll < (crit * 100)) dmg *= 1 + 1 * (1 + this.critdmgbonus * 2);
         return dmg * this.stats.dmgmod * this.mh.modifier;
     }
     serializeStats() {
