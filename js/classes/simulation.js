@@ -6,6 +6,25 @@ var RESULT = {
     GLANCE: 4
 }
 
+var DEFENSETYPE = {
+    NONE: 0,
+    MAGIC: 1,
+    MELEE: 2,
+    RANGED: 3,
+}
+
+var SCHOOL = {
+    NONE: 0,
+    PHYSICAL: 1,
+    HOLY: 2,
+    FIRE: 4,
+    NATURE: 8,
+    FROST: 16,
+    SHADOW: 32,
+    ARCANE: 64,
+}
+
+
 var batching = 0;
 var step = 0;
 var log = false;
@@ -382,6 +401,7 @@ class Simulation {
                     else if (player.precisetiming && player.spells.slam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
                     else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) { player.spelldelay = 1; delayedspell = player.spells.whirlwind; }
                     else if (!player.precisetiming && player.spells.slam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
+                    else if (player.spells.thunderclap && player.spells.thunderclap.canUse()) { player.spelldelay = 1; delayedspell = player.spells.thunderclap; }
                     else if (player.spells.quickstrike && player.spells.quickstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.quickstrike; }
                     else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                     else if (player.spells.hamstring && player.spells.hamstring.canUse()) { player.spelldelay = 1; delayedspell = player.spells.hamstring; }
@@ -584,6 +604,7 @@ class Simulation {
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.hamstring && player.spells.hamstring.timer && !player.spells.hamstring.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.spells.thunderclap && player.spells.thunderclap.timer && !player.spells.thunderclap.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.sunderarmor && player.spells.sunderarmor.timer && !player.spells.sunderarmor.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.slam && player.spells.slam.timer && !player.spells.slam.step(next) && !player.spelldelay) spellcheck = true;
 

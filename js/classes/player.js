@@ -413,6 +413,9 @@ class Player {
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
                     }
+                    if (item.furiousthunder) {
+                        this.furiousthunder = item.furiousthunder;
+                    }
                     if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
                         this.auras[item.name.toLowerCase()] = eval(`new ${item.name}(this)`);
                     }
@@ -543,6 +546,13 @@ class Player {
                 this.base.dmgmod *= (1 + buff.dmgmod / 100) || 1;
                 this.base.spelldmgmod *= (1 + buff.spelldmgmod / 100) || 1;
                 this.base.haste *= (1 + buff.haste / 100) || 1;
+                this.base.skill_0 += buff.skill_0 || 0;
+                this.base.skill_1 += buff.skill_1 || 0;
+                this.base.skill_2 += buff.skill_2 || 0;
+                this.base.skill_3 += buff.skill_3 || 0;
+                this.base.skill_4 += buff.skill_4 || 0;
+                this.base.skill_5 += buff.skill_5 || 0;
+                this.base.skill_6 += buff.skill_6 || 0;
                 this.base.skill_7 += buff.skill_7 || 0;
                 this.base.moddmgdone += buff.moddmgdone || 0;
                 this.base.moddmgtaken += buff.moddmgtaken || 0;
@@ -1023,7 +1033,7 @@ class Player {
         if (roll < tmp) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    rollspell(spell) {
+    rollmeleespell(spell) {
         let tmp = 0;
         let roll = rng10k();
         tmp += Math.max(this.mh.miss, 0) * 100;
@@ -1043,6 +1053,17 @@ class Player {
         if (roll < tmp && !spell.nocrit) return RESULT.CRIT;
         return RESULT.HIT;
     }
+    rollmagicspell(spell) {
+        let miss = this.target.misschance;
+        if (spell.binaryspell) 
+            miss = this.target.binaryresist;
+
+        if (rng10k() < miss) 
+            return RESULT.MISS;
+        if (rng10k() < (this.stats.spellcrit * 100)) 
+            return RESULT.CRIT;
+        return RESULT.HIT;
+    }
     attackmh(weapon, adjacent, damageSoFar) {
         this.stepauras();
 
@@ -1053,12 +1074,12 @@ class Player {
         if (this.nextswinghs) {
             this.nextswinghs = false;
             if (this.spells.heroicstrike && this.spells.heroicstrike.cost <= this.rage) {
-                result = this.rollspell(this.spells.heroicstrike);
+                result = this.rollmeleespell(this.spells.heroicstrike);
                 spell = this.spells.heroicstrike;
                 this.rage -= spell.cost;
             }
             else if (this.spells.cleave && this.spells.cleave.cost <= this.rage) {
-                result = this.rollspell(this.spells.cleave);
+                result = this.rollmeleespell(this.spells.cleave);
                 spell = this.spells.cleave;
                 if (adjacent) this.rage -= spell.cost;
             }
@@ -1145,10 +1166,16 @@ class Player {
             /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
-        let procdmg = 0;
         let dmg = spell.dmg() * this.mh.modifier;
-        let result = this.rollspell(spell);
-        procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
+        let result;
+        if (spell.defenseType == DEFENSETYPE.MELEE) 
+            result = this.rollmeleespell(spell);
+        else if(spell.defenseType == DEFENSETYPE.MAGIC)
+            result = this.rollmagicspell(spell);
+        else
+            result = RESULT.HIT;
+
+        let procdmg = this.procattack(spell, this.mh, result, adjacent, damageSoFar);
         if (spell instanceof SunderArmor) {
             procdmg += this.procattack(spell, this.mh, result, adjacent, damageSoFar);
         }
@@ -1161,7 +1188,12 @@ class Player {
             this.dodgetimer = 5000;
         }
         else if (result == RESULT.CRIT) {
-            let critmod = 1 + 1 * (1 + this.talents.abilitiescrit) * (1 + this.critdmgbonus * 2)
+            let critmod;
+            if (spell.defenseType == DEFENSETYPE.MAGIC) 
+                critmod = 1 + 0.5 * (1 + this.talents.abilitiescrit) * (1 + this.critdmgbonus * 3);
+            else
+                critmod = 1 + 1 * (1 + this.talents.abilitiescrit) * (1 + this.critdmgbonus * 2);
+
             dmg *= critmod;
             this.proccrit(false, adjacent, spell);
         }
@@ -1175,7 +1207,8 @@ class Player {
     }
     dealdamage(dmg, result, weapon, spell, adjacent) {
         if (result != RESULT.MISS && result != RESULT.DODGE) {
-            dmg *= (1 - this.armorReduction);
+            if(spell == null || spell.school == SCHOOL.PHYSICAL)
+              dmg *= (1 - this.armorReduction);
             if (!adjacent) this.addRage(dmg, result, weapon, spell);
             return dmg;
         }
@@ -1198,6 +1231,7 @@ class Player {
         let extras = 0;
         let batchedextras = 0;
         if (spell instanceof ShieldSlam) return 0;
+        if (spell instanceof ThunderClap) return 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
@@ -1319,7 +1353,7 @@ class Player {
         if (proc.binaryspell) miss = this.target.binaryresist;
         else mod *= this.target.mitigation;
         if (rng10k() < miss) return 0;
-        if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1.5;
+        if (rng10k() < (this.stats.spellcrit * 100)) mod *= 1 + 0.5 * (1 + this.critdmgbonus * 3);
         if (proc.coeff) dmg += this.spelldamage * proc.coeff;
         return (dmg * mod * this.stats.spelldmgmod);
     }
@@ -1332,7 +1366,7 @@ class Player {
         if (roll < tmp) { dmg = 0; }
         roll = rng10k();
         let crit = this.crit + this.mh.crit;
-        if (roll < (crit * 100)) dmg *= 2;
+        if (roll < (crit * 100)) dmg *= 1 + 1 * (1 + this.critdmgbonus * 2);
         return dmg * this.stats.dmgmod * this.mh.modifier;
     }
     serializeStats() {

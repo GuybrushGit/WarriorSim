@@ -31331,19 +31331,6 @@ var gear = {
       "ap": 8
     },
     {
-      "id": 20177,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Defiler's Lamellar Girdle",
-      "p": "inv_belt_14",
-      "str": 15,
-      "sta": 6,
-      "crit": 1
-    },
-    {
       "id": 20178,
       "type": "Mail",
       "slot": "waist",
@@ -31354,19 +31341,6 @@ var gear = {
       "p": "inv_belt_14",
       "str": 11,
       "sta": 4
-    },
-    {
-      "id": 20179,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Defiler's Lamellar Girdle",
-      "p": "inv_belt_14",
-      "str": 11,
-      "sta": 4,
-      "crit": 1
     },
     {
       "id": 20180,

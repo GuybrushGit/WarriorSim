@@ -13,6 +13,8 @@ class Spell {
         this.useonly = false;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.weaponspell = true;
+        this.defenseType = DEFENSETYPE.MELEE;
+        this.school = SCHOOL.PHYSICAL;
         this.minrage = 0;
 
         let spell = spells.filter(s => s.id == this.id)[0];
@@ -336,6 +338,26 @@ class Hamstring extends Spell {
         let dmg;
         dmg = this.value1 + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+    }
+}
+
+class ThunderClap extends Spell {
+    constructor(player, id) {
+        super(player, id);
+        this.defenseType = DEFENSETYPE.MAGIC
+        this.cost = 20 - player.ragecostbonus - player.talents.impthunderclap;
+    }
+    dmg() {
+        let dmg;
+        dmg = this.value1;
+        if(this.player.furiousthunder)
+            dmg *= 2;
+        return dmg;
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage &&
+            (!this.minrage || this.player.rage >= this.minrage) &&
+            (this.player.furiousthunder || (this.player.stance == 'battle' || this.player.stance == 'glad'));
     }
 }
 

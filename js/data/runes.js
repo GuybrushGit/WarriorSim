@@ -32,8 +32,9 @@ var runes = {
       {
          id: 403219,
          name: 'Furious Thunder',
-         description: "Thunder Clap now increases the time between attacks by an additional 6% and can be used in any stance.",
+         description: "Thunder Clap now increases the time between attacks by an additional 6%, can be used in any stance, deals 100% increased damage, and deals 50% increased threat.",
          iconname: 'ability_thunderclap',
+         furiousthunder: true,
      },
      {
          id: 425418,
