@@ -497,7 +497,7 @@ class Player {
                 let ap = 0, str = 0, agi = 0;
                 if (buff.group == "battleshout") {
                     let lvlbonus = 0;
-                    if (buff.lvlmod) lvlbonus = ~~((this.level - buff.minlevel + 1) * buff.lvlmod);
+                    if (buff.lvlmod) lvlbonus = ~~((this.level - buff.minlevel) * buff.lvlmod);
                     ap = ~~((buff.ap + lvlbonus + (this.enhancedbs ? 30 : 0)) * (1 + this.talents.impbattleshout));
                 }
                 if (buff.name == "Blessing of Might") {
