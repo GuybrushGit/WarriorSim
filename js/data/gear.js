@@ -2708,6 +2708,18 @@ var gear = {
   ],
   "waist": [
     {
+      "name": "Taut Dragonhide Belt",
+      "source": "Dungeon",
+      "ac": 125,
+      "sta": 17,
+      "ap": 60,
+      "phase": 1,
+      "id": 19396,
+      "q": "4",
+      "i": "75",
+      "p": "inv_belt_16"
+    },
+    {
       "name": "Molten Belt",
       "source": "Crafting",
       "ac": 118,
