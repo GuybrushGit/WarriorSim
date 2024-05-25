@@ -906,9 +906,9 @@ The act of shapeshifting frees the caster of Polymorph and Movement Impairing ef
 1451,,,
 1452,,,
 1453,,,
-1454,Rank 1,Converts $s1 health into $s1 mana.,
-1455,Rank 2,Converts $s1 health into $s1 mana.,
-1456,Rank 3,Converts $s1 health into $s1 mana.,
+1454,Rank 1,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][].,
+1455,Rank 2,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][],
+1456,Rank 3,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][],
 1459,Rank 1,Increases the target's Intellect by $s1 for $d.,Increases Intellect by $s1.
 1460,Rank 2,Increases the target's Intellect by $s1 for $d.,Increases Intellect by $s1.
 1461,Rank 3,Increases the target's Intellect by $s1 for $d.,Increases Intellect by $s1.
@@ -8695,9 +8695,9 @@ Strength reduced by $s3%."
 11684,Rank 3,"Ignites the area surrounding the caster, causing $s2 Fire damage to $ghimself:herself; and $11682s1 Fire damage to all nearby enemies every $t2 sec.  Lasts $d.",Damages self and all nearby enemies.
 11685,Rank 2,,
 11686,Rank 3,,
-11687,Rank 4,Converts $s1 health into $s1 mana.,
-11688,Rank 5,Converts $s1 health into $s1 mana.,
-11689,Rank 6,Converts $s1 health into $s1 mana.,
+11687,Rank 4,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][],
+11688,Rank 5,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][],
+11689,Rank 6,Converts $s1 health into $s1 mana$?s435395[ for you and your Demon pet][],
 11690,Rank 4,,
 11691,Rank 5,,
 11692,Rank 6,,
@@ -11286,7 +11286,7 @@ Attack speed increased by $s2%."
 15471,,"Immobilizes an enemy, increases the time between its attacks by $s2%, and prevents it from casting spells for $d.","Unable to move or cast spells.
 Time between attacks increased by $s2%."
 15472,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
-15473,,"Assume a Shadowform, increasing your Shadow damage by $s2%$?s440247[, reducing the mana cost of all Shadow spells by $s4%,][] and reducing Physical damage done to you by $s3%.  However, you may not cast Holy spells while in this form.",Shadow damage you deal increased by $s2%.$?$w4<0[ Mana cost of all Shadow spells reduced by $w4%.][]  Physical damage you take reduced by $s3%.  You may not cast Holy spells.
+15473,,"Assume a Shadowform, increasing your Shadow damage by $s2%$?s440247[, reducing the mana cost of all Shadow spells by $s4%,][] and reducing Physical damage done to you by $s3%.  However, you may not cast Holy spells while in this form.",Shadow damage you deal increased by $w2%.$?$w4<0[ Mana cost of all Shadow spells reduced by $w4%.][]  Physical damage you take reduced by $s3%.  You may not cast Holy spells.
 15474,,Immobilizes nearby enemies for $d.,Immobilized.
 15475,,Inflicts $s2 Nature damage and an additional $s1 damage every $t1 sec. to nearby enemies for $d.,$s1 Nature damage inflicted every $t1 sec.
 15487,,"Silences the target, preventing them from casting spells for $d.",Silenced.
@@ -12436,11 +12436,11 @@ Attack speed increased by $s2%."
 16899,Rank 3,"Increases the damage done by your Starfire, Moonfire and Wrath spells by $s1%.",
 16900,Rank 4,"Increases the damage done by your Starfire, Moonfire and Wrath spells by $s1%.",
 16901,Rank 5,"Increases the damage done by your Starfire, Moonfire and Wrath spells by $s1%.",
-16902,Rank 1,Increases the damage you deal with physical attacks in all forms by $s1%.,
-16903,Rank 2,Increases the damage you deal with physical attacks in all forms by $s1%.,
-16904,Rank 3,Increases the damage you deal with physical attacks in all forms by $s1%.,
-16905,Rank 4,Increases the damage you deal with physical attacks in all forms by $s1%.,
-16906,Rank 5,Increases the damage you deal with physical attacks in all forms by $s1%.,
+16902,Rank 1,$?s436895[Increases all damage you deal by $s1%.][Increases the damage you deal with physical attacks in all forms by $s1%.],
+16903,Rank 2,$?s436895[Increases all damage you deal by $s1%.][Increases the damage you deal with physical attacks in all forms by $s1%.],
+16904,Rank 3,$?s436895[Increases all damage you deal by $s1%.][Increases the damage you deal with physical attacks in all forms by $s1%.],
+16905,Rank 4,$?s436895[Increases all damage you deal by $s1%.][Increases the damage you deal with physical attacks in all forms by $s1%.],
+16906,Rank 5,$?s436895[Increases all damage you deal by $s1%.][Increases the damage you deal with physical attacks in all forms by $s1%.],
 16908,,Dispels a magic effect on the current foe.,
 16909,Rank 1,"Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by $s1%.",
 16910,Rank 2,"Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by $s1%.",
@@ -13828,7 +13828,7 @@ Attack speed increased by $s2%."
 18559,,Demon Pick to Destroy Demon Crystal.,
 18560,,"The purification of tainted Felcloth into Mooncloth can only be done at a moonwell, and only ocassionally will the waters permit themselves to be used in such a way.",
 18561,,"Shoots at an enemy, inflicting Physical damage.",
-18562,,Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.,
+18562,,$?s436895[Instantly heals a target with an active Rejuvenation or Regrowth effect for][Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them] an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.,
 18563,,Teaches you how to purify Felcloth and turn it into Mooncloth.,
 18564,,,
 18565,,,
@@ -17827,7 +17827,7 @@ Mana cost increased by $s3%."
 23737,,,Increases stamina by $s1%.
 23738,,,Increases spirit by $s1%.
 23758,,,
-23759,,,Reduces threat caused by $s1%.
+23759,,,$?$w1>0[Increases][Reduces] threat caused by $s1%.
 23760,,,Reduces physical damage taken by $s1%.
 23761,,,Increases damage caused by $s1%.
 23762,,,Increases resistance to all magic schools by $s1.
@@ -17855,7 +17855,7 @@ Heals $23781s1 damage every time you take ranged or melee damage."
 23784,,,
 23785,,"Grants both the Warlock and the summoned demon an effect as long as that demon is active.
 
-Imp - Reduces threat caused by $23759s1%.
+Imp - $?a403789[Increases][Reduces] threat caused by $23759s1%.
 
 Voidwalker - Reduces physical damage taken by $23760s1%.
 
@@ -17898,7 +17898,7 @@ Felhunter - Increases all resistances by .2 per level.",
 23821,,,
 23822,,"Grants both the Warlock and the summoned demon an effect as long as that demon is active.
 
-Imp - Reduces threat caused by $23826s1%.
+Imp - $?a403789[Increases][Reduces] threat caused by $23826s1%.
 
 Voidwalker - Reduces physical damage taken by $23841s1%.
 
@@ -17907,7 +17907,7 @@ Succubus/Incubus - Increases all damage caused by $23833s1%.
 Felhunter - Increases all resistances by .4 per level.",
 23823,,"Grants both the Warlock and the summoned demon an effect as long as that demon is active.
 
-Imp - Reduces threat caused by $23827s1%.
+Imp - $?a403789[Increases][Reduces] threat caused by $23827s1%.
 
 Voidwalker - Reduces physical damage taken by $23842s1%.
 
@@ -17916,7 +17916,7 @@ Succubus/Incubus - Increases all damage caused by $23834s1%.
 Felhunter - Increases all resistances by .6 per level.",
 23824,,"Grants both the Warlock and the summoned demon an effect as long as that demon is active.
 
-Imp - Reduces threat caused by $23828s1%.
+Imp - $?a403789[Increases][Reduces] threat caused by $23828s1%.
 
 Voidwalker - Reduces physical damage taken by $23843s1%.
 
@@ -17925,17 +17925,17 @@ Succubus/Incubus - Increases all damage caused by $23835s1%.
 Felhunter - Increases all resistances by .8 per level.",
 23825,,"Grants both the Warlock and the summoned demon an effect as long as that demon is active.
 
-Imp - Reduces threat caused by $23829s1%.
+Imp - $?a403789[Increases][Reduces] threat caused by $23829s1%.
 
 Voidwalker - Reduces physical damage taken by $23844s1%.
 
 Succubus/Incubus - Increases all damage caused by $23836s1%.
 
 Felhunter - Increases all resistances by 1 per level.",
-23826,,,Reduces threat caused by $s1%.
-23827,,,Reduces threat caused by $s1%.
-23828,,,Reduces threat caused by $s1%.
-23829,,,Reduces threat caused by $s1%.
+23826,,,$?$w1>0[Increases][Reduces] threat caused by $s1%.
+23827,,,$?$w1>0[Increases][Reduces] threat caused by $s1%.
+23828,,,$?$w1>0[Increases][Reduces] threat caused by $s1%.
+23829,,,$?$w1>0[Increases][Reduces] threat caused by $s1%.
 23830,,,
 23831,,,
 23832,,,
@@ -22902,7 +22902,7 @@ $@spelldesc399985",
 401489,,,
 401495,,,
 401502,,"Launches a bolt of frostfire at the enemy, causing ${$<power>*$m2/100*$<frostdamage>} to ${$<power>*$M2/100*$<frostdamage>} Frostfire damage, slowing movement speed by $s1% and causing an additional ${$<power>*$m3/100*3*$<frostdamage>} Frostfire damage over $d. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.
-",Movement slowed by $s1%.  $w3 Frostfire damage every $t3 sec.
+",Movement slowed by $w1%.  $w3 Frostfire damage every $t3 sec.
 401556,,"Summons a spellfire flame that moves toward the target, leaving a trail of spellfire. This trail deals ${$<power>*$401558m1/100} Spellfire damage every second to nearby enemies. Lasts $d.",
 401558,,Deals ${$<power>*$m1/100} Fire damage every $t1 sec.,Deals $w1 Fire damage every $t1 sec.
 401559,,,
@@ -23441,7 +23441,7 @@ While you know this ability, the threat bonus from Righteous Fury is increased t
 407653,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, causing Nature damage to each.",Static energy fills the air around you.
 407667,,"Strikes an enemy with a lightning bolt that forks to all nearby targets, causing Nature damage to each.",
 407669,,"Hurls a holy shield at the enemy, dealing ${$m1*$<damagepower>/100+0.091*$SPH+0.091*$AP} to ${$M1*$<damagepower>/100+0.091*$SPH+0.091*$AP} Holy damage, Dazing them and then jumping to additional nearby enemies.  Affects $x1 total targets.  Lasts $d.",Dazed.
-407676,,An instant strike that causes $m2% weapon damage as Holy and regenerates $s3% of your maximum mana.,
+407676,,An instant strike that causes $m2% weapon damage as Holy and regenerates $s3% of your maximum mana. The duration of all Judgement effects on the target is refreshed to $407676m4 sec.,
 407720,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, causing Nature damage to each.",
 407736,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, causing Nature damage to each.",
 407745,,"Strikes an enemy with a lightning bolt that forks to all nearby targets, causing Nature damage to each.",
@@ -23518,6 +23518,7 @@ In addition, you regenerate $417051s2 rage every time you dodge while in Bear Fo
 408341,Rank 1,Instantly inflicts $8349s1 fire damage to enemies within $8349a1 yd of your active Fire totem.,
 408342,Rank 2,Instantly inflicts $8502s1 fire damage to enemies within $8502a1 yd of your active Fire totem.,
 408343,Rank 3,Instantly inflicts $8503s1 fire damage to enemies within $8503a1 yd of your active Fire totem.,
+408344,Rank 4,Instantly inflicts $11306s1 fire damage to enemies within $11306a1 yd of your active Fire totem.,
 408345,Rank 5,Instantly inflicts $11307s1 fire damage to enemies within $11307a1 yd of your active Fire totem.,
 408424,Rank 2,,
 408426,Rank 3,,
@@ -24287,10 +24288,10 @@ Healing spells reduced by $s2%."
 415105,,,"Your next Chain Lightning, Chain Heal,  or Lava Burst spell will be an instant cast spell."
 415112,,,
 415113,,,
-415140,,"Dealing damage with your melee weapons increases your Attack Power by $s1% of your Intellect, and your spell damage and healing by $s2% of your total Attack Power for $415144d.",
+415140,,"Dealing damage with Lava Lash or Stormstrike increases your Attack Power by $s1% of your Intellect, and your spell damage and healing by $s2% of your total Attack Power for $415144d.",
 415144,,,"Attack Power increased by $w1.
 Spell damage and healing increased by $w2."
-415231,,Your Flame Shock now strikes up to $s1 targets.,
+415231,,"Your Flame Shock now strikes up to $s1 targets, gains ${$m5/1000} sec increased duration, and deals $s3% increased damage. In addition, while you have Flametongue Weapon imbued on an equipped weapon, you gain ${$m6*$PL} increased spell damage.",
 415233,,"Turns the Shaman into a Ghost Wolf, increasing speed by $s2% and decreasing all damage taken by $s3%.","Increases movement speed by $s2%.
 Decreases damage taken by $s3%."
 415236,,"Selects the area $415242a1 yards around target player, and heals all of target player's party members within that area for ${$<healpower>*$415242m1/100} every second.",Healing target player's party within your Healing Rain for ${$<healpower>*$415242m1/100} every second.
@@ -24315,9 +24316,9 @@ Decreases damage taken by $s3%."
 415362,,,Raptor Strike and Mongoose Bite damage increased by $w1%.
 415370,,You deal $s1% increased damage with all attacks while you do not have an active pet.,
 415372,,,
-415399,,"Your Shot abilities gain $415401s1% increased critical strike chance while you have not moved for the last $s1 sec, stacking every sec up to $415401u times. While moving, you will lose 1 stack per sec.",
-415401,,,Critical strike chance with Shot abilities increased by $s1%.
-415405,,"Reduces the cooldown on Rapid Fire by ${$m1/-60000} min, and your next Shot ability within $415407d after killing a target worth experience or honor deals $415407s2% increased damage.",
+415399,,"Your Shot abilities gain $415401s1% increased critical strike chance while you have not moved for the last $s1 sec, stacking every sec up to $415401u times. At $415401u stacks, your Aimed Shot becomes instant. While moving, you will lose 1 stack per sec.",
+415401,,,Critical strike chance with Shot abilities increased by $s1%.$?$w=10[ Your Aimed Shot is instant.][]
+415405,,"Reduces the cooldown on Rapid Fire by $s1%, and your next Shot ability within $415407d after killing a target worth experience or honor deals $415407s2% increased damage.",
 415407,,,Next Shot ability deals $s1% increased damage.
 415413,,"Each time one of your traps is triggered, your next Shot ability within $415414d costs no mana and does not incur a cooldown.",
 415414,,,Next Shot ability costs no mana and incurs no cooldown.
@@ -24606,11 +24607,11 @@ $@spelldesc414687
 
 Sunfire (Cat)
 $@spelldesc414689",
-416046,,"Engrave your pants with the Skull Bash rune:
+416046,,"Engrave your gloves with the Skull Bash rune:
 
 $@spellicon410176
 $@spelldesc410176",
-416049,,"Engrave your gloves with the Lacerate
+416049,,"Engrave your pants with the Lacerate
  rune:
 
 $@spellicon414644
@@ -25038,7 +25039,7 @@ $@spelldesc417046",
 
 $@spellicon417046
 $@spelldesc417046",
-424785,,"Viciously slash an enemy for $s2% weapon damage, and cause the target to bleed for ${$AP*$m4/100} damage every $t4 sec for $d, stacking up to $u times.  Awards $s3 combo $lpoint:points;.
+424785,,"Viciously slash an enemy for $s2% weapon damage, and cause the target to bleed for ${$AP*$m4/100} damage every $t4 sec for $d, stacking up to $u times. Each stack also increases damage done by your Saber Slash and Sinister Strike by $s5%. Awards $s3 combo $lpoint:points;.
 
 Saber Slash benefits from all talents and effects that trigger from or modify Sinister Strike.",Bleeding for $w4 damage every $t4 sec.
 424788,,Salvage the wreckage of a shredder for spare parts.,
@@ -25490,7 +25491,7 @@ $@spelldesc426065",
 426200,,,
 426223,,,
 426241,,,
-426243,,"Refreshing Corruption, Immolate, Curse of Agony, or Siphon Life when it has less than $s1 seconds duration remaining will cause you to deal instant damage to the target equal to the spell's remaining periodic damage.",
+426243,,"Refreshing Corruption, Immolate, Curse of Agony, Unstable Affliction, or Siphon Life when it has less than $s1 seconds duration remaining will cause you to deal instant damage to the target equal to the spell's remaining periodic damage.",
 426245,,,
 426246,,,
 426247,,,
@@ -25703,7 +25704,7 @@ These values are increased by each living Blade Master in the Far Seer's army, e
 427713,,Your Conflagrate ability also grants $427714s1% spellcasting haste for $427714d.,
 427714,,,Spellcasting haste increased by $s1%.
 427715,,,
-427717,,"Shadow energy slowly destroys the target, causing ${$m1*5*$<power>/100} damage over $d.  In addition, if the Unstable Affliction is dispelled it will cause ${$m1*9*$<power>/100} damage to the dispeller and silence them for $427719d. Only one Unstable Affliction or Immolate per Warlock can be active on any one target.","$w1 Shadow damage every $t1 sec.  If dispelled, will cause ${$w1*9} damage to the dispeller and silence them for $427719d."
+427717,,"Shadow energy slowly destroys the target, causing ${$m1*6*$<power>/100} damage over $d.  In addition, if the Unstable Affliction is dispelled it will cause ${$m1*$m3*$<power>/100} damage to the dispeller and silence them for $427719d. Only one Unstable Affliction or Immolate per Warlock can be active on any one target.","$w1 Shadow damage every $t1 sec.  If dispelled, will cause ${$w1*$m3} damage to the dispeller and silence them for $427719d."
 427718,,,
 427719,,,Silenced.
 427725,,,
@@ -25832,7 +25833,7 @@ $@spelldesc428861",
 429168,,,
 429207,,,
 429237,,,
-429242,,"Engrave your helm with the Light's Grace rune:
+429242,,"Engrave your bracers with the Light's Grace rune:
 
 $@spellicon428909
 $@spelldesc428909",
@@ -27882,7 +27883,7 @@ Defense increased by $s2."
 446392,,"Spells and attacks sometimes leech $446393s1 health from the target, and apply a stack of Decay. When decay reaches 5 stacks, the target takes $446810s1 damage.",
 446393,,,"Decaying. At 5 stacks, all stacks are consumed, and $446810s1 shadow damage is dealt."
 446394,,"Restore $446785s1 Energy, $446786s1% Mana, or $446783s1 Rage.","Restore $446785s1 Energy, $446786s1% Mana, or $446783s1 Rage."
-446395,,"Chance on successful heal to restore $446785s1 Energy, $446786s1% Mana, or $/10;446783s1 Rage.",
+446395,,"Chance on direct healing spell, and on effective healing over time ticks to restore $446785s1 Energy, $446786s1% Mana, or $/10;446783s1 Rage to the target.",
 446396,,"Increases healing done by $s1, mana regeneration by $s2 mana per 5 sec, and your heals have a chance to restore $446785s1 Energy, $446786s1% Mana, or $/10;446783s1 Rage. Only one Atal'ai potion can be active at any time. This has no effect outside of Sunken Temple.",Healing Done increased by $s1. Regenerate 11 mana every 5 sec. Chance on successful heal to restore your target's primary resource.
 446397,,"Rainbow power!
 ",Rainbow power!
@@ -28215,27 +28216,27 @@ Attack speed increased by $s2%."
 449162,,,
 449165,,,
 449200,,,
-449430,,,
-449958,,,
-449990,,,
-449994,,,
-449379,,,"Decaying. At 5 stacks, all stacks are consumed, and 150 to 250 shadow damage is dealt."
+449203,,,
+449288,,$s1 Nature damage.,
+449371,,,
+449379,,,"Decaying. At 5 stacks, all stacks are consumed, and ${$446810m1/$m2} to ${$446810M1/$m2} shadow damage is dealt."
+449409,,"Inspired by the Mojo of War, your size is increased and your Strength goes up by $s1 to match your new size.  Lasts $d.","Increases Agility by $s1 as well as increasing your size. Feel da voodoo, mon!"
 449414,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
 449420,,"A sacrificial dagger, engraved with a chant for an ancient Atal'ai blood ceremony.",
-450109,,,
-450110,,,
-449371,,,
 449422,,"Strikes enemies in a cone in front of the caster, knocking them back.",
-449409,,"Inspired by the Mojo of War, your size is increased and your Strength goes up by $s1 to match your new size.  Lasts $d.","Increases Agility by $s1 as well as increasing your size. Feel da voodoo, mon!"
+449430,,,
 449431,,Inflicts $s1 Arcane damage to enemies in a selected area every $t1 sec. for $d.,
 449432,,"Curses the target with impending doom, causing $s1 Shadow damage after $d.  If the target dies from this damage, there is a chance that a Doomguard will be summoned.  Cannot be cast on players.",Causes $s1 Shadow damage after $d.
 449463,,,
-449669,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
-450066,,..,
-450085,,,A finishing touch to a Dark Iron Dwarf disguise.
-450086,Rank 2,"Power infuses the target's party, increasing their Stamina by $s1 for $d.",Increases Stamina by $s1.
-450108,Rank 2,Allows the caster to see through the target's eyes for $d.  Will not work if the target is in another instance or on another continent.,Sight granted through target's eyes.
 449668,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
+449669,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
+449729,,$@spelldesc424574,Inflicts eye-opening damage.
+449825,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
+449869,,"Shoots a cloud of acidic breath at enemies in a cone in front of the caster, reducing their armor and inflicting Nature damage every $t1 sec. for $d.","Reduced armor.
+Nature damage inflicted every $t1 sec."
+449879,,,Asleep.
+449890,,"Inflicts $s1 damage on enemies in a cone behind the caster, knocking them back.",
+449907,,"Sends out a blast wave of magic, inflicting Arcane damage to nearby enemies.",
 449919,,Your damage spells have a chance to cause your target to take up to $449920s1 increased damage from subsequent spells.,
 449920,,,"Vulnerable to elemental power, increasing the damage taken from spells by up to $s1."
 449921,,Your Holy damage spells cause you to gain $449923s1 increased damage and healing power for $449923d.,
@@ -28245,39 +28246,44 @@ Attack speed increased by $s2%."
 449926,,Improves your chance to hit with all spells and attacks by $s1% while in Bear or Dire Bear Forms.,
 449927,,"Causes the target to hemorrhage, increasing any damage dealt to the target by up to $s1.  Lasts $n charges or $d.",Increases damage taken by $s1.
 449928,,Backstab and Sinister Strike cause the target to take $449927s1 more damage from all sources for $449927n charges or $449927d.,
-449929,,Your healing spell critical strikes now have a $h% chance to activate Dreamstate. You must have the rune engraved.,
+449929,,Your direct healing spell critical strikes now have a $h% chance to activate Dreamstate. You must have the rune engraved.,
 449930,,Reduces the cast time of Healing Rain by $s1%.,
+449931,,"Dealing Fire damage causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
 449932,,Attack power increased by $s1.,Attack power increased by $s1.
+449933,,Increases Holy spell critical strike chance by $s1%.,
 449934,,Increases damage and healing done by Nature spells and effects by up to $s1.,Nature spell damage and healing dealt is increased by $s1
 449935,,Chance on spell cast to increase your Nature spell damage and healing by up to $449934s1 for $449934d.,
+449958,,,
 449970,,Gives you a $h% chance to get an extra attack on the same target after dealing damage with your weapon.,
 449974,,Gain $449975s1 block value for $449975d after blocking.,
 449975,,Increases the block value of your shield by $s1.,
 449980,,Horn of Lordaeron reduces the cast time of your next $s1 Holy Light spells by ${$449982m1/-1000}.1 sec.,
 449982,,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.,Reduces the casting time of your next $n Holy Light spells by ${$m1/$m2/-1000}.1 sec.
-450012,,Dealing damage with Shadow Cleave reduces the cast time of your next Immolate spell by $450013s1%. Stacking up to $s1 times. Lasts $450013d.,
-450013,,Reduces the casting time of your next Immolate spell by $s1%.,Reduces the casting time of your next Immolate spell by $s1%.
-449729,,$@spelldesc424574,Inflicts eye-opening damage.
-449869,,"Shoots a cloud of acidic breath at enemies in a cone in front of the caster, reducing their armor and inflicting Nature damage every $t1 sec. for $d.","Reduced armor.
-Nature damage inflicted every $t1 sec."
-449879,,,Asleep.
-449890,,"Inflicts $s1 damage on enemies in a cone behind the caster, knocking them back.",
-449907,,"Sends out a blast wave of magic, inflicting Arcane damage to nearby enemies.",
-449825,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
-450005,,Reach into your coin purse and throw a handful of currency at your foes.,Pelted in the face with a handful of coins.
+449990,,,
+449994,,,
 449995,,,
 449996,,,
 449997,,,
-449203,,,
-449931,,"Dealing Fire damage causes you to gain $449932s1 attack power, stacking up to $449932u times. Lasts $449932d.",
+450005,,Reach into your coin purse and throw a handful of currency at your foes.,Pelted in the face with a handful of coins.
+450012,,Dealing damage with Shadow Cleave reduces the cast time of your next Immolate spell by $450013s1%. Stacking up to $s1 times. Lasts $450013d.,
+450013,,Reduces the casting time of your next Immolate spell by $s1%.,Reduces the casting time of your next Immolate spell by $s1%.
+450066,,..,
 450083,,Rapid Fire now also grants $450084s1% melee attack speed for $450084d.,
 450084,,Increases melee attack speed by $s1%.,Increases melee attack speed by $s1%.
+450085,,,A finishing touch to a Dark Iron Dwarf disguise.
+450086,Rank 2,"Power infuses the target's party, increasing their Stamina by $s1 for $d.",Increases Stamina by $s1.
 450091,,,
 450092,,,
 450098,,"The caster smashes the ground, inflicting $s1 Physical damage to all players and knocking them back.",
 450105,,"Attempts to remove one Curse, one Disease and one Poison from the Imbiber.",
 450106,,Restores $s1 health.,
 450107,,Restores $s1 health.,
+450108,Rank 2,Allows the caster to see through the target's eyes for $d.  Will not work if the target is in another instance or on another continent.,Sight granted through target's eyes.
+450109,,,
+450110,,,
+450403,,Increases your critical strike chance with ranged weapons by $s1%.,
+450409,,"Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
+450588,,,
 450600,,"Transforms an enemy into a frog, rendering it unable to attack or cast spells for $d.",Hexed.
 450601,,"Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to $x1 targets, inflicting greater Nature damage to each successive target.",
 450602,,"Blasts an enemy with lightning, inflicting Nature damage.",
@@ -28300,45 +28306,46 @@ $s2 Shadow damage inflicted to melee attackers."
 450659,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
 450662,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
 450663,,Inflicts Nature damage to an enemy.,
+450667,Rank 1,"Allows the rogue to sneak around, but reduces your speed by $s3%.  Lasts until cancelled.",Stealthed.  Movement slowed by $s3%.
+450804,,,
+450811,,,
 450848,,,
 450849,,,
 450851,,,
 450852,,,
 450874,,,
 450881,,,
-449933,,Increases Holy spell critical strike chance by $s1%.,
-450403,,Increases your critical strike chance with ranged weapons by $s1%.,
-450409,,"Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
-450667,Rank 1,"Allows the rogue to sneak around, but reduces your speed by $s3%.  Lasts until cancelled.",Stealthed.  Movement slowed by $s3%.
-449288,,$s1 Nature damage.,
-450588,,,
-450804,,,
-450811,,,
 451092,,,
 451227,,,
 451398,,,A finishing touch to a Dark Iron Dwarf disguise.
 451415,,,
 451706,,,
-451726,,$?$a446847[Teaches you how to craft a Gnomish Death Ray][],
-451725,,$?$a446847[Teaches you how to craft a Gnomish Battle Chicken][],
-451724,,$?$a446847[Teaches you how to craft a Gnomish Net-o-Matic Projector][],
-451723,,$?$a446847[Teaches you how to craft a Gnomish Mind Control Cap][],
-451722,,$?$a446847[Teaches you how to craft a Gnomish Harm Prevention Belt][],
-451721,,$?$a446847[Teaches you how to craft a Gnomish Goggles][],
-451719,,$?$a446847[Teaches you how to craft a Goblin Construction Helmet][],
-451718,,$?$a446847[Teaches you how to craft a Goblin Bomb Dispenser][],
-451717,,$?$a446847[Teaches you how to craft a Gnomish Shrink Ray][],
-451716,,$?$a446847[Teaches you how to craft a Gnomish Rocket Boots][],
-451715,,$?$a446847[Teaches you how to craft a Goblin Rocket Boots][],
-451714,,$?$a446847[Teaches you how to craft a Goblin Mortar][],
-451713,,$?$a446847[Teaches you how to craft a Goblin Mining Helmet][],
-451712,,$?$a446847[Teaches you how to craft a Goblin Dragon Gun][],
-451711,,$?$a446847[Teaches you how to craft The Big One][],
-451710,,$?$a446847[Teaches you how to craft a Goblin Sapper Charge][],
 451709,,$?$a446847[Teaches you how to craft a Goblin Rocket Helm][],
+451710,,$?$a446847[Teaches you how to craft a Goblin Sapper Charge][],
+451711,,$?$a446847[Teaches you how to craft The Big One][],
+451712,,$?$a446847[Teaches you how to craft a Goblin Dragon Gun][],
+451713,,$?$a446847[Teaches you how to craft a Goblin Mining Helmet][],
+451714,,$?$a446847[Teaches you how to craft a Goblin Mortar][],
+451715,,$?$a446847[Teaches you how to craft a Goblin Rocket Boots][],
+451716,,$?$a446847[Teaches you how to craft a Gnomish Rocket Boots][],
+451717,,$?$a446847[Teaches you how to craft a Gnomish Shrink Ray][],
+451718,,$?$a446847[Teaches you how to craft a Goblin Bomb Dispenser][],
+451719,,$?$a446847[Teaches you how to craft a Goblin Construction Helmet][],
+451721,,$?$a446847[Teaches you how to craft a Gnomish Goggles][],
+451722,,$?$a446847[Teaches you how to craft a Gnomish Harm Prevention Belt][],
+451723,,$?$a446847[Teaches you how to craft a Gnomish Mind Control Cap][],
+451724,,$?$a446847[Teaches you how to craft a Gnomish Net-o-Matic Projector][],
+451725,,$?$a446847[Teaches you how to craft a Gnomish Battle Chicken][],
+451726,,$?$a446847[Teaches you how to craft a Gnomish Death Ray][],
 451730,,,
-452185,,,
 452154,,,
-408344,Rank 4,Instantly inflicts $11306s1 fire damage to enemies within $11306a1 yd of your active Fire totem.,
+452185,,,
 452285,,,
 452574,,,
+453124,,,
+453165,,,
+454042,,,Spell damage increased by $w1.
+454197,,,
+454427,,,
+453593,,,
+455350,,Reduces healing effects for an enemy by $s1% for $d.,Healing effects reduced by $s1%.

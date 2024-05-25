@@ -21896,6 +21896,7 @@ ID,Name_lang
 408341,Fire Nova
 408342,Fire Nova
 408343,Fire Nova
+408344,Fire Nova
 408345,Fire Nova
 408424,Fire Nova
 408426,Fire Nova
@@ -22430,8 +22431,8 @@ ID,Name_lang
 416037,Engrave Pants - Exorcist
 416042,Engrave Chest - Survival of the Fittest
 416044,Engrave Gloves - Sunfire
-416046,Engrave Pants - Skull Bash
-416049,Engrave Gloves - Lacerate
+416046,Engrave Gloves - Skull Bash
+416049,Engrave Pants - Lacerate
 416050,Engrave Chest - Living Seed
 416051,Engrave Bracers - Elune's Fires
 416054,Engrave Belt - Power Surge
@@ -23217,7 +23218,7 @@ ID,Name_lang
 429168,Corrosive Blast
 429207,Corrosive Bite
 429237,Siphon Corruption
-429242,Engrave Helm - Light's Grace
+429242,Engrave Bracers - Light's Grace
 429243,Light's Grace
 429245,Improved Sanctuary
 429247,Engrave Helm - Improved Sanctuary
@@ -25235,27 +25236,26 @@ ID,Name_lang
 449162,Teleport
 449165,Teleport
 449200,Dream Converter
-449430,[DNT] Check Number of Passengers
-449958,Troll Object - Candle Display
-449990,Troll Object - Slab Display
-449994,Troll Object - Mask Display
+449203,Revolting Retch
+449288,Sandstorm
+449371,[DNT] Cancel Eternal Slumber
 449379,Decay
+449409,Voodoo Frenzy
 449414,Atal'ai Blood Ceremony
 449420,Atal'ai Blood Ceremony
-450109,Torment
-450110,Decay
-449371,[DNT] Cancel Eternal Slumber
 449422,Lucid Dreaming
-449409,Voodoo Frenzy
+449430,[DNT] Check Number of Passengers
 449431,Starfall
 449432,Curse of Doom
 449463,[DNT] Explorer Imp - Cosmetic
-449669,Retribution Aura
-450066,Destroy
-450085,Fire Crown
-450086,Prayer of Fortitude
-450108,Mind Vision
 449668,Attack Power - Feral (+114)
+449669,Retribution Aura
+449729,Wake Up Dead
+449825,Out of Bounds
+449869,Corrosive Acid Breath
+449879,Dream Fog
+449890,Tail Sweep
+449907,Arcane Explosion
 449919,Malevolence
 449920,Malevolence
 449921,Faith and Magic
@@ -25267,36 +25267,42 @@ ID,Name_lang
 449928,Blood Corrupting
 449929,Exiled Dreamer
 449930,Emerald Rains
+449931,Fiery Strength
 449932,Fiery Strength
+449933,Holy Crit
 449934,The Furious Storm
 449935,The Furious Storm
+449958,Troll Object - Candle Display
 449970,Extra Attack
 449974,Stalwart Block
 449975,Stalwart Block
 449980,For Lordaeron!!
 449982,For Lordaeron!!
-450012,Shadow Spark
-450013,Shadow Spark
-449729,Wake Up Dead
-449869,Corrosive Acid Breath
-449879,Dream Fog
-449890,Tail Sweep
-449907,Arcane Explosion
-449825,Out of Bounds
-450005,Spare Change
+449990,Troll Object - Slab Display
+449994,Troll Object - Mask Display
 449995,Reputation - Merchant Faction
 449996,Reputation - Merchant Faction
 449997,Reputation - Merchant Faction
-449203,Revolting Retch
-449931,Fiery Strength
+450005,Spare Change
+450012,Shadow Spark
+450013,Shadow Spark
+450066,Destroy
 450083,Rapid Cutting
 450084,Rapid Cutting
+450085,Fire Crown
+450086,Prayer of Fortitude
 450091,Deep Slumber
 450092,Deep Slumber
 450098,Demolishing Smash
 450105,Purification
 450106,Healing Potion
 450107,Healing Potion
+450108,Mind Vision
+450109,Torment
+450110,Decay
+450403,Lethal Shots
+450409,Call of Sul'thraze
+450588,Summon Player
 450600,Hex
 450601,Chain Lightning
 450602,Lightning Bolt
@@ -25314,45 +25320,46 @@ ID,Name_lang
 450659,Shadow Bolt
 450662,Sleep
 450663,Acid Spit
+450667,Stealth
+450804,Disallow Blink
+450811,Disallow Shadowstrike
 450848,Daze
 450849,Hold Stein
 450851,Drink Stein
 450852,Sleep
 450874,Toss Stein
 450881,Toss Stein
-449933,Holy Crit
-450403,Lethal Shots
-450409,Call of Sul'thraze
-450667,Stealth
-449288,Sandstorm
-450588,Summon Player
-450804,Disallow Blink
-450811,Disallow Shadowstrike
 451092,Create Yellow Punch Card
 451227,Despawn Caster
 451398,Fire Crown
 451415,Sandstorm
 451706,Screaming Chain Pauldrons
-451726,Gnomish Death Ray
-451725,Gnomish Battle Chicken
-451724,Gnomish Net-o-Matic Projector
-451723,Gnomish Mind Control Cap
-451722,Gnomish Harm Prevention Belt
-451721,Gnomish Goggles
-451719,Goblin Construction Helmet
-451718,Goblin Bomb Dispenser
-451717,Gnomish Shrink Ray
-451716,Gnomish Rocket Boots
-451715,Goblin Rocket Boots
-451714,Goblin Mortar
-451713,Goblin Mining Helmet
-451712,Goblin Dragon Gun
-451711,The Big One
-451710,Goblin Sapper Charge
 451709,Goblin Rocket Helmet
+451710,Goblin Sapper Charge
+451711,The Big One
+451712,Goblin Dragon Gun
+451713,Goblin Mining Helmet
+451714,Goblin Mortar
+451715,Goblin Rocket Boots
+451716,Gnomish Rocket Boots
+451717,Gnomish Shrink Ray
+451718,Goblin Bomb Dispenser
+451719,Goblin Construction Helmet
+451721,Gnomish Goggles
+451722,Gnomish Harm Prevention Belt
+451723,Gnomish Mind Control Cap
+451724,Gnomish Net-o-Matic Projector
+451725,Gnomish Battle Chicken
+451726,Gnomish Death Ray
 451730,[DNT] Threat Drop
-452185,Teleport Players
 452154,Rolling Thunder
-408344,Fire Nova
+452185,Teleport Players
 452285,Summon Emerald Warden
 452574,Fragile Armor
+453124,S03 - Tuning and Overrides Passive - Druid
+453165,Sniper Training
+454042,Burn
+454197,Invocation
+454427,Invocation
+453593,S03 - PvP - Damage Reduction Aura
+455350,Veil of Shadow
