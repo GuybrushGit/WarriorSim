@@ -884,7 +884,7 @@ class Player {
         }
         if (this.rage > 100) this.rage = 100;
 
-        if (this.auras.consumedrage && oldRage < 80 && this.rage >= 80)
+        if (this.auras.consumedrage && oldRage < 80 && this.rage >= 60)
             this.auras.consumedrage.use();
     }
     steptimer(a) {
@@ -1340,8 +1340,6 @@ class Player {
         }
         if (!spell && this.auras.flurry && this.auras.flurry.stacks)
             this.auras.flurry.proc();
-        if (!adjacent && this.auras.consumedrage && this.auras.consumedrage.stacks)
-            this.auras.consumedrage.proc();
         if (!spell && this.mh.windfury && this.mh.windfury.stacks)
             this.mh.windfury.proc();
         return procdmg;

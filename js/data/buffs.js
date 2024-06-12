@@ -405,16 +405,6 @@ var buffs = [
       minlevel: 4,
    },
    {
-      id: 425600,
-      spellid: true,
-      name: "Horn of Lordaeron",
-      iconname: "inv_misc_horn_03",
-      group: "blessingmight",
-      str: 45, //17 at lvl 25 - 26 at 40
-      agi: 45,
-      sod: true,
-   },
-   {
       id: 8512,
       spellid: true,
       name: "Windfury Totem",
@@ -987,6 +977,15 @@ var buffs = [
       armor: 150,
       armorperlevel: 35,
       minlevel: 1,
+   },
+   {
+      id: 439462,
+      spellid: true,
+      name: "Sebacious Poison",
+      iconname: "ability_creature_poison_06",
+      group: "sunder",
+      armor: 1700,
+      minlevel: 56
    },
    {
       id: 8647,

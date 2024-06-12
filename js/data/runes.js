@@ -78,7 +78,7 @@ var runes = {
          name: 'Single-Minded Fury',
          description: "While dual-wielding, your Physical damage and movement speed are increased by 10%.",
          iconname: 'inv_relics_totemofrage',
-         dmgdw: 10
+         dmgdw: 0
      },
      {
          id: 429765,
