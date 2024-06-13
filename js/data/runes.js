@@ -12,7 +12,7 @@ var runes = {
          name: 'Blood Frenzy',
          description: "Each time you deal Bleed damage, you gain 3 rage.",
          iconname: 'ability_warrior_bloodfrenzy',
-         bleedrage: 3,
+         bloodfrenzy: true,
      },
      {
          id: 402911,

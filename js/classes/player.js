@@ -402,8 +402,8 @@ class Player {
             for (let item of runes[type]) {
                 if (item.selected) {
                     // Blood Frenzy
-                    if (item.bleedrage) {
-                        this.bleedrage = item.bleedrage;
+                    if (item.bloodfrenzy) {
+                        this.bloodfrenzy = item.bloodfrenzy;
                     }
                     // Endless Rage
                     if (item.ragemod) {

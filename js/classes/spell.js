@@ -786,14 +786,6 @@ class DeepWounds extends Aura {
             this.totaldmg += dmg;
             this.ticksleft--;
 
-            if (this.player.bleedrage) {
-                let oldRage = this.player.rage;
-                this.player.rage += this.player.bleedrage;
-                if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
-                    this.player.auras.consumedrage.use();
-            }
-
             /* start-log */ if (log) this.player.log(`${this.name} tick for ${dmg.toFixed(2)}`); /* end-log */
 
             this.nexttick += 3000;
@@ -839,14 +831,6 @@ class OldDeepWounds extends Aura {
             dmg *= this.player.mh.modifier * this.player.stats.dmgmod * this.player.talents.deepwounds * this.player.bleedmod;
             this.idmg += dmg / 4;
             this.totaldmg += dmg / 4;
-
-            if (this.player.bleedrage) {
-                let oldRage = this.player.rage;
-                this.player.rage += this.player.bleedrage;
-                if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
-                    this.player.auras.consumedrage.use();
-            }
 
             /* start-log */ if (log) this.player.log(`${this.name} tick for ${(dmg / 4).toFixed(2)}`); /* end-log */
 
@@ -1653,17 +1637,12 @@ class Rend extends Aura {
     }
     step() {
         while (step >= this.nexttick && this.stacks) {
-            let dmg = this.value1 * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
+            let basedmg = this.value1;
+            if (this.player.bloodfrenzy)
+                basedmg += this.value1 + ~~(this.player.stats.ap * 0.03);
+            let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
             this.idmg += dmg / this.value2;
             this.totaldmg +=dmg / this.value2;
-
-            if (this.player.bleedrage) {
-                let oldRage = this.player.rage;
-                this.player.rage += this.player.bleedrage;
-                if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
-                    this.player.auras.consumedrage.use();
-            }
 
             /* start-log */ if (log) this.player.log(`${this.name} tick for ${(dmg / this.value2).toFixed(2)}`); /* end-log */
 
@@ -1703,7 +1682,7 @@ class Rend extends Aura {
         this.player.timer = 1500;
         this.starttimer = step;
         this.stacks = this.value2;
-        if (this.player.stance == 'zerk')
+        if (this.player.stance == 'zerk' && !this.player.bloodfrenzy)
             this.player.switch('battle');
         this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
@@ -1711,8 +1690,8 @@ class Rend extends Aura {
     }
     canUse() {
         return !this.timer && !this.player.timer && this.player.rage >= this.cost &&
-            (this.player.stance != 'zerk' || this.player.talents.rageretained >= this.cost) && 
-            (!this.maxrage || this.player.stance != 'zerk' || this.player.rage <= this.maxrage);
+            (this.player.stance != 'zerk' || this.player.talents.rageretained >= this.cost || this.player.bloodfrenzy) && 
+            (!this.maxrage || this.player.stance != 'zerk' || this.player.rage <= this.maxrage || this.player.bloodfrenzy);
     }
     end() {
         if (this.stacks)
@@ -1802,14 +1781,6 @@ class WeaponBleed extends Aura {
         while (step >= this.nexttick) {
             this.idmg += this.dmg;
             this.totaldmg += this.dmg;
-
-            if (this.player.bleedrage) {
-                let oldRage = this.player.rage;
-                this.player.rage += this.player.bleedrage;
-                if (this.player.rage > 100) this.player.rage = 100;
-                if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
-                    this.player.auras.consumedrage.use();
-            }
 
             /* start-log */ if (log) this.player.log(`${this.name} tick for ${this.dmg}`); /* end-log */
 
