@@ -77,7 +77,7 @@ class Bloodthirst extends Spell {
     dmg() {
         let dmg;
         dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -289,7 +289,7 @@ class MortalStrike extends Spell {
         let dmg;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -596,7 +596,7 @@ class ShieldSlam extends Spell {
     dmg() {
         let dmg;
         dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + (this.player.stats.block * 2) + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
     }
     use() {
         this.player.timer = 1500;
@@ -2131,20 +2131,20 @@ class Rampage extends Aura {
 class WreckingCrew extends Aura {
     constructor(player, id) {
         super(player, id, 'Wrecking Crew');
-        this.duration = 6;
+        this.duration = 12;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.critdmgbonus = 0.1;
+        this.player.mainspelldmg = 1.1;
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
-            this.player.critdmgbonus = 0;
+            this.player.mainspelldmg = 1;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }

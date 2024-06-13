@@ -34,6 +34,7 @@ class Player {
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;
+        this.mainspelldmg = 1;
         this.extraattacks = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
@@ -588,6 +589,7 @@ class Player {
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;
+        this.mainspelldmg = 1;
         this.spelldelay = 0;
         this.heroicdelay = 0;
         this.mh.timer = 0;
