@@ -698,8 +698,9 @@ class Aura {
 class Recklessness extends Aura {
     constructor(player, id) {
         super(player, id);
-        this.duration = 15;
-        this.stats = { crit: 100 };
+        this.duration = 12;
+        this.stats = { crit: 50 };
+        this.cooldown = 300;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -712,7 +713,16 @@ class Recklessness extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && step >= this.usestep;
+        return !this.timer && !this.player.timer && step >= this.usestep;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.usestep = this.starttimer + (this.cooldown * 1000);
+            this.player.updateAuras();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
     }
 }
 
