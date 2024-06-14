@@ -74,10 +74,10 @@ var runes = {
          devastate: true,
      },
      {
-         id: 430472,
+         id: 413404,
          name: 'Single-Minded Fury',
          description: "While dual-wielding, your Physical damage and movement speed are increased by 10%.",
-         iconname: 'inv_relics_totemofrage',
+         iconname: 'ability_warrior_incite',
          dmgdw: 0
      },
      {

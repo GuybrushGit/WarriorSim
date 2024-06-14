@@ -641,6 +641,7 @@ class Aura {
         if (spell.haste) this.mult_stats = { haste: parseInt(spell.haste) };
         if (spell.value1) this.value1 = spell.value1;
         if (spell.value2) this.value2 = spell.value2;
+        if (spell.minlevel) this.minlevel = spell.minlevel;
         if (spell.procblock) this.procblock = spell.procblock;
         if (spell.rageblockactive) this.rageblock = parseInt(spell.rageblock);
         if (spell.erageblockactive) this.erageblock = parseInt(spell.erageblock);
@@ -648,7 +649,6 @@ class Aura {
         if (spell.echargeblockactive) this.echargeblock = parseInt(spell.echargeblock);
         if (spell.wfap) this.wfap = parseInt(spell.wfap);
         if (spell.wfapperc) this.wfapperc = parseInt(spell.wfapperc);
-        if (spell.stoptimeactive) this.stoptime = parseInt(spell.stoptime);
         if (spell.alwaystails) this.alwaystails = spell.alwaystails;
         if (spell.alwaysheads) this.alwaysheads = spell.alwaysheads;
         if (spell.item) this.item = spell.item;
@@ -699,8 +699,8 @@ class Recklessness extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 12;
-        this.stats = { crit: 50 };
-        this.cooldown = 300;
+        this.stats = { crit: this.player.mode == "sod" ? 50 : 100 };
+        this.cooldown = this.player.mode == "sod" ? 300 : 1800;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -1596,6 +1596,39 @@ class BerserkerRageAura extends Aura {
             this.timer = 0;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
+    }
+}
+
+class BattleShout extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 120 + (this.player.talents.boomingvoice * 36);
+        this.cost = 10 - (this.player.talents.boomingvoice * 2);
+        this.name = 'Battle Shout';
+        let lvlbonus = ~~((this.player.level - this.minlevel) * this.value2);
+        this.stats.ap = ~~((this.value1 + lvlbonus + (this.player.enhancedbs ? 30 : 0)) * (1 + this.player.talents.impbattleshout))
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.rage -= this.cost;
+        this.player.timer = 1500;
+        this.player.updateAP();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateAP();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage;
     }
 }
 

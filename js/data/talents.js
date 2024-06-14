@@ -417,7 +417,7 @@ var talents = [
             y: 0,
             c: 0,
             iconname: 'Spell_Nature_Purge',
-            aura: function (count) { return { boomingvoice: count * 0.1 } },
+            aura: function (count) { return { boomingvoice: count } },
          },
          {
             i: 157,

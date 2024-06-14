@@ -261,9 +261,6 @@ class Simulation {
             else if (player.spells[spell.classname.toLowerCase()].prep)
                 player.spells[spell.classname.toLowerCase()].prep(this.maxsteps);
         }
-       
-        if (player.auras.recklessness && player.auras.recklessness.stoptime) stopstep = this.maxsteps - (player.auras.recklessness.stoptime * 1000);
-
 
         while (step < this.maxsteps) {
 
@@ -349,6 +346,7 @@ class Simulation {
                     else if (player.auras.bloodfury && player.auras.bloodfury.canUse()) { player.spelldelay = 1; delayedspell = player.auras.bloodfury; }
                     else if (player.auras.berserking && player.auras.berserking.canUse()) { player.spelldelay = 1; delayedspell = player.auras.berserking; }
                     else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
+                    else if (player.auras.battleshout && player.auras.battleshout.canUse()) { player.spelldelay = 1; delayedspell = player.auras.battleshout; }
 
                     // Execute phase
                     else if (player.spells.execute && step >= this.executestep) {

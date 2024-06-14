@@ -523,8 +523,6 @@ SIM.SETTINGS = {
             ul.append(`<div class="label">Execute Phase:</div><li data-id="erageblockactive" class="${spell.erageblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="erageblock" value="${spell.erageblock}" data-numberonly="true" /> rage</li>`);
         if (spell.echargeblock !== undefined)
             ul.append(`<li data-id="echargeblockactive" class="${spell.echargeblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="echargeblock" value="${spell.echargeblock}" data-numberonly="true" /> CbR charges</li>`);
-        if (typeof spell.stoptime !== 'undefined') 
-            ul.append(`<li data-id="stoptimeactive" class="${spell.stoptimeactive ? 'active' : ''}">Stop everything when <input type="text" name="stoptime" value="${spell.stoptime}" data-numberonly="true" /> seconds are left</li>`);
         if (spell.alwaysheads !== undefined)
             ul.append(`<li data-id="alwaysheads" data-group="coinflip" class="${spell.alwaysheads ? 'active' : ''}">Always heads</li>`);
         if (spell.alwaystails !== undefined)

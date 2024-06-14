@@ -496,11 +496,6 @@ class Player {
         for (let buff of buffs) {
             if (buff.active) {
                 let ap = 0, str = 0, agi = 0;
-                if (buff.group == "battleshout") {
-                    let lvlbonus = 0;
-                    if (buff.lvlmod) lvlbonus = ~~((this.level - buff.minlevel) * buff.lvlmod);
-                    ap = ~~((buff.ap + lvlbonus + (this.enhancedbs ? 30 : 0)) * (1 + this.talents.impbattleshout));
-                }
                 if (buff.name == "Blessing of Might") {
                     let impmight = buffs.filter(s => s.mightmod && s.active)[0];
                     ap = ~~(buff.ap * (impmight ? impmight.mightmod : 1));
@@ -949,6 +944,7 @@ class Player {
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
+        if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1001,6 +997,7 @@ class Player {
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
+        if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
