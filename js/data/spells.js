@@ -443,8 +443,6 @@ var spells = [
     iconname: 'ability_racial_bloodrage',
     active: true,
     buff: true,
-    flagellation: true,
-    consumedrage: true,
 },
 
 // Sunder Armor
@@ -722,8 +720,6 @@ var spells = [
     maxrageactive: false,
     active: true,
     buff: true,
-    flagellation: true,
-    consumedrage: true,
     zerkerpriority: false,
 },
 

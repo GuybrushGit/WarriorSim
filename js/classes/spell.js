@@ -27,7 +27,6 @@ class Spell {
         if (spell.value1) this.value1 = parseInt(spell.value1);
         if (spell.value2) this.value2 = parseInt(spell.value2);
         if (spell.priorityapactive) this.priorityap = parseInt(spell.priorityap);
-        if (spell.flagellation) this.flagellation = spell.flagellation;
         if (spell.consumedrage) this.consumedrage = spell.consumedrage;
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
         if (spell.exmacro) this.exmacro = spell.exmacro;
@@ -210,15 +209,12 @@ class Bloodrage extends Spell {
         let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.bloodrage.use();
-        this.player.auras.flagellation && this.player.auras.flagellation.use();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
             this.player.auras.consumedrage.use();
     }
     canUse() {
-        return this.timer == 0 && 
-            (!this.flagellation || !this.player.auras.flagellation || !this.player.auras.flagellation.timer) &&
-            (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
+        return this.timer == 0;
     }
 }
 
@@ -401,7 +397,7 @@ class RagingBlow extends Spell {
             (!executephase || this.execute) &&
             ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) 
               || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer)
-              || (this.player.auras.consumedrage && this.player.auras.consumedrage.timer));
+              || (this.player.isEnraged()));
     }
 }
 
@@ -420,16 +416,13 @@ class BerserkerRage extends Spell {
         this.player.switch('zerk');
         this.player.rage = Math.min(this.player.rage + this.rage, 100);
         this.player.auras.berserkerrage.use();
-        this.player.auras.flagellation && this.player.auras.flagellation.use();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
             this.player.auras.consumedrage.use();
     }
     canUse() {
         return this.timer == 0 && !this.player.timer &&
-            (!this.maxrage || this.player.stance == 'zerk' || this.player.rage <= this.maxrage) &&
-            (!this.flagellation || !this.player.auras.flagellation || !this.player.auras.flagellation.timer) &&
-            (!this.consumedrage || !this.player.auras.consumedrage || this.player.auras.consumedrage.timer);
+            (!this.maxrage || this.player.stance == 'zerk' || this.player.rage <= this.maxrage);
     }
 }
 
@@ -471,7 +464,7 @@ class RagePotion extends Spell {
         let oldRage = this.player.rage;
         this.player.rage = Math.min(this.player.rage + ~~rng(this.value1, this.value2), 100);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
             this.player.auras.consumedrage.use();
     }
     canUse() {
@@ -991,7 +984,7 @@ class MightyRagePotion extends Aura {
         this.starttimer = step;
         this.player.updateStrength();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.player.auras.consumedrage && oldRage < 80 && this.player.rage >= 60)
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
             this.player.auras.consumedrage.use();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
@@ -1555,26 +1548,6 @@ class Avenger extends Aura {
         this.duration = 10;
         this.stats = { ap: 200 };
         this.name = 'Argent Avenger';
-    }
-}
-
-class Flagellation extends Aura {
-    constructor(player, id) {
-        super(player, id);
-        this.duration = 12;
-    }
-    use() {
-        if (this.timer) this.uptime += (step - this.starttimer);
-        this.timer = step + this.duration * 1000;
-        this.starttimer = step;
-        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
-    }
-    step() {
-        if (step >= this.timer) {
-            this.uptime += (this.timer - this.starttimer);
-            this.timer = 0;
-            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
-        }
     }
 }
 

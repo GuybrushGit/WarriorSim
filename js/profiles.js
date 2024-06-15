@@ -325,8 +325,6 @@ SIM.PROFILES = {
                 if (typeof spell.maincdactive !== 'undefined') obj.maincdactive = spell.maincdactive;
                 if (typeof spell.priorityap !== 'undefined') obj.priorityap = spell.priorityap;
                 if (typeof spell.priorityapactive !== 'undefined') obj.priorityapactive = spell.priorityapactive;
-                if (typeof spell.flagellation !== 'undefined') obj.flagellation = spell.flagellation;
-                if (typeof spell.consumedrage !== 'undefined') obj.consumedrage = spell.consumedrage;
                 if (typeof spell.unqueue !== 'undefined') obj.unqueue = spell.unqueue;
                 if (typeof spell.unqueueactive !== 'undefined') obj.unqueueactive = spell.unqueueactive;
                 if (typeof spell.exmacro !== 'undefined') obj.exmacro = spell.exmacro;
@@ -410,8 +408,6 @@ SIM.PROFILES = {
                     if (typeof newspell.maincdactive !== 'undefined') spell.maincdactive = newspell.maincdactive;
                     if (typeof newspell.priorityap !== 'undefined') spell.priorityap = newspell.priorityap;
                     if (typeof newspell.priorityapactive !== 'undefined') spell.priorityapactive = newspell.priorityapactive;
-                    if (typeof newspell.flagellation !== 'undefined') spell.flagellation = newspell.flagellation;
-                    if (typeof newspell.consumedrage !== 'undefined') spell.consumedrage = newspell.consumedrage;
                     if (typeof newspell.unqueue !== 'undefined') spell.unqueue = newspell.unqueue;
                     if (typeof newspell.unqueueactive !== 'undefined') spell.unqueueactive = newspell.unqueueactive;
                     if (typeof newspell.exmacro !== 'undefined') spell.exmacro = newspell.exmacro;

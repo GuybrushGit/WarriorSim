@@ -417,9 +417,6 @@ class Player {
                     if (item.furiousthunder) {
                         this.furiousthunder = item.furiousthunder;
                     }
-                    if (item.flagellation && (this.spells.bloodrage || this.spells.berserkerrage)) {
-                        this.auras[item.name.toLowerCase()] = eval(`new ${item.name}(this)`);
-                    }
                     if (item.dmgdw && this.oh) {
                         this.base.dmgmod *= (1 + item.dmgdw / 100) || 1;
                     }
@@ -881,7 +878,7 @@ class Player {
         }
         if (this.rage > 100) this.rage = 100;
 
-        if (this.auras.consumedrage && oldRage < 80 && this.rage >= 60)
+        if (this.auras.consumedrage && oldRage < 60 && this.rage >= 60)
             this.auras.consumedrage.use();
     }
     steptimer(a) {
@@ -954,7 +951,6 @@ class Player {
 
         if (!nobleeds && this.auras.deepwounds && this.auras.deepwounds.timer) this.auras.deepwounds.step();
         if (!nobleeds && this.auras.rend && this.auras.rend.timer) this.auras.rend.step();
-        if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.step();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.step();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.step();
         if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.step();
@@ -1012,7 +1008,6 @@ class Player {
         if (this.auras.deepwounds3 && this.auras.deepwounds3.timer) this.auras.deepwounds3.end();
         if (this.auras.deepwounds4 && this.auras.deepwounds4.timer) this.auras.deepwounds4.end();
         if (this.auras.rend && this.auras.rend.timer) this.auras.rend.end();
-        if (this.auras.flagellation && this.auras.flagellation.timer) this.auras.flagellation.end();
         if (this.auras.berserkerrage && this.auras.berserkerrage.timer) this.auras.berserkerrage.end();
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.end();
         if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.end();
@@ -1396,5 +1391,10 @@ class Player {
         this.rage = Math.min(this.rage, this.talents.rageretained);
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
+    }
+    isEnraged() {
+        return (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) || 
+            (this.auras.consumedrage && this.auras.consumedrage.timer) || 
+            (this.auras.freshmeat && this.auras.freshmeat.timer);
     }
 }
