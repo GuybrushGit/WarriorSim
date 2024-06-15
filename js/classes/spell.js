@@ -78,6 +78,15 @@ class Bloodthirst extends Spell {
         dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
     }
+    use() {
+        this.player.timer = 1500;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        if (this.player.freshmeat && (this.player.auras.freshmeat.firstuse || rng10k() < 1000)) {
+            this.player.auras.freshmeat.use();
+        }
+    }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
     }
@@ -2260,5 +2269,29 @@ class EchoesDread extends Aura {
         this.player.updateAP();
         this.player.updateHaste();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
+class FreshMeat extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Fresh Meat');
+        this.duration = 12;
+        this.mult_stats = { dmgmod: 10 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateDmgMod();
+        this.firstuse = false;
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateDmgMod();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
     }
 }

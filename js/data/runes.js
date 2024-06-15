@@ -186,4 +186,26 @@ var runes = {
             iconname: 'ability_warrior_vigilance',
         },
     ],
+    "back": [
+        {
+            id: 440484,
+            name: 'Fresh Meat',
+            description: "",
+            iconname: 'spell_deathknight_butcher',
+            freshmeat: true,
+        },
+        // {
+        //     id: 440113,
+        //     name: 'Sudden Death',
+        //     description: "",
+        //     iconname: 'ability_warrior_improveddisciplines',
+        //     enable: 440113,
+        // },
+        // {
+        //     id: 440488,
+        //     name: 'Shockwave',
+        //     description: "",
+        //     iconname: 'ability_warrior_shockwave',
+        // },
+    ],
 };

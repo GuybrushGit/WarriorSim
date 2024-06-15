@@ -439,6 +439,10 @@ class Player {
                     if (item.tasteforblood) {
                         this.tasteforblood = item.tasteforblood;
                     }
+                    if (item.freshmeat) {
+                        this.freshmeat = item.freshmeat;
+                        this.auras.freshmeat = new FreshMeat(this);
+                    }
                 }
             }
         }
@@ -940,6 +944,7 @@ class Player {
         if (this.auras.relentlessstrength && this.auras.relentlessstrength.firstuse && this.auras.relentlessstrength.timer) this.auras.relentlessstrength.step();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
+        if (this.auras.freshmeat && this.auras.freshmeat.timer) this.auras.freshmeat.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.step();
 
@@ -992,6 +997,7 @@ class Player {
         if (this.auras.relentlessstrength && this.auras.relentlessstrength.firstuse && this.auras.relentlessstrength.timer) this.auras.relentlessstrength.end();
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
+        if (this.auras.freshmeat && this.auras.freshmeat.timer) this.auras.freshmeat.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.end();
         
