@@ -2097,38 +2097,25 @@ class Rampage extends Aura {
     constructor(player, id) {
         super(player, id);
         this.duration = 30;
-        this.mult_stats = { apmod: 2 };
-        this.stacks = 0;
+        this.mult_stats = { apmod: 10 };
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
-        if (!this.timer) {
-            this.stacks =  1;
-            this.mult_stats.apmod = 2;
-        } 
         this.timer = step + this.duration * 1000;
-        this.player.rage -= 20;
         this.player.timer = 1500;
-        this.player.crittimer = 0;
         this.starttimer = step;
         this.player.updateAP();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
-    proc() {
-        this.stacks++;
-        this.mult_stats.apmod = this.stacks * 2;
-        this.player.updateAP();
-    }
     canUse() {
-        return (!this.timer || (this.timer - step) < 3000) && !this.player.timer && this.player.crittimer && this.player.rage >= 20;
+        return (!this.timer || (this.timer - step) < 3000) && !this.player.timer && this.player.isEnraged();
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateAP();
-            this.player.crittimer = 0;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }

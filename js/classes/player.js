@@ -1304,11 +1304,6 @@ class Player {
                 this.spells.shieldslam.timer = 0;
                 /* start-log */ if (log) this.log(`Sword and Board proc`); /* end-log */
             }
-            // Rampage
-            if (this.auras.rampage && this.auras.rampage.timer && this.auras.rampage.stacks < 5) {
-                this.auras.rampage.proc();
-                /* start-log */ if (log) this.log(`Rampage proc`); /* end-log */
-            }
             // Voodoo Frenzy
             if (this.auras.voodoofrenzy && rng10k() < 1500) {
                 this.auras.voodoofrenzy.use();
