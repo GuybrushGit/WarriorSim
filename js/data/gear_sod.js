@@ -3783,19 +3783,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "p": "inv_helmet_49",
-      "str": 20,
-      "sta": 14,
-      "crit": 1
-    },
-    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -4010,6 +3997,159 @@ var gear = {
       "str": 9,
       "sta": 14,
       "ap": 32
+    },
+    {
+      "id": 226488,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Helm of Might",
+      "p": "inv_helmet_09",
+      "agi": 15,
+      "str": 15,
+      "sta": 28,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1,
+      "block": 15
+    },
+    {
+      "id": 226495,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Jaws of Might",
+      "p": "inv_helmet_09",
+      "str": 28,
+      "sta": 23,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1,
+      "crit": 1
+    },
+    {
+      "id": 226707,
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Shadowcraft Cap",
+      "p": "inv_helmet_41",
+      "agi": 25,
+      "sta": 18,
+      "hit": 1
+    },
+    {
+      "id": 226708,
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Wildheart Cowl",
+      "p": "inv_helmet_27",
+      "sta": 11,
+      "hit": 1
+    },
+    {
+      "id": 226769,
+      "type": "Plate",
+      "slot": "head",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Helm of Valor",
+      "p": "inv_helmet_02",
+      "agi": 14,
+      "str": 25,
+      "sta": 17
+    },
+    {
+      "id": 226860,
+      "type": "Plate",
+      "slot": "head",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Crown of Heroism",
+      "p": "inv_helmet_02",
+      "str": 32,
+      "sta": 18,
+      "crit": 1
+    },
+    {
+      "id": 226869,
+      "type": "Plate",
+      "slot": "head",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Faceguard of Heroism",
+      "p": "inv_helmet_02",
+      "str": 15,
+      "sta": 32,
+      "hit": 1
+    },
+    {
+      "id": 226877,
+      "type": "Plate",
+      "slot": "head",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Helm of Heroism",
+      "p": "inv_helmet_02",
+      "str": 18,
+      "sta": 32,
+      "crit": 1
+    },
+    {
+      "id": 227043,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "3",
+      "i": "71",
+      "name": "Champion's Plate Helm",
+      "p": "inv_helmet_09",
+      "str": 21,
+      "sta": 24,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "id": 227044,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "3",
+      "i": "71",
+      "name": "Lieutenant Commander's Plate Helm",
+      "p": "inv_helmet_09",
+      "str": 21,
+      "sta": 24,
+      "crit": 1,
+      "hit": 1
+    },
+    {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "p": "inv_helmet_49",
+      "str": 20,
+      "sta": 14,
+      "crit": 1
     }
   ],
   "neck": [
@@ -8958,6 +9098,131 @@ var gear = {
       "agi": 10,
       "str": 11,
       "sta": 10
+    },
+    {
+      "id": 226491,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Shoulderplates of Might",
+      "p": "inv_shoulder_15",
+      "agi": 8,
+      "str": 22,
+      "sta": 15,
+      "resist": {
+        "fire": 7
+      }
+    },
+    {
+      "id": 226492,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Pauldrons of Might",
+      "p": "inv_shoulder_15",
+      "agi": 15,
+      "str": 22,
+      "sta": 8,
+      "resist": {
+        "fire": 7
+      },
+      "hit": 1
+    },
+    {
+      "id": 226706,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Shadowcraft Spaulders",
+      "p": "inv_shoulder_07",
+      "agi": 22,
+      "str": 6,
+      "sta": 6
+    },
+    {
+      "id": 226768,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Spaulders of Valor",
+      "p": "inv_shoulder_30",
+      "agi": 10,
+      "str": 14,
+      "sta": 14
+    },
+    {
+      "id": 226858,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Spaulders of Heroism",
+      "p": "inv_shoulder_30",
+      "agi": 10,
+      "str": 18,
+      "sta": 7,
+      "hit": 1
+    },
+    {
+      "id": 226867,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Pauldrons of Heroism",
+      "p": "inv_shoulder_30",
+      "str": 12,
+      "sta": 18,
+      "hit": 1
+    },
+    {
+      "id": 226875,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Shoulders of Heroism",
+      "p": "inv_shoulder_30",
+      "agi": 12,
+      "str": 12,
+      "sta": 18
+    },
+    {
+      "id": 227042,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "3",
+      "i": "71",
+      "name": "Champion's Plate Shoulders",
+      "p": "inv_shoulder_11",
+      "str": 17,
+      "sta": 18,
+      "crit": 1
+    },
+    {
+      "id": 227045,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "3",
+      "i": "71",
+      "name": "Lieutenant Commander's Plate Shoulders",
+      "p": "inv_shoulder_11",
+      "str": 17,
+      "sta": 18,
+      "crit": 1
     },
     {
       "id": 2207381,
@@ -16129,6 +16394,146 @@ var gear = {
       "agi": 8,
       "str": 15,
       "sta": 10
+    },
+    {
+      "id": 226489,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Breastplate of Might",
+      "p": "inv_chest_plate16",
+      "agi": 10,
+      "str": 20,
+      "sta": 25,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1
+    },
+    {
+      "id": 226494,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Hauberk of Might",
+      "p": "inv_chest_plate16",
+      "str": 28,
+      "sta": 23,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1,
+      "crit": 1
+    },
+    {
+      "id": 226700,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Shadowcraft Tunic",
+      "p": "inv_chest_leather_07",
+      "agi": 27,
+      "sta": 15,
+      "hit": 1
+    },
+    {
+      "id": 226715,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Wildheart Vest",
+      "p": "inv_chest_plate06",
+      "sta": 12,
+      "hit": 1
+    },
+    {
+      "id": 226770,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Breastplate of Valor",
+      "p": "inv_chest_plate03",
+      "agi": 10,
+      "str": 24,
+      "sta": 15,
+      "hit": 1
+    },
+    {
+      "id": 226862,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Breastplate of Heroism",
+      "p": "inv_chest_plate03",
+      "agi": 14,
+      "str": 30,
+      "sta": 16,
+      "hit": 1
+    },
+    {
+      "id": 226872,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Chestguard of Heroism",
+      "p": "inv_chest_plate03",
+      "str": 19,
+      "sta": 31,
+      "hit": 1
+    },
+    {
+      "id": 226880,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Chest of Heroism",
+      "p": "inv_chest_plate03",
+      "agi": 13,
+      "str": 21,
+      "sta": 26,
+      "hit": 1
+    },
+    {
+      "id": 227046,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Knight-Captain's Plate Hauberk",
+      "p": "inv_chest_plate16",
+      "str": 21,
+      "sta": 23,
+      "crit": 1
+    },
+    {
+      "id": 227049,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Legionnaire's Plate Hauberk",
+      "p": "inv_chest_plate16",
+      "str": 21,
+      "sta": 23,
+      "crit": 1
     }
   ],
   "wrist": [
@@ -20012,6 +20417,97 @@ var gear = {
       "p": "inv_bracer_14",
       "str": 8,
       "sta": 9
+    },
+    {
+      "id": 226484,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Bracers of Might",
+      "p": "inv_bracer_19",
+      "str": 11,
+      "sta": 19,
+      "hit": 1
+    },
+    {
+      "id": 226499,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Armguards of Might",
+      "p": "inv_bracer_19",
+      "str": 19,
+      "sta": 11,
+      "hit": 1
+    },
+    {
+      "id": 226704,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Shadowcraft Bracers",
+      "p": "inv_bracer_07",
+      "agi": 13,
+      "str": 8,
+      "sta": 5
+    },
+    {
+      "id": 226766,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Bracers of Valor",
+      "p": "inv_bracer_18",
+      "agi": 5,
+      "str": 13,
+      "sta": 8
+    },
+    {
+      "id": 226863,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Bracers of Heroism",
+      "p": "inv_bracer_18",
+      "agi": 8,
+      "str": 15,
+      "sta": 6
+    },
+    {
+      "id": 226865,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Wristguards of Heroism",
+      "p": "inv_bracer_18",
+      "agi": 5,
+      "str": 9,
+      "sta": 14
+    },
+    {
+      "id": 226873,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Wrists of Heroism",
+      "p": "inv_bracer_18",
+      "agi": 5,
+      "str": 9,
+      "sta": 14
     }
   ],
   "hands": [
@@ -26221,6 +26717,152 @@ var gear = {
       "sta": 14
     },
     {
+      "id": 226486,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Gauntlets of Might",
+      "p": "inv_gauntlets_10",
+      "agi": 8,
+      "str": 22,
+      "sta": 17,
+      "resist": {
+        "fire": 7
+      },
+      "hit": 1,
+      "block": 10
+    },
+    {
+      "id": 226497,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Hands of Might",
+      "p": "inv_gauntlets_10",
+      "str": 25,
+      "sta": 15,
+      "resist": {
+        "fire": 7
+      },
+      "hit": 1
+    },
+    {
+      "id": 226702,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Shadowcraft Gloves",
+      "p": "inv_gauntlets_24",
+      "agi": 18,
+      "str": 11,
+      "sta": 7
+    },
+    {
+      "id": 226711,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Wildheart Gloves",
+      "p": "inv_gauntlets_17",
+      "sta": 7,
+      "hit": 1
+    },
+    {
+      "id": 226748,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Gauntlets of Elements",
+      "p": "inv_gauntlets_11",
+      "sta": 4,
+      "hit": 1
+    },
+    {
+      "id": 226771,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Gauntlets of Valor",
+      "p": "inv_gauntlets_26",
+      "agi": 11,
+      "str": 18,
+      "sta": 7
+    },
+    {
+      "id": 226861,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 0,
+      "q": "4",
+      "i": "55",
+      "name": "Gauntlets of Heroism",
+      "p": "inv_gauntlets_26",
+      "str": 19,
+      "sta": 14,
+      "crit": 1
+    },
+    {
+      "id": 226870,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 0,
+      "q": "4",
+      "i": "55",
+      "name": "Handguards of Heroism",
+      "p": "inv_gauntlets_26",
+      "str": 12,
+      "sta": 18
+    },
+    {
+      "id": 226878,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 0,
+      "q": "4",
+      "i": "55",
+      "name": "Gloves of Heroism",
+      "p": "inv_gauntlets_26",
+      "str": 18,
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 227050,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "3",
+      "i": "66",
+      "name": "Blood Guard's Plate Gauntlets",
+      "p": "inv_gauntlets_26",
+      "str": 17,
+      "sta": 17
+    },
+    {
+      "id": 227053,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "3",
+      "i": "66",
+      "name": "Knight-Lieutenant's Plate Gauntlets",
+      "p": "inv_gauntlets_26",
+      "str": 17,
+      "sta": 17
+    },
+    {
       "id": "213319a",
       "type": "Leather",
       "slot": "hands",
@@ -31959,6 +32601,104 @@ var gear = {
       "str": 13,
       "sta": 14,
       "block": 14
+    },
+    {
+      "id": 226485,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Belt of Might",
+      "p": "inv_belt_09",
+      "agi": 8,
+      "str": 21,
+      "sta": 15,
+      "resist": {
+        "fire": 7
+      },
+      "block": 18
+    },
+    {
+      "id": 226498,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Sash of Might",
+      "p": "inv_belt_09",
+      "str": 22,
+      "sta": 15,
+      "resist": {
+        "fire": 7
+      },
+      "crit": 1
+    },
+    {
+      "id": 226701,
+      "type": "Leather",
+      "slot": "waist",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Shadowcraft Belt",
+      "p": "inv_belt_03",
+      "agi": 14,
+      "str": 14,
+      "sta": 9
+    },
+    {
+      "id": 226765,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Belt of Valor",
+      "p": "inv_belt_34",
+      "agi": 7,
+      "str": 14,
+      "sta": 14
+    },
+    {
+      "id": 226864,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Belt of Heroism",
+      "p": "inv_belt_34",
+      "str": 17,
+      "sta": 10,
+      "crit": 1
+    },
+    {
+      "id": 226866,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Waistguard of Heroism",
+      "p": "inv_belt_34",
+      "str": 12,
+      "sta": 15,
+      "hit": 1
+    },
+    {
+      "id": 226874,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 0,
+      "q": "3",
+      "i": "65",
+      "name": "Waist of Heroism",
+      "p": "inv_belt_34",
+      "agi": 9,
+      "str": 15,
+      "sta": 12
     }
   ],
   "legs": [
@@ -37336,6 +38076,145 @@ var gear = {
         "fire": 10
       },
       "hit": 1
+    },
+    {
+      "id": 226490,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Legplates of Might",
+      "p": "inv_pants_04",
+      "agi": 6,
+      "str": 20,
+      "sta": 26,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1,
+      "block": 27
+    },
+    {
+      "id": 226493,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Leggings of Might",
+      "p": "inv_pants_04",
+      "agi": 14,
+      "str": 25,
+      "sta": 25,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1
+    },
+    {
+      "id": 226705,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Shadowcraft Pants",
+      "p": "inv_pants_02",
+      "agi": 25,
+      "str": 12,
+      "sta": 12
+    },
+    {
+      "id": 226750,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Kilt of Elements",
+      "p": "inv_pants_03",
+      "sta": 11,
+      "hit": 1
+    },
+    {
+      "id": 226767,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Legplates of Valor",
+      "p": "inv_pants_04",
+      "agi": 10,
+      "str": 26,
+      "sta": 15
+    },
+    {
+      "id": 226859,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 0,
+      "q": "3",
+      "i": "66",
+      "name": "Legplates of Heroism",
+      "p": "inv_pants_04",
+      "agi": 14,
+      "str": 28,
+      "sta": 8,
+      "hit": 1
+    },
+    {
+      "id": 226868,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 0,
+      "q": "3",
+      "i": "66",
+      "name": "Legguards of Heroism",
+      "p": "inv_pants_04",
+      "str": 16,
+      "sta": 25,
+      "block": 18
+    },
+    {
+      "id": 226876,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 0,
+      "q": "3",
+      "i": "66",
+      "name": "Legs of Heroism",
+      "p": "inv_pants_04",
+      "agi": 11,
+      "str": 25,
+      "sta": 16
+    },
+    {
+      "id": 227047,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Knight-Captain's Plate Leggings",
+      "p": "inv_pants_06",
+      "str": 12,
+      "sta": 17,
+      "crit": 2
+    },
+    {
+      "id": 227048,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Legionnaire's Plate Leggings",
+      "p": "inv_pants_06",
+      "str": 12,
+      "sta": 17,
+      "crit": 2
     }
   ],
   "feet": [
@@ -42096,6 +42975,130 @@ var gear = {
       "p": "inv_bracer_04",
       "agi": 17,
       "str": 8
+    },
+    {
+      "id": 226487,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Sabatons of Might",
+      "p": "inv_boots_plate_04",
+      "agi": 8,
+      "str": 15,
+      "sta": 26,
+      "resist": {
+        "fire": 7
+      },
+      "block": 12
+    },
+    {
+      "id": 226496,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Treads of Might",
+      "p": "inv_boots_plate_04",
+      "str": 21,
+      "sta": 20,
+      "resist": {
+        "fire": 7
+      },
+      "hit": 1
+    },
+    {
+      "id": 226703,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Shadowcraft Boots",
+      "p": "inv_boots_08",
+      "agi": 18,
+      "str": 11,
+      "sta": 8
+    },
+    {
+      "id": 226764,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Boots of Valor",
+      "p": "inv_boots_plate_03",
+      "agi": 7,
+      "str": 18,
+      "sta": 11
+    },
+    {
+      "id": 226857,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Battleboots of Heroism",
+      "p": "inv_boots_plate_03",
+      "str": 25,
+      "sta": 12,
+      "hit": 1
+    },
+    {
+      "id": 226871,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Sabatons of Heroism",
+      "p": "inv_boots_plate_03",
+      "str": 15,
+      "sta": 20,
+      "hit": 1
+    },
+    {
+      "id": 226879,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 0,
+      "q": "4",
+      "i": "60",
+      "name": "Boots of Heroism",
+      "p": "inv_boots_plate_03",
+      "str": 20,
+      "sta": 20,
+      "hit": 1
+    },
+    {
+      "id": 227051,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "3",
+      "i": "66",
+      "name": "Blood Guard's Plate Greaves",
+      "p": "inv_boots_plate_09",
+      "agi": 9,
+      "str": 10,
+      "sta": 23
+    },
+    {
+      "id": 227052,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "3",
+      "i": "66",
+      "name": "Knight-Lieutenant's Plate Greaves",
+      "p": "inv_boots_plate_09",
+      "agi": 9,
+      "str": 10,
+      "sta": 23
     }
   ],
   "finger1": [
@@ -44244,6 +45247,21 @@ var gear = {
       "p": "inv_jewelry_ring_37",
       "sta": 4,
       "ap": 6
+    },
+    {
+      "id": 227455,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "4",
+      "i": "65",
+      "name": "Ocean's Breeze",
+      "p": "inv_jewelry_ring_28",
+      "sta": 8,
+      "resist": {
+        "fire": 20
+      },
+      "ap": 22
     }
   ],
   "finger2": [
@@ -46392,6 +47410,21 @@ var gear = {
       "p": "inv_jewelry_ring_37",
       "sta": 4,
       "ap": 6
+    },
+    {
+      "id": 227455,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 0,
+      "q": "4",
+      "i": "65",
+      "name": "Ocean's Breeze",
+      "p": "inv_jewelry_ring_28",
+      "sta": 8,
+      "resist": {
+        "fire": 20
+      },
+      "ap": 22
     }
   ],
   "trinket1": [
@@ -78924,7 +79957,7 @@ var gear = {
       "slot": "twohand",
       "r": 125,
       "q": "4",
-      "i": "200",
+      "i": "100",
       "name": "Bloodthirst Blade",
       "speed": 4.2,
       "mindmg": 649,
@@ -79164,8 +80197,7 @@ var gear = {
       "p": "inv_staff_goldfeathered_01",
       "agi": 19,
       "str": 31,
-      "sta": 13,
-      "ap": 115
+      "sta": 13
     },
     {
       "id": 220686,
@@ -79298,6 +80330,87 @@ var gear = {
         "fire": 10
       },
       "crit": 1
+    },
+    {
+      "id": 225893,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 125,
+      "q": "4",
+      "i": "100",
+      "name": "Epoch's End",
+      "speed": 4.2,
+      "mindmg": 649,
+      "maxdmg": 764,
+      "p": "inv_sword_50",
+      "str": 333
+    },
+    {
+      "id": 227683,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "5",
+      "i": "80",
+      "name": "Sulfuras Hand of Ragnaros",
+      "speed": 3.8,
+      "mindmg": 229,
+      "maxdmg": 382,
+      "p": "inv_hammer_unique_sulfuras",
+      "str": 12,
+      "sta": 12,
+      "resist": {
+        "fire": 32
+      },
+      "proc": {
+        "magic": true,
+        "dmg": 303,
+        "tick": 15,
+        "interval": "2000",
+        "duration": "10000"
+      }
+    },
+    {
+      "id": 227684,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "67",
+      "name": "Sulfuron Hammer",
+      "speed": 3.8,
+      "mindmg": 181,
+      "maxdmg": 303,
+      "p": "inv_hammer_unique_sulfuras",
+      "str": 10,
+      "sta": 10,
+      "resist": {
+        "fire": 30
+      },
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 92,
+        "tick": 4,
+        "interval": "2000",
+        "duration": "8000"
+      }
+    },
+    {
+      "id": 227691,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 59,
+      "q": "4",
+      "i": "64",
+      "name": "Blade of Hanna",
+      "speed": 2.1,
+      "mindmg": 101,
+      "maxdmg": 152,
+      "p": "inv_sword_10",
+      "agi": 11,
+      "str": 11,
+      "sta": 11
     }
   ]
 };

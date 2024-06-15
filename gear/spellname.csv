@@ -21565,8 +21565,10 @@ ID,Name_lang
 400586,Arcane Blast
 400588,Missile Barrage
 400589,Missile Barrage
+400610,Arcane Barrage
 400613,Living Bomb
 400614,Living Bomb
+400615,Overheat
 400616,Fire Blast
 400618,Fire Blast
 400619,Fire Blast
@@ -21600,6 +21602,8 @@ ID,Name_lang
 401683,Translate Spell Notes
 401684,Translate Spell Notes
 401699,Translate Spell Notes
+401719,Arcane Barrage
+401722,Engrave Cloak - Arcane Barrage
 401724,Hot Streak
 401725,Brain Freeze
 401726,Advanced Warding
@@ -21609,6 +21613,7 @@ ID,Name_lang
 401734,Rewind Time
 401735,Frostfire Bolt
 401736,Missile Barrage
+401737,Overheat
 401741,Fingers of Frost
 401743,Regeneration
 401744,Living Flame
@@ -21621,6 +21626,7 @@ ID,Name_lang
 401761,Engrave Gloves - Rewind Time
 401762,Engrave Belt - Frostfire Bolt
 401763,Engrave Belt - Missile Barrage
+401764,Engrave Cloak - Overheat
 401765,Engrave Chest - Fingers of Frost
 401767,Engrave Chest - Regeneration
 401768,Engrave Pants - Living Flame
@@ -21631,6 +21637,7 @@ ID,Name_lang
 401877,Prayer of Mending
 401880,Prayer of Mending
 401882,Prayer of Mending
+401937,Binding Heal
 401946,Circle of Healing
 401955,Shadow Word: Death
 401956,Cryomantic Mishap
@@ -21643,6 +21650,7 @@ ID,Name_lang
 401988,Mana Leech
 401990,Shadowcrawl
 401991,Shadowcrawl
+402000,Soul Warding
 402004,Pain Suppression
 402010,Polymorph Cured
 402069,Cut-throat Ambush
@@ -21658,11 +21666,13 @@ ID,Name_lang
 402362,White
 402368,Black
 402392,Teleport
+402668,Vampiric Touch
 402686,Wild Polymorph
 402753,Runecarving:  Learn Engrave Shadowstep
 402755,Runecarving: Learn Engrave Quick Draw
 402758,Runecarving:  Learn Engrave Shuriken Toss
 402760,Runecarving:  Learn Engrave Deadly Brew
+402779,Vampiric Touch
 402789,Eye of the Void
 402790,Shadow Bolt
 402791,Curse of Shadow
@@ -21676,18 +21686,24 @@ ID,Name_lang
 402818,Degrade
 402832,Prayer of Mending
 402833,Shadow Word: Death
+402834,Soul Warding
 402836,Homunculi
+402837,Binding Heal
 402838,Shared Pain
 402839,Pain Suppression
+402841,Vampiric Touch
 402842,Circle of Healing
 402843,Shadowfiend
 402844,Penance
 402846,Eye of the Void
 402848,Engrave Pants - Prayer of Mending
 402849,Engrave Gloves - Shadow Word: Death
+402850,Engrave Cloak - Soul Warding
 402852,Engrave Pants - Homunculi
+402853,Engrave Cloak - Binding Heal
 402854,Engrave Pants - Shared Pain
 402855,Engrave Boots - Pain Suppression
+402857,Engrave Cloak - Vampiric Touch
 402859,Engrave Gloves - Circle of Healing
 402861,Engrave Pants - Shadowfiend
 402862,Engrave Gloves - Penance
@@ -21706,6 +21722,9 @@ ID,Name_lang
 403215,Commanding Shout
 403218,Endless Rage
 403219,Furious Thunder
+403228,Meathook
+403231,Meathook
+403233,Meathook
 403332,Heroic Shot
 403338,Intervene
 403339,Intervene
@@ -21717,6 +21736,7 @@ ID,Name_lang
 403359,Enraged Regeneration
 403434,Victory Rush
 403435,Commanding Shout
+403436,Meathook
 403437,Intervene
 403446,Engrave Pants - Commanding Shout
 403467,Engrave Boots - Enraged Regeneration
@@ -21833,6 +21853,7 @@ ID,Name_lang
 407613,Beacon of Light
 407614,Light's Beacon
 407615,Beacon of Light
+407624,Aura Mastery
 407627,Righteous Fury
 407628,Righteous Fury
 407631,Hand of Reckoning
@@ -21850,6 +21871,7 @@ ID,Name_lang
 407778,Divine Storm
 407782,Divine Storm
 407784,Divine Storm
+407788,Avenging Wrath
 407791,Aku'mai's Rage
 407794,Triple Puncture
 407798,Seal of Martyrdom
@@ -21867,6 +21889,7 @@ ID,Name_lang
 407822,Frost Arrow
 407880,Inspiration Exemplar
 407881,Inspiration Exemplar
+407957,Avenging Wrath
 407973,Wild Strike
 407975,Wild Strikes
 407977,Wild Strikes
@@ -21898,6 +21921,7 @@ ID,Name_lang
 408343,Fire Nova
 408344,Fire Nova
 408345,Fire Nova
+408423,Fire Nova
 408424,Fire Nova
 408426,Fire Nova
 408427,Fire Nova
@@ -21961,6 +21985,8 @@ ID,Name_lang
 409163,Engrave Belt - Focused Rage
 409214,Tanking Elite
 409215,Tanking Elite
+409239,Fan of Knives
+409240,Fan of Knives
 409317,Strength of Soul
 409324,Ancestral Guidance
 409333,Ancestral Guidance
@@ -21996,6 +22022,7 @@ ID,Name_lang
 409554,Explosive Shot
 409580,Heart of the Lion
 409583,Heart of the Lion
+409593,Kill Shot
 409687,Dual Wield Specialization
 409691,Raptor Strike
 409693,Raptor Strike
@@ -22025,9 +22052,11 @@ ID,Name_lang
 409920,Learn Relic (Judgement)
 409922,Hammer of the Righteous
 409924,Divine Storm
-409925,Seal of Martyrdom
+409925,Divine Light
 409930,Libram of Judgement
+409932,Aura Mastery
 409933,Avenger's Shield
+409934,Avenging Wrath
 409935,Divine Sacrifice
 409936,Inspiration Exemplar
 409938,Fire Nova
@@ -22046,12 +22075,12 @@ ID,Name_lang
 409957,Steady Shot
 409958,Master Marksman
 409959,Expose Weakness
-409960,Heart of the Lion
+409960,Cobra Slayer
 409961,Dual Wield Specialization
 409962,Beast Mastery
 409963,Summon Spirit
 409968,Trap Launcher
-409974,Kill Command
+409974,Kill Shot
 409976,Chimera Shot
 409978,Explosive Shot
 409979,Lone Wolf
@@ -22059,12 +22088,13 @@ ID,Name_lang
 409999,Engrave Gloves - Beacon of Light
 410001,Engrave Gloves - Hand of Reckoning
 410002,Engrave Gloves - Crusader Strike
+410005,Engrave Pants - Aura Mastery
 410008,Engrave Pants - Avenger's Shield
 410010,Engrave Pants - Divine Sacrifice
 410011,Engrave Pants - Inspiration Exemplar
 410013,Engrave Bracers - Hammer of the Righteous
 410014,Engrave Chest - Divine Storm
-410015,Engrave Chest - Seal of Martyrdom
+410015,Engrave Chest - Divine Light
 410021,Engrave Chest - Wild Strikes
 410023,Engrave Pants - Savage Roar
 410025,Engrave Gloves - Mangle
@@ -22090,10 +22120,10 @@ ID,Name_lang
 410107,Engrave Pants - Way of Earth
 410109,Engrave Belt - Steady Shot
 410110,Engrave Gloves - Beast Mastery
-410111,Engrave Pants - Kill Command
+410111,Engrave Pants - Kill Shot
 410113,Engrave Chest - Master Marksman
 410114,Engrave Belt - Expose Weakness
-410115,Engrave Chest - Heart of the Lion
+410115,Cobra Slayer
 410116,Engrave Boots - Dual Wield Specialization
 410118,Engrave Boots - Trap Launcher
 410121,Engrave Gloves - Chimera Shot
@@ -22121,6 +22151,7 @@ ID,Name_lang
 410971,Learn Rune From Prophecy
 411115,Survival of the Fittest
 411124,Survival of the Fittest
+411128,Swipe
 411173,[DNT] Player is in Mokwa Trigger
 411186,Place Bait
 411210,Healing Wave
@@ -22161,6 +22192,7 @@ ID,Name_lang
 412072,Shadow Strike
 412079,Shadow Strike
 412080,Shadow Strike
+412096,Crimson Tempest
 412107,Hate to Zero
 412113,Remove Greater Curse
 412114,Void Empowerment
@@ -22201,7 +22233,6 @@ ID,Name_lang
 412456,March of the Murlocs
 412466,March of the Murlocs
 412507,Blood Frenzy
-412508,Blood Frenzy Rage Effect
 412510,Mass Regeneration
 412513,Gladiator Stance
 412526,Mind Flay
@@ -22321,6 +22352,7 @@ ID,Name_lang
 415073,Exorcism
 415076,Exorcist
 415093,Summon Lightning VFX
+415096,Coherence
 415100,Power Surge
 415105,Power Surge
 415112,Vateya Timberhoof - Trade Quilboar Head For Rune Fragment
@@ -22362,6 +22394,8 @@ ID,Name_lang
 415431,Avoidance
 415449,Waist Rune Ability
 415450,Feet Rune Ability
+415452,Improved Swipe
+415457,Fan of Knives
 415459,Spell Power
 415460,Burnout
 415467,Mass Regeneration
@@ -22380,6 +22414,7 @@ ID,Name_lang
 415717,Catlike Reflexes
 415718,Aspect of the Viper
 415719,Lock and Load
+415720,Kill Shot
 415723,Melee Specialist
 415725,Waylay
 415729,Enlightenment
@@ -22395,16 +22430,19 @@ ID,Name_lang
 415750,Incinerate
 415751,Dance of the Wicked
 415755,Guarded by the Light
-415756,Exorcist
+415756,Aura Mastery
 415759,Skull Bash
 415760,Lacerate
 415761,Living Seed
 415762,Elune's Fires
 415768,Burn
-415816,Invigoration
+415813,Greater Ghost Wolf
+415816,Wyvern Strike
 415817,Rapid Killing
 415818,Sniper Training
 415822,Raptor Fury
+415918,Engrave Cloak - Crimson Tempest
+415922,Engrave Cloak - Blunderbuss
 415926,Engrave Boots - Waylay
 415934,Engrave Boots - Spell Power
 415936,Engrave Gloves - Living Bomb
@@ -22428,7 +22466,7 @@ ID,Name_lang
 416028,Engrave Boots - Sacred Shield
 416031,Engrave Boots - The Art of War
 416035,Engrave Boots - Guarded by the Light
-416037,Engrave Pants - Exorcist
+416037,Engrave Pants - Aura Mastery
 416042,Engrave Chest - Survival of the Fittest
 416044,Engrave Gloves - Sunfire
 416046,Engrave Gloves - Skull Bash
@@ -22438,12 +22476,15 @@ ID,Name_lang
 416054,Engrave Belt - Power Surge
 416055,Engrave Helm - Mental Dexterity
 416057,Engrave Chest - Healing Rain
+416062,Engrave Cloak - Coherence
 416066,Engrave Helm - Burn
+416081,Coherence
 416083,Engrave Helm - Catlike Reflexes
 416084,Engrave Belt - Aspect of the Viper
 416085,Engrave Helm - Lock and Load
 416086,Engrave Belt - Melee Specialist
-416089,Engrave Boots - Invigoration
+416087,Engrave Belt - Kill Shot
+416089,Engrave Boots - Wyvern Strike
 416090,Engrave Helm - Rapid Killing
 416091,Engrave Pants - Sniper Training
 416093,Engrave Bracers - Raptor Fury
@@ -22478,6 +22519,7 @@ ID,Name_lang
 416825,Reveal Poacher
 416837,Tame Adder
 416861,Adder Pheromone
+416863,Aura Mastery
 417045,Tiger's Fury
 417046,King of the Jungle
 417051,Natural Reaction
@@ -22859,8 +22901,8 @@ ID,Name_lang
 425336,Shamanistic Rage
 425339,Molten Blast
 425340,Molten Blast
-425341,Shamanistic Rage
-425343,Engrave Pants - Shamanistic Rage
+425341,Greater Ghost Wolf
+425343,Engrave Pants - Greater Ghost Wolf
 425344,Engrave Gloves - Molten Blast
 425412,Frenzied Assault
 425415,Enrage
@@ -22890,14 +22932,13 @@ ID,Name_lang
 425477,Engrave Pants - Demonic Grace
 425480,Sleep
 425497,Toss Bait
-425585,Aegis
 425589,Aegis
 425600,Horn of Lordaeron
 425609,Rebuke
-425614,Horn of Lordaeron
+425614,Hallowed Ground
 425615,Aegis
 425616,Rebuke
-425618,Engrave Chest - Horn of Lordaeron
+425618,Engrave Chest - Hallowed Ground
 425619,Engrave Chest - Aegis
 425621,Engrave Pants - Rebuke
 425711,Carve
@@ -22957,10 +22998,10 @@ ID,Name_lang
 426157,The Art of War
 426158,Sheath of Light
 426159,Sheath of Light
-426162,Sheath of Light
+426162,Fanaticism
 426173,Enlightened Judgements
-426174,Enlightened Judgements
-426175,Engrave Belt - Enlightened Judgements
+426174,Malleable Protection
+426175,Engrave Belt - Malleable Protection
 426176,Sheath of Light
 426178,Engrave Belt - Sheath of Light
 426179,Infusion of Light
@@ -23017,6 +23058,7 @@ ID,Name_lang
 426503,Homunculi
 426504,Homunculi
 426506,Eye of the Void
+426570,Fan of Knives
 426571,Search Corpse
 426597,Destroy
 426598,Spawn Omni Diffusion Armor
@@ -23049,9 +23091,6 @@ ID,Name_lang
 426923,Fire Form
 426925,Water Form
 426940,Rampage
-426942,Rampage
-426945,Rampage Enabling Driver
-426947,Rampage Enabler
 426953,Taste for Blood
 426969,Taste for Blood
 426972,Vigilance
@@ -23997,6 +24036,10 @@ ID,Name_lang
 436563,DNT Void Phase
 436564,Blunderbuss
 436570,Cluck!
+436608,Fan of Knives
+436609,Engrave Cloak - Fan of Knives
+436610,Blunderbuss
+436611,Crimson Tempest
 436620,Duel The Swordsman
 436622,Defeated Wandering Swordsman
 436623,Wandering Swordsman Reward
@@ -24329,6 +24372,7 @@ ID,Name_lang
 439500,Sebacious Poison
 439503,Atrophic Poison
 439505,Numbing Poison
+439510,Improved Swipe
 439512,Swipe
 439540,Walking Bomb Passive Proc (100%)
 439581,[DNT] - Radiation Cloud Visual
@@ -24341,6 +24385,18 @@ ID,Name_lang
 439672,Radioactive Bomb
 439691,Teleport to Booty Bay
 439731,Domesticated Attack Chicken
+439733,Tree of Life
+439734,Tree of Life (Passive)
+439745,Tree of Life
+439748,Starfall
+439753,Starfall
+439755,Starfall
+439756,Starfall
+439765,Engrave Cloak - Improved Swipe
+439766,Tree of Life
+439767,Engrave Cloak - Tree of Life
+439768,Starfall
+439770,Engrave Cloak - Starfall
 439822,Electrical Grid
 439823,Electrical Grid
 439824,Electrical Grid
@@ -24373,6 +24429,7 @@ ID,Name_lang
 440093,Gear Toss
 440106,Resurrection
 440108,Pacify Self
+440113,Sudden Death
 440114,Sudden Death
 440123,[DNT] Despawn
 440212,Cryoblast
@@ -24384,8 +24441,27 @@ ID,Name_lang
 440414,Widget Volley
 440471,Toxic Ventilation
 440483,Enrage
+440484,Fresh Meat
 440486,High Voltage!
+440488,Shockwave
+440492,Engrave Cloak - Fresh Meat
+440493,Fresh Meat
+440494,Engrave Cloak - Sudden Death
+440495,Sudden Death
+440496,Engrave Cloak - Shockwave
+440497,Shockwave
 440505,Invisibility
+440520,Improved Volley
+440529,Resourcefulness
+440531,Hit and Run
+440533,Hit and Run
+440557,Engrave Cloak - Resourcefulness
+440558,Resourcefulness
+440560,Engrave Cloak - Improved Volley
+440561,Improved Volley
+440563,Engrave Cloak - Hit and Run
+440564,Hit and Run
+440569,"Storm, Earth, and Fire"
 440574,Earthgrab
 440580,Feral Spirit
 440586,Bash
@@ -24393,9 +24469,14 @@ ID,Name_lang
 440593,Spirit Hunt
 440594,Avoidance
 440595,Shaman Pet Scaling
+440605,Spirit Leap
 440609,Spirit Hunt
 440610,Spirit Walk
+440630,Engrave Cloak - Feral Spirit
+440631,Feral Spirit
 440632,Attack Power - Feral (+36)
+440633,"Storm, Earth, and Fire"
+440634,"Engrave Cloak - Storm, Earth, and Fire"
 440636,Electrical Grid
 440637,Electrical Grid
 440638,Electrical Grid
@@ -24406,14 +24487,24 @@ ID,Name_lang
 440643,Electrical Grid
 440651,Sacred Shield
 440656,High Voltage!
+440658,Shield of Righteousness
 440664,Sludge
+440666,Vindicator
 440667,Vindicator
 440668,Vindicator
+440672,Righteous Vengeance
 440675,Righteous Vengeance
 440677,Righteous Vengeance
 440720,Scooty's Not-Quite-Divine Shield
+440788,Engrave Cloak - Shield of Righteousness
+440789,Shield of Righteousness
+440790,Engrave Cloak - Vindicator
+440791,Vindicator
+440792,Engrave Cloak - Righteous Vengeance
+440794,Righteous Vengeance
 440802,Frozen Orb
 440804,Frozen Orb
+440809,Frozen Orb
 440813,Frozen Orb
 440817,[DNT] Holdout Teleport - Teleport To Crowd Pummeler Room
 440818,[DNT] Holdout Teleport - Crowd Pummeler - Floating Visual
@@ -24436,9 +24527,19 @@ ID,Name_lang
 440847,[DNT] Holdout Teleport - Teleport To Electrocutioner Room
 440848,[DNT] Holdout Teleport - Teleport To Thermaplugg Room
 440856,S03 - 50 - Rogue 45 Quest Start
+440858,Engrave Cloak - Frozen Orb
+440859,Frozen Orb
+440870,Decimation
 440873,Decimation
 440882,Infernal Armor
+440892,Mark of Chaos
 440895,Mark of Chaos
+440922,Engrave Cloak - Decimation
+440923,Decimation
+440924,Engrave Cloak - Mark of Chaos
+440925,Mark of Chaos
+440926,Engrave Cloak - Infernal Armor
+440927,Infernal Armor
 440981,Weapon Damage 03
 441004,[DNT] S03 - GNO Raid - Crowd Pummeler - Platform Area Trigger Dummy Aura
 441042,Gear Toss
@@ -24483,6 +24584,19 @@ ID,Name_lang
 442622,Acid Breath
 442623,Wing Buffet
 442625,Delayed Wing Buffet
+442813,Sword Specialization
+442876,Axe Specialization
+442881,Mace Specialization
+442887,Dagger Specialization
+442890,Fist Weapon Specialization
+442891,Ranged Weapon Specialization
+442892,Pole Weapon Specialization
+442893,Arcane Specialization
+442894,Fire Specialization
+442895,Frost Specialization
+442896,Nature Specialization
+442897,Shadow Specialization
+442898,Holy Specialization
 442945,Saved by the Light
 442946,Near Death
 442947,"Feeling much better, thank you!"
@@ -25302,13 +25416,27 @@ ID,Name_lang
 450110,Decay
 450403,Lethal Shots
 450409,Call of Sul'thraze
+450512,"S03 - Attack Power 40, Spell Damage 23, Healing 40 - Wildheart"
+450516,"S03 - Attack Power 40, Healing 32 - Lightforge"
+450517,"S03 - Attack Power 40, Spell Damage 23, Healing 44 - The Elements"
+450527,S03 - Mana Proc on Cast - Magister's Regalia
+450554,Sudden Insight
+450576,S03 - Mana Proc on Cast - Vestments of the Devout
+450577,S03 - Mana Proc on Cast - Beaststalker Armor
+450583,Dark Reward
+450585,S03 - Heal Proc on Cast - Dreadmist Raiment
+450587,S03 - Warrior Armor Heal Trigger - Battlegear of Valor
 450588,Summon Player
+450589,Warrior's Resolve
 450600,Hex
 450601,Chain Lightning
 450602,Lightning Bolt
 450603,Healing Wave
 450606,Wandering Plague
 450607,Wandering Plague
+450608,S03 - Druid Energize Trigger - Wildheart Raiment
+450625,Item - Crusader's Wrath Proc - Lightforge Armor
+450626,Item - The Furious Storm Proc
 450640,Wandering Plague
 450642,Volatile Infection
 450643,Volatile Infection
@@ -25333,6 +25461,8 @@ ID,Name_lang
 451227,Despawn Caster
 451398,Fire Crown
 451415,Sandstorm
+451438,Dream Eater
+451439,Dream Eater
 451706,Screaming Chain Pauldrons
 451709,Goblin Rocket Helmet
 451710,Goblin Sapper Charge
@@ -25355,11 +25485,435 @@ ID,Name_lang
 452154,Rolling Thunder
 452185,Teleport Players
 452285,Summon Emerald Warden
+452424,Gla'sir
+452428,Gla'sir
+452430,Lae'rar
+452432,Lae'rar
+452433,Summon Gla'sir
+452434,Summon Lae'rar
+452454,Boon of Water
+452456,Boon of Air
+452460,Boon of Fire
+452464,Boon of Earth
+452466,Terrestris
+452474,Suzerain
 452574,Fragile Armor
+452745,Dream Eater
+452857,Knockdown
+452862,Suzerain
+453009,Gla'sir
+453017,Gla'sir
+453021,Gla'sir
+453028,Gla'sir
+453053,Attack Power - Feral (+260)
+453081,Boon of Water
+453085,Boon of Fire
 453124,S03 - Tuning and Overrides Passive - Druid
 453165,Sniper Training
+453341,[DNT] Overture
+453342,[DNT] Beatdown
+453343,[DNT] Beatdown
+453344,[DNT] Beatdown
+453482,Astral Form
+453593,S03 - PvP - Damage Reduction Aura
+453622,Feral Combat Specialization
+453635,Engrave Ring - Sword Specialization
+453688,Engrave Ring - Axe Specialization
+453689,Engrave Ring - Mace Specialization
+453690,Engrave Ring - Dagger Specialization
+453691,Engrave Ring - Fist Weapon Specialization
+453692,Engrave Ring - Ranged Weapon Specialization
+453694,Engrave Ring - Pole Weapon Specialization
+453695,Engrave Ring - Arcane Specialization
+453696,Engrave Ring - Fire Specialization
+453697,Engrave Ring - Frost Specialization
+453698,Engrave Ring - Nature Specialization
+453700,Engrave Ring - Shadow Specialization
+453702,Engrave Ring - Holy Specialization
+453703,Engrave Ring - Feral Combat Specialization
+454017,Redirect Portal
 454042,Burn
 454197,Invocation
+454204,Destination: Vosh'Aranas
+454207,Destination: Cen'gar
+454208,Destination: Niskara
+454209,Destination: Zzalrukh
+454210,Destination: Evasilier
 454427,Invocation
-453593,S03 - PvP - Damage Reduction Aura
+454466,Redirect Portal
+454469,Overcharge
 455350,Veil of Shadow
+455586,Molten Obsidian Core
+455595,Molten Obsidian Core Proc Effect
+455823,[DNT] Swim Area Trigger
+455852,S03 - Item - T1 - Druid - Balance 2P Bonus
+455858,S03 - Item - T1 - Druid - Balance 4P Bonus
+455859,S03 - Item - T1 - Druid - Balance 6P Bonus
+455864,S03 - Item - T1 - Druid - Feral 2P Bonus
+455868,Revealed Weakness
+455872,S03 - Item - T1 - Druid - Feral 4P Bonus
+455873,S03 - Item - T1 - Druid - Feral 6P Bonus
+455876,Polish
+455903,Sustained Roar
+455987,Decisive Strike
+455989,Decisive Strike
+455991,Thunder Stomp
+455994,Crescent Smash
+456010,Higher Power
+456194,S03 - Item - T1 - Druid - Restoration 2P Bonus
+456195,Innervate
+456222,S03 - Item - T1 - Druid - Restoration 4P Bonus
+456223,Voltaic  Icon
+456224,Mana Surge
+456322,S03 - Item - T1 - Druid - Restoration 6P Bonus
+456325,S03 - Item - T1 - Druid - Guardian 2P Bonus
+456328,S03 - Item - T1 - Druid - Guardian 4P Bonus
+456332,S03 - Item - T1 - Druid - Guardian 6P Bonus
+456333,Cower
+456337,S03 - Item - T1 - Hunter - Ranged 2P Bonus
+456339,Ferocity
+456341,S03 - Item - T1 - Hunter - Melee 4P Bonus
+456344,Undead Slaying
+456347,Beast Slaying
+456348,Dragon Slaying
+456349,Elemental Slaying
+456352,Demon Slaying
+456360,Giant Slaying
+456361,Humanoid Slaying
+456379,S03 - Item - T1 - Hunter - Ranged 6P Bonus
+456382,Precision
+456389,S03 - Item - T1 - Hunter - Melee 2P Bonus
+456393,Stalked
+456394,S03 - Item - T1 - Hunter - Melee 6P Bonus
+456396,S03 - Item - T1 - Mage - Damage 2P Bonus
+456397,Evocation
+456398,S03 - Item - T1 - Mage - Damage 4P Bonus
+456399,Selfless
+456400,Noble
+456401,Fool
+456402,S03 - Item - T1 - Mage - Damage 6P Bonus
+456403,Molten Armor
+456404,S03 - Item - T1 - Mage - Healer 2P Bonus
+456463,Epoch's End
+456477,S03 - Item - T1 - Mage - Healer 4P Bonus
+456481,S03 - Item - T1 - Mage - Healer 6P Bonus
+456485,Regeneration
+456488,S03 - Item - T1 - Paladin - Holy 2P Bonus
+456489,S03 - Item - T1 - Paladin - Retribution 4P Bonus
+456492,S03 - Item - T1 - Paladin - Holy 6P Bonus
+456493,Healing Circle
+456494,S03 - Item - T1 - Paladin - Retribution 2P Bonus
+456496,Judgement of the Crusader
+456533,S03 - Item - T1 - Paladin - Retribution 6P Bonus
+456536,S03 - Item - T1 - Paladin - Protection 2P Bonus
+456538,S03 - Item - T1 - Paladin - Protection 4P Bonus
+456540,Bastion of Light
+456541,S03 - Item - T1 - Paladin - Protection 6P Bonus
+456544,Holy Shield
+456545,S03 - Item - T1 - Priest - Healer 2P Bonus
+456546,S03 - Item - T1 - Priest - Healer 4P Bonus
+456547,S03 - Item - T1 - Priest - Healer 6P Bonus
+456548,S03 - Item - T1 - Priest - Shadow 2P Bonus
+456549,Melting Faces
+456635,[DNT] Ice Chains Effect
+456677,Dispel Chains
+456692,[DNT] Dispel Chains Trigger
+456694,[DNT] Frijidar Scale
+456695,[DNT] Frijidar Scale
+456881,Diplomatic Immunity
+457010,Teleport
+457012,Ichor Coating
+457021,Rancid Hunk of Flesh
+457097,[DNT] Spawn Regurgitated Carrion
+457107,[DNT] Poison Dummy Visual
+457191,Decisive Strike
+457322,S03 - Item - T1 - Priest - Shadow 4P Bonus
+457323,S03 - Item - T1 - Paladin - Holy 4P Bonus
+457324,S03 - Item - T1 - Hunter - Ranged 4P Bonus
+457325,S03 - Item - T1 - Priest - Shadow 6P Bonus
+457329,S03 - Item - T1 - Rogue - Damage 2P Bonus
+457331,Avoidance
+457339,S03 - Item - T1 - Rogue - Damage 4P Bonus
+457342,Clearcasting
+457344,S03 - Item - T1 - Rogue - Damage 6P Bonus
+457349,S03 - Item - T1 - Rogue - Tank 2P Bonus
+457351,Blade Dance
+457437,Vanish
+457440,S03 - Item - T1 - Rogue - Tank 4P Bonus
+457464,S03 - Item - T1 - Rogue - Tank 6P Bonus
+457469,Resilient
+457475,S03 - Item - T1 - Shaman - Elemental/Enhancement/Restoration 2P Bonus
+457478,S03 - Item - T1 - Shaman - Restoration 4P Bonus
+457479,Mana Surge
+457480,Mana Surge
+457494,S03 - Item - T1 - Shaman - Restoration 6P Bonus
+457520,S03 - Item - T1 - Shaman - Elemental 4P Bonus
+457524,S03 - Item - T1 - Shaman - Elemental 6P Bonus
+457530,S03 - Item - T1 - Shaman - Enhancement 4P Bonus
+457532,S03 - Item - T1 - Shaman - Enhancement 6P Bonus
+457540,S03 - Item - T1 - Shaman - Tank 2P Bonus
+457541,S03 - Item - T1 - Shaman - Tank 4P Bonus
+457544,S03 - Item - T1 - Shaman - Tank 6P Bonus
+457548,S03 - Item - T1 - Warlock - Damage 2P Bonus
+457549,S03 - Item - T1 - Warlock - Damage 4P Bonus
+457553,S03 - Item - T1 - Warlock - Damage 6P Bonus
+457558,Fire Trance
+457569,Banish
+457571,S03 - Item - T1 - Warlock - Tank 2P Bonus
+457572,S03 - Item - T1 - Warlock - Tank 4P Bonus
+457573,Pain Tap
+457612,Decisive Strike
+457613,Crescent Smash
+457614,Thunder Stomp
+457642,S03 - Item - T1 - Warlock - Tank 6P Bonus
+457643,Soul Fire!
+457645,S03 - Item - T1 - Warrior - Tank 2P Bonus
+457646,S03 - Item - T1 - Warrior - Tank 4P Bonus
+457648,Inner Fury
+457651,S03 - Item - T1 - Warrior - Tank 6P Bonus
+457652,S03 - Item - T1 - Warrior - Damage 2P Bonus
+457697,S03 - Item - T1 - Warrior - Damage 4P Bonus
+457699,Echoes of Defensive Stance
+457706,Echoes of Battle Stance
+457708,Echoes of Berserker Stance
+457814,Defensive Forecast
+457816,Battle Forecast
+457817,Berserker Forecast
+457819,Echoes of Gladiator Stance
+457820,S03 - Item - T1 - Warrior - Damage 6P Bonus
+457844,Starfall
+457845,Starfall
+457846,Starfall
+457847,Starfall
+457848,Holy Strike
+457849,Controller Timer
+457851,Overconfidence
+457870,Epoch's End
+458112,Crusader
+458176,[DNT] Stratholme Puzzle Aura
+458285,Consecration
+458286,Consecration
+458287,Hallowed Ground
+458312,Divine Protection
+458318,Malleable Protection
+458321,Sandworm Submerge Visual
+458354,[DNT] Juvenile Sandworm - Burrow
+458355,Flag Tracking Quest
+458371,Divine Protection
+458389,Dirt Mound Effect
+458390,Dirt Mound Passive
+458392,[DNT] Juvenile Sandworm - Summon Dirt Mound
+458393,Cobra Slayer
+458399,Eruption
+458403,Stalker
+458407,Eruption
+458436,Wyvern Strike
+458454,Use Echo
+458479,Wyvern Strike
+458481,Wyvern Strike
+458482,Wyvern Strike
+458488,Astral Beacon
+458491,Attack
+458590,Infinite Midnight
+458684,Starfall
+458808,[DNT] Stratholme Clue Active
+458809,[DNT] Stratholme Clue Failed
+458819,Tim's Test Fireball
+458820,Occult Poison I
+458821,Occult Poison I
+458822,Occult Poison I
+458833,[DNT] Update Bonus Difficulty
+458841,Heat Level 1
+458842,Heat Level 2
+458843,Heat Level 3
+458856,Divine Light
+458857,Divine Light
+458860,Divine Light
+458872,Infinite Midnight
+458877,Infinite Midnight
+458878,Infinite Midnight
+458880,Disarm
+458881,Disarmed
+458882,Recycle
+458884,Teleport
+458885,Righteous Vengeance
+458886,Escort Complete
+458888,Josh's General Phase and Zone Aura Update
+458902,Bulky Protective Ironweave
+458965,Interrupt
+458976,Sand Bomb
+458979,Sand Bomb
+458984,Boss Kill Tracking [DNT]
+458985,Boss Kill Tracking [DNT]
+458988,Boss Kill Tracking [DNT]
+458990,Boss Kill Tracking [DNT]
+458991,Boss Kill Tracking [DNT]
+458992,Boss Kill Tracking [DNT]
+458993,Boss Kill Tracking [DNT]
+458994,Boss Kill Tracking [DNT]
+458996,Sand Bomb
+459005,Interrupt
+459107,Flag Tracking Quest
+459153,Fireworks
+459160,Teleport
+459161,Omni Diffusion Armor
+459162,Omni Diffusion Armor
+459163,Interrupt
+459164,Reployer Malfunction
+459165,Force Dampeners
+459166,Central Reaping Function 9000
+459170,Summon Squire
+459173,Squire Despawn
+459178,Self Explosion
+459197,Bolster Girdle-Jerry Bolts
+459198,Flex Tandem Press Task Apparatus
+459200,Full-field System Flap Latch
+459207,Summon Squire
+459217,Desert Sonar
+459221,Desert Sonar
+459232,Summon Squire
+459261,Capture Echo
+459280,Transiting Realities
+459290,Thunder Stomp
+459293,Activate Auxiliary Anti-Tamper Grapplers
+459312,Defense Specialization
+459313,Engrave Ring - Defense Specialization
+459340,[DNT] Edu Copperbolt - Give Sonar
+459369,Boss Kill Tracking [DNT]
+459370,Boss Kill Tracking [DNT]
+459371,Boss Kill Tracking [DNT]
+459372,Boss Kill Tracking [DNT]
+459373,Boss Kill Tracking [DNT]
+459374,Boss Kill Tracking [DNT]
+459375,Boss Kill Tracking [DNT]
+459377,Boss Kill Tracking [DNT]
+459378,Boss Kill Tracking [DNT]
+459380,Boss Kill Tracking [DNT]
+459381,Boss Kill Tracking [DNT]
+459382,Boss Kill Tracking [DNT]
+459383,Boss Kill Tracking [DNT]
+459384,Boss Kill Tracking [DNT]
+459385,Boss Kill Tracking [DNT]
+459386,Boss Kill Tracking [DNT]
+459387,Boss Kill Tracking [DNT]
+459388,Boss Kill Tracking [DNT]
+459389,Boss Kill Tracking [DNT]
+459390,Boss Kill Tracking [DNT]
+459392,Boss Kill Tracking [DNT]
+459393,Boss Kill Tracking [DNT]
+459394,Boss Kill Tracking [DNT]
+459396,Boss Kill Tracking [DNT]
+459398,Boss Kill Tracking [DNT]
+459399,Boss Kill Tracking [DNT]
+459400,Boss Kill Tracking [DNT]
+459401,Boss Kill Tracking [DNT]
+459402,Boss Kill Tracking [DNT]
+459403,Boss Kill Tracking [DNT]
+459405,Boss Kill Tracking [DNT]
+459406,Boss Kill Tracking [DNT]
+459414,Boss Kill Tracking [DNT]
+459415,Boss Kill Tracking [DNT]
+459416,Boss Kill Tracking [DNT]
+459417,Boss Kill Tracking [DNT]
+459418,Boss Kill Tracking [DNT]
+459420,Boss Kill Tracking [DNT]
+459423,Boss Kill Tracking [DNT]
+459424,Boss Kill Tracking [DNT]
+459425,Boss Kill Tracking [DNT]
+459426,Boss Kill Tracking [DNT]
+459427,Boss Kill Tracking [DNT]
+459429,Boss Kill Tracking [DNT]
+459430,Boss Kill Tracking [DNT]
+459431,Boss Kill Tracking [DNT]
+459432,Boss Kill Tracking [DNT]
+459433,Boss Kill Tracking [DNT]
+459434,Boss Kill Tracking [DNT]
+459435,Boss Kill Tracking [DNT]
+459436,Boss Kill Tracking [DNT]
+459437,Boss Kill Tracking [DNT]
+459438,Boss Kill Tracking [DNT]
+459467,Rumbling Sand
+459481,Rumbling Sand
+459487,[DNT] Summon Sandworm
+459498,Self-sufficient Slicing Scythe-Hooks
+459499,Crippling Clip
+459584,Wing Clip Duration
+459591,Cropchop
+459592,Cropchop
+459593,Multi-Shot Damage Increase
+459594,Shapeshift Cost Reduction
+459595,Wrath Cast Pushback Reduction
+459596,Barkskin Duration Increase
+459598,Raptor Strike Damage Increase
+459599,Mana Shield Absorb Increase
+459600,Arcane Blast Cast Pushback Reduction
+459601,Judgement Damage Increase
+459602,Holy Shock Critical Chance Increase
+459603,Weakened Soul Duration Decrease
+459604,Mind Blast Cast Pushback Reduction
+459605,Sprint Duration Increase
+459606,Ghost Wolf Speed
+459607,Searing Pain Cast Pushback Reduction
+459608,Hamstring Rage Reduction
+459610,Wanderer's Resolve
+459611,Astral Victory
+459612,Astral Perfect Victory
+459613,Guided Buoyancy Accelerant
+459614,Dedication
+459615,Dedication
+459616,Rhythm of War
+459617,Legacy of Valor
+459618,Legacy of Valor
+459619,Smite
+459620,[DNT] Spawn Challenge
+459621,Whirlwind
+459622,Holy Fire
+459623,[DNT] Arena Victory
+459624,Vindicator
+459625,[DNT] Arena Victory
+459692,Swimming
+459695,Priest Racial Ability
+459699,Fear Ward
+459702,Desperate Prayer
+459703,Feedback
+459705,Starshards
+459706,Elune's Grace
+459709,Shadowguard
+459710,Hex of Weakness
+459713,Devouring Plague
+459714,Touch of Weakness
+459736,Warmed Rumsey with Cream
+460060,Volcanic Unrest
+460171,Defender's Resolve
+460200,Demonic Resolve
+460205,Permanent Feign Death
+460228,Stealth
+460229,Block Value 17
+460230,Increased Hit Chance 2
+460310,Shimmering Light
+460332,Warmed Rumsey with Cream
+460335,Immolation
+460338,Melt Armor
+460339,Attack Power - Feral (+358)
+460340,Melt Armor
+460341,Immolation
+460342,Fireball
+460343,Attack Power - Feral (+124)
+460352,Dummy - Boss Kill Tracking (DNT)
+460353,Boss Kill Give Currency [DNT]
+460355,[DNT] Arena Victory
+460362,Protection of Kel'thuzad
+460363,Destroy Kel'thuzad's Protection
+460372,[DNT] Arena Victory
+460373,Hateful Strike
+460374,Hateful Strike
+460375,Summon Dwarf Spirit
+460376,[DNT] Spawn Challenge
+460455,Haste
+460460,Sulfuron Hammer
+460461,Plans: Sulfuron Hammer
+460462,Eye of Sulfuras
+460466,Create Thorium Brotherhood Contract DND
+460507,[DNT] Spawn Challenge
+460508,[DNT] Spawn Challenge
+442901,Shapeshifting Specialization
