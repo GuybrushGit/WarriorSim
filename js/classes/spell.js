@@ -2345,7 +2345,7 @@ class SuddenDeath extends Aura {
         }
     }
     remove() {
+        this.uptime += (this.timer - this.starttimer);
         this.timer = 0;
-        this.step();
     }
 }
