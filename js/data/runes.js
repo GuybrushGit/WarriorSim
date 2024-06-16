@@ -194,13 +194,13 @@ var runes = {
             iconname: 'spell_deathknight_butcher',
             freshmeat: true,
         },
-        // {
-        //     id: 440113,
-        //     name: 'Sudden Death',
-        //     description: "",
-        //     iconname: 'ability_warrior_improveddisciplines',
-        //     enable: 440113,
-        // },
+        {
+            id: 440113,
+            name: 'Sudden Death',
+            description: "",
+            iconname: 'ability_warrior_improveddisciplines',
+            suddendeath: true,
+        },
         // {
         //     id: 440488,
         //     name: 'Shockwave',

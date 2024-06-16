@@ -443,6 +443,10 @@ class Player {
                         this.freshmeat = item.freshmeat;
                         this.auras.freshmeat = new FreshMeat(this);
                     }
+                    if (item.suddendeath) {
+                        this.suddendeath = item.suddendeath;
+                        this.auras.suddendeath = new SuddenDeath(this);
+                    }
                 }
             }
         }
@@ -945,6 +949,7 @@ class Player {
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.step();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.step();
         if (this.auras.freshmeat && this.auras.freshmeat.timer) this.auras.freshmeat.step();
+        if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.step();
 
@@ -998,6 +1003,7 @@ class Player {
         if (this.auras.rampage && this.auras.rampage.timer) this.auras.rampage.end();
         if (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) this.auras.wreckingcrew.end();
         if (this.auras.freshmeat && this.auras.freshmeat.timer) this.auras.freshmeat.end();
+        if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.end();
         
@@ -1313,6 +1319,10 @@ class Player {
             // Voodoo Frenzy
             if (this.auras.voodoofrenzy && rng10k() < 1500) {
                 this.auras.voodoofrenzy.use();
+            }
+            // Sudden Death
+            if (this.auras.suddendeath && rng10k() < 1000) {
+                this.auras.suddendeath.use();
             }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;

@@ -349,7 +349,7 @@ class Simulation {
                     else if (player.auras.battleshout && player.auras.battleshout.canUse()) { player.spelldelay = 1; delayedspell = player.auras.battleshout; }
 
                     // Execute phase
-                    else if (player.spells.execute && step >= this.executestep) {
+                    else if (player.spells.execute && (step >= this.executestep || (player.auras.suddendeath && player.auras.suddendeath.timer))) {
 
                         if (player.spells.ragingblow && player.spells.ragingblow.canUse(true)) { 
                             player.spelldelay = 1; delayedspell = player.spells.ragingblow; 
@@ -409,7 +409,7 @@ class Simulation {
 
                 // Heroic Strike
                 if (spellcheck && !player.heroicdelay) {
-                    if (!player.spells.execute || step < this.executestep) {
+                    if (!player.spells.execute || (step < this.executestep && (!player.auras.suddendeath || !player.auras.suddendeath.timer))) {
                         // prevent using spells while waiting for consumed by rage proc
                         if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 60) { } 
                         else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
@@ -476,7 +476,7 @@ class Simulation {
                 }
 
                 // Unqueue HS
-                if (!player.spells.execute || step < this.executestep) {
+                if (!player.spells.execute || (step < this.executestep && (!player.auras.suddendeath || !player.auras.suddendeath.timer))) {
                     if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs &&
                         player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                         this.player.nextswinghs = false;
@@ -564,7 +564,7 @@ class Simulation {
             if (player.spells.execute && player.spells.execute.timer && player.spells.execute.timer < next) next = player.spells.execute.timer;
             if (player.spells.slam && player.spells.slam.timer && player.spells.slam.timer < next) next = player.spells.slam.timer;
 
-            if (!player.spells.execute || step < this.executestep) {
+            if (!player.spells.execute || (step < this.executestep && (!player.auras.suddendeath || !player.auras.suddendeath.timer))) {
                 if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
                     let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
                     if (timeleft > 0 && timeleft < next) next = timeleft;
