@@ -1057,7 +1057,6 @@ var buffs = [
       id: 442813,
       name: "Increased Swords",
       iconname: "ability_meleedamage",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_1: 5
@@ -1066,7 +1065,6 @@ var buffs = [
       id: 442876,
       name: "Increased Axes",
       iconname: "inv_axe_03",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_3: 5
@@ -1075,7 +1073,6 @@ var buffs = [
       id: 442881,
       name: "Increased Maces",
       iconname: "inv_hammer_01",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_0: 5
@@ -1084,7 +1081,6 @@ var buffs = [
       id: 442887,
       name: "Increased Daggers",
       iconname: "inv_weapon_shortblade_05",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_2: 5
@@ -1093,7 +1089,6 @@ var buffs = [
       id: 442890,
       name: "Increased Fist",
       iconname: "inv_misc_desecrated_plategloves",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_4: 5
@@ -1102,7 +1097,6 @@ var buffs = [
       id: 442892,
       name: "Increased Polearms",
       iconname: "inv_staff_08",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_5: 5,
@@ -1112,7 +1106,6 @@ var buffs = [
       id: 459312,
       name: "Defense Specialization",
       iconname: "inv_shield_06",
-      group: "skill",
       spellid: true,
       skill: true,
       skill_8: 5,

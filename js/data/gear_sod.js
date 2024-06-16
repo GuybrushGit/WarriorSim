@@ -3119,31 +3119,6 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 16707,
-      "type": "Leather",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Shadowcraft Cap",
-      "p": "inv_helmet_41",
-      "agi": 20,
-      "str": 13,
-      "sta": 18
-    },
-    {
-      "id": 16720,
-      "type": "Leather",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Wildheart Cowl",
-      "p": "inv_helmet_27",
-      "str": 6,
-      "sta": 10
-    },
-    {
       "id": 16727,
       "type": "Plate",
       "slot": "head",
@@ -3870,31 +3845,6 @@ var gear = {
       },
       "hit": 1,
       "crit": 1
-    },
-    {
-      "id": 226707,
-      "type": "Leather",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Shadowcraft Cap",
-      "p": "inv_helmet_41",
-      "agi": 25,
-      "sta": 18,
-      "hit": 1
-    },
-    {
-      "id": 226708,
-      "type": "Leather",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Wildheart Cowl",
-      "p": "inv_helmet_27",
-      "sta": 11,
-      "hit": 1
     },
     {
       "id": 226769,
@@ -7716,18 +7666,6 @@ var gear = {
       "sta": 14
     },
     {
-      "id": 16708,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Shadowcraft Spaulders",
-      "p": "inv_shoulder_07",
-      "agi": 22,
-      "sta": 9
-    },
-    {
       "id": 16729,
       "type": "Plate",
       "slot": "shoulder",
@@ -8661,19 +8599,6 @@ var gear = {
         "fire": 7
       },
       "hit": 1
-    },
-    {
-      "id": 226706,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Shadowcraft Spaulders",
-      "p": "inv_shoulder_07",
-      "agi": 22,
-      "str": 6,
-      "sta": 6
     },
     {
       "id": 226768,
@@ -14851,18 +14776,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16721,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Shadowcraft Tunic",
-      "p": "inv_chest_leather_07",
-      "agi": 26,
-      "sta": 13
-    },
-    {
       "id": 16726,
       "type": "Plate",
       "slot": "chest",
@@ -15686,31 +15599,6 @@ var gear = {
       },
       "hit": 1,
       "crit": 1
-    },
-    {
-      "id": 226700,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Shadowcraft Tunic",
-      "p": "inv_chest_leather_07",
-      "agi": 27,
-      "sta": 15,
-      "hit": 1
-    },
-    {
-      "id": 226715,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Wildheart Vest",
-      "p": "inv_chest_plate06",
-      "sta": 12,
-      "hit": 1
     },
     {
       "id": 226770,
@@ -18704,29 +18592,6 @@ var gear = {
       "sta": 17
     },
     {
-      "id": 16710,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Shadowcraft Bracers",
-      "p": "inv_bracer_07",
-      "agi": 15,
-      "sta": 7
-    },
-    {
-      "id": 16714,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Wildheart Bracers",
-      "p": "inv_bracer_09",
-      "str": 7
-    },
-    {
       "id": 16722,
       "type": "Plate",
       "slot": "wrist",
@@ -19597,19 +19462,6 @@ var gear = {
       "str": 19,
       "sta": 11,
       "hit": 1
-    },
-    {
-      "id": 226704,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Shadowcraft Bracers",
-      "p": "inv_bracer_07",
-      "agi": 13,
-      "str": 8,
-      "sta": 5
     },
     {
       "id": 226766,
@@ -24707,19 +24559,6 @@ var gear = {
       "sta": 4
     },
     {
-      "id": 16712,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Shadowcraft Gloves",
-      "p": "inv_gauntlets_24",
-      "agi": 14,
-      "str": 9,
-      "sta": 9
-    },
-    {
       "id": 16724,
       "type": "Plate",
       "slot": "hands",
@@ -25610,31 +25449,6 @@ var gear = {
       "resist": {
         "fire": 7
       },
-      "hit": 1
-    },
-    {
-      "id": 226702,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Shadowcraft Gloves",
-      "p": "inv_gauntlets_24",
-      "agi": 18,
-      "str": 11,
-      "sta": 7
-    },
-    {
-      "id": 226711,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Wildheart Gloves",
-      "p": "inv_gauntlets_17",
-      "sta": 7,
       "hit": 1
     },
     {
@@ -30193,19 +30007,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 16713,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Shadowcraft Belt",
-      "p": "inv_belt_03",
-      "agi": 14,
-      "str": 9,
-      "sta": 10
-    },
-    {
       "id": 16723,
       "type": "Plate",
       "slot": "waist",
@@ -31298,19 +31099,6 @@ var gear = {
         "fire": 7
       },
       "crit": 1
-    },
-    {
-      "id": 226701,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Shadowcraft Belt",
-      "p": "inv_belt_03",
-      "agi": 14,
-      "str": 14,
-      "sta": 9
     },
     {
       "id": 226765,
@@ -35653,32 +35441,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 16709,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Shadowcraft Pants",
-      "p": "inv_pants_02",
-      "agi": 25,
-      "str": 12,
-      "sta": 12
-    },
-    {
-      "id": 16719,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Wildheart Kilt",
-      "p": "inv_pants_08",
-      "agi": 12,
-      "str": 13,
-      "sta": 14
-    },
-    {
       "id": 16728,
       "type": "Plate",
       "slot": "legs",
@@ -36606,19 +36368,6 @@ var gear = {
         "fire": 10
       },
       "hit": 1
-    },
-    {
-      "id": 226705,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Shadowcraft Pants",
-      "p": "inv_pants_02",
-      "agi": 25,
-      "str": 12,
-      "sta": 12
     },
     {
       "id": 226750,
@@ -39878,18 +39627,6 @@ var gear = {
       "agi": 9
     },
     {
-      "id": 16711,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Shadowcraft Boots",
-      "p": "inv_boots_08",
-      "agi": 21,
-      "sta": 9
-    },
-    {
       "id": 16725,
       "type": "Plate",
       "slot": "feet",
@@ -41282,19 +41019,6 @@ var gear = {
         "fire": 7
       },
       "hit": 1
-    },
-    {
-      "id": 226703,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Shadowcraft Boots",
-      "p": "inv_boots_08",
-      "agi": 18,
-      "str": 11,
-      "sta": 8
     },
     {
       "id": 226764,
@@ -76070,7 +75794,8 @@ var gear = {
         "dmg": 303,
         "tick": 15,
         "interval": "2000",
-        "duration": "10000"
+        "duration": "10000",
+        "ppm": 0.7
       }
     },
     {
