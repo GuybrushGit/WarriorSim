@@ -78,15 +78,6 @@ class Bloodthirst extends Spell {
         dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
     }
-    use() {
-        this.player.timer = 1500;
-        this.player.rage -= this.cost;
-        this.timer = this.cooldown * 1000;
-        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (this.player.freshmeat && (this.player.auras.freshmeat.firstuse || rng10k() < 1000)) {
-            this.player.auras.freshmeat.use();
-        }
-    }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
     }
@@ -184,7 +175,7 @@ class Execute extends Spell {
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.usedrage = ~~this.player.rage;
-        this.totalusedrage += this.usedrage;
+        this.totalusedrage += this.usedrage - (this.player.auras.suddendeath && this.player.auras.suddendeath.timer ? 10 : 0);
         this.timer = batching - (step % batching);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
@@ -619,12 +610,10 @@ class Shockwave extends Spell {
         super(player, id);
         this.cost = 15 - player.ragecostbonus;
         this.cooldown = 20;
+        this.canDodge = false;
     }
     dmg() {
-        let dmg;
-        dmg = 1000; // todo
-        // dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        // dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
+        let dmg = this.player.stats.ap / 2 + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
     }
     use() {

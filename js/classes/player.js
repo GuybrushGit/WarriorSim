@@ -1324,6 +1324,10 @@ class Player {
             if (this.auras.suddendeath && rng10k() < 1000) {
                 this.auras.suddendeath.use();
             }
+            // Fresh Meat
+            if (spell instanceof Bloodthirst && this.freshmeat && (this.auras.freshmeat.firstuse || rng10k() < 1000)) {
+                this.auras.freshmeat.use();
+            }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;
                 weapon.windfury.use();
