@@ -3351,31 +3351,6 @@ var gear = {
       "sta": 34
     },
     {
-      "id": 22091,
-      "type": "Plate",
-      "slot": "head",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Soulforge Helm",
-      "p": "inv_helmet_08",
-      "str": 16,
-      "sta": 17
-    },
-    {
-      "id": 22109,
-      "type": "Leather",
-      "slot": "head",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Feralheart Cowl",
-      "p": "inv_helmet_27",
-      "agi": 9,
-      "str": 14,
-      "sta": 17
-    },
-    {
       "id": 22223,
       "type": "Plate",
       "slot": "head",
@@ -7993,43 +7968,6 @@ var gear = {
       "str": 20,
       "sta": 21,
       "hit": 1
-    },
-    {
-      "id": 22093,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Soulforge Spaulders",
-      "p": "inv_shoulder_10",
-      "str": 10,
-      "sta": 11
-    },
-    {
-      "id": 22101,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Pauldrons of The Five Thunders",
-      "p": "inv_shoulder_29",
-      "str": 10,
-      "sta": 11
-    },
-    {
-      "id": 22112,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Feralheart Spaulders",
-      "p": "inv_shoulder_01",
-      "agi": 5,
-      "str": 8,
-      "sta": 9
     },
     {
       "id": 22212,
@@ -14845,44 +14783,6 @@ var gear = {
       "sta": 38
     },
     {
-      "id": 22089,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Soulforge Breastplate",
-      "p": "inv_chest_plate03",
-      "str": 16,
-      "sta": 17,
-      "crit": 1
-    },
-    {
-      "id": 22102,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Vest of The Five Thunders",
-      "p": "inv_chest_chain_11",
-      "str": 12,
-      "sta": 17
-    },
-    {
-      "id": 22113,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Feralheart Vest",
-      "p": "inv_chest_plate06",
-      "agi": 9,
-      "str": 16,
-      "sta": 17
-    },
-    {
       "id": 22191,
       "type": "Mail",
       "slot": "chest",
@@ -18800,31 +18700,6 @@ var gear = {
       "agi": 10,
       "str": 19,
       "sta": 8
-    },
-    {
-      "id": 22088,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Soulforge Bracers",
-      "p": "inv_bracer_14",
-      "str": 9,
-      "sta": 10
-    },
-    {
-      "id": 22108,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Feralheart Bracers",
-      "p": "inv_bracer_09",
-      "agi": 6,
-      "str": 6,
-      "sta": 6
     },
     {
       "id": 22204,
@@ -24614,44 +24489,6 @@ var gear = {
       "str": 13
     },
     {
-      "id": 22090,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 58,
-      "q": "4",
-      "i": "55",
-      "name": "Soulforge Gauntlets",
-      "p": "inv_gauntlets_19",
-      "str": 9,
-      "sta": 10,
-      "crit": 1
-    },
-    {
-      "id": 22099,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 58,
-      "q": "4",
-      "i": "55",
-      "name": "Gauntlets of The Five Thunders",
-      "p": "inv_gauntlets_11",
-      "str": 9,
-      "sta": 12
-    },
-    {
-      "id": 22110,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 58,
-      "q": "4",
-      "i": "55",
-      "name": "Feralheart Gloves",
-      "p": "inv_gauntlets_17",
-      "agi": 9,
-      "str": 10,
-      "sta": 10
-    },
-    {
       "id": 22194,
       "type": "Mail",
       "slot": "hands",
@@ -30307,43 +30144,6 @@ var gear = {
       "ap": 24
     },
     {
-      "id": 22086,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Soulforge Belt",
-      "p": "inv_belt_11",
-      "str": 10,
-      "sta": 11
-    },
-    {
-      "id": 22098,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Cord of The Five Thunders",
-      "p": "inv_belt_16",
-      "str": 10,
-      "sta": 11
-    },
-    {
-      "id": 22106,
-      "type": "Leather",
-      "slot": "waist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Feralheart Belt",
-      "p": "inv_belt_15",
-      "agi": 7,
-      "str": 6,
-      "sta": 9
-    },
-    {
       "id": 22195,
       "type": "Mail",
       "slot": "waist",
@@ -35322,43 +35122,6 @@ var gear = {
       }
     },
     {
-      "id": 22092,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "66",
-      "name": "Soulforge Legplates",
-      "p": "inv_pants_04",
-      "str": 16,
-      "sta": 17
-    },
-    {
-      "id": 22100,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "66",
-      "name": "Kilt of The Five Thunders",
-      "p": "inv_pants_03",
-      "str": 10,
-      "sta": 17
-    },
-    {
-      "id": 22111,
-      "type": "Leather",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "66",
-      "name": "Feralheart Kilt",
-      "p": "inv_pants_08",
-      "agi": 12,
-      "str": 14,
-      "sta": 14
-    },
-    {
       "id": 22385,
       "type": "Plate",
       "slot": "legs",
@@ -39984,43 +39747,6 @@ var gear = {
       "resist": {
         "nature": 20
       }
-    },
-    {
-      "id": 22087,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Soulforge Boots",
-      "p": "inv_boots_plate_03",
-      "str": 12,
-      "sta": 13
-    },
-    {
-      "id": 22096,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Boots of The Five Thunders",
-      "p": "inv_boots_wolf",
-      "str": 12,
-      "sta": 13
-    },
-    {
-      "id": 22107,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Feralheart Boots",
-      "p": "inv_boots_08",
-      "agi": 7,
-      "str": 12,
-      "sta": 13
     },
     {
       "id": 22270,

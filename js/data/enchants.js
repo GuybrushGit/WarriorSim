@@ -1077,4 +1077,21 @@ var enchant = {
          { count: 2, stats: { procspell: "SerpentAscension", procchance: 3 } }
       ]
    },
+   {
+    id: 1682,
+    name: 'Battlegear of Valor',
+    items: [226765,226764,226766,226770,226771,226769,226767,226768],
+    bonus: [
+       { count: 4, stats: { ap: 40 } }
+    ]
+   },
+   {
+    id: 1719,
+    name: 'Immoveable Might',
+    items: [226485,226484,226489,226486,226488,226490,226491,226487],
+    bonus: [
+       { count: 2, stats: { block: 30 } },
+       { count: 6, stats: { gladdmg: 4 } },
+    ]
+ },
 ];

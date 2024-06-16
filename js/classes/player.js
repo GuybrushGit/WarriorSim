@@ -481,6 +481,9 @@ class Player {
                     if (bonus.stats.extra) {
                         this.setextra = bonus.stats.extra;
                     }
+                    if (bonus.stats.gladdmg) {
+                        this.gladdmg = bonus.stats.gladdmg;
+                    }
                 }
             }
         }
@@ -530,6 +533,9 @@ class Player {
                     this.basestance = buff.stance;
                     if (buff.stance == 'glad' && !this.shield)
                         this.basestance = 'battle';
+                    if (buff.stance == 'glad' && this.gladdmg) {
+                        this.base.dmgmod *= (1 + this.gladdmg / 100);
+                    }
                     continue;
                 }
                 if (buff.group == "trueshot" && this.mode == "sod") {
