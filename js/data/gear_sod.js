@@ -3055,19 +3055,6 @@ var gear = {
       "rand": 1233
     },
     {
-      "id": 16429,
-      "type": "Plate",
-      "slot": "head",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lieutenant Commander's Plate Helm",
-      "p": "inv_helmet_05",
-      "agi": 8,
-      "str": 9,
-      "sta": 31
-    },
-    {
       "id": 16478,
       "type": "Plate",
       "slot": "head",
@@ -3079,19 +3066,6 @@ var gear = {
       "str": 28,
       "sta": 34,
       "crit": 1
-    },
-    {
-      "id": 16514,
-      "type": "Plate",
-      "slot": "head",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Champion's Plate Headguard",
-      "p": "inv_helmet_09",
-      "agi": 8,
-      "str": 9,
-      "sta": 31
     },
     {
       "id": 16542,
@@ -3130,34 +3104,6 @@ var gear = {
       "agi": 6,
       "str": 13,
       "sta": 20
-    },
-    {
-      "id": 16731,
-      "type": "Plate",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Helm of Valor",
-      "p": "inv_helmet_02",
-      "agi": 9,
-      "str": 15,
-      "sta": 23
-    },
-    {
-      "id": 16866,
-      "type": "Plate",
-      "slot": "head",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Helm of Might",
-      "p": "inv_helmet_09",
-      "str": 15,
-      "sta": 35,
-      "resist": {
-        "fire": 10
-      }
     },
     {
       "id": 16963,
@@ -3405,19 +3351,6 @@ var gear = {
       "sta": 34
     },
     {
-      "id": 21999,
-      "type": "Plate",
-      "slot": "head",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Helm of Heroism",
-      "p": "inv_helmet_02",
-      "str": 18,
-      "sta": 32,
-      "crit": 1
-    },
-    {
       "id": 22091,
       "type": "Plate",
       "slot": "head",
@@ -3478,34 +3411,6 @@ var gear = {
       "p": "inv_helmet_58",
       "str": 21,
       "sta": 45
-    },
-    {
-      "id": 23244,
-      "type": "Plate",
-      "slot": "head",
-      "r": 60,
-      "q": "3",
-      "i": "71",
-      "name": "Champion's Plate Helm",
-      "p": "inv_helmet_09",
-      "str": 21,
-      "sta": 24,
-      "crit": 1,
-      "hit": 1
-    },
-    {
-      "id": 23314,
-      "type": "Plate",
-      "slot": "head",
-      "r": 60,
-      "q": "3",
-      "i": "71",
-      "name": "Lieutenant Commander's Plate Helm",
-      "p": "inv_helmet_09",
-      "str": 21,
-      "sta": 24,
-      "crit": 1,
-      "hit": 1
     },
     {
       "id": 209690,
@@ -7600,19 +7505,6 @@ var gear = {
       "agi": 18
     },
     {
-      "id": 16432,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lieutenant Commander's Plate Pauldrons",
-      "p": "inv_shoulder_20",
-      "agi": 6,
-      "str": 7,
-      "sta": 23
-    },
-    {
       "id": 16480,
       "type": "Plate",
       "slot": "shoulder",
@@ -7625,19 +7517,6 @@ var gear = {
       "str": 18,
       "sta": 23,
       "hit": 1
-    },
-    {
-      "id": 16516,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Champion's Plate Pauldrons",
-      "p": "inv_shoulder_11",
-      "agi": 6,
-      "str": 7,
-      "sta": 23
     },
     {
       "id": 16544,
@@ -7679,19 +7558,6 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 16733,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Spaulders of Valor",
-      "p": "inv_shoulder_30",
-      "agi": 9,
-      "str": 11,
-      "sta": 17
-    },
-    {
       "id": 16793,
       "type": "Mail",
       "slot": "shoulder",
@@ -7702,21 +7568,6 @@ var gear = {
       "p": "inv_shoulder_16",
       "agi": 9,
       "sta": 5
-    },
-    {
-      "id": 16868,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Pauldrons of Might",
-      "p": "inv_shoulder_15",
-      "str": 15,
-      "sta": 22,
-      "resist": {
-        "shadow": 7
-      }
     },
     {
       "id": 16995,
@@ -8144,19 +7995,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 22001,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Spaulders of Heroism",
-      "p": "inv_shoulder_30",
-      "agi": 12,
-      "str": 12,
-      "sta": 18
-    },
-    {
       "id": 22093,
       "type": "Plate",
       "slot": "shoulder",
@@ -8231,32 +8069,6 @@ var gear = {
       "sta": 29,
       "hit": 1,
       "block": 21
-    },
-    {
-      "id": 23243,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "q": "3",
-      "i": "71",
-      "name": "Champion's Plate Shoulders",
-      "p": "inv_shoulder_11",
-      "str": 17,
-      "sta": 18,
-      "crit": 1
-    },
-    {
-      "id": 23315,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 60,
-      "q": "3",
-      "i": "71",
-      "name": "Lieutenant Commander's Plate Shoulders",
-      "p": "inv_shoulder_11",
-      "str": 17,
-      "sta": 18,
-      "crit": 1
     },
     {
       "id": 209676,
@@ -14720,20 +14532,6 @@ var gear = {
       "str": 5
     },
     {
-      "id": 16430,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Knight-Captain's Plate Chestguard",
-      "p": "inv_chest_plate16",
-      "agi": 6,
-      "str": 9,
-      "sta": 25,
-      "crit": 1
-    },
-    {
       "id": 16477,
       "type": "Plate",
       "slot": "chest",
@@ -14745,20 +14543,6 @@ var gear = {
       "agi": 14,
       "str": 16,
       "sta": 33,
-      "crit": 1
-    },
-    {
-      "id": 16513,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Legionnaire's Plate Armor",
-      "p": "inv_chest_plate16",
-      "agi": 6,
-      "str": 9,
-      "sta": 25,
       "crit": 1
     },
     {
@@ -14786,34 +14570,6 @@ var gear = {
       "p": "inv_chest_plate03",
       "str": 13,
       "sta": 21
-    },
-    {
-      "id": 16730,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Breastplate of Valor",
-      "p": "inv_chest_plate03",
-      "agi": 10,
-      "str": 15,
-      "sta": 24
-    },
-    {
-      "id": 16865,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Breastplate of Might",
-      "p": "inv_chest_plate16",
-      "str": 20,
-      "sta": 28,
-      "resist": {
-        "fire": 10
-      }
     },
     {
       "id": 17005,
@@ -15089,20 +14845,6 @@ var gear = {
       "sta": 38
     },
     {
-      "id": 21997,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Breastplate of Heroism",
-      "p": "inv_chest_plate03",
-      "agi": 13,
-      "str": 21,
-      "sta": 26,
-      "hit": 1
-    },
-    {
       "id": 22089,
       "type": "Plate",
       "slot": "chest",
@@ -15236,19 +14978,6 @@ var gear = {
       }
     },
     {
-      "id": 22872,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 60,
-      "q": "3",
-      "i": "68",
-      "name": "Legionnaire's Plate Hauberk",
-      "p": "inv_chest_plate16",
-      "str": 21,
-      "sta": 23,
-      "crit": 1
-    },
-    {
       "id": 23087,
       "type": "Plate",
       "slot": "chest",
@@ -15283,19 +15012,6 @@ var gear = {
       "p": "inv_chest_leather_06",
       "sta": 20,
       "ap": 81
-    },
-    {
-      "id": 23300,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 60,
-      "q": "3",
-      "i": "68",
-      "name": "Knight-Captain's Plate Hauberk",
-      "p": "inv_chest_plate16",
-      "str": 21,
-      "sta": 23,
-      "crit": 1
     },
     {
       "id": 209572,
@@ -18605,19 +18321,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 16735,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Bracers of Valor",
-      "p": "inv_bracer_18",
-      "agi": 3,
-      "str": 7,
-      "sta": 14
-    },
-    {
       "id": 16794,
       "type": "Mail",
       "slot": "wrist",
@@ -18629,18 +18332,6 @@ var gear = {
       "agi": 3,
       "str": 5,
       "sta": 5
-    },
-    {
-      "id": 16861,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Bracers of Might",
-      "p": "inv_bracer_19",
-      "str": 11,
-      "sta": 23
     },
     {
       "id": 17714,
@@ -19109,19 +18800,6 @@ var gear = {
       "agi": 10,
       "str": 19,
       "sta": 8
-    },
-    {
-      "id": 21996,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Bracers of Heroism",
-      "p": "inv_bracer_18",
-      "agi": 5,
-      "str": 9,
-      "sta": 14
     },
     {
       "id": 22088,
@@ -24497,18 +24175,6 @@ var gear = {
       "str": 18
     },
     {
-      "id": 16406,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Knight-Lieutenant's Plate Gauntlets",
-      "p": "inv_gauntlets_23",
-      "str": 16,
-      "sta": 15
-    },
-    {
       "id": 16484,
       "type": "Plate",
       "slot": "hands",
@@ -24520,18 +24186,6 @@ var gear = {
       "str": 20,
       "sta": 23,
       "crit": 1
-    },
-    {
-      "id": 16510,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Blood Guard's Plate Gloves",
-      "p": "inv_gauntlets_26",
-      "str": 16,
-      "sta": 15
     },
     {
       "id": 16548,
@@ -24569,35 +24223,6 @@ var gear = {
       "p": "inv_gauntlets_19",
       "str": 14,
       "sta": 9
-    },
-    {
-      "id": 16737,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Gauntlets of Valor",
-      "p": "inv_gauntlets_26",
-      "agi": 3,
-      "str": 17,
-      "sta": 10
-    },
-    {
-      "id": 16863,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Gauntlets of Might",
-      "p": "inv_gauntlets_10",
-      "str": 22,
-      "sta": 17,
-      "resist": {
-        "fire": 7
-      },
-      "hit": 1
     },
     {
       "id": 16978,
@@ -24989,19 +24614,6 @@ var gear = {
       "str": 13
     },
     {
-      "id": 21998,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 58,
-      "q": "4",
-      "i": "55",
-      "name": "Gauntlets of Heroism",
-      "p": "inv_gauntlets_26",
-      "str": 18,
-      "sta": 12,
-      "crit": 1
-    },
-    {
       "id": 22090,
       "type": "Plate",
       "slot": "hands",
@@ -25134,18 +24746,6 @@ var gear = {
       }
     },
     {
-      "id": 22868,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "q": "3",
-      "i": "66",
-      "name": "Blood Guard's Plate Gauntlets",
-      "p": "inv_gauntlets_26",
-      "str": 17,
-      "sta": 17
-    },
-    {
       "id": 23078,
       "type": "Plate",
       "slot": "hands",
@@ -25192,18 +24792,6 @@ var gear = {
       "p": "inv_gauntlets_11",
       "sta": 10,
       "ap": 20
-    },
-    {
-      "id": 23286,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "q": "3",
-      "i": "66",
-      "name": "Knight-Lieutenant's Plate Gauntlets",
-      "p": "inv_gauntlets_26",
-      "str": 17,
-      "sta": 17
     },
     {
       "id": 209527,
@@ -30019,34 +29607,6 @@ var gear = {
       "sta": 9
     },
     {
-      "id": 16736,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Belt of Valor",
-      "p": "inv_belt_34",
-      "agi": 7,
-      "str": 14,
-      "sta": 8
-    },
-    {
-      "id": 16864,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Belt of Might",
-      "p": "inv_belt_09",
-      "str": 21,
-      "sta": 15,
-      "resist": {
-        "fire": 7
-      }
-    },
-    {
       "id": 16987,
       "type": "Leather",
       "slot": "waist",
@@ -30745,19 +30305,6 @@ var gear = {
       "p": "inv_belt_09",
       "sta": 6,
       "ap": 24
-    },
-    {
-      "id": 21994,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 58,
-      "q": "3",
-      "i": "65",
-      "name": "Belt of Heroism",
-      "p": "inv_belt_34",
-      "agi": 9,
-      "str": 15,
-      "sta": 12
     },
     {
       "id": 22086,
@@ -35374,19 +34921,6 @@ var gear = {
       "rand": 320
     },
     {
-      "id": 16431,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Knight-Captain's Plate Leggings",
-      "p": "inv_pants_04",
-      "str": 7,
-      "sta": 13,
-      "crit": 2
-    },
-    {
       "id": 16479,
       "type": "Plate",
       "slot": "legs",
@@ -35399,19 +34933,6 @@ var gear = {
       "sta": 28,
       "crit": 2,
       "hit": 1
-    },
-    {
-      "id": 16515,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Legionnaire's Plate Legguards",
-      "p": "inv_pants_06",
-      "str": 7,
-      "sta": 13,
-      "crit": 2
     },
     {
       "id": 16543,
@@ -35452,34 +34973,6 @@ var gear = {
       "agi": 8,
       "str": 20,
       "sta": 14
-    },
-    {
-      "id": 16732,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Legplates of Valor",
-      "p": "inv_pants_04",
-      "agi": 11,
-      "str": 23,
-      "sta": 15
-    },
-    {
-      "id": 16867,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Legplates of Might",
-      "p": "inv_pants_04",
-      "str": 24,
-      "sta": 23,
-      "resist": {
-        "shadow": 10
-      }
     },
     {
       "id": 16962,
@@ -35829,19 +35322,6 @@ var gear = {
       }
     },
     {
-      "id": 22000,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 58,
-      "q": "3",
-      "i": "66",
-      "name": "Legplates of Heroism",
-      "p": "inv_pants_04",
-      "agi": 11,
-      "str": 25,
-      "sta": 16
-    },
-    {
       "id": 22092,
       "type": "Plate",
       "slot": "legs",
@@ -36098,19 +35578,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 22873,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "q": "3",
-      "i": "68",
-      "name": "Legionnaire's Plate Leggings",
-      "p": "inv_pants_06",
-      "str": 12,
-      "sta": 17,
-      "crit": 2
-    },
-    {
       "id": 23071,
       "type": "Leather",
       "slot": "legs",
@@ -36122,19 +35589,6 @@ var gear = {
       "agi": 31,
       "str": 15,
       "sta": 23,
-      "crit": 2
-    },
-    {
-      "id": 23301,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "q": "3",
-      "i": "68",
-      "name": "Knight-Captain's Plate Leggings",
-      "p": "inv_pants_06",
-      "str": 12,
-      "sta": 17,
       "crit": 2
     },
     {
@@ -39562,19 +39016,6 @@ var gear = {
       "str": 5
     },
     {
-      "id": 16405,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Knight-Lieutenant's Plate Boots",
-      "p": "inv_boots_plate_09",
-      "agi": 5,
-      "str": 8,
-      "sta": 23
-    },
-    {
       "id": 16483,
       "type": "Plate",
       "slot": "feet",
@@ -39587,19 +39028,6 @@ var gear = {
       "str": 18,
       "sta": 24,
       "hit": 1
-    },
-    {
-      "id": 16509,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Blood Guard's Plate Boots",
-      "p": "inv_boots_plate_09",
-      "agi": 5,
-      "str": 8,
-      "sta": 23
     },
     {
       "id": 16545,
@@ -39637,34 +39065,6 @@ var gear = {
       "p": "inv_boots_plate_03",
       "str": 8,
       "sta": 18
-    },
-    {
-      "id": 16734,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Boots of Valor",
-      "p": "inv_boots_plate_03",
-      "agi": 4,
-      "str": 8,
-      "sta": 20
-    },
-    {
-      "id": 16862,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Sabatons of Might",
-      "p": "inv_boots_plate_04",
-      "str": 15,
-      "sta": 26,
-      "resist": {
-        "shadow": 7
-      }
     },
     {
       "id": 16977,
@@ -40586,19 +39986,6 @@ var gear = {
       }
     },
     {
-      "id": 21995,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 58,
-      "q": "4",
-      "i": "60",
-      "name": "Boots of Heroism",
-      "p": "inv_boots_plate_03",
-      "str": 20,
-      "sta": 20,
-      "hit": 1
-    },
-    {
       "id": 22087,
       "type": "Plate",
       "slot": "feet",
@@ -40672,32 +40059,6 @@ var gear = {
       "agi": 13,
       "str": 13,
       "sta": 13
-    },
-    {
-      "id": 22858,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "q": "3",
-      "i": "66",
-      "name": "Blood Guard's Plate Greaves",
-      "p": "inv_boots_plate_09",
-      "agi": 9,
-      "str": 10,
-      "sta": 23
-    },
-    {
-      "id": 23287,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "q": "3",
-      "i": "66",
-      "name": "Knight-Lieutenant's Plate Greaves",
-      "p": "inv_boots_plate_09",
-      "agi": 9,
-      "str": 10,
-      "sta": 23
     },
     {
       "id": 209581,
