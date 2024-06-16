@@ -1327,8 +1327,8 @@ class Player {
             if (this.auras.voodoofrenzy && rng10k() < 1500) {
                 this.auras.voodoofrenzy.use();
             }
-            // Sudden Death
-            if (this.auras.suddendeath && rng10k() < 1000) {
+            // Sudden Death - Execute proc is handled on execute spell
+            if (!(spell instanceof Execute) && this.auras.suddendeath && rng10k() < 1000) {
                 this.auras.suddendeath.use();
             }
             // Fresh Meat

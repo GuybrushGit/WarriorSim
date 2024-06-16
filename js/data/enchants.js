@@ -1082,7 +1082,8 @@ var enchant = {
     name: 'Battlegear of Valor',
     items: [226765,226764,226766,226770,226771,226769,226767,226768],
     bonus: [
-       { count: 4, stats: { ap: 40 } }
+       { count: 4, stats: { ap: 40 } },
+       { count: 6, stats: { procspell: "WarriorsResolve", procchance: 2 } }
     ]
    },
    {
@@ -1094,4 +1095,29 @@ var enchant = {
        { count: 6, stats: { gladdmg: 4 } },
     ]
  },
+ {
+  id: 1761,
+  name: 'Champion\'s Battlegear',
+  items: [227050,227051,227043,227042,227049,227048],
+  bonus: [
+     { count: 2, stats: { ap: 40 } }
+  ]
+},
+{
+  id: 1775,
+  name: 'Lieutenant Commander\'s Battlegear',
+  items: [227046,227047,227053,227052,227044,227045],
+  bonus: [
+     { count: 2, stats: { ap: 40 } }
+  ]
+},
+{
+  id: 1778,
+  name: 'Battlegear of Heroism',
+  items: [226879,226880,226878,226877,226876,226875,226874,226873],
+  bonus: [
+     { count: 2, stats: { ap: 40 } },
+     { count: 4, stats: { procspell: "WarriorsResolve", procchance: 2 } }
+  ]
+},
 ];

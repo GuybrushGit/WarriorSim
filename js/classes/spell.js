@@ -176,14 +176,24 @@ class Execute extends Spell {
         this.player.rage -= this.cost;
         this.usedrage = ~~this.player.rage;
         this.totalusedrage += this.usedrage - (this.player.auras.suddendeath && this.player.auras.suddendeath.timer ? 10 : 0);
-        this.timer = batching - (step % batching);
+        this.timer = 1 - (step % 1);
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     step(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            if (this.result != RESULT.MISS && this.result != RESULT.DODGE)
-                this.player.rage = this.player.auras.suddendeath && this.player.auras.suddendeath.timer ? 10 : 0;
+            if (this.result != RESULT.MISS && this.result != RESULT.DODGE) {
+                if (this.player.auras.suddendeath && this.player.auras.suddendeath.timer) {
+                    this.player.rage = Math.min(this.player.rage, 10);
+                    this.player.auras.suddendeath.remove();
+                    // proc new sudden death
+                    if (rng10k() < 1000) this.player.auras.suddendeath.use();
+                }
+                else {
+                    this.player.rage = 0;
+                }
+            }
+                
             /* start-log */ if (log) this.player.log(`Execute batch (${Object.keys(RESULT)[this.result]})`); /* end-log */
         }
         else {
@@ -2333,5 +2343,9 @@ class SuddenDeath extends Aura {
             this.timer = 0;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
+    }
+    remove() {
+        this.timer = 0;
+        this.step();
     }
 }
