@@ -639,7 +639,7 @@ SIM.SETTINGS = {
         view.buffs.append(armor);
         view.buffs.append('<div class="label">Default Stance</div>');
         view.buffs.append(stances);
-        view.buffs.append('<div class="label">Skill</div>');
+        view.buffs.append('<div class="label">Skill Specialization</div>');
         view.buffs.append(skills);
         SIM.UI.updateSession();
         SIM.UI.updateSidebar();
@@ -700,10 +700,10 @@ SIM.SETTINGS = {
                     tree.append(td);
                 }
                 let tr = $('<tr>');
-                let tree_header = $(`<th style="text-align:left; padding-left: 4px;">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString()}</th>`)
+                let tree_header = $(`<th style="text-align:left; padding-left: 4px;">${tree_name.toString().charAt(0).toUpperCase()}${tree_name.slice(1).toString().replace('1','')}</th>`)
                 tr.append(tree_header)
-                if (tree_name == "legs")
-                    tree.append('<td><div id="move" class="rune" style="position: absolute; z-index: 999; margin-top: -23px;"><div class="icon"><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_titansgrip.jpg" alt="" /></div></div></td>');
+                // if (tree_name == "legs")
+                //     tree.append('<td><div id="move" class="rune" style="position: absolute; z-index: 999; margin-top: -23px;"><div class="icon"><img src="https://wow.zamimg.com/images/wow/icons/medium/ability_warrior_titansgrip.jpg" alt="" /></div></div></td>');
                 
                 table.append(tr).append(tree);
                 tbody.append(table)

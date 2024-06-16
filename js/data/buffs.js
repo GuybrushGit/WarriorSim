@@ -1054,52 +1054,68 @@ var buffs = [
       minlevel: 20,
    },
    {
-      id: 20597,
+      id: 442813,
       name: "Increased Swords",
       iconname: "ability_meleedamage",
+      group: "skill",
       spellid: true,
       skill: true,
       skill_1: 5
    },
    {
-      id: 20574,
+      id: 442876,
       name: "Increased Axes",
-      iconname: "inv_axe_02",
+      iconname: "inv_axe_03",
+      group: "skill",
       spellid: true,
       skill: true,
       skill_3: 5
    },
    {
-      id: 20864,
+      id: 442881,
       name: "Increased Maces",
-      iconname: "inv_hammer_05",
+      iconname: "inv_hammer_01",
+      group: "skill",
       spellid: true,
       skill: true,
       skill_0: 5
    },
    {
-      id: 7576,
+      id: 442887,
       name: "Increased Daggers",
-      iconname: "inv_weapon_shortblade_14",
+      iconname: "inv_weapon_shortblade_05",
+      group: "skill",
       spellid: true,
       skill: true,
       skill_2: 5
    },
    {
-      id: 436285,
+      id: 442890,
       name: "Increased Fist",
-      iconname: "inv_gauntlets_04",
+      iconname: "inv_misc_desecrated_plategloves",
+      group: "skill",
       spellid: true,
       skill: true,
       skill_4: 5
    },
    {
-      id: 200,
+      id: 442892,
       name: "Increased Polearms",
-      iconname: "inv_spear_06",
+      iconname: "inv_staff_08",
+      group: "skill",
       spellid: true,
       skill: true,
-      skill_5: 5
+      skill_5: 5,
+      skill_6: 5,
+   },
+   {
+      id: 459312,
+      name: "Defense Specialization",
+      iconname: "inv_shield_06",
+      group: "skill",
+      spellid: true,
+      skill: true,
+      skill_8: 5,
    },
    
    
