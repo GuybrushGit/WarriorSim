@@ -10,6 +10,7 @@
 
   <script type="text/javascript" src="/dist/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="rawdata.js"></script>
+  <script type="text/javascript" src="wow-classic-items.js"></script>
 </head>
 <body>
 
@@ -308,6 +309,17 @@
 
           if (obj.id == 220743 || obj.id == 220747 || obj.id == 220738) obj.name += ' (with proc)';
           if (obj.id == 220742) obj.name += ' (no proc)';
+
+          let source = getSource(obj.id);
+          if (source && source.zone) {
+            if (source.zone == 3456) continue; // Naxxramas
+            if (source.zone == 1977) continue; // Zul'Gurub
+            if (source.zone == 2677) continue; // Blackwing Lair
+            if (source.zone == 3428) continue; // Ahn'Qiraj
+            if (source.zone == 3429) continue; // Ruins of Ahn'Qiraj
+          }
+         
+          if (obj.id == 19347) console.log(source);
 
           addToGear(obj);
         }
@@ -701,6 +713,11 @@
         if (obj["StatModifier_bonusStat[8]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[8]"]);
         if (obj["StatModifier_bonusStat[9]"] == type) stat += parseInt(obj["StatModifier_bonusAmount[9]"]);
         return stat;
+      }
+      var getSource = function(id) {
+        for(let i = 0; i < classicitems.length; i++) {
+          if (id == classicitems[i].itemId) return classicitems[i].source;
+        }
       }
       var isUnobtainable = function(id) {
         let unobtainable = true;
