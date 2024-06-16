@@ -614,6 +614,37 @@ class ShieldSlam extends Spell {
     }
 }
 
+class Shockwave extends Spell {
+    constructor(player, id) {
+        super(player, id);
+        this.cost = 15 - player.ragecostbonus;
+        this.cooldown = 20;
+    }
+    dmg() {
+        let dmg;
+        dmg = 1000; // todo
+        // dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
+        // dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
+        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+    }
+    use() {
+        this.player.switch('def');
+        this.player.timer = 1500;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
+        (this.player.stance == 'def' || this.player.stance == 'glad' || this.player.talents.rageretained >= this.cost) &&
+        (!this.maxrage || (this.player.stance != 'battle' && this.player.stance != 'zerk') || this.player.rage <= this.maxrage) &&
+        (!this.minrage || this.player.rage >= this.minrage) &&
+        (!this.maincd || 
+            (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
+            (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
+    }
+}
+
 
 /**************************************************** AURAS ****************************************************/
 

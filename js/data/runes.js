@@ -201,11 +201,12 @@ var runes = {
             iconname: 'ability_warrior_improveddisciplines',
             suddendeath: true,
         },
-        // {
-        //     id: 440488,
-        //     name: 'Shockwave',
-        //     description: "",
-        //     iconname: 'ability_warrior_shockwave',
-        // },
+        {
+            id: 440488,
+            name: 'Shockwave',
+            description: "",
+            iconname: 'ability_warrior_shockwave',
+            enable: 440488,
+        },
     ],
 };

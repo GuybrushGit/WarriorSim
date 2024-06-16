@@ -739,6 +739,22 @@ var spells = [
     active: false,
 },
 
+// Shockwave
+{
+    id: 440488,
+    name: 'Shockwave',
+    classname: 'Shockwave',
+    iconname: 'ability_warrior_shockwave',
+    minrage: 50,
+    minrageactive: false,
+    maxrage: 25,
+    maxrageactive: false,
+    maincd: 2,
+    maincdactive: false,
+    minlevel: 1,
+    active: false,
+},
+
 // Bloodthirst
 {
     id: 23894,
