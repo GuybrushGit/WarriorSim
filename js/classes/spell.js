@@ -183,18 +183,8 @@ class Execute extends Spell {
         if (this.timer <= a) {
             this.timer = 0;
             if (this.result != RESULT.MISS && this.result != RESULT.DODGE) {
-                if (this.player.auras.suddendeath && this.player.auras.suddendeath.timer) {
-                    this.player.rage = Math.min(this.player.rage, 10);
-                    this.player.auras.suddendeath.remove();
-                    // proc new sudden death
-                    if (rng10k() < 1000) this.player.auras.suddendeath.use();
-                }
-                else {
-                    this.player.rage = 0;
-                }
+                // moved to procattack
             }
-                
-            /* start-log */ if (log) this.player.log(`Execute batch (${Object.keys(RESULT)[this.result]})`); /* end-log */
         }
         else {
             this.timer -= a;
@@ -2347,5 +2337,6 @@ class SuddenDeath extends Aura {
     remove() {
         this.uptime += (this.timer - this.starttimer);
         this.timer = 0;
+        /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
     }
 }

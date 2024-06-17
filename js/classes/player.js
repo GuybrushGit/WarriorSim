@@ -1246,6 +1246,13 @@ class Player {
         if (spell instanceof ShieldSlam) return 0;
         if (spell instanceof ThunderClap) return 0;
         if (result != RESULT.MISS && result != RESULT.DODGE) {
+            if (spell instanceof Execute) {
+                this.rage = 0;
+                if (this.auras.suddendeath && this.auras.suddendeath.timer) {
+                    this.rage = 10;
+                    this.auras.suddendeath.remove();
+                }
+            }
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += weapon.proc1.chance == 10000 ? weapon.proc1.magicdmg : this.magicproc(weapon.proc1);
@@ -1327,8 +1334,8 @@ class Player {
             if (this.auras.voodoofrenzy && rng10k() < 1500) {
                 this.auras.voodoofrenzy.use();
             }
-            // Sudden Death - Execute proc is handled on execute spell
-            if (!(spell instanceof Execute) && this.auras.suddendeath && rng10k() < 1000) {
+            // Sudden Death
+            if (this.auras.suddendeath && rng10k() < 1000) {
                 this.auras.suddendeath.use();
             }
             // Fresh Meat
