@@ -1114,7 +1114,7 @@ var enchant = {
 {
   id: 1778,
   name: 'Battlegear of Heroism',
-  items: [226879,226880,226878,226877,226876,226875,226874,226873],
+  items: [226879,226880,226878,226877,226876,226875,226874,226873,226869,226860,226858,226867,226872,226862,226865,226863,226870,226861,226864,226866,226859,226868,226871,226857],
   bonus: [
      { count: 2, stats: { ap: 40 } },
      { count: 4, stats: { procspell: "WarriorsResolve", procchance: 2 } }
@@ -1128,6 +1128,23 @@ var enchant = {
      { count: 2, stats: { switchrage: true } },
      { count: 4, stats: { switchdelay: true } },
      { count: 6, stats: { switchbonus: true } },
+  ]
+},
+{
+  id: 383,
+  name: 'Warlord\'s Battlegear',
+  items: [16541,16542,16544,16545,16548,16543],
+  bonus: [
+     { count: 6, stats: { ap: 40 } }
+  ]
+},
+{
+  id: 1,
+  name: 'The Gladiator',
+  items: [11729,11726,11728,11731,11730],
+  bonus: [
+     { count: 4, stats: { ap: 10 } },
+     { count: 5, stats: { crit: 1 } }
   ]
 },
 ];

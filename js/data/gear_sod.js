@@ -3081,31 +3081,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16667,
-      "type": "Mail",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Coif of Elements",
-      "p": "inv_helmet_04",
-      "str": 7,
-      "sta": 13
-    },
-    {
-      "id": 16727,
-      "type": "Plate",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Lightforge Helm",
-      "p": "inv_helmet_08",
-      "agi": 6,
-      "str": 13,
-      "sta": 20
-    },
-    {
       "id": 16963,
       "type": "Plate",
       "slot": "head",
@@ -7506,31 +7481,6 @@ var gear = {
       "str": 18,
       "sta": 23,
       "hit": 1
-    },
-    {
-      "id": 16669,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Pauldrons of Elements",
-      "p": "inv_shoulder_29",
-      "str": 6,
-      "sta": 14
-    },
-    {
-      "id": 16729,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Lightforge Spaulders",
-      "p": "inv_shoulder_10",
-      "agi": 4,
-      "str": 9,
-      "sta": 15
     },
     {
       "id": 16793,
@@ -14498,18 +14448,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16726,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lightforge Breastplate",
-      "p": "inv_chest_plate03",
-      "str": 13,
-      "sta": 21
-    },
-    {
       "id": 17005,
       "type": "Leather",
       "slot": "chest",
@@ -18206,19 +18144,6 @@ var gear = {
       "agi": 7,
       "str": 17,
       "sta": 17
-    },
-    {
-      "id": 16722,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Lightforge Bracers",
-      "p": "inv_bracer_14",
-      "agi": 4,
-      "str": 7,
-      "sta": 10
     },
     {
       "id": 16794,
@@ -24076,30 +24001,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 16672,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Gauntlets of Elements",
-      "p": "inv_gauntlets_11",
-      "str": 9,
-      "sta": 4
-    },
-    {
-      "id": 16724,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Lightforge Gauntlets",
-      "p": "inv_gauntlets_19",
-      "str": 14,
-      "sta": 9
-    },
-    {
       "id": 16978,
       "type": "Mail",
       "slot": "hands",
@@ -24874,18 +24775,6 @@ var gear = {
       "resist": {
         "fire": 7
       },
-      "hit": 1
-    },
-    {
-      "id": 226748,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Gauntlets of Elements",
-      "p": "inv_gauntlets_11",
-      "sta": 4,
       "hit": 1
     },
     {
@@ -29418,30 +29307,6 @@ var gear = {
       "agi": 4,
       "sta": 3,
       "ap": 12
-    },
-    {
-      "id": 16673,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Cord of Elements",
-      "p": "inv_belt_16",
-      "str": 9,
-      "sta": 6
-    },
-    {
-      "id": 16723,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Lightforge Belt",
-      "p": "inv_belt_11",
-      "str": 10,
-      "sta": 9
     },
     {
       "id": 16987,
@@ -34749,32 +34614,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 16668,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Kilt of Elements",
-      "p": "inv_pants_03",
-      "agi": 6,
-      "str": 12,
-      "sta": 7
-    },
-    {
-      "id": 16728,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Lightforge Legplates",
-      "p": "inv_pants_04",
-      "agi": 8,
-      "str": 20,
-      "sta": 14
-    },
-    {
       "id": 16962,
       "type": "Plate",
       "slot": "legs",
@@ -35584,18 +35423,6 @@ var gear = {
       "resist": {
         "fire": 10
       },
-      "hit": 1
-    },
-    {
-      "id": 226750,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Kilt of Elements",
-      "p": "inv_pants_03",
-      "sta": 11,
       "hit": 1
     },
     {
@@ -38805,29 +38632,6 @@ var gear = {
       "str": 18,
       "sta": 24,
       "hit": 1
-    },
-    {
-      "id": 16670,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Boots of Elements",
-      "p": "inv_boots_wolf",
-      "agi": 9
-    },
-    {
-      "id": 16725,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Lightforge Boots",
-      "p": "inv_boots_plate_03",
-      "str": 8,
-      "sta": 18
     },
     {
       "id": 16977,
