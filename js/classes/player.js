@@ -1424,6 +1424,8 @@ class Player {
     isEnraged() {
         return (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) || 
             (this.auras.consumedrage && this.auras.consumedrage.timer) || 
-            (this.auras.freshmeat && this.auras.freshmeat.timer);
+            (this.auras.freshmeat && this.auras.freshmeat.timer) || 
+            (this.auras.bloodrage && this.auras.bloodrage.timer) || 
+            (this.auras.berserkerrage && this.auras.berserkerrage.timer);
     }
 }

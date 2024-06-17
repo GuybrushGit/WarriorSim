@@ -395,9 +395,7 @@ class RagingBlow extends Spell {
     canUse(executephase) {
         return !this.timer && !this.player.timer && 
             (!executephase || this.execute) &&
-            ((this.player.auras.bloodrage && this.player.auras.bloodrage.timer) 
-              || (this.player.auras.berserkerrage && this.player.auras.berserkerrage.timer)
-              || (this.player.isEnraged()));
+            this.player.isEnraged();
     }
 }
 
@@ -2127,6 +2125,8 @@ class Rampage extends Aura {
         super(player, id);
         this.duration = 30;
         this.mult_stats = { apmod: 10 };
+        this.cooldown = 120;
+        this.usestep = 0;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2138,12 +2138,13 @@ class Rampage extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return (!this.timer || (this.timer - step) < 3000) && !this.player.timer && this.player.isEnraged();
+        return !this.timer && !this.player.timer && this.player.isEnraged() && step >= this.usestep;
     }
     step() {
         if (step >= this.timer) {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
+            this.usestep = this.starttimer + (this.cooldown * 1000);
             this.player.updateAP();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
@@ -2338,5 +2339,18 @@ class SuddenDeath extends Aura {
         this.uptime += (this.timer - this.starttimer);
         this.timer = 0;
         /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+    }
+}
+
+class WarriorsResolve extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Warrior\'s Resolve');
+    }
+    use() {
+        let oldRage = this.player.rage;
+        this.player.rage = Math.min(this.player.rage + 10, 100);
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
+            this.player.auras.consumedrage.use();
+        /* start-log */ if (log) this.player.log(`${this.name} proc`); /* end-log */
     }
 }
