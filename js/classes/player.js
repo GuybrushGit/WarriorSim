@@ -85,6 +85,7 @@ class Player {
                 frost: 0,
             },
             block: 0,
+            defense: 0,
         };
         if (enchtype == 1) {
             this.testEnch = testItem;
@@ -230,6 +231,8 @@ class Player {
                             this.base['skill_' + sk] += item.skill;
                         }
                     }
+
+                    if (item.d) this.base.defense += item.d;
 
                     if (type == "mainhand" || type == "offhand" || type == "twohand")
                         this.addWeapon(item, type);
@@ -564,6 +567,7 @@ class Player {
                 this.base.haste *= (1 + buff.haste / 100) || 1;
                 this.base.moddmgdone += buff.moddmgdone || 0;
                 this.base.moddmgtaken += buff.moddmgtaken || 0;
+                this.base.defense += buff.defense || 0;
 
                 this.base.skill_0 += this.race == "Human" ? 0 : (buff.skill_0 || 0);
                 this.base.skill_1 += this.race == "Human" ? 0 : (buff.skill_1 || 0);

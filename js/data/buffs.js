@@ -1108,7 +1108,7 @@ var buffs = [
       iconname: "inv_shield_06",
       spellid: true,
       skill: true,
-      skill_8: 5,
+      defense: 25,
    },
    
    

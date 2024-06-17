@@ -136,6 +136,8 @@
                   }
                   if (e.Effect == 6 && e.EffectAura == 564)
                     obj.block = parseInt(e.EffectBasePoints) + 1;
+                  if (e.Effect == 6 && e.EffectAura == 30 && e["EffectMiscValue[0]"] == 95)
+                    obj.d = parseInt(e.EffectBasePoints) + 1;
                 });
               }
 

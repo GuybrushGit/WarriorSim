@@ -1612,7 +1612,8 @@ var gear = {
       "name": "Golem Skull Helm",
       "p": "inv_helmet_23",
       "str": 18,
-      "sta": 18
+      "sta": 18,
+      "d": 7
     },
     {
       "id": 11913,
@@ -1676,7 +1677,8 @@ var gear = {
       "name": "Enchanted Thorium Helm",
       "p": "inv_helmet_02",
       "str": 12,
-      "sta": 25
+      "sta": 25,
+      "d": 9
     },
     {
       "id": 12640,
@@ -3094,7 +3096,8 @@ var gear = {
       "resist": {
         "frost": 10,
         "shadow": 10
-      }
+      },
+      "d": 11
     },
     {
       "id": 17767,
@@ -3285,7 +3288,8 @@ var gear = {
       "name": "Southsea Head Bucket",
       "p": "inv_helmet_20",
       "str": 6,
-      "sta": 15
+      "sta": 15,
+      "d": 4
     },
     {
       "id": 20643,
@@ -3323,7 +3327,8 @@ var gear = {
       "p": "inv_helmet_72",
       "agi": 18,
       "str": 29,
-      "sta": 34
+      "sta": 34,
+      "d": 6
     },
     {
       "id": 22223,
@@ -3360,7 +3365,8 @@ var gear = {
       "name": "Dreadnaught Helmet",
       "p": "inv_helmet_58",
       "str": 21,
-      "sta": 45
+      "sta": 45,
+      "d": 14
     },
     {
       "id": 209690,
@@ -3385,7 +3391,8 @@ var gear = {
       "p": "inv_helmet_13",
       "agi": 11,
       "str": 9,
-      "sta": 3
+      "sta": 3,
+      "d": 4
     },
     {
       "id": 211510,
@@ -3423,7 +3430,8 @@ var gear = {
       "name": "Mask of Scorn",
       "p": "inv_helmet_11",
       "str": 9,
-      "sta": 7
+      "sta": 7,
+      "d": 7
     },
     {
       "id": 213280,
@@ -3738,7 +3746,8 @@ var gear = {
       "p": "inv_helmet_02",
       "str": 15,
       "sta": 32,
-      "hit": 1
+      "hit": 1,
+      "d": 9
     },
     {
       "id": 226877,
@@ -4559,7 +4568,8 @@ var gear = {
       "name": "Medallion of Steadfast Might",
       "p": "inv_jewelry_amulet_03",
       "str": 9,
-      "sta": 13
+      "sta": 13,
+      "d": 8
     },
     {
       "id": 17111,
@@ -4613,7 +4623,8 @@ var gear = {
       "i": "62",
       "name": "Evil Eye Pendant",
       "p": "inv_misc_eye_01",
-      "agi": 15
+      "agi": 15,
+      "d": 7
     },
     {
       "id": 18404,
@@ -4679,7 +4690,8 @@ var gear = {
       "name": "Master Dragonslayer's Medallion",
       "p": "inv_jewelry_necklace_18",
       "agi": 14,
-      "sta": 24
+      "sta": 24,
+      "d": 7
     },
     {
       "id": 19491,
@@ -4800,7 +4812,8 @@ var gear = {
       "name": "Strength of Mugamba",
       "p": "inv_jewelry_necklace_23",
       "str": 7,
-      "sta": 10
+      "sta": 10,
+      "d": 4
     },
     {
       "id": 19575,
@@ -4813,7 +4826,8 @@ var gear = {
       "p": "inv_jewelry_necklace_24",
       "agi": 6,
       "str": 7,
-      "sta": 10
+      "sta": 10,
+      "d": 4
     },
     {
       "id": 19576,
@@ -4826,7 +4840,8 @@ var gear = {
       "p": "inv_jewelry_necklace_25",
       "agi": 8,
       "str": 8,
-      "sta": 13
+      "sta": 13,
+      "d": 5
     },
     {
       "id": 19577,
@@ -4839,7 +4854,8 @@ var gear = {
       "p": "inv_jewelry_necklace_26",
       "agi": 8,
       "str": 8,
-      "sta": 13
+      "sta": 13,
+      "d": 6
     },
     {
       "id": 20442,
@@ -4923,7 +4939,8 @@ var gear = {
       "name": "Pendant of the Shifting Sands",
       "p": "inv_jewelry_necklace_ahnqiraj_03",
       "str": 14,
-      "sta": 21
+      "sta": 21,
+      "d": 4
     },
     {
       "id": 22150,
@@ -4997,7 +5014,8 @@ var gear = {
       "name": "Justice Badge",
       "p": "inv_jewelry_amulet_03",
       "str": 6,
-      "sta": 7
+      "sta": 7,
+      "d": 4
     },
     {
       "id": 213344,
@@ -6526,7 +6544,8 @@ var gear = {
       "sta": 14,
       "resist": {
         "shadow": 10
-      }
+      },
+      "d": 3
     },
     {
       "id": 14503,
@@ -6550,7 +6569,8 @@ var gear = {
       "i": "55",
       "name": "Stockade Pauldrons",
       "p": "inv_shoulder_20",
-      "sta": 20
+      "sta": 20,
+      "d": 10
     },
     {
       "id": 14573,
@@ -7559,7 +7579,8 @@ var gear = {
       "name": "Bile-etched Spaulders",
       "p": "inv_shoulder_17",
       "str": 17,
-      "sta": 6
+      "sta": 6,
+      "d": 7
     },
     {
       "id": 18493,
@@ -7571,7 +7592,8 @@ var gear = {
       "name": "Bulky Iron Spaulders",
       "p": "inv_shoulder_26",
       "str": 15,
-      "sta": 12
+      "sta": 12,
+      "d": 6
     },
     {
       "id": 18686,
@@ -7858,7 +7880,8 @@ var gear = {
       "sta": 16,
       "resist": {
         "nature": 25
-      }
+      },
+      "d": 6
     },
     {
       "id": 20680,
@@ -7917,6 +7940,7 @@ var gear = {
       "agi": 16,
       "str": 20,
       "sta": 21,
+      "d": 4,
       "hit": 1
     },
     {
@@ -7956,7 +7980,8 @@ var gear = {
       "str": 16,
       "sta": 29,
       "hit": 1,
-      "block": 21
+      "block": 21,
+      "d": 9
     },
     {
       "id": 209676,
@@ -8338,6 +8363,7 @@ var gear = {
       "p": "inv_shoulder_30",
       "str": 12,
       "sta": 18,
+      "d": 4,
       "hit": 1
     },
     {
@@ -12947,7 +12973,8 @@ var gear = {
       "name": "Enchanted Thorium Breastplate",
       "p": "inv_chest_plate10",
       "str": 12,
-      "sta": 26
+      "sta": 26,
+      "d": 9
     },
     {
       "id": 12757,
@@ -13070,7 +13097,8 @@ var gear = {
       "sta": 20,
       "resist": {
         "frost": 10
-      }
+      },
+      "d": 6
     },
     {
       "id": 13944,
@@ -14517,7 +14545,8 @@ var gear = {
       "name": "Kromcrush's Chestplate",
       "p": "inv_chest_chain_14",
       "str": 16,
-      "sta": 16
+      "sta": 16,
+      "d": 10
     },
     {
       "id": 18530,
@@ -14644,7 +14673,8 @@ var gear = {
       "p": "inv_chest_plate07",
       "agi": 15,
       "str": 23,
-      "sta": 24
+      "sta": 24,
+      "d": 4
     },
     {
       "id": 20380,
@@ -14705,7 +14735,8 @@ var gear = {
       "i": "58",
       "name": "Ursa's Embrace",
       "p": "inv_chest_plate16",
-      "agi": 17
+      "agi": 17,
+      "d": 10
     },
     {
       "id": 21331,
@@ -14718,7 +14749,8 @@ var gear = {
       "p": "inv_chest_plate12",
       "agi": 24,
       "str": 34,
-      "sta": 38
+      "sta": 38,
+      "d": 6
     },
     {
       "id": 22191,
@@ -14768,6 +14800,7 @@ var gear = {
       "p": "inv_chest_plate02",
       "str": 21,
       "sta": 43,
+      "d": 13,
       "hit": 2
     },
     {
@@ -14813,7 +14846,8 @@ var gear = {
       "sta": 24,
       "resist": {
         "frost": 42
-      }
+      },
+      "d": 8
     },
     {
       "id": 23087,
@@ -14916,7 +14950,8 @@ var gear = {
       "p": "inv_chest_chain_12",
       "agi": 6,
       "str": 9,
-      "sta": 8
+      "sta": 8,
+      "d": 4
     },
     {
       "id": 211512,
@@ -15193,7 +15228,8 @@ var gear = {
       "p": "inv_chest_plate03",
       "str": 19,
       "sta": 31,
-      "hit": 1
+      "hit": 1,
+      "d": 6
     },
     {
       "id": 226880,
@@ -16793,7 +16829,8 @@ var gear = {
       "i": "53",
       "name": "Runed Golem Shackles",
       "p": "inv_bracer_17",
-      "str": 14
+      "str": 14,
+      "d": 4
     },
     {
       "id": 12936,
@@ -18313,7 +18350,8 @@ var gear = {
       "name": "Fel Hardened Bracers",
       "p": "inv_bracer_15",
       "str": 12,
-      "sta": 12
+      "sta": 12,
+      "d": 3
     },
     {
       "id": 18812,
@@ -18662,7 +18700,8 @@ var gear = {
       "name": "Dreadnaught Bracers",
       "p": "inv_bracer_15",
       "str": 14,
-      "sta": 28
+      "sta": 28,
+      "d": 5
     },
     {
       "id": 22663,
@@ -18720,7 +18759,8 @@ var gear = {
       "sta": 13,
       "resist": {
         "frost": 24
-      }
+      },
+      "d": 5
     },
     {
       "id": 23090,
@@ -18978,7 +19018,8 @@ var gear = {
       "p": "inv_bracer_18",
       "agi": 5,
       "str": 9,
-      "sta": 14
+      "sta": 14,
+      "d": 5
     },
     {
       "id": 226873,
@@ -18991,7 +19032,8 @@ var gear = {
       "p": "inv_bracer_18",
       "agi": 5,
       "str": 9,
-      "sta": 14
+      "sta": 14,
+      "d": 3
     }
   ],
   "hands": [
@@ -20434,6 +20476,7 @@ var gear = {
       "i": "45",
       "name": "Cragfists of the Tiger",
       "p": "inv_gauntlets_12",
+      "d": 5,
       "agi": 11,
       "str": 11,
       "rand": 699
@@ -20447,6 +20490,7 @@ var gear = {
       "i": "45",
       "name": "Cragfists of the Bear",
       "p": "inv_gauntlets_12",
+      "d": 5,
       "sta": 11,
       "str": 11,
       "rand": 1209
@@ -20460,6 +20504,7 @@ var gear = {
       "i": "45",
       "name": "Cragfists of Strength",
       "p": "inv_gauntlets_12",
+      "d": 5,
       "str": 16,
       "rand": 308
     },
@@ -21980,7 +22025,8 @@ var gear = {
       "name": "Stonegrip Gauntlets",
       "p": "inv_gauntlets_03",
       "str": 9,
-      "sta": 14
+      "sta": 14,
+      "d": 10
     },
     {
       "id": 13126,
@@ -22093,7 +22139,8 @@ var gear = {
       "name": "Boneclenched Gauntlets",
       "p": "inv_gauntlets_29",
       "str": 15,
-      "sta": 14
+      "sta": 14,
+      "d": 7
     },
     {
       "id": 14551,
@@ -24338,7 +24385,8 @@ var gear = {
       "name": "Desert Wind Gauntlets",
       "p": "inv_gauntlets_28",
       "str": 11,
-      "sta": 10
+      "sta": 10,
+      "d": 6
     },
     {
       "id": 20712,
@@ -24436,6 +24484,7 @@ var gear = {
       "p": "inv_gauntlets_28",
       "str": 17,
       "sta": 27,
+      "d": 9,
       "block": 21
     },
     {
@@ -24481,7 +24530,8 @@ var gear = {
       "sta": 18,
       "resist": {
         "frost": 32
-      }
+      },
+      "d": 5
     },
     {
       "id": 23078,
@@ -24813,7 +24863,8 @@ var gear = {
       "name": "Handguards of Heroism",
       "p": "inv_gauntlets_26",
       "str": 12,
-      "sta": 18
+      "sta": 18,
+      "d": 4
     },
     {
       "id": 226878,
@@ -25867,7 +25918,8 @@ var gear = {
       "i": "33",
       "name": "Girdle of Golem Strength",
       "p": "inv_belt_27",
-      "str": 12
+      "str": 12,
+      "d": 3
     },
     {
       "id": 9657,
@@ -29395,7 +29447,8 @@ var gear = {
       "sta": 14,
       "resist": {
         "frost": 16
-      }
+      },
+      "d": 8
     },
     {
       "id": 19043,
@@ -30091,7 +30144,8 @@ var gear = {
       "p": "inv_belt_27",
       "str": 20,
       "sta": 26,
-      "block": 18
+      "block": 18,
+      "d": 9
     },
     {
       "id": 209421,
@@ -30115,7 +30169,8 @@ var gear = {
       "name": "Twilight Defender's Girdle",
       "p": "inv_belt_27",
       "str": 7,
-      "sta": 9
+      "sta": 9,
+      "d": 4
     },
     {
       "id": 212590,
@@ -30349,6 +30404,7 @@ var gear = {
       "p": "inv_belt_34",
       "str": 12,
       "sta": 15,
+      "d": 7,
       "hit": 1
     },
     {
@@ -30362,7 +30418,8 @@ var gear = {
       "p": "inv_belt_34",
       "agi": 9,
       "str": 15,
-      "sta": 12
+      "sta": 12,
+      "d": 7
     }
   ],
   "legs": [
@@ -32748,7 +32805,8 @@ var gear = {
       "name": "Enchanted Thorium Leggings",
       "p": "inv_pants_04",
       "str": 20,
-      "sta": 21
+      "sta": 21,
+      "d": 8
     },
     {
       "id": 12903,
@@ -32827,7 +32885,8 @@ var gear = {
       "i": "46",
       "name": "Golem Shard Leggings",
       "p": "inv_pants_04",
-      "str": 22
+      "str": 22,
+      "d": 6
     },
     {
       "id": 13075,
@@ -34626,7 +34685,8 @@ var gear = {
       "sta": 27,
       "resist": {
         "fire": 10
-      }
+      },
+      "d": 11
     },
     {
       "id": 17006,
@@ -34780,7 +34840,8 @@ var gear = {
       "name": "Slagplate Leggings",
       "p": "inv_pants_04",
       "str": 12,
-      "sta": 12
+      "sta": 12,
+      "d": 3
     },
     {
       "id": 19694,
@@ -34943,6 +35004,7 @@ var gear = {
       "agi": 21,
       "str": 33,
       "sta": 24,
+      "d": 6,
       "hit": 1
     },
     {
@@ -34984,6 +35046,7 @@ var gear = {
       "p": "inv_pants_plate_05",
       "str": 23,
       "sta": 37,
+      "d": 13,
       "block": 32
     },
     {
@@ -35067,7 +35130,8 @@ var gear = {
       "sta": 25,
       "resist": {
         "frost": 40
-      }
+      },
+      "d": 6
     },
     {
       "id": 22701,
@@ -35463,6 +35527,7 @@ var gear = {
       "p": "inv_pants_04",
       "str": 16,
       "sta": 25,
+      "d": 9,
       "block": 18
     },
     {
@@ -35476,7 +35541,8 @@ var gear = {
       "p": "inv_pants_04",
       "agi": 11,
       "str": 25,
-      "sta": 16
+      "sta": 16,
+      "d": 5
     },
     {
       "id": 227047,
@@ -39484,7 +39550,8 @@ var gear = {
       "sta": 19,
       "resist": {
         "nature": 25
-      }
+      },
+      "d": 6
     },
     {
       "id": 20629,
@@ -39534,7 +39601,8 @@ var gear = {
       "p": "inv_boots_plate_05",
       "agi": 17,
       "str": 21,
-      "sta": 23
+      "sta": 23,
+      "d": 4
     },
     {
       "id": 21532,
@@ -39575,7 +39643,8 @@ var gear = {
       "name": "Dreadnaught Sabatons",
       "p": "inv_boots_plate_06",
       "str": 15,
-      "sta": 34
+      "sta": 34,
+      "d": 9
     },
     {
       "id": 22472,
@@ -39673,7 +39742,8 @@ var gear = {
       "p": "inv_boots_01",
       "agi": 9,
       "str": 7,
-      "sta": 10
+      "sta": 10,
+      "d": 4
     },
     {
       "id": 213335,
@@ -39948,7 +40018,8 @@ var gear = {
       "p": "inv_boots_plate_03",
       "str": 15,
       "sta": 20,
-      "hit": 1
+      "hit": 1,
+      "d": 7
     },
     {
       "id": 226879,
@@ -40424,6 +40495,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of the Tiger",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -40437,6 +40509,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of the Bear",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -40450,6 +40523,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of Strength",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "str": 15,
       "rand": 307
     },
@@ -41391,7 +41465,8 @@ var gear = {
       "name": "Hardened Stone Band",
       "p": "inv_jewelry_ring_14",
       "str": 8,
-      "sta": 8
+      "sta": 8,
+      "d": 3
     },
     {
       "id": 18701,
@@ -41648,7 +41723,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 10,
-      "sta": 18
+      "sta": 18,
+      "d": 5
     },
     {
       "id": 21197,
@@ -41660,7 +41736,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 11,
-      "sta": 19
+      "sta": 19,
+      "d": 5
     },
     {
       "id": 21198,
@@ -41672,7 +41749,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 12,
-      "sta": 21
+      "sta": 21,
+      "d": 6
     },
     {
       "id": 21199,
@@ -41684,7 +41762,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 12,
-      "sta": 22
+      "sta": 22,
+      "d": 6
     },
     {
       "id": 21200,
@@ -41696,7 +41775,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 13,
-      "sta": 24
+      "sta": 24,
+      "d": 7
     },
     {
       "id": 21201,
@@ -41811,7 +41891,8 @@ var gear = {
       "name": "Band of the Steadfast Hero",
       "p": "inv_jewelry_ring_33",
       "str": 7,
-      "sta": 12
+      "sta": 12,
+      "d": 7
     },
     {
       "id": 209565,
@@ -42413,6 +42494,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of the Tiger",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "agi": 10,
       "str": 10,
       "rand": 696
@@ -42426,6 +42508,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of the Bear",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "sta": 10,
       "str": 10,
       "rand": 1206
@@ -42439,6 +42522,7 @@ var gear = {
       "i": "54",
       "name": "Drakeclaw Band of Strength",
       "p": "inv_jewelry_ring_04",
+      "d": 4,
       "str": 15,
       "rand": 307
     },
@@ -43380,7 +43464,8 @@ var gear = {
       "name": "Hardened Stone Band",
       "p": "inv_jewelry_ring_14",
       "str": 8,
-      "sta": 8
+      "sta": 8,
+      "d": 3
     },
     {
       "id": 18701,
@@ -43637,7 +43722,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 10,
-      "sta": 18
+      "sta": 18,
+      "d": 5
     },
     {
       "id": 21197,
@@ -43649,7 +43735,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 11,
-      "sta": 19
+      "sta": 19,
+      "d": 5
     },
     {
       "id": 21198,
@@ -43661,7 +43748,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 12,
-      "sta": 21
+      "sta": 21,
+      "d": 6
     },
     {
       "id": 21199,
@@ -43673,7 +43761,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 12,
-      "sta": 22
+      "sta": 22,
+      "d": 6
     },
     {
       "id": 21200,
@@ -43685,7 +43774,8 @@ var gear = {
       "name": "Signet Ring of the Bronze Dragonflight",
       "p": "inv_jewelry_ring_40",
       "str": 13,
-      "sta": 24
+      "sta": 24,
+      "d": 7
     },
     {
       "id": 21201,
@@ -43800,7 +43890,8 @@ var gear = {
       "name": "Band of the Steadfast Hero",
       "p": "inv_jewelry_ring_33",
       "str": 7,
-      "sta": 12
+      "sta": 12,
+      "d": 7
     },
     {
       "id": 209565,
@@ -45992,7 +46083,8 @@ var gear = {
       "speed": 2.1,
       "mindmg": 48,
       "maxdmg": 90,
-      "p": "inv_mace_13"
+      "p": "inv_mace_13",
+      "d": 5
     },
     {
       "id": 869,
@@ -54534,7 +54626,8 @@ var gear = {
       "maxdmg": 166,
       "p": "inv_mace_24",
       "str": 10,
-      "sta": 12
+      "sta": 12,
+      "d": 8
     },
     {
       "id": 21392,
@@ -54550,7 +54643,8 @@ var gear = {
       "p": "inv_axe_15",
       "agi": 6,
       "str": 15,
-      "sta": 9
+      "sta": 9,
+      "d": 4
     },
     {
       "id": 21520,
@@ -55208,7 +55302,8 @@ var gear = {
       "maxdmg": 94,
       "p": "inv_hammer_08",
       "str": 5,
-      "sta": 7
+      "sta": 7,
+      "d": 4
     },
     {
       "id": 213352,
@@ -60882,6 +60977,7 @@ var gear = {
       "resist": {
         "fire": 10
       },
+      "d": 10,
       "block": 40
     },
     {
@@ -60943,7 +61039,8 @@ var gear = {
       "speed": 1.8,
       "mindmg": 52,
       "maxdmg": 97,
-      "p": "inv_sword_40"
+      "p": "inv_sword_40",
+      "d": 7
     },
     {
       "id": 12976,
@@ -61255,6 +61352,7 @@ var gear = {
       "i": "20",
       "name": "Kresh's Back",
       "p": "inv_shield_18",
+      "d": 4,
       "block": 9
     },
     {
@@ -65545,6 +65643,7 @@ var gear = {
       "name": "Earthen Guard",
       "p": "inv_shield_15",
       "sta": 19,
+      "d": 7,
       "block": 44
     },
     {
@@ -65593,7 +65692,8 @@ var gear = {
       "maxdmg": 166,
       "p": "inv_mace_24",
       "str": 10,
-      "sta": 12
+      "sta": 12,
+      "d": 8
     },
     {
       "id": 21269,
@@ -65605,7 +65705,8 @@ var gear = {
       "name": "Blessed Qiraji Bulwark",
       "p": "inv_shield_23",
       "sta": 20,
-      "block": 55
+      "block": 55,
+      "d": 8
     },
     {
       "id": 21392,
@@ -65621,7 +65722,8 @@ var gear = {
       "p": "inv_axe_15",
       "agi": 6,
       "str": 15,
-      "sta": 9
+      "sta": 9,
+      "d": 4
     },
     {
       "id": 21520,
@@ -66098,7 +66200,8 @@ var gear = {
       "maxdmg": 94,
       "p": "inv_hammer_08",
       "str": 5,
-      "sta": 7
+      "sta": 7,
+      "d": 4
     },
     {
       "id": 213351,
@@ -66758,7 +66861,8 @@ var gear = {
       "mindmg": 89,
       "maxdmg": 134,
       "p": "inv_staff_29",
-      "sta": 11
+      "sta": 11,
+      "d": 10
     },
     {
       "id": 944,
@@ -69675,7 +69779,8 @@ var gear = {
       "speed": 3.1,
       "mindmg": 77,
       "maxdmg": 117,
-      "p": "inv_sword_41"
+      "p": "inv_sword_41",
+      "d": 10
     },
     {
       "id": 9391,
@@ -70768,7 +70873,8 @@ var gear = {
       "speed": 2.9,
       "mindmg": 50,
       "maxdmg": 76,
-      "p": "inv_sword_25"
+      "p": "inv_sword_25",
+      "d": 9
     },
     {
       "id": 13042,
@@ -70873,7 +70979,8 @@ var gear = {
       "speed": 2.8,
       "mindmg": 53,
       "maxdmg": 80,
-      "p": "inv_sword_46"
+      "p": "inv_sword_46",
+      "d": 10
     },
     {
       "id": 13051,
@@ -72920,7 +73027,8 @@ var gear = {
       "mindmg": 123,
       "maxdmg": 185,
       "p": "inv_weapon_halberd_09",
-      "sta": 23
+      "sta": 23,
+      "d": 7
     },
     {
       "id": 18520,
@@ -72949,7 +73057,8 @@ var gear = {
       "mindmg": 135,
       "maxdmg": 204,
       "p": "inv_hammer_22",
-      "sta": 12
+      "sta": 12,
+      "d": 8
     },
     {
       "id": 18534,
