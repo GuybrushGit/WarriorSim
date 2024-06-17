@@ -481,8 +481,17 @@ class Player {
                     if (bonus.stats.extra) {
                         this.setextra = bonus.stats.extra;
                     }
-                    if (bonus.stats.gladdmg) {
-                        this.gladdmg = bonus.stats.gladdmg;
+                    if (bonus.stats.switchrage) {
+                        this.switchrage = bonus.stats.switchrage;
+                    }
+                    if (bonus.stats.switchdelay) {
+                        this.switchdelay = bonus.stats.switchdelay;
+                        this.auras.echoesstance = new EchoesStance(this);
+                    }
+                    if (bonus.stats.switchbonus) {
+                        this.switchbonus = bonus.stats.switchbonus;
+                        this.auras.battleforecast = new BattleForecast(this);
+                        this.auras.berserkerforecast = new BerserkerForecast(this);
                     }
                 }
             }
@@ -960,6 +969,9 @@ class Player {
         if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.step();
+        if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.step();
+        if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.step();
+        if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1014,6 +1026,9 @@ class Player {
         if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.end();
+        if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.end();
+        if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.end();
+        if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
@@ -1408,7 +1423,9 @@ class Player {
         console.log(`%c ${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`, `color: ${color}`);
     }
     switch(stance) {
-        if (this.stance == stance || this.stance == 'glad') return;
+        let prev = this.stance;
+        // if (this.stance == stance || this.stance == 'glad') return;
+        // if (this.auras.echoesstance && this.auras.echoesstance.timer && this.auras.echoesstance.stance == stance) return;
         this.stance = stance;
         this.auras.battlestance.timer = 0;
         this.auras.berserkerstance.timer = 0;
@@ -1419,8 +1436,22 @@ class Player {
         if (stance == 'def') this.auras.defensivestance.timer = 1;
         if (stance == 'glad') this.auras.gladiatorstance.timer = 1;
         this.rage = Math.min(this.rage, this.talents.rageretained);
+        if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
+        if (this.auras.battleforecast && this.stance == 'battle') {
+            this.auras.berserkerforecast.remove();
+            this.auras.battleforecast.use();
+        } 
+        if (this.auras.berserkerforecast && this.stance == 'zerk') {
+            this.auras.battleforecast.remove();
+            this.auras.berserkerforecast.use();
+        } 
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
+    }
+    isValidStance(stance, isRend) {
+        return this.stance == stance || this.stance == 'glad' ||
+            (this.auras.echoesstance && this.auras.echoesstance.timer && this.auras.echoesstance.stance == stance) ||
+            (isRend && this.stance == 'zerk' && this.bloodfrenzy);
     }
     isEnraged() {
         return (this.auras.wreckingcrew && this.auras.wreckingcrew.timer) || 

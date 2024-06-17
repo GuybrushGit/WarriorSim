@@ -1120,4 +1120,14 @@ var enchant = {
      { count: 4, stats: { procspell: "WarriorsResolve", procchance: 2 } }
   ]
 },
+{
+  id: 1720,
+  name: 'Unstoppable Might',
+  items: [226499,226497,226494,226495,226493,226492,226498,226496],
+  bonus: [
+     { count: 2, stats: { switchrage: true } },
+     { count: 4, stats: { switchdelay: true } },
+     { count: 6, stats: { switchbonus: true } },
+  ]
+},
 ];
