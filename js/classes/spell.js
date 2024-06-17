@@ -2134,7 +2134,6 @@ class Rampage extends Aura {
         this.duration = 30;
         this.mult_stats = { apmod: 10 };
         this.cooldown = 120;
-        this.usestep = 0;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
