@@ -2336,7 +2336,7 @@ class SuddenDeath extends Aura {
         }
     }
     remove() {
-        this.uptime += (this.timer - this.starttimer);
+        this.uptime += (step - this.starttimer);
         this.timer = 0;
         /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
     }
