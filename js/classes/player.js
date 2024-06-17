@@ -1423,8 +1423,6 @@ class Player {
     }
     switch(stance) {
         let prev = this.stance;
-        // if (this.stance == stance || this.stance == 'glad') return;
-        // if (this.auras.echoesstance && this.auras.echoesstance.timer && this.auras.echoesstance.stance == stance) return;
         this.stance = stance;
         this.auras.battlestance.timer = 0;
         this.auras.berserkerstance.timer = 0;
@@ -1435,6 +1433,7 @@ class Player {
         if (stance == 'def') this.auras.defensivestance.timer = 1;
         if (stance == 'glad') this.auras.gladiatorstance.timer = 1;
         this.rage = Math.min(this.rage, this.talents.rageretained);
+        if (this.switchrage) this.rage += 10;
         if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
         if (this.auras.battleforecast && this.stance == 'battle') {
             this.auras.berserkerforecast.remove();
@@ -1443,7 +1442,7 @@ class Player {
         if (this.auras.berserkerforecast && this.stance == 'zerk') {
             this.auras.battleforecast.remove();
             this.auras.berserkerforecast.use();
-        } 
+        }
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
     }
