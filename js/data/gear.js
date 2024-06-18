@@ -2704,7 +2704,20 @@ var gear = {
       "q": "4",
       "i": "70",
       "p": "inv_gauntlets_22"
-    }
+    },
+    {
+      "name": "Vek'lor's Gloves of Devastation",
+      "crit": 1,
+      "agi": 22,
+      "sta": 21,
+      "ac": 320,
+      "source": "AQ40",
+      "phase": "5",
+      "id": 21599,
+      "q": "4",
+      "i": "81",
+      "p": "inv_gauntlets_28"
+    },
   ],
   "waist": [
     {
