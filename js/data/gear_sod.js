@@ -74795,6 +74795,7 @@ var gear = {
         "tick": 15,
         "interval": "2000",
         "duration": "10000",
+        "spell": "MeltArmor",
         "ppm": 0.7
       }
     },

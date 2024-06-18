@@ -807,6 +807,7 @@ class Player {
     }
     updateBonusDmg() {
         let bonus = 0;
+        let taken = 0;
         if (this.auras.stoneslayer && this.auras.stoneslayer.timer)
             bonus += this.auras.stoneslayer.stats.moddmgdone;
         if (this.auras.zeal && this.auras.zeal.timer)
@@ -817,8 +818,10 @@ class Player {
             bonus += this.auras.relentlessstrength.stats.moddmgdone;
         if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
             bonus += this.auras.blisteringragehammer.stats.moddmgdone;
+        if (this.auras.meltarmor && this.auras.meltarmor.timer)
+            taken += this.auras.meltarmor.stats.moddmgtaken;
         this.stats.moddmgdone = this.base.moddmgdone + bonus;
-        this.stats.moddmgtaken = this.base.moddmgtaken;
+        this.stats.moddmgtaken = this.base.moddmgtaken + taken;
         this.mh.bonusdmg = this.mh.basebonusdmg;
         if (this.oh)
             this.oh.bonusdmg = this.oh.basebonusdmg;
