@@ -111,6 +111,17 @@ var buffs = [
       worldbuff: true,
    },
    {
+      id: 459610,
+      spellid: true,
+      name: "Wanderer's Resolve",
+      iconname: "ability_creature_poison_05",
+      group: "",
+      strmod: 15,
+      agimod: 15,
+      worldbuff: true,
+      sod: true
+   },
+   {
       id: 17007,
       spellid: true,
       name: "Leader of the Pack",
