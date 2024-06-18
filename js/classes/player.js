@@ -247,6 +247,7 @@ class Player {
                         proc.chance = item.proc.chance * 100;
                         proc.extra = item.proc.extra;
                         proc.magicdmg = item.proc.dmg;
+                        proc.cooldown = item.proc.cooldown;
                         if (item.spell) {
                             this.auras[item.proc.spell.toLowerCase()] = eval('new ' + item.proc.spell + '(this)');
                             proc.spell = this.auras[item.proc.spell.toLowerCase()];
@@ -638,6 +639,8 @@ class Player {
             if (this.auras[s].cooldowntimer) this.auras[s].cooldowntimer = 0;
             if (this.auras[s].tfbstep) this.auras[s].tfbstep = -6000;
         }
+        if (this.trinketproc1 && this.trinketproc1.usestep) this.trinketproc1.usestep = 0;
+        if (this.trinketproc2 && this.trinketproc2.usestep) this.trinketproc2.usestep = 0;
         if (this.auras.deepwounds) {
             this.auras.deepwounds.idmg = 0;
         }
@@ -1310,9 +1313,12 @@ class Player {
                 /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
             }
             if (this.trinketproc1 && this.trinketproc1.extra && !damageSoFar && rng10k() < this.trinketproc1.chance) {
-                if (spell) this.batchedextras += this.trinketproc1.extra;
-                else batchedextras = this.trinketproc1.extra;
-                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
+                if (!this.trinketproc1.cooldown || !this.trinketproc1.usestep || step > this.trinketproc1.usestep) {
+                    if (this.trinketproc1.cooldown) this.trinketproc1.usestep = step + this.trinketproc1.cooldown;
+                    if (spell) this.batchedextras += this.trinketproc1.extra;
+                    else batchedextras = this.trinketproc1.extra;
+                    /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
+                }
             }
             if (this.trinketproc2 && !this.trinketproc2.extra  && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
@@ -1320,9 +1326,12 @@ class Player {
                 /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.trinketproc2 && this.trinketproc2.extra && !damageSoFar && rng10k() < this.trinketproc2.chance) {
-                if (spell) this.batchedextras += this.trinketproc2.extra;
-                else batchedextras = this.trinketproc2.extra;
-                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
+                if (!this.trinketproc2.cooldown || !this.trinketproc2.usestep || step > this.trinketproc2.usestep) {
+                    if (this.trinketproc2.cooldown) this.trinketproc2.usestep = step + this.trinketproc2.cooldown;
+                    if (spell) this.batchedextras += this.trinketproc2.extra;
+                    else batchedextras = this.trinketproc2.extra;
+                    /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
+                }
             }
             if (this.attackproc1 && rng10k() < this.attackproc1.chance) {
                 if (this.attackproc1.magicdmg) { 

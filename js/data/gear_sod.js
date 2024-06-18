@@ -44071,6 +44071,7 @@ var gear = {
       "p": "inv_jewelry_talisman_01",
       "proc": {
         "extra": 1,
+        "cooldown": 2000,
         "chance": 2
       },
       "ap": 20
@@ -44345,6 +44346,7 @@ var gear = {
       "p": "inv_jewelry_talisman_01",
       "proc": {
         "extra": 1,
+        "cooldown": 2000,
         "chance": 2
       },
       "ap": 20
