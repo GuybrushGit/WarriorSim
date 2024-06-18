@@ -894,6 +894,7 @@ SIM.UI = {
         obj.filter_green = view.main.find('#filter_green').hasClass('active');
         obj.filter_blue = view.main.find('#filter_blue').hasClass('active');
         obj.bleedreduction = view.fight.find('select[name="bleedreduction"]').val();
+        obj.spellqueueing = view.fight.find('select[name="spellqueueing"]').val();
         
 
         let _buffs = [], _rotation = [], _talents = [], _sources = [], _phases = [], _gear = {}, _enchant = {}, _runes = {}, _resistance = {};

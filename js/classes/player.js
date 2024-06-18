@@ -8,6 +8,7 @@ class Player {
             reactionmax: parseInt($('input[name="reactionmax"]').val()),
             adjacent: parseInt($('input[name="adjacent"]').val()),
             mode: globalThis.mode,
+            spellqueueing: $('select[name="spellqueueing"]').val() == "Yes",
             target: {
                 level: parseInt($('input[name="targetlevel"]').val()),
                 basearmor: parseInt($('select[name="targetbasearmor"]').val() || $('input[name="targetcustomarmor"]').val()),
@@ -50,6 +51,7 @@ class Player {
         this.target = config.target;
         this.mode = config.mode;
         this.bleedmod = parseFloat(this.target.bleedreduction);
+        this.spellqueueing = config.spellqueueing;
         this.target.misschance = this.getTargetSpellMiss();
         this.target.mitigation = this.getTargetSpellMitigation();
         this.target.binaryresist = this.getTargetSpellBinaryResist();

@@ -584,7 +584,7 @@ class Simulation {
 
             // Determine if a spell check should happen next step
             canSpellQueue = false;
-            if (player.timer && player.steptimer(next) && !player.spelldelay) { spellcheck = true; canSpellQueue = true; }
+            if (player.timer && player.steptimer(next) && !player.spelldelay) { spellcheck = true; canSpellQueue = player.spellqueueing; }
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
