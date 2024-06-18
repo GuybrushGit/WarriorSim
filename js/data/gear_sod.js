@@ -74547,7 +74547,8 @@ var gear = {
       "maxdmg": 225,
       "p": "inv_hammer_06",
       "proc": {
-        "spell": "BlisteringRagehammer"
+        "spell": "BlisteringRagehammer",
+        "ppm": 2.7
       }
     },
     {
