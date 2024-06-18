@@ -1241,7 +1241,6 @@ class Bonereaver extends Aura {
         this.stacks = 0;
     }
     use() {
-        if (this.player.faeriefire) return;
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
@@ -1873,7 +1872,7 @@ class Ragehammer extends Aura {
 
 class BlisteringRagehammer extends Aura {
     constructor(player, id) {
-        super(player, id);
+        super(player, id, 'Blistering Ragehammer');
         this.duration = 15;
         this.stats = { moddmgdone: 30 };
         this.mult_stats = { haste: 10 };
