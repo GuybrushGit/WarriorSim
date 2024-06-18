@@ -39,6 +39,7 @@ class Spell {
         if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
         if (spell.zerkerpriority) this.zerkerpriority = spell.zerkerpriority;
         if (spell.swordboard) this.swordboard = spell.swordboard;
+        if (spell.durationactive) this.duration = parseInt(spell.duration);
         
     }
     dmg() {
@@ -582,6 +583,7 @@ class ShieldSlam extends Spell {
         super(player, id, 'Shield Slam');
         this.cost = 20 - player.ragecostbonus;
         this.cooldown = 6;
+        if (this.duration) this.cooldown = Math.max(this.cooldown, this.duration);
         if (this.swordboard) this.cost = 0;
     }
     dmg() {
