@@ -2391,3 +2391,27 @@ class BerserkerForecast extends Aura {
         this.duration = 10;
     }
 }
+
+class DefendersResolve extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Defender\'s Resolve');
+        this.duration = 15;
+    }
+    use() {
+        this.stats = { ap: 4 * this.player.stats.defense };
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAP();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateAP();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}

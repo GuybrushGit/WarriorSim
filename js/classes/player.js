@@ -141,6 +141,7 @@ class Player {
 
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
+        if (this.spells.shieldslam) this.auras.defendersresolve = new DefendersResolve(this);
         
         if ((this.basestance == 'def' || this.basestance == 'glad') && this.spells.sunderarmor && this.devastate && this.shield) {
             this.spells.sunderarmor.devastate = true;
@@ -195,6 +196,7 @@ class Player {
                 this.talents = Object.assign(this.talents, talent.aura(talent.c));
             }
         }
+        if (this.talents.defense) this.base.defense += this.talents.defense;
     }
     addGear() {
         for (let type in gear) {
@@ -975,6 +977,7 @@ class Player {
         if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.step();
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.step();
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
+        if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1032,6 +1035,7 @@ class Player {
         if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.end();
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.end();
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.end();
+        if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
@@ -1262,8 +1266,13 @@ class Player {
         let procdmg = 0;
         let extras = 0;
         let batchedextras = 0;
-        if (spell instanceof ShieldSlam) return 0;
         if (spell instanceof ThunderClap) return 0;
+        if (spell instanceof ShieldSlam) {
+            if (result != RESULT.MISS && result != RESULT.DODGE &&  this.mode == "sod") {
+                this.auras.defendersresolve.use();
+            }
+            return 0;
+        }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
             if (spell instanceof Execute) {
                 this.rage = 0;
