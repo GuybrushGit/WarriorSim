@@ -703,7 +703,7 @@ class Player {
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi * this.agipercrit;
         this.crit = this.getCritChance();
-        this.stats.block += (this.shield ? this.shield.block : 0) + ~~(this.stats.str / 20);
+        this.stats.block = this.base.block + ~~(this.stats.str / 20);
 
         if (this.stats.baseapmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
@@ -752,7 +752,7 @@ class Player {
         }
         this.stats.str = ~~(this.stats.str * this.stats.strmod);
         this.stats.ap += this.stats.str * 2;
-        this.stats.block += (this.shield ? this.shield.block : 0) + ~~(this.stats.str / 20);
+        this.stats.block = this.base.block + ~~(this.stats.str / 20);
 
         if (this.stats.baseapmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
