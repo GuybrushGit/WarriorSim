@@ -328,7 +328,7 @@
           if (parseInt(sparse.OverallQualityID) >= 3 && obj.type == "Shield") include = true;
           if (parseInt(sparse.OverallQualityID) >= 3 && item.ClassID == "2" && obj.slot != "ranged") include = true;
           if (exclude) continue;
-          if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill) continue;
+          if (!include && !obj.proc && !obj.str && !obj.agi && !obj.ap && !obj.crit && !obj.hit && !obj.skill && !obj.d) continue;
           if (isUnobtainable(obj.id)) continue;
 
           if (obj.id == 220743 || obj.id == 220747 || obj.id == 220738) obj.name += ' (with proc)';

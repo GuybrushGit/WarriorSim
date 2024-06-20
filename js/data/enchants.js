@@ -1147,4 +1147,12 @@ var enchant = {
      { count: 5, stats: { crit: 1 } }
   ]
 },
+{
+  id: 124,
+  name: 'Deathbone Guardian',
+  items: [14624,14622,14620,14623,14621],
+  bonus: [
+     { count: 2, stats: { defense: 3 } }
+  ]
+},
 ];

@@ -1694,6 +1694,18 @@ var gear = {
       "hit": 2
     },
     {
+      "id": 12952,
+      "type": "Plate",
+      "slot": "head",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Gyth's Skull",
+      "p": "inv_helmet_23",
+      "sta": 20,
+      "d": 9
+    },
+    {
       "id": 12953,
       "type": "Mail",
       "slot": "head",
@@ -3100,6 +3112,20 @@ var gear = {
       "d": 11
     },
     {
+      "id": 17734,
+      "type": "Plate",
+      "slot": "head",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Helm of the Mountain",
+      "p": "inv_helmet_20",
+      "resist": {
+        "nature": 10
+      },
+      "d": 7
+    },
+    {
       "id": 17767,
       "type": "Mail",
       "slot": "head",
@@ -3659,6 +3685,21 @@ var gear = {
       "p": "inv_helmet_39",
       "str": 7,
       "sta": 7
+    },
+    {
+      "id": 223522,
+      "type": "Plate",
+      "slot": "head",
+      "r": 48,
+      "q": "3",
+      "i": "53",
+      "name": "Helm of the Mountain",
+      "p": "inv_helmet_20",
+      "sta": 19,
+      "resist": {
+        "nature": 10
+      },
+      "d": 7
     },
     {
       "id": 223963,
@@ -4524,6 +4565,18 @@ var gear = {
       "str": 5
     },
     {
+      "id": 13091,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Medallion of Grand Marshal Morris",
+      "p": "inv_jewelry_talisman_08",
+      "sta": 7,
+      "d": 10
+    },
+    {
       "id": 13177,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -5003,6 +5056,18 @@ var gear = {
       "p": "inv_jewelry_necklace_26",
       "str": 6,
       "sta": 6
+    },
+    {
+      "id": 209817,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Voidwalker Brooch",
+      "p": "inv_jewelry_necklace_11",
+      "sta": 6,
+      "d": 4
     },
     {
       "id": 213343,
@@ -6548,6 +6613,17 @@ var gear = {
       "d": 3
     },
     {
+      "id": 13955,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Stoneform Shoulders",
+      "p": "inv_shoulder_25",
+      "d": 7
+    },
+    {
       "id": 14503,
       "type": "Leather",
       "slot": "shoulder",
@@ -8006,6 +8082,18 @@ var gear = {
       "p": "inv_shoulder_08",
       "agi": 8,
       "sta": 10
+    },
+    {
+      "id": 209824,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Shimmering Shoulderpads",
+      "p": "inv_shoulder_10",
+      "sta": 6,
+      "d": 4
     },
     {
       "id": 213302,
@@ -10358,6 +10446,29 @@ var gear = {
       }
     },
     {
+      "id": 18413,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Cloak of Warding",
+      "p": "inv_misc_cape_06",
+      "d": 5
+    },
+    {
+      "id": 18495,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Redoubt Cloak",
+      "p": "inv_misc_cape_21",
+      "sta": 15,
+      "d": 7
+    },
+    {
       "id": 18511,
       "type": "Cloth",
       "slot": "back",
@@ -10791,6 +10902,17 @@ var gear = {
       "p": "inv_chest_chain_09",
       "str": 9,
       "sta": 10
+    },
+    {
+      "id": 1717,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Double Link Tunic",
+      "p": "inv_chest_chain",
+      "d": 9
     },
     {
       "id": 1981,
@@ -12977,6 +13099,17 @@ var gear = {
       "d": 9
     },
     {
+      "id": 12641,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 57,
+      "q": "4",
+      "i": "63",
+      "name": "Invulnerable Mail",
+      "p": "inv_chest_chain_07",
+      "d": 13
+    },
+    {
       "id": 12757,
       "type": "Leather",
       "slot": "chest",
@@ -13184,6 +13317,18 @@ var gear = {
       "p": "inv_chest_leather_05",
       "str": 10,
       "sta": 15
+    },
+    {
+      "id": 14624,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Chestplate",
+      "p": "inv_chest_chain_15",
+      "sta": 12,
+      "d": 17
     },
     {
       "id": 14637,
@@ -13966,6 +14111,18 @@ var gear = {
       "sta": 16,
       "str": 16,
       "rand": 1224
+    },
+    {
+      "id": 15413,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 52,
+      "q": "3",
+      "i": "63",
+      "name": "Ornate Adamantium Breastplate",
+      "p": "inv_chest_plate09",
+      "sta": 22,
+      "d": 10
     },
     {
       "id": "15433|1230",
@@ -14848,6 +15005,21 @@ var gear = {
         "frost": 42
       },
       "d": 8
+    },
+    {
+      "id": 22762,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "3",
+      "i": "70",
+      "name": "Ironvine Breastplate",
+      "p": "inv_chest_plate07",
+      "sta": 15,
+      "resist": {
+        "nature": 30
+      },
+      "d": 7
     },
     {
       "id": 23087,
@@ -18218,6 +18390,17 @@ var gear = {
       "p": "inv_bracer_06",
       "agi": 12,
       "sta": 6
+    },
+    {
+      "id": 18351,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 56,
+      "q": "2",
+      "i": "61",
+      "name": "Magically Sealed Bracers",
+      "p": "inv_bracer_18",
+      "d": 3
     },
     {
       "id": 18375,
@@ -22203,6 +22386,18 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 14622,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Gauntlets",
+      "p": "inv_gauntlets_28",
+      "sta": 14,
+      "d": 10
+    },
+    {
       "id": 14640,
       "type": "Leather",
       "slot": "hands",
@@ -24171,6 +24366,18 @@ var gear = {
       "sta": 7
     },
     {
+      "id": 18383,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Force Imbued Gauntlets",
+      "p": "inv_gauntlets_09",
+      "sta": 14,
+      "d": 7
+    },
+    {
       "id": 18544,
       "type": "Leather",
       "slot": "hands",
@@ -24532,6 +24739,21 @@ var gear = {
         "frost": 32
       },
       "d": 5
+    },
+    {
+      "id": 22763,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "3",
+      "i": "70",
+      "name": "Ironvine Gloves",
+      "p": "inv_gauntlets_29",
+      "sta": 10,
+      "resist": {
+        "nature": 20
+      },
+      "d": 10
     },
     {
       "id": 23078,
@@ -27228,6 +27450,18 @@ var gear = {
       "sta": 14
     },
     {
+      "id": 12115,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 48,
+      "q": "2",
+      "i": "56",
+      "name": "Stalwart Clutch",
+      "p": "inv_belt_34",
+      "sta": 12,
+      "d": 8
+    },
+    {
       "id": 12257,
       "type": "Mail",
       "slot": "waist",
@@ -27515,6 +27749,18 @@ var gear = {
       "agi": 12,
       "str": 12,
       "sta": 11
+    },
+    {
+      "id": 14620,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Girdle",
+      "p": "inv_belt_12",
+      "sta": 15,
+      "d": 9
     },
     {
       "id": 14636,
@@ -30148,6 +30394,21 @@ var gear = {
       "d": 9
     },
     {
+      "id": 22764,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "3",
+      "i": "70",
+      "name": "Ironvine Belt",
+      "p": "inv_belt_21",
+      "sta": 12,
+      "resist": {
+        "nature": 15
+      },
+      "d": 3
+    },
+    {
       "id": 209421,
       "type": "Leather",
       "slot": "waist",
@@ -31681,6 +31942,17 @@ var gear = {
       "sta": 6
     },
     {
+      "id": 9625,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 25,
+      "q": "3",
+      "i": "37",
+      "name": "Dual Reinforced Leggings",
+      "p": "inv_pants_03",
+      "d": 5
+    },
+    {
       "id": 9652,
       "type": "Leather",
       "slot": "legs",
@@ -32772,6 +33044,17 @@ var gear = {
       "sta": 16
     },
     {
+      "id": 11927,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Legplates of the Eternal Guardian",
+      "p": "inv_pants_04",
+      "d": 15
+    },
+    {
       "id": 12041,
       "type": "Leather",
       "slot": "legs",
@@ -33022,6 +33305,18 @@ var gear = {
       "agi": 12,
       "str": 15,
       "sta": 16
+    },
+    {
+      "id": 14623,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Legguards",
+      "p": "inv_pants_04",
+      "sta": 20,
+      "d": 13
     },
     {
       "id": 14638,
@@ -34951,6 +35246,21 @@ var gear = {
       "rand": 2157
     },
     {
+      "id": 20699,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Cenarion Reservist's Legplates",
+      "p": "inv_pants_plate_18",
+      "sta": 13,
+      "resist": {
+        "nature": 25
+      },
+      "d": 9
+    },
+    {
       "id": 20702,
       "type": "Mail",
       "slot": "legs",
@@ -35021,6 +35331,18 @@ var gear = {
       "resist": {
         "shadow": 30
       }
+    },
+    {
+      "id": 22328,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Legplates of Vigilance",
+      "p": "inv_pants_04",
+      "sta": 22,
+      "d": 15
     },
     {
       "id": 22385,
@@ -35334,6 +35656,17 @@ var gear = {
       "agi": 21,
       "str": 5,
       "sta": 8
+    },
+    {
+      "id": 216678,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 0,
+      "q": "3",
+      "i": "45",
+      "name": "Triple Reinforced Leggings",
+      "p": "inv_pants_03",
+      "d": 6
     },
     {
       "id": 217285,
@@ -37623,6 +37956,18 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 14621,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Sabatons",
+      "p": "inv_boots_01",
+      "sta": 9,
+      "d": 10
+    },
+    {
       "id": 14641,
       "type": "Leather",
       "slot": "feet",
@@ -38866,6 +39211,22 @@ var gear = {
       "sta": 13
     },
     {
+      "id": 18806,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Core Forged Greaves",
+      "p": "inv_boots_plate_09",
+      "sta": 28,
+      "resist": {
+        "fire": 12,
+        "shadow": 8
+      },
+      "d": 4
+    },
+    {
       "id": 19048,
       "type": "Mail",
       "slot": "feet",
@@ -39564,6 +39925,18 @@ var gear = {
       "p": "inv_boots_chain_08",
       "str": 10,
       "sta": 12
+    },
+    {
+      "id": 20710,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Crystal Encrusted Greaves",
+      "p": "inv_boots_plate_02",
+      "sta": 21,
+      "d": 5
     },
     {
       "id": 20711,
@@ -40566,6 +40939,18 @@ var gear = {
       "rand": 219
     },
     {
+      "id": 11669,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Naglering",
+      "p": "inv_jewelry_ring_05",
+      "sta": 10,
+      "d": 5
+    },
+    {
       "id": 11824,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -41209,6 +41594,17 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 12985,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "3",
+      "i": "22",
+      "name": "Ring of Defense",
+      "p": "inv_jewelry_ring_28",
+      "d": 4
+    },
+    {
       "id": 13093,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -41481,6 +41877,23 @@ var gear = {
       "sta": 9
     },
     {
+      "id": 18813,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "73",
+      "name": "Ring of Binding",
+      "p": "inv_jewelry_ring_13",
+      "resist": {
+        "fire": 10,
+        "nature": 10,
+        "frost": 10,
+        "shadow": 10
+      },
+      "d": 4
+    },
+    {
       "id": 18821,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -41493,6 +41906,18 @@ var gear = {
       "sta": 8,
       "crit": 1,
       "ap": 30
+    },
+    {
+      "id": 18879,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Heavy Dark Iron Ring",
+      "p": "inv_jewelry_ring_14",
+      "sta": 20,
+      "d": 5
     },
     {
       "id": 19325,
@@ -41893,6 +42318,18 @@ var gear = {
       "str": 7,
       "sta": 12,
       "d": 7
+    },
+    {
+      "id": 22680,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 55,
+      "q": "3",
+      "i": "66",
+      "name": "Band of Resolution",
+      "p": "inv_jewelry_ring_01",
+      "sta": 18,
+      "d": 5
     },
     {
       "id": 209565,
@@ -42565,6 +43002,18 @@ var gear = {
       "rand": 219
     },
     {
+      "id": 11669,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Naglering",
+      "p": "inv_jewelry_ring_05",
+      "sta": 10,
+      "d": 5
+    },
+    {
       "id": 11824,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43208,6 +43657,17 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 12985,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 17,
+      "q": "3",
+      "i": "22",
+      "name": "Ring of Defense",
+      "p": "inv_jewelry_ring_28",
+      "d": 4
+    },
+    {
       "id": 13093,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43480,6 +43940,23 @@ var gear = {
       "sta": 9
     },
     {
+      "id": 18813,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "73",
+      "name": "Ring of Binding",
+      "p": "inv_jewelry_ring_13",
+      "resist": {
+        "fire": 10,
+        "nature": 10,
+        "frost": 10,
+        "shadow": 10
+      },
+      "d": 4
+    },
+    {
       "id": 18821,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43492,6 +43969,18 @@ var gear = {
       "sta": 8,
       "crit": 1,
       "ap": 30
+    },
+    {
+      "id": 18879,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Heavy Dark Iron Ring",
+      "p": "inv_jewelry_ring_14",
+      "sta": 20,
+      "d": 5
     },
     {
       "id": 19325,
@@ -43894,6 +44383,18 @@ var gear = {
       "d": 7
     },
     {
+      "id": 22680,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 55,
+      "q": "3",
+      "i": "66",
+      "name": "Band of Resolution",
+      "p": "inv_jewelry_ring_01",
+      "sta": 18,
+      "d": 5
+    },
+    {
       "id": 209565,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -44061,6 +44562,28 @@ var gear = {
   ],
   "trinket1": [
     {
+      "id": 10779,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 45,
+      "q": "2",
+      "i": "60",
+      "name": "Demon's Blood",
+      "p": "spell_shadow_lifedrain",
+      "d": 3
+    },
+    {
+      "id": 11810,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Force of Will",
+      "p": "inv_jewelry_amulet_01",
+      "d": 7
+    },
+    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -44097,6 +44620,20 @@ var gear = {
       "name": "Blackhand's Breadth",
       "p": "inv_misc_armorkit_09",
       "crit": 2
+    },
+    {
+      "id": 18406,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Onyxia Blood Talisman",
+      "p": "spell_shadow_lifedrain",
+      "resist": {
+        "fire": 15
+      },
+      "d": 8
     },
     {
       "id": 18537,
@@ -44336,6 +44873,28 @@ var gear = {
   ],
   "trinket2": [
     {
+      "id": 10779,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 45,
+      "q": "2",
+      "i": "60",
+      "name": "Demon's Blood",
+      "p": "spell_shadow_lifedrain",
+      "d": 3
+    },
+    {
+      "id": 11810,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Force of Will",
+      "p": "inv_jewelry_amulet_01",
+      "d": 7
+    },
+    {
       "id": 11815,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -44372,6 +44931,20 @@ var gear = {
       "name": "Blackhand's Breadth",
       "p": "inv_misc_armorkit_09",
       "crit": 2
+    },
+    {
+      "id": 18406,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Onyxia Blood Talisman",
+      "p": "spell_shadow_lifedrain",
+      "resist": {
+        "fire": 15
+      },
+      "d": 8
     },
     {
       "id": 18537,
@@ -45576,6 +46149,20 @@ var gear = {
       "maxdmg": 55,
       "p": "inv_weapon_rifle_04",
       "agi": 6
+    },
+    {
+      "id": 209830,
+      "type": "Crossbow",
+      "slot": "ranged",
+      "r": 25,
+      "q": "3",
+      "i": "30",
+      "name": "Ironhide Arbalest",
+      "speed": 1.9,
+      "mindmg": 19,
+      "maxdmg": 37,
+      "p": "inv_weapon_crossbow_04",
+      "d": 3
     },
     {
       "id": 213293,
