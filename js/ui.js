@@ -1228,6 +1228,7 @@ SIM.UI = {
                                 <th>AP</th>
                                 <th>Hit</th>
                                 <th>Crit</th>
+                                <th>Def</th>
                                 <th>Skill</th>
                                 <th>Type</th>
                                 <th>DPS</th>
@@ -1303,6 +1304,7 @@ SIM.UI = {
                         <td>${item.ap || ''}</td>
                         <td>${item.hit || ''}</td>
                         <td>${item.crit || ''}</td>
+                        <td>${item.d || ''}</td>
                         <td>${item.skill || ''}</td>
                         <td>${item.type || ''}</td>
                         <td>${item.dps || ''}</td>
