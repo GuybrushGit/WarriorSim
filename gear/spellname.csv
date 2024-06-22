@@ -21617,13 +21617,13 @@ ID,Name_lang
 401741,Fingers of Frost
 401743,Regeneration
 401744,Living Flame
-401749,Engrave Belt - Hot Streak
+401749,Engrave Helm - Hot Streak
 401752,Engrave Boots - Brain Freeze
 401754,Engrave Helm - Advanced Warding
 401757,Engrave Gloves - Arcane Blast
 401759,Engrave Chest - Burnout
 401760,Engrave Gloves - Ice Lance
-401761,Engrave Gloves - Rewind Time
+401761,Engrave Bracers - Rewind Time
 401762,Engrave Belt - Frostfire Bolt
 401763,Engrave Belt - Missile Barrage
 401764,Engrave Cloak - Overheat
@@ -22094,7 +22094,7 @@ ID,Name_lang
 410011,Engrave Pants - Inspiration Exemplar
 410013,Engrave Bracers - Hammer of the Righteous
 410014,Engrave Chest - Divine Storm
-410015,Engrave Chest - Divine Light
+410015,Engrave Cloak - Divine Light
 410021,Engrave Chest - Wild Strikes
 410023,Engrave Pants - Savage Roar
 410025,Engrave Gloves - Mangle
@@ -24597,6 +24597,7 @@ ID,Name_lang
 442896,Nature Specialization
 442897,Shadow Specialization
 442898,Holy Specialization
+442901,Shapeshifting Specialization
 442945,Saved by the Light
 442946,Near Death
 442947,"Feeling much better, thank you!"
@@ -25390,8 +25391,8 @@ ID,Name_lang
 449970,Extra Attack
 449974,Stalwart Block
 449975,Stalwart Block
-449980,For Lordaeron!!
-449982,For Lordaeron!!
+449980,Libram of Holy Alacrity
+449982,Libram of Holy Alacrity
 449990,Troll Object - Slab Display
 449994,Troll Object - Mask Display
 449995,Reputation - Merchant Faction
@@ -25722,10 +25723,6 @@ ID,Name_lang
 458820,Occult Poison I
 458821,Occult Poison I
 458822,Occult Poison I
-458833,[DNT] Update Bonus Difficulty
-458841,Heat Level 1
-458842,Heat Level 2
-458843,Heat Level 3
 458856,Divine Light
 458857,Divine Light
 458860,Divine Light
@@ -25883,7 +25880,6 @@ ID,Name_lang
 459713,Devouring Plague
 459714,Touch of Weakness
 459736,Warmed Rumsey with Cream
-460060,Volcanic Unrest
 460171,Defender's Resolve
 460200,Demonic Resolve
 460205,Permanent Feign Death
@@ -25893,14 +25889,13 @@ ID,Name_lang
 460310,Shimmering Light
 460332,Warmed Rumsey with Cream
 460335,Immolation
-460338,Melt Armor
+460338,Purged by Fire
 460339,Attack Power - Feral (+358)
-460340,Melt Armor
+460340,Purged by Fire
 460341,Immolation
 460342,Fireball
 460343,Attack Power - Feral (+124)
 460352,Dummy - Boss Kill Tracking (DNT)
-460353,Boss Kill Give Currency [DNT]
 460355,[DNT] Arena Victory
 460362,Protection of Kel'thuzad
 460363,Destroy Kel'thuzad's Protection
@@ -25916,4 +25911,233 @@ ID,Name_lang
 460466,Create Thorium Brotherhood Contract DND
 460507,[DNT] Spawn Challenge
 460508,[DNT] Spawn Challenge
-442901,Shapeshifting Specialization
+460651,Frozen Orb
+460692,Rain of Fire
+460698,Rain of Fire
+460699,Rain of Fire
+460700,Rain of Fire
+460742,Permanent Feign Death
+460773,Magnetic Pulse
+460774,[DNT] Arena Victory
+460788,[DNT] Spawn Challenge
+460886,Burst of Energy
+460900,Beacon of Light
+460906,Demonic Frenzy
+460907,Demonic Frenzy
+460930,Sleep
+460933,Destroy
+460939,Might of Stormwind
+460940,Might of Stormwind
+460941,Controller Timer
+460962,Increased Fire Resist 15
+460963,Blessed Flame Mantle of the Dawn
+460988,[DNT] Calyx - On Quest
+460989,[DNT] Calyx - Complete Quest
+460990,[DNT] Calyx - Complete Quest
+461061,(DNT) Check for dead Protectors
+461064,Teleport
+461067,Teleport
+461069,(DNT) Check for dead Protectors
+461075,(DNT) Check for dead Protectors
+461080,Interrupt
+461084,Duke's Domain
+461087,Inferno
+461088,Inferno
+461090,Living Bomb
+461098,Living Fallout
+461099,Explosion
+461103,Living Fallout
+461105,Living Bomb
+461108,Inferno
+461110,Inferno
+461111,Inferno
+461113,Duke's Domain
+461120,Treading Water
+461121,Armageddon
+461123,Armageddon
+461124,Answer Call
+461125,Panic
+461127,Resistance - Hydraxian Coronation
+461129,Hydraxian Coronation
+461131,Summon Core Hound
+461133,Magma Pool
+461137,Oath of the Sea
+461138,Magma Pool
+461139,Flame Spear
+461140,Magma Pool
+461142,Flame Spear
+461143,Flame Spear
+461144,Magma Spit
+461146,Magma Spit
+461151,Flame Wrath
+461152,Flame Wrath
+461153,Flame Wrath
+461154,Flame Wrath
+461155,Mark of Korth'azz
+461156,Magnetic Pulse
+461158,[DNT] Spawn Challenge
+461163,Permanent Feign Death
+461164,Hand of Injustice
+461187,[DNT] Spawn Challenge
+461188,Magnetic Pulse
+461189,Flame Spear
+461196,Hot Blooded
+461197,Eruption!
+461203,Eruption!
+461205,Eruption!
+461214,Conflagration
+461215,Conflagration
+461216,Conflagration
+461217,Conflagration
+461224,Demon-Tainted Blood
+461226,Heart of the Treant
+461227,Guardian of Nature
+461228,The Molten Core
+461230,The Molten Core
+461231,Extinguish Fire
+461232,Gehennas' Curse
+461233,Gehennas' Curse
+461235,Moonstalker Fury
+461237,Shadowflame Skull
+461239,[DNT] Arcane Barrage
+461240,Altruist Ward
+461241,Altruist Ward
+461252,Shadowflame Fury
+461253,Shadowflame Fury
+461254,Fury of Stormrage
+461256,Diplomatic Immunity
+461266,Summon Core Hound
+461267,Core Hound's Call
+461268,Magmadar's Return
+461269,Diplomat Ring
+461270,Magmadar's Return
+461272,Rune Scrying
+461283,S03 - Molten Core - Alternate Fire Resist Aura
+461289,Shadowtooth Illusion Ward
+461290,Libram of the Consecrated
+461291,Shield of Righteousness
+461292,Libram of the Devoted
+461294,Libram of Holy Alacrity
+461295,Totem of Thunder
+461297,Totem of Raging Fire
+461298,Totem of Raging Fire
+461299,Totem of Earthen Vitality
+461300,Totem of Earthen Vitality
+461301,Totem of the Plains
+461302,Smoldering Aegis
+461303,Smoldering Aegis
+461304,Idol of Exsanguination
+461305,Idol of Exsanguination (Bear)
+461306,Idol of Exsanguination (Bear)
+461307,Idol of the Grove
+461308,Idol of the Grove
+461309,Libram of the Devoted
+461312,Health
+461313,Oath of Protection
+461314,Oath of Protection
+461317,Prestor's Hairpin
+461318,Gift of Gob
+461322,Boss Kill Tracking [DNT]
+461323,Warmed Rumsey with Cream
+461324,Sleep
+461327,Serrated Blades
+461328,Serrated Blades
+461329,Levitate
+461330,Decisive Strike
+461333,Rune Scrying
+461335,Flag Tracking Quest
+461336,Flag Tracking Quest
+461337,[DNT] Spawn Challenge
+461338,[DNT] Spawn Challenge
+461339,Destroy
+461342,Eruption
+461343,Shazzrah's Curse
+461344,Gate of Shazzrah
+461347,Enrage
+461348,Enrage
+461349,Enrage
+461351,Teleport
+461352,Crescent Smash
+461354,Controller Timer
+461355,Astral Perfect Victory
+461407,[DNT] Give Rune
+461437,Combat Pulse
+461463,Falling Rocks
+461464,Falling Rocks
+461465,Falling Rocks
+461466,Falling Rocks
+461470,Single-Minded
+461475,Valor of Azeroth
+461477,Fireworks
+461520,[DNT] Power Overwhelming
+461555,Fiery Justice
+461569,Increase Healing 76
+461571,500 Health
+461575,Astral Beacon
+461579,Stun
+461580,Attack Power - Feral (+172)
+461607,Divine Steed
+461615,Mark of Chaos
+461628,Stun
+461629,Attack Power - Feral (+109)
+461632,Stratholme Holy Water
+461633,Frostbrand Weapon
+461634,Flametongue Weapon
+461635,Rockbiter Weapon
+461636,Windfury Weapon
+461637,Phase Shift
+461640,[DNT] Idol of the Huntress
+461643,[DNT] Idol of the Huntress Dummy
+461644,[DNT] Idol of the Huntress Setup
+461645,Honed Blue Dragonscale Shoulders
+461646,Pattern: Honed Blue Dragonscale Shoulders
+461647,Skyrider's Masterwork Stormhammer
+461648,Plans: Skyrider's Masterwork Stormhammer
+461649,Living Green Dragonscale Leggings
+461650,Pattern: Living Green Dragonscale Leggings
+461651,Fiery Plate Gauntlets of the Hidden Technique
+461652,Plans: Fiery Plate Gauntlets of the Hidden Technique
+461653,Brilliant Chromatic Cloak
+461654,Pattern: Brilliant Chromatic Cloak
+461655,Hardened Black Dragonscale Breastplate
+461656,Pattern: Hardened Black Dragonscale Breastplate
+461657,Hardened Black Dragonscale Leggings
+461658,Pattern: Hardened Black Dragonscale Leggings
+461659,Hardened Black Dragonscale Shoulders
+461660,Pattern: Hardened Black Dragonscale Shoulders
+461661,Masterwork Volcanic Breastplate
+461662,Pattern: Masterwork Volcanic Breastplate
+461663,Masterwork Volcanic Shoulders
+461664,Pattern: Masterwork Volcanic Shoulders
+461665,Masterwork Volcanic Leggings
+461666,Pattern: Masterwork Volcanic Leggings
+461667,Tempered Dark Iron Plate
+461668,Plans: Tempered Dark Iron Plate
+461669,Refined Arcanite Champion
+461670,Plans: Refined Arcanite Champion
+461671,Stronger-hold Gauntlets
+461672,Plans: Stronger-hold Gauntlets
+461673,Honed Blue Dragonscale Breastplate
+461674,Pattern: Honed Blue Dragonscale Breastplate
+461675,Refined Arcanite Reaper
+461676,Plans: Refined Arcanite Reaper
+461677,Living Green Dragonscale Leggings
+461678,Pattern: Living Green Dragonscale Leggings
+461679,Opening
+461680,Ephemeral Power
+461681,Increased Feral Combat
+461682,Gutgore Ripper
+461683,Drain Life
+461684,Drain Life
+461685,Attack Power - Feral (+189)
+461686,Chain Lightning
+461687,Chain Lightning
+461688,Summon Shadowstrike
+461689,Summon Thunderstrike
+461810,Thunder Clap
+461826,Thunder Clap
+461827,Thunder Clap
+461828,Thunder Clap
+461829,Thunder Clap
+461830,Thunder Clap
+461966,Vampiric Embrace

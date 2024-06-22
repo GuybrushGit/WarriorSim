@@ -60,17 +60,6 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 3837,
-      "type": "Mail",
-      "slot": "head",
-      "r": 33,
-      "q": "2",
-      "i": "38",
-      "name": "Golden Scale Coif",
-      "p": "inv_helmet_36",
-      "str": 10
-    },
-    {
       "id": 4078,
       "type": "Mail",
       "slot": "head",
@@ -612,19 +601,6 @@ var gear = {
       "p": "inv_helmet_15",
       "agi": 9,
       "sta": 14
-    },
-    {
-      "id": 9479,
-      "type": "Leather",
-      "slot": "head",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "Embrace of the Lycan",
-      "p": "ability_mount_whitedirewolf",
-      "str": 8,
-      "sta": 16,
-      "ap": 32
     },
     {
       "id": 9664,
@@ -1540,18 +1516,6 @@ var gear = {
       "str": 5
     },
     {
-      "id": 10749,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "3",
-      "i": "54",
-      "name": "Avenguard Helm",
-      "p": "inv_helmet_22",
-      "agi": 5,
-      "sta": 25
-    },
-    {
       "id": 10763,
       "type": "Plate",
       "slot": "head",
@@ -1567,29 +1531,6 @@ var gear = {
       }
     },
     {
-      "id": 11124,
-      "type": "Mail",
-      "slot": "head",
-      "r": 38,
-      "q": "3",
-      "i": "55",
-      "name": "Helm of Exile",
-      "p": "inv_helmet_21",
-      "agi": 11
-    },
-    {
-      "id": 11729,
-      "type": "Mail",
-      "slot": "head",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Savage Gladiator Helm",
-      "p": "inv_helmet_01",
-      "agi": 12,
-      "sta": 28
-    },
-    {
       "id": 11735,
       "type": "Leather",
       "slot": "head",
@@ -1603,19 +1544,6 @@ var gear = {
       "crit": 2
     },
     {
-      "id": 11746,
-      "type": "Plate",
-      "slot": "head",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Golem Skull Helm",
-      "p": "inv_helmet_23",
-      "str": 18,
-      "sta": 18,
-      "d": 7
-    },
-    {
       "id": 11913,
       "type": "Mail",
       "slot": "head",
@@ -1625,22 +1553,6 @@ var gear = {
       "name": "Clayridge Helm",
       "p": "inv_helmet_56",
       "agi": 16
-    },
-    {
-      "id": 11925,
-      "type": "Leather",
-      "slot": "head",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Ghostshroud",
-      "p": "inv_helmet_41",
-      "agi": 19,
-      "str": 12,
-      "sta": 18,
-      "resist": {
-        "shadow": 5
-      }
     },
     {
       "id": 12427,
@@ -1766,19 +1678,6 @@ var gear = {
       "sta": 12,
       "hit": 2,
       "crit": 1
-    },
-    {
-      "id": 14539,
-      "type": "Leather",
-      "slot": "head",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Bone Ring Helm",
-      "p": "inv_helmet_14",
-      "agi": 5,
-      "str": 6,
-      "sta": 30
     },
     {
       "id": 14584,
@@ -3112,20 +3011,6 @@ var gear = {
       "d": 11
     },
     {
-      "id": 17734,
-      "type": "Plate",
-      "slot": "head",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Helm of the Mountain",
-      "p": "inv_helmet_20",
-      "resist": {
-        "nature": 10
-      },
-      "d": 7
-    },
-    {
       "id": 17767,
       "type": "Mail",
       "slot": "head",
@@ -3832,6 +3717,85 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 227955,
+      "type": "Mail",
+      "slot": "head",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Savage Gladiator Helm",
+      "p": "inv_helmet_01",
+      "agi": 12,
+      "sta": 28
+    },
+    {
+      "id": 227958,
+      "type": "Leather",
+      "slot": "head",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Ghostshroud",
+      "p": "inv_helmet_41",
+      "agi": 19,
+      "str": 12,
+      "sta": 18,
+      "resist": {
+        "shadow": 5
+      }
+    },
+    {
+      "id": 227975,
+      "type": "Plate",
+      "slot": "head",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Golem Skull Helm",
+      "p": "inv_helmet_23",
+      "str": 18,
+      "sta": 18,
+      "d": 7
+    },
+    {
+      "id": 228032,
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Bone Ring Helm",
+      "p": "inv_helmet_14",
+      "agi": 5,
+      "str": 6,
+      "sta": 30
+    },
+    {
+      "id": 228062,
+      "type": "Leather",
+      "slot": "head",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Insightful Hood",
+      "p": "inv_helmet_41",
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 228111,
+      "type": "Leather",
+      "slot": "head",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Mask of the Godslayer",
+      "p": "inv_helmet_14",
+      "agi": 5,
+      "str": 6,
+      "sta": 30
+    },
+    {
       "id": 215161,
       "type": "Plate",
       "slot": "head",
@@ -4006,30 +3970,6 @@ var gear = {
       "p": "inv_jewelry_necklace_07",
       "agi": 1,
       "sta": 7
-    },
-    {
-      "id": 11755,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Verek's Collar",
-      "p": "inv_misc_bandage_14",
-      "str": 6,
-      "sta": 7
-    },
-    {
-      "id": 11933,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Imperial Jewel",
-      "p": "inv_misc_gem_sapphire_01",
-      "sta": 7,
-      "ap": 32
     },
     {
       "id": "11946|692",
@@ -4612,19 +4552,6 @@ var gear = {
       "ap": 30
     },
     {
-      "id": 17065,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Medallion of Steadfast Might",
-      "p": "inv_jewelry_amulet_03",
-      "str": 9,
-      "sta": 13,
-      "d": 8
-    },
-    {
       "id": 17111,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -5142,6 +5069,83 @@ var gear = {
       "p": "inv_jewelry_necklace_24",
       "sta": 8,
       "hit": 1
+    },
+    {
+      "id": 227943,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Verek's Collar",
+      "p": "inv_misc_bandage_14",
+      "str": 6,
+      "sta": 7
+    },
+    {
+      "id": 227988,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Imperial Jewel",
+      "p": "inv_misc_gem_sapphire_01",
+      "sta": 7,
+      "ap": 32
+    },
+    {
+      "id": 228054,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Tempest Talisman",
+      "p": "inv_jewelry_necklace_03",
+      "crit": 1
+    },
+    {
+      "id": 228088,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Shredder Operator's Dogtags",
+      "p": "inv_jewelry_necklace_39",
+      "sta": 11,
+      "d": 7
+    },
+    {
+      "id": 228137,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 0,
+      "q": "4",
+      "i": "74",
+      "name": "Heart of Golemagg",
+      "p": "inv_jewelry_necklace_05",
+      "agi": 12,
+      "sta": 9,
+      "resist": {
+        "fire": 10
+      },
+      "hit": 1,
+      "crit": 1
+    },
+    {
+      "id": 228249,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Medallion of Steadfast Might",
+      "p": "inv_jewelry_amulet_03",
+      "str": 7,
+      "sta": 21,
+      "d": 9
     }
   ],
   "shoulder": [
@@ -5216,17 +5220,6 @@ var gear = {
       "p": "inv_shoulder_09",
       "str": 4,
       "sta": 7
-    },
-    {
-      "id": 3841,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 30,
-      "q": "2",
-      "i": "35",
-      "name": "Golden Scale Shoulders",
-      "p": "inv_shoulder_09",
-      "str": 7
     },
     {
       "id": 4252,
@@ -5703,18 +5696,6 @@ var gear = {
       "name": "Rockshard Pauldrons",
       "p": "inv_shoulder_02",
       "str": 2
-    },
-    {
-      "id": 9476,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "Big Bad Pauldrons",
-      "p": "inv_shoulder_01",
-      "str": 12,
-      "sta": 12
     },
     {
       "id": 9531,
@@ -6368,30 +6349,6 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 11685,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 50,
-      "q": "3",
-      "i": "55",
-      "name": "Splinthide Shoulders",
-      "p": "inv_shoulder_13",
-      "str": 11,
-      "sta": 10
-    },
-    {
-      "id": 11722,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 50,
-      "q": "3",
-      "i": "55",
-      "name": "Dregmetal Spaulders",
-      "p": "inv_shoulder_30",
-      "str": 6,
-      "sta": 5
-    },
-    {
       "id": 11871,
       "type": "Leather",
       "slot": "shoulder",
@@ -6611,30 +6568,6 @@ var gear = {
         "shadow": 10
       },
       "d": 3
-    },
-    {
-      "id": 13955,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Stoneform Shoulders",
-      "p": "inv_shoulder_25",
-      "d": 7
-    },
-    {
-      "id": 14503,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Death's Clutch",
-      "p": "inv_shoulder_25",
-      "agi": 10,
-      "str": 10,
-      "sta": 10
     },
     {
       "id": 14552,
@@ -7659,19 +7592,6 @@ var gear = {
       "d": 7
     },
     {
-      "id": 18493,
-      "type": "Plate",
-      "slot": "shoulder",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Bulky Iron Spaulders",
-      "p": "inv_shoulder_26",
-      "str": 15,
-      "sta": 12,
-      "d": 6
-    },
-    {
       "id": 18686,
       "type": "Mail",
       "slot": "shoulder",
@@ -8018,18 +7938,6 @@ var gear = {
       "sta": 21,
       "d": 4,
       "hit": 1
-    },
-    {
-      "id": 22212,
-      "type": "Mail",
-      "slot": "shoulder",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Golem Fitted Pauldrons",
-      "p": "inv_shoulder_16",
-      "agi": 13,
-      "sta": 17
     },
     {
       "id": 22241,
@@ -8492,6 +8400,70 @@ var gear = {
       "str": 17,
       "sta": 18,
       "crit": 1
+    },
+    {
+      "id": 227853,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Hardened Black Dragonscale Shoulders",
+      "p": "inv_shoulder_01",
+      "sta": 9,
+      "resist": {
+        "fire": 6
+      },
+      "ap": 40
+    },
+    {
+      "id": 227947,
+      "type": "Mail",
+      "slot": "shoulder",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Golem Fitted Pauldrons",
+      "p": "inv_shoulder_16",
+      "agi": 13,
+      "sta": 17
+    },
+    {
+      "id": 228001,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Stoneform Shoulders",
+      "p": "inv_shoulder_25",
+      "d": 7
+    },
+    {
+      "id": 228036,
+      "type": "Leather",
+      "slot": "shoulder",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Death's Clutch",
+      "p": "inv_shoulder_25",
+      "agi": 10,
+      "str": 10,
+      "sta": 10
+    },
+    {
+      "id": 228058,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Bulky Iron Spaulders",
+      "p": "inv_shoulder_26",
+      "str": 15,
+      "sta": 12,
+      "d": 6
     },
     {
       "id": 2207381,
@@ -9456,18 +9428,6 @@ var gear = {
       "p": "inv_misc_cape_08",
       "sta": 8,
       "ap": 10
-    },
-    {
-      "id": 11930,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "The Emperor's New Cape",
-      "p": "inv_misc_cape_20",
-      "agi": 7,
-      "sta": 16
     },
     {
       "id": 12066,
@@ -10723,19 +10683,6 @@ var gear = {
       "agi": 6
     },
     {
-      "id": 213087,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 25,
-      "q": "3",
-      "i": "30",
-      "name": "Sergeant's Cloak",
-      "p": "inv_misc_cape_21",
-      "agi": 4,
-      "str": 4,
-      "sta": 4
-    },
-    {
       "id": 213088,
       "type": "Cloth",
       "slot": "back",
@@ -10818,6 +10765,73 @@ var gear = {
       "p": "inv_misc_cape_21",
       "agi": 15,
       "str": 6
+    },
+    {
+      "id": 227854,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 57,
+      "q": "4",
+      "i": "62",
+      "name": "Mastercrafted Shifting Cloak",
+      "p": "inv_misc_cape_20",
+      "agi": 17,
+      "sta": 8
+    },
+    {
+      "id": 227985,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "The Emperor's New Cape",
+      "p": "inv_misc_cape_20",
+      "agi": 7,
+      "sta": 16
+    },
+    {
+      "id": 228060,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Heliotrope Cloak",
+      "p": "inv_misc_cape_02",
+      "crit": 1
+    },
+    {
+      "id": 228100,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Drape of the Firelord",
+      "p": "inv_misc_cape_18",
+      "agi": 22,
+      "sta": 12,
+      "resist": {
+        "fire": 6,
+        "nature": 6
+      }
+    },
+    {
+      "id": 228102,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Domo's Drape",
+      "p": "inv_misc_cape_20",
+      "agi": 22,
+      "sta": 12,
+      "resist": {
+        "fire": 6,
+        "nature": 6
+      }
     }
   ],
   "chest": [
@@ -11212,17 +11226,6 @@ var gear = {
       "p": "inv_chest_chain",
       "str": 7,
       "sta": 11
-    },
-    {
-      "id": 3845,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 35,
-      "q": "2",
-      "i": "40",
-      "name": "Golden Scale Cuirass",
-      "p": "inv_chest_chain_06",
-      "str": 14
     },
     {
       "id": 4071,
@@ -12886,18 +12889,6 @@ var gear = {
       "sta": 15
     },
     {
-      "id": 10781,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 46,
-      "q": "2",
-      "i": "55",
-      "name": "Hakkari Breastplate",
-      "p": "inv_chest_leather_02",
-      "agi": 4,
-      "sta": 22
-    },
-    {
       "id": 10784,
       "type": "Mail",
       "slot": "chest",
@@ -12982,20 +12973,6 @@ var gear = {
       "sta": 22
     },
     {
-      "id": 11726,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 52,
-      "q": "4",
-      "i": "57",
-      "name": "Savage Gladiator Chain",
-      "p": "inv_chest_chain_15",
-      "agi": 14,
-      "str": 13,
-      "sta": 13,
-      "crit": 2
-    },
-    {
       "id": 11820,
       "type": "Mail",
       "slot": "chest",
@@ -13019,19 +12996,6 @@ var gear = {
       "p": "inv_chest_leather_07",
       "agi": 4,
       "sta": 23
-    },
-    {
-      "id": 11926,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Deathdealer Breastplate",
-      "p": "inv_chest_chain_07",
-      "str": 8,
-      "sta": 8,
-      "crit": 2
     },
     {
       "id": 12049,
@@ -13234,19 +13198,6 @@ var gear = {
       "d": 6
     },
     {
-      "id": 13944,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Tombstone Breastplate",
-      "p": "inv_chest_chain_17",
-      "str": 10,
-      "sta": 10,
-      "crit": 2
-    },
-    {
       "id": 14536,
       "type": "Mail",
       "slot": "chest",
@@ -13305,43 +13256,6 @@ var gear = {
       "p": "inv_chest_leather_04",
       "agi": 12,
       "sta": 12
-    },
-    {
-      "id": 14611,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Bloodmail Hauberk",
-      "p": "inv_chest_leather_05",
-      "str": 10,
-      "sta": 15
-    },
-    {
-      "id": 14624,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Deathbone Chestplate",
-      "p": "inv_chest_chain_15",
-      "sta": 12,
-      "d": 17
-    },
-    {
-      "id": 14637,
-      "type": "Leather",
-      "slot": "chest",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Cadaverous Armor",
-      "p": "inv_chest_leather_03",
-      "agi": 8,
-      "str": 8,
-      "ap": 60
     },
     {
       "id": 14655,
@@ -14669,18 +14583,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 18312,
-      "type": "Plate",
-      "slot": "chest",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Energized Chestplate",
-      "p": "inv_chest_plate11",
-      "str": 13,
-      "sta": 20
-    },
-    {
       "id": 18478,
       "type": "Leather",
       "slot": "chest",
@@ -14704,20 +14606,6 @@ var gear = {
       "str": 16,
       "sta": 16,
       "d": 10
-    },
-    {
-      "id": 18530,
-      "type": "Mail",
-      "slot": "chest",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Ogre Forged Hauberk",
-      "p": "inv_chest_chain_12",
-      "agi": 20,
-      "str": 8,
-      "sta": 13,
-      "crit": 1
     },
     {
       "id": 19041,
@@ -15442,6 +15330,160 @@ var gear = {
       "str": 21,
       "sta": 23,
       "crit": 1
+    },
+    {
+      "id": 227803,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 50,
+      "q": "3",
+      "i": "55",
+      "name": "Dire Warbear Harness",
+      "p": "inv_chest_leather_04",
+      "str": 11,
+      "sta": 27
+    },
+    {
+      "id": 227851,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Hardened Black Dragonscale Breastplate",
+      "p": "inv_chest_plate06",
+      "sta": 8,
+      "resist": {
+        "fire": 12
+      },
+      "ap": 50
+    },
+    {
+      "id": 227876,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 57,
+      "q": "4",
+      "i": "63",
+      "name": "Invincible Mail",
+      "p": "inv_chest_chain_07",
+      "d": 13
+    },
+    {
+      "id": 227952,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 52,
+      "q": "4",
+      "i": "57",
+      "name": "Savage Gladiator Chain",
+      "p": "inv_chest_chain_15",
+      "agi": 14,
+      "str": 13,
+      "sta": 13,
+      "crit": 2
+    },
+    {
+      "id": 227956,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Deathdealer Breastplate",
+      "p": "inv_chest_chain_07",
+      "str": 8,
+      "sta": 8,
+      "crit": 2
+    },
+    {
+      "id": 227995,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Cadaverous Armor",
+      "p": "inv_chest_leather_03",
+      "agi": 8,
+      "str": 8,
+      "ap": 60
+    },
+    {
+      "id": 228000,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Chestplate",
+      "p": "inv_chest_chain_15",
+      "sta": 12,
+      "d": 17
+    },
+    {
+      "id": 228012,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Bloodmail Hauberk",
+      "p": "inv_chest_leather_05",
+      "str": 10,
+      "sta": 15
+    },
+    {
+      "id": 228025,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Tombstone Breastplate",
+      "p": "inv_chest_chain_17",
+      "str": 10,
+      "sta": 10,
+      "crit": 3
+    },
+    {
+      "id": 228055,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Energized Chestplate",
+      "p": "inv_chest_plate11",
+      "str": 13,
+      "sta": 20
+    },
+    {
+      "id": 228070,
+      "type": "Mail",
+      "slot": "chest",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Ogre Forged Hauberk",
+      "p": "inv_chest_chain_12",
+      "agi": 20,
+      "str": 8,
+      "sta": 13,
+      "crit": 1
+    },
+    {
+      "id": 228101,
+      "type": "Leather",
+      "slot": "chest",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Hide of the Behemoth",
+      "p": "inv_chest_chain_17",
+      "str": 10,
+      "sta": 10,
+      "crit": 3
     }
   ],
   "wrist": [
@@ -16138,18 +16180,6 @@ var gear = {
       "sta": 6,
       "str": 6,
       "rand": 1194
-    },
-    {
-      "id": 9432,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 40,
-      "q": "3",
-      "i": "42",
-      "name": "Skullplate Bracers",
-      "p": "inv_bracer_14",
-      "str": 5,
-      "sta": 9
     },
     {
       "id": 9535,
@@ -18428,54 +18458,6 @@ var gear = {
       "ap": 14
     },
     {
-      "id": 18429,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "First Sergeant's Plate Bracers",
-      "p": "inv_bracer_19",
-      "str": 7,
-      "sta": 17
-    },
-    {
-      "id": 18430,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "First Sergeant's Plate Bracers",
-      "p": "inv_bracer_19",
-      "str": 6,
-      "sta": 14
-    },
-    {
-      "id": 18445,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Sergeant Major's Plate Wristguards",
-      "p": "inv_bracer_18",
-      "str": 7,
-      "sta": 17
-    },
-    {
-      "id": 18447,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "Sergeant Major's Plate Wristguards",
-      "p": "inv_bracer_18",
-      "str": 6,
-      "sta": 14
-    },
-    {
       "id": 18533,
       "type": "Plate",
       "slot": "wrist",
@@ -18586,18 +18568,6 @@ var gear = {
       "agi": 8,
       "str": 7,
       "sta": 14
-    },
-    {
-      "id": 19146,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Wristguards of Stability",
-      "p": "inv_bracer_04",
-      "str": 24,
-      "sta": 8
     },
     {
       "id": 19508,
@@ -18846,19 +18816,6 @@ var gear = {
       "agi": 10,
       "str": 19,
       "sta": 8
-    },
-    {
-      "id": 22204,
-      "type": "Leather",
-      "slot": "wrist",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Wristguards of Renown",
-      "p": "inv_bracer_10",
-      "agi": 10,
-      "str": 9,
-      "sta": 10
     },
     {
       "id": 22205,
@@ -19217,6 +19174,43 @@ var gear = {
       "str": 9,
       "sta": 14,
       "d": 3
+    },
+    {
+      "id": 227986,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Wristguards of Renown",
+      "p": "inv_bracer_10",
+      "agi": 10,
+      "str": 9,
+      "sta": 10
+    },
+    {
+      "id": 228127,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Wristguards of Instability",
+      "p": "inv_bracer_15",
+      "str": 24,
+      "sta": 8
+    },
+    {
+      "id": 228246,
+      "type": "Leather",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Wristguards of Stability",
+      "p": "inv_bracer_04",
+      "str": 25,
+      "sta": 7
     }
   ],
   "hands": [
@@ -20640,17 +20634,6 @@ var gear = {
       "rand": 219
     },
     {
-      "id": 9366,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 36,
-      "q": "2",
-      "i": "41",
-      "name": "Golden Scale Gauntlets",
-      "p": "inv_gauntlets_29",
-      "str": 11
-    },
-    {
       "id": "9410|699",
       "type": "Plate",
       "slot": "hands",
@@ -22021,19 +22004,6 @@ var gear = {
       "rand": 1206
     },
     {
-      "id": 11730,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Savage Gladiator Grips",
-      "p": "inv_gauntlets_04",
-      "agi": 9,
-      "str": 5,
-      "sta": 14
-    },
-    {
       "id": 11745,
       "type": "Plate",
       "slot": "hands",
@@ -22044,21 +22014,6 @@ var gear = {
       "p": "inv_gauntlets_22",
       "str": 20,
       "sta": 9
-    },
-    {
-      "id": 11814,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Molten Fists",
-      "p": "inv_gauntlets_04",
-      "agi": 10,
-      "sta": 11,
-      "resist": {
-        "fire": 10
-      }
     },
     {
       "id": 11867,
@@ -22286,20 +22241,6 @@ var gear = {
       "ap": 40
     },
     {
-      "id": 13957,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Gargoyle Slashers",
-      "p": "inv_gauntlets_09",
-      "agi": 5,
-      "str": 10,
-      "sta": 12,
-      "crit": 1
-    },
-    {
       "id": 13963,
       "type": "Mail",
       "slot": "hands",
@@ -22371,31 +22312,6 @@ var gear = {
       "p": "inv_gauntlets_21",
       "agi": 8,
       "sta": 7
-    },
-    {
-      "id": 14615,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Bloodmail Gauntlets",
-      "p": "inv_gauntlets_26",
-      "str": 9,
-      "sta": 10,
-      "crit": 1
-    },
-    {
-      "id": 14622,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Deathbone Gauntlets",
-      "p": "inv_gauntlets_28",
-      "sta": 14,
-      "d": 10
     },
     {
       "id": 14640,
@@ -24421,24 +24337,6 @@ var gear = {
       }
     },
     {
-      "id": 18823,
-      "type": "Dagger",
-      "slot": "hands",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Aged Core Leather Gloves",
-      "p": "inv_gauntlets_23",
-      "str": 15,
-      "sta": 15,
-      "resist": {
-        "fire": 8,
-        "shadow": 5
-      },
-      "crit": 1,
-      "skill": 5
-    },
-    {
       "id": 19049,
       "type": "Leather",
       "slot": "hands",
@@ -24473,19 +24371,6 @@ var gear = {
       "p": "inv_gauntlets_22",
       "str": 12,
       "sta": 7
-    },
-    {
-      "id": 19143,
-      "type": "Plate",
-      "slot": "hands",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Flameguard Gauntlets",
-      "p": "inv_gauntlets_26",
-      "sta": 13,
-      "crit": 1,
-      "ap": 54
     },
     {
       "id": 19157,
@@ -25124,6 +25009,202 @@ var gear = {
       "p": "inv_gauntlets_26",
       "str": 17,
       "sta": 17
+    },
+    {
+      "id": 227809,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 59,
+      "q": "3",
+      "i": "64",
+      "name": "Studded Timbermaw Brawlers",
+      "p": "inv_gauntlets_26",
+      "str": 23,
+      "sta": 10
+    },
+    {
+      "id": 227817,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 59,
+      "q": "3",
+      "i": "64",
+      "name": "Radiant Gloves of the Dawn",
+      "p": "inv_gauntlets_29",
+      "str": 23,
+      "sta": 10
+    },
+    {
+      "id": 227835,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Tempered Dark Iron Gauntlets",
+      "p": "inv_gauntlets_22",
+      "agi": 12,
+      "sta": 16,
+      "resist": {
+        "fire": 28
+      }
+    },
+    {
+      "id": 227838,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Shining Chromatic Gauntlets",
+      "p": "inv_gauntlets_22",
+      "resist": {
+        "fire": 5,
+        "nature": 5,
+        "frost": 5,
+        "shadow": 5
+      },
+      "ap": 44,
+      "crit": 1
+    },
+    {
+      "id": 227848,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Devilcore Gauntlets",
+      "p": "inv_gauntlets_26",
+      "sta": 9,
+      "ap": 28,
+      "crit": 1
+    },
+    {
+      "id": 227865,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Fiery Plate Gauntlets of the Hidden Technique",
+      "p": "inv_gauntlets_03",
+      "resist": {
+        "fire": 10
+      },
+      "proc": {
+        "magic": true,
+        "dmg": 4
+      }
+    },
+    {
+      "id": 227885,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 57,
+      "q": "4",
+      "i": "62",
+      "name": "Stronger-hold Gauntlets",
+      "p": "inv_gauntlets_30",
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 227961,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Savage Gladiator Grips",
+      "p": "inv_gauntlets_04",
+      "agi": 9,
+      "str": 5,
+      "sta": 14
+    },
+    {
+      "id": 227971,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Molten Fists",
+      "p": "inv_gauntlets_04",
+      "agi": 10,
+      "sta": 11,
+      "resist": {
+        "fire": 10
+      }
+    },
+    {
+      "id": 228006,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Gauntlets",
+      "p": "inv_gauntlets_28",
+      "sta": 14,
+      "d": 10
+    },
+    {
+      "id": 228007,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Gargoyle Slashers",
+      "p": "inv_gauntlets_09",
+      "agi": 5,
+      "str": 10,
+      "sta": 12,
+      "crit": 1
+    },
+    {
+      "id": 228020,
+      "type": "Mail",
+      "slot": "hands",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Bloodmail Gauntlets",
+      "p": "inv_gauntlets_26",
+      "str": 9,
+      "sta": 10,
+      "crit": 1
+    },
+    {
+      "id": 228257,
+      "type": "Dagger",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Aged Core Leather Gloves",
+      "p": "inv_gauntlets_23",
+      "str": 15,
+      "sta": 15,
+      "resist": {
+        "fire": 10
+      },
+      "crit": 1,
+      "skill": 3
+    },
+    {
+      "id": 228260,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Flameguard Gauntlets",
+      "p": "inv_gauntlets_26",
+      "sta": 14,
+      "crit": 1,
+      "ap": 58
     },
     {
       "id": "213319a",
@@ -27738,31 +27819,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 14614,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Bloodmail Belt",
-      "p": "inv_belt_23",
-      "agi": 12,
-      "str": 12,
-      "sta": 11
-    },
-    {
-      "id": 14620,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Deathbone Girdle",
-      "p": "inv_belt_12",
-      "sta": 15,
-      "d": 9
-    },
-    {
       "id": 14636,
       "type": "Leather",
       "slot": "waist",
@@ -29630,19 +29686,6 @@ var gear = {
       "agi": 15
     },
     {
-      "id": 18393,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Warpwood Binding",
-      "p": "inv_belt_34",
-      "agi": 14,
-      "sta": 6,
-      "crit": 1
-    },
-    {
       "id": 18451,
       "type": "Leather",
       "slot": "waist",
@@ -29653,19 +29696,6 @@ var gear = {
       "p": "inv_belt_16",
       "sta": 13,
       "ap": 28
-    },
-    {
-      "id": 18505,
-      "type": "Dagger",
-      "slot": "waist",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Mugger's Belt",
-      "p": "inv_belt_02",
-      "sta": 16,
-      "crit": 1,
-      "skill": 5
     },
     {
       "id": 18529,
@@ -30331,18 +30361,6 @@ var gear = {
       "str": 25
     },
     {
-      "id": 22207,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Sash of the Grand Hunt",
-      "p": "inv_belt_28",
-      "agi": 15,
-      "sta": 14
-    },
-    {
       "id": 22232,
       "type": "Mail",
       "slot": "waist",
@@ -30353,19 +30371,6 @@ var gear = {
       "p": "inv_belt_18",
       "agi": 21,
       "hit": 1
-    },
-    {
-      "id": 22242,
-      "type": "Mail",
-      "slot": "waist",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Verek's Leash",
-      "p": "inv_belt_18",
-      "agi": 8,
-      "str": 8,
-      "sta": 8
     },
     {
       "id": 22325,
@@ -30681,6 +30686,118 @@ var gear = {
       "str": 15,
       "sta": 12,
       "d": 7
+    },
+    {
+      "id": 227805,
+      "type": "Leather",
+      "slot": "waist",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Ferocity of the Timbermaw",
+      "p": "inv_belt_09",
+      "str": 21,
+      "sta": 9
+    },
+    {
+      "id": 227807,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Dense Timbermaw Belt",
+      "p": "inv_belt_16",
+      "sta": 9,
+      "ap": 42
+    },
+    {
+      "id": 227814,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Radiant Girdle of the Dawn",
+      "p": "inv_belt_11",
+      "str": 21,
+      "sta": 9
+    },
+    {
+      "id": 227944,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Verek's Leash",
+      "p": "inv_belt_18",
+      "agi": 8,
+      "str": 8,
+      "sta": 8
+    },
+    {
+      "id": 227987,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Sash of the Grand Hunt",
+      "p": "inv_belt_28",
+      "agi": 15,
+      "sta": 14
+    },
+    {
+      "id": 228002,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Girdle",
+      "p": "inv_belt_12",
+      "sta": 15,
+      "d": 9
+    },
+    {
+      "id": 228014,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Bloodmail Belt",
+      "p": "inv_belt_23",
+      "agi": 12,
+      "str": 12,
+      "sta": 11
+    },
+    {
+      "id": 228063,
+      "type": "Mail",
+      "slot": "waist",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Warpwood Binding",
+      "p": "inv_belt_34",
+      "agi": 14,
+      "sta": 6,
+      "crit": 1
+    },
+    {
+      "id": 228068,
+      "type": "Dagger",
+      "slot": "waist",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Mugger's Belt",
+      "p": "inv_belt_02",
+      "sta": 16,
+      "crit": 1,
+      "skill": 5
     }
   ],
   "legs": [
@@ -30985,17 +31102,6 @@ var gear = {
       "p": "inv_pants_05",
       "str": 8,
       "sta": 8
-    },
-    {
-      "id": 3843,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 29,
-      "q": "2",
-      "i": "34",
-      "name": "Golden Scale Leggings",
-      "p": "inv_pants_04",
-      "str": 11
     },
     {
       "id": 4054,
@@ -32992,21 +33098,6 @@ var gear = {
       "sta": 19
     },
     {
-      "id": 11749,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Searingscale Leggings",
-      "p": "inv_pants_03",
-      "agi": 13,
-      "sta": 13,
-      "resist": {
-        "fire": 10
-      }
-    },
-    {
       "id": 11802,
       "type": "Plate",
       "slot": "legs",
@@ -33042,17 +33133,6 @@ var gear = {
       "p": "inv_pants_03",
       "str": 16,
       "sta": 16
-    },
-    {
-      "id": 11927,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Legplates of the Eternal Guardian",
-      "p": "inv_pants_04",
-      "d": 15
     },
     {
       "id": 12041,
@@ -33292,31 +33372,6 @@ var gear = {
       "p": "inv_pants_09",
       "agi": 14,
       "sta": 3
-    },
-    {
-      "id": 14612,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Bloodmail Legguards",
-      "p": "inv_pants_06",
-      "agi": 12,
-      "str": 15,
-      "sta": 16
-    },
-    {
-      "id": 14623,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Deathbone Legguards",
-      "p": "inv_pants_04",
-      "sta": 20,
-      "d": 13
     },
     {
       "id": 14638,
@@ -35058,20 +35113,6 @@ var gear = {
       "sta": 16
     },
     {
-      "id": 18380,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Eldritch Reinforced Legplates",
-      "p": "inv_pants_04",
-      "agi": 9,
-      "str": 15,
-      "sta": 20,
-      "crit": 1
-    },
-    {
       "id": 18524,
       "type": "Mail",
       "slot": "legs",
@@ -35096,22 +35137,6 @@ var gear = {
       "agi": 30,
       "sta": 6,
       "hit": 1
-    },
-    {
-      "id": 18861,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 56,
-      "q": "4",
-      "i": "61",
-      "name": "Flamewaker Legplates",
-      "p": "inv_pants_04",
-      "str": 18,
-      "sta": 22,
-      "resist": {
-        "fire": 11,
-        "shadow": 11
-      }
     },
     {
       "id": 19117,
@@ -35902,6 +35927,135 @@ var gear = {
       "str": 12,
       "sta": 17,
       "crit": 2
+    },
+    {
+      "id": 227804,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Dire Warbear Woolies",
+      "p": "inv_pants_wolf",
+      "str": 28,
+      "sta": 12
+    },
+    {
+      "id": 227847,
+      "type": "Leather",
+      "slot": "legs",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Devilcore Leggings",
+      "p": "inv_pants_wolf",
+      "sta": 12,
+      "ap": 46,
+      "crit": 1
+    },
+    {
+      "id": 227852,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Hardened Black Dragonscale Leggings",
+      "p": "inv_pants_03",
+      "sta": 8,
+      "resist": {
+        "fire": 13
+      },
+      "ap": 54
+    },
+    {
+      "id": 227959,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Legplates of the Eternal Guardian",
+      "p": "inv_pants_04",
+      "d": 15
+    },
+    {
+      "id": 228003,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Bloodmail Legguards",
+      "p": "inv_pants_06",
+      "agi": 12,
+      "str": 15,
+      "sta": 16
+    },
+    {
+      "id": 228008,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Legguards",
+      "p": "inv_pants_04",
+      "sta": 20,
+      "d": 13
+    },
+    {
+      "id": 228069,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Eldritch Reinforced Legplates",
+      "p": "inv_pants_04",
+      "agi": 9,
+      "str": 15,
+      "sta": 20,
+      "crit": 1
+    },
+    {
+      "id": 228103,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Nathrezim's Greaves",
+      "p": "inv_pants_plate_12",
+      "crit": 1
+    },
+    {
+      "id": 228109,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Legguards of Sacrifice",
+      "p": "inv_pants_03",
+      "agi": 6,
+      "sta": 16
+    },
+    {
+      "id": 228240,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Flamewaker Legplates",
+      "p": "inv_pants_04",
+      "str": 19,
+      "sta": 30,
+      "resist": {
+        "fire": 20
+      },
+      "d": 7
     }
   ],
   "feet": [
@@ -36072,17 +36226,6 @@ var gear = {
       "p": "inv_boots_08",
       "agi": 4,
       "str": 4
-    },
-    {
-      "id": 3847,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 35,
-      "q": "2",
-      "i": "40",
-      "name": "Golden Scale Boots",
-      "p": "inv_boots_01",
-      "str": 8
     },
     {
       "id": 4051,
@@ -37649,19 +37792,6 @@ var gear = {
       "sta": 13
     },
     {
-      "id": 11731,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Savage Gladiator Greaves",
-      "p": "inv_boots_01",
-      "agi": 15,
-      "str": 10,
-      "sta": 13
-    },
-    {
       "id": 11853,
       "type": "Leather",
       "slot": "feet",
@@ -37708,18 +37838,6 @@ var gear = {
       "p": "inv_boots_plate_01",
       "str": 13,
       "sta": 12
-    },
-    {
-      "id": 12470,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 42,
-      "q": "3",
-      "i": "47",
-      "name": "Sandstalker Ankleguards",
-      "p": "inv_bracer_04",
-      "agi": 17,
-      "str": 6
     },
     {
       "id": 12553,
@@ -37883,18 +38001,6 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 13967,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Windreaver Greaves",
-      "p": "inv_boots_plate_04",
-      "agi": 20,
-      "hit": 1
-    },
-    {
       "id": 14549,
       "type": "Plate",
       "slot": "feet",
@@ -37940,32 +38046,6 @@ var gear = {
       "name": "Warden's Footpads",
       "p": "inv_boots_08",
       "str": 3
-    },
-    {
-      "id": 14616,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Bloodmail Boots",
-      "p": "inv_boots_01",
-      "agi": 9,
-      "str": 9,
-      "sta": 10,
-      "hit": 1
-    },
-    {
-      "id": 14621,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Deathbone Sabatons",
-      "p": "inv_boots_01",
-      "sta": 9,
-      "d": 10
     },
     {
       "id": 14641,
@@ -39187,18 +39267,6 @@ var gear = {
       "str": 17
     },
     {
-      "id": 18692,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Death Knight Sabatons",
-      "p": "inv_boots_plate_08",
-      "str": 11,
-      "sta": 11
-    },
-    {
       "id": 18716,
       "type": "Leather",
       "slot": "feet",
@@ -39237,18 +39305,6 @@ var gear = {
       "p": "inv_boots_chain_10",
       "sta": 23,
       "ap": 20
-    },
-    {
-      "id": 19144,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Sabatons of the Flamewalker",
-      "p": "inv_boots_chain_05",
-      "sta": 27,
-      "ap": 30
     },
     {
       "id": "20039|699",
@@ -40432,6 +40488,126 @@ var gear = {
       "agi": 9,
       "str": 10,
       "sta": 23
+    },
+    {
+      "id": 227810,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 59,
+      "q": "3",
+      "i": "64",
+      "name": "Dense Timbermaw Boots",
+      "p": "inv_boots_chain_10",
+      "sta": 23,
+      "ap": 20
+    },
+    {
+      "id": 227822,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 54,
+      "q": "4",
+      "i": "59",
+      "name": "Thick Corehound Boots",
+      "p": "inv_boots_07",
+      "agi": 13,
+      "sta": 10,
+      "resist": {
+        "fire": 24
+      }
+    },
+    {
+      "id": 227829,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 56,
+      "q": "4",
+      "i": "61",
+      "name": "Hardened Black Dragonscale Boots",
+      "p": "inv_boots_plate_09",
+      "sta": 10,
+      "resist": {
+        "fire": 24
+      },
+      "ap": 28
+    },
+    {
+      "id": 227957,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Savage Gladiator Greaves",
+      "p": "inv_boots_01",
+      "agi": 15,
+      "str": 10,
+      "sta": 13
+    },
+    {
+      "id": 227992,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Death Knight Sabatons",
+      "p": "inv_boots_plate_08",
+      "str": 11,
+      "sta": 11
+    },
+    {
+      "id": 227998,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Bloodmail Boots",
+      "p": "inv_boots_01",
+      "agi": 9,
+      "str": 9,
+      "sta": 10,
+      "hit": 1
+    },
+    {
+      "id": 227999,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Deathbone Sabatons",
+      "p": "inv_boots_01",
+      "sta": 9,
+      "d": 10
+    },
+    {
+      "id": 228004,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Windreaver Greaves",
+      "p": "inv_boots_plate_04",
+      "agi": 20,
+      "hit": 1
+    },
+    {
+      "id": 228253,
+      "type": "Mail",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Sabatons of the Flamewalker",
+      "p": "inv_boots_chain_05",
+      "sta": 24,
+      "resist": {
+        "fire": 11
+      },
+      "ap": 34
     }
   ],
   "finger1": [
@@ -40848,18 +41024,6 @@ var gear = {
       "rand": 136
     },
     {
-      "id": 10780,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 46,
-      "q": "2",
-      "i": "55",
-      "name": "Mark of Hakkar",
-      "p": "inv_jewelry_ring_05",
-      "str": 7,
-      "sta": 10
-    },
-    {
       "id": "10795|696",
       "type": "Miscellaneous",
       "slot": "finger",
@@ -40937,18 +41101,6 @@ var gear = {
       "p": "inv_stone_15",
       "str": 13,
       "rand": 219
-    },
-    {
-      "id": 11669,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Naglering",
-      "p": "inv_jewelry_ring_05",
-      "sta": 10,
-      "d": 5
     },
     {
       "id": 11824,
@@ -41776,22 +41928,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 18399,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 55,
-      "q": "3",
-      "i": "63",
-      "name": "Ocean's Breeze",
-      "p": "inv_jewelry_ring_28",
-      "agi": 7,
-      "str": 4,
-      "sta": 4,
-      "resist": {
-        "fire": 15
-      }
-    },
-    {
       "id": 18400,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -41892,32 +42028,6 @@ var gear = {
         "shadow": 10
       },
       "d": 4
-    },
-    {
-      "id": 18821,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Quick Strike Ring",
-      "p": "inv_jewelry_ring_07",
-      "str": 5,
-      "sta": 8,
-      "crit": 1,
-      "ap": 30
-    },
-    {
-      "id": 18879,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Heavy Dark Iron Ring",
-      "p": "inv_jewelry_ring_14",
-      "sta": 20,
-      "d": 5
     },
     {
       "id": 19325,
@@ -42295,18 +42405,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 22326,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Amalgam's Band",
-      "p": "inv_jewelry_ring_19",
-      "sta": 5,
-      "crit": 1
-    },
-    {
       "id": 22331,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -42433,18 +42531,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 221193,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "Emerald Ring",
-      "p": "inv_jewelry_ring_37",
-      "sta": 12,
-      "ap": 14
-    },
-    {
       "id": 223194,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -42495,6 +42581,68 @@ var gear = {
         "fire": 20
       },
       "ap": 22
+    },
+    {
+      "id": 227966,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Naglering",
+      "p": "inv_jewelry_ring_05",
+      "sta": 10,
+      "d": 5
+    },
+    {
+      "id": 228046,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Don Mauricio's Band of Domination",
+      "p": "inv_jewelry_ring_16",
+      "sta": 5,
+      "crit": 1
+    },
+    {
+      "id": 228047,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Amalgam's Band",
+      "p": "inv_jewelry_ring_19",
+      "sta": 5,
+      "crit": 1
+    },
+    {
+      "id": 228242,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Heavy Dark Iron Ring",
+      "p": "inv_jewelry_ring_14",
+      "sta": 20,
+      "d": 7
+    },
+    {
+      "id": 228261,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Quick Strike Ring",
+      "p": "inv_jewelry_ring_07",
+      "str": 5,
+      "sta": 8,
+      "crit": 1,
+      "ap": 36
     }
   ],
   "finger2": [
@@ -42911,18 +43059,6 @@ var gear = {
       "rand": 136
     },
     {
-      "id": 10780,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 46,
-      "q": "2",
-      "i": "55",
-      "name": "Mark of Hakkar",
-      "p": "inv_jewelry_ring_05",
-      "str": 7,
-      "sta": 10
-    },
-    {
       "id": "10795|696",
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43000,18 +43136,6 @@ var gear = {
       "p": "inv_stone_15",
       "str": 13,
       "rand": 219
-    },
-    {
-      "id": 11669,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Naglering",
-      "p": "inv_jewelry_ring_05",
-      "sta": 10,
-      "d": 5
     },
     {
       "id": 11824,
@@ -43839,22 +43963,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 18399,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 55,
-      "q": "3",
-      "i": "63",
-      "name": "Ocean's Breeze",
-      "p": "inv_jewelry_ring_28",
-      "agi": 7,
-      "str": 4,
-      "sta": 4,
-      "resist": {
-        "fire": 15
-      }
-    },
-    {
       "id": 18400,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43955,32 +44063,6 @@ var gear = {
         "shadow": 10
       },
       "d": 4
-    },
-    {
-      "id": 18821,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Quick Strike Ring",
-      "p": "inv_jewelry_ring_07",
-      "str": 5,
-      "sta": 8,
-      "crit": 1,
-      "ap": 30
-    },
-    {
-      "id": 18879,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Heavy Dark Iron Ring",
-      "p": "inv_jewelry_ring_14",
-      "sta": 20,
-      "d": 5
     },
     {
       "id": 19325,
@@ -44358,18 +44440,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 22326,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Amalgam's Band",
-      "p": "inv_jewelry_ring_19",
-      "sta": 5,
-      "crit": 1
-    },
-    {
       "id": 22331,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -44496,18 +44566,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 221193,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 45,
-      "q": "3",
-      "i": "50",
-      "name": "Emerald Ring",
-      "p": "inv_jewelry_ring_37",
-      "sta": 12,
-      "ap": 14
-    },
-    {
       "id": 223194,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -44558,6 +44616,68 @@ var gear = {
         "fire": 20
       },
       "ap": 22
+    },
+    {
+      "id": 227966,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Naglering",
+      "p": "inv_jewelry_ring_05",
+      "sta": 10,
+      "d": 5
+    },
+    {
+      "id": 228046,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Don Mauricio's Band of Domination",
+      "p": "inv_jewelry_ring_16",
+      "sta": 5,
+      "crit": 1
+    },
+    {
+      "id": 228047,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Amalgam's Band",
+      "p": "inv_jewelry_ring_19",
+      "sta": 5,
+      "crit": 1
+    },
+    {
+      "id": 228242,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Heavy Dark Iron Ring",
+      "p": "inv_jewelry_ring_14",
+      "sta": 20,
+      "d": 7
+    },
+    {
+      "id": 228261,
+      "type": "Miscellaneous",
+      "slot": "finger",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Quick Strike Ring",
+      "p": "inv_jewelry_ring_07",
+      "str": 5,
+      "sta": 8,
+      "crit": 1,
+      "ap": 36
     }
   ],
   "trinket1": [
@@ -44582,22 +44702,6 @@ var gear = {
       "name": "Force of Will",
       "p": "inv_jewelry_amulet_01",
       "d": 7
-    },
-    {
-      "id": 11815,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Hand of Justice",
-      "p": "inv_jewelry_talisman_01",
-      "proc": {
-        "extra": 1,
-        "cooldown": 2000,
-        "chance": 2
-      },
-      "ap": 20
     },
     {
       "id": 13209,
@@ -44868,6 +44972,44 @@ var gear = {
       "name": "Breadth of the Beast",
       "p": "inv_jewelcrafting_jadeowl",
       "crit": 1,
+      "hit": 1
+    },
+    {
+      "id": 227989,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Hand of Justice",
+      "p": "inv_jewelry_talisman_01",
+      "proc": {
+        "extra": 1,
+        "cooldown": 2000,
+        "chance": 2
+      },
+      "ap": 20
+    },
+    {
+      "id": 228078,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Accursed Chalice",
+      "p": "spell_shadow_demonictactics",
+      "crit": 1
+    },
+    {
+      "id": 228081,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Germinating Poisonseed",
+      "p": "inv_misc_herb_nightmareseed",
       "hit": 1
     }
   ],
@@ -44895,22 +45037,6 @@ var gear = {
       "d": 7
     },
     {
-      "id": 11815,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Hand of Justice",
-      "p": "inv_jewelry_talisman_01",
-      "proc": {
-        "extra": 1,
-        "cooldown": 2000,
-        "chance": 2
-      },
-      "ap": 20
-    },
-    {
       "id": 13209,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -45179,6 +45305,44 @@ var gear = {
       "name": "Breadth of the Beast",
       "p": "inv_jewelcrafting_jadeowl",
       "crit": 1,
+      "hit": 1
+    },
+    {
+      "id": 227989,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Hand of Justice",
+      "p": "inv_jewelry_talisman_01",
+      "proc": {
+        "extra": 1,
+        "cooldown": 2000,
+        "chance": 2
+      },
+      "ap": 20
+    },
+    {
+      "id": 228078,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Accursed Chalice",
+      "p": "spell_shadow_demonictactics",
+      "crit": 1
+    },
+    {
+      "id": 228081,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Germinating Poisonseed",
+      "p": "inv_misc_herb_nightmareseed",
       "hit": 1
     }
   ],
@@ -45362,34 +45526,6 @@ var gear = {
       "p": "inv_weapon_bow_08",
       "str": 3,
       "ap": 14
-    },
-    {
-      "id": 11628,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Houndmaster's Bow",
-      "speed": 1.8,
-      "mindmg": 34,
-      "maxdmg": 64,
-      "p": "inv_weapon_bow_04",
-      "agi": 3
-    },
-    {
-      "id": 11629,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Houndmaster's Rifle",
-      "speed": 2.3,
-      "mindmg": 44,
-      "maxdmg": 82,
-      "p": "inv_weapon_rifle_07",
-      "agi": 3
     },
     {
       "id": 12651,
@@ -45760,36 +45896,6 @@ var gear = {
       "sta": 9
     },
     {
-      "id": 17069,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Striker's Mark",
-      "speed": 2.5,
-      "mindmg": 69,
-      "maxdmg": 129,
-      "p": "inv_weapon_bow_08",
-      "ap": 22,
-      "hit": 1
-    },
-    {
-      "id": 17072,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Blastershot Launcher",
-      "speed": 2.6,
-      "mindmg": 73,
-      "maxdmg": 136,
-      "p": "inv_weapon_rifle_09",
-      "sta": 6,
-      "crit": 1
-    },
-    {
       "id": 18282,
       "type": "Guns",
       "slot": "ranged",
@@ -45801,21 +45907,6 @@ var gear = {
       "mindmg": 64,
       "maxdmg": 120,
       "p": "inv_weapon_rifle_05",
-      "hit": 1
-    },
-    {
-      "id": 18323,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Satyr's Bow",
-      "speed": 2.4,
-      "mindmg": 50,
-      "maxdmg": 93,
-      "p": "inv_weapon_bow_03",
-      "agi": 3,
       "hit": 1
     },
     {
@@ -45846,20 +45937,6 @@ var gear = {
       "p": "inv_weapon_bow_05",
       "agi": 6,
       "sta": 5
-    },
-    {
-      "id": 18680,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Ancient Bone Bow",
-      "speed": 2.8,
-      "mindmg": 61,
-      "maxdmg": 114,
-      "p": "inv_weapon_bow_08",
-      "agi": 11
     },
     {
       "id": 18738,
@@ -46265,6 +46342,94 @@ var gear = {
       "maxdmg": 111,
       "p": "inv_weapon_rifle_07",
       "agi": 3
+    },
+    {
+      "id": 227849,
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Fiery Core Sharpshooter Rifle",
+      "speed": 2.5,
+      "mindmg": 64,
+      "maxdmg": 120,
+      "p": "inv_weapon_rifle_05",
+      "hit": 1
+    },
+    {
+      "id": 227996,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Ancient Bone Bow",
+      "speed": 2.8,
+      "mindmg": 61,
+      "maxdmg": 114,
+      "p": "inv_weapon_bow_08",
+      "agi": 11
+    },
+    {
+      "id": 228050,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Satyr's Bow",
+      "speed": 2.4,
+      "mindmg": 50,
+      "maxdmg": 93,
+      "p": "inv_weapon_bow_03",
+      "agi": 3,
+      "hit": 1
+    },
+    {
+      "id": 228107,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 0,
+      "q": "3",
+      "i": "62",
+      "name": "Fallen Huntress' Longbow",
+      "speed": 3,
+      "mindmg": 66,
+      "maxdmg": 124,
+      "p": "inv_weapon_bow_04",
+      "agi": 8,
+      "sta": 7
+    },
+    {
+      "id": 228252,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Striker's Mark",
+      "speed": 3.2,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "p": "inv_weapon_bow_08",
+      "hit": 1,
+      "ap": 22
+    },
+    {
+      "id": 228270,
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Blastershot Launcher",
+      "speed": 3.1,
+      "mindmg": 87,
+      "maxdmg": 162,
+      "p": "inv_weapon_rifle_09",
+      "sta": 6,
+      "crit": 1
     }
   ],
   "mainhand": [
@@ -50205,20 +50370,6 @@ var gear = {
       "str": 9
     },
     {
-      "id": 10750,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 40,
-      "q": "3",
-      "i": "54",
-      "name": "Lifeforce Dirk",
-      "speed": 1.6,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_21",
-      "sta": 11
-    },
-    {
       "id": 10761,
       "type": "Dagger",
       "slot": "onehand",
@@ -50521,23 +50672,6 @@ var gear = {
       }
     },
     {
-      "id": 11684,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 55,
-      "q": "4",
-      "i": "60",
-      "name": "Ironfoe",
-      "speed": 2.4,
-      "mindmg": 73,
-      "maxdmg": 136,
-      "p": "spell_frost_frostbrand",
-      "proc": {
-        "extra": 2,
-        "ppm": 0.8
-      }
-    },
-    {
       "id": 11702,
       "type": "Axe",
       "slot": "mainhand",
@@ -50552,80 +50686,6 @@ var gear = {
       "agi": 6,
       "str": 8,
       "sta": 5
-    },
-    {
-      "id": 11743,
-      "type": "Fist",
-      "slot": "onehand",
-      "r": 50,
-      "q": "2",
-      "i": "55",
-      "name": "Rockfist",
-      "speed": 1.4,
-      "mindmg": 32,
-      "maxdmg": 60,
-      "p": "inv_gauntlets_11",
-      "str": 10
-    },
-    {
-      "id": 11744,
-      "type": "Fist",
-      "slot": "onehand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Bloodfist",
-      "speed": 1.5,
-      "mindmg": 38,
-      "maxdmg": 72,
-      "p": "inv_gauntlets_11",
-      "proc": {
-        "dmg": 20
-      }
-    },
-    {
-      "id": 11784,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Arbiter's Blade",
-      "speed": 2.4,
-      "mindmg": 59,
-      "maxdmg": 110,
-      "p": "inv_sword_23",
-      "sta": 8
-    },
-    {
-      "id": 11805,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Rubidium Hammer",
-      "speed": 2,
-      "mindmg": 51,
-      "maxdmg": 96,
-      "p": "inv_hammer_09",
-      "str": 5
-    },
-    {
-      "id": 11817,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Lord General's Sword",
-      "speed": 2.6,
-      "mindmg": 67,
-      "maxdmg": 125,
-      "p": "inv_sword_25",
-      "proc": {
-        "spell": "LordGeneral"
-      }
     },
     {
       "id": 11856,
@@ -50659,51 +50719,6 @@ var gear = {
         "procgcd": true,
         "dmg": 60
       }
-    },
-    {
-      "id": 11920,
-      "type": "Axe",
-      "slot": "mainhand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Wraith Scythe",
-      "speed": 2.2,
-      "mindmg": 57,
-      "maxdmg": 106,
-      "p": "inv_axe_13",
-      "proc": {
-        "magic": true,
-        "dmg": 45,
-        "coeff": 1
-      }
-    },
-    {
-      "id": 11922,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Blood-etched Blade",
-      "speed": 1.5,
-      "mindmg": 39,
-      "maxdmg": 74,
-      "p": "inv_weapon_shortblade_15",
-      "sta": 12
-    },
-    {
-      "id": 11923,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "The Hammer of Grace",
-      "speed": 2.7,
-      "mindmg": 71,
-      "maxdmg": 132,
-      "p": "inv_hammer_07"
     },
     {
       "id": 11964,
@@ -51611,45 +51626,6 @@ var gear = {
       }
     },
     {
-      "id": 13952,
-      "type": "Axe",
-      "slot": "mainhand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Iceblade Hacker",
-      "speed": 2,
-      "mindmg": 58,
-      "maxdmg": 111,
-      "p": "inv_axe_03"
-    },
-    {
-      "id": 13953,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Silent Fang",
-      "speed": 1.6,
-      "mindmg": 45,
-      "maxdmg": 85,
-      "p": "inv_sword_41"
-    },
-    {
-      "id": 13964,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Witchblade",
-      "speed": 1.6,
-      "mindmg": 45,
-      "maxdmg": 85,
-      "p": "inv_weapon_shortblade_25"
-    },
-    {
       "id": 13984,
       "type": "Dagger",
       "slot": "onehand",
@@ -51665,19 +51641,6 @@ var gear = {
         "magic": true,
         "dmg": 90
       }
-    },
-    {
-      "id": 14024,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Frightalon",
-      "speed": 1.4,
-      "mindmg": 39,
-      "maxdmg": 73,
-      "p": "inv_weapon_shortblade_16"
     },
     {
       "id": 14151,
@@ -51729,26 +51692,6 @@ var gear = {
       "proc": {
         "magic": true,
         "dmg": 90
-      }
-    },
-    {
-      "id": 14576,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Ebon Hilt of Marduk",
-      "speed": 2.7,
-      "mindmg": 73,
-      "maxdmg": 137,
-      "p": "inv_sword_15",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 70,
-        "interval": "1000",
-        "duration": "3000"
       }
     },
     {
@@ -53807,24 +53750,6 @@ var gear = {
       "p": "inv_weapon_shortblade_06"
     },
     {
-      "id": 17071,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Gutgore Ripper",
-      "speed": 1.8,
-      "mindmg": 63,
-      "maxdmg": 119,
-      "p": "inv_weapon_shortblade_18",
-      "proc": {
-        "magic": true,
-        "dmg": 75,
-        "binaryspell": true
-      }
-    },
-    {
       "id": 17075,
       "type": "Sword",
       "slot": "onehand",
@@ -53840,34 +53765,6 @@ var gear = {
         "dmg": 240,
         "ppm": 0.6
       }
-    },
-    {
-      "id": 17103,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Azuresong Mageblade",
-      "speed": 2.4,
-      "mindmg": 64,
-      "maxdmg": 140,
-      "p": "inv_sword_39",
-      "sta": 7
-    },
-    {
-      "id": 17105,
-      "type": "Mace",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Aurastone Hammer",
-      "speed": 2.7,
-      "mindmg": 79,
-      "maxdmg": 162,
-      "p": "inv_hammer_05",
-      "sta": 10
     },
     {
       "id": 17112,
@@ -53920,32 +53817,6 @@ var gear = {
       }
     },
     {
-      "id": 17710,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 49,
-      "q": "3",
-      "i": "54",
-      "name": "Charstone Dirk",
-      "speed": 1.6,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_weapon_shortblade_14"
-    },
-    {
-      "id": 17719,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Inventor's Focal Sword",
-      "speed": 2.2,
-      "mindmg": 54,
-      "maxdmg": 101,
-      "p": "inv_sword_14"
-    },
-    {
       "id": 17752,
       "type": "Dagger",
       "slot": "onehand",
@@ -53962,19 +53833,6 @@ var gear = {
         "procgcd": true,
         "dmg": 70
       }
-    },
-    {
-      "id": 17943,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Fist of Stone",
-      "speed": 1.8,
-      "mindmg": 44,
-      "maxdmg": 83,
-      "p": "inv_hammer_17"
     },
     {
       "id": 18044,
@@ -54020,20 +53878,6 @@ var gear = {
       "proc": {
         "spell": "Eskhandar"
       }
-    },
-    {
-      "id": 18310,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Fiendish Machete",
-      "speed": 2.4,
-      "mindmg": 74,
-      "maxdmg": 112,
-      "p": "inv_sword_18",
-      "agi": 5
     },
     {
       "id": 18321,
@@ -54320,22 +54164,6 @@ var gear = {
       "ap": 28
     },
     {
-      "id": 18832,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Brutality Blade",
-      "speed": 2.5,
-      "mindmg": 90,
-      "maxdmg": 168,
-      "p": "inv_sword_15",
-      "agi": 9,
-      "str": 9,
-      "crit": 1
-    },
-    {
       "id": 18838,
       "type": "Dagger",
       "slot": "onehand",
@@ -54430,20 +54258,6 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
-    },
-    {
-      "id": 18878,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Sorcerous Dagger",
-      "speed": 1.4,
-      "mindmg": 39,
-      "maxdmg": 79,
-      "p": "inv_weapon_shortblade_07",
-      "sta": 8
     },
     {
       "id": 19019,
@@ -54633,246 +54447,6 @@ var gear = {
       }
     },
     {
-      "id": 19542,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 49,
-      "maxdmg": 92,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 13,
-      "sta": 5
-    },
-    {
-      "id": 19543,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 41,
-      "maxdmg": 78,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 11,
-      "sta": 5
-    },
-    {
-      "id": 19544,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 34,
-      "maxdmg": 65,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 8,
-      "sta": 3
-    },
-    {
-      "id": 19545,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 25,
-      "maxdmg": 47,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 7,
-      "sta": 3
-    },
-    {
-      "id": 19546,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 49,
-      "maxdmg": 92,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 13,
-      "sta": 5
-    },
-    {
-      "id": 19547,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 41,
-      "maxdmg": 78,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 11,
-      "sta": 5
-    },
-    {
-      "id": 19548,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 34,
-      "maxdmg": 65,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 8,
-      "sta": 3
-    },
-    {
-      "id": 19549,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 25,
-      "maxdmg": 47,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 7,
-      "sta": 3
-    },
-    {
-      "id": 19550,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 78,
-      "maxdmg": 146,
-      "p": "inv_sword_31",
-      "str": 13,
-      "sta": 5
-    },
-    {
-      "id": 19551,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 66,
-      "maxdmg": 124,
-      "p": "inv_sword_31",
-      "str": 11,
-      "sta": 5
-    },
-    {
-      "id": 19552,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 55,
-      "maxdmg": 103,
-      "p": "inv_sword_31",
-      "str": 8,
-      "sta": 3
-    },
-    {
-      "id": 19553,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_31",
-      "str": 7,
-      "sta": 3
-    },
-    {
-      "id": 19554,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 78,
-      "maxdmg": 146,
-      "p": "inv_sword_27",
-      "str": 13,
-      "sta": 5
-    },
-    {
-      "id": 19555,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 66,
-      "maxdmg": 124,
-      "p": "inv_sword_27",
-      "str": 11,
-      "sta": 5
-    },
-    {
-      "id": 19556,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 55,
-      "maxdmg": 103,
-      "p": "inv_sword_27",
-      "str": 8,
-      "sta": 3
-    },
-    {
-      "id": 19557,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_27",
-      "str": 7,
-      "sta": 3
-    },
-    {
       "id": "19921|690",
       "type": "Axe",
       "slot": "onehand",
@@ -54962,66 +54536,6 @@ var gear = {
       "maxdmg": 96,
       "p": "inv_sword_13",
       "sta": 8
-    },
-    {
-      "id": 20430,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 28,
-      "maxdmg": 53,
-      "p": "inv_sword_31",
-      "str": 4,
-      "sta": 2
-    },
-    {
-      "id": 20440,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 28,
-      "maxdmg": 53,
-      "p": "inv_sword_27",
-      "str": 4,
-      "sta": 2
-    },
-    {
-      "id": 20441,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 18,
-      "maxdmg": 34,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 4,
-      "sta": 2
-    },
-    {
-      "id": 20443,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 18,
-      "maxdmg": 34,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 4,
-      "sta": 2
     },
     {
       "id": 20577,
@@ -55296,19 +54810,6 @@ var gear = {
       "sta": 9
     },
     {
-      "id": 22266,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Flarethorn",
-      "speed": 1.8,
-      "mindmg": 47,
-      "maxdmg": 88,
-      "p": "inv_spear_01"
-    },
-    {
       "id": 22315,
       "type": "Mace",
       "slot": "mainhand",
@@ -55350,20 +54851,6 @@ var gear = {
       "maxdmg": 84,
       "p": "inv_mace_15",
       "crit": 1
-    },
-    {
-      "id": 22332,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Blade of Necromancy",
-      "speed": 1.5,
-      "mindmg": 42,
-      "maxdmg": 80,
-      "p": "inv_sword_25",
-      "sta": 4
     },
     {
       "id": 22377,
@@ -56368,6 +55855,667 @@ var gear = {
       "maxdmg": 111,
       "p": "inv_sword_23",
       "sta": 11
+    },
+    {
+      "id": 227825,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Molten Dark Iron Destroyer",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "p": "inv_axe_12",
+      "str": 10,
+      "resist": {
+        "fire": 6
+      }
+    },
+    {
+      "id": 227826,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Dark Iron Flame Reaver",
+      "speed": 2.4,
+      "mindmg": 71,
+      "maxdmg": 134,
+      "p": "inv_sword_48",
+      "sta": 10,
+      "resist": {
+        "fire": 6
+      }
+    },
+    {
+      "id": 227832,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Tempered Black Amnesty",
+      "speed": 1.6,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "p": "inv_weapon_shortblade_12"
+    },
+    {
+      "id": 227840,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Implacable Blackguard",
+      "speed": 1.8,
+      "mindmg": 65,
+      "maxdmg": 121,
+      "p": "inv_sword_39",
+      "sta": 9
+    },
+    {
+      "id": 227842,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Ebon Fist",
+      "speed": 2.5,
+      "mindmg": 90,
+      "maxdmg": 168,
+      "p": "inv_hammer_19",
+      "sta": 9,
+      "resist": {
+        "fire": 7
+      },
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 200
+      }
+    },
+    {
+      "id": 227850,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 59,
+      "q": "4",
+      "i": "64",
+      "name": "Sageblade of the Archmagus",
+      "speed": 1.8,
+      "mindmg": 49,
+      "maxdmg": 100,
+      "p": "inv_sword_51",
+      "sta": 14
+    },
+    {
+      "id": 227881,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Tranquility",
+      "speed": 2,
+      "mindmg": 52,
+      "maxdmg": 98,
+      "p": "inv_mace_02"
+    },
+    {
+      "id": 227884,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Deadly Heartseeker",
+      "speed": 1.7,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "p": "inv_sword_17",
+      "str": 4,
+      "crit": 1
+    },
+    {
+      "id": 227886,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "63",
+      "name": "Skyrider's Masterwork Stormhammer",
+      "speed": 2,
+      "mindmg": 58,
+      "maxdmg": 108,
+      "p": "inv_hammer_04",
+      "proc": {
+        "magic": true,
+        "dmg": 125
+      }
+    },
+    {
+      "id": 227887,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Hardened Frostguard",
+      "speed": 2.3,
+      "mindmg": 66,
+      "maxdmg": 124,
+      "p": "inv_sword_11"
+    },
+    {
+      "id": 227935,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 0,
+      "q": "3",
+      "i": "62",
+      "name": "Hammer of the Fallen Thane",
+      "speed": 1.5,
+      "mindmg": 31,
+      "maxdmg": 58,
+      "p": "inv_misc_bone_03",
+      "str": 12,
+      "sta": 15,
+      "proc": {
+        "magic": true,
+        "dmg": 40,
+        "coeff": 1
+      }
+    },
+    {
+      "id": 227940,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Lord General's Sword",
+      "speed": 2.6,
+      "mindmg": 67,
+      "maxdmg": 125,
+      "p": "inv_sword_25",
+      "proc": {
+        "spell": "LordGeneral"
+      }
+    },
+    {
+      "id": 227941,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Wraith Scythe",
+      "speed": 2.2,
+      "mindmg": 57,
+      "maxdmg": 106,
+      "p": "inv_axe_13",
+      "proc": {
+        "magic": true,
+        "dmg": 45,
+        "coeff": 1
+      }
+    },
+    {
+      "id": 227946,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Rubidium Hammer",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 96,
+      "p": "inv_hammer_09",
+      "str": 5
+    },
+    {
+      "id": 227951,
+      "type": "Fist",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Bloodfist",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "p": "inv_gauntlets_11",
+      "proc": {
+        "dmg": 20
+      }
+    },
+    {
+      "id": 227953,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "The Hammer of Grace",
+      "speed": 2.7,
+      "mindmg": 71,
+      "maxdmg": 132,
+      "p": "inv_hammer_07"
+    },
+    {
+      "id": 227962,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Flarethorn",
+      "speed": 1.8,
+      "mindmg": 47,
+      "maxdmg": 88,
+      "p": "inv_spear_01"
+    },
+    {
+      "id": 227963,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Blood-etched Blade",
+      "speed": 1.5,
+      "mindmg": 39,
+      "maxdmg": 74,
+      "p": "inv_weapon_shortblade_15",
+      "sta": 12
+    },
+    {
+      "id": 227968,
+      "type": "Fist",
+      "slot": "onehand",
+      "r": 50,
+      "q": "3",
+      "i": "56",
+      "name": "Rockfist",
+      "speed": 1.4,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "p": "inv_gauntlets_11",
+      "str": 10
+    },
+    {
+      "id": 227991,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 58,
+      "q": "4",
+      "i": "63",
+      "name": "Ironfoe",
+      "speed": 2.4,
+      "mindmg": 77,
+      "maxdmg": 143,
+      "p": "spell_frost_frostbrand",
+      "proc": {
+        "extra": 2,
+        "ppm": 0.8
+      },
+      "ap": 18
+    },
+    {
+      "id": 227993,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Ebon Hilt of Marduk",
+      "speed": 2.7,
+      "mindmg": 73,
+      "maxdmg": 137,
+      "p": "inv_sword_15",
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "tick": 70,
+        "interval": "1000",
+        "duration": "3000"
+      }
+    },
+    {
+      "id": 228015,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Frightalon",
+      "speed": 1.4,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "p": "inv_weapon_shortblade_16"
+    },
+    {
+      "id": 228021,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Witchblade",
+      "speed": 1.6,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "p": "inv_weapon_shortblade_25"
+    },
+    {
+      "id": 228024,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Silent Fang",
+      "speed": 1.6,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "p": "inv_sword_41"
+    },
+    {
+      "id": 228026,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Blade of Blackwood",
+      "speed": 1.5,
+      "mindmg": 42,
+      "maxdmg": 80,
+      "p": "inv_sword_05",
+      "sta": 14
+    },
+    {
+      "id": 228027,
+      "type": "Axe",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Iceblade Hacker",
+      "speed": 2,
+      "mindmg": 58,
+      "maxdmg": 111,
+      "p": "inv_axe_03"
+    },
+    {
+      "id": 228028,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Blade of Necromancy",
+      "speed": 1.5,
+      "mindmg": 42,
+      "maxdmg": 80,
+      "p": "inv_sword_25",
+      "sta": 4
+    },
+    {
+      "id": 228056,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Fiendish Machete",
+      "speed": 2.4,
+      "mindmg": 74,
+      "maxdmg": 112,
+      "p": "inv_sword_18",
+      "agi": 5
+    },
+    {
+      "id": 228082,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Warsong Axe",
+      "speed": 2.5,
+      "mindmg": 71,
+      "maxdmg": 133,
+      "p": "inv_axe_13",
+      "ap": 28
+    },
+    {
+      "id": 228090,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Cenarion Ritual Dagger",
+      "speed": 1.6,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "p": "inv_weapon_shortblade_25",
+      "sta": 4
+    },
+    {
+      "id": 228094,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Dreadlord's Blade",
+      "speed": 1.5,
+      "mindmg": 42,
+      "maxdmg": 80,
+      "p": "inv_sword_25",
+      "sta": 4
+    },
+    {
+      "id": 228128,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "69",
+      "name": "Hammer of The Black Anvil",
+      "speed": 2.7,
+      "mindmg": 79,
+      "maxdmg": 162,
+      "p": "inv_hammer_03",
+      "sta": 10
+    },
+    {
+      "id": 228139,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "69",
+      "name": "Fist of the Firesworn",
+      "speed": 2.7,
+      "mindmg": 95,
+      "maxdmg": 178,
+      "p": "spell_fire_flametounge",
+      "sta": 10
+    },
+    {
+      "id": 228143,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Shadowflame Sword",
+      "speed": 2.5,
+      "mindmg": 90,
+      "maxdmg": 168,
+      "p": "inv_sword_15",
+      "agi": 9,
+      "str": 9
+    },
+    {
+      "id": 228145,
+      "type": "Fist",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Magmadar's Right Claw",
+      "speed": 2.5,
+      "mindmg": 84,
+      "maxdmg": 156,
+      "p": "inv_misc_monsterclaw_03",
+      "sta": 10,
+      "hit": 1,
+      "ap": 20
+    },
+    {
+      "id": 228162,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Deceit",
+      "speed": 1.6,
+      "mindmg": 57,
+      "maxdmg": 107,
+      "p": "inv_weapon_shortblade_11",
+      "sta": 9
+    },
+    {
+      "id": 228168,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Goblin Gear Grinder",
+      "speed": 2.5,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "p": "inv_gizmo_02"
+    },
+    {
+      "id": 228169,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "The Attitude Adjustor",
+      "speed": 2.5,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "p": "inv_misc_wrench_01"
+    },
+    {
+      "id": 228185,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Broken Bottle of Goblino Noir",
+      "speed": 2,
+      "mindmg": 51,
+      "maxdmg": 95,
+      "p": "inv_drink_10",
+      "proc": {
+        "tick": 10,
+        "interval": "3000",
+        "duration": "30000",
+        "bleed": true
+      }
+    },
+    {
+      "id": 228263,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Sorcerous Dagger",
+      "speed": 1.4,
+      "mindmg": 37,
+      "maxdmg": 79,
+      "p": "inv_weapon_shortblade_07",
+      "sta": 8
+    },
+    {
+      "id": 228264,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Aurastone Hammer",
+      "speed": 2.7,
+      "mindmg": 72,
+      "maxdmg": 153,
+      "p": "inv_hammer_05",
+      "sta": 10
+    },
+    {
+      "id": 228265,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Brutality Blade",
+      "speed": 2.5,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "p": "inv_sword_15",
+      "agi": 10,
+      "str": 10,
+      "crit": 1
+    },
+    {
+      "id": 228267,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Gutgore Ripper",
+      "speed": 1.8,
+      "mindmg": 66,
+      "maxdmg": 123,
+      "p": "inv_weapon_shortblade_18",
+      "proc": {
+        "magic": true,
+        "dmg": 151
+      }
+    },
+    {
+      "id": 228269,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Azuresong Mageblade",
+      "speed": 2.4,
+      "mindmg": 64,
+      "maxdmg": 140,
+      "p": "inv_sword_39",
+      "sta": 8,
+      "crit": 1
     }
   ],
   "offhand": [
@@ -61080,20 +61228,6 @@ var gear = {
       "str": 8
     },
     {
-      "id": 10750,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 40,
-      "q": "3",
-      "i": "54",
-      "name": "Lifeforce Dirk",
-      "speed": 1.6,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_21",
-      "sta": 11
-    },
-    {
       "id": 10761,
       "type": "Dagger",
       "slot": "onehand",
@@ -61309,36 +61443,6 @@ var gear = {
         "tick": 7,
         "interval": "3000",
         "duration": "30000"
-      }
-    },
-    {
-      "id": 11743,
-      "type": "Fist",
-      "slot": "onehand",
-      "r": 50,
-      "q": "2",
-      "i": "55",
-      "name": "Rockfist",
-      "speed": 1.4,
-      "mindmg": 32,
-      "maxdmg": 60,
-      "p": "inv_gauntlets_11",
-      "str": 10
-    },
-    {
-      "id": 11744,
-      "type": "Fist",
-      "slot": "onehand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Bloodfist",
-      "speed": 1.5,
-      "mindmg": 38,
-      "maxdmg": 72,
-      "p": "inv_gauntlets_11",
-      "proc": {
-        "dmg": 20
       }
     },
     {
@@ -62140,19 +62244,6 @@ var gear = {
       "block": 40
     },
     {
-      "id": 14024,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Frightalon",
-      "speed": 1.4,
-      "mindmg": 39,
-      "maxdmg": 73,
-      "p": "inv_weapon_shortblade_16"
-    },
-    {
       "id": 14151,
       "type": "Dagger",
       "slot": "onehand",
@@ -62183,21 +62274,6 @@ var gear = {
         "magic": true,
         "dmg": 90
       }
-    },
-    {
-      "id": 14528,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Rattlecage Buckler",
-      "p": "inv_shield_02",
-      "sta": 7,
-      "resist": {
-        "shadow": 7
-      },
-      "block": 39
     },
     {
       "id": 14555,
@@ -64923,18 +64999,6 @@ var gear = {
       "sta": 6
     },
     {
-      "id": 17066,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Drillborer Disk",
-      "p": "inv_shield_10",
-      "sta": 10,
-      "block": 46
-    },
-    {
       "id": 17068,
       "type": "Axe",
       "slot": "onehand",
@@ -64965,24 +65029,6 @@ var gear = {
       "mindmg": 39,
       "maxdmg": 86,
       "p": "inv_weapon_shortblade_06"
-    },
-    {
-      "id": 17071,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "69",
-      "name": "Gutgore Ripper",
-      "speed": 1.8,
-      "mindmg": 63,
-      "maxdmg": 119,
-      "p": "inv_weapon_shortblade_18",
-      "proc": {
-        "magic": true,
-        "dmg": 75,
-        "binaryspell": true
-      }
     },
     {
       "id": 17075,
@@ -65042,31 +65088,6 @@ var gear = {
       "proc": {
         "extra": 1
       }
-    },
-    {
-      "id": 17718,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Gizlock's Hypertech Buckler",
-      "p": "inv_shield_10",
-      "sta": 5,
-      "block": 32
-    },
-    {
-      "id": 17719,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Inventor's Focal Sword",
-      "speed": 2.2,
-      "mindmg": 54,
-      "maxdmg": 101,
-      "p": "inv_sword_14"
     },
     {
       "id": 17738,
@@ -65135,20 +65156,6 @@ var gear = {
         "interval": "3000",
         "duration": "30000"
       }
-    },
-    {
-      "id": 18310,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Fiendish Machete",
-      "speed": 2.4,
-      "mindmg": 74,
-      "maxdmg": 112,
-      "p": "inv_sword_18",
-      "agi": 5
     },
     {
       "id": 18347,
@@ -65221,18 +65228,6 @@ var gear = {
       "maxdmg": 125,
       "p": "inv_weapon_shortblade_04",
       "ap": 28
-    },
-    {
-      "id": 18485,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Observer's Shield",
-      "p": "inv_shield_13",
-      "sta": 9,
-      "block": 38
     },
     {
       "id": 18498,
@@ -65443,22 +65438,6 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
-    },
-    {
-      "id": 18832,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Brutality Blade",
-      "speed": 2.5,
-      "mindmg": 90,
-      "maxdmg": 168,
-      "p": "inv_sword_15",
-      "agi": 9,
-      "str": 9,
-      "crit": 1
     },
     {
       "id": 18838,
@@ -65756,246 +65735,6 @@ var gear = {
       }
     },
     {
-      "id": 19542,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 49,
-      "maxdmg": 92,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 13,
-      "sta": 5
-    },
-    {
-      "id": 19543,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 41,
-      "maxdmg": 78,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 11,
-      "sta": 5
-    },
-    {
-      "id": 19544,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 34,
-      "maxdmg": 65,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 8,
-      "sta": 3
-    },
-    {
-      "id": 19545,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 25,
-      "maxdmg": 47,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 7,
-      "sta": 3
-    },
-    {
-      "id": 19546,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 49,
-      "maxdmg": 92,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 13,
-      "sta": 5
-    },
-    {
-      "id": 19547,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 41,
-      "maxdmg": 78,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 11,
-      "sta": 5
-    },
-    {
-      "id": 19548,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 34,
-      "maxdmg": 65,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 8,
-      "sta": 3
-    },
-    {
-      "id": 19549,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 25,
-      "maxdmg": 47,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 7,
-      "sta": 3
-    },
-    {
-      "id": 19550,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 78,
-      "maxdmg": 146,
-      "p": "inv_sword_31",
-      "str": 13,
-      "sta": 5
-    },
-    {
-      "id": 19551,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 66,
-      "maxdmg": 124,
-      "p": "inv_sword_31",
-      "str": 11,
-      "sta": 5
-    },
-    {
-      "id": 19552,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 55,
-      "maxdmg": 103,
-      "p": "inv_sword_31",
-      "str": 8,
-      "sta": 3
-    },
-    {
-      "id": 19553,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_31",
-      "str": 7,
-      "sta": 3
-    },
-    {
-      "id": 19554,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 78,
-      "maxdmg": 146,
-      "p": "inv_sword_27",
-      "str": 13,
-      "sta": 5
-    },
-    {
-      "id": 19555,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 66,
-      "maxdmg": 124,
-      "p": "inv_sword_27",
-      "str": 11,
-      "sta": 5
-    },
-    {
-      "id": 19556,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 55,
-      "maxdmg": 103,
-      "p": "inv_sword_27",
-      "str": 8,
-      "sta": 3
-    },
-    {
-      "id": 19557,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 40,
-      "maxdmg": 75,
-      "p": "inv_sword_27",
-      "str": 7,
-      "sta": 3
-    },
-    {
       "id": "19921|690",
       "type": "Axe",
       "slot": "onehand",
@@ -66085,66 +65824,6 @@ var gear = {
       "maxdmg": 96,
       "p": "inv_sword_13",
       "sta": 8
-    },
-    {
-      "id": 20430,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Legionnaire's Sword",
-      "speed": 2.7,
-      "mindmg": 28,
-      "maxdmg": 53,
-      "p": "inv_sword_31",
-      "str": 4,
-      "sta": 2
-    },
-    {
-      "id": 20440,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Protector's Sword",
-      "speed": 2.7,
-      "mindmg": 28,
-      "maxdmg": 53,
-      "p": "inv_sword_27",
-      "str": 4,
-      "sta": 2
-    },
-    {
-      "id": 20441,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Scout's Blade",
-      "speed": 1.7,
-      "mindmg": 18,
-      "maxdmg": 34,
-      "p": "inv_weapon_shortblade_15",
-      "agi": 4,
-      "sta": 2
-    },
-    {
-      "id": 20443,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Sentinel's Blade",
-      "speed": 1.7,
-      "mindmg": 18,
-      "maxdmg": 34,
-      "p": "inv_weapon_shortblade_14",
-      "agi": 4,
-      "sta": 2
     },
     {
       "id": 20577,
@@ -66454,18 +66133,6 @@ var gear = {
       "maxdmg": 80,
       "p": "inv_sword_05",
       "sta": 14
-    },
-    {
-      "id": 23139,
-      "type": "Shield",
-      "slot": "offhand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Lord Blackwood's Buckler",
-      "p": "inv_shield_02",
-      "sta": 10,
-      "block": 39
     },
     {
       "id": 23168,
@@ -67216,6 +66883,337 @@ var gear = {
       "proc": {
         "magic": true,
         "dmg": 51
+      }
+    },
+    {
+      "id": 227832,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Tempered Black Amnesty",
+      "speed": 1.6,
+      "mindmg": 53,
+      "maxdmg": 100,
+      "p": "inv_weapon_shortblade_12"
+    },
+    {
+      "id": 227840,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Implacable Blackguard",
+      "speed": 1.8,
+      "mindmg": 65,
+      "maxdmg": 121,
+      "p": "inv_sword_39",
+      "sta": 9
+    },
+    {
+      "id": 227842,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Ebon Fist",
+      "speed": 2.5,
+      "mindmg": 90,
+      "maxdmg": 168,
+      "p": "inv_hammer_19",
+      "sta": 9,
+      "resist": {
+        "fire": 7
+      },
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 200
+      }
+    },
+    {
+      "id": 227884,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Deadly Heartseeker",
+      "speed": 1.7,
+      "mindmg": 49,
+      "maxdmg": 92,
+      "p": "inv_sword_17",
+      "str": 4,
+      "crit": 1
+    },
+    {
+      "id": 227951,
+      "type": "Fist",
+      "slot": "onehand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Bloodfist",
+      "speed": 1.5,
+      "mindmg": 38,
+      "maxdmg": 72,
+      "p": "inv_gauntlets_11",
+      "proc": {
+        "dmg": 20
+      }
+    },
+    {
+      "id": 227968,
+      "type": "Fist",
+      "slot": "onehand",
+      "r": 50,
+      "q": "3",
+      "i": "56",
+      "name": "Rockfist",
+      "speed": 1.4,
+      "mindmg": 32,
+      "maxdmg": 60,
+      "p": "inv_gauntlets_11",
+      "str": 10
+    },
+    {
+      "id": 228015,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Frightalon",
+      "speed": 1.4,
+      "mindmg": 39,
+      "maxdmg": 73,
+      "p": "inv_weapon_shortblade_16"
+    },
+    {
+      "id": 228026,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Blade of Blackwood",
+      "speed": 1.5,
+      "mindmg": 42,
+      "maxdmg": 80,
+      "p": "inv_sword_05",
+      "sta": 14
+    },
+    {
+      "id": 228035,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Lord Blackwood's Buckler",
+      "p": "inv_shield_02",
+      "sta": 10,
+      "block": 39
+    },
+    {
+      "id": 228037,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Rattlecage Buckler",
+      "p": "inv_shield_02",
+      "sta": 7,
+      "resist": {
+        "shadow": 7
+      },
+      "block": 39
+    },
+    {
+      "id": 228056,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Fiendish Machete",
+      "speed": 2.4,
+      "mindmg": 74,
+      "maxdmg": 112,
+      "p": "inv_sword_18",
+      "agi": 5
+    },
+    {
+      "id": 228064,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Observer's Shield",
+      "p": "inv_shield_13",
+      "sta": 9,
+      "block": 38
+    },
+    {
+      "id": 228082,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Warsong Axe",
+      "speed": 2.5,
+      "mindmg": 71,
+      "maxdmg": 133,
+      "p": "inv_axe_13",
+      "ap": 28
+    },
+    {
+      "id": 228090,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Cenarion Ritual Dagger",
+      "speed": 1.6,
+      "mindmg": 45,
+      "maxdmg": 85,
+      "p": "inv_weapon_shortblade_25",
+      "sta": 4
+    },
+    {
+      "id": 228106,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Shield of Life and Death",
+      "p": "inv_shield_02",
+      "sta": 8,
+      "resist": {
+        "shadow": 7
+      },
+      "block": 39
+    },
+    {
+      "id": 228139,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "69",
+      "name": "Fist of the Firesworn",
+      "speed": 2.7,
+      "mindmg": 95,
+      "maxdmg": 178,
+      "p": "spell_fire_flametounge",
+      "sta": 10
+    },
+    {
+      "id": 228142,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "67",
+      "name": "Earth and Fire",
+      "p": "inv_shield_10",
+      "sta": 9,
+      "block": 46
+    },
+    {
+      "id": 228146,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Magmadar's Left Claw",
+      "speed": 2.5,
+      "mindmg": 84,
+      "maxdmg": 156,
+      "p": "inv_misc_monsterclaw_03",
+      "agi": 6,
+      "sta": 8,
+      "crit": 1
+    },
+    {
+      "id": 228162,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Deceit",
+      "speed": 1.6,
+      "mindmg": 57,
+      "maxdmg": 107,
+      "p": "inv_weapon_shortblade_11",
+      "sta": 9
+    },
+    {
+      "id": 228169,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "The Attitude Adjustor",
+      "speed": 2.5,
+      "mindmg": 53,
+      "maxdmg": 99,
+      "p": "inv_misc_wrench_01"
+    },
+    {
+      "id": 228265,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Brutality Blade",
+      "speed": 2.5,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "p": "inv_sword_15",
+      "agi": 10,
+      "str": 10,
+      "crit": 1
+    },
+    {
+      "id": 228266,
+      "type": "Shield",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Drillborer Disk",
+      "p": "inv_shield_10",
+      "sta": 11,
+      "block": 47
+    },
+    {
+      "id": 228267,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Gutgore Ripper",
+      "speed": 1.8,
+      "mindmg": 66,
+      "maxdmg": 123,
+      "p": "inv_weapon_shortblade_18",
+      "proc": {
+        "magic": true,
+        "dmg": 151
       }
     }
   ],
@@ -68435,22 +68433,6 @@ var gear = {
       "mindmg": 46,
       "maxdmg": 70,
       "p": "inv_staff_25"
-    },
-    {
-      "id": 2801,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 59,
-      "q": "4",
-      "i": "64",
-      "name": "Blade of Hanna",
-      "speed": 2.1,
-      "mindmg": 101,
-      "maxdmg": 152,
-      "p": "inv_sword_10",
-      "agi": 11,
-      "str": 11,
-      "sta": 11
     },
     {
       "id": 2823,
@@ -70089,20 +70071,6 @@ var gear = {
       "p": "inv_staff_18"
     },
     {
-      "id": 7713,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 34,
-      "q": "3",
-      "i": "39",
-      "name": "Illusionary Rod",
-      "speed": 3.4,
-      "mindmg": 94,
-      "maxdmg": 142,
-      "p": "inv_wand_04",
-      "sta": 7
-    },
-    {
       "id": 7717,
       "type": "Axe",
       "slot": "twohand",
@@ -70114,20 +70082,6 @@ var gear = {
       "mindmg": 104,
       "maxdmg": 157,
       "p": "inv_weapon_halberd_05"
-    },
-    {
-      "id": 7723,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 39,
-      "q": "3",
-      "i": "44",
-      "name": "Mograine's Might",
-      "speed": 2.8,
-      "mindmg": 87,
-      "maxdmg": 131,
-      "p": "inv_mace_13",
-      "sta": 17
     },
     {
       "id": 7730,
@@ -70322,26 +70276,6 @@ var gear = {
       "rand": 312
     },
     {
-      "id": 9372,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "55",
-      "name": "Sul'thraze the Lasher",
-      "speed": 2.6,
-      "mindmg": 108,
-      "maxdmg": 163,
-      "p": "inv_sword_40",
-      "proc": {
-        "magic": true,
-        "dmg": 150,
-        "tick": 25,
-        "interval": "3000",
-        "duration": "15000"
-      }
-    },
-    {
       "id": 9383,
       "type": "Axe",
       "slot": "twohand",
@@ -70387,21 +70321,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 9408,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 37,
-      "q": "3",
-      "i": "42",
-      "name": "Ironshod Bludgeon",
-      "speed": 2.5,
-      "mindmg": 74,
-      "maxdmg": 112,
-      "p": "inv_staff_28",
-      "str": 8,
-      "sta": 20
-    },
-    {
       "id": 9413,
       "type": "Mace",
       "slot": "twohand",
@@ -70415,22 +70334,6 @@ var gear = {
       "p": "inv_hammer_12",
       "str": 5,
       "crit": 2
-    },
-    {
-      "id": 9416,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 42,
-      "q": "3",
-      "i": "47",
-      "name": "Grimlok's Charge",
-      "speed": 2.7,
-      "mindmg": 88,
-      "maxdmg": 133,
-      "p": "inv_spear_08",
-      "agi": 15,
-      "str": 10,
-      "sta": 15
     },
     {
       "id": 9418,
@@ -70840,135 +70743,6 @@ var gear = {
       "mindmg": 140,
       "maxdmg": 211,
       "p": "inv_hammer_09"
-    },
-    {
-      "id": 11750,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Kindling Stave",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_18",
-      "sta": 10,
-      "resist": {
-        "fire": 10
-      }
-    },
-    {
-      "id": 11786,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Stone of the Earth",
-      "speed": 3.2,
-      "mindmg": 123,
-      "maxdmg": 185,
-      "p": "inv_sword_47",
-      "sta": 12
-    },
-    {
-      "id": 11803,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Force of Magma",
-      "speed": 3.2,
-      "mindmg": 123,
-      "maxdmg": 185,
-      "p": "inv_hammer_09",
-      "str": 14,
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 150
-      }
-    },
-    {
-      "id": 11809,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Flame Wrath",
-      "speed": 3.3,
-      "mindmg": 127,
-      "maxdmg": 191,
-      "p": "inv_spear_01",
-      "proc": {
-        "magic": true,
-        "dmg": 150
-      }
-    },
-    {
-      "id": 11816,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 51,
-      "q": "3",
-      "i": "56",
-      "name": "Angerforge's Battle Axe",
-      "speed": 2.6,
-      "mindmg": 100,
-      "maxdmg": 150,
-      "p": "inv_weapon_halberd_06",
-      "str": 27,
-      "sta": 11
-    },
-    {
-      "id": 11921,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 52,
-      "q": "3",
-      "i": "57",
-      "name": "Impervious Giant",
-      "speed": 2.7,
-      "mindmg": 105,
-      "maxdmg": 159,
-      "p": "inv_hammer_08",
-      "hit": 1,
-      "crit": 2
-    },
-    {
-      "id": 11931,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Dreadforge Retaliator",
-      "speed": 3.7,
-      "mindmg": 149,
-      "maxdmg": 225,
-      "p": "inv_axe_22",
-      "crit": 1,
-      "ap": 30
-    },
-    {
-      "id": 11932,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Guiding Stave of Wisdom",
-      "speed": 3.3,
-      "mindmg": 133,
-      "maxdmg": 200,
-      "p": "inv_staff_30",
-      "sta": 11,
-      "resist": {
-        "frost": 10
-      }
     },
     {
       "id": 12000,
@@ -71889,20 +71663,6 @@ var gear = {
       "p": "inv_sword_17"
     },
     {
-      "id": 13937,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 57,
-      "q": "4",
-      "i": "62",
-      "name": "Headmaster's Charge",
-      "speed": 2.9,
-      "mindmg": 135,
-      "maxdmg": 204,
-      "p": "inv_jewelry_talisman_12",
-      "sta": 30
-    },
-    {
       "id": 13982,
       "type": "Sword",
       "slot": "twohand",
@@ -71914,63 +71674,6 @@ var gear = {
       "mindmg": 143,
       "maxdmg": 236,
       "p": "inv_sword_39"
-    },
-    {
-      "id": 13983,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Gravestone War Axe",
-      "speed": 3.4,
-      "mindmg": 144,
-      "maxdmg": 217,
-      "p": "inv_weapon_halberd_09",
-      "proc": {
-        "magic": true,
-        "tick": 55,
-        "interval": "3000",
-        "duration": "15000"
-      }
-    },
-    {
-      "id": 14531,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 54,
-      "q": "3",
-      "i": "59",
-      "name": "Frightskull Shaft",
-      "speed": 3.4,
-      "mindmg": 137,
-      "maxdmg": 206,
-      "p": "inv_hammer_13",
-      "proc": {
-        "magic": true,
-        "tick": 8,
-        "interval": "2000",
-        "duration": "30000"
-      }
-    },
-    {
-      "id": 14541,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Barovian Family Sword",
-      "speed": 2.1,
-      "mindmg": 87,
-      "maxdmg": 132,
-      "p": "inv_sword_03",
-      "proc": {
-        "magic": true,
-        "tick": 30,
-        "interval": "3000",
-        "duration": "15000"
-      }
     },
     {
       "id": "15248|678",
@@ -73334,38 +73037,6 @@ var gear = {
       "p": "inv_sword_41"
     },
     {
-      "id": 17073,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Earthshaker",
-      "speed": 3.5,
-      "mindmg": 175,
-      "maxdmg": 263,
-      "p": "inv_hammer_04",
-      "ap": 22
-    },
-    {
-      "id": 17074,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 58,
-      "q": "4",
-      "i": "63",
-      "name": "Shadowstrike",
-      "speed": 3.1,
-      "mindmg": 147,
-      "maxdmg": 221,
-      "p": "inv_spear_08",
-      "proc": {
-        "magic": true,
-        "dmg": 140,
-        "coeff": 1
-      }
-    },
-    {
       "id": 17076,
       "type": "Sword",
       "slot": "twohand",
@@ -73418,71 +73089,6 @@ var gear = {
       }
     },
     {
-      "id": 17182,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "5",
-      "i": "80",
-      "name": "Sulfuras Hand of Ragnaros",
-      "speed": 3.7,
-      "mindmg": 223,
-      "maxdmg": 372,
-      "p": "inv_hammer_unique_sulfuras",
-      "str": 12,
-      "sta": 12,
-      "resist": {
-        "fire": 30
-      },
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 303,
-        "tick": 15,
-        "interval": "2000",
-        "duration": "10000",
-        "ppm": 0.7
-      }
-    },
-    {
-      "id": 17193,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Sulfuron Hammer",
-      "speed": 3.7,
-      "mindmg": 176,
-      "maxdmg": 295,
-      "p": "inv_hammer_unique_sulfuras",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "dmg": 92,
-        "tick": 4,
-        "interval": "2000",
-        "duration": "8000"
-      }
-    },
-    {
-      "id": 17223,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 58,
-      "q": "4",
-      "i": "63",
-      "name": "Thunderstrike",
-      "speed": 3.1,
-      "mindmg": 147,
-      "maxdmg": 221,
-      "p": "inv_spear_08",
-      "proc": {
-        "magic": true,
-        "dmg": 200
-      }
-    },
-    {
       "id": 17730,
       "type": "Axe",
       "slot": "twohand",
@@ -73515,23 +73121,6 @@ var gear = {
       "p": "inv_staff_goldfeathered_01"
     },
     {
-      "id": 17766,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 49,
-      "q": "3",
-      "i": "54",
-      "name": "Princess Theradras' Scepter",
-      "speed": 3.4,
-      "mindmg": 126,
-      "maxdmg": 190,
-      "p": "inv_hammer_10",
-      "proc": {
-        "dmg": 160,
-        "spell": "Vibroblade"
-      }
-    },
-    {
       "id": 18082,
       "type": "Staff",
       "slot": "twohand",
@@ -73544,35 +73133,6 @@ var gear = {
       "maxdmg": 133,
       "p": "inv_staff_10",
       "sta": 10
-    },
-    {
-      "id": 18311,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Quel'dorai Channeling Rod",
-      "speed": 2.8,
-      "mindmg": 111,
-      "maxdmg": 167,
-      "p": "inv_staff_14",
-      "sta": 8
-    },
-    {
-      "id": 18324,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Waveslicer",
-      "speed": 3.1,
-      "mindmg": 123,
-      "maxdmg": 185,
-      "p": "inv_axe_17",
-      "str": 26,
-      "crit": 1
     },
     {
       "id": 18420,
@@ -73725,21 +73285,6 @@ var gear = {
       "ap": 56
     },
     {
-      "id": 18759,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Malicious Axe",
-      "speed": 3.1,
-      "mindmg": 131,
-      "maxdmg": 197,
-      "p": "inv_axe_18",
-      "sta": 30,
-      "ap": 26
-    },
-    {
       "id": 18803,
       "type": "Mace",
       "slot": "twohand",
@@ -73755,21 +73300,6 @@ var gear = {
       "resist": {
         "fire": 15
       }
-    },
-    {
-      "id": 18822,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Obsidian Edged Blade",
-      "speed": 3.4,
-      "mindmg": 176,
-      "maxdmg": 264,
-      "p": "inv_sword_28",
-      "str": 42,
-      "skill": 8
     },
     {
       "id": 18830,
@@ -73802,20 +73332,6 @@ var gear = {
       "str": 26,
       "sta": 41,
       "crit": 1
-    },
-    {
-      "id": 18842,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Staff of Dominance",
-      "speed": 2.9,
-      "mindmg": 126,
-      "maxdmg": 205,
-      "p": "inv_staff_13",
-      "sta": 16
     },
     {
       "id": 18867,
@@ -74048,118 +73564,6 @@ var gear = {
       "crit": 2
     },
     {
-      "id": 19566,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 188,
-      "p": "inv_staff_25",
-      "sta": 21
-    },
-    {
-      "id": 19567,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_25",
-      "sta": 18
-    },
-    {
-      "id": 19568,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 88,
-      "maxdmg": 133,
-      "p": "inv_staff_25",
-      "sta": 14
-    },
-    {
-      "id": 19569,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 64,
-      "maxdmg": 97,
-      "p": "inv_staff_25",
-      "sta": 11
-    },
-    {
-      "id": 19570,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 188,
-      "p": "inv_staff_28",
-      "sta": 21
-    },
-    {
-      "id": 19571,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_28",
-      "sta": 18
-    },
-    {
-      "id": 19572,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 38,
-      "q": "3",
-      "i": "43",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 88,
-      "maxdmg": 133,
-      "p": "inv_staff_28",
-      "sta": 14
-    },
-    {
-      "id": 19573,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 28,
-      "q": "3",
-      "i": "33",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 64,
-      "maxdmg": 97,
-      "p": "inv_staff_28",
-      "sta": 11
-    },
-    {
       "id": 19970,
       "type": "Fishing Pole",
       "slot": "twohand",
@@ -74215,34 +73619,6 @@ var gear = {
       "maxdmg": 243,
       "p": "inv_wand_04",
       "sta": 19
-    },
-    {
-      "id": 20425,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 45,
-      "maxdmg": 69,
-      "p": "inv_staff_25",
-      "sta": 8
-    },
-    {
-      "id": 20434,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 18,
-      "q": "3",
-      "i": "23",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 45,
-      "maxdmg": 69,
-      "p": "inv_staff_28",
-      "sta": 8
     },
     {
       "id": 20504,
@@ -74426,21 +73802,6 @@ var gear = {
       "sta": 23
     },
     {
-      "id": 22208,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Lavastone Hammer",
-      "speed": 3.4,
-      "mindmg": 135,
-      "maxdmg": 203,
-      "p": "inv_hammer_10",
-      "str": 10,
-      "sta": 14
-    },
-    {
       "id": 22314,
       "type": "Polearm",
       "slot": "twohand",
@@ -74453,20 +73814,6 @@ var gear = {
       "maxdmg": 226,
       "p": "inv_spear_06",
       "agi": 35
-    },
-    {
-      "id": 22333,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Hammer of Divine Might",
-      "speed": 2.1,
-      "mindmg": 89,
-      "maxdmg": 134,
-      "p": "inv_hammer_04",
-      "sta": 13
     },
     {
       "id": 22335,
@@ -75290,7 +74637,10 @@ var gear = {
       "p": "inv_hammer_10",
       "agi": 10,
       "str": 13,
-      "sta": 15
+      "sta": 15,
+      "proc": {
+        "spell": "Vibroblade"
+      }
     },
     {
       "id": 223526,
@@ -75430,6 +74780,598 @@ var gear = {
       "agi": 11,
       "str": 11,
       "sta": 11
+    },
+    {
+      "id": 227833,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Glaive of Obsidian Fury",
+      "speed": 2.1,
+      "mindmg": 105,
+      "maxdmg": 158,
+      "p": "inv_spear_08",
+      "str": 35,
+      "sta": 15,
+      "resist": {
+        "fire": 10
+      },
+      "crit": 1
+    },
+    {
+      "id": 227843,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Reaving Nightfall",
+      "speed": 3.5,
+      "mindmg": 187,
+      "maxdmg": 282,
+      "p": "inv_axe_12"
+    },
+    {
+      "id": 227845,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Refined Arcanite Reaper",
+      "speed": 4,
+      "mindmg": 215,
+      "maxdmg": 322,
+      "p": "inv_axe_09",
+      "sta": 18,
+      "ap": 84
+    },
+    {
+      "id": 227857,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Desecration",
+      "speed": 3,
+      "mindmg": 119,
+      "maxdmg": 179,
+      "p": "inv_sword_07",
+      "str": 30,
+      "sta": 30
+    },
+    {
+      "id": 227858,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Hammer of the Wild Gods",
+      "speed": 3.8,
+      "mindmg": 163,
+      "maxdmg": 246,
+      "p": "inv_hammer_09",
+      "str": 15
+    },
+    {
+      "id": 227880,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Finely-Enchanted Battlehammer",
+      "speed": 2.6,
+      "mindmg": 100,
+      "maxdmg": 150,
+      "p": "inv_hammer_05",
+      "hit": 2
+    },
+    {
+      "id": 227934,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Flame Wrath",
+      "speed": 3.3,
+      "mindmg": 127,
+      "maxdmg": 191,
+      "p": "inv_spear_01",
+      "proc": {
+        "magic": true,
+        "dmg": 150
+      }
+    },
+    {
+      "id": 227948,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Angerforge's Battle Axe",
+      "speed": 2.6,
+      "mindmg": 100,
+      "maxdmg": 150,
+      "p": "inv_weapon_halberd_06",
+      "str": 27,
+      "sta": 11
+    },
+    {
+      "id": 227949,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Force of Magma",
+      "speed": 3.2,
+      "mindmg": 123,
+      "maxdmg": 185,
+      "p": "inv_hammer_09",
+      "str": 14,
+      "proc": {
+        "magic": true,
+        "procgcd": true,
+        "dmg": 150
+      }
+    },
+    {
+      "id": 227950,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 51,
+      "q": "3",
+      "i": "56",
+      "name": "Stone of the Earth",
+      "speed": 3.2,
+      "mindmg": 123,
+      "maxdmg": 185,
+      "p": "inv_sword_47",
+      "sta": 12
+    },
+    {
+      "id": 227960,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 52,
+      "q": "3",
+      "i": "57",
+      "name": "Impervious Giant",
+      "speed": 2.7,
+      "mindmg": 105,
+      "maxdmg": 159,
+      "p": "inv_hammer_08",
+      "hit": 1,
+      "crit": 2
+    },
+    {
+      "id": 227974,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Lavastone Hammer",
+      "speed": 3.4,
+      "mindmg": 135,
+      "maxdmg": 203,
+      "p": "inv_hammer_10",
+      "str": 10,
+      "sta": 14
+    },
+    {
+      "id": 227981,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Dreadforge Retaliator",
+      "speed": 3.7,
+      "mindmg": 149,
+      "maxdmg": 225,
+      "p": "inv_axe_22",
+      "crit": 1,
+      "ap": 30
+    },
+    {
+      "id": 227982,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Guiding Stave of Wisdom",
+      "speed": 3.3,
+      "mindmg": 133,
+      "maxdmg": 200,
+      "p": "inv_staff_30",
+      "sta": 11,
+      "resist": {
+        "frost": 10
+      }
+    },
+    {
+      "id": 227994,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Frightskull Shaft",
+      "speed": 3.4,
+      "mindmg": 137,
+      "maxdmg": 206,
+      "p": "inv_hammer_13",
+      "proc": {
+        "magic": true,
+        "tick": 8,
+        "interval": "2000",
+        "duration": "30000"
+      }
+    },
+    {
+      "id": 227997,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Barovian Family Sword",
+      "speed": 2.1,
+      "mindmg": 87,
+      "maxdmg": 132,
+      "p": "inv_sword_03",
+      "proc": {
+        "magic": true,
+        "tick": 30,
+        "interval": "3000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 228022,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 57,
+      "q": "4",
+      "i": "62",
+      "name": "Headmaster's Charge",
+      "speed": 2.9,
+      "mindmg": 135,
+      "maxdmg": 204,
+      "p": "inv_jewelry_talisman_12",
+      "sta": 30
+    },
+    {
+      "id": 228029,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Gravestone War Axe",
+      "speed": 3.4,
+      "mindmg": 144,
+      "maxdmg": 217,
+      "p": "inv_weapon_halberd_09",
+      "proc": {
+        "magic": true,
+        "tick": 55,
+        "interval": "3000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 228030,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Malicious Axe",
+      "speed": 3.1,
+      "mindmg": 131,
+      "maxdmg": 197,
+      "p": "inv_axe_18",
+      "sta": 30,
+      "ap": 26
+    },
+    {
+      "id": 228033,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Hammer of Divine Might",
+      "speed": 2.1,
+      "mindmg": 89,
+      "maxdmg": 134,
+      "p": "inv_hammer_04",
+      "sta": 13
+    },
+    {
+      "id": 228051,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Quel'dorai Channeling Rod",
+      "speed": 2.8,
+      "mindmg": 111,
+      "maxdmg": 167,
+      "p": "inv_staff_14",
+      "sta": 8
+    },
+    {
+      "id": 228052,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Waveslicer",
+      "speed": 3.1,
+      "mindmg": 123,
+      "maxdmg": 185,
+      "p": "inv_axe_17",
+      "str": 26,
+      "crit": 1
+    },
+    {
+      "id": 228075,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Spear of Destiny",
+      "speed": 3.8,
+      "mindmg": 123,
+      "maxdmg": 185,
+      "p": "inv_weapon_halberd_09",
+      "agi": 27,
+      "str": 15,
+      "sta": 11
+    },
+    {
+      "id": 228086,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Repurposed Shredderblade",
+      "speed": 3.6,
+      "mindmg": 152,
+      "maxdmg": 229,
+      "p": "inv_sword_35",
+      "sta": 17,
+      "ap": 54
+    },
+    {
+      "id": 228108,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Shadow of Gorehowl",
+      "speed": 3.6,
+      "mindmg": 152,
+      "maxdmg": 229,
+      "p": "inv_weapon_halberd_09",
+      "agi": 15,
+      "str": 27,
+      "sta": 11,
+      "proc": {
+        "magic": true,
+        "tick": 55,
+        "interval": "3000",
+        "duration": "15000"
+      }
+    },
+    {
+      "id": 228116,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Pattern: Synthetic Gordok Ogre Suit",
+      "speed": 3.8,
+      "mindmg": 153,
+      "maxdmg": 256,
+      "p": "inv_chest_chain_14",
+      "sta": 13,
+      "ap": 62
+    },
+    {
+      "id": 228125,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Refined Arcanite Champion",
+      "speed": 3,
+      "mindmg": 129,
+      "maxdmg": 194,
+      "p": "inv_sword_39"
+    },
+    {
+      "id": 228160,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Faithbringer",
+      "speed": 3.9,
+      "mindmg": 170,
+      "maxdmg": 301,
+      "p": "inv_hammer_04",
+      "sta": 21,
+      "crit": 1
+    },
+    {
+      "id": 228166,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "Key to the City",
+      "speed": 3.3,
+      "mindmg": 145,
+      "maxdmg": 242,
+      "p": "inv_misc_key_15",
+      "sta": 23
+    },
+    {
+      "id": 228167,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 54,
+      "q": "3",
+      "i": "59",
+      "name": "Whelpling-Head Trophy",
+      "speed": 3.3,
+      "mindmg": 133,
+      "maxdmg": 200,
+      "p": "inv_misc_head_dragon_bronze",
+      "sta": 11,
+      "resist": {
+        "frost": 10
+      }
+    },
+    {
+      "id": 228170,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Makeshift South Sea Oar",
+      "speed": 2.1,
+      "mindmg": 105,
+      "maxdmg": 158,
+      "p": "inv_spear_08",
+      "str": 35,
+      "sta": 15,
+      "resist": {
+        "fire": 10
+      }
+    },
+    {
+      "id": 228229,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Obsidian Edged Blade",
+      "speed": 3.6,
+      "mindmg": 187,
+      "maxdmg": 280,
+      "p": "inv_sword_28",
+      "str": 42,
+      "skill": 3,
+      "crit": 1
+    },
+    {
+      "id": 228230,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Refined Hammer of the Titans",
+      "speed": 2,
+      "mindmg": 107,
+      "maxdmg": 161,
+      "p": "inv_hammer_09",
+      "str": 36,
+      "ap": 173
+    },
+    {
+      "id": 228248,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Earthshaker",
+      "speed": 3.5,
+      "mindmg": 175,
+      "maxdmg": 263,
+      "p": "inv_hammer_04",
+      "ap": 132
+    },
+    {
+      "id": 228271,
+      "type": "Staff",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Staff of Dominance",
+      "speed": 2.9,
+      "mindmg": 125,
+      "maxdmg": 204,
+      "p": "inv_staff_13",
+      "sta": 16,
+      "crit": 1
+    },
+    {
+      "id": 228272,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 58,
+      "q": "4",
+      "i": "71",
+      "name": "Shadowstrike",
+      "speed": 3.4,
+      "mindmg": 186,
+      "maxdmg": 279,
+      "p": "inv_spear_08",
+      "agi": 33,
+      "sta": 13,
+      "proc": {
+        "magic": true,
+        "dmg": 200,
+        "coeff": 1
+      },
+      "ap": 190
+    },
+    {
+      "id": 228273,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 58,
+      "q": "4",
+      "i": "71",
+      "name": "Thunderstrike",
+      "speed": 3.4,
+      "mindmg": 186,
+      "maxdmg": 279,
+      "p": "inv_spear_08",
+      "agi": 13,
+      "sta": 33,
+      "proc": {
+        "magic": true,
+        "dmg": 250
+      },
+      "ap": 190
     }
   ]
 };

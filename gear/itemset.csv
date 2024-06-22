@@ -173,7 +173,7 @@ ID,Name_lang,SetFlags,RequiredSkill,RequiredSkillRank,ItemID[0],ItemID[1],ItemID
 551,Lieutenant Commander's Refuge,0,0,0,23294,23295,23280,23281,23308,23309,0,0,0,0,0,0,0,0,0,0,0
 1570,Twilight Invoker's Vestments,0,0,0,209683,209671,209669,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1571,Judgement Redoubt,0,0,0,0,0,211263,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1576,Battleplate of Might,0,0,0,0,0,211501,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1576,Battleplate of Might,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1577,Blackfathom Avenger's Mail,0,0,0,211506,211504,211505,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1578,Blackfathom Slayer's Leather,0,0,0,211510,211511,211512,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 1579,Blackfathom Elementalist's Hide,0,0,0,211507,211508,211509,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -330,3 +330,4 @@ ID,Name_lang,SetFlags,RequiredSkill,RequiredSkillRank,ItemID[0],ItemID[1],ItemID
 1776,Lieutenant Commander's Redemption,0,0,0,227151,227150,227152,227153,227149,227148,0,0,0,0,0,0,0,0,0,0,0
 1777,Lieutenant Commander's Vindication,0,0,0,227142,227143,227147,227146,227144,227145,0,0,0,0,0,0,0,0,0,0,0
 1778,Battlegear of Heroism,0,0,0,226879,226880,226878,226877,226876,226875,226874,226873,0,0,0,0,0,0,0,0,0
+1779,Core Hound's Call,0,0,0,228145,228146,228147,0,0,0,0,0,0,0,0,0,0,0,0,0,0

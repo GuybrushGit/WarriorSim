@@ -145,8 +145,8 @@
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 7284) {
-                  //console.log("check: " + obj.name);
+                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 227865 && item.ID != 7284) {
+                  console.log("check: " + obj.name);
                 }
                 else {
                   proc2 = getProcFromSpell(triggerSpell[0].EffectTriggerSpell);
@@ -343,8 +343,9 @@
             if (source.zone == 3429) continue; // Ruins of Ahn'Qiraj
           }
          
-          if (obj.id == 19347) console.log(source);
 
+
+          findDupe(obj);
           addToGear(obj);
         }
 
@@ -447,6 +448,36 @@
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }
 
+      var findDupe = function(obj) {
+        let dupe = false;
+        if (obj.slot == "finger") {
+          removeDupe(obj, 'finger1');
+          removeDupe(obj, 'finger2');
+        }
+        else if (obj.slot == "trinket") {
+          removeDupe(obj, 'trinket1');
+          removeDupe(obj, 'trinket2');
+        }
+        else if (obj.slot == "onehand") {
+          removeDupe(obj, 'mainhand');
+          removeDupe(obj, 'offhand');
+        }
+        else {
+          removeDupe(obj, obj.slot);
+        }
+      }
+
+      var removeDupe = function(obj, slot) {
+        let i = gear[slot].length;
+        while (i--) {
+          if (obj.name == gear[slot][i].name && obj.id > gear[slot][i].id && obj.id > 100000) { 
+            if (gear[slot][i].proc) console.log(gear[slot][i], obj.id);
+            if (obj.id == 224409) return;
+            gear[slot].splice(i, 1);
+          } 
+        }
+      }
+
       var addToGear = function(obj) {
         if (obj.slot == "finger") {
           gear["finger1"].push(obj);
@@ -487,8 +518,10 @@
         {i:220569,s:"BlisteringRagehammer"},
         {i:9423,s:"Jackhammer"},
         {i:11817,s:"LordGeneral"},
+        {i:227940,s:"LordGeneral"},
         {i:9418,s:"Stoneslayer"},
         {i:17766,s:"Vibroblade"},
+        {i:221780,s:"Vibroblade"},
         {i:11607,s:"CleaveArmor"},
         {i:12790,s:"StrengthChampion"},
         {i:213295,s:"Ultrasonic"},
@@ -505,6 +538,7 @@
         {i:871,p:1.8},
         {i:19170,p:0.4},
         {i:11684,p:0.8},
+        {i:227991,p:0.8},
         {i:23221,p:2},
         {i:6622,p:1.8},
         {i:19019,p:6},
@@ -520,6 +554,7 @@
         {i:227683,p:0.7},
         {i:17076,p:2},
         {i:11815,c:2},
+        {i:227989,c:2},
         {i:19289,c:2},
         {i:22321,c:2},
         {i:17111,c:100},
