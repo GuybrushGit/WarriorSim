@@ -822,6 +822,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.echoesdread.mult_stats.haste / 100);
         if (this.auras.singleminded && this.auras.singleminded.timer)
             this.stats.haste *= (1 + this.auras.singleminded.mult_stats.haste / 100);
+        if (this.auras.magmadarsreturn && this.auras.magmadarsreturn.timer)
+            this.stats.haste *= (1 + this.auras.magmadarsreturn.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;

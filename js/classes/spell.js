@@ -2541,3 +2541,22 @@ class MoonstalkerFury extends Aura {
         return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }
+
+class MagmadarsReturn extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Magmadar\'s Return');
+        this.duration = 12;
+        this.mult_stats = { haste: 10 };
+        this.cooldown = 60;
+        this.cooldowntimer = 0;
+    }
+    use() {
+        if (this.cooldowntimer > step) return;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.cooldowntimer = step + this.cooldown * 1000;
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}

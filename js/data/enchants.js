@@ -1155,4 +1155,12 @@ var enchant = {
      { count: 2, stats: { defense: 3 } }
   ]
 },
+{
+  id: 1779,
+  name: 'Core Hound\'s Call',
+  items: [228145,228146,228147],
+  bonus: [
+     { count: 3, stats: { procspell: "MagmadarsReturn", procchance: 1 } }
+  ]
+},
 ];
