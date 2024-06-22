@@ -2439,3 +2439,30 @@ class MeltArmor extends Aura {
         }
     }
 }
+
+class SingleMinded extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 10;
+        this.stacks = 0;
+        this.mult_stats = { haste: 2 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.stacks = Math.min(5, this.stacks + 1);
+        this.mult_stats = { haste: 2 * this.stacks };
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.stacks = 0;
+            this.player.updateHaste();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}

@@ -455,6 +455,9 @@ class Player {
                         this.suddendeath = item.suddendeath;
                         this.auras.suddendeath = new SuddenDeath(this);
                     }
+                    if (item.singleminded) {
+                        this.auras.singleminded = new SingleMinded(this);
+                    }
                 }
             }
         }
@@ -809,6 +812,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.spicy.mult_stats.haste / 100);
         if (this.auras.echoesdread && this.auras.echoesdread.timer)
             this.stats.haste *= (1 + this.auras.echoesdread.mult_stats.haste / 100);
+        if (this.auras.singleminded && this.auras.singleminded.timer)
+            this.stats.haste *= (1 + this.auras.singleminded.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
@@ -986,6 +991,7 @@ class Player {
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.step();
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
+        if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1044,6 +1050,7 @@ class Player {
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.end();
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.end();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.end();
+        if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
@@ -1383,6 +1390,10 @@ class Player {
             // Fresh Meat
             if (spell instanceof Bloodthirst && this.freshmeat && (this.auras.freshmeat.firstuse || rng10k() < 1000)) {
                 this.auras.freshmeat.use();
+            }
+            // Single Minded
+            if (!spell && this.auras.singleminded) {
+                this.auras.singleminded.use();
             }
             if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
                 if (!spell) extras = 0;
