@@ -416,7 +416,7 @@ class Player {
                     }
                     // Endless Rage
                     if (item.ragemod) {
-                        this.ragemod = item.ragemod;
+                        this.ragemod = (this.ragemod || 1) * item.ragemod;
                     }
                     // Frenzied Assault
                     if (item.haste2h && this.mh.twohand) {
@@ -553,9 +553,10 @@ class Player {
                     this.basestance = buff.stance;
                     if (buff.stance == 'glad' && !this.shield)
                         this.basestance = 'battle';
-                    if (buff.stance == 'glad' && this.gladdmg) {
+                    if (buff.stance == 'glad' && this.gladdmg)
                         this.base.dmgmod *= (1 + this.gladdmg / 100);
-                    }
+                    if (this.basestance == "glad" && !this.target.speed)
+                        this.ragemod = 1.5;
                     continue;
                 }
                 if (buff.group == "trueshot" && this.mode == "sod") {

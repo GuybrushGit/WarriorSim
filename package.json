@@ -14,7 +14,8 @@
   },
   "scripts": {
     "dist": "gulp sass && gulp js-build",
-    "dev": "gulp"
+    "dev": "gulp",
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
