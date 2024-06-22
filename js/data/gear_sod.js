@@ -75300,8 +75300,7 @@ var gear = {
       "mindmg": 107,
       "maxdmg": 161,
       "p": "inv_hammer_09",
-      "str": 36,
-      "ap": 173
+      "str": 36
     },
     {
       "id": 228248,
@@ -75315,7 +75314,7 @@ var gear = {
       "mindmg": 175,
       "maxdmg": 263,
       "p": "inv_hammer_04",
-      "ap": 132
+      "ap": 22
     },
     {
       "id": 228271,
@@ -75350,8 +75349,7 @@ var gear = {
         "magic": true,
         "dmg": 200,
         "coeff": 1
-      },
-      "ap": 190
+      }
     },
     {
       "id": 228273,
@@ -75370,8 +75368,7 @@ var gear = {
       "proc": {
         "magic": true,
         "dmg": 250
-      },
-      "ap": 190
+      }
     }
   ]
 };

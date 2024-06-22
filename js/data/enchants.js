@@ -1083,7 +1083,7 @@ var enchant = {
     items: [226765,226764,226766,226770,226771,226769,226767,226768],
     bonus: [
        { count: 4, stats: { ap: 40 } },
-       { count: 6, stats: { procspell: "WarriorsResolve", procchance: 2 } }
+       { count: 6, stats: { procspell: "WarriorsResolve", procchance: 6 } }
     ]
    },
    {
@@ -1117,7 +1117,7 @@ var enchant = {
   items: [226879,226880,226878,226877,226876,226875,226874,226873,226869,226860,226858,226867,226872,226862,226865,226863,226870,226861,226864,226866,226859,226868,226871,226857],
   bonus: [
      { count: 2, stats: { ap: 40 } },
-     { count: 4, stats: { procspell: "WarriorsResolve", procchance: 2 } }
+     { count: 4, stats: { procspell: "WarriorsResolve", procchance: 6 } }
   ]
 },
 {

@@ -146,7 +146,7 @@
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
                 if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 227865 && item.ID != 7284) {
-                  console.log("check: " + obj.name);
+                  //console.log("check: " + obj.name);
                 }
                 else {
                   proc2 = getProcFromSpell(triggerSpell[0].EffectTriggerSpell);
@@ -471,7 +471,6 @@
         let i = gear[slot].length;
         while (i--) {
           if (obj.name == gear[slot][i].name && obj.id > gear[slot][i].id && obj.id > 100000) { 
-            if (gear[slot][i].proc) console.log(gear[slot][i], obj.id);
             if (obj.id == 224409) return;
             gear[slot].splice(i, 1);
           } 
