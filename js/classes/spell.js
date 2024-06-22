@@ -638,6 +638,23 @@ class Shockwave extends Spell {
     }
 }
 
+class TheMoltenCore extends Spell {
+    constructor(player, id) {
+        super(player, id, 'The Molten Core');
+        this.useonly = true;
+        this.proc = { magicdmg: 20 };
+        this.idmg = 0;
+    }
+    use() {
+        let procdmg = this.player.magicproc(this.proc);
+        for (let i = 0; i < this.player.adjacent; i++) {
+            procdmg += this.player.magicproc(this.proc);
+        }
+        this.idmg += procdmg;
+        /* start-log */ if (log) this.player.log(`The Molten Core hit for ${procdmg}`); /* end-log */
+    }
+}
+
 
 /**************************************************** AURAS ****************************************************/
 
@@ -2468,5 +2485,59 @@ class SingleMinded extends Aura {
             this.player.updateHaste();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
+    }
+}
+
+class DemonTaintedBlood extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Demon-Tainted Blood');
+        this.duration = 20;
+        this.stats = { str: 80 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateStrength();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateStrength();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+}
+
+class MoonstalkerFury extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Moonstalker Fury');
+        this.duration = 15;
+        this.stats = { str: 60 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateStrength();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateStrength();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
     }
 }

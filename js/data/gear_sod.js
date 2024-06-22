@@ -5135,6 +5135,17 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 228147,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Magmadar's Horn",
+      "p": "inv_jewelry_necklace_22",
+      "sta": 17
+    },
+    {
       "id": 228249,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -45011,6 +45022,29 @@ var gear = {
       "name": "Germinating Poisonseed",
       "p": "inv_misc_herb_nightmareseed",
       "hit": 1
+    },
+    {
+      "id": 228089,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Woodcarved Moonstalker",
+      "p": "inv_jewelcrafting_blackpearlpanther"
+    },
+    {
+      "id": 228122,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "The Molten Core",
+      "p": "ability_warlock_moltencore",
+      "resist": {
+        "fire": 20
+      }
     }
   ],
   "trinket2": [
@@ -45344,6 +45378,29 @@ var gear = {
       "name": "Germinating Poisonseed",
       "p": "inv_misc_herb_nightmareseed",
       "hit": 1
+    },
+    {
+      "id": 228089,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Woodcarved Moonstalker",
+      "p": "inv_jewelcrafting_blackpearlpanther"
+    },
+    {
+      "id": 228122,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "The Molten Core",
+      "p": "ability_warlock_moltencore",
+      "resist": {
+        "fire": 20
+      }
     }
   ],
   "ranged": [

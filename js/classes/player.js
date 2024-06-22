@@ -273,6 +273,10 @@ class Player {
                         this.base['moddmgdone'] += 2;
                     if (item.id == 215166)
                         this.base['moddmgdone'] += 3;
+                    if (item.id == 228089)
+                        this.base['moddmgdone'] += 4;
+                    if (item.id == 228122)
+                        this.spells.themoltencore = new TheMoltenCore(this);
 
                     this.items.push(item.id);
                 }
@@ -672,6 +676,9 @@ class Player {
         if (this.spells.gunaxe) {
             this.spells.gunaxe.idmg = 0;
         }
+        if (this.spells.themoltencore) {
+            this.spells.themoltencore.idmg = 0;
+        }
         this.initStances();
         this.update();
     }
@@ -993,6 +1000,8 @@ class Player {
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
+        if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.step();
+        if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1052,6 +1061,8 @@ class Player {
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.end();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.end();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.end();
+        if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.end();
+        if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
@@ -1070,6 +1081,7 @@ class Player {
         if (this.auras.consumedrage && this.auras.consumedrage.timer) this.auras.consumedrage.end();
         if (this.auras.weaponbleedmh && this.auras.weaponbleedmh.timer) this.auras.weaponbleedmh.end();
         if (this.auras.weaponbleedoh && this.auras.weaponbleedoh.timer) this.auras.weaponbleedoh.end();
+        
 
     }
     rollweapon(weapon) {

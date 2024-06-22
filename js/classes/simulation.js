@@ -277,6 +277,10 @@ class Simulation {
                 if (player.auras.consumedrage && player.rage >= 60)
                     player.auras.consumedrage.use();
             }
+            if (player.spells.themoltencore && next != 0 && step % 1000 == 0) {
+                player.spells.themoltencore.use();
+            }
+
             if (player.target.speed && step % player.target.speed == 0) {
                 let oldRage = player.rage;
                 let dmg = rng(player.target.mindmg, player.target.maxdmg);
@@ -335,6 +339,8 @@ class Simulation {
                     else if (player.auras.roarguardian && player.auras.roarguardian.canUse()) { player.spelldelay = 1; delayedspell = player.auras.roarguardian; }
                     else if (player.auras.zandalarian && player.auras.zandalarian.canUse()) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
                     else if (player.auras.relentlessstrength && player.auras.relentlessstrength.canUse()) { player.spelldelay = 1; delayedspell = player.auras.relentlessstrength; }
+                    else if (player.auras.demontaintedblood && player.auras.demontaintedblood.canUse()) { player.spelldelay = 1; delayedspell = player.auras.demontaintedblood; }
+                    else if (player.auras.moonstalkerfury && player.auras.moonstalkerfury.canUse()) { player.spelldelay = 1; delayedspell = player.auras.moonstalkerfury; }
 
                     // Use GCD spells
                     else if (player.timer) { }
@@ -529,6 +535,7 @@ class Simulation {
             if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
             if (player.vaelbuff && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
+            if (player.spells.themoltencore && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
             if (player.auras.bloodrage && player.auras.bloodrage.timer && (1000 - ((step - player.auras.bloodrage.starttimer) % 1000)) < next)
                 next = 1000 - ((step - player.auras.bloodrage.starttimer) % 1000);
             if (player.auras.gabbar && player.auras.gabbar.timer && (2000 - ((step - player.auras.gabbar.starttimer) % 2000)) < next)
@@ -652,6 +659,9 @@ class Simulation {
         }
         if (player.spells.gunaxe) {
             this.idmg += player.spells.gunaxe.idmg;
+        }
+        if (player.spells.themoltencore) {
+            this.idmg += player.spells.themoltencore.idmg;
         }
         this.totaldmg += this.idmg;
         this.totalduration += this.duration;

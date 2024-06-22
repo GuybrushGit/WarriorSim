@@ -1374,6 +1374,30 @@ var spells = [
     timetostart: 0,
     timetostartactive: false,
 },
+{
+    id: 228078,
+    name: 'Accursed Chalice',
+    classname: 'DemonTaintedBlood',
+    iconname: 'spell_shadow_demonictactics',
+    item: true,
+    aura: true,
+    timetoend: 21,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
+{
+    id: 228089,
+    name: 'Woodcarved Moonstalker',
+    classname: 'MoonstalkerFury',
+    iconname: 'inv_jewelcrafting_blackpearlpanther',
+    item: true,
+    aura: true,
+    timetoend: 16,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
 
 
 
