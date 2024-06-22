@@ -1218,7 +1218,7 @@ class Player {
             /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
-        let dmg = spell.dmg() * this.mh.modifier;
+        let dmg = spell.dmg() * this.mh.modifier + this.stats.moddmgtaken;
         let result;
         if (spell.defenseType == DEFENSETYPE.MELEE) 
             result = this.rollmeleespell(spell);

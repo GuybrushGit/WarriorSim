@@ -77,7 +77,7 @@ class Bloodthirst extends Spell {
     dmg() {
         let dmg;
         dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -95,7 +95,7 @@ class Whirlwind extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
         if (!this.player.isValidStance('zerk')) this.player.switch('zerk');
@@ -126,7 +126,7 @@ class Overpower extends Spell {
         let dmg;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
         this.player.timer = 1500;
@@ -158,7 +158,7 @@ class Execute extends Spell {
     dmg() {
         let dmg;
         dmg = this.value1 + (this.value2 * this.usedrage) + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use(delayedheroic) {
         // HS + Execute macro
@@ -286,7 +286,7 @@ class MortalStrike extends Spell {
         let dmg;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && this.player.rage >= this.minrage;
@@ -334,7 +334,7 @@ class Hamstring extends Spell {
     dmg() {
         let dmg;
         dmg = this.value1 + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
 }
 
@@ -391,7 +391,7 @@ class RagingBlow extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * 0.8 * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * 0.8 * this.player.stats.dmgmod;
     }
     canUse(executephase) {
         return !this.timer && !this.player.timer && 
@@ -434,7 +434,7 @@ class QuickStrike extends Spell {
     dmg() {
         let dmg;
         dmg = ~~rng(this.player.stats.ap * 0.10, this.player.stats.ap * 0.20) + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
@@ -483,7 +483,7 @@ class Slam extends Spell {
         let dmg;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.speed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
         if (!this.player.freeslam) this.player.rage -= this.cost;
@@ -561,7 +561,7 @@ class BlademasterFury extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
         this.player.timer = 1500;
@@ -588,8 +588,10 @@ class ShieldSlam extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = rng(this.value1, this.value2) + this.player.mh.bonusdmg + (this.player.stats.block * 2) + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg + this.player.stats.moddmgtaken;
+        // SS benefits from the buff it triggers, add it manually if its not up
+        let ap = this.player.stats.ap + (this.player.auras.defendersresolve && !this.player.auras.defendersresolve.timer ? 4 * this.player.stats.defense : 0);
+        dmg = rng(this.value1, this.value2) + (this.player.stats.block * 2) + ~~(ap * 0.15);
+        return dmg * this.player.stats.dmgmod * this.player.mainspelldmg;
     }
     use() {
         this.player.timer = 1500;
@@ -614,7 +616,7 @@ class Shockwave extends Spell {
     }
     dmg() {
         let dmg = this.player.stats.ap / 2 + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
         if (!this.player.isValidStance('def')) this.player.switch('def');
@@ -811,7 +813,7 @@ class DeepWounds extends Aura {
             this.player.stepauras(true);
             let dmg = this.saveddmg / this.ticksleft;
             this.saveddmg -= dmg;
-            dmg *= this.player.mh.modifier * this.player.stats.dmgmod;
+            //dmg *= this.player.mh.modifier * this.player.stats.dmgmod;
             this.idmg += dmg;
             this.totaldmg += dmg;
             this.ticksleft--;
