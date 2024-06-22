@@ -531,8 +531,10 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="alwaystails" data-group="coinflip" class="${spell.alwaystails ? 'active' : ''}">Always tails</li>`);
         if (spell.zerkerpriority !== undefined)
             ul.append(`<li data-id="zerkerpriority" class="${spell.zerkerpriority ? 'active' : ''}">Prioritize over Bloodrage</li>`);
+        if (typeof spell.resolve !== 'undefined') 
+            ul.append(`<li data-id="resolve" class="${spell.resolve ? 'active' : ''}">Only use if Defender's Resolve is not up</li>`);
         if (typeof spell.swordboard !== 'undefined') 
-            ul.append(`<li data-id="swordboard" class="${spell.swordboard ? 'active' : ''}">Use only after a Sword & Board proc</li>`);
+            ul.append(`<li data-id="swordboard" class="${spell.swordboard ? 'active' : ''}">Only use after a Sword & Board proc</li>`);
 
         details.css('visibility','hidden');
         details.append(ul);

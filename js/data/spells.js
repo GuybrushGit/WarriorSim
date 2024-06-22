@@ -846,6 +846,7 @@ var spells = [
     maxlevel: 47,
     duration: 15,
     durationactive: false,
+    resolve: false,
     active: false,
 },
 {
@@ -862,6 +863,7 @@ var spells = [
     maxlevel: 53,
     duration: 15,
     durationactive: false,
+    resolve: false,
     active: false,
 },
 {
@@ -878,6 +880,7 @@ var spells = [
     maxlevel: 59,
     duration: 15,
     durationactive: false,
+    resolve: false,
     active: false,
 },
 {
@@ -893,6 +896,7 @@ var spells = [
     minlevel: 60,
     duration: 15,
     durationactive: false,
+    resolve: false,
     active: false,
 },
 

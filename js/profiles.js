@@ -337,6 +337,7 @@ SIM.PROFILES = {
                 if (typeof spell.alwaysheads !== 'undefined') obj.alwaysheads = spell.alwaysheads;
                 if (typeof spell.zerkerpriority !== 'undefined') obj.zerkerpriority = spell.zerkerpriority;
                 if (typeof spell.swordboard !== 'undefined') obj.swordboard = spell.swordboard;
+                if (typeof spell.resolve !== 'undefined') obj.resolve = spell.resolve;
                 minified.rotation.push(obj);
             }
         }
@@ -420,6 +421,7 @@ SIM.PROFILES = {
                     if (typeof newspell.alwaysheads !== 'undefined') spell.alwaysheads = newspell.alwaysheads;
                     if (typeof newspell.zerkerpriority !== 'undefined') spell.zerkerpriority = newspell.zerkerpriority;
                     if (typeof newspell.swordboard !== 'undefined') spell.swordboard = newspell.swordboard;
+                    if (typeof newspell.resolve !== 'undefined') spell.resolve = newspell.resolve;
                 }
                 else {
                     spell.active = false;

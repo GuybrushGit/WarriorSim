@@ -39,6 +39,7 @@ class Spell {
         if (spell.timetostartactive) this.timetostart = parseInt(spell.timetostart) * 1000;
         if (spell.zerkerpriority) this.zerkerpriority = spell.zerkerpriority;
         if (spell.swordboard) this.swordboard = spell.swordboard;
+        if (spell.resolve) this.resolve = spell.resolve;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         
     }
@@ -603,6 +604,7 @@ class ShieldSlam extends Spell {
     canUse() {
         return this.player.shield && !this.timer && !this.player.timer && (this.player.freeshieldslam || this.cost <= this.player.rage) 
             && (this.player.freeshieldslam || this.player.rage >= this.minrage)
+            && (!this.resolve || (this.player.auras.defendersresolve && !this.player.auras.defendersresolve.timer))
             && (!this.swordboard || this.player.freeshieldslam);
     }
 }
