@@ -1236,7 +1236,8 @@ class Player {
             /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
-        let dmg = spell.dmg() * this.mh.modifier + this.stats.moddmgtaken;
+        let dmg = spell.dmg() * this.mh.modifier;
+        if (dmg) dmg += this.stats.moddmgtaken;
         let result;
         if (spell.defenseType == DEFENSETYPE.MELEE) 
             result = this.rollmeleespell(spell);
@@ -1500,12 +1501,13 @@ class Player {
             this.auras.battleforecast.remove();
             this.auras.berserkerforecast.use();
         }
+        if (this.spells.unstoppablemight) this.spells.unstoppablemight.timer = 1500;
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
     }
     isValidStance(stance, isRend) {
         return this.stance == stance || this.stance == 'glad' ||
-            (this.auras.echoesstance && this.auras.echoesstance.timer && this.auras.echoesstance.stance == stance) ||
+            (this.auras.echoesstance && this.auras.echoesstance.timer && (this.auras.echoesstance.stance == stance || this.auras.echoesstance.stance == 'glad')) ||
             (isRend && this.stance == 'zerk' && this.bloodfrenzy);
     }
     isEnraged() {
