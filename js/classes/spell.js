@@ -41,9 +41,9 @@ class Spell {
         if (spell.swordboard) this.swordboard = spell.swordboard;
         if (spell.resolve) this.resolve = spell.resolve;
         if (spell.switchstart) this.switchstart = spell.switchstart;
+        if (spell.switchtimeactive) this.switchtime = parseInt(spell.switchtime) * 1000;
+        if (spell.switchtimeactive) this.switchrage = spell.switchrage;
         if (spell.switchtimeactive) this.switchtimeactive = spell.switchtimeactive;
-        if (spell.switchtime) this.switchtime = spell.switchtime;
-        if (spell.switchrage) this.switchrage = spell.switchrage;
         if (spell.switchdefault) this.switchdefault = spell.switchdefault;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         
@@ -663,12 +663,16 @@ class TheMoltenCore extends Spell {
 class UnstoppableMight extends Spell {
     constructor(player, id) {
         super(player, id, 'Unstoppable Might');
-
-        // Switch stance if Forecast shorter than X seconds and rage below Y
-        // Switch back to default stance as soon as possible
+        this.useonly = true;
+    }
+    use() {
+        if (this.player.stance != 'battle') this.player.switch('battle');
+        else this.player.switch(this.player.basestance == 'battle' ? 'zerk' : this.player.basestance);
     }
     canUse() {
-        return !this.timer && !this.player.timer;
+        //Switch if Forecast shorter than X secs and rage below Y
+        let forecast = Math.max(this.player.auras.battleforecast.timer - step, this.player.auras.berserkerforecast.timer - step);
+        return (this.switchtimeactive && this.player.rage <= this.switchrage && forecast <= this.switchtime);
     }
 }
 
@@ -2420,6 +2424,30 @@ class BattleForecast extends Aura {
         super(player, id, 'Battle Forecast');
         this.mult_stats = { dmgmod: 10 };
         this.duration = 10;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateDmgMod();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateDmgMod();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    remove() {
+        if (this.timer) {
+            this.uptime += (step - this.starttimer);
+            this.timer = 0;
+            this.player.updateDmgMod();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
     }
 }
 

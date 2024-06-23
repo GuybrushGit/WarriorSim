@@ -344,7 +344,8 @@ class Simulation {
 
                     // Use GCD spells
                     else if (player.timer) { }
-                    else if (player.stance != player.basestance && !player.stancetimer) { player.switch(player.basestance); } // Go back to base stance
+                    else if (player.stance != player.basestance && !player.stancetimer && (!player.spells.unstoppablemight || player.spells.unstoppablemight.switchdefault)) { player.switch(player.basestance); } // Go back to base stance
+                    else if (player.spells.unstoppablemight && player.spells.unstoppablemight.canUse()) { player.spelldelay = 1; delayedspell = player.spells.unstoppablemight; }
                     else if (player.spells.victoryrush && player.spells.victoryrush.canUse()) { player.spelldelay = 1; delayedspell = player.spells.victoryrush; }
                     else if (player.auras.flask && player.auras.flask.canUse()) { player.spelldelay = 1; delayedspell = player.auras.flask; }
                     else if (player.auras.recklessness && player.auras.recklessness.canUse()) { player.spelldelay = 1; delayedspell = player.auras.recklessness; }
@@ -560,6 +561,7 @@ class Simulation {
                 next = player.auras.weaponbleedoh.interval - ((step - player.auras.weaponbleedoh.starttimer) % player.auras.weaponbleedoh.interval);
 
             // Spells used by player
+            if (player.spells.unstoppablemight && player.spells.unstoppablemight.timer && player.spells.unstoppablemight.timer < next) next = player.spells.unstoppablemight.timer;
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && player.spells.bloodthirst.timer < next) next = player.spells.bloodthirst.timer;
             if (player.spells.mortalstrike && player.spells.mortalstrike.timer && player.spells.mortalstrike.timer < next) next = player.spells.mortalstrike.timer;
             if (player.spells.shieldslam && player.spells.shieldslam.timer && player.spells.shieldslam.timer < next) next = player.spells.shieldslam.timer;
@@ -600,6 +602,7 @@ class Simulation {
             if (player.heroicdelay) player.heroicdelay += next;
 
             // Spells used by player
+            if (player.spells.unstoppablemight && player.spells.unstoppablemight.timer && !player.spells.unstoppablemight.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.ragingblow && player.spells.ragingblow.timer && !player.spells.ragingblow.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.berserkerrage && player.spells.berserkerrage.timer && !player.spells.berserkerrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.bloodthirst && player.spells.bloodthirst.timer && !player.spells.bloodthirst.step(next) && !player.spelldelay) spellcheck = true;
