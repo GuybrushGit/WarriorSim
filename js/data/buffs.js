@@ -31,7 +31,7 @@ var buffs = [
       spellid: true,
       name: "Gladiator Stance",
       iconname: "achievement_featsofstrength_gladiator_08",
-      dmgshield: 10,
+      dmgshield: 0,
       group: "stance",
       stance: 'glad',
       rune: true,

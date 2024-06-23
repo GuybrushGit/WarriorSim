@@ -40,6 +40,7 @@ class Spell {
         if (spell.zerkerpriority) this.zerkerpriority = spell.zerkerpriority;
         if (spell.swordboard) this.swordboard = spell.swordboard;
         if (spell.resolve) this.resolve = spell.resolve;
+        if (spell.switchstart) this.switchstart = spell.switchstart;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         
     }
@@ -655,6 +656,12 @@ class TheMoltenCore extends Spell {
     }
 }
 
+class UnstoppableMight extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Unstoppable Might');
+    }
+}
+
 
 /**************************************************** AURAS ****************************************************/
 
@@ -1024,7 +1031,7 @@ class BerserkerStance extends Aura {
 class GladiatorStance extends Aura {
     constructor(player, id) {
         super(player, id, 'Gladiator Stance');
-        this.mult_stats = { };
+        this.mult_stats = { dmgmod: 10 };
     }
 }
 

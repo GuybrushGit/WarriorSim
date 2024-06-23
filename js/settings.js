@@ -441,6 +441,7 @@ SIM.SETTINGS = {
                 for (let type in gear)
                     for (let g of gear[type])
                         if (spell.id == g.id && g.selected) item = g;
+
                 if (!item) {
                     spell.active = false;
                     continue;
@@ -450,13 +451,27 @@ SIM.SETTINGS = {
                 }
             }
 
+            // Might set bonus
+            if (spell.itemblock) { 
+                let count = 0;
+                let items = [226499,226497,226494,226495,226493,226492,226498,226496];
+                for (let type in gear)
+                    for (let g of gear[type])
+                        if (g.selected && items.includes(g.id)) count++;
+                if (count < 6) {
+                    spell.active = false;
+                    continue;
+                }
+                spell.active = true;
+            }
+
             let div = $(`<div data-id="${spell.id}" data-name="${spell.name}" class="spell ${spell.active ? 'active' : ''}"><div class="icon">
             <img src="https://wow.zamimg.com/images/wow/icons/medium/${spell.iconname.toLowerCase()}.jpg " alt="${spell.name}">
             <a href="${WEB_DB_URL}${spell.item ? 'item' : 'spell'}=${spell.id}" class="wh-tooltip"></a>
             </div></div>`);
 
             if (spell.buff) buffs += div[0].outerHTML;
-            else if (spell.item) items += div[0].outerHTML;
+            else if (spell.item || spell.itemblock) items += div[0].outerHTML;
             else container.append(div);
 
         }
@@ -485,7 +500,7 @@ SIM.SETTINGS = {
         if (spell.haste !== undefined)
             ul.append(`<li class="nobox ${spell.haste ? 'active' : ''}">Attack speed set at <input type="text" name="haste" value="${spell.haste}" data-numberonly="true" /> %</li>`);
 
-        if (typeof spell.timetoend === 'undefined')
+        if (typeof spell.timetoend === 'undefined' && !spell.noactiveoption)
             ul.append(`<li data-id="active" class="${spell.active ? 'active' : ''}">Enabled ${note ? ` - ${note}` : ''}</li>`);
         if (typeof spell.afterswing !== 'undefined') 
             ul.append(`<li data-id="afterswing" class="${spell.afterswing ? 'active' : ''}">Use only after a swing reset</li>`);
@@ -535,6 +550,10 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="resolve" class="${spell.resolve ? 'active' : ''}">Only use if Defender's Resolve is not up</li>`);
         if (typeof spell.swordboard !== 'undefined') 
             ul.append(`<li data-id="swordboard" class="${spell.swordboard ? 'active' : ''}">Only use after a Sword & Board proc</li>`);
+
+        // Might set
+        if (typeof spell.switchstart !== 'undefined')
+            ul.append(`<li data-id="switchstart" class="${spell.switchstart ? 'active' : ''}">Switch stance at fight start</li>`);
 
         details.css('visibility','hidden');
         details.append(ul);

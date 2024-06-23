@@ -164,6 +164,11 @@ class Player {
         if (this.basestance == 'zerk') this.auras.berserkerstance.timer = 1;
         if (this.basestance == 'def') this.auras.defensivestance.timer = 1;
         if (this.basestance == 'glad') this.auras.gladiatorstance.timer = 1;
+
+        // Might set bonus
+        if (this.spells.unstoppablemight && this.spells.unstoppablemight.switchstart) {
+            this.switch(this.stance);
+        }
     }
     addRace() {
         for(let l of levelstats) {
@@ -504,7 +509,6 @@ class Player {
                         this.auras.echoesstance = new EchoesStance(this);
                     }
                     if (bonus.stats.switchbonus) {
-                        this.switchbonus = bonus.stats.switchbonus;
                         this.auras.battleforecast = new BattleForecast(this);
                         this.auras.berserkerforecast = new BerserkerForecast(this);
                     }
@@ -1488,7 +1492,7 @@ class Player {
         this.rage = Math.min(this.rage, this.talents.rageretained);
         if (this.switchrage) this.rage += 10;
         if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
-        if (this.auras.battleforecast && this.stance == 'battle') {
+        if (this.auras.battleforecast && (this.stance == 'battle' || this.stance == 'glad')) {
             this.auras.berserkerforecast.remove();
             this.auras.battleforecast.use();
         } 

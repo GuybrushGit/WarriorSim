@@ -1398,6 +1398,17 @@ var spells = [
     timetostart: 0,
     timetostartactive: false,
 },
+{
+    id: 457820,
+    name: 'Unstoppable Might',
+    classname: 'UnstoppableMight',
+    iconname: 'inv_helmet_09',
+    item: false,
+    itemblock: true,
+    active: true,
+    noactiveoption: true,
+    switchstart: true,
+},
 
 
 
