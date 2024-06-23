@@ -339,6 +339,10 @@ SIM.PROFILES = {
                 if (typeof spell.swordboard !== 'undefined') obj.swordboard = spell.swordboard;
                 if (typeof spell.resolve !== 'undefined') obj.resolve = spell.resolve;
                 if (typeof spell.switchstart !== 'undefined') obj.switchstart = spell.switchstart;
+                if (typeof spell.switchtime !== 'undefined') obj.switchtime = spell.switchtime;
+                if (typeof spell.switchrage !== 'undefined') obj.switchrage = spell.switchrage;
+                if (typeof spell.switchdefault !== 'undefined') obj.switchdefault = spell.switchdefault;
+                if (typeof spell.switchtimeactive !== 'undefined') obj.switchtimeactive = spell.switchtimeactive;
                 minified.rotation.push(obj);
             }
         }
@@ -424,6 +428,10 @@ SIM.PROFILES = {
                     if (typeof newspell.swordboard !== 'undefined') spell.swordboard = newspell.swordboard;
                     if (typeof newspell.resolve !== 'undefined') spell.resolve = newspell.resolve;
                     if (typeof newspell.switchstart !== 'undefined') spell.switchstart = newspell.switchstart;
+                    if (typeof newspell.switchtime !== 'undefined') spell.switchtime = newspell.switchtime;
+                    if (typeof newspell.switchrage !== 'undefined') spell.switchrage = newspell.switchrage;
+                    if (typeof newspell.switchdefault !== 'undefined') spell.switchdefault = newspell.switchdefault;
+                    if (typeof newspell.switchtimeactive !== 'undefined') spell.switchtimeactive = newspell.switchtimeactive;
                     
                 }
                 else {

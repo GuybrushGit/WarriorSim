@@ -1408,6 +1408,10 @@ var spells = [
     active: true,
     noactiveoption: true,
     switchstart: true,
+    switchtimeactive: true,
+    switchtime: 3,
+    switchrage: 25,
+    switchdefault: true,
 },
 
 

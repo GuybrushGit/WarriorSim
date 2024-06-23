@@ -41,6 +41,10 @@ class Spell {
         if (spell.swordboard) this.swordboard = spell.swordboard;
         if (spell.resolve) this.resolve = spell.resolve;
         if (spell.switchstart) this.switchstart = spell.switchstart;
+        if (spell.switchtimeactive) this.switchtimeactive = spell.switchtimeactive;
+        if (spell.switchtime) this.switchtime = spell.switchtime;
+        if (spell.switchrage) this.switchrage = spell.switchrage;
+        if (spell.switchdefault) this.switchdefault = spell.switchdefault;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         
     }
@@ -659,6 +663,12 @@ class TheMoltenCore extends Spell {
 class UnstoppableMight extends Spell {
     constructor(player, id) {
         super(player, id, 'Unstoppable Might');
+
+        // Switch stance if Forecast shorter than X seconds and rage below Y
+        // Switch back to default stance as soon as possible
+    }
+    canUse() {
+        return !this.timer && !this.player.timer;
     }
 }
 
