@@ -344,7 +344,7 @@ class Simulation {
 
                     // Use GCD spells
                     else if (player.timer) { }
-                    else if (player.stance != player.basestance) { player.switch(player.basestance); } // Go back to base stance
+                    else if (player.stance != player.basestance && !player.stancetimer) { player.switch(player.basestance); } // Go back to base stance
                     else if (player.spells.victoryrush && player.spells.victoryrush.canUse()) { player.spelldelay = 1; delayedspell = player.spells.victoryrush; }
                     else if (player.auras.flask && player.auras.flask.canUse()) { player.spelldelay = 1; delayedspell = player.auras.flask; }
                     else if (player.auras.recklessness && player.auras.recklessness.canUse()) { player.spelldelay = 1; delayedspell = player.auras.recklessness; }
@@ -530,6 +530,7 @@ class Simulation {
 
             if (player.timer && player.timer < next) next = player.timer;
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
+            if (player.stancetimer && player.stancetimer < next) next = player.stancetimer;
 
             // Auras with periodic ticks
             if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
@@ -593,6 +594,7 @@ class Simulation {
             canSpellQueue = false;
             if (player.timer && player.steptimer(next) && !player.spelldelay) { spellcheck = true; canSpellQueue = player.spellqueueing; }
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
+            if (player.stancetimer && player.stepstancetimer(next) && !player.spelldelay) spellcheck = true;
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
             if (player.heroicdelay) player.heroicdelay += next;

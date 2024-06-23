@@ -32,6 +32,7 @@ class Player {
         this.agipercrit = this.getAgiPerCrit(this.level);
         this.timer = 0;
         this.itemtimer = 0;
+        this.stancetimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;
@@ -623,6 +624,7 @@ class Player {
         this.rage = rage;
         this.timer = 0;
         this.itemtimer = 0;
+        this.stancetimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;
@@ -957,6 +959,17 @@ class Player {
         }
         else {
             this.itemtimer -= a;
+            return false;
+        }
+    }
+    stepstancetimer(a) {
+        if (this.stancetimer <= a) {
+            this.stancetimer = 0;
+            /* start-log */ if (log) this.log('Stance CD off'); /* end-log */
+            return true;
+        }
+        else {
+            this.stancetimer -= a;
             return false;
         }
     }
@@ -1501,7 +1514,7 @@ class Player {
             this.auras.battleforecast.remove();
             this.auras.berserkerforecast.use();
         }
-        if (this.spells.unstoppablemight) this.spells.unstoppablemight.timer = 1500;
+        this.stancetimer = 1500 + rng(this.reactionmin, this.reactionmax);
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
     }
