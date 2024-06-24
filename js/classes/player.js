@@ -33,6 +33,7 @@ class Player {
         this.timer = 0;
         this.itemtimer = 0;
         this.stancetimer = 0;
+        this.ragetimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;
@@ -142,6 +143,7 @@ class Player {
                 this.auras['deepwounds' + i] = this.mode == "sod" ? new DeepWounds(this, null, i) : new OldDeepWounds(this, null, i);
         }
 
+        this.spells.stanceswitch = new StanceSwitch(this);
         if (this.spells.bloodrage) this.auras.bloodrage = new BloodrageAura(this);
         if (this.spells.berserkerrage) this.auras.berserkerrage = new BerserkerRageAura(this);
         if (this.spells.shieldslam) this.auras.defendersresolve = new DefendersResolve(this);
@@ -625,6 +627,7 @@ class Player {
         this.timer = 0;
         this.itemtimer = 0;
         this.stancetimer = 0;
+        this.ragetimer = 0;
         this.dodgetimer = 0;
         this.crittimer = 0;
         this.critdmgbonus = 0;

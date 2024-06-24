@@ -676,6 +676,19 @@ class UnstoppableMight extends Spell {
     }
 }
 
+class StanceSwitch extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Stance Switch');
+        this.useonly = true;
+    }
+    use() {
+        this.player.switch(this.player.basestance);
+    }
+    canUse() {
+        return !this.player.timer && !this.player.stancetimer && this.player.stance != this.player.basestance && 
+            (!this.player.spells.unstoppablemight || this.player.spells.unstoppablemight.switchdefault);
+    }
+}
 
 /**************************************************** AURAS ****************************************************/
 
