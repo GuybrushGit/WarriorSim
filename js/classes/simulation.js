@@ -344,7 +344,7 @@ class Simulation {
 
                     // Use GCD spells
                     else if (player.timer) { }
-                    else if (player.stance != player.basestance && !player.stancetimer && (!player.spells.unstoppablemight || player.spells.unstoppablemight.switchdefault)) { player.switch(player.basestance); } // Go back to base stance
+                    else if (player.stance != player.basestance && !player.stancetimer && (!player.spells.unstoppablemight || player.spells.unstoppablemight.switchdefault)) { player.switch(player.basestance); continue; } // Go back to base stance
                     else if (player.spells.unstoppablemight && player.spells.unstoppablemight.canUse()) { player.spelldelay = 1; delayedspell = player.spells.unstoppablemight; }
                     else if (player.spells.victoryrush && player.spells.victoryrush.canUse()) { player.spelldelay = 1; delayedspell = player.spells.victoryrush; }
                     else if (player.auras.flask && player.auras.flask.canUse()) { player.spelldelay = 1; delayedspell = player.auras.flask; }
