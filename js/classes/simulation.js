@@ -532,6 +532,7 @@ class Simulation {
             if (player.timer && player.timer < next) next = player.timer;
             if (player.itemtimer && player.itemtimer < next) next = player.itemtimer;
             if (player.stancetimer && player.stancetimer < next) next = player.stancetimer;
+            if (player.ragetimer && player.ragetimer < next) next = player.ragetimer;
 
             // Auras with periodic ticks
             if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
@@ -596,6 +597,7 @@ class Simulation {
             if (player.timer && player.steptimer(next) && !player.spelldelay) { spellcheck = true; canSpellQueue = player.spellqueueing; }
             if (player.itemtimer && player.stepitemtimer(next) && !player.spelldelay) spellcheck = true;
             if (player.stancetimer && player.stepstancetimer(next) && !player.spelldelay) spellcheck = true;
+            if (player.ragetimer) player.stepragetimer(next);
             if (player.dodgetimer) player.stepdodgetimer(next);
             if (player.spelldelay) player.spelldelay += next;
             if (player.heroicdelay) player.heroicdelay += next;

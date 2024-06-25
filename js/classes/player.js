@@ -976,6 +976,18 @@ class Player {
             return false;
         }
     }
+    stepragetimer(a) {
+        if (this.ragetimer <= a) {
+            this.ragetimer = 0;
+            this.rage += 10;
+            /* start-log */ if (log) this.log('10 rage gained'); /* end-log */
+            return true;
+        }
+        else {
+            this.ragetimer -= a;
+            return false;
+        }
+    }
     stepdodgetimer(a) {
         if (this.dodgetimer <= a) {
             this.dodgetimer = 0;
@@ -1507,7 +1519,7 @@ class Player {
         if (stance == 'def') this.auras.defensivestance.timer = 1;
         if (stance == 'glad') this.auras.gladiatorstance.timer = 1;
         this.rage = Math.min(this.rage, this.talents.rageretained);
-        if (this.switchrage) this.rage += 10;
+        
         if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
         if (this.auras.battleforecast && (this.stance == 'battle' || this.stance == 'glad')) {
             this.auras.berserkerforecast.remove();
@@ -1517,6 +1529,7 @@ class Player {
             this.auras.battleforecast.remove();
             this.auras.berserkerforecast.use();
         }
+        if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
         this.stancetimer = 1500 + rng(this.reactionmin, this.reactionmax);
         this.updateAuras();
         /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
