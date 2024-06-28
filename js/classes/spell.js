@@ -633,7 +633,7 @@ class Shockwave extends Spell {
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
+        return this.player.shield && !this.timer && !this.player.timer && this.cost <= this.player.rage && 
         (this.player.isValidStance('def') || this.player.talents.rageretained >= this.cost) &&
         (!this.maxrage || this.player.isValidStance('def') || this.player.rage <= this.maxrage) &&
         (!this.minrage || this.player.rage >= this.minrage) &&

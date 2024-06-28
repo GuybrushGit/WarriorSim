@@ -25621,7 +25621,9 @@ ID,Name_lang
 456692,[DNT] Dispel Chains Trigger
 456694,[DNT] Frijidar Scale
 456695,[DNT] Frijidar Scale
+456740,Pilfershard - Trade Souls for Rune
 456881,Diplomatic Immunity
+456937,Combine Torn Spell Notes
 457010,Teleport
 457012,Ichor Coating
 457021,Rancid Hunk of Flesh
@@ -25632,6 +25634,7 @@ ID,Name_lang
 457323,S03 - Item - T1 - Paladin - Holy 4P Bonus
 457324,S03 - Item - T1 - Hunter - Ranged 4P Bonus
 457325,S03 - Item - T1 - Priest - Shadow 6P Bonus
+457326,Hex
 457329,S03 - Item - T1 - Rogue - Damage 2P Bonus
 457331,Avoidance
 457339,S03 - Item - T1 - Rogue - Damage 4P Bonus
@@ -25652,6 +25655,7 @@ ID,Name_lang
 457524,S03 - Item - T1 - Shaman - Elemental 6P Bonus
 457530,S03 - Item - T1 - Shaman - Enhancement 4P Bonus
 457532,S03 - Item - T1 - Shaman - Enhancement 6P Bonus
+457534,Frostbitten
 457540,S03 - Item - T1 - Shaman - Tank 2P Bonus
 457541,S03 - Item - T1 - Shaman - Tank 4P Bonus
 457544,S03 - Item - T1 - Shaman - Tank 6P Bonus
@@ -25659,6 +25663,10 @@ ID,Name_lang
 457549,S03 - Item - T1 - Warlock - Damage 4P Bonus
 457553,S03 - Item - T1 - Warlock - Damage 6P Bonus
 457558,Fire Trance
+457559,Novice Frost Mage - Receive Torn Spell Notes
+457560,Novice Frost Mage - Receive Torn Spell Notes
+457561,Novice Frost Mage - Receive Torn Spell Notes
+457563,Novice Frost Mage - Receive Torn Spell Notes
 457569,Banish
 457571,S03 - Item - T1 - Warlock - Tank 2P Bonus
 457572,S03 - Item - T1 - Warlock - Tank 4P Bonus
@@ -25880,8 +25888,13 @@ ID,Name_lang
 459713,Devouring Plague
 459714,Touch of Weakness
 459736,Warmed Rumsey with Cream
+459837,Shadow Ritual of Great Sacrifice
+459845,Shadow Ritual of Great Sacrifice
+460001,Summon Heliath
 460171,Defender's Resolve
+460195,Shadowsworn Sacrifice - Give Note
 460200,Demonic Resolve
+460201,Voidwalker
 460205,Permanent Feign Death
 460228,Stealth
 460229,Block Value 17
@@ -25924,6 +25937,8 @@ ID,Name_lang
 460900,Beacon of Light
 460906,Demonic Frenzy
 460907,Demonic Frenzy
+460923,Decipher Scroll
+460928,Weak Healing Touch
 460930,Sleep
 460933,Destroy
 460939,Might of Stormwind
@@ -25978,6 +25993,7 @@ ID,Name_lang
 461158,[DNT] Spawn Challenge
 461163,Permanent Feign Death
 461164,Hand of Injustice
+461165,Hand of Injustice
 461187,[DNT] Spawn Challenge
 461188,Magnetic Pulse
 461189,Flame Spear
@@ -26121,8 +26137,8 @@ ID,Name_lang
 461674,Pattern: Honed Blue Dragonscale Breastplate
 461675,Refined Arcanite Reaper
 461676,Plans: Refined Arcanite Reaper
-461677,Living Green Dragonscale Leggings
-461678,Pattern: Living Green Dragonscale Leggings
+461677,Living Green Dragonscale Gauntlets
+461678,Pattern: Living Green Dragonscale Gauntlets
 461679,Opening
 461680,Ephemeral Power
 461681,Increased Feral Combat
@@ -26134,10 +26150,154 @@ ID,Name_lang
 461687,Chain Lightning
 461688,Summon Shadowstrike
 461689,Summon Thunderstrike
+461690,Mastercrafted Shifting Cloak
+461691,Pattern: Mastercrafted Shifting Cloak
+461692,Synthetic Gordok Ogre Suit
+461693,Pattern: Synthetic Gordok Ogre Suit
+461694,Fiery Aura
+461695,Firebolt
+461696,Vitality
+461697,Increase Spell Dam 29
+461698,Shard of the Gods
+461699,Spinal Reaper
+461700,Spinal Reaper
+461701,Geddon's Grace
+461702,Fire Nova
+461706,Swift Flight Vambraces
+461707,Pattern: Swift Flight Vambraces
+461708,Incandescent Mooncloth Robe
+461709,Pattern: Incandescent Mooncloth Robe
+461710,Fiery Core Sharpshooter Rifle
+461711,Schematic: Fiery Core Sharpshooter Rifle
+461712,Refined Hammer of the Titans
+461713,Plans: Refined Hammer of the Titans
+461714,Desecration
+461715,Plans: Desecration
+461716,Deadly Heartseeker
+461717,Plans: Deadly Heartseeker
+461718,Tranquility
+461719,Plans: Tranquility
+461720,Living Green Dragonscale Breastplate
+461721,Pattern: Living Green Dragonscale Breastplate
+461722,Devilcore Gauntlets
+461723,Pattern: Devilcore Gauntlets
+461724,Devilcore Leggings
+461725,Pattern: Devilcore Leggings
+461727,Leather-Reinforced Runecloth Bag
+461728,Pattern: Leather-Reinforced Runecloth Bag
+461730,Hardened Frostguard
+461731,Plans: Hardened Frostguard
+461733,Finely-Enchanted Battlehammer
+461734,Plans: Finely-Enchanted Battlehammer
+461735,Invincible Mail
+461736,Plans: Invincible Mail
+461737,Tempest Gauntlets
+461738,Plans: Tempest Gauntlets
+461739,Warcrest of the Great Chief
+461740,Plans: Warcrest of the Great Chief
+461743,Sageblade of the Archmagus
+461744,Plans: Sageblade of the Archmagus
+461747,Incandescent Mooncloth Vest
+461748,Pattern: Incandescent Mooncloth Vest
+461750,Incandescent Mooncloth Circlet
+461751,Pattern: Incandescent Mooncloth Circlet
+461752,Incandescent Mooncloth Leggings
+461753,Pattern: Incandescent Mooncloth Leggings
+461754,Girdle of Arcane Insight
+461755,Pattern: Girdle of Arcane Insight
+461764,Use Echo
+461765,Use Echo
+461767,Use Echo
+461769,Use Echo
+461770,Use Echo
+461771,Use Echo
+461772,Use Echo
 461810,Thunder Clap
 461826,Thunder Clap
 461827,Thunder Clap
 461828,Thunder Clap
 461829,Thunder Clap
 461830,Thunder Clap
+461833,Sending Sigil
+461839,From the Firelands
+461841,[DNT] Sending Pillar
+461862,Armageddon
+461863,Armageddon
+461896,Fire Blast
+461900,[DNT] Sending Pillar
+461902,[DNT] Sending Pillar
+461903,[DNT] Sending Pillar
+461905,[DNT] Sending Pillar
+461906,[DNT] Sending Pillar
+461951,Increase Healing 112
+461953,Holy Crit
+461956,Increase Shadow Dam 75
+461961,Call Benediction
+461962,Call Anathema
 461966,Vampiric Embrace
+461985,Typhoon
+461990,Call of Eskhandar
+461992,Full Heal
+462050,(DNT) Hellscream Change Color
+462059,(DNT) Summon Thorn Stalker
+462134,Language Demon Tongue
+462149,Speed
+462178,Enfeeble
+462214,Primal Instinct
+462221,Drain Life
+462222,Destructor's Devastation
+462227,Honed Blue Dragonscale Leggings
+462228,Cursed Blade
+462229,Corrupted Fear
+462230,Defender's Resolve
+462238,Out of breath!
+462250,Curse of Agony
+462256,Warlord
+462257,Warlord
+462259,Ground Stomp
+462272,Pool of Fire
+462275,Boss Kill Tracking [DNT]
+462276,Boss Kill Tracking [DNT]
+462277,Boss Kill Tracking [DNT]
+462278,Boss Kill Tracking [DNT]
+462279,Boss Kill Tracking [DNT]
+462280,Boss Kill Tracking [DNT]
+462281,Pattern: Embroidered Belt of the Archmage
+462282,Embroidered Belt of the Archmage
+462286,Occult Poison I
+462287,(DNT) Lasher Counter Pulse
+462289,(DNT) Lasher Counter Pulse
+462307,[DNT] Vengeful Wisp
+462316,(DNT) Cancel Fog Aura
+462331,[DNT] Vengeful Wisp
+462337,(DNT) Heating Up
+462344,Gift of the Wisp
+462358,Summon Crimson Cannon
+462359,[DNT] Vengeful Wisp Clear Auras
+462361,Cannon Fire
+462362,(DNT) Buff All
+462370,(DNT) Cogs
+462379,Self Explosion
+462381,(DNT) Buff All
+462385,Flame Lash
+462386,Flame Lash
+462387,Light Torch
+462388,Eruption
+462395,Pyroclast Barrage
+462398,Fireball Volley
+462400,Incinerate
+462401,Explosion
+462402,Living Bomb
+462411,[DNT] Calyx - On Quest
+462422,(DNT) Remove Stone Aura
+462423,(DNT) Remove Heat Aura
+462467,Flex Tandem Press Task Apparatus
+462498,Rift Beacon
+462504,Rune Scrying
+462509,Rune Scrying
+462653,Lethal Shots
+462654,Lethal Shots
+462656,Lethal Shots
+462657,Lethal Shots
+462658,Lethal Shots
+462659,S03 - Tuning and Overrides Passive - Hunter

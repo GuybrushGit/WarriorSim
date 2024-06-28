@@ -1777,7 +1777,7 @@ Each strike has a 30% chance of poisoning the enemy for $2819o1 Nature damage ov
 3042,Rank 4,,
 3043,Rank 1,"Stings the target, reducing Strength and Agility by $s1 for $d.  Only one Sting per Hunter can be active on any one target.",Strength and Agility reduced by $s1.
 3044,Rank 1,An instant shot that causes $s1 Arcane damage.,
-3045,,Increases ranged attack speed by $s1% for $d.,Increases ranged attack speed by $s1%.
+3045,,Increases ranged attack speed by $s1% $?a415817[and melee attack speed by $s2%][] for $d.,Increases ranged attack speed by $s1%$?$w2>0[ and melee attack speed by $w2%][].
 3046,Rank 2,,
 3047,Rank 1,,
 3048,Rank 1,,
@@ -14488,22 +14488,22 @@ Silenced."
 19413,Rank 3,Gives your Concussive Shot a $h% chance to stun the target for $19410d.,
 19414,Rank 4,Gives your Concussive Shot a $h% chance to stun the target for $19410d.,
 19415,Rank 5,Gives your Concussive Shot a $h% chance to stun the target for $19410d.,
-19416,Rank 1,Reduces the Mana cost of your Shots and Stings by $s1%.,
-19417,Rank 2,Reduces the Mana cost of your Shots and Stings by $s1%.,
-19418,Rank 3,Reduces the Mana cost of your Shots and Stings by $s1%.,
-19419,Rank 4,Reduces the Mana cost of your Shots and Stings by $s1%.,
-19420,Rank 5,Reduces the Mana cost of your Shots and Stings by $s1%.,
+19416,Rank 1,"Reduces the Mana cost of your Shots$?s446374[, Strikes,][] and Stings by $s1%.",
+19417,Rank 2,"Reduces the Mana cost of your Shots$?s446374[, Strikes,][] and Stings by $s1%.",
+19418,Rank 3,"Reduces the Mana cost of your Shots$?s446374[, Strikes,][] and Stings by $s1%.",
+19419,Rank 4,"Reduces the Mana cost of your Shots$?s446374[, Strikes,][] and Stings by $s1%.",
+19420,Rank 5,"Reduces the Mana cost of your Shots$?s446374[, Strikes,][] and Stings by $s1%.",
 19421,Rank 1,Increases the Ranged Attack Power bonus of your Hunter's Mark spell by $s1%.,
 19422,Rank 2,Increases the Ranged Attack Power bonus of your Hunter's Mark spell by $s1%.,
 19423,Rank 3,Increases the Ranged Attack Power bonus of your Hunter's Mark spell by $s1%.,
 19424,Rank 4,Increases the Ranged Attack Power bonus of your Hunter's Mark spell by $s1%.,
 19425,Rank 5,Increases the Ranged Attack Power bonus of your Hunter's Mark spell by $s1%.,
-19426,Rank 1,Increases your critical strike chance with ranged weapons by $s1%.,
-19427,Rank 2,Increases your critical strike chance with ranged weapons by $s1%.,
+19426,Rank 1,Increases your critical strike chance $?s446374[][with ranged weapons] by $462658s1%.,
+19427,Rank 2,Increases your critical strike chance $?s446374[][with ranged weapons] by $462657s1%.,
 19428,,,$o1 Fire damage inflicted over $d.
-19429,Rank 3,Increases your critical strike chance with ranged weapons by $s1%.,
-19430,Rank 4,Increases your critical strike chance with ranged weapons by $s1%.,
-19431,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
+19429,Rank 3,Increases your critical strike chance $?s446374[][with ranged weapons] by $462656s1%.,
+19430,Rank 4,Increases your critical strike chance $?s446374[][with ranged weapons] by $462654s1%.,
+19431,Rank 5,Increases your critical strike chance $?s446374[][with ranged weapons] by $462653s1%.,
 19432,,,
 19433,,,
 19434,Rank 1,An aimed shot that increases ranged damage by $s1.,
@@ -14558,12 +14558,12 @@ Nature damage inflicted every $t2 sec."
 19482,Rank 1,Causes $s2 damage and stuns all enemies within $a1 yards for $d.,Stunned.
 19483,Rank 1,Burns nearby enemies for $20153s1 fire damage every $t1 seconds.,Burns nearby enemies for $20153s1 fire damage every $t1 seconds.
 19484,,,
-19485,Rank 1,Increases your ranged weapon critical strike damage bonus by $s1%.,
+19485,Rank 1,Increases your ranged weapon $?s446374[and melee ability ][]critical strike damage bonus by $s1%.,
 19486,,,Stamina reduced by $s1.
-19487,Rank 2,Increases your ranged weapon critical strike damage bonus by $s1%.,
-19488,Rank 3,Increases your ranged weapon critical strike damage bonus by $s1%.,
-19489,Rank 4,Increases your ranged weapon critical strike damage bonus by $s1%.,
-19490,Rank 5,Increases your ranged weapon critical strike damage bonus by $s1%.,
+19487,Rank 2,Increases your ranged weapon $?s446374[and melee ability ][]critical strike damage bonus by $s1%.,
+19488,Rank 3,Increases your ranged weapon $?s446374[and melee ability ][]critical strike damage bonus by $s1%.,
+19489,Rank 4,Increases your ranged weapon $?s446374[and melee ability ][]critical strike damage bonus by $s1%.,
+19490,Rank 5,Increases your ranged weapon $?s446374[and melee ability ][]critical strike damage bonus by $s1%.,
 19491,Rank 1,Reduces the Stamina of targets affected by your Scorpid Sting by 10% of the amount of Strength reduced.,
 19492,,"Dispels magic on nearby enemies, removing $s1 beneficial spell $leffect:effects;.",
 19493,Rank 2,Reduces the Stamina of targets affected by your Scorpid Sting by 20% of the amount of Strength reduced.,
@@ -14576,8 +14576,7 @@ Nature damage inflicted every $t2 sec."
 19502,,,
 19503,,A short-range shot that deals $s1% weapon damage and disorients the target for $d.  Any damage caused will remove the effect.  Turns off your attack when used.,Disoriented.
 19505,Rank 1,"Purges $s1 harmful magic $leffect:effects; from a friend or $s1 beneficial magic $leffect:effects; from an enemy.  If an effect is devoured, the Felhunter will be healed for $19658s1.",
-19506,Rank 1,Increases the attack power of party members within $a1 yards by $s2$?$s446374[ and increases their ranged attack power by an additional $s2][].  Lasts $d.,"Attack power increased by $w2$?$w1>$w2[
-Ranged attack power increased by $w1][]"
+19506,Rank 1,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
 19507,Rank 1,Increases the damage you deal with ranged weapons by $s1%.,
 19508,Rank 2,Increases the damage you deal with ranged weapons by $s1%.,
 19509,Rank 3,Increases the damage you deal with ranged weapons by $s1%.,
@@ -15836,10 +15835,8 @@ Strength reduced by $s3%."
 20902,Rank 4,An aimed shot that increases ranged damage by $s1.,
 20903,Rank 5,An aimed shot that increases ranged damage by $s1.,
 20904,Rank 6,An aimed shot that increases ranged damage by $s1.,
-20905,Rank 2,Increases the attack power of party members within $a1 yards by $s2$?$s446374[ and increases their ranged attack power by an additional $s2][].  Lasts $d.,"Attack power increased by $w2.$?$w1>$w2[
-Ranged attack power increased by $w1.][]"
-20906,Rank 3,Increases the attack power of party members within $a1 yards by $s2$?$s446374[ and increases their ranged attack power by an additional $s2][].  Lasts $d.,"Attack power increased by $w2.$?$w1>$w2[
-Ranged attack power increased by $w1.][]"
+20905,Rank 2,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
+20906,Rank 3,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
 20909,Rank 2,"A strike that becomes active after parrying an opponent's attack.  This attack deals $s1 damage and immobilizes the target for $d.  Counterattack cannot be blocked, dodged, or parried.",Immobile.
 20910,Rank 3,"A strike that becomes active after parrying an opponent's attack.  This attack deals $s1 damage and immobilizes the target for $d.  Counterattack cannot be blocked, dodged, or parried.",Immobile.
 20911,Rank 1,"Places a Blessing on the friendly target, reducing damage dealt from all sources by up to $s1 for $d.  In addition, when the target blocks a melee attack the attacker will take $s2 Holy damage.  Players may only have one Blessing on them per Paladin at any one time.",Damage taken reduced by up to $s1 and blocked melee attacks cause $s2 Holy damage to the attacker.
@@ -22796,7 +22793,7 @@ Cooldown shared with Kidney Shot.",Stunned.
    2 points: 18 seconds
    3 points: 22 seconds
    4 points: 26 seconds
-   5 points: 30 seconds",Parry chance increased by $w2%. Attack Power increased by $w4.$?$w3<0[ Physical damage taken reduced by $w3%.][]
+   5 points: 30 seconds",Parry chance increased by $w2%. $?$w3<0[ Physical damage taken reduced by $w3%.][]
 400014,,"You take $s1% reduced Physical damage while Blade Dance is active. Additionally, you have $s3% reduced chance to be critically hit by melee attacks, the threat generated by all your actions is massively increased, and your Feint ability is replaced with Tease, which Taunts the target to attack you.
 
 $@spellicon410412
@@ -22889,7 +22886,7 @@ $@spelldesc399985",
 400610,,"Launches several missiles at the enemy target, causing ${$<power>*$m1/100} to ${$<power>*$M1/100} Arcane damage. This spell also has a ${$400588h/2}% to trigger Missile Barrage.",
 400613,,"The target becomes a Living Bomb, taking ${$<power>*$400613m1/100*4} Fire damage over $d.  After $d or when the spell is dispelled, the target explodes dealing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards","Causes $w1 Fire damage every $t1 sec.  After $d or when the spell is dispelled, the target explodes causing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards."
 400614,,"The target becomes a Living Bomb, taking ${$<power>*$400613m1/100*4} Fire damage over $d.  After $d or when the spell is dispelled, the target explodes dealing ${$<power>*$400614m1/100} Fire damage to all enemies within $400614a1 yards.",
-400615,,"Fire Blast will always deal a critical strike, can be cast while casting another spell, and is not affected by the global cooldown.",
+400615,,"Fire Blast will always deal a critical strike, can be cast while casting another spell, and is not affected by the global cooldown, but its cooldown is increased to $s9 sec.",
 400616,Rank 3,Blasts the enemy for $s1 Fire damage.,
 400618,Rank 1,Blasts the enemy for $s1 Fire damage.,
 400619,Rank 2,Blasts the enemy for $s1 Fire damage.,
@@ -23297,7 +23294,7 @@ $@spellicon403218
 $@spelldesc403218",
 403501,,"Unleash a ghostly soul on an enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} damage, and increasing all Shadow damage over time you deal to that target by $s2%. When the Haunt ends or is dispelled, you will be healed for all the damage it dealt to your target.",Damage taken from Shadow damage over time effects from the caster increased by $s2%.
 403506,,,
-403511,,"Increases the amount drained by your Drain Life and Drain Soul spells by an additional $s1% for each of your Warlock Shadow effects afflicting the target, up to a maximum of ${3*$m1}% additional effect. When Drain Soul is cast on a target below $s3% health, it instead gains $s2% per effect, up to a maximum of ${$m2*3}%.",
+403511,,"Causes your Drain Soul to to deal damage $s4 times faster and increases the amount drained by your Drain Life and Drain Soul spells by an additional $s1% for each of your Warlock Shadow effects afflicting the target, up to a maximum of ${3*$m1}% additional effect. When Drain Soul is cast on a target below $s3% health, it instead gains $s2% per effect, up to a maximum of ${$m2*3}%. In addition, your Drain Soul can now trigger your Nightfall talent.",
 403628,,"Your Shadow Bolt now strikes up to $s1 targets within a chain distance of $s2 yards, but for $s3% reduced damage.",
 403629,,"Sends a bolt of chaotic fire at the enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} Fire damage.  Chaos Bolt always hits, cannot be resisted, and its knowledge causes all your Fire spells to pierce through absorption effects. Chaos Bolt gains a high chance to be resisted when used against monsters 4 or more levels above your level.",
 403630,,,
@@ -23716,9 +23713,7 @@ Serpent Sting - Instantly deals $409493s1% of the damage done by your Serpent St
 
 Viper Sting - Instantly restores mana to you equal to $409494s1% of the total amount drained by your Viper Sting.
 
-Scorpid Sting - Attempts to Disarm the target for $409495d. This effect cannot occur more than once per 1 minute.
-
-Wyvern Strike - Resets the cooldown on Wyvern Strike.",
+Scorpid Sting - Attempts to Disarm the target for $409495d. This effect cannot occur more than once per 1 minute.",
 409493,,"You deal $409433s3% weapon damage, refreshing the current Sting on your target and triggering an effect:
 
 Serpent Sting - Instantly deals $409493s1% of the damage done by your Serpent Sting.
@@ -23754,11 +23749,11 @@ Scorpid Sting - Attempts to Disarm the target for $409495d. This effect cannot o
 409532,Rank 1,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $13812s1 Fire damage and $13812o2 additional Fire damage over $13812d to all within $13812a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
 409534,Rank 2,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $14314s1 Fire damage and $14314o2 additional Fire damage over $14314d to all within $14314a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
 409535,Rank 3,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $14315s1 Fire damage and $14315o2 additional Fire damage over $14315d to all within $14315a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
-409541,,"Your Traps can now be placed at any location within $409535r yards, and can be placed while you are in combat. Additionally, your Fire-based and Frost-based traps now have separate shared cooldowns.",
+409541,,"Your Traps can now be placed at any location within $409535r yards. Additionally, your Fire-based and Frost-based traps now have separate shared cooldowns.",
 409552,,"You fire an explosive charge into the enemy target, dealing ${$RAP*0.039+$m1/100*$<damagepower>}-${$RAP*0.039+$M1/100*$<damagepower>} Fire damage to all enemies within $409554a1 yards. The charge will deal damage again every second for an additional $d.",Taking $w1 Fire damage every second.
 409554,,"You fire an explosive charge into the enemy target, dealing ${$RAP*0.14+$m1}-${$RAP*0.14+$M1} Fire damage. The charge will blast the target every second for an additional $d. Cooldown shared with Arcane Shot.",Taking Fire damage every second.
-409580,,"The hunter invokes the heart of a lion, increasing total stats by $409583s1% for all nearby allies, and increasing total stats for the Hunter by an additional $409580s1%.",Increases Hunter's stats by $s1%.
-409583,,"The hunter invokes the heart of a lion, increasing total stats by $409583s1% for all nearby allies, and increasing total stats for the Hunter by an additional $409580s1%.",Increases stats by $s1%.
+409580,,"The hunter invokes the heart of a lion, increasing total stats by $409583s1% and Attack Power by $409583s2 for all nearby allies, and increasing total stats for the Hunter by an additional $409580s1%.",Increases Hunter's stats by $s1%.
+409583,,"The hunter invokes the heart of a lion, increasing total stats by $409583s1% for all nearby allies, and increasing total stats for the Hunter by an additional $409580s1%.",Increases stats by $s1% and Attack Power by $s2.
 409593,,"You attempt to finish off a wounded target, firing a ranged attack dealing $s2% weapon damage plus ${$m1/100*$m2/100*$<damagepower>}. Kill Shot has no minimum range. Kill Shot's cooldown is reset if used on an enemy that has 20% or less health.",
 409687,,Increases the damage done by your offhand weapon by $s1% and causes your Raptor Strike to strike with both weapons when you are dual-wielding.,
 409691,Rank 1,A strong attack that increases melee damage by $s1.,
@@ -24415,7 +24410,7 @@ Healing spells reduced by $s2%."
 415073,Rank 6,Causes $s1 Holy damage to an enemy target and has $s2% chance to crit against Demons and Undead.,
 415076,,Exorcism can now be cast on any target and has $415068s2% increased critical strike chance against Undead and Demons.,
 415093,,,
-415096,,"Causes you Chain heal effectiveness to only reduce by $s1% per jump, and Chain Lightning effectiveness to only reduce by $s2% per jump. Each also jumps to $s3 additional target.
+415096,,"Causes your Chain heal effectiveness to only reduce by $s1% per jump, and Chain Lightning effectiveness to only reduce by $s2% per jump. Each also jumps to $s3 additional target.
 ",
 415100,,"Each time Flame Shock deals damage, it has a $h% chance to reset the cooldown on Lava Burst and Chain Lightning and make the next Lava Burst, Chain Heal, or Chain Lightning within $415105d instant. Additionally, every $440285t sec you gain mana equal to $s2% of your Intellect.
 ",
@@ -24434,7 +24429,7 @@ Decreases damage taken by $s3%."
 415292,,"Heals ${$m1/100*$<healpower>*4} over $d sec.
 
 ",Heals $w1 every $t1 sec.
-415320,,"You and your pet deal simultaneous instant $s2% melee damage. Afterward, your Mongoose Bite and Raptor Strike deal $s3% increased damage for $d, stacking up to $u times. Raptor Strike has a $s4% chance to reset the cooldown on Flanking Strike.",Mongoose Bite and Raptor Strike damage increased by $s3%.
+415320,,"You and your pet deal simultaneous instant $s2% melee damage. Afterward, you deal $s3% increased damage for $d, stacking up to $u times. Your pet's Basic attacks have a $s4% chance to reset the cooldown on Flanking Strike.",All damage increased by $s3%.
 415326,,"You and your pet deal simultaneous instant $s2% melee damage. Afterward, your Mongoose Bite and Raptor Strike deal $s3% increased damage for $d, stacking up to $u times. Raptor Strike has a $s4% chance to reset the cooldown on Flanking Strike.",
 415327,,,
 415335,Rank 1,A strong attack that increases melee damage by $s1.,
@@ -24452,7 +24447,7 @@ Decreases damage taken by $s3%."
 415372,,,
 415399,,"Your Shot abilities gain $415401s1% increased critical strike chance while you have not moved for the last $s1 sec, stacking every sec up to $415401u times. At $415401u stacks, your Aimed Shot becomes instant. While moving, you will lose 1 stack per sec.",
 415401,,,Critical strike chance with Shot abilities increased by $s1%.$?$w=10[ Your Aimed Shot is instant.][]
-415405,,"Reduces the cooldown on Rapid Fire by $s1%, and your next Shot ability within $415407d after killing a target worth experience or honor deals $415407s2% increased damage.",
+415405,,"Reduces the cooldown on Rapid Fire by $s1%, Rapid Fire now also grants $s3% increased melee attack speed, and your next Shot ability within $415407d after killing a target worth experience or honor deals $415407s2% increased damage.",
 415407,,,Next Shot ability deals $s1% increased damage.
 415413,,"Each time one of your traps is triggered, your next Shot (except Scatter Shot) ability within $415414d costs no mana and does not incur a cooldown.",
 415414,,,Next Shot ability costs no mana and incurs no cooldown.
@@ -25526,8 +25521,8 @@ $@spelldesc425589",
 
 $@spellicon425609
 $@spelldesc425609",
-425711,,A sweeping attack that strikes all enemies in front of you for $s2% weapon damage.,
-425713,,Your critical hits with Shot abilities cause your pet's next 2 special attacks to critically hit.,
+425711,,A sweeping attack that strikes all enemies in front of you with your melee weapons for $s2% weapon damage. Your primary target takes $s3% increased damage.,
+425713,,Your critical hits with Shot and Strike abilities and with Mongoose Bite cause your pet's next 2 special attacks to critically hit.,
 425714,,Your critical hits with Shot abilities cause your pet's next 2 special attacks to critically hit.,Pet special abilities guaranteed to be critical strikes.
 425718,,Your critical hits with Shot abilities cause your pet's next 2 special attacks to critically hit.,Pet special abilities guaranteed to be critical strikes.
 425728,Rank 1,"Stings the target, causing $o1 Nature damage over $d.  Only one Sting per Hunter can be active on any one target.",Causes $s1 Nature damage every $t1 seconds.
@@ -25667,7 +25662,9 @@ $@spelldesc426065",
 426303,,Increases all damage done by $s1%.,Increases all damage done by $s1%.
 426311,,Increases all Fire and Shadow damage done by $s1%.,Increases all Fire and Shadow damage done by $s1%.
 426316,,Your critical strikes with Fire and Shadow spells increase your Fire and Shadow damage done by $426311s1% for $426311d.,
-426320,,Targets in a cone in front of the caster take ${$m1*$<power>/100} Shadow damage and an additional ${$426325m1*4*$<power>/100} Fire damage over $426325d. This effect can be consumed with Conflagrate.,
+426320,,"Burns the enemy for ${$m1*$<power>/100*$<mult>} Shadowflame damage and then an additional ${$m2*5*$<power>/100} Shadowflame damage over $d.
+
+Shadowflame triggers and benefits from all effects that modify or interact with Immolate, or with Affliction, Destruction, Fire, or Shadow spells, but only one of Immolate, Unstable Affliction, or Shadowflame per Warlock can be active on any target.",
 426325,,,$w1 Fire damage every $t1 seconds.
 426331,,,
 426336,,,
@@ -25866,7 +25863,7 @@ These values are increased by each living Blade Master in the Far Seer's army, e
 427625,,,Deals $w1 Nature damage every $t1 sec.
 427711,,,
 427712,,"Periodic damage from your Corruption, Unstable Affliction, Curse of Agony, Immolate, Curse of Doom, and Siphon Life abilities can now be critical strikes.",
-427713,,Your Conflagrate ability also grants $427714s1% spellcasting haste for $427714d.,
+427713,,Your Conflagrate ability also grants $427714s1% spellcasting haste for $427714d and no longer consumes Immolate.,
 427714,,,Spellcasting haste increased by $s1%.
 427715,,,
 427717,,"Shadow energy slowly destroys the target, causing ${$m1*6*$<power>/100} damage over $d. In addition, if the Unstable Affliction is dispelled it will cause ${$m1*9*$<power>/100} damage to the dispeller and silence them for $427719d. Only one Unstable Affliction or Immolate per Warlock can be active on any one target.","$w1 Shadow damage every $t1 sec.  If dispelled, will cause ${$w1*9} damage to the dispeller and silence them for $427719d."
@@ -25969,7 +25966,7 @@ $@spellicon428861
 $@spelldesc428861",
 428865,,,Location of recent Blink recorded.
 428872,,,
-428878,,"Unleash a reality-distorting burst of raw magic at your enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} Spellfire damage.  Each time you cast Balefire Bolt, the damage of your next Balefire Bolt within $d will be increased by $s3% and your Spirit will be decreased by $s2% for $d, both stacking up to $u times. If your Spirit reaches 0 as consequence, you will immediately die. This spell will be checked against the lower of the target's Arcane and Fire resists.
+428878,,"Unleash a reality-distorting burst of raw magic at your enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} Chimeric damage.  Each time you cast Balefire Bolt, the damage of your next Balefire Bolt within $d will be increased by $s3% and your Spirit will be decreased by $s2% for $d, both stacking up to $u times. If your Spirit reaches 0 as consequence, you will immediately die. This spell will be checked against the lower of the target's Arcane, Fire, and Frost resists.
 ",Increases damage dealt by Balefire Bolt by $s3% but decreases Spirit by $s2%. Reaching 0 Spirit is fatal.
 428885,,Launches an orb of temporal energy which slowly moves forward and every $428888t1 sec grants all nearby party members a shield absorbing ${$428895m1*$<power>/100} damage for $428895d. This shield accumulates additional value if party members remain near the orb.,
 428888,,,
@@ -28916,7 +28913,9 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 456692,,,
 456694,,,
 456695,,,
+456740,,,
 456881,,Your presence is tolerated by the Horde. For now.,
+456937,,Combine the collected Torn Spell Notes into a scroll that will teach a new Engraving spell.,
 457010,,Teleport player to the Epoch Ender.,Teleport player to the Epoch Ender.
 457012,,Coat in ichor.,
 457021,,???,
@@ -28927,6 +28926,7 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 457323,,Increases your critical strike chance with spells and attacks by $s1%.,
 457324,,"While tracking a creature type, you deal $s1% increased damage to that creature type.",
 457325,,Mind Blast critical strikes reduce the duration of your next Mind Flay by $456549s1% while increasing its total damage by $456491s3%.,
+457326,,,Hexed.
 457329,,"Feint also grants Avoidance for $457331d, reducing all damage taken from area of effect attacks from non-players by $457331s1%.",
 457331,,,Reduces all damage taken by $s1% from area of effect attacks made by enemies that are not players or player-controlled pets.
 457339,,Increases the critical strike damage bonus of your Poisons by $s1%.,
@@ -28949,6 +28949,7 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 ",
 457530,,Increases your critical strike chance with spells and attacks by $s1%.,
 457532,,Your Flurry talent grants an additional $s1% increase to your attack speed.,
+457534,,,Weakened from frozen state. Will succumb in $d.
 457540,,"Increases your attack speed by $16280s1% for your next 3 swings after you parry, dodge, or block.",
 457541,,Your parries and dodges also activate your Shield Mastery rune ability.,
 457544,,Your Stoneskin Totem also reduces Physical damage taken by $s1% and your Windwall Totem also reduces Magical damage taken by $s1%.,
@@ -28956,6 +28957,10 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 457549,,Increases your critical strike chance with spells and attacks by $s1%.,
 457553,,"Your Nightfall talent has a $s1% increased chance to trigger. Your Immolate periodic damage has a $h% chance to grant Fire Trance, reducing the cast time of your next Incinerate or Immolate by $457558s1%.",
 457558,,,Your next Immolate or Incinerate becomes an instant cast spell.
+457559,,,
+457560,,,
+457561,,,
+457563,,,
 457569,,"Banishes the target, preventing all action but making it invulnerable for up to $d.  Only one target can be banished at a time.  Only works on Demons and Elementals.","Invulnerable, but unable to act."
 457571,,"Banish is now instant cast, and can be cast on yourself while you are a Demon. You cannot Banish yourself while you have Forbearance, and doing so will give you Forbearance for $25771d.",
 457572,,"Each time you take damage, you and your pet gain mana equal to the damage taken, up to a maximum of $s1 mana per event. Can only occur once every few seconds.",
@@ -29009,20 +29014,17 @@ Damage done increased by $s2%"
 458389,,,
 458390,,,
 458392,,,
-458393,,"Mongoose Bite now activates when an enemy dodges your attack, and Mongoose Bite deals additional damage equal to $s2% of your Attack Power.",
+458393,,"Mongoose Bite now has a $s3% chance to activate on each of your melee attacks, a 100% chance when an enemy dodges. This chance accumulates, with the chance rising by $s3% from each subsequent attack if it does not reset. Mongoose Bite also deals additional damage equal to $s2% of your Attack Power.",
 458399,,,
 458403,,,Chance to hit with all attacks increased by $s1%.
 458407,,,Stunned.
-458436,Rank 1,"A stinging strike that deals $s2% weapon damage and poisons the target with a Sting for ${$m3/100*6*$AP} Nature damage over $d. Only one Sting per Hunter can be active on the target at a time.
-",$w3 Nature damage every $t3 seconds.
+458436,Rank 1,A vicious strike that deals $s2% weapon damage and causes the target to Bleed for ${$m3/100*8*$AP} Physical damage over $d.,$w3 Bleed damage every $t3 seconds.
 458454,,Offer the echo.,
-458479,Rank 1,"Replaces your Wyvern Sting ability with Wyvern Strike, a stinging strike that deals $458436s2% weapon damage and poisons the target with a Sting for Nature damage over time.
+458479,Rank 1,"Replaces your Wyvern Sting ability with Wyvern Strike, a vicious strike that deals $458436s2% weapon damage and causes the target to Bleed for damage over time.
 
 Wyvern Strike requires you to have the Wyvern Sting talent, and replaces the Wyvern Sting abilities found in the Survival spellbook.",
-458481,Rank 2,"A stinging strike that deals $s2% weapon damage and poisons the target with a Sting for ${$m3/100*8*$AP} Nature damage over $d. Only one Sting per Hunter can be active on the target at a time.
-",$w3 Nature damage every $t3 seconds.
-458482,Rank 3,"A stinging strike that deals $s2% weapon damage and poisons the target with a Sting for ${$m3/100*10*$AP} Nature damage over $d. Only one Sting per Hunter can be active on the target at a time.
-",$w3 Nature damage every $t3 seconds.
+458481,Rank 2,A vicious strike that deals $s2% weapon damage and causes the target to Bleed for ${$m3/100*8*$AP} Physical damage over $d.,$w3 Bleed damage every $t3 seconds.
+458482,Rank 3,A vicious strike that deals $s2% weapon damage and causes the target to Bleed for ${$m3/100*8*$AP} Physical damage over $d.,$w3 Bleed damage every $t3 seconds.
 458488,,,
 458491,,,
 458590,,,The end of an epoch is nigh!
@@ -29248,8 +29250,13 @@ $@spelldesc19280",
 $@spellicon19266
 $@spelldesc19266",
 459736,,Increases Stamina by $s1 for $d and gets you drunk to boot!,Stamina increased by $s1.
+459837,,,Offer yourself as a willing sacrifice to the Shadows.
+459845,,,Offer yourself as a willing sacrifice to the Shadows.
+460001,,,
 460171,,,Attack Power increased by $w1.
+460195,,,
 460200,,,Spell damage increased by $w1.
+460201,,Summons $s1 $lVoidwalker:Voidwalkers; to aid the caster in battle for $d.,
 460205,,,
 460228,,Decreases your effective stealth level by 2.,
 460229,,Increases the block value of your shield by $s1.,
@@ -29292,6 +29299,8 @@ $@spelldesc19266",
 460900,,The target becomes a Beacon of Light to all targets within a 40 yard radius.  Any heals you cast on those targets will also heal the Beacon for $53563s1% of the amount healed.  Only one target can be the Beacon of Light at a time. Lasts $53563d.,
 460906,,"The Felguard's damaging melee attacks cause a demonic frenzy, increasing attack power by $460907s1% for $460907d.  This effect can stack up to $460907u times.",
 460907,,,Attack power increased by $s1%.
+460923,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
+460928,,,
 460930,,,
 460933,,..,
 460939,,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.
@@ -29348,6 +29357,7 @@ Periodically inflicting Fire damage to nearby enemies."
 461158,,,
 461163,,,
 461164,,2% chance on ranged hit to gain 1 extra attack.,
+461165,,,
 461187,,,
 461188,,,
 461189,,"Tosses a spear of flame, inflicting $s1 Fire damage to an enemy, as well as scorching any other enemies in the vicinity of the target.",
@@ -29510,10 +29520,156 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461687,,,
 461688,,Transforms Thunderstrike into Shadowstrike.,
 461689,,Transforms Shadowstrike into Thunderstrike.,
+461690,,,
+461691,,Teaches you how to craft a Shifting Cloak.,
+461692,,,
+461693,,Teaches you how to craft a Shifting Cloak.,
+461694,Rank 1,When struck in combat inflicts $s1 Fire damage to the attacker.,
+461695,,Blasts a target for $s1 Fire damage.,
+461696,Rank 1,Restores $s1 health per 5 sec.,Restores $s1 health per 5 sec.
+461697,,Increases damage done by magical spells and effects by up to $s1.,
+461698,,Your spell casts have a chance to summon Servants of the Scale or Flame.,
+461699,Rank 1,,
+461700,,Restores $461699s1 mana or 20 rage when you kill a target that gives experience; this effect cannot occur more than once every 10 seconds.,
+461701,,"Your death destabilizes The Molten Core, causing it to erupt dealing $s1 Fire damage to nearby enemies.",A Living Bomb.
+461702,,Inflicts $s1 Fire damage to nearby enemies.,
+461706,,,
+461707,,Teaches you how to craft Swift Flight Bracers.,
+461708,,,
+461709,,Teaches you how to sew a Mooncloth Robe.,
+461710,,,
+461711,,Teaches you how to make a Fiery Core Sharpshooter Rifle.,
+461712,,,
+461713,,Teaches you how to make a Hammer of the Titans.,
+461714,,,
+461715,,Teaches you how to make Desecration.,
+461716,,,
+461717,,Teaches you how to make Heartseeker.,
+461718,,,
+461719,,Teaches you how to make Tranquility.,
+461720,,,
+461721,,Teaches you how to craft a Green Dragonscale Breastplate.,
+461722,,,
+461723,,Teaches you how to craft Devilcore Gauntlets.,
+461724,,,
+461725,,Teaches you how to craft Devilcore Leggings.,
+461727,,,
+461728,,Teaches you how to sew a Leather-Reinforced Runecloth Bag.,
+461730,,,
+461731,,Teaches you how to make a Frostguard.,
+461733,,,
+461734,,Teaches you how to make an Enchanted Battlehammer.,
+461735,,,
+461736,,Teaches you how to make Invincible Mail.,
+461737,,,
+461738,,Teaches you how to make Tempest Gauntlets.,
+461739,,,
+461740,,Teaches you how to make a Warcrest of the Great Chief.,
+461743,,,
+461744,,Teaches you how to make a Sageblade of the Archmagus.,
+461747,,,
+461748,,Teaches you how to sew a Mooncloth Vest.,
+461750,,,
+461751,,Teaches you how to sew a Mooncloth Circlet.,
+461752,,,
+461753,,Teaches you how to sew Mooncloth Leggings.,
+461754,,,
+461755,,Teaches you how to craft a Girdle of Insight.,
+461764,,Offer the echo.,
+461765,,Offer the echo.,
+461767,,Offer the echo.,
+461769,,Offer the echo.,
+461770,,Offer the echo.,
+461771,,Offer the echo.,
+461772,,Offer the echo.,
 461810,Rank 6,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461826,Rank 5,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461827,Rank 4,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461828,Rank 3,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461829,Rank 2,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461830,Rank 1,Blasts nearby enemies increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
+461833,,,
+461839,,,
+461841,,,
+461862,,,"Unable to move, attack, or cast spells."
+461863,,,
+461896,,Blasts the enemy for $s1 Fire damage.,
+461900,,,
+461902,,,
+461903,,,
+461905,,,
+461906,,,
+461951,,Increases healing done by spells and effects by up to $s1.,
+461953,,Increases Holy spell critical strike chance by $s1%.,
+461956,,Increases damage done by Shadow spells and effects by up to $s1.,
+461961,,Calls forth Benediction.,
+461962,,Calls forth Anathema.,
 461966,,Afflicts your target with Shadow energy that causes all party members to be healed for $s1% of any Shadow spell damage you deal for $d.,$s1% of Shadow spell damage caused by casting priest heals the priest's group.
+461985,,Grants an extra attack on your next swing.,
+461990,,1% chance on a melee hit to call forth the spirit of Eskhandar to protect you in battle for $22649d.,
+461992,,,
+462050,,,
+462059,,,
+462134,,,
+462149,,Increases run speed by $s1% for $d1.,Increases run speed by $s1%.
+462178,,Reduces an enemy's Strength by $s1 and its Stamina by $s2 for $d.,"Strength reduced by $s1.
+Stamina reduced by $s2."
+462214,,Your pet's next attack is guaranteed to critically strike if that attack is capable of striking critically.,Next attack is a guaranteed critical.
+462221,,Steals $s1 life from target enemy.,
+462222,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462227,,,
+462228,,,
+462229,,When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds. ,
+462230,,,Attack Power increased by $w1.
+462238,,Exhausted.,Exhausted.
+462250,,"Curses an enemy with agony, inflicting Shadow damage every $t1 sec. over $d. Only one curse per warlock can be active on any one target.",Shadow damage inflicted every $t1 sec.
+462256,,Warlord,Warlord
+462257,,Warlord,Warlord
+462259,,"Stomps the ground, stunning nearby enemies for $d.",Stunned.
+462272,,,$s1 Fire damage and $s2 mana burned every $t1 sec.
+462275,,,
+462276,,,
+462277,,,
+462278,,,
+462279,,,
+462280,,,
+462281,,Teaches you how to sew an Embroidered Belt of the Archmage.,
+462282,,,
+462286,Rank 1,,Target takes $s1 Nature damage every $t1 seconds and $s2% increased non-Physical damage.
+462287,,,
+462289,,,
+462307,,,
+462316,,,
+462331,,,
+462337,,,
+462344,,,
+462358,,Summons a cannon that will fire at enemies in front of it that are attacking you.,
+462359,,,
+462361,,Hurls a fiery ball that causes $s1 fire damage to the enemy.,
+462362,,,
+462370,,,(DNT) Healing and damage dealt increased by $s1%.
+462379,,Oops!,
+462381,,,
+462385,,Chance to bathe your melee target in flames for $27655s1 Fire damage.,
+462386,,Flame Lash for $s1 Fire damage.,
+462387,,,
+462388,,,
+462395,,"Inflicts $o2 Fire damage to enemies in a cone in front of the caster, stunning them for $d.","Stunned.
+$o2 Fire damage inflicted over $d."
+462398,,Inflicts Fire damage to nearby enemies.,
+462400,,,Fire damage taken is increased by $s1.
+462401,,,
+462402,,"Throws a bomb at an enemy. After $t1 sec., the bomb explodes, inflicting $20476s1 Fire damage to the target and its nearby allies.",$20476s1 Fire damage inflicted to nearby allies after $t1 sec.
+462411,,,
+462422,,,
+462423,,,
+462467,,Recover mana.,Drawing in energy.
+462498,,"Marks an enemy with a tracking device. After $d., $9615s1 Lost One Rift Travelers will find and attack the enemy. Lost One Rift Travelers are unstable at the subatomic level and so cannot maintain physical form past $9615d.",Rift Travelers are locking onto your position. They will find you after $d.
+462504,,,
+462509,,,
+462653,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
+462654,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
+462656,Rank 3,Increases your critical strike chance with ranged weapons by $s1%.,
+462657,Rank 2,Increases your critical strike chance with ranged weapons by $s1%.,
+462658,Rank 1,Increases your critical strike chance with ranged weapons by $s1%.,
+462659,,,
