@@ -56550,7 +56550,10 @@ var gear = {
       "mindmg": 52,
       "maxdmg": 96,
       "p": "inv_misc_monsterclaw_04",
-      "agi": 7
+      "agi": 7,
+      "proc": {
+        "spell": "Eskhandar"
+      }
     },
     {
       "id": 228382,
@@ -56577,7 +56580,10 @@ var gear = {
       "speed": 2.8,
       "mindmg": 94,
       "maxdmg": 175,
-      "p": "inv_hammer_05"
+      "p": "inv_hammer_05",
+      "proc": {
+        "spell": "Empyrean"
+      }
     },
     {
       "id": 228535,
