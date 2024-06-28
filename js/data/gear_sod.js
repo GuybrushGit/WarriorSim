@@ -5127,6 +5127,11 @@ var gear = {
       "sta": 13,
       "resist": {
         "fire": 12
+      },
+      "proc": {
+        "magic": true,
+        "dmg": 2,
+        "chance": 100
       }
     },
     {
@@ -45228,23 +45233,6 @@ var gear = {
       "resist": {
         "fire": 20
       }
-    },
-    {
-      "id": 228576,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Smolderweb's Eye",
-      "p": "inv_misc_gem_pearl_01",
-      "sta": 13,
-      "proc": {
-        "magic": true,
-        "tick": 20,
-        "interval": "2000",
-        "duration": "20000"
-      }
     }
   ],
   "trinket2": [
@@ -45600,23 +45588,6 @@ var gear = {
       "p": "ability_warlock_moltencore",
       "resist": {
         "fire": 20
-      }
-    },
-    {
-      "id": 228576,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Smolderweb's Eye",
-      "p": "inv_misc_gem_pearl_01",
-      "sta": 13,
-      "proc": {
-        "magic": true,
-        "tick": 20,
-        "interval": "2000",
-        "duration": "20000"
       }
     }
   ],
@@ -75296,6 +75267,10 @@ var gear = {
       "maxdmg": 310,
       "p": "inv_sword_12",
       "sta": 16,
+      "proc": {
+        "spell": "Bonereaver",
+        "ppm": 2
+      },
       "crit": 1
     },
     {

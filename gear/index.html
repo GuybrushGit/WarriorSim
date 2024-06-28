@@ -145,7 +145,7 @@
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 12631 && item.ID != 227865 && item.ID != 7284) {
+                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 228354 && item.ID != 12631 && item.ID != 227865 && item.ID != 7284) {
                   //console.log("check: " + obj.name);
                 }
                 else {
@@ -275,8 +275,8 @@
           if (obj.id == 228089) include = true;
           if (obj.id == 228122) include = true;
           if (obj.id == 228147) include = true;
-          
-          
+
+
           
           if (obj.id == 16336) exclude = true;
           if (obj.id == 17780) exclude = true;
@@ -299,6 +299,7 @@
           if (obj.id == 20177) exclude = true;
           if (obj.id == 20179) exclude = true;
           if (obj.id == 22736) exclude = true;
+          if (obj.id == 228576) exclude = true;
           if (obj.id == 21244) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21268) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21244) exclude = true; // REMOVE WHEN AQ
@@ -519,6 +520,7 @@
         {i:12590,s:"Felstriker"},
         {i:13204,s:"Rivenspike"},
         {i:17076,s:"Bonereaver"},
+        {i:228461,s:"Bonereaver"},
         {i:647,s:"Destiny"},
         {i:19334,s:"Untamed"},
         {i:9465,s:"Vibroblade"},
@@ -564,11 +566,13 @@
         {i:17182,p:0.7},
         {i:227683,p:0.7},
         {i:17076,p:2},
+        {i:228461,p:2},
         {i:11815,c:2},
         {i:227989,c:2},
         {i:19289,c:2},
         {i:22321,c:2},
         {i:17111,c:100},
+        {i:228354,c:100},
         {i:12631,c:100},
         {i:7284,c:5},
         {i:19968,c:100},
