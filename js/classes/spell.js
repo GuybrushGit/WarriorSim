@@ -318,7 +318,7 @@ class SunderArmor extends Spell {
         if (!this.devastate) return 0;
         let mod = 1.5 * (1 + 0.1 * (this.stacks - 1));
         let dmg = (this.player.mh.mindmg + this.player.mh.maxdmg) / 2;
-        let dps = (dmg  + (this.player.stats.ap / 14) * this.player.mh.speed)  / this.player.mh.speed;
+        let dps = (dmg  + (this.player.stats.ap / 14) * this.player.mh.speed) / this.player.mh.speed;
         return dps * mod * this.player.stats.dmgmod;
     }
     canUse() {
@@ -1736,7 +1736,7 @@ class Rend extends Aura {
         while (step >= this.nexttick && this.stacks) {
             let basedmg = this.value1;
             if (this.player.bloodfrenzy)
-                basedmg += this.value1 + ~~(this.player.stats.ap * 0.03);
+                basedmg += this.value1 + ~~(this.player.stats.ap * 0.03 * this.value2);
             let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
             this.idmg += dmg / this.value2;
             this.totaldmg +=dmg / this.value2;
