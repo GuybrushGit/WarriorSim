@@ -833,6 +833,8 @@ class Player {
             this.stats.haste *= (1 + this.auras.singleminded.mult_stats.haste / 100);
         if (this.auras.magmadarsreturn && this.auras.magmadarsreturn.timer)
             this.stats.haste *= (1 + this.auras.magmadarsreturn.mult_stats.haste / 100);
+        if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
+            this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
     }
     updateBonusDmg() {
         let bonus = 0;
@@ -1036,6 +1038,7 @@ class Player {
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.step();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.step();
+        if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1097,6 +1100,7 @@ class Player {
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.end();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.end();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.end();
+        if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();

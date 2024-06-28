@@ -15,6 +15,8 @@ class Weapon {
         this.name = item.name;
         this.mindmg = item.mindmg;
         this.maxdmg = item.maxdmg;
+        this.basemindmg = item.mindmg;
+        this.basemaxdmg = item.maxdmg;
         this.type = item.type;
         this.modifier = offhand ? 0.5 * (1 + player.talents.offmod) * (1 + player.talents.onemod) : 1 + player.talents.onemod;
         if (twohand) this.modifier = 1 + player.talents.twomod;

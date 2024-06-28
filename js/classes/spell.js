@@ -2618,3 +2618,48 @@ class MagmadarsReturn extends Aura {
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
 }
+
+class JujuFlurry extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Juju Flurry');
+        this.duration = 20;
+        this.cooldown = 60;
+        this.mult_stats = { haste: 3 };
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.moddmg(1.03);
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return !this.timer && step >= this.usestep;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.usestep = this.starttimer + (this.cooldown * 1000);
+            this.moddmg(1);
+            this.player.updateHaste();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.moddmg(1);
+    }
+    moddmg(mod) {
+        this.player.mh.mindmg = this.player.mh.basemindmg / mod;
+        this.player.mh.maxdmg = this.player.mh.basemaxdmg / mod;
+        if (this.player.oh) {
+            this.player.oh.mindmg = this.player.oh.basemindmg / mod;
+            this.player.oh.maxdmg = this.player.oh.basemaxdmg / mod;
+        }
+    }
+}
