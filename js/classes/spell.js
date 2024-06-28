@@ -1734,14 +1734,10 @@ class Rend extends Aura {
     }
     step() {
         while (step >= this.nexttick && this.stacks) {
-            let basedmg = this.value1;
-            if (this.player.bloodfrenzy)
-                basedmg += this.value1 + ~~(this.player.stats.ap * 0.03 * this.value2);
-            let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
-            this.idmg += dmg / this.value2;
-            this.totaldmg +=dmg / this.value2;
+            this.idmg += this.tickdmg;
+            this.totaldmg += this.tickdmg;
 
-            /* start-log */ if (log) this.player.log(`${this.name} tick for ${(dmg / this.value2).toFixed(2)}`); /* end-log */
+            /* start-log */ if (log) this.player.log(`${this.name} tick for ${this.tickdmg.toFixed(2)}`); /* end-log */
 
             this.nexttick += 3000;
             this.stacks--;
@@ -1782,6 +1778,13 @@ class Rend extends Aura {
         if (!this.player.isValidStance('battle', true))
             this.player.switch('battle');
         this.player.rage -= this.cost;
+
+        let basedmg = this.value1;
+        if (this.player.bloodfrenzy)
+            basedmg += this.value1 + ~~(this.player.stats.ap * 0.03 * this.value2);
+       let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
+       this.tickdmg = dmg / this.value2;
+
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
