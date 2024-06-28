@@ -836,6 +836,23 @@ class Player {
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
             this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
     }
+    updateHasteDamage() {
+        // MOD_ATTACKSPEED works differently than regular haste, lowers dmg
+        let mod = 1;
+        if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
+            mod *= (1 + this.auras.blisteringragehammer.mult_stats.haste / 100);
+        if (this.auras.spicy && this.auras.spicy.timer)
+            mod *= (1 + this.auras.spicy.mult_stats.haste / 100);
+        if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
+            mod *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
+
+        this.mh.mindmg = this.mh.basemindmg / mod;
+        this.mh.maxdmg = this.mh.basemaxdmg / mod;
+        if (this.oh) {
+            this.oh.mindmg = this.oh.basemindmg / mod;
+            this.oh.maxdmg = this.oh.basemaxdmg / mod;
+        }
+    }
     updateBonusDmg() {
         let bonus = 0;
         let taken = 0;

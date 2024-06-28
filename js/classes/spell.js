@@ -1941,6 +1941,7 @@ class BlisteringRagehammer extends Aura {
         this.starttimer = step;
         this.player.updateBonusDmg();
         this.player.updateHaste();
+        this.player.updateHasteDamage();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
@@ -1950,6 +1951,7 @@ class BlisteringRagehammer extends Aura {
             this.firstuse = false;
             this.player.updateBonusDmg();
             this.player.updateHaste();
+            this.player.updateHasteDamage();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
@@ -1958,6 +1960,7 @@ class BlisteringRagehammer extends Aura {
         this.timer = 0;
         this.stacks = 0;
         this.player.updateBonusDmg();
+        this.player.updateHasteDamage();
     }
 }
 
@@ -2126,6 +2129,7 @@ class Spicy extends Aura {
         this.starttimer = step;
         this.firstuse = false;
         this.player.updateHaste();
+        this.player.updateHasteDamage();
         if (!this.player.attackproc1) this.player.attackproc1 = { chance: 500, magicdmg: 7, spicy: true };
         if (!this.player.attackproc2) this.player.attackproc2 = { chance: 500, magicdmg: 7, spicy: true };
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
@@ -2135,6 +2139,7 @@ class Spicy extends Aura {
             this.uptime += (this.timer - this.starttimer);
             this.timer = 0;
             this.player.updateHaste();
+            this.player.updateHasteDamage();
             if (this.player.attackproc1 && this.player.attackproc1.spicy) delete this.player.attackproc1;
             if (this.player.attackproc2 && this.player.attackproc2.spicy) delete this.player.attackproc2;
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
@@ -2144,6 +2149,7 @@ class Spicy extends Aura {
         this.uptime += (step - this.starttimer);
         this.timer = 0;
         this.stacks = 0;
+        this.player.updateHasteDamage();
         if (this.player.attackproc1 && this.player.attackproc1.spicy) delete this.player.attackproc1;
         if (this.player.attackproc2 && this.player.attackproc2.spicy) delete this.player.attackproc2;
     }
@@ -2633,7 +2639,7 @@ class JujuFlurry extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.moddmg(1.03);
+        this.player.updateHasteDamage();
         this.player.updateHaste();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
@@ -2646,7 +2652,7 @@ class JujuFlurry extends Aura {
             this.timer = 0;
             this.firstuse = false;
             this.usestep = this.starttimer + (this.cooldown * 1000);
-            this.moddmg(1);
+            this.player.updateHasteDamage();
             this.player.updateHaste();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
@@ -2655,14 +2661,6 @@ class JujuFlurry extends Aura {
         this.uptime += (step - this.starttimer);
         this.timer = 0;
         this.stacks = 0;
-        this.moddmg(1);
-    }
-    moddmg(mod) {
-        this.player.mh.mindmg = this.player.mh.basemindmg / mod;
-        this.player.mh.maxdmg = this.player.mh.basemaxdmg / mod;
-        if (this.player.oh) {
-            this.player.oh.mindmg = this.player.oh.basemindmg / mod;
-            this.player.oh.maxdmg = this.player.oh.basemaxdmg / mod;
-        }
+        this.player.updateHasteDamage();
     }
 }

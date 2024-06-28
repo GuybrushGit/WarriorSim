@@ -1141,7 +1141,7 @@ var enchant = {
 {
   id: 1,
   name: 'The Gladiator',
-  items: [11729,11726,11728,11731,11730],
+  items: [11729,11726,11728,11731,11730,227957,227952,227955,227961,227957],
   bonus: [
      { count: 4, stats: { ap: 10 } },
      { count: 5, stats: { crit: 1 } }
