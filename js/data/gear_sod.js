@@ -3726,7 +3726,7 @@ var gear = {
       "resist": {
         "fire": 15
       },
-      "crit": 3,
+      "crit": 2,
       "ap": 50
     },
     {
@@ -3756,7 +3756,7 @@ var gear = {
       "p": "inv_misc_bandana_01",
       "sta": 12,
       "crit": 1,
-      "hit": 3
+      "hit": 2
     },
     {
       "id": 228540,
@@ -3797,7 +3797,7 @@ var gear = {
       "p": "inv_helmet_01",
       "str": 14,
       "sta": 20,
-      "hit": 3
+      "hit": 2
     },
     {
       "id": 228604,
@@ -3810,7 +3810,7 @@ var gear = {
       "p": "inv_helmet_46",
       "str": 13,
       "sta": 7,
-      "crit": 3
+      "crit": 2
     },
     {
       "id": 215161,
@@ -8501,7 +8501,7 @@ var gear = {
       "i": "61",
       "name": "Truestrike Shoulders",
       "p": "inv_shoulder_10",
-      "hit": 3,
+      "hit": 2,
       "ap": 24
     },
     {
@@ -15439,7 +15439,7 @@ var gear = {
       "p": "inv_chest_chain_17",
       "str": 10,
       "sta": 10,
-      "crit": 3
+      "crit": 2
     },
     {
       "id": 228055,
@@ -15478,7 +15478,7 @@ var gear = {
       "p": "inv_chest_chain_17",
       "agi": 24,
       "sta": 27,
-      "hit": 3
+      "hit": 2
     },
     {
       "id": 228501,
@@ -42758,7 +42758,7 @@ var gear = {
       "p": "inv_jewelry_ring_15",
       "agi": 17,
       "sta": 10,
-      "hit": 3
+      "hit": 2
     },
     {
       "id": 228287,
@@ -44841,7 +44841,7 @@ var gear = {
       "p": "inv_jewelry_ring_15",
       "agi": 17,
       "sta": 10,
-      "hit": 3
+      "hit": 2
     },
     {
       "id": 228287,
@@ -74338,7 +74338,7 @@ var gear = {
       "maxdmg": 214,
       "p": "inv_waepon_bow_zulgrub_d_01",
       "sta": 13,
-      "crit": 3
+      "crit": 2
     },
     {
       "id": 220591,
@@ -74995,7 +74995,7 @@ var gear = {
       "p": "inv_sword_142",
       "str": 12,
       "sta": 11,
-      "crit": 3
+      "crit": 2
     },
     {
       "id": 228108,
@@ -75338,7 +75338,7 @@ var gear = {
       "p": "inv_axe_10",
       "str": 25,
       "sta": 15,
-      "crit": 3
+      "crit": 2
     },
     {
       "id": 228498,

@@ -117,9 +117,9 @@
                   if (e.Effect == 6 && e.EffectAura == 102 && e["EffectMiscValue[0]"] & 256)
                     obj.ap = (obj.ap || 0) + parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 54)
-                    obj.hit = parseInt(e.EffectBasePoints) + 1;
+                    obj.hit = parseInt(e.EffectBasePoints) + parseInt(e.EffectDieSides);
                   if (e.Effect == 6 && e.EffectAura == 52)
-                    obj.crit = parseInt(e.EffectBasePoints) + 1;
+                    obj.crit = parseInt(e.EffectBasePoints) + parseInt(e.EffectDieSides);
                   if (e.Effect == 6 && e.EffectAura == 71)
                     obj.spellcrit = parseInt(e.EffectBasePoints) + 1;
                   if (e.Effect == 6 && e.EffectAura == 30 && e["EffectMiscValue[0]"] != 95 && e["EffectMiscValue[0]"] != 226 && e["EffectMiscValue[0]"] != 393 && e["EffectMiscValue[0]"] != 45 && e["EffectMiscValue[0]"] != 46) {
