@@ -60,13 +60,6 @@ var runes = {
          enable: 402927,
      },
      {
-         id: 403218,
-         name: 'Endless Rage',
-         description: "You generate 25% more Rage from all damage you deal.<br />[ASSUMED NO EFFECT ON REFUNDS]",
-         iconname: 'ability_warrior_endlessrage',
-         ragemod: 1.25,
-     },
-     {
          id: 403195,
          name: 'Devastate',
          description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
@@ -184,6 +177,13 @@ var runes = {
             name: 'Vigilance',
             description: "",
             iconname: 'ability_warrior_vigilance',
+        },
+        {
+            id: 403218,
+            name: 'Endless Rage',
+            description: "You generate 25% more Rage from all damage you deal.<br />[ASSUMED NO EFFECT ON REFUNDS]",
+            iconname: 'ability_warrior_endlessrage',
+            ragemod: 1.25,
         },
     ],
     "back": [

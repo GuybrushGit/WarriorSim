@@ -888,7 +888,7 @@ var enchant = {
    {
       id: 41,
       name: 'Dal\'Rend\'s Arms',
-      items: [12940, 12939],
+      items: [12940, 12939, 228653, 228652],
       bonus: [
          { count: 2, stats: { ap: 50 } }
       ]

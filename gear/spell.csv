@@ -7112,7 +7112,7 @@ Inflicting normal damage plus $3231s1 every $t1 sec to nearby enemies."
 Cannot attack or use spells."
 9439,,,
 9440,,Teaches you how to craft Green Leather Armor.,
-9452,Rank 1,Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $67s1% for $67d.,
+9452,Rank 1,"Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $67s1%$?s462814[, reduce the target's Attack Power by ${$440667m1/-3}, and increase the Paladin's Attack Power by ${$440668m1/3}% for $440667d.][$67d.]",
 9453,Rank 1,Increases your chance to resist Fear and Disorient effects by an additional $s1%.,
 9454,,GM tool to freeze players.,Frozen.
 9455,,Instantly Kills the target.  I hope you feel good about yourself now.....,
@@ -15863,17 +15863,15 @@ Unleashing this Seal's energy will judge an enemy, instantly causing $/2;20966s1
 20924,Rank 5,"Consecrates the land beneath Paladin, doing $o1 Holy damage over $d to enemies who enter the area.",$s1 damage every $t1 $lsecond:seconds;.
 20925,Rank 1,"Increases chance to block by $s1% for $d, and deals $s2 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.$?a456541[][ Each block expends a charge. $n charges.]$?s446847[
 
-Activating Holy Shield also grants you $460171s1 Attack Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
+Activating Holy Shield also grants you $460200s1 Spell Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
 20926,Rank 3,,
 20927,Rank 2,"Increases chance to block by $s1% for $d, and deals $s2 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.  Each block expends a charge.$?a456541[][ Each block expends a charge. $n charges.]$?s446847[
 
-Activating Holy Shield also grants you $460171s1 Attack Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]
-
+Activating Holy Shield also grants you $460200s1 Spell Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]
 ",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
 20928,Rank 3,"Increases chance to block by $s1% for $d, and deals $s2 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.$?a456541[][ Each block expends a charge. $n charges.]$?s446847[
 
-Activating Holy Shield also grants you $460171s1 Attack Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]
-
+Activating Holy Shield also grants you $460200s1 Spell Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]
 ",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
 20929,Rank 2,"Blasts the target with Holy energy, causing $25911s1 Holy damage to an enemy, or $25913s1 healing to an ally.",
 20930,Rank 3,"Blasts the target with Holy energy, causing $25902s1 Holy damage to an enemy, or $25903s1 healing to an ally.",
@@ -19684,12 +19682,12 @@ Slows movement by $s2%."
 26013,,,You left a battleground before it was complete and must wait before entering another one.
 26014,,,
 26015,,,
-26016,Rank 2,Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $26017s1% for $26017d.,
+26016,Rank 2,"Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $26017s1%$?s462814[, reduce the target's Attack Power by ${$440667m1*2/-3}, and increase the Paladin's Attack Power by ${$440668m1*2/3}% for $440667d.][$67d.]",
 26017,Rank 2,,Strength and Agility reduced by $s1%.
 26018,Rank 3,,Strength and Agility reduced by $s1%.
 26019,QASpell,Permantly enchant boots to increase speed by $13889s1%.,
 26020,QASpell,Permanently enchant a cloak to give +$13839s1 Herbalism,
-26021,Rank 3,Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $26018s1% for $26018d.,
+26021,Rank 3,"Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by $26018s1%$?s462814[, reduce the target's Attack Power by ${$440667m1*-1}, and increase the Paladin's Attack Power by ${$440668m1}% for $440667d.][$67d.]",
 26022,Rank 1,Increases movement and mounted movement speed by $s1%.  This does not stack with other movement speed increasing effects.,
 26023,Rank 2,Increases movement and mounted movement speed by $s1%.  This does not stack with other movement speed increasing effects.,
 26025,,Inflicts Physical damage to an enemy every $t2 sec. for $d.,$s2 damage inflicted every $t2 sec.
@@ -23856,10 +23854,10 @@ $@spelldesc407669",
 
 $@spellicon407788
 $@spelldesc407788",
-409935,,"Gain the Divine Sacrifice ability:
+409935,,"Gain the Hand of Sacrifice ability:
 
-$@spellicon407804
-$@spelldesc407804",
+$@spellicon462853
+$@spelldesc462853",
 409936,,"Gain the Inspiration Exemplar
  ability:
 
@@ -23983,10 +23981,10 @@ $@spelldesc407624",
 
 $@spellicon407669
 $@spelldesc407669",
-410010,,"Engrave your pants with the Divine Sacrifice rune:
+410010,,"Engrave your pants with the Hand of Sacrifice rune:
 
-$@spellicon407804
-$@spelldesc407804",
+$@spellicon462853
+$@spelldesc462853",
 410011,,"Engrave your pants with the Inspiration Exemplar rune:
 
 $@spellicon407880
@@ -25211,20 +25209,20 @@ Saber Slash benefits from all talents and effects that trigger from or modify Si
 Shiv benefits from all talents and effects that trigger from or modify Sinister Strike.",
 424800,,"Instantly attack with your off-hand weapon with a 100% chance to apply the poison from your off-hand weapon to the target. Slower weapons require more energy. Awards $s2 combo $lpoint:points;.
 ",
-424919,,"Instantly strike with your off-hand weapon for normal off-hand weapon damage and increase your chance to parry by $s2% for $d.  Awards $s3 combo $lpoint:points;.
+424919,,"Instantly strike with your off-hand weapon for normal off-hand weapon damage and increase your chance to parry by $s2% for $d or until you successfully parry. For $462752d after using Main Gauche, Sinister Strike costs $462752s1 less Energy. Awards $s3 combo $lpoint:points;.
 
 Main Gauche benefits from all talents and effects that trigger from or modify Sinister Strike.",Parry chance increased by $s2%.
-424925,,Reduces the Energy cost of your Backstab and Ambush abilities by $s1. $?s400094[Does not apply to Mutilate.][Does not apply to abilities learned from other runes.],
+424925,,"Reduces the Energy cost of your Backstab and Ambush abilities by $s1, and increases the damage they deal to non-player controlled targets by $s2%. $?s400094[Does not apply to Mutilate.][Does not apply to abilities learned from other runes.]",
 424941,,,
 424976,,,
 424979,,"Gain the Saber Slash ability:
 
 $@spellicon424785
 $@spelldesc424785",
-424980,,"Gain the Shiv ability:
+424980,,"Gain the Cutthroat ability:
 
-$@spellicon424799
-$@spelldesc424799",
+$@spellicon462708
+$@spelldesc462708",
 424982,,"Gain the Main Gauche ability:
 
 $@spellicon424919
@@ -25237,10 +25235,10 @@ $@spelldesc424925",
 
 $@spellicon424785
 $@spelldesc424785",
-424988,,"Engrave your gloves with the Shiv rune:
+424988,,"Engrave your gloves with the Cutthroat rune:
 
-$@spellicon424799
-$@spelldesc424799",
+$@spellicon462708
+$@spelldesc462708",
 424990,,"Engrave your gloves with the Main Gauche rune:
 
 $@spellicon424919
@@ -26490,10 +26488,10 @@ $@spelldesc432140",
 432266,,,
 432268,,,
 432271,,"Your Eviscerate and Envenom abilities refresh either your Slice and Dice or your Blade Dance duration to its 5 combo point maximum. If both are active, only the one with shortest remaining duration will be refreshed.",
-432273,,"Whenever you dodge an attack you gain an Unfair Advantage, striking back for $432274s2% of your main hand weapon's damage.  This cannot occur more than once per second.",
+432273,,"Whenever you dodge or parry an attack you gain an Unfair Advantage, striking back for $432274s2% of your main hand weapon's damage and gaining $432274s3 combo $lpoint:points;. This cannot occur more than once per second.",
 432274,,,
 432275,,,Taking $s1% increased damage from the abilities of a Rogue with an active Bleed effect.
-432276,,Your abilities deal $432275s1% increased damage to targets afflicted by one of your Bleed effects.,
+432276,,Your abilities deal $432275s1% increased damage to targets afflicted by one of your Bleed effects. Your Rupture also heals you for $s2% of the damage it deals.,
 432288,,,
 432289,,,
 432290,,"Gain the Focused Attacks ability:
@@ -27644,7 +27642,7 @@ $@spelldesc440569",
 440664,,,
 440666,,"When your Vindication talent is triggered, it also decreases the target's Attack Power by ${$440667m1/-3} per talent point and increases your Strength, Agility, and Attack Power by ${$440668m1/3}% per talent point. Vindication duration increased to $s1 sec.",
 440667,,,Attack Power reduced by $w1.
-440668,,,"Strength, Agility, and Attack Power increased by $w1%."
+440668,,,Attack Power increased by $w1%.
 440672,,"When your Judgement, Crusader Strike, or Divine Storm deals a critical strike, your target will take $s1% additional damage over $61840d.",
 440675,,,Deals Holy damage every $t1 sec.
 440677,,,
@@ -27657,14 +27655,14 @@ $@spelldesc440658",
 
 $@spellicon440658
 $@spelldesc440658",
-440790,,"Engrave your cloak with the Vindicator rune:
+440790,,"Engrave your cloak with the Shock and Awe rune:
 
-$@spellicon440666
-$@spelldesc440666",
-440791,,"Gain the Vindicator ability:
+$@spellicon462834
+$@spelldesc462834",
+440791,,"Gain the Shock and Awe ability:
 
-$@spellicon440666
-$@spelldesc440666",
+$@spellicon462834
+$@spelldesc462834",
 440792,,"Engrave your cloak with the Righteous Vengeance rune:
 
 $@spellicon440672
@@ -28252,7 +28250,7 @@ Defense increased by $s2."
 446386,,Combine the Ace through Eight of Plagues to complete the set.,
 446387,,Combine the Ace through Eight of Wilds to complete the set.,
 446388,,Targets passed through take $s1 Nature damage.,
-446389,,"Chance on spells and attacks to summon a sandstorm that circles you, dealing $s1 Nature damage to targets it passes through.",
+446389,,"Chance on spells and attacks to summon a sandstorm that circles you, dealing $449288s1 Nature damage to targets it passes through.",
 446390,,"Gives the wearer a chance on attack and spell cast to Torment their target, causing them to wander in suffering for $446391d.",
 446391,,Wandering aimlessly for $d.,Tormented.
 446392,,"Spells and attacks sometimes leech $446393s1 health from the target, and apply a stack of Decay. When decay reaches 5 stacks, the target takes $446810s1 damage.",
@@ -28932,7 +28930,7 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 457339,,Increases the critical strike damage bonus of your Poisons by $s1%.,
 457342,,,Your next ability has its energy cost reduced by $s1%.
 457344,,Your finishing moves have a $b1% chance per combo point to make your next ability cost no energy.,
-457349,,"While Just a Flesh Wound and Blade Dance are active, Fan of Knives costs $457351s1% less Energy and generates $s2% increased threat.",
+457349,,"While Just a Flesh Wound and Blade Dance are active, Crimson Tempest, Blunderbuss, and Fan of Knives cost $457351s1  less Energy and generate $457351s2% increased threat.",
 457351,,,
 457437,,Reduces all Magic damage taken by $s1% for $d.,Magic damage taken reduced by $s1%.
 457440,,"Vanish now reduces all Magic damage you take by $457437s1% for its duration, but it no longer grants Stealth or breaks movement impairing effects.",
@@ -29006,7 +29004,7 @@ Damage done increased by $s2%"
 458286,,,
 458287,,Your Consecration now also heals party members within its area for $s1% of Consecration's damage value.,
 458312,Rank 1,"Reduces all damage taken by $s1% for $d.  Once protected, you cannot be targeted by Divine Shield, Divine Protection, or Blessing of Protection again for $25771d.",Damage taken reduced by $s1%.
-458318,,"You can now take actions during Divine Protection and its duration is increased by $s3%, but it only reduces damage you take by $458312s1% instead of making you immune.",
+458318,,"You can now take actions during Divine Protection and its duration is increased by $s3%, but it only reduces damage you take by $458312s1% instead of making you immune. In addition, you gain $s4% more Spell Power from Holy Shield.",
 458321,,,
 458354,,,
 458355,,,
@@ -29667,9 +29665,72 @@ $o2 Fire damage inflicted over $d."
 462498,,"Marks an enemy with a tracking device. After $d., $9615s1 Lost One Rift Travelers will find and attack the enemy. Lost One Rift Travelers are unstable at the subatomic level and so cannot maintain physical form past $9615d.",Rift Travelers are locking onto your position. They will find you after $d.
 462504,,,
 462509,,,
+462516,,,
+462518,,,
+462553,,,
+462569,,,
+462577,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
+462580,,"Hurls a bolt of lightning at an enemy, inflicting Nature damage.",
+462584,,"Inflicts $s1% weapon damage and leaves the target unbalanced, reducing their defense skill by $s2 for $d.",Defense skill reduced by $s2.
+462585,,Calls upon Nature magic to heal an ally.,
+462586,Rank 1,"Inflicts normal damage plus $s2 to an enemy when attacking from stealth, stunning it $d. Awards $s3 combo $lpoint:points;.",Stunned.
+462590,,"Hurls missiles of dark magic, inflicting Shadow damage to nearby enemies.",
+462593,,,
+462623,,"Forms Rhok'delar, Longbow of the Ancient Keepers, when combined with Enchanted Black Dragon Sinew.",
+462627,,,
+462628,,,
+462630,,,
+462634,,,
+462636,,Increases your spell damage by up to 100 and your healing by up to 190 for $d.,"Spell damage increased by up to $s1.
+Healing increased by up to $s2."
 462653,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
 462654,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
 462656,Rank 3,Increases your critical strike chance with ranged weapons by $s1%.,
 462657,Rank 2,Increases your critical strike chance with ranged weapons by $s1%.,
 462658,Rank 1,Increases your critical strike chance with ranged weapons by $s1%.,
 462659,,,
+462664,,Drains $s1 mana from those in the blast radius and does 50% of the mana drained in damage to the target.  Also Silences targets in the blast for $d.,Silenced.
+462665,,"Drains $s1 health from an enemy, transferring it to the caster.",
+462666,,A short-range shot that deals $s1% weapon damage and disorients the target for $d.  Any damage caused will remove the effect.,Disoriented.
+462667,,,Stunned.
+462673,,,
+462675,,Drive into the heart of the brood mother to temper the heated blade.,
+462701,,,
+462707,,,Next Ambush does not require Stealth.
+462708,,"Your Ambush, Backstab, and Garrote abilities no longer require you to be behind your target, and Backstab has a $h% chance to make your next Ambush within $462707d not require you to be in Stealth.",
+462709,Rank 1,"Backstab the target, causing $s2% weapon damage plus 15 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462710,Rank 2,"Backstab the target, causing $s2% weapon damage plus 30 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462711,Rank 3,"Backstab the target, causing $s2% weapon damage plus 48 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462712,Rank 4,"Backstab the target, causing $s2% weapon damage plus 69 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462713,Rank 5,"Backstab the target, causing $s2% weapon damage plus 90 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462714,Rank 6,"Backstab the target, causing $s2% weapon damage plus 135 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462715,Rank 7,"Backstab the target, causing $s2% weapon damage plus 165 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462716,Rank 8,"Backstab the target, causing $s2% weapon damage plus 210 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462717,Rank 9,"Backstab the target, causing $s2% weapon damage plus 225 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462718,Rank 1,"Ambush the target, causing $s2% weapon damage plus 70 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462719,Rank 2,"Ambush the target, causing $s2% weapon damage plus 100 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462720,Rank 3,"Ambush the target, causing $s2% weapon damage plus 125 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462721,Rank 4,"Ambush the target, causing $s2% weapon damage plus 185 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462722,Rank 5,"Ambush the target, causing $s2% weapon damage plus 230 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462723,Rank 6,"Ambush the target, causing $s2% weapon damage plus 290 to the target.  Must be stealthed and behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.",
+462724,Rank 1,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462726,Rank 2,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462727,Rank 3,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462728,Rank 4,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462729,Rank 5,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462730,Rank 6,"Garrote the enemy, causing $o1 damage over $d, increased by your Attack Power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.",$s1 damage every $t1 seconds.
+462744,,,
+462746,,+$s1 Attack Power when fighting Elementals.,
+462752,,,Sinister Strike Energy cost reduced by $s1.
+462754,,,
+462781,,,
+462787,,,
+462814,,,
+462831,,,
+462832,,,Spell damage increased by $w1.
+462834,,You gain $s1% of your Intellect as Spell Damage for $462832d when you cast Holy Shock.,
+462848,,,
+462850,,,
+462851,,,
+462853,,Causes target party or raid member to transfer $s1% of damage taken to the caster.  Lasts $d or until the caster has transferred $s2% of their maximum health.,Transfers $s1% of damage taken to the paladin.
+462858,,Channels $s1 health into mana every $t1 sec for $d.,Mana convert.

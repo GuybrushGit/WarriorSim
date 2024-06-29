@@ -22057,7 +22057,7 @@ ID,Name_lang
 409932,Aura Mastery
 409933,Avenger's Shield
 409934,Avenging Wrath
-409935,Divine Sacrifice
+409935,Hand of Sacrifice
 409936,Inspiration Exemplar
 409938,Fire Nova
 409940,Dual Wield Specialization
@@ -22090,7 +22090,7 @@ ID,Name_lang
 410002,Engrave Gloves - Crusader Strike
 410005,Engrave Pants - Aura Mastery
 410008,Engrave Pants - Avenger's Shield
-410010,Engrave Pants - Divine Sacrifice
+410010,Engrave Pants - Hand of Sacrifice
 410011,Engrave Pants - Inspiration Exemplar
 410013,Engrave Bracers - Hammer of the Righteous
 410014,Engrave Chest - Divine Storm
@@ -22824,11 +22824,11 @@ ID,Name_lang
 424941,Teach Living Bomb
 424976,Begin Ratchet Arms Dealer Quest
 424979,Saber Slash
-424980,Shiv
+424980,Cutthroat
 424982,Main Gauche
 424983,Slaughter from the Shadows
 424984,Engrave Gloves - Saber Slash
-424988,Engrave Gloves - Shiv
+424988,Engrave Gloves - Cutthroat
 424990,Engrave Gloves - Main Gauche
 424992,Engrave Chest - Slaughter from the Shadows
 425012,Poisoned Knife
@@ -24490,16 +24490,16 @@ ID,Name_lang
 440658,Shield of Righteousness
 440664,Sludge
 440666,Vindicator
-440667,Vindicator
-440668,Vindicator
+440667,Vindication
+440668,Vindication
 440672,Righteous Vengeance
 440675,Righteous Vengeance
 440677,Righteous Vengeance
 440720,Scooty's Not-Quite-Divine Shield
 440788,Engrave Cloak - Shield of Righteousness
 440789,Shield of Righteousness
-440790,Engrave Cloak - Vindicator
-440791,Vindicator
+440790,Engrave Cloak - Shock and Awe
+440791,Shock and Awe
 440792,Engrave Cloak - Righteous Vengeance
 440794,Righteous Vengeance
 440802,Frozen Orb
@@ -24525,7 +24525,7 @@ ID,Name_lang
 440844,[DNT] Holdout Teleport - Holdout - Floating Visual
 440845,[DNT] Holdout Teleport - Teleport To Holdout
 440847,[DNT] Holdout Teleport - Teleport To Electrocutioner Room
-440848,[DNT] Holdout Teleport - Teleport To Thermaplugg Room
+440848,[DNT] Teleport to Storm Cliffs Exterior
 440856,S03 - 50 - Rogue 45 Quest Start
 440858,Engrave Cloak - Frozen Orb
 440859,Frozen Orb
@@ -25893,7 +25893,7 @@ ID,Name_lang
 460001,Summon Heliath
 460171,Defender's Resolve
 460195,Shadowsworn Sacrifice - Give Note
-460200,Demonic Resolve
+460200,Defender's Resolve
 460201,Voidwalker
 460205,Permanent Feign Death
 460228,Stealth
@@ -26295,9 +26295,71 @@ ID,Name_lang
 462498,Rift Beacon
 462504,Rune Scrying
 462509,Rune Scrying
+462516,[DNT] Calyx - Complete Quest
+462518,Dragon Orb
+462553,Controller Timer
+462569,Eruption!
+462577,Sleep
+462580,Wrath
+462584,Unbalancing Strike
+462585,Healing Touch
+462586,Shadowstalker Slash
+462590,Shadow Bolt Volley
+462593,Quest Invisibility
+462623,Forming Rhok'delar
+462627,Create Hunter Epic Bow DND
+462628,Seeping Willow
+462630,Create Hunter Epic Staff DND
+462634,(DNT) Ash and Cinder Cover Spell
+462636,Chromatic Infusion
 462653,Lethal Shots
 462654,Lethal Shots
 462656,Lethal Shots
 462657,Lethal Shots
 462658,Lethal Shots
 462659,S03 - Tuning and Overrides Passive - Hunter
+462664,Arcane Bomb
+462665,Draining Touch
+462666,Scatter Shot
+462667,Purge
+462673,Conjure Dull Flat Elven Blade DND
+462675,Plunging Blade into Onyxia
+462701,(DNT) Remove Heart Buffs
+462707,Cutthroat
+462708,Cutthroat
+462709,Backstab
+462710,Backstab
+462711,Backstab
+462712,Backstab
+462713,Backstab
+462714,Backstab
+462715,Backstab
+462716,Backstab
+462717,Backstab
+462718,Ambush
+462719,Ambush
+462720,Ambush
+462721,Ambush
+462722,Ambush
+462723,Ambush
+462724,Garrote
+462726,Garrote
+462727,Garrote
+462728,Garrote
+462729,Garrote
+462730,Garrote
+462744,[DNT] Teleport to Tainted Scar Exterior
+462746,Elemental Slaying 75
+462752,Main Gauche
+462754,Carnage
+462781,[DNT] Demon Fall Canyon Portal Effect
+462787,[DNT] Demon Fall Canyon Portal Effect
+462814,S03 - Tuning and Overrides Passive - Paladin
+462831,(DNT) Heat Level 25 Screen Effect
+462832,Shock and Awe
+462834,Shock and Awe
+462848,(DNT) Heat Level 50 Screen Effect
+462850,(DNT) Heat Level 75 Screen Effect
+462851,(DNT) Heat Level 100 Screen Effect
+462853,Hand of Sacrifice
+462858,Circle of Flame

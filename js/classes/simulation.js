@@ -277,7 +277,7 @@ class Simulation {
                 if (player.auras.consumedrage && player.rage >= 60)
                     player.auras.consumedrage.use();
             }
-            if (player.spells.themoltencore && next != 0 && step % 1000 == 0) {
+            if (player.spells.themoltencore && next != 0 && step % 2000 == 0) {
                 player.spells.themoltencore.use();
             }
 
@@ -539,7 +539,7 @@ class Simulation {
             if (player.target.speed && (player.target.speed - (step % player.target.speed)) < next) next = player.target.speed - (step % player.target.speed);
             if (player.talents.angermanagement && (3000 - (step % 3000)) < next) next = 3000 - (step % 3000);
             if (player.vaelbuff && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
-            if (player.spells.themoltencore && (1000 - (step % 1000)) < next) next = 1000 - (step % 1000);
+            if (player.spells.themoltencore && (2000 - (step % 2000)) < next) next = 2000 - (step % 2000);
             if (player.auras.bloodrage && player.auras.bloodrage.timer && (1000 - ((step - player.auras.bloodrage.starttimer) % 1000)) < next)
                 next = 1000 - ((step - player.auras.bloodrage.starttimer) % 1000);
             if (player.auras.gabbar && player.auras.gabbar.timer && (2000 - ((step - player.auras.gabbar.starttimer) % 2000)) < next)

@@ -145,7 +145,9 @@
               let proc = getProcFromSpell(spell.SpellID), proc2;
               let triggerSpell = effects.filter(e => !!parseInt(e.EffectTriggerSpell));
               if (triggerSpell.length) {
-                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 && item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 228354 && item.ID != 12631 && item.ID != 227865 && item.ID != 7284) {
+                if (item.ClassID != "2" && item.ID != 11815 && item.ID != 227989 && item.ID != 228722 && item.ID != 19949 && item.ID != 22321 && item.ID != 23570 &&
+                 item.ID != 22194 && item.ID != 21670 && item.ID != 19289 && item.ID != 17111 && item.ID != 228354 && item.ID != 12631 && item.ID != 227865 && 
+                 item.ID != 7284) {
                   //console.log("check: " + obj.name);
                 }
                 else {
@@ -573,6 +575,7 @@
         {i:228461,p:2},
         {i:11815,c:2},
         {i:227989,c:2},
+        {i:228722,c:2},
         {i:19289,c:2},
         {i:22321,c:2},
         {i:17111,c:100},
