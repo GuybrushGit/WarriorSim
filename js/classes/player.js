@@ -1211,6 +1211,8 @@ class Player {
         else {
             result = this.rollweapon(weapon);
         }
+        if (spell && this.spells.ragingblow)
+            this.spells.ragingblow.reduce(spell);
 
         let dmg = weapon.dmg(spell);
         procdmg = this.procattack(spell, weapon, result, adjacent, damageSoFar);

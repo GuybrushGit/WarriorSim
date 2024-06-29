@@ -16,6 +16,7 @@ class Spell {
         this.defenseType = DEFENSETYPE.MELEE;
         this.school = SCHOOL.PHYSICAL;
         this.minrage = 0;
+        this.offensive = true;
 
         let spell = spells.filter(s => s.id == this.id)[0];
         if (!spell) return;
@@ -82,7 +83,7 @@ class Bloodthirst extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = this.player.stats.ap * 0.45 + this.player.stats.moddmgdone;
+        dmg = this.player.stats.ap * 0.45;
         return dmg * this.player.stats.dmgmod * this.player.mainspelldmg;
     }
     canUse() {
@@ -164,7 +165,7 @@ class Execute extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = this.value1 + (this.value2 * this.usedrage) + this.player.stats.moddmgdone;
+        dmg = this.value1 + (this.value2 * this.usedrage);
         return dmg * this.player.stats.dmgmod;
     }
     use(delayedheroic) {
@@ -211,6 +212,7 @@ class Bloodrage extends Spell {
         this.rage = 10 + player.talents.bloodragebonus;
         this.cooldown = 60;
         this.useonly = true;
+        this.offensive = false;
     }
     use() {
         this.timer = this.cooldown * 1000;
@@ -340,7 +342,7 @@ class Hamstring extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = this.value1 + this.player.stats.moddmgdone;
+        dmg = this.value1;
         return dmg * this.player.stats.dmgmod;
     }
 }
@@ -407,7 +409,7 @@ class RagingBlow extends Spell {
     }
     reduce(spell) {
         // Raging blow cooldown is reduced by 1 second when you use another melee ability while enraged.
-        if (this.player.isEnraged() && spell && spell != this && !spell.useonly && spell.defenseType == DEFENSETYPE.MELEE) {
+        if (this.timer && this.player.isEnraged() && spell && spell != this && spell.offensive) {
             this.timer = Math.max(0, this.timer - 1000);
         }
     }
@@ -420,6 +422,7 @@ class BerserkerRage extends Spell {
         this.rage = player.talents.berserkerbonus;
         this.cooldown = 30;
         this.useonly = true;
+        this.offensive = false;
     }
     use() {
         this.player.timer = 1500;
@@ -465,6 +468,7 @@ class RagePotion extends Spell {
         this.minrage = 80;
         this.cooldown = 120;
         this.useonly = true;
+        this.offensive = false;
     }
     prep(duration) {
         if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
@@ -527,6 +531,7 @@ class Fireball extends Spell {
         this.useonly = true;
         this.proc = { magicdmg: 331+40 };
         this.idmg = 0;
+        this.offensive = false;
     }
     prep(duration) {
         if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
@@ -550,6 +555,7 @@ class GunAxe extends Spell {
         this.useonly = true;
         this.proc = { magicdmg: 150 + 75 };
         this.idmg = 0;
+        this.offensive = false;
     }
     prep(duration) {
         if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
@@ -631,7 +637,7 @@ class Shockwave extends Spell {
         this.canDodge = false;
     }
     dmg() {
-        let dmg = this.player.stats.ap / 2 + this.player.stats.moddmgdone;
+        let dmg = this.player.stats.ap / 2;
         return dmg * this.player.stats.dmgmod;
     }
     use() {
@@ -658,6 +664,7 @@ class TheMoltenCore extends Spell {
         this.useonly = true;
         this.proc = { magicdmg: 20 };
         this.idmg = 0;
+        this.offensive = false;
     }
     use() {
         let procdmg = this.player.magicproc(this.proc);
@@ -673,6 +680,7 @@ class UnstoppableMight extends Spell {
     constructor(player, id) {
         super(player, id, 'Unstoppable Might');
         this.useonly = true;
+        this.offensive = false;
     }
     use() {
         if (this.player.stance != 'battle') this.player.switch('battle');
@@ -689,6 +697,7 @@ class StanceSwitch extends Spell {
     constructor(player, id) {
         super(player, id, 'Stance Switch');
         this.useonly = true;
+        this.offensive = false;
     }
     use() {
         this.player.switch(this.player.basestance);
@@ -716,6 +725,7 @@ class Aura {
         this.name = name || this.constructor.name;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.useonly = true;
+        this.offensive = false;
 
         let spell = spells.filter(s => s.id == this.id)[0];
         if (!spell) spell = buffs.filter(s => s.id == this.id)[0];
@@ -1740,6 +1750,7 @@ class Rend extends Aura {
         this.nocrit = true;
         this.dmgmod = 1 + this.player.talents.rendmod / 100;
         this.tfbstep = -6000;
+        this.offensive = true;
     }
     step() {
         while (step >= this.nexttick && this.stacks) {

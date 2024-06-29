@@ -516,6 +516,7 @@ var buffs = [
       group: "blasted",
       ap: 48,
       minlevel: 50,
+      maxlevel: 59,
       voodoofrenzy: true,
       consume: true,
       sod: true,
