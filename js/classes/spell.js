@@ -98,6 +98,7 @@ class Whirlwind extends Spell {
         this.refund = false;
     }
     dmg() {
+        if (this.player.auras.consumedrage && this.player.auras.consumedrage.timer) this.offhandhit = true;
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
