@@ -1152,20 +1152,21 @@ class Player {
         if (roll < tmp) return RESULT.CRIT;
         return RESULT.HIT;
     }
-    rollmeleespell(spell) {
+    rollmeleespell(spell, weapon) {
+        if (!weapon) weapon = this.mh;
         let tmp = 0;
         let roll = rng10k();
-        tmp += Math.max(this.mh.miss, 0) * 100;
+        tmp += Math.max(weapon.miss, 0) * 100;
         if (roll < tmp) return RESULT.MISS;
         if (spell.canDodge) {
-            tmp += this.mh.dodge * 100;
+            tmp += weapon.dodge * 100;
             if (roll < tmp) return RESULT.DODGE;
         }
         if (!spell.weaponspell) {
             roll = rng10k();
             tmp = 0;
         }
-        let crit = this.crit + this.mh.crit;
+        let crit = this.crit + weapon.crit;
         if (spell instanceof Overpower)
             crit += this.talents.overpowercrit;
         tmp += crit * 100;
@@ -1285,6 +1286,8 @@ class Player {
             /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
+        if (this.spells.ragingblow) this.spells.ragingblow.reduce(spell);
+        
         let dmg = spell.dmg() * this.mh.modifier;
         if (dmg) dmg += this.stats.moddmgtaken;
         let result;
@@ -1323,6 +1326,33 @@ class Player {
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
         /* start-log */ if (log) this.log(`${spell.name} for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
+        return done + procdmg;
+    }
+    castoh(spell, adjacent, damageSoFar) {
+        let dmg = spell.dmg(this.oh) * this.oh.modifier;
+        if (dmg) dmg += this.stats.moddmgtaken;
+        let result = this.rollmeleespell(spell, this.oh);
+
+        let procdmg = this.procattack(spell, this.oh, result, adjacent, damageSoFar);
+        if (result == RESULT.MISS) {
+            spell.failed();
+        }
+        else if (result == RESULT.DODGE) {
+            spell.failed();
+            this.dodgetimer = 5000;
+        }
+        else if (result == RESULT.CRIT) {
+            let critmod = 1 + 1 * (1 + this.talents.abilitiescrit) * (1 + this.critdmgbonus * 2);
+            dmg *= critmod;
+            this.proccrit(false, adjacent, spell);
+        }
+
+        let done = this.dealdamage(dmg, result, this.oh, spell, adjacent);
+        if (!adjacent) spell.data[result]++;
+        spell.totaldmg += done;
+        spell.offhandhit = false;
+        this.oh.totalprocdmg += procdmg;
+        /* start-log */ if (log) this.log(`${spell.name} (OH) for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
         return done + procdmg;
     }
     dealdamage(dmg, result, weapon, spell, adjacent) {

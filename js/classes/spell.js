@@ -397,12 +397,18 @@ class RagingBlow extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * 0.8 * this.player.stats.dmgmod;
+        return dmg * this.player.stats.dmgmod;
     }
     canUse(executephase) {
         return !this.timer && !this.player.timer && 
             (!executephase || this.execute) &&
             this.player.isEnraged();
+    }
+    reduce(spell) {
+        // Raging blow cooldown is reduced by 1 second when you use another melee ability while enraged.
+        if (this.player.isEnraged() && spell && spell != this && !spell.useonly && spell.defenseType == DEFENSETYPE.MELEE) {
+            this.timer = Math.max(0, this.timer - 1000);
+        }
     }
 }
 
@@ -485,13 +491,15 @@ class Slam extends Spell {
         this.cooldown = player.precisetiming ? 6 : 0;
         this.mhthreshold = 0;
     }
-    dmg() {
+    dmg(weapon) {
+        if (!weapon) weapon = this.player.mh;
         let dmg;
-        dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
-        dmg += (this.player.stats.ap / 14) * this.player.mh.speed + this.player.stats.moddmgdone;
+        dmg = this.value1 + rng(weapon.mindmg + weapon.bonusdmg, weapon.maxdmg + weapon.bonusdmg);
+        dmg += (this.player.stats.ap / 14) * weapon.speed + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod;
     }
     use() {
+        if (this.player.freeslam) this.offhandhit = true;
         if (!this.player.freeslam) this.player.rage -= this.cost;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         if (this.casttime && !this.player.freeslam) {

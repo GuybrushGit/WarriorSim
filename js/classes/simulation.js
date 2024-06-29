@@ -460,10 +460,19 @@ class Simulation {
                         player.spelldelay = 0;
                         spellcheck = true;
 
+                        if (delayedspell.offhandhit && player.oh) {
+                            done = player.castoh(delayedspell);
+                            this.idmg += done;
+                        }
+
                         if (delayedspell instanceof Whirlwind || delayedspell instanceof BlademasterFury || delayedspell instanceof ThunderClap || delayedspell instanceof Shockwave) {
                             for (let i = 0; i < player.adjacent; i++) {
                                 done = player.cast(delayedspell, delayedheroic, player.adjacent, done);
                                 this.idmg += done;
+                                if (delayedspell.offhandhit && player.oh) {
+                                    done = player.castoh(delayedspell, player.adjacent, done);
+                                    this.idmg += done;
+                                }
                             }
                         }
                     }
@@ -505,6 +514,10 @@ class Simulation {
             if (slamstep && step == slamstep) {
                 let done = player.cast(delayedspell, delayedheroic)
                 this.idmg += done;
+                if (delayedspell.offhandhit && player.oh) {
+                    done = player.castoh(delayedspell);
+                    this.idmg += done;
+                }
                 spellcheck = true;
                 slamstep = 0;
             }
