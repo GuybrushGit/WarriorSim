@@ -3287,6 +3287,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 215161,
+      "type": "Plate",
+      "slot": "head",
+      "r": 40,
+      "q": "4",
+      "i": "45",
+      "name": "Tempered Interference-Negating Helmet",
+      "p": "inv_helmet_49",
+      "str": 20,
+      "sta": 14,
+      "crit": 1
+    },
+    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",
@@ -3821,19 +3834,6 @@ var gear = {
       "sta": 23,
       "hit": 1,
       "d": 7
-    },
-    {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "p": "inv_helmet_49",
-      "str": 20,
-      "sta": 14,
-      "crit": 1
     }
   ],
   "neck": [
@@ -4576,18 +4576,6 @@ var gear = {
       "ap": 20
     },
     {
-      "id": 18205,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Eskhandar's Collar",
-      "p": "inv_belt_12",
-      "sta": 17,
-      "crit": 1
-    },
-    {
       "id": 18381,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -5195,6 +5183,19 @@ var gear = {
       },
       "hit": 1,
       "crit": 1
+    },
+    {
+      "id": 228759,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Eskhandar's Collar",
+      "p": "inv_belt_12",
+      "sta": 14,
+      "crit": 1,
+      "ap": 34
     }
   ],
   "shoulder": [
@@ -42795,7 +42796,7 @@ var gear = {
       "i": "77",
       "name": "Band of Sulfuras",
       "p": "inv_jewelry_ring_36",
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 228359,
@@ -44915,7 +44916,7 @@ var gear = {
       "i": "77",
       "name": "Band of Sulfuras",
       "p": "inv_jewelry_ring_36",
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 228359,
@@ -51357,22 +51358,6 @@ var gear = {
       "ap": 28
     },
     {
-      "id": 12590,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "4",
-      "i": "63",
-      "name": "Felstriker",
-      "speed": 1.7,
-      "mindmg": 54,
-      "maxdmg": 101,
-      "p": "inv_weapon_shortblade_25",
-      "proc": {
-        "spell": "Felstriker"
-      }
-    },
-    {
       "id": 12621,
       "type": "Axe",
       "slot": "mainhand",
@@ -56573,11 +56558,11 @@ var gear = {
       "slot": "mainhand",
       "r": 60,
       "q": "4",
-      "i": "71",
+      "i": "66",
       "name": "Eskhandar's Right Claw",
-      "speed": 1.4,
-      "mindmg": 52,
-      "maxdmg": 96,
+      "speed": 2.6,
+      "mindmg": 87,
+      "maxdmg": 163,
       "p": "inv_misc_monsterclaw_04",
       "agi": 7,
       "proc": {
@@ -56828,8 +56813,8 @@ var gear = {
       "i": "71",
       "name": "Quel'Serrar",
       "speed": 2,
-      "mindmg": 84,
-      "maxdmg": 126,
+      "mindmg": 73,
+      "maxdmg": 137,
       "p": "inv_sword_01",
       "sta": 12
     },
@@ -56848,6 +56833,22 @@ var gear = {
       "sta": 9,
       "crit": 1,
       "ap": 22
+    },
+    {
+      "id": 228757,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 58,
+      "q": "4",
+      "i": "63",
+      "name": "Felstriker",
+      "speed": 1.7,
+      "mindmg": 54,
+      "maxdmg": 101,
+      "p": "inv_weapon_shortblade_25",
+      "proc": {
+        "spell": "Felstriker"
+      }
     }
   ],
   "offhand": [
@@ -61989,22 +61990,6 @@ var gear = {
       "sta": 7,
       "crit": 1,
       "ap": 28
-    },
-    {
-      "id": 12590,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "4",
-      "i": "63",
-      "name": "Felstriker",
-      "speed": 1.7,
-      "mindmg": 54,
-      "maxdmg": 101,
-      "p": "inv_weapon_shortblade_25",
-      "proc": {
-        "spell": "Felstriker"
-      }
     },
     {
       "id": 12602,
@@ -67245,9 +67230,9 @@ var gear = {
       "q": "4",
       "i": "66",
       "name": "Eskhandar's Left Claw",
-      "speed": 1.5,
-      "mindmg": 50,
-      "maxdmg": 94,
+      "speed": 2.6,
+      "mindmg": 87,
+      "maxdmg": 163,
       "p": "inv_misc_monsterclaw_04",
       "agi": 4,
       "proc": {
@@ -67467,8 +67452,8 @@ var gear = {
       "i": "71",
       "name": "Quel'Serrar",
       "speed": 2,
-      "mindmg": 84,
-      "maxdmg": 126,
+      "mindmg": 73,
+      "maxdmg": 137,
       "p": "inv_sword_01",
       "sta": 12
     },
@@ -67499,6 +67484,22 @@ var gear = {
       "p": "inv_shield_10",
       "sta": 11,
       "block": 47
+    },
+    {
+      "id": 228757,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 58,
+      "q": "4",
+      "i": "63",
+      "name": "Felstriker",
+      "speed": 1.7,
+      "mindmg": 54,
+      "maxdmg": 101,
+      "p": "inv_weapon_shortblade_25",
+      "proc": {
+        "spell": "Felstriker"
+      }
     }
   ],
   "twohand": [
