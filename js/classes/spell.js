@@ -355,10 +355,10 @@ class ThunderClap extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = this.value1;
+        dmg = this.value1 + (this.player.mode == "sod" ? ~~(this.player.stats.ap * 0.05) : 0);
         if(this.player.furiousthunder)
             dmg *= 2;
-        return dmg;
+        return dmg * this.player.stats.dmgmod;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage &&
