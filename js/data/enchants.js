@@ -1191,15 +1191,6 @@ var enchant = {
   ]
 },
 {
-  id: 468,
-  name: 'The Highlander\'s Resolve',
-  items: [20042,20049,20058],
-  bonus: [
-     { count: 2, stats: { sta: 5 } },
-     { count: 3, stats: { crit: 1 } },
-  ]
-},
-{
   id: 471,
   name: 'The Highlander\'s Purpose',
   items: [20052,20045,20059],
