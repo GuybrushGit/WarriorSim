@@ -3287,19 +3287,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 215161,
-      "type": "Plate",
-      "slot": "head",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Tempered Interference-Negating Helmet",
-      "p": "inv_helmet_49",
-      "str": 20,
-      "sta": 14,
-      "crit": 1
-    },
-    {
       "id": 215166,
       "type": "Leather",
       "slot": "head",

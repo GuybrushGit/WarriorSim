@@ -21750,6 +21750,7 @@ ID,Name_lang
 403501,Haunt
 403506,Haunt
 403511,Soul Siphon
+403619,Fel Armor
 403628,Shadow Bolt Volley
 403629,Chaos Bolt
 403630,Chaos Bolt
@@ -25731,6 +25732,10 @@ ID,Name_lang
 458820,Occult Poison I
 458821,Occult Poison I
 458822,Occult Poison I
+458833,[DNT] Update Bonus Difficulty
+458841,Sweltering Heat
+458842,Blistering Heat
+458843,Molten Heat
 458856,Divine Light
 458857,Divine Light
 458860,Divine Light
@@ -25891,6 +25896,7 @@ ID,Name_lang
 459837,Shadow Ritual of Great Sacrifice
 459845,Shadow Ritual of Great Sacrifice
 460001,Summon Heliath
+460060,Volcanic Unrest
 460171,Defender's Resolve
 460195,Shadowsworn Sacrifice - Give Note
 460200,Defender's Resolve
@@ -25933,23 +25939,68 @@ ID,Name_lang
 460773,Magnetic Pulse
 460774,[DNT] Arena Victory
 460788,[DNT] Spawn Challenge
+460842,From the Ashes
+460845,Drawing Fire
+460846,Fired Up
+460848,Magma Spit
+460851,(DNT) Create Magma Pool
+460856,Reflect Magic
+460858,Pyroblast
+460860,Pyroblast
+460862,Enrage
+460865,Sweltering Heat
+460866,Crushing Stone
+460878,Heating Up
+460880,Flare
+460883,Meteor
+460884,Meteor
+460885,Doomsday
 460886,Burst of Energy
+460887,Harmonic Tremor
+460890,Melt Armor
+460893,Conjure Flame
+460894,Ash and Cinder
+460895,Heart of Cinder
+460898,Heart of Ash
+460899,Frigid Current
 460900,Beacon of Light
 460906,Demonic Frenzy
 460907,Demonic Frenzy
+460912,Fired Up
 460923,Decipher Scroll
 460928,Weak Healing Touch
 460930,Sleep
+460931,Impending Doom
+460932,Lucifron's Curse
 460933,Destroy
 460939,Might of Stormwind
 460940,Might of Stormwind
 460941,Controller Timer
 460962,Increased Fire Resist 15
 460963,Blessed Flame Mantle of the Dawn
+460975,Drawing Fire
 460988,[DNT] Calyx - On Quest
 460989,[DNT] Calyx - Complete Quest
 460990,[DNT] Calyx - Complete Quest
+461019,Smoldering Shackles
+461020,Smoldering Shackles
+461022,Wall of Flame
+461027,Drawing Fire
+461028,Drawing Fire
+461035,Drawing Fire
+461038,Drawing Fire
+461043,Sundering Shout
+461046,Drawing Fire
+461047,Flame Spear
+461048,Conflagration
+461053,Immolation Aura
+461054,Immolation Aura
+461055,Drawing Fire
+461056,Raging Flare
+461057,Scorching Fetters
+461058,Scorching Fetters
 461061,(DNT) Check for dead Protectors
+461062,Pool of Fire
 461064,Teleport
 461067,Teleport
 461069,(DNT) Check for dead Protectors
@@ -26028,6 +26079,8 @@ ID,Name_lang
 461269,Diplomat Ring
 461270,Magmadar's Return
 461272,Rune Scrying
+461279,Shadow Bolt
+461280,Shadow Bolt
 461283,S03 - Molten Core - Alternate Fire Resist Aura
 461289,Shadowtooth Illusion Ward
 461290,Libram of the Consecrated
@@ -26069,6 +26122,8 @@ ID,Name_lang
 461342,Eruption
 461343,Shazzrah's Curse
 461344,Gate of Shazzrah
+461345,Crushing Stone
+461346,Sweltering Heat
 461347,Enrage
 461348,Enrage
 461349,Enrage
@@ -26212,7 +26267,9 @@ ID,Name_lang
 461770,Use Echo
 461771,Use Echo
 461772,Use Echo
+461798,Pool of Fire
 461810,Thunder Clap
+461812,Pool of Fire
 461826,Thunder Clap
 461827,Thunder Clap
 461828,Thunder Clap
@@ -26223,6 +26280,9 @@ ID,Name_lang
 461841,[DNT] Sending Pillar
 461862,Armageddon
 461863,Armageddon
+461874,Scorching Fetters
+461875,Scorching Fetters
+461888,Scorching Fetters
 461896,Fire Blast
 461900,[DNT] Sending Pillar
 461902,[DNT] Sending Pillar
@@ -26292,20 +26352,33 @@ ID,Name_lang
 462422,(DNT) Remove Stone Aura
 462423,(DNT) Remove Heat Aura
 462467,Flex Tandem Press Task Apparatus
+462482,Flare
 462498,Rift Beacon
 462504,Rune Scrying
 462509,Rune Scrying
 462516,[DNT] Calyx - Complete Quest
 462518,Dragon Orb
+462542,Flare
+462543,Flare
+462545,Flare
+462546,Flare
+462547,Flare
+462548,Flare
 462553,Controller Timer
+462560,Harmonic Tremor
+462563,Harmonic Tremor
 462569,Eruption!
 462577,Sleep
 462580,Wrath
+462581,Meteor
+462582,Meteor
+462583,Meteor
 462584,Unbalancing Strike
 462585,Healing Touch
 462586,Shadowstalker Slash
 462590,Shadow Bolt Volley
 462593,Quest Invisibility
+462619,Conjure Flame
 462623,Forming Rhok'delar
 462627,Create Hunter Epic Bow DND
 462628,Seeping Willow
@@ -26324,6 +26397,8 @@ ID,Name_lang
 462667,Purge
 462673,Conjure Dull Flat Elven Blade DND
 462675,Plunging Blade into Onyxia
+462685,Heart of Ash
+462687,Heart of Cinder
 462701,(DNT) Remove Heart Buffs
 462707,Cutthroat
 462708,Cutthroat
@@ -26352,6 +26427,9 @@ ID,Name_lang
 462746,Elemental Slaying 75
 462752,Main Gauche
 462754,Carnage
+462778,Meteor
+462779,Meteor
+462780,Meteor
 462781,[DNT] Demon Fall Canyon Portal Effect
 462787,[DNT] Demon Fall Canyon Portal Effect
 462814,S03 - Tuning and Overrides Passive - Paladin
@@ -26371,92 +26449,15 @@ ID,Name_lang
 462896,Slam
 462897,Slam
 463004,Glowy (Green)
-458833,[DNT] Update Bonus Difficulty
-458841,Sweltering Heat
-458842,Blistering Heat
-458843,Molten Heat
-460060,Volcanic Unrest
-460842,From the Ashes
-460845,Drawing Fire
-460846,Fired Up
-460848,Magma Spit
-460851,(DNT) Create Magma Pool
-460856,Reflect Magic
-460858,Pyroblast
-460860,Pyroblast
-460862,Enrage
-460865,Sweltering Heat
-460866,Crushing Stone
-460878,Heating Up
-460880,Flare
-460883,Meteor
-460884,Meteor
-460885,Doomsday
-460887,Harmonic Tremor
-460890,Melt Armor
-460893,Conjure Flame
-460894,Ash and Cinder
-460895,Heart of Cinder
-460898,Heart of Ash
-460899,Frigid Current
-460912,Fired Up
-460931,Impending Doom
-460932,Lucifron's Curse
-460975,Drawing Fire
-461019,Smoldering Shackles
-461020,Smoldering Shackles
-461022,Wall of Flame
-461027,Drawing Fire
-461028,Drawing Fire
-461035,Drawing Fire
-461038,Drawing Fire
-461043,Sundering Shout
-461046,Drawing Fire
-461047,Flame Spear
-461048,Conflagration
-461053,Immolation Aura
-461054,Immolation Aura
-461055,Drawing Fire
-461056,Raging Flare
-461057,Scorching Fetters
-461058,Scorching Fetters
-461062,Pool of Fire
-461279,Shadow Bolt
-461280,Shadow Bolt
-461345,Crushing Stone
-461346,Sweltering Heat
-461798,Pool of Fire
-461812,Pool of Fire
-461874,Scorching Fetters
-461875,Scorching Fetters
-461888,Scorching Fetters
-462482,Flare
-462542,Flare
-462543,Flare
-462545,Flare
-462546,Flare
-462547,Flare
-462548,Flare
-462560,Harmonic Tremor
-462563,Harmonic Tremor
-462581,Meteor
-462582,Meteor
-462583,Meteor
-462619,Conjure Flame
-462685,Heart of Ash
-462687,Heart of Cinder
-462778,Meteor
-462779,Meteor
-462780,Meteor
+463008,Balance of Light and Shadow
 463078,[DNT] S03 - MC Raid - Teleport 01 - Entrance
 463080,[DNT] S03 - MC Raid - Teleport 02 - Rune of Kress (Magmadar)
 463082,[DNT] S03 - MC Raid - Teleport 03 - Rune of Mohn (Gehennas)
 463085,[DNT] S03 - MC Raid - Teleport 04 - Rune of Blaz (Garr)
+463105,Sanctuary
 463109,[DNT] S03 - MC Raid - Teleport 05 - Rune of Mazj (Shazzrah)
 463111,[DNT] S03 - MC Raid - Teleport 06 - Rune of Zeth (Baron Geddon)
 463112,[DNT] S03 - MC Raid - Teleport 07 - Rune of Theri (Golemagg)
 463113,[DNT] S03 - MC Raid - Teleport 08 - Rune of Koro (Sulfuron Harbinger)
-463186,[DNT] S03 - MC Raid - Defeated Heat Level Message
-463105,Sanctuary
 463146,Libram of the Consecrated
-403619,Fel Armor
+463186,[DNT] S03 - MC Raid - Defeated Heat Level Message

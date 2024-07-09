@@ -23295,6 +23295,8 @@ $@spelldesc403218",
 403501,,"Unleash a ghostly soul on an enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} damage, and increasing all Shadow damage over time you deal to that target by $s2%. When the Haunt ends or is dispelled, you will be healed for all the damage it dealt to your target.",Damage taken from Shadow damage over time effects from the caster increased by $s2%.
 403506,,,
 403511,,"Causes your Drain Soul to to deal damage $s4 times faster and increases the amount drained by your Drain Life and Drain Soul spells by an additional $s1% for each of your Warlock Shadow effects afflicting the target, up to a maximum of ${3*$m1}% additional effect. When Drain Soul is cast on a target below $s3% health, it instead gains $s2% per effect, up to a maximum of ${$m2*3}%. In addition, your Drain Soul can now trigger your Nightfall talent.",
+403619,,"Surrounds the caster with fel energy, increasing spell damage and healing by $s3 plus additional spell damage and healing equal to $s1% of your Spirit. In addition, you regain $s2% of your maximum health every 5 sec. Only one type of Armor spell can be active on the Warlock at any time.  Lasts $d.
+",Increases spell damage and healing by ${$w1*$SPI/100+$w3}. Also regenerate $s2% of maximum health every 5 sec.
 403628,,"Your Shadow Bolt now strikes up to $s1 targets within a chain distance of $s2 yards, but for $s3% reduced damage.",
 403629,,"Sends a bolt of chaotic fire at the enemy, dealing ${$<power>*$m1/100} to ${$<power>*$M1/100} Fire damage.  Chaos Bolt always hits, cannot be resisted, and its knowledge causes all your Fire spells to pierce through absorption effects. Chaos Bolt gains a high chance to be resisted when used against monsters 4 or more levels above your level.",
 403630,,,
@@ -29041,6 +29043,10 @@ Occult Poison counts as Deadly Poison and benefits from all talents and effects 
 Each strike has a 30% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.  250 charges.
 
 Occult Poison counts as Deadly Poison and benefits from all talents and effects that trigger from or modify Deadly Poison.",
+458833,,,
+458841,,,"The Hydraxians are providing maximum relief, reducing the heat within the Molten Core to a minimum."
+458842,,,The Hydraxians are providing limited relief. The Molten Core is almost too hot to bear.
+458843,,,The Hydraxians are providing no relief. The Molten Core is at its most intense.
 458856,,"Heals a friendly target for $s1. $s2% of any excess healing on the target is converted into an absorption shield that lasts $458857d. Multiple casts of Divine Light do not accumulate this shield.
 
 Divine Light benefits from all talents and effects that trigger from or modify Holy Light.
@@ -29253,6 +29259,11 @@ $@spelldesc19266",
 459837,,,Offer yourself as a willing sacrifice to the Shadows.
 459845,,,Offer yourself as a willing sacrifice to the Shadows.
 460001,,,
+460060,,"Health increased by $s1%.
+","|cFFffd200Bonus Event: Season of Discovery|r
+
+Health increased by $w1%.
+Damage increased by $w2%."
 460171,,,Attack Power increased by $w1.
 460195,,,
 460200,,,Spell damage increased by $w1.
@@ -29295,23 +29306,68 @@ $@spelldesc19266",
 460773,,,
 460774,,,
 460788,,,
+460842,,,
+460845,,,Incoming damage is reduced for each living Flamewaker Protector.
+460846,,,Heals for a large amount of health every second. Active while a Flamewaker Protector is nearby.
+460848,,,$s2 Fire damage inflicted every $t2 sec.
+460851,,,
+460856,,,Hostile spells reflect $s1% of the time.
+460858,,Inflicts $s1 Fire damage to an enemy and scorches the target for an additional $s2 damage every $t2 sec. for $d.,$s2 Fire damage inflicted every $t2  sec.
+460860,,,$20476s1  Fire damage inflicted to nearby allies after $t1 sec. Afflicted allies will also become Living Bombs.
+460862,,,Physical damage and attack speed are dramatically increased.
+460865,,,Deals $s1% Fire damage every $t1 seconds.
+460866,,,Deals $s1% Nature damage every $t1 seconds.
+460878,,,"The Molten Core is slowly heating up, gradually becoming more powerful and unstable."
+460880,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+460883,,,
+460884,,,
+460885,,,
 460886,,,
+460887,,,
+460890,,,Armor reduced by $s1.
+460893,,,
+460894,,,
+460895,,,"The Heart of Cinder burns within you, dealing damage over time. Cancelled by the Heart of Ash."
+460898,,,"The Heart of Ash burns within you, dealing damage over time. Cancelled by the Heart of Cinder."
+460899,,,
 460900,,The target becomes a Beacon of Light to all targets within a 40 yard radius.  Any heals you cast on those targets will also heal the Beacon for $53563s1% of the amount healed.  Only one target can be the Beacon of Light at a time. Lasts $53563d.,
 460906,,"The Felguard's damaging melee attacks cause a demonic frenzy, increasing attack power by $460907s1% for $460907d.  This effect can stack up to $460907u times.",
 460907,,,Attack power increased by $s1%.
+460912,,,
 460923,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
 460928,,,
 460930,,,
+460931,,Inflicts $s1 Shadow damage to nearby enemies after $t1 sec.,$s1 Shadow damage inflicted after $t1 sec.
+460932,,"Curses nearby enemies, increasing the costs of their spells and abilities by $s1% for $d. This cost increase applies to all spells and abilities, whether they cost mana, rage, or energy.",Spell and ability costs are increased by $s1%.
 460933,,..,
 460939,,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.
 460940,,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.,Increases hitpoints by 300. 15% haste to melee attacks. 10 mana regen every 5 seconds.
 460941,,,
 460962,,+$s1 Fire Resistance.,
 460963,,Permanently adds $460962s1 fire resistance to a shoulder slot item.,
+460975,,,
 460988,,,
 460989,,,
 460990,,,
+461019,,,Linked with flaming chains.
+461020,,,$w1 Fire damage every $t1 sec.
+461022,,,$w1 Fire damage every $t1 sec.
+461027,,,Incoming damage is reduced for each living Flamewaker Protector.
+461028,,,
+461035,,,
+461038,,,Incoming damage is reduced for each living Flamewaker Protector.
+461043,,,Melee and ranged attack power reduced by $w1. Armor reduced by $w3. Stacks.
+461046,,,
+461047,,,$w1 Fire damage every $t1 sec.
+461048,,,
+461053,,,Burning nearby enemies for $w1 damage every $t1 seconds.
+461054,,,
+461055,,,Incoming damage is reduced for each living Flamewaker Protector.
+461056,,,"A burst of scorching heat, dealing damage divided up evenly among all affected targets."
+461057,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
+461058,,,$w1 Fire damage every $t1 sec.
 461061,,,
+461062,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
 461064,,Teleport player to relative safety.,Teleport player to relative safety.
 461067,,Teleport player to relative safety.,Teleport player to relative safety.
 461069,,,
@@ -29392,6 +29448,8 @@ Periodically inflicting Fire damage to nearby enemies."
 461269,,Parley with an opposing Priest to gain safe passage through enemy territory.,
 461270,,Melee attack speed increased by $1% for $d.,Melee attack speed increased by $s1%.
 461272,,,
+461279,,,
+461280,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
 461283,,,
 461289,,Wards the bearer against the fel glamours surrounding Demon Fall Canyon.,Protected from the fel glamours surrounding Demon Fall Canyon.
 461290,,,The mana cost of your next Consecration spell is reduced by $s1%.
@@ -29434,6 +29492,8 @@ Periodically inflicting Fire damage to nearby enemies."
 461342,,,
 461343,,Increases the magical damage taken by nearby enemies by $s1% for $d.,Magical damage taken is increased by $s1%.
 461344,,,
+461345,,,Deals $s1% Nature damage every $t1 seconds.
+461346,,,Deals $s1% Fire damage every $t1 seconds.
 461347,,,"Physical damage dealt is increased by $s1.
 Attack speed increased by $s2%."
 461348,,,"Physical damage dealt is increased by $s1.
@@ -29582,7 +29642,9 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461770,,Offer the echo.,
 461771,,Offer the echo.,
 461772,,Offer the echo.,
+461798,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
 461810,Rank 6,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
+461812,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
 461826,Rank 5,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461827,Rank 4,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461828,Rank 3,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
@@ -29593,6 +29655,9 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461841,,,
 461862,,,"Unable to move, attack, or cast spells."
 461863,,,
+461874,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
+461875,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
+461888,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
 461896,,Blasts the enemy for $s1 Fire damage.,
 461900,,,
 461902,,,
@@ -29664,20 +29729,33 @@ $o2 Fire damage inflicted over $d."
 462422,,,
 462423,,,
 462467,,Recover mana.,Drawing in energy.
+462482,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
 462498,,"Marks an enemy with a tracking device. After $d., $9615s1 Lost One Rift Travelers will find and attack the enemy. Lost One Rift Travelers are unstable at the subatomic level and so cannot maintain physical form past $9615d.",Rift Travelers are locking onto your position. They will find you after $d.
 462504,,,
 462509,,,
 462516,,,
 462518,,,
+462542,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+462543,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+462545,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+462546,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+462547,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
+462548,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
 462553,,,
+462560,,,
+462563,,,
 462569,,,
 462577,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
 462580,,"Hurls a bolt of lightning at an enemy, inflicting Nature damage.",
+462581,,,
+462582,,,
+462583,,,
 462584,,"Inflicts $s1% weapon damage and leaves the target unbalanced, reducing their defense skill by $s2 for $d.",Defense skill reduced by $s2.
 462585,,Calls upon Nature magic to heal an ally.,
 462586,Rank 1,"Inflicts normal damage plus $s2 to an enemy when attacking from stealth, stunning it $d. Awards $s3 combo $lpoint:points;.",Stunned.
 462590,,"Hurls missiles of dark magic, inflicting Shadow damage to nearby enemies.",
 462593,,,
+462619,,,
 462623,,"Forms Rhok'delar, Longbow of the Ancient Keepers, when combined with Enchanted Black Dragon Sinew.",
 462627,,,
 462628,,,
@@ -29697,6 +29775,8 @@ Healing increased by up to $s2."
 462667,,,Stunned.
 462673,,,
 462675,,Drive into the heart of the brood mother to temper the heated blade.,
+462685,,,"The Heart of Ash burns within you, dealing damage over time. Cancelled by the Heart of Cinder."
+462687,,,"The Heart of Cinder burns within you, dealing damage over time. Cancelled by the Heart of Ash."
 462701,,,
 462707,,,Next Ambush does not require Stealth.
 462708,,"Your Ambush, Backstab, and Garrote abilities no longer require you to be behind your target, and Backstab has a $h% chance to make your next Ambush within $462707d not require you to be in Stealth.",
@@ -29725,6 +29805,9 @@ Healing increased by up to $s2."
 462746,,+$s1 Attack Power when fighting Elementals.,
 462752,,,Sinister Strike Energy cost reduced by $s1.
 462754,,,
+462778,,,
+462779,,,
+462780,,,
 462781,,,
 462787,,,
 462814,,,
@@ -29744,98 +29827,16 @@ Healing increased by up to $s2."
 462896,Rank 3,"Slams the opponent, causing weapon damage plus $s1.",
 462897,Rank 4,"Slams the opponent, causing weapon damage plus $s1.",
 463004,,,
-458833,,,
-458841,,,"The Hydraxians are providing maximum relief, reducing the heat within the Molten Core to a minimum."
-458842,,,The Hydraxians are providing limited relief. The Molten Core is almost too hot to bear.
-458843,,,The Hydraxians are providing no relief. The Molten Core is at its most intense.
-460060,,"Health increased by $s1%.
-","|cFFffd200Bonus Event: Season of Discovery|r
-
-Health increased by $w1%.
-Damage increased by $w2%."
-460842,,,
-460845,,,Incoming damage is reduced for each living Flamewaker Protector.
-460846,,,Heals for a large amount of health every second. Active while a Flamewaker Protector is nearby.
-460848,,,$s2 Fire damage inflicted every $t2 sec.
-460851,,,
-460856,,,Hostile spells reflect $s1% of the time.
-460858,,Inflicts $s1 Fire damage to an enemy and scorches the target for an additional $s2 damage every $t2 sec. for $d.,$s2 Fire damage inflicted every $t2  sec.
-460860,,,$20476s1  Fire damage inflicted to nearby allies after $t1 sec. Afflicted allies will also become Living Bombs.
-460862,,,Physical damage and attack speed are dramatically increased.
-460865,,,Deals $s1% Fire damage every $t1 seconds.
-460866,,,Deals $s1% Nature damage every $t1 seconds.
-460878,,,"The Molten Core is slowly heating up, gradually becoming more powerful and unstable."
-460880,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-460883,,,
-460884,,,
-460885,,,
-460887,,,
-460890,,,Armor reduced by $s1.
-460893,,,
-460894,,,
-460895,,,"The Heart of Cinder burns within you, dealing damage over time. Cancelled by the Heart of Ash."
-460898,,,"The Heart of Ash burns within you, dealing damage over time. Cancelled by the Heart of Cinder."
-460899,,,
-460912,,,
-460931,,Inflicts $s1 Shadow damage to nearby enemies after $t1 sec.,$s1 Shadow damage inflicted after $t1 sec.
-460932,,"Curses nearby enemies, increasing the costs of their spells and abilities by $s1% for $d. This cost increase applies to all spells and abilities, whether they cost mana, rage, or energy.",Spell and ability costs are increased by $s1%.
-460975,,,
-461019,,,Linked with flaming chains.
-461020,,,$w1 Fire damage every $t1 sec.
-461022,,,$w1 Fire damage every $t1 sec.
-461027,,,Incoming damage is reduced for each living Flamewaker Protector.
-461028,,,
-461035,,,
-461038,,,Incoming damage is reduced for each living Flamewaker Protector.
-461043,,,Melee and ranged attack power reduced by $w1. Armor reduced by $w3. Stacks.
-461046,,,
-461047,,,$w1 Fire damage every $t1 sec.
-461048,,,
-461053,,,Burning nearby enemies for $w1 damage every $t1 seconds.
-461054,,,
-461055,,,Incoming damage is reduced for each living Flamewaker Protector.
-461056,,,"A burst of scorching heat, dealing damage divided up evenly among all affected targets."
-461057,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
-461058,,,$w1 Fire damage every $t1 sec.
-461062,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
-461279,,,
-461280,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
-461345,,,Deals $s1% Nature damage every $t1 seconds.
-461346,,,Deals $s1% Fire damage every $t1 seconds.
-461798,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
-461812,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
-461874,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
-461875,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
-461888,,,Bound with flaming chains. Taking $w1 Fire damage every $t1 sec.
-462482,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462542,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462543,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462545,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462546,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462547,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462548,,,"The Molten Core exudes unbelievable heat, causing damage that increases as The Molten Core becomes hotter."
-462560,,,
-462563,,,
-462581,,,
-462582,,,
-462583,,,
-462619,,,
-462685,,,"The Heart of Ash burns within you, dealing damage over time. Cancelled by the Heart of Cinder."
-462687,,,"The Heart of Cinder burns within you, dealing damage over time. Cancelled by the Heart of Ash."
-462778,,,
-462779,,,
-462780,,,
+463008,,Forms Benediction when combined with the Eye of Shadow and the Eye of Divinity.,
 463078,,,
 463080,,,
 463082,,,
 463085,,,
+463105,,"When active, grants the wielder $s1 defense and $s2 armor for $d.","Armor increased by $s2.
+Defense increased by $s1."
 463109,,,
 463111,,,
 463112,,,
 463113,,,
-463186,,,
-463105,,"When active, grants the wielder $s1 defense and $s2 armor for $d.","Armor increased by $s2.
-Defense increased by $s1."
 463146,,Your Crusader Strike spell reduces the cost of your next Consecration spell by $s1%.,
-403619,,"Surrounds the caster with fel energy, increasing spell damage and healing by $s3 plus additional spell damage and healing equal to $s1% of your Spirit. In addition, you regain $s2% of your maximum health every 5 sec. Only one type of Armor spell can be active on the Warlock at any time.  Lasts $d.
-",Increases spell damage and healing by ${$w1*$SPI/100+$w3}. Also regenerate $s2% of maximum health every 5 sec.
+463186,,,
