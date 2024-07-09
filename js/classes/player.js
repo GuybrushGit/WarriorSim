@@ -1383,23 +1383,18 @@ class Player {
         let extras = 0;
         let batchedextras = 0;
         if (spell instanceof ThunderClap) return 0;
+        if (spell instanceof ShieldSlam) {
+            if (result != RESULT.MISS && result != RESULT.DODGE) {
+                if (this.mode == "sod") this.auras.defendersresolve.use();
+
+                // procs at least windfury - more info needed
+                if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
+                    weapon.windfury.use();
+                }
+            }
+            return 0;
+        }
         if (result != RESULT.MISS && result != RESULT.DODGE) {
-            if (spell instanceof ShieldSlam) {
-                if (this.mode == "sod") {
-                    this.auras.defendersresolve.use();
-                }
-            }
-
-            // Evaluate windfury procs first to shortcircuit the calculation if spell is Shield Slam.
-            // I've only confirmed Shield Slam procs windfury, but not other effects.
-            if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
-                if (!spell) extras = 0;
-                weapon.windfury.use();
-                if (spell instanceof ShieldSlam) {
-                    return 0;
-                }
-            }
-
             if (spell instanceof Execute) {
                 this.rage = 0;
                 if (this.auras.suddendeath && this.auras.suddendeath.timer) {
@@ -1505,6 +1500,10 @@ class Player {
             // Single Minded
             if (!spell && this.auras.singleminded) {
                 this.auras.singleminded.use();
+            }
+            if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
+                if (!spell) extras = 0;
+                weapon.windfury.use();
             }
             if (this.auras.swarmguard && this.auras.swarmguard.timer && rng10k() < this.auras.swarmguard.chance) {
                 this.auras.swarmguard.proc();
