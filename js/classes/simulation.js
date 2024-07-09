@@ -388,7 +388,6 @@ class Simulation {
 
                     // Normal phase - no cost
                     else if (player.auras.rampage && player.auras.rampage.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rampage; }
-                    else if (player.spells.ragingblow && player.spells.ragingblow.canUse(false)) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
                     else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
                     else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shieldslam; }
                     else if (player.spells.blademasterfury && player.spells.blademasterfury.canUse()) { player.spelldelay = 1; delayedspell = player.spells.blademasterfury; }
@@ -409,6 +408,7 @@ class Simulation {
                     else if (player.spells.shockwave && player.spells.shockwave.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shockwave; }
                     else if (!player.precisetiming && player.spells.slam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
                     else if (player.spells.thunderclap && player.spells.thunderclap.canUse()) { player.spelldelay = 1; delayedspell = player.spells.thunderclap; }
+                    else if (player.spells.ragingblow && player.spells.ragingblow.canUse(false)) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
                     else if (player.spells.quickstrike && player.spells.quickstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.quickstrike; }
                     else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
                     else if (player.spells.hamstring && player.spells.hamstring.canUse()) { player.spelldelay = 1; delayedspell = player.spells.hamstring; }
