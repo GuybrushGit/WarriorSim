@@ -25219,6 +25219,7 @@ ID,Name_lang
 447280,Rift-ripping Roar
 447282,Rift-ripping Roar
 447283,Rift-ripping Roar
+447296,Idol of the Swarm
 447297,Summon Burning Imp
 447298,Summon Burning Imp
 447299,Summon Burning Imp
@@ -25897,15 +25898,31 @@ ID,Name_lang
 459845,Shadow Ritual of Great Sacrifice
 460001,Summon Heliath
 460060,Volcanic Unrest
+460084,Spectral Shout
+460086,Spectral Shout
+460087,Warbreaker
+460119,Mortal Combo
+460122,Mortal Combo
+460123,Mortal Combo
+460143,Wrecking Ball
+460145,Wrecking Ball
+460152,Wrecking Ball
+460160,Wrecking Ball
+460170,Wrecking Ball
 460171,Defender's Resolve
 460195,Shadowsworn Sacrifice - Give Note
+460199,Wrecking Ball
 460200,Defender's Resolve
 460201,Voidwalker
 460205,Permanent Feign Death
 460228,Stealth
 460229,Block Value 17
 460230,Increased Hit Chance 2
+460248,Spiritstorm
+460249,Spiritstorm
+460254,Spiritstorm
 460310,Shimmering Light
+460328,(DNT) Hellscream's Phantom Spooky Visuals
 460332,Warmed Rumsey with Cream
 460335,Immolation
 460338,Purged by Fire
@@ -25923,6 +25940,14 @@ ID,Name_lang
 460374,Hateful Strike
 460375,Summon Dwarf Spirit
 460376,[DNT] Spawn Challenge
+460379,(DNT) Randomize Threat Target
+460399,Destructor's Devastation
+460401,Nether Nova
+460402,Abysmal Aura
+460403,Kerosene Kick
+460406,Fel-fuel Flames
+460408,Chaos Chopper
+460417,(DNT) Randomize Threat Target
 460455,Haste
 460460,Sulfuron Hammer
 460461,Plans: Sulfuron Hammer
@@ -25930,12 +25955,65 @@ ID,Name_lang
 460466,Create Thorium Brotherhood Contract DND
 460507,[DNT] Spawn Challenge
 460508,[DNT] Spawn Challenge
+460509,Corrupted Tears
+460510,Corrupted Tears
+460512,Corrupted Tears
+460514,Corrupted Tears
+460515,Corrupted Tears
+460545,Enshrouding Fog
+460557,Fungus Explosion
+460560,Fungus Explosion
+460567,(DNT) Despawn Animation
+460577,Summon Dread Fungus
+460585,Chaos Chopper
+460591,Chaos Chopper
+460607,Dread Seed
+460612,Summon Dread Lasher
+460631,(DNT) Pyranis Add Fog Stealth
 460651,Frozen Orb
+460654,[DNT] Pyranis Fog
+460658,Thorn Whip
+460664,Poisoned Sapling
+460666,Summon Dread Seed
+460671,Wrath
+460673,Demonskin
+460676,Summon Dread Lasher
+460684,Nature's Grip
+460690,Entangling Roots
 460692,Rain of Fire
 460698,Rain of Fire
 460699,Rain of Fire
 460700,Rain of Fire
+460703,Tender's Rage
+460725,Gloom
+460726,Gloom
+460727,Gloom
+460728,Gloom
 460742,Permanent Feign Death
+460749,Shadow Bolt
+460750,Orbs of Shadow
+460751,Orbs of Shadow Visual 2
+460752,Orbs of Shadow Visual 3
+460753,Shadow Bolt Volley
+460754,Shadow Bolt Volley
+460755,Veil of Shadow
+460756,Sleep
+460757,Carrion Swarm
+460758,Carrion Swarm
+460759,Carrion Swarm
+460760,Carrion Swarm
+460761,Carrion Swarm
+460762,Carrion Swarm
+460763,Carrion Swarm
+460764,Mannoroth's Fury
+460765,Berserker Charge
+460766,Berserker Charge
+460767,Berserker Charge
+460768,Corrupted Blood
+460769,Corrupted Blood
+460770,Corrupted Blood
+460771,Corrupted Blood
+460772,Burn Out
 460773,Magnetic Pulse
 460774,[DNT] Arena Victory
 460788,[DNT] Spawn Challenge
@@ -26131,6 +26209,10 @@ ID,Name_lang
 461352,Crescent Smash
 461354,Controller Timer
 461355,Astral Perfect Victory
+461383,Chaos Chopper
+461384,Chaos Chopper
+461396,Chaos Chopper
+461402,Chaos Chopper
 461407,[DNT] Give Rune
 461437,Combat Pulse
 461463,Falling Rocks
@@ -26260,6 +26342,7 @@ ID,Name_lang
 461753,Pattern: Incandescent Mooncloth Leggings
 461754,Girdle of Arcane Insight
 461755,Pattern: Girdle of Arcane Insight
+461761,Destructor's Devastation
 461764,Use Echo
 461765,Use Echo
 461767,Use Echo
@@ -26267,6 +26350,7 @@ ID,Name_lang
 461770,Use Echo
 461771,Use Echo
 461772,Use Echo
+461773,Destructor's Devastation
 461798,Pool of Fire
 461810,Thunder Clap
 461812,Pool of Fire
@@ -26299,13 +26383,20 @@ ID,Name_lang
 461990,Call of Eskhandar
 461992,Full Heal
 462050,(DNT) Hellscream Change Color
+462058,Sleep
 462059,(DNT) Summon Thorn Stalker
 462134,Language Demon Tongue
 462149,Speed
+462160,Destructor's Devastation
+462161,Destructor's Devastation
 462178,Enfeeble
 462214,Primal Instinct
 462221,Drain Life
 462222,Destructor's Devastation
+462223,Destructor's Devastation
+462224,Destructor's Devastation
+462225,Destructor's Devastation
+462226,Destructor's Devastation
 462227,Honed Blue Dragonscale Leggings
 462228,Cursed Blade
 462229,Corrupted Fear
@@ -26314,8 +26405,12 @@ ID,Name_lang
 462250,Curse of Agony
 462256,Warlord
 462257,Warlord
+462258,Kerosene Kick
 462259,Ground Stomp
+462260,Kerosene Kick
 462272,Pool of Fire
+462273,Pool of Fire
+462274,Pool of Fire
 462275,Boss Kill Tracking [DNT]
 462276,Boss Kill Tracking [DNT]
 462277,Boss Kill Tracking [DNT]
@@ -26441,6 +26536,12 @@ ID,Name_lang
 462851,(DNT) Heat Level 100 Screen Effect
 462853,Hand of Sacrifice
 462858,Circle of Flame
+462861,[DNT] Spawn Challenge
+462863,Summon Imp
+462868,Devour Magic
+462871,Boulder
+462872,Unholy Frenzy
+462873,Cloak of Shadows
 462885,Enrage
 462890,Sweeping Strikes
 462891,Whirlwind
@@ -26448,8 +26549,21 @@ ID,Name_lang
 462895,Slam
 462896,Slam
 462897,Slam
+462937,Charge
+462999,Carrion Swarm
+463000,Dedication
+463001,Time Step
+463002,Magic Stone Helmet
 463004,Glowy (Green)
+463005,Fluorescent Green Mechanostrider
+463006,Golden Sabercat
+463007,Mottled Blood Raptor
 463008,Balance of Light and Shadow
+463009,Controller Timer
+463010,Escape Rope
+463011,Escape Rope
+463012,Escape Rope
+463013,Escape Rope
 463078,[DNT] S03 - MC Raid - Teleport 01 - Entrance
 463080,[DNT] S03 - MC Raid - Teleport 02 - Rune of Kress (Magmadar)
 463082,[DNT] S03 - MC Raid - Teleport 03 - Rune of Mohn (Gehennas)
@@ -26460,4 +26574,21 @@ ID,Name_lang
 463112,[DNT] S03 - MC Raid - Teleport 07 - Rune of Theri (Golemagg)
 463113,[DNT] S03 - MC Raid - Teleport 08 - Rune of Koro (Sulfuron Harbinger)
 463146,Libram of the Consecrated
+463168,Kerosene Kick
 463186,[DNT] S03 - MC Raid - Defeated Heat Level Message
+463285,Starfire
+463320,Opening
+463448,Frost Nova
+463512,Summon Eskhandar
+463518,Vigilance
+463529,Dummy Trigger
+463537,Conflagration
+463555,Blood Alchemy
+463556,Blood Alchemy
+463557,Blood Alchemy
+463564,Broodmother's Block
+463605,ST XP Grant [DNT]
+463620,Retribution Aura
+463621,Retribution Aura
+463626,Teleport
+463641,Chain Lightning

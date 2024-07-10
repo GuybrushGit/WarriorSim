@@ -1226,4 +1226,21 @@ var enchant = {
      { count: 3, stats: { crit: 1 } },
   ]
 },
+{
+  id: 1793,
+  name: 'Devilsaur Armor',
+  items: [227848,227847],
+  bonus: [
+     { count: 2, stats: { hit: 2 } },
+  ]
+},
+{
+  id: 1792,
+  name: 'Black Dragon Mail',
+  items: [227829,227851,227852,227853],
+  bonus: [
+     { count: 2, stats: { hit: 1 } },
+     { count: 3, stats: { crit: 2, spellcrit: 2 } },
+  ]
+},
 ];

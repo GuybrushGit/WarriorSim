@@ -13310,7 +13310,7 @@ Increased health regeneration."
 17938,Rank 2,,
 17939,,,
 17940,,Enchants a weapon with fire.,
-17941,,,"Your next Shadow Bolt becomes an instant cast spell,$?$w2=100[ or your next Shadowcleave deals $s2% increased damage][]."
+17941,,,"Your next Shadow Bolt becomes an instant cast spell,$?$w2=100[ or your next Shadow Cleave deals $s2% increased damage][]."
 17942,,Enchants a weapon with fire.,
 17943,,,
 17944,,,
@@ -15867,7 +15867,7 @@ Unleashing this Seal's energy will judge an enemy, instantly causing $/2;20966s1
 
 Activating Holy Shield also grants you $460200s1 Spell Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
 20926,Rank 3,,
-20927,Rank 2,"Increases chance to block by $s1% for $d, and deals $s2 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.  Each block expends a charge.$?a456541[][ Each block expends a charge. $n charges.]$?s446847[
+20927,Rank 2,"Increases chance to block by $s1% for $d, and deals $s2 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.$?a456541[][ Each block expends a charge. $n charges.]$?s446847[
 
 Activating Holy Shield also grants you $460200s1 Spell Power for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.][]
 ",Block chance increased by $s1%.  $w2 Holy damage dealt to attacker when blocked.  Damage caused by Holy Shield causes 20% additional threat.$?$n>0[ $n charges.][]
@@ -28452,6 +28452,7 @@ Physical damage dealt is increased by $s3."
 447280,,,The deafening roar tears open new rifts.
 447282,,,The deafening roar tears open new rifts.
 447283,,,The deafening roar tears open new rifts.
+447296,,The duration of your Insect Swarm spell is increased by $/1000;s1 sec.,
 447297,,,
 447298,,,
 447299,,,
@@ -29264,15 +29265,31 @@ $@spelldesc19266",
 
 Health increased by $w1%.
 Damage increased by $w2%."
+460084,,"Shouts at an enemy, paralyzing it with terror for $d. and causing all other nearby enemies to flee in fear.",Intimidated.
+460086,,,Cowering in fear.
+460087,,,
+460119,,,Overwhelmed by the incoming onslaught.
+460122,,,
+460123,,,
+460143,,,
+460145,,,
+460152,,,
+460160,,,
+460170,,,
 460171,,,Attack Power increased by $w1.
 460195,,,
+460199,,,
 460200,,,Spell damage increased by $w1.
 460201,,Summons $s1 $lVoidwalker:Voidwalkers; to aid the caster in battle for $d.,
 460205,,,
 460228,,Decreases your effective stealth level by 2.,
 460229,,Increases the block value of your shield by $s1.,
 460230,,Improves your chance to hit with all spells and attacks by $s1%.,
+460248,,,
+460249,,,
+460254,,,
 460310,,,Something about the wisp has changed.
+460328,,,
 460332,,Increases Stamina by $s2 for $d and gets you drunk to boot!,Stamina increased by $s2.
 460335,,$h% chance to deal $460341s1 Fire damage to all nearby enemies when you are struck by a melee attack.,
 460338,,"Hurls a fiery ball that causes $s1 Fire damage and purges the target's soul, increasing Fire and Holy damage taken by up to $s3 and dealing an additional $o2 damage over $d.",Fire and Holy damage taken increased by up to $s3 and taking $s2 Fire damage every $t2 sec.
@@ -29290,6 +29307,14 @@ Damage increased by $w2%."
 460374,,,
 460375,,Give Orthas' tooth a... rub. Gross.,
 460376,,,
+460379,,,
+460399,,The Destructor's devastation annihilates enemies in its path.,Burning.
+460401,,"Unleashes a blast of nether fire that damages and burns enemies in a large radius, creating a ring of fire that damages enemies who cross it. ","Burst a wave of explosive nether energy, burning combustible objects."
+460402,,The demon emits an aura of corruption that harms nearby enemies.,"Afflicted by the corrupting, poisonous aura"
+460403,,"Zilbagob sends the shredder into an explosive launch, sending shockwaves that clear the floor.",Knocks everybody off their feet.
+460406,,The imp empowers and ignites the shredder's fuel.,The ignited shredder fuel inflicts fire damage and harmful effects.
+460408,,"The imp swings the shredder's blades in a circular motion, dealing damage and knocking back enemies around him.",Sharp elements impede and damage neaby enemies.
+460417,,,
 460455,,Increases your attack speed by $s1% for $d1. Does not affect characters above level 55.,Increased attack speed.
 460460,,,
 460461,,Teaches you how to make a Sulfuron Hammer.,
@@ -29297,12 +29322,71 @@ Damage increased by $w2%."
 460466,,,
 460507,,,
 460508,,,
+460509,,,
+460510,,,
+460512,,,
+460514,,,
+460515,,Deals $s1 Nature damage every $t1 sec.,Deals $s1 Nature damage every $t1 sec.
+460545,,,Lost in an endless fog.
+460557,,,
+460560,,,
+460567,,,
+460577,,,
+460585,,"The imp swings the shredder's blades in a circular motion, dealing damage and knocking back enemies around him.",Sharp elements impede and damage neaby enemies.
+460591,,,
+460607,,,
+460612,,,
+460631,,,
 460651,,,Movement speed reduced by $w1%.
+460654,,,
+460658,,,"Attached to a Dread Lasher, causing damage and healing the Lasher over time."
+460664,,,
+460666,,,
+460671,,"Hurls a bolt of lightning at an enemy, inflicting $s1 Nature damage.",
+460673,,Physical and Magical damage taken is reduced by $22839s2%. ,Physical and Magical damage taken is reduced by $22839s2%.
+460676,,,
+460684,,,Chance on attack to entangle the enemy.
+460690,,,Rooted.  Causes $s2 Nature damage every $t2 seconds.
 460692,Rank 1,Calls down a fiery rain to burn enemies in the area of effect for $o1 Fire damage over $d.,$s1 Fire damage every $t1 seconds.
 460698,Rank 2,Calls down a fiery rain to burn enemies in the area of effect for $o1 Fire damage over $d.,$s1 Fire damage every $t1 seconds.
 460699,Rank 3,Calls down a fiery rain to burn enemies in the area of effect for $o1 Fire damage over $d.,$s1 Fire damage every $t1 seconds.
 460700,Rank 4,Calls down a fiery rain to burn enemies in the area of effect for $o1 Fire damage over $d.,$s1 Fire damage every $t1 seconds.
+460703,,,Attack speed increased by $s1%.
+460725,,,"Overcome with grief.
+Suffering harmful effects."
+460726,,,"Overcome with grief.
+Suffering harmful effects."
+460727,,,"Overcome with grief.
+Suffering harmful effects."
+460728,,,"Overcome with grief.
+Suffering harmful effects."
 460742,,,
+460749,,"Inflicts Shadow damage to an enemy, but causes a high amount of threat.",
+460750,,,"Unstable magical energy coalesces around Diathorus.
+
+Increases shadow damage by $s1%."
+460751,,,
+460752,,,
+460753,,,
+460754,,"Hurls a bolt of dark magic at an enemy, inflicting Shadow damage.",
+460755,,Reduces healing effects for nearby enemies by $s1% for $d.,Healing effects reduced by $s1%.
+460756,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
+460757,,,
+460758,,,
+460759,,,
+460760,,,
+460761,,Deals $s1 Fire damage every $t1 sec.,Deals $s1 Fire damage every $t1 sec.
+460762,,,
+460763,,,
+460764,,,Attack speed and movement speed increased by $s1%.
+460765,,,
+460766,,"Charges an enemy, inflicting normal damage plus $s3 and stuns the opponent for $d.",
+460767,,,Stunned.
+460768,,,
+460769,,,
+460770,,,
+460771,,,
+460772,,,Attack speed and movement speed increased by $s1%.
 460773,,,
 460774,,,
 460788,,,
@@ -29504,6 +29588,10 @@ Attack speed increased by $s2%."
 461352,,Smashes the area in front of the caster.,"Crippled by the smash, movement speed slowed by $s2%"
 461354,,,
 461355,,,$w flawless $?$w=1[duel][duels] without defeat against Khonsu.
+461383,,,
+461384,,"The imp swings the shredder's blades in a circular motion, dealing damage and knocking back enemies around him.",Sharp elements impede and damage neaby enemies.
+461396,,"The imp swings the shredder's blades in a circular motion, dealing damage and knocking back enemies around him.",Sharp elements impede and damage neaby enemies.
+461402,,"The imp swings the shredder's blades in a circular motion, dealing damage and knocking back enemies around him.",Sharp elements impede and damage neaby enemies.
 461407,,,
 461437,,,
 461463,,$@spelldesc445575,
@@ -29635,6 +29723,7 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461753,,Teaches you how to sew Mooncloth Leggings.,
 461754,,,
 461755,,Teaches you how to craft a Girdle of Insight.,
+461761,,The Destructor's devastation annihilates enemies in its path.,Burning.
 461764,,Offer the echo.,
 461765,,Offer the echo.,
 461767,,Offer the echo.,
@@ -29642,6 +29731,7 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461770,,Offer the echo.,
 461771,,Offer the echo.,
 461772,,Offer the echo.,
+461773,,The Destructor's devastation annihilates enemies in its path.,Burning.
 461798,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
 461810,Rank 6,Blasts nearby enemies with thunder increasing the time between their attacks by $s2% for $d and doing $s1 damage to them.  Will affect up to $i targets.,Time between attacks increased by $s2%.
 461812,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
@@ -29674,14 +29764,21 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461990,,1% chance on a melee hit to call forth the spirit of Eskhandar to protect you in battle for $22649d.,
 461992,,,
 462050,,,
+462058,,Puts an enemy to sleep for up to $d. Any damage caused will awaken the target. Only one target can be asleep at a time.,Asleep.
 462059,,,
 462134,,,
 462149,,Increases run speed by $s1% for $d1.,Increases run speed by $s1%.
+462160,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462161,,The Destructor's devastation annihilates enemies in its path.,Burning.
 462178,,Reduces an enemy's Strength by $s1 and its Stamina by $s2 for $d.,"Strength reduced by $s1.
 Stamina reduced by $s2."
 462214,,Your pet's next attack is guaranteed to critically strike if that attack is capable of striking critically.,Next attack is a guaranteed critical.
 462221,,Steals $s1 life from target enemy.,
 462222,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462223,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462224,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462225,,The Destructor's devastation annihilates enemies in its path.,Burning.
+462226,,The Destructor's devastation annihilates enemies in its path.,Burning.
 462227,,,
 462228,,,
 462229,,When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds. ,
@@ -29690,8 +29787,12 @@ Stamina reduced by $s2."
 462250,,"Curses an enemy with agony, inflicting Shadow damage every $t1 sec. over $d. Only one curse per warlock can be active on any one target.",Shadow damage inflicted every $t1 sec.
 462256,,Warlord,Warlord
 462257,,Warlord,Warlord
+462258,,"Zilbagob sends the shredder into an explosive launch, sending shockwaves that clear the floor.",Knocks everybody off their feet.
 462259,,"Stomps the ground, stunning nearby enemies for $d.",Stunned.
+462260,,"Zilbagob sends the shredder into an explosive launch, sending shockwaves that clear the floor.",Knocks everybody off their feet.
 462272,,,$s1 Fire damage and $s2 mana burned every $t1 sec.
+462273,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
+462274,,,$w1 Fire damage and $w2 mana burned every $t1 sec.
 462275,,,
 462276,,,
 462277,,,
@@ -29819,6 +29920,13 @@ Healing increased by up to $s2."
 462851,,,
 462853,,Causes target party or raid member to transfer $s1% of damage taken to the caster.  Lasts $d or until the caster has transferred $s2% of their maximum health.,Transfers $s1% of damage taken to the paladin.
 462858,,Channels $s1 health into mana every $t1 sec for $d.,Mana convert.
+462861,,,
+462863,,Summons an Imp to accompany the caster until dismissed.,
+462868,Rank 4,"Purges $s1 harmful magic $leffect:effects; from a friend or $s1 beneficial magic $leffect:effects; from an enemy.  If an effect is devoured, the Felhunter will be healed for $19735s1.",
+462871,,"Hurls a boulder at an enemy, knocking it back and inflicting Physical damage.",
+462872,,"Increases an ally's attack speed by $s1% for $d., but also inflicts $s2 Nature damage to that ally every $t2 sec.","Attack speed increased by $s1%.
+$s2 Nature damage inflicted every $t2 sec."
+462873,,Instantly removes all existing harmful spell effects and increases your chance to resist all spells by $s1% for $d.  Does not remove effects that prevent you from using Cloak of Shadows.,Increases chance to resist spells by $s1%.
 462885,,,Enraged.
 462890,Rank 1,Your next $n melee weapon swings strike an additional nearby opponent.,Sweeping Strikes.
 462891,,"In a whirlwind of steel you attack up to $i enemies within $a1 yards, causing weapon damage to each enemy.",
@@ -29826,8 +29934,21 @@ Healing increased by up to $s2."
 462895,Rank 2,"Slams the opponent, causing weapon damage plus $s1.",
 462896,Rank 3,"Slams the opponent, causing weapon damage plus $s1.",
 462897,Rank 4,"Slams the opponent, causing weapon damage plus $s1.",
+462937,,"Charges an enemy, inflicting normal damage plus $s3 and stuns the opponent for $d.",
+462999,,,
+463000,,,
+463001,,,
+463002,,,
 463004,,,
+463005,,Summons and dismisses a rideable mechanical tallstrider.,Increases speed by $s2%.
+463006,,Summons and dismisses a rideable Golden Saber Cat.,Increases speed by $s2%.
+463007,,Summons and dismisses a rideable Raptor.,Increases speed by $s2%.
 463008,,Forms Benediction when combined with the Eye of Shadow and the Eye of Divinity.,
+463009,,,
+463010,,,
+463011,,,
+463012,,,
+463013,,,
 463078,,,
 463080,,,
 463082,,,
@@ -29839,4 +29960,21 @@ Defense increased by $s1."
 463112,,,
 463113,,,
 463146,,Your Crusader Strike spell reduces the cost of your next Consecration spell by $s1%.,
+463168,,"Zilbagob sends the shredder into an explosive launch, sending shockwaves that clear the floor.",Knocks everybody off their feet.
 463186,,,
+463285,,Causes $s1 Arcane damage to the target.,
+463320,,,
+463448,,"Inflicts Frost damage to nearby enemies, immobilizing them for up to $d.",Immobilized.
+463512,,Calls forth the spirit of Eskhandar to protect you in battle for $d.,
+463518,,,Damage taken reduced by $426972s3% and $s1% of all threat transferred to the warrior.
+463529,,,
+463537,,,
+463555,,Receive tokens for your service to the Blood God.,
+463556,,Transmute 100 Copper Slaughter Coins into 1 Silver Slaughter Coin.,
+463557,,Transmute 100 Silver Massacre Coins into 1 Gold Massacre Coin.,
+463564,,Increases the block value of your shield by $s1 for $d.,Block value increased by $s1.
+463605,,,
+463620,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
+463621,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
+463626,,Teleport player to relative safety.,Teleport player to relative safety.
+463641,,,

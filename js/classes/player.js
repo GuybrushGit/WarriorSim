@@ -283,6 +283,9 @@ class Player {
                         this.base['moddmgdone'] += 3;
                     if (item.id == 228089)
                         this.base['moddmgdone'] += 4;
+                    if (item.id == 227809)
+                        this.base['moddmgdone'] += 3;
+                    
                     if (item.id == 228122)
                         this.spells.themoltencore = new TheMoltenCore(this);
 
