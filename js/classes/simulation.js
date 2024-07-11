@@ -365,7 +365,7 @@ class Simulation {
                         else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { 
                             player.spelldelay = 1; delayedspell = player.spells.berserkerrage; 
                         }
-                        else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { 
+                        else if (player.spells.slam && player.freeslam && player.spells.slam.canUse(true)) { 
                             player.spelldelay = 1; delayedspell = player.spells.slam; 
                         }
                         else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { 
@@ -373,13 +373,11 @@ class Simulation {
                         }
                         else if (player.auras.consumedrage && player.auras.consumedrage.erageblock && player.rage < player.auras.consumedrage.erageblock) { } 
                         else if (player.auras.consumedrage && player.auras.consumedrage.echargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.echargeblock && player.rage < 60) { } 
-                        else if (player.stats.ap >= player.spells.execute.priorityap) {
-                            if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
-                                player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
-                            }
-                            else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
-                                player.spelldelay = 1; delayedspell = player.spells.mortalstrike;
-                            }
+                        else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
+                            player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
+                        }
+                        else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
+                            player.spelldelay = 1; delayedspell = player.spells.mortalstrike;
                         }
                         else if (player.spells.execute.canUse()) {
                             player.spelldelay = 1; delayedspell = player.spells.execute;

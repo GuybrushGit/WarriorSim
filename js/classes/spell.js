@@ -515,8 +515,9 @@ class Slam extends Spell {
         this.timer = this.cooldown * 1000;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
-    canUse() {
+    canUse(executephase) {
         return !this.timer && !this.player.timer && this.player.mh.timer >= this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
+            (!executephase || this.execute) &&
             (!this.bloodsurge || this.player.freeslam) &&
             (!this.minrage || this.player.rage >= this.minrage) &&
             (!this.maincd || 

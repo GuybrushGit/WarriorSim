@@ -1028,6 +1028,7 @@ var spells = [
     swingreset: true,
     afterswing: true,
     bloodsurge: true,
+    execute: false,
     active: false,
 },
 {
@@ -1045,6 +1046,7 @@ var spells = [
     swingreset: true,
     afterswing: true,
     bloodsurge: true,
+    execute: false,
     active: false,
 },
 {
@@ -1062,6 +1064,7 @@ var spells = [
     swingreset: true,
     afterswing: true,
     bloodsurge: true,
+    execute: false,
     active: false,
 },
 {
@@ -1078,6 +1081,7 @@ var spells = [
     swingreset: true,
     afterswing: true,
     bloodsurge: true,
+    execute: false,
     active: false,
 },
 
@@ -1087,7 +1091,7 @@ var spells = [
     name: 'Raging Blow',
     classname: 'RagingBlow',
     iconname: 'ability_hunter_swiftstrike',
-    execute: true,
+    execute: false,
     rune: true,
 },
 {

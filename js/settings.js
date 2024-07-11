@@ -531,7 +531,7 @@ SIM.SETTINGS = {
         if (spell.rageblock !== undefined)
             ul.append(`<li data-id="rageblockactive" class="${spell.rageblockactive ? 'active' : ''}">Don't use rage below <input type="text" name="rageblock" value="${spell.rageblock}" data-numberonly="true" /> rage</li>`);
         if (spell.execute !== undefined)
-            ul.append(`<li data-id="execute" class="${spell.execute ? 'active' : ''}">Use during Execute phase</li>`);
+            ul.append(`<li data-id="execute" class="${spell.execute ? 'active' : ''}">Use during Execute phase / Sudden Death</li>`);
         if (typeof spell.globals !== 'undefined') 
             ul.append(`<li data-id="globalsactive" class="${spell.globalsactive ? 'active' : ''}" data-group="usage">Only use on first <input type="text" name="globals" value="${spell.globals}" data-numberonly="true" /> globals</li>`);
         if (spell.chargeblock !== undefined)
