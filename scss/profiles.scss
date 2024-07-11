@@ -180,19 +180,23 @@
         }
     }
 
-    .import-container {
+    .presets {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 30px;
         & > div {
             width: 124px;
             height: 30px;
+            text-align: center;
             line-height: 30px;
             border-radius: 5px;
-            margin-top: 6px;
             border: 1px solid #525252;
             transition: all 0.2s ease-in;
+            cursor: pointer;
             &:hover {
                 border-color: white;
             }

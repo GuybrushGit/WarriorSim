@@ -687,6 +687,7 @@ class UnstoppableMight extends Spell {
         else this.player.switch(this.player.basestance == 'battle' ? 'zerk' : this.player.basestance);
     }
     canUse() {
+        if (!this.player.auras.battleforecast) return false;
         //Switch if Forecast shorter than X secs and rage below Y
         let forecast = Math.max(this.player.auras.battleforecast.timer - step, this.player.auras.berserkerforecast.timer - step);
         return (this.switchtimeactive && this.player.rage <= this.switchrage && forecast <= this.switchtime);

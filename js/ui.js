@@ -1331,7 +1331,7 @@ SIM.UI = {
             widthFixed: false,
             sortList: editmode ? [[dpsrow, 1],[2, 0]] : [[dpsrow-1, 1],[1, 0]],
             textSorter : {
-                11 : function(a, b, direction, column, table) {
+                12 : function(a, b, direction, column, table) {
                     var a = parseFloat(a.substring(0,a.indexOf('.') + 3));
                     var b = parseFloat(b.substring(0,b.indexOf('.') + 3));
                     if (isNaN(a)) a = 0;
@@ -1340,7 +1340,7 @@ SIM.UI = {
                 },
             },
             headers: {
-                11: { sorter: "text" }
+                12: { sorter: "text" }
             }
         });
 

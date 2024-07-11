@@ -14,6 +14,7 @@ SIM.PROFILES = {
         view.body = $('body');
         view.section = view.body.find('section.profiles');
         view.container = view.section.find('.container');
+        view.presets = view.section.find('.presets');
         view.close = view.section.find('.btn-close');
         view.modal = view.body.find('.import-modal');
         view.textarea = view.modal.find('textarea');
@@ -47,21 +48,21 @@ SIM.PROFILES = {
             view.textarea.focus();
         });
 
-        view.container.on('click','.import-th', function (e) {
+        view.presets.on('click','.import-th', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
             view.importProfile(preset_th, index);
         });
 
-        view.container.on('click','.import-dw', function (e) {
+        view.presets.on('click','.import-dw', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
             view.importProfile(preset_dw, index);
         });
 
-        view.container.on('click','.import-gl', function (e) {
+        view.presets.on('click','.import-gl', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
@@ -210,18 +211,19 @@ SIM.PROFILES = {
 
         view.container.append(`<div>
             <div class="add-profile">${svgAdd}<p>Add Profile</p></div>
-            <div class="import-profile">${svgImport}<p>Import Profile</p>
-            ${mode == "sod" ? 
-                `<div class="import-container">
-                    <div class="import-gl" style="width: 100%;">Gladiator Stance</div>
-                    <div class="import-dw">50 DW Fury</div>
-                    <div class="import-th">50 2H Arms</div>
-                </div>` : ''}
-            </div>
+            <div class="import-profile">${svgImport}<p>Import Profile</p></div>
             </div>`);
 
-          
-    },
+        if (mode == "sod") {
+            view.presets.empty();
+            view.presets.append(`
+                <label>Presets:</label>
+                <div class="import-dw">60 DW Fury</div>
+                <div class="import-th">60 2H Arms</div>
+                <div class="import-gl">60 Gladiator</div>`);
+        }
+            
+        },
 
     getItemsHTML(storage) {
         const view = this;
