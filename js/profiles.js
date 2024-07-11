@@ -69,6 +69,13 @@ SIM.PROFILES = {
             view.importProfile(preset_gl, index);
         });
 
+        view.presets.on('click','.import-pb', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_pb, index);
+        });
+
         view.container.on('click','.delete-profile', function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -219,6 +226,7 @@ SIM.PROFILES = {
             view.presets.append(`
                 <label>Presets:</label>
                 <div class="import-dw">60 DW Fury</div>
+                <div class="import-pb">60 DW Fury Pre-Bis</div>
                 <div class="import-th">60 2H Arms</div>
                 <div class="import-gl">60 Gladiator</div>`);
         }
