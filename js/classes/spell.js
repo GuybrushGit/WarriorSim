@@ -690,7 +690,7 @@ class UnstoppableMight extends Spell {
     canUse() {
         if (!this.player.auras.battleforecast) return false;
         //Switch if Forecast shorter than X secs and rage below Y
-        let forecast = Math.max(this.player.auras.battleforecast.timer - step, this.player.auras.berserkerforecast.timer - step);
+        let forecast = Math.max(this.player.auras.battleforecast.timer - step, this.player.auras.berserkerforecast.timer - step, this.player.auras.defensiveforecast.timer - step);
         return (this.switchtimeactive && this.player.rage <= this.switchrage && forecast <= this.switchtime);
     }
 }
@@ -2499,6 +2499,13 @@ class BerserkerForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Berserker Forecast');
         this.stats = { crit: 10 };
+        this.duration = 10;
+    }
+}
+
+class DefensiveForecast extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Defensive Forecast');
         this.duration = 10;
     }
 }

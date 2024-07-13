@@ -517,6 +517,7 @@ class Player {
                     if (bonus.stats.switchbonus) {
                         this.auras.battleforecast = new BattleForecast(this);
                         this.auras.berserkerforecast = new BerserkerForecast(this);
+                        this.auras.defensiveforecast = new DefensiveForecast(this);
                     }
                 }
             }
@@ -1054,6 +1055,7 @@ class Player {
         if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.step();
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.step();
         if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
+        if (this.auras.defensiveforecast && this.auras.defensiveforecast.timer) this.auras.defensiveforecast.step();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.step();
@@ -1584,11 +1586,18 @@ class Player {
         if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
         if (this.auras.battleforecast && (this.stance == 'battle' || this.stance == 'glad')) {
             this.auras.berserkerforecast.remove();
+            this.auras.defensiveforecast.remove();
             this.auras.battleforecast.use();
         } 
         if (this.auras.berserkerforecast && this.stance == 'zerk') {
             this.auras.battleforecast.remove();
+            this.auras.defensiveforecast.remove();
             this.auras.berserkerforecast.use();
+        }
+        if (this.auras.defensiveforecast && this.stance == 'def') {
+            this.auras.battleforecast.remove();
+            this.auras.berserkerforecast.remove();
+            this.auras.defensiveforecast.use();
         }
         if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
         this.stancetimer = 1500 + rng(this.reactionmin, this.reactionmax);
