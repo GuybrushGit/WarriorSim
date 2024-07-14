@@ -487,7 +487,7 @@
       var removeDupe = function(obj, slot) {
         let i = gear[slot].length;
         while (i--) {
-          if (obj.name == gear[slot][i].name && obj.id > gear[slot][i].id && obj.id > 100000) { 
+          if (obj.name == gear[slot][i].name && obj.id > gear[slot][i].id && obj.id > 100000 && obj.r != 25) { 
             if (obj.id == 224409) return;
             gear[slot].splice(i, 1);
           } 
