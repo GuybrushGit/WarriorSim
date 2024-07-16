@@ -24403,7 +24403,7 @@ Each effect can only be extended up to its initial duration.
 415028,,,
 415058,,,"Gaining $m1% of total mana every $t1 sec.
 Healing spells reduced by $s2%."
-415059,,"Each time you hit a target with your melee weapon, you gain $415058m1% of your maximum mana per $415058t1 sec for $415058d, but the amount healed by your Flash of Light, Holy Light, and Holy Shock spells is reduced by $415058s2% during this mana regeneration.",
+415059,,"Each time you hit a target with your melee weapon, you gain $415058m1% of your maximum mana per $415058t1 sec for $415058d, but the amount healed by your Healing spells is reduced by $415058s2% during this mana regeneration.",
 415068,Rank 1,Causes $s1 Holy damage to an enemy target and has $s2% chance to crit against Demons and Undead.,
 415069,Rank 2,Causes $s1 Holy damage to an enemy target and has $s2% chance to crit against Demons and Undead.,
 415070,Rank 3,Causes $s1 Holy damage to an enemy target and has $s2% chance to crit against Demons and Undead.,
@@ -27428,13 +27428,13 @@ Movement speed reduced by $s2%."
 439440,Rank 1,,
 439441,Rank 1,,
 439462,,"Coats a weapon with poison that lasts for 30 minutes.
-Each strike has a $h% chance of poisoning the enemy, reducing the enemy's armor by $439471s1 for $439471d.  105 charges.
+Each strike has a $h% chance of poisoning the enemy, reducing the enemy's armor by $439471s1 for $439471d.
 
 Sebacious Poison benefits from the Improved Expose Armor talent.",
 439464,,"Coats a weapon with poison that lasts for 30 minutes.
-Each strike has a $h% chance of poisoning the enemy, increasing the time between the enemy's melee attacks by $439472s1% for $439472d.  105 charges.",
+Each strike has a $h% chance of poisoning the enemy, increasing the time between the enemy's melee attacks by $439472s1% for $439472d.",
 439465,,"Coats a weapon with poison that lasts for 30 minutes.
-Each strike has a $h% chance of poisoning the enemy, reducing the enemy's melee attack power by $439473s1 for $439473d.  105 charges.",
+Each strike has a $h% chance of poisoning the enemy, reducing the enemy's melee attack power by $439473s1 for $439473d.",
 439471,,,Armor reduced by $w1.
 439472,,,Time between attacks increased by $s1%.
 439473,,,Melee attack power reduced by $s1.
@@ -29036,22 +29036,21 @@ Wyvern Strike requires you to have the Wyvern Sting talent, and replaces the Wyv
 458809,,,
 458819,,Inflicts Fire damage to an enemy.,
 458820,Rank 1,,Target takes $s1 Nature damage every $t1 seconds and $s2% increased non-Physical damage.
-458821,Rank 1,"Coats a weapon with poison that lasts for 30 minutes. Each strike has a $h% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.  250 charges.
+458821,Rank 1,"Coats a weapon with poison that lasts for 30 minutes. Each strike has a $h% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.
 
 Occult Poison counts as Deadly Poison and benefits from all talents and effects that trigger from or modify Deadly Poison.
 ",
 458822,Rank 1,"Coats a weapon with poison that lasts for 30 minutes.
-Each strike has a 30% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.  250 charges.
+Each strike has a 30% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.
 
 Occult Poison counts as Deadly Poison and benefits from all talents and effects that trigger from or modify Deadly Poison.",
 458833,,,
 458841,,,"The Hydraxians are providing maximum relief, reducing the heat within the Molten Core to a minimum."
 458842,,,The Hydraxians are providing limited relief. The Molten Core is almost too hot to bear.
 458843,,,The Hydraxians are providing no relief. The Molten Core is at its most intense.
-458856,,"Heals a friendly target for $s1. $s2% of any excess healing on the target is converted into an absorption shield that lasts $458857d. Multiple casts of Divine Light do not accumulate this shield.
+458856,,"Heals a friendly target for ${$<healpower>*$m1/100} to ${$<healpower>*$M1/100}. $s2% of any excess healing on the target is converted into an absorption shield that lasts $458857d. Multiple casts of Divine Light do not accumulate this shield.
 
-Divine Light benefits from all talents and effects that trigger from or modify Holy Light.
-",
+Divine Light benefits from all talents and effects that trigger from or modify Holy Light.",
 458857,,,Absorbs $w damage.
 458860,,,
 458872,,"The end of an epoch is nigh!
@@ -29978,3 +29977,9 @@ Defense increased by $s1."
 463621,Rank 1,Causes $s1 Holy damage to any creature that strikes a nearby party member. Players may only have one aura on them per paladin at any one time. The aura lasts until cancelled.,$s1 Holy damage inflicted to melee attackers.
 463626,,Teleport player to relative safety.,Teleport player to relative safety.
 463641,,,
+463946,,Blasts up to 3 targets for $s1 Nature damage.,
+463970,,Teaches you how to sew a Bottomless Bag.,
+463972,,,
+464250,,"Charges an enemy, inflicting $s3 damage to the target and any of its nearby allies, as well as knocking them all back.",
+464251,,,
+464279,,Inflicts normal damage plus $s1 to nearby enemies.,

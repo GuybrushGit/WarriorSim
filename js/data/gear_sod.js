@@ -3652,14 +3652,14 @@ var gear = {
       "slot": "head",
       "r": 60,
       "q": "4",
-      "i": "65",
+      "i": "71",
       "name": "Flamekissed Molten Helm",
       "p": "inv_helmet_08",
-      "sta": 21,
+      "sta": 20,
       "resist": {
-        "fire": 35
+        "fire": 40
       },
-      "d": 8
+      "d": 9
     },
     {
       "id": 227824,
@@ -55351,7 +55351,7 @@ var gear = {
     {
       "id": 20666,
       "type": "Mace",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 57,
       "q": "3",
       "i": "62",
@@ -56552,7 +56552,7 @@ var gear = {
     {
       "id": 227832,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 60,
       "q": "4",
       "i": "68",
@@ -56810,7 +56810,8 @@ var gear = {
       "mindmg": 39,
       "maxdmg": 73,
       "p": "inv_weapon_shortblade_16",
-      "agi": 13
+      "agi": 5,
+      "sta": 8
     },
     {
       "id": 228021,
@@ -56915,7 +56916,7 @@ var gear = {
     {
       "id": 228090,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 57,
       "q": "3",
       "i": "62",
@@ -57016,7 +57017,7 @@ var gear = {
       "mindmg": 76,
       "maxdmg": 142,
       "p": "inv_misc_wrench_01",
-      "str": 13,
+      "ap": 26,
       "hit": 1
     },
     {
@@ -57207,7 +57208,7 @@ var gear = {
     {
       "id": 228541,
       "type": "Dagger",
-      "slot": "onehand",
+      "slot": "mainhand",
       "r": 58,
       "q": "3",
       "i": "63",
@@ -62868,6 +62869,20 @@ var gear = {
       }
     },
     {
+      "id": 13360,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Gift of the Elven Magi",
+      "speed": 1.5,
+      "mindmg": 43,
+      "maxdmg": 81,
+      "p": "inv_weapon_shortblade_15",
+      "sta": 5
+    },
+    {
       "id": 13368,
       "type": "Dagger",
       "slot": "onehand",
@@ -66795,20 +66810,6 @@ var gear = {
       "ap": 24
     },
     {
-      "id": 20666,
-      "type": "Mace",
-      "slot": "onehand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Hardened Steel Warhammer",
-      "speed": 2.6,
-      "mindmg": 74,
-      "maxdmg": 138,
-      "p": "inv_hammer_14",
-      "sta": 10
-    },
-    {
       "id": 20675,
       "type": "Axe",
       "slot": "onehand",
@@ -67743,19 +67744,6 @@ var gear = {
       }
     },
     {
-      "id": 227832,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Tempered Black Amnesty",
-      "speed": 1.6,
-      "mindmg": 42,
-      "maxdmg": 91,
-      "p": "inv_weapon_shortblade_12"
-    },
-    {
       "id": 227840,
       "type": "Sword",
       "slot": "onehand",
@@ -67819,7 +67807,8 @@ var gear = {
       "mindmg": 39,
       "maxdmg": 73,
       "p": "inv_weapon_shortblade_16",
-      "agi": 13
+      "agi": 5,
+      "sta": 8
     },
     {
       "id": 228026,
@@ -67891,20 +67880,6 @@ var gear = {
       "p": "inv_axe_01",
       "agi": 7,
       "str": 10,
-      "sta": 6
-    },
-    {
-      "id": 228090,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Cenarion Ritual Dagger",
-      "speed": 1.6,
-      "mindmg": 45,
-      "maxdmg": 85,
-      "p": "inv_weapon_shortblade_25",
       "sta": 6
     },
     {
@@ -68007,7 +67982,7 @@ var gear = {
       "mindmg": 76,
       "maxdmg": 142,
       "p": "inv_misc_wrench_01",
-      "str": 13,
+      "ap": 26,
       "hit": 1
     },
     {
@@ -68134,20 +68109,6 @@ var gear = {
       "maxdmg": 143,
       "p": "inv_axe_11",
       "agi": 13,
-      "sta": 5
-    },
-    {
-      "id": 228541,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Gift of the Elven Magi",
-      "speed": 1.5,
-      "mindmg": 43,
-      "maxdmg": 81,
-      "p": "inv_weapon_shortblade_15",
       "sta": 5
     },
     {
@@ -74956,6 +74917,22 @@ var gear = {
         "dmg": 50
       },
       "hit": 1
+    },
+    {
+      "id": 208222,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 58,
+      "q": "3",
+      "i": "61",
+      "name": "Old Guard Retaliator",
+      "speed": 3.9,
+      "mindmg": 189,
+      "maxdmg": 264,
+      "p": "inv_axe_22",
+      "agi": 10,
+      "str": 8,
+      "sta": 41
     },
     {
       "id": 209559,
