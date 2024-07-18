@@ -667,7 +667,7 @@ SIM.SETTINGS = {
         view.buffs.append(worldbuffs);
         view.buffs.append('<div class="label">Other</div>');
         view.buffs.append(other);
-        view.buffs.append(`<div class="label">Armor (Current: <span id="currentarmor"></span>)</div>`);
+        view.buffs.append(`<div class="label">Target's Armor (Current: <span id="currentarmor"></span>)</div>`);
         view.buffs.append(armor);
         view.buffs.append('<div class="label">Default Stance</div>');
         view.buffs.append(stances);
