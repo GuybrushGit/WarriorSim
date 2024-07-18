@@ -753,6 +753,7 @@ var spells = [
     maincdactive: false,
     minlevel: 1,
     active: false,
+    rune: true,
 },
 
 // Bloodthirst
