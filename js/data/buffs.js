@@ -692,7 +692,7 @@ var buffs = [
       sod: true,
    },
    {
-      id: 463864,
+      id: 228978,
       name: "Sigil of Flowing Waters",
       iconname: "inv_sigil_hodir",
       minlevel: 60,
