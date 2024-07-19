@@ -692,6 +692,15 @@ var buffs = [
       sod: true,
    },
    {
+      id: 463864,
+      name: "Sigil of Flowing Waters",
+      iconname: "inv_sigil_hodir",
+      minlevel: 60,
+      other: true,
+      ap: 30,
+      sod: true,
+   },
+   {
       id: 221024,
       name: "Flask of Everlasting Nightmares",
       iconname: "inv_alchemy_endlessflask_01",

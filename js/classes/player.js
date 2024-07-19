@@ -839,6 +839,7 @@ class Player {
             this.stats.haste *= (1 + this.auras.magmadarsreturn.mult_stats.haste / 100);
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
             this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
+
     }
     updateHasteDamage() {
         // MOD_ATTACKSPEED works differently than regular haste, lowers dmg
