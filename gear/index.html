@@ -58,6 +58,7 @@
           let obj = {};
           obj.id = parseInt(item.ID);
 
+          if (obj.id == 228165) debugger;
           obj.type = getType(item.ClassID, item.SubclassID);
           if (!obj.type) continue;
           obj.slot = getSlot(item.InventoryType);
@@ -309,6 +310,11 @@
           if (obj.id == 21268) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21244) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21242) exclude = true; // REMOVE WHEN AQ
+          if (obj.id == 21394) exclude = true; // REMOVE WHEN AQ
+          if (obj.id == 21710) exclude = true; // REMOVE WHEN AQ
+          if (obj.id == 21187) exclude = true; // REMOVE WHEN AQ
+          
+          
           
 
 
@@ -727,6 +733,7 @@
           case "20": return "chest";
           case "21": return "mainhand";
           case "22": return "offhand";
+          case "25": return "ranged";
           case "26": return "ranged";
         }
       }
@@ -764,6 +771,7 @@
             case "13": return "Fist";
             case "14": return "Miscellaneous";
             case "15": return "Dagger";
+            case "16": return "Thrown";
             case "18": return "Crossbow";
             case "20": return "Fishing Pole";
           }

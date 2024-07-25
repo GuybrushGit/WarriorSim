@@ -706,6 +706,7 @@ var buffs = [
       iconname: "inv_alchemy_endlessflask_01",
       ap: 45,
       minlevel: 50,
+      maxlevel: 59,
       other: true,
       sod: true,
    },

@@ -10650,45 +10650,6 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 21187,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "q": "3",
-      "i": "62",
-      "name": "Earthweave Cloak",
-      "p": "inv_misc_cape_07",
-      "agi": 15,
-      "hit": 1
-    },
-    {
-      "id": 21394,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Drape of Unyielding Strength",
-      "p": "inv_misc_cape_20",
-      "agi": 9,
-      "str": 15,
-      "sta": 9,
-      "hit": 1
-    },
-    {
-      "id": 21710,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "q": "4",
-      "i": "88",
-      "name": "Cloak of the Fallen God",
-      "p": "inv_misc_cape_10",
-      "agi": 26,
-      "str": 11,
-      "sta": 15
-    },
-    {
       "id": 22269,
       "type": "Cloth",
       "slot": "back",
@@ -45269,7 +45230,7 @@ var gear = {
       "slot": "trinket",
       "r": 46,
       "q": "2",
-      "i": "60",
+      "i": 60,
       "name": "Rune of the Guard Captain",
       "p": "inv_misc_rune_07",
       "ap": 20,
@@ -45641,7 +45602,7 @@ var gear = {
       "slot": "trinket",
       "r": 46,
       "q": "2",
-      "i": "60",
+      "i": 60,
       "name": "Rune of the Guard Captain",
       "p": "inv_misc_rune_07",
       "ap": 20,
@@ -46705,6 +46666,20 @@ var gear = {
       "ap": 20
     },
     {
+      "id": 21135,
+      "type": "Thrown",
+      "slot": "ranged",
+      "r": 58,
+      "q": "3",
+      "i": "63",
+      "name": "Assassin's Throwing Axe",
+      "speed": 3,
+      "mindmg": 78,
+      "maxdmg": 146,
+      "p": "inv_throwingaxe_06",
+      "agi": 11
+    },
+    {
       "id": 22318,
       "type": "Bows",
       "slot": "ranged",
@@ -46966,6 +46941,21 @@ var gear = {
       "agi": 6,
       "sta": 5,
       "ap": 12
+    },
+    {
+      "id": 228165,
+      "type": "Thrown",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Dragonslayer's Javelin",
+      "speed": 3,
+      "mindmg": 104,
+      "maxdmg": 195,
+      "p": "inv_spear_07",
+      "str": 7,
+      "crit": 1
     },
     {
       "id": 228270,
