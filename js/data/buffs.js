@@ -52,7 +52,7 @@ var buffs = [
       id: 461475,
       spellid: true,
       name: "Valor of Azeroth",
-      iconname: "spell_holy_summonchampion",
+      iconname: "ability_warrior_innerrage",
       group: "rallying",
       ap: 90,
       crit: 5,
