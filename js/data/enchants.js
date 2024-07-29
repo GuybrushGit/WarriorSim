@@ -1231,7 +1231,7 @@ var enchant = {
   name: 'Devilsaur Armor',
   items: [227848,227847],
   bonus: [
-     { count: 2, stats: { hit: 2 } },
+     { count: 2, stats: { hit: 2, resist: { fire: 10 }}},
   ]
 },
 {

@@ -162,7 +162,7 @@ var buffs = [
       agi: 2,
       int: 2,
       minlevel: 10,
-      maxlevel: 19
+      maxlevel: 19,
    },
    {
       id: 6756,
@@ -186,7 +186,13 @@ var buffs = [
       agi: 6,
       int: 6,
       minlevel: 30,
-      maxlevel: 39
+      maxlevel: 39,
+      resist: {
+         fire: 5,
+         frost: 5,
+         nature: 5,
+         shadow: 5
+       },
    },
    {
       id: 8907,
@@ -198,7 +204,13 @@ var buffs = [
       agi: 8,
       int: 8,
       minlevel: 40,
-      maxlevel: 49
+      maxlevel: 49,
+      resist: {
+         fire: 10,
+         frost: 10,
+         nature: 10,
+         shadow: 10
+       },
    },
    {
       id: 9884,
@@ -210,7 +222,13 @@ var buffs = [
       agi: 10,
       int: 10,
       minlevel: 50,
-      maxlevel: 59
+      maxlevel: 59,
+      resist: {
+         fire: 15,
+         frost: 15,
+         nature: 15,
+         shadow: 15
+       },
    },
    {
       id: 9885,
@@ -221,7 +239,13 @@ var buffs = [
       str: 12,
       agi: 12,
       int: 12,
-      minlevel: 60
+      minlevel: 60,
+      resist: {
+        fire: 20,
+        frost: 20,
+        nature: 20,
+        shadow: 20
+      },
    },
    {
       id: 17055,
@@ -802,6 +826,38 @@ var buffs = [
       spellcrit: 60,
       minlevel: 60,
       other: true,
+   },
+   {
+      id: 13510,
+      name: "Flask of the Titans",
+      iconname: "inv_potion_62",
+      minlevel: 50,
+      other: true,
+      group: 'flask'
+   },
+   {
+      id: 13513,
+      name: "Flask of Chromatic Resistance",
+      iconname: "inv_potion_48",
+      minlevel: 50,
+      other: true,
+      group: 'flask',
+      resist: {
+         fire: 25,
+         frost: 25,
+         nature: 25,
+         shadow: 25
+      }
+   },
+   {
+      id: 12455,
+      name: "Juju Ember",
+      iconname: "inv_misc_monsterscales_15",
+      minlevel: 55,
+      other: true,
+      resist: {
+         fire: 15
+      }
    },
    
 
