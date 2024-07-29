@@ -76,6 +76,13 @@ SIM.PROFILES = {
             view.importProfile(preset_pb, index);
         });
 
+        view.presets.on('click','.import-fr', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let index = view.container.find('.profile').last().data('index') + 1;
+            view.importProfile(preset_fr, index);
+        });
+
         view.container.on('click','.delete-profile', function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -225,6 +232,7 @@ SIM.PROFILES = {
             view.presets.empty();
             view.presets.append(`
                 <label>Presets:</label>
+                <div class="import-fr">Heat 3 BiS</div>
                 <div class="import-dw">60 DW Fury</div>
                 <div class="import-pb">60 DW Fury Pre-Bis</div>
                 <div class="import-th">60 2H Arms</div>
