@@ -516,7 +516,17 @@ var enchant = {
        "phase": 1,
        "r": 50,
        "ench": "1506"
-     }
+     },
+     {
+      "id": 11644,
+      "name": "Lesser Arcanum of Resilience (Fire Resist)",
+      "resist": {
+         "fire": 20
+       },
+      "phase": 1,
+      "r": 50,
+      "ench": "1505"
+    }
    ],
    "shoulder": [
      {
@@ -526,6 +536,30 @@ var enchant = {
        "r": 50,
        "ench": "7328"
      },
+     {
+      "name": "Blessed Flame Mantle of the Dawn",
+      "source": "Quest",
+      "subsource": "fire",
+      "resist": {
+        "fire": 15
+      },
+      "phase": "1",
+      "id": 227819,
+      "r": 55,
+      "ench": "7563"
+    },
+    {
+      "name": "Flame Mantle of the Dawn",
+      "source": "Quest",
+      "subsource": "fire",
+      "resist": {
+        "fire": 5
+      },
+      "phase": "1",
+      "id": 18169,
+      "r": 55,
+      "ench": "2483"
+    },
      {
        "name": "Frost Mantle of the Dawn",
        "source": "Quest",
@@ -571,6 +605,17 @@ var enchant = {
      }
    ],
    "back": [
+      {
+        "name": "Hydraxian Coronation",
+        "source": "Quest",
+        "subsource": "fire",
+        "resist": {
+          "fire": 20
+        },
+        "phase": 1,
+        "id": 227926,
+        "ench": "7564"
+      },
      {
        "spellid": true,
        "name": "Greater Fire Resistance",
@@ -805,7 +850,17 @@ var enchant = {
        "phase": 1,
        "r": 50,
        "ench": "1506"
-     }
+     },
+     {
+      "id": 11644,
+      "name": "Lesser Arcanum of Resilience (Fire Resist)",
+      "resist": {
+         "fire": 20
+       },
+      "phase": 1,
+      "r": 50,
+      "ench": "1505"
+    }
    ],
    "feet": [
      {
