@@ -4583,6 +4583,20 @@ var gear = {
       "ap": 26
     },
     {
+      "id": 16309,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 50,
+      "q": "3",
+      "i": "63",
+      "name": "Drakefire Amulet",
+      "p": "inv_jewelry_talisman_11",
+      "sta": 10,
+      "resist": {
+        "fire": 15
+      }
+    },
+    {
       "id": 17044,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -9576,6 +9590,19 @@ var gear = {
       "sta": 3,
       "resist": {
         "shadow": 6
+      }
+    },
+    {
+      "id": 12905,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 56,
+      "q": "3",
+      "i": "61",
+      "name": "Wildfire Cape",
+      "p": "inv_chest_cloth_16",
+      "resist": {
+        "fire": 20
       }
     },
     {
@@ -45216,6 +45243,19 @@ var gear = {
       "ap": 22
     },
     {
+      "id": 18638,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Hyper-Radiant Flame Reflector",
+      "p": "inv_misc_enggizmos_04",
+      "resist": {
+        "fire": 18
+      }
+    },
+    {
       "id": 19024,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -45440,6 +45480,20 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 227915,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "q": "4",
+      "i": "65",
+      "name": "Duke's Domain",
+      "p": "inv_elemental_primal_water",
+      "sta": 22,
+      "resist": {
+        "fire": 20
+      }
+    },
+    {
       "id": 228078,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -45460,6 +45514,19 @@ var gear = {
       "name": "Germinating Poisonseed",
       "p": "inv_misc_herb_nightmareseed",
       "hit": 1
+    },
+    {
+      "id": 228084,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Miniaturized Fire Extinguisher",
+      "p": "inv_misc_enggizmos_essencedistiller",
+      "resist": {
+        "fire": 20
+      }
     },
     {
       "id": 228089,
@@ -45588,6 +45655,19 @@ var gear = {
       "ap": 22
     },
     {
+      "id": 18638,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 53,
+      "q": "3",
+      "i": "58",
+      "name": "Hyper-Radiant Flame Reflector",
+      "p": "inv_misc_enggizmos_04",
+      "resist": {
+        "fire": 18
+      }
+    },
+    {
       "id": 19024,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -45812,6 +45892,20 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 227915,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 0,
+      "q": "4",
+      "i": "65",
+      "name": "Duke's Domain",
+      "p": "inv_elemental_primal_water",
+      "sta": 22,
+      "resist": {
+        "fire": 20
+      }
+    },
+    {
       "id": 228078,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -45832,6 +45926,19 @@ var gear = {
       "name": "Germinating Poisonseed",
       "p": "inv_misc_herb_nightmareseed",
       "hit": 1
+    },
+    {
+      "id": 228084,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 57,
+      "q": "3",
+      "i": "62",
+      "name": "Miniaturized Fire Extinguisher",
+      "p": "inv_misc_enggizmos_essencedistiller",
+      "resist": {
+        "fire": 20
+      }
     },
     {
       "id": 228089,
