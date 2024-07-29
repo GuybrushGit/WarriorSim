@@ -40904,7 +40904,7 @@ var gear = {
       "d": 8
     },
     {
-      "id": 228927,
+      "id": 228924,
       "type": "Plate",
       "slot": "feet",
       "r": 60,
@@ -40912,6 +40912,7 @@ var gear = {
       "i": "71",
       "name": "Tempered Dark Iron Boots",
       "p": "inv_boots_chain_08",
+      "agi": 15,
       "str": 15,
       "resist": {
         "fire": 30
@@ -55944,6 +55945,50 @@ var gear = {
       "sta": 3
     },
     {
+      "id": 229379,
+      "type": "Fist",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Eskhandar's Right Claw",
+      "speed": 2.6,
+      "mindmg": 87,
+      "maxdmg": 163,
+      "p": "inv_misc_monsterclaw_04",
+      "agi": 7
+    },
+    {
+      "id": 229378,
+      "type": "Fist",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Magmadar's Right Claw",
+      "speed": 2.5,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "p": "inv_misc_monsterclaw_03",
+      "sta": 12,
+      "hit": 1,
+      "ap": 20
+    },
+    {
+      "id": 229376,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Sorcerous Dagger",
+      "speed": 1.4,
+      "mindmg": 37,
+      "maxdmg": 79,
+      "p": "inv_weapon_shortblade_07",
+      "sta": 8
+    },
+    {
       "id": 213105,
       "type": "Mace",
       "slot": "onehand",
@@ -55957,6 +56002,41 @@ var gear = {
       "p": "inv_misc_food_13",
       "proc": {
         "spell": "Spicy"
+      }
+    },
+    {
+      "id": 229374,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Fist of the Firesworn",
+      "speed": 1.7,
+      "mindmg": 59,
+      "maxdmg": 110,
+      "p": "spell_fire_flametounge",
+      "sta": 10,
+      "proc": {
+        "magic": true,
+        "dmg": 71
+      }
+    },
+    {
+      "id": 229372,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Gutgore Ripper",
+      "speed": 1.8,
+      "mindmg": 66,
+      "maxdmg": 123,
+      "p": "inv_weapon_shortblade_18",
+      "proc": {
+        "magic": true,
+        "dmg": 151
       }
     },
     {
@@ -57007,8 +57087,8 @@ var gear = {
       "mindmg": 76,
       "maxdmg": 142,
       "p": "inv_misc_wrench_01",
-      "ap": 26,
-      "hit": 1
+      "hit": 1,
+      "ap": 26
     },
     {
       "id": 228185,
@@ -67240,6 +67320,22 @@ var gear = {
       "sta": 3
     },
     {
+      "id": 229377,
+      "type": "Fist",
+      "slot": "offhand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Magmadar's Left Claw",
+      "speed": 2.5,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "p": "inv_misc_monsterclaw_03",
+      "agi": 11,
+      "sta": 8,
+      "crit": 1
+    },
+    {
       "id": 213105,
       "type": "Mace",
       "slot": "onehand",
@@ -67253,6 +67349,41 @@ var gear = {
       "p": "inv_misc_food_13",
       "proc": {
         "spell": "Spicy"
+      }
+    },
+    {
+      "id": 229374,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Fist of the Firesworn",
+      "speed": 1.7,
+      "mindmg": 59,
+      "maxdmg": 110,
+      "p": "spell_fire_flametounge",
+      "sta": 10,
+      "proc": {
+        "magic": true,
+        "dmg": 71
+      }
+    },
+    {
+      "id": 229372,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Gutgore Ripper",
+      "speed": 1.8,
+      "mindmg": 66,
+      "maxdmg": 123,
+      "p": "inv_weapon_shortblade_18",
+      "proc": {
+        "magic": true,
+        "dmg": 151
       }
     },
     {
@@ -67972,8 +68103,8 @@ var gear = {
       "mindmg": 76,
       "maxdmg": 142,
       "p": "inv_misc_wrench_01",
-      "ap": 26,
-      "hit": 1
+      "hit": 1,
+      "ap": 26
     },
     {
       "id": 228267,
@@ -74912,13 +75043,13 @@ var gear = {
       "id": 208222,
       "type": "Axe",
       "slot": "twohand",
-      "r": 58,
+      "r": 55,
       "q": "3",
       "i": "61",
       "name": "Old Guard Retaliator",
       "speed": 3.9,
-      "mindmg": 189,
-      "maxdmg": 264,
+      "mindmg": 163,
+      "maxdmg": 245,
       "p": "inv_axe_22",
       "agi": 10,
       "str": 8,
@@ -75118,6 +75249,78 @@ var gear = {
       "maxdmg": 87,
       "p": "inv_staff_25",
       "sta": 10
+    },
+    {
+      "id": 229382,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Hyperthermically Insulated Lava Dredger",
+      "speed": 3.2,
+      "mindmg": 140,
+      "maxdmg": 227,
+      "p": "inv_gizmo_02",
+      "sta": 25,
+      "resist": {
+        "fire": 15
+      }
+    },
+    {
+      "id": 229381,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 58,
+      "q": "4",
+      "i": "71",
+      "name": "Thunderstrike",
+      "speed": 3.4,
+      "mindmg": 186,
+      "maxdmg": 279,
+      "p": "inv_spear_08",
+      "agi": 13,
+      "sta": 33,
+      "proc": {
+        "magic": true,
+        "dmg": 250
+      }
+    },
+    {
+      "id": 229380,
+      "type": "Polearm",
+      "slot": "twohand",
+      "r": 58,
+      "q": "4",
+      "i": "71",
+      "name": "Shadowstrike",
+      "speed": 3.4,
+      "mindmg": 186,
+      "maxdmg": 279,
+      "p": "inv_spear_08",
+      "agi": 33,
+      "sta": 13,
+      "proc": {
+        "magic": true,
+        "dmg": 200,
+        "coeff": 1
+      }
+    },
+    {
+      "id": 229373,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Faithbringer",
+      "speed": 3.7,
+      "mindmg": 202,
+      "maxdmg": 303,
+      "p": "inv_hammer_04",
+      "str": 17,
+      "sta": 14,
+      "crit": 1
     },
     {
       "id": 213289,
@@ -76125,7 +76328,9 @@ var gear = {
       "mindmg": 145,
       "maxdmg": 242,
       "p": "inv_misc_key_15",
-      "sta": 23
+      "sta": 31,
+      "hit": 1,
+      "crit": 1
     },
     {
       "id": 228170,
@@ -76244,14 +76449,14 @@ var gear = {
       "mindmg": 145,
       "maxdmg": 229,
       "p": "inv_staff_goldfeathered_01",
-      "sta": 19,
+      "sta": 17,
       "resist": {
         "fire": 5,
         "nature": 5,
         "frost": 5,
         "shadow": 5
       },
-      "hit": 1
+      "hit": 2
     },
     {
       "id": 228459,
@@ -76583,8 +76788,8 @@ var gear = {
       "mindmg": 125,
       "maxdmg": 204,
       "p": "inv_staff_13",
-      "sta": 16,
-      "crit": 1
+      "sta": 15,
+      "crit": 2
     }
   ]
 };

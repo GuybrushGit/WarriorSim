@@ -7530,7 +7530,7 @@ Conjured items disappear if logged out for more than 15 minutes.",
 10139,Rank 6,"Conjures $?s442543[${$max(20,$m1)}][$s1] $lbottle:bottles; of sparkling water, providing the mage and $ghis:her; allies with something to drink.
 
 Conjured items disappear if logged out for more than 15 minutes.",
-10140,Rank 7,"Conjures $s1 $lbottle:bottles; of crystal water, providing the mage and $ghis:her; allies with something to drink.
+10140,Rank 7,"Conjures $?s442543[${$max(20,$m1)}][$s1] $lbottle:bottles; of crystal water, providing the mage and $ghis:her; allies with something to drink.
 
 Conjured items disappear if logged out for more than 15 minutes.",
 10141,Rank 5,,
@@ -8291,7 +8291,7 @@ Each strike has a $h% chance of poisoning the enemy, slowing their movement spee
 11213,Rank 1,Gives you a $h% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by $/10;12536s1%.,
 11222,Rank 1,Reduces the chance that the opponent can resist your Arcane spells by $s1%.,
 11232,Rank 1,Increases your maximum Mana by $s1%.,
-11237,Rank 1,Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles.,
+11237,Rank 1,"Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles$?s442543[, Regeneration, or Mass Regeneration, and a $s2% chance to avoid interruption caused by damage while casting Arcane Blast][].",
 11242,Rank 1,Increases the critical strike chance of your Arcane Explosion spell by an additional $s1%.,
 11247,Rank 1,Increases the effect of your Amplify Magic and Dampen Magic spells by $s1%.,
 11252,Rank 1,Decreases the mana lost per point of damage taken when Mana Shield is active by $s1%.,
@@ -9148,8 +9148,8 @@ Time between attacks increased by $s2%."
 12459,,Attaches a permanent scope to a bow or gun that increases its damage by 5.,
 12460,,Attaches a permanent scope to a bow or gun that increases its damage by 7.,
 12461,,"Inflicts normal damage plus $s2 to an enemy, stunning it for $d.",Stunned.
-12463,Rank 2,Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles.,
-12464,Rank 3,Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles.,
+12463,Rank 2,"Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles$?s442543[, Regeneration, or Mass Regeneration, and a $s2% chance to avoid interruption caused by damage while casting Arcane Blast][].",
+12464,Rank 3,"Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles$?s442543[, Regeneration, or Mass Regeneration, and a $s2% chance to avoid interruption caused by damage while casting Arcane Blast][].",
 12466,,Inflicts Fire damage to an enemy.,
 12467,Rank 2,Increases the critical strike chance of your Arcane Explosion spell by an additional $s1%.,
 12468,,"Calls down a pillar of flame, burning all enemies in a selected area and inflicting additional damage every $t2 sec. for $d.",Fire damage inflicted every $t2 sec.
@@ -12320,8 +12320,8 @@ Melee damage taken is reduced by $s1%."
 16766,Rank 5,Reduces the casting time of your Frostbolt spell by $/1000;S1 sec.,
 16767,Rank 1,"Fire at an X, Y, Z location with a ranged weapon.  Each location needs a separate copy of this spell.",
 16768,Rank 1,"Fire at an X, Y, Z location with a ranged weapon.  Each location needs a separate copy of this spell.",
-16769,Rank 4,Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles.,
-16770,Rank 5,Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles.,
+16769,Rank 4,"Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles$?s442543[, Regeneration, or Mass Regeneration, and a $s2% chance to avoid interruption caused by damage while casting Arcane Blast][].",
+16770,Rank 5,"Gives you a $s1% chance to avoid interruption caused by damage while channeling Arcane Missiles$?s442543[, Regeneration, or Mass Regeneration, and a $s2% chance to avoid interruption caused by damage while casting Arcane Blast][].",
 16771,,,
 16772,Rank 1,"Fire at an X, Y, Z location with a ranged weapon.  Each location needs a separate copy of this spell.",
 16775,Rank 1,"Fire at an X, Y, Z location with a ranged weapon.  Each location needs a separate copy of this spell.",
@@ -21449,7 +21449,7 @@ Deals $s2 nature damage every $t2 sec."
 28851,,Increases healing done by Flash of Light by up to $s1.,
 28852,,Increases the melee attack power bonus of your Seal of the Crusader by $s1 and the Holy damage increase of your Judgement of the Crusader by $s2.,
 28853,,Increases healing done by Flash of Light by up to $s1.,
-28854,,Increases the damage of your Moonfire spell by up to $s1%.,
+28854,,Increases the damage of your Moonfire spell by up to $s1.,
 28855,,Reduces the rage cost of Maul and Swipe by 3.,
 28856,,Increases healing done by Lesser Healing Wave by up to $s1.,
 28857,,Increases damage done by Chain Lightning and Lightning Bolt by up to $s1.,
@@ -22237,7 +22237,7 @@ $@null",
 349863,,Restores your suspended world effects.,
 349981,,,"World effects suspended:
 
-$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]$?$W11!=0[$@spelldesc348779 $@spellicon438536 $@spellname438536 (${$w11/60}m)][]$?$W12!=0[$@spelldesc348779 $@spellicon446695 $@spellname446695 (${$w12/60}m)][]$?$W13!=0[$@spelldesc460939 $@spellicon460939 $@spellname460939 (${$w13/60}m)][]
+$?$W1!=0[$@spelldesc348779 $@spellicon22817 $@spellname22817 (${$w1/60}m)][]$?$W2!=0[$@spelldesc348779 $@spellicon22818 $@spellname22818 (${$w2/60}m)][]$?$W3!=0[$@spelldesc348779 $@spellicon22820 $@spellname22820 (${$w3/60}m)][]$?$W4!=0[$@spelldesc348779 $@spellicon22888 $@spellname22888 (${$w4/60}m)][]$?$W5!=0[$@spelldesc348779 $@spellicon16609 $@spellname16609 (${$w5/60}m)][]$?$W6!=0[$@spelldesc348779 $@spellicon24425 $@spellname24425 (${$w6/60}m)][]$?$W7!=0[$@spelldesc348779 $@spellicon15366 $@spellname15366 (${$w7/60}m)][]$?$W8!=0[$@spelldesc348779 $@spellicon23768 $@spellname353694 (${$w8/60}m)][]$?$W10!=0[$@spelldesc348779 $@spellicon430947 $@spellname430947 (${$w10/60}m)][]$?$W11!=0[$@spelldesc348779 $@spellicon438536 $@spellname438536 (${$w11/60}m)][]$?$W12!=0[$@spelldesc348779 $@spellicon446695 $@spellname446695 (${$w12/60}m)][]$?$W13!=0[$@spelldesc348779 $@spellicon460939 $@spellname460939 (${$w13/60}m)][]
 
 
 
@@ -23751,7 +23751,7 @@ Scorpid Sting - Attempts to Disarm the target for $409495d. This effect cannot o
 409532,Rank 1,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $13812s1 Fire damage and $13812o2 additional Fire damage over $13812d to all within $13812a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
 409534,Rank 2,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $14314s1 Fire damage and $14314o2 additional Fire damage over $14314d to all within $14314a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
 409535,Rank 3,"Place a fire trap at a nearby location that explodes when an enemy approaches, causing $14315s1 Fire damage and $14315o2 additional Fire damage over $14315d to all within $14315a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.",
-409541,,"Your Traps can now be placed at any location within $409535r yards. Additionally, your Fire-based and Frost-based traps now have separate shared cooldowns.",
+409541,,"Your Freezing, Immolation, and Explosive Traps can now be placed at any location within $409535r yards. Additionally, your Fire-based and Frost-based traps now have separate shared cooldowns.",
 409552,,"You fire an explosive charge into the enemy target, dealing ${$RAP*0.039+$m1/100*$<damagepower>}-${$RAP*0.039+$M1/100*$<damagepower>} Fire damage to all enemies within $409554a1 yards. The charge will deal damage again every second for an additional $d.",Taking $w1 Fire damage every second.
 409554,,"You fire an explosive charge into the enemy target, dealing ${$RAP*0.14+$m1}-${$RAP*0.14+$M1} Fire damage. The charge will blast the target every second for an additional $d. Cooldown shared with Arcane Shot.",Taking Fire damage every second.
 409580,,"The hunter invokes the heart of a lion, increasing total stats by $409583s1% and Attack Power by $409583s2 for all nearby allies, and increasing total stats for the Hunter by an additional $409580s1%.",Increases Hunter's stats by $s1%.
@@ -28823,7 +28823,7 @@ $@spelldesc442898",
 
 $@spellicon453622
 $@spelldesc453622",
-454017,,Connect a Fel Scar to a world deep in Legion space. May have unpredictable and dangerous effects.,
+454017,,Connect a Fel Scar or Rift to a world deep in Legion space. May have unpredictable and dangerous effects.,
 454042,,,Spell damage increased by $w1.
 454197,,,
 454204,,,The rift is destabilizing.
@@ -28832,7 +28832,7 @@ $@spelldesc453622",
 454209,,,
 454210,,,
 454427,,,
-454466,,Connect a Fel Scar to a world deep in Legion space. May have unpredictable and dangerous effects.,
+454466,,Connect a Fel Scar or Rift to a world deep in Legion space. May have unpredictable and dangerous effects.,
 454469,,Overcharge a Legion Portal Tuner.,
 455350,,Reduces healing effects for an enemy by $s1% for $d.,Healing effects reduced by $s1%.
 455586,,,
@@ -28977,7 +28977,7 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 457646,,You gain ${$457648m1/10} extra Rage every time you take any damage or deal auto attack damage.,
 457648,,,
 457651,,Increases all threat you generate in Defensive Stance by an additional $s1% and increases all damage you deal in Gladiator Stance by $s2%.,
-457652,,You gain $s1 Rage when you change stances.,
+457652,,"After changing stances, your next offensive ability's rage cost is reduced by $s1.",
 457697,,"For $457699d after leaving a stance, you can use abilities requiring that stance as if you were still in that stance.",
 457699,,,You can temporarily use all abilities that require Defensive Stance.
 457706,,,You can temporarily use all abilities that require Battle Stance.
@@ -29861,7 +29861,7 @@ $o2 Fire damage inflicted over $d."
 462628,,,
 462630,,,
 462634,,,
-462636,,Increases your spell damage by up to 100 and your healing by up to 190 for $d.,"Spell damage increased by up to $s1.
+462636,,Increases your spell damage by up to $s1 and your healing by up to $s2 for $d.,"Spell damage increased by up to $s1.
 Healing increased by up to $s2."
 462653,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
 462654,Rank 5,Increases your critical strike chance with ranged weapons by $s1%.,
@@ -29980,6 +29980,55 @@ Defense increased by $s1."
 463946,,Blasts up to 3 targets for $s1 Nature damage.,
 463970,,Teaches you how to sew a Bottomless Bag.,
 463972,,,
+463165,,,
+463171,,"Causes an enemy to fixate upon the caster and increases the caster's attack speed by $s2% for $d. While the target is fixated upon the caster, the target is very reluctant to attack anything else.",
+463175,,,
+463275,,,
+463269,,,
+463253,,,
+463250,,,
+464558,,,
+463911,,,
+463903,,,
+463825,,,
+463772,,,
+463661,,,
+463864,,"Gain an enchanted sigil of Flowing Waters, empowering your raid to deal up to $s1 increased damage and healing with spells, and increasing attack power by $s2 for $d.","Empowered by Flowing Waters. Dealing up to $s1 increased damage and healing with spells, and increasing attack power by $s2."
+463866,,,
+463867,,Teaches you how to conjure a Sigil of Flowing Waters. ,
+463868,,While applied to target shield it increases spell damage and healing by up to 24.  Lasts for 30 minutes.,
+463869,,Creates Conductive Shield Coating.,
+463870,,Teaches you how to create Conductive Shield Coating.,
+463871,,Permanently enchant a Shield to add up to 30 damage to spells and up to 55 points of healing to healing spells.,
+463872,,Teaches you how to permanently enchant a shield to add up to 30 damage to spells and up to 55 healing to healing spells.,
+463873,,"Increases damage done by magical spells and effects by up to $s1, and increases healing done by magical spells and effects by up to $2.",
+464241,,Reduces the rage cost of your next offensive ability by $/10;s1.,Reduces the rage cost of your next offensive ability by $/10;s1.
 464250,,"Charges an enemy, inflicting $s3 damage to the target and any of its nearby allies, as well as knocking them all back.",
 464251,,,
+464732,,,
+464731,,,
+464730,,,
+464658,,,
+464650,,,Stunned and very cold.
+464630,,"Calls down a mana storm that lasts $d., inflicting $s1 Frost damage and draining $s2 mana every $t1 sec. to all enemies in a selected area.",
+464629,,,
 464279,,Inflicts normal damage plus $s1 to nearby enemies.,
+464743,,Reduces the melee and ranged attack power of nearby enemies by $s1 for $d.,Melee and ranged attack power reduced by $s1.
+464611,,,
+464614,,,
+464945,,Transforms Shadowstrike into Thunderstrike.,
+464946,,Transforms Thunderstrike into Shadowstrike.,
+465124,,,
+465108,,,
+465003,,,
+465085,,,
+465155,,,
+465191,,,
+465192,,,
+465193,,,
+465194,,,
+465195,,,
+465196,,,
+465273,,,
+465323,,,
+465352,,"Banishes the target, preventing all action but making it invulnerable for up to $d.  Only one target can be banished at a time.  Only works on Demons and Elementals.","Invulnerable, but unable to act."
