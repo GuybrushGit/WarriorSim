@@ -684,14 +684,76 @@ class UnstoppableMight extends Spell {
         this.offensive = false;
     }
     use() {
-        if (this.player.stance != 'battle') this.player.switch('battle');
-        else this.player.switch(this.player.basestance == 'battle' ? 'zerk' : this.player.basestance);
+        this.player.switch(this.switchto);
     }
     canUse() {
+        return this.player.basestance == 'def' ? this.canUseDef() : this.player.basestance == 'glad' ? this.canUseGlad() : this.canUseZerk();
+    }
+    canUseZerk() {
+        if (this.player.stancetimer) return false;
         if (!this.player.auras.battleforecast) return false;
-        //Switch if Forecast shorter than X secs and rage below Y
-        let forecast = Math.max(this.player.auras.battleforecast.timer - step, this.player.auras.berserkerforecast.timer - step, this.player.auras.defensiveforecast.timer - step);
-        return (this.switchtimeactive && this.player.rage <= this.switchrage && forecast <= this.switchtime);
+        //Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
+
+        if (this.player.stance == 'zerk' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'battle';
+            return true;
+        }
+
+        if (this.player.stance == 'battle' && (this.player.auras.berserkerforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'zerk';
+            return true;
+        }
+
+        if (this.switchdefault && this.player.stance != this.player.basestance && this.player.rage <= this.switchrage) {
+            this.switchto = this.player.basestance;
+            return true;
+        }
+
+        return false;
+    }
+    canUseGlad() {
+        if (this.player.stancetimer) return false;
+        if (!this.player.auras.battleforecast) return false;
+        //Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
+
+        if (this.player.stance == 'zerk' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'glad';
+            return true;
+        }
+
+        if (this.player.stance == 'glad' && (this.player.auras.berserkerforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'zerk';
+            return true;
+        }
+
+        if (this.switchdefault && this.player.stance != this.player.basestance && this.player.rage <= this.switchrage) {
+            this.switchto = this.player.basestance;
+            return true;
+        }
+
+        return false;
+    }
+    canUseDef() {
+        if (this.player.stancetimer) return false;
+        if (!this.player.auras.battleforecast) return false;
+        //Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
+
+        if (this.player.stance == 'def' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'battle';
+            return true;
+        }
+
+        if (this.player.stance == 'battle' && (this.player.auras.defensiveforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage && this.switchtimeactive) {
+            this.switchto = 'def';
+            return true;
+        }
+
+        if (this.switchdefault && this.player.stance != this.player.basestance && this.player.rage <= this.switchrage) {
+            this.switchto = this.player.basestance;
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -705,8 +767,7 @@ class StanceSwitch extends Spell {
         this.player.switch(this.player.basestance);
     }
     canUse() {
-        return !this.player.timer && !this.player.stancetimer && this.player.stance != this.player.basestance && 
-            (!this.player.spells.unstoppablemight || this.player.spells.unstoppablemight.switchdefault);
+        return !this.player.spells.unstoppablemight && !this.player.stancetimer && this.player.stance != this.player.basestance;
     }
 }
 
