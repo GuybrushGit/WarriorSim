@@ -56052,36 +56052,6 @@ var gear = {
       "sta": 3
     },
     {
-      "id": 229379,
-      "type": "Fist",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Eskhandar's Right Claw",
-      "speed": 2.6,
-      "mindmg": 87,
-      "maxdmg": 163,
-      "p": "inv_misc_monsterclaw_04",
-      "agi": 7
-    },
-    {
-      "id": 229378,
-      "type": "Fist",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Magmadar's Right Claw",
-      "speed": 2.5,
-      "mindmg": 92,
-      "maxdmg": 171,
-      "p": "inv_misc_monsterclaw_03",
-      "sta": 12,
-      "hit": 1,
-      "ap": 20
-    },
-    {
       "id": 229376,
       "type": "Dagger",
       "slot": "mainhand",
@@ -57257,7 +57227,8 @@ var gear = {
       "p": "inv_misc_monsterclaw_04",
       "agi": 7,
       "proc": {
-        "spell": "Eskhandar"
+        "spell": "Eskhandar",
+        "ppm": 2
       }
     },
     {
@@ -67425,22 +67396,6 @@ var gear = {
       "p": "inv_weapon_shortblade_15",
       "agi": 6,
       "sta": 3
-    },
-    {
-      "id": 229377,
-      "type": "Fist",
-      "slot": "offhand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Magmadar's Left Claw",
-      "speed": 2.5,
-      "mindmg": 92,
-      "maxdmg": 171,
-      "p": "inv_misc_monsterclaw_03",
-      "agi": 11,
-      "sta": 8,
-      "crit": 1
     },
     {
       "id": 213105,
