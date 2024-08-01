@@ -1108,6 +1108,15 @@ var buffs = [
       minlevel: 54,
    },
    {
+      id: 455864,
+      spellid: true,
+      name: "Faerie Fire Hit",
+      iconname: "spell_nature_faeriefire",
+      armor: true,
+      hit: 1,
+      minlevel: 60,
+   },
+   {
       id: 704,
       spellid: true,
       name: "Curse of Recklessness",
