@@ -858,6 +858,32 @@ var buffs = [
          fire: 15
       }
    },
+   {
+      id: 9036,
+      name: "Magic Resistance Potion",
+      iconname: "inv_potion_16",
+      minlevel: 32,
+      other: true,
+      mrp: true,
+      resist: {
+         fire: 50,
+         frost: 50,
+         shadow: 50,
+         nature: 50,
+      }
+   },
+   {
+      id: 19900,
+      spellid: true,
+      name: "Fire Resistance Aura",
+      iconname: "spell_fire_sealoffire",
+      minlevel: 60,
+      other: true,
+      fra: true,
+      resist: {
+         fire: 60,
+      }
+   },
    
 
    // SoD Extras

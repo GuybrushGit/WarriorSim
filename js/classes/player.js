@@ -613,6 +613,8 @@ class Player {
 
                 if (buff.resist) {
                     let impmotw = buff.name == "Mark of the Wild" && buffs.filter(s => s.motwmod && s.active)[0];
+                    if (buff.name == "Mark of the Wild" && buffs.filter(s => s.mrp && s.active)[0]) continue;
+                    if ((buff.name == "Mark of the Wild" || buff.mrp) && buffs.filter(s => s.fra && s.active)[0]) continue;
                     this.base.resist.fire += ~~(buff.resist.fire * (impmotw ? impmotw.motwmod : 1) || 0);
                     this.base.resist.frost += ~~(buff.resist.frost * (impmotw ? impmotw.motwmod : 1) || 0);
                     this.base.resist.nature += ~~(buff.resist.nature * (impmotw ? impmotw.motwmod : 1) || 0);
