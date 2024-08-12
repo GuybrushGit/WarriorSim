@@ -817,15 +817,24 @@ var buffs = [
       other: true,
    },
    {
-      id: 29232,
+      id: 27666,
       spellid: true,
-      name: "Fungal Bloom",
-      iconname: "spell_nature_unyeildingstamina",
-      crit: 50,
-      spellcrit: 60,
-      minlevel: 60,
+      name: "Darnassus Gift of Friendship",
+      iconname: "inv_misc_gift_02",
+      minlevel: 1,
       other: true,
+      agi: 30,
    },
+   // {
+   //    id: 29232,
+   //    spellid: true,
+   //    name: "Fungal Bloom",
+   //    iconname: "spell_nature_unyeildingstamina",
+   //    crit: 50,
+   //    spellcrit: 60,
+   //    minlevel: 60,
+   //    other: true,
+   // },
    {
       id: 13510,
       name: "Flask of the Titans",
@@ -884,6 +893,8 @@ var buffs = [
          fire: 60,
       }
    },
+ 
+   
    
 
    // SoD Extras

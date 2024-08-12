@@ -26574,8 +26574,15 @@ ID,Name_lang
 463112,[DNT] S03 - MC Raid - Teleport 07 - Rune of Theri (Golemagg)
 463113,[DNT] S03 - MC Raid - Teleport 08 - Rune of Koro (Sulfuron Harbinger)
 463146,Libram of the Consecrated
+463165,(DNT) Firefighter Threat Pulse
 463168,Kerosene Kick
+463171,Fixate
+463175,(DNT) Remove Heat Screen Effects
 463186,[DNT] S03 - MC Raid - Defeated Heat Level Message
+463250,[DNT] Remove Parry
+463253,[DNT] Power Bar Color
+463269,Gehennas' Curse
+463275,Gehennas' Curse
 463285,Starfire
 463320,Opening
 463448,Frost Nova
@@ -26592,22 +26599,9 @@ ID,Name_lang
 463621,Retribution Aura
 463626,Teleport
 463641,Chain Lightning
-463946,Chain Lightning
-463970,Pattern: Bottomless Bag
-463972,Bottomless Bag
-463165,(DNT) Firefighter Threat Pulse
-463171,Fixate
-463175,(DNT) Remove Heat Screen Effects
-463275,Gehennas' Curse
-463269,Gehennas' Curse
-463253,[DNT] Power Bar Color
-463250,[DNT] Remove Parry
-464558,Flame Burst
-463911,Doomsday
-463903,Doomsday
-463825,(DNT) Lava Bubble Animation
-463772,(DNT) Lava Trap Animation
 463661,Meteor
+463772,(DNT) Lava Trap Animation
+463825,(DNT) Lava Bubble Animation
 463864,Sigil of Flowing Waters
 463866,Sigil of Flowing Waters
 463867,Enchanted Sigil: Flowing Waters
@@ -26617,26 +26611,32 @@ ID,Name_lang
 463871,Enchant Shield - Law of Nature
 463872,Formula: Enchant Shield - Law of Nature
 463873,Law of Nature
+463903,Doomsday
+463911,Doomsday
+463946,Chain Lightning
+463970,Pattern: Bottomless Bag
+463972,Bottomless Bag
 464241,Tactician
 464250,Surge
 464251,[DNT] Teleport to Storm Cliffs Exterior
-464732,[DNT] Teleport to Storm Cliffs Exterior
-464731,[DNT] Storm Cliffs Graveyard
-464730,[DNT] Storm Cliffs Graveyard
-464658,Frozen Solid
-464650,Frozen Solid
-464630,Manastorm
-464629,Manastorm
 464279,Trample
-464743,Force Dampeners
+464558,Flame Burst
 464611,[DNT] Drained of Blood (Instance)
 464614,[DNT] Drained of Blood (Instance - Cast)
+464629,Manastorm
+464630,Manastorm
+464650,Frozen Solid
+464658,Frozen Solid
+464730,[DNT] Storm Cliffs Graveyard
+464731,[DNT] Storm Cliffs Graveyard
+464732,[DNT] Teleport to Storm Cliffs Exterior
+464743,Force Dampeners
 464945,Summon Thunderstrike
 464946,Summon Shadowstrike
-465124,(DNT) TMC Summoning Steam
-465108,Frigid Current
 465003,(DNT) TMC Spawn Visuals
 465085,[DNT] Calyx - On Quest
+465108,Frigid Current
+465124,(DNT) TMC Summoning Steam
 465155,Explosion
 465191,Heal Max Health
 465192,Lucifron's Curse
@@ -26647,3 +26647,13 @@ ID,Name_lang
 465273,(DNT) Core Hound Summon Stalker
 465323,Combat Pulse
 465352,Banish
+464592,Fireball Volley
+465230,Entrapment
+465483,Mangle
+465693,Clean Up Quel'Serrar Era to SoD [DNT]
+465699,Clean Up Quel'Serrar SoD to Era [DNT]
+465725,Living Bomb
+465727,Explosion
+465719,Clean Up Masterwork Volcanic Leggings in Era [DNT]
+464591,Servant of Flame and Scale
+465849,Combat Pulse
