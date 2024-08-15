@@ -817,6 +817,16 @@ var buffs = [
       other: true,
    },
    {
+      id: 29232,
+      spellid: true,
+      name: "Fungal Bloom",
+      iconname: "spell_nature_unyeildingstamina",
+      crit: 50,
+      spellcrit: 60,
+      minlevel: 60,
+      other: true,
+   },
+   {
       id: 27666,
       spellid: true,
       name: "Darnassus Gift of Friendship",
