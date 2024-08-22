@@ -9899,6 +9899,20 @@ var gear = {
       "sta": 10
     },
     {
+      "id": 15138,
+      "type": "Cloth",
+      "slot": "back",
+      "r": 55,
+      "q": "3",
+      "i": "60",
+      "name": "Onyxia Scale Cloak",
+      "p": "inv_misc_cape_05",
+      "sta": 7,
+      "resist": {
+        "fire": 16
+      }
+    },
+    {
       "id": "15165|1194",
       "type": "Cloth",
       "slot": "back",
