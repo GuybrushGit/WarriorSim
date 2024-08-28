@@ -1260,7 +1260,7 @@ var spells = [
     iconname: 'inv_trinket_naxxramas03',
     item: true,
     aura: true,
-    timetoend: 10,
+    timetoend: 20,
     timetoendactive: false,
     timetostart: 0,
     timetostartactive: false,
