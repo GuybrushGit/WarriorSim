@@ -1221,7 +1221,6 @@ class Berserking extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.rage -= 5;
-        this.player.timer = 1500;
         this.player.updateHaste();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
@@ -1236,7 +1235,7 @@ class Berserking extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && this.player.rage >= 5 && step >= this.usestep;
+        return this.firstuse && !this.timer && this.player.rage >= 5 && step >= this.usestep;
     }
 }
 
