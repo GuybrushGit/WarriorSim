@@ -338,7 +338,13 @@ class Hamstring extends Spell {
     constructor(player, id) {
         super(player, id);
         this.cost = 10 - player.ragecostbonus;
-        if (player.items.includes(19577)) this.cost -= 2;
+        if (player.items.includes(19577))
+            this.cost -= 2;
+        if (player.items.includes(16548) ||
+            player.items.includes(16484) ||
+            player.items.includes(22868) ||
+            player.items.includes(23286))
+            this.cost -= 3;
     }
     dmg() {
         let dmg;
@@ -1215,7 +1221,6 @@ class Berserking extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.rage -= 5;
-        this.player.timer = 1500;
         this.player.updateHaste();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
@@ -1230,7 +1235,7 @@ class Berserking extends Aura {
         }
     }
     canUse() {
-        return this.firstuse && !this.timer && !this.player.timer && this.player.rage >= 5 && step >= this.usestep;
+        return this.firstuse && !this.timer && this.player.rage >= 5 && step >= this.usestep;
     }
 }
 
@@ -1488,7 +1493,6 @@ class Swarmguard extends Aura {
         this.armor = 200;
         this.stacks = 0;
         this.chance = ~~(player.mh.speed * 10 / 0.006); // 10 PPM
-        this.timetoend = 30000;
     }
     use() {
         this.timer = step + this.duration * 1000;
