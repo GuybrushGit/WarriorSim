@@ -455,7 +455,7 @@ class QuickStrike extends Spell {
     }
     dmg() {
         let dmg;
-        dmg = ~~rng(this.player.stats.ap * 0.10, this.player.stats.ap * 0.20) + this.player.stats.moddmgdone;
+        dmg = ~~rng(this.player.stats.ap * 0.25, this.player.stats.ap * 0.35) + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod;
     }
     canUse() {

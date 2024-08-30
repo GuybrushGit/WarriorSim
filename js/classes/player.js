@@ -436,6 +436,7 @@ class Player {
                     // Frenzied Assault
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
+                        this.extrarage = 2;
                     }
                     if (item.furiousthunder) {
                         this.furiousthunder = item.furiousthunder;
@@ -966,6 +967,7 @@ class Player {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
             }
+            if (this.extrarage) this.rage += this.extrarage; // todo heroic strike?
         }
         if (spell) {
             if (spell instanceof Execute) spell.result = result;
@@ -1520,7 +1522,7 @@ class Player {
                 this.auras.suddendeath.use();
             }
             // Fresh Meat
-            if (spell instanceof Bloodthirst && this.freshmeat && (this.auras.freshmeat.firstuse || rng10k() < 1000)) {
+            if (this.freshmeat && (spell instanceof Bloodthirst || spell instanceof MortalStrike || spell instanceof ShieldSlam) && (this.auras.freshmeat.firstuse || rng10k() < 1000)) {
                 this.auras.freshmeat.use();
             }
             // Single Minded

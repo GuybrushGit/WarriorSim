@@ -22120,7 +22120,7 @@ ID,Name_lang
 410105,Engrave Bracers - Riptide
 410107,Engrave Pants - Way of Earth
 410109,Engrave Belt - Steady Shot
-410110,Engrave Gloves - Beast Mastery
+410110,Engrave Chest - Beast Mastery
 410111,Engrave Pants - Kill Shot
 410113,Engrave Chest - Master Marksman
 410114,Engrave Belt - Expose Weakness
@@ -24974,7 +24974,7 @@ ID,Name_lang
 446270,Falling Rocks
 446274,Dream Fog
 446275,Dream Fog
-446278,Dragonkin Slayer 93
+446278,Dragon Slaying 141
 446282,Attack Power - Feral (+78)
 446286,Relentless Strength
 446287,Unbound Soul
@@ -25166,7 +25166,7 @@ ID,Name_lang
 446723,Gurubashi Pit Figher's Bow
 446724,Bloodthirst Bow Health Drain Trigger
 446725,Thirst for Blood
-446727,Dragonkin Slayer 36
+446727,Dragon Slaying 36
 446728,Judgement of the Loa
 446729,Troll Speed
 446730,Totem of Fiery Precision
@@ -25210,7 +25210,7 @@ ID,Name_lang
 447106,[DNT] Nightmare Vines - Spawn Visual Dummy Spell
 447138,[DNT] Head of the Obliterator
 447238,[DNT] Backfire
-447255,Dragonkin Slayer 24
+447255,Dragon Slaying 24
 447256,Summon Burning Imp
 447259,Charged Air
 447260,Summon Burning Imp
@@ -25490,16 +25490,16 @@ ID,Name_lang
 452285,Summon Emerald Warden
 452424,Gla'sir
 452428,Gla'sir
-452430,Lae'rar
-452432,Lae'rar
+452430,Rae'lar
+452432,Rae'lar
 452433,Summon Gla'sir
-452434,Summon Lae'rar
+452434,Summon Rae'lar
 452454,Boon of Water
 452456,Boon of Air
 452460,Boon of Fire
 452464,Boon of Earth
 452466,Terrestris
-452474,Suzerain
+452474,Defense of the Dragonflights
 452574,Fragile Armor
 452745,Dream Eater
 452857,Knockdown
@@ -25756,6 +25756,7 @@ ID,Name_lang
 458979,Sand Bomb
 458984,Boss Kill Tracking [DNT]
 458985,Boss Kill Tracking [DNT]
+458987,Summon Zotl
 458988,Boss Kill Tracking [DNT]
 458990,Boss Kill Tracking [DNT]
 458991,Boss Kill Tracking [DNT]
@@ -25782,7 +25783,7 @@ ID,Name_lang
 459207,Summon Squire
 459217,Desert Sonar
 459221,Desert Sonar
-459232,Summon Squire
+459232,Call Aeonas
 459261,Capture Echo
 459280,Transiting Realities
 459290,Thunder Stomp
@@ -25790,6 +25791,7 @@ ID,Name_lang
 459312,Defense Specialization
 459313,Engrave Ring - Defense Specialization
 459340,[DNT] Edu Copperbolt - Give Sonar
+459360,Hanging Bat
 459369,Boss Kill Tracking [DNT]
 459370,Boss Kill Tracking [DNT]
 459371,Boss Kill Tracking [DNT]
@@ -25905,6 +25907,7 @@ ID,Name_lang
 460122,Mortal Combo
 460123,Mortal Combo
 460143,Wrecking Ball
+460144,Whirlwind Knockback
 460145,Wrecking Ball
 460152,Wrecking Ball
 460160,Wrecking Ball
@@ -26432,6 +26435,7 @@ ID,Name_lang
 462361,Cannon Fire
 462362,(DNT) Buff All
 462370,(DNT) Cogs
+462374,Dive
 462379,Self Explosion
 462381,(DNT) Buff All
 462385,Flame Lash
@@ -26473,6 +26477,7 @@ ID,Name_lang
 462586,Shadowstalker Slash
 462590,Shadow Bolt Volley
 462593,Quest Invisibility
+462594,Launch Quest
 462619,Conjure Flame
 462623,Forming Rhok'delar
 462627,Create Hunter Epic Bow DND
@@ -26585,6 +26590,7 @@ ID,Name_lang
 463275,Gehennas' Curse
 463285,Starfire
 463320,Opening
+463365,Summon Siopi
 463448,Frost Nova
 463512,Summon Eskhandar
 463518,Vigilance
@@ -26620,11 +26626,19 @@ ID,Name_lang
 464250,Surge
 464251,[DNT] Teleport to Storm Cliffs Exterior
 464279,Trample
+464312,(DNT) Greater Fire Protection - Raid Buff
+464396,(DNT) Greater Frost Protection - Raid Buff
+464418,(DNT) Greater Nature Protection - Raid Buff
+464437,(DNT) Greater Shadow Protection - Raid Buff
+464439,(DNT) Greater Arcane Protection - Raid Buff
 464558,Flame Burst
+464591,Servant of Flame and Scale
+464592,Fireball Volley
 464611,[DNT] Drained of Blood (Instance)
 464614,[DNT] Drained of Blood (Instance - Cast)
 464629,Manastorm
 464630,Manastorm
+464645,[DNT] Complete Syndicate Gossip
 464650,Frozen Solid
 464658,Frozen Solid
 464730,[DNT] Storm Cliffs Graveyard
@@ -26644,16 +26658,728 @@ ID,Name_lang
 465194,Shazzrah's Curse
 465195,Shazzrah's Curse
 465196,Water Bubble
+465230,Entrapment
 465273,(DNT) Core Hound Summon Stalker
 465323,Combat Pulse
 465352,Banish
-464592,Fireball Volley
-465230,Entrapment
+465404,Molten to the Core
+465411,Avenging Strike
+465412,Add Holy Dam - Weap 04
+465414,Crusader's Zeal
+465417,Change Stance
+465418,Change Stance
+465447,Create Campsite
 465483,Mangle
+465546,(DNT) Dual Spec
+465626,Create Campsite Accessories
+465675,Increase Reputation
 465693,Clean Up Quel'Serrar Era to SoD [DNT]
 465699,Clean Up Quel'Serrar SoD to Era [DNT]
+465719,Clean Up Masterwork Volcanic Leggings in Era [DNT]
 465725,Living Bomb
 465727,Explosion
-465719,Clean Up Masterwork Volcanic Leggings in Era [DNT]
-464591,Servant of Flame and Scale
+465779,Test Summon Boss Creature
+465787,Prophetic Insight
+465789,Teleport: Elsewhen
+465841,Winterspring Survival Fade Out
 465849,Combat Pulse
+465944,Create Campsite Accessories - Fur Rug
+465945,Create Campsite Accessories - Small Campfire
+465946,Create Campsite Accessories - Meat Rack
+465973,(DNT) Music Beat - TEST
+465975,(DNT) Music Off Beat - TEST
+465994,(DNT) Overture
+466061,Infiltration
+466062,Spotted!
+466071,Bronze Trial
+466072,Summon Estelenn
+466084,(DNT) Bronze Affix Manager
+466108,[DNT] Mana Beam Visual I
+466116,Attune Staff of Inferno
+466117,Attune Staff of Rime
+466118,Attune Staff of Order
+466123,[DNT] Explosion Visual
+466126,[DNT] Mana Beam Visual II
+466169,Infinite Midnight
+466195,Blazing Wounds
+466219,Shadowguard
+466255,Infinite Midnight
+466256,Infinite Midnight
+466261,Red Trial
+466266,Shadowguard
+466269,Shadowguard
+466277,Blue Trial
+466283,Arcane Bomb
+466286,Controller Timer
+466307,(DNT) Experimental AoE - Spell School Check
+466312,(DNT) Experimental Boss Buff - Strength
+466328,Magic Stone Helmet
+466329,Uppercut
+466357,Arcane Bomb
+466416,Green Trial
+466435,Nature's Fury
+466436,Nature's Fury
+466448,Toxic Pool
+466457,Toxic Pool
+466494,(DNT) Green Affix Pool Visuals
+466503,S03 - Tuning and Overrides Passive - Paladin
+466513,Ninja Mask
+466552,Ninja Costume
+466565,Ninja Mask
+466583,Ninja Costume
+466596,Ninja Costume
+466600,(DNT) Bronze Essence Warning Visual
+466603,(DNT) Bronze Essence Warning Visual Reversed
+466647,Smoke
+466653,Ninja Mask
+466662,Ninja Costume
+466668,Learn Rune
+466669,(DNT) Experimental Boss Buff - Attack Speed
+466670,(DNT) Experimental Boss Buff - Bonus Armor
+466672,(DNT) Experimental Boss Buff - Health Regeneration
+466674,(DNT) Experimental Boss Buff - Spell Power
+466675,(DNT) Experimental Boss Buff - Spell Resistance
+466677,Blood Moon
+466745,Ninja Mask
+466746,Ninja Costume
+466747,Ninja Mask
+466749,Ninja Costume
+466764,(DNT) Varmot moustache visual
+466841,Meathook
+466842,Combo
+466843,Combo
+466850,Combo
+466853,Combo
+466903,Blessing of Hethiss
+466909,Blessing of Hethiss
+466938,Increase Spell Dam 77
+467005,Bronze Essence
+467012,Red Essence
+467013,Blue Essence
+467015,Green Essence
+467030,Despawn Estelenn
+467042,Blessing of Bethekk
+467045,Black Essence
+467047,Black Essence
+467049,Blessing of Bethekk
+467055,Kris's Test Spell
+467077,S03 - Item - T2 - Druid - Balance 2P Bonus
+467084,S03 - Item - T2 - Druid - Balance 4P Bonus
+467085,[DNT] Elsewhen Torch Active
+467088,Astral Swiftness
+467090,S03 - Item - T2 - Druid - Balance 6P Bonus
+467099,S03 - Item - T2- Druid - Restoration 2P Bonus
+467101,Blessing of Hir'eek
+467103,Blessing of Hir'eek
+467125,Blessing of Shirvallah
+467127,Blessing of Shirvallah
+467141,Mind Quickening
+467142,Hybrid Healing/Spell Dam 46/16
+467143,Hybrid Healing/Spell Dam 37/13
+467144,Hybrid Healing/Spell Dam 40/14
+467145,Heartstrike
+467146,Heartstrike
+467166,Hybrid Healing/Spell Dam 66/22
+467167,Fatal Wound
+467194,Eruption
+467195,Eruption
+467199,Eruption
+467203,S03 - Item - T2- Druid - Restoration 4P Bonus
+467204,Healing Grace
+467205,S03 - Item - T2- Druid - Restoration 6P Bonus
+467206,S03 - Item - T2- Druid - Restoration 6P Bonus Moonkin Effect
+467207,S03 - Item - T2- Druid - Feral 2P Bonus
+467208,S03 - Item - T2- Druid - Feral 4P Bonus
+467209,S03 - Item - T2- Druid - Feral 4P Bonus Tiger's Fury Effect
+467211,S03 - Item - T2- Druid - Feral 6P Bonus
+467216,S03 - Item - T2- Druid - Guardian 2P Bonus
+467217,S03 - Item - T2- Druid - Guardian 2P Bonus Maul Effect
+467221,S03 - Item - T2- Druid - Guardian 4P Bonus
+467227,S03 - Item - T2- Druid - Guardian 6P Bonus
+467235,S03 - Item - T2- Hunter - Ranged 2P Bonus
+467259,Blessing of Shadra
+467264,[DNT] Elsewhen Torch Control - Periodic
+467269,Blessing of Shadra
+467271,Dragonbreath
+467276,Summon Spawn of Shadra
+467282,[DNT] Elsewhen Torch Control - Target Player
+467290,Summon Spawn of Shadra
+467312,S03 - Item - T2- Hunter - Ranged 4P Bonus
+467318,Hybrid Healing/Spell Dam 35/12
+467326,S03 - Item - T2- Hunter - Ranged 6P Bonus
+467329,S03 - Item - T2- Hunter - Melee 2P Bonus
+467330,Hybrid Healing/Spell Dam 64/22
+467331,Clever Strikes
+467332,Hybrid Healing/Spell Dam 77/26
+467333,S03 - Item - T2- Hunter - Melee 4P Bonus
+467334,S03 - Item - T2- Hunter - Melee 6P Bonus
+467345,Void
+467346,Taunt
+467347,Ninja Costume
+467348,Ninja Mask
+467360,Blue Flight
+467361,Twilight
+467362,Red Flight
+467363,Green Flight
+467364,Bronze Dragon Transform DND
+467365,Uppercut
+467366,Lightning
+467367,Frost Tomb
+467368,Frost Tomb
+467369,Ice Blast
+467370,Ice Blast
+467387,S03 - Item - T2 - Mage - Damage 2P Bonus
+467388,S03 - Item - T2 - Mage - Damage 4P Bonus
+467399,S03 - Item - T2 - Mage - Damage 6P Bonus
+467401,S03 - Item - T2 - Mage - Healer 2P Bonus
+467404,Arcane Insight
+467405,S03 - Item - T2 - Mage - Healer 4P Bonus
+467407,Claw of the Chromatic
+467409,Missile Barrage
+467410,Brood Boon: Bronze
+467411,Brood Boon: Black
+467412,Brood Boon: Blue
+467413,Brood Boon: Green
+467414,Brood Boon: Red
+467430,Hybrid Healing/Spell Dam 53/18
+467432,Increase Spell Dam 86
+467437,Hybrid Healing/Spell Dam 62/21
+467443,Hybrid Healing/Spell Dam 26/9
+467446,Arcane Infused
+467447,Arcane Detonation
+467449,Burning Adrenaline
+467459,Blessing of the Black Book
+467466,The Black Book Dummy
+467467,Shapeshifter's Sigil
+467480,Dismiss Pet Instant
+467489,Wildfire
+467491,Wildfire
+467494,S03 - Item - T2 - Mage - Healer 6P Bonus
+467498,Gift of Life
+467499,Gift of Life
+467502,Gift of Life
+467506,S03 - Item - T2 - Paladin - Holy 2P Bonus
+467507,S03 - Item - T2 - Paladin - Holy 4P Bonus
+467508,Lifegiving Gem Dummy
+467511,Venomous Totem
+467512,Venomous Totem Dummy
+467513,S03 - Item - T2 - Paladin - Holy 6P Bonus
+467518,S03 - Item - T2 - Paladin - Retribution 2P Bonus
+467522,Blinding Light
+467523,Nature Aligned
+467525,Aegis of Preservation
+467526,S03 - Item - T2 - Paladin - Retribution 4P Bonus
+467528,Aegis of Preservation Dummy
+467529,S03 - Item - T2 - Paladin - Retribution 6P Bonus
+467530,Swift Judgement
+467531,S03 - Item - T2 - Paladin - Protection 2P Bonus
+467532,S03 - Item - T2 - Paladin - Protection 4P Bonus
+467534,Holy Fortitude
+467536,S03 - Item - T2 - Paladin - Protection 6P Bonus
+467539,S03 - Item - T2 - Priest - Healer 2P Bonus
+467543,Deliverance
+467544,S03 - Item - T2 - Priest - Healer 4P Bonus
+467545,Quake Knockback
+467549,Hybrid Healing/Spell Dam 75/25
+467550,Hybrid Healing/Spell Dam 44/15
+467561,Poison Bolt Volley
+467562,Poison Bolt Volley
+467563,Poison Bolt Volley
+467566,Poison Bolt Volley
+467586,S03 - Item - T2 - Priest - Healer 6P Bonus
+467588,Healing Echoes
+467604,S03 - Item - T2 - Priest - Shadow 2P Bonus
+467608,S03 - Item - T2 - Priest - Shadow 4P Bonus
+467611,Fulmination
+467624,S03 - Item - T2 - Priest - Shadow 6P Bonus
+467632,Harness the Spirit
+467642,Jeklik's Crushing Blow
+467647,Hybrid Healing/Spell Dam 33/11
+467651,Hybrid Healing/Spell Dam 22/8
+467666,Mana Leech
+467667,Mana Leech
+467708,S03 - Item - T2 - Rogue - Damage 2P Bonus
+467720,Mar'li's Brain Infestors
+467732,Stop!
+467735,Clearcasting
+467737,S03 - Item - T2 - Rogue - Damage 4P Bonus
+467738,Zulian Slice
+467739,S03 - Item - T2 - Rogue - Damage 6P Bonus
+467740,Shadow Bolt
+467742,Primal Blessing
+467743,Primal Blessing Trigger
+467746,S03 - Item - T2 - Rogue - Tank 2P Bonus
+467747,Stop!
+467748,Stop!
+467751,Mar'li's Eye Dummy
+467753,Ancient Cornerstone Grimoire Dummy
+467754,Serpentine Spirit
+467762,Despawn Self
+467763,Decipher Scroll
+467764,Go!
+467765,Go!
+467766,Go!
+467782,Decipher Scroll
+467790,Combine Staff of Order
+467797,S03 - Item - T2 - Rogue - Tank 4P Bonus
+467801,Smoke
+467803,S03 - Item - T2 - Rogue - Tank 6P Bonus
+467804,S03 - Item - T2 - Shaman - Restoration 2P Bonus
+467805,Fatality
+467809,S03 - Item - T2 - Shaman - Restoration 4P Bonus
+467810,Grounded Lightning
+467813,Jeklik's Crusher
+467814,S03 - Item - T2 - Shaman - Restoration 6P Bonus
+467818,S03 - Item - T2 - Shaman - Elemental 2P Bonus
+467819,Decapitate
+467820,Decapitate
+467823,S03 - Item - T2 - Shaman - Elemental 4P Bonus
+467826,Collateral Sting
+467827,Lightning
+467828,Hybrid Healing/Spell Dam 29/10
+467829,Lightning
+467830,Hybrid Healing/Spell Dam 15/6
+467831,Lightning
+467832,Ice Blast
+467835,Halberd of Smiting
+467836,Fish Terminator
+467837,Fish Terminator
+467839,Void Slam
+467840,Void Slam
+467841,Void Slam
+467863,S03 - Item - T2 - Shaman - Elemental 6P Bonus
+467873,Periodic Quest Reset
+467877,S03 - Item - T2 - Shaman - Enhancement 2P Bonus
+467879,S03 - Item - T2 - Shaman - Enhancement 4P Bonus
+467880,Stormfury
+467882,S03 - Item - T2 - Shaman - Enhancement 6P Bonus
+467883,Fetch!
+467884,Fetch!
+467885,Fetch!
+467889,S03 - Item - T2 - Shaman - Tank 2P Bonus
+467891,Shield Block
+467896,Magical Stone - Display
+467909,S03 - Item - T2 - Shaman - Tank 4P Bonus
+467910,Elemental Shield
+467916,S03 - Item - T2 - Shaman - Tank 6P Bonus
+467917,S03 - Item - T2 - Warlock - Damage 2P Bonus
+467983,S03 - Item - T2 - Warlock - Damage 4P Bonus
+467988,S03 - Item - T2 - Warlock - Damage 6P Bonus
+467995,Aspect of Jeklik
+467997,Aspect of Venoxis
+467999,Aspect of Mar'li
+468000,Aspect of Thekal
+468001,Aspect of Arlokk
+468012,Sonic Burst
+468017,Summon Spawn of Mar'li
+468027,Fetch!
+468028,S03 - Item - T2 - Warlock - Tank 2P Bonus
+468029,Life Tap
+468038,[DNT] Essence of Fire - Fight
+468039,[DNT] Essence of Frost - Fight
+468046,S03 - Item - T2 - Warlock - Tank 4P Bonus
+468048,S03 - Item - T2 - Warlock - Tank 4P Bonus
+468049,Fire Puzzle Area Trigger
+468050,Frost Puzzle Area Trigger
+468061,S03 - Item - T2 - Warlock - Tank 6P Bonus
+468062,Soul Essence
+468065,S03 - Item - T2 - Warrior - Protection 2P Bonus
+468066,Thrill of Battle
+468067,S03 - Item - T2 - Warrior - Protection 4P Bonus
+468069,S03 - Item - T2 - Warrior - Protection 6P Bonus
+468071,Retaliate
+468072,S03 - Item - T2 - Warrior - Damage 2P Bonus
+468076,Vicious Strike
+468078,Nullify
+468125,Imbue Essence of Fire
+468133,Start Essence of Fire
+468156,Thunderfury
+468157,Thunderfury
+468164,Pagle's Broken Reel
+468165,Beast Slaying 99
+468166,Dragon Slaying 60
+468167,Fire Strike
+468168,Add Fire Dam - Weap 02
+468169,Fire Strike
+468170,Add Fire Dam - Weap 02
+468175,Demon Slaying 141
+468181,Took Hit
+468183,Frenzy Effect
+468184,Drain Life
+468195,Roll Over!
+468197,Roll Over!
+468198,Roll Over!
+468199,Roll Over!
+468211,Close Growing Fel Rift
+468224,Hybrid Healing/Spell Dam 59/20
+468225,Decipher Scroll
+468235,S03 - Item - T2 - Warrior - Damage 4P Bonus
+468236,S03 - Item - T2 - Warrior - Damage 6P Bonus
+468240,Valxx Cracklequil - Receive Scroll of Lesser Spatial Mending
+468242,Corruption
+468252,Clean Off Rune
+468255,Twin Blades of the Hakkari
+468256,Twin Blades of the Hakkari
+468260,Improved Wrath/Starfire
+468267,Increased Pet Damage +3%
+468268,Increased Pet Damage +3%
+468269,Increased Pet Damage +2%
+468270,Increased Pet Damage +2%
+468271,Increased Pet Damage +1%
+468272,Increased Pet Damage +1%
+468273,Decreased Frozen Orb Cooldown
+468275,Increased Holy Hit Chance 3
+468277,Increased Holy Hit Chance 2
+468278,Improved Power Word: Shield
+468288,S03 - Item - Cutthroat Bonus Chance
+468289,Decreased Decoy Totem
+468297,(DNT) DEBUG - Destroy Egg
+468298,Summon
+468299,Summon
+468300,[DNT] Fire Trail Effect
+468301,[DNT] Fire Trail
+468303,Reduced Cleave Cooldown
+468309,Reduced Shield Slam Cost
+468310,Improved Bestial Wrath
+468312,Animist's Caress
+468314,Animist's Caress
+468316,Animist's Balance
+468318,Animist's Balance
+468320,Animist's Fury
+468321,Animist's Fury
+468322,Animist's Roar
+468323,Animist's Roar
+468324,Falcon's Call
+468325,Falcon's Call
+468327,Syncretist's Seal
+468328,Syncretist's Seal
+468329,Syncretist's Sigil
+468330,Syncretist's Sigil
+468331,Syncretist's Crest
+468332,Syncretist's Crest
+468336,Syncretist's Emblem
+468339,Syncretist's Emblem
+468341,Prophetic Aura
+468342,Prophetic Aura
+468343,Prophetic Curse
+468344,Prophetic Curse
+468345,Death's Embrace
+468347,Death's Embrace
+468348,Death's Advance
+468349,Death's Advance
+468350,Vodouisant's Embrace
+468351,Vodouisant's Embrace
+468352,Vodouisant's Shroud
+468354,Vodouisant's Shroud
+468358,Vodouisant's Charm
+468359,Vodouisant's Charm
+468361,Vodouisant's Vigilance
+468362,Vodouisant's Vigilance
+468363,Hoodoo Hex
+468365,Hoodoo Hex
+468367,Hoodoo Curse
+468368,Hoodoo Curse
+468372,Presence of Might
+468373,Presence of Might
+468375,Presence of Valor
+468376,Presence of Valor
+468379,Presence of Sight
+468380,Presence of Sight
+468382,Falcon's Fury
+468383,Falcon's Fury
+468387,Aligned with Nature
+468388,Locked In
+468395,S03 - Item - ZG - Druid - Balance 2P Bonus
+468397,S03 - Item - ZG - Mage - Frost 2P Bonus
+468398,S03 - Item - ZG - Priest - Discipline 2P Bonus
+468400,S03 - Item - ZG - Warlock - Demonology 2P Bonus
+468401,S03 - Item - ZG - Paladin - Caster 2P Bonus
+468407,S03 - Item - ZG - Hunter - Beastmaster 2P Bonus
+468408,Bloodlust
+468409,S03 - Item - ZG - Rogue - Dagger 2P Bonus
+468411,S03 - Item - ZG - Shaman - Tank 2P Bonus
+468412,S03 - Item - ZG - Warrior - Gladiator 2P Bonus
+468415,S03 - Item - ZG - Druid - Balance 3P Bonus
+468416,S03 - Item - ZG - Druid - Balance 5P Bonus
+468417,S03 - Item - ZG - Hunter - Beastmaster 3P Bonus
+468418,S03 - Item - ZG - Hunter - Beastmaster 5P Bonus
+468425,S03 - Item - ZG - Mage - Frost 3P Bonus
+468427,S03 - Item - ZG - Mage - Frost 5P Bonus
+468428,S03 - Item - ZG - Paladin - Caster 3P Bonus
+468431,S03 - Item - ZG - Paladin - Caster 5P Bonus
+468433,S03 - Item - ZG - Priest - Discipline 3P Bonus
+468434,S03 - Item - ZG - Priest - Discipline 5P Bonus
+468436,S03 - Item - ZG - Rogue - Dagger 3P Bonus
+468438,S03 - Item - ZG - Rogue - Dagger 5P Bonus
+468441,S03 - Item - ZG - Shaman - Tank 3P Bonus
+468445,S03 - Item - ZG - Shaman - Tank 5P Bonus
+468446,S03 - Item - ZG - Warlock - Demonology 3P Bonus
+468447,S03 - Item - ZG - Warlock - Demonology 5P Bonus
+468452,S03 - Item - ZG - Warrior - Gladiator 3P Bonus
+468453,S03 - Item - ZG - Warrior - Gladiator 5P Bonus
+468455,S03 - Item - ZG - Warrior - Gladiator 5P Bonus
+468458,Burst of Energy
+468459,Renataki's Charm of Trickery Dummy
+468460,Energized Shield
+468461,Brilliant Light
+468462,Gri'lek's Guard
+468463,S03 - Flag Tracking Quest
+468464,Destroy Simulacrum
+468465,Unmaking the Simulacrum
+468466,Unmaking the Simulacrum
+468467,[DNT] Faerie Flare
+468468,[DNT] Faerie Light
+468469,Flag Tracking Quest
+468472,Summon Parasitic Serpent
+468473,Parasitic Serpent
+468474,Parasitic Serpent
+468475,Poison
+468478,Growth
+468479,Growth
+468481,Full Grown
+468488,Aspect of Arlokk
+468491,Aspect of Arlokk
+468492,Aspect of Arlokk
+468495,(DNT) Teleport
+468500,Charge
+468503,Fulmination
+468509,(DNT) Stop Cast
+468512,Frost Potency
+468513,(DNT) Go Cast
+468526,Power Surge
+468528,[DNT] Priest Epic Book - Cosmetic
+468531,Rapid Healing
+468540,Massive Destruction
+468543,Demonic Destruction
+468552,Punctured Voodoo Doll WAR DND
+468555,Punctured Voodoo Doll SHM DND
+468556,Punctured Voodoo Doll MAG DND
+468557,Punctured Voodoo Doll WLK  DND
+468558,Punctured Voodoo Doll PRT DND
+468559,Punctured Voodoo Doll DRU DND
+468560,Punctured Voodoo Doll ROG DND
+468562,Punctured Voodoo Doll PAL DND
+468563,Punctured Voodoo Doll HUN DND
+468590,Hybrid Healing/Spell Dam 51/17
+468591,Sleep
+468592,Hybrid Healing/Spell Dam 42/14
+468594,Roll Over!
+468598,Roll Over!
+468621,Hybrid Healing/Spell Dam 31/11
+468638,Imbue Essence of Frost
+468643,Start The Depleted Scythe
+468667,Silithid Darter
+468670,Chain Lightning
+468671,Chain Lightning
+468688,Hybrid Healing/Spell Dam 128/43
+468689,Lock and Load
+468698,Open Suspicious Supplies
+468700,Attack Power - Feral (+338)
+468707,Xirath - Give Suspicious Supplies
+468714,Gla'sir Hybrid Healing/Spell Dam 144/77
+468733,Lasso Target
+468746,Power of Hakkar
+468751,Silithid Darter
+468758,Healing Specialization
+468761,Engrave Ring - Healing Specialization
+468762,Meditation Specialization
+468763,Engrave Ring - Meditation Specialization
+468764,Hybrid Healing/Spell Dam 55/19
+468766,Conjure Water
+468767,Drink
+468768,Wrath of Wray
+468769,Nature Reflector
+468774,Memory of Gri'lek
+468775,Memory of Hazza'rah
+468776,Memory of Renataki
+468777,Memory of Wushoolay
+468778,Summon Gurubashi Hero
+468780,Lightning's Cell
+468781,Gathering Storm
+468782,Unleashed Storm
+468783,Tim's Test Aoe Spell
+468784,Echoes of Betrayal
+468785,Increase Shadow and Arcane Dam 34
+468807,Relentless Strikes
+468823,Savage Maul
+468830,Summoning
+468836,Combine Depleted Scythe of Chaos
+468837,Combine Depleted Scythe of Chaos
+468838,Combine Depleted Scythe of Chaos
+468839,Combine Depleted Scythe of Chaos
+468840,Combine Scythe of Chaos
+468843,Lacerate
+468850,Create Soul of Mischief
+468851,Create Soul of the Void
+468852,Create Soul of Enthralling
+468854,Create Soul of Devouring
+468879,Stealth
+468882,Quest Invisibility
+468913,Libram of Awe
+468919,Xirath - Progress Quest
+468925,Caustic Slime
+468971,Windstriker
+468993,Attack Power - Feral (+298)
+468999,Tied Up
+469005,<DNT> Senna's Test Spell
+469009,Summon Abandoned Voidwalker
+469010,Shadow Ritual of Sacrifice
+469020,Close New Fel Portal
+469023,Despawn Silithid Darter
+469025,Rage of the Suzerain
+469047,(DNT) Cosmetic Chains - Bear
+469049,Summon Bearthold
+469053,Summon Felhound
+469055,Fire Volley
+469056,Frost Volley
+469057,Earth Volley
+469058,Lightning Volley
+469059,Prismatic Bolt
+469065,Ground Tremor
+469075,Fel Portal Creation
+469077,Initialize Corrupted Blood
+469085,Shadow Carving
+469086,"Suzerain, Defender of the Dragonflights"
+469091,Corrupted Blood
+469105,Corrupted Blood
+469106,Summon Roary
+469107,Summon Anne Tenna
+469110,Corrupted Blood
+469112,(DNT) Cosmetic Chains - Tiger
+469113,(DNT) Cosmetic Chains - Silithid
+469114,Corrupted Blood
+469115,Corrupted Blood
+469122,Double Attack
+469123,Double Attack
+469128,Combine Sigil Fragments
+469132,Broodling Venom
+469133,Hybrid Healing/Spell Dam 68/23
+469134,Holy Smite
+469138,Truthbearer Hybrid Healing/Spell Dam 144/77
+469140,Peregrine
+469142,Force of Nature
+469143,Wrath
+469144,Quick Strikes
+469145,Aspect of the Falcon
+469146,Sleep
+469147,Bloody Test Visual [DNT]
+469148,Kestrel
+469149,[DNT] Grow Seedling
+469151,[DNT] Seedling General Trigger
+469152,[DNT] Seedling of Growth
+469153,[DNT] Seedling of Restoration
+469154,[DNT] Seedling of Healing
+469155,Deep Sleep
+469156,Shadow Bolt Volley
+469159,Ritual
+469160,DNT
+469161,Blast Wave
+469162,Portal to Old Andorhal
+469166,You're a Ghoul!
+469182,Lying Low
+469183,Terrestris
+469190,DNT
+469191,Cassandra's Tome
+469199,Cool Flames
+469201,Ignite Flames
+469208,Boon of Earth
+469209,Boon of Fire
+469210,Boon of Water
+469211,Scythe of Chaos
+469220,Scythe of Chaos
+469221,Demonic Harvest
+469222,Impish Delight
+469223,Hybrid Healing/Spell Dam 42/22
+469224,Void Walking
+469225,Seduction of the Shadows
+469227,Felhunted
+469228,Felhunted
+469229,Hunter of Chaos
+469230,Fel Invigoration
+469231,Loot Scroll: SEENECS FO ROFTS
+469236,Staff of Order
+469237,Staff of Inferno
+469238,Staff of Rime
+469239,Guarded by Ice
+469247,Flag Tracking Quest
+469259,Flare Breath
+469260,Thrill of Battle
+469261,Burning Adrenaline
+469262,Gobmogrified
+469266,Summon Bearthold
+469271,Astral Form
+469277,Tame Beast
+469278,(DNT) Bear Sleep Anim
+469301,Tame Beast
+469305,(DNT) Silithid Sleep Anim
+469306,Tame Beast
+469320,Lava Burst
+469334,[DNT] Random Volley
+469348,Immune to Disarm
+469357,Immolation Aura
+469370,Firebolt
+469371,Waterbolt
+469372,Lightning Bolt
+469410,Hybrid Healing/Spell Dam 84/28
+469414,Hybrid Healing/Spell Dam 70/24
+469433,Poison Bolt
+469436,[DNT] Soul of Mischief
+469440,[DNT] Soul of the Void
+469441,[DNT] Soul of Enthralling
+469442,[DNT] Soul of Devouring
+469444,[DNT] Soul of Des'Altek
+469463,Summon
+469481,Hybrid Healing/Spell Dam 48/16
+469486,[DNT] Magma Charge
+469487,[DNT] Magma Missile
+469489,[DNT] Magma Shock
+469492,(DNT) Cancel Aura
+469493,Hybrid Healing/Spell Dam 90/30
+469496,[DNT] Xirath - Delay - Give Suspicious Supplies
+469497,[DNT] Xirath - Delay - Progress Quest
+469499,Vitality
+469521,Fear
+469537,Bile Vomit
+469548,Disease Buffet
+469566,Holy Light
+469569,[DNT] Cosmetic Cleave
+469593,Portal to Old Andorhal
+469605,Phase Shift
+469606,[DNT] Magma Spawn
+469622,Fire Patch
+469623,Fire Patch
+469624,On Fire!!
+469626,[DNT] Magma Spawn
+469632,Dummy Test Visual Proc Driver [DNT]
+469634,(DNT) Threat Pulse
+469647,Consecrated Weapon
+469648,DNT
+469668,Detect Greater Invisibility
+469670,Ending Azgaloth
+469672,Collateral Sting
+469673,Collateral Sting
+469674,Bloodied Zin'rokh Visual [DNT]
+469676,Create Zul'Gurub Talisman SHM R4 DND
+469677,Summon Augur's BP DND
+469678,Summon Augur's Belt DND
+469679,Summon Augur's Bracers DND
+469680,Create Zul'Gurub Talisman DRU R4 DND
+469681,Summon Haruspex's BP DND
+469682,Summon Haruspex's Belt DND
+469683,Summon Haruspex's Bracers DND
+469684,Create Zul'Gurub Talisman WAR R4 DND
+469685,Summon Vindicator's BP DND
+469686,Summon Vindicator's Belt  DND
+469687,Summon Vindicator's Armguards  DND
+469688,Zul'Gurub Talisman PAL R4 DND
+469689,Summon Freethinker's  BP DND
+469690,Summon Freethinker's Belt DND
+469691,Summon Freethinker's Bracers DND
+469699,Summon Tamed Bird
+469706,Call Aeonas
+469709,(DNT) Vehicle Force Cast
+469710,(DNT) Move to Vehicle
+469712,[DNT] Check for Players
+469714,[DNT] Check for Players Periodic
+469717,(DNT) Vehicle Force Cast
+469718,Create Zul'Gurub Talisman PRT R4 DND

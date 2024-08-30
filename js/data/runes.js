@@ -48,7 +48,7 @@ var runes = {
          name: 'Frenzied Assault',
          description: "While wielding 2-handed weapons, your attack speed is increased by 20%.",
          iconname: 'ability_warrior_unrelentingassault',
-         haste2h: 20,
+         haste2h: 30,
      }
    ],
    "hands": [
