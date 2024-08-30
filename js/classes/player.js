@@ -967,7 +967,7 @@ class Player {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
             }
-            if (this.extrarage) this.rage += this.extrarage; // todo heroic strike?
+            if (this.extrarage) this.rage += this.extrarage;
         }
         if (spell) {
             if (spell instanceof Execute) spell.result = result;
