@@ -319,6 +319,34 @@
           if (obj.id == 229377) exclude = true;
           if (obj.id == 229378) exclude = true;
           if (obj.id == 229379) exclude = true;
+          if (obj.id == 230867) exclude = true;
+          if (obj.id == 231001) exclude = true;
+          if (obj.id == 231785) exclude = true;
+          if (obj.id == 231271) exclude = true;
+          if (obj.id == 231784) exclude = true;
+          if (obj.id == 230794) exclude = true;
+          if (obj.id == 231858) exclude = true;
+          if (obj.id == 231874) exclude = true;
+          if (obj.id == 231859) exclude = true;
+          if (obj.id == 230838) exclude = true;
+          if (obj.id == 232310) exclude = true;
+          if (obj.id == 231753) exclude = true;
+          if (obj.id == 229376) exclude = true;
+          if (obj.id == 231387) exclude = true;
+          if (obj.id == 231887) exclude = true;
+          if (obj.id == 231871) exclude = true;
+          if (obj.id == 231865) exclude = true;
+          if (obj.id == 231912) exclude = true;
+          if (obj.id == 228081) exclude = true;
+          if (obj.id == 219345) exclude = true;
+          
+          
+          
+          
+          
+          
+          
+          
 
           if (obj.id == 20577) exclude = true; // REMOVE WHEN emerald dragons
 
@@ -333,12 +361,19 @@
           if (obj.id == 21520) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21522) exclude = true; // REMOVE WHEN AQ
           if (obj.id == 21392) exclude = true; // REMOVE WHEN AQ
+          if (obj.id == 21393) exclude = true; // REMOVE WHEN AQ
+          if (obj.id == 21180) exclude = true; // REMOVE WHEN AQ
+          
+
+          
           
           if (obj.name == "Signet Ring of the Bronze Dragonflight") exclude = true; // REMOVE WHEN AQ
 
           if (obj.id == 22656) exclude = true; // REMOVE WHEN NAXX
           if (obj.id == 22659) exclude = true; // REMOVE WHEN NAXX
           if (obj.id == 22811) exclude = true; // REMOVE WHEN NAXX
+          if (obj.id == 23206) exclude = true; // REMOVE WHEN NAXX
+          
 
 
           if (obj.name.indexOf("Grand Marshal'") > -1) exclude = true; // REMOVE WHEN R14
@@ -531,6 +566,8 @@
         while (i--) {
           if (obj.name == gear[slot][i].name && obj.id > gear[slot][i].id && obj.id > 100000 && obj.r != 25) { 
             if (obj.id == 224409) return;
+            if (gear[slot][i].id >= 231031 && gear[slot][i].id <= 231038) return; // draconic wrath
+            if (gear[slot][i].id >= 231023 && gear[slot][i].id <= 231030) return; // draconic wrath
             gear[slot].splice(i, 1);
           } 
         }
@@ -560,6 +597,7 @@
         {i:13286,s:"Rivenspike"},
         {i:12590,s:"Felstriker"},
         {i:228757,s:"Felstriker"},
+        {i:231817,s:"Felstriker"},
         {i:18203,s:"Eskhandar"},
         {i:228350,s:"Eskhandar"},
         {i:17112,s:"Empyrean"},

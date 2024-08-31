@@ -514,8 +514,11 @@ class Player {
                     if (bonus.stats.enhancedbs) {
                         this.enhancedbs = true;
                     }
-                    if (bonus.stats.extra) {
-                        this.setextra = bonus.stats.extra;
+                    if (bonus.stats.wailingextra) {
+                        this.wailingextra = bonus.stats.wailingextra;
+                    }
+                    if (bonus.stats.hakkariextra) {
+                        this.hakkariextra = bonus.stats.hakkariextra;
                     }
                     if (bonus.stats.switchrage) {
                         this.switchrage = bonus.stats.switchrage;
@@ -1496,11 +1499,18 @@ class Player {
                 /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
             }
             // Wailing set bonus extra
-            if (this.setextra && !damageSoFar && this.setextrastep != step && rng10k() < 500) {
-                this.setextrastep = step;
+            if (this.wailingextra && !damageSoFar && this.wailingextrastep != step && rng10k() < 300) {
+                this.wailingextrastep = step;
                 if (spell) this.extraattacks++;
                 else extras++;
-                /* start-log */ if (log) this.log(`Set bonus extra attack proc`); /* end-log */
+                /* start-log */ if (log) this.log(`Wailing set extra attack proc`); /* end-log */
+            }
+            // Hakkari set bonus extra
+            if (this.hakkariextra && !damageSoFar && this.hakkariextrastep != step && rng10k() < 200) {
+                this.hakkariextrastep = step;
+                if (spell) this.extraattacks++;
+                else extras++;
+                /* start-log */ if (log) this.log(`Hakkari set extra attack proc`); /* end-log */
             }
             // Blood Surge
             if (this.bloodsurge && (spell instanceof Whirlwind || spell instanceof Bloodthirst || spell instanceof HeroicStrike || spell instanceof QuickStrike) && rng10k() < 3000) {

@@ -3875,6 +3875,41 @@ var gear = {
       "ap": 54
     },
     {
+      "id": 231027,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Faceguard of Wrath",
+      "p": "inv_helmet_71",
+      "agi": 13,
+      "str": 23,
+      "sta": 34,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      },
+      "d": 10
+    },
+    {
+      "id": 231035,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Helm of Wrath",
+      "p": "inv_helmet_71",
+      "agi": 24,
+      "str": 36,
+      "sta": 18,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      }
+    },
+    {
       "id": 231535,
       "type": "Plate",
       "slot": "head",
@@ -8773,6 +8808,40 @@ var gear = {
       "str": 16,
       "sta": 16,
       "d": 11
+    },
+    {
+      "id": 231025,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Pauldrons of Wrath",
+      "p": "inv_shoulder_34",
+      "agi": 10,
+      "str": 12,
+      "sta": 24,
+      "resist": {
+        "frost": 10
+      },
+      "hit": 1,
+      "d": 9
+    },
+    {
+      "id": 231033,
+      "type": "Plate",
+      "slot": "shoulder",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Shoulders of Wrath",
+      "p": "inv_shoulder_34",
+      "str": 27,
+      "sta": 16,
+      "resist": {
+        "frost": 10
+      },
+      "crit": 1
     },
     {
       "id": 231534,
@@ -16000,6 +16069,42 @@ var gear = {
       "ap": 68
     },
     {
+      "id": 231030,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Chestguard of Wrath",
+      "p": "inv_chest_plate16",
+      "agi": 11,
+      "str": 18,
+      "sta": 32,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      },
+      "hit": 1,
+      "d": 10
+    },
+    {
+      "id": 231038,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Breastplate of Wrath",
+      "p": "inv_chest_plate16",
+      "agi": 30,
+      "str": 32,
+      "sta": 12,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      }
+    },
+    {
       "id": 231353,
       "type": "Plate",
       "slot": "chest",
@@ -19834,6 +19939,33 @@ var gear = {
         "shadow": 10
       },
       "hit": 1
+    },
+    {
+      "id": 231023,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Wristguards of Wrath",
+      "p": "inv_bracer_19",
+      "agi": 10,
+      "str": 12,
+      "sta": 20,
+      "d": 7
+    },
+    {
+      "id": 231031,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Bracers of Wrath",
+      "p": "inv_bracer_19",
+      "agi": 14,
+      "str": 20,
+      "sta": 14
     },
     {
       "id": 231351,
@@ -25930,6 +26062,40 @@ var gear = {
       "block": 21
     },
     {
+      "id": 231028,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Handguards of Wrath",
+      "p": "inv_gauntlets_10",
+      "str": 19,
+      "sta": 24,
+      "resist": {
+        "nature": 10
+      },
+      "d": 9,
+      "hit": 1
+    },
+    {
+      "id": 231036,
+      "type": "Plate",
+      "slot": "hands",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Gauntlets of Wrath",
+      "p": "inv_gauntlets_10",
+      "agi": 11,
+      "str": 27,
+      "sta": 16,
+      "resist": {
+        "nature": 10
+      },
+      "hit": 1
+    },
+    {
       "id": 231305,
       "type": "Mail",
       "slot": "hands",
@@ -31680,6 +31846,40 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 231024,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Waistguard of Wrath",
+      "p": "inv_belt_09",
+      "agi": 7,
+      "str": 15,
+      "sta": 24,
+      "resist": {
+        "frost": 10
+      },
+      "d": 7,
+      "hit": 1
+    },
+    {
+      "id": 231032,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Belt of Wrath",
+      "p": "inv_belt_09",
+      "str": 30,
+      "sta": 11,
+      "resist": {
+        "frost": 10
+      },
+      "crit": 1
+    },
+    {
       "id": 231352,
       "type": "Plate",
       "slot": "waist",
@@ -37062,6 +37262,41 @@ var gear = {
       "sta": 17
     },
     {
+      "id": 231026,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Legguards of Wrath",
+      "p": "inv_pants_04",
+      "str": 15,
+      "sta": 28,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      },
+      "d": 19,
+      "hit": 1
+    },
+    {
+      "id": 231034,
+      "type": "Plate",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Legplates of Wrath",
+      "p": "inv_pants_04",
+      "agi": 26,
+      "str": 33,
+      "sta": 19,
+      "resist": {
+        "nature": 10,
+        "frost": 10
+      }
+    },
+    {
       "id": 231299,
       "type": "Plate",
       "slot": "legs",
@@ -41827,6 +42062,39 @@ var gear = {
       "d": 7
     },
     {
+      "id": 231029,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Sabatons of Wrath",
+      "p": "inv_boots_plate_04",
+      "agi": 10,
+      "str": 10,
+      "sta": 27,
+      "resist": {
+        "nature": 10
+      },
+      "d": 11
+    },
+    {
+      "id": 231037,
+      "type": "Plate",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "76",
+      "name": "Greaves of Wrath",
+      "p": "inv_boots_plate_04",
+      "str": 26,
+      "sta": 16,
+      "resist": {
+        "nature": 10
+      },
+      "crit": 1
+    },
+    {
       "id": 231531,
       "type": "Plate",
       "slot": "feet",
@@ -43927,17 +44195,6 @@ var gear = {
       "ap": 46
     },
     {
-      "id": 230867,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Zanzil's Band",
-      "p": "inv_jewelry_ring_46",
-      "hit": 1
-    },
-    {
       "id": 230921,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -43989,18 +44246,6 @@ var gear = {
       "sta": 11,
       "d": 7,
       "block": 15
-    },
-    {
-      "id": 231001,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Zanzil's Seal",
-      "p": "inv_jewelry_ring_46",
-      "sta": 10,
-      "hit": 1
     }
   ],
   "finger2": [
@@ -46042,17 +46287,6 @@ var gear = {
       "ap": 46
     },
     {
-      "id": 230867,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Zanzil's Band",
-      "p": "inv_jewelry_ring_46",
-      "hit": 1
-    },
-    {
       "id": 230921,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -46104,18 +46338,6 @@ var gear = {
       "sta": 11,
       "d": 7,
       "block": 15
-    },
-    {
-      "id": 231001,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Zanzil's Seal",
-      "p": "inv_jewelry_ring_46",
-      "sta": 10,
-      "hit": 1
     }
   ],
   "trinket1": [
@@ -46568,17 +46790,6 @@ var gear = {
       "hit": 2
     },
     {
-      "id": 231271,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Nat Pagle's Broken Reel",
-      "p": "inv_gizmo_09",
-      "hit": 10
-    },
-    {
       "id": 231779,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -46590,28 +46801,6 @@ var gear = {
       "resist": {
         "nature": 10
       },
-      "crit": 1
-    },
-    {
-      "id": 231784,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Lightning's Cell",
-      "p": "spell_nature_unrelentingstorm",
-      "hit": 1
-    },
-    {
-      "id": 231785,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Echoes of Betrayal",
-      "p": "inv_jewelry_trinket_02",
       "crit": 1
     }
   ],
@@ -47065,17 +47254,6 @@ var gear = {
       "hit": 2
     },
     {
-      "id": 231271,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Nat Pagle's Broken Reel",
-      "p": "inv_gizmo_09",
-      "hit": 10
-    },
-    {
       "id": 231779,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -47087,28 +47265,6 @@ var gear = {
       "resist": {
         "nature": 10
       },
-      "crit": 1
-    },
-    {
-      "id": 231784,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Lightning's Cell",
-      "p": "spell_nature_unrelentingstorm",
-      "hit": 1
-    },
-    {
-      "id": 231785,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Echoes of Betrayal",
-      "p": "inv_jewelry_trinket_02",
       "crit": 1
     }
   ],
@@ -55940,6 +56096,34 @@ var gear = {
       }
     },
     {
+      "id": 19347,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "77",
+      "name": "Claw of Chromaggus",
+      "speed": 1.5,
+      "mindmg": 37,
+      "maxdmg": 90,
+      "p": "inv_weapon_shortblade_28",
+      "sta": 7
+    },
+    {
+      "id": 19360,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "81",
+      "name": "Lok'amir il Romathis",
+      "speed": 2.1,
+      "mindmg": 48,
+      "maxdmg": 128,
+      "p": "inv_mace_06",
+      "sta": 10
+    },
+    {
       "id": 19542,
       "type": "Dagger",
       "slot": "onehand",
@@ -57925,6 +58109,20 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 228263,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Sorcerous Dagger",
+      "speed": 1.4,
+      "mindmg": 37,
+      "maxdmg": 79,
+      "p": "inv_weapon_shortblade_07",
+      "sta": 8
+    },
+    {
       "id": 228350,
       "type": "Fist",
       "slot": "mainhand",
@@ -58259,20 +58457,6 @@ var gear = {
       }
     },
     {
-      "id": 229376,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Sorcerous Dagger",
-      "speed": 1.4,
-      "mindmg": 37,
-      "maxdmg": 79,
-      "p": "inv_weapon_shortblade_07",
-      "sta": 8
-    },
-    {
       "id": 230224,
       "type": "Sword",
       "slot": "onehand",
@@ -58374,20 +58558,6 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 230794,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Claw of Chromaggus",
-      "speed": 1.5,
-      "mindmg": 36,
-      "maxdmg": 89,
-      "p": "inv_weapon_shortblade_28",
-      "sta": 7
-    },
-    {
       "id": 230837,
       "type": "Axe",
       "slot": "onehand",
@@ -58401,20 +58571,6 @@ var gear = {
       "p": "inv_axe_12",
       "sta": 13,
       "ap": 38
-    },
-    {
-      "id": 230838,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "81",
-      "name": "Lok'amir il Romathis",
-      "speed": 2.1,
-      "mindmg": 47,
-      "maxdmg": 127,
-      "p": "inv_mace_06",
-      "sta": 10
     },
     {
       "id": 230845,
@@ -58433,36 +58589,73 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 231387,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Stormwrath Sanctified Shortblade of the Galefinder",
-      "speed": 1.9,
-      "mindmg": 45,
-      "maxdmg": 113,
-      "p": "inv_sword_37",
-      "sta": 10,
-      "proc": {
-        "magic": true,
-        "dmg": 205
-      }
-    },
-    {
-      "id": 231753,
+      "id": 230863,
       "type": "Mace",
       "slot": "mainhand",
       "r": 60,
       "q": "4",
-      "i": "77",
-      "name": "Skywall's Solace",
-      "speed": 2.1,
-      "mindmg": 51,
-      "maxdmg": 125,
-      "p": "ability_thunderbolt",
-      "sta": 8
+      "i": "65",
+      "name": "Zulian Scepter of Rites",
+      "speed": 2.6,
+      "mindmg": 71,
+      "maxdmg": 145,
+      "p": "inv_waepon_bow_zulgrub_d_01",
+      "sta": 10
+    },
+    {
+      "id": 230865,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Fang of Venoxis",
+      "speed": 1.3,
+      "mindmg": 34,
+      "maxdmg": 73,
+      "p": "inv_weapon_shortblade_31"
+    },
+    {
+      "id": 231002,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "68",
+      "name": "Jin'do's Hexxer",
+      "speed": 2.4,
+      "mindmg": 63,
+      "maxdmg": 136,
+      "p": "inv_mace_17",
+      "sta": 8,
+      "crit": 1
+    },
+    {
+      "id": 231279,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Wushoolay's Poker",
+      "speed": 1.6,
+      "mindmg": 44,
+      "maxdmg": 89,
+      "p": "inv_sword_37"
+    },
+    {
+      "id": 231296,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "70",
+      "name": "Bloodcaller",
+      "speed": 2,
+      "mindmg": 52,
+      "maxdmg": 114,
+      "p": "inv_sword_18",
+      "sta": 12
     },
     {
       "id": 231815,
@@ -58491,7 +58684,10 @@ var gear = {
       "speed": 1.7,
       "mindmg": 69,
       "maxdmg": 129,
-      "p": "inv_weapon_shortblade_99"
+      "p": "inv_weapon_shortblade_99",
+      "proc": {
+        "spell": "Felstriker"
+      }
     },
     {
       "id": 231847,
@@ -58555,35 +58751,6 @@ var gear = {
       }
     },
     {
-      "id": 231858,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Bloodcaller",
-      "speed": 2,
-      "mindmg": 52,
-      "maxdmg": 114,
-      "p": "inv_sword_18",
-      "sta": 12
-    },
-    {
-      "id": 231859,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Jin'do's Hexxer",
-      "speed": 2.4,
-      "mindmg": 63,
-      "maxdmg": 136,
-      "p": "inv_mace_17",
-      "sta": 8,
-      "crit": 1
-    },
-    {
       "id": 231862,
       "type": "Sword",
       "slot": "mainhand",
@@ -58601,20 +58768,6 @@ var gear = {
       }
     },
     {
-      "id": 231865,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Zulian Scepter of Rites",
-      "speed": 2.6,
-      "mindmg": 71,
-      "maxdmg": 145,
-      "p": "inv_waepon_bow_zulgrub_d_01",
-      "sta": 10
-    },
-    {
       "id": 231867,
       "type": "Sword",
       "slot": "mainhand",
@@ -58629,32 +58782,6 @@ var gear = {
       "sta": 8,
       "d": 8,
       "block": 18
-    },
-    {
-      "id": 231871,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Wushoolay's Poker",
-      "speed": 1.6,
-      "mindmg": 44,
-      "maxdmg": 89,
-      "p": "inv_sword_37"
-    },
-    {
-      "id": 231874,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Fang of Venoxis",
-      "speed": 1.3,
-      "mindmg": 34,
-      "maxdmg": 73,
-      "p": "inv_weapon_shortblade_31"
     },
     {
       "id": 231875,
@@ -58691,40 +58818,7 @@ var gear = {
       "ap": 12
     },
     {
-      "id": 231887,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 50,
-      "q": "3",
-      "i": "55",
-      "name": "Test Dagger",
-      "speed": 2,
-      "mindmg": 51,
-      "maxdmg": 95,
-      "p": "inv_drink_10",
-      "proc": {
-        "tick": 10,
-        "interval": "3000",
-        "duration": "30000",
-        "bleed": true
-      }
-    },
-    {
-      "id": 231912,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 57,
-      "q": "4",
-      "i": "65",
-      "name": "Blade of the Pit",
-      "speed": 1.8,
-      "mindmg": 49,
-      "maxdmg": 101,
-      "p": "inv_weapon_shortblade_61",
-      "sta": 6
-    },
-    {
-      "id": 232310,
+      "id": 232309,
       "type": "Sword",
       "slot": "mainhand",
       "r": 60,
@@ -69480,7 +69574,10 @@ var gear = {
       "speed": 1.7,
       "mindmg": 69,
       "maxdmg": 129,
-      "p": "inv_weapon_shortblade_99"
+      "p": "inv_weapon_shortblade_99",
+      "proc": {
+        "spell": "Felstriker"
+      }
     },
     {
       "id": 231847,

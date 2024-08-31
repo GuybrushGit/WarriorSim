@@ -1105,7 +1105,7 @@ var enchant = {
       items: [220653,220654,220656],
       bonus: [
          { count: 2, stats: { hit: 1 } },
-         { count: 3, stats: { extra: 1 } },
+         { count: 3, stats: { wailingextra: 1 } },
       ]
    },
    {
@@ -1303,4 +1303,65 @@ var enchant = {
      { count: 4, stats: { resist: { fire: 10 }}},
   ]
 },
+{
+  id: 1721,
+  name: 'Warlord\'s Battlegear',
+  items: [231535,231534,231530,231533,231531,231532],
+  bonus: [
+     { count: 2, stats: { sta: 20 }},
+     { count: 6, stats: { ap: 40 }},
+  ]
+},
+{
+  id: 1747,
+  name: 'Field Marshal\'s Battlegear',
+  items: [231538,231537,231536,231540,231539,231541],
+  bonus: [
+     { count: 2, stats: { sta: 20 }},
+     { count: 6, stats: { ap: 40 }},
+  ]
+},
+{
+  id: 1799,
+  name: 'Overlord\'s Resolution',
+  items: [230943,230999],
+  bonus: [
+    { count: 2, stats: { defense: 8 }},
+  ]
+},
+{
+  id: 1797,
+  name: 'Major Mojo Infusion',
+  items: [230921,230929],
+  bonus: [
+    { count: 2, stats: { ap: 30 }},
+  ]
+},
+{
+  id: 1800,
+  name: 'The Twin Blades of Hakkari',
+  items: [231853,231869],
+  bonus: [
+    { count: 2, stats: { skill_1: 3, hakkariextra: 1 } }
+  ]
+},
+{
+  id: 1798,
+  name: 'Primal Blessing',
+  items: [231875,231851],
+  bonus: [
+    { count: 2, stats: { procspell: "PrimalBlessing2", procchance: 5 } }
+  ]
+},
+{
+  id: 1832,
+  name: 'Vindicator\'s Battlegear', // TODO
+  items: [231353,231352,231351,231350,231286],
+  bonus: [
+     { count: 2, stats: { defense: 7 }},
+     { count: 3, stats: { shieldslamcd: 2 }},
+     { count: 5, stats: { gladbloodrage: 30 }},
+  ]
+},
+
 ];

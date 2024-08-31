@@ -1649,6 +1649,25 @@ class PrimalBlessing extends Aura {
     }
 }
 
+class PrimalBlessing2 extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Primal Blessing 2');
+        this.duration = 12;
+        this.stats = { ap: 300 };
+        this.cooldown = 72;
+        this.cooldowntimer = 0;
+    }
+    use() {
+        if (this.cooldowntimer > step) return;
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.cooldowntimer = step + this.cooldown * 1000;
+        this.player.updateAP();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
 class BloodrageAura extends Aura {
     constructor(player, id) {
         super(player, id);
