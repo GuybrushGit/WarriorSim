@@ -2309,14 +2309,13 @@ class Rampage extends Aura {
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
-        this.player.timer = 1500;
         this.starttimer = step;
         this.player.updateAP();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
-        return !this.timer && !this.player.timer && this.player.isEnraged() && step >= this.usestep;
+        return !this.timer && this.player.isEnraged() && step >= this.usestep;
     }
     step() {
         if (step >= this.timer) {

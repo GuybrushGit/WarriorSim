@@ -343,7 +343,8 @@ class Simulation {
                     else if (player.auras.demontaintedblood && player.auras.demontaintedblood.canUse()) { player.spelldelay = 1; delayedspell = player.auras.demontaintedblood; }
                     else if (player.auras.wrathwray && player.auras.wrathwray.canUse()) { player.spelldelay = 1; delayedspell = player.auras.wrathwray; }
                     else if (player.auras.moonstalkerfury && player.auras.moonstalkerfury.canUse()) { player.spelldelay = 1; delayedspell = player.auras.moonstalkerfury; }
-
+                    else if (player.auras.rampage && player.auras.rampage.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rampage; }
+                    
                     // Use GCD spells
                     else if (player.spells.unstoppablemight && player.spells.unstoppablemight.canUse()) { player.spelldelay = 1; delayedspell = player.spells.unstoppablemight; }
                     else if (player.spells.stanceswitch.canUse()) { player.spelldelay = 1; delayedspell = player.spells.stanceswitch; }
@@ -386,7 +387,6 @@ class Simulation {
                     }
 
                     // Normal phase - no cost
-                    else if (player.auras.rampage && player.auras.rampage.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rampage; }
                     else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
                     else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shieldslam; }
                     else if (player.spells.blademasterfury && player.spells.blademasterfury.canUse()) { player.spelldelay = 1; delayedspell = player.spells.blademasterfury; }
