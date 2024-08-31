@@ -2053,7 +2053,6 @@ class BlisteringRagehammer extends Aura {
         this.starttimer = step;
         this.player.updateBonusDmg();
         this.player.updateHaste();
-        this.player.updateHasteDamage();
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
@@ -2063,7 +2062,6 @@ class BlisteringRagehammer extends Aura {
             this.firstuse = false;
             this.player.updateBonusDmg();
             this.player.updateHaste();
-            this.player.updateHasteDamage();
             /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
         }
     }
@@ -2072,7 +2070,6 @@ class BlisteringRagehammer extends Aura {
         this.timer = 0;
         this.stacks = 0;
         this.player.updateBonusDmg();
-        this.player.updateHasteDamage();
     }
 }
 
@@ -2807,5 +2804,39 @@ class WrathWray extends Aura {
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+}
+
+class CrusaderZeal extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 8;
+        this.stats = { moddmgdone: 15 };
+        this.mult_stats = { haste: 30 };
+        this.name = 'Crusader\'s Zeal';
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateBonusDmg();
+        this.player.updateHaste();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateBonusDmg();
+            this.player.updateHaste();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    end() {
+        this.uptime += (step - this.starttimer);
+        this.timer = 0;
+        this.stacks = 0;
+        this.player.updateBonusDmg();
     }
 }

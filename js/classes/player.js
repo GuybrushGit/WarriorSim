@@ -285,6 +285,8 @@ class Player {
                         this.base['moddmgdone'] += 4;
                     if (item.id == 227809)
                         this.base['moddmgdone'] += 3;
+                    if (item.id == 230003 || item.id == 23000399)
+                        this.base['moddmgdone'] += 4;
                     
                     if (item.id == 228122)
                         this.spells.themoltencore = new TheMoltenCore(this);
@@ -869,13 +871,13 @@ class Player {
             this.stats.haste *= (1 + this.auras.magmadarsreturn.mult_stats.haste / 100);
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
             this.stats.haste *= (1 + this.auras.jujuflurry.mult_stats.haste / 100);
+        if (this.auras.crusaderzeal && this.auras.crusaderzeal.timer)
+            this.stats.haste *= (1 + this.auras.crusaderzeal.mult_stats.haste / 100);
 
     }
     updateHasteDamage() {
         // MOD_ATTACKSPEED works differently than regular haste, lowers dmg
         let mod = 1;
-        if (this.auras.blisteringragehammer && this.auras.blisteringragehammer.timer)
-            mod *= (1 + this.auras.blisteringragehammer.mult_stats.haste / 100);
         if (this.auras.spicy && this.auras.spicy.timer)
             mod *= (1 + this.auras.spicy.mult_stats.haste / 100);
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer)
@@ -903,6 +905,8 @@ class Player {
             bonus += this.auras.blisteringragehammer.stats.moddmgdone;
         if (this.auras.meltarmor && this.auras.meltarmor.timer)
             taken += this.auras.meltarmor.stats.moddmgtaken;
+        if (this.auras.crusaderzeal && this.auras.crusaderzeal.timer)
+            bonus += this.auras.crusaderzeal.stats.moddmgdone;
         this.stats.moddmgdone = this.base.moddmgdone + bonus;
         this.stats.moddmgtaken = this.base.moddmgtaken + taken;
         this.mh.bonusdmg = this.mh.basebonusdmg;

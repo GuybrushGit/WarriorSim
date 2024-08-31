@@ -58463,6 +58463,25 @@ var gear = {
         "dmg": 84
       },
       "ap": 12
+    },
+    {
+      "id": 23000399,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "5",
+      "i": "90",
+      "name": "Hammer of the Lightbringer",
+      "speed": 4,
+      "mindmg": 310,
+      "maxdmg": 466,
+      "p": "inv_mace_1h_uther_d_01",
+      "agi": 20,
+      "str": 14,
+      "sta": 10,
+      "proc": {
+        "spell": "CrusaderZeal"
+      }
     }
   ],
   "offhand": [
@@ -76721,26 +76740,6 @@ var gear = {
       }
     },
     {
-      "id": 230003,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "q": "5",
-      "i": "90",
-      "name": "Hammer of the Lightbringer",
-      "speed": 4,
-      "mindmg": 310,
-      "maxdmg": 466,
-      "p": "inv_mace_1h_uther_d_01",
-      "agi": 20,
-      "str": 14,
-      "sta": 10,
-      "proc": {
-        "magic": true,
-        "dmg": 5
-      }
-    },
-    {
       "id": 230242,
       "type": "Sword",
       "slot": "twohand",
@@ -76962,6 +76961,25 @@ var gear = {
       "mindmg": 171,
       "maxdmg": 257,
       "p": "inv_sword_17"
+    },
+    {
+      "id": 230003,
+      "type": "Sword",
+      "slot": "twohand",
+      "r": 60,
+      "q": "5",
+      "i": "90",
+      "name": "Hammer of the Lightbringer",
+      "speed": 4,
+      "mindmg": 310,
+      "maxdmg": 466,
+      "p": "inv_mace_1h_uther_d_01",
+      "agi": 20,
+      "str": 14,
+      "sta": 10,
+      "proc": {
+        "spell": "CrusaderZeal"
+      }
     }
   ]
 };
