@@ -1888,8 +1888,8 @@ class Rend extends Aura {
         let basedmg = this.value1;
         if (this.player.bloodfrenzy)
             basedmg += this.value1 + ~~(this.player.stats.ap * 0.03 * this.value2);
-       let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
-       this.tickdmg = dmg / this.value2;
+        let dmg = basedmg * this.player.stats.dmgmod * this.dmgmod * this.player.bleedmod;
+        this.tickdmg = dmg / this.value2;
 
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
@@ -1905,6 +1905,11 @@ class Rend extends Aura {
         this.timer = 0;
         this.stacks = 0;
         this.tfbstep = -6000;
+    }
+    refresh() {
+        this.timer = this.nexttick - 3000 + this.duration * 1000;
+        this.stacks = this.value2;
+        /* start-log */ if (log) this.player.log(`${this.name} refreshed`); /* end-log */
     }
 }
 

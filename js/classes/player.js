@@ -532,6 +532,12 @@ class Player {
                         this.auras.berserkerforecast = new BerserkerForecast(this);
                         this.auras.defensiveforecast = new DefensiveForecast(this);
                     }
+                    if (bonus.stats.overpowerrend) this.overpowerrend = bonus.stats.overpowerrend;
+                    if (bonus.stats.whirlwindbonus) this.whirlwindbonus = bonus.stats.whirlwindbonus;
+                    if (bonus.stats.slammainreset) this.slammainreset = bonus.stats.slammainreset;
+                    if (bonus.stats.shieldslamcd) this.shieldslamcd = bonus.stats.shieldslamcd;
+                    if (bonus.stats.gladbloodrage) this.gladbloodrage = bonus.stats.gladbloodrage;
+                    if (bonus.stats.whirlwindcost) this.whirlwindcost = bonus.stats.whirlwindcost;
                 }
             }
         }
@@ -1410,6 +1416,7 @@ class Player {
             else this.auras['deepwounds' + (~~rng(1,adjacent) + 1)].use(offhand);
         }
         if (this.auras.wreckingcrew) this.auras.wreckingcrew.use();
+        if (this.overpowerrend && this.auras.rend && this.auras.rend.timer && spell instanceof Overpower) this.auras.rend.refresh();
     }
     procattack(spell, weapon, result, adjacent, damageSoFar) {
         let procdmg = 0;
