@@ -784,6 +784,35 @@ class StanceSwitch extends Spell {
     }
 }
 
+class GrilekFury extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Grilek Fury');
+        this.cooldown = 180;
+        this.rage = 30;
+        this.useonly = true;
+        this.offensive = false;
+    }
+    prep(duration) {
+        if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
+        if (typeof this.timetostart !== 'undefined') this.usestep = this.timetostart;
+        return 0;
+    }
+    use() {
+        this.player.itemtimer = this.cooldown * 1000;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+
+        let oldRage = this.player.rage;
+        this.player.rage = Math.min(this.player.rage + this.rage, 100);
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
+            this.player.auras.consumedrage.use();
+    }
+    canUse() {
+        return !this.player.itemtimer && !this.timer && step >= this.usestep;
+    }
+}
+
+
 /**************************************************** AURAS ****************************************************/
 
 class Aura {
@@ -2871,29 +2900,5 @@ class GrilekGuard extends Aura {
     }
     canUse() {
         return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
-    }
-}
-
-class GrilekFury extends Aura {
-    constructor(player, id) {
-        super(player, id, 'Grilek Fury');
-        this.duration = 180;
-        this.useonly = true;
-        this.offensive = false;
-        this.rage = 30;
-    }
-    use() {
-        this.player.itemtimer = this.duration * 1000;
-        this.timer = step + this.duration * 1000;
-        this.starttimer = step;
-        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-
-        let oldRage = this.player.rage;
-        this.player.rage = Math.min(this.player.rage + this.rage, 100);
-        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
-            this.player.auras.consumedrage.use();
-    }
-    canUse() {
-        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }
