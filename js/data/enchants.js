@@ -526,6 +526,24 @@ var enchant = {
       "phase": 1,
       "r": 50,
       "ench": "1505"
+    },
+    {
+      "id": 231379,
+      "name": "Presence of Might",
+      "r": 60,
+      "sta": 20,
+      "str": 10,
+      "agi": 10,
+      "ench": "7632"
+    },
+    {
+      "id": 231381,
+      "name": "Presence of Valor",
+      "r": 60,
+      "sta": 20,
+      "defense": 7,
+      "block": 15,
+      "ench": "7633"
     }
    ],
    "shoulder": [

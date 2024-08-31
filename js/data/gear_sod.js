@@ -57969,6 +57969,7 @@ var gear = {
       "agi": 7,
       "proc": {
         "spell": "Eskhandar",
+        "ppm": 0.6
       }
     },
     {
