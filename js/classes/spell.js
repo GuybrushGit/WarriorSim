@@ -214,6 +214,7 @@ class Bloodrage extends Spell {
         this.cooldown = 60;
         this.useonly = true;
         this.offensive = false;
+        if (player.basestance == 'glad' && player.gladbloodrage) this.cooldown -= 30;
     }
     use() {
         this.timer = this.cooldown * 1000;
@@ -616,7 +617,7 @@ class ShieldSlam extends Spell {
         if (player.items.includes(231350))
             this.cost -= 5;
 
-        this.cooldown = 6;
+        this.cooldown = 6 - (player.shieldslamcd || 0);
         if (this.duration) this.cooldown = Math.max(this.cooldown, this.duration);
         if (this.swordboard) this.cost = 0;
     }
@@ -2843,5 +2844,56 @@ class CrusaderZeal extends Aura {
         this.timer = 0;
         this.stacks = 0;
         this.player.updateBonusDmg();
+    }
+}
+
+class GrilekGuard extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Gri\'lek\'s Guard');
+        this.duration = 20;
+        this.stats = { block: 200 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAuras();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateAuras();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+}
+
+class GrilekFury extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Grilek Fury');
+        this.duration = 180;
+        this.useonly = true;
+        this.offensive = false;
+        this.rage = 30;
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+
+        let oldRage = this.player.rage;
+        this.player.rage = Math.min(this.player.rage + this.rage, 100);
+        if (this.player.auras.consumedrage && oldRage < 60 && this.player.rage >= 60)
+            this.player.auras.consumedrage.use();
+    }
+    canUse() {
+        return this.firstuse && !this.player.itemtimer && !this.timer && step >= this.usestep;
     }
 }

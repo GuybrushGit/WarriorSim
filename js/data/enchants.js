@@ -1384,7 +1384,7 @@ var enchant = {
 
 {
   id: 1832,
-  name: 'Vindicator\'s Battlegear', // TODO
+  name: 'Vindicator\'s Battlegear',
   items: [231353,231352,231351,231350,231286],
   bonus: [
      { count: 2, stats: { defense: 7 }},

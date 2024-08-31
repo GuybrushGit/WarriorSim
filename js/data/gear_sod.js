@@ -3036,6 +3036,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 20263,
+      "type": "Plate",
+      "slot": "head",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Gurubashi Helm",
+      "p": "inv_helmet_25",
+      "agi": 21,
+      "str": 22,
+      "sta": 13
+    },
+    {
       "id": 20521,
       "type": "Plate",
       "slot": "head",
@@ -25147,6 +25160,19 @@ var gear = {
       "crit": 1
     },
     {
+      "id": 20259,
+      "type": "Leather",
+      "slot": "hands",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Shadow Panther Hide Gloves",
+      "p": "inv_gauntlets_25",
+      "str": 15,
+      "sta": 10,
+      "crit": 1
+    },
+    {
       "id": 20369,
       "type": "Mail",
       "slot": "hands",
@@ -31162,6 +31188,19 @@ var gear = {
       "str": 14,
       "sta": 11,
       "hit": 1
+    },
+    {
+      "id": 20261,
+      "type": "Leather",
+      "slot": "waist",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Shadow Panther Hide Belt",
+      "p": "inv_belt_26",
+      "agi": 16,
+      "str": 8,
+      "sta": 10
     },
     {
       "id": 21312,
@@ -46312,6 +46351,16 @@ var gear = {
       "p": "inv_jewelry_necklace_13"
     },
     {
+      "id": 19951,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Gri'lek's Charm of Might",
+      "p": "inv_jewelry_necklace_19"
+    },
+    {
       "id": 20130,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -46735,6 +46784,16 @@ var gear = {
       "i": "68",
       "name": "Zandalarian Hero Medallion",
       "p": "inv_jewelry_necklace_13"
+    },
+    {
+      "id": 19951,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Gri'lek's Charm of Might",
+      "p": "inv_jewelry_necklace_19"
     },
     {
       "id": 20130,
@@ -56113,6 +56172,24 @@ var gear = {
       "sta": 3
     },
     {
+      "id": 19908,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Sceptre of Smiting",
+      "speed": 2.6,
+      "mindmg": 77,
+      "maxdmg": 145,
+      "p": "inv_mace_08",
+      "skill": 2,
+      "proc": {
+        "magic": true,
+        "dmg": 78
+      }
+    },
+    {
       "id": "19921|690",
       "type": "Axe",
       "slot": "onehand",
@@ -56161,6 +56238,26 @@ var gear = {
       "skill": 2,
       "str": 12,
       "rand": 193
+    },
+    {
+      "id": 19968,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "3",
+      "i": "68",
+      "name": "Fiery Retributer",
+      "speed": 1.8,
+      "mindmg": 56,
+      "maxdmg": 105,
+      "p": "inv_sword_01",
+      "str": 7,
+      "d": 5,
+      "proc": {
+        "magic": true,
+        "dmg": 2,
+        "chance": 100
+      }
     },
     {
       "id": 20035,
@@ -67565,6 +67662,24 @@ var gear = {
       "p": "inv_sword_27",
       "str": 7,
       "sta": 3
+    },
+    {
+      "id": 19908,
+      "type": "Mace",
+      "slot": "onehand",
+      "r": 60,
+      "q": "3",
+      "i": "65",
+      "name": "Sceptre of Smiting",
+      "speed": 2.6,
+      "mindmg": 77,
+      "maxdmg": 145,
+      "p": "inv_mace_08",
+      "skill": 2,
+      "proc": {
+        "magic": true,
+        "dmg": 78
+      }
     },
     {
       "id": "19921|690",

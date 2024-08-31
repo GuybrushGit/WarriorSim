@@ -450,6 +450,18 @@
           if (obj.id == 18842) exclude = true;
           if (obj.id == 19402) exclude = true;
           if (obj.id == 230003) exclude = true;
+          if (obj.id == 19890) exclude = true;
+          if (obj.id == 19964) exclude = true;
+          if (obj.id == 19965) exclude = true;
+          if (obj.id == 19864) exclude = true;
+          if (obj.id == 19903) exclude = true;
+          if (obj.id == 22713) exclude = true;
+          if (obj.id == 19884) exclude = true;
+          if (obj.id == 19909) exclude = true;
+          if (obj.id == 20258) exclude = true;
+          if (obj.id == 19963) exclude = true;
+          if (obj.id == 20260) exclude = true;
+          if (obj.id == 20257) exclude = true;
           
 
           
@@ -516,7 +528,7 @@
           if (obj.name.indexOf('Knight-Captain\'s Plate') > -1 && obj.id < 100000) exclude = true;
           if (obj.name.indexOf('Lieutenant Commander\'s Plate') > -1 && obj.id < 100000) exclude = true;
           if (obj.name.indexOf('Knight-Lieutenant\'s Plat') > -1 && obj.id < 100000) exclude = true;
-          if (obj.name.indexOf('of Might') > -1 && obj.id < 100000) exclude = true;
+          if (obj.name.indexOf('of Might') > -1 && obj.name.indexOf('Gri\'lek') == -1 && obj.id < 100000) exclude = true;
 
           if (obj.name == "Tempered Dark Iron Boots" && obj.id == 228924) include = true;
           if (obj.name == "Tempered Dark Iron Boots" && obj.id != 228924) exclude = true;
@@ -539,7 +551,7 @@
           let source = getSource(obj.id);
           if (source && source.zone) {
             if (source.zone == 3456) continue; // Naxxramas
-            if (source.zone == 1977) continue; // Zul'Gurub
+            //if (source.zone == 1977) continue; // Zul'Gurub
             //if (source.zone == 2677) continue; // Blackwing Lair
             if (source.zone == 3428) continue; // Ahn'Qiraj
             if (source.zone == 3429) continue; // Ruins of Ahn'Qiraj

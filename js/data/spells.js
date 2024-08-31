@@ -1449,6 +1449,32 @@ var spells = [
     timetostartactive: false,
 },
 
+{
+    id: 231286,
+    name: 'Gri\'lek\'s Charm of Might',
+    classname: 'GrilekGuard',
+    iconname: 'inv_jewelry_necklace_19',
+    item: true,
+    aura: true,
+    timetoend: 21,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
+
+{
+    id: 19951,
+    name: 'Gri\'lek\'s Charm of Might',
+    classname: 'BloodFury',
+    iconname: 'inv_jewelry_necklace_19',
+    item: true,
+    aura: true,
+    timetoend: 21,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
+
 
 
 

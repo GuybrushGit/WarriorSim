@@ -759,7 +759,7 @@ class Player {
         this.stats.ap += this.stats.str * 2;
         this.stats.crit += this.stats.agi * this.agipercrit;
         this.crit = this.getCritChance();
-        this.stats.block = this.base.block + ~~(this.stats.str / 20);
+        this.stats.block = this.stats.block + ~~(this.stats.str / 20);
 
         if (this.stats.baseapmod != 1)
             this.stats.ap += ~~((this.base.aprace + this.stats.str * 2) * (this.stats.baseapmod - 1));
@@ -1098,6 +1098,7 @@ class Player {
         if (this.auras.wrathwray && this.auras.wrathwray.timer) this.auras.wrathwray.step();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.step();
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.step();
+        if (this.auras.grilekguard && this.auras.grilekguard.timer) this.auras.grilekguard.step();
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.step();
         if (this.trinketproc1 && this.trinketproc1.spell && this.trinketproc1.spell.timer) this.trinketproc1.spell.step();
@@ -1161,6 +1162,7 @@ class Player {
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.end();
         if (this.auras.wrathwray && this.auras.wrathwray.timer) this.auras.wrathwray.end();
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.end();
+        if (this.auras.grilekguard && this.auras.grilekguard.timer) this.auras.grilekguard.end();
         
 
         if (this.mh.windfury && this.mh.windfury.timer) this.mh.windfury.end();
