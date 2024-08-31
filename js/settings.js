@@ -454,7 +454,7 @@ SIM.SETTINGS = {
             // Might set bonus
             if (spell.itemblock) { 
                 let count = 0;
-                let items = [226499,226497,226494,226495,226493,226492,226498,226496];
+                let items = [226499,226497,226494,226495,226493,226492,226498,226496,232251,232249,232254,232247,232252,232248,232250,232253];
                 for (let type in gear)
                     for (let g of gear[type])
                         if (g.selected && items.includes(g.id)) count++;

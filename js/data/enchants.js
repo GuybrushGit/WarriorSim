@@ -1408,6 +1408,7 @@ var enchant = {
   name: 'Immoveable Wrath',
   items: [231030,231029,231028,231027,231026,231025,231024,231023],
   bonus: [
+    { count: 2, stats: {  } },
   ]
 },
 
