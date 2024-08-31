@@ -58191,7 +58191,8 @@ var gear = {
       },
       "proc": {
         "magic": true,
-        "dmg": 300
+        "dmg": 300,
+        "ppm": 6
       }
     },
     {
@@ -69047,7 +69048,8 @@ var gear = {
       },
       "proc": {
         "magic": true,
-        "dmg": 300
+        "dmg": 300,
+        "ppm": 6
       }
     },
     {
@@ -76751,7 +76753,10 @@ var gear = {
       "maxdmg": 297,
       "p": "inv_sword_50",
       "agi": 29,
-      "sta": 20
+      "sta": 20,
+      "proc": {
+        "spell": "Untamed"
+      }
     },
     {
       "id": 230271,
