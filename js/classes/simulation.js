@@ -341,6 +341,7 @@ class Simulation {
                     else if (player.auras.zandalarian && player.auras.zandalarian.canUse()) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
                     else if (player.auras.relentlessstrength && player.auras.relentlessstrength.canUse()) { player.spelldelay = 1; delayedspell = player.auras.relentlessstrength; }
                     else if (player.auras.demontaintedblood && player.auras.demontaintedblood.canUse()) { player.spelldelay = 1; delayedspell = player.auras.demontaintedblood; }
+                    else if (player.auras.wrathwray && player.auras.wrathwray.canUse()) { player.spelldelay = 1; delayedspell = player.auras.wrathwray; }
                     else if (player.auras.moonstalkerfury && player.auras.moonstalkerfury.canUse()) { player.spelldelay = 1; delayedspell = player.auras.moonstalkerfury; }
 
                     // Use GCD spells

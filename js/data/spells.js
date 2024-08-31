@@ -1436,6 +1436,19 @@ var spells = [
     buff: true,
 },
 
+{
+    id: 231779,
+    name: 'Wrath of Wray',
+    classname: 'WrathWray',
+    iconname: 'achievement_bg_wineos',
+    item: true,
+    aura: true,
+    timetoend: 21,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
+},
+
 
 
 

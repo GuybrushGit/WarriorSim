@@ -2777,3 +2777,30 @@ class JujuFlurry extends Aura {
         this.player.updateHasteDamage();
     }
 }
+
+class WrathWray extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Wrath of Wray');
+        this.duration = 20;
+        this.stats = { str: 92 };
+    }
+    use() {
+        this.player.itemtimer = this.duration * 1000;
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateStrength();
+        /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.firstuse = false;
+            this.player.updateStrength();
+            /* start-log */ if (log) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+    canUse() {
+        return this.firstuse && !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+}

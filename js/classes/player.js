@@ -1085,6 +1085,7 @@ class Player {
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.step();
+        if (this.auras.wrathwray && this.auras.wrathwray.timer) this.auras.wrathwray.step();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.step();
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.step();
 
@@ -1148,6 +1149,7 @@ class Player {
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.end();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.end();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.end();
+        if (this.auras.wrathwray && this.auras.wrathwray.timer) this.auras.wrathwray.end();
         if (this.auras.jujuflurry && this.auras.jujuflurry.timer) this.auras.jujuflurry.end();
         
 
