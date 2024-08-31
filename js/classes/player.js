@@ -1442,6 +1442,12 @@ class Player {
                     this.auras.suddendeath.remove();
                 }
             }
+            if (spell instanceof Slam && this.slammainreset) {
+                if (this.spells.mortalstrike) this.spells.mortalstrike.timer = 0;
+                if (this.spells.bloodthirst) this.spells.bloodthirst.timer = 0;
+                if (this.spells.shieldslam) this.spells.shieldslam.timer = 0;
+                /* start-log */ if (log) this.log(`T2 Slam reset`); /* end-log */
+            }
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += weapon.proc1.chance == 10000 ? weapon.proc1.magicdmg : this.magicproc(weapon.proc1);

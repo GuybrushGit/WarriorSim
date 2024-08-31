@@ -103,10 +103,11 @@ class Whirlwind extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod;
+        let mod = this.player.whirlwindbonus ? 1.1 : 1;
+        return dmg * this.player.stats.dmgmod * mod;
     }
     use() {
-        if (!this.player.isValidStance('zerk')) this.player.switch('zerk');
+        if (!this.player.isValidStance('zerk') && !this.player.whirlwindbonus) this.player.switch('zerk');
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
@@ -114,8 +115,8 @@ class Whirlwind extends Spell {
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
-        (this.player.isValidStance('zerk') || this.player.talents.rageretained >= this.cost) &&
-        (!this.maxrage || this.player.isValidStance('zerk') || this.player.rage <= this.maxrage) &&
+        (this.player.isValidStance('zerk') || this.player.whirlwindbonus || this.player.talents.rageretained >= this.cost) &&
+        (!this.maxrage || this.player.isValidStance('zerk') || this.player.whirlwindbonus || this.player.rage <= this.maxrage) &&
         (!this.minrage || this.player.rage >= this.minrage) &&
         (!this.maincd || 
             (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
