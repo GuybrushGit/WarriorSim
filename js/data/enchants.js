@@ -1165,7 +1165,7 @@ var enchant = {
    {
     id: 1719,
     name: 'Immoveable Might',
-    items: [226485,226484,226489,226486,226488,226490,226491,226487],
+    items: [226485,226484,226489,226486,226488,226490,226491,226487,232259,232257,232262,232255,232260,232256,232258,232261],
     bonus: [
        { count: 2, stats: { block: 30 } },
        { count: 6, stats: { gladdmg: 4 } },
@@ -1200,7 +1200,7 @@ var enchant = {
 {
   id: 1720,
   name: 'Unstoppable Might',
-  items: [226499,226497,226494,226495,226493,226492,226498,226496],
+  items: [226499,226497,226494,226495,226493,226492,226498,226496,232251,232249,232254,232247,232252,232248,232250,232253],
   bonus: [
      { count: 2, stats: { switchrage: true } },
      { count: 4, stats: { switchdelay: true } },
@@ -1371,6 +1371,16 @@ var enchant = {
     { count: 2, stats: { procspell: "PrimalBlessing2", procchance: 5 } }
   ]
 },
+
+{
+  id: 474,
+  name: 'Vindicator\'s Battlegear', // TODO
+  items: [19951,19577,19824,19823,19822],
+  bonus: [
+     { count: 5, stats: { whirlwindcost: 3 }},
+  ]
+},
+
 {
   id: 1832,
   name: 'Vindicator\'s Battlegear', // TODO
@@ -1381,5 +1391,25 @@ var enchant = {
      { count: 5, stats: { gladbloodrage: 30 }},
   ]
 },
+
+{
+  id: 1823,
+  name: 'Unstoppable Wrath', // TODO
+  items: [231038,231037,231036,231035,231034,231033,231032,231031],
+  bonus: [
+     { count: 2, stats: { overpowerrend: true } },
+     { count: 4, stats: { whirlwindbonus: true } },
+     { count: 6, stats: { slammainreset: true } },
+  ]
+},
+
+{
+  id: 1822,
+  name: 'Immoveable Wrath',
+  items: [231030,231029,231028,231027,231026,231025,231024,231023],
+  bonus: [
+  ]
+},
+
 
 ];

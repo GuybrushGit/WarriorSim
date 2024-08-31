@@ -4941,6 +4941,20 @@ var gear = {
       "d": 5
     },
     {
+      "id": 19577,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Rage of Mugamba",
+      "p": "inv_jewelry_necklace_26",
+      "agi": 8,
+      "str": 8,
+      "sta": 13,
+      "d": 6
+    },
+    {
       "id": 20442,
       "type": "Miscellaneous",
       "slot": "neck",
@@ -5360,18 +5374,6 @@ var gear = {
       "p": "inv_jewelry_necklace_21",
       "sta": 8,
       "d": 16
-    },
-    {
-      "id": 231306,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Soul Corrupter's Necklace",
-      "p": "inv_jewelry_necklace_19",
-      "sta": 6,
-      "hit": 2
     },
     {
       "id": 231307,
@@ -8407,17 +8409,6 @@ var gear = {
       }
     },
     {
-      "id": 220745,
-      "type": "Leather",
-      "slot": "shoulder",
-      "r": 50,
-      "q": "4",
-      "i": "55",
-      "name": "Membrane of Dark Neurosis",
-      "p": "inv_shoulder_18",
-      "hit": 1
-    },
-    {
       "id": 220747,
       "type": "Leather",
       "slot": "shoulder",
@@ -11285,18 +11276,6 @@ var gear = {
       "ap": 52
     },
     {
-      "id": 230733,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Shroud of Pure Thought",
-      "p": "inv_misc_cape_16",
-      "sta": 10,
-      "crit": 1
-    },
-    {
       "id": 230744,
       "type": "Cloth",
       "slot": "back",
@@ -11344,17 +11323,6 @@ var gear = {
       "p": "inv_misc_cape_21",
       "sta": 12,
       "d": 11
-    },
-    {
-      "id": 231300,
-      "type": "Cloth",
-      "slot": "back",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Cloak of Consumption",
-      "p": "inv_misc_cape_22",
-      "hit": 1
     },
     {
       "id": 231783,
@@ -15219,6 +15187,20 @@ var gear = {
       "hit": 1
     },
     {
+      "id": 19822,
+      "type": "Plate",
+      "slot": "chest",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Zandalar Vindicator's Breastplate",
+      "p": "inv_chest_plate07",
+      "agi": 15,
+      "str": 23,
+      "sta": 24,
+      "d": 4
+    },
+    {
       "id": 20380,
       "type": "Mail",
       "slot": "chest",
@@ -19042,18 +19024,6 @@ var gear = {
       "sta": 5
     },
     {
-      "id": 16959,
-      "type": "Plate",
-      "slot": "wrist",
-      "r": 60,
-      "q": "4",
-      "i": "76",
-      "name": "Bracelets of Wrath",
-      "p": "inv_bracer_19",
-      "str": 13,
-      "sta": 27
-    },
-    {
       "id": 17714,
       "type": "Mail",
       "slot": "wrist",
@@ -19350,6 +19320,19 @@ var gear = {
       "agi": 14,
       "sta": 7,
       "hit": 1
+    },
+    {
+      "id": 19824,
+      "type": "Plate",
+      "slot": "wrist",
+      "r": 60,
+      "q": "4",
+      "i": "61",
+      "name": "Zandalar Vindicator's Armguards",
+      "p": "inv_bracer_14",
+      "agi": 13,
+      "str": 13,
+      "sta": 13
     },
     {
       "id": 20481,
@@ -25997,18 +25980,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 230742,
-      "type": "Leather",
-      "slot": "hands",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Taut Dragonhide Gloves",
-      "p": "inv_gauntlets_19",
-      "sta": 15,
-      "crit": 1
-    },
-    {
       "id": 230859,
       "type": "Mail",
       "slot": "hands",
@@ -26094,18 +26065,6 @@ var gear = {
         "nature": 10
       },
       "hit": 1
-    },
-    {
-      "id": 231305,
-      "type": "Mail",
-      "slot": "hands",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Seafury Gauntlets",
-      "p": "inv_gauntlets_30",
-      "sta": 10,
-      "crit": 1
     },
     {
       "id": 231532,
@@ -30573,22 +30532,6 @@ var gear = {
       "ap": 12
     },
     {
-      "id": 16960,
-      "type": "Plate",
-      "slot": "waist",
-      "r": 60,
-      "q": "4",
-      "i": "76",
-      "name": "Waistband of Wrath",
-      "p": "inv_belt_09",
-      "str": 20,
-      "sta": 20,
-      "resist": {
-        "shadow": 10
-      },
-      "d": 7
-    },
-    {
       "id": 16987,
       "type": "Leather",
       "slot": "waist",
@@ -30791,6 +30734,19 @@ var gear = {
       "resist": {
         "fire": 12
       }
+    },
+    {
+      "id": 19823,
+      "type": "Plate",
+      "slot": "waist",
+      "r": 60,
+      "q": "4",
+      "i": "61",
+      "name": "Zandalar Vindicator's Belt",
+      "p": "inv_belt_32",
+      "str": 25,
+      "sta": 10,
+      "crit": 1
     },
     {
       "id": 20041,
@@ -37169,32 +37125,6 @@ var gear = {
       "d": 10
     },
     {
-      "id": 230278,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Legguards of the Fallen Crusader",
-      "p": "inv_pants_plate_16",
-      "str": 28,
-      "sta": 22,
-      "crit": 1
-    },
-    {
-      "id": 230279,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Primalist's Linked Legguards",
-      "p": "inv_pants_mail_19",
-      "sta": 12,
-      "crit": 2,
-      "hit": 1
-    },
-    {
       "id": 230735,
       "type": "Mail",
       "slot": "legs",
@@ -37208,31 +37138,6 @@ var gear = {
       "resist": {
         "fire": 35
       },
-      "hit": 1
-    },
-    {
-      "id": 230926,
-      "type": "Plate",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Peacekeeper Leggings",
-      "p": "inv_pants_plate_04",
-      "sta": 16,
-      "crit": 1
-    },
-    {
-      "id": 230928,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Seafury Leggings",
-      "p": "inv_pants_mail_06",
-      "sta": 14,
-      "crit": 1,
       "hit": 1
     },
     {
@@ -42011,30 +41916,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 230914,
-      "type": "Plate",
-      "slot": "feet",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Peacekeeper Boots",
-      "p": "inv_boots_plate_03",
-      "sta": 12,
-      "crit": 1
-    },
-    {
-      "id": 230916,
-      "type": "Mail",
-      "slot": "feet",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Seafury Boots",
-      "p": "inv_boots_chain_11",
-      "sta": 10,
-      "crit": 1
-    },
-    {
       "id": 230919,
       "type": "Mail",
       "slot": "feet",
@@ -43754,19 +43635,6 @@ var gear = {
       "p": "inv_jewelry_ring_41",
       "sta": 8,
       "hit": 1
-    },
-    {
-      "id": 21393,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Signet of Unyielding Strength",
-      "p": "inv_jewelry_ring_ahnqiraj_03",
-      "str": 11,
-      "sta": 14,
-      "crit": 1
     },
     {
       "id": 22255,
@@ -45848,19 +45716,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 21393,
-      "type": "Miscellaneous",
-      "slot": "finger",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Signet of Unyielding Strength",
-      "p": "inv_jewelry_ring_ahnqiraj_03",
-      "str": 11,
-      "sta": 14,
-      "crit": 1
-    },
-    {
       "id": 22255,
       "type": "Miscellaneous",
       "slot": "finger",
@@ -46467,16 +46322,6 @@ var gear = {
       "p": "inv_drink_01"
     },
     {
-      "id": 21180,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Earthstrike",
-      "p": "spell_nature_abolishmagic"
-    },
-    {
       "id": 21567,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -46512,17 +46357,6 @@ var gear = {
         "dmg": 150,
         "chance": 2
       }
-    },
-    {
-      "id": 23206,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "90",
-      "name": "Mark of the Champion",
-      "p": "inv_misc_token_argentdawn2",
-      "ap": 150
     },
     {
       "id": 211449,
@@ -46561,23 +46395,6 @@ var gear = {
       "i": "40",
       "name": "Domesticated Attack Chicken",
       "p": "spell_magic_polymorphchicken"
-    },
-    {
-      "id": 219345,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 50,
-      "q": "3",
-      "i": "50",
-      "name": "Infernal Lasso",
-      "p": "spell_nature_slow",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 25,
-        "interval": "3000",
-        "duration": "24000"
-      }
     },
     {
       "id": 220632,
@@ -46657,17 +46474,6 @@ var gear = {
       "name": "Accursed Chalice",
       "p": "inv_offhand_pvealliance_d_01",
       "crit": 1
-    },
-    {
-      "id": 228081,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Germinating Poisonseed",
-      "p": "inv_misc_herb_nightmareseed",
-      "hit": 1
     },
     {
       "id": 228084,
@@ -46931,16 +46737,6 @@ var gear = {
       "p": "inv_drink_01"
     },
     {
-      "id": 21180,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Earthstrike",
-      "p": "spell_nature_abolishmagic"
-    },
-    {
       "id": 21567,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -46976,17 +46772,6 @@ var gear = {
         "dmg": 150,
         "chance": 2
       }
-    },
-    {
-      "id": 23206,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "90",
-      "name": "Mark of the Champion",
-      "p": "inv_misc_token_argentdawn2",
-      "ap": 150
     },
     {
       "id": 211449,
@@ -47025,23 +46810,6 @@ var gear = {
       "i": "40",
       "name": "Domesticated Attack Chicken",
       "p": "spell_magic_polymorphchicken"
-    },
-    {
-      "id": 219345,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 50,
-      "q": "3",
-      "i": "50",
-      "name": "Infernal Lasso",
-      "p": "spell_nature_slow",
-      "proc": {
-        "magic": true,
-        "procgcd": true,
-        "tick": 25,
-        "interval": "3000",
-        "duration": "24000"
-      }
     },
     {
       "id": 220632,
@@ -47121,17 +46889,6 @@ var gear = {
       "name": "Accursed Chalice",
       "p": "inv_offhand_pvealliance_d_01",
       "crit": 1
-    },
-    {
-      "id": 228081,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Germinating Poisonseed",
-      "p": "inv_misc_herb_nightmareseed",
-      "hit": 1
     },
     {
       "id": 228084,
@@ -56096,34 +55853,6 @@ var gear = {
       }
     },
     {
-      "id": 19347,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Claw of Chromaggus",
-      "speed": 1.5,
-      "mindmg": 37,
-      "maxdmg": 90,
-      "p": "inv_weapon_shortblade_28",
-      "sta": 7
-    },
-    {
-      "id": 19360,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "81",
-      "name": "Lok'amir il Romathis",
-      "speed": 2.1,
-      "mindmg": 48,
-      "maxdmg": 128,
-      "p": "inv_mace_06",
-      "sta": 10
-    },
-    {
       "id": 19542,
       "type": "Dagger",
       "slot": "onehand",
@@ -58109,20 +57838,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 228263,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Sorcerous Dagger",
-      "speed": 1.4,
-      "mindmg": 37,
-      "maxdmg": 79,
-      "p": "inv_weapon_shortblade_07",
-      "sta": 8
-    },
-    {
       "id": 228350,
       "type": "Fist",
       "slot": "mainhand",
@@ -58589,73 +58304,21 @@ var gear = {
       "sta": 7
     },
     {
-      "id": 230863,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Zulian Scepter of Rites",
-      "speed": 2.6,
-      "mindmg": 71,
-      "maxdmg": 145,
-      "p": "inv_waepon_bow_zulgrub_d_01",
-      "sta": 10
-    },
-    {
-      "id": 230865,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Fang of Venoxis",
-      "speed": 1.3,
-      "mindmg": 34,
-      "maxdmg": 73,
-      "p": "inv_weapon_shortblade_31"
-    },
-    {
-      "id": 231002,
-      "type": "Mace",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Jin'do's Hexxer",
-      "speed": 2.4,
-      "mindmg": 63,
-      "maxdmg": 136,
-      "p": "inv_mace_17",
-      "sta": 8,
-      "crit": 1
-    },
-    {
-      "id": 231279,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Wushoolay's Poker",
-      "speed": 1.6,
-      "mindmg": 44,
-      "maxdmg": 89,
-      "p": "inv_sword_37"
-    },
-    {
-      "id": 231296,
+      "id": 231275,
       "type": "Sword",
       "slot": "mainhand",
       "r": 60,
       "q": "4",
-      "i": "70",
-      "name": "Bloodcaller",
-      "speed": 2,
-      "mindmg": 52,
-      "maxdmg": 114,
-      "p": "inv_sword_18",
-      "sta": 12
+      "i": "65",
+      "name": "Blazefury Retributer",
+      "speed": 1.6,
+      "mindmg": 44,
+      "maxdmg": 89,
+      "p": "inv_sword_01",
+      "proc": {
+        "magic": true,
+        "dmg": 2
+      }
     },
     {
       "id": 231815,
@@ -58751,23 +58414,6 @@ var gear = {
       }
     },
     {
-      "id": 231862,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Blazefury Retributer",
-      "speed": 1.6,
-      "mindmg": 44,
-      "maxdmg": 89,
-      "p": "inv_sword_01",
-      "proc": {
-        "magic": true,
-        "dmg": 2
-      }
-    },
-    {
       "id": 231867,
       "type": "Sword",
       "slot": "mainhand",
@@ -58816,19 +58462,6 @@ var gear = {
         "dmg": 84
       },
       "ap": 12
-    },
-    {
-      "id": 232309,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Renataki's Soul Conduit",
-      "speed": 2.1,
-      "mindmg": 57,
-      "maxdmg": 117,
-      "p": "inv_sword_37"
     }
   ],
   "offhand": [
@@ -67654,20 +67287,6 @@ var gear = {
       }
     },
     {
-      "id": 19347,
-      "type": "Dagger",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Claw of Chromaggus",
-      "speed": 1.5,
-      "mindmg": 37,
-      "maxdmg": 90,
-      "p": "inv_weapon_shortblade_28",
-      "sta": 7
-    },
-    {
       "id": 19542,
       "type": "Dagger",
       "slot": "onehand",
@@ -69836,19 +69455,6 @@ var gear = {
       "str": 7
     },
     {
-      "id": 873,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 35,
-      "q": "4",
-      "i": "40",
-      "name": "Staff of Jordan",
-      "speed": 3.7,
-      "mindmg": 119,
-      "maxdmg": 180,
-      "p": "inv_staff_13"
-    },
-    {
       "id": 890,
       "type": "Staff",
       "slot": "twohand",
@@ -69923,23 +69529,6 @@ var gear = {
       "p": "inv_staff_29",
       "sta": 11,
       "d": 10
-    },
-    {
-      "id": 944,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 56,
-      "q": "4",
-      "i": "61",
-      "name": "Elemental Mage Staff",
-      "speed": 3.2,
-      "mindmg": 147,
-      "maxdmg": 221,
-      "p": "inv_staff_07",
-      "resist": {
-        "fire": 20,
-        "frost": 20
-      }
     },
     {
       "id": 1155,
@@ -73175,20 +72764,6 @@ var gear = {
       "sta": 18
     },
     {
-      "id": 10844,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 49,
-      "q": "3",
-      "i": "54",
-      "name": "Spire of Hakkar",
-      "speed": 3.4,
-      "mindmg": 126,
-      "maxdmg": 190,
-      "p": "inv_staff_32",
-      "sta": 16
-    },
-    {
       "id": 11607,
       "type": "Axe",
       "slot": "twohand",
@@ -73606,19 +73181,6 @@ var gear = {
       }
     },
     {
-      "id": 13000,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Staff of Hale Magefire",
-      "speed": 3.3,
-      "mindmg": 140,
-      "maxdmg": 210,
-      "p": "inv_staff_23"
-    },
-    {
       "id": 13003,
       "type": "Axe",
       "slot": "twohand",
@@ -73962,20 +73524,6 @@ var gear = {
       "proc": {
         "dmg": 75
       }
-    },
-    {
-      "id": 13249,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 55,
-      "q": "3",
-      "i": "62",
-      "name": "Argent Crusader",
-      "speed": 3,
-      "mindmg": 127,
-      "maxdmg": 191,
-      "p": "inv_staff_13",
-      "sta": 6
     },
     {
       "id": 13285,
@@ -75438,19 +74986,6 @@ var gear = {
       }
     },
     {
-      "id": 17743,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 45,
-      "q": "3",
-      "i": "53",
-      "name": "Resurgence Rod",
-      "speed": 3.8,
-      "mindmg": 139,
-      "maxdmg": 209,
-      "p": "inv_staff_goldfeathered_01"
-    },
-    {
       "id": 18082,
       "type": "Staff",
       "slot": "twohand",
@@ -75524,34 +75059,6 @@ var gear = {
       "skill": 25
     },
     {
-      "id": 19101,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "3",
-      "i": "65",
-      "name": "Whiteout Staff",
-      "speed": 3.1,
-      "mindmg": 138,
-      "maxdmg": 207,
-      "p": "inv_staff_30",
-      "sta": 25
-    },
-    {
-      "id": 19102,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "3",
-      "i": "65",
-      "name": "Crackling Staff",
-      "speed": 3.1,
-      "mindmg": 138,
-      "maxdmg": 207,
-      "p": "inv_staff_20",
-      "sta": 25
-    },
-    {
       "id": 19106,
       "type": "Polearm",
       "slot": "twohand",
@@ -75587,19 +75094,6 @@ var gear = {
       "crit": 1
     },
     {
-      "id": 19169,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Nightfall",
-      "speed": 3.5,
-      "mindmg": 187,
-      "maxdmg": 282,
-      "p": "inv_axe_12"
-    },
-    {
       "id": 19323,
       "type": "Mace",
       "slot": "twohand",
@@ -75631,34 +75125,6 @@ var gear = {
       "sta": 18
     },
     {
-      "id": 19566,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 188,
-      "p": "inv_staff_25",
-      "sta": 21
-    },
-    {
-      "id": 19567,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Advisor's Gnarled Staff",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_25",
-      "sta": 18
-    },
-    {
       "id": 19568,
       "type": "Staff",
       "slot": "twohand",
@@ -75685,34 +75151,6 @@ var gear = {
       "maxdmg": 97,
       "p": "inv_staff_25",
       "sta": 11
-    },
-    {
-      "id": 19570,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 188,
-      "p": "inv_staff_28",
-      "sta": 21
-    },
-    {
-      "id": 19571,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Lorekeeper's Staff",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_28",
-      "sta": 18
     },
     {
       "id": 19572,
@@ -75757,20 +75195,6 @@ var gear = {
       "skill": 35
     },
     {
-      "id": 20069,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Ironbark Staff",
-      "speed": 3.4,
-      "mindmg": 137,
-      "maxdmg": 243,
-      "p": "inv_wand_04",
-      "sta": 19
-    },
-    {
       "id": 20083,
       "type": "Polearm",
       "slot": "twohand",
@@ -75784,20 +75208,6 @@ var gear = {
       "p": "inv_spear_02",
       "sta": 17,
       "crit": 1
-    },
-    {
-      "id": 20220,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "65",
-      "name": "Ironbark Staff",
-      "speed": 3.4,
-      "mindmg": 137,
-      "maxdmg": 243,
-      "p": "inv_wand_04",
-      "sta": 19
     },
     {
       "id": 20425,
@@ -75828,40 +75238,6 @@ var gear = {
       "sta": 8
     },
     {
-      "id": 20504,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 47,
-      "q": "3",
-      "i": "52",
-      "name": "Lightforged Blade",
-      "speed": 3.3,
-      "mindmg": 118,
-      "maxdmg": 178,
-      "p": "inv_sword_39",
-      "str": 9,
-      "sta": 9,
-      "resist": {
-        "fire": 10,
-        "frost": 10,
-        "shadow": 10
-      }
-    },
-    {
-      "id": 20536,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 50,
-      "q": "3",
-      "i": "52",
-      "name": "Soul Harvester",
-      "speed": 3.3,
-      "mindmg": 118,
-      "maxdmg": 178,
-      "p": "inv_sword_48",
-      "sta": 16
-    },
-    {
       "id": 20556,
       "type": "Staff",
       "slot": "twohand",
@@ -75877,37 +75253,6 @@ var gear = {
       "sta": 10,
       "hit": 1,
       "crit": 1
-    },
-    {
-      "id": 20581,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Staff of Rampant Growth",
-      "speed": 2.6,
-      "mindmg": 114,
-      "maxdmg": 185,
-      "p": "inv_staff_36",
-      "sta": 12,
-      "resist": {
-        "nature": 20
-      }
-    },
-    {
-      "id": 20654,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Amethyst War Staff",
-      "speed": 2.9,
-      "mindmg": 119,
-      "maxdmg": 179,
-      "p": "inv_staff_11",
-      "sta": 6
     },
     {
       "id": 20660,
@@ -75955,60 +75300,6 @@ var gear = {
       "crit": 2
     },
     {
-      "id": 21125,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Ahn'Qiraj Staff [PH]",
-      "speed": 2.9,
-      "mindmg": 170,
-      "maxdmg": 255,
-      "p": "inv_staff_01"
-    },
-    {
-      "id": 21188,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "66",
-      "name": "Fist of Cenarius",
-      "speed": 3.5,
-      "mindmg": 175,
-      "maxdmg": 263,
-      "p": "inv_hammer_23"
-    },
-    {
-      "id": 21273,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "79",
-      "name": "Blessed Qiraji Acolyte Staff",
-      "speed": 3,
-      "mindmg": 132,
-      "maxdmg": 227,
-      "p": "inv_staff_20",
-      "sta": 32
-    },
-    {
-      "id": 21275,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "79",
-      "name": "Blessed Qiraji Augur Staff",
-      "speed": 3,
-      "mindmg": 132,
-      "maxdmg": 227,
-      "p": "inv_staff_20",
-      "sta": 23
-    },
-    {
       "id": 22314,
       "type": "Polearm",
       "slot": "twohand",
@@ -76037,95 +75328,6 @@ var gear = {
       "str": 22,
       "sta": 22,
       "hit": 1
-    },
-    {
-      "id": 22394,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Staff of Metanoia",
-      "speed": 2.1,
-      "mindmg": 89,
-      "maxdmg": 134,
-      "p": "inv_staff_29",
-      "sta": 15
-    },
-    {
-      "id": 22406,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Redemption",
-      "speed": 2.1,
-      "mindmg": 87,
-      "maxdmg": 132,
-      "p": "inv_staff_23"
-    },
-    {
-      "id": 22458,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 50,
-      "q": "3",
-      "i": "52",
-      "name": "Moonshadow Stave",
-      "speed": 3.7,
-      "mindmg": 133,
-      "maxdmg": 200,
-      "p": "inv_staff_28"
-    },
-    {
-      "id": 22691,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "86",
-      "name": "Corrupted Ashbringer",
-      "speed": 3.6,
-      "mindmg": 259,
-      "maxdmg": 389,
-      "p": "inv_sword_2h_ashbringercorrupt",
-      "sta": -25,
-      "crit": 2,
-      "hit": 1,
-      "proc": {
-        "magic": true,
-        "dmg": 200,
-        "coeff": 1
-      }
-    },
-    {
-      "id": 22809,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "83",
-      "name": "Maul of the Redeemed Crusader",
-      "speed": 3.6,
-      "mindmg": 244,
-      "maxdmg": 367,
-      "p": "inv_mace_26",
-      "sta": 29
-    },
-    {
-      "id": 23124,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 55,
-      "q": "3",
-      "i": "60",
-      "name": "Staff of Balzaphon",
-      "speed": 3.9,
-      "mindmg": 160,
-      "maxdmg": 241,
-      "p": "inv_staff_07",
-      "sta": 8
     },
     {
       "id": 23171,
@@ -76188,22 +75390,6 @@ var gear = {
       "maxdmg": 78,
       "p": "inv_staff_26",
       "sta": 5
-    },
-    {
-      "id": 209561,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 25,
-      "q": "4",
-      "i": "30",
-      "name": "Rod of the Ancient Sleepwalker",
-      "speed": 2,
-      "mindmg": 37,
-      "maxdmg": 63,
-      "p": "inv_staff_06",
-      "resist": {
-        "shadow": 5
-      }
     },
     {
       "id": 209562,
@@ -76419,20 +75605,6 @@ var gear = {
         "procgcd": true,
         "dmg": 90
       }
-    },
-    {
-      "id": 213353,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 40,
-      "q": "4",
-      "i": "45",
-      "name": "Defibrillating Staff",
-      "speed": 3.3,
-      "mindmg": 102,
-      "maxdmg": 160,
-      "p": "inv_staff_07",
-      "sta": 11
     },
     {
       "id": 213354,
@@ -76669,35 +75841,6 @@ var gear = {
       }
     },
     {
-      "id": 220590,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "55",
-      "name": "Spire of Hakkari Worship",
-      "speed": 3.8,
-      "mindmg": 135,
-      "maxdmg": 214,
-      "p": "inv_waepon_bow_zulgrub_d_01",
-      "sta": 13,
-      "crit": 2
-    },
-    {
-      "id": 220591,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "53",
-      "name": "Mijan's Restorative Rod",
-      "speed": 2.5,
-      "mindmg": 101,
-      "maxdmg": 152,
-      "p": "inv_staff_goldfeathered_01",
-      "sta": 11
-    },
-    {
       "id": 220594,
       "type": "Polearm",
       "slot": "twohand",
@@ -76713,20 +75856,6 @@ var gear = {
       "str": 26,
       "sta": 13,
       "hit": 1
-    },
-    {
-      "id": 220595,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 50,
-      "q": "4",
-      "i": "58",
-      "name": "Nightmare Focus Staff",
-      "speed": 2.1,
-      "mindmg": 74,
-      "maxdmg": 120,
-      "p": "inv_staff_07",
-      "sta": 30
     },
     {
       "id": 220596,
@@ -76860,24 +75989,6 @@ var gear = {
       "agi": 15,
       "str": 10,
       "sta": 15
-    },
-    {
-      "id": 223538,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 48,
-      "q": "3",
-      "i": "53",
-      "name": "Kindling Stave",
-      "speed": 2.9,
-      "mindmg": 106,
-      "maxdmg": 160,
-      "p": "inv_staff_18",
-      "sta": 10,
-      "resist": {
-        "fire": 10
-      },
-      "crit": 1
     },
     {
       "id": 225893,
@@ -77106,21 +76217,6 @@ var gear = {
       "crit": 2
     },
     {
-      "id": 227974,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Lavastone Hammer",
-      "speed": 3.4,
-      "mindmg": 135,
-      "maxdmg": 203,
-      "p": "inv_hammer_10",
-      "str": 17,
-      "sta": 12
-    },
-    {
       "id": 227981,
       "type": "Axe",
       "slot": "twohand",
@@ -77135,23 +76231,6 @@ var gear = {
       "agi": 12,
       "crit": 1,
       "ap": 30
-    },
-    {
-      "id": 227982,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Guiding Stave of Wisdom",
-      "speed": 3.3,
-      "mindmg": 142,
-      "maxdmg": 214,
-      "p": "inv_staff_30",
-      "sta": 11,
-      "resist": {
-        "fire": 10
-      }
     },
     {
       "id": 227994,
@@ -77196,20 +76275,6 @@ var gear = {
       }
     },
     {
-      "id": 228022,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Headmaster's Charge",
-      "speed": 2.9,
-      "mindmg": 126,
-      "maxdmg": 201,
-      "p": "inv_jewelry_talisman_12",
-      "sta": 30
-    },
-    {
       "id": 228029,
       "type": "Axe",
       "slot": "twohand",
@@ -77243,34 +76308,6 @@ var gear = {
       "p": "inv_axe_18",
       "sta": 25,
       "ap": 56
-    },
-    {
-      "id": 228033,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Hammer of Divine Might",
-      "speed": 2,
-      "mindmg": 84,
-      "maxdmg": 127,
-      "p": "inv_hammer_04",
-      "sta": 13
-    },
-    {
-      "id": 228051,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 53,
-      "q": "3",
-      "i": "58",
-      "name": "Quel'dorai Channeling Rod",
-      "speed": 2.8,
-      "mindmg": 111,
-      "maxdmg": 167,
-      "p": "inv_staff_14",
-      "sta": 8
     },
     {
       "id": 228052,
@@ -77349,22 +76386,6 @@ var gear = {
       "p": "inv_sword_39"
     },
     {
-      "id": 228166,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Key to the City",
-      "speed": 3.3,
-      "mindmg": 145,
-      "maxdmg": 242,
-      "p": "inv_misc_key_15",
-      "sta": 31,
-      "crit": 1,
-      "hit": 1
-    },
-    {
       "id": 228170,
       "type": "Staff",
       "slot": "twohand",
@@ -77412,27 +76433,6 @@ var gear = {
       "proc": {
         "extra": 1
       }
-    },
-    {
-      "id": 228356,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "67",
-      "name": "Amberseal Keeper",
-      "speed": 3.3,
-      "mindmg": 145,
-      "maxdmg": 229,
-      "p": "inv_staff_goldfeathered_01",
-      "sta": 17,
-      "resist": {
-        "fire": 5,
-        "nature": 5,
-        "frost": 5,
-        "shadow": 5
-      },
-      "hit": 2
     },
     {
       "id": 228459,
@@ -77499,21 +76499,6 @@ var gear = {
       "ap": 22
     },
     {
-      "id": 228473,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 57,
-      "q": "3",
-      "i": "62",
-      "name": "Unyielding Maul",
-      "speed": 3.2,
-      "mindmg": 135,
-      "maxdmg": 204,
-      "p": "inv_hammer_22",
-      "sta": 12,
-      "d": 8
-    },
-    {
       "id": 228478,
       "type": "Sword",
       "slot": "twohand",
@@ -77527,21 +76512,6 @@ var gear = {
       "p": "inv_sword_11",
       "crit": 1,
       "ap": 60
-    },
-    {
-      "id": 228484,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Rod of the Ogre Magi",
-      "speed": 2.7,
-      "mindmg": 116,
-      "maxdmg": 175,
-      "p": "inv_staff_32",
-      "sta": 8,
-      "crit": 1
     },
     {
       "id": 228486,
@@ -77608,20 +76578,6 @@ var gear = {
       "ap": 50
     },
     {
-      "id": 228544,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Hammer of the Grand Crusader",
-      "speed": 2.7,
-      "mindmg": 116,
-      "maxdmg": 175,
-      "p": "inv_hammer_06",
-      "sta": 10
-    },
-    {
       "id": 228570,
       "type": "Mace",
       "slot": "twohand",
@@ -77652,20 +76608,6 @@ var gear = {
         "magic": true,
         "dmg": 205
       }
-    },
-    {
-      "id": 228587,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 56,
-      "q": "3",
-      "i": "61",
-      "name": "Trindlehaven Staff",
-      "speed": 2.1,
-      "mindmg": 87,
-      "maxdmg": 132,
-      "p": "inv_staff_29",
-      "sta": 12
     },
     {
       "id": 228601,
@@ -77738,52 +76680,6 @@ var gear = {
       "d": 10
     },
     {
-      "id": 228682,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 58,
-      "q": "3",
-      "i": "63",
-      "name": "Lord Valthalak's Staff of Command",
-      "speed": 2.1,
-      "mindmg": 90,
-      "maxdmg": 136,
-      "p": "inv_staff_07",
-      "sta": 11,
-      "hit": 1
-    },
-    {
-      "id": 228922,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Staff of Dominance",
-      "speed": 2.9,
-      "mindmg": 125,
-      "maxdmg": 204,
-      "p": "inv_staff_13",
-      "sta": 15,
-      "crit": 2
-    },
-    {
-      "id": 229373,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Faithbringer",
-      "speed": 3.7,
-      "mindmg": 202,
-      "maxdmg": 303,
-      "p": "inv_hammer_04",
-      "str": 17,
-      "sta": 14,
-      "crit": 1
-    },
-    {
       "id": 229380,
       "type": "Polearm",
       "slot": "twohand",
@@ -77823,23 +76719,6 @@ var gear = {
       }
     },
     {
-      "id": 229382,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Hyperthermically Insulated Lava Dredger",
-      "speed": 3.2,
-      "mindmg": 140,
-      "maxdmg": 227,
-      "p": "inv_gizmo_02",
-      "sta": 25,
-      "resist": {
-        "fire": 15
-      }
-    },
-    {
       "id": 230003,
       "type": "Sword",
       "slot": "twohand",
@@ -77875,21 +76754,6 @@ var gear = {
       "sta": 20
     },
     {
-      "id": 230270,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Shadow Wing Focus Staff",
-      "speed": 3.2,
-      "mindmg": 140,
-      "maxdmg": 235,
-      "p": "inv_staff_13",
-      "sta": 19,
-      "crit": 1
-    },
-    {
       "id": 230271,
       "type": "Axe",
       "slot": "twohand",
@@ -77907,37 +76771,6 @@ var gear = {
       "proc": {
         "dmg": 301
       }
-    },
-    {
-      "id": 230738,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Herald of Woe",
-      "speed": 3.7,
-      "mindmg": 217,
-      "maxdmg": 326,
-      "p": "inv_mace_05",
-      "str": 31,
-      "sta": 22,
-      "crit": 1
-    },
-    {
-      "id": 230813,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "81",
-      "name": "Staff of the Shadow Flame",
-      "speed": 3.2,
-      "mindmg": 141,
-      "maxdmg": 247,
-      "p": "inv_staff_06",
-      "sta": 21,
-      "crit": 2
     },
     {
       "id": 230818,
@@ -78048,20 +76881,6 @@ var gear = {
       "hit": 2
     },
     {
-      "id": 231850,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Will of Arlokk",
-      "speed": 3,
-      "mindmg": 130,
-      "maxdmg": 208,
-      "p": "inv_staff_35",
-      "sta": 15
-    },
-    {
       "id": 231854,
       "type": "Sword",
       "slot": "twohand",
@@ -78075,21 +76894,6 @@ var gear = {
       "p": "inv_sword_55",
       "sta": 28,
       "ap": 74
-    },
-    {
-      "id": 231860,
-      "type": "Staff",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Jin'do's Judgement",
-      "speed": 3.3,
-      "mindmg": 144,
-      "maxdmg": 233,
-      "p": "inv_staff_33",
-      "sta": 20,
-      "hit": 2
     },
     {
       "id": 231861,
@@ -78108,19 +76912,6 @@ var gear = {
       "proc": {
         "dmg": 210
       }
-    },
-    {
-      "id": 231864,
-      "type": "Polearm",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "68",
-      "name": "Pitchfork of Madness",
-      "speed": 3.6,
-      "mindmg": 186,
-      "maxdmg": 280,
-      "p": "inv_spear_03"
     },
     {
       "id": 231870,
