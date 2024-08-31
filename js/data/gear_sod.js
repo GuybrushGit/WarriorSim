@@ -57999,7 +57999,8 @@ var gear = {
       "maxdmg": 175,
       "p": "inv_hammer_05",
       "proc": {
-        "spell": "Empyrean"
+        "spell": "Empyrean",
+        "ppm": 0.4
       }
     },
     {
