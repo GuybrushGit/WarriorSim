@@ -1374,9 +1374,10 @@ var enchant = {
 
 {
   id: 474,
-  name: 'Vindicator\'s Battlegear', // TODO
+  name: 'Vindicator\'s Battlegear',
   items: [19951,19577,19824,19823,19822],
   bonus: [
+     { count: 2, stats: { }},
      { count: 5, stats: { whirlwindcost: 3 }},
   ]
 },
@@ -1394,7 +1395,7 @@ var enchant = {
 
 {
   id: 1823,
-  name: 'Unstoppable Wrath', // TODO
+  name: 'Unstoppable Wrath',
   items: [231038,231037,231036,231035,231034,231033,231032,231031],
   bonus: [
      { count: 2, stats: { overpowerrend: true } },

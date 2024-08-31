@@ -94,7 +94,7 @@ class Bloodthirst extends Spell {
 class Whirlwind extends Spell {
     constructor(player, id) {
         super(player, id);
-        this.cost = 25 - player.ragecostbonus;
+        this.cost = 25 - player.ragecostbonus - (player.whirlwindcost || 0);
         this.cooldown = 10;
         this.refund = false;
     }
@@ -344,7 +344,9 @@ class Hamstring extends Spell {
         if (player.items.includes(16548) ||
             player.items.includes(16484) ||
             player.items.includes(22868) ||
-            player.items.includes(23286))
+            player.items.includes(23286) ||
+            player.items.includes(231541) ||
+            player.items.includes(231532))
             this.cost -= 3;
     }
     dmg() {
@@ -611,6 +613,9 @@ class ShieldSlam extends Spell {
     constructor(player, id) {
         super(player, id, 'Shield Slam');
         this.cost = 20 - player.ragecostbonus;
+        if (player.items.includes(231350))
+            this.cost -= 5;
+
         this.cooldown = 6;
         if (this.duration) this.cooldown = Math.max(this.cooldown, this.duration);
         if (this.swordboard) this.cost = 0;

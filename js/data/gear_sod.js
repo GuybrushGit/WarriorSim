@@ -46596,6 +46596,16 @@ var gear = {
       "hit": 2
     },
     {
+      "id": 231286,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Gri'lek's Charm of Might",
+      "p": "inv_jewelry_necklace_19"
+    },
+    {
       "id": 231779,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -47009,6 +47019,16 @@ var gear = {
       "name": "Neltharion's Tear",
       "p": "inv_stone_15",
       "hit": 2
+    },
+    {
+      "id": 231286,
+      "type": "Miscellaneous",
+      "slot": "trinket",
+      "r": 60,
+      "q": "4",
+      "i": "65",
+      "name": "Gri'lek's Charm of Might",
+      "p": "inv_jewelry_necklace_19"
     },
     {
       "id": 231779,
