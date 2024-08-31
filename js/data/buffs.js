@@ -386,6 +386,16 @@ var buffs = [
       minlevel: 4,
    },
    {
+      id: 425600,
+      spellid: true,
+      name: "Horn of Lordaeron",
+      iconname: "inv_misc_horn_03",
+      group: "blessingmight",
+      str: 89,
+      agi: 89,
+      minlevel: 60,
+   },
+   {
       id: 8512,
       spellid: true,
       name: "Windfury Totem",
