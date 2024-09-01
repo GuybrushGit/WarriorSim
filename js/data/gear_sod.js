@@ -58251,7 +58251,8 @@ var gear = {
       "maxdmg": 101,
       "p": "inv_weapon_shortblade_25",
       "proc": {
-        "spell": "Felstriker"
+        "spell": "Felstriker",
+        "ppm": 0.6
       }
     },
     {
@@ -58468,7 +58469,8 @@ var gear = {
       "maxdmg": 129,
       "p": "inv_weapon_shortblade_99",
       "proc": {
-        "spell": "Felstriker"
+        "spell": "Felstriker",
+        "ppm": 0.6
       }
     },
     {
@@ -69145,7 +69147,8 @@ var gear = {
       "maxdmg": 101,
       "p": "inv_weapon_shortblade_25",
       "proc": {
-        "spell": "Felstriker"
+        "spell": "Felstriker",
+        "ppm": 0.6
       }
     },
     {
@@ -69352,7 +69355,8 @@ var gear = {
       "maxdmg": 129,
       "p": "inv_weapon_shortblade_99",
       "proc": {
-        "spell": "Felstriker"
+        "spell": "Felstriker",
+        "ppm": 0.6
       }
     },
     {
