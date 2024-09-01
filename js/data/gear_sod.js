@@ -58000,7 +58000,7 @@ var gear = {
       "p": "inv_hammer_05",
       "proc": {
         "spell": "Empyrean",
-        "ppm": 0.4
+        "ppm": 0.6
       }
     },
     {
