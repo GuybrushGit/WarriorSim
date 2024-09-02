@@ -11,7 +11,7 @@ class Spell {
         this.data = [0, 0, 0, 0, 0];
         this.name = name || this.constructor.name;
         this.useonly = false;
-        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        this.maxdelay = this.player.reactionmin;
         this.weaponspell = true;
         this.defenseType = DEFENSETYPE.MELEE;
         this.school = SCHOOL.PHYSICAL;
@@ -697,6 +697,7 @@ class UnstoppableMight extends Spell {
         this.offensive = false;
     }
     use() {
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.player.switch(this.switchto);
     }
     canUse() {
@@ -777,6 +778,7 @@ class StanceSwitch extends Spell {
         this.offensive = false;
     }
     use() {
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         this.player.switch(this.player.basestance);
     }
     canUse() {
@@ -828,7 +830,7 @@ class Aura {
         this.stacks = 0;
         this.uptime = 0;
         this.name = name || this.constructor.name;
-        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        this.maxdelay = this.player.reactionmin;
         this.useonly = true;
         this.offensive = false;
 
@@ -1569,6 +1571,7 @@ class Flask extends Aura {
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
         this.player.updateAuras();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     canUse() {
@@ -1714,6 +1717,7 @@ class BloodrageAura extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (log) this.player.log(`${this.name} applied`); /* end-log */
     }
     step() {
