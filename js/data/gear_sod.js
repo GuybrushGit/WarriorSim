@@ -57973,6 +57973,24 @@ var gear = {
       }
     },
     {
+      "id": 22835099,
+      "type": "Fist",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Eskhandar's Right Claw (pre-nerf)",
+      "speed": 2.6,
+      "mindmg": 87,
+      "maxdmg": 163,
+      "p": "inv_misc_monsterclaw_04",
+      "agi": 7,
+      "proc": {
+        "spell": "Eskhandar",
+        "ppm": 2
+      }
+    },
+    {
       "id": 228382,
       "type": "Dagger",
       "slot": "mainhand",
@@ -58001,6 +58019,23 @@ var gear = {
       "proc": {
         "spell": "Empyrean",
         "ppm": 0.6
+      }
+    },
+    {
+      "id": 22839799,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "66",
+      "name": "Empyrean Demolisher (pre-nerf)",
+      "speed": 2.8,
+      "mindmg": 94,
+      "maxdmg": 175,
+      "p": "inv_hammer_05",
+      "proc": {
+        "spell": "Empyrean",
+        "ppm": 1
       }
     },
     {

@@ -855,6 +855,8 @@ SIM.UI = {
                     let id = item.id.toString().split('|');
                     href = id[0];
                     if (item.id == 23000399) href = "230003";
+                    if (item.id == 22839799) href = "228397";
+                    if (item.id == 22835099) href = "228350";
                     if (ench) href += '?ench=' + ench;
                     if (id.length == 2) href += (ench ? '&' : '?') + 'rand=' + id[1];
                     empty = false;
@@ -1130,6 +1132,8 @@ SIM.UI = {
             let tooltip = item.id.toString().split('|')[0], rand = '';
             if (tooltip == 199211) tooltip = 19921;
             if (tooltip == 23000399) tooltip = 230003;
+            if (tooltip == 22839799) tooltip = 228397;
+            if (tooltip == 22835099) tooltip = 228350;
             if (item.rand) rand = '?rand=' + item.rand;
 
             let resist = '';
