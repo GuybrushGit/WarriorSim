@@ -708,6 +708,8 @@ var spells = [
     active: true,
     priority: 8,
     expriority: 8,
+    minrageactive: false,
+    minrage: 50,
 },
 {
     id: 20658,
@@ -723,6 +725,8 @@ var spells = [
     active: true,
     priority: 8,
     expriority: 8,
+    minrageactive: false,
+    minrage: 50,
 },
 {
     id: 20660,
@@ -738,6 +742,8 @@ var spells = [
     active: true,
     priority: 8,
     expriority: 8,
+    minrageactive: false,
+    minrage: 50,
 },
 {
     id: 20661,
@@ -753,6 +759,8 @@ var spells = [
     active: true,
     priority: 8,
     expriority: 8,
+    minrageactive: false,
+    minrage: 50,
 },
 {
     id: 20662,
@@ -767,6 +775,8 @@ var spells = [
     active: true,
     priority: 8,
     expriority: 8,
+    minrageactive: false,
+    minrage: 50,
 },
 
 // Berserker Rage
