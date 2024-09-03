@@ -134,6 +134,7 @@ class Player {
         this.preAddRunes();
         this.addBuffs();
         this.addSpells(testItem);
+        this.sortSpells();
         this.addRunes();
         this.initStances();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
@@ -657,6 +658,21 @@ class Player {
         }
         // sort by timetoend to prepare for usestep calculations
         this.preporder.sort((a, b) => { return a.timetoend - b.timetoend; });
+    }
+    sortSpells() {
+        this.normalspells = [];
+        this.executespells = [];
+
+        for(let i = 10; i > 0; i--) {
+            for(let s in this.spells) {
+                if (this.spells[s].priority == i) this.normalspells.push(this.spells[s]);
+                if (this.spells[s].expriority == i) this.executespells.push(this.spells[s]);
+            }
+        }
+
+        this.normalspells_c = this.normalspells.length;
+        this.executespells_c = this.executespells.length;
+
     }
     reset(rage) {
         this.rage = rage;

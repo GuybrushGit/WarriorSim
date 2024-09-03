@@ -319,7 +319,7 @@ SIM.STATS = {
             if (!total) continue;
             let dps = (sim.player.spells[name].totaldmg / sim.totalduration).toFixed(2);
             let dpr = ((sim.player.spells[name].totaldmg / i) / (sim.player.spells[name].cost * (total / i))).toFixed(2);
-            if (name == "slam" && sim.player.spells[name].bloodsurge)
+            if (name == "slam" && sim.player.bloodsurge)
                 dpr = Infinity;
             if (name == "execute")
                 dpr = ((sim.player.spells[name].totaldmg / i) / ((sim.player.spells[name].cost * (total / i)) + (sim.player.spells[name].totalusedrage / i))).toFixed(2);

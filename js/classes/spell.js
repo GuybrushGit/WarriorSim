@@ -31,9 +31,7 @@ class Spell {
         if (spell.consumedrage) this.consumedrage = spell.consumedrage;
         if (spell.unqueueactive) this.unqueue = parseInt(spell.unqueue);
         if (spell.exmacro) this.exmacro = spell.exmacro;
-        if (spell.execute) this.execute = spell.execute;
         if (spell.globalsactive) this.globals = spell.globals;
-        if (spell.bloodsurge) this.bloodsurge = spell.bloodsurge;
         if (spell.afterswing) this.afterswing = spell.afterswing;
         if (spell.swingreset) this.swingreset = spell.swingreset;
         if (spell.timetoendactive) this.timetoend = parseInt(spell.timetoend) * 1000;
@@ -48,6 +46,8 @@ class Spell {
         if (spell.switchdefault) this.switchdefault = spell.switchdefault;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
         if (spell.swingtimeractive) this.swingtimer = parseFloat(spell.swingtimer) * 1000;
+        if (spell.priority) this.priority = parseInt(spell.priority);
+        if (spell.expriority) this.expriority = parseInt(spell.expriority);
         
     }
     dmg() {
@@ -201,7 +201,8 @@ class Execute extends Spell {
     }
     canUse() {
         return !this.player.timer && this.cost <= this.player.rage && 
-            (!this.swingtimer || this.player.mh.timer <= this.swingtimer);
+            (!this.swingtimer || this.player.mh.timer <= this.swingtimer) &&
+            (step >= this.executestep || (this.player.auras.suddendeath && this.player.auras.suddendeath.timer));
     }
 }
 
@@ -411,10 +412,8 @@ class RagingBlow extends Spell {
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
         return dmg * this.player.stats.dmgmod;
     }
-    canUse(executephase) {
-        return !this.timer && !this.player.timer && 
-            (!executephase || this.execute) &&
-            this.player.isEnraged();
+    canUse() {
+        return !this.timer && !this.player.timer && this.player.isEnraged();
     }
     reduce(spell) {
         // Raging blow cooldown is reduced by 1 second when you use another melee ability while enraged.
@@ -524,10 +523,9 @@ class Slam extends Spell {
         this.timer = this.cooldown * 1000;
         /* start-log */ if (log) this.player.log(`${this.name} done casting`); /* end-log */
     }
-    canUse(executephase) {
+    canUse() {
         return !this.timer && !this.player.timer && this.player.mh.timer >= this.mhthreshold && (this.player.freeslam || this.cost <= this.player.rage) && 
-            (!executephase || this.execute) &&
-            (!this.bloodsurge || this.player.freeslam) &&
+            (!this.player.bloodsurge || this.player.freeslam) &&
             (!this.minrage || this.player.rage >= this.minrage) &&
             (!this.maincd || 
                 (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 

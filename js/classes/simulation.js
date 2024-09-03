@@ -246,6 +246,7 @@ class Simulation {
         this.maxsteps = rng(this.timesecsmin * 1000, this.timesecsmax * 1000);
         this.duration = this.maxsteps / 1000;
         this.executestep = this.maxsteps - parseInt(this.maxsteps * (this.executeperc / 100));
+        if (player.spells.execute) player.spells.execute.executestep = this.executestep;
         let delayedspell, delayedheroic;
         let spellcheck = false;
         let canSpellQueue = false;
@@ -359,60 +360,27 @@ class Simulation {
                     else if (player.auras.berserking && player.auras.berserking.canUse()) { player.spelldelay = 1; delayedspell = player.auras.berserking; }
                     else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { player.spelldelay = 1; delayedspell = player.spells.berserkerrage; }
                     else if (player.auras.battleshout && player.auras.battleshout.canUse()) { player.spelldelay = 1; delayedspell = player.auras.battleshout; }
-
-                    // Execute phase
-                    else if (player.spells.execute && (step >= this.executestep || (player.auras.suddendeath && player.auras.suddendeath.timer))) {
-
-                        if (player.spells.ragingblow && player.spells.ragingblow.canUse(true)) { 
-                            player.spelldelay = 1; delayedspell = player.spells.ragingblow; 
-                        }
-                        else if (player.spells.berserkerrage && player.spells.berserkerrage.canUse()) { 
-                            player.spelldelay = 1; delayedspell = player.spells.berserkerrage; 
-                        }
-                        else if (player.spells.slam && player.freeslam && player.spells.slam.canUse(true)) { 
-                            player.spelldelay = 1; delayedspell = player.spells.slam; 
-                        }
-                        else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { 
-                            player.spelldelay = 1; delayedspell = player.spells.shieldslam; 
-                        }
-                        else if (player.auras.consumedrage && player.auras.consumedrage.erageblock && player.rage < player.auras.consumedrage.erageblock) { } 
-                        else if (player.auras.consumedrage && player.auras.consumedrage.echargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.echargeblock && player.rage < 60) { } 
-                        else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) {
-                            player.spelldelay = 1; delayedspell = player.spells.bloodthirst;
-                        }
-                        else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) {
-                            player.spelldelay = 1; delayedspell = player.spells.mortalstrike;
-                        }
-                        else if (player.spells.execute.canUse()) {
-                            player.spelldelay = 1; delayedspell = player.spells.execute;
-                        }
-                    }
-
-                    // Normal phase - no cost
-                    else if (player.spells.slam && player.freeslam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
-                    else if (player.spells.shieldslam && player.freeshieldslam && player.spells.shieldslam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shieldslam; }
                     else if (player.spells.blademasterfury && player.spells.blademasterfury.canUse()) { player.spelldelay = 1; delayedspell = player.spells.blademasterfury; }
-                    
+                   
                     // prevent using spells while waiting for consumed by rage proc
                     else if (player.auras.consumedrage && player.auras.consumedrage.procblock && !player.auras.consumedrage.timer && player.rage < 60) { } 
                     else if (player.auras.consumedrage && player.auras.consumedrage.rageblock && player.rage < player.auras.consumedrage.rageblock) { } 
                     else if (player.auras.consumedrage && player.auras.consumedrage.chargeblock && player.auras.consumedrage.stacks < player.auras.consumedrage.chargeblock && player.rage < 60) { } 
                     
-                    // Normal phase - rage cost
-                    else if (player.spells.overpower && player.spells.overpower.canUse()) { player.spelldelay = 1; delayedspell = player.spells.overpower; }
-                    else if (player.auras.rend && player.auras.rend.canUse()) { player.spelldelay = 1; delayedspell = player.auras.rend; }
-                    else if (player.spells.bloodthirst && player.spells.bloodthirst.canUse()) { player.spelldelay = 1; delayedspell = player.spells.bloodthirst; }
-                    else if (player.spells.mortalstrike && player.spells.mortalstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.mortalstrike; }
-                    else if (player.spells.shieldslam && player.spells.shieldslam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shieldslam; }
-                    else if (player.precisetiming && player.spells.slam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
-                    else if (player.spells.whirlwind && player.spells.whirlwind.canUse()) { player.spelldelay = 1; delayedspell = player.spells.whirlwind; }
-                    else if (player.spells.shockwave && player.spells.shockwave.canUse()) { player.spelldelay = 1; delayedspell = player.spells.shockwave; }
-                    else if (!player.precisetiming && player.spells.slam && player.spells.slam.canUse()) { player.spelldelay = 1; delayedspell = player.spells.slam; }
-                    else if (player.spells.thunderclap && player.spells.thunderclap.canUse()) { player.spelldelay = 1; delayedspell = player.spells.thunderclap; }
-                    else if (player.spells.ragingblow && player.spells.ragingblow.canUse(false)) { player.spelldelay = 1; delayedspell = player.spells.ragingblow; }
-                    else if (player.spells.quickstrike && player.spells.quickstrike.canUse()) { player.spelldelay = 1; delayedspell = player.spells.quickstrike; }
-                    else if (player.spells.sunderarmor && player.spells.sunderarmor.canUse()) { player.spelldelay = 1; delayedspell = player.spells.sunderarmor; }
-                    else if (player.spells.hamstring && player.spells.hamstring.canUse()) { player.spelldelay = 1; delayedspell = player.spells.hamstring; }
+                    // Execute phase
+                    else if (step >= this.executestep) {
+                        for(let i = 0; i < player.executespells_c; i++) {
+                            if (player.executespells[i].canUse()) { player.spelldelay = 1; delayedspell = player.executespells[i]; break; }
+                        }
+                    }
+
+                    // Normal phase
+                    else {
+                        for(let i = 0; i < player.normalspells_c; i++) {
+                            if (player.normalspells[i].canUse()) { player.spelldelay = 1; delayedspell = player.normalspells[i]; break; }
+                        }
+                    }
+
 
                     if (player.heroicdelay) spellcheck = false;
                 }

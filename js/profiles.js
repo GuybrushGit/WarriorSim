@@ -333,8 +333,6 @@ SIM.PROFILES = {
                 if (typeof spell.procblock !== 'undefined') obj.procblock = spell.procblock;
                 if (typeof spell.rageblock !== 'undefined') obj.rageblock = spell.rageblock;
                 if (typeof spell.rageblockactive !== 'undefined') obj.rageblockactive = spell.rageblockactive;
-                if (typeof spell.executestacks !== 'undefined') obj.executestacks = spell.executestacks;
-                if (typeof spell.executestacksactive !== 'undefined') obj.executestacksactive = spell.executestacksactive;
                 if (typeof spell.minrage !== 'undefined') obj.minrage = spell.minrage;
                 if (typeof spell.minrageactive !== 'undefined') obj.minrageactive = spell.minrageactive;
                 if (typeof spell.maxrage !== 'undefined') obj.maxrage = spell.maxrage;
@@ -348,7 +346,6 @@ SIM.PROFILES = {
                 if (typeof spell.exmacro !== 'undefined') obj.exmacro = spell.exmacro;
                 if (typeof spell.globals !== 'undefined') obj.globals = spell.globals;
                 if (typeof spell.globalsactive !== 'undefined') obj.globalsactive = spell.globalsactive;
-                if (typeof spell.bloodsurge !== 'undefined') obj.bloodsurge = spell.bloodsurge;
                 if (typeof spell.swingreset !== 'undefined') obj.swingreset = spell.swingreset;
                 if (typeof spell.afterswing !== 'undefined') obj.afterswing = spell.afterswing;
                 if (typeof spell.alwaystails !== 'undefined') obj.alwaystails = spell.alwaystails;
@@ -363,6 +360,8 @@ SIM.PROFILES = {
                 if (typeof spell.switchtimeactive !== 'undefined') obj.switchtimeactive = spell.switchtimeactive;
                 if (typeof spell.swingtimeractive !== 'undefined') obj.swingtimeractive = spell.swingtimeractive;
                 if (typeof spell.swingtimer !== 'undefined') obj.swingtimer = spell.swingtimer;
+                if (typeof spell.priority !== 'undefined') obj.priority = spell.priority;
+                if (typeof spell.expriority !== 'undefined') obj.expriority = spell.expriority;
                 minified.rotation.push(obj);
             }
         }
@@ -424,8 +423,6 @@ SIM.PROFILES = {
                     if (typeof newspell.procblock !== 'undefined') spell.procblock = newspell.procblock;
                     if (typeof newspell.rageblock !== 'undefined') spell.rageblock = newspell.rageblock;
                     if (typeof newspell.rageblockactive !== 'undefined') spell.rageblockactive = newspell.rageblockactive;
-                    if (typeof newspell.executestacks !== 'undefined') spell.executestacks = newspell.executestacks;
-                    if (typeof newspell.executestacksactive !== 'undefined') spell.executestacksactive = newspell.executestacksactive;
                     if (typeof newspell.minrage !== 'undefined') spell.minrage = newspell.minrage;
                     if (typeof newspell.minrageactive !== 'undefined') spell.minrageactive = newspell.minrageactive;
                     if (typeof newspell.maxrage !== 'undefined') spell.maxrage = newspell.maxrage;
@@ -439,7 +436,6 @@ SIM.PROFILES = {
                     if (typeof newspell.exmacro !== 'undefined') spell.exmacro = newspell.exmacro;
                     if (typeof newspell.globals !== 'undefined') spell.globals = newspell.globals;
                     if (typeof newspell.globalsactive !== 'undefined') spell.globalsactive = newspell.globalsactive;
-                    if (typeof newspell.bloodsurge !== 'undefined') spell.bloodsurge = newspell.bloodsurge;
                     if (typeof newspell.afterswing !== 'undefined') spell.afterswing = newspell.afterswing;
                     if (typeof newspell.swingreset !== 'undefined') spell.swingreset = newspell.swingreset;
                     if (typeof newspell.alwaystails !== 'undefined') spell.alwaystails = newspell.alwaystails;
@@ -454,6 +450,8 @@ SIM.PROFILES = {
                     if (typeof newspell.switchtimeactive !== 'undefined') spell.switchtimeactive = newspell.switchtimeactive;
                     if (typeof newspell.swingtimeractive !== 'undefined') spell.swingtimeractive = newspell.swingtimeractive;
                     if (typeof newspell.swingtimer !== 'undefined') spell.swingtimer = newspell.swingtimer;
+                    if (typeof newspell.priority !== 'undefined') spell.priority = newspell.priority;
+                    if (typeof newspell.expriority !== 'undefined') spell.expriority = newspell.expriority;
                     
                 }
                 else {
