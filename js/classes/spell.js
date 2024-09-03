@@ -854,6 +854,8 @@ class Aura {
         if (spell.item) this.item = spell.item;
         if (spell.noitemcd) this.noitemcd = spell.noitemcd;
         if (spell.maxrageactive) this.maxrage = parseInt(spell.maxrage);
+        if (spell.priority) this.priority = parseInt(spell.priority);
+        if (spell.expriority) this.expriority = parseInt(spell.expriority);
 
     }
     use() {

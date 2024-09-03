@@ -668,6 +668,10 @@ class Player {
                 if (this.spells[s].priority == i) this.normalspells.push(this.spells[s]);
                 if (this.spells[s].expriority == i) this.executespells.push(this.spells[s]);
             }
+            for(let a in this.auras) {
+                if (this.auras[a].priority == i) this.normalspells.push(this.auras[a]);
+                if (this.auras[a].expriority == i) this.executespells.push(this.auras[a]);
+            }
         }
 
         this.normalspells_c = this.normalspells.length;
