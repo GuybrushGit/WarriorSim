@@ -550,6 +550,8 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="resolve" class="${spell.resolve ? 'active' : ''}">Only use if Defender's Resolve is not up</li>`);
         if (typeof spell.swordboard !== 'undefined') 
             ul.append(`<li data-id="swordboard" class="${spell.swordboard ? 'active' : ''}">Only use after a Sword & Board proc</li>`);
+        if (typeof spell.swingtimer !== 'undefined') 
+            ul.append(`<li data-id="swingtimeractive" class="${spell.swingtimeractive ? 'active' : ''}">Don't use if swing timer longer than <input type="text" name="swingtimer" value="${spell.swingtimer}" data-numberonly="true" /> secs</li>`);
 
         // Might set
         if (typeof spell.switchstart !== 'undefined')

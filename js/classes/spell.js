@@ -47,6 +47,7 @@ class Spell {
         if (spell.switchtimeactive) this.switchtimeactive = spell.switchtimeactive;
         if (spell.switchdefault) this.switchdefault = spell.switchdefault;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
+        if (spell.swingtimeractive) this.swingtimer = parseFloat(spell.swingtimer) * 1000;
         
     }
     dmg() {
@@ -192,9 +193,6 @@ class Execute extends Spell {
     step(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            if (this.result != RESULT.MISS && this.result != RESULT.DODGE) {
-                // moved to procattack
-            }
         }
         else {
             this.timer -= a;
@@ -202,7 +200,8 @@ class Execute extends Spell {
         return this.timer;
     }
     canUse() {
-        return !this.player.timer && this.cost <= this.player.rage;
+        return !this.player.timer && this.cost <= this.player.rage && 
+            (!this.swingtimer || this.player.mh.timer <= this.swingtimer);
     }
 }
 
