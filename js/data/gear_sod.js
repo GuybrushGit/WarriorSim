@@ -57688,7 +57688,7 @@ var gear = {
       "p": "spell_frost_frostbrand",
       "proc": {
         "extra": 2,
-        "ppm": 0.8
+        "ppm": 0.5
       },
       "ap": 18
     },
@@ -76892,7 +76892,8 @@ var gear = {
       "agi": 29,
       "sta": 20,
       "proc": {
-        "spell": "Untamed"
+        "spell": "Untamed",
+        "ppm": 0.55,
       }
     },
     {
