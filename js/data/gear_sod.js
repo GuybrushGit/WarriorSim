@@ -58596,25 +58596,6 @@ var gear = {
         "dmg": 84
       },
       "ap": 12
-    },
-    {
-      "id": 23000399,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "5",
-      "i": "90",
-      "name": "Hammer of the Lightbringer",
-      "speed": 4,
-      "mindmg": 310,
-      "maxdmg": 466,
-      "p": "inv_mace_1h_uther_d_01",
-      "agi": 20,
-      "str": 14,
-      "sta": 10,
-      "proc": {
-        "spell": "CrusaderZeal"
-      }
     }
   ],
   "offhand": [
@@ -77117,25 +77098,6 @@ var gear = {
       "str": 21,
       "sta": 18,
       "hit": 2
-    },
-    {
-      "id": 230003,
-      "type": "Sword",
-      "slot": "twohand",
-      "r": 60,
-      "q": "5",
-      "i": "90",
-      "name": "Hammer of the Lightbringer",
-      "speed": 4,
-      "mindmg": 310,
-      "maxdmg": 466,
-      "p": "inv_mace_1h_uther_d_01",
-      "agi": 20,
-      "str": 14,
-      "sta": 10,
-      "proc": {
-        "spell": "CrusaderZeal"
-      }
     }
   ]
 };

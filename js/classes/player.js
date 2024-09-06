@@ -1001,8 +1001,6 @@ class Player {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
             }
-            if (this.extrarage && result == RESULT.HIT) this.rage += this.extrarage;
-            if (this.extracritrage && result == RESULT.CRIT) this.rage += this.extracritrage;
         }
         if (spell) {
             if (spell instanceof Execute) spell.result = result;
@@ -1019,6 +1017,9 @@ class Player {
                 this.rage += (dmg / this.rageconversion) * 7.5 * this.ragemod;
             }
         }
+        if (this.extrarage && result == RESULT.HIT) this.rage += this.extrarage;
+        if (this.extracritrage && result == RESULT.CRIT) this.rage += this.extracritrage;
+        
         if (this.rage > 100) this.rage = 100;
 
         if (this.auras.consumedrage && oldRage < 60 && this.rage >= 60)
