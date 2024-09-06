@@ -440,6 +440,7 @@ class Player {
                     if (item.haste2h && this.mh.twohand) {
                         this.base.haste *= (1 + item.haste2h / 100) || 1;
                         this.extrarage = 2;
+                        this.extracritrage = 4;
                     }
                     if (item.furiousthunder) {
                         this.furiousthunder = item.furiousthunder;
@@ -593,7 +594,7 @@ class Player {
                     if (buff.stance == 'glad' && this.gladdmg)
                         this.base.dmgmod *= (1 + this.gladdmg / 100);
                     if (this.basestance == "glad" && !this.target.speed)
-                        this.ragemod = 1.5;
+                        this.ragemod = (this.ragemod || 1) * 1.5;
                     continue;
                 }
                 if (buff.group == "trueshot" && this.mode == "sod") {
@@ -1000,7 +1001,8 @@ class Player {
             if (result != RESULT.MISS && result != RESULT.DODGE && this.talents.umbridledwrath && rng10k() < this.talents.umbridledwrath * 100) {
                 this.rage += 1;
             }
-            if (this.extrarage) this.rage += this.extrarage;
+            if (this.extrarage && result == RESULT.HIT) this.rage += this.extrarage;
+            if (this.extracritrage && result == RESULT.CRIT) this.rage += this.extracritrage;
         }
         if (spell) {
             if (spell instanceof Execute) spell.result = result;

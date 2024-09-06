@@ -857,6 +857,7 @@ SIM.UI = {
                     if (item.id == 23000399) href = "230003";
                     if (item.id == 22839799) href = "228397";
                     if (item.id == 22835099) href = "228350";
+                    if (item.id == 23024299) href = "230242";
                     if (ench) href += '?ench=' + ench;
                     if (id.length == 2) href += (ench ? '&' : '?') + 'rand=' + id[1];
                     empty = false;
@@ -1134,6 +1135,7 @@ SIM.UI = {
             if (tooltip == 23000399) tooltip = 230003;
             if (tooltip == 22839799) tooltip = 228397;
             if (tooltip == 22835099) tooltip = 228350;
+            if (tooltip == 23024299) tooltip = 230242;
             if (item.rand) rand = '?rand=' + item.rand;
 
             let resist = '';

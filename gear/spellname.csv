@@ -24467,6 +24467,7 @@ ID,Name_lang
 440580,Feral Spirit
 440586,Bash
 440589,Twin Howl
+440591,Spirit Walk
 440593,Spirit Hunt
 440594,Avoidance
 440595,Shaman Pet Scaling
@@ -25783,7 +25784,7 @@ ID,Name_lang
 459207,Summon Squire
 459217,Desert Sonar
 459221,Desert Sonar
-459232,Call Aeonas
+459232,Summon Squire
 459261,Capture Echo
 459280,Transiting Realities
 459290,Thunder Stomp
@@ -26675,6 +26676,7 @@ ID,Name_lang
 465675,Increase Reputation
 465693,Clean Up Quel'Serrar Era to SoD [DNT]
 465699,Clean Up Quel'Serrar SoD to Era [DNT]
+465700,Chain Lightning
 465719,Clean Up Masterwork Volcanic Leggings in Era [DNT]
 465725,Living Bomb
 465727,Explosion
@@ -26702,12 +26704,15 @@ ID,Name_lang
 466126,[DNT] Mana Beam Visual II
 466169,Infinite Midnight
 466195,Blazing Wounds
+466211,Tendrils of Air
 466219,Shadowguard
 466255,Infinite Midnight
 466256,Infinite Midnight
 466261,Red Trial
 466266,Shadowguard
 466269,Shadowguard
+466270,Tendrils of Air
+466272,Tendrils of Air
 466277,Blue Trial
 466283,Arcane Bomb
 466286,Controller Timer
@@ -26732,6 +26737,7 @@ ID,Name_lang
 466603,(DNT) Bronze Essence Warning Visual Reversed
 466647,Smoke
 466653,Ninja Mask
+466655,Convalescence
 466662,Ninja Costume
 466668,Learn Rune
 466669,(DNT) Experimental Boss Buff - Attack Speed
@@ -26740,19 +26746,28 @@ ID,Name_lang
 466674,(DNT) Experimental Boss Buff - Spell Power
 466675,(DNT) Experimental Boss Buff - Spell Resistance
 466677,Blood Moon
+466738,Lightning Cloud
+466739,Lightning Shield
+466740,Lightning Bolt
 466745,Ninja Mask
 466746,Ninja Costume
 466747,Ninja Mask
 466749,Ninja Costume
 466764,(DNT) Varmot moustache visual
+466774,Cyclonic Winds
+466799,Whirlwind
 466841,Meathook
 466842,Combo
 466843,Combo
 466850,Combo
 466853,Combo
+466870,Zephyr
 466903,Blessing of Hethiss
 466909,Blessing of Hethiss
+466913,[DNT] Power Bar Color (TCV Raid)
+466924,[DNT] Evocation Dummy
 466938,Increase Spell Dam 77
+466987,Squall
 467005,Bronze Essence
 467012,Red Essence
 467013,Blue Essence
@@ -26766,7 +26781,7 @@ ID,Name_lang
 467077,S03 - Item - T2 - Druid - Balance 2P Bonus
 467084,S03 - Item - T2 - Druid - Balance 4P Bonus
 467085,[DNT] Elsewhen Torch Active
-467088,Astral Swiftness
+467088,Astral Power
 467090,S03 - Item - T2 - Druid - Balance 6P Bonus
 467099,S03 - Item - T2- Druid - Restoration 2P Bonus
 467101,Blessing of Hir'eek
@@ -26799,9 +26814,15 @@ ID,Name_lang
 467235,S03 - Item - T2- Hunter - Ranged 2P Bonus
 467259,Blessing of Shadra
 467264,[DNT] Elsewhen Torch Control - Periodic
+467265,Summon Storm Mender
+467266,Summon Storm Mender
+467267,Summon Storm Mender
+467268,Summon Storm Mender
 467269,Blessing of Shadra
 467271,Dragonbreath
+467275,Tempest
 467276,Summon Spawn of Shadra
+467280,Lightning Cloud
 467282,[DNT] Elsewhen Torch Control - Target Player
 467290,Summon Spawn of Shadra
 467312,S03 - Item - T2- Hunter - Ranged 4P Bonus
@@ -26828,6 +26849,7 @@ ID,Name_lang
 467368,Frost Tomb
 467369,Ice Blast
 467370,Ice Blast
+467382,Tempest Summons
 467387,S03 - Item - T2 - Mage - Damage 2P Bonus
 467388,S03 - Item - T2 - Mage - Damage 4P Bonus
 467399,S03 - Item - T2 - Mage - Damage 6P Bonus
@@ -26848,10 +26870,16 @@ ID,Name_lang
 467446,Arcane Infused
 467447,Arcane Detonation
 467449,Burning Adrenaline
+467450,Tempest Summons
+467451,Tempest Summons
+467452,Tempest Summons
+467457,Tempest
 467459,Blessing of the Black Book
 467466,The Black Book Dummy
 467467,Shapeshifter's Sigil
+467468,Tempest
 467480,Dismiss Pet Instant
+467488,[DNT] Tempest Tracking
 467489,Wildfire
 467491,Wildfire
 467494,S03 - Item - T2 - Mage - Healer 6P Bonus
@@ -26880,8 +26908,11 @@ ID,Name_lang
 467543,Deliverance
 467544,S03 - Item - T2 - Priest - Healer 4P Bonus
 467545,Quake Knockback
+467548,Knockback
 467549,Hybrid Healing/Spell Dam 75/25
 467550,Hybrid Healing/Spell Dam 44/15
+467551,Knockback
+467554,The Storm
 467561,Poison Bolt Volley
 467562,Poison Bolt Volley
 467563,Poison Bolt Volley
@@ -26959,6 +26990,7 @@ ID,Name_lang
 467889,S03 - Item - T2 - Shaman - Tank 2P Bonus
 467891,Shield Block
 467896,Magical Stone - Display
+467899,[DNT] Lightning Strike
 467909,S03 - Item - T2 - Shaman - Tank 4P Bonus
 467910,Elemental Shield
 467916,S03 - Item - T2 - Shaman - Tank 6P Bonus
@@ -26975,6 +27007,7 @@ ID,Name_lang
 468027,Fetch!
 468028,S03 - Item - T2 - Warlock - Tank 2P Bonus
 468029,Life Tap
+468030,[DNT] Teleport to Crystal Vale Interior
 468038,[DNT] Essence of Fire - Fight
 468039,[DNT] Essence of Frost - Fight
 468046,S03 - Item - T2 - Warlock - Tank 4P Bonus
@@ -27085,6 +27118,7 @@ ID,Name_lang
 468376,Presence of Valor
 468379,Presence of Sight
 468380,Presence of Sight
+468381,Summon Vessel of Rebirth
 468382,Falcon's Fury
 468383,Falcon's Fury
 468387,Aligned with Nature
@@ -27176,6 +27210,7 @@ ID,Name_lang
 468698,Open Suspicious Supplies
 468700,Attack Power - Feral (+338)
 468707,Xirath - Give Suspicious Supplies
+468710,[DNT] Demitrian Summon
 468714,Gla'sir Hybrid Healing/Spell Dam 144/77
 468733,Lasso Target
 468746,Power of Hakkar
@@ -27379,11 +27414,83 @@ ID,Name_lang
 469706,Call Aeonas
 469709,(DNT) Vehicle Force Cast
 469710,(DNT) Move to Vehicle
-469712,[DNT] Check for Players
-469714,[DNT] Check for Players Periodic
 469717,(DNT) Vehicle Force Cast
 469718,Create Zul'Gurub Talisman PRT R4 DND
+469730,Summon Confessor's Mantle DND
+469731,Summon Confessor's Belt DND
+469732,Summon Confessor's Bracers DND
+469733,Create Zul'Gurub Talisman WLK R4 DND
+469734,Summon Demoniac's BP DND
+469735,Summon Demoniac's Mantle DND
+469736,Summon Demoniac's Bracers DND
+469742,Summon Illusionist's BP DND
+469743,Summon Illusionist's Mantle DND
+469744,Summon Illusionist's Bracers DND
+469746,Create Zul'Gurub Talisman MAG R4 DND
 469753,QAEnchant Shield Law of Nature
+469754,Create Zul'Gurub Talisman ROG R4 DND
+469758,Summon Madcap's BP DND
+469759,Summon Madcap's Mantle DND
+469761,Summon Madcap's Bracers DND
+469772,Create Zul'Gurub Talisman HUN R4 DND
+469774,Summon Predator's Mantle DND
+469775,Summon Predator's Belt DND
+469776,Summon Predator's Bracers DND
 469777,Blackwing Lair Ahoy!
+469788,[DNT] Personal Phase Aura
+469789,Stealth Detection
+469793,Fear
+469823,[DNT] Priest Epic Book - Cosmetic
+469828,Untamed Fury
+469865,Applying Heat
+469869,Cooling Down
 469872,Teleport to Zul'Gurub DND
 469873,[DNT] Teleport to Zul'Gurub
+469878,Thunder Stomp
+469879,Fear
+469884,[DNT] Detect Invisibility
+469891,Call Aeonas
+469984,Resurrection
+469985,Illusion Passive
+469990,Rain of Fire
+470009,Root Self
+470016,Flare Breath
+470017,Flare Breath
+470018,Flare Breath
+470026,Flare Breath
+470029,(DNT) Flare Breath Area Trigger Visuals
+470031,War Stomp
+470036,[DNT] Riosus
+470037,Fire Cat Form
+470051,[DNT] Riosus
+470052,Blue Beam
+470078,Libram of Plenty
+470079,Idol of Celestial Focus
+470080,Idol of Feline Focus
+470081,Totem of Raging Storms
+470082,Totem of Raging Storms
+470085,Sated
+470101,Loa Summon
+470103,Thunder Stomp
+470104,Totem of Storm and Fire
+470105,Totem of the Elements
+470108,Petrification
+470117,Summon
+470118,[DNT] Red Whelp Summon Visual
+470124,DNT
+470160,[DNT] Create Dragontooth Blade
+470163,[DNT] Red Whelp Spawn Spell
+470187,(DNT) Vehicle Force Cast
+470188,(DNT) Move to Vehicle
+470199,[DNT] Resurrection Sickness Prevention
+470235,Totem of Astral Flow
+470240,Totem of Conductive Currents
+470246,Libram of Wrath
+470263,Libram of Avengement
+470264,Avenger's Shield
+470265,Avenger's Shield
+470266,Increased Nourish Healing
+470269,Idol of Cruelty
+470270,Idol of Feline Focus
+470271,Libram of Wrath
+470272,Totem of Conductive Currents

@@ -46634,17 +46634,6 @@ var gear = {
       "d": 13
     },
     {
-      "id": 230810,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "83",
-      "name": "Neltharion's Tear",
-      "p": "inv_stone_15",
-      "hit": 2
-    },
-    {
       "id": 231286,
       "type": "Miscellaneous",
       "slot": "trinket",
@@ -47067,17 +47056,6 @@ var gear = {
       "p": "inv_misc_armorkit_10",
       "block": 24,
       "d": 13
-    },
-    {
-      "id": 230810,
-      "type": "Miscellaneous",
-      "slot": "trinket",
-      "r": 60,
-      "q": "4",
-      "i": "83",
-      "name": "Neltharion's Tear",
-      "p": "inv_stone_15",
-      "hit": 2
     },
     {
       "id": 231286,
@@ -75306,21 +75284,6 @@ var gear = {
       "crit": 2
     },
     {
-      "id": 19354,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Draconic Avenger",
-      "speed": 3.2,
-      "mindmg": 174,
-      "maxdmg": 262,
-      "p": "inv_axe_21",
-      "str": 21,
-      "sta": 18
-    },
-    {
       "id": 19568,
       "type": "Staff",
       "slot": "twohand",
@@ -77136,6 +77099,23 @@ var gear = {
       "mindmg": 171,
       "maxdmg": 257,
       "p": "inv_sword_17"
+    },
+    {
+      "id": 232357,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "71",
+      "name": "Draconic Avenger",
+      "speed": 3.5,
+      "mindmg": 191,
+      "maxdmg": 287,
+      "p": "inv_axe_21",
+      "agi": 26,
+      "str": 21,
+      "sta": 18,
+      "hit": 2
     },
     {
       "id": 230003,
