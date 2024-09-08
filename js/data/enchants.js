@@ -1261,7 +1261,7 @@ var enchant = {
 {
   id: 1781,
   name: 'Spirit of Eskhandar',
-  items: [228350,228349,228360,228759],
+  items: [228350,228349,228360,228759,22835099],
   bonus: [
      { count: 2, stats: { hit: 1 } },
      { count: 3, stats: { crit: 1, spellcrit: 1 } },

@@ -1596,7 +1596,7 @@ class Player {
             if (this.auras.relentlessstrength && this.auras.relentlessstrength.timer) {
                 this.auras.relentlessstrength.proc();
             }
-            if (this.dragonbreath && rng10k() < 400) {
+            if (this.dragonbreath && rng10k() < 500) {
                 procdmg += this.magicproc({ magicdmg: 60, coeff: 1 });
             }
             if (extras) this.extraattacks += extras;
