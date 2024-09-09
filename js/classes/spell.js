@@ -227,7 +227,12 @@ class Bloodrage extends Spell {
             this.player.auras.consumedrage.use();
     }
     canUse() {
-        return this.timer == 0;
+        return !this.timer && step >= this.usestep;
+    }
+    prep(duration) {
+        if (typeof this.timetoend !== 'undefined') this.usestep = Math.max(duration - this.timetoend, 0);
+        if (typeof this.timetostart !== 'undefined') this.usestep = this.timetostart;
+        return 0;
     }
 }
 

@@ -455,7 +455,10 @@ var spells = [
     name: 'Bloodrage',
     classname: 'Bloodrage',
     iconname: 'ability_racial_bloodrage',
-    active: true,
+    timetoend: 35,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: true,
     buff: true,
 },
 
