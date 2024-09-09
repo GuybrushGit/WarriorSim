@@ -1480,7 +1480,11 @@ class Player {
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
                 if (weapon.proc1.magicdmg) procdmg += weapon.proc1.chance == 10000 ? weapon.proc1.magicdmg : this.magicproc(weapon.proc1);
-                if (weapon.proc1.physdmg) procdmg += this.physproc(weapon.proc1.physdmg);
+                if (weapon.proc1.physdmg) {
+                    let dmg = this.physproc(weapon.proc1.physdmg);
+                    if (dmg > 0 && weapon.proc1.phantom) dmg += this.phantomproc(weapon)
+                    procdmg += dmg
+                }
                 /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
             }
             // Extra attacks roll only once per multi target attack
@@ -1607,6 +1611,19 @@ class Player {
         if (!spell && this.mh.windfury && this.mh.windfury.stacks)
             this.mh.windfury.proc();
         return procdmg;
+    }
+    phantomproc(weapon) {
+        let dmg = 0;
+        if (rng10k() < weapon.proc1.chance) {
+            dmg += this.physproc(weapon.proc1.physdmg);
+            if (dmg > 0) dmg += this.phantomproc(weapon)
+        }
+        if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
+            if (weapon.proc2.spell) weapon.proc2.spell.use();
+            if (weapon.proc2.magicdmg) dmg += this.magicproc(weapon.proc2);
+            /* start-log */ if (log) this.log(`${weapon.name} proc`); /* end-log */
+        }
+        return dmg;
     }
     magicproc(proc) {
         let mod = 1;
