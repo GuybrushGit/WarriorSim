@@ -44,6 +44,7 @@ class Player {
         this.nextswingcl = false;
         this.freeslam = false;
         this.ragecostbonus = 0;
+        this.logging = config.logging;
         this.race = config.race;
         this.aqbooks = config.aqbooks;
         this.reactionmin = config.reactionmin;
@@ -1028,7 +1029,7 @@ class Player {
     steptimer(a) {
         if (this.timer <= a) {
             this.timer = 0;
-            /* start-log */ if (log) this.log('Global CD off'); /* end-log */
+            /* start-log */ if (this.logging) this.log('Global CD off'); /* end-log */
             return true;
         }
         else {
@@ -1039,7 +1040,7 @@ class Player {
     stepitemtimer(a) {
         if (this.itemtimer <= a) {
             this.itemtimer = 0;
-            /* start-log */ if (log) this.log('Item CD off'); /* end-log */
+            /* start-log */ if (this.logging) this.log('Item CD off'); /* end-log */
             return true;
         }
         else {
@@ -1050,7 +1051,7 @@ class Player {
     stepstancetimer(a) {
         if (this.stancetimer <= a) {
             this.stancetimer = 0;
-            /* start-log */ if (log) this.log('Stance CD off'); /* end-log */
+            /* start-log */ if (this.logging) this.log('Stance CD off'); /* end-log */
             return true;
         }
         else {
@@ -1062,7 +1063,7 @@ class Player {
         if (this.ragetimer <= a) {
             this.ragetimer = 0;
             this.rage += 10;
-            /* start-log */ if (log) this.log('10 rage gained'); /* end-log */
+            /* start-log */ if (this.logging) this.log('10 rage gained'); /* end-log */
             return true;
         }
         else {
@@ -1273,7 +1274,7 @@ class Player {
             }
             else {
                 result = this.rollweapon(weapon);
-                /* start-log */ if (log) this.log(`Heroic Strike auto canceled`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Heroic Strike auto canceled`); /* end-log */
             }
         }
         else {
@@ -1309,7 +1310,7 @@ class Player {
             weapon.data[result]++;
         }
         weapon.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}`); /* end-log */
+        /* start-log */ if (this.logging) this.log(`${spell ? spell.name + ' for' : 'Main hand attack for'} ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}`); /* end-log */
 
         if (spell instanceof Cleave && !adjacent) {
             this.nextswinghs = true;
@@ -1344,7 +1345,7 @@ class Player {
         weapon.data[result]++;
         weapon.totaldmg += done;
         weapon.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
+        /* start-log */ if (this.logging) this.log(`Off hand attack for ${done + procdmg} (${Object.keys(RESULT)[result]})${this.nextswinghs ? ' (HS queued)' : ''}`); /* end-log */
         return done + procdmg;
     }
     cast(spell, delayedheroic, adjacent, damageSoFar) {
@@ -1353,7 +1354,7 @@ class Player {
             spell.use(delayedheroic);
         }
         if (spell.useonly) {
-            /* start-log */ if (log) this.log(`${spell.name} used`); /* end-log */
+            /* start-log */ if (this.logging) this.log(`${spell.name} used`); /* end-log */
             return 0;
         }
         if (this.spells.ragingblow) this.spells.ragingblow.reduce(spell);
@@ -1395,7 +1396,7 @@ class Player {
         if (!adjacent) spell.data[result]++;
         spell.totaldmg += done;
         this.mh.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`${spell.name} for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
+        /* start-log */ if (this.logging) this.log(`${spell.name} for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
         return done + procdmg;
     }
     castoh(spell, adjacent, damageSoFar) {
@@ -1422,7 +1423,7 @@ class Player {
         spell.totaldmg += done;
         spell.offhandhit = false;
         this.oh.totalprocdmg += procdmg;
-        /* start-log */ if (log) this.log(`${spell.name} (OH) for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
+        /* start-log */ if (this.logging) this.log(`${spell.name} (OH) for ${~~done} (${Object.keys(RESULT)[result]})${adjacent ? ' (Adjacent)' : ''}.`); /* end-log */
         return done + procdmg;
     }
     dealdamage(dmg, result, weapon, spell, adjacent) {
@@ -1475,7 +1476,7 @@ class Player {
                 if (this.spells.mortalstrike) this.spells.mortalstrike.timer = 0;
                 if (this.spells.bloodthirst) this.spells.bloodthirst.timer = 0;
                 if (this.spells.shieldslam) this.spells.shieldslam.timer = 0;
-                /* start-log */ if (log) this.log(`T2 Slam reset`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`T2 Slam reset`); /* end-log */
             }
             if (weapon.proc1 && !weapon.proc1.extra && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 if (weapon.proc1.spell) weapon.proc1.spell.use();
@@ -1485,57 +1486,57 @@ class Player {
                     if (dmg > 0 && weapon.proc1.phantom) dmg += this.phantomproc(weapon)
                     procdmg += dmg
                 }
-                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
             }
             // Extra attacks roll only once per multi target attack
             if (weapon.proc1 && weapon.proc1.extra && !damageSoFar && rng10k() < weapon.proc1.chance && !(weapon.proc1.gcd && this.timer && this.timer < 1500)) {
                 // Multiple extras procs off a non spel will only grant extra attack(s) from one source
                 if (spell) this.extraattacks += weapon.proc1.extra;
                 else extras = weapon.proc1.extra;
-                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
             }
             if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
                 if (weapon.proc2.spell) weapon.proc2.spell.use();
                 if (weapon.proc2.magicdmg) procdmg += this.magicproc(weapon.proc2);
-                /* start-log */ if (log) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`${weapon.name} proc ${procdmg ? 'for ' + ~~procdmg : ''}`); /* end-log */
             }
             if (this.trinketproc1 && !this.trinketproc1.extra && rng10k() < this.trinketproc1.chance) {
                 if (this.trinketproc1.magicdmg) procdmg += this.magicproc(this.trinketproc1);
                 if (this.trinketproc1.spell) this.trinketproc1.spell.use();
-                /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Trinket 1 proc`); /* end-log */
             }
             if (this.trinketproc1 && this.trinketproc1.extra && !damageSoFar && rng10k() < this.trinketproc1.chance) {
                 if (!this.trinketproc1.cooldown || !this.trinketproc1.usestep || step > this.trinketproc1.usestep) {
                     if (this.trinketproc1.cooldown) this.trinketproc1.usestep = step + this.trinketproc1.cooldown;
                     if (spell) this.batchedextras += this.trinketproc1.extra;
                     else batchedextras = this.trinketproc1.extra;
-                    /* start-log */ if (log) this.log(`Trinket 1 proc`); /* end-log */
+                    /* start-log */ if (this.logging) this.log(`Trinket 1 proc`); /* end-log */
                 }
             }
             if (this.trinketproc2 && !this.trinketproc2.extra  && rng10k() < this.trinketproc2.chance) {
                 if (this.trinketproc2.magicdmg) procdmg += this.magicproc(this.trinketproc2);
                 if (this.trinketproc2.spell) this.trinketproc2.spell.use();
-                /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Trinket 2 proc`); /* end-log */
             }
             if (this.trinketproc2 && this.trinketproc2.extra && !damageSoFar && rng10k() < this.trinketproc2.chance) {
                 if (!this.trinketproc2.cooldown || !this.trinketproc2.usestep || step > this.trinketproc2.usestep) {
                     if (this.trinketproc2.cooldown) this.trinketproc2.usestep = step + this.trinketproc2.cooldown;
                     if (spell) this.batchedextras += this.trinketproc2.extra;
                     else batchedextras = this.trinketproc2.extra;
-                    /* start-log */ if (log) this.log(`Trinket 2 proc`); /* end-log */
+                    /* start-log */ if (this.logging) this.log(`Trinket 2 proc`); /* end-log */
                 }
             }
             if (this.attackproc1 && rng10k() < this.attackproc1.chance) {
                 if (this.attackproc1.magicdmg) { 
                     procdmg += this.attackproc1.chance == 10000 ? this.attackproc1.magicdmg : this.magicproc(this.attackproc1);
-                    /* start-log */ if (log) this.log(`Attack proc for ${procdmg}`); /* end-log */
+                    /* start-log */ if (this.logging) this.log(`Attack proc for ${procdmg}`); /* end-log */
                 }
                 if (this.attackproc1.spell) this.attackproc1.spell.use();
             }
             if (this.attackproc2 && rng10k() < this.attackproc2.chance) {
                 if (this.attackproc2.magicdmg) { 
                     procdmg += this.attackproc2.chance == 10000 ? this.attackproc2.magicdmg : this.magicproc(this.attackproc2);
-                    /* start-log */ if (log) this.log(`Attack proc for ${procdmg}`); /* end-log */
+                    /* start-log */ if (this.logging) this.log(`Attack proc for ${procdmg}`); /* end-log */
                 }
                 if (this.attackproc2.spell) this.attackproc2.spell.use();
             }
@@ -1544,32 +1545,32 @@ class Player {
                 this.swordspecstep = step;
                 if (spell) this.extraattacks++;
                 else extras++;
-                /* start-log */ if (log) this.log(`Sword talent proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Sword talent proc`); /* end-log */
             }
             // Wailing set bonus extra
             if (this.wailingextra && !damageSoFar && this.wailingextrastep != step && rng10k() < 300) {
                 this.wailingextrastep = step;
                 if (spell) this.extraattacks++;
                 else extras++;
-                /* start-log */ if (log) this.log(`Wailing set extra attack proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Wailing set extra attack proc`); /* end-log */
             }
             // Hakkari set bonus extra
             if (this.hakkariextra && !damageSoFar && this.hakkariextrastep != step && rng10k() < 200) {
                 this.hakkariextrastep = step;
                 if (spell) this.extraattacks++;
                 else extras++;
-                /* start-log */ if (log) this.log(`Hakkari set extra attack proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Hakkari set extra attack proc`); /* end-log */
             }
             // Blood Surge
             if (this.bloodsurge && (spell instanceof Whirlwind || spell instanceof Bloodthirst || spell instanceof HeroicStrike || spell instanceof QuickStrike) && rng10k() < 3000) {
                 this.freeslam = true;
-                /* start-log */ if (log) this.log(`Blood Surge proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Blood Surge proc`); /* end-log */
             }
             // Sword and Board
             if (this.swordboard && this.spells.shieldslam && (spell instanceof SunderArmor) && rng10k() < 3000) {
                 this.freeshieldslam = true;
                 this.spells.shieldslam.timer = 0;
-                /* start-log */ if (log) this.log(`Sword and Board proc`); /* end-log */
+                /* start-log */ if (this.logging) this.log(`Sword and Board proc`); /* end-log */
             }
             // Voodoo Frenzy
             if (this.auras.voodoofrenzy && rng10k() < 1500) {
@@ -1621,7 +1622,7 @@ class Player {
         if (weapon.proc2 && rng10k() < weapon.proc2.chance) {
             if (weapon.proc2.spell) weapon.proc2.spell.use();
             if (weapon.proc2.magicdmg) dmg += this.magicproc(weapon.proc2);
-            /* start-log */ if (log) this.log(`${weapon.name} proc`); /* end-log */
+            /* start-log */ if (this.logging) this.log(`${weapon.name} proc`); /* end-log */
         }
         return dmg;
     }
@@ -1662,7 +1663,7 @@ class Player {
         else if (msg.indexOf('tick') > 1) color = 'Tomato';
         else if (msg.indexOf(' for ') > -1) color = 'DarkOrchid';
         else if (msg.indexOf('applied') > 1 || msg.indexOf('removed') > -1) color = '#17A8B6';
-        console.log(`%c ${step.toString().padStart(5,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`, `color: ${color}`);
+        console.log(`%c ${(step / 1000).toFixed(3).padStart(6,' ')} | ${this.rage.toFixed(2).padStart(6,' ')} | ${msg}`, `color: ${color}`);
     }
     switch(stance) {
         let prev = this.stance;
@@ -1690,7 +1691,7 @@ class Player {
         if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
         this.stancetimer = 1500;
         this.updateAuras();
-        /* start-log */ if (log) this.log(`Switched to ${stance} stance`); /* end-log */
+        /* start-log */ if (this.logging) this.log(`Switched to ${stance} stance`); /* end-log */
     }
     isValidStance(stance, isRend) {
         return this.stance == stance || this.stance == 'glad' ||

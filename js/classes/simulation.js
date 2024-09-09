@@ -27,7 +27,6 @@ var SCHOOL = {
 
 var batching = 0;
 var step = 0;
-var log = false;
 var version = 4;
 
 const TYPE = {
@@ -168,6 +167,7 @@ class SimulationWorkerParallel {
         this.workers.forEach((worker, i) => {
             const current = Math.round(remain / (this.workers.length - i));
             remain -= current;
+            params.player[3].logging = i == 0 && params.fullReport;
             worker.start({...params, sim: {...params.sim, iterations: current}});
         });
     }
@@ -206,9 +206,6 @@ class Simulation {
         this.cb_update = callback_update;
         this.cb_finished = callback_finished;
         this.spread = [];
-
-        if (this.iterations == 1) log = true;
-        else log = false;
     }
     startSync() {
         this.starttime = new Date().getTime();
@@ -290,7 +287,7 @@ class Simulation {
                 spellcheck = true;
                 if (player.auras.consumedrage && player.rage >= 60 && oldRage < 60)
                     player.auras.consumedrage.use();
-                /* start-log */ if (log) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
+                /* start-log */ if (player.logging) this.player.log(`Target attack for ${dmg} gained ${gained.toFixed(2)} rage `); /* end-log */
             }
 
             // Stop everything
@@ -420,7 +417,7 @@ class Simulation {
                             player.heroicdelay = 0;
                             player.nextswinghs = false;
                             next = 0;
-                            /* start-log */ if (log) this.player.log(`Casting Slam`); /* end-log */
+                            /* start-log */ if (player.logging) this.player.log(`Casting Slam`); /* end-log */
                             continue;
                         }
 
@@ -467,12 +464,12 @@ class Simulation {
                     if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue && player.nextswinghs &&
                         player.rage < player.spells.heroicstrike.unqueue && player.mh.timer <= player.spells.heroicstrike.unqueuetimer) {
                         this.player.nextswinghs = false;
-                        /* start-log */ if (log) this.player.log(`Heroic Strike unqueued`); /* end-log */
+                        /* start-log */ if (player.logging) this.player.log(`Heroic Strike unqueued`); /* end-log */
                     }
                     else if (player.spells.cleave && player.spells.cleave.unqueue && player.nextswinghs &&
                         player.rage < player.spells.cleave.unqueue && player.mh.timer <= player.spells.cleave.unqueuetimer) {
                         this.player.nextswinghs = false;
-                        /* start-log */ if (log) this.player.log(`Cleave unqueued`); /* end-log */
+                        /* start-log */ if (player.logging) this.player.log(`Cleave unqueued`); /* end-log */
                     }
                 }
 
@@ -620,6 +617,7 @@ class Simulation {
 
         // Fight done
         player.endauras();
+        player.logging = false;
 
         if (player.auras.deepwounds) {
             this.idmg += player.auras.deepwounds.idmg;
