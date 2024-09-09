@@ -41,7 +41,7 @@ class Spell {
         if (spell.resolve) this.resolve = spell.resolve;
         if (spell.switchstart) this.switchstart = spell.switchstart;
         if (spell.switchtimeactive) this.switchtime = parseFloat(spell.switchtime) * 1000;
-        if (spell.switchtimeactive) this.switchrage = spell.switchrage;
+        if (spell.switchtimeactive) this.switchrage = parseInt(spell.switchrage);
         if (spell.switchtimeactive) this.switchtimeactive = spell.switchtimeactive;
         if (spell.switchdefault) this.switchdefault = spell.switchdefault;
         if (spell.durationactive) this.duration = parseInt(spell.duration);
@@ -51,6 +51,9 @@ class Spell {
         if (spell.switchechoesactive) this.switchechoestime = parseFloat(spell.switchechoestime) * 1000;
         if (spell.switchechoesactive) this.switchechoesswing = parseFloat(spell.switchechoesswing) * 1000;
         if (spell.switchechoesactive) this.switchechoesactive = spell.switchechoesactive;
+        if (spell.switchoractive) this.switchortime = parseFloat(spell.switchortime) * 1000;
+        if (spell.switchoractive) this.switchorrage = parseInt(spell.switchorrage);
+        if (spell.switchoractive) this.switchoractive = spell.switchoractive;
         
     }
     dmg() {
@@ -724,7 +727,18 @@ class UnstoppableMight extends Spell {
             return true;
         }
 
-        // Switch if Echoes shorter than [switchtime] secs and rage below [switchrage]
+        //Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
+        if (this.switchoractive && this.player.stance == 'zerk' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'battle';
+            return true;
+        }
+
+        if (this.switchoractive && this.player.stance == 'battle' && ((this.player.auras.berserkerforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'zerk';
+            return true;
+        }
+
+        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
         if (this.switchechoesactive && this.player.stance == 'zerk' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
             this.switchto = 'battle';
             return true;
@@ -758,7 +772,18 @@ class UnstoppableMight extends Spell {
             return true;
         }
 
-        // Switch if Echoes shorter than [switchtime] secs and rage below [switchrage]
+        // Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
+        if (this.switchoractive && this.player.stance == 'zerk' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'glad';
+            return true;
+        }
+
+        if (this.switchoractive && this.player.stance == 'glad' && ((this.player.auras.berserkerforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'zerk';
+            return true;
+        }
+
+        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
         if (this.switchechoesactive && this.player.stance == 'zerk' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
             this.switchto = 'glad';
             return true;
@@ -792,7 +817,18 @@ class UnstoppableMight extends Spell {
             return true;
         }
 
-        // Switch if Echoes shorter than [switchtime] secs and rage below [switchrage]
+        //Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
+        if (this.switchoractive && this.player.stance == 'def' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'battle';
+            return true;
+        }
+
+        if (this.switchoractive && this.player.stance == 'battle' && ((this.player.auras.defensiveforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = 'def';
+            return true;
+        }
+
+        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
         if (this.switchechoesactive && this.player.stance == 'def' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
             this.switchto = 'battle';
             return true;
