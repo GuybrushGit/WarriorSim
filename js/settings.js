@@ -595,6 +595,8 @@ SIM.SETTINGS = {
             ul.append(`<li data-id="switchstart" class="${spell.switchstart ? 'active' : ''}">Switch stance at fight start</li>`);
         if (typeof spell.switchtimeactive !== 'undefined')
             ul.append(`<li data-id="switchtimeactive" class="${spell.switchtimeactive ? 'active' : ''}">Switch if any Forecast shorter than <input type="text" name="switchtime" value="${spell.switchtime}" data-numberonly="true" /> secs and rage below <input type="text" name="switchrage" value="${spell.switchrage}" data-numberonly="true" /></li>`);
+        if (typeof spell.switchechoesactive !== 'undefined')
+            ul.append(`<li data-id="switchechoesactive" class="${spell.switchechoesactive ? 'active' : ''}">Switch if Echoes is shorter than <input type="text" name="switchechoestime" value="${spell.switchechoestime}" data-numberonly="true" /> secs and rage below <input type="text" name="switchechoesswing" value="${spell.switchechoesswing}" data-numberonly="true" /></li>`);
         if (typeof spell.switchdefault !== 'undefined')
             ul.append(`<li data-id="switchdefault" class="${spell.switchdefault ? 'active' : ''}">Switch back to default stance as soon as possible</li>`);
 

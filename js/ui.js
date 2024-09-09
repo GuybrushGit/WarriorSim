@@ -336,6 +336,7 @@ SIM.UI = {
             view.endLoading();
             return;
         }
+        console.clear()
         let dps = view.sidebar.find('.dps');
         let error = view.sidebar.find('#dpserr');
         let stats = view.sidebar.find('#stats');

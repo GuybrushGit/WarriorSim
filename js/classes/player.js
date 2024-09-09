@@ -435,7 +435,7 @@ class Player {
                     }
                     // Endless Rage
                     if (item.ragemod) {
-                        this.ragemod = (this.ragemod || 1) * item.ragemod;
+                        this.base.ragemod = (this.base.ragemod || 1) * item.ragemod;
                     }
                     // Frenzied Assault
                     if (item.haste2h && this.mh.twohand) {
@@ -590,12 +590,8 @@ class Player {
                     this.auras.voodoofrenzy = new VoodooFrenzy(this);
                 if (buff.stance) {
                     this.basestance = buff.stance;
-                    if (buff.stance == 'glad' && !this.shield)
-                        this.basestance = 'battle';
-                    if (buff.stance == 'glad' && this.gladdmg)
+                    if (buff.stance == 'glad' && this.gladdmg && this.shield)
                         this.base.dmgmod *= (1 + this.gladdmg / 100);
-                    if (this.basestance == "glad" && !this.target.speed)
-                        this.ragemod = (this.ragemod || 1) * 1.5;
                     continue;
                 }
                 if (buff.group == "trueshot" && this.mode == "sod") {
@@ -1688,6 +1684,7 @@ class Player {
         if (this.auras.defensiveforecast && this.stance == 'def') {
             this.auras.defensiveforecast.use();
         }
+        this.ragemod = (this.base.ragemod || 1) * (this.stance == 'glad' && !this.target.speed ? 1.5 : 1);
         if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
         this.stancetimer = 1500;
         this.updateAuras();

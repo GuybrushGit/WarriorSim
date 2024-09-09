@@ -362,6 +362,9 @@ SIM.PROFILES = {
                 if (typeof spell.swingtimer !== 'undefined') obj.swingtimer = spell.swingtimer;
                 if (typeof spell.priority !== 'undefined') obj.priority = spell.priority;
                 if (typeof spell.expriority !== 'undefined') obj.expriority = spell.expriority;
+                if (typeof spell.switchechoesactive !== 'undefined') obj.switchechoesactive = spell.switchechoesactive;
+                if (typeof spell.switchechoestime !== 'undefined') obj.switchechoestime = spell.switchechoestime;
+                if (typeof spell.switchechoesswing !== 'undefined') obj.switchechoesswing = spell.switchechoesswing;
                 minified.rotation.push(obj);
             }
         }
@@ -452,7 +455,9 @@ SIM.PROFILES = {
                     if (typeof newspell.swingtimer !== 'undefined') spell.swingtimer = newspell.swingtimer;
                     if (typeof newspell.priority !== 'undefined') spell.priority = newspell.priority;
                     if (typeof newspell.expriority !== 'undefined') spell.expriority = newspell.expriority;
-                    
+                    if (typeof newspell.switchechoesactive !== 'undefined') spell.switchechoesactive = newspell.switchechoesactive;
+                    if (typeof newspell.switchechoestime !== 'undefined') spell.switchechoestime = newspell.switchechoestime;
+                    if (typeof newspell.switchechoesswing !== 'undefined') spell.switchechoesswing = newspell.switchechoesswing;
                 }
                 else {
                     spell.active = false;
