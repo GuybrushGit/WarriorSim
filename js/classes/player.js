@@ -1217,12 +1217,6 @@ class Player {
         
 
     }
-    stepechos() {
-        if (this.auras.echoeszerk && this.auras.echoeszerk.timer) this.auras.echoeszerk.step();
-        if (this.auras.echoesbattle && this.auras.echoesbattle.timer) this.auras.echoesbattle.step();
-        if (this.auras.echoesdef && this.auras.echoesdef.timer) this.auras.echoesdef.step();
-        if (this.auras.echoesglad && this.auras.echoesglad.timer) this.auras.echoesglad.step();
-    }
     rollweapon(weapon) {
         let tmp = 0;
         let roll = rng10k();

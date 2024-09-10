@@ -408,7 +408,6 @@ class Simulation {
                     if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
                         player.heroicdelay = delayedheroic.maxdelay - 99;
 
-                    player.stepechos();
                     if (delayedspell.canUse()) {
                         // Start casting slam
                         if (delayedspell instanceof Slam) {
