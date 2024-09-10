@@ -1581,11 +1581,11 @@ class Flask extends Aura {
         this.stats = { str: 75 };
         this.name = 'Diamond Flask';
     }
-    use() {
+    use(a, prepull = 0) {
         this.player.timer = 1500;
         this.player.itemtimer = this.duration * 1000;
-        this.timer = step + this.duration * 1000;
-        this.starttimer = step;
+        this.timer = step + this.duration * 1000 - prepull;
+        this.starttimer = step - prepull;
         this.player.updateAuras();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
@@ -1833,12 +1833,14 @@ class BattleShout extends Aura {
         let lvlbonus = ~~((this.player.level - this.minlevel) * this.value2);
         this.stats.ap = ~~((this.value1 + lvlbonus + (this.player.enhancedbs ? 30 : 0)) * (1 + this.player.talents.impbattleshout))
     }
-    use() {
+    use(prepull) {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.rage -= this.cost;
-        this.player.timer = 1500;
+        if (!prepull) {
+            this.player.rage -= this.cost;
+            this.player.timer = 1500;
+        }
         this.player.updateAP();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
@@ -2366,10 +2368,10 @@ class Rampage extends Aura {
         this.mult_stats = { apmod: 10 };
         this.cooldown = 120;
     }
-    use() {
+    use(a, prepull = 0) {
         if (this.timer) this.uptime += (step - this.starttimer);
-        this.timer = step + this.duration * 1000;
-        this.starttimer = step;
+        this.timer = step + this.duration * 1000 - prepull;
+        this.starttimer = step - prepull;
         this.player.updateAP();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
         /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */

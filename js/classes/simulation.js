@@ -260,6 +260,21 @@ class Simulation {
                 player.spells[spell.classname.toLowerCase()].prep(this.maxsteps);
         }
 
+        // prepull actions
+        let prepull = [];
+        for(let aura of Object.values(player.auras)) {
+            if (aura.usestep < 0) prepull.push(aura);
+        }
+        prepull.sort((a,b) => (b.usestep - a.usestep));
+        let counter = 1500;
+        for(let aura of prepull) {
+            aura.use(false, counter);
+            counter += 1500;
+        }
+        if (player.auras.battleshout) player.auras.battleshout.use(true);
+        this.player.timer = 0;
+        this.player.itemtimer = 0;
+
         while (step < this.maxsteps) {
 
             // Passive ticks

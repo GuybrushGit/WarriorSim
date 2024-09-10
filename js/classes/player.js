@@ -137,7 +137,6 @@ class Player {
         this.addSpells(testItem);
         this.sortSpells();
         this.addRunes();
-        this.initStances();
         if (this.talents.flurry) this.auras.flurry = new Flurry(this);
         if (this.talents.deepwounds && this.mode !== 'classic') this.auras.deepwounds = this.mode == "sod" ? new DeepWounds(this) : new OldDeepWounds(this);
         if (this.adjacent && this.talents.deepwounds && this.mode !== 'classic') {
