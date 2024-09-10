@@ -1523,6 +1523,7 @@ var spells = [
     switchoractive: false,
     switchortime: 0,
     switchorrage: 60,
+    secondarystance: 'battle',
 },
 
 {

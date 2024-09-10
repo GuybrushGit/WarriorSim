@@ -591,14 +591,22 @@ SIM.SETTINGS = {
 
 
         // Might set
+        if (typeof spell.secondarystance !== 'undefined')
+            ul.append(`<li data-id="secondarystance" class="nobox active">Secondary stance <select name="secondarystance">
+                <option value="battle" ${spell.secondarystance == 'battle' ? 'selected' : ''}>Battle Stance</option>
+                <option value="def" ${spell.secondarystance == 'def' ? 'selected' : ''}>Defensive Stance</option>
+                <option value="zerk" ${spell.secondarystance == 'zerk' ? 'selected' : ''}>Berserker Stance</option>
+                <option value="glad" ${spell.secondarystance == 'glad' ? 'selected' : ''}>Gladiator Stance</option></option>
+            </select></li>`);
+
         if (typeof spell.switchstart !== 'undefined')
             ul.append(`<li data-id="switchstart" class="${spell.switchstart ? 'active' : ''}">Switch stance at fight start</li>`);
         if (typeof spell.switchtimeactive !== 'undefined')
             ul.append(`<li data-id="switchtimeactive" class="${spell.switchtimeactive ? 'active' : ''}">Switch if any Forecast shorter than <input type="text" name="switchtime" value="${spell.switchtime}" data-numberonly="true" /> secs AND rage below <input type="text" name="switchrage" value="${spell.switchrage}" data-numberonly="true" /></li>`);
         if (typeof spell.switchoractive !== 'undefined')
             ul.append(`<li data-id="switchoractive" class="${spell.switchoractive ? 'active' : ''}">Switch if any Forecast shorter than <input type="text" name="switchortime" value="${spell.switchortime}" data-numberonly="true" /> secs OR rage below <input type="text" name="switchorrage" value="${spell.switchorrage}" data-numberonly="true" /></li>`);
-        if (typeof spell.switchechoesactive !== 'undefined')
-            ul.append(`<li data-id="switchechoesactive" class="${spell.switchechoesactive ? 'active' : ''}">Switch if Echoes is shorter than <input type="text" name="switchechoestime" value="${spell.switchechoestime}" data-numberonly="true" /> secs and swing below <input type="text" name="switchechoesswing" value="${spell.switchechoesswing}" data-numberonly="true" /> secs</li>`);
+        // if (typeof spell.switchechoesactive !== 'undefined')
+        //     ul.append(`<li data-id="switchechoesactive" class="${spell.switchechoesactive ? 'active' : ''}">Switch if Echoes is shorter than <input type="text" name="switchechoestime" value="${spell.switchechoestime}" data-numberonly="true" /> secs and swing below <input type="text" name="switchechoesswing" value="${spell.switchechoesswing}" data-numberonly="true" /> secs</li>`);
         if (typeof spell.switchdefault !== 'undefined')
             ul.append(`<li data-id="switchdefault" class="${spell.switchdefault ? 'active' : ''}">Switch back to default stance as soon as possible</li>`);
 

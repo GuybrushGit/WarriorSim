@@ -408,6 +408,7 @@ class Simulation {
                     if (player.heroicdelay && delayedheroic && player.heroicdelay > delayedheroic.maxdelay)
                         player.heroicdelay = delayedheroic.maxdelay - 99;
 
+                    player.stepechos();
                     if (delayedspell.canUse()) {
                         // Start casting slam
                         if (delayedspell instanceof Slam) {
@@ -556,6 +557,15 @@ class Simulation {
             if (player.spells.execute && player.spells.execute.timer && player.spells.execute.timer < next) next = player.spells.execute.timer;
             if (player.spells.slam && player.spells.slam.timer && player.spells.slam.timer < next) next = player.spells.slam.timer;
 
+            if (player.auras.zerkforecast && player.auras.zerkforecast.timer && (player.auras.zerkforecast.timer - step) < next) next = player.auras.zerkforecast.timer - step;
+            if (player.auras.battleforecast && player.auras.battleforecast.timer && (player.auras.battleforecast.timer - step) < next) next = player.auras.battleforecast.timer - step;
+            if (player.auras.defforecast && player.auras.defforecast.timer && (player.auras.defforecast.timer - step) < next) next = player.auras.defforecast.timer - step;
+            if (player.auras.gladforecast && player.auras.gladforecast.timer && (player.auras.gladforecast.timer - step) < next) next = player.auras.gladforecast.timer - step;  
+            if (player.auras.echoeszerk && player.auras.echoeszerk.timer && (player.auras.echoeszerk.timer - step) < next) next = player.auras.echoeszerk.timer - step;
+            if (player.auras.echoesbattle && player.auras.echoesbattle.timer && (player.auras.echoesbattle.timer - step) < next) next = player.auras.echoesbattle.timer - step;
+            if (player.auras.echoesdef && player.auras.echoesdef.timer && (player.auras.echoesdef.timer - step) < next) next = player.auras.echoesdef.timer - step;
+            if (player.auras.echoesglad && player.auras.echoesglad.timer && (player.auras.echoesglad.timer - step) < next) next = player.auras.echoesglad.timer - step;
+
             if (!player.spells.execute || (step < this.executestep && (!player.auras.suddendeath || !player.auras.suddendeath.timer))) {
                 if (player.spells.heroicstrike && player.spells.heroicstrike.unqueue) {
                     let timeleft = Math.max(player.mh.timer - player.spells.heroicstrike.unqueuetimer);
@@ -566,6 +576,8 @@ class Simulation {
                     if (timeleft > 0 && timeleft < next) next = timeleft;
                 }
             }
+
+            //if (Math.floor(step / 200) < Math.floor((step+next) / 200)) next = 200 - step % 200;
 
             step += next;
             if (step > this.maxsteps) break;
@@ -613,6 +625,18 @@ class Simulation {
                 if (player.auras.deepwounds3 && player.auras.deepwounds3.timer && !player.auras.deepwounds3.step() && !player.spelldelay) spellcheck = true;
                 if (player.auras.deepwounds4 && player.auras.deepwounds4.timer && !player.auras.deepwounds4.step() && !player.spelldelay) spellcheck = true;
             }
+
+            if (player.auras.zerkforecast && player.auras.zerkforecast.timer && !player.auras.zerkforecast.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.battleforecast && player.auras.battleforecast.timer && !player.auras.battleforecast.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.defforecast && player.auras.defforecast.timer && !player.auras.defforecast.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.gladforecast && player.auras.gladforecast.timer && !player.auras.gladforecast.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.echoeszerk && player.auras.echoeszerk.timer && !player.auras.echoeszerk.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.echoesbattle && player.auras.echoesbattle.timer && !player.auras.echoesbattle.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.echoesdef && player.auras.echoesdef.timer && !player.auras.echoesdef.step() && !player.spelldelay) spellcheck = true;
+            if (player.auras.echoesglad && player.auras.echoesglad.timer && !player.auras.echoesglad.step() && !player.spelldelay) spellcheck = true;
+
+            //if (step % 200 == 0) spellcheck = true;
+
         }
 
         // Fight done

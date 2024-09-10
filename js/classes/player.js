@@ -172,7 +172,7 @@ class Player {
 
         // Might set bonus
         if (this.spells.unstoppablemight && this.spells.unstoppablemight.switchstart) {
-            this.switch(this.stance == 'zerk' || this.stance == 'def' ? 'battle' : 'zerk');
+            this.switch(this.spells.unstoppablemight.secondarystance);
         }
     }
     addRace() {
@@ -530,12 +530,16 @@ class Player {
                     }
                     if (bonus.stats.switchdelay) {
                         this.switchdelay = bonus.stats.switchdelay;
-                        this.auras.echoesstance = new EchoesStance(this);
+                        this.auras.echoesbattle = new EchoesBattle(this);
+                        this.auras.echoeszerk = new EchoesZerk(this);
+                        this.auras.echoesglad = new EchoesGlad(this);
+                        this.auras.echoesdef = new EchoesDef(this);
                     }
                     if (bonus.stats.switchbonus) {
                         this.auras.battleforecast = new BattleForecast(this);
-                        this.auras.berserkerforecast = new BerserkerForecast(this);
-                        this.auras.defensiveforecast = new DefensiveForecast(this);
+                        this.auras.zerkforecast = new ZerkForecast(this);
+                        this.auras.defforecast = new DefForecast(this);
+                        this.auras.gladforecast = new GladForecast(this);
                     }
                     if (bonus.stats.overpowerrend) this.overpowerrend = bonus.stats.overpowerrend;
                     if (bonus.stats.whirlwindbonus) this.whirlwindbonus = bonus.stats.whirlwindbonus;
@@ -1108,10 +1112,14 @@ class Player {
         if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.step();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.step();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.step();
-        if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.step();
+        if (this.auras.echoeszerk && this.auras.echoeszerk.timer) this.auras.echoeszerk.step();
+        if (this.auras.echoesbattle && this.auras.echoesbattle.timer) this.auras.echoesbattle.step();
+        if (this.auras.echoesdef && this.auras.echoesdef.timer) this.auras.echoesdef.step();
+        if (this.auras.echoesglad && this.auras.echoesglad.timer) this.auras.echoesglad.step();
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.step();
-        if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.step();
-        if (this.auras.defensiveforecast && this.auras.defensiveforecast.timer) this.auras.defensiveforecast.step();
+        if (this.auras.zerkforecast && this.auras.zerkforecast.timer) this.auras.zerkforecast.step();
+        if (this.auras.defforecast && this.auras.defforecast.timer) this.auras.defforecast.step();
+        if (this.auras.gladforecast && this.auras.gladforecast.timer) this.auras.gladforecast.step();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.step();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.step();
         if (this.auras.demontaintedblood && this.auras.demontaintedblood.timer) this.auras.demontaintedblood.step();
@@ -1173,9 +1181,14 @@ class Player {
         if (this.auras.suddendeath && this.auras.suddendeath.timer) this.auras.suddendeath.end();
         if (this.auras.voodoofrenzy && this.auras.voodoofrenzy.timer) this.auras.voodoofrenzy.end();
         if (this.auras.battleshout && this.auras.battleshout.timer) this.auras.battleshout.end();
-        if (this.auras.echoesstance && this.auras.echoesstance.timer) this.auras.echoesstance.end();
+        if (this.auras.echoeszerk && this.auras.echoeszerk.timer) this.auras.echoeszerk.end();
+        if (this.auras.echoesbattle && this.auras.echoesbattle.timer) this.auras.echoesbattle.end();
+        if (this.auras.echoesdef && this.auras.echoesdef.timer) this.auras.echoesdef.end();
+        if (this.auras.echoesglad && this.auras.echoesglad.timer) this.auras.echoesglad.end();
         if (this.auras.battleforecast && this.auras.battleforecast.timer) this.auras.battleforecast.end();
-        if (this.auras.berserkerforecast && this.auras.berserkerforecast.timer) this.auras.berserkerforecast.end();
+        if (this.auras.zerkforecast && this.auras.zerkforecast.timer) this.auras.zerkforecast.end();
+        if (this.auras.defforecast && this.auras.defforecast.timer) this.auras.defforecast.end();
+        if (this.auras.gladforecast && this.auras.gladforecast.timer) this.auras.gladforecast.end();
         if (this.auras.defendersresolve && this.auras.defendersresolve.timer) this.auras.defendersresolve.end();
         if (this.auras.singleminded && this.auras.singleminded.timer) this.auras.singleminded.end();
         if (this.auras.moonstalkerfury && this.auras.moonstalkerfury.timer) this.auras.moonstalkerfury.end();
@@ -1203,6 +1216,12 @@ class Player {
         if (this.auras.weaponbleedoh && this.auras.weaponbleedoh.timer) this.auras.weaponbleedoh.end();
         
 
+    }
+    stepechos() {
+        if (this.auras.echoeszerk && this.auras.echoeszerk.timer) this.auras.echoeszerk.step();
+        if (this.auras.echoesbattle && this.auras.echoesbattle.timer) this.auras.echoesbattle.step();
+        if (this.auras.echoesdef && this.auras.echoesdef.timer) this.auras.echoesdef.step();
+        if (this.auras.echoesglad && this.auras.echoesglad.timer) this.auras.echoesglad.step();
     }
     rollweapon(weapon) {
         let tmp = 0;
@@ -1674,16 +1693,9 @@ class Player {
         if (stance == 'glad') this.auras.gladiatorstance.timer = 1;
         this.rage = Math.min(this.rage, this.talents.rageretained);
         
-        if (this.auras.echoesstance) this.auras.echoesstance.use(prev);
-        if (this.auras.battleforecast && (this.stance == 'battle' || this.stance == 'glad')) {
-            this.auras.battleforecast.use();
-        } 
-        if (this.auras.berserkerforecast && this.stance == 'zerk') {
-            this.auras.berserkerforecast.use();
-        }
-        if (this.auras.defensiveforecast && this.stance == 'def') {
-            this.auras.defensiveforecast.use();
-        }
+        if (this.auras["echoes" + prev]) this.auras["echoes" + prev].use();
+        if (this.auras[this.stance + "forecast"]) this.auras[this.stance + "forecast"].use();
+       
         this.ragemod = (this.base.ragemod || 1) * (this.stance == 'glad' && !this.target.speed ? 1.5 : 1);
         if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
         this.stancetimer = 1500;
@@ -1691,8 +1703,11 @@ class Player {
         /* start-log */ if (this.logging) this.log(`Switched to ${stance} stance`); /* end-log */
     }
     isValidStance(stance, isRend) {
-        return this.stance == stance || this.stance == 'glad' ||
-            (this.auras.echoesstance && this.auras.echoesstance.timer && (this.auras.echoesstance.stance == stance || this.auras.echoesstance.stance == 'glad')) ||
+        return this.stance == stance || (this.stance == 'glad' && this.shield) ||
+            (stance == 'zerk' && this.auras.echoeszerk && this.auras.echoeszerk.timer) || 
+            (stance == 'battle' && this.auras.echoesbattle && this.auras.echoesbattle.timer) || 
+            (stance == 'def' && this.auras.echoesdef && this.auras.echoesdef.timer) || 
+            (this.auras.echoesglad && this.auras.echoesglad.timer) ||
             (isRend && this.stance == 'zerk' && this.bloodfrenzy);
     }
     isEnraged() {

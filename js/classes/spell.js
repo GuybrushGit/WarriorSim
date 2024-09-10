@@ -54,6 +54,7 @@ class Spell {
         if (spell.switchoractive) this.switchortime = parseFloat(spell.switchortime) * 1000;
         if (spell.switchoractive) this.switchorrage = parseInt(spell.switchorrage);
         if (spell.switchoractive) this.switchoractive = spell.switchoractive;
+        if (spell.secondarystance) this.secondarystance = spell.secondarystance;
         
     }
     dmg() {
@@ -145,11 +146,11 @@ class Overpower extends Spell {
         return dmg * this.player.stats.dmgmod;
     }
     use() {
+        if (!this.player.isValidStance('battle')) this.player.switch('battle');
         this.player.timer = 1500;
         this.player.dodgetimer = 0;
         this.timer = this.cooldown * 1000;
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
-        if (!this.player.isValidStance('battle')) this.player.switch('battle');
         this.player.rage -= this.cost;
     }
     canUse() {
@@ -177,6 +178,13 @@ class Execute extends Spell {
         return dmg * this.player.stats.dmgmod;
     }
     use(delayedheroic) {
+        if (!this.player.isValidStance('zerk') && !this.player.isValidStance('battle')) {
+            let newstance = 'zerk';
+            if (this.player.basestance == 'battle') newstance = 'battle';
+            else if (this.player.spells.unstoppablemight && this.player.spells.unstoppablemight.secondarystance == 'battle') newstance = 'battle';
+            this.player.switch(newstance);
+        }
+        
         // HS + Execute macro
         if (delayedheroic && delayedheroic.exmacro) {
             if (delayedheroic.canUse()) {
@@ -367,6 +375,19 @@ class Hamstring extends Spell {
         dmg = this.value1;
         return dmg * this.player.stats.dmgmod;
     }
+    use() {
+        if (!this.player.isValidStance('zerk') && !this.player.isValidStance('battle')) {
+            let newstance = 'zerk';
+            if (this.player.basestance == 'battle') newstance = 'battle';
+            else if (this.player.spells.unstoppablemight && this.player.spells.unstoppablemight.secondarystance == 'battle') newstance = 'battle';
+            this.player.switch(newstance);
+        }
+
+        this.player.timer = 1500;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+    }
 }
 
 class ThunderClap extends Spell {
@@ -381,6 +402,13 @@ class ThunderClap extends Spell {
         if(this.player.furiousthunder)
             dmg *= 2;
         return dmg * this.player.stats.dmgmod;
+    }
+    use() {
+        if (!this.player.isValidStance('battle') && !this.player.furiousthunder) this.player.switch('battle');
+        this.player.timer = 1500;
+        this.player.rage -= this.cost;
+        this.timer = this.cooldown * 1000;
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage &&
@@ -710,89 +738,41 @@ class UnstoppableMight extends Spell {
         this.player.switch(this.switchto);
     }
     canUse() {
-        return this.player.basestance == 'def' ? this.canUseDef() : this.player.basestance == 'glad' ? this.canUseGlad() : this.canUseZerk();
-    }
-    canUseZerk() {
         if (this.player.stancetimer) return false;
         if (!this.player.auras.battleforecast) return false;
 
-        //Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
-        if (this.switchtimeactive && this.player.stance == 'zerk' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'battle';
+        //Switch if Forecast shorter than [switchtime] secs AND rage below [switchrage]
+        if (this.switchtimeactive && this.player.stance == this.player.basestance && (this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
+            this.switchto = this.secondarystance;
             return true;
         }
 
-        if (this.switchtimeactive && this.player.stance == 'battle' && (this.player.auras.berserkerforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'zerk';
-            return true;
-        }
-
-        //Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
-        if (this.switchoractive && this.player.stance == 'zerk' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'battle';
-            return true;
-        }
-
-        if (this.switchoractive && this.player.stance == 'battle' && ((this.player.auras.berserkerforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'zerk';
-            return true;
-        }
-
-        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
-        if (this.switchechoesactive && this.player.stance == 'zerk' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'battle';
-            return true;
-        }
-
-        if (this.switchechoesactive && this.player.stance == 'battle' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'zerk';
-            return true;
-        }
-
-        // Switch back to default stance as soon as possible
-        if (this.switchdefault && this.player.stance != this.player.basestance && this.player.rage <= this.switchrage) {
+        if (this.switchtimeactive && this.player.stance == this.secondarystance && (this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
             this.switchto = this.player.basestance;
             return true;
         }
 
-        return false;
-    }
-    canUseGlad() {
-        if (this.player.stancetimer) return false;
-        if (!this.player.auras.battleforecast) return false;
-
-        // Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
-        if (this.switchtimeactive && this.player.stance == 'zerk' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'glad';
+        //Switch if Forecast shorter than [switchtime] secs OR rage below [switchrage]
+        if (this.switchoractive && this.player.stance == this.player.basestance && ((this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = this.secondarystance;
             return true;
         }
 
-        if (this.switchtimeactive && this.player.stance == 'glad' && (this.player.auras.berserkerforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'zerk';
-            return true;
-        }
-
-        // Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
-        if (this.switchoractive && this.player.stance == 'zerk' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'glad';
-            return true;
-        }
-
-        if (this.switchoractive && this.player.stance == 'glad' && ((this.player.auras.berserkerforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'zerk';
+        if (this.switchoractive && this.player.stance == this.secondarystance && ((this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+            this.switchto = this.player.basestance;
             return true;
         }
 
         // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
-        if (this.switchechoesactive && this.player.stance == 'zerk' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'glad';
-            return true;
-        }
+        // if (this.switchechoesactive && this.player.stance == this.player.basestance && (this.player.auras["echoes" + this.secondarystance].timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
+        //     this.switchto = this.secondarystance;
+        //     return true;
+        // }
 
-        if (this.switchechoesactive && this.player.stance == 'glad' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'zerk';
-            return true;
-        }
+        // if (this.switchechoesactive && this.player.stance == this.secondarystance && (this.player.auras["echoes" + this.player.basestance].timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
+        //     this.switchto = this.player.basestance;
+        //     return true;
+        // }
 
         // Switch back to default stance as soon as possible
         if (this.switchdefault && this.player.stance != this.player.basestance) {
@@ -801,51 +781,7 @@ class UnstoppableMight extends Spell {
         }
 
         return false;
-    }
-    canUseDef() {
-        if (this.player.stancetimer) return false;
-        if (!this.player.auras.battleforecast) return false;
 
-        //Switch if Forecast shorter than [switchtime] secs and rage below [switchrage]
-        if (this.switchtimeactive && this.player.stance == 'def' && (this.player.auras.battleforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'battle';
-            return true;
-        }
-
-        if (this.switchtimeactive && this.player.stance == 'battle' && (this.player.auras.defensiveforecast.timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
-            this.switchto = 'def';
-            return true;
-        }
-
-        //Switch if Forecast shorter than [switchtime] secs or rage below [switchrage]
-        if (this.switchoractive && this.player.stance == 'def' && ((this.player.auras.battleforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'battle';
-            return true;
-        }
-
-        if (this.switchoractive && this.player.stance == 'battle' && ((this.player.auras.defensiveforecast.timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
-            this.switchto = 'def';
-            return true;
-        }
-
-        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
-        if (this.switchechoesactive && this.player.stance == 'def' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'battle';
-            return true;
-        }
-
-        if (this.switchechoesactive && this.player.stance == 'battle' && (this.player.auras.echoesstance.timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-            this.switchto = 'def';
-            return true;
-        }
-
-        // Switch back to default stance as soon as possible
-        if (this.switchdefault && this.player.stance != this.player.basestance && this.player.rage <= this.switchrage) {
-            this.switchto = this.player.basestance;
-            return true;
-        }
-
-        return false;
     }
 }
 
@@ -2001,8 +1937,10 @@ class Rend extends Aura {
         this.player.timer = 1500;
         this.starttimer = step;
         this.stacks = this.value2;
-        if (!this.player.isValidStance('battle', true))
+
+        if (!this.player.isValidStance('def', true) && !this.player.isValidStance('battle', true))
             this.player.switch('battle');
+
         this.player.rage -= this.cost;
 
         let basedmg = this.value1;
@@ -2016,8 +1954,8 @@ class Rend extends Aura {
     }
     canUse() {
         return !this.timer && !this.player.timer && this.player.rage >= this.cost &&
-            (this.player.isValidStance('battle', true) || this.player.talents.rageretained >= this.cost) && 
-            (!this.maxrage || this.player.isValidStance('battle', true) || this.player.rage <= this.maxrage);
+            (this.player.isValidStance('battle', true) || this.player.isValidStance('def', true) || this.player.talents.rageretained >= this.cost) && 
+            (!this.maxrage || this.player.isValidStance('battle', true) || this.player.isValidStance('def', true) || this.player.rage <= this.maxrage);
     }
     end() {
         if (this.stacks)
@@ -2654,16 +2592,54 @@ class WarriorsResolve extends Aura {
     }
 }
 
-class EchoesStance extends Aura {
+class EchoesBattle extends Aura {
     constructor(player, id) {
-        super(player, id, 'Echoes of Stance');
+        super(player, id, 'Echoes of Battle Stance');
         this.duration = 5;
     }
-    use(prev) {
+    use() {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.stance = prev;
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
+class EchoesZerk extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Echoes of Berserker Stance');
+        this.duration = 5;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
+class EchoesDef extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Echoes of Defensive Stance');
+        this.duration = 5;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
+    }
+}
+
+class EchoesGlad extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Echoes of Gladiator Stance');
+        this.duration = 5;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
         /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
     }
 }
@@ -2678,29 +2654,14 @@ class BattleForecast extends Aura {
         if (this.timer) this.uptime += (step - this.starttimer);
         this.timer = step + this.duration * 1000;
         this.starttimer = step;
-        this.player.updateDmgMod();
+        this.player.updateAuras();
         this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        this.player.auras.gladforecast.remove();
         /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
-    }
-    step() {
-        if (step >= this.timer) {
-            this.uptime += (this.timer - this.starttimer);
-            this.timer = 0;
-            this.player.updateDmgMod();
-            /* start-log */ if (this.player.logging) this.player.log(`${this.name} removed`); /* end-log */
-        }
-    }
-    remove() {
-        if (this.timer) {
-            this.uptime += (step - this.starttimer);
-            this.timer = 0;
-            this.player.updateDmgMod();
-            /* start-log */ if (this.player.logging) this.player.log(`${this.name} removed`); /* end-log */
-        }
     }
 }
 
-class BerserkerForecast extends Aura {
+class ZerkForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Berserker Forecast');
         this.stats = { crit: 10 };
@@ -2708,10 +2669,27 @@ class BerserkerForecast extends Aura {
     }
 }
 
-class DefensiveForecast extends Aura {
+class DefForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Defensive Forecast');
         this.duration = 10;
+    }
+}
+
+class GladForecast extends Aura {
+    constructor(player, id) {
+        super(player, id, 'Gladiator Forecast');
+        this.mult_stats = { dmgmod: 10 };
+        this.duration = 10;
+    }
+    use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateAuras();
+        this.maxdelay = rng(this.player.reactionmin, this.player.reactionmax);
+        this.player.auras.battleforecast.remove();
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
     }
 }
 
