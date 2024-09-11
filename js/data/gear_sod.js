@@ -5424,19 +5424,6 @@ var gear = {
       "p": "inv_jewelry_necklace_17",
       "agi": 30,
       "hit": 1
-    },
-    {
-      "id": 231902,
-      "type": "Miscellaneous",
-      "slot": "neck",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Ada's Amulet",
-      "p": "inv_jewelry_necklace_16",
-      "str": 21,
-      "sta": 4,
-      "crit": 1
     }
   ],
   "shoulder": [
@@ -8840,12 +8827,13 @@ var gear = {
       "i": "76",
       "name": "Shoulders of Wrath",
       "p": "inv_shoulder_34",
+      "agi": 14,
       "str": 27,
-      "sta": 16,
+      "sta": 12,
       "resist": {
         "frost": 10
       },
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 231534,
@@ -8884,12 +8872,13 @@ var gear = {
       "i": "76",
       "name": "Shoulders of Wrath",
       "p": "inv_shoulder_34",
+      "agi": 14,
       "str": 27,
-      "sta": 16,
+      "sta": 12,
       "resist": {
         "frost": 10
       },
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 232257,
@@ -42007,12 +41996,13 @@ var gear = {
       "i": "76",
       "name": "Greaves of Wrath",
       "p": "inv_boots_plate_04",
+      "agi": 16,
       "str": 26,
-      "sta": 16,
+      "sta": 13,
       "resist": {
         "nature": 10
       },
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 231531,
@@ -42051,12 +42041,13 @@ var gear = {
       "i": "76",
       "name": "Greaves of Wrath",
       "p": "inv_boots_plate_04",
+      "agi": 16,
       "str": 26,
-      "sta": 16,
+      "sta": 13,
       "resist": {
         "nature": 10
       },
-      "crit": 1
+      "hit": 1
     },
     {
       "id": 232261,
@@ -76874,7 +76865,7 @@ var gear = {
       "sta": 20,
       "proc": {
         "spell": "Untamed",
-        "ppm": 0.55,
+        "ppm": 0.55
       }
     },
     {
@@ -76909,7 +76900,8 @@ var gear = {
       "mindmg": 235,
       "maxdmg": 354,
       "p": "inv_sword_50",
-      "sta": 33,
+      "str": 20,
+      "sta": 23,
       "ap": 86
     },
     {

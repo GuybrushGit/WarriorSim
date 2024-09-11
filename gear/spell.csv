@@ -24426,7 +24426,7 @@ Healing spells reduced by $s2%."
 415140,,"Dealing damage with Lava Lash or Stormstrike increases your Attack Power by $s1% of your Intellect, and your spell damage by $s2% of your total Attack Power for $415144d.",
 415144,,,"Attack Power increased by $w1.
 Spell damage increased by $w2."
-415231,,"Your Flame Shock now strikes up to $s1 targets, gains ${$m5/1000} sec increased duration, and deals $s3% increased damage. In addition, while you have Flametongue Weapon imbued on an equipped weapon, you gain ${$m6*$PL} increased spell damage.",
+415231,,"Your Flame Shock now strikes up to $s1 targets, gains ${$m5/1000} sec increased duration, and deals $s3% increased damage. In addition, while you have Flametongue Weapon imbued on your main hand equipped weapon, you gain increased spell damage equal to your Intellect.",
 415233,,"Turns the Shaman into a Ghost Wolf, increasing speed by $s2% and decreasing all damage taken by $s3%.","Increases movement speed by $s2%.
 Decreases damage taken by $s3%."
 415236,,"Selects the area $415242a1 yards around target player, and heals all of target player's party members within that area for ${$<healpower>*$415242m1/100} every second.",Healing target player's party within your Healing Rain for ${$<healpower>*$415242m1/100} every second.
@@ -25476,7 +25476,7 @@ $@spelldesc425412",
 425462,,,
 425463,,"Surge with fel energy, increasing your pet's and your own dodge chance by $s1%, and your chance to critically strike with all attacks by $s2%. Lasts $d.","Dodge chance increased by $s1%. 
 Master's critical strike chance increased by $s2%."
-425464,,"Your pet's critical strikes apply the Demonic Pact effect to your party or raid members for $425467d. Demonic Pact increases spell damage and healing by $s1% of your spell damage or ${$PL/2}, whichever is higher. Does not work on Subjugated demons.
+425464,,"Your Fire spells deal $s2% more damage, and your pet's critical strikes apply the Demonic Pact effect to your party or raid members for $425467d. Demonic Pact increases spell damage and healing by $s1% of your spell damage or ${$PL/2}, whichever is higher. Does not work on Subjugated demons.
 ",
 425465,,,
 425466,,,
@@ -25606,7 +25606,7 @@ Movement speed slowed by $s3%."
 426019,,Eat (at your own risk).,Granted a new kind of vision.
 426053,,,
 426062,,,
-426065,,"Increases the damage and healing done by your Holy Shock by $s1%, reduces the cooldown on Holy Shock to ${30+$m2/1000} sec, and your critical strikes with Holy Shock reset its cooldown and refund its mana cost.",
+426065,,"Increases the damage and healing done by your Holy Shock by $s1%, reduces the cooldown on Holy Shock to ${30+$m2/1000} sec, and your critical strikes with Holy Shock refund its mana cost and reduce its remaining cooldown by $m3 sec.",
 426068,,,
 426069,,,
 426070,,,
@@ -28963,7 +28963,7 @@ $@spelldesc400735",Healing ${$w1*3} health over $d.
 457544,,Your Stoneskin Totem also reduces Physical damage taken by $s1% and your Windwall Totem also reduces Magical damage taken by $s1%.,
 457548,,Lifetap generates $s1% more mana and $s2% less threat.,
 457549,,Increases your critical strike chance with spells and attacks by $s1%.,
-457553,,"Your Nightfall talent has a $s1% increased chance to trigger. Your Immolate periodic damage has a $h% chance to grant Fire Trance, reducing the cast time of your next Incinerate or Immolate by $457558s1%.",
+457553,,Your Nightfall talent has a $s1% increased chance to trigger. Your Incinerate has a $h% chance to trigger your Decimation regardless of the target's health.,
 457558,,,Your next Immolate or Incinerate becomes an instant cast spell.
 457559,,,
 457560,,,
@@ -30171,7 +30171,8 @@ Direct heals remove 1 stack."
 467049,,,Sneaky like a panther.
 467055,,,
 467077,,Increases the damage done and damage radius of Starfall's stars and Hurricane by $s1%.,
-467084,,Your Wrath casts have a $h% chance to summon a stand of $s1  Treants to attack your target for $d.,
+467079,,Summons $s1 treants to attack enemy targets for $d.,
+467084,,Your Wrath casts have a $h% chance to summon a stand of $s1 Treants to attack your target for $467079d.,
 467085,,,
 467088,,,Increases the damage done by your next Starfire by $s1%.
 467090,,"Your Wrath critical strikes have a $h% chance to make your next Starfire deal $467088s1% increased damage, stacking up to $467088u times.",
@@ -30198,7 +30199,7 @@ Direct heals remove 1 stack."
 467207,,Increases the duration of Rake by ${$m2/1000} sec and its periodic damage by $m1%.,
 467208,,Your critical strike chance is increased by $467209s1% while Tiger's Fury is active.,
 467209,,,
-467211,,"Your Shred and Mangle(Cat) abilities deal $s1% increased damage per your Bleed effect on the target, up to a maximum of $s2% increase.",
+467211,,"Your Shred, Ferocious Bite, and Mangle(Cat) abilities deal $s1% increased damage per your Bleed effect on the target, up to a maximum of $s2% increase.",
 467216,,Swipe(Bear) also causes your Maul to hit $467217s1 additional target for the next $467217d.,
 467217,,,
 467221,,"Your Mangle(Bear), Swipe(Bear), Maul, and Lacerate abilities gain $s1% increased critical strike chance against targets afflicted by your Lacerate.",
@@ -30220,11 +30221,11 @@ Direct heals remove 1 stack."
 467312,,Your damaging Shot abilities deal $s1% increased damage if the previous damaging Shot used was different than the current one.,
 467318,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
 467326,,Your Serpent Sting damage is increased by $s1% of your Attack Power over its normal duration.,
-467329,,Raptor Strike increases the damage done by your next other melee ability within $467331d by $467331s1%.,
+467329,,Raptor Strike increases the damage done by your next other melee ability (excluding Wing Clip) within $467331d by $467331s1%.,
 467330,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
-467331,,,Increases the damage of your next melee ability that is not Raptor Strike by $s1%.
+467331,,,Increases the damage of your next melee ability that is not Raptor Strike or Wing Clip by $s1%.
 467332,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
-467333,,Increases main hand weapon damage by $s1%.,
+467333,,Increases damage dealt by your main hand weapon with Raptor Strike and Wyvern Strike by $s1%.,
 467334,,Your periodic damage has a $h% chance to reset the cooldown on one of your Strike abilities. The Strike with the longest remaining cooldown is always chosen.,
 467345,,,
 467346,,"Taunts the target to attack you, but has no effect if the target is already attacking you.",
@@ -30294,7 +30295,7 @@ Casting speed increased by $s1%."
 Healing effects increased by $s2%.
 Mana cost increased by $s3%."
 467525,,"Heals your target for $s2% of their maximum health, and increases their maximum health by $s1% for $d.",Maximum health increased by $s1%.
-467526,,The cooldown on your Judgement is instantly reset if used on a different Seal than your last Judgement.,
+467526,,Reduces the cooldown on your Judgement ability by ${$m1/-1000} sec.,
 467528,,,
 467529,,"Your Judgement grants $467530s1% increased Holy damage for $467530d, stacking up to $467530u times.",
 467530,,,Increases holy damage dealt by $s1%.
@@ -30320,8 +30321,8 @@ Mana cost increased by $s3%."
 467604,,Reduces the cooldown of your Shadow Word: Death spell by ${$m1/-1000} sec.,
 467608,,"Your Shadow Word: Pain has a ${$m1/10}.1% chance per talent point in Spirit Tap to trigger your Spirit Tap talent when it deals damage, or a $s2% chance per talent point when a target dies with your Shadow Word: Pain active.",
 467611,,,
-467624,,"While Spirit Tap is active, your Periodic damage spells deal $s1% more damage.",
-467632,,,Your periodic damage spells deal $s1% increased damage.
+467624,,"While Spirit Tap is active, you deal $467632s1% more Shadow damage.",
+467632,,,Shadow damage done increased by $s1%.
 467642,,Wounds the target for $s1 damage.,
 467647,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
 467651,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
@@ -30331,7 +30332,7 @@ Mana cost increased by $s3%."
 467720,,Calls forth $s1 spawn of High Priest Mar'li that will restore $467666s1  mana to their master every time they deal damage.,
 467732,,,
 467735,,,Your next ability has its energy cost reduced by $s1%.
-467737,,Increases main hand weapon damage by $s1%.,
+467737,,Increases damage dealt by your main hand weapon from combo-generating abilities by $s1%.,
 467738,,Slices the enemy for $s1 Nature damage.,
 467739,,Reduces the cooldown on Vanish to ${$m3/60000} min. Cannot be combined with Elusiveness.,
 467740,,Sends a shadowy bolt at the enemy causing $s1 Shadow damage.,
@@ -30354,9 +30355,9 @@ Ranged attack power increased by $s2."
 467797,,Your Rolling with the Punches also grants you $s1% increased Armor from items per stack.,
 467801,,,
 467803,,The cooldown on your Main Gauche resets every time your target Dodges or Parries.,
-467804,,"Your damaging and healing critical strikes now have a $h% chance to trigger your Water Shield, but do not consume a charge or trigger its cooldown.",
+467804,,"Your non-periodic damaging and healing critical strikes now have a $h% chance to trigger your Water Shield, but do not consume a charge or trigger its cooldown.",
 467805,,Attempts to finish off a wounded enemy with a fatal strike.,
-467809,,Your Chain Lightning now also heals the target of your Earth Shield for $s1% of the damage done.,
+467809,,Your Chain Lightning now also heals the target of your most recent Earth Shield for $s1% of the damage done.,
 467810,,,
 467813,,,
 467814,,Increases the healing of Chain Heal and the damage of Chain Lightning by $s1%.,
@@ -30377,12 +30378,12 @@ Ranged attack power increased by $s2."
 467839,,Assault targets with a power-nullifying void clone.,Pacified.
 467840,,Assault targets with a power-nullifying void clone.,Pacified.
 467841,,,
-467863,,Your Clearcasting also increases the damage of affected spells by $s1% (reduced to $s2% against player-controlled targets).,
+467863,,"While Clearcasting is active, you deal $s2% more non-Physical damage.",
 467873,,,
-467877,,Increases the frequency of Maelstrom Weapon triggering by $s1%.,
+467877,,Your chance to trigger Static Shock is increased by $m1% (${$m1/2}% while dual-wielding).,
 467879,,"Critical strikes with Stormstrike grant $467880s1% increased critical strike chance with your next Lightning Bolt, Chain Lightning, or Shock spell.",
 467880,,,"Your next Lightning Bolt, Chain Lightning, or Shock spell is guaranteed a critical strike."
-467882,,You gain $s1 charge of Maelstrom Weapon immediately after casting a spell made instant by Maelstrom Weapon.,
+467882,,"Your Lightning Shield now gains a charge each time you hit a target with Lightning Bolt or Chain Lightning, up to a maximum of ${$432134m1+3} charges. In addition, your Lightning Shield can now deal critical damage.",
 467883,,,
 467884,,,
 467885,,,
@@ -30409,11 +30410,11 @@ Ranged attack power increased by $s2."
 468030,,,
 468038,,,
 468039,,,
-468046,,"While Metamorphosis is active, your offensive abilities and Demon summons cost no Soul Shards.",
+468046,,"While Metamorphosis is active, your offensive abilities and Demon summons cost no Soul Shards. In addition, you heal for $468062s1% of your maximum health when you damage a target with Shadowburn.",
 468048,,,
 468049,,,
 468050,,,
-468061,,You heal for $468062s1% of your maximum health when you damage a target with Shadowburn.,
+468061,,"Any excess healing you deal to yourself  is converted into a shield that absorbs damage. This shield can absorb up to $s1% of your maximum health, and stacks from multiple heals.",
 468062,,,
 468065,,You gain ${$468066m1/10} Rage every time you Parry or one of your attacks is Parried.,
 468066,,,
@@ -30445,7 +30446,7 @@ Ranged attack power increased by $s2."
 468211,,Close a targeted small Fel portal. May draw unwanted attention from the other side.,
 468224,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
 468225,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
-468235,,Your Whirlwind deals $s1% more damage and can be used in all stances.,
+468235,,Your Heroic Strike deals $s1% more damage.,
 468236,,"Your Slam hits reset the remaining cooldown on your Mortal Strike, Bloodthirst, and Shield Slam abilities.",
 468240,,,
 468242,,,
@@ -30478,7 +30479,7 @@ Ranged attack power increased by $s2."
 468316,,,
 468318,,"Permanently adds $468316s1 Stamina, $468316s2% chance to hit, and increases spell damage and healing by up to $468316s4 to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot.",
 468320,,,
-468321,,"Permanently adds $468320s1 Stamina, $468320s2 Strength, and$468320s3 Agility to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot.",
+468321,,"Permanently adds $468320s1 Stamina, $468320s2 Strength, and $468320s3 Agility to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot.",
 468322,,,
 468323,,"Permanently adds $468322s1 Stamina, $468322s2 Strength, and $468322s3 Defense to a leg or head slot item. Does not stack with other enchantments for the selected equipment slot.",
 468324,,,
@@ -30662,7 +30663,7 @@ Conjured items disappear if logged out for more than 15 minutes.",
 468854,,,
 468879,Rank 1,,Stealthed.
 468882,,,
-468913,,"Increase the range of your Holy Shock spell by $s1 yards, but reduce the damage it deals by $s2%.",
+468913,,"Increase the range of your Holy Shock spell by $s1 yards, but reduces all Holy damage your deal by $s2%.",
 468919,,,
 468925,,Move speed slowed by $s2%.,Move speed slowed by $s2%.
 468971,,All attacks are guaranteed to land and will be critical strikes for the next $d.,
@@ -30871,7 +30872,6 @@ Immune to all attacks and spells."
 469879,,"Strikes fear in an enemy, causing it to flee in terror for up to $d. Only 1 target can be feared at a time.",Fleeing in fear.
 469884,,,
 469891,,Sound the horn to call Aeonas back to you should you get separated. This will also cancel any magical disguises you have active.,Aeonas is fighting alongside you.
-469984,,,
 469985,,"Bear the mark of a draconic messenger, ally to Dragonflight.",
 469990,,"Calls down a molten rain, burning all enemies in a selected area for $s1 Fire damage every $t1 sec. for $d.",$s1 Fire damage inflicted every $t1 sec.
 470009,,,
@@ -30907,7 +30907,7 @@ Reduced movement speed."
 470199,,,
 470235,,Increases the attack power bonus on Windfury Weapon attacks by $s1.,
 470240,,"While Frostbrand Weapon is active, your Water Shield triggers reduce the cast time of your next Chain Lightning spell within $470272d1 by $470272s1%, and increases its damage by $470272s1%. Stacking up to 5 times.",
-470246,,"Your Holy Shock spell reduces the cast time and mana cost of your next Holy Wrath spell cast within $470271d1 by $470271s1%, and increases its damage by $470271s4%. Stacking up to 5 times.",
+470246,,"Causing damage with your Holy Shock spell reduces the cast time and mana cost of your next Holy Wrath cast within $470271d1 by $470271s1%, and increases its damage by $470271s4%. Stacking up to 5 times.",
 470263,,"Your Avenger's Shield hits $s2 fewer targets, but will hit its target $s1 times.",
 470264,,,
 470265,,"Hurls a holy shield at the enemy, dealing ${$m1*$<damagepower>/100+0.091*$SPH+0.091*$AP} to ${$M1*$<damagepower>/100+0.091*$SPH+0.091*$AP} Holy damage, Dazing them and then jumping to additional nearby enemies.  Affects $x1 total targets.  Lasts $d.",Dazed.
@@ -30916,3 +30916,41 @@ Reduced movement speed."
 470270,,,
 470271,,,"Reduces the cast time and mana cost of your next Holy Wrath spell by $s1%, and increases its damage by $s4%."
 470272,,,"Reduces the cast time your next Chain Lightning spell by $s1%, and increases its damage by $s3%."
+470279,,,Absorbs $w1 damage.
+470280,,Deals $s1 Shadow damage split between enemy targets within $a1 yards in front of the caster. ,Shadow damage taken increased by $s2%
+470317,,,
+470338,,,
+470451,,,
+470454,,,
+470455,,,
+470457,,,
+470458,,,
+470459,,Teleport player to relative safety.,Teleport player to relative safety.
+470460,,Teleport player to relative safety.,Teleport player to relative safety.
+470462,,Launches shadow infused orbs towards a random player that travels out and return to it's origin. Players hit are inflicted with $s1 Shadow damage,
+470495,,,
+470497,,Carve a scale from Nefarian's hide. Only usable when Nefarian has been significantly weakened in battle.,
+470500,,,
+470535,,"Inflicts $s1% weapon damage and leaves the target wounded, reducing the effectiveness of any healing by $s2% for $d.",Healing effects reduced by $s2%.
+470537,,Carve a scale from Nefarian's hide. Only usable when Nefarian has been significantly weakened in battle.,
+470613,,"Smites an enemy, inflicting Holy damage.",
+470614,,,
+470665,,,
+470713,,,
+470743,Rank 1,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470744,Rank 2,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470745,Rank 3,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470746,Rank 4,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470748,Rank 5,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470749,Rank 6,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470753,Rank 7,Casts a bolt of lightning at the target for $s1 Nature damage.,
+470784,,,
+470788,,Chance to hit with Frost spells increased by $s1%. Not cumulative with other ring runes.,
+470789,,Chance to hit with Fire spells increased by $s1%. Not cumulative with other ring runes.,
+470793,,,
+470795,,,
+470807,,,
+470836,,"Creates a cloud of lightning that lasts $d., blasting all enemies in a selected area for $s1  Nature damage and inflicting $s2 additional damage every $t2 sec.",
+470856,,"Smites an enemy, inflicting Holy damage.",
+470866,,"Creates a cloud of lightning that lasts $d., blasting all enemies in a selected area for $s1  Nature damage and inflicting $s2 additional damage every $t2 sec.",
+470868,,,Wisp Costume.   Cannot attack or cast spells while in wisp form.  Right-Click this icon to remove the effect.

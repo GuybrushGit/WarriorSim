@@ -1417,7 +1417,7 @@ var enchant = {
   items: [231038,231037,231036,231035,231034,231033,231032,231031],
   bonus: [
      { count: 2, stats: { overpowerrend: true } },
-     { count: 4, stats: { whirlwindbonus: true } },
+     { count: 4, stats: { heroicbonus: true } },
      { count: 6, stats: { slammainreset: true } },
   ]
 },

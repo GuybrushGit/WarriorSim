@@ -660,44 +660,44 @@
           "sta": 12,
           "hit": 1
         });
-        gear["twohand"].push({
-          "id": 230003,
-          "type": "Sword",
-          "slot": "twohand",
-          "r": 60,
-          "q": "5",
-          "i": "90",
-          "name": "Hammer of the Lightbringer",
-          "speed": 4,
-          "mindmg": 310,
-          "maxdmg": 466,
-          "p": "inv_mace_1h_uther_d_01",
-          "agi": 20,
-          "str": 14,
-          "sta": 10,
-          "proc": {
-            "spell": "CrusaderZeal",
-          }
-        });
-        gear["mainhand"].push({
-          "id": 23000399,
-          "type": "Sword",
-          "slot": "mainhand",
-          "r": 60,
-          "q": "5",
-          "i": "90",
-          "name": "Hammer of the Lightbringer",
-          "speed": 4,
-          "mindmg": 310,
-          "maxdmg": 466,
-          "p": "inv_mace_1h_uther_d_01",
-          "agi": 20,
-          "str": 14,
-          "sta": 10,
-          "proc": {
-            "spell": "CrusaderZeal",
-          }
-        });
+        // gear["twohand"].push({
+        //   "id": 230003,
+        //   "type": "Sword",
+        //   "slot": "twohand",
+        //   "r": 60,
+        //   "q": "5",
+        //   "i": "90",
+        //   "name": "Hammer of the Lightbringer",
+        //   "speed": 4,
+        //   "mindmg": 310,
+        //   "maxdmg": 466,
+        //   "p": "inv_mace_1h_uther_d_01",
+        //   "agi": 20,
+        //   "str": 14,
+        //   "sta": 10,
+        //   "proc": {
+        //     "spell": "CrusaderZeal",
+        //   }
+        // });
+        // gear["mainhand"].push({
+        //   "id": 23000399,
+        //   "type": "Sword",
+        //   "slot": "mainhand",
+        //   "r": 60,
+        //   "q": "5",
+        //   "i": "90",
+        //   "name": "Hammer of the Lightbringer",
+        //   "speed": 4,
+        //   "mindmg": 310,
+        //   "maxdmg": 466,
+        //   "p": "inv_mace_1h_uther_d_01",
+        //   "agi": 20,
+        //   "str": 14,
+        //   "sta": 10,
+        //   "proc": {
+        //     "spell": "CrusaderZeal",
+        //   }
+        // });
 
         document.querySelector("textarea").value = "var gear = " + JSON.stringify(gear, null, 2) + ";";
       }

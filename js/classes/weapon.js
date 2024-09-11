@@ -112,9 +112,11 @@ class Weapon {
     }
     dmg(heroicstrike) {
         let dmg;
+        let mod = 1;
         dmg = rng(this.mindmg + this.bonusdmg, this.maxdmg + this.bonusdmg) + (this.player.stats.ap / 14) * this.speed + this.player.stats.moddmgdone;
         if (heroicstrike) dmg += heroicstrike.bonus;
-        return dmg * this.modifier * this.player.stats.dmgmod + this.player.stats.moddmgtaken;
+        if (heroicstrike && this.player.heroicbonus) mod = 1.1;
+        return dmg * this.modifier * this.player.stats.dmgmod * mod + this.player.stats.moddmgtaken;
     }
     avgdmg() {
         let dmg = ((this.mindmg + this.bonusdmg + this.maxdmg + this.bonusdmg)/2) + (this.player.stats.ap / 14) * this.normSpeed + this.player.stats.moddmgdone;

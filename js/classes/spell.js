@@ -111,11 +111,10 @@ class Whirlwind extends Spell {
         let dmg;
         dmg = rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        let mod = this.player.whirlwindbonus ? 1.1 : 1;
-        return dmg * this.player.stats.dmgmod * mod;
+        return dmg * this.player.stats.dmgmod;
     }
     use() {
-        if (!this.player.isValidStance('zerk') && !this.player.whirlwindbonus) this.player.switch('zerk');
+        if (!this.player.isValidStance('zerk')) this.player.switch('zerk');
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
@@ -123,8 +122,8 @@ class Whirlwind extends Spell {
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
-        (this.player.isValidStance('zerk') || this.player.whirlwindbonus || this.player.talents.rageretained >= this.cost) &&
-        (!this.maxrage || this.player.isValidStance('zerk') || this.player.whirlwindbonus || this.player.rage <= this.maxrage) &&
+        (this.player.isValidStance('zerk') || this.player.talents.rageretained >= this.cost) &&
+        (!this.maxrage || this.player.isValidStance('zerk') || this.player.rage <= this.maxrage) &&
         (!this.minrage || this.player.rage >= this.minrage) &&
         (!this.maincd || 
             (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) || 
@@ -496,9 +495,10 @@ class QuickStrike extends Spell {
         this.cooldown = 0;
     }
     dmg() {
-        let dmg;
+        let dmg, mod = 1;
         dmg = ~~rng(this.player.stats.ap * 0.25, this.player.stats.ap * 0.35) + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod;
+        if (this.player.heroicbonus) mod = 1.1;
+        return dmg * this.player.stats.dmgmod * mod;
     }
     canUse() {
         return !this.timer && !this.player.timer && this.cost <= this.player.rage && 
@@ -2597,7 +2597,7 @@ class WarriorsResolve extends Aura {
 class EchoesBattle extends Aura {
     constructor(player, id) {
         super(player, id, 'Echoes of Battle Stance');
-        this.duration = 5;
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2610,7 +2610,7 @@ class EchoesBattle extends Aura {
 class EchoesZerk extends Aura {
     constructor(player, id) {
         super(player, id, 'Echoes of Berserker Stance');
-        this.duration = 5;
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2623,7 +2623,7 @@ class EchoesZerk extends Aura {
 class EchoesDef extends Aura {
     constructor(player, id) {
         super(player, id, 'Echoes of Defensive Stance');
-        this.duration = 5;
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2636,7 +2636,7 @@ class EchoesDef extends Aura {
 class EchoesGlad extends Aura {
     constructor(player, id) {
         super(player, id, 'Echoes of Gladiator Stance');
-        this.duration = 5;
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2649,8 +2649,8 @@ class EchoesGlad extends Aura {
 class BattleForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Battle Forecast');
-        this.mult_stats = { dmgmod: 10 };
-        this.duration = 10;
+        this.mult_stats = { dmgmod: 5 };
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
@@ -2666,23 +2666,23 @@ class BattleForecast extends Aura {
 class ZerkForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Berserker Forecast');
-        this.stats = { crit: 10 };
-        this.duration = 10;
+        this.stats = { crit: 5 };
+        this.duration = 15;
     }
 }
 
 class DefForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Defensive Forecast');
-        this.duration = 10;
+        this.duration = 15;
     }
 }
 
 class GladForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Gladiator Forecast');
-        this.mult_stats = { dmgmod: 10 };
-        this.duration = 10;
+        this.mult_stats = { dmgmod: 5 };
+        this.duration = 15;
     }
     use() {
         if (this.timer) this.uptime += (step - this.starttimer);
