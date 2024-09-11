@@ -268,12 +268,15 @@ class Simulation {
         prepull.sort((a,b) => (b.usestep - a.usestep));
         let counter = 1500;
         for(let aura of prepull) {
-            aura.use(false, counter);
-            counter += 1500;
+            if (aura.canUse()) {
+                aura.use(false, counter);
+                counter += 1500;
+                this.player.timer = 0;
+                this.player.itemtimer = 0;
+            }
         }
         if (player.auras.battleshout) player.auras.battleshout.use(true);
         this.player.timer = 0;
-        this.player.itemtimer = 0;
 
         while (step < this.maxsteps) {
 
