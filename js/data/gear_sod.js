@@ -58584,7 +58584,8 @@ var gear = {
       "sta": 7,
       "proc": {
         "magic": true,
-        "dmg": 84
+        "dmg": 84,
+        "ppm": 1.3
       },
       "ap": 12
     }
@@ -69438,7 +69439,8 @@ var gear = {
       "sta": 7,
       "proc": {
         "magic": true,
-        "dmg": 84
+        "dmg": 84,
+        "ppm": 1.3
       },
       "ap": 12
     },
@@ -76885,7 +76887,7 @@ var gear = {
       "crit": 1,
       "proc": {
         "dmg": 301,
-        "ppm": 1.4
+        "ppm": 1
       }
     },
     {

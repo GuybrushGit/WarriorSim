@@ -62,18 +62,18 @@ SIM.PROFILES = {
             view.importProfile(preset_dw, index);
         });
 
-        view.presets.on('click','.import-gl', function (e) {
+        view.presets.on('click','.import-thmc', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
-            view.importProfile(preset_gl, index);
+            view.importProfile(preset_thmc, index);
         });
 
-        view.presets.on('click','.import-pb', function (e) {
+        view.presets.on('click','.import-dwmc', function (e) {
             e.preventDefault();
             e.stopPropagation();
             let index = view.container.find('.profile').last().data('index') + 1;
-            view.importProfile(preset_pb, index);
+            view.importProfile(preset_dwmc, index);
         });
 
         view.presets.on('click','.import-fr', function (e) {
@@ -234,6 +234,8 @@ SIM.PROFILES = {
                 <label>Presets:</label>
                 <div class="import-th">P5 2H Fury</div>
                 <div class="import-dw">P5 DW Fury</div>
+                <div class="import-thmc">Pre-BWL 2H Fury</div>
+                <div class="import-dwmc">Pre-BWL DW Fury</div>
                 <div class="import-fr">Heat 3 BiS</div>`);
         }
             
