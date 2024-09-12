@@ -1098,7 +1098,7 @@ SIM.UI = {
 
             if (filter) {
                 if (filter == "All") {
-                    if (type == "offhand" && (storage.buffs.includes("413479") || storage.buffs.includes("71"))) { // Glad & Def Stance
+                    if (type == "offhand" && (storage.buffs.includes("71"))) { // Glad & Def Stance
                         if (item.type !== "Shield") continue;
                     }
                     else if (item.type == "Shield") continue;

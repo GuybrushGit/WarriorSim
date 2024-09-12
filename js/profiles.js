@@ -232,11 +232,9 @@ SIM.PROFILES = {
             view.presets.empty();
             view.presets.append(`
                 <label>Presets:</label>
-                <div class="import-fr">Heat 3 BiS</div>
-                <div class="import-dw">60 DW Fury</div>
-                <div class="import-pb">60 DW Fury Pre-Bis</div>
-                <div class="import-th">60 2H Arms</div>
-                <div class="import-gl">60 Gladiator</div>`);
+                <div class="import-th">P5 2H Fury</div>
+                <div class="import-dw">P5 DW Fury</div>
+                <div class="import-fr">Heat 3 BiS</div>`);
         }
             
         },
