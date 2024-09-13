@@ -468,7 +468,7 @@ SIM.SETTINGS = {
                 for (let type in gear)
                     for (let g of gear[type])
                         if (g.selected && items.includes(g.id)) count++;
-                if (count < 6) {
+                if (count < 4) {
                     spell.active = false;
                     continue;
                 }

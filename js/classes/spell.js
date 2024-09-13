@@ -114,7 +114,12 @@ class Whirlwind extends Spell {
         return dmg * this.player.stats.dmgmod;
     }
     use() {
-        if (!this.player.isValidStance('zerk')) this.player.switch('zerk');
+        if (!this.player.isValidStance('zerk')) {
+            let stance = 'zerk';
+            if (this.player.switchdelay && this.player.stance == 'glad')
+                stance = this.player.basestance == 'glad' ? this.player.spells.unstoppablemight.secondarystance : this.player.basestance;
+            this.player.switch(stance);
+        }
         this.player.timer = 1500;
         this.player.rage -= this.cost;
         this.timer = this.cooldown * 1000;
@@ -145,7 +150,13 @@ class Overpower extends Spell {
         return dmg * this.player.stats.dmgmod;
     }
     use() {
-        if (!this.player.isValidStance('battle')) this.player.switch('battle');
+        if (!this.player.isValidStance('battle')) {
+            let stance = 'battle';
+            if (this.player.switchdelay && this.player.stance == 'glad')
+                stance = this.player.basestance == 'glad' ? this.player.spells.unstoppablemight.secondarystance : this.player.basestance;
+            this.player.switch(stance);
+        }
+
         this.player.timer = 1500;
         this.player.dodgetimer = 0;
         this.timer = this.cooldown * 1000;
@@ -178,10 +189,12 @@ class Execute extends Spell {
     }
     use(delayedheroic) {
         if (!this.player.isValidStance('zerk') && !this.player.isValidStance('battle')) {
-            let newstance = 'zerk';
-            if (this.player.basestance == 'battle') newstance = 'battle';
-            else if (this.player.spells.unstoppablemight && this.player.spells.unstoppablemight.secondarystance == 'battle') newstance = 'battle';
-            this.player.switch(newstance);
+            let stance = 'zerk';
+            if (this.player.switchdelay && this.player.stance == 'glad')
+                stance = this.player.basestance == 'glad' ? this.player.spells.unstoppablemight.secondarystance : this.player.basestance;
+            else if (this.player.basestance == 'battle') stance = 'battle';
+            else if (this.player.spells.unstoppablemight && this.player.spells.unstoppablemight.secondarystance == 'battle') stance = 'battle';
+            this.player.switch(stance);
         }
         
         // HS + Execute macro
@@ -1940,11 +1953,14 @@ class Rend extends Aura {
         this.starttimer = step;
         this.stacks = this.value2;
 
-        if (!this.player.isValidStance('def', true) && !this.player.isValidStance('battle', true))
-            this.player.switch('battle');
+        if (!this.player.isValidStance('def', true) && !this.player.isValidStance('battle', true)) {
+            let stance = 'battle';
+            if (this.player.switchdelay && this.player.stance == 'glad')
+                stance = this.player.basestance == 'glad' ? this.player.spells.unstoppablemight.secondarystance : this.player.basestance;
+            this.player.switch(stance);
+        }
 
         this.player.rage -= this.cost;
-
         let basedmg = this.value1;
         if (this.player.bloodfrenzy)
             basedmg += this.value1 + ~~(this.player.stats.ap * 0.03 * this.value2);
