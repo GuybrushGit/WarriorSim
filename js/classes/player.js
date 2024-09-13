@@ -1691,7 +1691,7 @@ class Player {
        
         this.ragemod = (this.base.ragemod || 1) * (this.stance == 'glad' && !this.target.speed ? 1.5 : 1);
         if (this.switchrage) this.ragetimer = 10; // Rage gain is batched to prevent switching stance + casting BT on the same step
-        this.stancetimer = 1500;
+        this.stancetimer = 1000;
         this.updateAuras();
         /* start-log */ if (this.logging) this.log(`Switched to ${stance} stance`); /* end-log */
     }

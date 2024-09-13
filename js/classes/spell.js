@@ -1200,7 +1200,7 @@ class BerserkerStance extends Aura {
 class GladiatorStance extends Aura {
     constructor(player, id) {
         super(player, id, 'Gladiator Stance');
-        this.mult_stats = { dmgmod: 10 };
+        this.mult_stats = { dmgmod: player.shield ? 10 : 0 };
     }
 }
 

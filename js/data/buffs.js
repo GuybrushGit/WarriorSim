@@ -842,6 +842,7 @@ var buffs = [
       id: 27666,
       spellid: true,
       name: "Darnassus Gift of Friendship",
+      group: "blasted",
       iconname: "inv_misc_gift_02",
       minlevel: 1,
       other: true,
