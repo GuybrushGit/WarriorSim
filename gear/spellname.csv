@@ -22863,7 +22863,7 @@ ID,Name_lang
 425212,Power Word: Barrier
 425213,Engrave Bracers - Power Word: Barrier
 425215,Engrave Chest - Twisted Faith
-425216,Engrave Chest - Void Plague
+425216,Engrave Boots - Void Plague
 425218,Crazed
 425225,Fire Damage Check
 425226,Burning
@@ -24536,9 +24536,9 @@ ID,Name_lang
 440882,Infernal Armor
 440892,Mark of Chaos
 440895,Mark of Chaos
-440922,Engrave Cloak - Decimation
+440922,Engrave Boots - Decimation
 440923,Decimation
-440924,Engrave Boots - Mark of Chaos
+440924,Engrave Cloak - Mark of Chaos
 440925,Mark of Chaos
 440926,Engrave Cloak - Infernal Armor
 440927,Infernal Armor
@@ -26058,7 +26058,7 @@ ID,Name_lang
 460939,Might of Stormwind
 460940,Might of Stormwind
 460941,Controller Timer
-460962,Increased Fire Resist 15
+460962,Increased Fire Resist 25
 460963,Blessed Flame Mantle of the Dawn
 460975,Drawing Fire
 460988,[DNT] Calyx - On Quest
@@ -26779,6 +26779,7 @@ ID,Name_lang
 467049,Blessing of Bethekk
 467055,Kris's Test Spell
 467077,S03 - Item - T2 - Druid - Balance 2P Bonus
+467079,Force of Nature
 467084,S03 - Item - T2 - Druid - Balance 4P Bonus
 467085,[DNT] Elsewhen Torch Active
 467088,Astral Power
@@ -27450,7 +27451,6 @@ ID,Name_lang
 469879,Fear
 469884,[DNT] Detect Invisibility
 469891,Call Aeonas
-469984,Resurrection
 469985,Illusion Passive
 469990,Rain of Fire
 470009,Root Self
@@ -27486,7 +27486,7 @@ ID,Name_lang
 470235,Totem of Astral Flow
 470240,Totem of Conductive Currents
 470246,Libram of Wrath
-470263,Libram of Avengement
+470263,Libram of Avenging
 470264,Avenger's Shield
 470265,Avenger's Shield
 470266,Increased Nourish Healing
@@ -27494,3 +27494,46 @@ ID,Name_lang
 470270,Idol of Feline Focus
 470271,Libram of Wrath
 470272,Totem of Conductive Currents
+470279,Demonic Aegis
+470280,Umbral Slash
+470317,DNT
+470338,[DNT] Effect
+470451,Portal Effect: Stormwind
+470454,DNT
+470455,[DNT] Effect
+470457,Bounding Shadow
+470458,Bounding Shadow
+470459,Teleport
+470460,Teleport
+470462,Bounding Shadow
+470495,Vulnerable
+470497,Exploit Weakness
+470500,[DNT] Dummy Aura Warrior
+470535,Nether Strike
+470537,Exploit Weakness
+470613,Destroy Simulacrum
+470614,Lightning Strike From Sky VFX
+470665,Majordomo Teleport Visual
+470713,Complete Quest
+470743,Lightning Shield
+470744,Lightning Shield
+470745,Lightning Shield
+470746,Lightning Shield
+470748,Lightning Shield
+470749,Lightning Shield
+470753,Lightning Shield
+470784,Permanent Feign Death
+470788,Frost Specialization
+470789,Fire Specialization
+470793,[DNT] S03 - ZG Raid - Hakkar Defeated Priest Tracking Message
+470795,[DNT] S03 - BWL Raid - Trial Tracking Message
+470807,[DNT] Personal Phase Aura
+470836,Lightning Cloud
+470856,DNT
+470866,Lightning Cloud
+470868,Wisp Costume
+471050,[DNT] Combat Check
+471051,[DNT] Combat Check
+471056,[DNT] Riosustrasz Fight Initialization
+471149,Out of Bounds
+471150,Portal to Old Andorhal

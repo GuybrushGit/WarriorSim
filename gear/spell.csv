@@ -25476,7 +25476,7 @@ $@spelldesc425412",
 425462,,,
 425463,,"Surge with fel energy, increasing your pet's and your own dodge chance by $s1%, and your chance to critically strike with all attacks by $s2%. Lasts $d.","Dodge chance increased by $s1%. 
 Master's critical strike chance increased by $s2%."
-425464,,"Your Fire spells deal $s2% more damage, and your pet's critical strikes apply the Demonic Pact effect to your party or raid members for $425467d. Demonic Pact increases spell damage and healing by $s1% of your spell damage or ${$PL/2}, whichever is higher. Does not work on Subjugated demons.
+425464,,"Your Fire and Shadow spells deal $s2% more damage, and your pet's critical strikes apply the Demonic Pact effect to your party or raid members for $425467d. Demonic Pact increases spell damage and healing by $s1% of your spell damage or ${$PL/2}, whichever is higher. Does not work on Subjugated demons.
 ",
 425465,,,
 425466,,,
@@ -27717,10 +27717,9 @@ $@spelldesc440802",
 440870,,"Your Soul Fire spell no longer has a cooldown. Additionally, when you Shadow Bolt, Shadow Cleave, Incinerate, or Soul Fire a target that is at or below $s2% health, the cast time of your Soul Fire spell is reduced by $s1% for $440873d. Soul Fires cast under the effect of Decimation cost no shard.",
 440873,,,"Your Soul Fire cast time is reduced by $s1%, and costs no shard."
 440882,,"Your spirit becomes infused with demonic energy, reducing all Magic damage you take by a percentage equal to your Physical damage reduction from armor. Lasts $d.",Magical damage taken is reduced by $w1%.
-440892,,"All your Curses except Curse of Shadow and Curse of the Elements now apply the Mark of Chaos, reducing the target's magical resistances by $s2 and increasing all spell damage taken by $s3% while they remain cursed.",
+440892,,"All your Curses except Curse of Shadow and Curse of the Elements now apply the Mark of Chaos, reducing the target's Arcane, Fire, Frost, Nature, and Shadow resistances by $s2 and increasing all spell damage taken from those schools by $s3% while they remain cursed.",
 440895,,,Your next single-target non-periodic spell gains $s1% increased critical strike chance.
-440922,,"Engrave your cloak with the Decimation
-rune:
+440922,,"Engrave your boots with the Decimation rune:
 
 $@spellicon440870
 $@spelldesc440870",
@@ -27728,7 +27727,7 @@ $@spelldesc440870",
 
 $@spellicon440870
 $@spelldesc440870",
-440924,,"Engrave your boots with the Mark of Chaos rune:
+440924,,"Engrave your cloak with the Mark of Chaos rune:
 
 $@spellicon440892
 $@spelldesc440892",
@@ -29040,13 +29039,13 @@ Wyvern Strike requires you to have the Wyvern Sting talent, and replaces the Wyv
 458808,,,
 458809,,,
 458819,,Inflicts Fire damage to an enemy.,
-458820,Rank 1,,Target takes $s1 Nature damage every $t1 seconds and $s2% increased non-Physical damage.
-458821,Rank 1,"Coats a weapon with poison that lasts for 30 minutes. Each strike has a $h% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.
+458820,Rank 1,,"Target takes $s1 Nature damage every $t1 seconds and $s2% increased Arcane, Fire, Frost, Nature, and Shadow damage."
+458821,Rank 1,"Coats a weapon with poison that lasts for 30 minutes. Each strike has a $h% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased Arcane, Fire, Frost, Nature, and Shadow damage.  Stacks up to $458820u times on a single target.
 
 Occult Poison counts as Deadly Poison and benefits from all talents and effects that trigger from or modify Deadly Poison.
 ",
 458822,Rank 1,"Coats a weapon with poison that lasts for 30 minutes.
-Each strike has a 30% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased non-Physical damage.  Stacks up to $458820u times on a single target.
+Each strike has a 30% chance of poisoning the enemy for $458820o1 Nature damage over $458820d and causing the enemy to take $458820s2% increased Arcane, Fire, Frost, Nature, and Shadow damage.  Stacks up to $458820u times on a single target.
 
 Occult Poison counts as Deadly Poison and benefits from all talents and effects that trigger from or modify Deadly Poison.",
 458833,,,
@@ -29618,7 +29617,7 @@ May not be combined with similar long-duration effects.",Increases critical chan
 461579,,,
 461580,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
 461607,Summon,"Leap atop your charger for $d, increasing movement speed by $s2%. Usable while indoors or in combat.",Increases speed by $s2%.
-461615,,,Reduces all magical resistances by $w1.  Increases all spell damage taken by $w2%.
+461615,,,"Reduces Arcane, Fire, Frost, Nature, and Shadow resistances by $w1.  Increases Arcane, Fire, Frost, Nature, and Shadow damage taken by $w2%."
 461628,,,
 461629,,"+$s1 Attack Power in Cat, Bear, and Dire Bear forms only.",
 461632,,Restores $o1 mana over $d.  Must remain seated while drinking.,Restores $/5;s2 mana per second.
@@ -29808,7 +29807,7 @@ Stamina reduced by $s2."
 462280,,,
 462281,,Teaches you how to sew an Embroidered Belt of the Archmage.,
 462282,,,
-462286,Rank 1,,Target takes $s1 Nature damage every $t1 seconds and $s2% increased non-Physical damage.
+462286,Rank 1,,"Target takes $s1 Nature damage every $t1 seconds and $s2% increased Arcane, Fire, Frost, Nature, and Shadow damage."
 462287,,,
 462289,,,
 462307,,,
@@ -30383,7 +30382,7 @@ Ranged attack power increased by $s2."
 467877,,Your chance to trigger Static Shock is increased by $m1% (${$m1/2}% while dual-wielding).,
 467879,,"Critical strikes with Stormstrike grant $467880s1% increased critical strike chance with your next Lightning Bolt, Chain Lightning, or Shock spell.",
 467880,,,"Your next Lightning Bolt, Chain Lightning, or Shock spell is guaranteed a critical strike."
-467882,,"Your Lightning Shield now gains a charge each time you hit a target with Lightning Bolt or Chain Lightning, up to a maximum of ${$432134m1+3} charges. In addition, your Lightning Shield can now deal critical damage.",
+467882,,"While Static Shock is engraved, your Lightning Shield now gains a charge each time you hit a target with Lightning Bolt or Chain Lightning, up to a maximum of ${$432134m1+3} charges. In addition, while Static Shock is engraved, your Lightning Shield can now deal critical damage.",
 467883,,,
 467884,,,
 467885,,,
@@ -30540,7 +30539,7 @@ Spell critical strike chance increased by $s3%."
 468417,,Increases the Attack Power your Beast pet gains from your attributes by $s1%.,
 468418,,Increases the Focus regeneration of your Beast pet by $s1%.,
 468425,,Increases the chance to trigger your Fingers of Frost rune by an additional $s1%.,
-468427,,Increases damage done by your Frostbolt spell by $s1%.,
+468427,,Increases damage done by your Frostbolt and Spellfrost Bolt spells by $s1%.,
 468428,,Increases damage done by your Holy Shock spell by $s1%.,
 468431,,Reduces the cooldown of your Exorcism spell by ${$m1/-1000} sec.,
 468433,,Reduces the cooldown of your Penance spell by ${$m1/-1000} sec.,
@@ -30580,8 +30579,8 @@ Spell critical strike chance increased by $s3%."
 468500,,"Charges an enemy, inflicting normal damage plus $s3 and stuns the opponent for $d.",
 468503,,,
 468509,,,
-468512,,"Increases the critical hit chance of your Frostbolt and Frozen Orb spells by $s1%, and increases the critical hit damage of your Frostbolt and Frozen Orb spells by $s2% for $d.","Frostbolt and Frozen Orb spell critical hit chance increased by $s1%.
-Frostbolt and Frozen Orb spell critical hit damage increased by $s2%."
+468512,,"Increases the critical hit chance of your Frostbolt, Spellfrost Bolt, and Frozen Orb spells by $s1%, and increases the critical hit damage of your Frostbolt, Spellfrost Bolt, and Frozen Orb spells by $s2% for $d.","Frostbolt, Spellfrost Bolt, and Frozen Orb spell critical hit chance increased by $s1%.
+Frostbolt, Spellfrost Bolt, and Frozen Orb spell critical hit damage increased by $s2%."
 468513,,,
 468526,,,Your next Chain Heal spell will be an instant cast spell.
 468528,,,
@@ -30663,7 +30662,7 @@ Conjured items disappear if logged out for more than 15 minutes.",
 468854,,,
 468879,Rank 1,,Stealthed.
 468882,,,
-468913,,"Increase the range of your Holy Shock spell by $s1 yards, but reduces all Holy damage your deal by $s2%.",
+468913,,"Increase the range of your Holy Shock spell by $s1 yards, but reduces all Holy damage you deal by $s2%.",
 468919,,,
 468925,,Move speed slowed by $s2%.,Move speed slowed by $s2%.
 468971,,All attacks are guaranteed to land and will be critical strikes for the next $d.,
@@ -30954,3 +30953,8 @@ Reduced movement speed."
 470856,,"Smites an enemy, inflicting Holy damage.",
 470866,,"Creates a cloud of lightning that lasts $d., blasting all enemies in a selected area for $s1  Nature damage and inflicting $s2 additional damage every $t2 sec.",
 470868,,,Wisp Costume.   Cannot attack or cast spells while in wisp form.  Right-Click this icon to remove the effect.
+471050,,,
+471051,,,
+471056,,,
+471149,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
+471150,,,
