@@ -144,10 +144,11 @@ class Overpower extends Spell {
         this.canDodge = false;
     }
     dmg() {
-        let dmg;
+        let dmg, mod = 1;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod;
+        if (this.player.heroicbonus) mod = 1.3;
+        return dmg * this.player.stats.dmgmod * mod;
     }
     use() {
         if (!this.player.isValidStance('battle')) {
@@ -510,7 +511,7 @@ class QuickStrike extends Spell {
     dmg() {
         let dmg, mod = 1;
         dmg = ~~rng(this.player.stats.ap * 0.25, this.player.stats.ap * 0.35) + this.player.stats.moddmgdone;
-        if (this.player.heroicbonus) mod = 1.1;
+        if (this.player.heroicbonus) mod = 1.3;
         return dmg * this.player.stats.dmgmod * mod;
     }
     canUse() {
@@ -559,10 +560,11 @@ class Slam extends Spell {
     }
     dmg(weapon) {
         if (!weapon) weapon = this.player.mh;
-        let dmg;
+        let dmg, mod = 1;
         dmg = this.value1 + rng(weapon.mindmg + weapon.bonusdmg, weapon.maxdmg + weapon.bonusdmg);
         dmg += (this.player.stats.ap / 14) * weapon.speed + this.player.stats.moddmgdone;
-        return dmg * this.player.stats.dmgmod;
+        if (this.player.heroicbonus) mod = 1.3;
+        return dmg * this.player.stats.dmgmod * mod;
     }
     use() {
         if (this.player.freeslam) this.offhandhit = true;
@@ -2665,7 +2667,7 @@ class EchoesGlad extends Aura {
 class BattleForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Battle Forecast');
-        this.mult_stats = { dmgmod: 5 };
+        this.mult_stats = { dmgmod: 10 };
         this.duration = 15;
     }
     use() {
@@ -2682,7 +2684,7 @@ class BattleForecast extends Aura {
 class ZerkForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Berserker Forecast');
-        this.stats = { crit: 5 };
+        this.stats = { crit: 10 };
         this.duration = 15;
     }
 }
@@ -2697,7 +2699,7 @@ class DefForecast extends Aura {
 class GladForecast extends Aura {
     constructor(player, id) {
         super(player, id, 'Gladiator Forecast');
-        this.mult_stats = { dmgmod: 5 };
+        this.mult_stats = { dmgmod: 10 };
         this.duration = 15;
     }
     use() {

@@ -699,15 +699,6 @@ var buffs = [
       consume: true,
    },
    {
-      id: 23060,
-      spellid: true,
-      name: "Battle Squawk",
-      iconname: "inv_misc_birdbeck_01",
-      minlevel: 40,
-      other: true,
-      haste: 5
-   },
-   {
       id: 217308,
       name: "Enchanted Sigil: Innovation",
       iconname: "inv_sigil_mimiron",
@@ -915,6 +906,52 @@ var buffs = [
       resist: {
          fire: 60,
       }
+   },
+
+   {
+      id: 23060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
+   },
+   {
+      id: 9923060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
+   },
+   {
+      id: 9823060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
+   },
+   {
+      id: 9723060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
+   },
+   {
+      id: 9623060,
+      spellid: true,
+      name: "Battle Squawk",
+      iconname: "inv_misc_birdbeck_01",
+      minlevel: 40,
+      other: true,
+      haste: 5
    },
  
    
