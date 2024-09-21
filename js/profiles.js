@@ -364,7 +364,7 @@ SIM.PROFILES = {
                 if (typeof spell.expriority !== 'undefined') obj.expriority = spell.expriority;
                 if (typeof spell.switchechoesactive !== 'undefined') obj.switchechoesactive = spell.switchechoesactive;
                 if (typeof spell.switchechoestime !== 'undefined') obj.switchechoestime = spell.switchechoestime;
-                if (typeof spell.switchechoesswing !== 'undefined') obj.switchechoesswing = spell.switchechoesswing;
+                if (typeof spell.switchechoesrage !== 'undefined') obj.switchechoesrage = spell.switchechoesrage;
                 if (typeof spell.switchoractive !== 'undefined') obj.switchoractive = spell.switchoractive;
                 if (typeof spell.switchortime !== 'undefined') obj.switchortime = spell.switchortime;
                 if (typeof spell.switchorrage !== 'undefined') obj.switchorrage = spell.switchorrage;
@@ -461,7 +461,7 @@ SIM.PROFILES = {
                     if (typeof newspell.expriority !== 'undefined') spell.expriority = newspell.expriority;
                     if (typeof newspell.switchechoesactive !== 'undefined') spell.switchechoesactive = newspell.switchechoesactive;
                     if (typeof newspell.switchechoestime !== 'undefined') spell.switchechoestime = newspell.switchechoestime;
-                    if (typeof newspell.switchechoesswing !== 'undefined') spell.switchechoesswing = newspell.switchechoesswing;
+                    if (typeof newspell.switchechoesrage !== 'undefined') spell.switchechoesrage = newspell.switchechoesrage;
                     if (typeof newspell.switchoractive !== 'undefined') spell.switchoractive = newspell.switchoractive;
                     if (typeof newspell.switchortime !== 'undefined') spell.switchortime = newspell.switchortime;
                     if (typeof newspell.switchorrage !== 'undefined') spell.switchorrage = newspell.switchorrage;

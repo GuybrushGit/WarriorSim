@@ -49,7 +49,7 @@ class Spell {
         if (spell.priority) this.priority = parseInt(spell.priority);
         if (spell.expriority) this.expriority = parseInt(spell.expriority);
         if (spell.switchechoesactive) this.switchechoestime = parseFloat(spell.switchechoestime) * 1000;
-        if (spell.switchechoesactive) this.switchechoesswing = parseFloat(spell.switchechoesswing) * 1000;
+        if (spell.switchechoesactive) this.switchechoesrage = parseInt(spell.switchechoesrage);
         if (spell.switchechoesactive) this.switchechoesactive = spell.switchechoesactive;
         if (spell.switchoractive) this.switchortime = parseFloat(spell.switchortime) * 1000;
         if (spell.switchoractive) this.switchorrage = parseInt(spell.switchorrage);
@@ -778,16 +778,16 @@ class UnstoppableMight extends Spell {
             return true;
         }
 
-        // Switch if Echoes shorter than [switchtime] secs and swing below [swing]
-        // if (this.switchechoesactive && this.player.stance == this.player.basestance && (this.player.auras["echoes" + this.secondarystance].timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-        //     this.switchto = this.secondarystance;
-        //     return true;
-        // }
+        // Switch if Echoes shorter than [switchtime] secs and rage below [rage]
+        if (this.switchechoesactive && this.player.stance == this.player.basestance && (this.player.auras['echoes' + this.secondarystance].timer - step) <= this.switchechoestime && this.player.rage <= this.switchechoesrage) {
+            this.switchto = this.secondarystance;
+            return true;
+        }
 
-        // if (this.switchechoesactive && this.player.stance == this.secondarystance && (this.player.auras["echoes" + this.player.basestance].timer - step) <= this.switchechoestime && this.player.mh.timer <= this.switchechoesswing) {
-        //     this.switchto = this.player.basestance;
-        //     return true;
-        // }
+        if (this.switchechoesactive && this.player.stance == this.secondarystance && (this.player.auras['echoes' + this.player.basestance].timer - step) <= this.switchechoestime && this.player.rage <= this.switchechoesrage) {
+            this.switchto = this.player.basestance;
+            return true;
+        }
 
         // Switch back to default stance as soon as possible
         if (this.switchdefault && this.player.stance != this.player.basestance) {

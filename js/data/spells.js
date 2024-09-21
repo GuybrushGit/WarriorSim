@@ -1519,7 +1519,7 @@ var spells = [
     switchdefault: true,
     switchechoesactive: false,
     switchechoestime: 0,
-    switchechoesswing: 1,
+    switchechoesrage: 100,
     switchoractive: false,
     switchortime: 0,
     switchorrage: 60,
