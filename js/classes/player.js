@@ -1427,7 +1427,6 @@ class Player {
         }
 
         let done = this.dealdamage(dmg, result, this.oh, spell, adjacent);
-        if (!adjacent) spell.data[result]++;
         spell.totaldmg += done;
         spell.offhandhit = false;
         this.oh.totalprocdmg += procdmg;
