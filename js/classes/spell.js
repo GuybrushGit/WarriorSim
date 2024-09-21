@@ -754,7 +754,7 @@ class UnstoppableMight extends Spell {
     }
     canUse() {
         if (this.player.stancetimer) return false;
-        if (!this.player.auras.battleforecast) return false;
+        if (!this.player.auras.echoesbattle) return false;
 
         //Switch if Forecast shorter than [switchtime] secs AND rage below [switchrage]
         if (this.switchtimeactive && this.player.stance == this.player.basestance && (this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
