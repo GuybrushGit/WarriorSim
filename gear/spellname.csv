@@ -26663,7 +26663,7 @@ ID,Name_lang
 465273,(DNT) Core Hound Summon Stalker
 465323,Combat Pulse
 465352,Banish
-465404,Molten to the Core
+471050,[DNT] Combat Check
 465411,Avenging Strike
 465412,Add Holy Dam - Weap 04
 465414,Crusader's Zeal
@@ -27532,8 +27532,15 @@ ID,Name_lang
 470856,DNT
 470866,Lightning Cloud
 470868,Wisp Costume
-471050,[DNT] Combat Check
 471051,[DNT] Combat Check
 471056,[DNT] Riosustrasz Fight Initialization
 471149,Out of Bounds
 471150,Portal to Old Andorhal
+471152,[DNT] Cancel Aura
+471399,Formula: Magnificent Trollshine
+471400,Magnificent Trollshine
+471401,Magnificent Trollshine
+471402,Increase Spell Dam 36 and 1% Crit
+471487,Peregrine
+471535,[DNT]
+471570,Shadowflame Visual [DNT]

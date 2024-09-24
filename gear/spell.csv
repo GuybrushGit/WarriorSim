@@ -14578,7 +14578,7 @@ Nature damage inflicted every $t2 sec."
 19502,,,
 19503,,A short-range shot that deals $s1% weapon damage and disorients the target for $d.  Any damage caused will remove the effect.  Turns off your attack when used.,Disoriented.
 19505,Rank 1,"Purges $s1 harmful magic $leffect:effects; from a friend or $s1 beneficial magic $leffect:effects; from an enemy.  If an effect is devoured, the Felhunter will be healed for $19658s1.",
-19506,Rank 1,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
+19506,Rank 1,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1$?$s446374 [ and the Hunter's ranged attack power by an additional $s3][].  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1$?$w3>0[ and caster's Ranged Attack Power increased by an additional $w3][].
 19507,Rank 1,Increases the damage you deal with ranged weapons by $s1%.,
 19508,Rank 2,Increases the damage you deal with ranged weapons by $s1%.,
 19509,Rank 3,Increases the damage you deal with ranged weapons by $s1%.,
@@ -15841,8 +15841,8 @@ Strength reduced by $s3%."
 20902,Rank 4,An aimed shot that increases ranged damage by $s1.,
 20903,Rank 5,An aimed shot that increases ranged damage by $s1.,
 20904,Rank 6,An aimed shot that increases ranged damage by $s1.,
-20905,Rank 2,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
-20906,Rank 3,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1.  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1.
+20905,Rank 2,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1$?$s446374 [ and the Hunter's ranged attack power by an additional $s3][].  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1$?$w3>0[ and caster's Ranged Attack Power increased by an additional $w3][].
+20906,Rank 3,Increases the $?$s446374 [ranged ][]attack power of party members within $a1 yards by $s1$?$s446374 [ and the Hunter's ranged attack power by an additional $s3][].  Lasts $d.,$?$w1>$w2[Ranged ][]Attack Power increased by $w1$?$w3>0[ and caster's Ranged Attack Power increased by an additional $w3][].
 20909,Rank 2,"A strike that becomes active after parrying an opponent's attack.  This attack deals $s1 damage and immobilizes the target for $d.  Counterattack cannot be blocked, dodged, or parried.",Immobile.
 20910,Rank 3,"A strike that becomes active after parrying an opponent's attack.  This attack deals $s1 damage and immobilizes the target for $d.  Counterattack cannot be blocked, dodged, or parried.",Immobile.
 20911,Rank 1,"Places a Blessing on the friendly target, reducing damage dealt from all sources by up to $s1 for $d.  In addition, when the target blocks a melee attack the attacker will take $s2 Holy damage.  Players may only have one Blessing on them per Paladin at any one time.",Damage taken reduced by up to $s1 and blocked melee attacks cause $s2 Holy damage to the attacker.
@@ -23656,7 +23656,7 @@ In addition, you regenerate $417051s2 rage every time you dodge while in Bear Fo
 408514,,"Protects the target with an earthen shield, reducing casting or channeling time lost when damaged by $s2%  and causing attacks to heal the shielded target for ${$m1*$<healpower>/100}.  This effect can only occur once every few seconds.  $n charges. Lasts $d.  Earth Shield can only be placed on one target at a time.
 ",Reduces casting or channeling time lost when damaged by $s2% and attacks heal the shielded target for $w1.
 408519,,Healed by Earth Shield.,
-408521,,Heals a friendly target for ${$m1/100*$<healpower>} to ${$M1/100*$<healpower>} and another ${5*$m2/100*$<healpower>} over $d.  Your next Chain Heal cast on that primary target within $d will consume the healing over time effect and increase the amount of the Chain Heal by $s3%. This spell also triggers Ancestral Awakening.,Heals $w2 every $t2 seconds.  Increases caster's Chain Heal by $s3%.
+408521,,Heals a friendly target for ${$m1/100*$<healpower>} to ${$M1/100*$<healpower>} and another ${5*$m2/100*$<healpower>} over $d.  Your Chain Heals cast on that primary target within $d will increase the amount of the Chain Heal by $s3%. This spell also triggers Ancestral Awakening.,Heals $w2 every $t2 seconds.  Increases caster's Chain Heal by $s3%.
 408524,,"Each time you Block, you regenerate mana equal to $408525s2% of your maximum mana and you gain Armor equal to $408525s1% of your shield's armor value, stacking up to $408525u times. You also always gain $s1% increased chance to Block and $s2% increased Block value.
 
 In addition, each time you use a Shock ability, you gain $460200s1 Spell Damage for each point of your defense skill beyond ${$PL*5}. Lasts $460171d.
@@ -24423,7 +24423,7 @@ Healing spells reduced by $s2%."
 415105,,,Your next Chain Lightning or Lava Burst spell will be an instant cast spell.
 415112,,,
 415113,,,
-415140,,"Dealing damage with Lava Lash or Stormstrike increases your Attack Power by $s1% of your Intellect, and your spell damage by $s2% of your total Attack Power for $415144d.",
+415140,,"Dealing damage with Stormstrike increases your Attack Power by $s1% of your Intellect, and your spell damage by $s2% of your total Attack Power for $415144d.",
 415144,,,"Attack Power increased by $w1.
 Spell damage increased by $w2."
 415231,,"Your Flame Shock now strikes up to $s1 targets, gains ${$m5/1000} sec increased duration, and deals $s3% increased damage. In addition, while you have Flametongue Weapon imbued on your main hand equipped weapon, you gain increased spell damage equal to your Intellect.",
@@ -26428,8 +26428,8 @@ $@spelldesc427726",
 431996,,,
 432029,,,
 432039,,,
-432041,,,Reduces the cast time of Healing Wave by $s1% and increases the critical strike chance of Lesser Healing Wave by $s2%.
-432042,,"When you cast Chain Heal or Riptide you gain $s1 charges of Tidal Waves, which reduces the cast time of your Healing Wave by $432041s1% and increases the critical effect chance of your Lesser Healing Wave by $432041s2%.",
+432041,,,"Reduces the cast time of Healing Wave by $s1%, reduces the cast time of Chain Heal by $s3%, and increases the critical strike chance of Lesser Healing Wave by $s2%."
+432042,,"When you cast Chain Heal or Riptide you gain $s1 charges of Tidal Waves, which reduces the cast time of your Healing Wave by $432041s1%, reduces the cast time of your Chain Heal by $432041s3%, and increases the critical effect chance of your Lesser Healing Wave by $432041s2%.",
 432056,,"Lightning Bolt and Chain Lightning have a $h% chance to add an additional charge to your active Lightning Shield, up to a maximum of $s1 Charges.
 
 Earth Shock now releases all Lightning Shield charges above $s2, dealing their damage to the target, and energizing you for $s3% of your maximum mana per charge released.",
@@ -30051,7 +30051,7 @@ Defense increased by $s1."
 465273,,,
 465323,,,
 465352,Rank 2,"Banishes the target, preventing all action but making it invulnerable for up to $d.  Only one target can be banished at a time.  Only works on Demons and Elementals.","Invulnerable, but unable to act."
-465404,,,
+471050,,,
 465411,,Does $s1 additional Holy damage to the target.,
 465412,,Adds $465411s1 holy damage to your melee attacks.,
 465414,,Increases damage done by $s1 and attack speed by $s2% for $d.,Increased melee damage and attack speed.
@@ -30318,7 +30318,7 @@ Mana cost increased by $s3%."
 467586,,Circle of Healing and Penance also place a heal over time effect on their targets that heals for $s1% as much over $467588d.,
 467588,,,Healing $w1 damage every $t1 seconds.
 467604,,Reduces the cooldown of your Shadow Word: Death spell by ${$m1/-1000} sec.,
-467608,,"Your Shadow Word: Pain has a ${$m1/10}.1% chance per talent point in Spirit Tap to trigger your Spirit Tap talent when it deals damage, or a $s2% chance per talent point when a target dies with your Shadow Word: Pain active.",
+467608,,"Your Shadow Word: Pain has a ${$m1/10}.1% chance per talent point in Spirit Tap to trigger your Spirit Tap talent when it deals damage, or a $s2% chance per talent point when a target dies with your Shadow Word: Pain active. Inner Focus also has a $s2% chance per talent point to trigger Spirit Tap.",
 467611,,,
 467624,,"While Spirit Tap is active, you deal $467632s1% more Shadow damage.",
 467632,,,Shadow damage done increased by $s1%.
@@ -30380,9 +30380,9 @@ Ranged attack power increased by $s2."
 467863,,"While Clearcasting is active, you deal $s2% more non-Physical damage.",
 467873,,,
 467877,,Your chance to trigger Static Shock is increased by $m1% (${$m1/2}% while dual-wielding).,
-467879,,"Critical strikes with Stormstrike grant $467880s1% increased critical strike chance with your next Lightning Bolt, Chain Lightning, or Shock spell.",
+467879,,Increases the main hand damage done by your Stormstrike by $s1%.,
 467880,,,"Your next Lightning Bolt, Chain Lightning, or Shock spell is guaranteed a critical strike."
-467882,,"While Static Shock is engraved, your Lightning Shield now gains a charge each time you hit a target with Lightning Bolt or Chain Lightning, up to a maximum of ${$432134m1+3} charges. In addition, while Static Shock is engraved, your Lightning Shield can now deal critical damage.",
+467882,,"Your Lightning Shield now gains a charge each time you hit a target with Lightning Bolt or Chain Lightning, up to a maximum of ${$432134m1+3} charges. In addition, your Lightning Shield can now deal critical damage.",
 467883,,,
 467884,,,
 467885,,,
@@ -30445,7 +30445,7 @@ Ranged attack power increased by $s2."
 468211,,Close a targeted small Fel portal. May draw unwanted attention from the other side.,
 468224,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
 468225,,Decipher the scroll with a Comprehension Charm. Who knows what magic it contains?,
-468235,,Your Heroic Strike deals $s1% more damage.,
+468235,,"Your Heroic Strike, Slam, and Overpower abilities deal $s1% more damage.",
 468236,,"Your Slam hits reset the remaining cooldown on your Mortal Strike, Bloodthirst, and Shield Slam abilities.",
 468240,,,
 468242,,,
@@ -30523,7 +30523,7 @@ Ranged attack power increased by $s2."
 468387,,"Aligns the Druid with nature, increasing the damage done by spells by $s1%, improving heal effects by $s2%, and increasing the critical strike chance of spells by $s3% for $d.","Spell damage increased by $s1%.
 Healing effects increased by $s2%.
 Spell critical strike chance increased by $s3%."
-468388,,Your next $s2 Multi-Shots or Carves within $d do not incur a cooldown.,Your next ${$m2/3} Multi-Shots or Carves do not incur a cooldown.
+468388,,Your next $s2 Shots or melee abilities within $d do not incur a cooldown.,Your next ${$m2/2} Shots or melee abilities do not incur a cooldown.
 468395,,Increases damage and healing done by magical spells and effects by up to $s1.,
 468397,,Increases damage done by Frost spells and effects by up to $s1.,
 468398,,Increases healing done by up to $s1 and damage done by up to $s2 for all magical spells and effects.,
@@ -30541,7 +30541,7 @@ Spell critical strike chance increased by $s3%."
 468425,,Increases the chance to trigger your Fingers of Frost rune by an additional $s1%.,
 468427,,Increases damage done by your Frostbolt and Spellfrost Bolt spells by $s1%.,
 468428,,Increases damage done by your Holy Shock spell by $s1%.,
-468431,,Reduces the cooldown of your Exorcism spell by ${$m1/-1000} sec.,
+468431,,Reduces the cooldown of your Exorcism spell by ${$m1/-1000} sec and increases its damage done by $s2%.,
 468433,,Reduces the cooldown of your Penance spell by ${$m1/-1000} sec.,
 468434,,Increases the damage absorbed by your Power Word: Shield spell by $s1%.,
 468436,,Increases your chance to get a critical strike with Daggers by $s1%.,
@@ -30953,8 +30953,15 @@ Reduced movement speed."
 470856,,"Smites an enemy, inflicting Holy damage.",
 470866,,"Creates a cloud of lightning that lasts $d., blasting all enemies in a selected area for $s1  Nature damage and inflicting $s2 additional damage every $t2 sec.",
 470868,,,Wisp Costume.   Cannot attack or cast spells while in wisp form.  Right-Click this icon to remove the effect.
-471050,,,
 471051,,,
 471056,,,
 471149,,Enter another area engulfed in nightmare.,Return to the mission area or you will be teleported in $d.
 471150,,,
+471152,,,
+471399,,Teaches you how to create Magnificent Trollshine.,
+471400,,Creates Magnificent Trollshine.,
+471401,,While applied to target shield it increases spell damage and healing by up to 36 and increases Spell Critical chance by 1%.  Lasts for 30 minutes.,
+471402,,Increases damage and healing done by magical spells and effects by up to $s1.   Also increases chance to get a critical hit with spells by $s3%.,
+471487,,,
+471535,,,
+471570,,,

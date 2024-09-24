@@ -16030,14 +16030,14 @@ var gear = {
       "slot": "chest",
       "r": 60,
       "q": "4",
-      "i": "71",
+      "i": "74",
       "name": "Interlaced Shadow Jerkin",
       "p": "inv_chest_leather_03",
-      "sta": 25,
+      "sta": 26,
       "resist": {
         "shadow": 30
       },
-      "ap": 52
+      "ap": 54
     },
     {
       "id": 230864,
@@ -48145,36 +48145,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 230253,
-      "type": "Bows",
-      "slot": "ranged",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Heartstriker",
-      "speed": 3.2,
-      "mindmg": 98,
-      "maxdmg": 183,
-      "p": "inv_weapon_bow_09",
-      "sta": 6,
-      "ap": 18
-    },
-    {
-      "id": 230726,
-      "type": "Guns",
-      "slot": "ranged",
-      "r": 60,
-      "q": "4",
-      "i": "75",
-      "name": "Dragonbreath Hand Cannon",
-      "speed": 3,
-      "mindmg": 92,
-      "maxdmg": 172,
-      "p": "inv_weapon_rifle_02",
-      "agi": 14,
-      "sta": 7
-    },
-    {
       "id": 231852,
       "type": "Guns",
       "slot": "ranged",
@@ -48217,6 +48187,36 @@ var gear = {
       "p": "inv_waepon_bow_zulgrub_d_02",
       "agi": 13,
       "sta": 4
+    },
+    {
+      "id": 232607,
+      "type": "Bows",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "Heartstriker",
+      "speed": 3.2,
+      "mindmg": 98,
+      "maxdmg": 183,
+      "p": "inv_weapon_bow_09",
+      "sta": 6,
+      "ap": 18
+    },
+    {
+      "id": 232608,
+      "type": "Guns",
+      "slot": "ranged",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "Dragonbreath Hand Cannon",
+      "speed": 3,
+      "mindmg": 92,
+      "maxdmg": 172,
+      "p": "inv_weapon_rifle_02",
+      "agi": 14,
+      "sta": 7
     }
   ],
   "mainhand": [
@@ -58305,22 +58305,6 @@ var gear = {
       }
     },
     {
-      "id": 230845,
-      "type": "Axe",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Doom's Edge",
-      "speed": 2.6,
-      "mindmg": 93,
-      "maxdmg": 175,
-      "p": "inv_axe_15",
-      "agi": 16,
-      "str": 9,
-      "sta": 7
-    },
-    {
       "id": 231275,
       "type": "Sword",
       "slot": "mainhand",
@@ -58497,21 +58481,6 @@ var gear = {
       "sta": 10
     },
     {
-      "id": 232555,
-      "type": "Axe",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "81",
-      "name": "Crul'shorukh Edge of Chaos",
-      "speed": 2.4,
-      "mindmg": 105,
-      "maxdmg": 197,
-      "p": "inv_axe_12",
-      "sta": 13,
-      "ap": 38
-    },
-    {
       "id": 232557,
       "type": "Dagger",
       "slot": "mainhand",
@@ -58523,22 +58492,6 @@ var gear = {
       "mindmg": 36,
       "maxdmg": 89,
       "p": "inv_weapon_shortblade_28",
-      "sta": 7
-    },
-    {
-      "id": 232558,
-      "type": "Sword",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Chromatically Tempered Sword",
-      "speed": 2.7,
-      "mindmg": 110,
-      "maxdmg": 205,
-      "p": "inv_sword_51",
-      "agi": 15,
-      "str": 14,
       "sta": 7
     },
     {
@@ -58556,6 +58509,53 @@ var gear = {
       "sta": 6,
       "crit": 1,
       "ap": 28
+    },
+    {
+      "id": 232567,
+      "type": "Mace",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "73",
+      "name": "Spineshatter",
+      "speed": 2.6,
+      "mindmg": 99,
+      "maxdmg": 184,
+      "p": "inv_mace_06",
+      "str": 7,
+      "sta": 14,
+      "d": 8
+    },
+    {
+      "id": 232555,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "81",
+      "name": "Crul'shorukh Edge of Chaos",
+      "speed": 2.4,
+      "mindmg": 105,
+      "maxdmg": 197,
+      "p": "inv_axe_12",
+      "sta": 13,
+      "ap": 38
+    },
+    {
+      "id": 232558,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "77",
+      "name": "Chromatically Tempered Sword",
+      "speed": 2.7,
+      "mindmg": 110,
+      "maxdmg": 205,
+      "p": "inv_sword_51",
+      "agi": 15,
+      "str": 14,
+      "sta": 7
     },
     {
       "id": 232564,
@@ -58588,20 +58588,20 @@ var gear = {
       "sta": 11
     },
     {
-      "id": 232567,
-      "type": "Mace",
-      "slot": "mainhand",
+      "id": 232577,
+      "type": "Axe",
+      "slot": "onehand",
       "r": 60,
       "q": "4",
-      "i": "73",
-      "name": "Spineshatter",
+      "i": "74",
+      "name": "Doom's Edge",
       "speed": 2.6,
-      "mindmg": 99,
-      "maxdmg": 184,
-      "p": "inv_mace_06",
-      "str": 7,
-      "sta": 14,
-      "d": 8
+      "mindmg": 100,
+      "maxdmg": 187,
+      "p": "inv_axe_15",
+      "agi": 17,
+      "str": 10,
+      "sta": 7
     }
   ],
   "offhand": [
@@ -69237,22 +69237,6 @@ var gear = {
       "d": 7
     },
     {
-      "id": 230845,
-      "type": "Axe",
-      "slot": "onehand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Doom's Edge",
-      "speed": 2.6,
-      "mindmg": 93,
-      "maxdmg": 175,
-      "p": "inv_axe_15",
-      "agi": 16,
-      "str": 9,
-      "sta": 7
-    },
-    {
       "id": 231289,
       "type": "Shield",
       "slot": "offhand",
@@ -69469,6 +69453,22 @@ var gear = {
       "p": "inv_weapon_shortblade_29",
       "agi": 18,
       "sta": 11
+    },
+    {
+      "id": 232577,
+      "type": "Axe",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Doom's Edge",
+      "speed": 2.6,
+      "mindmg": 100,
+      "maxdmg": 187,
+      "p": "inv_axe_15",
+      "agi": 17,
+      "str": 10,
+      "sta": 7
     }
   ],
   "twohand": [
@@ -76882,6 +76882,22 @@ var gear = {
       }
     },
     {
+      "id": 232551,
+      "type": "Mace",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "75",
+      "name": "Draconic Maul",
+      "speed": 2,
+      "mindmg": 117,
+      "maxdmg": 176,
+      "p": "inv_mace_05",
+      "str": 33,
+      "sta": 21,
+      "crit": 2
+    },
+    {
       "id": 231460,
       "type": "Mace",
       "slot": "twohand",
@@ -77039,23 +77055,6 @@ var gear = {
       "p": "inv_sword_17"
     },
     {
-      "id": 232357,
-      "type": "Axe",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "71",
-      "name": "Draconic Avenger",
-      "speed": 3.5,
-      "mindmg": 191,
-      "maxdmg": 287,
-      "p": "inv_axe_21",
-      "agi": 26,
-      "str": 21,
-      "sta": 18,
-      "hit": 2
-    },
-    {
       "id": 232550,
       "type": "Sword",
       "slot": "twohand",
@@ -77070,22 +77069,6 @@ var gear = {
       "str": 20,
       "sta": 23,
       "ap": 86
-    },
-    {
-      "id": 232551,
-      "type": "Mace",
-      "slot": "twohand",
-      "r": 60,
-      "q": "4",
-      "i": "70",
-      "name": "Draconic Maul",
-      "speed": 2,
-      "mindmg": 107,
-      "maxdmg": 161,
-      "p": "inv_mace_05",
-      "str": 28,
-      "sta": 19,
-      "crit": 2
     },
     {
       "id": 232556,
@@ -77166,6 +77149,23 @@ var gear = {
       "p": "inv_sword_50",
       "agi": 29,
       "sta": 20
+    },
+    {
+      "id": 232576,
+      "type": "Axe",
+      "slot": "twohand",
+      "r": 60,
+      "q": "4",
+      "i": "74",
+      "name": "Draconic Avenger",
+      "speed": 3.5,
+      "mindmg": 201,
+      "maxdmg": 303,
+      "p": "inv_axe_21",
+      "agi": 28,
+      "str": 23,
+      "sta": 18,
+      "hit": 2
     }
   ]
 };

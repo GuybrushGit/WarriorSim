@@ -147,7 +147,7 @@ class Overpower extends Spell {
         let dmg, mod = 1;
         dmg = this.value1 + rng(this.player.mh.mindmg + this.player.mh.bonusdmg, this.player.mh.maxdmg + this.player.mh.bonusdmg);
         dmg += (this.player.stats.ap / 14) * this.player.mh.normSpeed + this.player.stats.moddmgdone;
-        if (this.player.heroicbonus) mod = 1.3;
+        if (this.player.heroicbonus) mod = 1.25;
         return dmg * this.player.stats.dmgmod * mod;
     }
     use() {
@@ -511,7 +511,7 @@ class QuickStrike extends Spell {
     dmg() {
         let dmg, mod = 1;
         dmg = ~~rng(this.player.stats.ap * 0.25, this.player.stats.ap * 0.35) + this.player.stats.moddmgdone;
-        if (this.player.heroicbonus) mod = 1.3;
+        if (this.player.heroicbonus) mod = 1.25;
         return dmg * this.player.stats.dmgmod * mod;
     }
     canUse() {
@@ -563,7 +563,7 @@ class Slam extends Spell {
         let dmg, mod = 1;
         dmg = this.value1 + rng(weapon.mindmg + weapon.bonusdmg, weapon.maxdmg + weapon.bonusdmg);
         dmg += (this.player.stats.ap / 14) * weapon.speed + this.player.stats.moddmgdone;
-        if (this.player.heroicbonus) mod = 1.3;
+        if (this.player.heroicbonus) mod = 1.25;
         return dmg * this.player.stats.dmgmod * mod;
     }
     use() {
