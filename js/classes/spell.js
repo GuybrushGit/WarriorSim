@@ -757,23 +757,23 @@ class UnstoppableMight extends Spell {
         if (!this.player.auras.echoesbattle) return false;
 
         //Switch if Forecast shorter than [switchtime] secs AND rage below [switchrage]
-        if (this.switchtimeactive && this.player.stance == this.player.basestance && (this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
+        if (this.player.auras.battleforecast && this.switchtimeactive && this.player.stance == this.player.basestance && (this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
             this.switchto = this.secondarystance;
             return true;
         }
 
-        if (this.switchtimeactive && this.player.stance == this.secondarystance && (this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
+        if (this.player.auras.battleforecast && this.switchtimeactive && this.player.stance == this.secondarystance && (this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchtime && this.player.rage <= this.switchrage) {
             this.switchto = this.player.basestance;
             return true;
         }
 
         //Switch if Forecast shorter than [switchtime] secs OR rage below [switchrage]
-        if (this.switchoractive && this.player.stance == this.player.basestance && ((this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+        if (this.player.auras.battleforecast && this.switchoractive && this.player.stance == this.player.basestance && ((this.player.auras[this.secondarystance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
             this.switchto = this.secondarystance;
             return true;
         }
 
-        if (this.switchoractive && this.player.stance == this.secondarystance && ((this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
+        if (this.player.auras.battleforecast && this.switchoractive && this.player.stance == this.secondarystance && ((this.player.auras[this.player.basestance + 'forecast'].timer - step) <= this.switchortime || this.player.rage <= this.switchorrage)) {
             this.switchto = this.player.basestance;
             return true;
         }
