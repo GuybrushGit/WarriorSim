@@ -58,6 +58,7 @@ class Player {
         this.target.misschance = this.getTargetSpellMiss();
         this.target.mitigation = this.getTargetSpellMitigation();
         this.target.binaryresist = this.getTargetSpellBinaryResist();
+        this.target.dodge = 0;
         this.base = {
             ap: 0,
             agi: 0,
@@ -600,6 +601,9 @@ class Player {
                 if (buff.group == "trueshot" && this.mode == "sod") {
                     buff.ap = buff.apsod;
                 }
+                if (buff.dodge) {
+                    this.target.dodge += buff.dodge;
+                }
                     
                 this.base.ap += ap || buff.ap || 0;
                 this.base.agi += agi || buff.agi || 0;
@@ -988,7 +992,7 @@ class Player {
         return Math.max(crit, 0);
     }
     getDodgeChance(weapon) {
-        return Math.max(5 + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1, 0);
+        return Math.max(5 - this.target.dodge + (this.target.defense - this.stats['skill_' + weapon.type]) * 0.1, 0);
     }
     getArmorReduction() {
         if (isNaN(this.target.armor)) this.target.armor = 0;
