@@ -77115,7 +77115,8 @@ var gear = {
       "agi": 29,
       "sta": 20,
       "proc": {
-        "spell": "Untamed"
+        "spell": "Untamed",
+        "ppm": 0.55
       }
     },
     {
