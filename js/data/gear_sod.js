@@ -5424,6 +5424,21 @@ var gear = {
       "p": "inv_jewelry_necklace_17",
       "agi": 30,
       "hit": 1
+    },
+    {
+      "id": 234130,
+      "type": "Miscellaneous",
+      "slot": "neck",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Amulet of Shadow Shielding",
+      "p": "inv_jewelry_necklace_17",
+      "sta": 15,
+      "resist": {
+        "shadow": 20
+      },
+      "d": 9
     }
   ],
   "shoulder": [
@@ -11295,11 +11310,11 @@ var gear = {
       "slot": "back",
       "r": 60,
       "q": "4",
-      "i": "70",
+      "i": "75",
       "name": "Cloak of Draconic Might",
       "p": "inv_misc_cape_11",
-      "agi": 18,
-      "str": 18,
+      "agi": 19,
+      "str": 19,
       "sta": 5
     },
     {
@@ -36348,21 +36363,6 @@ var gear = {
       "hit": 1
     },
     {
-      "id": 21530,
-      "type": "Mail",
-      "slot": "legs",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Onyx Embedded Leggings",
-      "p": "inv_pants_mail_04",
-      "agi": 23,
-      "sta": 23,
-      "resist": {
-        "shadow": 30
-      }
-    },
-    {
       "id": 22328,
       "type": "Plate",
       "slot": "legs",
@@ -37290,6 +37290,19 @@ var gear = {
       },
       "hit": 1,
       "d": 19
+    },
+    {
+      "id": 234129,
+      "type": "Mail",
+      "slot": "legs",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Onyx Embedded Leggings",
+      "p": "inv_pants_mail_04",
+      "sta": 21,
+      "crit": 2,
+      "ap": 60
     }
   ],
   "feet": [
@@ -41200,22 +41213,6 @@ var gear = {
       "d": 4
     },
     {
-      "id": 21532,
-      "type": "Leather",
-      "slot": "feet",
-      "r": 60,
-      "q": "4",
-      "i": "77",
-      "name": "Drudge Boots",
-      "p": "inv_boots_08",
-      "agi": 17,
-      "str": 13,
-      "sta": 20,
-      "resist": {
-        "nature": 20
-      }
-    },
-    {
       "id": 22270,
       "type": "Plate",
       "slot": "feet",
@@ -42051,6 +42048,23 @@ var gear = {
         "nature": 10
       },
       "d": 11
+    },
+    {
+      "id": 234133,
+      "type": "Leather",
+      "slot": "feet",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Drudge Boots",
+      "p": "inv_boots_08",
+      "agi": 20,
+      "str": 15,
+      "sta": 12,
+      "resist": {
+        "nature": 20
+      },
+      "hit": 1
     }
   ],
   "finger1": [
@@ -56447,34 +56461,6 @@ var gear = {
       "str": 11
     },
     {
-      "id": 21521,
-      "type": "Sword",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "76",
-      "name": "Runesword of the Red",
-      "speed": 2.2,
-      "mindmg": 53,
-      "maxdmg": 129,
-      "p": "inv_sword_51",
-      "sta": 17
-    },
-    {
-      "id": 21523,
-      "type": "Dagger",
-      "slot": "mainhand",
-      "r": 60,
-      "q": "4",
-      "i": "76",
-      "name": "Fang of Korialstrasz",
-      "speed": 1.8,
-      "mindmg": 44,
-      "maxdmg": 107,
-      "p": "inv_weapon_shortblade_29",
-      "sta": 9
-    },
-    {
       "id": 22315,
       "type": "Mace",
       "slot": "mainhand",
@@ -58567,6 +58553,66 @@ var gear = {
       "agi": 17,
       "str": 10,
       "sta": 7
+    },
+    {
+      "id": 234137,
+      "type": "Dagger",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Fang of Korialstrasz",
+      "speed": 1.8,
+      "mindmg": 42,
+      "maxdmg": 108,
+      "p": "inv_weapon_shortblade_29",
+      "sta": 9
+    },
+    {
+      "id": 234138,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Shadowsong's Sorrow",
+      "speed": 1.6,
+      "mindmg": 68,
+      "maxdmg": 126,
+      "p": "inv_weapon_shortblade_25",
+      "agi": 13,
+      "str": 14,
+      "sta": 9
+    },
+    {
+      "id": 234139,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Ravencrest's Legacy",
+      "speed": 2.8,
+      "mindmg": 119,
+      "maxdmg": 221,
+      "p": "inv_sword_49",
+      "agi": 9,
+      "str": 14,
+      "sta": 13
+    },
+    {
+      "id": 234141,
+      "type": "Sword",
+      "slot": "mainhand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Runesword of the Red",
+      "speed": 2.2,
+      "mindmg": 51,
+      "maxdmg": 132,
+      "p": "inv_sword_51",
+      "sta": 17
     }
   ],
   "offhand": [
@@ -69434,6 +69480,38 @@ var gear = {
       "agi": 17,
       "str": 10,
       "sta": 7
+    },
+    {
+      "id": 234138,
+      "type": "Dagger",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Shadowsong's Sorrow",
+      "speed": 1.6,
+      "mindmg": 68,
+      "maxdmg": 126,
+      "p": "inv_weapon_shortblade_25",
+      "agi": 13,
+      "str": 14,
+      "sta": 9
+    },
+    {
+      "id": 234139,
+      "type": "Sword",
+      "slot": "onehand",
+      "r": 60,
+      "q": "4",
+      "i": "79",
+      "name": "Ravencrest's Legacy",
+      "speed": 2.8,
+      "mindmg": 119,
+      "maxdmg": 221,
+      "p": "inv_sword_49",
+      "agi": 9,
+      "str": 14,
+      "sta": 13
     }
   ],
   "twohand": [
