@@ -14,15 +14,32 @@ On Windows, run:
 npm run dist
 ```
 
+On Linux or macOS, run the shell equivalent:
+
+```sh
+./build-dist.sh
+```
+
+`build-dist.sh`/`build-dist.bat` are thin wrappers over `scripts/build-dist.sh` and
+`scripts/build-dist.ps1`, which mirror each other. Keep the two in sync: the compiler
+and Terser flags are part of the bundle identity and of the engine's numerical
+behavior. The same Emscripten SDK produces byte-identical minified JavaScript and
+Emscripten glue on both platforms; the `.wasm` differs only in the path separators
+of source paths embedded in libc++abi assertion strings, which leaves the code
+section identical but does change the `buildId`.
+
 This builds the native Release module and minifies all application JavaScript with
 Emscripten's bundled Terser. Class and function names are preserved because action
 serialization uses constructor names. It also generates `dist/compute-build.json`
 and an immutable `dist/bundles/<buildId>/` snapshot containing the Classic and SoD
 application assets. Keep the resulting `dist/js`, `dist/wasm`, manifest, and bundle
 snapshot together after validating them. The checked-in CSS remains usable.
-Use `npm run wasm` to rebuild only the native module, or
-`powershell -NoProfile -File scripts/build-dist.ps1 -SkipWasmBuild` to reuse a native
-build that already matches the current source. Never publish mismatched JS/WASM assets.
+Use `npm run wasm` (or `./wasm/build.sh`) to rebuild only the native module, or
+`powershell -NoProfile -File scripts/build-dist.ps1 -SkipWasmBuild` /
+`./build-dist.sh --skip-wasm-build` to reuse a native build that already matches the
+current source. Never publish mismatched JS/WASM assets. `dist/wasm/package.json`
+marks the deployed Emscripten glue as an ES module so Node can `import()` it; without
+it the deployed-artifact tests cannot load `dist/wasm/warriorsim.js`.
 
 Serve the repository through HTTP rather than opening an HTML file directly. For
 example, run `python -m http.server 8000`, then open `http://localhost:8000/classic.html`
