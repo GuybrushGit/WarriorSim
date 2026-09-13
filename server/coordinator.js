@@ -31,7 +31,7 @@ class Coordinator {
             client.protocol = message.protocol;
             let group = this.groups.get(client.buildId);
             if (!group) {
-                group = {clients: new Set(), jobs: new Map(), cursor: 0};
+                group = {clients: new Set(), jobs: new Map(), cursor: 0, threads: 0};
                 this.groups.set(client.buildId, group);
             }
             client.group = group;
@@ -40,7 +40,11 @@ class Coordinator {
             client.capacity = message.slots;
             client.slots = message.busy ? 0 : message.slots;
             client.busy = !!message.busy;
-            client.send({type: 'ready', protocol: client.protocol, leaseMs: this.leaseMs});
+            // Advertised capacity, not the momentary pull budget: the pool total must not
+            // dip every time a participant switches to push mode for its own simulation.
+            group.threads += client.capacity;
+            client.send({type: 'ready', protocol: client.protocol, leaseMs: this.leaseMs,
+                networkThreads: group.threads});
         } else {
             if (!client.ready) throw new Error('Join with sharing enabled first');
             if (message.buildId !== client.buildId) {
@@ -155,6 +159,7 @@ class Coordinator {
         for (const id of [...client.leases]) this.release(id);
         if (client.group) {
             client.group.clients.delete(client);
+            client.group.threads -= client.capacity;
             if (!client.group.clients.size) this.groups.delete(client.buildId);
         }
         this.schedule();

@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {harness, job, report, params, spec, BUILD} = require('./helpers');
+const {harness, job, report, params, spec, dom, BUILD, P} = require('./helpers');
 
 function setup(t) {
     const h = harness();
@@ -11,7 +11,7 @@ function setup(t) {
     return {...h, client, enable};
 }
 
-test('sharing defaults off and creates no connection or workers', t => {
+test('a newly constructed client shares nothing until it is enabled', t => {
     const {client, FakeWorker, FakeSocket} = setup(t);
     assert.equal(client.enabled, false);
     client.setEnabled(false);
@@ -246,6 +246,95 @@ test('the startup hash is immutable and tags every outgoing request, including r
     for (const connection of FakeSocket.all) assert.ok(connection.messages.every(message => message.buildId === original));
     assert.throws(() => client.receive({type: 'work', buildId: 'b'.repeat(64), job: job()}), /different bundle/);
     assert.throws(() => client.receive({type: 'cancel', leaseId: 'anything'}), /different bundle/);
+});
+
+function panel(t, options) {
+    const fake = dom(options);
+    const h = harness(fake.context);
+    h.api.initSharedCompute(12);
+    const client = h.api.getClient();
+    t.after(() => client.setEnabled(false));
+    const ready = (extra = {}) => {
+        const socket = h.FakeSocket.all.at(-1);
+        socket.readyState = 1;
+        socket.onopen();
+        socket.deliver({type: 'ready', protocol: P.version, ...extra});
+        return socket;
+    };
+    return {...h, fake, client, ready};
+}
+
+test('sharing is on by default and reports local threads before any coordinator replies', t => {
+    const {fake, client, FakeSocket} = panel(t);
+    assert.equal(fake.toggle.checked, true);
+    assert.equal(client.enabled, true);
+    assert.equal(FakeSocket.all.length, 1, 'the default opt-in connects on load');
+    assert.equal(fake.value('local'), '12 threads');
+    assert.equal(fake.idle('local'), false, 'local workers run every simulation, shared or not');
+    assert.equal(fake.value('shared'), '4 threads'); // Half of eight logical CPUs.
+    assert.equal(fake.idle('shared'), false);
+    assert.equal(fake.value('network'), '—', 'the pool size is unknown until a coordinator reports it');
+    assert.equal(fake.idle('network'), false);
+});
+
+test('opting out persists, dims both sharing rows, and keeps the local row live', t => {
+    const {fake, client} = panel(t);
+    fake.change(false);
+    assert.equal(fake.stored(), 'false');
+    assert.equal(client.enabled, false);
+    assert.equal(fake.idle('network'), true);
+    assert.equal(fake.idle('shared'), true);
+    assert.equal(fake.value('shared'), '4 threads', 'the dimmed row still shows what would be shared');
+    assert.equal(fake.idle('local'), false);
+    assert.equal(fake.value('local'), '12 threads');
+    fake.change(true);
+    assert.equal(fake.stored(), 'true');
+    assert.equal(client.enabled, true);
+    assert.equal(fake.idle('shared'), false);
+});
+
+test('only a stored refusal turns sharing off on the next load', t => {
+    assert.equal(panel(t, {stored: 'false'}).client.enabled, false);
+    assert.equal(panel(t, {stored: 'true'}).client.enabled, true);
+    assert.equal(panel(t, {stored: null}).client.enabled, true);
+});
+
+test('the coordinator pool size fills the network row and survives reconnects', t => {
+    const {fake, client, ready} = panel(t);
+    const socket = ready({networkThreads: 37});
+    assert.equal(fake.value('network'), '37 threads');
+    assert.equal(client.networkThreads, 37);
+    socket.close();
+    client.connect();
+    ready({networkThreads: 1});
+    assert.equal(fake.value('network'), '1 thread');
+});
+
+test('a coordinator that reports no pool size leaves the network row unknown', t => {
+    const {fake, client, ready} = panel(t);
+    ready({networkThreads: 12});
+    client.socket.close();
+    client.connect();
+    ready();
+    assert.equal(client.networkThreads, undefined);
+    assert.equal(fake.value('network'), '—');
+    client.socket.close();
+    client.connect();
+    ready({networkThreads: -3});
+    assert.equal(fake.value('network'), '—', 'a malformed count is discarded, not displayed');
+});
+
+test('another tab opting out revokes sharing here without reconnecting', t => {
+    const {fake, client, FakeSocket} = panel(t);
+    assert.equal(client.enabled, true);
+    fake.emit('storage', {key: 'warriorsim.shareCompute', newValue: 'false'});
+    assert.equal(fake.toggle.checked, false);
+    assert.equal(client.enabled, false);
+    assert.equal(fake.idle('shared'), true);
+    const connections = FakeSocket.all.length;
+    fake.emit('storage', {key: 'warriorsim.shareCompute', newValue: 'true'});
+    assert.equal(client.enabled, false, 'opting back in stays an explicit action in this tab');
+    assert.equal(FakeSocket.all.length, connections);
 });
 
 test('own and donated workers use the pinned bundle URL after a deployment', t => {

@@ -11,7 +11,7 @@ SIM.UI = {
         view.events();
         view.initLog();
         view.loadSession();
-        initSharedCompute();
+        initSharedCompute(MAX_WORKERS);
         view.loadWeapons("mainhand");
         view.updateSidebar();
         view.main.find('.js-import').hide();

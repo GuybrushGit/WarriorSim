@@ -1,12 +1,16 @@
 /* global ComputeProtocol, Player, SimulationWorkerParallel */
 class SharedComputeClient {
-    constructor({url, buildId, slots, workerUrl = './dist/js/compute-worker.min.js', onStatus = () => {}}) {
+    constructor({url, buildId, slots, workerUrl = './dist/js/compute-worker.min.js',
+        onStatus = () => {}, onThreads = () => {}}) {
         if (!ComputeProtocol.buildId(buildId)) throw new Error('Invalid bundle hash');
         this.url = url;
         Object.defineProperty(this, 'buildId', {value: buildId, enumerable: true});
         this.workerUrl = workerUrl;
         this.slots = slots;
         this.onStatus = onStatus;
+        this.onThreads = onThreads;
+        // Pool capacity as of the last handshake; undefined until a coordinator reports one.
+        this.networkThreads = undefined;
         this.enabled = false;
         this.uiBusy = false;
         this.runs = new Map();
@@ -17,6 +21,7 @@ class SharedComputeClient {
     }
     busy() { return this.uiBusy || this.runs.size > 0; }
     status() {
+        this.onThreads({enabled: this.enabled, shared: this.slots, network: this.networkThreads});
         this.onStatus(!this.enabled ? 'Off · local simulations only' :
             !this.ready ? 'Connecting · simulations run locally' :
             this.busy() ? 'Accelerating your simulations' :
@@ -92,6 +97,8 @@ class SharedComputeClient {
         if (message.type === 'ready') {
             if (message.buildId !== this.buildId || message.protocol !== ComputeProtocol.version) throw new Error('Incompatible coordinator');
             this.ready = true;
+            // Optional: a coordinator that predates pool reporting simply leaves the row unknown.
+            this.networkThreads = ComputeProtocol.uint(message.networkThreads, 0) ? message.networkThreads : undefined;
             this.retryDelay = 1000;
             for (const run of this.runs.values()) run.attach();
         } else if (message.type === 'work') this.donate(message);
@@ -330,24 +337,49 @@ function createSimulationRunner(threads, finished, update, error) {
         new SimulationWorkerParallel(threads, finished, update, error);
 }
 
-function initSharedCompute() {
+const SHARE_COMPUTE_KEY = 'warriorsim.shareCompute';
+// Sharing is opt-out: only an explicit refusal from an earlier visit turns it off,
+// so a first visit and unreadable storage both keep the default on.
+function readShareComputePreference() {
+    try { return localStorage.getItem(SHARE_COMPUTE_KEY) !== 'false'; } catch (_) { return true; }
+}
+
+function initSharedCompute(localThreads) {
     const toggle = document.getElementById('share-compute');
     const status = document.getElementById('share-compute-status');
     if (!toggle || !status) return;
+    const local = ComputeProtocol.uint(localThreads, 1) ? localThreads : (navigator.hardwareConcurrency || 4);
+    const rows = {};
+    for (const row of document.querySelectorAll('.share-compute-row[data-threads]')) rows[row.dataset.threads] = row;
+    const count = value => ComputeProtocol.uint(value, 0) ? `${value} thread${value === 1 ? '' : 's'}` : '—';
+    const write = (name, value, active) => {
+        const row = rows[name];
+        if (!row) return;
+        const cell = row.lastElementChild;
+        const text = count(value);
+        if (cell.textContent !== text) cell.textContent = text;
+        row.classList.toggle('share-compute-idle', !active);
+    };
     const url = new URL('./compute', location.href);
     url.protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
     sharedCompute = new SharedComputeClient({url: url.href, buildId: globalThis.SIMULATOR_BUNDLE.buildId,
         workerUrl: globalThis.SIMULATOR_BUNDLE.workerUrl('js/compute-worker.min.js'),
         slots: Math.max(1, Math.min(4, Math.floor((navigator.hardwareConcurrency || 4) / 2))),
-        onStatus: value => { status.textContent = value; }});
-    try { toggle.checked = localStorage.getItem('warriorsim.shareCompute') === 'true'; } catch (_) { /* Private browsing. */ }
+        onStatus: value => { status.textContent = value; },
+        onThreads: ({enabled, shared, network}) => {
+            // Local workers run every simulation, shared or not, so that row never dims.
+            write('local', local, true);
+            write('network', network, enabled);
+            write('shared', shared, enabled);
+        }});
+    toggle.checked = readShareComputePreference();
     toggle.addEventListener('change', () => {
-        try { localStorage.setItem('warriorsim.shareCompute', String(toggle.checked)); } catch (_) { /* Optional persistence. */ }
+        try { localStorage.setItem(SHARE_COMPUTE_KEY, String(toggle.checked)); } catch (_) { /* Optional persistence. */ }
         sharedCompute.setEnabled(toggle.checked);
     });
-    // Existing tabs must honor revocation too; opting in stays an explicit action per tab.
+    // Existing tabs must honor revocation too; opting back in stays an explicit action per tab.
     window.addEventListener('storage', event => {
-        if (event.key === 'warriorsim.shareCompute' && event.newValue !== 'true') {
+        if (event.key === SHARE_COMPUTE_KEY && event.newValue === 'false') {
             toggle.checked = false;
             sharedCompute.setEnabled(false);
         }
@@ -357,7 +389,7 @@ function initSharedCompute() {
     });
     window.addEventListener('pageshow', event => {
         if (event.persisted) {
-            try { toggle.checked = localStorage.getItem('warriorsim.shareCompute') === 'true'; } catch (_) { toggle.checked = false; }
+            toggle.checked = readShareComputePreference();
             sharedCompute.setEnabled(toggle.checked);
         }
     });

@@ -10,7 +10,8 @@ function createServer({origins = [], workerToken = '', ...options}) {
     const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'application/json');
         if (req.url === '/healthz') res.end(JSON.stringify({ok: true, participants: coordinator.clients.size,
-            jobs: coordinator.jobs.size, groups: coordinator.groups.size}));
+            jobs: coordinator.jobs.size, groups: coordinator.groups.size,
+            threads: [...coordinator.groups.values()].reduce((total, group) => total + group.threads, 0)}));
         else { res.statusCode = 404; res.end('{}'); }
     });
     const wss = new WebSocketServer({noServer: true, maxPayload: P.maxPayload, perMessageDeflate: false});

@@ -40,8 +40,46 @@ function harness(overrides = {}) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/classes/simulation.js'), 'utf8'), context);
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/shared-compute.js'), 'utf8') +
         '\n;globalThis.api = {SharedComputeClient, SharedSimulation, mergeSimulationReports, createSimulationRunner,' +
-        ' setClient(value) { sharedCompute = value; }};', context);
+        ' initSharedCompute, getClient() { return sharedCompute; }, setClient(value) { sharedCompute = value; }};', context);
     return {api: context.api, FakeWorker, FakeSocket};
 }
+
+// Just enough DOM for the sharing panel: the toggle, the status line, and the three
+// thread rows. querySelectorAll ignores its argument; the panel uses one selector.
+function dom({stored = null, hardwareConcurrency = 8} = {}) {
+    const listeners = {};
+    const element = (extra = {}) => {
+        const node = {textContent: '', children: [], classes: new Set(), dataset: {}, ...extra};
+        node.classList = {toggle: (name, on) => { if (on) node.classes.add(name); else node.classes.delete(name); }};
+        Object.defineProperty(node, 'lastElementChild', {get: () => node.children.at(-1) || null});
+        return node;
+    };
+    const row = name => element({dataset: {threads: name}, children: [element(), element({textContent: '—'})]});
+    const rows = {local: row('local'), network: row('network'), shared: row('shared')};
+    for (const name of ['network', 'shared']) rows[name].classes.add('share-compute-idle');
+    const toggle = element({checked: false, addEventListener(type, fn) { toggle[`on${type}`] = fn; }});
+    const status = element();
+    const storage = new Map(stored === null ? [] : [['warriorsim.shareCompute', stored]]);
+    return {
+        toggle, status,
+        change(checked) { toggle.checked = checked; toggle.onchange(); },
+        emit(type, event) { for (const fn of listeners[type] || []) fn(event); },
+        idle: name => rows[name].classes.has('share-compute-idle'),
+        value: name => rows[name].lastElementChild.textContent,
+        stored: () => (storage.has('warriorsim.shareCompute') ? storage.get('warriorsim.shareCompute') : null),
+        context: {
+            navigator: {hardwareConcurrency},
+            location: {href: 'https://sim.test/index.html', protocol: 'https:'},
+            localStorage: {getItem: key => (storage.has(key) ? storage.get(key) : null),
+                setItem: (key, value) => storage.set(key, String(value))},
+            document: {
+                getElementById: id => ({'share-compute': toggle, 'share-compute-status': status}[id] || null),
+                querySelectorAll: () => Object.values(rows),
+            },
+            window: {addEventListener(type, fn) { (listeners[type] = listeners[type] || []).push(fn); }},
+            SIMULATOR_BUNDLE: {buildId: BUILD, workerUrl: name => `https://sim.test/dist/bundles/${BUILD}/${name}`},
+        },
+    };
+}
 const params = () => ({player: [], sim: {iterations: 640, seed: 42, iterationOffset: 13}, fullReport: false});
-module.exports = {ROOT, BUILD, P, job, report, spec, harness, params};
+module.exports = {ROOT, BUILD, P, job, report, spec, harness, params, dom};

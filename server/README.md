@@ -4,8 +4,10 @@ Classic (`classic.html`) and Season of Discovery (`index.html`) share one
 coordinator and application bundle. The resolved simulation spec selects the
 game mode; each bundle hash forms its own isolated participant pool.
 
-An opt-in browser contributes up to four workers while idle. Starting any DPS,
-stat-weight, or gear-ranking operation synchronously terminates those workers.
+A participating browser contributes up to four workers while idle. Sharing is on
+by default; an explicit refusal is stored in `localStorage` under
+`warriorsim.shareCompute` and is the only value that keeps it off on a later visit.
+Starting any DPS, stat-weight, or gear-ranking operation synchronously terminates those workers.
 The first `submit` includes both the new simulation and the canceled lease IDs.
 The coordinator changes that connection to push mode, requeues **all** its
 donations (including assignments still in transit), and publishes its own work
@@ -189,7 +191,8 @@ WantedBy=multi-user.target
 Put `COMPUTE_ORIGINS=https://sim.example.com` in the environment file. Keep any
 native-worker token in that file, readable only by the service administrator.
 Use `curl http://127.0.0.1:8787/healthz` for health and aggregate connection/job
-counts, plus the number of active bundle pools. No simulation specs, bearer tokens,
+counts, the number of active bundle pools, and the advertised thread total across
+all pools. No simulation specs, bearer tokens,
 or participant addresses are logged.
 Run a **single coordinator process**; multiple independent replicas would have
 separate participant pools. Scaling across processes requires shared state.
@@ -216,8 +219,9 @@ or requeues the donor's work. Ping/pong detects dead connections, and outbound
 queue limits disconnect slow receivers. The client reconnects with backoff and
 resubmits its job while excluding completed/local chunks. Turning the toggle off
 terminates donations and detaches remote work; current local workers finish the
-remaining ranges. Changing the opt-in preference to off also revokes sharing in
-other open tabs through the storage event.
+remaining ranges. Changing the sharing preference to off also revokes sharing in
+other open tabs through the storage event; turning it back on stays an explicit
+action in each tab.
 
 Foreground UI batches stay busy between baseline/stat/row simulations, so idle
 donation work does not compete with the rest of the same operation. Chunks already
@@ -240,9 +244,10 @@ Only fixed WASM code executes. Work contains JSON simulation data, never a scrip
 URL or executable code. Specs and reports are bounded and validated, seed/count
 and lease ownership are checked, and report labels must match the owner's spec.
 Browser workers provide isolation and can be terminated even during native code.
-The opt-in text explains CPU, battery, data, background work, and sharing the
-simulation setup with other participants. Profiles/account information are not
-part of the execution spec.
+Sharing is on by default, so the panel's always-visible text explains CPU, battery,
+data, background work, and sharing the simulation setup with other participants
+before any contribution happens, and the toggle turns it off in one click.
+Profiles/account information are not part of the execution spec.
 
 **Public helpers are untrusted.** Structural validation and build matching do not
 prove that a helper ran the simulation. A malicious client can forge plausible
@@ -280,7 +285,7 @@ All messages below also carry the connection's `buildId`.
 | Message | Direction | Fields and behavior |
 | --- | --- | --- |
 | `hello` | client → server | Protocol/build identity, `share: true`, integer `slots` 1–64, `busy` |
-| `ready` | server → client | `protocol`, `buildId`, `leaseMs` |
+| `ready` | server → client | `protocol`, `buildId`, `leaseMs`, `networkThreads` |
 | `submit` | owner → server | `job`, `claimed` chunk indices, `cancelled` lease IDs; atomic push transition |
 | `submitted` | server → owner | `jobId`; acknowledgement, not a prerequisite to local work |
 | `work` | server → helper | `leaseId`, `job`, zero-based `index`, `leaseMs` |
@@ -294,6 +299,16 @@ All messages below also carry the connection's `buildId`.
 | `finish` | owner → server | `jobId`, `busy`; remove job, cancel helpers, optionally return to pull |
 | `mode` | client → server | `busy`; can pull only after all owned jobs finish |
 | `unavailable` | server → owner | `jobId`; job lifetime expired, complete locally |
+
+`networkThreads` is the total `slots` advertised by every participant in **this
+connection's pool**, including the one being greeted. It counts advertised capacity,
+not the momentary pull budget, so a participant pushing its own simulation still
+contributes its full count. Pools are per bundle hash, so the number describes the
+compute that can actually accept this connection's work rather than every connection
+on the coordinator. The server keeps it accurate as participants join and leave, but
+only reports it in `ready`; a client shows the value from its last handshake and
+refreshes it on reconnect. Treat it as advisory: it is a display figure with no effect
+on scheduling, and a client that never receives one simply leaves the count unknown.
 
 `job` is `{id, spec, seed, iterations, offset, chunkSize, fullReport}`. `spec` is
 the resolved output of `Player.serializeSimulationSpec()`, documented in
@@ -326,7 +341,9 @@ The compute suite covers concurrent old/new pools, identical job IDs across pool
 per-message hash enforcement, complete preloading, once-per-load client hashing,
 worker recreation after server asset removal, manifest/asset tampering, failed
 preload cleanup, scheduler races, opt-out, disconnect/reconnect, ownership,
-expiry, invalid inputs, exact iteration coverage, full player-report merging, and
+expiry, invalid inputs, exact iteration coverage, full player-report merging,
+the default-on sharing preference and its stored refusal, pool thread accounting
+across joins and departures, the thread rows the panel renders, and
 two browser-protocol clients using actual deployed WASM workers over a real local
 WebSocket coordinator. It requires built `wasm/dist` and `dist` assets. Background
 throttling and real internet speedups still require field testing.

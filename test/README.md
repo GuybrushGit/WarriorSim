@@ -53,7 +53,8 @@ npm run test:compute
 
 The suite covers bundle hashing and complete asset preload, retained worker assets
 after bundle URLs disappear, Classic and SoD entrypoints, coordinator pool
-isolation, opt-in and foreground priority, lease recovery, ownership, duplicate
+isolation, the sharing preference and foreground priority, pool thread accounting
+and the panel's thread rows, lease recovery, ownership, duplicate
 results, and local fallback. Integration tests run real deployed WASM workers over
 a loopback WebSocket coordinator. See [server/README.md](../server/README.md) for
 the protocol and a two-tab browser preview. Native parity tests remain documented

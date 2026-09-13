@@ -45,7 +45,11 @@ test('WebSocket endpoint rejects foreign origins and accepts an authenticated na
     await once(native, 'open');
     const reply = once(native, 'message');
     native.send(JSON.stringify({type: 'hello', protocol: P.version, buildId: BUILD, share: true, slots: 4}));
-    assert.equal(JSON.parse((await reply)[0]).type, 'ready');
+    const ready = JSON.parse((await reply)[0]);
+    assert.equal(ready.type, 'ready');
+    assert.equal(ready.networkThreads, 4, 'the handshake reports the pool thread total');
+    const port = app.server.address().port;
+    assert.equal((await (await fetch(`http://127.0.0.1:${port}/healthz`)).json()).threads, 4);
     native.close();
 });
 

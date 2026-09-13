@@ -142,6 +142,11 @@
       <div class="share-compute">
         <label><input id="share-compute" type="checkbox" aria-describedby="share-compute-help"> Share Compute</label>
         <small id="share-compute-status" role="status">Off · local simulations only</small>
+        <div class="share-compute-threads">
+          <div class="share-compute-row" data-threads="local"><span>Your local threads</span><span>&mdash;</span></div>
+          <div class="share-compute-row share-compute-idle" data-threads="network"><span>Network threads</span><span>&mdash;</span></div>
+          <div class="share-compute-row share-compute-idle" data-threads="shared"><span>Your shared threads</span><span>&mdash;</span></div>
+        </div>
         <p id="share-compute-help">Help other players while idle and get help with your simulations. Uses CPU, battery, and data, including in background tabs. Your simulation setup is shared with participating devices. Your own simulations always take priority.</p>
       </div>
       <a href="#" class="btn js-weights">STAT WEIGHTS</a>

@@ -4,3 +4,7 @@
 .share-compute input:focus-visible { outline: 2px solid #f8c45c; outline-offset: 3px; }
 .share-compute small { display: block; margin-top: 8px; color: #f8c45c; font-size: 12px; }
 .share-compute p { margin: 8px 0 0; color: #ccc; font-size: 12px; line-height: 1.5; }
+.share-compute-threads { margin-top: 8px; font-size: 12px; }
+.share-compute-row { display: flex; justify-content: space-between; gap: 12px; color: #ccc; line-height: 1.6; }
+.share-compute-row span:last-child { color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.share-compute-idle, .share-compute-idle span:last-child { color: #777; }

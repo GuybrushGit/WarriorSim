@@ -112,6 +112,35 @@ test('invalid cancellation, submit, and finish messages leave existing jobs and 
     assert.deepEqual([...helper.client.leases], leases);
 });
 
+test('the handshake reports its pool thread total, tracked across connects and disconnects', () => {
+    const {server, join} = setup();
+    const first = join(4);
+    assert.equal(first.messages[0].type, 'ready');
+    assert.equal(first.messages[0].networkThreads, 4);
+    assert.equal(join(2).messages[0].networkThreads, 6);
+    const other = join(3, 'b'.repeat(64));
+    assert.equal(other.messages[0].networkThreads, 3, 'each bundle pool counts only its own participants');
+    assert.equal(server.groups.get(BUILD).threads, 6);
+    const unfinished = server.connect(() => {});
+    server.disconnect(unfinished);
+    assert.equal(server.groups.get(BUILD).threads, 6, 'a connection that never said hello contributes nothing');
+    server.disconnect(first.client);
+    assert.equal(server.groups.get(BUILD).threads, 2);
+    server.disconnect(first.client);
+    assert.equal(server.groups.get(BUILD).threads, 2, 'repeated cleanup cannot subtract the same capacity twice');
+    assert.equal(join(5).messages[0].networkThreads, 7);
+});
+
+test('the pool total advertises capacity, so running a simulation does not shrink it', () => {
+    const {server, join, submit} = setup();
+    const owner = join(4);
+    join(2);
+    submit(owner);
+    assert.equal(owner.client.slots, 0, 'the owner stops pulling while it pushes its own job');
+    assert.equal(server.groups.get(BUILD).threads, 6);
+    assert.equal(join(1).messages[0].networkThreads, 7);
+});
+
 test('a repeated socket cleanup cannot delete a newly recreated pool', () => {
     const {server, join} = setup();
     const disconnected = join();
