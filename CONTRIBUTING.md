@@ -16,8 +16,10 @@ npm run dist
 
 This builds the native Release module and minifies all application JavaScript with
 Emscripten's bundled Terser. Class and function names are preserved because action
-serialization uses constructor names. Commit the resulting `dist/js` and
-`dist/wasm` assets together after validating them. The checked-in CSS remains usable.
+serialization uses constructor names. It also generates `dist/compute-build.json`
+and an immutable `dist/bundles/<buildId>/` snapshot containing the Classic and SoD
+application assets. Keep the resulting `dist/js`, `dist/wasm`, manifest, and bundle
+snapshot together after validating them. The checked-in CSS remains usable.
 Use `npm run wasm` to rebuild only the native module, or
 `powershell -NoProfile -File scripts/build-dist.ps1 -SkipWasmBuild` to reuse a native
 build that already matches the current source. Never publish mismatched JS/WASM assets.
@@ -26,19 +28,44 @@ Serve the repository through HTTP rather than opening an HTML file directly. For
 example, run `python -m http.server 8000`, then open `http://localhost:8000/classic.html`
 for Classic or `http://localhost:8000/index.html` for Season of Discovery. The server
 must serve `.wasm` as `application/wasm`; module and worker files must be accessible
-from the same origin.
+from the same origin. Web Crypto requires HTTPS or a localhost origin. Both pages
+preload and verify the complete bundle before initializing, and retain all assets
+for future workers. Deploy the complete new snapshot before replacing the current
+manifest; keep a grace period for tabs still preloading the previous snapshot.
+
+## Optional shared compute
+
+Sharing requires a WebSocket coordinator in addition to the static site. Install
+its independent dependencies and start a loopback preview:
+
+```powershell
+npm ci --prefix server
+npm run compute:dev
+```
+
+Open `http://127.0.0.1:8787/classic.html` for Classic or
+`http://127.0.0.1:8787/index.html` for SoD. Enable **Share Compute** in two tabs to
+exercise donations and foreground priority. Without a coordinator, simulations
+continue locally. The toggle must be enabled to receive or donate shared work.
+
+For AWS or another serving host, run one coordinator behind the existing HTTPS
+proxy. See [server/README.md](server/README.md) for origin configuration, deployment,
+bundle retention, lease recovery, native worker protocol, and public-result trust
+limits. The native worker application is a later project.
 
 ## Validate changes
 
 ```powershell
 npm test
 npm run test:wasm
+npm run test:compute
 npm run benchmark
 npm run test:regressions -- --dist
 ```
 
 `npm test` runs the existing simulation regression suite plus JavaScript reference
-and worker contract tests. Native parity/API tests and benchmarks require a fresh
+and worker contract tests. The compute suite also requires the coordinator
+dependencies and freshly built deployment assets. Native parity/API tests and benchmarks require a fresh
 `npm run wasm` build. See [test/README.md](test/README.md),
 [test/wasm/README.md](test/wasm/README.md), and [wasm/README.md](wasm/README.md).
 Seeded runs assign one seed and disjoint global iteration ranges to workers.

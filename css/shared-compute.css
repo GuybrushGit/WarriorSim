@@ -1,0 +1,6 @@
+.share-compute { margin: 12px 0; padding: 12px; border: 1px solid #666; border-radius: 3px; text-align: left; }
+.share-compute label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; color: #fff; }
+.share-compute input { margin: 0; width: 16px; height: 16px; accent-color: #f8c45c; }
+.share-compute input:focus-visible { outline: 2px solid #f8c45c; outline-offset: 3px; }
+.share-compute small { display: block; margin-top: 8px; color: #f8c45c; font-size: 12px; }
+.share-compute p { margin: 8px 0 0; color: #ccc; font-size: 12px; line-height: 1.5; }

@@ -1,4 +1,4 @@
-const MAX_WORKERS = Math.max(1, ~~Math.min(8, (navigator.hardwareConcurrency || 8) / 2));
+const MAX_WORKERS = Math.max(1, Math.min(64, navigator.hardwareConcurrency || 4));
 const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
@@ -11,6 +11,7 @@ SIM.UI = {
         view.events();
         view.initLog();
         view.loadSession();
+        initSharedCompute();
         view.loadWeapons("mainhand");
         view.updateSidebar();
         view.main.find('.js-import').hide();
@@ -366,7 +367,7 @@ SIM.UI = {
             view.endLoading();
             return;
         }
-        var sim = new SimulationWorkerParallel(
+        var sim = createSimulationRunner(
             MAX_WORKERS,
             (report) => {
                 // Finished
@@ -456,7 +457,7 @@ SIM.UI = {
                 player: [amount, stat, 3, Player.getConfig()],
                 sim: Simulation.getConfig(),
             };
-            var sim = new SimulationWorkerParallel(
+            var sim = createSimulationRunner(
                 MAX_WORKERS,
                 (report) => {
                     const mean = report.totaldmg / report.totalduration;
@@ -535,7 +536,8 @@ SIM.UI = {
             player: [item, type, istemp ? 2 : isench ? 1 : 0, Player.getConfig()],
             sim: Simulation.getConfig(),
         };
-        var sim = new SimulationWorker(
+        var sim = createSimulationRunner(
+            1,
             (report) => {
                 // Finished
                 let span = $('<span></span>');
@@ -758,6 +760,7 @@ SIM.UI = {
     },
 
     startLoading: function() {
+        if (sharedCompute) sharedCompute.beginForeground();
         let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.addClass('loading');
         btns.append('<span class="spinner"><span class="bounce1"></span><span class="bounce2"></span><span class="bounce3"></span></span>');
@@ -765,6 +768,7 @@ SIM.UI = {
     },
 
     endLoading: function() {
+        if (sharedCompute) sharedCompute.endForeground();
         let btns = $('.js-dps, .js-weights, .js-table, .js-enchant');
         btns.removeClass('loading');
         btns.find('.spinner').remove();

@@ -19,8 +19,8 @@ function createWorkerHarness(nativeModule, source = false) {
         postMessage(value) { messages.push(JSON.parse(JSON.stringify(value))); },
         importScripts(...paths) {
             for (const relativePath of paths) {
-                const filename = path.resolve(path.dirname(workerPath),
-                    source ? relativePath.replace(/\.min\.js$/, '.js') : relativePath);
+                const asset = new URL(relativePath, context.location.href).pathname.replace('/WarriorSim/dist/', '');
+                const filename = path.join(ROOT, source ? asset.replace(/\.min\.js$/, '.js') : path.join('dist', asset));
                 vm.runInContext(fs.readFileSync(filename, 'utf8'), context, {filename});
             }
         },

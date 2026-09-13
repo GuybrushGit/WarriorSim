@@ -72,7 +72,8 @@ function normalizeSimulationWorkerParams(params) {
 class SimulationWorker {
     constructor(callback_finished, callback_update, callback_error) {
         this.callback_error = callback_error;
-        this.worker = new Worker('./dist/js/sim-worker.min.js');
+        this.worker = new Worker(globalThis.SIMULATOR_BUNDLE ?
+            globalThis.SIMULATOR_BUNDLE.workerUrl('js/sim-worker.min.js') : './dist/js/sim-worker.min.js');
         this.worker.onerror = (...args) => {
             callback_error(...args);
             this.worker.terminate();

@@ -1,17 +1,19 @@
-importScripts(
-    './data/levelstats.min.js',
-    './data/buffs.min.js',
-    './data/enchants.min.js',
-    './data/spells.min.js',
-    './data/talents.min.js',
-    './classes/player.min.js',
-    './classes/simulation.min.js',
-    './classes/spell.min.js',
-    './classes/weapon.min.js',
-    './globals.min.js',
-);
+const simulationAssetUrl = file => globalThis.SIMULATOR_BUNDLE ?
+    globalThis.SIMULATOR_BUNDLE.url(file) : new URL('../' + file, self.location.href).href;
+importScripts(...[
+    'js/data/levelstats.min.js',
+    'js/data/buffs.min.js',
+    'js/data/enchants.min.js',
+    'js/data/spells.min.js',
+    'js/data/talents.min.js',
+    'js/classes/player.min.js',
+    'js/classes/simulation.min.js',
+    'js/classes/spell.min.js',
+    'js/classes/weapon.min.js',
+    'js/globals.min.js',
+].map(simulationAssetUrl));
 
-const WASM_MODULE_URL = new URL('../wasm/warriorsim.js', self.location.href).href;
+const WASM_MODULE_URL = simulationAssetUrl('wasm/warriorsim.js');
 const DEFAULT_BATCH_SIZE = 500;
 const WORKER_MAX_SIMULATION_UINT32 = 0xFFFFFFFF;
 const WORKER_SIMULATION_ITERATION_DOMAIN = 0x100000000;
@@ -28,7 +30,7 @@ function loadWarriorSim() {
                 throw new Error('The WarriorSim WASM module does not export createWarriorSim');
             }
             return factory({
-                locateFile: (file) => new URL(file, WASM_MODULE_URL).href,
+                locateFile: (file) => simulationAssetUrl('wasm/' + file),
             });
         });
     }
@@ -36,8 +38,8 @@ function loadWarriorSim() {
 }
 
 function importRules(sod) {
-    if (sod) importScripts('./data/gear_sod.min.js', './data/runes.min.js');
-    else importScripts('./data/gear.min.js');
+    if (sod) importScripts(...['js/data/gear_sod.min.js', 'js/data/runes.min.js'].map(simulationAssetUrl));
+    else importScripts(simulationAssetUrl('js/data/gear.min.js'));
 }
 
 function parseReport(value) {

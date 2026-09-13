@@ -5,19 +5,24 @@ var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var stripCode = require('gulp-strip-code');
 var browser = require('browser-sync').create();
+var fs = require('fs');
+var childProcess = require('child_process');
+
+const libFiles = ['js/**/*.js', ...(fs.existsSync('lib') ? ['lib/*.mjs'] : [])];
 
 gulp.task("js", function () {
     return gulp
-        .src(["js/**/*.js", "lib/*.mjs"])
+        .src(libFiles)
         .pipe(rename(function (path) {
             path.extname = ".min.js";
         }))
-        .pipe(gulp.dest("dist/js"));
+        .pipe(gulp.dest("dist/js"))
+        .on('end', function () { childProcess.execFileSync(process.execPath, ['scripts/compute-build.js']); });
 });
 
 gulp.task("js-build", function () {
     return gulp
-        .src(["js/**/*.js", "lib/*.mjs"])
+        .src(libFiles)
         // .pipe(stripCode({
         //     start_comment: "start-log",
         //     end_comment: "end-log"
@@ -30,7 +35,8 @@ gulp.task("js-build", function () {
                 },
             })
         )
-        .pipe(gulp.dest("dist/js"));
+        .pipe(gulp.dest("dist/js"))
+        .on('end', function () { childProcess.execFileSync(process.execPath, ['scripts/compute-build.js']); });
 });
 
 gulp.task("sass", function () {
