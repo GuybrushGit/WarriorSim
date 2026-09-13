@@ -13,10 +13,16 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "test": "node test/simulation-regressions.test.js",
-    "dist": "gulp sass && gulp js-build",
+    "test": "node test/simulation-regressions.test.js && node --test test/wasm/reference.test.js test/wasm/extra-reference.test.js test/wasm/worker.test.js",
+    "dist": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-dist.ps1",
     "dev": "gulp",
-    "start": "gulp"
+    "start": "gulp",
+    "wasm": "powershell -NoProfile -ExecutionPolicy Bypass -File wasm/build.ps1",
+    "build:css": "gulp sass",
+    "dist:full": "npm run build:css && npm run dist",
+    "test:wasm": "node --test test/wasm/native.test.js test/wasm/extra-native.test.js test/wasm/native-api.test.js",
+    "benchmark": "node test/wasm/benchmark.js",
+    "test:regressions": "node test/simulation-regressions.test.js"
   },
   "author": "",
   "license": "ISC",

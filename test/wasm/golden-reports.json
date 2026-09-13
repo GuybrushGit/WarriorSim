@@ -1,0 +1,2617 @@
+{
+  "oracle": "destination JavaScript; no native execution",
+  "revision": "76cc606bdadd596b9565770432175a4d70f973e2",
+  "reports": {
+    "classic-dw-fury": {
+      "iterations": 20,
+      "totaldmg": 139191.79031307148,
+      "totalduration": 405.07,
+      "mindps": 231.70389417537245,
+      "maxdps": 437.1887727033582,
+      "sumdps": 6896.943650384488,
+      "sumdps2": 2438526.1025411515,
+      "spread": {
+        "232": 1,
+        "264": 1,
+        "273": 1,
+        "280": 1,
+        "290": 1,
+        "295": 1,
+        "334": 1,
+        "337": 2,
+        "357": 1,
+        "363": 1,
+        "366": 1,
+        "371": 1,
+        "376": 1,
+        "377": 1,
+        "387": 1,
+        "401": 1,
+        "402": 1,
+        "418": 1,
+        "437": 1
+      },
+      "player": {
+        "auras": {
+          "crusader1": {
+            "name": "Crusader (MH)",
+            "uptime": 149404,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 124656,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "crusader2": {
+            "name": "Crusader (OH)",
+            "uptime": 93011,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mildlyirradiated": {
+            "name": "Mildly Irradiated",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "jujuflurry": {
+            "name": "Juju Flurry",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 285860,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 372946,
+            "totaldmg": 3345.002142857144,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerrage": {
+            "name": "Berserker Rage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 4959.510128425792,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              6,
+              0,
+              2,
+              4,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "sunderarmor": {
+            "name": "Sunder Armor",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              117,
+              0,
+              6,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 5204.035482589698,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              8,
+              0,
+              0,
+              6,
+              0
+            ]
+          },
+          "execute": {
+            "name": "Execute",
+            "uptime": 0,
+            "totaldmg": 16532.282978066112,
+            "totalusedrage": 389,
+            "cost": 10,
+            "data": [
+              22,
+              0,
+              2,
+              7,
+              0
+            ]
+          },
+          "berserkerrage": {
+            "name": "BerserkerRage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "whirlwind": {
+            "name": "Whirlwind",
+            "uptime": 0,
+            "totaldmg": 2568.252497168159,
+            "totalusedrage": 0,
+            "cost": 25,
+            "data": [
+              11,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "bloodthirst": {
+            "name": "Bloodthirst",
+            "uptime": 0,
+            "totaldmg": 12617.734012974977,
+            "totalusedrage": 0,
+            "cost": 30,
+            "data": [
+              7,
+              0,
+              3,
+              12,
+              0
+            ]
+          },
+          "unstoppablemight": {
+            "name": "Unstoppable Might",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Vis'kag the Bloodletter",
+          "totaldmg": 62752.240624863676,
+          "totalprocdmg": 3600,
+          "data": [
+            13,
+            33,
+            12,
+            78,
+            99
+          ]
+        },
+        "oh": {
+          "name": "Stormstrike Hammer",
+          "totaldmg": 27612.73244612597,
+          "totalprocdmg": 0,
+          "data": [
+            17,
+            21,
+            13,
+            58,
+            70
+          ]
+        }
+      }
+    },
+    "classic-adjacent-cleave": {
+      "iterations": 16,
+      "totaldmg": 97984.04094881125,
+      "totalduration": 279.996,
+      "mindps": 180.8012388746126,
+      "maxdps": 500.6656086803945,
+      "sumdps": 5595.49395363208,
+      "sumdps2": 2080235.7112857683,
+      "spread": {
+        "181": 1,
+        "204": 1,
+        "251": 1,
+        "296": 1,
+        "322": 1,
+        "335": 1,
+        "341": 1,
+        "346": 1,
+        "351": 1,
+        "355": 1,
+        "370": 1,
+        "386": 1,
+        "405": 1,
+        "475": 1,
+        "478": 1,
+        "501": 1
+      },
+      "player": {
+        "auras": {
+          "crusader1": {
+            "name": "Crusader (MH)",
+            "uptime": 91180,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "crusader2": {
+            "name": "Crusader (OH)",
+            "uptime": 101032,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mildlyirradiated": {
+            "name": "Mildly Irradiated",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "jujuflurry": {
+            "name": "Juju Flurry",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 203235,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 252895,
+            "totaldmg": 1944.747428571429,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds2": {
+            "name": "Deep Wounds 2",
+            "uptime": 16806,
+            "totaldmg": 186.2811428571429,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds3": {
+            "name": "Deep Wounds 3",
+            "uptime": 22688,
+            "totaldmg": 382.46400000000006,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds4": {
+            "name": "Deep Wounds 4",
+            "uptime": 45206,
+            "totaldmg": 673.162285714286,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerrage": {
+            "name": "Berserker Rage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "cleave": {
+            "name": "Cleave",
+            "uptime": 0,
+            "totaldmg": 1400.0507109156852,
+            "totalusedrage": 0,
+            "cost": 20,
+            "data": [
+              1,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "sunderarmor": {
+            "name": "Sunder Armor",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              75,
+              0,
+              5,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 2845.750874602818,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              8,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "execute": {
+            "name": "Execute",
+            "uptime": 0,
+            "totaldmg": 16600.08986744552,
+            "totalusedrage": 232,
+            "cost": 10,
+            "data": [
+              14,
+              0,
+              1,
+              10,
+              0
+            ]
+          },
+          "berserkerrage": {
+            "name": "BerserkerRage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "whirlwind": {
+            "name": "Whirlwind",
+            "uptime": 0,
+            "totaldmg": 10724.532207850567,
+            "totalusedrage": 0,
+            "cost": 25,
+            "data": [
+              5,
+              0,
+              0,
+              2,
+              0
+            ]
+          },
+          "bloodthirst": {
+            "name": "Bloodthirst",
+            "uptime": 0,
+            "totaldmg": 8070.023590204452,
+            "totalusedrage": 0,
+            "cost": 30,
+            "data": [
+              9,
+              0,
+              1,
+              5,
+              0
+            ]
+          },
+          "unstoppablemight": {
+            "name": "Unstoppable Might",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Vis'kag the Bloodletter",
+          "totaldmg": 32501.190588241927,
+          "totalprocdmg": 3120,
+          "data": [
+            7,
+            25,
+            8,
+            44,
+            49
+          ]
+        },
+        "oh": {
+          "name": "Stormstrike Hammer",
+          "totaldmg": 19535.748252407426,
+          "totalprocdmg": 0,
+          "data": [
+            2,
+            12,
+            6,
+            43,
+            61
+          ]
+        }
+      }
+    },
+    "classic-twohand-proc-slam": {
+      "iterations": 16,
+      "totaldmg": 75493.82763408245,
+      "totalduration": 353.69899999999996,
+      "mindps": 156.88766728379497,
+      "maxdps": 277.4223611353591,
+      "sumdps": 3395.4962815751956,
+      "sumdps2": 742623.4272753278,
+      "spread": {
+        "157": 1,
+        "167": 1,
+        "179": 2,
+        "183": 1,
+        "189": 1,
+        "192": 1,
+        "205": 1,
+        "206": 1,
+        "217": 1,
+        "218": 1,
+        "236": 1,
+        "262": 1,
+        "264": 1,
+        "265": 1,
+        "277": 1
+      },
+      "player": {
+        "auras": {
+          "untamed": {
+            "name": "The Untamed Blade",
+            "uptime": 51246,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mildlyirradiated": {
+            "name": "Mildly Irradiated",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "jujuflurry": {
+            "name": "Juju Flurry",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 258770,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 255229,
+            "totaldmg": 5036.77285714286,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerrage": {
+            "name": "Berserker Rage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 3457.00453537166,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              6,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "sunderarmor": {
+            "name": "Sunder Armor",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              16,
+              0,
+              3,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 3830.519942919309,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              5,
+              0,
+              0,
+              3,
+              0
+            ]
+          },
+          "execute": {
+            "name": "Execute",
+            "uptime": 0,
+            "totaldmg": 3650.5291266937,
+            "totalusedrage": 7,
+            "cost": 10,
+            "data": [
+              2,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "berserkerrage": {
+            "name": "BerserkerRage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "whirlwind": {
+            "name": "Whirlwind",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 25,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 30796.0943526852,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              37,
+              0,
+              7,
+              22,
+              0
+            ]
+          },
+          "unstoppablemight": {
+            "name": "Unstoppable Might",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "The Untamed Blade",
+          "totaldmg": 28722.90681926973,
+          "totalprocdmg": 0,
+          "data": [
+            20,
+            0,
+            10,
+            26,
+            32
+          ]
+        }
+      }
+    },
+    "sod-default-twohand": {
+      "iterations": 20,
+      "totaldmg": 2309217.327260079,
+      "totalduration": 405.07,
+      "mindps": 5204.463409629466,
+      "maxdps": 6275.680439405345,
+      "sumdps": 113984.62087796425,
+      "sumdps2": 651573951.7659967,
+      "spread": {
+        "5204": 1,
+        "5225": 1,
+        "5234": 1,
+        "5244": 1,
+        "5483": 1,
+        "5506": 1,
+        "5539": 1,
+        "5541": 1,
+        "5681": 1,
+        "5729": 1,
+        "5739": 1,
+        "5846": 1,
+        "5850": 1,
+        "5877": 1,
+        "5879": 2,
+        "6080": 1,
+        "6081": 1,
+        "6092": 1,
+        "6276": 1
+      },
+      "player": {
+        "auras": {
+          "crusader1": {
+            "name": "Crusader (MH)",
+            "uptime": 181384,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 92993,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rend": {
+            "name": "Rend",
+            "uptime": 399439,
+            "totaldmg": 34900.68214285711,
+            "totalusedrage": 0,
+            "cost": 10,
+            "data": [
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 411439,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "recklessness": {
+            "name": "Recklessness",
+            "uptime": 240000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 365439,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 346039,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 403439,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flask": {
+            "name": "Diamond Flask",
+            "uptime": 441439,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "freshmeat": {
+            "name": "Fresh Meat",
+            "uptime": 261643,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 383179,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 383179,
+            "totaldmg": 289471.3596503104,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 827569.2746971154,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              46,
+              0,
+              0,
+              123,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 237107.98163121668,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              0,
+              0,
+              0,
+              48,
+              0
+            ]
+          },
+          "bloodthirst": {
+            "name": "Bloodthirst",
+            "uptime": 0,
+            "totaldmg": 254956.9141585636,
+            "totalusedrage": 0,
+            "cost": 30,
+            "data": [
+              21,
+              0,
+              0,
+              39,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 248679.74508986057,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              4,
+              0,
+              0,
+              42,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 111951.07258312557,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              0,
+              0,
+              0,
+              25,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Dark Edge of Insanity",
+          "totaldmg": 303308.47730702953,
+          "totalprocdmg": 1271.8199999999997,
+          "data": [
+            3,
+            0,
+            0,
+            62,
+            39
+          ]
+        }
+      }
+    },
+    "sod-twohand-runes": {
+      "iterations": 16,
+      "totaldmg": 1488193.4473811009,
+      "totalduration": 353.69899999999996,
+      "mindps": 3385.6131293509748,
+      "maxdps": 5520.987883034014,
+      "sumdps": 67422.09826611582,
+      "sumdps2": 287335065.1457418,
+      "spread": {
+        "3386": 1,
+        "3757": 1,
+        "3878": 1,
+        "3967": 1,
+        "4064": 1,
+        "4098": 1,
+        "4106": 1,
+        "4128": 1,
+        "4169": 1,
+        "4186": 1,
+        "4221": 1,
+        "4326": 1,
+        "4436": 1,
+        "4438": 1,
+        "4742": 1,
+        "5521": 1
+      },
+      "player": {
+        "auras": {
+          "crusader1": {
+            "name": "Crusader (MH)",
+            "uptime": 168271,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 82112,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rend": {
+            "name": "Rend",
+            "uptime": 342021,
+            "totaldmg": 4216.212000000006,
+            "totalusedrage": 0,
+            "cost": 10,
+            "data": [
+              22,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 356989,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "recklessness": {
+            "name": "Recklessness",
+            "uptime": 192000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 323389,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 304685,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "consumedrage": {
+            "name": "Consumed by Rage",
+            "uptime": 264186,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 352189,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flask": {
+            "name": "Diamond Flask",
+            "uptime": 380989,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "wreckingcrew": {
+            "name": "Wrecking Crew",
+            "uptime": 330565,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "suddendeath": {
+            "name": "Sudden Death",
+            "uptime": 208803,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 330565,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 330565,
+            "totaldmg": 235710.55307825713,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 519093.86642841017,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              23,
+              0,
+              0,
+              91,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 96191.33613057011,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              6,
+              0,
+              0,
+              17,
+              0
+            ]
+          },
+          "ragingblow": {
+            "name": "Raging Blow",
+            "uptime": 0,
+            "totaldmg": 167937.63683001458,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              13,
+              0,
+              0,
+              43,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 259794.52008183955,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              10,
+              0,
+              0,
+              61,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Dark Edge of Insanity",
+          "totaldmg": 204008.52283200924,
+          "totalprocdmg": 1240.7999999999997,
+          "data": [
+            2,
+            0,
+            0,
+            48,
+            29
+          ]
+        }
+      }
+    },
+    "sod-level40-talents": {
+      "iterations": 20,
+      "totaldmg": 42260.80599138744,
+      "totalduration": 405.07,
+      "mindps": 68.04149722444177,
+      "maxdps": 198.24081101574944,
+      "sumdps": 2080.874601981591,
+      "sumdps2": 229540.9596092135,
+      "spread": {
+        "68": 1,
+        "84": 1,
+        "86": 2,
+        "88": 1,
+        "91": 2,
+        "92": 1,
+        "97": 1,
+        "98": 1,
+        "100": 1,
+        "106": 2,
+        "108": 1,
+        "112": 1,
+        "113": 1,
+        "117": 1,
+        "118": 1,
+        "124": 1,
+        "198": 1
+      },
+      "player": {
+        "auras": {
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 66000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 416015,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 10
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 408015,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 167150,
+            "totaldmg": 2706.819480468748,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "execute": {
+            "name": "Execute",
+            "uptime": 0,
+            "totaldmg": 1300.5951816252652,
+            "totalusedrage": 77,
+            "cost": 12,
+            "data": [
+              11,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          "whirlwind": {
+            "name": "Whirlwind",
+            "uptime": 0,
+            "totaldmg": 2218.443781229381,
+            "totalusedrage": 0,
+            "cost": 22,
+            "data": [
+              11,
+              0,
+              0,
+              3,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 16392.482786169014,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              77,
+              4,
+              3,
+              9,
+              0
+            ]
+          },
+          "ragingblow": {
+            "name": "Raging Blow",
+            "uptime": 0,
+            "totaldmg": 3766.478696791911,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              26,
+              3,
+              4,
+              2,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Ravager",
+          "totaldmg": 15875.986065103114,
+          "totalprocdmg": 0,
+          "data": [
+            75,
+            11,
+            4,
+            10,
+            30
+          ]
+        }
+      }
+    },
+    "sod-stance-runes": {
+      "iterations": 16,
+      "totaldmg": 1552854.8207778216,
+      "totalduration": 353.69899999999996,
+      "mindps": 3957.086825496106,
+      "maxdps": 4919.706835867671,
+      "sumdps": 70256.35443281128,
+      "sumdps2": 310327423.055038,
+      "spread": {
+        "3957": 1,
+        "3968": 1,
+        "4017": 1,
+        "4056": 1,
+        "4062": 1,
+        "4221": 1,
+        "4282": 1,
+        "4288": 1,
+        "4355": 1,
+        "4375": 1,
+        "4450": 1,
+        "4768": 1,
+        "4799": 1,
+        "4846": 1,
+        "4891": 1,
+        "4920": 1
+      },
+      "player": {
+        "auras": {
+          "crusader1": {
+            "name": "Crusader (MH)",
+            "uptime": 163764,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 88513,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rend": {
+            "name": "Rend",
+            "uptime": 341618,
+            "totaldmg": 4216.212000000006,
+            "totalusedrage": 0,
+            "cost": 10,
+            "data": [
+              23,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 355669,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "recklessness": {
+            "name": "Recklessness",
+            "uptime": 192000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 322069,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 302164,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "consumedrage": {
+            "name": "Consumed by Rage",
+            "uptime": 300675,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 350869,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flask": {
+            "name": "Diamond Flask",
+            "uptime": 379669,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "wreckingcrew": {
+            "name": "Wrecking Crew",
+            "uptime": 329245,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "suddendeath": {
+            "name": "Sudden Death",
+            "uptime": 191066,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 329245,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 329245,
+            "totaldmg": 243981.19746920685,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 160000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 529321.6321212341,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              15,
+              0,
+              0,
+              94,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 142096.8489826467,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              1,
+              0,
+              0,
+              28,
+              0
+            ]
+          },
+          "ragingblow": {
+            "name": "Raging Blow",
+            "uptime": 0,
+            "totaldmg": 159866.4183486338,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              9,
+              0,
+              0,
+              43,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 270001.63863289164,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              7,
+              0,
+              0,
+              64,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Dark Edge of Insanity",
+          "totaldmg": 201757.83322320864,
+          "totalprocdmg": 1613.0399999999995,
+          "data": [
+            3,
+            0,
+            0,
+            46,
+            34
+          ]
+        }
+      }
+    },
+    "sod-dw-runes": {
+      "iterations": 20,
+      "totaldmg": 1822682.1017312657,
+      "totalduration": 405.07,
+      "mindps": 2860.943009888769,
+      "maxdps": 5156.260810852324,
+      "sumdps": 90080.19687604287,
+      "sumdps2": 411390254.4666084,
+      "spread": {
+        "2861": 1,
+        "4070": 1,
+        "4110": 1,
+        "4129": 1,
+        "4153": 1,
+        "4174": 1,
+        "4214": 1,
+        "4224": 1,
+        "4358": 1,
+        "4520": 1,
+        "4635": 1,
+        "4681": 1,
+        "4822": 1,
+        "4876": 1,
+        "4912": 1,
+        "4979": 1,
+        "5015": 1,
+        "5072": 1,
+        "5120": 1,
+        "5156": 1
+      },
+      "player": {
+        "auras": {
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 125571,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rend": {
+            "name": "Rend",
+            "uptime": 396381,
+            "totaldmg": 5027.022000000007,
+            "totalusedrage": 0,
+            "cost": 10,
+            "data": [
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 410905,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "recklessness": {
+            "name": "Recklessness",
+            "uptime": 240000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 364905,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 344905,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "consumedrage": {
+            "name": "Consumed by Rage",
+            "uptime": 318536,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 402905,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flask": {
+            "name": "Diamond Flask",
+            "uptime": 440905,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "singleminded": {
+            "name": "SingleMinded",
+            "uptime": 409797,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "suddendeath": {
+            "name": "Sudden Death",
+            "uptime": 85899,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 374948,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 384356,
+            "totaldmg": 207130.77360088984,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 474005.13368661696,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              23,
+              0,
+              5,
+              131,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 16673.77241182758,
+            "totalusedrage": 0,
+            "cost": 5,
+            "data": [
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          },
+          "execute": {
+            "name": "Execute",
+            "uptime": 0,
+            "totaldmg": 280199.6990856193,
+            "totalusedrage": 4390,
+            "cost": 15,
+            "data": [
+              18,
+              0,
+              1,
+              52,
+              0
+            ]
+          },
+          "whirlwind": {
+            "name": "Whirlwind",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 25,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "bloodthirst": {
+            "name": "Bloodthirst",
+            "uptime": 0,
+            "totaldmg": 172707.8109326684,
+            "totalusedrage": 0,
+            "cost": 30,
+            "data": [
+              5,
+              0,
+              1,
+              34,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 162339.27570478572,
+            "totalusedrage": 0,
+            "cost": 15,
+            "data": [
+              0,
+              0,
+              0,
+              34,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 100674.91687448048,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              0,
+              0,
+              0,
+              26,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Brutality Blade",
+          "totaldmg": 221007.2598240778,
+          "totalprocdmg": 1364.8799999999997,
+          "data": [
+            0,
+            27,
+            4,
+            74,
+            80
+          ]
+        },
+        "oh": {
+          "name": "Vis'kag the Bloodletter",
+          "totaldmg": 176773.15761030006,
+          "totalprocdmg": 4778.4,
+          "data": [
+            1,
+            24,
+            2,
+            120,
+            103
+          ]
+        }
+      }
+    },
+    "sod-gladiator-shield": {
+      "iterations": 20,
+      "totaldmg": 1499188.410068763,
+      "totalduration": 405.07,
+      "mindps": 3199.36705056013,
+      "maxdps": 4233.436025623328,
+      "sumdps": 74067.11390992926,
+      "sumdps2": 275843965.53933585,
+      "spread": {
+        "3199": 1,
+        "3257": 1,
+        "3309": 1,
+        "3376": 1,
+        "3569": 1,
+        "3575": 1,
+        "3589": 1,
+        "3597": 1,
+        "3601": 1,
+        "3653": 1,
+        "3688": 1,
+        "3718": 1,
+        "3894": 1,
+        "3899": 1,
+        "3904": 1,
+        "3936": 1,
+        "3991": 1,
+        "4017": 1,
+        "4061": 1,
+        "4233": 1
+      },
+      "player": {
+        "auras": {
+          "windfury": {
+            "name": "Windfury",
+            "uptime": 129943,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rend": {
+            "name": "Rend",
+            "uptime": 328811,
+            "totaldmg": 5137.2921600000045,
+            "totalusedrage": 0,
+            "cost": 7,
+            "data": [
+              20,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "battleshout": {
+            "name": "Battle Shout",
+            "uptime": 410711,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "recklessness": {
+            "name": "Recklessness",
+            "uptime": 240900,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deathwish": {
+            "name": "Death Wish",
+            "uptime": 364711,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "mightyragepotion": {
+            "name": "Mighty Rage Potion",
+            "uptime": 344911,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "rampage": {
+            "name": "Rampage",
+            "uptime": 402711,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flask": {
+            "name": "Diamond Flask",
+            "uptime": 440711,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "flurry": {
+            "name": "Flurry",
+            "uptime": 398856,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "deepwounds": {
+            "name": "Deep Wounds",
+            "uptime": 398856,
+            "totaldmg": 189305.27916817402,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 200000,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defendersresolve": {
+            "name": "Defender's Resolve",
+            "uptime": 384819,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "battlestance": {
+            "name": "Battle Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "berserkerstance": {
+            "name": "Berserker Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "defensivestance": {
+            "name": "Defensive Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          },
+          "gladiatorstance": {
+            "name": "Gladiator Stance",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0
+          }
+        },
+        "spells": {
+          "heroicstrike": {
+            "name": "Heroic Strike",
+            "uptime": 0,
+            "totaldmg": 619844.6683188763,
+            "totalusedrage": 0,
+            "cost": 9,
+            "data": [
+              35,
+              0,
+              0,
+              162,
+              0
+            ]
+          },
+          "bloodrage": {
+            "name": "Bloodrage",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "sunderarmor": {
+            "name": "Sunder Armor",
+            "uptime": 0,
+            "totaldmg": 137564.18634899886,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              12,
+              0,
+              0,
+              60,
+              0
+            ]
+          },
+          "overpower": {
+            "name": "Overpower",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 2,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "thunderclap": {
+            "name": "ThunderClap",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 16.5,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shockwave": {
+            "name": "Shockwave",
+            "uptime": 0,
+            "totaldmg": 99610.62501413135,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              0,
+              0,
+              0,
+              20,
+              0
+            ]
+          },
+          "bloodthirst": {
+            "name": "Bloodthirst",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 27,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shieldslam": {
+            "name": "Shield Slam",
+            "uptime": 0,
+            "totaldmg": 219927.80082793022,
+            "totalusedrage": 0,
+            "cost": 17,
+            "data": [
+              16,
+              0,
+              3,
+              62,
+              0
+            ]
+          },
+          "slam": {
+            "name": "Slam",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 12,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "quickstrike": {
+            "name": "Quick Strike",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 14,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "unstoppablemight": {
+            "name": "Unstoppable Might",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stanceswitch": {
+            "name": "Stance Switch",
+            "uptime": 0,
+            "totaldmg": 0,
+            "totalusedrage": 0,
+            "cost": 0,
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "mh": {
+          "name": "Brutality Blade",
+          "totaldmg": 226743.87823065324,
+          "totalprocdmg": 1054.6799999999998,
+          "data": [
+            2,
+            0,
+            1,
+            84,
+            48
+          ]
+        }
+      }
+    }
+  }
+}

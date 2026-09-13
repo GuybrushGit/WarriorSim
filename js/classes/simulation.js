@@ -35,8 +35,43 @@ const TYPE = {
     ERROR: 2,
 }
 
+const MAX_SIMULATION_UINT32 = 0xFFFFFFFF;
+const SIMULATION_ITERATION_DOMAIN = 0x100000000;
+
+function normalizeSimulationWorkerParams(params) {
+    if (!params || !params.sim) throw new Error('Simulation configuration is required');
+    if (!Array.isArray(params.player)) throw new Error('Simulation player arguments are required');
+    const iterations = Number(params.sim.iterations);
+    if (!Number.isSafeInteger(iterations) || iterations <= 0 || iterations > MAX_SIMULATION_UINT32) {
+        throw new Error('Simulation iterations must be a positive unsigned 32-bit integer');
+    }
+    const iterationOffset = params.sim.iterationOffset == null ? 0 : Number(params.sim.iterationOffset);
+    if (!Number.isSafeInteger(iterationOffset) || iterationOffset < 0 ||
+        iterationOffset > MAX_SIMULATION_UINT32) {
+        throw new Error('Simulation iteration offset must be an unsigned 32-bit integer');
+    }
+    if (iterationOffset + iterations > SIMULATION_ITERATION_DOMAIN) {
+        throw new Error('Simulation iteration range exceeds the unsigned 32-bit seed domain');
+    }
+    const suppliedSeed = params.sim.seed;
+    const seed = Number(suppliedSeed);
+    if (suppliedSeed != null && (!Number.isSafeInteger(seed) || seed < 0 || seed > 0xFFFFFFFF)) {
+        throw new Error('Simulation seed must be an unsigned 32-bit integer');
+    }
+    return {
+        ...params,
+        sim: {
+            ...params.sim,
+            iterations,
+            iterationOffset,
+            seed: suppliedSeed == null ? generateSimulationSeed() : seed >>> 0,
+        },
+    };
+}
+
 class SimulationWorker {
     constructor(callback_finished, callback_update, callback_error) {
+        this.callback_error = callback_error;
         this.worker = new Worker('./dist/js/sim-worker.min.js');
         this.worker.onerror = (...args) => {
             callback_error(...args);
@@ -64,21 +99,117 @@ class SimulationWorker {
     }
 
     start(params) {
-        params.globals = getGlobalsDelta();
-        this.worker.postMessage(params);
+        try {
+            const normalized = normalizeSimulationWorkerParams(params);
+            this.worker.postMessage({...normalized, globals: getGlobalsDelta()});
+        } catch (error) {
+            this.worker.terminate();
+            this.callback_error(error);
+        }
     }
+
+    cancel() {
+        this.worker.postMessage({type: 'cancel'});
+        this.worker.terminate();
+    }
+}
+
+function mergeSimulationWeapons(destination, source) {
+    if (!destination) return source;
+    destination.totaldmg += source.totaldmg;
+    destination.totalprocdmg += source.totalprocdmg;
+    for (let i = 0; i < source.data.length; ++i) destination.data[i] += source.data[i];
+    return destination;
+}
+
+function mergeSimulationReports(destination, source) {
+    if (!destination) {
+        destination = {
+            iterations: 0,
+            totaldmg: 0,
+            totalduration: 0,
+            mindps: Number.POSITIVE_INFINITY,
+            maxdps: Number.NEGATIVE_INFINITY,
+            sumdps: 0,
+            sumdps2: 0,
+            starttime: Number.POSITIVE_INFINITY,
+            endtime: Number.NEGATIVE_INFINITY,
+        };
+    }
+    destination.iterations += source.iterations || 0;
+    destination.totaldmg += source.totaldmg || 0;
+    destination.totalduration += source.totalduration || 0;
+    destination.mindps = Math.min(destination.mindps, source.mindps);
+    destination.maxdps = Math.max(destination.maxdps, source.maxdps);
+    destination.sumdps += source.sumdps || 0;
+    destination.sumdps2 += source.sumdps2 || 0;
+    destination.starttime = Math.min(destination.starttime, source.starttime);
+    destination.endtime = Math.max(destination.endtime, source.endtime);
+    if (source.seed !== undefined) destination.seed = source.seed;
+    if (source.engineVersion !== undefined) destination.engineVersion = source.engineVersion;
+
+    if (source.player) {
+        if (!destination.player) {
+            destination.player = source.player;
+        } else {
+            for (const id in source.player.auras) {
+                const src = source.player.auras[id];
+                const dst = destination.player.auras[id];
+                if (!dst) {
+                    destination.player.auras[id] = src;
+                } else {
+                    dst.uptime += src.uptime;
+                    if (src.data) {
+                        for (let i = 0; i < src.data.length; ++i) dst.data[i] += src.data[i];
+                    }
+                    if (src.totaldmg) dst.totaldmg = (dst.totaldmg || 0) + src.totaldmg;
+                }
+            }
+            for (const id in source.player.spells) {
+                const src = source.player.spells[id];
+                const dst = destination.player.spells[id];
+                if (!dst) {
+                    destination.player.spells[id] = src;
+                } else {
+                    dst.totaldmg += src.totaldmg;
+                    if (src.totalusedrage !== undefined) {
+                        dst.totalusedrage = (dst.totalusedrage || 0) + src.totalusedrage;
+                    }
+                    for (let i = 0; i < src.data.length; ++i) dst.data[i] += src.data[i];
+                }
+            }
+            destination.player.mh = mergeSimulationWeapons(destination.player.mh, source.player.mh);
+            if (source.player.oh) {
+                destination.player.oh = mergeSimulationWeapons(destination.player.oh, source.player.oh);
+            }
+        }
+    }
+    if (source.spread) {
+        if (!destination.spread) destination.spread = [];
+        for (const dps in source.spread) {
+            destination.spread[dps] = (destination.spread[dps] || 0) + source.spread[dps];
+        }
+    }
+    return destination;
 }
 
 class SimulationWorkerParallel {
     constructor(threads, callback_finished, callback_update, callback_error) {
-        this.threads = threads;
+        this.threads = Number.isFinite(Number(threads)) ? Math.max(1, Math.trunc(threads) || 1) : 1;
         this.callback_finished = callback_finished;
         this.callback_update = callback_update;
+        this.callback_error = callback_error;
         this.states = [...Array(this.threads)];
         this.workers = this.states.map((_, i) => new SimulationWorker(
             data => { this.states[i] = { status: 1, data }; this.update(); },
             (iteration, data) => { this.states[i] = { status: 0, iteration, data }; this.update(); },
-            error => { if (!this.error) { this.error = error; callback_error(error); } },
+            error => {
+                if (!this.error) {
+                    this.error = error;
+                    this.workers.forEach((worker) => worker.cancel());
+                    callback_error(error);
+                }
+            },
         ));
     }
 
@@ -86,69 +217,7 @@ class SimulationWorkerParallel {
         if (this.error) return;
         const completed = this.states.reduce((count, state) => count + (state && state.status || 0), 0);
         if (completed >= this.states.length) {
-            const result = this.states[0].data;
-            this.states.slice(1).forEach(({data}) => {
-                result.iterations += data.iterations;
-                result.totaldmg += data.totaldmg;
-                result.totalduration += data.totalduration;
-                result.mindps = Math.min(result.mindps, data.mindps);
-                result.maxdps = Math.max(result.maxdps, data.maxdps);
-                result.sumdps += data.sumdps;
-                result.sumdps2 += data.sumdps2;
-                result.starttime = Math.min(result.starttime, data.starttime);
-                result.endtime = Math.max(result.endtime, data.endtime);
-                if (result.spread && data.spread) {
-                    for (let i in data.spread) {
-                        result.spread[i] = (result.spread[i] || 0) + data.spread[i];
-                    }
-                }
-                if (result.player && data.player) {
-                    for (let id in data.player.auras) {
-                        const src = data.player.auras[id], dst = result.player.auras[id];
-                        if (!dst) {
-                            result.player.auras[id] = src;
-                        } else {
-                            dst.uptime += src.uptime;
-                            if (src.data) {
-                                for (let i = 0; i < src.data.length; ++i) {
-                                    dst.data[i] += src.data[i];
-                                }
-                            }
-                            if (src.totaldmg) {
-                                dst.totaldmg = (dst.totaldmg || 0) + src.totaldmg;
-                            }
-                        }
-                    }
-                    for (let id in data.player.spells) {
-                        const src = data.player.spells[id], dst = result.player.spells[id];
-                        if (!dst) {
-                            result.player.spells[id] = src;
-                        } else {
-                            dst.totaldmg += src.totaldmg;
-                            if (src.totalusedrage !== undefined) {
-                                dst.totalusedrage = (dst.totalusedrage || 0) + src.totalusedrage;
-                            }
-                            for (let i = 0; i < src.data.length; ++i) {
-                                dst.data[i] += src.data[i];
-                            }
-                        }
-                    }
-                    function mergeWeapon(dst, src) {
-                        if (dst) {
-                            dst.totaldmg += src.totaldmg;
-                            dst.totalprocdmg += src.totalprocdmg;
-                            for (let i = 0; i < src.data.length; ++i) {
-                                dst.data[i] += src.data[i];
-                            }
-                            return dst;
-                        } else {
-                            return src;
-                        }
-                    }
-                    result.player.mh = mergeWeapon(result.player.mh, data.player.mh);
-                    if (data.player.oh) result.player.oh = mergeWeapon(result.player.oh, data.player.oh);
-                }
-            });
+            const result = this.states.reduce((merged, state) => mergeSimulationReports(merged, state.data), undefined);
             this.callback_finished(result);
         } else {
             let iteration = 0;
@@ -164,18 +233,40 @@ class SimulationWorkerParallel {
     }
 
     start(params) {
-        params.globals = getGlobalsDelta();
+        try {
+            params = normalizeSimulationWorkerParams(params);
+        } catch (error) {
+            this.error = error;
+            this.workers.forEach((worker) => worker.cancel());
+            this.callback_error(error);
+            return;
+        }
         this.iterations = params.sim.iterations;
-        const seed = params.sim.seed == null ? generateSimulationSeed() : Number(params.sim.seed) >>> 0;
+        const workerCount = Math.min(this.workers.length, Math.max(1, this.iterations));
+        if (workerCount !== this.workers.length) {
+            this.workers.slice(workerCount).forEach((worker) => worker.cancel());
+            this.workers.length = workerCount;
+            this.states.length = workerCount;
+        }
+        const seed = params.sim.seed;
         let iterationOffset = params.sim.iterationOffset || 0;
         let remain = params.sim.iterations;
         this.workers.forEach((worker, i) => {
             const current = Math.round(remain / (this.workers.length - i));
             remain -= current;
-            params.player[3].logging = i == 0 && params.fullReport;
-            worker.start({...params, sim: {...params.sim, iterations: current, seed, iterationOffset}});
+            const player = params.player.slice();
+            player[3] = {...player[3], logging: i == 0 && params.fullReport};
+            worker.start({
+                ...params,
+                player,
+                sim: {...params.sim, iterations: current, seed, iterationOffset},
+            });
             iterationOffset += current;
         });
+    }
+
+    cancel() {
+        this.workers.forEach((worker) => worker.cancel());
     }
 }
 

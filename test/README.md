@@ -1,8 +1,8 @@
 # JavaScript simulation regression tests
 
-Run `npm test` or `node test/simulation-regressions.test.js`. The suite uses Node
+Run `npm run test:regressions` or `node test/simulation-regressions.test.js`. The suite uses Node
 built-ins and requires no package installation. To check the browser's minified
-assets as well, run `npm test -- --dist`.
+assets as well, run `npm run test:regressions -- --dist`.
 
 Regression tests cover these fixes:
 
@@ -17,7 +17,7 @@ Regression tests cover these fixes:
   and Board is an existing Season of Discovery feature; the fix does not add
   that mechanic to Classic.
 - Support seeded random rolls, including glancing damage, with independent
-  streams for each global iteration so worker partitioning is reproducible.
+  streams for each global iteration so RNG assignment is reproducible.
   The seed formula is `(seed + imul(iterationOffset + i, 0x9e3779b9)) >>> 0`;
   each fight initializes a Mulberry32 stream before resetting the player.
 

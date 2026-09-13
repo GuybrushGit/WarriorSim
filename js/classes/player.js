@@ -1716,6 +1716,126 @@ class Player {
         if (roll < (crit * 100)) dmg *= 1 + 1 * (1 + this.critdmgbonus * 2);
         return dmg * this.stats.dmgmod * this.mh.modifier;
     }
+    serializeSimulationSpec(simConfig) {
+        const scalarProperties = (value) => {
+            const result = {};
+            for (const key in value) {
+                const property = value[key];
+                if (typeof property == 'number') {
+                    if (Number.isFinite(property)) result[key] = property;
+                }
+                else if (typeof property == 'string' || typeof property == 'boolean') {
+                    result[key] = property;
+                }
+            }
+            return result;
+        };
+
+        const spellKeys = new Map(Object.entries(this.spells).map(([key, value]) => [value, key]));
+        const auraEntries = Object.entries(this.auras);
+        const stanceDefinitions = [
+            ['battlestance', BattleStance],
+            ['berserkerstance', BerserkerStance],
+            ['defensivestance', DefensiveStance],
+            ['gladiatorstance', GladiatorStance],
+        ];
+        const existingAuraKeys = new Set(auraEntries.map(([key]) => key));
+        for (const [key, Stance] of stanceDefinitions) {
+            if (!existingAuraKeys.has(key)) auraEntries.push([key, new Stance(this)]);
+        }
+        const auraKeys = new Map(auraEntries.map(([key, value]) => [value, key]));
+
+        const reference = (value, context) => {
+            if (auraKeys.has(value)) return { spellAura: auraKeys.get(value) };
+            if (spellKeys.has(value)) return { spellSpell: spellKeys.get(value) };
+            throw new Error(`Cannot serialize ${context}: referenced action is not in player spells or auras`);
+        };
+        const serializeProc = (proc, context) => {
+            if (!proc) return null;
+            return {
+                props: scalarProperties(proc),
+                ...(proc.spell ? reference(proc.spell, context) : {}),
+            };
+        };
+        const serializeWeapon = (weapon, context) => {
+            if (!weapon) return null;
+            return {
+                props: scalarProperties(weapon),
+                proc1: serializeProc(weapon.proc1, `${context}.proc1`),
+                proc2: serializeProc(weapon.proc2, `${context}.proc2`),
+                windfuryAura: weapon.windfury ? auraKeys.get(weapon.windfury) : null,
+            };
+        };
+        const serializeSpell = ([key, spell]) => ({
+            key,
+            kind: spell.constructor.name,
+            props: scalarProperties(spell),
+            weapon: this.oh && spell.weapon === this.oh ? 'oh' : 'mh',
+            ...(spell.backupheroic ? {
+                backupHeroic: {
+                    kind: spell.backupheroic.constructor.name,
+                    props: scalarProperties(spell.backupheroic),
+                },
+            } : {}),
+        });
+        const serializeAura = ([key, aura]) => ({
+            key,
+            kind: aura.constructor.name,
+            props: {
+                ...scalarProperties(aura),
+                dataLength: aura.data ? aura.data.length : 0,
+            },
+            stats: scalarProperties(aura.stats || {}),
+            multStats: scalarProperties(aura.mult_stats || {}),
+        });
+        const actionReference = (value, context) => {
+            if (spellKeys.has(value)) return { type: 'spell', key: spellKeys.get(value) };
+            if (auraKeys.has(value)) return { type: 'aura', key: auraKeys.get(value) };
+            throw new Error(`Cannot serialize ${context}: action is not in player spells or auras`);
+        };
+
+        const prepOrder = this.preporder.map((descriptor) => {
+            const isAura = Boolean(descriptor.aura);
+            const key = descriptor.classname.toLowerCase();
+            const actions = isAura ? this.auras : this.spells;
+            if (!actions[key])
+                throw new Error(`Cannot serialize prepOrder: missing ${isAura ? 'aura' : 'spell'} ${key}`);
+            return { type: isAura ? 'aura' : 'spell', key };
+        });
+
+        return {
+            version: 1,
+            sim: scalarProperties(simConfig || {}),
+            player: {
+                props: {
+                    ...scalarProperties(this),
+                    shield: Boolean(this.shield),
+                    batching: Number(simConfig && simConfig.batching) || 0,
+                },
+                base: scalarProperties(this.base),
+                stats: scalarProperties(this.stats),
+                target: scalarProperties(this.target),
+                talents: scalarProperties(this.talents),
+                weapons: {
+                    mh: serializeWeapon(this.mh, 'main-hand weapon'),
+                    oh: serializeWeapon(this.oh, 'off-hand weapon'),
+                },
+                spells: Object.entries(this.spells).map(serializeSpell),
+                auras: auraEntries.map(serializeAura),
+                links: {
+                    normalSpells: this.normalspells.map((value) => actionReference(value, 'normalSpells')),
+                    executeSpells: this.executespells.map((value) => actionReference(value, 'executeSpells')),
+                    prepOrder,
+                },
+                procs: {
+                    trinketproc1: serializeProc(this.trinketproc1, 'trinketproc1'),
+                    trinketproc2: serializeProc(this.trinketproc2, 'trinketproc2'),
+                    attackproc1: serializeProc(this.attackproc1, 'attackproc1'),
+                    attackproc2: serializeProc(this.attackproc2, 'attackproc2'),
+                },
+            },
+        };
+    }
     serializeStats() {
         return {
             auras: this.auras,
