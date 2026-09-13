@@ -1,0 +1,866 @@
+[
+  {
+    "name": "classic-dw-fury",
+    "mode": "classic",
+    "player": {
+      "level": 60,
+      "race": "Human",
+      "aqbooks": true,
+      "reactionmin": 200,
+      "reactionmax": 300,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4211,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 18,
+      "timesecsmax": 22,
+      "executeperc": 15,
+      "startrage": 0,
+      "iterations": 20,
+      "batching": 10,
+      "seed": 305419896
+    },
+    "expect": {
+      "spells": [
+        "bloodthirst",
+        "execute",
+        "whirlwind"
+      ],
+      "auras": [
+        "crusader1",
+        "windfury",
+        "deepwounds"
+      ]
+    },
+    "buffsAdd": [
+      10614
+    ]
+  },
+  {
+    "name": "classic-adjacent-cleave",
+    "mode": "classic",
+    "player": {
+      "level": 60,
+      "race": "Orc",
+      "aqbooks": true,
+      "reactionmin": 100,
+      "reactionmax": 180,
+      "adjacent": 3,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 3402,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "0.8"
+      }
+    },
+    "sim": {
+      "timesecsmin": 16,
+      "timesecsmax": 19,
+      "executeperc": 20,
+      "startrage": 35,
+      "iterations": 16,
+      "batching": 10,
+      "seed": 2309737967
+    },
+    "rotation": {
+      "11567": {
+        "active": false
+      },
+      "20569": {
+        "active": true,
+        "minrage": 35,
+        "minrageactive": true
+      },
+      "25286": {
+        "active": false
+      }
+    },
+    "expect": {
+      "spells": [
+        "cleave",
+        "execute",
+        "whirlwind"
+      ],
+      "auras": [
+        "deepwounds",
+        "deepwounds2"
+      ]
+    }
+  },
+  {
+    "name": "classic-twohand-proc-slam",
+    "mode": "classic",
+    "player": {
+      "level": 60,
+      "race": "Night Elf",
+      "aqbooks": true,
+      "reactionmin": 150,
+      "reactionmax": 250,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4611,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 20,
+      "timesecsmax": 24,
+      "executeperc": 15,
+      "startrage": 20,
+      "iterations": 16,
+      "batching": 400,
+      "seed": 324508639
+    },
+    "gear": {
+      "mainhand": [],
+      "offhand": [],
+      "twohand": [
+        19334
+      ]
+    },
+    "rotation": {
+      "11605": {
+        "active": true,
+        "minrage": 15,
+        "minrageactive": false,
+        "swingreset": true,
+        "afterswing": true
+      },
+      "23894": {
+        "active": false
+      }
+    },
+    "expect": {
+      "spells": [
+        "slam",
+        "execute"
+      ],
+      "auras": [
+        "deepwounds"
+      ]
+    }
+  },
+  {
+    "name": "sod-default-twohand",
+    "mode": "sod",
+    "player": {
+      "level": 60,
+      "race": "Human",
+      "aqbooks": true,
+      "reactionmin": 200,
+      "reactionmax": 300,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4211,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 18,
+      "timesecsmax": 22,
+      "executeperc": 15,
+      "startrage": 0,
+      "iterations": 20,
+      "batching": 10,
+      "seed": 305419896
+    }
+  },
+  {
+    "name": "sod-twohand-runes",
+    "mode": "sod",
+    "player": {
+      "level": 60,
+      "race": "Night Elf",
+      "aqbooks": true,
+      "reactionmin": 150,
+      "reactionmax": 250,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4611,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 20,
+      "timesecsmax": 24,
+      "executeperc": 15,
+      "startrage": 85,
+      "iterations": 16,
+      "batching": 400,
+      "seed": 324508639
+    },
+    "gear": {
+      "mainhand": [],
+      "offhand": [],
+      "twohand": [
+        234985
+      ]
+    },
+    "rotation": {
+      "11605": {
+        "active": true,
+        "minrage": 15,
+        "minrageactive": false,
+        "swingreset": true,
+        "afterswing": true
+      },
+      "23894": {
+        "active": false
+      },
+      "402911": {
+        "active": true,
+        "priority": 9,
+        "expriority": 9
+      },
+      "425418": {
+        "active": true
+      }
+    },
+    "runes": {
+      "chest": [
+        402911
+      ],
+      "legs": [
+        425418
+      ],
+      "hands": [
+        429765
+      ],
+      "waist": [
+        402922
+      ],
+      "wrist": [
+        427065
+      ],
+      "head": [
+        403218
+      ],
+      "back": [
+        440113
+      ]
+    }
+  },
+  {
+    "name": "sod-level40-talents",
+    "mode": "sod",
+    "player": {
+      "level": 40,
+      "race": "Human",
+      "aqbooks": false,
+      "reactionmin": 200,
+      "reactionmax": 300,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 42,
+        "basearmor": 4211,
+        "defense": 210,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 18,
+      "timesecsmax": 22,
+      "executeperc": 15,
+      "startrage": 0,
+      "iterations": 20,
+      "batching": 10,
+      "seed": 305419896
+    },
+    "buffsAdd": [
+      10614
+    ],
+    "talents": [
+      [
+        0,
+        0,
+        3,
+        0,
+        5,
+        0,
+        2,
+        0,
+        3,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "buffs": [
+      2457,
+      8512
+    ],
+    "rotation": {
+      "78": {
+        "active": false
+      },
+      "284": {
+        "active": false
+      },
+      "285": {
+        "active": false
+      },
+      "772": {
+        "active": false
+      },
+      "1608": {
+        "active": false
+      },
+      "1680": {
+        "active": true,
+        "priority": 7,
+        "expriority": 7
+      },
+      "1715": {
+        "active": false
+      },
+      "1719": {
+        "active": false
+      },
+      "2687": {
+        "active": true,
+        "timetostartactive": true,
+        "timetostart": 0
+      },
+      "5308": {
+        "active": false
+      },
+      "6343": {
+        "active": false
+      },
+      "6546": {
+        "active": false
+      },
+      "6547": {
+        "active": false
+      },
+      "6548": {
+        "active": false
+      },
+      "6612": {
+        "active": false
+      },
+      "6613": {
+        "active": false
+      },
+      "7372": {
+        "active": false
+      },
+      "7373": {
+        "active": false
+      },
+      "7384": {
+        "active": false
+      },
+      "7887": {
+        "active": false
+      },
+      "8198": {
+        "active": false
+      },
+      "8204": {
+        "active": false
+      },
+      "8205": {
+        "active": false
+      },
+      "11564": {
+        "active": false
+      },
+      "11565": {
+        "active": true,
+        "minrage": 30,
+        "minrageactive": true
+      },
+      "11566": {
+        "active": false
+      },
+      "11567": {
+        "active": false
+      },
+      "11572": {
+        "active": false
+      },
+      "11573": {
+        "active": false
+      },
+      "11574": {
+        "active": false
+      },
+      "11580": {
+        "active": false
+      },
+      "11581": {
+        "active": false
+      },
+      "11584": {
+        "active": false
+      },
+      "11585": {
+        "active": false
+      },
+      "11597": {
+        "active": false
+      },
+      "12328": {
+        "active": false
+      },
+      "17528": {
+        "active": false
+      },
+      "18499": {
+        "active": false
+      },
+      "20572": {
+        "active": false
+      },
+      "20658": {
+        "active": true,
+        "priority": 9,
+        "expriority": 9
+      },
+      "20660": {
+        "active": false
+      },
+      "20661": {
+        "active": false
+      },
+      "20662": {
+        "active": false
+      },
+      "23894": {
+        "active": false
+      },
+      "26296": {
+        "active": false
+      },
+      "27580": {
+        "active": false
+      },
+      "402911": {
+        "active": true,
+        "priority": 8,
+        "expriority": 8
+      },
+      "900003": {
+        "active": false
+      },
+      "900006": {
+        "active": false
+      },
+      "900008": {
+        "active": false
+      },
+      "900012": {
+        "active": false
+      }
+    },
+    "gear": {
+      "head": [],
+      "neck": [],
+      "shoulder": [],
+      "back": [],
+      "chest": [],
+      "wrist": [],
+      "hands": [],
+      "waist": [],
+      "legs": [],
+      "feet": [],
+      "finger1": [],
+      "finger2": [],
+      "trinket1": [],
+      "trinket2": [],
+      "ranged": [],
+      "mainhand": [],
+      "offhand": [],
+      "twohand": [
+        7717
+      ],
+      "custom": []
+    },
+    "enchant": {
+      "head": [],
+      "shoulder": [],
+      "back": [],
+      "chest": [],
+      "wrist": [],
+      "hands": [],
+      "legs": [],
+      "feet": [],
+      "mainhand": [],
+      "offhand": [],
+      "twohand": []
+    },
+    "runes": {
+      "chest": [
+        402911
+      ],
+      "legs": [
+        431046
+      ],
+      "hands": [
+        429765
+      ],
+      "waist": [
+        29787
+      ]
+    }
+  },
+  {
+    "name": "sod-stance-runes",
+    "mode": "sod",
+    "player": {
+      "level": 60,
+      "race": "Night Elf",
+      "aqbooks": true,
+      "reactionmin": 150,
+      "reactionmax": 250,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4611,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 20,
+      "timesecsmax": 24,
+      "executeperc": 15,
+      "startrage": 85,
+      "iterations": 16,
+      "batching": 400,
+      "seed": 324508639
+    },
+    "gear": {
+      "mainhand": [],
+      "offhand": [],
+      "twohand": [
+        234985
+      ]
+    },
+    "rotation": {
+      "11585": {
+        "active": true,
+        "priority": 10,
+        "expriority": 10
+      },
+      "11605": {
+        "active": true,
+        "minrage": 15,
+        "minrageactive": false,
+        "swingreset": true,
+        "afterswing": true
+      },
+      "23894": {
+        "active": false
+      },
+      "402911": {
+        "active": true,
+        "priority": 9,
+        "expriority": 9
+      },
+      "425418": {
+        "active": true
+      }
+    },
+    "runes": {
+      "chest": [
+        402877
+      ],
+      "legs": [
+        425418
+      ],
+      "hands": [
+        429765
+      ],
+      "waist": [
+        402922
+      ],
+      "wrist": [
+        427065
+      ],
+      "head": [
+        403218
+      ],
+      "back": [
+        440113
+      ]
+    },
+    "buffsRemove": [
+      2457
+    ],
+    "buffsAdd": [
+      2458
+    ]
+  },
+  {
+    "name": "sod-dw-runes",
+    "mode": "sod",
+    "player": {
+      "level": 60,
+      "race": "Human",
+      "aqbooks": true,
+      "reactionmin": 200,
+      "reactionmax": 300,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4211,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 18,
+      "timesecsmax": 22,
+      "executeperc": 15,
+      "startrage": 85,
+      "iterations": 20,
+      "batching": 10,
+      "seed": 305419896
+    },
+    "gear": {
+      "twohand": [],
+      "mainhand": [
+        228506
+      ],
+      "offhand": [
+        17075
+      ]
+    },
+    "runes": {
+      "chest": [
+        402877
+      ],
+      "legs": [
+        425418
+      ],
+      "hands": [
+        413404
+      ],
+      "waist": [
+        413380
+      ],
+      "wrist": [
+        427070
+      ],
+      "head": [
+        403218
+      ],
+      "back": [
+        440113
+      ]
+    },
+    "rotation": {
+      "1680": {
+        "active": true,
+        "priority": 8,
+        "expriority": 8
+      },
+      "20662": {
+        "active": true,
+        "priority": 9,
+        "expriority": 9
+      },
+      "425418": {
+        "active": true
+      }
+    }
+  },
+  {
+    "name": "sod-gladiator-shield",
+    "mode": "sod",
+    "player": {
+      "level": 60,
+      "race": "Human",
+      "aqbooks": true,
+      "reactionmin": 200,
+      "reactionmax": 300,
+      "adjacent": 0,
+      "spellqueueing": false,
+      "target": {
+        "level": 63,
+        "basearmor": 4211,
+        "defense": 315,
+        "resistance": 24,
+        "speed": 0,
+        "mindmg": 200,
+        "maxdmg": 300,
+        "bleedreduction": "1"
+      }
+    },
+    "sim": {
+      "timesecsmin": 18,
+      "timesecsmax": 22,
+      "executeperc": 15,
+      "startrage": 85,
+      "iterations": 20,
+      "batching": 10,
+      "seed": 305419896
+    },
+    "gear": {
+      "twohand": [],
+      "mainhand": [
+        228506
+      ],
+      "offhand": [
+        234807
+      ]
+    },
+    "runes": {
+      "chest": [
+        402877
+      ],
+      "legs": [
+        403219
+      ],
+      "hands": [
+        403195
+      ],
+      "waist": [
+        29787
+      ],
+      "feet": [
+        413479
+      ],
+      "wrist": [
+        426978
+      ],
+      "head": [
+        426980
+      ],
+      "back": [
+        440488
+      ]
+    },
+    "rotation": {
+      "11581": {
+        "active": true,
+        "priority": 7,
+        "expriority": 7
+      },
+      "11597": {
+        "active": true,
+        "priority": 8,
+        "expriority": 8
+      },
+      "23925": {
+        "active": true,
+        "priority": 10,
+        "expriority": 10
+      },
+      "440488": {
+        "active": true,
+        "priority": 9,
+        "expriority": 9
+      },
+      "457820": {
+        "active": true,
+        "secondarystance": "zerk",
+        "switchdefault": true
+      }
+    },
+    "buffsRemove": [
+      2457,
+      2458
+    ],
+    "buffsAdd": [
+      413479
+    ]
+  }
+]

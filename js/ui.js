@@ -1,4 +1,4 @@
-const MAX_WORKERS = ~~Math.min(8, (navigator.hardwareConcurrency || 8) / 2);
+const MAX_WORKERS = Math.max(1, ~~Math.min(8, (navigator.hardwareConcurrency || 8) / 2));
 const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
@@ -398,6 +398,8 @@ SIM.UI = {
             },
             (error) => {
                 dps.text('ERROR');
+                btn.css('background', '');
+                view.endLoading();
                 console.error(error);
             },
         );
@@ -576,6 +578,7 @@ SIM.UI = {
             },
             (error) => {
                 dps.text('ERROR');
+                view.endLoading();
                 console.error(error);
             },
         );
