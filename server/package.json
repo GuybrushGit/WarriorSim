@@ -2,7 +2,7 @@
   "name": "warriorsim-compute-coordinator",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=22" },
+  "engines": { "node": ">=18" },
   "scripts": { "start": "node index.js", "test": "node --test ../test/compute/*.test.js" },
   "dependencies": { "ws": "^8.18.3" }
 }

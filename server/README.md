@@ -15,7 +15,7 @@ pull mode immediately. Disabled sharing creates no connection and runs locally.
 
 ## Hosting
 
-Use Node.js 22 or newer. Keep the existing static web host and run one coordinator
+Use Node.js 18 or newer. Keep the existing static web host and run one coordinator
 process on the same machine. It routes work and reports; it does not run combat.
 It has no database, and restarting it is safe: clients keep completed chunks and
 continue locally, then reconnect with the remaining work.
