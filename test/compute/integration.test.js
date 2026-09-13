@@ -47,8 +47,9 @@ test('WebSocket endpoint rejects foreign origins and accepts an authenticated na
     native.send(JSON.stringify({type: 'hello', protocol: P.version, buildId: BUILD, share: true, slots: 4}));
     const ready = JSON.parse((await reply)[0]);
     assert.equal(ready.type, 'ready');
-    assert.equal(ready.networkThreads, 4, 'the handshake reports the pool thread total');
+    assert.equal(ready.networkThreads, 0, 'the handshake reports peers only, and this client has none');
     const port = app.server.address().port;
+    // healthz counts the whole pool, so it does include the client the handshake left out.
     assert.equal((await (await fetch(`http://127.0.0.1:${port}/healthz`)).json()).threads, 4);
     native.close();
 });

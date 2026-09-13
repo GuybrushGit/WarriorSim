@@ -42,9 +42,11 @@ class Coordinator {
             client.busy = !!message.busy;
             // Advertised capacity, not the momentary pull budget: the pool total must not
             // dip every time a participant switches to push mode for its own simulation.
+            // Report peers only, since the client shows its own contribution on its own row.
+            const peerThreads = group.threads;
             group.threads += client.capacity;
             client.send({type: 'ready', protocol: client.protocol, leaseMs: this.leaseMs,
-                networkThreads: group.threads});
+                networkThreads: peerThreads});
         } else {
             if (!client.ready) throw new Error('Join with sharing enabled first');
             if (message.buildId !== client.buildId) {

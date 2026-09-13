@@ -306,16 +306,19 @@ All messages below also carry the connection's `buildId`.
 | `mode` | client → server | `busy`; can pull only after all owned jobs finish. Optional `slots` 1–64 re-advertises capacity without reconnecting |
 | `unavailable` | server → owner | `jobId`; job lifetime expired, complete locally |
 
-`networkThreads` is the total `slots` advertised by every participant in **this
-connection's pool**, including the one being greeted. It counts advertised capacity,
-not the momentary pull budget, so a participant pushing its own simulation still
-contributes its full count. Pools are per bundle hash, so the number describes the
-compute that can actually accept this connection's work rather than every connection
-on the coordinator. The server keeps it accurate as participants join and leave, but
-only reports it in `ready`; a client shows the value from its last handshake and
-refreshes it on reconnect. When a participant re-advertises its own capacity through
-`mode`, it adjusts its displayed total by its own delta so the two rows stay coherent
-until the next handshake. Treat it as advisory: it is a display figure with no effect
+`networkThreads` is the total `slots` advertised by every **other** participant in
+**this connection's pool**; the client being greeted is excluded, because the panel
+already shows its own contribution on its own row. The first participant in a pool
+therefore sees `0`, which is a real count rather than a missing one. It counts
+advertised capacity, not the momentary pull budget, so a participant pushing its own
+simulation still contributes its full count to what its peers see. Pools are per bundle
+hash, so the number describes the compute that can actually accept this connection's
+work rather than every connection on the coordinator. The server keeps it accurate as
+participants join and leave, but only reports it in `ready`; a client shows the value
+from its last handshake and refreshes it on reconnect. Re-advertising capacity through
+`mode` leaves the figure alone, since a client's own threads were never part of it.
+(`/healthz` reports `threads` across whole pools, so that total *does* include every
+participant.) Treat it as advisory: it is a display figure with no effect
 on scheduling, and a client that never receives one simply leaves the count unknown.
 
 `job` is `{id, spec, seed, iterations, offset, chunkSize, fullReport}`. `spec` is

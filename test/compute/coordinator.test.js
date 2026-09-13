@@ -116,10 +116,10 @@ test('the handshake reports its pool thread total, tracked across connects and d
     const {server, join} = setup();
     const first = join(4);
     assert.equal(first.messages[0].type, 'ready');
-    assert.equal(first.messages[0].networkThreads, 4);
-    assert.equal(join(2).messages[0].networkThreads, 6);
+    assert.equal(first.messages[0].networkThreads, 0, 'the first participant has no peers to count');
+    assert.equal(join(2).messages[0].networkThreads, 4, 'peers only, so the joiner omits its own capacity');
     const other = join(3, 'b'.repeat(64));
-    assert.equal(other.messages[0].networkThreads, 3, 'each bundle pool counts only its own participants');
+    assert.equal(other.messages[0].networkThreads, 0, 'each bundle pool counts only its own participants');
     assert.equal(server.groups.get(BUILD).threads, 6);
     const unfinished = server.connect(() => {});
     server.disconnect(unfinished);
@@ -128,7 +128,7 @@ test('the handshake reports its pool thread total, tracked across connects and d
     assert.equal(server.groups.get(BUILD).threads, 2);
     server.disconnect(first.client);
     assert.equal(server.groups.get(BUILD).threads, 2, 'repeated cleanup cannot subtract the same capacity twice');
-    assert.equal(join(5).messages[0].networkThreads, 7);
+    assert.equal(join(5).messages[0].networkThreads, 2, 'the survivors, not the newcomer, make up the peer total');
 });
 
 test('the pool total advertises capacity, so running a simulation does not shrink it', () => {
@@ -138,7 +138,7 @@ test('the pool total advertises capacity, so running a simulation does not shrin
     submit(owner);
     assert.equal(owner.client.slots, 0, 'the owner stops pulling while it pushes its own job');
     assert.equal(server.groups.get(BUILD).threads, 6);
-    assert.equal(join(1).messages[0].networkThreads, 7);
+    assert.equal(join(1).messages[0].networkThreads, 6, 'the busy owner still counts toward what a peer sees');
 });
 
 test('a mode message can re-advertise capacity without reconnecting', () => {

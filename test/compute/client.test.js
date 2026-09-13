@@ -308,6 +308,12 @@ test('the coordinator pool size fills the network row and survives reconnects', 
     client.connect();
     ready({networkThreads: 1});
     assert.equal(fake.value('network'), '1 thread');
+    socket.close();
+    client.connect();
+    // Being alone in the pool is a real count of zero, not a missing one.
+    ready({networkThreads: 0});
+    assert.equal(client.networkThreads, 0);
+    assert.equal(fake.value('network'), '0 threads');
 });
 
 test('a coordinator that reports no pool size leaves the network row unknown', t => {
@@ -380,7 +386,7 @@ test('the shared slider republishes its capacity to the coordinator only on rele
     fake.release('shared');
     assert.deepEqual(socket.messages.at(-1), {type: 'mode', busy: false, slots: 9, buildId: BUILD});
     assert.equal(fake.stored('warriorsim.sharedThreads'), '9');
-    assert.equal(fake.value('network'), '44 threads', 'our own four extra threads join the pool total');
+    assert.equal(fake.value('network'), '40 threads', 'the peer total excludes us, so our own change leaves it alone');
     fake.drag('shared', 9);
     assert.equal(socket.messages.filter(message => message.type === 'mode').length, 1, 'no message without a change');
 });

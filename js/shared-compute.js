@@ -11,7 +11,8 @@ class SharedComputeClient {
         this.publishedSlots = slots;
         this.onStatus = onStatus;
         this.onThreads = onThreads;
-        // Pool capacity as of the last handshake; undefined until a coordinator reports one.
+        // Capacity of everyone else in the pool as of the last handshake, excluding our own
+        // shared threads; undefined until a coordinator reports one.
         this.networkThreads = undefined;
         this.enabled = false;
         this.uiBusy = false;
@@ -35,12 +36,8 @@ class SharedComputeClient {
     }
     publishSlots() {
         if (!this.ready || this.slots === this.publishedSlots) return;
-        if (this.send({type: 'mode', busy: this.busy(), slots: this.slots})) {
-            // Our own contribution moved, so keep the pool total we display coherent
-            // until the next handshake replaces it with a freshly counted one.
-            if (this.networkThreads !== undefined) this.networkThreads += this.slots - this.publishedSlots;
-            this.publishedSlots = this.slots;
-        }
+        // The pool figure counts peers only, so our own change never moves it.
+        if (this.send({type: 'mode', busy: this.busy(), slots: this.slots})) this.publishedSlots = this.slots;
         this.status();
     }
     setEnabled(enabled) {
