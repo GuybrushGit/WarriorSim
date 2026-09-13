@@ -212,8 +212,8 @@ separate participant pools. Scaling across processes requires shared state.
 ## Scheduling and failure behavior
 
 Each job has one fixed seed and contiguous chunks of at most 2,000 iterations,
-sized for about four chunks per local worker (never below 128 iterations), so that
-a helper's compute on each chunk dwarfs the round trip that delivers it.
+sized for about sixteen chunks per local worker (never below 128 iterations).
+Helpers buffer additional chunks to hide the round trip that delivers them.
 Every chunk has a deterministic global offset, so changing workers never changes
 its random stream. The requester starts its local workers before any network
 reply. It computes from the beginning; helpers work from the end. This reduces
@@ -227,12 +227,24 @@ Changing batch or worker partitioning can therefore change combat history as
 described in [the native guide](../wasm/README.md). Floating point sums can also
 differ in the last few bits because batching changes addition order.
 
+Sheet DPS, Gear DPS, and enchant comparisons assign separate rows locally and
+remotely. The requester keeps at most its Local Threads setting running locally
+and submits up to 64 other rows ahead, with no local chunk reserved in those remote
+rows. Each side takes another untouched row as it finishes, so remote progress does
+not wait for a local row. Once every row is assigned, idle local workers take over
+remote rows and unfinished local rows become shareable as the coordinator's job
+budget permits. Disabling sharing or losing the connection preserves completed
+results and drains the remaining rows locally within the same thread limit.
+Ordinary DPS and the five sequential stat-weight simulations still share chunks
+within a single simulation; they do not use the row scheduler.
+
 A helper keeps more leases than it has threads. Its handshake and `mode` messages
 advertise a `queue`: the outstanding leases it wants, running plus waiting, from
 its thread count up to four times that (256 at most). The coordinator fills each
 helper up to its queue, one lease per helper per pass, so a deep queue cannot hoard
-a small job while other helpers idle. The browser starts at twice its thread count
-and then sizes the queue from measurements: the coordinator echoes the send time of
+a small job while other helpers idle. The browser starts with the full bounded
+window to cover the first round trip before chunk speed is known, and then sizes
+the queue from measurements: the coordinator echoes the send time of
 the helper's latest result on its next `work` message, so the helper knows its round
 trip (taken at the minimum of recent samples) without any clock agreement, and it
 times its own chunks (median of recent samples). Threads × (1 + round trip ÷ chunk
@@ -243,6 +255,8 @@ times, so its queue shrinks toward its thread count on its own. Waiting leases r
 in arrival order on a fixed pool of workers; cancelling one that has not started
 costs nothing, and the owner's tail stealing takes the helper's newest leases first,
 which are exactly the waiting ones.
+Cancellation lists accept the entire window of up to 256 leases, including when
+a helper switches to its own foreground simulation.
 
 The spec travels once per job per connection: the first `work` for a job carries
 `job`, later ones name it by `jobId` only, and a `forget` message follows the job's

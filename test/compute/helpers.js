@@ -40,10 +40,10 @@ function harness(overrides = {}) {
         Player: class {constructor() { this.mh = {}; } serializeSimulationSpec() { return spec(); }}, ...overrides});
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/classes/simulation.js'), 'utf8'), context);
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/shared-compute.js'), 'utf8') +
-        '\n;globalThis.api = {SharedComputeClient, SharedSimulation, mergeSimulationReports, createSimulationRunner,' +
+        '\n;globalThis.api = {SharedComputeClient, SharedSimulation, SimulationRowBatch, mergeSimulationReports, createSimulationRunner,' +
         ' initSharedCompute, sharedComputeLocalThreads,' +
         ' getClient() { return sharedCompute; }, setClient(value) { sharedCompute = value; }};', context);
-    return {api: context.api, FakeWorker, FakeSocket};
+    return {api: context.api, FakeWorker, FakeSocket, context};
 }
 
 // Just enough DOM for the sharing panel: the toggle, the status line, and the three

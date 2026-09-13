@@ -137,6 +137,35 @@ for (const mode of ['classic', 'sod']) test(`${mode} browser clients execute dep
     await until(() => app.coordinator.jobs.size === 0);
     assert.equal(owner.busy(), false);
     assert.equal(helper.busy(), false);
+
+    const batch = new api.SimulationRowBatch(2, owner);
+    t.after(() => batch.cancel());
+    owner.beginForeground();
+    const beforeBatch = remoteIterations;
+    // Each row fits one chunk so the independent reference has identical combat history,
+    // including the engine's retained proc timestamps between fights.
+    const simulations = Array.from({length: 8}, (_, index) => ({...fixture.sim,
+        seed: 42 + index, iterations: 128, iterationOffset: 19}));
+    const reports = simulations.map(sim => new Promise((resolve, reject) => {
+        batch.createRunner(resolve, () => {}, reject).start({player: [], sim, fullReport: false});
+    }));
+    batch.start();
+    const results = await Promise.all(reports);
+    owner.endForeground();
+    assert.ok(remoteIterations > beforeBatch, 'the row batch uses real donated WASM work');
+    for (let index = 0; index < results.length; index++) {
+        const expectedRow = runNative(await loadNativeModule(), fixture, simulations[index]);
+        const actual = results[index];
+        assert.equal(actual.iterations, simulations[index].iterations);
+        assert.equal(actual.seed, simulations[index].seed);
+        for (const key of ['totaldmg', 'totalduration', 'sumdps', 'sumdps2']) {
+            assert.ok(Math.abs(actual[key] - expectedRow[key]) <= Math.abs(expectedRow[key]) * 1e-12, `row ${index}: ${key}`);
+        }
+    }
+    await until(() => app.coordinator.jobs.size === 0 && helper.donations.size === 0);
+    assert.equal(owner.runs.size, 0);
+    assert.equal(owner.batches.size, 0);
+    assert.equal(owner.busy(), false);
 });
 
 test('a donated worker refreshes its native engine when a reused job ID has a different seed or spec', {timeout: 15000}, async t => {

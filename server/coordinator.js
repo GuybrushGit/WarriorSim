@@ -131,7 +131,7 @@ class Coordinator {
         this.schedule();
     }
     cancellations(value) {
-        return Array.isArray(value) && value.length <= 64 && value.every(id => P.id(id));
+        return Array.isArray(value) && value.length <= P.maxQueue && value.every(id => P.id(id));
     }
     owned(client, id) {
         if (!P.id(id)) throw new Error('Invalid job ID');

@@ -481,14 +481,12 @@ SIM.UI = {
     simulateRows: function(rows) {
         var view = this;
         var btn = view.sidebar.find('.js-table');
+        const batch = new SimulationRowBatch(simulationThreads());
 
         const simulations = rows.map((row) => {
             const simulation = { perc: 0 };
             simulation.run = () => {
-                // Remove from pending simulations
-                pending.delete(simulation);
-
-                // Start simulation
+                // Queue the row; the batch assigns separate rows locally and remotely.
                 this.simulateRow($(row), (perc) => {
                     // Update row percentage
                     simulation.perc = perc;
@@ -506,26 +504,15 @@ SIM.UI = {
                     } else {
                         btn.css('background', 'linear-gradient(to right, transparent ' + total + '%, #444 ' + total + '%)');
                     }
-
-                    // If simulation complete, run another pending simulation (if any)
-                    if (simulation.perc == 100) {
-                        const next = pending.values().next().value;
-                        if (next) {
-                            next.run();
-                        }
-                    }
-                });
+                }, batch);
             };
             return simulation;
         });
-        const pending = new Set(simulations);
-
-        for (const simulation of simulations.slice(0, simulationThreads())) {
-            simulation.run();
-        }
+        for (const simulation of simulations) simulation.run();
+        batch.start();
     },
 
-    simulateRow: function(tr, updateFn) {
+    simulateRow: function(tr, updateFn, batch) {
         var view = this;
         var dps = tr.find('td:last-of-type');
         var type = tr.parents('table').data('type');
@@ -558,7 +545,6 @@ SIM.UI = {
                 });
 
                 tr.removeClass('waiting');
-                updateFn(100);
                 sim = null;
 
                 if (isench) {
@@ -571,6 +557,7 @@ SIM.UI = {
                         if (i.id == item)
                             i.dps = calc.toFixed(2);
                 }
+                updateFn(100);
             },
             (iteration, report) => {
                 // Update
@@ -585,6 +572,7 @@ SIM.UI = {
                 view.endLoading();
                 console.error(error);
             },
+            batch,
         );
         sim.start(params);
     },

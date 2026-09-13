@@ -37,6 +37,7 @@ class SharedComputeClient {
         this.enabled = false;
         this.uiBusy = false;
         this.runs = new Map();
+        this.batches = new Set();
         this.leaseMs = ComputeProtocol.leaseMs;
         // Round trips to the coordinator and our own compute time per chunk, most recent last.
         this.samples = {rtt: [], chunk: []};
@@ -78,10 +79,11 @@ class SharedComputeClient {
     // Little's law: a lease turns around in one round trip plus one chunk, so a worker stays
     // busy when its share of the outstanding leases covers that turnaround. Round trips are
     // taken at their minimum, since every sample is a true round trip plus some slack; chunk
-    // times at their median. Twice the thread count until both have been measured.
+    // times at their median. Start at the cap so fast workers do not exhaust the first
+    // window before their first speed measurement can make a round trip.
     queueFor(slots) {
         const cap = Math.min(4 * slots, ComputeProtocol.maxQueue);
-        if (!this.samples.rtt.length || !this.samples.chunk.length) return Math.min(cap, 2 * slots);
+        if (!this.samples.rtt.length || !this.samples.chunk.length) return cap;
         const rtt = Math.min(...this.samples.rtt), chunk = Math.max(1, median(this.samples.chunk));
         let queue = Math.ceil(slots * (1 + rtt / chunk) * QUEUE_MARGIN);
         // Waiting work must still start well inside its lease when chunks are slow here.
@@ -159,6 +161,7 @@ class SharedComputeClient {
             this.jobs.clear();
             this.cancelled = [];
             for (const run of this.runs.values()) run.detach();
+            for (const batch of this.batches) batch.pump();
             this.status();
             if (event.code === 1008) this.onStatus('Sharing unavailable · reload to check for updates');
             else this.reconnect();
@@ -178,6 +181,7 @@ class SharedComputeClient {
         this.jobs.clear();
         this.cancelled = [];
         for (const run of this.runs.values()) run.detach();
+        for (const batch of this.batches) batch.pump();
     }
     receive(message) {
         if (message.buildId !== this.buildId) throw new Error('Message belongs to a different bundle');
@@ -190,6 +194,7 @@ class SharedComputeClient {
             this.sample('rtt', this.now() - this.helloAt);
             this.retryDelay = 1000;
             for (const run of this.runs.values()) run.attach();
+            for (const batch of this.batches) batch.pump();
         } else if (message.type === 'work') this.donate(message);
         else if (message.type === 'cancel') this.stopDonation(message.leaseId);
         else if (message.type === 'forget') {
@@ -241,6 +246,9 @@ class SharedComputeClient {
         if (run.done) return;
         this.stopDonations();
         this.runs.set(run.job.id, run);
+        if (run.localOnly && this.runs.size === 1 && this.send({type: 'mode', busy: true})) {
+            this.cancelled = []; // The mode change reclaims all donations at the coordinator.
+        }
         run.attach();
         this.status();
     }
@@ -341,16 +349,17 @@ class SharedSimulation {
         this.workers = [];
         this.done = false;
     }
-    start(params) {
+    start(params, {localOnly = false, remoteOnly = false} = {}) {
         this.started = Date.now();
+        this.localOnly = localOnly;
         this.client.stopDonations();
         try {
             params = normalizeSimulationWorkerParams(params);
             const spec = resolveSharedSimulationSpec(params);
-            // A few chunks per local worker: large enough that a donor's compute dwarfs the
-            // round trip delivering each one, small enough for the tail to balance.
+            // Fine-grained chunks balance individual simulations and the final batch tail.
+            // Helpers buffer chunks to cover network latency.
             const chunkSize = Math.min(ComputeProtocol.maxChunkSize,
-                Math.max(128, Math.ceil(params.sim.iterations / (this.threads * 4))));
+                Math.max(128, Math.ceil(params.sim.iterations / (this.threads * 16))));
             const id = Array.from(crypto.getRandomValues(new Uint32Array(4)), value => value.toString(16).padStart(8, '0')).join('');
             this.job = {id, spec,
                 seed: params.sim.seed, iterations: params.sim.iterations, offset: params.sim.iterationOffset,
@@ -360,16 +369,28 @@ class SharedSimulation {
                 this.client.stopDonations();
                 this.client.runs.set(this.job.id, this);
                 this.client.send({type: 'mode', busy: true});
+                this.fallbackParams = params;
+                if (!remoteOnly) this.startLocal();
+                return;
+            }
+            this.states = Array(Math.ceil(this.job.iterations / chunkSize)).fill('pending');
+            this.remoteLeases = new Map();
+            if (!remoteOnly) this.startLocal();
+            this.client.add(this);
+        } catch (error) { this.fail(error); }
+    }
+    startLocal() {
+        if (this.done || this.workers.length || this.fallback) return;
+        try {
+            if (this.fallbackParams) {
                 this.fallback = new SimulationWorkerParallel(this.threads, report => {
                     this.done = true;
                     this.cleanup();
                     this.finished(report);
                 }, this.update, error => this.fail(error));
-                this.fallback.start(params);
+                this.fallback.start(this.fallbackParams);
                 return;
             }
-            this.states = Array(Math.ceil(this.job.iterations / chunkSize)).fill('pending');
-            this.remoteLeases = new Map();
             for (let i = 0; i < Math.min(this.threads, this.states.length); i++) {
                 const slot = {worker: new Worker(this.client.workerUrl)};
                 this.workers.push(slot);
@@ -385,11 +406,10 @@ class SharedSimulation {
                 this.fill(slot);
                 if (this.done) return;
             }
-            this.client.add(this);
         } catch (error) { this.fail(error); }
     }
     attach() {
-        if (this.done || this.fallback || this.attached || !this.client.enabled || !this.client.ready) return;
+        if (this.done || this.localOnly || this.fallbackParams || this.attached || !this.client.enabled || !this.client.ready) return;
         const claimed = [];
         this.states.forEach((state, index) => { if (state === 'local' || state === 'done') claimed.push(index); });
         this.attached = this.client.send({type: 'submit', job: this.job, claimed,
@@ -468,8 +488,98 @@ class SharedSimulation {
     }
 }
 
+// A row batch assigns different rows locally and remotely while fresh rows remain.
+// Remote rows start without reserving a local chunk and replenish independently of local
+// progress. Once all rows are assigned, either side can help finish the remaining chunks.
+class SimulationRowBatch {
+    constructor(threads, client = sharedCompute) {
+        this.threads = Math.max(1, Math.trunc(threads) || 1);
+        this.client = client;
+        this.pending = [];
+        this.local = new Set();
+        this.remote = new Set();
+    }
+    createRunner(finished, update, error) {
+        return {start: params => { this.pending.push({params, finished, update, error}); }};
+    }
+    start() {
+        if (this.client) this.client.batches.add(this);
+        this.pump();
+    }
+    launch(task, remote) {
+        (remote ? this.remote : this.local).add(task);
+        const finished = report => {
+            if (this.stopped) return;
+            this.local.delete(task);
+            this.remote.delete(task);
+            // Refill before rendering results, which can sort a large gear table.
+            this.pump();
+            task.finished(report);
+        };
+        const error = value => {
+            if (this.stopped) return;
+            this.cancel();
+            task.error(value);
+        };
+        try {
+            task.run = this.client ? new SharedSimulation(this.client, 1, finished, task.update, error) :
+                new SimulationWorkerParallel(1, finished, task.update, error);
+            task.run.start(task.params, {localOnly: !remote, remoteOnly: remote});
+        } catch (value) { error(value); }
+    }
+    pump() {
+        if (this.pumping || this.stopped) return;
+        this.pumping = true;
+        try {
+            const sharedJobs = () => [...this.client.runs.values()].filter(run =>
+                !run.localOnly && !run.fallbackParams && !run.done).length;
+            // Fresh rows always go to free local workers before the lookahead is extended.
+            while (!this.stopped && this.pending.length && this.local.size < this.threads) {
+                this.launch(this.pending.shift(), false);
+            }
+            if (this.client && this.client.enabled && this.client.ready) {
+                // The coordinator accepts at most 64 jobs per owner. Local-only rows do
+                // not consume that budget; include other shared runs on this connection.
+                while (!this.stopped && this.pending.length && this.remote.size < 64 && sharedJobs() < 64) {
+                    this.launch(this.pending.shift(), true);
+                }
+            }
+            if (!this.pending.length) {
+                // At the tail, expose unfinished local rows too, as the submission budget
+                // becomes available. A fast helper must not wait for the last local rows.
+                if (this.client) for (const task of this.local) {
+                    if (this.stopped || sharedJobs() >= 64) break;
+                    if (!task.run.localOnly || task.run.fallbackParams) continue;
+                    task.run.localOnly = false;
+                    task.run.attach();
+                }
+                // Only the tail steals: newest remote rows are most likely still waiting.
+                for (const task of [...this.remote].reverse()) {
+                    if (this.stopped || this.local.size >= this.threads) break;
+                    if (this.local.has(task)) continue;
+                    this.local.add(task);
+                    task.run.startLocal();
+                }
+            }
+            if (!this.pending.length && !this.local.size && !this.remote.size && this.client) {
+                this.client.batches.delete(this);
+            }
+        } finally { this.pumping = false; }
+    }
+    cancel() {
+        if (this.stopped) return;
+        this.stopped = true;
+        this.pending = [];
+        for (const task of new Set([...this.local, ...this.remote])) if (task.run) task.run.cancel();
+        this.local.clear();
+        this.remote.clear();
+        if (this.client) this.client.batches.delete(this);
+    }
+}
+
 let sharedCompute;
-function createSimulationRunner(threads, finished, update, error) {
+function createSimulationRunner(threads, finished, update, error, batch) {
+    if (batch) return batch.createRunner(finished, update, error);
     return sharedCompute && sharedCompute.enabled ?
         new SharedSimulation(sharedCompute, threads, finished, update, error) :
         new SimulationWorkerParallel(threads, finished, update, error);

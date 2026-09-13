@@ -52,7 +52,7 @@ test('mixed remote and local ranges merge once, preserve offsets, and return to 
     while (!final) local.finish();
     assert.equal(final.iterations, 640);
     assert.equal(final.totaldmg, 64000);
-    assert.deepEqual(local.messages.map(value => value.offset), [13, 173, 333]);
+    assert.deepEqual(local.messages.map(value => value.offset), [13, 141, 269, 525]);
     assert.equal(local.terminated, true);
     assert.deepEqual(socket.messages.at(-1), {type: 'finish', jobId: run.job.id, busy: false, buildId: BUILD});
 });
@@ -63,15 +63,15 @@ test('local workers immediately steal the remote tail and ignore its late result
     let final;
     const run = new api.SharedSimulation(client, 1, value => { final = value; }, () => {}, assert.fail);
     run.start(params());
-    for (let index = 1; index < 4; index++) socket.deliver({type: 'leased', jobId: run.job.id, index, leaseId: `lease-${index}`});
+    for (let index = 1; index < run.states.length; index++) socket.deliver({type: 'leased', jobId: run.job.id, index, leaseId: `lease-${index}`});
     const local = FakeWorker.all[0];
     local.finish();
-    assert.equal(local.messages.at(-1).offset, 173);
+    assert.equal(local.messages.at(-1).offset, 141);
     socket.deliver({type: 'result', jobId: run.job.id, index: 1, report: report(run.job, 1)});
-    assert.equal(run.report.iterations, 160);
+    assert.equal(run.report.iterations, 128);
     while (!final) local.finish();
     assert.equal(final.iterations, 640);
-    assert.equal(socket.messages.filter(message => message.type === 'claim').length, 3);
+    assert.equal(socket.messages.filter(message => message.type === 'claim').length, 4);
 });
 
 test('turning sharing off keeps current local workers and completes all missing ranges', t => {
@@ -87,7 +87,7 @@ test('turning sharing off keeps current local workers and completes all missing 
     assert.equal(run.states[3], 'pending');
     while (!final) worker.finish();
     assert.equal(final.iterations, 640);
-    assert.equal(worker.messages.length, 4);
+    assert.equal(worker.messages.length, 5);
 });
 
 test('the UI runner uses ordinary local workers while sharing is disabled', t => {
@@ -148,7 +148,7 @@ test('opt-out discards donated completions, queued work and remote results from 
     assert.equal(run.report, undefined);
     while (!run.done) FakeWorker.all[1].finish();
     assert.equal(run.report.iterations, 640);
-    assert.equal(FakeWorker.all[1].messages.length, 4);
+    assert.equal(FakeWorker.all[1].messages.length, 5);
     assert.equal(FakeSocket.all.length, 1);
     assert.equal(socket.messages.length, sent);
 });
@@ -164,7 +164,7 @@ test('a coordinator unavailable response leaves every unfinished range available
     assert.equal(run.states[3], 'pending');
     while (!run.done) FakeWorker.all[0].finish();
     assert.deepEqual(FakeWorker.all[0].messages.map(value => [value.offset, value.count]),
-        [[13, 160], [173, 160], [333, 160], [493, 160]]);
+        [[13, 128], [141, 128], [269, 128], [397, 128], [525, 128]]);
     assert.equal(run.report.iterations, 640);
     assert.equal(client.busy(), false);
 });
@@ -382,7 +382,7 @@ test('the shared slider republishes its capacity to the coordinator only on rele
     assert.equal(socket.messages.length, before, 'a drag does not touch the socket');
     assert.equal(fake.value('network'), '40 threads');
     fake.release('shared');
-    assert.deepEqual(socket.messages.at(-1), {type: 'mode', busy: false, slots: 9, queue: 18, buildId: BUILD});
+    assert.deepEqual(socket.messages.at(-1), {type: 'mode', busy: false, slots: 9, queue: 36, buildId: BUILD});
     assert.equal(fake.stored('warriorsim.sharedThreads'), '9');
     assert.equal(fake.value('network'), '40 threads', 'the peer total excludes us, so our own change leaves it alone');
     fake.drag('shared', 9);
@@ -397,7 +397,7 @@ test('an unpublished capacity change rides along on the next handshake', t => {
     const socket = ready();
     assert.equal(socket.messages[0].type, 'hello');
     assert.equal(socket.messages[0].slots, 7);
-    assert.equal(socket.messages[0].queue, 14, 'twice the threads until round trips and chunks are measured');
+    assert.equal(socket.messages[0].queue, 28, 'a full window until round trips and chunks are measured');
 });
 
 test('stored thread counts are restored and re-clamped to the current machine', t => {
@@ -520,7 +520,7 @@ test('the queue follows measured round trips and chunk times', t => {
     const socket = h.FakeSocket.all[0];
     socket.readyState = 1;
     socket.onopen();
-    assert.equal(socket.messages[0].queue, 8, 'twice the threads before any measurement');
+    assert.equal(socket.messages[0].queue, 16, 'a full window before any measurement');
     time = 40;
     socket.deliver({type: 'ready', protocol: P.version, leaseMs: 15000});
     assert.deepEqual([...client.samples.rtt], [40], 'the handshake is the first round trip');
@@ -538,8 +538,8 @@ test('the queue follows measured round trips and chunk times', t => {
     chunks(20, 1);
     assert.deepEqual([...client.samples.chunk], [20]);
     assert.equal(client.queue, 15);
-    assert.deepEqual(modes().at(-1), {type: 'mode', busy: false, slots: 4, queue: 15, buildId: BUILD});
-    assert.equal(socket.messages.at(-2).sent, 60, 'the result carried its send time');
+    assert.equal(modes().length, 0, 'the initial window is already within the hysteresis band');
+    assert.equal(socket.messages.at(-1).sent, 60, 'the result carried its send time');
     // The coordinator echoes that send time; a slower sample never lowers the minimum.
     time = 200;
     socket.deliver(again({leaseId: 'echoed', index: 1, echo: 60}));
@@ -549,6 +549,7 @@ test('the queue follows measured round trips and chunk times', t => {
     // A busier machine: chunks stretch to 200 ms and the queue shrinks toward the thread count.
     chunks(200, 16);
     assert.equal(client.queue, 6);
+    client.publish(); // Explicit publishing also sends changes held by hysteresis.
     assert.equal(modes().at(-1).queue, 6);
     // A change inside the hysteresis band is kept locally and rides along on the next publish.
     chunks(170, 16);
@@ -564,7 +565,7 @@ test('the queue follows measured round trips and chunk times', t => {
     assert.ok(modes().every(message => message.queue >= message.slots && message.queue <= 4 * message.slots));
 });
 
-test('shared jobs use a few chunks per local worker, capped at the protocol maximum', t => {
+test('shared jobs leave enough chunks for helpers, including single-worker sheet rows', t => {
     const {api, client, enable} = setup(t);
     enable();
     const size = (threads, iterations) => {
@@ -576,7 +577,8 @@ test('shared jobs use a few chunks per local worker, capped at the protocol maxi
         run.cancel();
         return chunkSize;
     };
-    assert.equal(size(16, 50000), 782);
+    assert.equal(size(16, 50000), 196);
+    assert.equal(size(1, 10000), 625, 'a sheet row leaves fifteen chunks for helpers');
     assert.equal(size(1, 50000), 2000);
     assert.equal(size(16, 1000), 128);
 });

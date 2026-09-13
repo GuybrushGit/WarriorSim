@@ -384,3 +384,19 @@ test("a result's send time is echoed on the helper's next lease", () => {
     const after = helper.messages.filter(message => message.type === 'work').at(-1);
     assert.equal(after.echo, 5678, 'any received result updates the echo, even one that no longer counts');
 });
+
+for (const slots of [20, 64]) test(`a ${slots}-thread helper can cancel its entire buffered window`, () => {
+    const {server, join, submit} = setup();
+    const owner = join(), helper = join(slots);
+    receive(server, helper.client, {type: 'mode', busy: false, queue: slots * 4});
+    submit(owner, job('large', {iterations: 128 * 400}));
+    const cancelled = [...helper.client.leases];
+    assert.equal(cancelled.length, slots * 4);
+    assert.throws(() => receive(server, helper.client, {type: 'abandon',
+        cancelled: Array(P.maxQueue + 1).fill(cancelled[0])}), /cancellations/);
+    assert.equal(helper.client.leases.size, slots * 4, 'an excessive cancellation list changes nothing');
+    submit(helper, job('foreground'), [0], cancelled);
+    assert.equal(helper.client.leases.size, 0);
+    assert.ok(cancelled.every(id => !server.leases.has(id)));
+    assert.equal(helper.client.jobs.size, 1, 'the foreground job is accepted with the full cancellation list');
+});
