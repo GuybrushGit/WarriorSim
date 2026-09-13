@@ -42,21 +42,22 @@ COMPUTE_ORIGINS=https://sim.example.com npm run compute:server
 ```
 
 `server/package.json` is independent of the legacy gulp dependencies. The build
-writes the current release to `dist/bundle/` and publishes
-`dist/compute-build.json` as the pointer to it. The coordinator
+writes the current release once under `dist/js/` and `dist/wasm/` and publishes
+`dist/compute-build.json` with paths relative to `dist/`. The coordinator
 does **not** read that pointer or require a configured current hash. Old and new
 bundles can share concurrently, each within its own pool, because a pool is keyed by
 the `buildId` a client reports rather than by anything on disk. A code/content
 rollout does not require restarting the coordinator.
 
-Each build replaces `dist/bundle/` whole rather than adding a directory beside it,
-so exactly one release is on disk and stale files from a previous build are removed.
-The build stages the new contents and swaps them in, so an interrupted build does not
-leave a partially written bundle. Upload the complete new bundle directory before
-atomically replacing the manifest. Each tab preloads and verifies **every manifest
-asset**, including both page variants and WASM, before initializing the simulator. It
-retains the bytes as document-owned Blob URLs; page scripts and all future workers use
-those copies. Once startup completes, replacing or deleting the bundle directory does
+Each build updates the assets in place and removes the legacy duplicate
+`dist/bundle/` and `dist/bundle.tmp/` directories. Manifest generation hashes the
+deployed files directly without copying them. Upload the complete new `dist/js/`
+and `dist/wasm/` assets before atomically replacing the manifest. An interrupted
+build or deployment can leave assets that fail verification until it is completed.
+Each tab preloads and verifies **every manifest asset**, including both page variants
+and WASM, before initializing the simulator. It retains the bytes as document-owned
+Blob URLs; page scripts and all future workers use
+those copies. Once startup completes, replacing or deleting the deployed assets does
 not affect that tab's local simulations, sharing, parameter changes, or recreation of
 canceled workers. This does not depend on the browser's HTTP cache keeping the assets
 available.
@@ -70,10 +71,11 @@ An inactive pool is removed from server memory when its last client disconnects,
 but can be recreated by a returning client with that hash.
 
 Serve the HTML and `dist/js/bundle-loader.min.js` with `Cache-Control: no-cache`,
-the current manifest with `Cache-Control: no-store`, and immutable bundle assets
-with `Cache-Control: public, max-age=31536000, immutable`. Preserve their bytes:
+the current manifest with `Cache-Control: no-store`, and the application assets
+with `Cache-Control: no-cache` because their URLs are updated in place. The loader
+also requests revalidation for every asset. Preserve their bytes:
 do not rewrite/minify CDN responses after building. `.gitattributes` disables Git
-line-ending conversion within bundle directories so integrity checks survive
+line-ending conversion under `dist/js/` and `dist/wasm/` so integrity checks survive
 Windows/Linux checkouts. The loader uses Web Crypto and requires HTTPS (localhost
 is supported for development). If setting a Content Security Policy, allow Blob
 URLs for scripts, workers, and WASM fetches (`script-src`, `worker-src`, and
@@ -103,7 +105,7 @@ shown, with the `files` list sorted lexically by path:
 }
 ```
 
-The build also calculates the digest to name the snapshot directory; browsers
+The build records the digest as the release identity in the manifest; browsers
 independently calculate it and check that it matches the advertised `buildId`.
 Manifest format 2 requires the preloading runtime in both pages and workers;
 incompatible loader/manifest combinations fail at startup and request a reload.
@@ -125,7 +127,7 @@ the same asset map; their script imports and WASM fetches also use retained Blob
 URLs, with no further bundle requests to the web server. Only the selected page
 variant's entrypoints execute, but all files are retained. The tab holds one
 immutable bundle identity, even if the current release pointer changes or its
-server directory is deleted. A failed startup releases any retained object URLs.
+deployed files are deleted. A failed startup releases any retained object URLs.
 Successful tabs keep them until the document unloads (including across a browser
 back/forward-cache restore). Reloading or restoring a discarded tab loads the
 then-current release. This increases startup downloads and retained asset memory;

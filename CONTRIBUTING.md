@@ -30,11 +30,12 @@ section identical but does change the `buildId`.
 
 This builds the native Release module and minifies all application JavaScript with
 Emscripten's bundled Terser. Class and function names are preserved because action
-serialization uses constructor names. It also generates `dist/compute-build.json`
-and a `dist/bundle/` directory containing the Classic and SoD application assets.
-Each build replaces that directory whole, so old releases are not kept alongside it.
-Keep the resulting `dist/js`, `dist/wasm`, manifest, and bundle directory together
-after validating them. The checked-in CSS remains usable.
+serialization uses constructor names. It writes the Classic and SoD application
+assets once, under `dist/js` and `dist/wasm`, then generates `dist/compute-build.json`
+with hashes of those files. Builds update these assets in place and remove the
+legacy duplicate `dist/bundle/` and `dist/bundle.tmp/` directories. Keep the resulting
+`dist/js`, `dist/wasm`, and manifest together after validating them. The checked-in
+CSS remains usable.
 Use `npm run wasm` (or `./wasm/build.sh`) to rebuild only the native module, or
 `powershell -NoProfile -File scripts/build-dist.ps1 -SkipWasmBuild` /
 `./build-dist.sh --skip-wasm-build` to reuse a native build that already matches the
@@ -48,8 +49,9 @@ for Classic or `http://localhost:8000/index.html` for Season of Discovery. The s
 must serve `.wasm` as `application/wasm`; module and worker files must be accessible
 from the same origin. Web Crypto requires HTTPS or a localhost origin. Both pages
 preload and verify the complete bundle before initializing, and retain all assets
-for future workers. Deploy the complete new snapshot before replacing the current
-manifest; keep a grace period for tabs still preloading the previous snapshot.
+for future workers. Deploy the complete new assets before replacing the current
+manifest. Tabs still preloading during a deployment may fail verification and need
+to reload; initialized tabs retain their assets and continue running.
 
 ## Optional shared compute
 

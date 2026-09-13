@@ -412,7 +412,7 @@ test('stored thread counts are restored and re-clamped to the current machine', 
 
 test('own and donated workers use the pinned bundle URL after a deployment', t => {
     const {api, client, enable, FakeWorker} = setup(t);
-    client.workerUrl = 'https://sim.test/dist/bundle/js/compute-worker.min.js';
+    client.workerUrl = 'https://sim.test/dist/js/compute-worker.min.js';
     const socket = enable();
     socket.deliver(work({leaseId: 'lease', index: 4}));
     client.beginForeground();

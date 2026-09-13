@@ -36,11 +36,11 @@
         if (buildId !== manifest.buildId) throw new Error('Simulation bundle hash mismatch');
         const selected = entrypoints[globalThis.mode];
         if (!selected) throw new Error('Unknown simulator mode');
-        const base = new URL('./bundle/', manifestUrl);
+        const base = new URL('./', manifestUrl);
         // Complete and verify every download before executing any application code.
         // Object URLs retain the bytes independently of HTTP cache eviction or deployment.
         const contents = await Promise.all(files.map(async file => {
-            const response = await fetch(new URL(file.path, base));
+            const response = await fetch(new URL(file.path, base), {cache: 'no-cache'});
             if (!response.ok) throw new Error(`Could not preload bundle asset: ${file.path}`);
             const bytes = await response.arrayBuffer();
             if (hex(await crypto.subtle.digest('SHA-256', bytes)) !== file.sha256) {

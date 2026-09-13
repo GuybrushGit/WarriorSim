@@ -27,7 +27,7 @@ function createWorkerClass(assets) {
 
 function deployedWorkers() {
     const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist/compute-build.json')));
-    const base = path.join(ROOT, 'dist/bundle');
+    const base = path.join(ROOT, 'dist');
     const url = file => pathToFileURL(path.join(base, file)).href;
     const assets = new Map(manifest.files.map(file => [url(file.path), fs.readFileSync(path.join(base, file.path))]));
     return {manifest, url, Worker: createWorkerClass(assets)};

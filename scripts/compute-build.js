@@ -18,7 +18,7 @@ const entrypoints = {
 const scripts = mode => entrypoints[mode].map(name => `js/${name}.min.js`);
 
 function buildBundle(root) {
-    const dist = path.join(root, 'dist');
+    const dist = path.resolve(root, 'dist');
     const entries = new Map();
     function visit(directory, relative = '') {
         for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
@@ -45,23 +45,17 @@ function buildBundle(root) {
     const buildId = digest(JSON.stringify(descriptor));
     const manifest = {buildId, ...descriptor};
     const json = JSON.stringify(manifest) + '\n';
-    // One directory, replaced whole: staging then swapping drops files this build no longer
-    // produces and keeps a failed build from leaving a half-written bundle behind.
-    const bundleRoot = path.join(dist, 'bundle');
-    const staging = path.join(dist, 'bundle.tmp');
-    fs.rmSync(staging, {recursive: true, force: true});
-    for (const [name, bytes] of entries) {
-        const destination = path.join(staging, name);
-        fs.mkdirSync(path.dirname(destination), {recursive: true});
-        fs.writeFileSync(destination, bytes);
-    }
-    fs.writeFileSync(path.join(staging, 'manifest.json'), json);
-    fs.rmSync(bundleRoot, {recursive: true, force: true});
-    fs.renameSync(staging, bundleRoot);
-    // Publish the pointer only after the complete bundle exists.
+    // The manifest addresses dist/js and dist/wasm directly. Publish it only after
+    // all assets have been read and validated; no second asset tree is needed.
     const pending = path.join(dist, 'compute-build.json.tmp');
     fs.writeFileSync(pending, json);
     fs.renameSync(pending, path.join(dist, 'compute-build.json'));
+    // Remove duplicate output (including interrupted staging) from older builds.
+    for (const name of ['bundle', 'bundle.tmp']) {
+        const legacy = path.resolve(dist, name);
+        if (path.dirname(legacy) !== dist) throw new Error(`Invalid legacy bundle path: ${legacy}`);
+        fs.rmSync(legacy, {recursive: true, force: true});
+    }
     return manifest;
 }
 

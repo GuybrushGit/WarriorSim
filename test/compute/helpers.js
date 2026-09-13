@@ -104,7 +104,7 @@ function dom({stored = null, localThreads = null, sharedThreads = null, hardware
                 querySelectorAll: () => Object.values(entries).map(value => value.node),
             },
             window: {addEventListener(type, fn) { (listeners[type] = listeners[type] || []).push(fn); }},
-            SIMULATOR_BUNDLE: {buildId: BUILD, workerUrl: name => `https://sim.test/dist/bundle/${name}`},
+            SIMULATOR_BUNDLE: {buildId: BUILD, workerUrl: name => `https://sim.test/dist/${name}`},
         },
     };
 }

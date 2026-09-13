@@ -1,2 +1,3 @@
-# Bundle paths identify exact bytes; Git must not translate their line endings.
-/dist/bundle/** -text
+# The manifest hashes deployed bytes; Git must not translate their line endings.
+/dist/js/** -text
+/dist/wasm/** -text
