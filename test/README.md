@@ -40,3 +40,21 @@ finally { Remove-Item Env:SIM_SOURCE_REF }
 
 This run is expected to exit with failure. Each regression test fails against
 the original code and passes with the fixes applied.
+
+## Shared compute tests
+
+After building the deployment assets, install the coordinator's independent
+dependencies and run:
+
+```powershell
+npm ci --prefix server
+npm run test:compute
+```
+
+The suite covers bundle hashing and complete asset preload, retained worker assets
+after bundle URLs disappear, Classic and SoD entrypoints, coordinator pool
+isolation, opt-in and foreground priority, lease recovery, ownership, duplicate
+results, and local fallback. Integration tests run real deployed WASM workers over
+a loopback WebSocket coordinator. See [server/README.md](../server/README.md) for
+the protocol and a two-tab browser preview. Native parity tests remain documented
+in [wasm/README.md](wasm/README.md).

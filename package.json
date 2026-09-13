@@ -13,7 +13,11 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "test": "node test/simulation-regressions.test.js && node --test test/wasm/reference.test.js test/wasm/extra-reference.test.js test/wasm/worker.test.js",
+    "test": "node test/simulation-regressions.test.js && node --test test/wasm/reference.test.js test/wasm/extra-reference.test.js test/wasm/worker.test.js test/compute/*.test.js",
+    "test:compute": "node --test test/compute/*.test.js",
+    "compute:server": "node server/index.js",
+    "compute:dev": "node server/dev.js",
+    "compute:build": "node scripts/compute-build.js",
     "dist": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-dist.ps1",
     "dev": "gulp",
     "start": "gulp",

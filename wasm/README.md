@@ -12,6 +12,24 @@ The ES-module default factory exposes `createEngine(JSON.stringify(spec), seed)`
 
 Each iteration uses Mulberry32 seeded by `seed + imul(globalIteration, 0x9e3779b9)`. Report counters reset at batch boundaries; combat reset follows the JavaScript implementation. Existing proc timestamps persist between fights, including their initially absent state, so RNG stream partitioning does not imply that every synthetic cross-worker partition has identical combat history.
 
+## Shared execution
+
+The optional [compute coordinator](../server/README.md) distributes resolved
+Classic or SoD execution specs to opted-in helpers running the same bundle hash.
+A shared worker needs only its fixed worker code, WASM loader, and binary; it
+receives the complete resolved spec with the job. It never downloads executable
+code supplied by another participant. Each tab preloads and retains every manifest
+asset, including both game catalogs, before startup. Its later local and donated
+workers use those retained assets even if the original bundle directory is removed.
+
+Shared chunks use the existing engine interface with a fixed seed and disjoint
+global iteration ranges. Report counters are batch-only. The retained proc
+timestamp behavior described above still applies: changing batch or worker
+partitioning can change combat history, and aggregation order can also change
+floating point sums. Shared execution does not alter the native combat mechanics.
+The protocol is ready for a future native worker application, which must be built
+and checked against the advertised bundle's engine behavior before joining its pool.
+
 ## Replay log
 
 The source optimization sequence was replayed in order, with this repository's JavaScript combat behavior as authority. Every stage compiled and passed the native/API parity tests available at that stage. All measurements below were taken in this destination.

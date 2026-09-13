@@ -8,34 +8,15 @@
   <link rel="icon" type="image/x-icon" href="/WarriorSim/favicon.ico">
   <link href="dist/css/theme.default.min.css" rel="stylesheet">
   <link href="dist/css/style.css" rel="stylesheet">
+  <link href="css/shared-compute.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
-  <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.min.js"></script>
-  <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
-  <script type="text/javascript" src="dist/js/libs/Chart.min.js"></script>
-
-  <script type="text/javascript" src="dist/js/classes/player.min.js"></script>
-  <script type="text/javascript" src="dist/js/classes/simulation.min.js"></script>
-  <script type="text/javascript" src="dist/js/classes/spell.min.js"></script>
-  <script type="text/javascript" src="dist/js/classes/weapon.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/gear.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/enchants.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/levelstats.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/buffs.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/spells.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/talents.min.js"></script>
-  <script type="text/javascript" src="dist/js/data/session.min.js"></script>
-  <script type="text/javascript" src="dist/js/globals.min.js"></script>
-  <script type="text/javascript" src="dist/js/settings.min.js"></script>
-  <script type="text/javascript" src="dist/js/profiles.min.js"></script>
-  <script type="text/javascript" src="dist/js/stats.min.js"></script>
-  <script type="text/javascript" src="dist/js/ui.min.js"></script>
+  <script>var mode = "classic";</script>
+  <script src="dist/js/bundle-loader.min.js"></script>
 
   <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
   <script src="https://wow.zamimg.com/widgets/power.js"></script>
-  <script>var mode = "classic";</script>
 
 </head>
 <body>
@@ -138,6 +119,11 @@
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
+      <div class="share-compute">
+        <label><input id="share-compute" type="checkbox" aria-describedby="share-compute-help"> Share Compute</label>
+        <small id="share-compute-status" role="status">Off · local simulations only</small>
+        <p id="share-compute-help">Help other players while idle and get help with your simulations. Uses CPU, battery, and data, including in background tabs. Your simulation setup is shared with participating devices. Your own simulations always take priority.</p>
+      </div>
       <a href="#" class="btn js-weights">STAT WEIGHTS</a>
       <a href="#" class="btn js-table">SHEET DPS</a>
       <a href="#" class="btn js-stats disabled">STATS</a>
@@ -534,12 +520,14 @@
 
 
   <script>
-    $(document).ready(function () {
-      SIM.UI.init();
-      SIM.SETTINGS.init();
-      SIM.STATS.init();
-      SIM.PROFILES.init();
-    });
+    simulatorReady.then(function () {
+      $(document).ready(function () {
+        SIM.UI.init();
+        SIM.SETTINGS.init();
+        SIM.STATS.init();
+        SIM.PROFILES.init();
+      });
+    }, function () { /* The bundle loader displays load failures. */ });
   </script>
 
 </body>

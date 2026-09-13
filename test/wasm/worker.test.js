@@ -97,7 +97,8 @@ function evaluateBuiltWorker(source = false) {
         postMessage() {},
         importScripts(...relativePaths) {
             for (const relativePath of relativePaths) {
-                const filename = path.resolve(path.dirname(workerPath), source ? relativePath.replace(/\.min\.js$/, ".js") : relativePath);
+                const asset = new URL(relativePath, context.location.href).pathname.replace('/WarriorSim/dist/', '');
+                const filename = path.join(ROOT, source ? asset.replace(/\.min\.js$/, '.js') : path.join('dist', asset));
                 vm.runInContext(fs.readFileSync(filename, 'utf8'), context, {filename});
             }
         },
@@ -150,6 +151,8 @@ function createMinifiedContext(fixture, FakeWorker, includeSession) {
         'data/levelstats.min.js',
         'classes/player.min.js',
         'classes/simulation.min.js',
+        'compute-protocol.min.js',
+        'shared-compute.min.js',
         'classes/spell.min.js',
         'classes/weapon.min.js',
         'globals.min.js',
@@ -179,6 +182,8 @@ function createMinifiedContext(fixture, FakeWorker, includeSession) {
             const player = new Player(...request.player);
             return player.serializeSimulationSpec(request.sim);
         },
+        sharedSpec(request) { return resolveSharedSimulationSpec(request); },
+        catalogs() { return JSON.stringify({spells, buffs, gear, runes: globalThis.runes}); },
     };`, context);
     return context;
 }
@@ -437,4 +442,54 @@ for (const source of [true, false]) for (const mode of ['classic','sod']) test(`
  await context.__run({player:[null,null,null,{...fixture.player,mode}],sim:{...fixture.sim,iterations:5,iterationOffset:11},globals:{...createState(engine,fixture),sod:mode==='sod'},fullReport:true,batchSize:2});
  assert.deepEqual(calls,[[2,11],[2,13],[1,15]]);assert.equal(destroyed,1);
  const final=messages.at(-1)[1];assert.equal(final.iterations,5);assert.ok(final.player.mh.totaldmg>0);
+});
+
+for (const mode of ['classic', 'sod']) test(`${mode} shared stat weights and item rows preserve page catalogs and match real local WASM`, {timeout: 20000}, async t => {
+    const {deployedWorkers, request: execute} = require('../compute/worker-harness');
+    const {Worker, url} = deployedWorkers();
+    t.after(() => Promise.all(Worker.all.map(worker => worker.terminate())));
+    const fixture = structuredClone(loadFixtures().find(value =>
+        value.name === (mode === 'sod' ? 'sod-dw-runes' : 'classic-dw-fury')));
+    fixture.buffsAdd = [...fixture.buffsAdd || [], 20906];
+    fixture.rotation = {...fixture.rotation, 20130: {active: false, timetoendactive: false, timetostartactive: false}};
+    const state = createState(createReferenceEngine(mode), fixture);
+    const page = createMinifiedContext(fixture, class {}, true);
+    page.__minifiedApi.configure(plain(state));
+    const originalCatalogs = page.__minifiedApi.catalogs();
+    const sim = {...fixture.sim, iterations: 17, iterationOffset: 31};
+    const sharedWorker = new Worker(url('js/compute-worker.min.js'));
+    let baseline;
+    for (const [name, args] of [
+        ['base', [null, null, null]], ['attack power', [40, 0, 3]], ['crit', [1, 1, 3]],
+        ['hit', [1, 2, 3]], ['strength', [20, 3, 3]], ['agility', [20, 4, 3]],
+        ['item row', [20130, 'trinket1', 0]], ['base after item', [null, null, null]],
+    ]) {
+        const input = {player: [...args, {...plain(fixture.player), mode}], sim: plain(sim),
+            globals: {...plain(state), sod: mode === 'sod'}, fullReport: true};
+        const before = JSON.stringify(input);
+        const spec = plain(page.__minifiedApi.sharedSpec(input));
+        assert.equal(JSON.stringify(input), before, `${name}: caller configuration is immutable`);
+        assert.equal(page.__minifiedApi.catalogs(), originalCatalogs, `${name}: page catalogs are unchanged`);
+        const localContext = createMinifiedContext(fixture, class {}, false);
+        const expectedSpec = plain(localContext.__minifiedApi.setupWorker(plain(input)));
+        // Native runBatch initializes this random reaction timer afresh for every iteration.
+        const stableSpec = value => JSON.parse(JSON.stringify(value, (key, entry) => key === 'unqueuetimer' ? undefined : entry));
+        assert.deepEqual(stableSpec(spec), stableSpec(expectedSpec), `${name}: shared and local resolved spec`);
+        const localWorker = new Worker(url('js/sim-worker.min.js'));
+        const local = await execute(localWorker, input, true);
+        await localWorker.terminate();
+        const shared = await execute(sharedWorker, {id: name, jobId: `variant-${name}`, spec,
+            seed: sim.seed, count: sim.iterations, offset: sim.iterationOffset, fullReport: true});
+        for (const key of ['iterations', 'totaldmg', 'totalduration', 'sumdps', 'sumdps2', 'mindps', 'maxdps']) {
+            assert.equal(shared[key], local[key], `${name}: ${key}`);
+        }
+        assert.deepEqual(shared.player, local.player, `${name}: complete combat counters`);
+        assert.deepEqual(shared.spread, Object.fromEntries(Object.entries(local.spread)), `${name}: spread`);
+        if (name === 'base') baseline = shared;
+        if (name === 'base after item') {
+            assert.equal(shared.totaldmg, baseline.totaldmg);
+            assert.deepEqual(shared.player, baseline.player, 'item rows cannot affect subsequent base simulations');
+        }
+        if (name === 'item row') assert.ok(shared.player.auras.flask, 'the item row must activate Diamond Flask');
+    }
 });

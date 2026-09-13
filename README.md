@@ -12,3 +12,11 @@ Simulations run in WebAssembly, with a separate native engine in each browser wo
 Classic (`classic.html`) and Season of Discovery (`index.html`) keep their existing
 JavaScript character setup and catalogs. See [the native engine guide](wasm/README.md)
 for the resolved-spec interface, optimizations, and parity validation.
+
+Enable **Share Compute** to contribute idle browser workers and receive help with
+your simulations. Starting a simulation immediately gives your own work priority;
+disabling sharing keeps execution local. Both Classic and SoD use the same optional
+[compute coordinator](server/README.md), with separate pools for each bundle hash.
+Each tab preloads and verifies its complete simulation bundle at startup, so later
+simulations keep working after deployment assets change. Public helper results
+are structurally validated but are not independently audited.
