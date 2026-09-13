@@ -1,10 +1,17 @@
 .share-compute { margin: 12px 0; padding: 12px; border: 1px solid #666; border-radius: 3px; text-align: left; }
 .share-compute label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; color: #fff; }
-.share-compute input { margin: 0; width: 16px; height: 16px; accent-color: #f8c45c; }
-.share-compute input:focus-visible { outline: 2px solid #f8c45c; outline-offset: 3px; }
+.share-compute input[type="checkbox"] { margin: 0; width: 16px; height: 16px; accent-color: #f8c45c; }
+.share-compute input[type="checkbox"]:focus-visible { outline: 2px solid #f8c45c; outline-offset: 3px; }
 .share-compute small { display: block; margin-top: 8px; color: #f8c45c; font-size: 12px; }
 .share-compute p { margin: 8px 0 0; color: #ccc; font-size: 12px; line-height: 1.5; }
 .share-compute-threads { margin-top: 8px; font-size: 12px; }
-.share-compute-row { display: flex; justify-content: space-between; gap: 12px; color: #ccc; line-height: 1.6; }
+.share-compute-entry { color: #ccc; }
+/* Keep each slider tight against its own label, and space the entries apart instead. */
+.share-compute-entry + .share-compute-entry { margin-top: 7px; }
+.share-compute-row { display: flex; justify-content: space-between; gap: 12px; line-height: 1.6; }
 .share-compute-row span:last-child { color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.share-compute-idle, .share-compute-idle span:last-child { color: #777; }
+.share-compute-slider { display: block; box-sizing: border-box; width: 100%; height: 14px; margin: 0; accent-color: #f8c45c; cursor: pointer; }
+.share-compute-slider:focus-visible { outline: 2px solid #f8c45c; outline-offset: 2px; }
+.share-compute-slider:disabled { opacity: 0.5; cursor: default; }
+.share-compute-idle, .share-compute-idle .share-compute-row span:last-child { color: #777; }
+.share-compute-idle .share-compute-slider { accent-color: #777; }

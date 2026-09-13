@@ -128,6 +128,12 @@ class Coordinator {
     }
     mode(client, message) {
         if (typeof message.busy !== 'boolean') throw new Error('Invalid mode');
+        if (message.slots !== undefined) {
+            // Re-advertised capacity: the pool total tracks it without a reconnect.
+            if (!P.uint(message.slots, 1, 64)) throw new Error('Invalid capacity');
+            client.group.threads += message.slots - client.capacity;
+            client.capacity = message.slots;
+        }
         client.busy = message.busy || client.jobs.size > 0;
         client.slots = client.busy ? 0 : client.capacity;
         if (client.busy) for (const id of [...client.leases]) this.release(id);

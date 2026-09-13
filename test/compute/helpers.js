@@ -40,13 +40,15 @@ function harness(overrides = {}) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/classes/simulation.js'), 'utf8'), context);
     vm.runInContext(fs.readFileSync(path.join(ROOT, 'js/shared-compute.js'), 'utf8') +
         '\n;globalThis.api = {SharedComputeClient, SharedSimulation, mergeSimulationReports, createSimulationRunner,' +
-        ' initSharedCompute, getClient() { return sharedCompute; }, setClient(value) { sharedCompute = value; }};', context);
+        ' initSharedCompute, sharedComputeLocalThreads,' +
+        ' getClient() { return sharedCompute; }, setClient(value) { sharedCompute = value; }};', context);
     return {api: context.api, FakeWorker, FakeSocket};
 }
 
 // Just enough DOM for the sharing panel: the toggle, the status line, and the three
-// thread rows. querySelectorAll ignores its argument; the panel uses one selector.
-function dom({stored = null, hardwareConcurrency = 8} = {}) {
+// thread entries with their sliders. querySelectorAll ignores its argument; the panel
+// uses one selector. Each entry answers only the two selectors the panel asks it for.
+function dom({stored = null, localThreads = null, sharedThreads = null, hardwareConcurrency = 8} = {}) {
     const listeners = {};
     const element = (extra = {}) => {
         const node = {textContent: '', children: [], classes: new Set(), dataset: {}, ...extra};
@@ -54,19 +56,43 @@ function dom({stored = null, hardwareConcurrency = 8} = {}) {
         Object.defineProperty(node, 'lastElementChild', {get: () => node.children.at(-1) || null});
         return node;
     };
-    const row = name => element({dataset: {threads: name}, children: [element(), element({textContent: '—'})]});
-    const rows = {local: row('local'), network: row('network'), shared: row('shared')};
-    for (const name of ['network', 'shared']) rows[name].classes.add('share-compute-idle');
+    const control = () => {
+        const input = element({min: '', max: '', value: '', disabled: false,
+            addEventListener(type, fn) { input[`on${type}`] = fn; }});
+        return input;
+    };
+    const entry = (name, sliding) => {
+        const cell = element({textContent: '—'});
+        const row = element({children: [element(), cell]});
+        const input = sliding ? control() : null;
+        const node = element({dataset: {threads: name}, children: input ? [row, input] : [row]});
+        node.querySelector = selector => selector === '.share-compute-row' ? row :
+            selector === 'input[type="range"]' ? input : null;
+        return {node, cell, input};
+    };
+    const entries = {local: entry('local', true), network: entry('network', false), shared: entry('shared', true)};
+    for (const name of ['network', 'shared']) entries[name].node.classes.add('share-compute-idle');
     const toggle = element({checked: false, addEventListener(type, fn) { toggle[`on${type}`] = fn; }});
     const status = element();
-    const storage = new Map(stored === null ? [] : [['warriorsim.shareCompute', stored]]);
+    const storage = new Map([['warriorsim.shareCompute', stored],
+        ['warriorsim.localThreads', localThreads], ['warriorsim.sharedThreads', sharedThreads]]
+        .filter(([, value]) => value !== null).map(([key, value]) => [key, String(value)]));
     return {
         toggle, status,
         change(checked) { toggle.checked = checked; toggle.onchange(); },
         emit(type, event) { for (const fn of listeners[type] || []) fn(event); },
-        idle: name => rows[name].classes.has('share-compute-idle'),
-        value: name => rows[name].lastElementChild.textContent,
-        stored: () => (storage.has('warriorsim.shareCompute') ? storage.get('warriorsim.shareCompute') : null),
+        idle: name => entries[name].node.classes.has('share-compute-idle'),
+        value: name => entries[name].cell.textContent,
+        slider: name => entries[name].input,
+        // A range input fires input while dragging and change once it settles.
+        drag(name, value) { this.hold(name, value); this.release(name); },
+        hold(name, value) {
+            const input = entries[name].input;
+            input.value = String(value);
+            input.oninput();
+        },
+        release(name) { entries[name].input.onchange(); },
+        stored: (key = 'warriorsim.shareCompute') => (storage.has(key) ? storage.get(key) : null),
         context: {
             navigator: {hardwareConcurrency},
             location: {href: 'https://sim.test/index.html', protocol: 'https:'},
@@ -74,7 +100,7 @@ function dom({stored = null, hardwareConcurrency = 8} = {}) {
                 setItem: (key, value) => storage.set(key, String(value))},
             document: {
                 getElementById: id => ({'share-compute': toggle, 'share-compute-status': status}[id] || null),
-                querySelectorAll: () => Object.values(rows),
+                querySelectorAll: () => Object.values(entries).map(value => value.node),
             },
             window: {addEventListener(type, fn) { (listeners[type] = listeners[type] || []).push(fn); }},
             SIMULATOR_BUNDLE: {buildId: BUILD, workerUrl: name => `https://sim.test/dist/bundles/${BUILD}/${name}`},

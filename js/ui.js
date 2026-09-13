@@ -1,4 +1,6 @@
 const MAX_WORKERS = Math.max(1, Math.min(64, navigator.hardwareConcurrency || 4));
+// Hardware is only the ceiling; the sharing panel's slider picks the count actually used.
+function simulationThreads() { return sharedComputeLocalThreads() || MAX_WORKERS; }
 const WEB_DB_URL = "https://classic.wowhead.com/";
 
 var SIM = SIM || {}
@@ -368,7 +370,7 @@ SIM.UI = {
             return;
         }
         var sim = createSimulationRunner(
-            MAX_WORKERS,
+            simulationThreads(),
             (report) => {
                 // Finished
                 // Technically, it is incorrect to calculate mean DPS like this, since fight duration varies...
@@ -458,7 +460,7 @@ SIM.UI = {
                 sim: Simulation.getConfig(),
             };
             var sim = createSimulationRunner(
-                MAX_WORKERS,
+                simulationThreads(),
                 (report) => {
                     const mean = report.totaldmg / report.totalduration;
 
@@ -518,7 +520,7 @@ SIM.UI = {
         });
         const pending = new Set(simulations);
 
-        for (const simulation of simulations.slice(0, MAX_WORKERS)) {
+        for (const simulation of simulations.slice(0, simulationThreads())) {
             simulation.run();
         }
     },

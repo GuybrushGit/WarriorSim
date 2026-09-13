@@ -7,6 +7,8 @@ class SharedComputeClient {
         Object.defineProperty(this, 'buildId', {value: buildId, enumerable: true});
         this.workerUrl = workerUrl;
         this.slots = slots;
+        // What the coordinator was last told; the difference is what publishSlots must send.
+        this.publishedSlots = slots;
         this.onStatus = onStatus;
         this.onThreads = onThreads;
         // Pool capacity as of the last handshake; undefined until a coordinator reports one.
@@ -26,6 +28,20 @@ class SharedComputeClient {
             !this.ready ? 'Connecting · simulations run locally' :
             this.busy() ? 'Accelerating your simulations' :
             this.donations.size ? `Sharing compute · ${this.donations.size} workers` : 'Ready to share');
+    }
+    setSlots(slots) {
+        this.slots = slots;
+        this.status();
+    }
+    publishSlots() {
+        if (!this.ready || this.slots === this.publishedSlots) return;
+        if (this.send({type: 'mode', busy: this.busy(), slots: this.slots})) {
+            // Our own contribution moved, so keep the pool total we display coherent
+            // until the next handshake replaces it with a freshly counted one.
+            if (this.networkThreads !== undefined) this.networkThreads += this.slots - this.publishedSlots;
+            this.publishedSlots = this.slots;
+        }
+        this.status();
     }
     setEnabled(enabled) {
         this.enabled = !!enabled;
@@ -54,6 +70,7 @@ class SharedComputeClient {
         const timeout = setTimeout(() => { if (!this.ready && this.socket === socket) socket.close(); }, 5000);
         socket.onopen = () => {
             if (this.socket !== socket) return;
+            this.publishedSlots = this.slots;
             socket.send(JSON.stringify({type: 'hello', protocol: ComputeProtocol.version,
                 buildId: this.buildId, share: true, slots: this.slots, busy: this.busy()}));
         };
@@ -338,40 +355,92 @@ function createSimulationRunner(threads, finished, update, error) {
 }
 
 const SHARE_COMPUTE_KEY = 'warriorsim.shareCompute';
+const LOCAL_THREADS_KEY = 'warriorsim.localThreads';
+const SHARED_THREADS_KEY = 'warriorsim.sharedThreads';
+const SHARED_THREADS_MIN = 2;
+const SHARED_THREADS_RATIO = 0.45;
+
 // Sharing is opt-out: only an explicit refusal from an earlier visit turns it off,
 // so a first visit and unreadable storage both keep the default on.
 function readShareComputePreference() {
     try { return localStorage.getItem(SHARE_COMPUTE_KEY) !== 'false'; } catch (_) { return true; }
 }
+function readStoredThreads(key, min, max, fallback) {
+    let stored;
+    try { stored = parseInt(localStorage.getItem(key), 10); } catch (_) { /* Private browsing. */ }
+    // Always re-clamp: a stored count can come from a machine with a different CPU.
+    return Math.min(max, Math.max(min, Number.isFinite(stored) ? stored : fallback));
+}
+function storeThreads(key, value) {
+    try { localStorage.setItem(key, String(value)); } catch (_) { /* Optional persistence. */ }
+}
 
-function initSharedCompute(localThreads) {
+let localThreadCount = 0;
+// The simulator's own worker count once the panel has resolved its stored preference.
+// Zero beforehand, so callers fall back to their own hardware default.
+function sharedComputeLocalThreads() { return localThreadCount; }
+
+function initSharedCompute(maxThreads) {
     const toggle = document.getElementById('share-compute');
     const status = document.getElementById('share-compute-status');
     if (!toggle || !status) return;
-    const local = ComputeProtocol.uint(localThreads, 1) ? localThreads : (navigator.hardwareConcurrency || 4);
-    const rows = {};
-    for (const row of document.querySelectorAll('.share-compute-row[data-threads]')) rows[row.dataset.threads] = row;
+    const localMax = ComputeProtocol.uint(maxThreads, 1) ? maxThreads : (navigator.hardwareConcurrency || 4);
+    // A single-core machine still has to satisfy the shared floor, so clamp rather than invert.
+    const sharedMax = Math.max(SHARED_THREADS_MIN, localMax);
+    localThreadCount = readStoredThreads(LOCAL_THREADS_KEY, 1, localMax, localMax);
+    const sharedThreads = readStoredThreads(SHARED_THREADS_KEY, SHARED_THREADS_MIN, sharedMax,
+        Math.floor(sharedMax * SHARED_THREADS_RATIO));
+    const entries = {};
+    for (const entry of document.querySelectorAll('.share-compute-entry[data-threads]')) {
+        entries[entry.dataset.threads] = entry;
+    }
     const count = value => ComputeProtocol.uint(value, 0) ? `${value} thread${value === 1 ? '' : 's'}` : '—';
     const write = (name, value, active) => {
-        const row = rows[name];
-        if (!row) return;
-        const cell = row.lastElementChild;
+        const entry = entries[name];
+        if (!entry) return;
+        const cell = entry.querySelector('.share-compute-row').lastElementChild;
         const text = count(value);
         if (cell.textContent !== text) cell.textContent = text;
-        row.classList.toggle('share-compute-idle', !active);
+        entry.classList.toggle('share-compute-idle', !active);
+    };
+    const slider = (name, min, max, value) => {
+        const input = entries[name] && entries[name].querySelector('input[type="range"]');
+        if (!input) return undefined;
+        input.min = String(min);
+        input.max = String(max);
+        input.value = String(value);
+        input.disabled = min >= max; // Nothing to choose between.
+        return input;
     };
     const url = new URL('./compute', location.href);
     url.protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
     sharedCompute = new SharedComputeClient({url: url.href, buildId: globalThis.SIMULATOR_BUNDLE.buildId,
         workerUrl: globalThis.SIMULATOR_BUNDLE.workerUrl('js/compute-worker.min.js'),
-        slots: Math.max(1, Math.min(4, Math.floor((navigator.hardwareConcurrency || 4) / 2))),
+        slots: sharedThreads,
         onStatus: value => { status.textContent = value; },
         onThreads: ({enabled, shared, network}) => {
             // Local workers run every simulation, shared or not, so that row never dims.
-            write('local', local, true);
+            write('local', localThreadCount, true);
             write('network', network, enabled);
             write('shared', shared, enabled);
         }});
+    const localSlider = slider('local', 1, localMax, localThreadCount);
+    if (localSlider) {
+        localSlider.addEventListener('input', () => {
+            localThreadCount = Number(localSlider.value);
+            sharedCompute.status();
+        });
+        localSlider.addEventListener('change', () => storeThreads(LOCAL_THREADS_KEY, localThreadCount));
+    }
+    const sharedSlider = slider('shared', SHARED_THREADS_MIN, sharedMax, sharedThreads);
+    if (sharedSlider) {
+        // Track the drag locally, but only tell the coordinator once it settles.
+        sharedSlider.addEventListener('input', () => sharedCompute.setSlots(Number(sharedSlider.value)));
+        sharedSlider.addEventListener('change', () => {
+            storeThreads(SHARED_THREADS_KEY, sharedCompute.slots);
+            sharedCompute.publishSlots();
+        });
+    }
     toggle.checked = readShareComputePreference();
     toggle.addEventListener('change', () => {
         try { localStorage.setItem(SHARE_COMPUTE_KEY, String(toggle.checked)); } catch (_) { /* Optional persistence. */ }

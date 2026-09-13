@@ -248,10 +248,10 @@ test('the startup hash is immutable and tags every outgoing request, including r
     assert.throws(() => client.receive({type: 'cancel', leaseId: 'anything'}), /different bundle/);
 });
 
-function panel(t, options) {
+function panel(t, {max = 12, ...options} = {}) {
     const fake = dom(options);
     const h = harness(fake.context);
-    h.api.initSharedCompute(12);
+    h.api.initSharedCompute(max);
     const client = h.api.getClient();
     t.after(() => client.setEnabled(false));
     const ready = (extra = {}) => {
@@ -269,9 +269,9 @@ test('sharing is on by default and reports local threads before any coordinator 
     assert.equal(fake.toggle.checked, true);
     assert.equal(client.enabled, true);
     assert.equal(FakeSocket.all.length, 1, 'the default opt-in connects on load');
-    assert.equal(fake.value('local'), '12 threads');
+    assert.equal(fake.value('local'), '12 threads', 'local defaults to the whole machine');
     assert.equal(fake.idle('local'), false, 'local workers run every simulation, shared or not');
-    assert.equal(fake.value('shared'), '4 threads'); // Half of eight logical CPUs.
+    assert.equal(fake.value('shared'), '5 threads'); // floor(12 * 0.45).
     assert.equal(fake.idle('shared'), false);
     assert.equal(fake.value('network'), '—', 'the pool size is unknown until a coordinator reports it');
     assert.equal(fake.idle('network'), false);
@@ -284,7 +284,7 @@ test('opting out persists, dims both sharing rows, and keeps the local row live'
     assert.equal(client.enabled, false);
     assert.equal(fake.idle('network'), true);
     assert.equal(fake.idle('shared'), true);
-    assert.equal(fake.value('shared'), '4 threads', 'the dimmed row still shows what would be shared');
+    assert.equal(fake.value('shared'), '5 threads', 'the dimmed row still shows what would be shared');
     assert.equal(fake.idle('local'), false);
     assert.equal(fake.value('local'), '12 threads');
     fake.change(true);
@@ -335,6 +335,74 @@ test('another tab opting out revokes sharing here without reconnecting', t => {
     fake.emit('storage', {key: 'warriorsim.shareCompute', newValue: 'true'});
     assert.equal(client.enabled, false, 'opting back in stays an explicit action in this tab');
     assert.equal(FakeSocket.all.length, connections);
+});
+
+test('the thread sliders expose their ranges and defaults', t => {
+    const {fake, api} = panel(t);
+    assert.deepEqual([fake.slider('local').min, fake.slider('local').max, fake.slider('local').value],
+        ['1', '12', '12'], 'local runs 1..max and defaults to the maximum');
+    assert.deepEqual([fake.slider('shared').min, fake.slider('shared').max, fake.slider('shared').value],
+        ['2', '12', '5'], 'shared runs 2..max and defaults to floor(45% of max)');
+    assert.equal(fake.slider('local').disabled, false);
+    assert.equal(api.sharedComputeLocalThreads(), 12);
+});
+
+test('a single-core machine keeps the shared floor instead of an inverted range', t => {
+    const {fake, api} = panel(t, {max: 1});
+    assert.deepEqual([fake.slider('local').min, fake.slider('local').max, fake.slider('local').value], ['1', '1', '1']);
+    assert.equal(fake.slider('local').disabled, true, 'nothing to choose between');
+    assert.deepEqual([fake.slider('shared').min, fake.slider('shared').max, fake.slider('shared').value],
+        ['2', '2', '2'], 'the floor of two still applies');
+    assert.equal(api.sharedComputeLocalThreads(), 1);
+});
+
+test('dragging the local slider retargets simulations and persists on release', t => {
+    const {fake, api} = panel(t);
+    fake.hold('local', 3);
+    assert.equal(api.sharedComputeLocalThreads(), 3, 'the count follows the drag');
+    assert.equal(fake.value('local'), '3 threads');
+    assert.equal(fake.stored('warriorsim.localThreads'), null, 'nothing is written mid-drag');
+    fake.release('local');
+    assert.equal(fake.stored('warriorsim.localThreads'), '3');
+    fake.drag('local', 1);
+    assert.equal(fake.value('local'), '1 thread', 'the singular label still applies');
+});
+
+test('the shared slider republishes its capacity to the coordinator only on release', t => {
+    const {fake, client, ready} = panel(t);
+    const socket = ready({networkThreads: 40});
+    const before = socket.messages.length;
+    fake.hold('shared', 9);
+    assert.equal(client.slots, 9);
+    assert.equal(fake.value('shared'), '9 threads');
+    assert.equal(socket.messages.length, before, 'a drag does not touch the socket');
+    assert.equal(fake.value('network'), '40 threads');
+    fake.release('shared');
+    assert.deepEqual(socket.messages.at(-1), {type: 'mode', busy: false, slots: 9, buildId: BUILD});
+    assert.equal(fake.stored('warriorsim.sharedThreads'), '9');
+    assert.equal(fake.value('network'), '44 threads', 'our own four extra threads join the pool total');
+    fake.drag('shared', 9);
+    assert.equal(socket.messages.filter(message => message.type === 'mode').length, 1, 'no message without a change');
+});
+
+test('an unpublished capacity change rides along on the next handshake', t => {
+    const {fake, client, ready} = panel(t);
+    fake.drag('shared', 7);
+    assert.equal(client.enabled, true);
+    assert.equal(client.ready, undefined, 'still connecting, so nothing was published');
+    const socket = ready();
+    assert.equal(socket.messages[0].type, 'hello');
+    assert.equal(socket.messages[0].slots, 7);
+});
+
+test('stored thread counts are restored and re-clamped to the current machine', t => {
+    assert.equal(panel(t, {localThreads: 4, sharedThreads: 3}).fake.value('local'), '4 threads');
+    assert.equal(panel(t, {localThreads: 4, sharedThreads: 3}).fake.value('shared'), '3 threads');
+    // A profile carried over from a larger machine, and one from below the shared floor.
+    assert.equal(panel(t, {localThreads: 999}).fake.value('local'), '12 threads');
+    assert.equal(panel(t, {sharedThreads: 1}).fake.value('shared'), '2 threads');
+    assert.equal(panel(t, {localThreads: 0}).fake.value('local'), '1 thread');
+    assert.equal(panel(t, {localThreads: 'nonsense'}).fake.value('local'), '12 threads', 'falls back to the default');
 });
 
 test('own and donated workers use the pinned bundle URL after a deployment', t => {

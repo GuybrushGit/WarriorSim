@@ -17,7 +17,7 @@
 
   <script>var whTooltips = { colorLinks: true, iconizeLinks: false, renameLinks: false, "hide": { "ilvl": false } };</script>
   <script src="https://wow.zamimg.com/widgets/power.js"></script>
-<!-- 
+  <!-- 
   TODO 
   fight log btn
   fix selected item losing dps
@@ -35,6 +35,7 @@
 -->
 
 </head>
+
 <body>
   <div class="alerts"></div>
 
@@ -50,7 +51,7 @@
       <a href="classic.html" class="btn js-classic">Classic</a>
       <a href="." class="btn js-sod active">Season of Discovery</a>
     </div>
-    
+
     <div class="bg"></div>
     <div class="character">
       <p><span id="race">Human</span> Warrior</p>
@@ -129,36 +130,54 @@
     </div>
     <div class="bottom">
       <div id="weights-div">
-        <div id="weight-str"><span class="stat-name">Strength:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
-        <div id="weight-agi"><span class="stat-name">Agility:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
-        <div id="weight-ap"><span class="stat-name">Attack Power:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
-        <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
-        <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-str"><span class="stat-name">Strength:</span><span class="stat-dps">12345</span><span
+            class="stat-error">123</span></div>
+        <div id="weight-agi"><span class="stat-name">Agility:</span><span class="stat-dps">12345</span><span
+            class="stat-error">123</span></div>
+        <div id="weight-ap"><span class="stat-name">Attack Power:</span><span class="stat-dps">12345</span><span
+            class="stat-error">123</span></div>
+        <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span
+            class="stat-error">123</span></div>
+        <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span
+            class="stat-error">123</span></div>
       </div>
       <div id="dps-box"><span class="dps"></span><span id="dpserr"></span></div>
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
-      <div class="share-compute">
-        <label><input id="share-compute" type="checkbox" aria-describedby="share-compute-help"> Share Compute</label>
-        <small id="share-compute-status" role="status">Off · local simulations only</small>
-        <div class="share-compute-threads">
-          <div class="share-compute-row" data-threads="local"><span>Your local threads</span><span>&mdash;</span></div>
-          <div class="share-compute-row share-compute-idle" data-threads="network"><span>Network threads</span><span>&mdash;</span></div>
-          <div class="share-compute-row share-compute-idle" data-threads="shared"><span>Your shared threads</span><span>&mdash;</span></div>
-        </div>
-        <p id="share-compute-help">Help other players while idle and get help with your simulations. Uses CPU, battery, and data, including in background tabs. Your simulation setup is shared with participating devices. Your own simulations always take priority.</p>
-      </div>
       <a href="#" class="btn js-weights">STAT WEIGHTS</a>
       <a href="#" class="btn js-table">SHEET DPS</a>
       <a href="#" class="btn js-stats disabled">STATS</a>
       <a href="#" class="btn js-settings">SETTINGS</a>
       <a href="#" class="btn js-profiles">PROFILES</a>
-      <div class="author">made by Guybrush-Golemagg</div>
-      <div class="manual"><a href="https://docs.google.com/document/d/1-ugglMDHqIQlEDiE2z9G7zuI-kgyvb2kvgPobWbcxy0/edit" target="_blank">User Manual</a></div>
+      <div class="share-compute">
+        <label><input id="share-compute" type="checkbox" aria-describedby="share-compute-help"> Share Compute</label>
+        <small id="share-compute-status" role="status">Off · local simulations only</small>
+        <div class="share-compute-threads">
+          <div class="share-compute-entry" data-threads="local">
+            <div class="share-compute-row"><span>Your local threads</span><span>&mdash;</span></div>
+            <input class="share-compute-slider" type="range" min="1" max="1" value="1"
+              aria-label="Local simulation threads">
+          </div>
+          <div class="share-compute-entry share-compute-idle" data-threads="network">
+            <div class="share-compute-row"><span>Network threads</span><span>&mdash;</span></div>
+          </div>
+          <div class="share-compute-entry share-compute-idle" data-threads="shared">
+            <div class="share-compute-row"><span>Your shared threads</span><span>&mdash;</span></div>
+            <input class="share-compute-slider" type="range" min="2" max="2" value="2"
+              aria-label="Shared compute threads">
+          </div>
+        </div>
+        <p id="share-compute-help">Help other players while idle and get help with your simulations. Uses CPU, battery,
+          and data, including in background tabs. Your simulation setup is shared with participating devices. Your own
+          simulations always take priority.</p>
+      </div>
+      <div class="manual"><a href="https://docs.google.com/document/d/1-ugglMDHqIQlEDiE2z9G7zuI-kgyvb2kvgPobWbcxy0/edit"
+          target="_blank">User Manual</a></div>
       <div class="manual"><a href="https://github.com/GuybrushGit/WarriorSim" target="_blank">Github</a></div>
+      <div class="author">by tzcnt<br>original by Guybrush-Golemagg</div>
     </div>
-    
+
   </section>
 
   <section class="profiles">
@@ -189,7 +208,7 @@
           </li>
           <li>
             <label>Target Level</label>
-            <input type="range"  name="slider-targetlevel" min="1" max="63" value="28" class="slider">
+            <input type="range" name="slider-targetlevel" min="1" max="63" value="28" class="slider">
             <input type="text" name="targetlevel" value="28" data-numberonly="true">
           </li>
           <li>
@@ -274,7 +293,7 @@
           </li>
           <li>
             <label>Adjacent Mobs</label>
-            <input type="range"  name="slider-adjacent" min="0" max="3" value="0" class="slider">
+            <input type="range" name="slider-adjacent" min="0" max="3" value="0" class="slider">
             <input type="text" name="adjacent" value="0" data-numberonly="true">
           </li>
           <li>
@@ -333,37 +352,37 @@
             <ul class="resistances-list hidden">
               <li>
                 <label>
-                    Shadow Resist
-                    <input type="checkbox" class="resistances js-toggle" data-id="shadow-resist" name="shadow-resist">
+                  Shadow Resist
+                  <input type="checkbox" class="resistances js-toggle" data-id="shadow-resist" name="shadow-resist">
                 </label>
               </li>
               <li>
                 <label>
-                    Arcane Resist
-                    <input type="checkbox" class="resistances js-toggle" data-id="arcane-resist" name="arcane-resist">
+                  Arcane Resist
+                  <input type="checkbox" class="resistances js-toggle" data-id="arcane-resist" name="arcane-resist">
                 </label>
               </li>
-              </li>
-                <label>
-                    Nature Resist
-                    <input type="checkbox" class="resistances js-toggle" data-id="nature-resist" name="nature-resist">
-                </label>
-              </li>
-              <li>
-                <label>
-                    Fire Resist
-                    <input type="checkbox" class="resistances js-toggle" data-id="fire-resist" name="fire-resist">
-                </label>
-              </li>
-              <li>
-                <label>
-                    Frost Resist
-                    <input type="checkbox" class="resistances js-toggle" data-id="frost-resist" name="frost-resist">
-                </label>
-              </li>
-            </ul>
           </li>
-          <li data-id="other">Other</li>
+          <label>
+            Nature Resist
+            <input type="checkbox" class="resistances js-toggle" data-id="nature-resist" name="nature-resist">
+          </label>
+          </li>
+          <li>
+            <label>
+              Fire Resist
+              <input type="checkbox" class="resistances js-toggle" data-id="fire-resist" name="fire-resist">
+            </label>
+          </li>
+          <li>
+            <label>
+              Frost Resist
+              <input type="checkbox" class="resistances js-toggle" data-id="frost-resist" name="frost-resist">
+            </label>
+          </li>
+        </ul>
+        </li>
+        <li data-id="other">Other</li>
         </ul>
         <ul class="phases">
           <li data-id="1" class="active" data-sources="onyxia,mc">P1</li>
@@ -417,53 +436,107 @@
       <ul>
         <li data-type="mainhand" class="active">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_mainhand.jpg" alt="Main Hand"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_mainhand.jpg"
+                alt="Main Hand"></a>
           </div>
           <ul class="filter">
-            <li class="active"><p>All</p></li>
-            <li><p>Axe</p></li>
-            <li><p>Dagger</p></li>
-            <li><p>Fist</p></li>
-            <li><p>Mace</p></li>
-            <li><p>Sword</p></li>
-            <li><p>Mace & Sword</p></li>
-            <li><p>Axe, Dagger & Sword</p></li>
+            <li class="active">
+              <p>All</p>
+            </li>
+            <li>
+              <p>Axe</p>
+            </li>
+            <li>
+              <p>Dagger</p>
+            </li>
+            <li>
+              <p>Fist</p>
+            </li>
+            <li>
+              <p>Mace</p>
+            </li>
+            <li>
+              <p>Sword</p>
+            </li>
+            <li>
+              <p>Mace & Sword</p>
+            </li>
+            <li>
+              <p>Axe, Dagger & Sword</p>
+            </li>
           </ul>
         </li>
         <li data-type="offhand">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_offhand.jpg" alt="Off Hand"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_offhand.jpg"
+                alt="Off Hand"></a>
           </div>
           <ul class="filter">
-            <li class="active"><p>All</p></li>
-            <li><p>Axe</p></li>
-            <li><p>Dagger</p></li>
-            <li><p>Fist</p></li>
-            <li><p>Mace</p></li>
-            <li><p>Sword</p></li>
-            <li><p>Mace & Sword</p></li>
-            <li><p>Axe, Dagger & Sword</p></li>
-            <li><p>Shield</p></li>
+            <li class="active">
+              <p>All</p>
+            </li>
+            <li>
+              <p>Axe</p>
+            </li>
+            <li>
+              <p>Dagger</p>
+            </li>
+            <li>
+              <p>Fist</p>
+            </li>
+            <li>
+              <p>Mace</p>
+            </li>
+            <li>
+              <p>Sword</p>
+            </li>
+            <li>
+              <p>Mace & Sword</p>
+            </li>
+            <li>
+              <p>Axe, Dagger & Sword</p>
+            </li>
+            <li>
+              <p>Shield</p>
+            </li>
           </ul>
         </li>
         <li data-type="twohand">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_twohand.jpg" alt="Two Hand"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_twohand.jpg"
+                alt="Two Hand"></a>
           </div>
           <ul class="filter">
-            <li class="active"><p>All</p></li>
-            <li><p>Axe</p></li>
-            <li><p>Mace</p></li>
-            <li><p>Polearm</p></li>
-            <li><p>Sword</p></li>
-            <li><p>Mace & Sword</p></li>
-            <li><p>Staff</p></li>
-            <li><p>Fishing Pole</p></li>
+            <li class="active">
+              <p>All</p>
+            </li>
+            <li>
+              <p>Axe</p>
+            </li>
+            <li>
+              <p>Mace</p>
+            </li>
+            <li>
+              <p>Polearm</p>
+            </li>
+            <li>
+              <p>Sword</p>
+            </li>
+            <li>
+              <p>Mace & Sword</p>
+            </li>
+            <li>
+              <p>Staff</p>
+            </li>
+            <li>
+              <p>Fishing Pole</p>
+            </li>
           </ul>
         </li>
         <li data-type="ranged">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_ranged.jpg" alt="Ranged"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_ranged.jpg"
+                alt="Ranged"></a>
           </div>
         </li>
         <li data-type="head">
@@ -478,7 +551,8 @@
         </li>
         <li data-type="shoulder">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_shoulder.jpg" alt="shoulder"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_shoulder.jpg"
+                alt="shoulder"></a>
           </div>
         </li>
         <li data-type="back">
@@ -488,22 +562,26 @@
         </li>
         <li data-type="chest">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_chest.jpg" alt="chest"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_chest.jpg"
+                alt="chest"></a>
           </div>
         </li>
         <li data-type="wrist">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_wrists.jpg" alt="wrist"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_wrists.jpg"
+                alt="wrist"></a>
           </div>
         </li>
         <li data-type="hands">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_hands.jpg" alt="hands"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_hands.jpg"
+                alt="hands"></a>
           </div>
         </li>
         <li data-type="waist">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_waist.jpg" alt="waist"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_waist.jpg"
+                alt="waist"></a>
           </div>
         </li>
         <li data-type="legs">
@@ -518,27 +596,31 @@
         </li>
         <li data-type="finger1">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_finger.jpg" alt="finger1"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_finger.jpg"
+                alt="finger1"></a>
           </div>
         </li>
         <li data-type="finger2">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_finger.jpg" alt="finger2"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_finger.jpg"
+                alt="finger2"></a>
           </div>
         </li>
         <li data-type="trinket1">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_trinket.jpg" alt="trinket1"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_trinket.jpg"
+                alt="trinket1"></a>
           </div>
         </li>
         <li data-type="trinket2">
           <div class="icon">
-            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_trinket.jpg" alt="trinket2"></a>
+            <a href="#"><img src="https://wow.zamimg.com/images/wow/icons/medium/inventoryslot_trinket.jpg"
+                alt="trinket2"></a>
           </div>
         </li>
       </ul>
     </nav>
- 
+
     <div class="table-container"></div>
     <div class="button-container">
       <a href="#" class="btn js-editmode">SHOW / HIDE ROWS</a>

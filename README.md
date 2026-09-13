@@ -15,8 +15,9 @@ for the resolved-spec interface, optimizations, and parity validation.
 
 **Share Compute** contributes idle browser workers and receives help with your
 simulations. It is **on by default**, and turning it off is remembered in that
-browser. The panel lists your local threads (always used for your own runs), the
-pool's advertised threads, and the threads you share. Starting a simulation
+browser. The panel has a slider for your local threads (always used for your own runs)
+and one for the threads you share, plus the pool's advertised total; both sliders are
+remembered between visits. Starting a simulation
 immediately gives your own work priority; disabling sharing keeps execution
 local and dims the two sharing rows. Both Classic and SoD use the same optional
 [compute coordinator](server/README.md), with separate pools for each bundle hash.

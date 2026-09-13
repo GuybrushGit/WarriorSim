@@ -4,7 +4,13 @@ Classic (`classic.html`) and Season of Discovery (`index.html`) share one
 coordinator and application bundle. The resolved simulation spec selects the
 game mode; each bundle hash forms its own isolated participant pool.
 
-A participating browser contributes up to four workers while idle. Sharing is on
+A participating browser contributes idle workers up to the count chosen on the panel's
+**Your shared threads** slider, which runs from 2 to the machine's logical CPU count
+(capped at 64) and defaults to 45% of that maximum, rounded down. A second slider,
+**Your local threads**, sets how many workers the browser uses for its own simulations:
+1 to the same maximum, defaulting to the maximum. Both are stored in `localStorage`
+(`warriorsim.localThreads`, `warriorsim.sharedThreads`) and re-clamped to the current
+machine on load. Sharing is on
 by default; an explicit refusal is stored in `localStorage` under
 `warriorsim.shareCompute` and is the only value that keeps it off on a later visit.
 Starting any DPS, stat-weight, or gear-ranking operation synchronously terminates those workers.
@@ -297,7 +303,7 @@ All messages below also carry the connection's `buildId`.
 | `cancel` | server → helper | `leaseId`; terminate that task and discard its report |
 | `released` | server → owner | `jobId`, `index`, `leaseId` |
 | `finish` | owner → server | `jobId`, `busy`; remove job, cancel helpers, optionally return to pull |
-| `mode` | client → server | `busy`; can pull only after all owned jobs finish |
+| `mode` | client → server | `busy`; can pull only after all owned jobs finish. Optional `slots` 1–64 re-advertises capacity without reconnecting |
 | `unavailable` | server → owner | `jobId`; job lifetime expired, complete locally |
 
 `networkThreads` is the total `slots` advertised by every participant in **this
@@ -307,7 +313,9 @@ contributes its full count. Pools are per bundle hash, so the number describes t
 compute that can actually accept this connection's work rather than every connection
 on the coordinator. The server keeps it accurate as participants join and leave, but
 only reports it in `ready`; a client shows the value from its last handshake and
-refreshes it on reconnect. Treat it as advisory: it is a display figure with no effect
+refreshes it on reconnect. When a participant re-advertises its own capacity through
+`mode`, it adjusts its displayed total by its own delta so the two rows stay coherent
+until the next handshake. Treat it as advisory: it is a display figure with no effect
 on scheduling, and a client that never receives one simply leaves the count unknown.
 
 `job` is `{id, spec, seed, iterations, offset, chunkSize, fullReport}`. `spec` is

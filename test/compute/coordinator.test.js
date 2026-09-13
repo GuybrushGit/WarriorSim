@@ -141,6 +141,39 @@ test('the pool total advertises capacity, so running a simulation does not shrin
     assert.equal(join(1).messages[0].networkThreads, 7);
 });
 
+test('a mode message can re-advertise capacity without reconnecting', () => {
+    const {server, join, submit} = setup();
+    const owner = join(1), helper = join(2);
+    assert.equal(server.groups.get(BUILD).threads, 3);
+    receive(server, helper.client, {type: 'mode', busy: false, slots: 6});
+    assert.equal(helper.client.capacity, 6);
+    assert.equal(helper.client.slots, 6);
+    assert.equal(server.groups.get(BUILD).threads, 7, 'the pool total follows the new capacity');
+    submit(owner);
+    // Capacity 6 now exceeds the work: every chunk the owner did not claim is leased at once,
+    // where the original capacity of 2 would have covered only two of them.
+    assert.equal(helper.client.leases.size, 4, 'the extra capacity is scheduled immediately');
+    receive(server, helper.client, {type: 'mode', busy: false, slots: 2});
+    assert.equal(server.groups.get(BUILD).threads, 3);
+    // Leases beyond the new capacity drain rather than being torn down mid-batch.
+    assert.equal(helper.client.leases.size, 4);
+    server.disconnect(helper.client);
+    assert.equal(server.groups.get(BUILD).threads, 1, 'the reduced capacity is what gets removed');
+});
+
+test('an invalid re-advertised capacity is rejected before it can skew the pool total', () => {
+    const {server, join} = setup();
+    const client = join(3);
+    for (const slots of [0, 65, 1.5, '4', null]) {
+        assert.throws(() => receive(server, client.client, {type: 'mode', busy: false, slots}), /capacity/);
+    }
+    assert.equal(client.client.capacity, 3);
+    assert.equal(server.groups.get(BUILD).threads, 3);
+    receive(server, client.client, {type: 'mode', busy: false});
+    assert.equal(client.client.capacity, 3, 'omitting slots leaves capacity alone');
+    assert.equal(server.groups.get(BUILD).threads, 3);
+});
+
 test('a repeated socket cleanup cannot delete a newly recreated pool', () => {
     const {server, join} = setup();
     const disconnected = join();
