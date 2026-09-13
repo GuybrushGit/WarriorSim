@@ -31,9 +31,10 @@ section identical but does change the `buildId`.
 This builds the native Release module and minifies all application JavaScript with
 Emscripten's bundled Terser. Class and function names are preserved because action
 serialization uses constructor names. It also generates `dist/compute-build.json`
-and an immutable `dist/bundles/<buildId>/` snapshot containing the Classic and SoD
-application assets. Keep the resulting `dist/js`, `dist/wasm`, manifest, and bundle
-snapshot together after validating them. The checked-in CSS remains usable.
+and a `dist/bundle/` directory containing the Classic and SoD application assets.
+Each build replaces that directory whole, so old releases are not kept alongside it.
+Keep the resulting `dist/js`, `dist/wasm`, manifest, and bundle directory together
+after validating them. The checked-in CSS remains usable.
 Use `npm run wasm` (or `./wasm/build.sh`) to rebuild only the native module, or
 `powershell -NoProfile -File scripts/build-dist.ps1 -SkipWasmBuild` /
 `./build-dist.sh --skip-wasm-build` to reuse a native build that already matches the

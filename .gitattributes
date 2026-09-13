@@ -1,2 +1,2 @@
 # Bundle paths identify exact bytes; Git must not translate their line endings.
-/dist/bundles/** -text
+/dist/bundle/** -text

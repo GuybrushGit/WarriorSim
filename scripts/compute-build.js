@@ -43,21 +43,22 @@ function buildBundle(root) {
         for (const file of list) if (!entries.has(file)) throw new Error(`Missing bundle entrypoint: ${file}`);
     }
     const buildId = digest(JSON.stringify(descriptor));
-    const bundleRoot = path.join(dist, 'bundles', buildId);
-    for (const [name, bytes] of entries) {
-        const destination = path.join(bundleRoot, name);
-        fs.mkdirSync(path.dirname(destination), {recursive: true});
-        if (fs.existsSync(destination)) {
-            if (!fs.readFileSync(destination).equals(bytes)) throw new Error(`Immutable bundle was modified: ${destination}`);
-        } else fs.writeFileSync(destination, bytes, {flag: 'wx'});
-    }
     const manifest = {buildId, ...descriptor};
     const json = JSON.stringify(manifest) + '\n';
-    const bundleManifest = path.join(bundleRoot, 'manifest.json');
-    if (fs.existsSync(bundleManifest)) {
-        if (fs.readFileSync(bundleManifest, 'utf8') !== json) throw new Error(`Immutable manifest was modified: ${bundleManifest}`);
-    } else fs.writeFileSync(bundleManifest, json, {flag: 'wx'});
-    // Publish the pointer only after the complete immutable snapshot exists.
+    // One directory, replaced whole: staging then swapping drops files this build no longer
+    // produces and keeps a failed build from leaving a half-written bundle behind.
+    const bundleRoot = path.join(dist, 'bundle');
+    const staging = path.join(dist, 'bundle.tmp');
+    fs.rmSync(staging, {recursive: true, force: true});
+    for (const [name, bytes] of entries) {
+        const destination = path.join(staging, name);
+        fs.mkdirSync(path.dirname(destination), {recursive: true});
+        fs.writeFileSync(destination, bytes);
+    }
+    fs.writeFileSync(path.join(staging, 'manifest.json'), json);
+    fs.rmSync(bundleRoot, {recursive: true, force: true});
+    fs.renameSync(staging, bundleRoot);
+    // Publish the pointer only after the complete bundle exists.
     const pending = path.join(dist, 'compute-build.json.tmp');
     fs.writeFileSync(pending, json);
     fs.renameSync(pending, path.join(dist, 'compute-build.json'));

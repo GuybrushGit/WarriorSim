@@ -42,24 +42,30 @@ COMPUTE_ORIGINS=https://sim.example.com npm run compute:server
 ```
 
 `server/package.json` is independent of the legacy gulp dependencies. The build
-creates an immutable snapshot at `dist/bundles/<buildId>/` and publishes
-`dist/compute-build.json` as the pointer to the current release. The coordinator
+writes the current release to `dist/bundle/` and publishes
+`dist/compute-build.json` as the pointer to it. The coordinator
 does **not** read that pointer or require a configured current hash. Old and new
-bundles can share concurrently, each within its own pool. A code/content rollout
-does not require restarting the coordinator.
+bundles can share concurrently, each within its own pool, because a pool is keyed by
+the `buildId` a client reports rather than by anything on disk. A code/content
+rollout does not require restarting the coordinator.
 
-Upload the complete new bundle directory before atomically replacing the manifest.
-Each tab preloads and verifies **every manifest asset**, including both page
-variants and WASM, before initializing the simulator. It retains the bytes as
-document-owned Blob URLs; page scripts and all future workers use those copies.
-Once startup completes, removing the tab's old bundle directory does not affect
-local simulations, sharing, parameter changes, or recreation of canceled workers.
-This does not depend on the browser's HTTP cache keeping the assets available.
+Each build replaces `dist/bundle/` whole rather than adding a directory beside it,
+so exactly one release is on disk and stale files from a previous build are removed.
+The build stages the new contents and swaps them in, so an interrupted build does not
+leave a partially written bundle. Upload the complete new bundle directory before
+atomically replacing the manifest. Each tab preloads and verifies **every manifest
+asset**, including both page variants and WASM, before initializing the simulator. It
+retains the bytes as document-owned Blob URLs; page scripts and all future workers use
+those copies. Once startup completes, replacing or deleting the bundle directory does
+not affect that tab's local simulations, sharing, parameter changes, or recreation of
+canceled workers. This does not depend on the browser's HTTP cache keeping the assets
+available.
 
-Keep a deployment grace period for tabs **still downloading** the previous release:
-an incomplete preload fails visibly and requires a reload to select the new release.
-Old directories are otherwise optional for already initialized tabs. The build
-does not delete snapshots automatically, so deployment cleanup controls retention.
+There is deliberately **no** deployment grace period for tabs **still downloading**
+the previous release. Such a tab reads a mix of old and new bytes, its per-file SHA-256
+check fails, and it reports the failure and requires a reload — it never executes mixed
+code. Retaining the previous release would avoid that reload; the project accepts the
+reload in exchange for not accumulating old builds.
 An inactive pool is removed from server memory when its last client disconnects,
 but can be recreated by a returning client with that hash.
 

@@ -36,7 +36,7 @@
         if (buildId !== manifest.buildId) throw new Error('Simulation bundle hash mismatch');
         const selected = entrypoints[globalThis.mode];
         if (!selected) throw new Error('Unknown simulator mode');
-        const base = new URL(`./bundles/${buildId}/`, manifestUrl);
+        const base = new URL('./bundle/', manifestUrl);
         // Complete and verify every download before executing any application code.
         // Object URLs retain the bytes independently of HTTP cache eviction or deployment.
         const contents = await Promise.all(files.map(async file => {
