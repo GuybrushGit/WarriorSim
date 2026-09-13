@@ -13,6 +13,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
+    "test": "node test/simulation-regressions.test.js",
     "dist": "gulp sass && gulp js-build",
     "dev": "gulp",
     "start": "gulp"

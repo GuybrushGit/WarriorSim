@@ -92,11 +92,11 @@ class SimulationWorkerParallel {
                 result.totaldmg += data.totaldmg;
                 result.totalduration += data.totalduration;
                 result.mindps = Math.min(result.mindps, data.mindps);
-                result.maxdps = Math.min(result.maxdps, data.maxdps);
+                result.maxdps = Math.max(result.maxdps, data.maxdps);
                 result.sumdps += data.sumdps;
                 result.sumdps2 += data.sumdps2;
                 result.starttime = Math.min(result.starttime, data.starttime);
-                result.endtime = Math.min(result.endtime, data.endtime);
+                result.endtime = Math.max(result.endtime, data.endtime);
                 if (result.spread && data.spread) {
                     for (let i in data.spread) {
                         result.spread[i] = (result.spread[i] || 0) + data.spread[i];
@@ -125,6 +125,9 @@ class SimulationWorkerParallel {
                             result.player.spells[id] = src;
                         } else {
                             dst.totaldmg += src.totaldmg;
+                            if (src.totalusedrage !== undefined) {
+                                dst.totalusedrage = (dst.totalusedrage || 0) + src.totalusedrage;
+                            }
                             for (let i = 0; i < src.data.length; ++i) {
                                 dst.data[i] += src.data[i];
                             }
@@ -163,12 +166,15 @@ class SimulationWorkerParallel {
     start(params) {
         params.globals = getGlobalsDelta();
         this.iterations = params.sim.iterations;
+        const seed = params.sim.seed == null ? generateSimulationSeed() : Number(params.sim.seed) >>> 0;
+        let iterationOffset = params.sim.iterationOffset || 0;
         let remain = params.sim.iterations;
         this.workers.forEach((worker, i) => {
             const current = Math.round(remain / (this.workers.length - i));
             remain -= current;
             params.player[3].logging = i == 0 && params.fullReport;
-            worker.start({...params, sim: {...params.sim, iterations: current}});
+            worker.start({...params, sim: {...params.sim, iterations: current, seed, iterationOffset}});
+            iterationOffset += current;
         });
     }
 }
@@ -192,6 +198,9 @@ class Simulation {
         this.executeperc = config.executeperc;
         this.startrage = config.startrage;
         this.iterations = config.iterations;
+        this.seed = config.seed == null ? null : config.seed >>> 0;
+        this.iterationOffset = config.iterationOffset || 0;
+        this.completedIterations = 0;
         batching = config.batching;
         this.idmg = 0;
         this.totaldmg = 0;
@@ -211,7 +220,7 @@ class Simulation {
         this.starttime = new Date().getTime();
         let iteration;
         for (iteration = 1; iteration <= this.iterations; ++iteration) {
-            this.run();
+            this.run(iteration - 1);
             if (iteration % this.maxcallstack == 0) {
                 this.update(iteration);
             }
@@ -224,7 +233,7 @@ class Simulation {
         this.runAsync(1);
     }
     runAsync(iteration) {
-        this.run();
+        this.run(iteration - 1);
         if (iteration == this.iterations) {
             this.endtime = new Date().getTime();
             this.finished();
@@ -235,7 +244,10 @@ class Simulation {
             this.runAsync(iteration + 1);
         }
     }
-    run() {
+    run(iterationIndex) {
+        if (iterationIndex === undefined) iterationIndex = this.completedIterations;
+        this.completedIterations = iterationIndex + 1;
+        setSimulationSeed(this.seed == null ? null : simulationIterationSeed(this.seed, this.iterationOffset + iterationIndex));
         step = 0;
         this.idmg = 0;
         let player = this.player;
@@ -727,12 +739,38 @@ class Simulation {
     }
 }
 
+var simulationRngState = null;
+
+function generateSimulationSeed() {
+    if (globalThis.crypto && globalThis.crypto.getRandomValues) {
+        return globalThis.crypto.getRandomValues(new Uint32Array(1))[0];
+    }
+    return (Date.now() ^ Math.floor(Math.random() * 0x100000000)) >>> 0;
+}
+
+function simulationIterationSeed(baseSeed, globalIteration) {
+    return (baseSeed + Math.imul(globalIteration, 0x9E3779B9)) >>> 0;
+}
+
+function setSimulationSeed(seed) {
+    simulationRngState = seed == null ? null : seed >>> 0;
+}
+
+function simulationRandom() {
+    if (simulationRngState == null) return Math.random();
+    simulationRngState = (simulationRngState + 0x6D2B79F5) >>> 0;
+    let z = simulationRngState;
+    z = Math.imul(z ^ (z >>> 15), z | 1);
+    z ^= (z + Math.imul(z ^ (z >>> 7), z | 61)) >>> 0;
+    return ((z ^ (z >>> 14)) >>> 0) / 0x100000000;
+}
+
 function rng(min, max) {
-    return ~~(Math.random() * (max - min + 1) + min);
+    return ~~(simulationRandom() * (max - min + 1) + min);
 }
 
 function rng10k() {
-    return ~~(Math.random() * 10000);
+    return ~~(simulationRandom() * 10000);
 }
 
 function avg(min, max) {

@@ -25,3 +25,8 @@ npm run dist
 git add .
 git commit
 ```
+
+Run `npm test` to check the JavaScript simulation fixes, or `npm test -- --dist`
+to check the minified browser assets. These tests use only Node built-ins and
+do not require installing the legacy gulp dependencies. See
+[test/README.md](test/README.md) for coverage and the negative-control command.

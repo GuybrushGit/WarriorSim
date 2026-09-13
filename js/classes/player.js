@@ -43,6 +43,7 @@ class Player {
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.freeslam = false;
+        this.freeshieldslam = false;
         this.ragecostbonus = 0;
         this.logging = config.logging;
         this.race = config.race;
@@ -709,26 +710,38 @@ class Player {
         this.spelldelay = 0;
         this.heroicdelay = 0;
         this.mh.timer = 0;
-        if (this.oh)
-            this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
         this.extraattacks = 0;
         this.batchedextras = 0;
         this.nextswinghs = false;
         this.nextswingcl = false;
         this.freeslam = false;
+        this.freeshieldslam = false;
         for (let s in this.spells) {
-            this.spells[s].timer = 0;
-            this.spells[s].stacks = 0;
+            let spell = this.spells[s];
+            spell.timer = 0;
+            spell.stacks = 0;
+            spell.maxdelay = this.reactionmin;
+            if (spell.unqueuetimer !== undefined)
+                spell.unqueuetimer = 300 + rng(this.reactionmin, this.reactionmax);
+            if (spell.usedrage !== undefined) spell.usedrage = 0;
+            if (spell.backupheroic) {
+                spell.backupheroic.maxdelay = this.reactionmin;
+                spell.backupheroic.unqueuetimer = 300 + rng(this.reactionmin, this.reactionmax);
+            }
         }
         for (let s in this.auras) {
-            this.auras[s].timer = 0;
-            this.auras[s].firstuse = true;
-            this.auras[s].stacks = 0;
-            if (this.auras[s].ticksleft) this.auras[s].ticksleft = 0;
-            if (this.auras[s].saveddmg) this.auras[s].saveddmg = 0;
-            if (this.auras[s].nexttick) this.auras[s].nexttick = 0;
-            if (this.auras[s].cooldowntimer) this.auras[s].cooldowntimer = 0;
-            if (this.auras[s].tfbstep) this.auras[s].tfbstep = -6000;
+            let aura = this.auras[s];
+            aura.timer = 0;
+            aura.firstuse = true;
+            aura.stacks = 0;
+            aura.starttimer = 0;
+            aura.maxdelay = this.reactionmin;
+            if (aura.mintime !== undefined) aura.mintime = 0;
+            if (aura.ticksleft) aura.ticksleft = 0;
+            if (aura.saveddmg) aura.saveddmg = 0;
+            if (aura.nexttick) aura.nexttick = 0;
+            if (aura.cooldowntimer) aura.cooldowntimer = 0;
+            if (aura.tfbstep) aura.tfbstep = -6000;
         }
         if (this.trinketproc1 && this.trinketproc1.usestep) this.trinketproc1.usestep = 0;
         if (this.trinketproc2 && this.trinketproc2.usestep) this.trinketproc2.usestep = 0;
@@ -764,6 +777,8 @@ class Player {
         }
         this.initStances();
         this.update();
+        if (this.oh)
+            this.oh.timer = Math.round(this.oh.speed * 1000 / this.stats.haste / 2);
     }
     update() {
         this.updateAuras();
@@ -989,7 +1004,7 @@ class Player {
         let diff = this.target.defense - this.stats['skill_' + weapon.type];
         let low = Math.max(Math.min(1.3 - 0.05 * diff, 0.91), 0.01);
         let high = Math.max(Math.min(1.2 - 0.03 * diff, 0.99), 0.2);
-        return Math.random() * (high - low) + low;
+        return simulationRandom() * (high - low) + low;
     }
     getGlanceChance(weapon) {
         return 10 + Math.max(this.target.defense - Math.min(this.level * 5, this.stats['skill_' + weapon.type]), 0) * 2;
