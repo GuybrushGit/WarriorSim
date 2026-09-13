@@ -1068,7 +1068,8 @@ SIM.UI = {
 
     loadWeapons: function (type, editmode) {
         var view = this;
-        var filter = view.main.find('nav li.active .filter .active').text();
+        // Trimmed: the markup wraps each label on its own line, so .text() carries indentation.
+        var filter = view.main.find('nav li.active .filter .active').text().trim();
 
         let storage = JSON.parse(localStorage[mode + (globalThis.profileid || 0)]);
         let level = parseInt(storage.level);
