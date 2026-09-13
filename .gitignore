@@ -2,3 +2,4 @@ node_modules
 old
 wasm/.em-cache/
 wasm/dist/
+scratch/
