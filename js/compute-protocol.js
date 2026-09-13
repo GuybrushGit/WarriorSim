@@ -2,15 +2,20 @@
 (function(root) {
     'use strict';
     const protocol = {
-        version: 2,
+        version: 3,
         maxChunks: 8192,
         maxChunkSize: 2000,
         leaseMs: 15000,
+        // Outstanding leases one participant may hold: running plus waiting.
+        maxQueue: 256,
         maxPayload: 1024 * 1024,
         buildId(value) { return typeof value === 'string' && /^[a-f0-9]{64}$/.test(value); },
         id(value) { return typeof value === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(value); },
         uint(value, min = 0, max = 0xffffffff) {
             return Number.isSafeInteger(value) && value >= min && value <= max;
+        },
+        queue(value, slots) {
+            return protocol.uint(value, slots, Math.min(4 * slots, protocol.maxQueue));
         },
         safeTree(value, depth = 0, budget = {left: 30000}) {
             if (--budget.left < 0 || depth > 16) return false;

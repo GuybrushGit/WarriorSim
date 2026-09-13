@@ -23,7 +23,8 @@ function harness(overrides = {}) {
         terminate() { this.terminated = true; }
         finish() {
             const data = this.messages.at(-1);
-            this.onmessage({data: {id: data.id, report: report(job('job', {iterations: data.count, offset: data.offset, seed: data.seed}), 0)}});
+            this.onmessage({data: {id: data.id, report: report(job('job', {iterations: data.count, chunkSize: data.count,
+                offset: data.offset, seed: data.seed}), 0)}});
         }
     }
     class FakeSocket {
@@ -108,4 +109,9 @@ function dom({stored = null, localThreads = null, sharedThreads = null, hardware
     };
 }
 const params = () => ({player: [], sim: {iterations: 640, seed: 42, iterationOffset: 13}, fullReport: false});
-module.exports = {ROOT, BUILD, P, job, report, spec, harness, params, dom};
+// A lease as the coordinator sends it, carrying the spec unless a test omits it.
+function work(overrides = {}) {
+    const value = 'job' in overrides ? overrides.job : job();
+    return {type: 'work', leaseId: 'lease', jobId: value ? value.id : overrides.jobId, job: value, index: 0, leaseMs: 15000, ...overrides};
+}
+module.exports = {ROOT, BUILD, P, job, report, spec, harness, params, dom, work};

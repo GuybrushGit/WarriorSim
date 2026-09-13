@@ -96,7 +96,7 @@ shown, with the `files` list sorted lexically by path:
 ```text
 {
   format: 2,
-  protocol: 2,
+  protocol: 3,
   specVersion: 1,
   entrypoints: { classic: [ordered script paths], sod: [ordered script paths] },
   files: [{ path: "js/...", sha256: "SHA-256 of that file's exact bytes" }, ...]
@@ -131,14 +131,14 @@ back/forward-cache restore). Reloading or restoring a discarded tab loads the
 then-current release. This increases startup downloads and retained asset memory;
 CSS, images, and external tooltips remain outside the simulation bundle.
 
-Every protocol 2 message in **both directions**, including `hello`, work results,
+Every protocol 3 message in **both directions**, including `hello`, work results,
 claims, cancellations, finish, and mode changes, contains `buildId`. The server
 binds the connection to that hash at handshake and rejects missing or changed
 hashes before modifying jobs. Jobs are keyed by `(buildId, jobId)`, so different
 pools may even reuse a job ID. Scheduling, leases, results, and cancellation stay
 within the connection's pool. The server keeps global resource limits across
 pools; advertising many hashes does not multiply those limits.
-Only protocol 2 is accepted; messages cannot omit the connection's hash.
+Only protocol 3 is accepted; messages cannot omit the connection's hash.
 
 The hash is a compatibility/routing identity, not an attestation that a client
 executed honest code. Future incompatible wire/schema changes must retain an
@@ -211,7 +211,9 @@ separate participant pools. Scaling across processes requires shared state.
 
 ## Scheduling and failure behavior
 
-Each job has one fixed seed and contiguous chunks of at most 2,000 iterations.
+Each job has one fixed seed and contiguous chunks of at most 2,000 iterations,
+sized for about four chunks per local worker (never below 128 iterations), so that
+a helper's compute on each chunk dwarfs the round trip that delivers it.
 Every chunk has a deterministic global offset, so changing workers never changes
 its random stream. The requester starts its local workers before any network
 reply. It computes from the beginning; helpers work from the end. This reduces
@@ -224,6 +226,29 @@ assignment, but the native engine retains some proc timestamps between fights.
 Changing batch or worker partitioning can therefore change combat history as
 described in [the native guide](../wasm/README.md). Floating point sums can also
 differ in the last few bits because batching changes addition order.
+
+A helper keeps more leases than it has threads. Its handshake and `mode` messages
+advertise a `queue`: the outstanding leases it wants, running plus waiting, from
+its thread count up to four times that (256 at most). The coordinator fills each
+helper up to its queue, one lease per helper per pass, so a deep queue cannot hoard
+a small job while other helpers idle. The browser starts at twice its thread count
+and then sizes the queue from measurements: the coordinator echoes the send time of
+the helper's latest result on its next `work` message, so the helper knows its round
+trip (taken at the minimum of recent samples) without any clock agreement, and it
+times its own chunks (median of recent samples). Threads × (1 + round trip ÷ chunk
+time) × 1.25 keeps every worker fed through the round trip, bounded so that waiting
+work still starts inside half a lease; the helper republishes only on a change of
+25% or more, at most once a second. A slower or busier machine lengthens its chunk
+times, so its queue shrinks toward its thread count on its own. Waiting leases run
+in arrival order on a fixed pool of workers; cancelling one that has not started
+costs nothing, and the owner's tail stealing takes the helper's newest leases first,
+which are exactly the waiting ones.
+
+The spec travels once per job per connection: the first `work` for a job carries
+`job`, later ones name it by `jobId` only, and a `forget` message follows the job's
+removal so the helper drops its copy (a resubmission of the same ID carries the spec
+again). A lease naming a job the helper does not hold closes the connection, and the
+reconnection starts both sides from a clean slate.
 
 Leases expire after 15 seconds and get fresh random identities when reassigned.
 Donors terminate workers at that deadline. A disconnect removes the owner's jobs
@@ -243,7 +268,8 @@ minutes or over 8,192 chunks) use the established local path.
 
 The coordinator caps connections (512), jobs (512 total, 64 per connection),
 chunk count (8,192 per job), incoming messages (1 MiB), message rate, queued bytes,
-and job lifetime (30 minutes). It schedules pending jobs in round-robin order.
+and job lifetime (30 minutes). It schedules pending jobs in round-robin order,
+one lease per helper per pass.
 These are initial guardrails, not capacity measurements. Load-test the expected
 participant count and full-report bandwidth before raising them. Chunk size and
 network latency determine whether a particular short simulation becomes faster;
@@ -286,8 +312,10 @@ to `wss://sim.example.com/compute` with
 Include the same `buildId` on every later message. Native workers can explicitly
 join an older bundle's pool; they should not adopt the current web manifest's
 hash unless their engine/data compatibility matches it.
-The server replies `ready` and sends up to `slots` concurrent `work` messages.
-This is a standing pull; no polling loop is necessary. Use a matching engine
+The server replies `ready` and sends up to `queue` concurrent `work` messages
+(`slots` when the handshake names no queue). This is a standing pull; no polling
+loop is necessary. Queue more than one lease per thread only if the workers run
+them in arrival order and can drop a waiting lease on `cancel` without cost. Use a matching engine
 revision and verify deterministic WASM/native parity before assigning the build
 identity to a native binary. Native floating point/compiler behavior must preserve
 the same iteration streams; claiming a matching identity alone is insufficient.
@@ -296,20 +324,21 @@ All messages below also carry the connection's `buildId`.
 
 | Message | Direction | Fields and behavior |
 | --- | --- | --- |
-| `hello` | client → server | Protocol/build identity, `share: true`, integer `slots` 1–64, `busy` |
+| `hello` | client → server | Protocol/build identity, `share: true`, integer `slots` 1–64, `busy`; optional `queue` from `slots` to min(4 × `slots`, 256), the outstanding leases wanted (default `slots`) |
 | `ready` | server → client | `protocol`, `buildId`, `leaseMs`, `networkThreads` |
 | `submit` | owner → server | `job`, `claimed` chunk indices, `cancelled` lease IDs; atomic push transition |
 | `submitted` | server → owner | `jobId`; acknowledgement, not a prerequisite to local work |
-| `work` | server → helper | `leaseId`, `job`, zero-based `index`, `leaseMs` |
+| `work` | server → helper | `leaseId`, `jobId`, zero-based `index`, `leaseMs`; `job` on the first lease of that job per connection only; `echo` repeats the `sent` of this helper's latest `result` once one exists |
 | `leased` | server → owner | `jobId`, `index`, `leaseId` |
 | `claim` | owner → server | `jobId`, `index`; withdraw/revoke this chunk for local execution |
-| `result` | helper → server | `leaseId`, native batch `report` |
+| `result` | helper → server | `leaseId`, native batch `report`; optional integer `sent`, the helper's own send time in milliseconds, echoed on its next lease |
 | `result` | server → owner | `jobId`, `index`, validated `report` |
 | `abandon` | helper → server | `cancelled` lease IDs, at most 64; requeue immediately |
 | `cancel` | server → helper | `leaseId`; terminate that task and discard its report |
 | `released` | server → owner | `jobId`, `index`, `leaseId` |
+| `forget` | server → helper | `jobId`; the job is gone, drop its retained spec |
 | `finish` | owner → server | `jobId`, `busy`; remove job, cancel helpers, optionally return to pull |
-| `mode` | client → server | `busy`; can pull only after all owned jobs finish. Optional `slots` 1–64 re-advertises capacity without reconnecting |
+| `mode` | client → server | `busy`; can pull only after all owned jobs finish. Optional `slots` 1–64 re-advertises capacity without reconnecting; optional `queue` resizes the outstanding leases (a new `slots` without a `queue` resets the queue to it) |
 | `unavailable` | server → owner | `jobId`; job lifetime expired, complete locally |
 
 `networkThreads` is the total `slots` advertised by every **other** participant in
@@ -339,6 +368,7 @@ runBatch(handle,
          fullReport)
 ```
 
+Retain each `job` by ID until `forget` or disconnect; later leases carry only `jobId`.
 Reuse a handle for chunks of the same job. Destroy it when changing jobs. Return
 the complete batch-only JSON, including `engineVersion` and `seed`; never return
 cumulative counters from previous chunks. Respect cancellation, lease deadlines,
@@ -360,7 +390,10 @@ worker recreation after server asset removal, manifest/asset tampering, failed
 preload cleanup, scheduler races, opt-out, disconnect/reconnect, ownership,
 expiry, invalid inputs, exact iteration coverage, full player-report merging,
 the default-on sharing preference and its stored refusal, pool thread accounting
-across joins and departures, the thread rows the panel renders, and
+across joins and departures, the thread rows the panel renders, helper queues
+(validation, breadth-first filling, waiting leases running in order, free
+cancellation of waiting work, the measured queue size and its republishing),
+once-per-connection specs with `forget`, the round-trip echo, chunk sizing, and
 two browser-protocol clients using actual deployed WASM workers over a real local
 WebSocket coordinator. It requires built `wasm/dist` and `dist` assets. Background
 throttling and real internet speedups still require field testing.

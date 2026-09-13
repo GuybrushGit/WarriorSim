@@ -1,13 +1,33 @@
 /* global ComputeProtocol, Player, SimulationWorkerParallel */
+// Enough round-trip samples to follow a changing connection within a couple of seconds of
+// donation at typical thread counts, and enough chunk samples to shrug off a single
+// garbage-collection pause.
+const RTT_SAMPLES = 32;
+const CHUNK_SAMPLES = 16;
+const MAX_SAMPLE_MS = 60000;
+// Headroom over the measured need, the relative change worth telling the coordinator
+// about, and the shortest interval between two such updates.
+const QUEUE_MARGIN = 1.25;
+const QUEUE_HYSTERESIS = 0.25;
+const QUEUE_PUBLISH_INTERVAL_MS = 1000;
+
+function median(values) {
+    const sorted = [...values].sort((a, b) => a - b);
+    const middle = Math.floor(sorted.length / 2);
+    return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
 class SharedComputeClient {
     constructor({url, buildId, slots, workerUrl = './dist/js/compute-worker.min.js',
-        onStatus = () => {}, onThreads = () => {}}) {
+        onStatus = () => {}, onThreads = () => {},
+        now = () => (typeof performance === 'object' ? performance.now() : Date.now())}) {
         if (!ComputeProtocol.buildId(buildId)) throw new Error('Invalid bundle hash');
         this.url = url;
         Object.defineProperty(this, 'buildId', {value: buildId, enumerable: true});
         this.workerUrl = workerUrl;
+        this.now = now;
         this.slots = slots;
-        // What the coordinator was last told; the difference is what publishSlots must send.
+        // What the coordinator was last told; the difference is what publish must send.
         this.publishedSlots = slots;
         this.onStatus = onStatus;
         this.onThreads = onThreads;
@@ -17,7 +37,20 @@ class SharedComputeClient {
         this.enabled = false;
         this.uiBusy = false;
         this.runs = new Map();
+        this.leaseMs = ComputeProtocol.leaseMs;
+        // Round trips to the coordinator and our own compute time per chunk, most recent last.
+        this.samples = {rtt: [], chunk: []};
+        // Leases the coordinator may keep with us: the ones running plus enough waiting
+        // behind them that no worker idles for a round trip between chunks.
+        this.queue = this.queueFor(slots);
+        this.publishedQueue = this.queue;
+        this.lastQueuePublish = -Infinity;
+        // Specs received on this connection, by job ID; later leases name the job only.
+        this.jobs = new Map();
+        // Lease ID to donation. Those without a worker wait in order in `waiting`.
         this.donations = new Map();
+        this.waiting = [];
+        this.active = 0;
         this.idleWorkers = [];
         this.cancelled = [];
         this.retryDelay = 1000;
@@ -25,19 +58,54 @@ class SharedComputeClient {
     busy() { return this.uiBusy || this.runs.size > 0; }
     status() {
         this.onThreads({enabled: this.enabled, shared: this.slots, network: this.networkThreads});
+        const waiting = this.waiting.length ? ` · ${this.waiting.length} queued` : '';
         this.onStatus(!this.enabled ? 'Off · local simulations only' :
             !this.ready ? 'Connecting · simulations run locally' :
             this.busy() ? 'Accelerating your simulations' :
-            this.donations.size ? `Sharing compute · ${this.donations.size} workers` : 'Ready to share');
+            this.donations.size ? `Sharing compute · ${this.active} workers${waiting}` : 'Ready to share');
     }
     setSlots(slots) {
         this.slots = slots;
+        this.queue = this.queueFor(slots);
         this.status();
     }
-    publishSlots() {
-        if (!this.ready || this.slots === this.publishedSlots) return;
+    sample(kind, value) {
+        if (!(value >= 0 && value <= MAX_SAMPLE_MS)) return;
+        const values = this.samples[kind];
+        values.push(value);
+        if (values.length > (kind === 'rtt' ? RTT_SAMPLES : CHUNK_SAMPLES)) values.shift();
+    }
+    // Little's law: a lease turns around in one round trip plus one chunk, so a worker stays
+    // busy when its share of the outstanding leases covers that turnaround. Round trips are
+    // taken at their minimum, since every sample is a true round trip plus some slack; chunk
+    // times at their median. Twice the thread count until both have been measured.
+    queueFor(slots) {
+        const cap = Math.min(4 * slots, ComputeProtocol.maxQueue);
+        if (!this.samples.rtt.length || !this.samples.chunk.length) return Math.min(cap, 2 * slots);
+        const rtt = Math.min(...this.samples.rtt), chunk = Math.max(1, median(this.samples.chunk));
+        let queue = Math.ceil(slots * (1 + rtt / chunk) * QUEUE_MARGIN);
+        // Waiting work must still start well inside its lease when chunks are slow here.
+        queue = Math.min(queue, Math.floor(slots * this.leaseMs / (2 * chunk)));
+        return Math.max(slots, Math.min(cap, queue));
+    }
+    adapt() {
+        this.queue = this.queueFor(this.slots);
+        // Judged against what the coordinator knows, so an update held back by the interval
+        // still goes out once it has passed.
+        if (Math.abs(this.queue - this.publishedQueue) < Math.max(1, this.publishedQueue * QUEUE_HYSTERESIS) ||
+            this.now() - this.lastQueuePublish < QUEUE_PUBLISH_INTERVAL_MS) return;
+        this.publish();
+    }
+    publish() {
+        if (!this.ready) return;
+        this.queue = this.queueFor(this.slots);
+        if (this.slots === this.publishedSlots && this.queue === this.publishedQueue) return;
         // The pool figure counts peers only, so our own change never moves it.
-        if (this.send({type: 'mode', busy: this.busy(), slots: this.slots})) this.publishedSlots = this.slots;
+        if (this.send({type: 'mode', busy: this.busy(), slots: this.slots, queue: this.queue})) {
+            this.publishedSlots = this.slots;
+            this.publishedQueue = this.queue;
+            this.lastQueuePublish = this.now();
+        }
         this.status();
     }
     setEnabled(enabled) {
@@ -68,8 +136,11 @@ class SharedComputeClient {
         socket.onopen = () => {
             if (this.socket !== socket) return;
             this.publishedSlots = this.slots;
+            this.queue = this.queueFor(this.slots);
+            this.publishedQueue = this.queue;
+            this.helloAt = this.now();
             socket.send(JSON.stringify({type: 'hello', protocol: ComputeProtocol.version,
-                buildId: this.buildId, share: true, slots: this.slots, busy: this.busy()}));
+                buildId: this.buildId, share: true, slots: this.slots, queue: this.queue, busy: this.busy()}));
         };
         socket.onmessage = event => {
             if (this.socket !== socket || !this.enabled) return;
@@ -85,6 +156,7 @@ class SharedComputeClient {
             this.socket = undefined;
             this.ready = false;
             this.stopDonations();
+            this.jobs.clear();
             this.cancelled = [];
             for (const run of this.runs.values()) run.detach();
             this.status();
@@ -103,6 +175,7 @@ class SharedComputeClient {
         this.socket = undefined;
         this.ready = false;
         if (socket) socket.close();
+        this.jobs.clear();
         this.cancelled = [];
         for (const run of this.runs.values()) run.detach();
     }
@@ -113,11 +186,15 @@ class SharedComputeClient {
             this.ready = true;
             // Optional: a coordinator that predates pool reporting simply leaves the row unknown.
             this.networkThreads = ComputeProtocol.uint(message.networkThreads, 0) ? message.networkThreads : undefined;
+            this.leaseMs = ComputeProtocol.uint(message.leaseMs, 1, 60000) ? message.leaseMs : ComputeProtocol.leaseMs;
+            this.sample('rtt', this.now() - this.helloAt);
             this.retryDelay = 1000;
             for (const run of this.runs.values()) run.attach();
         } else if (message.type === 'work') this.donate(message);
         else if (message.type === 'cancel') this.stopDonation(message.leaseId);
-        else {
+        else if (message.type === 'forget') {
+            if (ComputeProtocol.id(message.jobId)) this.jobs.delete(message.jobId);
+        } else {
             const run = this.runs.get(message.jobId);
             if (run) run.receive(message);
         }
@@ -127,11 +204,22 @@ class SharedComputeClient {
         const donation = this.donations.get(id);
         if (!donation) return;
         clearTimeout(donation.timeout);
-        donation.worker.terminate(); // Synchronous reclamation, even inside a native runBatch.
         this.donations.delete(id);
+        if (donation.worker) {
+            donation.worker.terminate(); // Synchronous reclamation, even inside a native runBatch.
+            this.active--;
+            this.pump();
+        } else {
+            // Waiting work stops for free: no worker started it.
+            const at = this.waiting.indexOf(id);
+            if (at >= 0) this.waiting.splice(at, 1);
+        }
     }
     stopDonations() {
-        for (const id of this.donations.keys()) {
+        // Drop the waiting leases first, so terminating a worker does not start another one.
+        const ids = [...this.donations.keys()];
+        this.waiting = [];
+        for (const id of ids) {
             this.cancelled.push(id);
             this.stopDonation(id);
         }
@@ -163,32 +251,66 @@ class SharedComputeClient {
         this.status();
     }
     donate(message) {
-        const reject = () => this.send({type: 'abandon', cancelled: [message.leaseId]});
-        if (!this.enabled || this.busy() || this.donations.size >= this.slots) { reject(); return; }
-        const job = message.job;
-        if (!ComputeProtocol.id(message.leaseId) || !ComputeProtocol.job(job) ||
-            !ComputeProtocol.uint(message.index, 0, Math.ceil(job.iterations / job.chunkSize) - 1) ||
-            !ComputeProtocol.uint(message.leaseMs, 1, 60000)) throw new Error('Invalid work');
-        const worker = this.idleWorkers.pop() || new Worker(this.workerUrl);
+        if (!ComputeProtocol.id(message.leaseId) || !ComputeProtocol.id(message.jobId) ||
+            !ComputeProtocol.uint(message.leaseMs, 1, 60000) ||
+            (message.echo !== undefined && !ComputeProtocol.uint(message.echo, 0, Number.MAX_SAFE_INTEGER))) {
+            throw new Error('Invalid work');
+        }
+        // Our own send time for an earlier result, echoed back: one round trip plus whatever
+        // the coordinator waited before granting this lease.
+        if (message.echo !== undefined) this.sample('rtt', this.now() - message.echo);
+        let job = this.jobs.get(message.jobId);
+        if (message.job !== undefined) {
+            if (!ComputeProtocol.job(message.job) || message.job.id !== message.jobId) throw new Error('Invalid work');
+            job = message.job;
+            this.jobs.set(job.id, job);
+        }
+        if (!job) throw new Error('Unknown job');
+        if (!ComputeProtocol.uint(message.index, 0, Math.ceil(job.iterations / job.chunkSize) - 1)) throw new Error('Invalid work');
         const id = message.leaseId;
-        const donation = {worker};
+        const reject = () => this.send({type: 'abandon', cancelled: [id]});
+        if (!this.enabled || this.busy() || this.donations.size >= Math.min(4 * this.slots, ComputeProtocol.maxQueue)) {
+            reject();
+            return;
+        }
+        const donation = {job, index: message.index, reject};
         this.donations.set(id, donation);
         donation.timeout = setTimeout(() => { this.stopDonation(id); reject(); this.status(); }, message.leaseMs);
-        const fail = () => { this.stopDonation(id); reject(); this.status(); };
-        worker.onerror = fail;
-        worker.onmessage = ({data}) => {
-            if (this.donations.get(id) !== donation || data.id !== id) return;
-            if (data.error || !ComputeProtocol.report(data.report, job, message.index)) { fail(); return; }
-            clearTimeout(donation.timeout);
-            this.donations.delete(id);
-            this.idleWorkers.push(worker);
-            this.send({type: 'result', leaseId: id, report: data.report});
-            this.status();
-        };
-        try {
-            worker.postMessage({id, jobId: job.id, spec: job.spec, seed: job.seed,
-                fullReport: job.fullReport, ...ComputeProtocol.range(job, message.index)});
-        } catch (_) { fail(); }
+        this.waiting.push(id);
+        this.pump();
+    }
+    pump() {
+        while (this.waiting.length && this.active < this.slots) {
+            const id = this.waiting.shift();
+            const donation = this.donations.get(id);
+            const worker = this.idleWorkers.pop() || new Worker(this.workerUrl);
+            donation.worker = worker;
+            donation.started = this.now();
+            this.active++;
+            const fail = () => { this.stopDonation(id); donation.reject(); this.status(); };
+            worker.onerror = fail;
+            worker.onmessage = ({data}) => {
+                if (this.donations.get(id) !== donation || data.id !== id) return;
+                if (data.error || !ComputeProtocol.report(data.report, donation.job, donation.index)) { fail(); return; }
+                this.finish(id, data.report);
+            };
+            try {
+                worker.postMessage({id, jobId: donation.job.id, spec: donation.job.spec, seed: donation.job.seed,
+                    fullReport: donation.job.fullReport, ...ComputeProtocol.range(donation.job, donation.index)});
+            } catch (_) { fail(); }
+        }
+    }
+    finish(id, report) {
+        const donation = this.donations.get(id);
+        clearTimeout(donation.timeout);
+        this.donations.delete(id);
+        this.active--;
+        this.idleWorkers.push(donation.worker);
+        this.sample('chunk', this.now() - donation.started);
+        this.send({type: 'result', leaseId: id, report, sent: Math.floor(this.now())});
+        this.pump();
+        this.adapt();
+        this.status();
     }
 }
 
@@ -225,8 +347,10 @@ class SharedSimulation {
         try {
             params = normalizeSimulationWorkerParams(params);
             const spec = resolveSharedSimulationSpec(params);
+            // A few chunks per local worker: large enough that a donor's compute dwarfs the
+            // round trip delivering each one, small enough for the tail to balance.
             const chunkSize = Math.min(ComputeProtocol.maxChunkSize,
-                Math.max(128, Math.ceil(params.sim.iterations / (this.threads * 16))));
+                Math.max(128, Math.ceil(params.sim.iterations / (this.threads * 4))));
             const id = Array.from(crypto.getRandomValues(new Uint32Array(4)), value => value.toString(16).padStart(8, '0')).join('');
             this.job = {id, spec,
                 seed: params.sim.seed, iterations: params.sim.iterations, offset: params.sim.iterationOffset,
@@ -435,7 +559,7 @@ function initSharedCompute(maxThreads) {
         sharedSlider.addEventListener('input', () => sharedCompute.setSlots(Number(sharedSlider.value)));
         sharedSlider.addEventListener('change', () => {
             storeThreads(SHARED_THREADS_KEY, sharedCompute.slots);
-            sharedCompute.publishSlots();
+            sharedCompute.publish();
         });
     }
     toggle.checked = readShareComputePreference();

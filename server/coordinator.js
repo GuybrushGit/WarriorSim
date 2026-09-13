@@ -15,7 +15,8 @@ class Coordinator {
     }
     connect(send) {
         if (this.clients.size >= this.maxClients) throw new Error('Coordinator is full');
-        const client = {ready: false, slots: 0, busy: false, jobs: new Set(), leases: new Set()};
+        // sent: jobs whose spec this connection already holds, so later leases name the job only.
+        const client = {ready: false, slots: 0, busy: false, jobs: new Set(), leases: new Set(), sent: new Set()};
         client.send = message => send({...message, buildId: client.buildId});
         this.clients.add(client);
         return client;
@@ -26,6 +27,7 @@ class Coordinator {
         if (message.type === 'hello') {
             if (client.ready || message.protocol !== P.version || !P.buildId(message.buildId) ||
                 message.share !== true || !P.uint(message.slots, 1, 64) ||
+                (message.queue !== undefined && !P.queue(message.queue, message.slots)) ||
                 (message.busy !== undefined && typeof message.busy !== 'boolean')) throw new Error('Incompatible participant');
             Object.defineProperty(client, 'buildId', {value: message.buildId, enumerable: true});
             client.protocol = message.protocol;
@@ -38,7 +40,10 @@ class Coordinator {
             group.clients.add(client);
             client.ready = true;
             client.capacity = message.slots;
-            client.slots = message.busy ? 0 : message.slots;
+            // Outstanding leases the participant wants, running plus waiting, so that its
+            // workers never idle for a round trip; its thread count unless it asks for more.
+            client.queue = message.queue !== undefined ? message.queue : message.slots;
+            client.slots = message.busy ? 0 : client.queue;
             client.busy = !!message.busy;
             // Advertised capacity, not the momentary pull budget: the pool total must not
             // dip every time a participant switches to push mode for its own simulation.
@@ -86,6 +91,12 @@ class Coordinator {
                     break;
                 }
                 case 'result': {
+                    // The helper's own send time, echoed on its next lease so it can measure
+                    // the round trip without any clock agreement.
+                    if (message.sent !== undefined) {
+                        if (!P.uint(message.sent, 0, Number.MAX_SAFE_INTEGER)) throw new Error('Invalid result');
+                        client.echo = message.sent;
+                    }
                     const lease = this.leases.get(message.leaseId);
                     if (!lease || lease.client !== client) break; // Expired, duplicate, or forged lease.
                     const state = lease.state;
@@ -130,14 +141,20 @@ class Coordinator {
     }
     mode(client, message) {
         if (typeof message.busy !== 'boolean') throw new Error('Invalid mode');
-        if (message.slots !== undefined) {
-            // Re-advertised capacity: the pool total tracks it without a reconnect.
-            if (!P.uint(message.slots, 1, 64)) throw new Error('Invalid capacity');
-            client.group.threads += message.slots - client.capacity;
-            client.capacity = message.slots;
+        // Re-advertised capacity: the pool total tracks it without a reconnect. A new
+        // capacity without a queue resets the queue to it, as the handshake would.
+        if (message.slots !== undefined && !P.uint(message.slots, 1, 64)) throw new Error('Invalid capacity');
+        const capacity = message.slots !== undefined ? message.slots : client.capacity;
+        let queue = message.slots !== undefined ? capacity : client.queue;
+        if (message.queue !== undefined) {
+            if (!P.queue(message.queue, capacity)) throw new Error('Invalid queue');
+            queue = message.queue;
         }
+        client.group.threads += capacity - client.capacity;
+        client.capacity = capacity;
+        client.queue = queue;
         client.busy = message.busy || client.jobs.size > 0;
-        client.slots = client.busy ? 0 : client.capacity;
+        client.slots = client.busy ? 0 : client.queue;
         if (client.busy) for (const id of [...client.leases]) this.release(id);
     }
     release(id, notify = true) {
@@ -160,6 +177,10 @@ class Coordinator {
         state.owner.jobs.delete(id);
         state.owner.group.jobs.delete(state.job.id);
         this.jobs.delete(id);
+        // Helpers drop the retained spec; a resubmission of the same ID carries it again.
+        for (const client of state.owner.group.clients) {
+            if (client.sent.delete(id)) client.send({type: 'forget', jobId: state.job.id});
+        }
     }
     disconnect(client) {
         if (!this.clients.delete(client)) return;
@@ -183,29 +204,48 @@ class Coordinator {
         this.schedule();
     }
     schedule() {
-        for (const client of this.clients) {
-            if (!client.ready || client.busy) continue;
-            const group = client.group;
-            const jobs = [...group.jobs.values()];
-            if (!jobs.length) continue;
-            while (client.ready && !client.busy && client.leases.size < client.slots) {
-                let state, index;
-                for (let i = 0; i < jobs.length; i++) {
-                    const candidate = jobs[group.cursor++ % jobs.length];
-                    // Donate from the far end; owners compute from the beginning.
-                    const pending = candidate.chunks.lastIndexOf('pending');
-                    if (candidate.owner !== client && pending >= 0) { state = candidate; index = pending; break; }
-                }
-                if (!state) break;
-                const id = randomUUID();
-                this.leases.set(id, {client, state, jobId: state.job.id, index, expires: this.now() + this.leaseMs});
-                client.leases.add(id);
-                state.leases.set(index, id);
-                state.chunks[index] = 'leased';
-                state.owner.send({type: 'leased', jobId: state.job.id, index, leaseId: id});
-                client.send({type: 'work', leaseId: id, job: state.job, index, leaseMs: this.leaseMs});
+        // One lease per participant per pass, so a deep queue on one participant cannot
+        // hoard a small job while its peers sit idle.
+        const lists = new Map();
+        const jobsOf = group => {
+            if (!lists.has(group)) lists.set(group, [...group.jobs.values()]);
+            return lists.get(group);
+        };
+        let waiting = [...this.clients].filter(client => client.ready && !client.busy &&
+            client.leases.size < client.slots && client.group.jobs.size);
+        while (waiting.length) {
+            const again = [];
+            for (const client of waiting) {
+                if (this.lease(client, jobsOf(client.group)) && client.leases.size < client.slots) again.push(client);
             }
+            waiting = again;
         }
+    }
+    lease(client, jobs) {
+        const group = client.group;
+        let state, index;
+        for (let i = 0; i < jobs.length; i++) {
+            const candidate = jobs[group.cursor++ % jobs.length];
+            // Donate from the far end; owners compute from the beginning.
+            const pending = candidate.chunks.lastIndexOf('pending');
+            if (candidate.owner !== client && pending >= 0) { state = candidate; index = pending; break; }
+        }
+        if (!state) return false;
+        const id = randomUUID();
+        this.leases.set(id, {client, state, jobId: state.job.id, index, expires: this.now() + this.leaseMs});
+        client.leases.add(id);
+        state.leases.set(index, id);
+        state.chunks[index] = 'leased';
+        state.owner.send({type: 'leased', jobId: state.job.id, index, leaseId: id});
+        // The spec travels once per job per connection; every later lease names the job only.
+        const work = {type: 'work', leaseId: id, jobId: state.job.id, index, leaseMs: this.leaseMs};
+        if (!client.sent.has(state.key)) {
+            client.sent.add(state.key);
+            work.job = state.job;
+        }
+        if (client.echo !== undefined) work.echo = client.echo;
+        client.send(work);
+        return true;
     }
 }
 module.exports = {Coordinator};
