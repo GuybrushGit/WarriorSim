@@ -11,6 +11,110 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
+  <style>
+    .forever-redirect {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(5, 10, 17, .82);
+    }
+
+    .forever-redirect[hidden] {
+      display: none;
+    }
+
+    .forever-redirect__panel {
+      position: relative;
+      width: min(100%, 480px);
+      padding: 40px;
+      border: 1px solid #46515b;
+      border-top: 3px solid #ffcd45;
+      border-radius: 6px;
+      background: #17232e;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, .55);
+      color: #ddd;
+      font: 14px/1.6 'Open Sans', sans-serif;
+      text-align: center;
+    }
+
+    .forever-redirect__close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border: 0;
+      background: none;
+      color: #aeb8c0;
+      cursor: pointer;
+      font: inherit;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .forever-redirect__image {
+      display: block;
+      width: min(100%, 180px);
+      height: auto;
+      margin: 0 auto 20px;
+    }
+
+    .forever-redirect__eyebrow {
+      margin: 0 0 8px;
+      color: #ffcd45;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .forever-redirect__panel h1 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .forever-redirect__panel p:not(.forever-redirect__eyebrow) {
+      margin: 0 0 24px;
+      color: #b9c2ca;
+    }
+
+    .forever-redirect__link {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 4px;
+      background: #ffcd45;
+      color: #17232e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .forever-redirect__link:hover,
+    .forever-redirect__link:focus-visible {
+      background: #ffdb72;
+    }
+
+    .forever-redirect__continue {
+      display: block;
+      margin: 16px auto 0;
+      border: 0;
+      background: none;
+      color: #aeb8c0;
+      cursor: pointer;
+      font: inherit;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .forever-redirect__panel {
+        padding: 36px 24px 28px;
+      }
+    }
+  </style>
+
   <script type="text/javascript" src="dist/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.min.js"></script>
   <script type="text/javascript" src="dist/js/libs/jquery.tablesorter.widgets.min.js"></script>
@@ -57,6 +161,27 @@
 
 </head>
 <body>
+  <div class="forever-redirect" id="forever-redirect" role="dialog" aria-modal="true" aria-labelledby="forever-redirect-title" aria-describedby="forever-redirect-description">
+    <div class="forever-redirect__panel">
+      <button class="forever-redirect__close" type="button" aria-label="Close">&times;</button>
+      <img class="forever-redirect__image" src="dist/img/simyoself.gif" alt="">
+      <h1 id="forever-redirect-title">Looking for WoW Forever?</h1>
+      <a class="forever-redirect__link" href="https://guybrushgit.github.io/ForeverSim/" target="_blank" rel="noopener noreferrer">Go to WoW Forever Sim</a>
+      <button class="forever-redirect__continue" type="button">Stay here</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var redirectModal = document.getElementById('forever-redirect');
+      var closeButtons = redirectModal.querySelectorAll('.forever-redirect__close, .forever-redirect__continue');
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          redirectModal.hidden = true;
+        });
+      });
+    })();
+  </script>
   <div class="alerts"></div>
 
   <section class="sidebar closed">
