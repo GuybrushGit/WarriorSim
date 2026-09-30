@@ -1,5 +1,14 @@
 var buffs = [
    {
+      id: 28059,
+      spellid: true,
+      name: "Positive Charge",
+      iconname: "spell_chargepositive",
+      dmgmod: 190,
+      spelldmgmod: 190,
+      other:true
+   },
+   {
       id: 2457,
       spellid: true,
       name: "Battle Stance",
