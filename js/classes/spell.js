@@ -940,7 +940,7 @@ class Aura {
 class Recklessness extends Aura {
     constructor(player, id) {
         super(player, id);
-        this.duration = 12;
+        this.duration = 15;
         this.stats = { crit: this.player.mode == "sod" ? 50 : 100 };
         this.cooldown = this.player.mode == "sod" ? 300 : 1800;
     }
